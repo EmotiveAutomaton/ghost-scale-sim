@@ -131,12 +131,27 @@ expertise:
 # learning SPEED is set separately by lr_pA so one knob does not do two jobs.
 # ---------------------------------------------------------------------------
 learning:
-  prior_strength: 16.0      # total Dirichlet concentration per A[0] column. SET BY CALIBRATION
-                            # (results/v2_calibration.json). Provisional until W6 runs.
+  prior_strength: 1.0       # SET BY THE D2 FALLBACK. See results/v2_calibration.json.
   lr_pA: 1.0                # Dirichlet pseudo-count scale per observation (learning SPEED)
-  use_param_info_gain: true # epistemic drive toward parts of the model not yet known.
-                            # D2 fallback: if calibration fails in one pass, set false
-                            # everywhere and record it as a deviation.
+  use_param_info_gain: false
+  # ^ D2 FALLBACK APPLIED. The single calibration pass FAILED: criteria (a) and (b) are
+  # anti-correlated and no swept prior_strength satisfies both.
+  #     strength    gap   ratio  (a)   ghost_deep  (b)
+  #          1.0  133.2   75.9  False        0.00  True
+  #          4.0   34.6   19.7  False        0.00  True
+  #         16.0   10.0    5.7  False        2.40  False
+  #         64.0    3.8    2.2  False        2.70  False
+  #        256.0    2.3    1.3  True         2.50  False
+  #       1024.0    1.9    1.1  True         2.30  False
+  # A prior weak enough to keep the parameter info-gain term in scale is strong enough that
+  # the term dominates engagement; a prior strong enough to tame the term also prevents the
+  # learner from ever disengaging from GHOST content, which deletes E9's starvation arm.
+  # Per the pre-committed ONE-PASS LIMIT we do not iterate: the term is switched off.
+  # Validated after the fact (not a second pass): with the term off the learner's
+  # G(DEEP)-G(SKIM) is 1.765 against the oracle's 1.754 -- ratio 1.01, so criterion (a) is
+  # vacuous -- and criterion (b) passes at prior_strength 1.0 (ghost_deep 0.90 < 1.0).
+  # Recorded as a deviation in RESULTS_V2.md. Under D1's seeding the learner still has a
+  # reason to engage GHOST content: it believes GHOST is CREATOR-like until it learns better.
   calibration_sweep: [1.0, 4.0, 16.0, 64.0, 256.0, 1024.0]
 
 # ---------------------------------------------------------------------------

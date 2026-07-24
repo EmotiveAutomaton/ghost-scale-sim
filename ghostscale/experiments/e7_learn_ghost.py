@@ -27,12 +27,12 @@ so that clock reads zero in every condition. It measures the seeding, not the le
 the learner genuinely does not have at t=0 is the GHOST column, so competence is timed on
 that instead. The human-column MI is still reported, as a DEGRADATION measure (does it fall?)
 rather than an acquisition one.
-"""
 
   PREDICTED  without labels the learner folds synthetic features into its model of human
              intent (human columns acquire synthetic mass and lose goal-discriminability),
              and the degradation is worse at high kappa. With honest labels it acquires a
              clean GHOST column quickly and the human columns stay sharp.
+"""
 from __future__ import annotations
 
 from pathlib import Path

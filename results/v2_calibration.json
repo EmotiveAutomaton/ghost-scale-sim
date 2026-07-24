@@ -1,0 +1,92 @@
+{
+  "criterion": {
+    "decision": "D2",
+    "written_before_sweep": true,
+    "quantity": "learning.prior_strength",
+    "rule": "the SMALLEST swept prior_strength satisfying BOTH criteria below",
+    "criterion_a": {
+      "what": "learner's G(DEEP)-G(SKIM) on CREATOR content, relative to the oracle's",
+      "test": "gap_learner <= 2.0 * gap_oracle",
+      "why": "the parameter info-gain term must not dominate the EFE; the learner should engage for roughly the reasons the oracle does"
+    },
+    "criterion_b": {
+      "what": "engagement on GHOST content for a learner whose GHOST column has converged",
+      "test": "cum_deep < 1.0 over 20 free steps",
+      "why": "E9's STARVATION channel requires that disengagement remains possible; if a converged learner still engages GHOST, starvation cannot occur and the arm does not exist"
+    },
+    "decoupling": "learning speed is set by lr_pA and is NOT adjusted by this procedure",
+    "one_pass_limit": {
+      "rule": "exactly one pass; no iteration, retuning, or grid widening",
+      "on_failure": "set learning.use_param_info_gain=false for ALL learner experiments and record it as a deviation in RESULTS_V2.md"
+    },
+    "sweep": [
+      1.0,
+      4.0,
+      16.0,
+      64.0,
+      256.0,
+      1024.0
+    ]
+  },
+  "gap_oracle": 1.7535704593251626,
+  "sweep_results": [
+    {
+      "prior_strength": 1.0,
+      "gap_learner": 133.16962327327525,
+      "gap_oracle": 1.7535704593251626,
+      "ratio": 75.94198600067871,
+      "criterion_a_pass": false,
+      "ghost_cum_deep": 0.0,
+      "criterion_b_pass": true
+    },
+    {
+      "prior_strength": 4.0,
+      "gap_learner": 34.616307974243995,
+      "gap_oracle": 1.7535704593251626,
+      "ratio": 19.740471670334593,
+      "criterion_a_pass": false,
+      "ghost_cum_deep": 0.0,
+      "criterion_b_pass": true
+    },
+    {
+      "prior_strength": 16.0,
+      "gap_learner": 9.97797914948611,
+      "gap_oracle": 1.7535704593251626,
+      "ratio": 5.690093087748523,
+      "criterion_a_pass": false,
+      "ghost_cum_deep": 2.4,
+      "criterion_b_pass": false
+    },
+    {
+      "prior_strength": 64.0,
+      "gap_learner": 3.818396943296639,
+      "gap_oracle": 1.7535704593251626,
+      "ratio": 2.177498442102005,
+      "criterion_a_pass": false,
+      "ghost_cum_deep": 2.7,
+      "criterion_b_pass": false
+    },
+    {
+      "prior_strength": 256.0,
+      "gap_learner": 2.2785013917492707,
+      "gap_oracle": 1.7535704593251626,
+      "ratio": 1.2993497806903753,
+      "criterion_a_pass": true,
+      "ghost_cum_deep": 2.5,
+      "criterion_b_pass": false
+    },
+    {
+      "prior_strength": 1024.0,
+      "gap_learner": 1.8935275038624289,
+      "gap_oracle": 1.7535704593251626,
+      "ratio": 1.0798126153374679,
+      "criterion_a_pass": true,
+      "ghost_cum_deep": 2.3,
+      "criterion_b_pass": false
+    }
+  ],
+  "chosen_prior_strength": null,
+  "PASSED": false,
+  "fallback_applied": true,
+  "action": "ONE-PASS LIMIT REACHED (D2): set learning.use_param_info_gain=false for all learner experiments and record as a deviation"
+}

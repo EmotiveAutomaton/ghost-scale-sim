@@ -1,0 +1,29 @@
+{
+  "decision": "D2",
+  "written_before_sweep": true,
+  "quantity": "learning.prior_strength",
+  "rule": "the SMALLEST swept prior_strength satisfying BOTH criteria below",
+  "criterion_a": {
+    "what": "learner's G(DEEP)-G(SKIM) on CREATOR content, relative to the oracle's",
+    "test": "gap_learner <= 2.0 * gap_oracle",
+    "why": "the parameter info-gain term must not dominate the EFE; the learner should engage for roughly the reasons the oracle does"
+  },
+  "criterion_b": {
+    "what": "engagement on GHOST content for a learner whose GHOST column has converged",
+    "test": "cum_deep < 1.0 over 20 free steps",
+    "why": "E9's STARVATION channel requires that disengagement remains possible; if a converged learner still engages GHOST, starvation cannot occur and the arm does not exist"
+  },
+  "decoupling": "learning speed is set by lr_pA and is NOT adjusted by this procedure",
+  "one_pass_limit": {
+    "rule": "exactly one pass; no iteration, retuning, or grid widening",
+    "on_failure": "set learning.use_param_info_gain=false for ALL learner experiments and record it as a deviation in RESULTS_V2.md"
+  },
+  "sweep": [
+    1.0,
+    4.0,
+    16.0,
+    64.0,
+    256.0,
+    1024.0
+  ]
+}

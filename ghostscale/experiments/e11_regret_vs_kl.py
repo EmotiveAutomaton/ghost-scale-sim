@@ -32,7 +32,12 @@ SOURCES = [
     ("e6b_raw.csv", "kl_recovered", "weighted_regret", "weighted_argmax_preserved",
      "E6b provenance-weighted"),
     ("e10_raw.csv", "kl", "regret", "argmax_preserved", "E10 expertise"),
-    ("e8_raw.csv", "kl", "regret", "argmax_preserved", "E8 recursive"),
+    # E8 IS DELIBERATELY EXCLUDED. V2 spec §2 lists E8 among E11's inputs, but N11 failed for
+    # this build (significant payload degradation at f=0 with an honest signal, t=3.75), which
+    # per spec §3 makes every E8 number an implementation artifact rather than a finding.
+    # Pooling artifacts into E11 would launder them into a cross-cutting result. E11 therefore
+    # runs on E6b and E10 only, and says so. Restore this line if the loop is ever fixed:
+    #   ("e8_raw.csv", "kl", "regret", "argmax_preserved", "E8 recursive"),
 ]
 
 
@@ -89,12 +94,34 @@ def analyse(df: pd.DataFrame) -> dict:
         "mean_regret_argmax_kept": float(y[am >= 0.5].mean()) if (am >= 0.5).any() else np.nan,
         "mean_regret_argmax_flipped": float(y[am < 0.5].mean()) if (am < 0.5).any() else np.nan,
     }
-    out["conclusion"] = (
-        "The argmax-flip boundary explains more variance in harm than KL magnitude. KL is the "
-        "wrong harm metric; report regret." if out["argmax_explains_more"] else
-        "KL magnitude explains at least as much variance as the argmax-flip boundary. The "
-        "prediction did NOT hold; KL is not obviously the wrong metric here. Reported as measured.")
+    # The prediction is not merely "argmax wins by any margin" — it is that the relationship
+    # with KL is WEAK and that argmax explains FAR MORE variance. Both parts are tested, with
+    # a material-margin threshold, so a 0.665-vs-0.651 split is not reported as a win.
+    margin = float(cfg_margin())
+    out["material_margin_required"] = margin
+    out["argmax_explains_materially_more"] = bool(r2_am > r2_kl * (1.0 + margin))
+    out["kl_relationship_is_weak"] = bool(abs(out["pearson_kl_regret"]) < 0.5)
+    if out["argmax_explains_materially_more"] and out["kl_relationship_is_weak"]:
+        out["conclusion"] = ("CONFIRMED. The KL-regret relationship is weak and the "
+                             "argmax-flip boundary explains far more variance. KL is the "
+                             "wrong harm metric; report regret.")
+    elif out["argmax_explains_materially_more"]:
+        out["conclusion"] = ("PARTIAL. The argmax-flip boundary explains materially more "
+                             "variance, but the KL-regret relationship is NOT weak. KL is "
+                             "informative about harm; it is simply not sufficient.")
+    else:
+        out["conclusion"] = ("NOT CONFIRMED as stated. The argmax-flip boundary does not "
+                             "explain materially more variance than KL magnitude, and the "
+                             "KL-regret relationship is not weak. Both carry real signal and "
+                             "the two together explain more than either. Reported as measured.")
     return out
+
+
+def cfg_margin() -> float:
+    """Relative margin by which argmax-only R^2 must beat KL-only R^2 to count as
+    'explains far more variance'. 10% — chosen so a rounding-level difference cannot be
+    reported as a confirmation."""
+    return 0.10
 
 
 def run(cfg: Config, out_dir: Path | None = None, make_fig: bool = True, **_) -> dict:

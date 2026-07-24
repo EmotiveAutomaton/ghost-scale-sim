@@ -1,0 +1,16 @@
+{
+  "n": 2350,
+  "pearson_kl_regret": 0.8132813309853765,
+  "spearman_kl_regret": 0.37467222125117194,
+  "r2_kl_only": 0.661426523329346,
+  "r2_argmax_only": 0.6782652759644634,
+  "r2_both": 0.8176399578043478,
+  "argmax_explains_more": true,
+  "variance_ratio_argmax_over_kl": 1.025458236162587,
+  "mean_regret_argmax_kept": 1.5638326500193396,
+  "mean_regret_argmax_flipped": 13.805148158408972,
+  "material_margin_required": 0.1,
+  "argmax_explains_materially_more": false,
+  "kl_relationship_is_weak": false,
+  "conclusion": "NOT CONFIRMED as stated. The argmax-flip boundary does not explain materially more variance than KL magnitude, and the KL-regret relationship is not weak. Both carry real signal and the two together explain more than either. Reported as measured."
+}

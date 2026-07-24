@@ -230,12 +230,44 @@ def test_N9_prereg_is_locked_against_tampering(cfg, tmp_path):
 # "If generational decay appears without any contamination, the recursion loop itself is
 #  lossy and every E8 result is an artifact of the implementation rather than a finding."
 # --------------------------------------------------------------------------- #
-def test_N11_zero_contamination_recursion_is_not_lossy(cfg):
-    """At f=0 the generation chain must not degrade.
+@pytest.mark.xfail(strict=True, reason=(
+    "N11 FAILS ON THE FULL-SCALE E8 RUN, and that failure is a REPORTED FINDING, not a bug "
+    "to tune away — see RESULTS_V2.md, 'E8 — not reportable'. With f=0 and an HONEST signal "
+    "the chain still degrades: slope +0.0119 nats/generation, t=3.75. Per V2 spec §3 the "
+    "recursion loop is therefore lossy and every E8 number is an implementation artifact, so "
+    "E8 is not reported and is excluded from E11. Marked xfail(strict) so the failure stays "
+    "VISIBLE in the suite rather than being deleted or weakened; if the loop is ever fixed "
+    "this XPASSes and forces the marker off."))
+def test_N11_gate_on_full_scale_e8_output(cfg):
+    """THE N11 GATE. Evaluated on the actual E8 run, at the scale E8 ran.
 
-    Tested as "no SIGNIFICANT trend" rather than "exactly zero": each generation estimates A
-    from finitely many artifacts, so some estimation noise is unavoidable and strict zero is
-    not achievable. A structurally lossy loop fails this; a merely finite one does not.
+    This reads ``results/e8_trends.csv`` rather than re-simulating. That is deliberate and it
+    is the lesson of this null: the reduced-scale re-simulation below PASSES in both signal
+    conditions, while the full-scale run FAILS on the honest arm. A null checked at a smaller
+    scale than the experiment it gates is not a gate — it is a smoke test that happens to be
+    green. The estimation noise that compounds through the generation loop simply is not
+    visible at 120 artifacts and 3 observers.
+    """
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[1] / "results" / "e8_trends.csv"
+    if not path.exists():
+        pytest.skip("E8 has not been run; nothing to gate")
+    tr = pd.read_csv(path)
+    zero = tr[(tr.contamination == 0.0) & (tr.metric == "kl_payload")]
+    assert len(zero) > 0, "E8 must include an f=0 arm so N11 is measured on the same run"
+    bad = zero[zero.significant]
+    assert bad.empty, (
+        "N11: significant payload degradation at f=0 in "
+        f"{list(bad.signal)} (slopes {list(bad.slope.round(4))}, t {list(bad.t.round(2))}). "
+        "The recursion loop is lossy; every E8 result is an implementation artifact.")
+
+
+def test_N11_reduced_scale_recursion_smoke(cfg):
+    """Reduced-scale re-simulation of the f=0 chain, both signal conditions.
+
+    Kept as a fast structural check — it catches a loop that is GROSSLY lossy — but it is NOT
+    the gate, and its passing must not be read as N11 passing. See
+    ``test_N11_gate_on_full_scale_e8_output`` for the real gate and why scale matters here.
     """
     from ghostscale.config import load_config
     from ghostscale.generations import run_chain, chain_trend
@@ -243,17 +275,16 @@ def test_N11_zero_contamination_recursion_is_not_lossy(cfg):
 
     cfg_q = load_config(quick=True)
     gm = gmod.build_shared_model(cfg_q, goal_symmetric=False, synth_draw_seed=17)
-    results = run_chain(cfg_q, gm, POP_GOAL_DIST, contamination=0.0, signing_rate=1.0,
-                        honesty=1.0, g_max=3, n_creators=20, n_artifacts=60,
-                        n_observers=2, infer_steps=4, d_i=0.0, base_seed=4242)
-    assert len(results) == 3
-    trend = chain_trend(results, "kl_payload")
-    assert abs(trend["t"]) < 4.0, (
-        f"N11: significant payload degradation at f=0 (slope={trend['slope']:.4f}, "
-        f"t={trend['t']:.2f}). The recursion loop is lossy and every E8 result would be an "
-        f"implementation artifact.")
-    kls = [r.kl_payload for r in results]
-    assert max(kls) < 0.25, f"N11: f=0 payload KL should stay small; got {kls}"
+    for signing in (0.0, 1.0):
+        results = run_chain(cfg_q, gm, POP_GOAL_DIST, contamination=0.0,
+                            signing_rate=signing, honesty=1.0, g_max=4, n_creators=20,
+                            n_artifacts=120, n_observers=3, infer_steps=4, d_i=0.0,
+                            base_seed=4242)
+        trend = chain_trend(results, "kl_payload")
+        assert abs(trend["t"]) < 2.0, (
+            f"N11 (signing_rate={signing}): significant payload degradation at f=0 "
+            f"(slope={trend['slope']:.4f}, t={trend['t']:.2f}). The recursion loop is lossy "
+            f"and every E8 result would be an implementation artifact.")
 
 
 def test_N11_guard_contamination_does_degrade(cfg):
