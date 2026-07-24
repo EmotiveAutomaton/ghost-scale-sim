@@ -114,27 +114,44 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
     agg.to_csv(res_dir / "e6_summary.csv", index=False)
 
     if make_fig:
-        set_style()
-        fig, axes = plt.subplots(1, len(signing), figsize=(4.6 * len(signing), 4.2),
-                                 sharey=True)
-        if len(signing) == 1:
-            axes = [axes]
-        for ax, sr in zip(axes, signing):
-            sub = agg[agg.signing_rate == sr]
-            for kap in kappas:
-                d = sub[sub.kappa == kap].sort_values("contamination")
-                ax.plot(d.contamination, d.kl_recovered, "-o", ms=4, label=f"kappa={kap}")
-            ax.set(xlabel="contamination fraction f",
-                   title=f"signing_rate = {sr}")
-            ax.legend(fontsize=8, title="observer trust")
-        axes[0].set_ylabel("KL(C_recovered || C_true)  [nats]")
-        fig.suptitle("E6 — Corpus corruption of the alignment payload (H6)\n"
-                     "honest signal attenuates corruption; the untrusting/unsigned corner is worst",
-                     fontweight="bold")
-        fig.tight_layout()
-        fig.savefig(fig_dir / "e6_corpus_corruption.png", bbox_inches="tight")
-        plt.close(fig)
+        make_e6_figure(agg, kappas, signing, fig_dir / "e6_corpus_corruption.png")
     return agg
+
+
+def make_e6_figure(agg, kappas, signing, path):
+    """Two panels. LEFT: the alignment result — provenance-aware (down-weighted) aggregation
+    protects C_recovered under contamination while naive aggregation degrades (averaged over
+    kappa/signing, which barely matter). RIGHT: shows that near-invariance — recovery KL is
+    flat across signing_rate, because a DEEP-inspecting aggregator identifies synthetics from
+    content, so the signal's value is metabolic (E3/E5), not recovery accuracy."""
+    set_style()
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.4))
+
+    ax = axes[0]
+    naive = agg.groupby("contamination").kl_naive.mean()
+    recov = agg.groupby("contamination").kl_recovered.mean()
+    ax.plot(naive.index, naive.values, "-o", color="firebrick", lw=2,
+            label="naive aggregation")
+    ax.plot(recov.index, recov.values, "-o", color="C0", lw=2,
+            label="provenance-weighted (Ghost Scale)")
+    ax.set(xlabel="contamination fraction f",
+           ylabel="KL(C_recovered || C_true)  [nats]",
+           title="Provenance-awareness protects the alignment payload")
+    ax.legend()
+
+    ax = axes[1]
+    for sr in signing:
+        d = agg[agg.signing_rate == sr].groupby("contamination").kl_recovered.mean()
+        ax.plot(d.index, d.values, "-o", ms=4, label=f"signing_rate={sr}")
+    ax.set(xlabel="contamination fraction f",
+           ylabel="KL(C_recovered || C_true)  [nats]",
+           title="Recovery is ~invariant to signing rate\n(value of the signal is metabolic, not accuracy)")
+    ax.legend(fontsize=8)
+
+    fig.suptitle("E6 — Corpus corruption of the alignment payload (H6)", fontweight="bold")
+    fig.tight_layout()
+    fig.savefig(path, bbox_inches="tight")
+    plt.close(fig)
 
 
 def main():

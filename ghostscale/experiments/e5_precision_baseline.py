@@ -66,6 +66,11 @@ def _e5_worker(payload):
     (cfg_raw, cell_index, arm, kappa, gamma, seed_rep, base_seed, n_obs, T) = payload
     cfg = Config(cfg_raw)
     cfg.set("agent.gamma", gamma)
+    # gamma scales the softmax over policies and is INERT under deterministic (argmax) action
+    # selection. To test whether gamma can mimic kappa we must let it act, so E5 uses stochastic
+    # selection throughout (all three arms, same setting) — otherwise the gamma sweep is a no-op
+    # and the kappa-vs-gamma comparison is vacuous. Documented in RESULTS.md.
+    cfg.set("agent.action_selection", "stochastic")
     early_window = int(cfg.get("experiments.e5.early_window", 3))
     gm = _build_model(cfg, kappa=kappa)
     assert_preferences_zero(gm.C)
