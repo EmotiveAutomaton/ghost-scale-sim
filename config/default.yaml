@@ -37,10 +37,24 @@ artifact_model:
   noise_free_synth_concentration: 0.03  # Dirichlet concentration (< 1 => structured/peaked).
                                         # After goal-symmetrization this yields H(synth)=1.52 nats
                                         # (structured, well below the 1.8 ceiling and uniform 2.079).
-  goal_symmetric: true                  # symmetrize synth across goal-pairs => equidistant from
-                                        # every goal signature (no accidental single-goal bias).
-                                        # Required for the H2 disagreement result; see generative_model.
+  goal_symmetric: true                  # V2 C2: an EXPERIMENT-LEVEL AXIS, not a global truth.
+                                        # true  = V1 control arm. Synth equidistant from every goal
+                                        #         signature; synthetic content is NOISE and averages
+                                        #         out over a corpus. Required for the H2 result.
+                                        # false = V2 biased arm. The raw draw leans toward some goal
+                                        #         k; synthetic content is an ATTRACTOR and accumulates
+                                        #         linearly in sample size. E6b/E7/E8/E9 use this.
+                                        # Neither is "correct"; they are claims about different
+                                        # generator architectures. Both reported everywhere.
   noise_free_synth_seed: 20240719       # dedicated seed so the frozen synth is reproducible
+  synth_floor: 1.0e-3                   # DECISION D3b. Minimum mass per feature, renormalized.
+                                        # The raw Dirichlet(0.03) draw has HARD ZEROS; a zero makes
+                                        # those features impossible under GHOST, so observing one is a
+                                        # PROOF of non-GHOST provenance — an unintended perfect
+                                        # provenance channel that bypasses the Ghost Scale and biases
+                                        # against the C2 effect. It also makes E9's per-column KL
+                                        # infinite. No-op for the symmetrized V1 draw (min mass
+                                        # 0.007 >> 1e-3), so N8/N9 are unaffected.
   structured_ceiling: 1.8               # max allowed H(noise_free_synth) in nats. MUST be < ln(8)=2.079
   # NOTE: ln(8)=2.0794 nats is uniform entropy. The ceiling sits BELOW uniform so the
   # assertion is meaningful: it proves the synthetic content is structured (H≈1.55 with the
@@ -89,6 +103,19 @@ preferences:
 priors:
   eps: 0.35              # heterogeneity scale: D = normalize(uniform + eps * dirichlet(ones))
   perturb_provenance: true   # also perturb D[0] the same way
+
+# ---------------------------------------------------------------------------
+# Observer expertise (V2 C1). THE most important V2 change: heterogeneity moves from
+# the prior to the LIKELIHOOD. Each observer gets its own sig_i, a perturbation of the
+# shared latent sig_true at inexpertise d_i. Expertise is 1 - d_i.
+#   sig_i[g] = normalize( (1 - d_i) * sig_true[g] + d_i * dirichlet(ones(F)) )
+# d_i = 0 reproduces V1 EXACTLY (null N8) and draws no variate at all.
+# ---------------------------------------------------------------------------
+expertise:
+  d: 0.0                 # default inexpertise for experiments that do not sweep it (V1-compatible)
+  heterogeneous: false   # if true, each observer draws its own d_i ~ Uniform(d_min, d_max)
+  d_min: 0.0
+  d_max: 0.0
 
 # ---------------------------------------------------------------------------
 # Agent construction (Spec §3.7).

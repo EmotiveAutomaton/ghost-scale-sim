@@ -20,15 +20,48 @@ import numpy as np
 from . import constants as K
 from .config import Config
 from .environment import Artifact, Environment
-from .generative_model import GenerativeModel, build_D, make_agent
+from .generative_model import (GenerativeModel, build_D, make_agent,
+                               build_observer_model)
 from . import metrics
+
+# Fallback salt, used only if a Generator exposes no seed sequence to spawn from.
+_SIG_STREAM_SALT = 0x5164A17
+# Inexpertise at or below this is treated as exactly zero (fast path / N8).
+_D_ZERO_TOL = 0.0
+
+
+def observer_sig_rng(rng: np.random.Generator) -> np.random.Generator:
+    """A DEDICATED RNG stream for the C1 ``sig_i`` perturbation.
+
+    N8 HAZARD — the reason this exists. The observer's D prior is drawn from the caller's
+    ``rng``. If ``sig_i`` were drawn from the same stream, then turning expertise on would
+    consume variates and shift every subsequent D draw, so V2-at-d=0 would no longer
+    reproduce V1 and N8 would fail for a reason having nothing to do with the refactor.
+
+    ``seed_seq.spawn`` is the correct primitive here: it derives an independent child stream
+    WITHOUT drawing a variate from the parent, so the D sequence is bit-identical whatever
+    ``d`` is. (``spawn`` advances the parent's child counter only, not its bit stream.)
+    """
+    seq = getattr(rng.bit_generator, "seed_seq", None)
+    if seq is not None:
+        return np.random.default_rng(seq.spawn(1)[0])
+    state = rng.bit_generator.state["state"]
+    base = state["state"] if isinstance(state, dict) else int(state)
+    return np.random.default_rng(int(base) % (2**63 - 1) ^ _SIG_STREAM_SALT)
 
 
 def make_observer(gm: GenerativeModel, cfg: Config, rng: np.random.Generator,
-                  kappa: float | None = None):
-    """Build one heterogeneous observer agent (its own D drawn from ``rng``)."""
+                  kappa: float | None = None, d_i: float = 0.0):
+    """Build one heterogeneous observer agent.
+
+    Heterogeneity now has TWO sources (C1): the observer's own D prior (V1, drawn from
+    ``rng``) and its own goal-signature likelihood ``sig_i`` at inexpertise ``d_i`` (V2,
+    drawn from an independent stream). At ``d_i=0`` this is exactly the V1 observer.
+    """
+    rng_sig = observer_sig_rng(rng) if d_i > _D_ZERO_TOL else None
+    om = build_observer_model(gm, cfg, d_i, rng_sig=rng_sig, kappa=kappa)
     D = build_D(cfg, rng)
-    return make_agent(gm, D, cfg, kappa=kappa)
+    return make_agent(om, D, cfg, kappa=kappa)
 
 
 def find_named_policies(agent):
