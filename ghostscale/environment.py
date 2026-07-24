@@ -113,14 +113,19 @@ class Environment:
     # -- corpus draw (E6) -----------------------------------------------------
     def draw_corpus(self, n_artifacts: int, contamination: float,
                     creator_goals: np.ndarray, rng: np.random.Generator) -> list[Artifact]:
-        """A corpus of N artifacts: a fraction ``contamination`` are unsigned GHOST
-        synthetics; the rest are CREATOR artifacts whose goals are drawn from the given
-        population goal distribution (via sampled ``creator_goals``)."""
+        """A corpus of N artifacts: a fraction ``contamination`` are GHOST synthetics, the
+        rest CREATOR artifacts whose goals are drawn from the population distribution (via
+        sampled ``creator_goals``). BOTH classes carry their honest provenance signal at the
+        environment's ``signing_rate`` (SIG_GHOST / SIG_CREATOR when signed, else UNSIGNED).
+
+        This is what makes ``signing_rate`` the lever in E6: at a high signing rate a trusting
+        (high-kappa) aggregator can exclude synthetics via the signal; at a low signing rate it
+        is left to content alone and is the most corruptible."""
         artifacts = []
         for _ in range(n_artifacts):
             if rng.random() < contamination:
-                art = Artifact(provenance=K.GHOST, goal=int(rng.integers(self.cd.goals)),
-                               declared_signal=K.UNSIGNED)
+                art = self.make_artifact(provenance=K.GHOST,
+                                         goal=int(rng.integers(self.cd.goals)), rng=rng)
             else:
                 goal = int(rng.choice(creator_goals))
                 art = self.make_artifact(provenance=K.CREATOR, goal=goal, rng=rng)

@@ -131,6 +131,25 @@ def fig_e2(points_df, cell_stats, path: Path) -> None:
     plt.close(fig)
 
 
+def save_heatmap(matrix, xlabels, ylabels, path: Path, xlabel="", ylabel="", title="",
+                 cbar_label="", cmap="magma", contour_level=None):
+    """Heatmap with optional highlighted contour (used to locate a boundary, e.g. E4)."""
+    set_style()
+    fig, ax = plt.subplots(figsize=(6.8, 5.0))
+    M = np.asarray(matrix, dtype=float)
+    im = ax.imshow(M, aspect="auto", origin="lower", cmap=cmap)
+    ax.set_xticks(range(len(xlabels)), [f"{x:g}" for x in xlabels], rotation=45, ha="right")
+    ax.set_yticks(range(len(ylabels)), [f"{y:g}" for y in ylabels])
+    if contour_level is not None and np.nanmin(M) < contour_level < np.nanmax(M):
+        ax.contour(M, levels=[contour_level], colors="cyan", linewidths=2)
+    ax.set(xlabel=xlabel, ylabel=ylabel, title=title)
+    fig.colorbar(im, ax=ax, label=cbar_label)
+    ax.grid(False)
+    fig.tight_layout()
+    fig.savefig(path, bbox_inches="tight")
+    plt.close(fig)
+
+
 def save_simple_lines(df, x, y, hue, path: Path, xlabel="", ylabel="", title=""):
     """Generic line plot used by E3-E6 (one line per hue level)."""
     set_style()
