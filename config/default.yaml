@@ -34,7 +34,12 @@ artifact_model:
   # Drawn once from Dirichlet(concentration < 1) so it is visibly structured, then frozen.
   # This is the most important modeling decision (Spec §3.3): synthetic content is
   # structured, not noise. Entropy stays LOW; MI with goal goes to ZERO.
-  noise_free_synth_concentration: 0.5   # Dirichlet concentration (< 1 => structured/peaked)
+  noise_free_synth_concentration: 0.03  # Dirichlet concentration (< 1 => structured/peaked).
+                                        # After goal-symmetrization this yields H(synth)=1.52 nats
+                                        # (structured, well below the 1.8 ceiling and uniform 2.079).
+  goal_symmetric: true                  # symmetrize synth across goal-pairs => equidistant from
+                                        # every goal signature (no accidental single-goal bias).
+                                        # Required for the H2 disagreement result; see generative_model.
   noise_free_synth_seed: 20240719       # dedicated seed so the frozen synth is reproducible
   structured_ceiling: 1.8               # max allowed H(noise_free_synth) in nats. MUST be < ln(8)=2.079
   # NOTE: ln(8)=2.0794 nats is uniform entropy. The ceiling sits BELOW uniform so the
@@ -66,7 +71,16 @@ signal_model:
 # any preference over provenance or signal (Spec §14, load-bearing).
 # ---------------------------------------------------------------------------
 preferences:
-  c_effort: 0.5          # prefers LOW_COST over HIGH_COST; C[2] = [+c_effort, -c_effort]
+  # DEVIATION FROM SPEC (documented in RESULTS.md): spec §3.5 default is 0.5. pymdp legacy
+  # softmaxes C per modality, so the effective DEEP-vs-SKIM effort gap is 2*policy_len*c_effort
+  # = 4*c_effort (nats). At c=0.5 that gap is 2.0, which EXCEEDS the model's maximum epistemic
+  # value (~2.18 for a known CREATOR, ~0 for GHOST) — so DEEP is never worth it and EVERY tier
+  # disengages at t=0, collapsing E1. c=0.15 puts the effort gap at ~0.6, below CREATOR/POLISHED/
+  # CURATOR epistemic value and above GHOST's — the regime where the generative crash is visible.
+  # This is calibration of a value, not of the mechanism; E3 sweeps c_effort across the transition.
+  # At c=0.1 the effort gap is 0.4 nats: GHOST (epistemic value ~0.02) disengages immediately
+  # while CREATOR/POLISHED/CURATOR (~2.18/1.94/0.88) sustain DEEP until the goal is resolved.
+  c_effort: 0.1          # prefers LOW_COST over HIGH_COST; C[2] = [+c_effort, -c_effort]
 
 # ---------------------------------------------------------------------------
 # D priors + observer heterogeneity (Spec §3.6). Heterogeneity is not cosmetic:
@@ -101,7 +115,9 @@ experiments:
   e2:
     forced_deep_k: 10    # observers forced to DEEP for first k steps, then free
   e3:
-    c_effort_sweep: [0.1, 0.25, 0.5, 0.75, 1.0]
+    # spans the transition regime (tier thresholds in c: GHOST~0.006, CURATOR~0.22,
+    # POLISHED~0.49, CREATOR~0.54) plus the collapsed regime above CREATOR.
+    c_effort_sweep: [0.05, 0.1, 0.15, 0.25, 0.35, 0.5, 0.75]
     calibrated_kappa: 0.9
     naive_kappa: 0.1
   e4:

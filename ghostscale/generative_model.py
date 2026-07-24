@@ -92,9 +92,18 @@ def build_noise_free_synth(cfg: Config, uniform_override: bool = False) -> np.nd
     features, drawn once from a Dirichlet(concentration < 1) with a dedicated seed and
     then frozen. Shape (num_features,).
 
+    GOAL-SYMMETRY (config ``goal_symmetric``, default True): the raw Dirichlet draw is
+    symmetrized across the goal-pair group so the frozen synth is EQUIDISTANT from every
+    goal signature. This is a strengthening of the Spec §3.3 requirement that synthetic
+    content carry no goal information: an un-symmetrized draw generically resembles ONE
+    goal by chance, which would turn the H2 result from *arbitrary, observer-specific*
+    hallucination (confident DISAGREEMENT — the theoretical claim) into spurious
+    CONSENSUS on that one goal, masking the effect. Symmetrizing removes that confound
+    while keeping the distribution structured and identical for all goals. (Documented as
+    a deviation in RESULTS.md.)
+
     ``uniform_override=True`` replaces it with a uniform distribution — the deliberate
-    NOISE STRAWMAN of null N6, used only to show the MI/entropy diagnostic separates the
-    two cases. It is NOT the default and must never be the default.
+    NOISE STRAWMAN of null N6. It is NOT the default and must never be the default.
     """
     cd = cards(cfg)
     if uniform_override:
@@ -102,7 +111,33 @@ def build_noise_free_synth(cfg: Config, uniform_override: bool = False) -> np.nd
     rng = np.random.default_rng(int(cfg.artifact_model.noise_free_synth_seed))
     conc = float(cfg.artifact_model.noise_free_synth_concentration)
     synth = rng.dirichlet(np.full(cd.features, conc))
+    if bool(cfg.artifact_model.get("goal_symmetric", True)):
+        synth = _symmetrize_over_goal_pairs(synth, cfg.artifact_model.goal_feature_pairs)
     return synth
+
+
+def _symmetrize_over_goal_pairs(dist: np.ndarray, pairs: list[list[int]]) -> np.ndarray:
+    """Make ``dist`` invariant under relabeling of goals (hence equidistant from every goal
+    signature) WHILE PRESERVING its structure.
+
+    Each pair is assigned the pooled *larger* mass on its first feature and the pooled
+    *smaller* mass on its second feature (both pooled as means across pairs). Because the
+    same (high, low) shape is applied to every pair, the result is goal-symmetric; because
+    high > low (the raw draw is peaked), it stays structured — unlike a plain average over
+    permutations, which would collapse toward uniform.
+    """
+    dist = np.asarray(dist, dtype=float)
+    highs = np.mean([max(dist[a], dist[b]) for a, b in pairs])
+    lows = np.mean([min(dist[a], dist[b]) for a, b in pairs])
+    out = np.zeros_like(dist)
+    for a, b in pairs:
+        out[a] = highs
+        out[b] = lows
+    covered = {i for pair in pairs for i in pair}
+    for i in range(len(dist)):
+        if i not in covered:
+            out[i] = dist[i]
+    return out / out.sum()
 
 
 def alpha_by_provenance(cfg: Config,
