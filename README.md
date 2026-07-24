@@ -103,6 +103,38 @@ entropy stays low. `metrics.mutual_information_features_goal` reported alongside
 `feature_entropy_given_provenance` is the diagnostic that separates this *unidentifiability* from
 the *noise strawman* (null N6): both are low-MI, but only the strawman is high-entropy.
 
+## V2: what the Learner observer already knows, and why that is a claim rather than a shortcut
+
+V2 adds a **Learner** observer that does not arrive holding a correct `A[0]` GHOST column and
+must acquire one from an unlabelled, contaminated corpus (V2 C3). What it *does* start with is a
+deliberate theoretical commitment, and it should be read as one:
+
+> **The learner knows the shared goal→feature family. It does not know how provenance modulates
+> it.** Its Dirichlet prior seeds every provenance tier as CREATOR-like — the naive reader assumes
+> everything they read was meant — and what it must learn is *which sources are hollow*.
+
+This is the same commitment V2 C1 makes when it derives each observer's `sig_i` as a perturbation
+of a shared latent signature: **observers share a likelihood family because they share a body
+plan; what they do not share, and must learn, is which sources carry intent.** Granting the
+learner the family is therefore not a concession that makes the problem easier by fiat — it is the
+theory's own claim about where the shared part of perception ends.
+
+It is also forced. A literally uninformative prior (uniform over features in every column) is not
+merely a slow learner, it is an **unidentifiable** one. Learning `A[0]` attributes each observed
+feature to the *believed* `(provenance, goal)`; under a uniform `A[0]` the goal posterior never
+leaves its prior, so every observation deposits ~1/G of a count into all G goal columns and they
+converge to a common marginal. Measured, with DEEP forced so that disengagement is impossible by
+construction: `MI(features; goal)` sits at exactly 0.0000 nats after 400 artifacts and all four
+learned goal columns remain bit-identical. The provenance-uninformative seeding reaches 1.025 nats
+against an oracle ceiling of 1.089. The measurement is kept as a live test
+(`tests/test_nulls_v2.py::test_D1_uniform_prior_is_unidentifiable`) so that if it ever stops being
+true, the deviation gets revisited rather than inherited.
+
+**What this scopes.** E7's question is *not* "can intent-reading be learned from scratch?" It is
+"can you learn which sources are hollow, from content alone, without labels?" That is the question
+V2 §0's third diagnosis actually poses — you do not have the GHOST column and must learn it from a
+corpus that is already contaminated and unlabelled — and it is the one the experiment answers.
+
 ## Relationship to existing active inference work on Theory of Mind
 
 This model slots into a named gap in the active-inference ToM literature. The mapping, honestly:

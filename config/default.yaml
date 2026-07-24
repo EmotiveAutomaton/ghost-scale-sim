@@ -137,6 +137,7 @@ learning:
   use_param_info_gain: true # epistemic drive toward parts of the model not yet known.
                             # D2 fallback: if calibration fails in one pass, set false
                             # everywhere and record it as a deviation.
+  calibration_sweep: [1.0, 4.0, 16.0, 64.0, 256.0, 1024.0]
 
 # ---------------------------------------------------------------------------
 # Agent construction (Spec §3.7).
@@ -215,6 +216,80 @@ experiments:
     infer_steps: 8         # forced-DEEP inference budget per artifact for the aggregator
     n_replications: 5      # corpus replications for CI (2000 artifacts already large-sample)
 
+  # E6b (V2 stage 1) — corpus corruption under BIASED synthetic content. Runs first, alone.
+  # Cost lever 2: kappa/signing reduced to the levels that actually mattered in V1 (they were
+  # near-inert for recovery accuracy), so the budget goes into the bias axis instead.
+  e6b:
+    n_creators: 50
+    n_artifacts: 2000
+    contamination_sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    # Full V1 E6 grid retained: the spec says E6b is "identical to V1 E6 except
+    # goal_symmetric: false", and the 6.3x cost lever bought enough headroom to honour that
+    # literally rather than invoking cost lever 2.
+    kappa_levels: [0.1, 0.5, 0.9]
+    signing_rate_levels: [0.0, 0.5, 1.0]
+    infer_steps: 8
+    n_replications: 3
+    # Pre-registration (D3a). The FULL scan is recorded in e6b_preregistration.json.
+    seed_scan_n: 200
+    seed_scan_start: 1
+    # Pre-registered prediction and falsification criterion (V2 spec §2).
+    falsification_f: 0.8
+    falsification_kl: 0.10         # naive KL below this at f=0.8 => FALSIFIED, stop and report
+    predicted_kl_low: 0.15
+    predicted_kl_high: 0.60
+
+  # E10 (V2 stage 2) — the expertise gradient. THE headline standalone claim, and cheap:
+  # no contamination, no recursion, no learning. Run even if compute forces cuts elsewhere.
+  e10:
+    d_sweep: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    n_creators: 50
+    n_artifacts: 300       # clean CREATOR artifacts per observer; corpus quality held constant
+    n_observers: 20        # between-observer variance IS measured here, so keep a population
+    infer_steps: 8
+    n_replications: 5
+
+  # E7 (V2 stage 3) — can the GHOST column be learned without labels?
+  # Cost lever 2: 50 observers is plenty; between-observer variance is not the quantity here.
+  e7:
+    n_creators: 50
+    n_artifacts: 600
+    n_observers: 8
+    infer_steps: 6
+    n_replications: 3
+    n_checkpoints: 6
+    contamination_levels: [0.3, 0.6]
+    kappa_levels: [0.1, 0.9]
+    signing_rate_levels: [0.0, 0.5, 1.0]
+    synth_draw_seed: 17         # the G0-favouring stratified draw (see e6b_preregistration)
+    competence_kl: 1.0          # "competent" = learned GHOST column within this KL of the true
+                                # synth. NOT defined on human-column MI: under D1 seeding the
+                                # learner starts at ~95% of oracle MI, so that clock reads zero
+                                # in every condition and would measure the seeding, not learning.
+
+  # E9 (V2 stage 4) — poisoning versus starvation.
+  e9:
+    n_creators: 50
+    n_artifacts: 400
+    n_observers: 8
+    infer_steps: 6
+    n_replications: 3
+    contamination_levels: [0.0, 0.3, 0.6]
+    kappa: 0.9
+    synth_draw_seed: 17
+
+  # E8 (V2 stage 5) — recursive degradation. Run last. G_max may NOT drop below 3 (spec §4).
+  e8:
+    g_max: 4
+    n_creators_next: 20
+    n_artifacts: 300
+    n_observers: 5
+    infer_steps: 6
+    n_replications: 3
+    contamination_levels: [0.0, 0.3, 0.6]
+    d: 0.0
+    synth_draw_seed: 17
+
 # ---------------------------------------------------------------------------
 # Verification tolerances.
 # ---------------------------------------------------------------------------
@@ -235,3 +310,28 @@ quick:
       n_creators: 10
       n_artifacts: 200
       contamination_sweep: [0.0, 0.3, 0.6]
+    e6b:
+      n_creators: 10
+      n_artifacts: 200
+      contamination_sweep: [0.0, 0.4, 0.8]
+      n_replications: 2
+      seed_scan_n: 40
+    e10:
+      n_creators: 10
+      n_artifacts: 150
+      d_sweep: [0.0, 0.3, 0.6, 0.9]
+      n_replications: 2
+    e7:
+      n_artifacts: 200
+      n_observers: 6
+      n_replications: 2
+    e9:
+      n_artifacts: 200
+      n_observers: 6
+      n_replications: 2
+    e8:
+      g_max: 3
+      n_artifacts: 150
+      n_observers: 5
+      n_creators_next: 6
+      n_replications: 2

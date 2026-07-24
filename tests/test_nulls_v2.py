@@ -9,6 +9,7 @@
 Plus the V2 §3 standing invariant: every pA update leaves A column-stochastic.
 """
 import numpy as np
+import pandas as pd
 import pytest
 
 from ghostscale.config import load_config
@@ -161,6 +162,154 @@ def test_learning_survives_reset(cfg, gm):
     agent.reset()
     assert np.allclose(before, np.asarray(agent.A[0])), \
         "learning must survive the per-artifact reset"
+
+
+# --------------------------------------------------------------------------- #
+# N9 — Symmetric control.  With goal_symmetric: true, E6b must reproduce V1's E6.
+# Proves the new effect comes from the bias axis and nothing else.
+# --------------------------------------------------------------------------- #
+def test_N9_symmetric_arm_reproduces_v1_regime(cfg, tmp_path):
+    """Run E6b's symmetric arm at reduced scale and check it lands in V1's regime rather
+    than the biased arm's. V1 measured naive KL = 0.066 at f=0.8 with 2000 artifacts; at
+    test scale we require only that the symmetric arm stays small and clearly below its own
+    pre-registered bound."""
+    from ghostscale.config import load_config
+    from ghostscale.experiments import e6b_corpus_biased as e6b
+
+    cfg_q = load_config(quick=True)
+    cfg_q.set("experiments.e6b.contamination_sweep", [0.8])
+    cfg_q.set("experiments.e6b.kappa_levels", [0.9])
+    cfg_q.set("experiments.e6b.signing_rate_levels", [1.0])
+    cfg_q.set("experiments.e6b.n_replications", 2)
+    cfg_q.set("experiments.e6b.n_artifacts", 400)
+    cfg_q.set("experiments.e6b.seed_scan_n", 30)
+    e6b.run(cfg_q, out_dir=tmp_path, workers=1, make_fig=False)
+
+    df = pd.read_csv(tmp_path / "e6b_raw.csv")
+    sym = df[df.arm == "symmetric"]
+    assert len(sym) > 0, "the symmetric control arm must actually be run (N9)"
+    # It must stay below its bound and must not blow up: symmetric synth is NOISE.
+    assert sym.kl_naive.mean() < sym.bound.mean(), (
+        f"symmetric arm KL {sym.kl_naive.mean():.3f} must stay below its bound "
+        f"{sym.bound.mean():.3f}")
+    assert sym.kl_naive.mean() < 0.5, (
+        f"symmetric arm KL {sym.kl_naive.mean():.3f} is far above V1's regime; the control "
+        f"is not behaving like V1 and the bias-axis attribution is unsafe")
+
+
+def test_N9_prereg_is_locked_against_tampering(cfg, tmp_path):
+    """The pre-registration mechanism itself (V2 spec §6): a bound edited after the fact
+    must be detected, and a differing bound must not silently overwrite the committed one."""
+    import json
+    from ghostscale.config import load_config
+    from ghostscale import preregistration as P
+
+    cfg_q = load_config(quick=True)
+    path = tmp_path / "prereg.json"
+    payload = P.write_preregistration(cfg_q, path)
+    assert P.assert_prereg_locked(path)["content_hash"] == payload["content_hash"]
+
+    # Tampering is detected.
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    doc["selected_draws"][0]["bounds"]["0.8"] = 0.0001
+    path.write_text(json.dumps(doc), encoding="utf-8")
+    with pytest.raises(RuntimeError, match="modified since it was written"):
+        P.assert_prereg_locked(path)
+
+    # A genuinely different pre-registration refuses to overwrite silently.
+    path2 = tmp_path / "prereg2.json"
+    P.write_preregistration(cfg_q, path2)
+    cfg_b = load_config(quick=True)
+    cfg_b.set("experiments.e6b.contamination_sweep", [0.0, 0.9])
+    with pytest.raises(RuntimeError, match="DIFFERENT content hash"):
+        P.write_preregistration(cfg_b, path2)
+
+
+# --------------------------------------------------------------------------- #
+# N11 — Zero-contamination recursion.  THE most important new null.
+# "If generational decay appears without any contamination, the recursion loop itself is
+#  lossy and every E8 result is an artifact of the implementation rather than a finding."
+# --------------------------------------------------------------------------- #
+def test_N11_zero_contamination_recursion_is_not_lossy(cfg):
+    """At f=0 the generation chain must not degrade.
+
+    Tested as "no SIGNIFICANT trend" rather than "exactly zero": each generation estimates A
+    from finitely many artifacts, so some estimation noise is unavoidable and strict zero is
+    not achievable. A structurally lossy loop fails this; a merely finite one does not.
+    """
+    from ghostscale.config import load_config
+    from ghostscale.generations import run_chain, chain_trend
+    from ghostscale.preregistration import POP_GOAL_DIST
+
+    cfg_q = load_config(quick=True)
+    gm = gmod.build_shared_model(cfg_q, goal_symmetric=False, synth_draw_seed=17)
+    results = run_chain(cfg_q, gm, POP_GOAL_DIST, contamination=0.0, signing_rate=1.0,
+                        honesty=1.0, g_max=3, n_creators=20, n_artifacts=60,
+                        n_observers=2, infer_steps=4, d_i=0.0, base_seed=4242)
+    assert len(results) == 3
+    trend = chain_trend(results, "kl_payload")
+    assert abs(trend["t"]) < 4.0, (
+        f"N11: significant payload degradation at f=0 (slope={trend['slope']:.4f}, "
+        f"t={trend['t']:.2f}). The recursion loop is lossy and every E8 result would be an "
+        f"implementation artifact.")
+    kls = [r.kl_payload for r in results]
+    assert max(kls) < 0.25, f"N11: f=0 payload KL should stay small; got {kls}"
+
+
+def test_N11_guard_contamination_does_degrade(cfg):
+    """Guard against N11 passing vacuously: at f>0 the chain MUST degrade more than at f=0,
+    or the loop transmits nothing and N11 is meaningless."""
+    from ghostscale.config import load_config
+    from ghostscale.generations import run_chain
+    from ghostscale.preregistration import POP_GOAL_DIST
+
+    cfg_q = load_config(quick=True)
+    gm = gmod.build_shared_model(cfg_q, goal_symmetric=False, synth_draw_seed=17)
+    kw = dict(signing_rate=0.0, honesty=1.0, g_max=3, n_creators=20, n_artifacts=60,
+              n_observers=2, infer_steps=4, d_i=0.0, base_seed=4242)
+    clean = run_chain(cfg_q, gm, POP_GOAL_DIST, contamination=0.0, **kw)
+    dirty = run_chain(cfg_q, gm, POP_GOAL_DIST, contamination=0.8, **kw)
+    kl_clean = float(np.mean([r.kl_payload for r in clean]))
+    kl_dirty = float(np.mean([r.kl_payload for r in dirty]))
+    assert kl_dirty > kl_clean, (
+        f"contamination must degrade the payload more than a clean corpus; "
+        f"f=0.8 gave {kl_dirty:.4f} vs f=0 {kl_clean:.4f}")
+
+
+def test_N11_seeded_creator_is_lossless_given_a_perfect_model():
+    """The fixed-point property the whole loop rests on (D5): a creator seeded from a
+    PERFECTLY learned A reproduces sig_true exactly, so f=0 cannot drift structurally."""
+    from ghostscale.config import load_config
+    from ghostscale.generations import SeededCreator
+
+    cfg_q = load_config()
+    gm = gmod.build_shared_model(cfg_q)
+    for g in range(cfg_q.cardinalities.num_goals):
+        target = np.asarray(gm.A[0])[:, K.CREATOR, g, K.DEEP]   # a perfect learned column
+        creator = SeededCreator(cfg_q, target, g)
+        emitted = creator.emission_distribution()
+        assert np.allclose(emitted, target, atol=1e-6), (
+            f"goal {g}: seeded creator emits {emitted} but should reproduce {target}")
+
+
+# --------------------------------------------------------------------------- #
+# N12 — Clean-corpus expertise.  E10's gradient must persist with zero synthetic content.
+# --------------------------------------------------------------------------- #
+def test_N12_e10_corpus_contains_no_ghost(cfg, tmp_path):
+    """Asserted in E10's worker itself; this test proves the assertion is reachable and that
+    a full E10 cell really does run on a corpus with no synthetic content."""
+    from ghostscale.config import load_config
+    from ghostscale.experiments import e10_expertise as e10
+
+    cfg_q = load_config(quick=True)
+    cfg_q.set("experiments.e10.d_sweep", [0.0, 0.9])
+    cfg_q.set("experiments.e10.n_replications", 1)
+    cfg_q.set("experiments.e10.n_observers", 2)
+    cfg_q.set("experiments.e10.n_artifacts", 40)
+    e10.run(cfg_q, out_dir=tmp_path, workers=1, make_fig=False)
+    df = pd.read_csv(tmp_path / "e10_raw.csv")
+    assert (df.n_ghost_in_corpus == 0).all(), "N12: E10 corpus must contain no GHOST artifacts"
+    assert set(df.d.unique()) == {0.0, 0.9}
 
 
 # --------------------------------------------------------------------------- #
