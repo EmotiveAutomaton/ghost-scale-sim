@@ -118,6 +118,27 @@ expertise:
   d_max: 0.0
 
 # ---------------------------------------------------------------------------
+# Learned likelihoods (V2 C3) — the Learner observer.
+#
+# DECISION D1: the prior is uninformative over PROVENANCE, not over everything. The
+# learner knows the shared goal->feature family (it has a body plan, per C1) and must
+# learn which sources actually carry intent. A fully-uniform prior is an IDENTIFIABILITY
+# deadlock, not just a disengagement one: measured MI stays at exactly 0 and all four
+# learned goal columns stay bit-identical even with DEEP forced. See ghostscale/learning.py.
+#
+# DECISION D2: prior_strength is calibrated for the EFE SCALE of the parameter info-gain
+# term (which pymdp adds raw, with no coefficient, at ~130x the scale of everything else);
+# learning SPEED is set separately by lr_pA so one knob does not do two jobs.
+# ---------------------------------------------------------------------------
+learning:
+  prior_strength: 16.0      # total Dirichlet concentration per A[0] column. SET BY CALIBRATION
+                            # (results/v2_calibration.json). Provisional until W6 runs.
+  lr_pA: 1.0                # Dirichlet pseudo-count scale per observation (learning SPEED)
+  use_param_info_gain: true # epistemic drive toward parts of the model not yet known.
+                            # D2 fallback: if calibration fails in one pass, set false
+                            # everywhere and record it as a deviation.
+
+# ---------------------------------------------------------------------------
 # Agent construction (Spec §3.7).
 # ---------------------------------------------------------------------------
 agent:
@@ -128,6 +149,33 @@ agent:
   action_selection: "deterministic"
   use_utility: true
   use_states_info_gain: true
+
+# ---------------------------------------------------------------------------
+# Behavioural regret (V2 C5) — the alignment harm metric, reported alongside KL
+# EVERYWHERE. "A KL of 1.0 that preserves the argmax may be harmless; a KL of 0.05
+# that flips it is catastrophic."
+#
+# DECISION D4: regret and argmax use the closed form (softmax(gamma*log C) == C, the
+# identity creators.HumanCreator already relies on); sycophancy uses a real pymdp agent
+# because it must INFER a hidden goal from an unreliable signal.
+# ---------------------------------------------------------------------------
+regret:
+  horizon: 100            # steps the downstream agent is scored over
+  policy_gamma: 8.0       # precision of the induced preference policy, pi = normalize(C^gamma).
+                          # Must be high enough that a CORRECT prior acts near-optimally
+                          # (regret ~ 0 when nothing is wrong) but finite, so a prior that
+                          # keeps the right argmax while being FLATTER still incurs regret.
+                          # A pure argmax policy would make regret a deterministic function
+                          # of argmax preservation and E11 would confirm itself.
+  # Sycophancy analogue (H5):
+  n_sycophancy_trials: 200
+  signal_honesty: 0.40    # P(the simulated user's signal points at the truly rewarded goal).
+                          # Deliberately only WEAKLY informative (chance is 0.25). At 0.7 the
+                          # likelihood ratio is 7:1, which no prior of this magnitude can
+                          # overturn: measured sycophancy is then flat at ~0.75 for every
+                          # C_recovered from exact to uniform, and the metric is dead.
+  c_match: 1.0            # preference strength for serving the right goal
+  gamma: 8.0              # policy precision of the sycophancy agent
 
 # ---------------------------------------------------------------------------
 # Experiment scale defaults (Spec §5): 200 observers, 40 timesteps, 20 seeds.

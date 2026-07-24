@@ -23,6 +23,7 @@ from .environment import Artifact, Environment
 from .generative_model import (GenerativeModel, build_D, make_agent,
                                build_observer_model)
 from . import metrics
+from . import learning as _learning
 
 # Fallback salt, used only if a Generator exposes no seed sequence to spawn from.
 _SIG_STREAM_SALT = 0x5164A17
@@ -107,7 +108,7 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                      force_deep_k: int = 0, record_efe: bool = False,
                      kappa: float | None = None, initial_glance: bool = True,
                      early_stop: bool = True, stop_patience: int = 3,
-                     stop_tol: float = 1e-3) -> RolloutResult:
+                     stop_tol: float = 1e-3, learn: bool = False) -> RolloutResult:
     """Roll one observer forward over ``n_timesteps`` looking at a single artifact.
 
     ``force_deep_k``: force DEEP for the first k steps (E2), so every condition gets a
@@ -126,7 +127,21 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
     forever and its beliefs are static (identity B on provenance/goal, no goal-resolving
     observations) — and it is the dominant runtime win. Never triggers before the forced
     phase ends.
+
+    ``learn`` (V2 C3): after each timestep's state inference, run a Dirichlet concentration
+    update on A[0]. Requires a Learner agent (one built with a pA). Two deliberate choices:
+
+      * The FREE INITIAL GLANCE never contributes a learning update. The glance is a
+        modelling device for delivering the provenance tag cheaply; letting it also update
+        the model would hand out free model improvements that no metabolic cost gates, and
+        that would blunt E9's starvation channel — a fully disengaged observer would keep
+        learning from glances alone and never starve.
+      * EARLY STOP is disabled whenever ``learn`` is set. Its correctness argument is that a
+        disengaged observer's beliefs are static, which is false once the model itself is
+        changing: a learner that skims is still accumulating counts on its SKIM columns.
     """
+    if learn:
+        early_stop = False   # the early-stop correctness argument does not survive learning
     agent.reset()
     deep_pol, skim_pol = find_named_policies(agent)
     goal_prior = np.asarray(agent.D[K.F_GOAL], dtype=float).copy()
@@ -145,7 +160,18 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
 
     first_skim = -1
     for t in range(n_timesteps):
-        agent.infer_policies()  # decision from current (pre-observation) beliefs
+        forced = t < force_deep_k
+
+        # COST: infer_policies is ~85% of runtime in the forced-DEEP aggregator path
+        # (measured: 2.25s of 2.63s), and on a forced step its entire output is discarded —
+        # the action is set directly below and ``sample_action`` is never called, so q_pi and
+        # G are never read. Skipping it there is exact, not an approximation. It is still run
+        # when EFE terms are being recorded, since those ARE the measurement (E1/E5).
+        # This is the dominant cost lever for E6/E6b/E7, not the corpus caching V2 spec §4
+        # assumes: an Artifact is metadata only, and draw_corpus(200) costs 0.9 ms against
+        # 5091 ms of rollouts for the same 200 artifacts.
+        if record_efe or not forced:
+            agent.infer_policies()  # decision from current (pre-observation) beliefs
 
         if record_efe:
             pd, ed_tot = metrics.policy_efe_terms(agent, deep_pol)
@@ -155,7 +181,6 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
             efe["deep_prag"][t], efe["deep_epi_total"][t], efe["deep_epi_goal"][t] = pd, ed_tot, ed_goal
             efe["skim_prag"][t], efe["skim_epi_total"][t], efe["skim_epi_goal"][t] = ps, es_tot, es_goal
 
-        forced = t < force_deep_k
         if forced:
             attention = K.DEEP
             agent.action = _deep_action(agent)
@@ -167,6 +192,8 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
 
         obs = env.observation(artifact, attention, rng)
         qs = agent.infer_states(obs)
+        if learn:
+            _learning.learn_step(agent, obs, cfg)
 
         attn[t] = attention
         goal_post[t] = np.asarray(qs[K.F_GOAL])
