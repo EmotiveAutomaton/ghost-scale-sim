@@ -1,0 +1,34 @@
+[project]
+name = "ghost-scale-sim"
+version = "0.1.0"
+description = "Ghost Scale Simulation — active-inference model of the generative crash and the trust exploit"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Abraham Haskins, PhD" }]
+dependencies = [
+    "inferactively-pymdp==1.0.2", # ships pymdp.legacy; we use the legacy NumPy API only
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "pyyaml",
+    "seaborn",
+    "pytest",
+]
+
+# Non-negotiable API constraint (Spec §1): use the legacy NumPy interface throughout.
+#   from pymdp.legacy.agent import Agent
+#   from pymdp.legacy import utils, maths
+# pymdp 1.x is JAX-first at the top level; the legacy module is the correct target for
+# this workload (hundreds of independent small agents in a Python loop).
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ghostscale*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
