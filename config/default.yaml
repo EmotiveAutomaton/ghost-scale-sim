@@ -36,9 +36,11 @@ artifact_model:
   # structured, not noise. Entropy stays LOW; MI with goal goes to ZERO.
   noise_free_synth_concentration: 0.5   # Dirichlet concentration (< 1 => structured/peaked)
   noise_free_synth_seed: 20240719       # dedicated seed so the frozen synth is reproducible
-  structured_ceiling: 2.6               # max allowed H(noise_free_synth) in nats (< ln(8)=2.079? see note)
-  # NOTE: ln(8) = 2.0794 nats is uniform entropy. structured_ceiling is asserted to be a
-  # value the frozen synth stays BELOW; it is validated at construction against actual H.
+  structured_ceiling: 1.8               # max allowed H(noise_free_synth) in nats. MUST be < ln(8)=2.079
+  # NOTE: ln(8)=2.0794 nats is uniform entropy. The ceiling sits BELOW uniform so the
+  # assertion is meaningful: it proves the synthetic content is structured (H≈1.55 with the
+  # default seed), and it cleanly REJECTS the uniform-noise strawman (H=2.079 > 1.8) used in
+  # null N6 — that is exactly the structured-vs-noise discriminator.
 
   # Intent-transmission coefficients alpha[p]: Ghost Scale opacity read as fraction of
   # recoverable intent (Spec §3.3). This alpha<->opacity correspondence is the framework's
