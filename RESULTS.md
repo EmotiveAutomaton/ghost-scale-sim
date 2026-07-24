@@ -171,14 +171,16 @@ inference protects the alignment payload — this is the CIRL-loop-in-miniature 
 hand a downstream agent as its preference prior survives heavy contamination *if and only if* the
 aggregator is provenance-aware.
 
-**Did not replicate, and why (reported, not tuned):** the two finer predictions — that an *honest
-signal* attenuates the corruption, and that *high κ under low signing* is the most corruptible — do
-**not** appear at full scale. Recovery KL is essentially **flat across signing_rate and κ**
-(e.g. at f=0.8: 0.008 / 0.005 / 0.003 for signing 0.0 / 0.5 / 1.0, and identical across κ). The
-mechanism: a DEEP-inspecting aggregator identifies synthetic content **from the content itself**
-(GHOST features match the GHOST likelihood column), so it excludes contamination without needing the
-provenance signal. In this model the signal is therefore **redundant for recovery accuracy**; its
-value is **metabolic** — it lets the aggregator exclude synthetics *cheaply*, without spending DEEP
+**Mostly did not replicate, and why (reported, not tuned):** the two finer predictions — that an
+*honest signal* attenuates the corruption, and that *high κ under low signing* is the most
+corruptible — are, at full scale, **an order of magnitude too small to matter**. An honest signal
+*does* help, but only marginally and only at extreme contamination (at f=0.8: KL 0.008 / 0.005 /
+0.003 for signing 0.0 / 0.5 / 1.0) — a ≤0.008 nats effect against the naive aggregator's 0.066 and
+essentially flat across κ. The mechanism: a DEEP-inspecting aggregator identifies synthetic content
+**from the content itself** (GHOST features match the GHOST likelihood column), so it excludes
+contamination without needing the provenance signal. In this model the signal is therefore **nearly
+redundant for recovery accuracy**; its value is overwhelmingly **metabolic** — it lets the
+aggregator exclude synthetics *cheaply*, without spending DEEP
 inspections (exactly the saving quantified in E3 and E5). The "trusting observer with no signal is
 most corruptible" effect requires either a *bounded* inspection budget (so the aggregator cannot
 afford to inspect and must rely on the signal) or *dishonest* signals (the trust exploit, which is
