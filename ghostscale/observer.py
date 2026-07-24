@@ -72,7 +72,9 @@ class RolloutResult:
 def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                      rng: np.random.Generator, n_timesteps: int,
                      force_deep_k: int = 0, record_efe: bool = False,
-                     kappa: float | None = None, initial_glance: bool = True) -> RolloutResult:
+                     kappa: float | None = None, initial_glance: bool = True,
+                     early_stop: bool = True, stop_patience: int = 3,
+                     stop_tol: float = 1e-3) -> RolloutResult:
     """Roll one observer forward over ``n_timesteps`` looking at a single artifact.
 
     ``force_deep_k``: force DEEP for the first k steps (E2), so every condition gets a
@@ -84,6 +86,13 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
     intended (Spec §0): the observer reads the provenance tag cheaply and early, and can
     then disengage from GHOST content *before* burning DEEP budget. The glance is not
     counted as a timestep or a DEEP step.
+
+    ``early_stop``: once the observer has disengaged (SKIM) and its goal posterior has been
+    stable for ``stop_patience`` steps, the rollout stops and the remaining timesteps are
+    padded with the final value. This is exact — after disengagement the agent skims
+    forever and its beliefs are static (identity B on provenance/goal, no goal-resolving
+    observations) — and it is the dominant runtime win. Never triggers before the forced
+    phase ends.
     """
     agent.reset()
     deep_pol, skim_pol = find_named_policies(agent)
@@ -130,6 +139,20 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
         goal_post[t] = np.asarray(qs[K.F_GOAL])
         prov_post[t] = np.asarray(qs[K.F_PROVENANCE])
         ent[t] = metrics.within_observer_entropy(goal_post[t])
+
+        # Early stop: after the forced phase, if disengaged (SKIM) and the goal posterior
+        # has been stable for `stop_patience` steps, the future is static -> pad and break.
+        if early_stop and not forced and attention == K.SKIM and t >= force_deep_k + stop_patience:
+            recent = goal_post[t - stop_patience:t + 1]
+            if np.max(np.abs(recent - goal_post[t])) < stop_tol:
+                attn[t + 1:] = K.SKIM
+                goal_post[t + 1:] = goal_post[t]
+                prov_post[t + 1:] = prov_post[t]
+                ent[t + 1:] = ent[t]
+                if record_efe:
+                    for key in efe:
+                        efe[key][t + 1:] = efe[key][t]
+                break
 
     final_goal = goal_post[-1]
     return RolloutResult(
