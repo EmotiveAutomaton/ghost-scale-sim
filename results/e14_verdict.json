@@ -1,0 +1,62 @@
+{
+  "experiment": "E14 (not in the V3 spec; required by \u00a71 C2's 'until that reason is found')",
+  "hypothesis": "the f=0 leak is misattribution under unresolved goal posteriors \u2014 a self-confirming learning bias bounded by ENGAGEMENT, not by sample size",
+  "arms": {
+    "forced": {
+      "leak_slope": {
+        "slope": 0.007243769100684562,
+        "se": 0.002487380274064948,
+        "t": 2.9122081477499973
+      },
+      "n11_verdict_on_this_arm": {
+        "slope": 0.007243769100684562,
+        "t": 2.9122081477499973,
+        "t_ok": false,
+        "slope_ok": false,
+        "passed": false,
+        "criterion": "|t| < 2.0 AND |slope| < 0.001"
+      },
+      "creator_col_kl_slope": {
+        "slope": 0.11386911630407011,
+        "se": 0.011979216487665941,
+        "t": 9.50555626249114
+      },
+      "creator_col_kl_mean": 0.3843049580224828,
+      "creator_col_kl_gen0": 0.08476664696783585,
+      "kl_payload_mean": 0.024394593377678787,
+      "deep_per_genuine": 6.0,
+      "c_entropy_gen0": 1.2937336028896864,
+      "c_entropy_final": 1.3607919557777108
+    },
+    "free": {
+      "leak_slope": {
+        "slope": 0.005476255606132295,
+        "se": 0.0021417066120665434,
+        "t": 2.556958817458302
+      },
+      "n11_verdict_on_this_arm": {
+        "slope": 0.005476255606132295,
+        "t": 2.556958817458302,
+        "t_ok": false,
+        "slope_ok": false,
+        "passed": false,
+        "criterion": "|t| < 2.0 AND |slope| < 0.001"
+      },
+      "creator_col_kl_slope": {
+        "slope": 0.04737371950270361,
+        "se": 0.010505691375213446,
+        "t": 4.5093385871275995
+      },
+      "creator_col_kl_mean": 0.5767008737380462,
+      "creator_col_kl_gen0": 0.4635418741380972,
+      "kl_payload_mean": 0.0800649242731243,
+      "deep_per_genuine": 2.171322222222222,
+      "c_entropy_gen0": 1.3727233159524959,
+      "c_entropy_final": 1.381619436583125
+    }
+  },
+  "forced_over_free_column_error": 0.6663852536437199,
+  "hypothesis_supported": false,
+  "reference_e9_control_column_kl": 0.0744,
+  "interpretation": "supported: forcing engagement removes the leak that neither more data (E12 N-sweep) nor more observers (E12 M-sweep) could touch, so the loop's loss is attribution error under unresolved posteriors. NOT supported: both arms leak, the cause lies elsewhere again, and E8 stays withheld under \u00a76 either way \u2014 this experiment identifies a mechanism, it does not repair E8."
+}

@@ -1,0 +1,10 @@
+{
+  "single_generation_contraction_at_6_steps": 0.078,
+  "single_generation_contraction_at_24_steps": 0.014,
+  "expected_factor": 5.7,
+  "free_arm_leak_slope_at_6_steps": 0.00548,
+  "forced_arm_leak_slope_at_6_steps": 0.00724,
+  "predicted_leak_slope_at_24_steps_if_chain_follows": 0.001,
+  "n11_slope_ceiling": 0.001,
+  "if_chain_does_not_follow": "early-step misattribution is not the whole of the generational contraction; a second contributor exists and must be found before the estimator fix is credited with anything"
+}

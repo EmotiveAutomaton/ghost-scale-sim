@@ -10,9 +10,18 @@ plain-language: <https://abrahamhaskins.org/art>; Ghost Scale Figma kit:
 <https://www.figma.com/community/file/1624141586132218953>).
 
 > **This is a model, not a demo.** Every headline effect has a matching *null condition* that
-> must produce a null (`tests/test_nulls.py`). Read `RESULTS.md` for what actually happened,
-> including where predictions did not fully replicate and the deliberate deviations from the
-> build spec.
+> must produce a null (`tests/test_nulls*.py`). Read `RESULTS.md`, `RESULTS_V2.md` and
+> `RESULTS_V3.md` for what actually happened — including where predictions did not replicate,
+> where a gate refused to let an experiment be reported, and the deliberate deviations from the
+> build specs.
+
+> **One experiment has never been reportable.** E8 (recursive generational degradation) has
+> failed its acceptance null in every version, and is withheld rather than reported. V3 was
+> built to repair it; V3's own diagnosis was refuted by V3's own gate, along with three
+> successor hypotheses. What that produced instead — a located, measured estimator bias and the
+> methodological pattern that caught it — is in `RESULTS_V3.md`. The failing null is kept as a
+> visible `xfail(strict)` in the suite rather than deleted, so a future fix forces the marker
+> off.
 
 ## What is being modeled
 
@@ -135,6 +144,42 @@ true, the deviation gets revisited rather than inherited.
 V2 §0's third diagnosis actually poses — you do not have the GHOST column and must learn it from a
 corpus that is already contaminated and unlabelled — and it is the one the experiment answers.
 
+## V3: what a refuted diagnosis produced
+
+V3 set out to repair E8 under one hypothesis — that the loop's f = 0 leak was finite-sample
+estimation error, fixable by population-averaged seeding and a larger per-generation sample.
+The pre-registered gate (`ghostscale/prereg_v3.py`, hash-locked before any run) refuted it:
+across a **100× range of sample size the leak is statistically indistinguishable from
+constant**, and at generation 0 it *grows* with data. E8 did not run.
+
+Three successor hypotheses were then tested and refuted in turn. What survived is specific:
+
+- **The contraction was an estimator artifact, and it is now located and fixed.** `learn_step`
+  committed Dirichlet counts at every timestep using the posterior held *at that moment*, so
+  each artifact's first observation was filed before its goal had resolved. A fixed fraction of
+  all evidence, ≈ `1/infer_steps`, was misattributed — which is why the effect was invariant to
+  corpus size, to observer averaging, and nearly so to engagement. Deferring commitment until
+  inference finishes (`learning.learn_deferred`) removes it: the learned-column error falls
+  **171×** and `H(C_recovered)` stops drifting toward uniform.
+- **The fix is flat in the inference budget, and that is the point.** Raising `infer_steps`
+  divides the bias; deferring commitment removes it. A result that clears its gate only at a
+  hand-picked budget is a tuned result, so the tuned route was run as a labelled diagnostic and
+  excluded from the reportable set — it lands on the same residual anyway.
+- **E8 is still withheld.** The repaired chain misses its pre-registered null narrowly
+  (slope +0.00116 against a 0.001 ceiling). "Narrowly" is exactly the case the no-exceptions
+  rule exists for.
+
+The residual that remains behaves differently from the bias that was removed — divergence grows
+while entropy stays put — and the next experiment is named in `RESULTS_V3.md` rather than run.
+
+**The most transferable result is methodological.** Three separate times, a coherent and
+plausible story was one step from being written down, and what stopped it was measuring the
+*instrument* rather than the phenomenon: a stale file silently substituting its own parameter,
+a null that tested a weaker claim than the hypothesis it gated, and a statistic computed at the
+wrong timestep that understated an effect fifty-fold. Two of the three produced not just
+plausible numbers but plausible explanations. `RESULTS_V3.md` records all three, because the
+cheap habit that caught them generalises further than anything else here.
+
 ## Relationship to existing active inference work on Theory of Mind
 
 This model slots into a named gap in the active-inference ToM literature. The mapping, honestly:
@@ -166,14 +211,27 @@ is that it fills a named gap, and that argument is weakened by claiming more gro
 ## Repository layout
 
 ```
-ghostscale/            generative_model, creators, environment, observer, metrics, figures
-ghostscale/experiments/ e1..e6, each runnable standalone
-tests/                 test_model_invariants.py (§10), test_nulls.py (§9, N1..N7)
-config/default.yaml    every Spec §3 parameter
+ghostscale/             generative_model, creators, environment, observer, learning, probes, metrics
+ghostscale/experiments/ e1..e18, each runnable standalone
+ghostscale/prereg_v3.py V3's acceptance criteria as executable, hash-locked code
+tests/                  test_model_invariants.py (§10), test_nulls*.py (N1..N15)
+config/default.yaml     every spec parameter, for every version
 notebooks/walkthrough.ipynb   runs E1 and E2 end to end, narrated
-results/  figures/     generated CSVs and PNGs
-RESULTS.md             written from actual output, incl. deviations and non-replications
+results/  figures/      generated CSVs and PNGs (CSV/PNG gitignored; JSON verdicts committed)
+RESULTS.md              V1 — written from actual output, incl. deviations and non-replications
+RESULTS_V2.md           V2 — adds the Learner, expertise, regret; E8 first withheld here
+RESULTS_V3.md           V3 — the refuted diagnosis, the estimator fix, the methodological finding
+DECISIONS_V2.md         design decisions signed off before V2 was implemented
+DECISIONS_V3.md         the same for V3, including the compute and criterion decisions
+run_all.py / run_all_v2.py / run_all_v3.py   gated runners, one per version
 ```
+
+Experiments added after V1: `e6b` (biased synthetic content), `e7` (learning the GHOST column
+without labels), `e8` (recursive degradation — **withheld**), `e9` (poisoning vs starvation),
+`e10` (the expertise gradient), `e11` (regret vs KL), `e12` (leak vs sample size — the gate that
+refuted V3), `e13` (freeze/leak shared axis), `e14` (engagement floor), `e15` (competence cliff
+or knee), `e16` (labelling coverage threshold), `e17` (fabrication across all four tiers),
+`e18` (deferred-commitment estimator).
 
 ## Provenance of design choices
 

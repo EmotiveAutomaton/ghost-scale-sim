@@ -108,7 +108,8 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                      force_deep_k: int = 0, record_efe: bool = False,
                      kappa: float | None = None, initial_glance: bool = True,
                      early_stop: bool = True, stop_patience: int = 3,
-                     stop_tol: float = 1e-3, learn: bool = False) -> RolloutResult:
+                     stop_tol: float = 1e-3, learn: bool = False,
+                     learn_mode: str = "online") -> RolloutResult:
     """Roll one observer forward over ``n_timesteps`` looking at a single artifact.
 
     ``force_deep_k``: force DEEP for the first k steps (E2), so every condition gets a
@@ -139,9 +140,21 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
       * EARLY STOP is disabled whenever ``learn`` is set. Its correctness argument is that a
         disengaged observer's beliefs are static, which is false once the model itself is
         changing: a learner that skims is still accumulating counts on its SKIM columns.
+
+    ``learn_mode`` (V3 follow-up) selects WHEN evidence is committed:
+
+      * ``"online"``   — V1/V2/V3 behaviour: update at every timestep with the posterior held
+        at that moment. Biased flat, because the first DEEP observation is committed before
+        the goal has resolved; see ``learning.learn_deferred`` for the measurement.
+      * ``"deferred"`` — buffer the artifact's observations and commit them once inference has
+        finished, attributed under the resolved posterior. No new parameter, and the bias is
+        absent at any ``n_timesteps``.
     """
     if learn:
         early_stop = False   # the early-stop correctness argument does not survive learning
+    if learn_mode not in ("online", "deferred"):
+        raise ValueError(f"learn_mode must be 'online' or 'deferred', got {learn_mode!r}")
+    buffered: list[tuple[list[int], np.ndarray]] = []
     agent.reset()
     deep_pol, skim_pol = find_named_policies(agent)
     goal_prior = np.asarray(agent.D[K.F_GOAL], dtype=float).copy()
@@ -193,7 +206,12 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
         obs = env.observation(artifact, attention, rng)
         qs = agent.infer_states(obs)
         if learn:
-            _learning.learn_step(agent, obs, cfg)
+            if learn_mode == "online":
+                _learning.learn_step(agent, obs, cfg)
+            else:
+                # Attention is kept per-step: effort observations reveal it exactly, so it is
+                # not one of the uncertain factors the resolved posterior is meant to correct.
+                buffered.append((obs, np.asarray(qs[K.F_ATTENTION], dtype=float).copy()))
 
         attn[t] = attention
         goal_post[t] = np.asarray(qs[K.F_GOAL])
@@ -213,6 +231,11 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                     for key in efe:
                         efe[key][t + 1:] = efe[key][t]
                 break
+
+    if learn and learn_mode == "deferred":
+        # Inference over this artifact is finished; commit its evidence now, under the
+        # posterior that finishing produced.
+        _learning.learn_deferred(agent, buffered, cfg)
 
     final_goal = goal_post[-1]
     return RolloutResult(

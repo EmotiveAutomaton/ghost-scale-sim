@@ -269,6 +269,59 @@ def build_A1_observer(cfg: Config, kappa: float) -> np.ndarray:
     return A1
 
 
+def build_A1_regime_aware(cfg: Config, kappa: float,
+                          signing_rate_by_provenance: dict[int, float]) -> np.ndarray:
+    """A[1] for an observer who KNOWS THE LABELLING REGIME (E16).
+
+        A1[:, p, :, :] = s_p · (κ·truthful_row(p) + (1-κ)·uniform_over_the_4_signal_types)
+                         + (1 - s_p) · onehot(UNSIGNED)
+
+    -------------------------------------------------------------------------------------
+    WHY THIS EXISTS, AND WHY IT IS A SEPARATE FUNCTION RATHER THAN A FIX.
+
+    ``build_A1_observer`` gives ``P(UNSIGNED | provenance) = (1-κ)/5`` — the SAME value for
+    every provenance. Under that likelihood the absence of a label carries exactly zero
+    information about where an artifact came from, by construction and at any coverage.
+
+    That is fine for V1/V2, where labelling is uniform across tiers so absence really is
+    uninformative. It is fatal to the question "how much AI content must be labelled to
+    protect the corpus", because the entire policy mechanism is the CONTRAPOSITIVE: if
+    synthetic work is disclosed at rate p, an unlabelled artifact is evidence of humanity,
+    and that inference is unavailable to an observer holding the V1/V2 likelihood.
+
+    So this is not a bug fix. It is a **different observer**, carrying an extra piece of
+    knowledge — the coverage of the regime it lives under — and the difference between the
+    two is itself the finding E16 reports. A reader who does not know a disclosure mandate
+    exists cannot benefit from it, however good the mandate is.
+
+    ``s_p`` is the observer's BELIEF about coverage. E16 gives it the true value, which is
+    the most generous assumption available and therefore an upper bound on what disclosure
+    can buy; a miscalibrated reader can only do worse.
+    -------------------------------------------------------------------------------------
+    """
+    cd = cards(cfg)
+    signal_types = [s for s in range(cd.signals) if s != K.UNSIGNED]
+    uniform_signed = np.zeros(cd.signals)
+    for s in signal_types:
+        uniform_signed[s] = 1.0 / len(signal_types)
+
+    A1 = np.zeros((cd.signals, cd.provenance, cd.goals, cd.attention))
+    for p in range(cd.provenance):
+        s_p = float(signing_rate_by_provenance.get(int(p), 0.0))
+        truthful = np.zeros(cd.signals)
+        truthful[K.TRUTHFUL_SIGNAL[p]] = 1.0
+        signed_row = kappa * truthful + (1.0 - kappa) * uniform_signed
+        row = s_p * signed_row
+        row[K.UNSIGNED] += (1.0 - s_p)
+        row = row / row.sum()
+        for g in range(cd.goals):
+            for att in range(cd.attention):
+                A1[:, p, g, att] = row
+    assert np.allclose(A1.sum(axis=0), 1.0, atol=1e-10), \
+        "A1_regime_aware must stay column-stochastic"
+    return A1
+
+
 def build_A2(cfg: Config) -> np.ndarray:
     """A[2] effort, deterministic, shape (effort, prov, goal, att).
     LOW_COST↔SKIM, HIGH_COST↔DEEP; constant across provenance and goal (Spec §3.3)."""

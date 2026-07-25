@@ -32,3 +32,6 @@ include = ["ghostscale*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "slow: reads a real experiment's output rather than re-simulating; skips until it exists",
+]

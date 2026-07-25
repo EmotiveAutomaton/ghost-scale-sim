@@ -293,17 +293,135 @@ experiments:
     kappa: 0.9
     synth_draw_seed: 17
 
-  # E8 (V2 stage 5) — recursive degradation. Run last. G_max may NOT drop below 3 (spec §4).
+  # E8 (V3 stage 4) — recursive degradation, re-run under C1. GATED on E12 and the repaired
+  # N11. V3 §4: G_max may NOT drop below 6 — the superlinearity claim needs the generations.
   e8:
-    g_max: 4
+    g_max: 8               # V2 used 4; four generations cannot distinguish a curve from a line
     n_creators_next: 20
-    n_artifacts: 300
+    n_artifacts: 300       # PLACEHOLDER. E12 sets this; see population_average_seed below and
+                           # results/e12_threshold.json. Never hardcode E8's sample size
+                           # (V3 §1 C2) — run_all_v3 refuses to run E8 without the threshold.
     n_observers: 5
+    n_probes: 150          # C3 encoder-divergence probe set (0 disables the second channel)
     infer_steps: 6
     n_replications: 3
     contamination_levels: [0.0, 0.3, 0.6]
     d: 0.0
     synth_draw_seed: 17
+    population_average_seed: true    # C1. False reproduces the V2 leak (E12's control arm).
+    min_g_max: 6                     # asserted in the worker; V3 §4 cost lever floor
+
+  # E12 (V3 stage 1) — leak versus sample size. Runs FIRST; its output sets E8's sample size.
+  # Two sub-sweeps, because C1 and C2 make two different claims:
+  #   N-sweep: does the leak shrink as 1/N?  (the finite-sample diagnosis itself — N13)
+  #   M-sweep: does averaging over M observers help, and where does its floor sit?  (C1, D2)
+  # The M sweep exists because the corpus is drawn ONCE per generation and shared by all M
+  # observers, so averaging cannot cancel the corpus's own goal-composition noise. The 1/M
+  # gain has a floor only larger N can lower, and this measures it.
+  e12:
+    n_artifacts_sweep: [100, 300, 1000, 3000, 10000]
+    m_observers_sweep: [1, 5, 20]     # M=1 must reproduce the V2 seeding exactly (N14)
+    m_sweep_n_artifacts: 1000         # M sweep at fixed N, so M is the only thing varying
+    g_max: 8                          # D4: must match E8's, or the threshold does not transfer
+    n_observers: 5                    # the N sweep's fixed M
+    n_creators_next: 20
+    infer_steps: 6
+    n_replications: 3                 # FIXED by the pre-registration; do not vary per cell
+    d: 0.0
+    synth_draw_seed: 17
+    # The condition that failed N11 in V2: zero contamination, honest signal.
+    contamination: 0.0
+    signing_rate: 1.0
+
+  # E13 (V3 stage 2) — the freeze/leak shared-signature diagnostic.
+  # Both halves report the IDENTICAL quantity (KL of the learned CREATOR/DEEP column from the
+  # true one) against effective Dirichlet sample count, which is the only way "the same curve"
+  # is defined across two experiments that otherwise measure in different spaces (D7).
+  e13:
+    # half 1: E9's starvation arm, re-run with instrumentation (V2 E9 scale, so it is comparable)
+    n_artifacts: 400
+    n_observers: 8
+    n_creators: 50
+    contamination_levels: [0.0, 0.3, 0.6]
+    kappa: 0.9
+    # half 2: the f=0 honest-signal recursion, instrumented on the same axis
+    recursion_n_artifacts: 1000
+    recursion_g_max: 4
+    recursion_n_observers: 5
+    recursion_n_creators: 20
+    infer_steps: 6
+    n_replications: 3
+    synth_draw_seed: 17
+    trace_every: 25        # record the panel every k artifacts; the x-axis is sample count
+
+  # E14 — engagement floor on the f=0 leak (added after E12 refuted the V3 diagnosis).
+  e14:
+    g_max: 6
+    n_artifacts: 1000
+    n_observers: 5
+    n_creators_next: 20
+    infer_steps: 6
+    n_replications: 3
+    synth_draw_seed: 17
+
+  # E18 — does fixing the ESTIMATOR (deferred commitment) remove the contraction?
+  # Run at V3's OWN infer_steps, with the estimator as the only variable. Raising the
+  # inference budget divides the bias; deferring commitment removes it, and the deferred
+  # estimator's single-generation bias is flat in the budget, so nothing depends on the value.
+  e18:
+    g_max: 6
+    n_artifacts: 1000
+    n_observers: 5
+    n_creators_next: 20
+    infer_steps: 6         # deliberately V3's value; do NOT raise it to help the result
+    n_replications: 3
+    freeze_engagement: true   # forced DEEP, matching E14's cleanest arm
+    synth_draw_seed: 17
+
+  # ---------------------------------------------------------------------------
+  # Follow-up experiments on the V1/V2 standalone results (E15-E17).
+  # ---------------------------------------------------------------------------
+
+  # E15 — is E10's competence threshold a cliff or a knee?
+  # The window is 0.40-1.00, NOT the 0.30-0.70 first proposed: E10's successive accuracy
+  # drops (-0.0004 / -0.0023 / -0.0121 / -0.0546 / -0.1810 / -0.2195) are still accelerating
+  # at d = 0.9, so the transition midpoint lies ABOVE 0.7 and a 0.3-0.7 grid would spend half
+  # its points where accuracy is >= 0.997 and stop before the collapse it means to resolve.
+  e15:
+    d_grid: [0.0, 0.2, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1.00]
+    n_creators: 50
+    n_artifacts: 300       # matched to E10 so the main sweep is directly comparable
+    n_observers: 20
+    infer_steps: 8
+    n_replications: 5
+    # The width-versus-evidence arm: a transition is only "sharp" if its width narrows as
+    # evidence per observer grows. If the width is invariant, it is a smooth crossover and
+    # "cliff" is the wrong word however steep the curve looks.
+    width_d_grid: [0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90]
+    width_corpus_sizes: [75, 300, 1200]
+    width_n_replications: 3
+
+  # E16 — how much AI content must be labelled to protect the corpus?
+  # 2x2: regime (symmetric | ai_only) x reader (naive | regime_aware). The reader axis is
+  # load-bearing: build_A1_observer makes P(UNSIGNED | provenance) identical across tiers, so
+  # a naive reader cannot draw the "unlabelled implies human" inference at ANY coverage.
+  e16:
+    coverage_grid: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.0]
+    kappa: 0.9             # E7's protective-signal condition; labels are worth trusting
+    contamination: 0.6     # the heavily contaminated corpus, where labelling should matter most
+    n_creators: 50
+    n_artifacts: 400
+    n_observers: 6
+    infer_steps: 6
+    n_replications: 3
+    synth_draw_seed: 17
+
+  # E17 — E2's confident-fabrication result across all four tiers rather than a binary contrast.
+  e17:
+    n_observers: 200       # between-observer disagreement IS the measure; keep the population
+    n_seeds: 20
+    forced_deep_k: 10
+    true_goal: 1
 
 # ---------------------------------------------------------------------------
 # Verification tolerances.
@@ -350,3 +468,53 @@ quick:
       n_observers: 5
       n_creators_next: 6
       n_replications: 2
+      n_probes: 40
+      min_g_max: 3         # the --quick floor; the REAL run keeps V3 §4's floor of 6
+    # V3 §4 cost lever 3: --quick must remain functional for every new experiment.
+    e12:
+      n_artifacts_sweep: [60, 120, 240]
+      m_observers_sweep: [1, 3]
+      m_sweep_n_artifacts: 120
+      g_max: 3
+      n_observers: 3
+      n_creators_next: 6
+      n_replications: 2
+    e13:
+      n_artifacts: 150
+      n_observers: 4
+      n_creators: 10
+      contamination_levels: [0.0, 0.6]
+      recursion_n_artifacts: 150
+      recursion_g_max: 2
+      recursion_n_observers: 3
+      recursion_n_creators: 6
+      n_replications: 2
+      trace_every: 25
+    e14:
+      g_max: 3
+      n_artifacts: 150
+      n_observers: 3
+      n_creators_next: 6
+      n_replications: 2
+    e18:
+      g_max: 3
+      n_artifacts: 150
+      n_observers: 3
+      n_creators_next: 6
+      n_replications: 2
+    e15:
+      d_grid: [0.0, 0.5, 0.7, 0.8, 0.9, 1.0]
+      n_artifacts: 100
+      n_observers: 6
+      n_replications: 2
+      width_d_grid: [0.6, 0.7, 0.8, 0.9]
+      width_corpus_sizes: [50, 200]
+      width_n_replications: 2
+    e16:
+      coverage_grid: [0.0, 0.3, 0.6, 1.0]
+      n_artifacts: 150
+      n_observers: 3
+      n_replications: 2
+    e17:
+      n_observers: 40
+      n_seeds: 4

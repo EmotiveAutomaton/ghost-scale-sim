@@ -43,6 +43,9 @@ def emit_signal(rng: np.random.Generator, true_provenance: int,
         otherwise:
             with prob honesty:        signal matching true provenance
             with prob (1 - honesty):  SIG_CREATOR   (the bad actor's move)
+
+    ``signing_rate`` may be PER-PROVENANCE (see ``Environment.signing_rate_for``), which is
+    what lets E16 model a disclosure regime that labels synthetic content only.
     """
     if rng.random() >= signing_rate:
         return K.UNSIGNED
@@ -62,13 +65,19 @@ class Environment:
                  alpha_overrides: dict | None = None,
                  alpha_permutation: list[int] | None = None,
                  ghost_pure_synth: bool = True,
-                 creator_bank: dict[int, HumanCreator] | None = None):
+                 creator_bank: dict[int, HumanCreator] | None = None,
+                 signing_rate_by_provenance: dict[int, float] | None = None):
         self.cfg = cfg
         self.gm = gm
         self.cd = cards(cfg)
         self.honesty = float(cfg.signal_model.honesty) if honesty is None else float(honesty)
         self.signing_rate = (float(cfg.signal_model.signing_rate)
                              if signing_rate is None else float(signing_rate))
+        # E16: a labelling regime may cover tiers unequally — e.g. "disclose synthetic content"
+        # labels GHOST at rate p and human work not at all. None = the uniform V1/V2 behaviour.
+        self.signing_rate_by_provenance = (
+            None if signing_rate_by_provenance is None
+            else {int(k): float(v) for k, v in signing_rate_by_provenance.items()})
         # TRUE alpha (may be overridden/permuted for nulls N1/N4, matching the model build).
         self.alpha = alpha_by_provenance(cfg, overrides=alpha_overrides,
                                          permutation=alpha_permutation)
@@ -77,9 +86,16 @@ class Environment:
         self.creators = creator_bank if creator_bank is not None else build_creator_bank(cfg, gm)
 
     # -- artifact construction ------------------------------------------------
+    def signing_rate_for(self, provenance: int) -> float:
+        """The labelling coverage this tier actually receives."""
+        if self.signing_rate_by_provenance is None:
+            return self.signing_rate
+        return self.signing_rate_by_provenance.get(int(provenance), self.signing_rate)
+
     def make_artifact(self, provenance: int, goal: int,
                       rng: np.random.Generator) -> Artifact:
-        signal = emit_signal(rng, provenance, self.honesty, self.signing_rate)
+        signal = emit_signal(rng, provenance, self.honesty,
+                             self.signing_rate_for(provenance))
         return Artifact(provenance=int(provenance), goal=int(goal), declared_signal=signal)
 
     # -- observation emission -------------------------------------------------

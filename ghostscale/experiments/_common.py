@@ -72,7 +72,18 @@ def observer_rng(base_seed: int, cell_index: int, seed_rep: int, observer_i: int
 
 
 def ensure_dirs(out_dir: Path | None = None) -> tuple[Path, Path]:
-    res = Path(out_dir) if out_dir is not None else RESULTS_DIR
+    """Resolve (results_dir, figures_dir).
+
+    An explicit ``--out`` redirects the FIGURES too, into ``<out>/figures``. Without this a
+    run directed away from ``results/`` would still overwrite the committed figures — which is
+    the failure it was invoked to avoid. (Learned the hard way: a ``--quick`` run without
+    ``--out`` destroyed V2's E8 outputs; see DECISIONS_V3.md, "An incident worth recording".)
+    """
+    if out_dir is not None:
+        res = Path(out_dir)
+        figs = res / "figures"
+    else:
+        res, figs = RESULTS_DIR, FIGURES_DIR
     res.mkdir(parents=True, exist_ok=True)
-    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
-    return res, FIGURES_DIR
+    figs.mkdir(parents=True, exist_ok=True)
+    return res, figs

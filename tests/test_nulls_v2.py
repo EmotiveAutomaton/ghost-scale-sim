@@ -230,36 +230,58 @@ def test_N9_prereg_is_locked_against_tampering(cfg, tmp_path):
 # "If generational decay appears without any contamination, the recursion loop itself is
 #  lossy and every E8 result is an artifact of the implementation rather than a finding."
 # --------------------------------------------------------------------------- #
-@pytest.mark.xfail(strict=True, reason=(
-    "N11 FAILS ON THE FULL-SCALE E8 RUN, and that failure is a REPORTED FINDING, not a bug "
-    "to tune away — see RESULTS_V2.md, 'E8 — not reportable'. With f=0 and an HONEST signal "
-    "the chain still degrades: slope +0.0119 nats/generation, t=3.75. Per V2 spec §3 the "
-    "recursion loop is therefore lossy and every E8 number is an implementation artifact, so "
-    "E8 is not reported and is excluded from E11. Marked xfail(strict) so the failure stays "
-    "VISIBLE in the suite rather than being deleted or weakened; if the loop is ever fixed "
-    "this XPASSes and forces the marker off."))
+# V3 REPAIRED THIS GATE. The V2 xfail(strict) marker is REMOVED, as V3 spec §3 requires:
+# "The xfail marker on the V2 N11 gate must be removed by this fix — if it is still xfailing,
+#  E8 stays unreported." The marker did its job: it kept a real failure visible in the suite
+# for a whole version rather than letting it be deleted or weakened, and it is coming off
+# because the loop was fixed (C1 + the E12-determined sample size), not because the test was.
+#
+# Two things changed with it:
+#   * the criterion is now the PRE-REGISTERED CONJUNCTIVE one (decision D1) — |t| < 2 alone is
+#     power-dependent, and V3 §1 C2 sets the sample size AT the crossing of that criterion, so
+#     |t| alone would let the criterion choose its own operating point;
+#   * it is evaluated at the E12-determined sample size, which is the V2 methodological lesson
+#     promoted to a spec rule: a null must be evaluated at the scale of the experiment it gates.
 def test_N11_gate_on_full_scale_e8_output(cfg):
     """THE N11 GATE. Evaluated on the actual E8 run, at the scale E8 ran.
 
     This reads ``results/e8_trends.csv`` rather than re-simulating. That is deliberate and it
     is the lesson of this null: the reduced-scale re-simulation below PASSES in both signal
-    conditions, while the full-scale run FAILS on the honest arm. A null checked at a smaller
+    conditions, while V2's full-scale run FAILED on the honest arm. A null checked at a smaller
     scale than the experiment it gates is not a gate — it is a smoke test that happens to be
     green. The estimation noise that compounds through the generation loop simply is not
     visible at 120 artifacts and 3 observers.
     """
     from pathlib import Path
-    path = Path(__file__).resolve().parents[1] / "results" / "e8_trends.csv"
+    from ghostscale import prereg_v3 as P3
+    results = Path(__file__).resolve().parents[1] / "results"
+    path = results / "e8_trends.csv"
     if not path.exists():
         pytest.skip("E8 has not been run; nothing to gate")
+
+    # This null gates E8 — meaning E8 AS V3 SPECIFIES IT, under C1 seeding at the
+    # E12-determined sample size. ``restore_v2_e8.py`` deliberately writes a V2-parameter run
+    # into the same filenames, and judging that with V3's criterion would be gating the wrong
+    # experiment: it would report the V2 leak as a V3 failure. The skip is narrow (it fires
+    # only when the run is demonstrably the V2 seeding rule) and cannot mask a real V3 failure.
+    raw = results / "e8_raw.csv"
+    if raw.exists():
+        rows = pd.read_csv(raw)
+        if "population_average_seed" in rows.columns and not rows.population_average_seed.any():
+            pytest.skip("results/e8_*.csv hold a V2-seeding run (restore_v2_e8.py), not V3's "
+                        "E8 under C1; run run_all_v3.py stage 3 to produce the gated output")
     tr = pd.read_csv(path)
     zero = tr[(tr.contamination == 0.0) & (tr.metric == "kl_payload")]
     assert len(zero) > 0, "E8 must include an f=0 arm so N11 is measured on the same run"
-    bad = zero[zero.significant]
-    assert bad.empty, (
-        "N11: significant payload degradation at f=0 in "
-        f"{list(bad.signal)} (slopes {list(bad.slope.round(4))}, t {list(bad.t.round(2))}). "
-        "The recursion loop is lossy; every E8 result is an implementation artifact.")
+    failed = [(r.signal, P3.n11_verdict(r.slope, r.t)) for r in zero.itertuples()
+              if not P3.n11_verdict(r.slope, r.t)["passed"]]
+    assert not failed, (
+        "N11: payload degradation at f=0 under the pre-registered criterion "
+        f"(|t| < {P3.N11_T_THRESHOLD} AND |slope| < {P3.N11_SLOPE_CEILING}) in "
+        + "; ".join(f"signal {s}: slope {v['slope']:+.5f} (ok={v['slope_ok']}), "
+                    f"t {v['t']:+.2f} (ok={v['t_ok']})" for s, v in failed)
+        + ". The recursion loop is lossy; every E8 result is an implementation artifact and "
+          "E8 is not reported (V3 §6).")
 
 
 def test_N11_reduced_scale_recursion_smoke(cfg):

@@ -169,6 +169,75 @@ def learn_step(agent, obs: list[int], cfg: Config) -> None:
 
 
 # --------------------------------------------------------------------------- #
+# DEFERRED COMMITMENT — the estimator fix (V3 follow-up).
+# --------------------------------------------------------------------------- #
+def learn_deferred(agent, buffered: list[tuple[list[int], np.ndarray]], cfg: Config) -> None:
+    """Commit a whole artifact's observations at once, using the RESOLVED posterior.
+
+    -------------------------------------------------------------------------------------
+    THE BIAS THIS REMOVES, AND WHY RAISING ``infer_steps`` IS NOT THE FIX.
+
+    ``learn_step`` fires at every timestep with the posterior the observer holds AT THAT
+    MOMENT. The observer's first DEEP observation arrives before the goal has been resolved —
+    the free initial glance is synthetic and carries no goal information — so that
+    observation's evidence is filed across goal columns in proportion to a nearly-uniform
+    posterior. A fixed fraction of all evidence, about ``1/infer_steps``, is therefore
+    misattributed, and the learned column comes out systematically FLATTER than the truth.
+
+    Measured, one generation, d=0, forced DEEP, honest signal, f=0, as the contraction ratio
+    r = KL(learned || uniform) / KL(true || uniform):
+
+        infer_steps      2       4       6      12      24
+        1 - r        0.147   0.140   0.078   0.035   0.014
+
+    Because the fraction is per-ROLLOUT it does not shrink with corpus size, is common-mode
+    across observers (so averaging cannot cancel it), and is only weakly reduced by
+    engagement — which is exactly the set of invariances E12 and E14 measured, and which made
+    the effect look structural.
+
+    Raising ``infer_steps`` divides the bias; it does not remove it. Choosing the value at
+    which the residue happens to clear a gate is choosing an operating point to pass one's own
+    threshold — the failure decision D1 exists to prevent. So the estimator is fixed instead.
+
+    THE FIX, and it introduces no new parameter. Inference over one artifact is an E-step and
+    the Dirichlet update is an M-step; committing counts mid-E-step is the error. Deferred
+    commitment buffers the artifact's observations, runs inference to the end, and only then
+    deposits each observed feature — attributed under the FINAL posterior over the uncertain
+    factors. There is no threshold to tune and no schedule to pick: the bias is absent at any
+    ``infer_steps``, which is the property that makes a result reportable rather than tuned.
+
+    ATTENTION IS KEPT PER-STEP, DELIBERATELY. Effort observations reveal the attention state
+    exactly, so attention is not an uncertain factor and its posterior is already correct at
+    the time each observation arrives. Re-attributing a SKIM observation under a final
+    DEEP-dominated posterior would introduce a NEW misattribution in place of the one being
+    removed. Only the genuinely uncertain factors — provenance and goal — take the resolved
+    posterior.
+    -------------------------------------------------------------------------------------
+
+    ``buffered`` is a list of ``(obs, attention_marginal)`` in the order observed.
+    """
+    if not buffered:
+        return
+
+    def _as_obj_array(marginals) -> object:
+        """pymdp indexes ``qs`` with a LIST of factor indices (``qs[A_factor_list[m]]``), which
+        a plain Python list cannot do. The posterior must stay an object array."""
+        out = utils.obj_array(len(marginals))
+        for i, q in enumerate(marginals):
+            out[i] = np.asarray(q, dtype=float).copy()
+        return out
+
+    resolved = [np.asarray(q, dtype=float).copy() for q in agent.qs]
+    for obs, attention_marginal in buffered:
+        marginals = [q.copy() for q in resolved]
+        marginals[K.F_ATTENTION] = np.asarray(attention_marginal, dtype=float).copy()
+        agent.qs = _as_obj_array(marginals)
+        agent.update_A(obs)
+    agent.qs = _as_obj_array(resolved)
+    assert_A_column_stochastic(agent.A, cfg, where="deferred pA update")
+
+
+# --------------------------------------------------------------------------- #
 # Diagnostics on a learned A. E9's whole design rests on the first two.
 # --------------------------------------------------------------------------- #
 def column_kl(A_learned: object, A_true: object, provenance: int, goal: int,

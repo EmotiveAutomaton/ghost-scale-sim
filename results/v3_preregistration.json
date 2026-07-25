@@ -1,0 +1,85 @@
+{
+  "programme": "V3",
+  "written_before_run": true,
+  "spec": "V3 \u00a71 (C2, C4), \u00a73 (N11 repaired, N13), \u00a75 (reporting), \u00a76 (may not change)",
+  "N11": {
+    "decision": "D1 \u2014 conjunctive criterion, replications fixed in advance",
+    "why": "|t| alone is power-dependent: larger N shrinks the leak while more replications shrink the standard error, so 'insignificant at the scale of the experiment' is not monotone in N. V3 \u00a71 C2 then defines the sample-size threshold as the crossing of that criterion, so the criterion would be selecting its own operating point.",
+    "criterion": "|t| < 2.0 AND |slope| < 0.001 nats/gen",
+    "t_threshold": 2.0,
+    "slope_ceiling_nats_per_generation": 0.001,
+    "n_replications_fixed_at": 3,
+    "evaluated_at": "the E12-determined per-generation sample size, at full E8 scale",
+    "v2_reference": {
+      "slope": 0.0119,
+      "t": 3.75,
+      "baseline_kl_at_f0": 0.042
+    },
+    "consequence_if_failed": "E8 is not reported and is excluded from E11"
+  },
+  "N13": {
+    "decision": "D8 \u2014 test the 1/N prediction, not monotonicity",
+    "why": "monotonicity says only 'the leak did not get worse'. The diagnosis says the leak is finite-sample estimation error, whose signature is KL falling as 1/N. Testing the exponent confirms or refutes the diagnosis rather than merely guarding it, and does not fail by luck when five noisy slope estimates happen to be non-monotone.",
+    "model": "log|slope| = a + b * log N, over the without-averaging arm",
+    "gate": "b significantly negative (t < -2.0)",
+    "predicted_exponent": -1.0,
+    "consistent_band": [
+      -1.5,
+      -0.5
+    ],
+    "band_is_reported_not_gated": true,
+    "consequence_if_refuted": "the leak is not finite-sample estimation error; the entire V3 diagnosis is wrong and E8 must not be run until the structural reason is found (V3 \u00a71 C2)"
+  },
+  "E12": {
+    "n_artifacts_sweep": [
+      100,
+      300,
+      1000,
+      3000,
+      10000
+    ],
+    "m_observers_sweep": [
+      1,
+      5,
+      20
+    ],
+    "g_max": 8,
+    "n_replications": 3,
+    "condition": "f = 0 with an honest signal \u2014 the exact condition that failed N11 in V2",
+    "arms": [
+      "with C1 population averaging",
+      "without (V2 single-observer seeding)"
+    ],
+    "threshold_rule": "smallest swept per-generation sample size whose AVERAGED arm satisfies the N11 criterion above; 'smallest passing' rather than 'largest swept' so that a failure to find one is visible",
+    "m_sweep_purpose": "D2 \u2014 the corpus is drawn once per generation and shared by all M observers, so averaging cannot cancel the corpus's own goal-composition noise. The 1/M gain therefore has a floor that only N can lower, and the M sweep measures where it sits."
+  },
+  "E13": {
+    "decision": "D7 \u2014 one shared quantity, and outcome 2 expected",
+    "shared_quantity": "mean over goals of KL(learned CREATOR/DEEP column || true CREATOR/DEEP column), in nats \u2014 computed by the identical code path (learning.column_kl) in both experiments",
+    "shared_axis": "effective Dirichlet sample count = concentration mass - prior",
+    "fit": "kl = c * n_eff ** b, fitted on the honest-signal recursion",
+    "classification": {
+      "outcome_1_shared_axis": "E9's starvation point falls within a factor of 2.0 of the fitted curve",
+      "outcome_2_distinct_effects": "it does not \u2014 two distinct finite-sample failure modes",
+      "outcome_3_freeze_vanished": "the starvation arm no longer freezes at all"
+    },
+    "tolerance_factor": 2.0,
+    "prior_expectation": {
+      "expected_outcome": 2,
+      "reasoning": "E9's starvation arm never departs from its informative D1 prior because engagement collapses (1.87 of 6 DEEP steps) \u2014 LOW effective sample count. E8's honest arm sharpens fast around a finite-sample estimate \u2014 HIGH effective sample count. On this axis those are opposite signatures.",
+      "framing": "the V3 \u00a70 hypothesis is softened accordingly: not 'the same effect' but 'a shared finite-sample axis, on which they may sit at opposite ends'",
+      "why_this_is_not_a_failure": "two distinct finite-sample failure modes where the framework assumed one is a finding, and V3 \u00a76 requires E13 to be capable of returning it"
+    }
+  },
+  "C3_regression": {
+    "decision": "D6 \u2014 partial correlation controlling for generation",
+    "why": "value divergence and encoder divergence both trend with generation by construction, so a pooled regression across generations would come out significant even if the two channels were independent \u2014 it would confirm the shared-mechanism claim automatically and could not refute it",
+    "reported": [
+      "partial correlation of encoder divergence with value divergence, controlling for generation",
+      "within-generation correlation across conditions and replications",
+      "lag-1 cross-correlation, for the 'lags and tracks' claim"
+    ],
+    "pooled_regression_is_reported_but_not_evidence": true
+  },
+  "content_hash": "5cbf6bc470436f8ed69232d7a733bfe7874d2707dbcff235185e688b760bd83e"
+}

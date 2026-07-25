@@ -12,3 +12,9 @@ __pycache__/
 # RESULTS.md is committed (it is a written artifact); CSVs and PNGs are not.
 results/*.csv
 figures/*.png
+
+# Smoke-scale and diagnostic run outputs. --quick and labelled diagnostics write here so they
+# can never overwrite, or be mistaken for, a reportable run in results/ and figures/.
+results_quick/
+results_e14_steps24/*.csv
+results_e14_steps24/figures/
