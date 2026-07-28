@@ -423,6 +423,42 @@ experiments:
     forced_deep_k: 10
     true_goal: 1
 
+  # ---- V4 ----------------------------------------------------------------
+  e19:
+    n_observers: 200       # the EXPLORE-mass and disagreement measures are between-observer
+    n_seeds: 20
+    forced_deep_k: 10      # every condition gets a comparable inference attempt (as E2)
+    n_timesteps: 24
+    signing_rate: 0.0      # UNSIGNED throughout: content has to carry the whole load, or the
+                           # provenance channel would answer E19's question for it
+
+# ---------------------------------------------------------------------------
+# V4 — hypothesis-space overlap (spec C1/C2). See ghostscale/foreign.py for why the
+# feature space doubles and why sig_EXPLORE could not be built at V1-V3 cardinality.
+# ---------------------------------------------------------------------------
+v4:
+  cardinalities:
+    num_features: 16       # 0-7 HUMAN block, 8-15 FOREIGN block, disjoint by construction
+    num_real_goals: 4      # the observer's real goals; EXPLORE is appended when enabled
+  foreign:
+    draw_seed: 41          # foreign_basis is drawn ONCE, deterministically, and frozen
+    concentration: 0.25    # base Dirichlet concentration over the foreign block
+    anchor: 6.0            # added to goal k's OWN foreign pair. Each foreign goal owns a pair
+                           # the way each human goal does, with a drawn shape on top. Without
+                           # it, unanchored draws collide and MI lurches with the seed
+                           # (0.64 / 0.73 / 0.60 at conc 0.25 / 0.10 / 0.05) — see foreign.py.
+    floor: 1.0e-3          # support floor, same reasoning as synth_floor (D3b)
+    # N18 and the C1 property assertions. Pre-registered; see prereg_v4.py.
+    # The N18 floor is stated as a FRACTION of the human family's own MI rather than as a
+    # bare number, so it expresses the reframe's claim ("foreign content is goal-directed,
+    # about as much as human content is") instead of a value picked to be cleared. The human
+    # family measures 1.0065 nats; the anchored foreign family measures 0.94-1.12 across five
+    # seeds; every unanchored variant fails.
+    mi_floor_fraction_of_human: 0.85
+    mi_floor_absolute: 0.50    # backstop, in case the human family is ever rebuilt weaker
+    observer_mi_ceiling: 0.05  # MI(features; observer_goal) on foreign content must be under
+    entropy_ceiling: 2.0       # max H(foreign signature); uniform over 16 is 2.773
+
 # ---------------------------------------------------------------------------
 # Verification tolerances.
 # ---------------------------------------------------------------------------
@@ -518,3 +554,7 @@ quick:
     e17:
       n_observers: 40
       n_seeds: 4
+    e19:
+      n_observers: 40
+      n_seeds: 4
+      n_timesteps: 12

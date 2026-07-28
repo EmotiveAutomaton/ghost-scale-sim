@@ -168,10 +168,16 @@ def e18(res, figs):
                   figs / "e18_deferred_estimator.png")
 
 
+def e19(res, figs):
+    from ghostscale.experiments import e19_explore as M
+    M.make_figure(_read(res, "e19_cell_stats.csv"), _verdict(res, "e19_verdict.json"),
+                  figs / "e19_explore.png")
+
+
 BUILDERS = [("E1", e1), ("E2", e2), ("E3", e3), ("E4", e4), ("E5", e5), ("E6", e6),
             ("E6b", e6b), ("E7", e7), ("E8", e8), ("E9", e9), ("E10", e10), ("E11", e11),
             ("E12", e12), ("E13", e13), ("E14", e14), ("E15", e15), ("E16", e16),
-            ("E17", e17), ("E18", e18)]
+            ("E17", e17), ("E18", e18), ("E19", e19)]
 
 
 def main() -> int:

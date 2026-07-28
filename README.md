@@ -43,6 +43,11 @@ is evidence about what real people do. It's the companion code to *Art as an Alg
 - **Labelling works, but only for readers who know the rule exists.** A reader who knows that
   generated work gets disclosed needs 31% coverage. A reader who doesn't know needs 74%. You need
   both the disclosure and the convention. (E16)
+- **The obvious deflationary explanation was tested and didn't hold.** Maybe readers only fail on
+  machine work because we gave them too few options. So we added the most generous one the theory
+  allows, "they were just exploring", and checked it works: given human work made while dabbling,
+  91% of readers picked it. Given machine work they gave it 0.204 of their belief, against 0.200
+  for a reader with no idea at all. (E19)
 
 Every number above traces to a committed CSV in [results/](results/) and a chart in
 [figures/](figures/).
@@ -73,6 +78,15 @@ withheld. (E18)
 **Two predictions from earlier versions didn't replicate**, and the write-ups say so where the
 original claims were made: inexpert readers don't produce a more flattering downstream agent
 (E10), and trusting the label isn't harmful when the label is honest (E7).
+
+**And one headline result did not carry over when the model of machine content changed.** V1
+through V3 treated machine content as having no purpose behind it at all, and found readers
+disengage from it. V4 treats it as having a purpose the reader has no vocabulary for, which is
+a better description of a generative model, and finds the opposite: readers keep looking, keep
+paying, and never get anywhere. The failure to read intent survives and gets worse. The saving
+of effort does not. Both can't be right, and which one is depends on a fact about real
+generated content that a simulation cannot settle. It's written up in
+[RESULTS_V4.md](RESULTS_V4.md).
 
 ### How the scoreboard is counted
 
@@ -185,11 +199,18 @@ the same CSV, and an invariant test checks it. Every parameter lives in
 | E16 | How much generated content has to be labelled? | held | [chart](figures/e16_label_coverage.png), `e16_*.csv` |
 | E17 | Is confident invention graded by opacity, or all-or-nothing? | held | [chart](figures/e17_tier_dose_response.png), `e17_*.csv` |
 | E18 | Does fixing the bookkeeping remove the drift? | held | [chart](figures/e18_deferred_estimator.png), `e18_*.csv` |
+| E19 | Does the failure survive giving readers the most generous possible excuse? | held | [chart](figures/e19_explore.png), `e19_*.csv` |
 
 Full write-ups, including every deviation and every non-replication, are in
-[RESULTS.md](RESULTS.md) (version 1), [RESULTS_V2.md](RESULTS_V2.md) and
-[RESULTS_V3.md](RESULTS_V3.md). Design decisions signed off before each build are in
-[DECISIONS_V2.md](DECISIONS_V2.md) and [DECISIONS_V3.md](DECISIONS_V3.md).
+[RESULTS.md](RESULTS.md) (version 1), [RESULTS_V2.md](RESULTS_V2.md),
+[RESULTS_V3.md](RESULTS_V3.md) and [RESULTS_V4.md](RESULTS_V4.md). Design decisions signed off
+before each build are in [DECISIONS_V2.md](DECISIONS_V2.md) and
+[DECISIONS_V3.md](DECISIONS_V3.md).
+
+Version 4 is in progress and only its first stage is done. It changes what the model says
+machine content *is*, from "made with no purpose" to "made with a purpose you have no
+vocabulary for", and then checks whether the earlier results survive. E19 is stage 1 of 8;
+stages 3 onward are explicitly optional.
 
 ## How the model works
 

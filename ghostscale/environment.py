@@ -29,10 +29,19 @@ from .generative_model import GenerativeModel, cards, alpha_by_provenance
 @dataclass
 class Artifact:
     """One artifact the observer inspects. ``declared_signal`` is emitted once (a fixed
-    provenance tag) and seen by the observer at every timestep."""
+    provenance tag) and seen by the observer at every timestep.
+
+    ``foreign_goal`` (V4 C1) is -1 for every V1-V3 artifact and for every human artifact in
+    V4. When it is >= 0 the artifact was produced by a policy over a FOREIGN goal, and its
+    features come from ``sig_foreign[foreign_goal]`` rather than from a human creator or from
+    ``noise_free_synth``. The field defaults so that no V1-V3 call site changes and no V1-V3
+    behaviour can change: with the default, ``sample_feature`` takes exactly the path it
+    always took.
+    """
     provenance: int
     goal: int
     declared_signal: int
+    foreign_goal: int = -1
 
 
 def emit_signal(rng: np.random.Generator, true_provenance: int,
@@ -66,7 +75,8 @@ class Environment:
                  alpha_permutation: list[int] | None = None,
                  ghost_pure_synth: bool = True,
                  creator_bank: dict[int, HumanCreator] | None = None,
-                 signing_rate_by_provenance: dict[int, float] | None = None):
+                 signing_rate_by_provenance: dict[int, float] | None = None,
+                 foreign_sig: np.ndarray | None = None):
         self.cfg = cfg
         self.gm = gm
         self.cd = cards(cfg)
@@ -84,6 +94,9 @@ class Environment:
         self.ghost_pure_synth = bool(ghost_pure_synth)
         self.synth = np.asarray(gm.noise_free_synth, dtype=float)
         self.creators = creator_bank if creator_bank is not None else build_creator_bank(cfg, gm)
+        # V4 C1. None for every V1-V3 run, so the foreign branch below is unreachable there.
+        self.foreign_sig = (None if foreign_sig is None
+                            else np.asarray(foreign_sig, dtype=float))
 
     # -- artifact construction ------------------------------------------------
     def signing_rate_for(self, provenance: int) -> float:
@@ -109,6 +122,15 @@ class Environment:
         if attention == K.SKIM:
             return int(rng.choice(nf, p=self.synth))
         # DEEP
+        # V4 C1 — foreign content. Checked BEFORE the GHOST branch, because a foreign artifact
+        # is GHOST-provenance but is emphatically not pure synth: it was produced by a real
+        # policy over a real goal, and its structure is the reframe. Unreachable in V1-V3,
+        # where ``foreign_goal`` is always -1.
+        if artifact.foreign_goal >= 0:
+            assert self.foreign_sig is not None, (
+                "artifact declares a foreign goal but the Environment was built without a "
+                "foreign signature family")
+            return int(rng.choice(nf, p=self.foreign_sig[artifact.foreign_goal]))
         if artifact.provenance == K.GHOST and self.ghost_pure_synth:
             return int(rng.choice(nf, p=self.synth))
         a = self.alpha[artifact.provenance]

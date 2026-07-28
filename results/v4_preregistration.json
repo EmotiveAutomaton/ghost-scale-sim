@@ -1,0 +1,131 @@
+{
+  "version": "V4",
+  "written_before": "any V4 experiment is run",
+  "C1_feature_partition": {
+    "num_features": 16,
+    "human_features": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "foreign_features": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "human_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "foreign_pairs": [
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "why_16_not_8": "V4 spec C1 requires foreign_basis to occupy a partition disjoint from the dominant support of sig_true. At V1-V3 cardinality F=8 and the four goal pairs tile all eight features, so no disjoint partition exists. The only alternative was to overlap the observer's support, which is the spec's own pre-mortem failure #1. Logged as V4 deviation 1: V4 does not share a seed stream with V1-V3 and N16 is a behavioural regression, not a bit-exact one."
+  },
+  "C2_explore": {
+    "construction": "normalize(mean_g(sig_true[g])) over the four REAL goals",
+    "index_in_observer_goal_space": 4,
+    "signature": [
+      0.11556603773584906,
+      0.11556603773584906,
+      0.11556603773584906,
+      0.11556603773584906,
+      0.11556603773584906,
+      0.11556603773584906,
+      0.11556603773584906,
+      0.11556603773584906,
+      0.009433962264150943,
+      0.009433962264150943,
+      0.009433962264150943,
+      0.009433962264150943,
+      0.009433962264150943,
+      0.009433962264150943,
+      0.009433962264150943,
+      0.009433962264150943
+    ],
+    "human_block_mass": 0.9245283018867925,
+    "foreign_block_mass": 0.07547169811320754,
+    "linf_from_global_uniform": 0.05306603773584906,
+    "atol": 1e-12,
+    "measured_before_the_build": {
+      "at_V1_V3_cardinality_sig_explore_was_exactly_uniform": true,
+      "linf_from_uniform_at_F8": 1.4e-17,
+      "kl_synth_to_explore_at_F8": 0.565,
+      "kl_synth_to_sig0_at_F8": 2.113,
+      "consequence": "the prescribed construction and the construction the spec explicitly forbids were the same object at F=8, and EXPLORE sat four times closer to synthetic content than any real goal. E19 could only have returned CRASH_IS_AN_ARTIFACT, for a reason about the feature partition rather than about the theory."
+    }
+  },
+  "N18_foreign_is_goal_directed": {
+    "mi_floor": 0.8,
+    "observer_mi_ceiling": 0.05,
+    "entropy_ceiling": 2.0,
+    "foreign_draw_seed": 41,
+    "foreign_concentration": 0.25,
+    "measured_mi_features_foreign_goal": 0.9732019812278183,
+    "why": "foreign content that is not itself goal-informative has silently reverted to V3's goal-empty model, and every V4 result would be a V3 result in new vocabulary (V4 spec \u00a76, \u00a77)"
+  },
+  "E19_criteria": {
+    "absorb_mass": 0.5,
+    "converged_entropy": 0.5,
+    "engaged_fraction_for_crash_signature_only": 0.5,
+    "flat_posterior_baselines": {
+      "explore_mass_if_flat": 0.2,
+      "entropy_if_flat_nats": 1.6094379124341003
+    },
+    "rule": "conjunctive: absorption requires mass AND convergence, so that parking probability on the vaguest available hypothesis does not count as explaining the content",
+    "deviation_2_engagement_clause_removed": {
+      "when": "before this file was first written to results/, at smoke scale",
+      "why": "the first draft also required sustained engagement. That is invalid as a component of absorption: in this model disengagement is what SUCCESS looks like, and the canonical success case (human_directed, accuracy 1.00, entropy 0.00007) scores 0.000 on engagement. The clause would have failed E19's own positive control for behaving as the theory predicts.",
+      "checked_before_making_it": "the correction cannot manufacture the welcome answer: the foreign cell fails absorption on MASS (0.198 at smoke scale, against a 0.20 flat baseline and a 0.50 threshold), which is the primary clause and is untouched. Dropping engagement rescues the control and does not move the decisive cell.",
+      "what_replaced_it": "the crash is now measured as its own quantity by crash_signature(): disengagement WITHOUT resolution, which is the joint of low engagement and high entropy"
+    },
+    "positive_control": "human_exploratory/explore_on must be absorbed",
+    "outcomes": [
+      "CRASH_SURVIVES",
+      "CRASH_IS_AN_ARTIFACT",
+      "INCONCLUSIVE"
+    ],
+    "both_outcomes_written_before_the_run": true
+  },
+  "D4_posterior_arity_rule": "metrics that consume a goal posterior take the four REAL goals, renormalised; EXPLORE mass is reported separately rather than folded in. Fixed before E19 so the choice cannot be made after seeing which is kinder.",
+  "content_hash": "c11ff29ed2a1bf6194e55178271cbf8c05e88032b2eb534567964de1622f688b"
+}
