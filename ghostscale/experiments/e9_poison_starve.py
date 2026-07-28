@@ -164,7 +164,10 @@ def make_e9_figure(df, agg, cfg, path):
                     color=colours.get(arm, "k"), capsize=3, label=arm_label.get(arm, arm))
     ax.set(xlabel="share of the corpus that is machine-made (f)",
            ylabel="how washed-out the reader's model is (nats)",
-           title="Washed out: the reader stops telling anything apart")
+           # The predicted starvation signature was flattening. It is not here, and the panel
+           # title has to say so rather than assert the prediction over the data.
+           title="Washing out: predicted for starvation, and absent\n"
+                 "(a starved reader freezes instead of blurring)")
     ax.legend(fontsize=8)
 
     ax = axes[2]

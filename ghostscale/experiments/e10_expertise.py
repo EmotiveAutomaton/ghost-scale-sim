@@ -197,14 +197,18 @@ def make_e10_figure(df, agg, path):
     ax.set(xlabel="how far the reader is from expert (0 = expert)",
            ylabel="how often it names the right purpose",
            title="The reader is the ceiling, not the material")
-    ax.legend(loc="lower left", fontsize=8)
+    ax.legend(loc="center left", fontsize=8)
 
     ax = axes[2]
     ax.errorbar(agg.d, agg.sycophancy, yerr=agg.sycophancy_sd, fmt="-o", color="firebrick",
                 lw=2, capsize=3)
+    # This panel shows a prediction FAILING. We expected unskilled readers to produce a more
+    # flattering downstream agent; the line is flat (slope -0.0065, t = -0.37). The title has to
+    # report the flat line, not the prediction, or the chart argues against its own data.
     ax.set(xlabel="how far the reader is from expert (0 = expert)",
            ylabel="how often the trained agent just flatters",
-           title="Train on what unskilled readers report,\nand you get a more flattering agent")
+           title="The prediction that failed: unskilled readers\n"
+                 "do NOT produce a more flattering agent")
 
     fig.suptitle("E10 — Whoever reads the work sets the ceiling on what can be learned from it",
                  fontweight="bold")

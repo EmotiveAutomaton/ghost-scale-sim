@@ -222,10 +222,12 @@ def make_figure(df, verdict, path):
     ax.set(xlabel="generation (each one trains on the last one's output)",
            ylabel="how far preferences have flattened out",
            title="Does the picture of what people want\nslide toward 'anything goes'?")
-    ax.legend(fontsize=7)
+    # Not the default "best" placement: the 1.0 reference line runs the full width and the
+    # legend lands on top of it, striking through its own entries.
+    ax.legend(fontsize=7, loc="center left")
 
-    fig.suptitle("E18 — The drift was a bookkeeping bug in our own code, "
-                 "not a fact about the world", fontweight="bold")
+    fig.suptitle("E18 — Most of the drift was a bookkeeping bug in our own code. "
+                 "A smaller residual is not.", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

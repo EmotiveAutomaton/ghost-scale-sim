@@ -242,7 +242,8 @@ def make_e6b_figure(df, agg, prereg, path):
             " what the earlier version measured: 0.066", va="top", fontsize=8, color="grey")
     ax.set(xlabel="share of the corpus that is machine-made (f)",
            ylabel="error in what people are believed to want (nats)",
-           title="Content with no lean cancels out; content with a lean piles up")
+           title="A lean pushes the error past the pre-set line.\n"
+                 "Content with no lean stays under it.")
     ax.legend(fontsize=8)
 
     ax = axes[1]

@@ -185,7 +185,7 @@ def make_e7_figure(df, agg, path):
     ax.set(xlabel="artifacts the reader has seen",
            ylabel="how much intent it can still read out of human work",
            title="Does its grip on real human work hold,\nor blur into the machine content?")
-    ax.legend(fontsize=8)
+    ax.legend(fontsize=8, loc="lower right")
 
     ax = axes[2]
     piv = agg.pivot_table(index="signing_rate", columns="kappa", values="mi_ratio")

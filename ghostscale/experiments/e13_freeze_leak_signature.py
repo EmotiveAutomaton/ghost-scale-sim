@@ -278,17 +278,31 @@ def make_e13_figure(df, verdict, path):
     if len(control):
         ax.scatter(control.eff_sample_count, control.creator_col_kl, s=45, marker="s",
                    color="grey", label="readers with a normal diet (control)", zorder=5)
+    # DO NOT print classification.label straight onto the chart. The pre-registered rule returns
+    # "shared_axis" here, and RESULTS_V3.md deviation 2 says that answer may not be reported: the
+    # rule is a tolerance test against a power-law fit, and it was written without requiring the
+    # fitted exponent to be negative. It came out POSITIVE (+0.080), so the curve is flat, and a
+    # factor-of-2 tolerance around a flat curve accepts almost any value. The test cannot tell
+    # the two outcomes apart. The figure has to say that, or it contradicts the write-up.
+    if float(fit.get("b", 0.0)) >= 0.0:
+        verdict_line = ("no answer: our own test could not tell\n"
+                        f"(it assumed this curve falls; it rises, n^{fit['b']:+.2f})")
+    else:
+        verdict_line = f"verdict: {verdict['classification']['label'].replace('_', ' ')}"
     ax.set(xscale="log", yscale="log",
            xlabel="how much evidence the reader has accumulated",
            ylabel="how wrong its model of human work is (nats)",
-           title="Are these two failures the same failure?\n"
-                 f"verdict: {verdict['classification']['label']}")
+           title=f"Are these two failures the same failure?\n{verdict_line}")
     ax.legend(fontsize=7)
 
     ax = axes[1]
     for (half, arm), sub in df.groupby(["half", "arm"]):
         m = sub.groupby("artifact_index").col_change_rate.mean().sort_index()
-        ax.plot(m.index, m.values, marker="o", ms=3, label=f"{half} / {arm}".replace("_", " "))
+        arm_name = {("recursion", "honest_f0"): "trained on its own output",
+                    ("starvation", "control"): "normal diet (control)",
+                    ("starvation", "starvation_only"): "starved of real work"}
+        ax.plot(m.index, m.values, marker="o", ms=3,
+                label=arm_name.get((half, arm), f"{half} / {arm}".replace("_", " ")))
     ax.set(yscale="log", xlabel="artifacts the reader has seen",
            ylabel="how much its model still moves per artifact",
            title="Does the reader stop updating altogether?\n"
