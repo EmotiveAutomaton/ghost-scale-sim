@@ -238,43 +238,59 @@ def make_figure(df, verdict, path):
     ax = axes[0]
     agg = main.groupby("d").goal_accuracy.agg(["mean", "std"])
     ax.errorbar(agg.index, agg["mean"], yerr=agg["std"], fmt="o", ms=4, capsize=3,
-                color="C0", label="measured")
+                color="C0", label="what we measured")
     sh = verdict["shape_by_metric"]["goal_accuracy"]["fits"]
     xs = np.linspace(float(main.d.min()), float(main.d.max()), 300)
+    shape_word = {"linear": "a straight slide", "hinge": "a sudden bend",
+                  "logistic": "an S-shaped drop"}
     for name, fn, colour in (("linear", _linear, "grey"), ("hinge", _hinge, "C2"),
                              ("logistic", _logistic, "firebrick")):
         p = sh.get(name, {}).get("params")
         if p:
             ax.plot(xs, fn(xs, *p), color=colour, lw=1.6,
                     ls="-" if name == verdict["verdict_shape"] else "--",
-                    label=f"{name} (AIC {sh[name]['aic']:.0f})")
-    ax.set(xlabel="observer inexpertise  d", ylabel="goal-recovery accuracy",
-           title=f"Shape of the transition\nAIC winner: {verdict['verdict_shape']}, "
-                 f"width={verdict['logistic_width']:.3f}")
+                    label=f"{shape_word[name]} (fit score {sh[name]['aic']:.0f}, lower is better)")
+    ax.set(xlabel="how far the reader is from expert (0 = expert)",
+           ylabel="how often it names the right purpose",
+           title="Does skill run out gradually, or fall off a cliff?\n"
+                 f"best fit: {shape_word[verdict['verdict_shape']]}")
     ax.legend(fontsize=7)
 
     ax = axes[1]
+    # final_entropy runs the other way (higher = less sure), so it is flipped before plotting.
+    # Three curves that all fall makes "which one goes first" readable at a glance; three curves
+    # with mixed polarity does not, and mixed polarity is how misleading charts get made.
+    metric_label = {"goal_accuracy": "picks the right purpose (a choice)",
+                    "psi": "intent it pulls out (a belief)",
+                    "final_entropy": "how sure it is (a belief)"}
     for metric, colour in zip(METRICS, ("C0", "C1", "C3")):
         a = main.groupby("d")[metric].mean()
         norm = (a - a.min()) / max(a.max() - a.min(), 1e-12)
-        ax.plot(a.index, norm, "-o", ms=3, color=colour, label=metric)
+        if metric == "final_entropy":
+            norm = 1.0 - norm
+        ax.plot(a.index, norm, "-o", ms=3, color=colour, label=metric_label[metric])
     ax.axvline(verdict["logistic_d50"], color="k", ls=":", lw=1,
-               label=f"d50 = {verdict['logistic_d50']:.2f}")
-    ax.set(xlabel="observer inexpertise  d", ylabel="normalised value",
-           title="Do the three metrics break at the same d?")
+               label=f"halfway point for choices ({verdict['logistic_d50']:.2f})")
+    ax.set(xlabel="how far the reader is from expert (0 = expert)",
+           ylabel="each measure, rescaled so 1 = intact and 0 = gone",
+           title="What it believes breaks first.\nWhat it picks holds on longer.")
     ax.legend(fontsize=7)
 
     ax = axes[2]
     for arm, sub in df[df.arm.str.startswith("width_")].groupby("arm"):
         a = sub.groupby("d").goal_accuracy.mean()
-        ax.plot(a.index, a.values, "-o", ms=3, label=f"N={int(sub.n_artifacts.iloc[0])}")
+        ax.plot(a.index, a.values, "-o", ms=3,
+                label=f"{int(sub.n_artifacts.iloc[0])} artifacts to go on")
     w = verdict["width_vs_evidence"]
-    ax.set(xlabel="observer inexpertise  d", ylabel="goal-recovery accuracy",
-           title=f"Width vs evidence (the real test)\nratio {w['width_ratio']:.2f} — "
-                 f"{'narrows' if w['narrows_with_evidence'] else 'INVARIANT'}")
+    ax.set(xlabel="how far the reader is from expert (0 = expert)",
+           ylabel="how often it names the right purpose",
+           title="Give the reader more to go on: does the drop sharpen?\n"
+                 f"{'yes, it sharpens' if w['narrows_with_evidence'] else 'no, it stays the same'} "
+                 f"(ratio {w['width_ratio']:.2f})")
     ax.legend(fontsize=7)
 
-    fig.suptitle("E15 — Competence cliff, or competence knee?", fontweight="bold")
+    fig.suptitle("E15 — Skill does not run out all at once, and belief goes before choice",
+                 fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

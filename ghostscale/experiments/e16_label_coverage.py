@@ -285,31 +285,52 @@ def make_figure(df, verdict, path):
     styles = {("symmetric", "naive"): ("grey", "--"), ("symmetric", "regime_aware"): ("C2", "-"),
               ("ai_only", "naive"): ("firebrick", "--"), ("ai_only", "regime_aware"): ("C0", "-")}
 
+    def arm_name(regime, reader):
+        rg = "everything gets labelled" if regime == "symmetric" else "only AI gets labelled"
+        rd = "reader knows the rule" if reader == "regime_aware" else "reader does not know it"
+        return f"{rg}, {rd}"
+
     for key, ax, ylab, title in (
-            ("creator_mi", axes[0], "MI(features; goal), learned HUMAN columns [nats]",
-             "The reader's model of humanity\n(primary outcome)"),
-            ("ghost_col_err", axes[1], "KL(learned GHOST column || true synth) [nats]",
-             "Has the reader learned what\nhollow content looks like?")):
+            ("creator_mi", axes[0], "intent it can still read out of human work (nats)",
+             "Its grip on human work\n(a background check, not the headline)"),
+            ("ghost_col_err", axes[1], "how wrong it is about machine-made work (nats)",
+             "Has the reader worked out what\nhollow content looks like?")):
         for (regime, reader), sub in df.groupby(["regime", "reader"]):
             agg = sub.groupby("coverage")[key].agg(["mean", "std"])
             colour, ls = styles.get((regime, reader), ("k", "-"))
             ax.errorbar(agg.index, agg["mean"], yerr=agg["std"], color=colour, ls=ls,
-                        marker="o", ms=4, capsize=2, label=f"{regime}/{reader}")
-        ax.set(xlabel="labelling coverage  p", ylabel=ylab, title=title)
+                        marker="o", ms=4, capsize=2, label=arm_name(regime, reader))
+        ax.set(xlabel="share of machine-made work that carries a label",
+               ylabel=ylab, title=title)
         ax.legend(fontsize=7)
 
     ax = axes[2]
+    # Short forms, because four full arm names will not fit across one axis without colliding.
+    short = {("symmetric", "naive"): "all work\nlabelled\nreader in\nthe dark",
+             ("symmetric", "regime_aware"): "all work\nlabelled\nreader told\nthe rule",
+             ("ai_only", "naive"): "only AI\nlabelled\nreader in\nthe dark",
+             ("ai_only", "regime_aware"): "only AI\nlabelled\nreader told\nthe rule"}
     names, vals = [], []
     for name, a in verdict["arms"].items():
-        names.append(name.replace("/", "\n"))
-        vals.append(a.get("threshold") if a.get("threshold") is not None else np.nan)
+        regime, reader = name.split("/")
+        names.append(short.get((regime, reader), name))
+        # ``competence_threshold`` is the key ``analyse`` actually writes. This read used to be
+        # ``a.get("threshold")``, which is never present, so every bar came out NaN and the panel
+        # rendered empty — a silent one, because an empty panel looks like a real null result.
+        v = a.get("competence_threshold")
+        vals.append(float(v) if v is not None else np.nan)
     ax.bar(range(len(names)), vals,
            color=["C0" if "regime_aware" in n else "firebrick" for n in verdict["arms"]])
+    for i, v in enumerate(vals):
+        if np.isfinite(v):
+            ax.text(i, v, f"{v:.0%}", ha="center", va="bottom", fontsize=9)
     ax.set_xticks(range(len(names)), names, fontsize=7)
-    ax.set(ylabel="coverage reaching 95% of the arm's gain",
-           title="The quotable number, per arm\n(missing bar = no gain from coverage)")
+    ax.set(ylim=(0, 1.0), ylabel="labelling needed before the reader copes",
+           title="How much labelling each case needs\n"
+                 "(no bar = labelling never got this reader there)")
 
-    fig.suptitle("E16 — How much AI content must be labelled?", fontweight="bold")
+    fig.suptitle("E16 — A label helps twice as much when the reader knows "
+                 "the labelling rule exists", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

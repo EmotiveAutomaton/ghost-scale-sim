@@ -266,47 +266,52 @@ def make_e13_figure(df, verdict, path):
 
     ax = axes[0]
     ax.scatter(rec.eff_sample_count, rec.creator_col_kl, s=10, alpha=0.35, color="C0",
-               label="E8/E12 honest f=0 recursion")
+               label="chains trained on their own output")
     fit = verdict["recursion_fit"]
     if np.isfinite(fit["b"]) and len(rec):
         xs = np.linspace(max(rec.eff_sample_count.min(), 1e-6), rec.eff_sample_count.max(), 50)
         ax.plot(xs, fit["c"] * xs ** fit["b"], color="C0", lw=2,
-                label=f"fit: {fit['c']:.2f}·n^{fit['b']:.2f}")
+                label=f"best fit through them ({fit['c']:.2f}·n^{fit['b']:.2f})")
     if len(starve):
         ax.scatter(starve.eff_sample_count, starve.creator_col_kl, s=45, marker="D",
-                   color="firebrick", label="E9 starvation (the freeze)", zorder=5)
+                   color="firebrick", label="readers starved of real work", zorder=5)
     if len(control):
         ax.scatter(control.eff_sample_count, control.creator_col_kl, s=45, marker="s",
-                   color="grey", label="E9 control", zorder=5)
-    ax.set(xscale="log", yscale="log", xlabel="effective Dirichlet sample count",
-           ylabel="KL(learned CREATOR column || true)  [nats]",
-           title=f"The shared axis\noutcome {verdict['classification']['outcome']}: "
-                 f"{verdict['classification']['label']}")
+                   color="grey", label="readers with a normal diet (control)", zorder=5)
+    ax.set(xscale="log", yscale="log",
+           xlabel="how much evidence the reader has accumulated",
+           ylabel="how wrong its model of human work is (nats)",
+           title="Are these two failures the same failure?\n"
+                 f"verdict: {verdict['classification']['label']}")
     ax.legend(fontsize=7)
 
     ax = axes[1]
     for (half, arm), sub in df.groupby(["half", "arm"]):
         m = sub.groupby("artifact_index").col_change_rate.mean().sort_index()
-        ax.plot(m.index, m.values, marker="o", ms=3, label=f"{half}/{arm}")
-    ax.set(yscale="log", xlabel="artifacts observed",
-           ylabel="|Δ learned column| per observation",
-           title="Does the rate of change collapse?\n(C4's premature-convergence signature)")
+        ax.plot(m.index, m.values, marker="o", ms=3, label=f"{half} / {arm}".replace("_", " "))
+    ax.set(yscale="log", xlabel="artifacts the reader has seen",
+           ylabel="how much its model still moves per artifact",
+           title="Does the reader stop updating altogether?\n"
+                 "(a reader that freezes early can never be corrected)")
     ax.legend(fontsize=7)
 
     ax = axes[2]
     if len(starve):
         s = starve.groupby("contamination").creator_col_kl.agg(["mean", "std"])
         ax.errorbar(s.index, s["mean"], yerr=s["std"], marker="D", capsize=3,
-                    color="firebrick", label="starvation")
+                    color="firebrick", label="starved of real work")
     if len(control):
         cc = control.groupby("contamination").creator_col_kl.agg(["mean", "std"])
         ax.errorbar(cc.index, cc["mean"], yerr=cc["std"], marker="s", capsize=3,
-                    color="grey", label="control")
-    ax.set(xlabel="contamination f", ylabel="KL(learned CREATOR column || true)  [nats]",
-           title="V2's freeze signature: flat in f\n(is it still there under C1?)")
+                    color="grey", label="normal diet (control)")
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="how wrong its model of human work is (nats)",
+           title="Starved readers are damaged the same amount\n"
+                 "no matter how much machine content they see")
     ax.legend(fontsize=7)
 
-    fig.suptitle("E13 — The freeze and the leak on one finite-sample axis", fontweight="bold")
+    fig.suptitle("E13 — Are 'too little data' and 'the wrong data' the same problem "
+                 "underneath?", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

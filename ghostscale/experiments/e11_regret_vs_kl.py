@@ -144,22 +144,27 @@ def make_e11_figure(df, stats, path):
     ax = axes[0]
     kept = df[df.argmax_preserved >= 0.5]
     flip = df[df.argmax_preserved < 0.5]
-    ax.scatter(kept.kl, kept.regret, s=16, alpha=0.5, color="C0", label="argmax preserved")
-    ax.scatter(flip.kl, flip.regret, s=16, alpha=0.6, color="firebrick", label="argmax FLIPPED")
-    ax.set(xlabel="KL(C_recovered || C_true)  [nats]", ylabel="behavioural regret",
-           title=f"KL vs harm  (Spearman {stats['spearman_kl_regret']:+.2f})")
+    ax.scatter(kept.kl, kept.regret, s=16, alpha=0.5, color="C0",
+               label="still picks the same top option")
+    ax.scatter(flip.kl, flip.regret, s=16, alpha=0.6, color="firebrick",
+               label="now picks a DIFFERENT top option")
+    ax.set(xlabel="how far the numbers drifted from the truth (nats)",
+           ylabel="what acting on them actually costs (regret)",
+           title="Being off by a lot is not the same as\n"
+                 f"being off in a way that matters  "
+                 f"(rank match {stats['spearman_kl_regret']:+.2f})")
     ax.legend(fontsize=8)
 
     ax = axes[1]
-    ax.bar(["KL only", "argmax only", "both"],
+    ax.bar(["how far off\nthe numbers are", "whether the top\nchoice flipped", "both together"],
            [stats["r2_kl_only"], stats["r2_argmax_only"], stats["r2_both"]],
            color=["grey", "firebrick", "C0"])
-    ax.set(ylabel="variance in regret explained  (R²)",
-           title="Which predicts harm?")
+    ax.set(ylabel="share of the real cost this explains",
+           title="Which one actually predicts harm?")
     for i, v in enumerate([stats["r2_kl_only"], stats["r2_argmax_only"], stats["r2_both"]]):
         ax.text(i, v, f"{v:.2f}", ha="center", va="bottom")
 
-    fig.suptitle("E11 — Is KL the right harm metric?", fontweight="bold")
+    fig.suptitle("E11 — Are we measuring harm, or just measuring distance?", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

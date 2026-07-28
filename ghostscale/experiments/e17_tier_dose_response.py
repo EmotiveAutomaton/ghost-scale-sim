@@ -236,46 +236,55 @@ def make_figure(stats, verdict, path):
     set_style()
     fig, axes = plt.subplots(1, 3, figsize=(14.5, 4.3))
     colours = {"claimed_human": "firebrick", "truthful": "C0"}
+    lab_name = {"claimed_human": "all of it labelled human-made",
+                "truthful": "labelled honestly"}
 
     ax = axes[0]
     for labelling, s in stats.groupby("labelling"):
         s = s.sort_values("alpha")
         ax.errorbar(s.alpha, s.between, yerr=s.between_sd, marker="o", ms=5, capsize=3,
-                    color=colours[labelling], label=labelling)
+                    color=colours[labelling], label=lab_name[labelling])
     ax.invert_xaxis()
-    ax.set(xlabel="intent transmission  alpha  (opacity increases ->)",
-           ylabel="between-observer disagreement [nats]",
-           title="Disagreement scales with opacity")
+    ax.set(xlabel="how much of the maker's intent survives\n"
+                  "(left = all of it, right = almost none)",
+           ylabel="how much readers disagree with each other (nats)",
+           title="The more hollow the work, the more readers disagree")
     ax.legend(fontsize=8)
-    for _, r in stats[stats.labelling == "claimed_human"].iterrows():
+    # CREATOR and POLISHED sit at alpha 1.00 and 0.95, close enough that their labels collide;
+    # alternating the vertical offset separates them without moving the points.
+    for i, (_, r) in enumerate(stats[stats.labelling == "claimed_human"]
+                               .sort_values("alpha", ascending=False).iterrows()):
         # r["between"], not r.between: on a Series that attribute is pandas' between() method.
         ax.annotate(r["true_provenance"], (r["alpha"], r["between"]), fontsize=6,
-                    xytext=(0, 6), textcoords="offset points", ha="center")
+                    xytext=(0, 16 if i % 2 else 6), textcoords="offset points", ha="center")
 
     ax = axes[1]
     for labelling, s in stats.groupby("labelling"):
         s = s.sort_values("alpha")
         ax.errorbar(s.alpha, s.within, yerr=s.within_sd, marker="s", ms=5, capsize=3,
-                    color=colours[labelling], label=labelling)
+                    color=colours[labelling], label=lab_name[labelling])
     ax.invert_xaxis()
-    ax.set(xlabel="intent transmission  alpha", ylabel="within-observer entropy [nats]",
-           title="Confidence: told the truth the reader\ndoubts; told 'human' it does not")
+    ax.set(xlabel="how much of the maker's intent survives\n"
+                  "(left = all of it, right = almost none)",
+           ylabel="how unsure each reader is (nats)",
+           title="Told the truth, readers get unsure.\nTold it is human, they stay certain.")
     ax.legend(fontsize=8)
 
     ax = axes[2]
     for labelling, s in stats.groupby("labelling"):
         s = s.sort_values("alpha")
         ax.plot(s.alpha, s.fabrication_gap, "-o", ms=5, color=colours[labelling],
-                label=labelling)
+                label=lab_name[labelling])
     ax.axhline(0, color="k", lw=1)
     ax.invert_xaxis()
-    ax.set(xlabel="intent transmission  alpha",
-           ylabel="between − within  [nats]",
-           title="The fabrication gap\n(disagreement without uncertainty)")
+    ax.set(xlabel="how much of the maker's intent survives\n"
+                  "(left = all of it, right = almost none)",
+           ylabel="disagreement minus doubt (nats)",
+           title="Making things up, measured:\nreaders who disagree and are sure anyway")
     ax.legend(fontsize=8)
 
-    fig.suptitle("E17 — Confident fabrication is graded by opacity, not binary",
-                 fontweight="bold")
+    fig.suptitle("E17 — This is a dial, not a switch: partly-hollow work does "
+                 "partly the damage", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

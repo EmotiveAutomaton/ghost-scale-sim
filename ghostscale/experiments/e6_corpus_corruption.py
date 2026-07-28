@@ -131,24 +131,26 @@ def make_e6_figure(agg, kappas, signing, path):
     naive = agg.groupby("contamination").kl_naive.mean()
     recov = agg.groupby("contamination").kl_recovered.mean()
     ax.plot(naive.index, naive.values, "-o", color="firebrick", lw=2,
-            label="naive aggregation")
+            label="counts every artifact equally")
     ax.plot(recov.index, recov.values, "-o", color="C0", lw=2,
-            label="provenance-weighted (Ghost Scale)")
-    ax.set(xlabel="contamination fraction f",
-           ylabel="KL(C_recovered || C_true)  [nats]",
-           title="Provenance-awareness protects the alignment payload")
+            label="weights by who made it (Ghost Scale)")
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="error in what people are believed to want (nats)",
+           title="Knowing who made it protects the read on what people want")
     ax.legend()
 
     ax = axes[1]
     for sr in signing:
         d = agg[agg.signing_rate == sr].groupby("contamination").kl_recovered.mean()
-        ax.plot(d.index, d.values, "-o", ms=4, label=f"signing_rate={sr}")
-    ax.set(xlabel="contamination fraction f",
-           ylabel="KL(C_recovered || C_true)  [nats]",
-           title="Recovery is ~invariant to signing rate\n(value of the signal is metabolic, not accuracy)")
+        ax.plot(d.index, d.values, "-o", ms=4, label=f"{sr:.0%} of it labelled")
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="error in what people are believed to want (nats)",
+           title="Labelling more of it barely changes the answer\n"
+                 "(the label saves effort; it does not fix the reading)")
     ax.legend(fontsize=8)
 
-    fig.suptitle("E6 — Corpus corruption of the alignment payload (H6)", fontweight="bold")
+    fig.suptitle("E6 — What machine-made content does to a system's read on "
+                 "what people want", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

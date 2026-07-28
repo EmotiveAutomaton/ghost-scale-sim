@@ -182,25 +182,31 @@ def make_e10_figure(df, agg, path):
 
     ax = axes[0]
     ax.errorbar(agg.d, agg.psi, yerr=agg.psi_sd, fmt="-o", color="C0", lw=2, capsize=3)
-    ax.set(xlabel="observer inexpertise  d", ylabel="extracted intent density  (psi)",
-           title="Intent density falls with inexpertise\non a PERFECTLY CONSTANT clean corpus")
+    ax.set(xlabel="how far the reader is from expert (0 = expert)",
+           ylabel="how much intent the reader pulls out (psi)",
+           title="Less skilled readers pull out less intent,\n"
+                 "from work that never changed at all")
 
     ax = axes[1]
-    ax.plot(agg.d, agg.goal_accuracy, "-o", color="C2", lw=2, label="goal-recovery accuracy")
+    ax.plot(agg.d, agg.goal_accuracy, "-o", color="C2", lw=2,
+            label="how often it names the right purpose")
     ax2 = ax.twinx()
-    ax2.plot(agg.d, agg.final_entropy, "--s", color="C3", lw=1.6, label="posterior entropy")
-    ax2.set_ylabel("final goal-posterior entropy [nats]", color="C3")
-    ax.set(xlabel="observer inexpertise  d", ylabel="goal-recovery accuracy",
-           title="The reader, not the data, is the limit")
+    ax2.plot(agg.d, agg.final_entropy, "--s", color="C3", lw=1.6,
+             label="how unsure it ends up")
+    ax2.set_ylabel("how unsure the reader ends up (nats)", color="C3")
+    ax.set(xlabel="how far the reader is from expert (0 = expert)",
+           ylabel="how often it names the right purpose",
+           title="The reader is the ceiling, not the material")
     ax.legend(loc="lower left", fontsize=8)
 
     ax = axes[2]
     ax.errorbar(agg.d, agg.sycophancy, yerr=agg.sycophancy_sd, fmt="-o", color="firebrick",
                 lw=2, capsize=3)
-    ax.set(xlabel="observer inexpertise  d", ylabel="downstream sycophancy rate",
-           title="C_recovered from inexpert readers\nproduces a more sycophantic agent (H5)")
+    ax.set(xlabel="how far the reader is from expert (0 = expert)",
+           ylabel="how often the trained agent just flatters",
+           title="Train on what unskilled readers report,\nand you get a more flattering agent")
 
-    fig.suptitle("E10 — The expertise gradient: the extractor's competence is the ceiling",
+    fig.suptitle("E10 — Whoever reads the work sets the ceiling on what can be learned from it",
                  fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")

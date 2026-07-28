@@ -143,35 +143,41 @@ def make_e9_figure(df, agg, cfg, path):
     fig, axes = plt.subplots(1, 3, figsize=(14.5, 4.3))
     colours = {"poisoning_only": "firebrick", "starvation_only": "C0",
                "both": "purple", "control": "grey"}
+    arm_label = {"poisoning_only": "fed misleading work only",
+                 "starvation_only": "starved of real work only",
+                 "both": "both at once", "control": "neither (control)"}
 
     ax = axes[0]
     for arm, sub in agg.groupby("arm"):
         sub = sub.sort_values("contamination")
         ax.errorbar(sub.contamination, sub.shape_kl, yerr=sub.shape_kl_sd, fmt="-o",
-                    color=colours.get(arm, "k"), capsize=3, label=arm)
-    ax.set(xlabel="contamination f", ylabel="per-column KL from true A  [nats]",
-           title="SHAPE distortion (poisoning signature)")
+                    color=colours.get(arm, "k"), capsize=3, label=arm_label.get(arm, arm))
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="how far the reader's model has been bent (nats)",
+           title="Bent: the reader is wrong in a particular direction")
     ax.legend(fontsize=8)
 
     ax = axes[1]
     for arm, sub in agg.groupby("arm"):
         sub = sub.sort_values("contamination")
         ax.errorbar(sub.contamination, sub.flatness, yerr=sub.flatness_sd, fmt="-o",
-                    color=colours.get(arm, "k"), capsize=3, label=arm)
-    ax.set(xlabel="contamination f", ylabel="per-column entropy of learned A  [nats]",
-           title="FLATNESS (starvation signature)")
+                    color=colours.get(arm, "k"), capsize=3, label=arm_label.get(arm, arm))
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="how washed-out the reader's model is (nats)",
+           title="Washed out: the reader stops telling anything apart")
     ax.legend(fontsize=8)
 
     ax = axes[2]
     for arm, sub in df.groupby("arm"):
         ax.scatter(sub.shape_kl_human, sub.flatness_human, s=18, alpha=0.6,
-                   color=colours.get(arm, "k"), label=arm)
-    ax.set(xlabel="shape distortion  (KL from true A)",
-           ylabel="flatness  (entropy of learned A)",
-           title="The diagnostic: do the two channels separate?")
+                   color=colours.get(arm, "k"), label=arm_label.get(arm, arm))
+    ax.set(xlabel="how far the model has been bent (nats)",
+           ylabel="how washed-out the model is (nats)",
+           title="The two damages land in different places,\nso you can tell them apart")
     ax.legend(fontsize=8)
 
-    fig.suptitle("E9 — Poisoning distorts shape; starvation flattens", fontweight="bold")
+    fig.suptitle("E9 — Misleading data and missing data damage a reader in different ways",
+                 fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

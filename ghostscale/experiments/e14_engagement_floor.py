@@ -175,19 +175,26 @@ def make_figure(df, verdict, path):
     set_style()
     fig, axes = plt.subplots(1, 3, figsize=(14.5, 4.3))
     colours = {"free": "firebrick", "forced": "C0"}
+    arm_label = {"free": "readers free to look away",
+                 "forced": "readers made to look closely at everything"}
 
     for key, ax, title, ylab in (
-            ("kl_payload", axes[0], "VALUE divergence at f=0\n(flat = a lossless loop)",
-             "KL(C_recovered || C_true) [nats]"),
-            ("creator_col_kl", axes[1], "The learned CREATOR column\n(E9 control = 0.074)",
-             "KL(learned column || true) [nats]")):
+            ("kl_payload", axes[0],
+             "With zero machine content, this should stay flat\n"
+             "(everything here is honest human work)",
+             "error in what people are believed to want (nats)"),
+            ("creator_col_kl", axes[1],
+             "The reader's own model of human work drifts too",
+             "how wrong its model of human work is (nats)")):
         for arm, sub in df.groupby("arm"):
             m = sub.groupby("generation")[key].agg(["mean", "std"])
             ax.errorbar(m.index, m["mean"], yerr=m["std"], marker="o", ms=4, capsize=3,
-                        color=colours.get(arm, "k"), label=f"engagement {arm}")
+                        color=colours.get(arm, "k"), label=arm_label.get(arm, arm))
         if key == "creator_col_kl":
-            ax.axhline(0.0744, color="grey", ls=":", lw=1, label="E9 control (forced DEEP)")
-        ax.set(xlabel="generation", ylabel=ylab, title=title)
+            ax.axhline(0.0744, color="grey", ls=":", lw=1,
+                       label="damage from a starved reader, for scale")
+        ax.set(xlabel="generation (each one trains on the last one's output)",
+               ylabel=ylab, title=title)
         ax.legend(fontsize=7)
 
     ax = axes[2]
@@ -198,14 +205,18 @@ def make_figure(df, verdict, path):
     ax.bar(range(len(arms)), slopes, yerr=errs, capsize=4,
            color=["C0" if p else "firebrick" for p in passed])
     ax.axhline(0, color="k", lw=1)
-    ax.axhline(P3.N11_SLOPE_CEILING, color="k", ls=":", lw=1, label="N11 slope ceiling")
-    ax.set_xticks(range(len(arms)), arms)
-    ax.set(ylabel="leak slope [nats/generation]",
-           title="Does forcing engagement close the leak?\n(blue = passes the N11 criterion)")
+    ax.axhline(P3.N11_SLOPE_CEILING, color="k", ls=":", lw=1,
+               label="the level this had to get under")
+    short = {"free": "readers free\nto look away",
+             "forced": "readers made to look\nclosely at everything"}
+    ax.set_xticks(range(len(arms)), [short.get(a, a) for a in arms], fontsize=8)
+    ax.set(ylabel="error added per generation (nats)",
+           title="Does making readers pay attention fix it?\n"
+                 "(a blue bar would mean yes; both are red)")
     ax.legend(fontsize=7)
 
-    fig.suptitle("E14 — The f=0 leak is bounded by engagement, not by sample size",
-                 fontweight="bold")
+    fig.suptitle("E14 — Forcing readers to pay attention lowers the damage "
+                 "but does not stop the drift", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

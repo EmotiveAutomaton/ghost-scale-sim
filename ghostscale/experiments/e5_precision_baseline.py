@@ -118,28 +118,41 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
     agg.to_csv(res_dir / "e5_summary.csv", index=False)
 
     if make_fig:
-        set_style()
-        fig, axes = plt.subplots(1, 2, figsize=(11, 4.4))
-        a = agg[agg.arm == "A"].sort_values("kappa")
-        axes[0].plot(a.kappa, a.selectivity, "-o", color="C0", label="selectivity")
-        axes[0].plot(a.kappa, a.engagement, "--s", color="C1", label="overall engagement")
-        axes[0].set(xlabel="kappa (gamma fixed)", ylabel="rate",
-                    title="Arm A: selectivity rises with kappa", ylim=(-0.05, 1.05))
-        axes[0].legend()
-        b = agg[agg.arm == "B"].sort_values("gamma")
-        c = agg[agg.arm == "C"].sort_values("gamma")
-        axes[1].plot(b.gamma, b.selectivity, "-o", color="C3", label="arm B (kappa=0, content-only)")
-        axes[1].plot(c.gamma, c.selectivity, "-o", color="C0", label="arm C (kappa=0.9)")
-        axes[1].plot(b.gamma, b.engagement, "--s", color="C3", alpha=0.5, label="arm B engagement")
-        axes[1].set(xlabel="gamma (log-spaced)", xscale="log", ylabel="rate",
-                    title="Arms B & C: gamma shifts engagement, not selectivity", ylim=(-0.05, 1.05))
-        axes[1].legend(fontsize=8)
-        fig.suptitle("E5 — kappa is content-selective; gamma is indiscriminate (Spec §8)",
-                     fontweight="bold")
-        fig.tight_layout()
-        fig.savefig(fig_dir / "e5_precision_baseline.png", bbox_inches="tight")
-        plt.close(fig)
+        make_e5_figure(agg, fig_dir / "e5_precision_baseline.png")
     return agg
+
+
+def make_e5_figure(agg, path):
+    set_style()
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.4))
+    a = agg[agg.arm == "A"].sort_values("kappa")
+    axes[0].plot(a.kappa, a.selectivity, "-o", color="C0",
+                 label="looks closely only at human work")
+    axes[0].plot(a.kappa, a.engagement, "--s", color="C1",
+                 label="looks closely at anything")
+    axes[0].set(xlabel="how much the reader trusts the label (kappa)",
+                ylabel="share of the time",
+                title="Trusting the label makes the reader picky",
+                ylim=(-0.05, 1.05))
+    axes[0].legend()
+    b = agg[agg.arm == "B"].sort_values("gamma")
+    c = agg[agg.arm == "C"].sort_values("gamma")
+    axes[1].plot(b.gamma, b.selectivity, "-o", color="C3",
+                 label="picky, with no label to go on")
+    axes[1].plot(c.gamma, c.selectivity, "-o", color="C0",
+                 label="picky, with a trusted label")
+    axes[1].plot(b.gamma, b.engagement, "--s", color="C3", alpha=0.5,
+                 label="looks closely at anything, no label")
+    axes[1].set(xlabel="how decisive the reader is in general (gamma)", xscale="log",
+                ylabel="share of the time",
+                title="Being more decisive in general does not make it picky",
+                ylim=(-0.05, 1.05))
+    axes[1].legend(fontsize=8)
+    fig.suptitle("E5 — Trusting a label is a different knob from being decisive "
+                 "in general", fontweight="bold")
+    fig.tight_layout()
+    fig.savefig(path, bbox_inches="tight")
+    plt.close(fig)
 
 
 def main():

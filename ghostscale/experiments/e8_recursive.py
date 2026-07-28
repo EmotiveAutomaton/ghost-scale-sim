@@ -377,9 +377,11 @@ def make_e8_figure(agg, trends, channels, path):
         sub = sub.sort_values("generation")
         ax.errorbar(sub.generation, sub.kl_payload, yerr=sub.kl_sd, capsize=2,
                     ls=styles[mode], marker="o", ms=4,
-                    label=f"f={f}, signal {mode}")
-    ax.set(xlabel="generation", ylabel="KL(C_recovered || C_true) [nats]",
-           title="Payload degradation across generations\n(f=0 is the N11 null)")
+                    label=f"{f:.0%} machine-made, label {mode}")
+    ax.set(xlabel="generation (each one trains on the last one's output)",
+           ylabel="error in what people are believed to want (nats)",
+           title="Does the read on what people want decay down the chain?\n"
+                 "(the 0% line is the control: it should stay flat)")
     ax.legend(fontsize=7)
 
     ax = axes[1]
@@ -387,9 +389,12 @@ def make_e8_figure(agg, trends, channels, path):
         for (f, mode), sub in agg.groupby(["contamination", "signal"]):
             sub = sub.sort_values("generation")
             ax.errorbar(sub.generation, sub.encoder_mi, yerr=sub.encoder_mi_sd, capsize=2,
-                        ls=styles[mode], marker="^", ms=4, label=f"f={f}, {mode}")
-        ax.set(xlabel="generation", ylabel="MI(inferred goal ; true goal) on clean probes [nats]",
-               title="ENCODER divergence (C3 secondary)\ncan they still read clean human work?")
+                        ls=styles[mode], marker="^", ms=4,
+                        label=f"{f:.0%} machine-made, label {mode}")
+        ax.set(xlabel="generation (each one trains on the last one's output)",
+               ylabel="intent it can still read from untouched human work (nats)",
+               title="Has the reader itself gone blind?\n"
+                     "(tested on clean human work held out from the chain)")
         ax.legend(fontsize=7)
     else:
         ax.set_axis_off()
@@ -398,26 +403,30 @@ def make_e8_figure(agg, trends, channels, path):
     for (f, mode), sub in agg.groupby(["contamination", "signal"]):
         sub = sub.sort_values("generation")
         ax.plot(sub.generation, sub.regret, ls=styles[mode], marker="s", ms=4,
-                label=f"f={f}, {mode}")
-    ax.set(xlabel="generation", ylabel="behavioural regret",
-           title="Harm, measured as regret\n(the headline harm claim)")
+                label=f"{f:.0%} machine-made, label {mode}")
+    ax.set(xlabel="generation (each one trains on the last one's output)",
+           ylabel="cost of acting on the wrong read (regret)",
+           title="What the error actually costs\n"
+                 "(harm in decisions, not in distance between numbers)")
     ax.legend(fontsize=7)
 
     ax = axes[3]
     t = trends[trends.metric == "kl_payload"]
-    labels = [f"f={r.contamination}\n{r.signal}" for r in t.itertuples()]
+    labels = [f"{r.contamination:.0%} machine\nlabel {r.signal}" for r in t.itertuples()]
     colours = ["firebrick" if r.significant else "grey" for r in t.itertuples()]
     ax.bar(range(len(t)), t.slope, yerr=t.se, color=colours, capsize=3)
     ax.axhline(0, color="k", lw=1)
     ax.set_xticks(range(len(t)), labels, fontsize=7)
     partial = (channels or {}).get("partial_corr_controlling_for_generation", {})
     r = partial.get("r", float("nan"))
-    ax.set(ylabel="KL slope per generation",
-           title=f"Per-generation trend (red = |t| > 2)\n"
-                 f"C3 partial r (gen controlled) = {r:.2f}")
+    ax.set(ylabel="error added per generation (nats)",
+           title=f"How fast each condition decays\n"
+                 f"red = the trend is real, not noise (link between the "
+                 f"two channels: r = {r:.2f})")
 
-    fig.suptitle("E8 — Recursive degradation, two channels (trend, not equilibrium; "
-                 "no extrapolation)", fontweight="bold")
+    fig.suptitle("E8 — Chains that train on their own output "
+                 "(WITHHELD: this experiment has never passed its own control)",
+                 fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

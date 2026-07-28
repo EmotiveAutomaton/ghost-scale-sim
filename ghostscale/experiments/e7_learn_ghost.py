@@ -170,34 +170,36 @@ def make_e7_figure(df, agg, path):
     ax = axes[0]
     for sr, sub in traj.groupby("signing_rate"):
         d = sub.groupby("exposure").ghost_col_err.mean()
-        ax.plot(d.index, d.values, "-o", ms=4, label=f"signing_rate={sr}")
-    ax.set(xlabel="artifacts seen", ylabel="KL(learned GHOST column || true synth) [nats]",
-           title="Acquiring the GHOST column")
+        ax.plot(d.index, d.values, "-o", ms=4, label=f"{sr:.0%} of it labelled")
+    ax.set(xlabel="artifacts the reader has seen",
+           ylabel="how wrong it still is about machine-made work (nats)",
+           title="Learning what hollow work looks like, from scratch")
     ax.legend(fontsize=8)
 
     ax = axes[1]
     for sr, sub in traj.groupby("signing_rate"):
         d = sub.groupby("exposure").mi_ratio.mean()
-        ax.plot(d.index, d.values, "-o", ms=4, label=f"signing_rate={sr}")
+        ax.plot(d.index, d.values, "-o", ms=4, label=f"{sr:.0%} of it labelled")
     ax.axhline(1.0, color="k", ls=":", lw=1)
-    ax.text(traj.exposure.min(), 1.0, " oracle", va="bottom", fontsize=8)
-    ax.set(xlabel="artifacts seen",
-           ylabel="MI(features;goal) of learned human columns / oracle",
-           title="Do the human columns stay sharp,\nor absorb synthetic mass?")
+    ax.text(traj.exposure.min(), 1.0, " as good as being told the answer", va="bottom", fontsize=8)
+    ax.set(xlabel="artifacts the reader has seen",
+           ylabel="how much intent it can still read out of human work",
+           title="Does its grip on real human work hold,\nor blur into the machine content?")
     ax.legend(fontsize=8)
 
     ax = axes[2]
     piv = agg.pivot_table(index="signing_rate", columns="kappa", values="mi_ratio")
     im = ax.imshow(piv.values, cmap="viridis", aspect="auto", vmin=0, vmax=1)
-    ax.set_xticks(range(len(piv.columns)), [f"κ={c}" for c in piv.columns])
-    ax.set_yticks(range(len(piv.index)), [f"sign={i}" for i in piv.index])
+    ax.set_xticks(range(len(piv.columns)), [f"trusts label {c}" for c in piv.columns])
+    ax.set_yticks(range(len(piv.index)), [f"{i:.0%} labelled" for i in piv.index])
     for a in range(piv.shape[0]):
         for b in range(piv.shape[1]):
             ax.text(b, a, f"{piv.values[a, b]:.2f}", ha="center", va="center", color="w")
-    ax.set(title="Final MI ratio vs oracle")
+    ax.set(title="Where each condition ends up\n(1.00 = as good as being told the answer)")
     fig.colorbar(im, ax=ax, fraction=0.046)
 
-    fig.suptitle("E7 — Can the GHOST column be learned without labels?", fontweight="bold")
+    fig.suptitle("E7 — Can a reader work out which sources are hollow, with no labels at all?",
+                 fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

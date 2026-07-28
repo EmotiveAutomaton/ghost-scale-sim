@@ -194,31 +194,38 @@ def make_figure(df, verdict, path):
     set_style()
     fig, axes = plt.subplots(1, 3, figsize=(14.5, 4.3))
     colours = {"online": "firebrick", "deferred": "C0"}
+    mode_name = {"online": "old: files evidence as it goes",
+                 "deferred": "fixed: waits until it has decided"}
 
     for key, ax, ylab, title in (
-            ("kl_payload", axes[0], "KL(C_recovered || C_true) [nats]",
-             "VALUE divergence at f=0\n(flat = a lossless loop)"),
-            ("creator_col_kl", axes[1], "KL(learned column || true) [nats]",
-             "The learned CREATOR column")):
+            ("kl_payload", axes[0], "error in what people are believed to want (nats)",
+             "With zero machine content, this should stay flat\n"
+             "(everything here is honest human work)"),
+            ("creator_col_kl", axes[1], "how wrong its model of human work is (nats)",
+             "The reader's own model of human work")):
         for mode, sub in df.groupby("learn_mode"):
             m = sub.groupby("generation")[key].agg(["mean", "std"])
             ax.errorbar(m.index, m["mean"], yerr=m["std"], marker="o", ms=4, capsize=3,
-                        color=colours.get(mode, "k"), label=f"{mode}")
-        ax.set(xlabel="generation", ylabel=ylab, title=title)
+                        color=colours.get(mode, "k"), label=mode_name.get(mode, mode))
+        ax.set(xlabel="generation (each one trains on the last one's output)",
+               ylabel=ylab, title=title)
         ax.legend(fontsize=8)
 
     ax = axes[2]
     for mode, sub in df.groupby("learn_mode"):
         m = sub.groupby("generation").c_entropy.mean()
         frac = (m - TRUE_H) / (UNIFORM_H - TRUE_H)
-        ax.plot(m.index, frac, "-o", ms=4, color=colours.get(mode, "k"), label=mode)
-    ax.axhline(0.0, color="grey", ls=":", lw=1, label="H(C_true)")
-    ax.axhline(1.0, color="k", ls="--", lw=1, label="uniform")
-    ax.set(xlabel="generation", ylabel="fraction of the way to uniform",
-           title="The contraction itself\n(does C flatten toward uniform?)")
+        ax.plot(m.index, frac, "-o", ms=4, color=colours.get(mode, "k"),
+                label=mode_name.get(mode, mode))
+    ax.axhline(0.0, color="grey", ls=":", lw=1, label="what people actually want")
+    ax.axhline(1.0, color="k", ls="--", lw=1, label="no preferences left at all")
+    ax.set(xlabel="generation (each one trains on the last one's output)",
+           ylabel="how far preferences have flattened out",
+           title="Does the picture of what people want\nslide toward 'anything goes'?")
     ax.legend(fontsize=7)
 
-    fig.suptitle("E18 — Fixing the estimator, not the inference budget", fontweight="bold")
+    fig.suptitle("E18 — The drift was a bookkeeping bug in our own code, "
+                 "not a fact about the world", fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)

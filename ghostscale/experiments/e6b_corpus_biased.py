@@ -223,23 +223,26 @@ def make_e6b_figure(df, agg, prereg, path):
     fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.4))
 
     ax = axes[0]
-    for arm, colour, label in [("biased", "firebrick", "biased synth (C2) — an attractor"),
-                               ("symmetric", "C0", "symmetric synth (V1 control) — noise")]:
+    for arm, colour, label in [("biased", "firebrick",
+                                "machine content that leans one way"),
+                               ("symmetric", "C0",
+                                "machine content with no lean (control)")]:
         d = df[df.arm == arm].groupby("contamination").kl_naive.agg(["mean", "std"])
         ax.errorbar(d.index, d["mean"], yerr=d["std"], fmt="-o", color=colour, lw=2,
                     capsize=3, label=label)
     d = df[df.arm == "biased"].groupby("contamination").kl_recovered.mean()
     ax.plot(d.index, d.values, "--s", color="darkgreen", lw=1.6,
-            label="biased, provenance-weighted")
+            label="leaning content, but weighted by who made it")
     thresh = float(prereg["falsification"]["threshold"])
     ax.axhline(thresh, color="k", ls=":", lw=1.2)
-    ax.text(0.02, thresh, f" falsification threshold {thresh}", va="bottom", fontsize=8)
+    ax.text(0.02, thresh, f" the line this had to cross to count: {thresh}",
+            va="bottom", fontsize=8)
     ax.axhline(float(prereg["prediction"]["v1_reference"]), color="grey", ls="-.", lw=1.0)
-    ax.text(0.02, float(prereg["prediction"]["v1_reference"]), " V1 measured 0.066",
-            va="top", fontsize=8, color="grey")
-    ax.set(xlabel="contamination fraction f",
-           ylabel="KL(C_recovered || C_true)  [nats]",
-           title="Symmetric synth averages out; biased synth accumulates")
+    ax.text(0.02, float(prereg["prediction"]["v1_reference"]),
+            " what the earlier version measured: 0.066", va="top", fontsize=8, color="grey")
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="error in what people are believed to want (nats)",
+           title="Content with no lean cancels out; content with a lean piles up")
     ax.legend(fontsize=8)
 
     ax = axes[1]
@@ -247,16 +250,18 @@ def make_e6b_figure(df, agg, prereg, path):
     for k, sub in b.groupby("favoured_k"):
         sub = sub.sort_values("contamination")
         ax.plot(sub.contamination, sub.kl_naive, "-o", ms=4,
-                label=f"synth favours G{int(k)}  (C_true={POP_GOAL_DIST[int(k)]:.2f})")
+                label=f"machine leans toward purpose {int(k) + 1}  "
+                      f"(people want it {POP_GOAL_DIST[int(k)]:.0%} of the time)")
     for k, sub in b.groupby("favoured_k"):
         sub = sub.sort_values("contamination")
         ax.plot(sub.contamination, sub.bound, ":", lw=1, color="grey", alpha=0.6)
-    ax.set(xlabel="contamination fraction f",
-           ylabel="naive KL(C_recovered || C_true)  [nats]",
-           title="Corruption scales with the realized lean\n(dotted = pre-registered bounds)")
+    ax.set(xlabel="share of the corpus that is machine-made (f)",
+           ylabel="error in what people are believed to want (nats)",
+           title="The harder the machine leans, the more the read is skewed\n"
+                 "(dotted lines were predicted before the run)")
     ax.legend(fontsize=7)
 
-    fig.suptitle("E6b — Corpus corruption under biased synthetic content (V2 C2)",
+    fig.suptitle("E6b — Machine content with a lean of its own does not average away",
                  fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")

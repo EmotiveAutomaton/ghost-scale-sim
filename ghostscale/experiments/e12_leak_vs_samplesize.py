@@ -205,13 +205,14 @@ def make_e12_figure(df, slopes, verdict, path):
         ax.errorbar(sub.n_artifacts, np.abs(sub.slope), yerr=sub.se, capsize=3, marker="o",
                     ls="-" if averaging else "--",
                     color="C0" if averaging else "firebrick",
-                    label="with C1 averaging" if averaging else "without (V2 seeding)")
+                    label="averaged over many readers" if averaging else "one reader at a time")
     ceiling = P3.N11_SLOPE_CEILING
-    ax.axhline(ceiling, color="k", lw=1, ls=":", label=f"N11 ceiling ({ceiling})")
-    ax.set(xscale="log", yscale="log", xlabel="artifacts per generation (N)",
-           ylabel="|leak slope|  [nats/generation]",
-           title=f"The leak versus sample size\nN13: log-log b = {verdict['N13'].get('b', float('nan')):.2f}"
-                 f" (predicted -1)")
+    ax.axhline(ceiling, color="k", lw=1, ls=":",
+               label=f"the level this had to get under ({ceiling})")
+    ax.set(xscale="log", yscale="log", xlabel="artifacts per generation",
+           ylabel="error added per generation (nats)",
+           title="If the drift were just too little data,\nthis line would fall. It does not.\n"
+                 f"(measured slope {verdict['N13'].get('b', float('nan')):.2f}; predicted -1.00)")
     ax.legend(fontsize=7)
 
     ax = axes[1]
@@ -219,20 +220,25 @@ def make_e12_figure(df, slopes, verdict, path):
     if len(m_arm):
         ax.errorbar(m_arm.m_observers, np.abs(m_arm.slope), yerr=m_arm.se, capsize=3,
                     marker="s", color="C2")
-    ax.set(xscale="log", yscale="log", xlabel="observers averaged per generation (M)",
-           ylabel="|leak slope|  [nats/generation]",
-           title="C1's own claim, and its floor\n(shared corpus -> averaging cannot cancel all of it)")
+    ax.set(xscale="log", yscale="log", xlabel="readers averaged together per generation",
+           ylabel="error added per generation (nats)",
+           title="Averaging over more readers does not help either\n"
+                 "(they all read the same corpus, so the error is shared)")
 
     ax = axes[2]
     for (n_art, averaging), sub in df[df.sweep == "N"].groupby(["n_artifacts", "averaging"]):
         m = sub.groupby("generation").kl_payload.mean().sort_index()
         ax.plot(m.index, m.values, ls="-" if averaging else "--", marker="o", ms=3,
-                alpha=0.85, label=f"N={n_art} {'avg' if averaging else 'V2'}")
-    ax.set(xlabel="generation", ylabel="KL(C_recovered || C_true)  [nats]",
-           title="The f=0 chains themselves\n(flat = a lossless loop)")
+                alpha=0.85,
+                label=f"{n_art} artifacts, {'averaged' if averaging else 'single reader'}")
+    ax.set(xlabel="generation (each one trains on the last one's output)",
+           ylabel="error in what people are believed to want (nats)",
+           title="The chains themselves, with zero machine content\n"
+                 "(a lossless loop would be a flat line)")
     ax.legend(fontsize=6, ncol=2)
 
-    fig.suptitle("E12 — Is the leak finite-sample? (E8's sample size is set from this)",
+    fig.suptitle("E12 — Is the drift just a shortage of data? "
+                 "The test says no, and that killed our explanation",
                  fontweight="bold")
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight")

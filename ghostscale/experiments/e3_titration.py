@@ -90,17 +90,29 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
     agg.to_csv(res_dir / "e3_summary.csv", index=False)
 
     if make_fig:
-        figures.save_simple_lines(
-            agg, x="c_effort", y="mean_high_cost", hue="obs_type",
-            path=fig_dir / "e3_titration_effort.png",
-            xlabel="c_effort", ylabel="mean HIGH_COST (metabolic expenditure)",
-            title="E3 — Calibrated observers spend less effort on a mixed corpus (H3)")
-        figures.save_simple_lines(
-            agg, x="c_effort", y="creator_accuracy", hue="obs_type",
-            path=fig_dir / "e3_titration_accuracy.png",
-            xlabel="c_effort", ylabel="goal-recovery accuracy on CREATOR trials",
-            title="E3 — ...without losing accuracy on genuine human artifacts")
+        make_e3_figures(agg, fig_dir)
     return agg
+
+
+OBS_TYPE_LABELS = {"calibrated": "can tell human work from machine work",
+                   "naive": "cannot tell the difference"}
+
+
+def make_e3_figures(agg, fig_dir: Path) -> None:
+    figures.save_simple_lines(
+        agg, x="c_effort", y="mean_high_cost", hue="obs_type",
+        path=fig_dir / "e3_titration_effort.png",
+        xlabel="how expensive it is to look closely (c_effort)",
+        ylabel="total effort the reader spends",
+        title="E3 — Readers who can spot machine work spend less effort",
+        legend_title="the reader", level_labels=OBS_TYPE_LABELS)
+    figures.save_simple_lines(
+        agg, x="c_effort", y="creator_accuracy", hue="obs_type",
+        path=fig_dir / "e3_titration_accuracy.png",
+        xlabel="how expensive it is to look closely (c_effort)",
+        ylabel="how often they read real human work correctly",
+        title="E3 — and they give up nothing on the human work that matters",
+        legend_title="the reader", level_labels=OBS_TYPE_LABELS)
 
 
 def main():
