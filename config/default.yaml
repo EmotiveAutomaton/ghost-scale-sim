@@ -539,6 +539,10 @@ v4_5:
     # construction reduces to it algebraically, so any nonzero difference is a wiring error
     # rather than a numerical one. Asserted at construction (V4.5 §7's N-series check).
     v4_boundary_tol: 1.0e-12
+    # Pairwise Jensen-Shannon floor between execution modes, the depth analogue of
+    # artifact_model.js_threshold. The first mode family built cleared every other assertion
+    # at 0.019 nats and carried almost no recoverable depth; this is what catches that.
+    mode_js_floor: 0.10
   theta:
     # The acceptance gate, sigmoid(theta_base - lambda * D_KL(Q(R|tau) || P_c(R))).
     # OPEN is the default everywhere outside E29: lambda = 0 makes the gate ignore divergence
@@ -557,6 +561,56 @@ v4_5:
     # for social influence but no experiment that manipulates it, so it is built, asserted, and
     # left inert rather than swept on the quiet.
     weight: 0.0
+
+# ---------------------------------------------------------------------------
+# V5 — mu, estimated MODEL DEPTH, replacing V4.5's rationality beta (spec C1).
+# See ghostscale/v5_model.py for why a scalar mu was rejected and a hierarchy built instead.
+#
+# mu indexes how many LEVELS of the creator's decision hierarchy reach the surface:
+#   1  execution only          features depend on the goal alone. This is V4, exactly.
+#   2  + sub-goal level        goal-generic execution modes; the artifact carries blocks.
+#   3  + goal level            goal-specific modes, so the ORDER of blocks names the goal.
+#
+# The design commitment, asserted at construction: depth is CORRELATIONAL, not marginal. The
+# execution modes average exactly to sig[g] and the mode chains are doubly stochastic, so a
+# deep artifact and a shallow one have identical time-averaged feature histograms. A reader
+# who counts features and ignores their order cannot tell them apart at all. That is what
+# stops mu from being a second name for legibility, which kappa_p already measures.
+# ---------------------------------------------------------------------------
+v5:
+  depth:
+    # MODE DISTINCTNESS. The one free knob in the depth construction, so it is pre-registered
+    # rather than tuned: at 0 every mode is the goal signature and depth is unreadable at any
+    # mu; at 1 the modes are as distinct as the exact-average constraint permits.
+    #
+    # SET TO 1.0, THE CANONICAL END OF THE RANGE, and deliberately not to a value chosen to
+    # clear the separation floor below — picking delta to pass an assertion this file also
+    # sets would make both numbers meaningless. At 1.0 the value is fixed by the construction
+    # rather than by preference, and delta is available to E30 as a depth-CONTRAST axis to
+    # sweep downward, which is the honest place for a free parameter to live.
+    delta: 1.0
+    # At mu = 1 the V5 likelihood must equal V4's ELEMENTWISE, not approximately: the
+    # construction reduces to it algebraically, so any nonzero difference is a wiring error
+    # rather than a numerical one. V5 decision 4, asserted at construction.
+    v4_boundary_tol: 1.0e-12
+    # Pairwise Jensen-Shannon floor between execution modes, the depth analogue of
+    # artifact_model.js_threshold. The first mode family built cleared every other assertion
+    # at 0.019 nats and carried almost no recoverable depth; this is what catches that.
+    mode_js_floor: 0.10
+  subgoals:
+    n: 4                 # V5 decision 1/2: four execution modes.
+    # Mean consecutive steps in a mode. Set so that three to four blocks fit in a 24-step
+    # artifact (V5 decision 2). Too short and no block structure forms; too long and every
+    # artifact shows one mode. Outside that window a null E30 would be measuring the block
+    # geometry rather than the theory, so the range is asserted rather than trusted.
+    # 1 + 23/9.2 = 3.50 blocks exactly, the middle of the window rather than an edge of it.
+    dwell: 9.2
+    min_blocks: 3.0
+    max_blocks: 4.0
+    # Share of the leaving mass that goes to the NEXT mode in this goal's own cycle. This is
+    # what makes the plans differ between goals while every chain stays doubly stochastic, so
+    # goal identity is carried by the ORDER of modes and by nothing else.
+    next_share: 0.7
 
 # ---------------------------------------------------------------------------
 # Verification tolerances.
