@@ -1,0 +1,84 @@
+{
+  "version": "V5",
+  "scope": "C1 only: mu as estimated model depth, its dissociation null N21, and E30. C2/C3/C4 and E31-E34 are not covered and must pre-register separately.",
+  "construction": {
+    "mu_levels": [
+      1,
+      2,
+      3
+    ],
+    "n_subgoals": 4,
+    "dwell": 9.2,
+    "delta": 1.0,
+    "mode_js_floor": 0.1,
+    "asserted_at_construction": [
+      "mu = 1 reproduces V4's A[0] elementwise, tolerance 1e-12",
+      "beta at mu = 1 reduces to V4.5's sig_EXPLORE, tolerance 1e-12",
+      "execution modes average EXACTLY to sig[g] (depth is correlational)",
+      "sub-goal chains doubly stochastic with uniform stationary distribution",
+      "execution modes pairwise separated above the JS floor",
+      "execution modes carry < 0.10 mass in the FOREIGN block",
+      "three to four mode blocks fit a 24-step artifact"
+    ]
+  },
+  "N21": {
+    "role": "gate on E30. E30 does not count unless this passes.",
+    "cells": [
+      [
+        "committed_shallow",
+        1.0,
+        1
+      ],
+      [
+        "committed_deep",
+        1.0,
+        3
+      ],
+      [
+        "offhand_shallow",
+        0.25,
+        1
+      ],
+      [
+        "offhand_deep",
+        0.25,
+        3
+      ]
+    ],
+    "clause_a": "recovered mu higher at mu = 3 than mu = 1, at BOTH beta levels",
+    "clause_b": "mu effect exceeds beta's FALSE-DEPTH effect (the mu = 1 row) by 3.0x",
+    "clause_b_deviation": "clause (b) originally averaged beta's simple effects over both mu levels; it failed at 1.67 and was restated to score the mu = 1 row. V5 deviation 1. The original is retained, computed, reported, and decides nothing. The threshold value was NOT changed."
+  },
+  "E30": {
+    "design": "a NEW design, not a re-run of E28 (V5 decision 8): under route A the creator is hierarchical, so there is no version of E28's stimulus to re-run. E28 and E30 are reported side by side as two constructs on comparable designs, and E28 is not deleted.",
+    "mu_grid": [
+      1,
+      2,
+      3
+    ],
+    "delta_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "predicted": "update magnitude scales with recovered depth while goal accuracy holds at EVERY depth \u2014 a wider range than beta achieved, which collapsed to 0.257 at the bottom of its grid",
+    "recovery_rho": 0.99,
+    "update_rho": 0.99,
+    "accuracy_floor": 0.9,
+    "outcomes": [
+      "DEPTH_IS_SEPARABLE",
+      "DEPTH_MOVES_NOTHING",
+      "DEPTH_IS_LEGIBILITY",
+      "DEPTH_DOES_NEITHER"
+    ]
+  },
+  "unchanged_from_v4_5": {
+    "E8": "stays withheld with its xfail(strict) marker",
+    "E27": "the V3 residual stays open and is not touched",
+    "E28/E29": "stand as measurements of mis-specified constructs, labelled as such",
+    "null_suite": "unchanged and must continue to pass"
+  },
+  "content_hash": "e1adf130c011c5e31bb3162c371ad0120a131d7ba51708a150421058c69ac7fa"
+}

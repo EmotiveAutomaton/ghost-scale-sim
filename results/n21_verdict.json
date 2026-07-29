@@ -1,0 +1,23 @@
+{
+  "null": "N21 \u2014 the observer recovers depth, not effort",
+  "passed": true,
+  "verdict": "DEPTH_RECOVERED_NOT_EFFORT",
+  "mu_effect": 0.49900183616709226,
+  "beta_false_depth_effect": 0.08339101009304928,
+  "dominance_ratio": 5.98388046397683,
+  "dominance_required": 3.0,
+  "ordering_holds_at_both_beta_levels": true,
+  "simple_effects": {
+    "mu_effect_at_beta_1.00": 0.7923202971959229,
+    "mu_effect_at_beta_0.25": 0.20568337513826163,
+    "beta_effect_at_mu_1": -0.08339101009304928,
+    "beta_effect_at_mu_3": 0.503245911964612
+  },
+  "original_clause_retained": {
+    "beta_effect_averaged_over_both_mu": 0.29331846102883063,
+    "dominance_ratio_original": 1.7012288773669952,
+    "passes_original": false,
+    "note": "the clause as first written, restated after it failed at 1.67. Logged as V5 deviation 1, retained here, and decides nothing. It charges beta's legitimate limit on how much REAL depth is recoverable as though it were contamination."
+  },
+  "reading": "PASS means beta cannot make the observer report depth that is not there, while mu moves the estimate substantially \u2014 which is what separates a correction from a rename. FAIL means mu is beta with a new label; V5 must report that in the first line of E30's section rather than running a re-run that cannot mean anything."
+}

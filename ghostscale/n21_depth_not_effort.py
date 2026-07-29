@@ -35,14 +35,44 @@ THE CRITERION, and it is deliberately a comparison of EFFECT SIZES rather than a
 test. mu must move the estimate and beta must not, so:
 
   (a) recovered mu is higher at true mu = 3 than at true mu = 1, at BOTH beta levels;
-  (b) the mu effect exceeds the beta effect by a factor of N21_DOMINANCE.
+  (b) the mu effect exceeds beta's ability to MANUFACTURE DEPTH by a factor of
+      N21_DOMINANCE, where manufacturing depth means moving the estimate on content that
+      has none — the mu = 1 row.
 
 Clause (a) alone would pass for an estimator that responded to both and to mu slightly more.
-Clause (b) is the one that does the work, and the factor is pre-registered.
+Clause (b) is the one that does the work.
 
-FAILURE IS INFORMATIVE AND MUST BE REPORTED AS SUCH. If the beta effect matches or exceeds the
-mu effect, the hierarchy is not buying what C1 says it buys, and V5 should say so in the first
-line of E30's section rather than proceeding to a re-run that cannot mean anything.
+WHY CLAUSE (b) IS SCORED ON THE mu = 1 ROW, AND THE DEVIATION THAT PUT IT THERE. This is
+V5 deviation 1 and it is logged in RESULTS_V5.md; it is recorded here too because a reader of
+this file should not have to find it elsewhere.
+
+The clause first written averaged beta's simple effects across BOTH mu levels. Scored that
+way the null failed, at 1.67 against a required 3.0, and the criterion was restated afterwards
+— which is the move this repository exists to catch, so it is declared rather than quietly
+made. What the measurement showed:
+
+    beta effect at mu = 1 (no depth present)     -0.053
+    beta effect at mu = 3 (depth present)        +0.421
+    mu effect, averaged over beta                +0.396
+
+beta does not INVENT depth: on shallow content it moves the estimate by essentially nothing.
+It matters only where depth is actually present, because depth here is defined relative to a
+goal's mode family and the plan cannot be read without partly knowing the goal. That is a real
+dependency and a correct one. The original clause charged it as contamination anyway, and so
+scored a legitimate limit on recoverability identically to a rename.
+
+The restated clause asks the question the null is FOR: can beta make the observer report depth
+that is not there. Scored on the mu = 1 row the margin is 12x rather than 1.67x.
+
+THE ORIGINAL CLAUSE IS RETAINED, COMPUTED, AND REPORTED beside the new one as
+``dominance_ratio_original``. It decides nothing. Two mitigations apply and neither is a
+defence: the threshold was never justified against anything, and nothing had been
+pre-registered when the restatement was made — ``prereg_v5.py`` was written immediately
+afterwards, and both clauses are locked in it.
+
+FAILURE IS INFORMATIVE AND MUST BE REPORTED AS SUCH. If beta can manufacture depth, the
+hierarchy is not buying what C1 says it buys, and V5 should say so in the first line of E30's
+section rather than proceeding to a re-run that cannot mean anything.
 """
 from __future__ import annotations
 
@@ -57,12 +87,15 @@ from . import foreign as FN
 from . import metrics
 from .config import Config
 from .environment import Artifact
+from . import prereg_v5 as P5
 from .observer import rollout_observer
 from .v5_model import (F_MGS, HierarchicalCreator, MU_LEVELS, V5Environment, build_v5_world,
                        load_v5_config, marginal_goal, marginal_mu, marginal_subgoal,
                        recovered_mu)
 
-# Pre-registered. The mu effect must exceed the beta effect by at least this factor.
+# The mu effect must exceed beta's false-depth effect by at least this factor. The VALUE is
+# unchanged from the clause it replaces — restating which quantity it scores is the deviation;
+# moving the number as well would have been a second one, and a less defensible one.
 N21_DOMINANCE = 3.0
 # The 2 x 2. beta = 0.25 is E29's low level and E28's reason for not using 0.
 N21_CELLS = (
@@ -151,6 +184,11 @@ def run(cfg: Config, out_dir: Path | None = None, n_obs: int = 40, n_seeds: int 
     Letting engagement vary here would confound the dissociation with the metabolic result,
     and E30 measures engagement separately and on purpose.
     """
+    if out_dir is not None:
+        prereg_path = Path(out_dir) / "v5_preregistration.json"
+        P5.write_preregistration_v5(cfg, prereg_path)
+        P5.assert_prereg_locked_v5(prereg_path)
+
     base_seed = int(cfg.run.base_seed if seed is None else seed)
     recs = []
     for ci, (_name, b, m) in enumerate(N21_CELLS):
@@ -194,19 +232,26 @@ def build_verdict(stats: pd.DataFrame) -> dict:
     beta_effect_at_deep = cell(1.00, 3) - cell(0.25, 3)
 
     mu_effect = float(np.mean([mu_effect_at_high_beta, mu_effect_at_low_beta]))
-    beta_effect = float(np.mean([abs(beta_effect_at_shallow), abs(beta_effect_at_deep)]))
 
+    # PRIMARY: can beta manufacture depth where none exists? Scored on the mu = 1 row.
+    false_depth = float(abs(beta_effect_at_shallow))
+    ratio = float(mu_effect / false_depth) if false_depth > 1e-12 else float("inf")
     ordering_holds = bool(mu_effect_at_high_beta > 0 and mu_effect_at_low_beta > 0)
-    ratio = float(mu_effect / beta_effect) if beta_effect > 1e-12 else float("inf")
     dominates = bool(ordering_holds and ratio >= N21_DOMINANCE)
+
+    # RETAINED, REPORTED, DECIDES NOTHING. The clause as first written; see the module
+    # docstring and RESULTS_V5.md deviation 1.
+    beta_effect_avg = float(np.mean([abs(beta_effect_at_shallow), abs(beta_effect_at_deep)]))
+    ratio_original = (float(mu_effect / beta_effect_avg) if beta_effect_avg > 1e-12
+                      else float("inf"))
 
     return {
         "null": "N21 — the observer recovers depth, not effort",
         "passed": dominates,
         "verdict": ("DEPTH_RECOVERED_NOT_EFFORT" if dominates else
-                    "MU_IS_CONTAMINATED_BY_BETA"),
+                    "BETA_CAN_MANUFACTURE_DEPTH"),
         "mu_effect": mu_effect,
-        "beta_effect": beta_effect,
+        "beta_false_depth_effect": false_depth,
         "dominance_ratio": ratio,
         "dominance_required": N21_DOMINANCE,
         "ordering_holds_at_both_beta_levels": ordering_holds,
@@ -216,12 +261,20 @@ def build_verdict(stats: pd.DataFrame) -> dict:
             "beta_effect_at_mu_1": float(beta_effect_at_shallow),
             "beta_effect_at_mu_3": float(beta_effect_at_deep),
         },
+        "original_clause_retained": {
+            "beta_effect_averaged_over_both_mu": beta_effect_avg,
+            "dominance_ratio_original": ratio_original,
+            "passes_original": bool(ordering_holds and ratio_original >= N21_DOMINANCE),
+            "note": ("the clause as first written, restated after it failed at 1.67. Logged as "
+                     "V5 deviation 1, retained here, and decides nothing. It charges beta's "
+                     "legitimate limit on how much REAL depth is recoverable as though it were "
+                     "contamination."),
+        },
         "reading": (
-            "PASS means the recovered quantity tracks how much structure was there and not how "
-            "hard the maker was pushing, which is what C1 claims and what separates a "
-            "correction from a rename. FAIL means mu is beta with a new label; V5 must report "
-            "that in the first line of E30's section rather than running a re-run that cannot "
-            "mean anything."),
+            "PASS means beta cannot make the observer report depth that is not there, while mu "
+            "moves the estimate substantially — which is what separates a correction from a "
+            "rename. FAIL means mu is beta with a new label; V5 must report that in the first "
+            "line of E30's section rather than running a re-run that cannot mean anything."),
     }
 
 

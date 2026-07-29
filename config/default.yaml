@@ -562,6 +562,17 @@ v4_5:
     # left inert rather than swept on the quiet.
     weight: 0.0
 
+  # E30 (V5 C1) — mu replaces beta. Scale matched to E28 so the two are directly
+  # comparable, which decision 8 requires: they are reported side by side as two constructs
+  # on comparable designs rather than as one design with a swapped variable.
+  e30:
+    n_observers: 200
+    n_seeds: 20
+    forced_deep_k: 10      # the FREE arm only. The primary arm forces DEEP for the whole
+                           # artifact, because depth lives in the ORDER of execution modes and
+                           # N21 -- E30's gate -- was measured under sustained attention.
+    n_timesteps: 24
+
 # ---------------------------------------------------------------------------
 # V5 — mu, estimated MODEL DEPTH, replacing V4.5's rationality beta (spec C1).
 # See ghostscale/v5_model.py for why a scalar mu was rejected and a hierarchy built instead.
@@ -628,6 +639,9 @@ quick:
     n_timesteps: 15
     n_seeds: 3
   experiments:
+    e30:
+      n_observers: 15
+      n_seeds: 3
     e6:
       n_creators: 10
       n_artifacts: 200

@@ -610,7 +610,8 @@ def build_v5_D(cfg: Config, rng: np.random.Generator, n_mu: int, ng: int, n_sub:
 def build_v5_world(cfg: Config, omega: float = 0.0, kappa: float | None = None,
                    delta: float | None = None, dwell: float | None = None,
                    n_subgoals: int | None = None, foreign_seed: int | None = None,
-                   run_assertions: bool = True) -> V5World:
+                   run_assertions: bool = True,
+                   enforce_mode_separation: bool = True) -> V5World:
     """The V5 world model, with every C1 assertion run at construction."""
     kappa = float(cfg.signal_model.kappa) if kappa is None else float(kappa)
     n_sub = int(cfg.get("v5.subgoals.n", 4) if n_subgoals is None else n_subgoals)
@@ -643,7 +644,22 @@ def build_v5_world(cfg: Config, omega: float = 0.0, kappa: float | None = None,
         assert_preferences_zero(gm.C)
         diag = {}
         diag["mu1_vs_v4"] = assert_mu1_reproduces_v4(cfg, sigs, synth, alpha, subsig)
-        diag["mode_separation"] = assert_modes_are_separated(cfg, subsig)
+        # E30's CONTRAST sweep deliberately drives delta below the separation floor — that end
+        # of the axis is the negative control, where there is no depth to find and the
+        # observer must fail to find any. So the floor is skippable, EXPLICITLY and per call,
+        # and the skip is recorded in the diagnostics rather than inferred from a threshold.
+        # An earlier version tried to infer it by comparing delta against the floor, which is
+        # a category error: delta is a mixture weight and the floor is in nats.
+        if enforce_mode_separation:
+            diag["mode_separation"] = assert_modes_are_separated(cfg, subsig)
+        else:
+            deepest = subsig[-1]
+            diag["mode_separation"] = {
+                "enforced": False,
+                "min_pairwise_js_across_goals": float(np.min(
+                    [mode_separation(deepest[g]) for g in range(deepest.shape[0])])),
+                "note": "separation floor deliberately not enforced (negative-control cell)",
+            }
         diag["beta_vs_v4_5"] = assert_beta_reduces_to_v4_5(subsig, sigs.sig_explore)
         diag["chains"] = assert_chains_uniform_stationary(chains)
         diag["dwell"] = assert_block_count_in_range(cfg, chains, dwell)
