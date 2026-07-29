@@ -432,6 +432,67 @@ experiments:
     signing_rate: 0.0      # UNSIGNED throughout: content has to carry the whole load, or the
                            # provenance channel would answer E19's question for it
 
+  # E21 (V4 stage 2 / V4.5 priority 2) — is the machinery necessary?
+  # Scale matched to E19 so the between-observer numbers are directly comparable to it and,
+  # through it, to E2. Every arm sees the same tape and the same D draw, so the observer count
+  # is doing the same job in every arm.
+  e21:
+    n_observers: 200
+    n_seeds: 20
+    forced_deep_k: 10
+    n_timesteps: 24
+    classifier_train_n: 200   # labelled human artifacts arm E trains on, per observer.
+                              # FINITE ON PURPOSE and this is the arm's whole mechanism: its
+                              # heterogeneity is sampling noise in its own training set, which
+                              # is the classifier analogue of "two readers who have seen
+                              # different work read the same artifact differently". An infinite
+                              # sample would make every arm-E observer identical and its
+                              # between-observer disagreement would be zero by construction.
+
+  # E20 (V4 stage 3 / V4.5 priority 5) — the overlap sweep.
+  # Scale matched to E19 so the omega = 0 cell is directly comparable to E19's foreign cell,
+  # which is the anchor the whole sweep is read against.
+  e20:
+    n_observers: 200
+    n_seeds: 60            # THREE TIMES E19's, and the reason is the deliverable. Engagement
+                           # here is bimodal — an observer either sustains attention across the
+                           # free steps or drops it almost at once — so the cell mean's
+                           # effective sample size is the number of SEEDS, not observers, and
+                           # the omega where engagement crosses 0.50 is what a pupillometry
+                           # study would target. At 20 seeds that crossing sat inside its own
+                           # standard error. Raising seeds is more data under the same
+                           # pre-registered design, not a change to it.
+    forced_deep_k: 10
+    n_timesteps: 24
+
+  # E28 (V4.5 §4) — beta as inferred rationality. Scale matched to E19/E21.
+  e28:
+    n_observers: 200
+    n_seeds: 20
+    forced_deep_k: 10
+    n_timesteps: 24
+
+  # E29 (V4.5 §5) — do the three gates dissociate?
+  # Fewer observers than E28 because the primary measures here are cell MEANS of engagement,
+  # resolution and update rather than between-observer statistics; the design is 12 cells wide
+  # instead of 5, and the budget goes into covering the design.
+  e29:
+    n_observers: 60
+    n_seeds: 20
+    forced_deep_k: 10
+    n_timesteps: 24
+    n_encounters: 4        # artifacts per observer from ONE source, with the gated update
+                           # carried between them. Not a detail: theta gates the update, so in
+                           # a single-artifact design it changes nothing observable and would
+                           # appear to dissociate on the strength of its own definition. Four
+                           # is enough for the open gate to walk the prior somewhere and the
+                           # closed gate to leave it where it started.
+    integration_rate: 0.5  # eta: how much of the recovered posterior an OPEN gate writes into
+                           # the carried prior per encounter. theta multiplies it, so theta = 1
+                           # is full integration at this rate and theta = 0 is none. Sets the
+                           # scale of the update measure, not the contrast between cells, which
+                           # is why every threshold is a fraction of the reference cell.
+
 # ---------------------------------------------------------------------------
 # V4 — hypothesis-space overlap (spec C1/C2). See ghostscale/foreign.py for why the
 # feature space doubles and why sig_EXPLORE could not be built at V1-V3 cardinality.
@@ -458,6 +519,44 @@ v4:
     mi_floor_absolute: 0.50    # backstop, in case the human family is ever rebuilt weaker
     observer_mi_ceiling: 0.05  # MI(features; observer_goal) on foreign content must be under
     entropy_ceiling: 2.0       # max H(foreign signature); uniform over 16 is 2.773
+
+# ---------------------------------------------------------------------------
+# V4.5 — the three-gate decomposition (spec §3-§5). See ghostscale/v4_5_model.py.
+#
+# kappa_p acts on the likelihood, beta on the demonstrator model, theta on the update. Social
+# influence is NOT a gate: it shifts the prior, upstream of all three, and the model asserts
+# that no social term appears on the update path.
+# ---------------------------------------------------------------------------
+v4_5:
+  beta:
+    # The observer's hypothesis space over the creator's rationality. Five levels spanning the
+    # closed interval, so both boundaries are reachable: beta = 1 is the perfectly-optimising
+    # creator the preprint's Appendix A.1 assumes by writing the MaxEnt likelihood with
+    # beta = 1, and beta = 0 is the policy marginal, which is sig_EXPLORE and therefore the
+    # continuous form of V4's discrete EXPLORE hypothesis.
+    levels: [0.0, 0.25, 0.5, 0.75, 1.0]
+    # At beta = 1 the V4.5 likelihood must equal V4's ELEMENTWISE, not approximately: the
+    # construction reduces to it algebraically, so any nonzero difference is a wiring error
+    # rather than a numerical one. Asserted at construction (V4.5 §7's N-series check).
+    v4_boundary_tol: 1.0e-12
+  theta:
+    # The acceptance gate, sigmoid(theta_base - lambda * D_KL(Q(R|tau) || P_c(R))).
+    # OPEN is the default everywhere outside E29: lambda = 0 makes the gate ignore divergence
+    # entirely and reduces gated_update to V1's psi_analogue exactly, which is what keeps every
+    # V1-V4 number reachable from the V4.5 code path.
+    base_open: 10.0
+    lambda_open: 0.0
+    # CLOSED is E29's manipulation. The base is dropped and lambda raised together so that the
+    # gate is shut by VALUE DIVERGENCE rather than shut unconditionally — a gate that is closed
+    # regardless of what was recovered is not a values gate, it is an off switch, and it would
+    # make E29's decisive contrast trivially winnable.
+    base_closed: 0.0
+    lambda_closed: 4.0
+  social:
+    # Enters D[1] and nothing else (spec §3.2). Zero by default: V4.5 specifies the ARCHITECTURE
+    # for social influence but no experiment that manipulates it, so it is built, asserted, and
+    # left inert rather than swept on the quiet.
+    weight: 0.0
 
 # ---------------------------------------------------------------------------
 # Verification tolerances.

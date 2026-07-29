@@ -190,6 +190,112 @@ def mean_within_observer_entropy(posteriors: list[np.ndarray]) -> float:
 
 
 # --------------------------------------------------------------------------- #
+# Calibration (V4.5 A2 / V4 E25).
+#
+# Regret, accuracy, and the epistemic/pragmatic decomposition already exist. These two are
+# the gap, and they are TRANSLATION rather than new information: they restate the
+# fabrication result in the vocabulary an ML audience already uses. The observer is not
+# merely wrong about the goal, it is MISCALIBRATED about the goal, and V1's E2 shows the
+# miscalibration is induced by a LABEL rather than by the content.
+#
+# Both take the full posterior over goals. Neither is computable from a modal goal and an
+# entropy, which is why the three source experiments had to start persisting the posterior;
+# see analyses_v4_5 for that deviation.
+# --------------------------------------------------------------------------- #
+def brier_score(posteriors: np.ndarray, truths: np.ndarray) -> float:
+    """Multiclass Brier score: mean squared error between the posterior and the one-hot
+    outcome, averaged over observers.
+
+        BS = (1/N) Σ_n Σ_c ( p_n[c] - 1[y_n = c] )^2
+
+    Range [0, 2]; lower is better. A uniform posterior over K classes scores 1 - 1/K
+    (0.75 at K = 4) regardless of the outcome, which is the reference an honestly-uncertain
+    observer earns. Confident-and-wrong approaches 2, and that is the E2 cell.
+
+    This is the STRICTLY PROPER scoring rule of the pair: it rewards an observer for
+    reporting its true belief and cannot be gamed by hedging, so a bad Brier score is a
+    statement about the belief and not about the reporting convention.
+    """
+    p = np.asarray(posteriors, dtype=float)
+    y = np.asarray(truths, dtype=int)
+    if p.ndim == 1:
+        p = p[None, :]
+    onehot = np.zeros_like(p)
+    onehot[np.arange(p.shape[0]), y] = 1.0
+    return float(np.mean(np.sum((p - onehot) ** 2, axis=1)))
+
+
+def expected_calibration_error(posteriors: np.ndarray, truths: np.ndarray,
+                               n_bins: int = 10) -> float:
+    """Expected calibration error on the top-label prediction (the standard formulation).
+
+        ECE = Σ_b (|B_b| / N) · | acc(B_b) - conf(B_b) |
+
+    where observers are binned by their confidence (max posterior mass), ``acc`` is the
+    fraction of that bin whose modal goal was correct, and ``conf`` is the bin's mean
+    confidence. Range [0, 1]; zero means stated confidence tracks the chance of being right.
+
+    ECE is NOT proper — an observer that always says "25%" and is right 25% of the time
+    scores a perfect 0 while knowing nothing — so it is reported ALONGSIDE Brier and never
+    instead of it. It is included because it is the number an ML audience reads first, and
+    because the specific failure it names is the one the Ghost Scale induces: high
+    confidence in a bin whose accuracy is at chance.
+
+    Bins are the equal-width [0,1] bins of the standard definition, so the value is
+    comparable to published figures. Empty bins contribute nothing.
+    """
+    p = np.asarray(posteriors, dtype=float)
+    y = np.asarray(truths, dtype=int)
+    if p.ndim == 1:
+        p = p[None, :]
+    conf = p.max(axis=1)
+    correct = (p.argmax(axis=1) == y).astype(float)
+    n = p.shape[0]
+    if n == 0:
+        return float("nan")
+    edges = np.linspace(0.0, 1.0, int(n_bins) + 1)
+    ece = 0.0
+    for b in range(int(n_bins)):
+        lo, hi = edges[b], edges[b + 1]
+        # Left-open bins, with the first bin closed on the left so nothing is dropped.
+        sel = (conf > lo) & (conf <= hi) if b > 0 else (conf >= lo) & (conf <= hi)
+        m = int(np.sum(sel))
+        if m == 0:
+            continue
+        ece += (m / n) * abs(float(np.mean(correct[sel])) - float(np.mean(conf[sel])))
+    return float(ece)
+
+
+def calibration_bins(posteriors: np.ndarray, truths: np.ndarray,
+                     n_bins: int = 10) -> list[dict]:
+    """The reliability-diagram rows behind ``expected_calibration_error``.
+
+    Reported because a single ECE number hides the direction of the error, and the direction
+    is the finding: the E2 hallucination cell is overconfident (confidence far above
+    accuracy) rather than merely inaccurate.
+    """
+    p = np.asarray(posteriors, dtype=float)
+    y = np.asarray(truths, dtype=int)
+    if p.ndim == 1:
+        p = p[None, :]
+    conf = p.max(axis=1)
+    correct = (p.argmax(axis=1) == y).astype(float)
+    edges = np.linspace(0.0, 1.0, int(n_bins) + 1)
+    rows = []
+    for b in range(int(n_bins)):
+        lo, hi = edges[b], edges[b + 1]
+        sel = (conf > lo) & (conf <= hi) if b > 0 else (conf >= lo) & (conf <= hi)
+        m = int(np.sum(sel))
+        rows.append({
+            "bin_lo": float(lo), "bin_hi": float(hi), "n": m,
+            "mean_confidence": float(np.mean(conf[sel])) if m else float("nan"),
+            "accuracy": float(np.mean(correct[sel])) if m else float("nan"),
+            "gap": float(np.mean(conf[sel]) - np.mean(correct[sel])) if m else float("nan"),
+        })
+    return rows
+
+
+# --------------------------------------------------------------------------- #
 # The unidentifiability-vs-noise diagnostic (Spec §6, §9 N6).
 # --------------------------------------------------------------------------- #
 def mutual_information_features_goal(A0: np.ndarray, provenance: int, attention: int,

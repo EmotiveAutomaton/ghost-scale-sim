@@ -187,8 +187,10 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
             ci += 1
     recs = C.run_parallel(payloads, _e19_worker, workers)
 
-    drop = {"real_posterior", "full_posterior"}
-    df = pd.DataFrame([{k: v for k, v in r.items() if k not in drop} for r in recs])
+    # Both posteriors KEPT (V4.5 A2) — see the note in e2_variance.run. ``real_posterior`` is
+    # the four-real-goal object decision D4 fixes as the comparable one, so it is what the
+    # calibration analysis scores; ``full_posterior`` carries the EXPLORE mass alongside it.
+    df = pd.DataFrame(recs)
     df.to_csv(res_dir / "e19_explore.csv", index=False)
 
     stats = cell_stats(recs)

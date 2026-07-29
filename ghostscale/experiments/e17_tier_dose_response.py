@@ -121,8 +121,8 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
             ci += 1
     recs = C.run_parallel(payloads, _e17_worker, workers)
 
-    points = pd.DataFrame([{k2: v for k2, v in r.items() if k2 != "final_posterior"}
-                           for r in recs])
+    # Posterior KEPT (V4.5 A2) — see the note in e2_variance.run for why.
+    points = pd.DataFrame(recs)
     points.to_csv(res_dir / "e17_points.csv", index=False)
 
     rows = []

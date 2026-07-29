@@ -222,6 +222,106 @@ against goal-foreign content the observer fails in a different and more expensiv
 
 ---
 
+## A1 — The mislabeling asymmetry (V4.5 §1, zero compute)
+
+This was measured in V1, has been sitting in `results/e2_cell_stats.csv` since, and has never
+been reported. It is a directional design argument and it is the kind that standards work
+actually needs.
+
+E2 holds content constant and varies only the declared label. Two of its four cells are
+mislabelings, one in each direction:
+
+| condition | within-observer (confidence) | between-observer (disagreement) |
+|---|---|---|
+| human artifact, labeled AI | 0.0924 | **0.0091** |
+| AI artifact, labeled human | 0.0896 | **1.3793** |
+
+Confidence is the same to within 3% — the ratio is 1.032, so **from inside a single reader's
+head the two errors are indistinguishable**. The between-observer outcomes are opposite, by a
+factor of 152. Disagreement in the mislabeled-human cell is 0.7% of the ln(4) = 1.386 ceiling;
+in the mislabeled-synthetic cell it is 99.5% of it.
+
+**So the Ghost Scale's two failure modes are asymmetric, and they fail in different
+currencies.** Human work falsely labeled AI is still *read accurately*: observers converge,
+they agree with each other, and A2 below shows they stay 99.85% correct about the goal. What
+that error costs is engagement — the reader's willingness to look, not their ability to see.
+AI work falsely labeled human produces confident fabrication at ceiling disagreement. What
+that error costs is the model: every reader walks away with a different invented intent, held
+with near-certainty.
+
+**That is a directional argument for erring toward over-labeling**, and it is measured rather
+than asserted. The costs of the two mistakes are not symmetric, so a disclosure regime tuned
+to minimise total mislabeling is optimising the wrong objective; it should be tuned to
+minimise mislabeled *synthetic* work specifically, accepting more mislabeled human work in
+exchange.
+
+Computed by `ghostscale/analyses_v4_5.py::a1_mislabeling_asymmetry`, which asserts all three
+clauses (comparable confidence, low disagreement on mislabeled human work, ceiling
+disagreement on mislabeled synthetic work) rather than reading them off, and returns FAILS if
+any of them stops holding. Written to `results/a1_mislabeling_asymmetry.json`. Verdict: HOLDS.
+
+One correction to the spec: V4.5 §1 cites `results/e2_variance.csv`. No such file exists —
+`e2_variance` is the figure name. The numbers are in `e2_cell_stats.csv`, and the direction
+was confirmed against it as §1 instructs rather than taken from the spec's table.
+
+---
+
+## A2 — Calibration (V4.5 §1, zero compute)
+
+`brier_score` and `expected_calibration_error` are now in `metrics.py`, alongside
+`calibration_bins` for the reliability rows. This is translation, not new information: it
+restates the fabrication result in the vocabulary an ML audience reads first.
+
+The reference points for four goals: an honestly-uncertain observer reporting a uniform
+posterior scores Brier 0.75 and, if it is right a quarter of the time, ECE 0.0. A
+confidently-wrong observer approaches Brier 2.0.
+
+| condition | Brier | ECE | accuracy | confidence |
+|---|---|---|---|---|
+| E2 CREATOR / SIG_CREATOR | 0.000 | 0.000 | 1.000 | 1.000 |
+| E2 CREATOR / SIG_GHOST | 0.007 | 0.021 | **0.999** | 0.977 |
+| E2 GHOST / SIG_GHOST | 0.802 | 0.145 | 0.259 | 0.396 |
+| E2 GHOST / SIG_CREATOR | **1.487** | **0.743** | **0.239** | **0.982** |
+
+**The bottom two rows are the same content.** Pure `noise_free_synth`, no recoverable goal,
+identical in every respect except the label attached to it. Told the truth, the observer is
+nearly calibrated: Brier 0.802 against the 0.75 an honest shrug earns, confidence 0.396,
+accuracy 0.259. Told it is human, the same observer on the same content goes to Brier 1.487
+and ECE 0.743.
+
+**The label moves ECE by 5.1× and Brier by 0.69, at zero change in the content.** That is the
+sentence this analysis exists to produce: *the observer is not merely wrong, it is
+miscalibrated, and the miscalibration is induced by a label.*
+
+The reliability bins make it sharper than the summary does. In the mislabeled cell, **all 4000
+observers fall in the single highest confidence bin** — mean confidence 0.982 — and that bin's
+accuracy is 0.238, against 0.25 for guessing. Not a distribution with a bad tail. Unanimous
+near-certainty, at chance. Under truthful labelling the same content spreads across seven bins
+with its mass at 0.3–0.4, which is roughly where it belongs.
+
+E17 makes it a dose-response. Under `claimed_human`, ECE by intent transmission is 0.000
+(α=1.00), 0.000 (0.95), 0.017 (0.60), **0.737** (0.05). Miscalibration is graded by opacity,
+not switched on by the GHOST tier.
+
+Two smaller readings worth keeping:
+
+- **E2 CREATOR / SIG_GHOST is the only cell with a negative confidence-accuracy gap** (−0.021):
+  human work labeled AI makes the reader slightly *under*confident while leaving it 99.85%
+  accurate. That is A1's engagement-cost claim showing up in the calibration vocabulary, from
+  a different direction.
+- **E19's positive control is well calibrated**, scored on its five-way posterior: ECE 0.019,
+  accuracy 0.907, confidence 0.905. When the observer says "they were just exploring", it is
+  right about as often as it claims to be. EXPLORE is not a hedge the observer hides behind.
+
+Foreign content is excluded from the calibration table and the exclusion is load-bearing: it
+has no correct in-family goal by construction, so accuracy is undefined and any Brier score
+against an arbitrary target would measure the labelling convention rather than the observer.
+E19's entropy and disagreement columns already carry that case.
+
+`results/a2_calibration.csv`, `results/a2_reliability_bins.json`.
+
+---
+
 ## Deviations
 
 **1. V4 runs at F = 16, so N16 is behavioural rather than bit-exact.** Forced by C1's
@@ -281,6 +381,40 @@ shape still drawn. Measured across five seeds the anchored family gives 0.94 to 
 Related: **the N18 floor is expressed as a fraction of the human family's own MI (85%) rather
 than as a bare number**, so it states the reframe's claim instead of a value chosen to be
 cleared, and it cannot be quietly satisfied by weakening the human family.
+
+---
+
+**5. A2 required re-running E2, E17 and E19, which V4.5 §7 forbids.** §1 says the two
+analyses "add no new simulation" and §7 says that if either requires a run, the analysis has
+been misunderstood. A2 required one, for a reason that is about the writers rather than about
+the analysis: Brier score and expected calibration error are functions of a predicted
+*distribution*, and all three experiments computed the posterior and then dropped it before
+writing their CSV. A modal goal and an entropy do not determine a posterior, so the quantity
+was not recoverable from anything on disk.
+
+The three writers now persist it, and all three experiments were re-run at their committed
+seeds. The mitigation is that this is a **deterministic reproduction, not a new experiment** —
+no design, seed, scale or parameter changed — and that was verified rather than assumed:
+
+```
+e2_points.csv    16,000 rows   identical on every pre-existing column   e2_cell_stats.csv identical
+e17_points.csv   32,000 rows   identical on every pre-existing column   e17_tier_stats.csv identical
+e19_explore.csv  24,000 rows   identical on every pre-existing column   e19_cell_stats.csv identical
+```
+
+E19's verdict returns CRASH_SURVIVES with an identical crash-signature block. `e17_verdict.json`
+differs from its predecessor in the last two or three digits of some floats (slope
+−1.4488056975774923 against −1.4488056975774926) and in one 4-decimal rounding that straddles a
+boundary (accuracy 0.98075 rendering as 0.9808 before and 0.9807 after). Those come from
+floating-point summation order across parallel workers; the per-observer rows they are computed
+from are bit-identical, so no measured quantity moved.
+
+The alternative was to invert `within_entropy` under a peaked-plus-flat-tail assumption to
+recover confidence. It honours §7 literally, but it makes ECE depend on an assumption about
+the *shape* of a posterior, which is precisely what the fabrication result is a claim about,
+and it leaves Brier out of reach regardless. Recorded here rather than argued away: a
+constraint was broken, and the reason it was breakable is that three writers threw away the
+column that mattered.
 
 ---
 

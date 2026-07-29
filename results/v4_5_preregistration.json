@@ -1,0 +1,125 @@
+{
+  "version": "V4.5",
+  "written_before": "any V4.5 experiment is run",
+  "depends_on": "results/v4_preregistration.json, which is unchanged and still binding",
+  "E21_criteria": {
+    "arms": [
+      "A_active_inference",
+      "B_bayesian_always_deep",
+      "C_label_truster",
+      "D_effort_heuristic",
+      "E_no_tom_classifier"
+    ],
+    "scaffolding_arms": [
+      "C_label_truster",
+      "D_effort_heuristic"
+    ],
+    "dissociation": {
+      "confident_entropy_max": 0.35,
+      "disagreement_entropy_min": 1.1,
+      "rule": "conjunctive and simultaneous",
+      "anchored_to": {
+        "e2_dissociation_cell_within": 0.0896,
+        "e2_dissociation_cell_between": 1.3793,
+        "e2_truthful_ghost_within": 1.2926,
+        "ln4_ceiling": 1.3862943611198906
+      },
+      "why_conjunctive": "high disagreement alone is not the signature: truthfully-labelled synthetic content produces it too, while being honest about its uncertainty. What distinguishes fabrication is that the disagreement comes with confidence. A heuristic can be confidently wrong; the pre-registered claim is that it should not produce the JOINT pattern."
+    },
+    "foreign_engagement": {
+      "engaged_floor": 0.5,
+      "unresolved_entropy_min": 0.5,
+      "anchored_to": {
+        "e19_foreign_engaged": 0.746,
+        "e19_foreign_entropy": 1.4854
+      },
+      "why": "sustained expensive attention that never resolves is a prediction about an agent that keeps EXPECTING to learn. A pure effort heuristic has no expectation to be wrong about, so arm D should fail it; if arm D reproduces it anyway that is informative about how little machinery the phenomenon requires.",
+      "specificity_clause": "on directed human content the same arm must both RESOLVE and DISENGAGE. E19's finding is a contrast, not a level: the observer that pays 75% of free steps on foreign content resolves human content and stops paying (0.00002). Scored as a level, arm C passes for free because it never resolves anything, and arm B passes for free because it has no engagement policy and is DEEP by construction. An arm whose engagement does not respond to content has not reproduced a result about engagement responding to content. Added before any E21 cell ran, from inspection of the arm definitions."
+    },
+    "secondary_measure_label_induction": "reported alongside the dissociation but NOT part of the verdict. E2's finding is that the SAME content under a truthful label produces within 1.2926 against the mislabeled cell's 0.0896, so the confidence is induced by the label. An arm that is confidently wrong regardless of the label has reproduced confident fabrication without reproducing the induction, and A2's calibration result is a claim about the induction specifically.",
+    "arm_D_is_given_its_best_shot": "arm D's disengagement threshold is its one free parameter and there is no principled value for it. Rather than fitting it, D is run across a grid of thresholds and is credited with reproducing a signature if ANY threshold in the grid does. That is maximally generous to the baseline, which is the direction the benefit of the doubt should run in an experiment whose unwelcome outcome is that the apparatus is unnecessary. The full grid is reported, not just the crediting value.",
+    "cells": "content {human_directed, goal_empty, goal_foreign} x declared signal {SIG_CREATOR, SIG_GHOST, UNSIGNED}. goal_empty is V1-V3's noise_free_synth stimulus, which is what E2 actually ran on; goal_foreign is V4's. Both are included because the dissociation is a V1 result about goal-empty content and V4.5 is a delta on a model that replaced that stimulus \u2014 asking the necessity question about only one of them would answer it for only one model of synthetic content. The UNSIGNED cells carry the E19 engagement discriminator, which was measured unsigned.",
+    "positive_control": "arm A must itself reproduce a signature for any baseline's failure on it to carry information; otherwise INCONCLUSIVE",
+    "outcomes": [
+      "MACHINERY_NECESSARY",
+      "MACHINERY_PARTLY_NECESSARY",
+      "MACHINERY_UNNECESSARY",
+      "INCONCLUSIVE"
+    ],
+    "unwelcome_outcome_goes_first": "V4.5 \u00a72: if arm C or D reproduces either signature, that goes in the FIRST LINE of the section",
+    "baseline_fairness": "every arm receives the same observation stream and the same D-prior draw as the full observer, used as its prior or regulariser. Without matched heterogeneity a deterministic heuristic scores zero between-observer disagreement by construction and arm A wins the comparison for a reason that has nothing to do with theory of mind. Arm E additionally carries a discriminative feature-to-goal head, because the dissociation is measured on goals and a provenance-only classifier could not be scored on it at all."
+  },
+  "E28_criteria": {
+    "beta_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "recovery_rho_min": 0.8,
+    "update_rho_min": 0.8,
+    "accuracy_floor": 0.75,
+    "beta0_entropy_tolerance_nats": 0.25,
+    "beta1_reproduces_v4_tolerance": 0.05,
+    "predicted": "goal accuracy stays high across the beta range while update magnitude falls with beta \u2014 legible, competent, and unmoving",
+    "falsification": "if update magnitude does not fall with beta while accuracy holds, beta is not doing separable work and collapses into either kappa_p or theta",
+    "third_outcome_named_before_the_run": "if accuracy falls WITH the update magnitude, beta is doing something but not the predicted thing: content generated at low beta genuinely carries less goal information, so failing to read it is the ordinary consequence of a weaker stimulus rather than a distinct gate. The predicted result requires the DISSOCIATION.",
+    "required_consistency_check": "V4.5 \u00a73.3: at beta = 0, E28 must reproduce E19's exploratory-human cell. If a continuous beta near zero does not recover the discrete EXPLORE result, the two are not the same axis and \u00a73.3's identification is wrong.",
+    "outcomes": [
+      "BETA_IS_SEPARABLE",
+      "BETA_IS_SEPARABLE_OVER_PART_OF_THE_RANGE",
+      "CONFOUNDED_WITH_LEGIBILITY",
+      "BETA_COLLAPSES"
+    ]
+  },
+  "E29_criteria": {
+    "predicted_signatures": {
+      "low_kappa_p_goal_empty": {
+        "engagement": "low",
+        "resolution": "no",
+        "update": "none"
+      },
+      "low_kappa_p_goal_foreign": {
+        "engagement": "high",
+        "resolution": "no",
+        "update": "none"
+      },
+      "low_beta": {
+        "engagement": "high",
+        "resolution": "yes",
+        "update": "low"
+      },
+      "closed_theta": {
+        "engagement": "high",
+        "resolution": "yes",
+        "update": "none"
+      }
+    },
+    "update_none_max_fraction_of_reference": 0.05,
+    "update_low_max_fraction_of_reference": 0.5,
+    "engaged_high_min": 0.5,
+    "resolved_entropy_max": 0.5,
+    "divergence_spike_min_ratio": 2.0,
+    "decisive_contrast": "low_beta versus closed_theta",
+    "why_thresholds_are_ratios": "update magnitude is classified as a fraction of the reference cell measured in the same run, not as a bare number in nats. A bare threshold could be slid until the predicted table came out and would not survive a change to the update scale; a ratio states the claim.",
+    "failure_is_reportable": "V4.5 \u00a75: three gates with different action points is a harder object to identify than one scalar. E29 is the mitigation. If it fails, say so plainly rather than keeping the decomposition on theoretical grounds.",
+    "outcomes": [
+      "GATES_DISSOCIATE",
+      "GATES_PARTLY_DISSOCIATE",
+      "DECOMPOSITION_NOT_EARNED",
+      "INCOMPLETE"
+    ]
+  },
+  "architecture_constraints": {
+    "beta_position": "beta acts on the DEMONSTRATOR MODEL \u2014 the observer's likelihood over what a creator at that rationality would emit \u2014 not on the update. At beta = 1 the construction must reduce to V4's A[0] exactly, which is the N-series check V4.5 \u00a77 requires: 'if it does not, beta has been wired into the wrong pipeline position'.",
+    "social_influence": "V4.5 \u00a73.2 and \u00a77: social influence shifts P_0(R) and the prior over provenance BEFORE any gate runs. It is never a multiplier on integration. Asserted at construction \u2014 no social term may appear in the update-magnitude path.",
+    "integrity_is_not_a_separate_construct": "V4.5 \u00a73.2: under revealed preference, values are defined by what behaviour reveals, so integrity cannot diverge from values by construction. What can diverge is STATED from REVEALED values, and that gap is already V4's C4 (declared_tier versus omega_true). No separate construct is added."
+  },
+  "unchanged_from_v4": {
+    "E8": "stays withheld with its xfail(strict) marker",
+    "E27": "the V3 residual stays open and is not touched",
+    "sig_EXPLORE": "still locked by v4_preregistration.json and N17"
+  },
+  "content_hash": "056b1d729b315d649ce3d74e8ccfc26cf5a2bd9d64dbf597501135b09aca39e7"
+}

@@ -77,8 +77,12 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
                 for ci, (prov, sig) in enumerate(CELLS) for s in range(n_seeds)]
     recs = C.run_parallel(payloads, _e2_worker, workers)
 
-    points = pd.DataFrame([{k2: v for k2, v in r.items() if k2 != "final_posterior"}
-                           for r in recs])
+    # The posterior is KEPT (V4.5 A2). It was dropped here through V1-V4, which made Brier
+    # score and expected calibration error uncomputable from the committed CSV: those are
+    # functions of a predicted DISTRIBUTION, and a modal goal plus an entropy does not
+    # determine one. Keeping it costs one wide column and makes the calibration analysis a
+    # true zero-compute reanalysis from this run forward.
+    points = pd.DataFrame(recs)
     points = points.sort_values(
         ["true_provenance", "declared_signal", "seed_rep", "observer"]).reset_index(drop=True)
     points.to_csv(res_dir / "e2_points.csv", index=False)

@@ -4,14 +4,14 @@
   "arms": {
     "claimed_human": {
       "between_vs_alpha": {
-        "slope": -1.4488056975774923,
+        "slope": -1.4488056975774926,
         "spearman": -0.9486832980505139,
         "monotone": false,
         "weakly_monotone_increasing_with_opacity": true,
         "n_distinguishable_levels": 3,
         "steps_with_opacity": [
           0.0,
-          0.1082740567591164,
+          0.10827405675911647,
           1.2711418986893872
         ]
       },
@@ -24,18 +24,18 @@
         "steps_with_opacity": [
           2.296821997618642e-06,
           0.0111405995839263,
-          0.0782694719103902
+          0.07826947191039021
         ]
       },
       "gap_vs_alpha": {
-        "slope": -1.35453808581491,
+        "slope": -1.3545380858149096,
         "spearman": -0.7999999999999999,
         "monotone": false,
         "weakly_monotone_increasing_with_opacity": true,
         "n_distinguishable_levels": 3,
         "steps_with_opacity": [
           -2.296821997618642e-06,
-          0.09713345717519009,
+          0.09713345717519017,
           1.1928724267789972
         ]
       },
@@ -54,7 +54,7 @@
           "within": 0.0111,
           "between": 0.1083,
           "fabrication_gap": 0.0971,
-          "accuracy": 0.9808
+          "accuracy": 0.9807
         },
         {
           "true_provenance": "POLISHED",
@@ -88,27 +88,27 @@
         ]
       },
       "within_vs_alpha": {
-        "slope": -1.3562879072729683,
+        "slope": -1.3562879072729677,
         "spearman": -1.0,
         "monotone": true,
         "weakly_monotone_increasing_with_opacity": true,
         "n_distinguishable_levels": 3,
         "steps_with_opacity": [
           1.9680469646903915e-05,
-          0.028764916246000433,
-          1.2686024382627996
+          0.02876491624600045,
+          1.2686024382627994
         ]
       },
       "gap_vs_alpha": {
-        "slope": -0.08763546249464664,
+        "slope": -0.0876354624946467,
         "spearman": -0.7999999999999999,
         "monotone": false,
         "weakly_monotone_increasing_with_opacity": true,
         "n_distinguishable_levels": 3,
         "steps_with_opacity": [
           -1.9680469646903915e-05,
-          0.018975093900972368,
-          0.0634391134386103
+          0.018975093900972448,
+          0.06343911343861026
         ]
       },
       "by_tier": [

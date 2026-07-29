@@ -102,6 +102,13 @@ class RolloutResult:
     modal_goal: int = -1
     kappa: float = None
 
+    # V4.5: posteriors over any ADDITIONAL hidden state factors the caller asked to record,
+    # keyed by factor index. Empty for every V1-V4 rollout, since none of them has a fourth
+    # factor. This exists so beta can be read out of the same loop the goal is read out of,
+    # rather than duplicating the rollout for E28.
+    extra_posterior: dict = field(default_factory=dict)       # factor -> (T, cardinality)
+    final_extra_posterior: dict = field(default_factory=dict) # factor -> (cardinality,)
+
 
 def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                      rng: np.random.Generator, n_timesteps: int,
@@ -109,7 +116,8 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                      kappa: float | None = None, initial_glance: bool = True,
                      early_stop: bool = True, stop_patience: int = 3,
                      stop_tol: float = 1e-3, learn: bool = False,
-                     learn_mode: str = "online") -> RolloutResult:
+                     learn_mode: str = "online",
+                     extra_factors: tuple[int, ...] = ()) -> RolloutResult:
     """Roll one observer forward over ``n_timesteps`` looking at a single artifact.
 
     ``force_deep_k``: force DEEP for the first k steps (E2), so every condition gets a
@@ -149,6 +157,13 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
       * ``"deferred"`` — buffer the artifact's observations and commit them once inference has
         finished, attributed under the resolved posterior. No new parameter, and the bias is
         absent at any ``n_timesteps``.
+
+    ``extra_factors`` (V4.5) records the posterior over additional hidden state factors, by
+    index, into ``RolloutResult.extra_posterior``. Empty by default and therefore inert for
+    every V1-V4 call site. E28 gives the observer a fourth factor (beta, the creator's
+    rationality) and needs to read its posterior out of the same loop that reads the goal's;
+    duplicating the rollout to do that would have created two copies of the early-stop
+    argument and the learning hooks, which is how they drift.
     """
     if learn:
         early_stop = False   # the early-stop correctness argument does not survive learning
@@ -170,6 +185,8 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
     efe = {k: np.zeros(n_timesteps) for k in
            ("deep_prag", "deep_epi_total", "deep_epi_goal",
             "skim_prag", "skim_epi_total", "skim_epi_goal")} if record_efe else {}
+    extra = {f: np.zeros((n_timesteps, np.asarray(agent.D[f]).size))
+             for f in extra_factors}
 
     first_skim = -1
     for t in range(n_timesteps):
@@ -217,6 +234,8 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
         goal_post[t] = np.asarray(qs[K.F_GOAL])
         prov_post[t] = np.asarray(qs[K.F_PROVENANCE])
         ent[t] = metrics.within_observer_entropy(goal_post[t])
+        for f in extra_factors:
+            extra[f][t] = np.asarray(qs[f], dtype=float)
 
         # Early stop: after the forced phase, if disengaged (SKIM) and the goal posterior
         # has been stable for `stop_patience` steps, the future is static -> pad and break.
@@ -230,6 +249,8 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
                 if record_efe:
                     for key in efe:
                         efe[key][t + 1:] = efe[key][t]
+                for f in extra_factors:
+                    extra[f][t + 1:] = extra[f][t]
                 break
 
     if learn and learn_mode == "deferred":
@@ -248,4 +269,6 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
         goal_prior=goal_prior,
         modal_goal=int(np.argmax(final_goal)),
         kappa=float(kappa if kappa is not None else cfg.signal_model.kappa),
+        extra_posterior=extra,
+        final_extra_posterior={f: extra[f][-1].copy() for f in extra_factors},
     )

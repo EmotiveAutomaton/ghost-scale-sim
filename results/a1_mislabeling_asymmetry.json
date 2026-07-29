@@ -1,0 +1,41 @@
+{
+  "analysis": "A1 \u2014 the mislabeling asymmetry",
+  "source": "results/e2_cell_stats.csv",
+  "note_on_the_spec": "V4.5 \u00a71 cites results/e2_variance.csv. That file does not exist; e2_variance is the FIGURE name. The measurements live in e2_cell_stats.csv and the direction was confirmed against it rather than taken from the spec's table.",
+  "cells": {
+    "human_artifact_labeled_AI": {
+      "true_provenance": "CREATOR",
+      "declared_signal": "SIG_GHOST",
+      "within_observer": 0.0924440938010487,
+      "between_observer": 0.0090958899071757
+    },
+    "AI_artifact_labeled_human": {
+      "true_provenance": "GHOST",
+      "declared_signal": "SIG_CREATOR",
+      "within_observer": 0.089599060950349,
+      "between_observer": 1.3792851522317506
+    },
+    "human_artifact_labeled_human": {
+      "within_observer": 7.060177278056233e-08,
+      "between_observer": 0.0
+    },
+    "AI_artifact_labeled_AI": {
+      "within_observer": 1.292643197505897,
+      "between_observer": 1.3783789469839058
+    }
+  },
+  "derived": {
+    "confidence_ratio_mislabelled_human_over_mislabelled_synth": 1.031752931565614,
+    "disagreement_ratio_synth_over_human": 151.63828567709902,
+    "disagreement_ceiling_nats": 1.3862943611198906,
+    "mislabelled_synth_as_fraction_of_ceiling": 0.9949439245482629,
+    "mislabelled_human_as_fraction_of_ceiling": 0.0065612976307771785
+  },
+  "clauses": {
+    "confidence_is_comparable_across_the_two_errors": true,
+    "mislabelled_human_work_is_still_read_accurately": true,
+    "mislabelled_synthetic_work_produces_ceiling_disagreement": true
+  },
+  "verdict": "HOLDS",
+  "statement": "The Ghost Scale's two failure modes are asymmetric. Mislabeling human work costs ENGAGEMENT: the observer is equally confident and observers still agree with each other, so the intent is read accurately and what is lost is the reader's willingness to look. Mislabeling synthetic work costs the MODEL: the same confidence, at ceiling disagreement, which is confident fabrication. That is a directional design argument for erring toward over-labeling, it was already measured in V1, and it has never been reported."
+}
