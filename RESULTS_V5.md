@@ -4,13 +4,29 @@ V5 exists because a careful read-through of V1–V4.5 by the author surfaced fou
 and one omission. **None were found by the simulations.** They were found by someone who knows
 the theory checking whether the implementation matched it.
 
-**Status: C1 only.** μ is built, its dissociation null N21 is built and passes, and E30 has run.
-C2, C3, C4 and E31–E34 are not started and must pre-register separately.
+**Status: C1–C4 built and run. E30, E31, E32, E33 and E34 have reported.** The standing
+literature check (§0) has not been run and is not a spec-implementation task.
 
-Criteria were pre-registered and hash-locked in `results/v5_preregistration.json` before N21 ran
-at scale and before a line of E30 existed, with every outcome branch written in advance.
-`ghostscale/prereg_v5.py` holds them as the functions the experiments and the tests both call,
-so the written criterion and the applied criterion are the same object.
+Criteria were pre-registered and hash-locked before any experiment ran, with every outcome
+branch written in advance. C1 is in `results/v5_preregistration.json`; C2/C3/C4 are in
+`results/v5_c234_preregistration.json`, a **separate file** for V4.5's reason — the first was
+already locked and its experiments had reported, and a pre-registration that acquires new
+content after its experiments run is not a pre-registration. `ghostscale/prereg_v5.py` and
+`prereg_v5_c234.py` hold the criteria as the functions the experiments and the tests both call.
+
+### The scoreboard for V5
+
+| experiment | verdict | reading |
+|---|---|---|
+| **N21** | DEPTH_RECOVERED_NOT_EFFORT | 5.98× — μ is not β renamed, so E30 counts |
+| **E30** | DEPTH_MOVES_NOTHING | depth is readable and inert; **C1's central claim fails** |
+| **E31** | ONE_MECHANISM_OPPOSITE_SIGNS | **C2 supported**; the crash and the exploit are one mechanism |
+| **E32** | TWO_DIMENSIONS | **C3 refuted, informatively**; ω and d are not one channel |
+| **E33** | READS_THE_LATENT_WITHOUT_A_TRACE | **C4 half-supported**; the mark is real and unreadable |
+| **E34** | not answerable in simulation | shipped as an instrument, not a result |
+
+Two of the five corrections came back against the framework, one for it, and two split. That
+distribution is the point of writing every branch in advance.
 
 ---
 
@@ -233,6 +249,238 @@ and must report the limitation.
 
 ---
 
+## E31 — two gates, provenance as evidence about depth
+
+### Verdict: ONE_MECHANISM_OPPOSITE_SIGNS. C2 is supported, and it is the only correction that was.
+
+**What a reader takes on tracks how much thought it believes went in, regardless of which
+channel put that belief there** — Spearman 0.886 against a required 0.70, across every open-θ
+cell. And a dishonest label inflates the depth estimate on content that has none: the exploit
+gap is 0.187 against a required 0.15.
+
+`results/e31_verdict.json`, `results/e31_cell_stats.csv`, `figures/e31_two_gates.png`.
+2 content × 3 labels × 2 θ × 20 seeds × 60 observers × 4 sequential encounters.
+
+### The headline, which is three cells
+
+Machine content at ω = 0.10 — **the same artifact in both rows** — differing only in what the
+label says:
+
+| | recovered depth | what the reader takes on | left uncertain | invents |
+|---|---|---|---|---|
+| machine work, labelled honestly | 1.892 | **0.039** | 1.350 (unresolved) | 0.000 |
+| machine work, passed off as human | **2.079** | **0.848** | 0.242 (resolved) | 0.025 |
+| human work, labelled honestly | 2.323 | 1.148 | 0.000 | 0.000 |
+
+That is C2's claim in one table. **The generative crash is a correctly low depth estimate** —
+little reasoning behind it, so don't spend, and the reader doesn't. **The trust exploit is a
+falsely high one** — the same content, one dishonest word, and the reader spends twenty-two
+times as much and resolves onto an answer the content does not support. One mechanism, opposite
+signs, and the update is a monotone function of the depth estimate in both directions.
+
+### μ and θ dissociate on behaviour, not on definition
+
+E29's decisive contrast in its corrected form. Both cells integrate almost nothing; they differ
+in why:
+
+| | low depth | closed θ |
+|---|---|---|
+| left uncertain | 1.350 (**never resolved**) | 0.000 (**read perfectly**) |
+| what the reader takes on | 0.039 | 0.000 |
+| accuracy of the belief carried forward | **0.985** | **0.238** (chance) |
+
+The reader facing shallow content never works out what it was for and still ends up nearly
+right. The reader with a closed gate reads the work perfectly — the lowest uncertainty in the
+design — and finishes believing exactly what it believed at the start. Different failures, told
+apart on quantities that are not restatements of the manipulation.
+
+### The limitation, stated where a reader will meet it
+
+The observer takes the label at face value when forming its depth prior and **cannot doubt it**,
+because provenance and depth are no longer in one hidden factor — the merge that would have
+allowed joint inference is incompatible with the merge that makes depth readable at all (see the
+C1 section). Only content can subsequently move the estimate.
+
+**So the exploit measured here is an upper bound.** A reader able to doubt the label would be
+harder to fool. That is the right side to err on for a warning and the wrong side for a
+reassurance, and it should be quoted as the former.
+
+---
+
+## E32 — are foreign content and an unskilled reader the same thing?
+
+### Verdict: TWO_DIMENSIONS. They differ on all five measures, and the difference is the useful part.
+
+C3 proposed that ω and observer inexpertise `d` are one channel: creator-side and observer-side
+causes of the same gap. **They are not, and the way they fail is more informative than the
+collapse would have been.**
+
+`results/e32_verdict.json`, `results/e32_cell_stats.csv`, `figures/e32_omega_d.png`.
+6 matched overlap levels × 2 arms × 30 seeds × 200 observers.
+
+### The matching came first and is locked
+
+"Matched effective overlap" is a free parameter, and the spec does not flag it: without fixing
+the correspondence in advance one can find a `d` that matches any ω on whichever measure one is
+about to report. So it is defined once, computed before any rollout, and hash-locked —
+MI(features; goal) under the observer's own likelihood on the content it sees, with `d` solved
+by bisection:
+
+| ω | 0.00 | 0.05 | 0.10 | 0.20 | 0.40 | 0.70 |
+|---|---|---|---|---|---|---|
+| matched `d` | 0.945 | 0.935 | 0.924 | 0.898 | 0.823 | 0.612 |
+| effective overlap, nats | −0.012 | 0.039 | 0.090 | 0.192 | 0.395 | 0.701 |
+
+Achieved overlap matches target to four decimals in every cell, so the two arms really are
+extracting the same amount of information by construction.
+
+### Measured, at the widest gap
+
+| | competent reader, foreign content | unskilled reader, human content |
+|---|---|---|
+| keeps looking | **0.611** | **0.001** |
+| left uncertain | 1.259 | 0.663 |
+| readers disagree | 1.378 | 1.310 |
+| gets it right | 0.255 | 0.419 |
+
+**The same information deficit produces opposite behaviour.** The unskilled reader disengages
+almost immediately and is comparatively confident; the competent reader facing foreign content
+sustains attention through most of the free phase and stays near maximum uncertainty. The
+engagement gap is 0.610 out of a possible 1.0.
+
+### The second dimension, which C3 asked to have named
+
+**Whether the failure is detectable to the reader.** A high-`d` reader has templates aimed at
+the wrong place but the content is *in support*: its hypotheses give different likelihoods, one
+wins, and it wins on that reader's own sampling noise. It fails silently. Low-ω content sits
+where every template reads floor, the likelihoods are near-equal, nothing wins, and the reader
+keeps paying because it can still see there is something there. It fails loudly.
+
+That was the pre-registered prediction, written before the run in place of "one variable", and
+it held on every measure. **The model should carry both variables, and the second one is not
+"how big is the gap" but "can the reader tell there is one".**
+
+The zero-compute precursor from E15's and E20's committed grids pointed the same way and is
+reported in the verdict as `precursor`, labelled indicative only — different feature counts,
+different designs, not matched on overlap.
+
+---
+
+## E33 — the latent goal
+
+### Verdict: READS_THE_LATENT_WITHOUT_A_TRACE
+
+**A reader can know a maker better than the maker knows itself, and the margin grows the more
+wrong the maker is.** But the categorical claim about generative systems does not survive: the
+mark that self-blindness leaves on the work is real and **no reader in this model can detect
+it.**
+
+`results/e33_verdict.json`, `results/e33_cell_stats.csv`, `figures/e33_latent_goal.png`.
+3 creator arms × 5 divergence rates × 20 seeds × 100 observers.
+
+### The reader beats the maker's own account
+
+| how often the maker is wrong about itself | reader recovers the real goal | maker's own account is right | margin |
+|---|---|---|---|
+| never | 0.887 | 1.000 | −0.113 |
+| 25% | 0.889 | 0.800 | +0.089 |
+| 50% | 0.895 | 0.500 | +0.395 |
+| 75% | 0.883 | 0.400 | +0.483 |
+| always | 0.886 | 0.000 | **+0.886** |
+
+The reader's recovery is **flat at ~0.89 across the whole range**, and that flatness is the
+result. It reads the work, weights the self-report at its stated reliability, and is unmoved by
+how wrong that report is. The maker's account degrades to zero; the reader does not follow it
+down. Beyond a divergence rate of about 0.1 the reader is the better source on what the maker
+was doing.
+
+### The categorical claim, and why it is only half supported
+
+V5 decision 18 restated C4's claim in a falsifiable form: what a generative system cannot
+produce is not a divergence — deception produces those too — but **a divergence that leaves a
+trace in the artifact.** Three arms make that testable: self-unaware (trace), deceptive
+(divergence, no trace), generative (confabulated declaration, no trace).
+
+**The trace is real.** Measured on the artifact itself, as how far its realised structure
+departs from what an unconflicted maker produces, on diverged artifacts only:
+
+| self-unaware | deceptive | generative |
+|---|---|---|
+| **0.896** | 0.628 | 0.603 |
+
+The self-unaware maker's work is marked, and the two arms that merely *say* something false are
+not. That is the premise of the categorical claim, and it holds.
+
+**The reader cannot see it.** Recovered depth on those same artifacts is 1.9709, 1.9705 and
+1.9707 — a separation of 0.0004 against a required 0.10. All three arms are indistinguishable to
+the observer.
+
+**So the mark exists and is unreadable, which is a different result from there being no mark,
+and the two would have been indistinguishable without the artifact-side measurement.** The
+reason is the same one C3 just named: the conflict puts the work slightly outside what any
+hypothesis in the reader's space predicts, and a reader with no hypothesis for "this maker was
+avoiding something" has nowhere to put the evidence. **Self-blindness leaves a mark in a
+vocabulary the reader does not have** — which is C4 arriving at C3's second dimension by a
+completely different route, and is the most interesting thing in V5.
+
+The generative arm behaved as designed: its confabulated declaration diverges from what drove
+its output about 10–20% of the time regardless of any rate imposed on it, because it has no
+self-model to be wrong *about* — it reports what its output looks like.
+
+### What this does and does not license
+
+It licenses: *an observer can recover a goal the creator does not represent, and beats the
+creator's self-report as soon as that report is unreliable at all.*
+
+It does not license: *a self-unaware maker's work is detectably different from a liar's.* In
+this model it is different and not detectably so. **The claim that a generative system cannot
+produce what a self-blind human produces survives as a fact about artifacts and fails as a fact
+about readers**, and the framework should say the first without the second.
+
+---
+
+## E34 — where does real generative content sit on ω?
+
+**Not a result. An instrument.** E34 cannot be run in simulation, the spec says so, and what
+this ships is a prediction card mapping each band of the overlap axis to the signature a human
+study would observe there — so a measurement can be *located* on the axis rather than argued
+about. Zero compute; every number read from E20's committed sweep.
+
+`results/e34_prediction_card.json`, `results/e34_prediction_card.csv`.
+
+| band | ω | what the reader does | what a study would see |
+|---|---|---|---|
+| sustained and futile | 0.00–0.04 | keeps looking, never resolves | arousal held past 4 s with no resolution |
+| **the crash band** | 0.04–0.15 | gives up while still not knowing, and confidently invents when it commits | arousal rises then falls sharply with no resolution event; confident but mutually inconsistent readings |
+| read, then abandoned | 0.15–0.40 | works it out quickly, correctly stops paying | brief dilation, quick resolution, low disagreement |
+| ordinary reading | 0.40–1.00 | reads it like human work | indistinguishable from human content |
+
+Landmarks: engagement crosses 0.50 at ω = 0.041; fabrication peaks at ω = 0.10 (0.302); the
+crash signature is true at exactly one point, ω = 0.10. **The crash and the fabrication peak are
+the same band**, which the framework had always treated as two phenomena.
+
+### Both readings are stated, because the framework cannot choose between them from inside
+
+- **Partially foreign.** Real output sits near ω ≈ 0.10, exactly where fabrication peaks and
+  attention collapses without resolving. Both headline phenomena would then describe ordinary
+  encounters with generated content.
+- **Nearly in-family.** Real output, trained on human data, lives almost entirely in the human
+  block — high ω, where the model says content is read and correctly abandoned. That matches the
+  observation that people are not in fact paralysed by AI content, and would mean the crash is a
+  phenomenon of a regime generative systems do not occupy.
+
+**A study that measures the signature decides between them.** The bands differ on engagement, on
+whether resolution occurs, and on whether confident readings agree — all observable without
+knowing ω.
+
+**The caveat belongs with the card, not under it.** ω's meaning depends on V4 decision D1, which
+split the feature space into disjoint human and foreign blocks because no such partition existed
+at V1–V3 cardinality. Real content may have no well-defined position on this axis at all. Use
+the card to classify an observed signature first, and only then ask what ω would have produced
+it.
+
+---
+
 ## Deviations
 
 **V5-1 — N21's second clause was restated after the first version failed.** The clause as written
@@ -265,17 +513,53 @@ secondary agrees with it on the outcome while disagreeing on the reason.
 
 ---
 
+**V5-3 — the C2/C3/C4 pre-registration lock fired, and it was the call sites rather than the
+criteria.** E32 wrote the payload including its matching curve; E31 wrote the same criteria
+without one, because E31 has no curve of its own to pass. Different payload, different hash, and
+whichever experiment ran second refused to start — correctly, on its own terms. Fixed by giving
+all three a single entry point that assembles the payload identically, so the hash means the
+criteria have not moved rather than that the caller happened to build them the same way. No
+criterion changed and no result is affected; recorded because a lock that fires is worth a line
+either way.
+
+---
+
+## What V5 changes, in one place
+
+**C1 — μ replaces β.** μ is the better-specified construct and the worse-performing one. β's
+update effect was real but confounded with legibility; μ removes the confound and the effect
+goes with it. Keep μ for what it measures; do not claim it gates uptake.
+
+**C2 — two gates, provenance as evidence. Supported, and it is the one that paid.** The crash
+and the trust exploit are one mechanism with opposite signs, and the update is a monotone
+function of the depth estimate whatever moved it. This is the correction to carry forward.
+
+**C3 — ω and d are not one channel.** They differ on every measure at matched overlap. Carry
+both, and name the second dimension: whether the reader can tell it is failing.
+
+**C4 — the latent goal.** A reader beats the maker's self-account as soon as that account is
+unreliable at all. The mark self-blindness leaves is real and unreadable by this observer, so
+the categorical claim about generative systems holds about artifacts and fails about readers.
+
+**C5 — the non-monotone attention gradient** is recorded in the README's limitations, stated by
+the author before anyone else states it, with the observation that this repository's own
+charting code had already quietly declined to use the published opacity ramp.
+
 ## What is not done
 
-- **C2, C3, C4 are not built.** E31, E32, E33, E34 are not started. Each needs its own
-  pre-registration; `v5_preregistration.json` covers C1 only and says so in its `scope` field.
 - **The literature check (V5 §0) has not been run.** It is explicitly not a spec-implementation
-  task and remains outstanding.
-- **The README update (V5 §4) is not done**, except that `LICENSE` and `CITATION.cff` were
-  already present and the figures/CSV gitignore had already been fixed — §4's premise on both is
-  stale. The landing page still describes V3 and lists 19 experiments.
-- **E8 remains withheld** with its `xfail(strict)` marker. **E27 stays open.** The null suite is
-  unchanged and passes.
+  task and remains outstanding. It is now the largest single thing owed: every prediction here
+  was derived from theory and tested in simulation with no search for prior empirical work.
+- **E8 remains withheld** with its `xfail(strict)` marker. **E27 stays open.**
 - **The μ grid should be redesigned before it is used again.** μ = 2 and μ = 3 are not
-  distinguishable in this construction, for the reason given above, and a three-level axis whose
-  top two levels are tied is a two-level axis with an extra label.
+  distinguishable in this construction, and a three-level axis whose top two levels are tied is
+  a two-level axis with an extra label.
+- **E31's exploit is an upper bound**, because the observer cannot doubt the label it
+  conditioned on. A design where provenance and depth are inferred jointly would measure the
+  real figure, and needs an inference engine that is not pymdp's mean-field solver.
+- **E33's trace is unread, not unreadable in principle.** An observer with a hypothesis for
+  "this maker was avoiding something" might detect it. Building one is the obvious next
+  experiment and is not in this version.
+- **A systematic or flattering latent/declared divergence was not run.** Uniform-over-others is
+  the assumption-free primary and the only arm executed; a systematic variant is a second free
+  parameter on the layer V5 §5 already calls the most tunable object in the spec.

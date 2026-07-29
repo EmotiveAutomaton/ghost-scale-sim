@@ -669,12 +669,39 @@ def build_v5_world(cfg: Config, omega: float = 0.0, kappa: float | None = None,
 
 
 def make_v5_observer(world: V5World, rng: np.random.Generator,
-                     mu_prior: np.ndarray | None = None) -> Agent:
+                     mu_prior: np.ndarray | None = None,
+                     extra_modalities: list | None = None) -> Agent:
+    """One observer over the V5 world.
+
+    ``extra_modalities`` appends observation channels at construction, which is the only time
+    they can be appended: pymdp caches the modality count and the Markov-blanket map when the
+    Agent is built, so an A array grown afterwards raises inside the inference loop rather
+    than being picked up. E33 uses this for the creator's self-report.
+
+    EVERY EXTRA MODALITY GETS A ZERO PREFERENCE, and that is load-bearing rather than tidy.
+    Null N7 requires the observer to have no preference over provenance or signal, so that
+    disengagement can only come from the epistemic term collapsing and never from a distaste.
+    A self-report channel is exactly the kind of thing a preference could be smuggled into —
+    an observer that WANTED to be told a particular goal would produce C4's result by wishing
+    — so C is extended with zeros and the existing ``assert_preferences_zero`` is extended to
+    cover it.
+    """
     D = build_v5_D(world.cfg, rng, len(world.mu_levels), FN.NUM_REAL_GOALS,
                    world.n_subgoals, mu_prior=mu_prior)
+    A, C_ = world.gm.A, world.gm.C
+    if extra_modalities:
+        A = utils.obj_array(len(world.gm.A) + len(extra_modalities))
+        for m in range(len(world.gm.A)):
+            A[m] = world.gm.A[m]
+        C_ = utils.obj_array(len(world.gm.C) + len(extra_modalities))
+        for m in range(len(world.gm.C)):
+            C_[m] = world.gm.C[m]
+        for j, extra in enumerate(extra_modalities):
+            A[len(world.gm.A) + j] = np.asarray(extra, dtype=float)
+            C_[len(world.gm.C) + j] = np.zeros(np.asarray(extra).shape[0])
     a = world.cfg.agent
     return Agent(
-        A=world.gm.A, B=world.gm.B, C=world.gm.C, D=D,
+        A=A, B=world.gm.B, C=C_, D=D,
         control_fac_idx=[F_ATTENTION],
         policy_len=int(a.policy_len),
         inference_horizon=int(a.inference_horizon),
@@ -1000,13 +1027,14 @@ class V5Environment(Environment):
     """
 
     def __init__(self, *args, creator: HierarchicalCreator | None = None, **kwargs):
-        # The V1 creator bank is never consulted when a hierarchical creator is supplied, and
-        # it CANNOT be built here anyway: the config a V5 rollout carries has the MERGED goal
-        # cardinality (goal x sub-goal), while ``gm.sig`` still has one row per real goal, so
-        # ``build_creator_bank`` would index off the end of it. Passing an empty bank says
-        # that explicitly rather than letting a stale default decide.
-        if creator is not None:
-            kwargs.setdefault("creator_bank", {})
+        # The V1 creator bank is never consulted under V5 and CANNOT be built here: the config
+        # a V5 rollout carries has the MERGED goal cardinality (mu x goal x sub-goal), while
+        # ``gm.sig`` still has one row per real goal, so ``build_creator_bank`` would index
+        # off the end of it. Passing an empty bank says that explicitly rather than letting a
+        # stale default decide. Unconditional, including when ``creator`` is None: the foreign
+        # branch of ``sample_feature`` needs no bank either, and making it conditional meant
+        # E31's foreign cells tripped the same IndexError the hierarchical cells had avoided.
+        kwargs.setdefault("creator_bank", {})
         super().__init__(*args, **kwargs)
         self.creator = creator
 

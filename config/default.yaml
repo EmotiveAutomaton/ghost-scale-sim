@@ -562,6 +562,44 @@ v4_5:
     # left inert rather than swept on the quiet.
     weight: 0.0
 
+  # E32 (V5 C3) — foreign content versus an unskilled reader, at matched effective overlap.
+  e32:
+    n_observers: 200
+    n_seeds: 30           # between-observer disagreement is a primary measure here and the
+                          # engagement column is bimodal, so seeds are the effective n (E20's
+                          # lesson, deviation V4.5-6).
+    forced_deep_k: 10
+    n_timesteps: 24
+
+  # E31 (V5 C2) — two gates, provenance as evidence about depth.
+  e31:
+    n_observers: 60
+    n_seeds: 20
+    forced_deep_k: 24     # depth lives in the ORDER of execution modes; a reader who stops
+                          # early cannot have recovered a plan. Engagement is measured in E30.
+    n_timesteps: 24
+    n_encounters: 4       # theta gates the update, so it needs somewhere to accumulate.
+    foreign_omega: 0.10   # E20 located BOTH headline phenomena here: crash_signature is true
+                          # at exactly this overlap and fabrication peaks here on both indices.
+                          # At omega = 0 there is no crash and no fabrication, so an exploit
+                          # experiment run there would return a null that means nothing.
+    integration_rate: 0.5
+
+  # E33 (V5 C4) — the latent goal.
+  e33:
+    n_observers: 100
+    n_seeds: 20
+    forced_deep_k: 24
+    n_timesteps: 24
+    suppression: 0.9      # how completely a self-unaware creator avoids the execution mode
+                          # that would read as its declared goal. A FIXED CONSTANT: if it
+                          # scaled with the divergence RATE, "divergence increases depth"
+                          # would be true by construction and E33 would prove nothing.
+    rho: 0.8              # the observer's PRECISION on the self-report channel: how much it
+                          # trusts a creator to know its own goal. Parallel to kappa on the
+                          # provenance channel, and deliberately not 1.0 -- an observer that
+                          # fully trusted the declaration could never beat the self-model.
+
   # E30 (V5 C1) — mu replaces beta. Scale matched to E28 so the two are directly
   # comparable, which decision 8 requires: they are reported side by side as two constructs
   # on comparable designs rather than as one design with a swapped variable.

@@ -1,0 +1,74 @@
+{
+  "instrument": "E34 \u2014 prediction card for locating real generative content on omega",
+  "not_a_result": "E34 cannot be run in simulation. This maps each band of the overlap axis to the signature a human study would observe there, so a measurement can be LOCATED on the axis. Every number is read from E20's committed sweep; nothing is fitted.",
+  "bands": [
+    {
+      "band": "sustained and futile",
+      "omega_from": 0.0,
+      "omega_to": 0.04,
+      "what_the_reader_does": "keeps looking, never resolves, no drop in arousal",
+      "what_a_study_would_see": "attention held with no resolution; pupil stays dilated past 4 s",
+      "engaged_fraction": 0.6255773809523809,
+      "reads_the_goal": 0.2499166666666666,
+      "within_observer_nats": 1.2579973786845244,
+      "between_observer_nats": 1.378291410904397,
+      "fabrication_index": 0.0920124464895767,
+      "crash_signature_anywhere_in_band": false
+    },
+    {
+      "band": "the crash band",
+      "omega_from": 0.04,
+      "omega_to": 0.15,
+      "what_the_reader_does": "gives up while still not knowing, and confidently invents when it does commit",
+      "what_a_study_would_see": "arousal rises then falls sharply without a resolution event; confident but mutually inconsistent reports of intent",
+      "engaged_fraction": 0.3204285714285714,
+      "reads_the_goal": 0.7688333333333334,
+      "within_observer_nats": 0.5888088955754651,
+      "between_observer_nats": 0.7274072727899912,
+      "fabrication_index": 0.3018488336926586,
+      "crash_signature_anywhere_in_band": true
+    },
+    {
+      "band": "read, then abandoned",
+      "omega_from": 0.15,
+      "omega_to": 0.4,
+      "what_the_reader_does": "works out the intent quickly and correctly stops paying",
+      "what_a_study_would_see": "brief dilation, quick resolution, low disagreement",
+      "engaged_fraction": 0.08481249999999994,
+      "reads_the_goal": 0.9293333333333333,
+      "within_observer_nats": 0.33808062932128014,
+      "between_observer_nats": 0.2769661399934481,
+      "fabrication_index": 0.15066353710224475,
+      "crash_signature_anywhere_in_band": false
+    },
+    {
+      "band": "ordinary reading",
+      "omega_from": 0.4,
+      "omega_to": 1.0,
+      "what_the_reader_does": "reads it like human work",
+      "what_a_study_would_see": "indistinguishable from human content on every measure",
+      "engaged_fraction": 0.0036944444444444104,
+      "reads_the_goal": 0.9945694444444445,
+      "within_observer_nats": 0.05608088387294712,
+      "between_observer_nats": 0.028785722153341534,
+      "fabrication_index": 0.019331816487823148,
+      "crash_signature_anywhere_in_band": false
+    }
+  ],
+  "landmarks": {
+    "engagement_crosses_half_at_omega": 0.041,
+    "fabrication_peaks_at_omega": 0.1,
+    "fabrication_peak_value": 0.3018488336926586,
+    "crash_signature_true_at_omega": [
+      0.1
+    ],
+    "note": "the crash and the fabrication peak are the SAME narrow band, which the framework had always treated as two separate phenomena."
+  },
+  "the_two_readings": {
+    "partially_foreign": "real output sits near omega ~ 0.10, exactly where fabrication peaks and attention collapses without resolving. Both headline phenomena would then describe ordinary encounters with generated content.",
+    "nearly_in_family": "real output, trained on human data, lives almost entirely in the human block \u2014 high omega, where the model says content is read and correctly abandoned. That matches the observation that people are not in fact paralysed by AI content, and it would mean the crash is a phenomenon of a regime generative systems do not occupy.",
+    "how_to_decide": "measure the signature, not the parameter. The bands differ on engagement, on whether resolution occurs, and on whether confident readings agree with each other \u2014 all observable without knowing omega."
+  },
+  "caveat": "omega's meaning depends on V4 decision D1, which split the feature space into disjoint HUMAN and FOREIGN blocks because no such partition existed at V1-V3 cardinality. Real content may have no well-defined position on this axis at all. The card should be used to classify an observed SIGNATURE, and only then to ask what omega would have produced it.",
+  "sharpest_single_measurement": "pupillometry on unlabelled generated content. H1 and H3 in the preprint assume goal-EMPTY content and predict an autonomic drop within 2-4 seconds. Goal-FOREIGN content below omega ~ 0.04 predicts the opposite: sustained arousal with no resolution. One measurement discriminates them, and the window where the original prediction holds is now bounded rather than assumed."
+}

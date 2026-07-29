@@ -143,10 +143,30 @@ def build_v4_world(cfg: Config, omega: float, include_explore: bool,
     return V4World(gm=gm, sigs=sigs, cfg=cfg, include_explore=include_explore)
 
 
-def make_v4_observer(world: V4World, rng: np.random.Generator, kappa: float | None = None):
-    """One observer over the V4 world. Heterogeneous D, as V1 requires (null N3)."""
+def make_v4_observer(world: V4World, rng: np.random.Generator, kappa: float | None = None,
+                     d_i: float = 0.0):
+    """One observer over the V4 world. Heterogeneous D, as V1 requires (null N3).
+
+    ``d_i`` is V2 C1's INEXPERTISE, carried into V4 for E32. V4 never swept it — the reframe
+    was about the content, so every V4 observer was a perfect reader of its own family — and
+    V5 C3 is precisely the question of whether moving the content and blunting the reader are
+    the same operation, so the axis has to exist on both sides of one design.
+
+    At ``d_i = 0`` this returns the V4 observer unchanged and DRAWS NO VARIATE from the
+    signature stream, which is V2's N8 hazard and its fix: ``observer_sig_rng`` spawns an
+    independent child stream so the D-prior sequence is bit-identical whatever d is. Without
+    that, turning expertise on would shift every downstream draw and E32's two arms would
+    differ for a reason having nothing to do with C3.
+    """
+    from .generative_model import build_observer_model
+    from .observer import observer_sig_rng
+
     D = build_D(world.cfg, rng)
-    return make_agent(world.gm, D, world.cfg, kappa=kappa)
+    if float(d_i) <= 0.0:
+        return make_agent(world.gm, D, world.cfg, kappa=kappa)
+    gm_i = build_observer_model(world.gm, world.cfg, float(d_i),
+                                rng_sig=observer_sig_rng(rng), kappa=kappa)
+    return make_agent(gm_i, D, world.cfg, kappa=kappa)
 
 
 # --------------------------------------------------------------------------- #
