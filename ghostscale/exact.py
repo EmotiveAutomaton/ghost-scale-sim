@@ -363,12 +363,62 @@ class ExactAgent:
             self.action = None if action is None else np.asarray(action, dtype=float)
         return float(self.log_evidence)
 
-    # Anything that would silently be approximate.
-    def infer_parameters(self, *a, **k):
-        raise NotImplementedError("ExactAgent does not implement Dirichlet learning; the "
-                                 "experiments that learn are not in V-1's scope")
+    # ------------------------------------------------------------------ #
+    # Dirichlet learning, with the counts attributed under the EXACT posterior (repair R-10).
+    # ------------------------------------------------------------------ #
+    def attach_pA(self, pA):
+        """Give this agent Dirichlet concentration parameters, enabling ``update_A``."""
+        self.pA = pA
+        self.lr_pA = 1.0
+        self.modalities_to_learn = "all"
+        return self
 
-    update_A = infer_parameters
+    def update_A(self, obs):
+        """One Dirichlet update, attributing each observation under the EXACT joint posterior.
+
+        WHAT IS AND IS NOT EXACT HERE, STATED NARROWLY, because the difference matters and the
+        obvious name for this would overstate it.
+
+        Fully exact Bayesian learning would carry a joint posterior over hidden states AND the
+        likelihood parameters. That is intractable: with the states uncertain the posterior over A
+        is not conjugate, and getting it right means summing over every state sequence, which grows
+        exponentially in the run length. Nothing in this file can do that and pretending otherwise
+        would be the kind of quiet approximation this whole audit exists to catch.
+
+        What IS exact is the ATTRIBUTION. The Dirichlet update splits each observation's evidence
+        across hidden states in proportion to the posterior over those states. pymdp does that with
+        the factorised marginals; this does it with the marginals of the true joint. So this is an
+        exact E-step with the same conjugate M-step, and it removes the mean-field attribution error
+        without claiming to remove parameter uncertainty.
+
+        That distinction is why six experiments were unreachable and are now reachable: their
+        blocker was the attribution, not the conjugacy.
+        """
+        from pymdp.legacy import learning as _learning
+
+        if getattr(self, "pA", None) is None:
+            raise NotImplementedError(
+                "this ExactAgent has no Dirichlet parameters; call attach_pA first")
+        qA = _learning.update_obs_likelihood_dirichlet(
+            self.pA, self.A, obs, self.qs, self.lr_pA, self.modalities_to_learn)
+        self.pA = qA
+        self.A = utils.norm_dist_obj_arr(qA)
+        # The flattened likelihoods and the conditional-entropy cache are derived from A, so they
+        # have to be rebuilt or the filter keeps using the pre-update model. Missing this would be
+        # silent: inference would carry on and simply ignore everything the agent had learned.
+        self._rebuild_likelihood_cache()
+        return qA
+
+    def _rebuild_likelihood_cache(self):
+        self._L = [np.asarray(self.A[m], dtype=float).reshape(
+            np.asarray(self.A[m]).shape[0], self._n_joint) for m in range(self.num_modalities)]
+        self._condH = np.zeros(self._n_joint)
+        for Lm in self._L:
+            p = np.clip(Lm, _FLOOR, None)
+            self._condH += -np.sum(p * np.log(p), axis=0)
+
+    def infer_parameters(self, *a, **k):
+        return self.update_A(*a, **k)
 
 
 # --------------------------------------------------------------------------- #

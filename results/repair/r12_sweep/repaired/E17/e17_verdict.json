@@ -1,0 +1,153 @@
+{
+  "experiment": "E17 \u2014 confident fabrication across the four Ghost Scale tiers",
+  "x_axis_note": "plotted against alpha {1.00, 0.95, 0.60, 0.05}, not tier index: the doses are unevenly spaced and POLISHED sits within 0.05 of CREATOR, so four tiers supply roughly three distinguishable dose levels",
+  "arms": {
+    "claimed_human": {
+      "between_vs_alpha": {
+        "slope": -1.448879189936523,
+        "spearman": -0.9486832980505139,
+        "monotone": false,
+        "weakly_monotone_increasing_with_opacity": true,
+        "n_distinguishable_levels": 3,
+        "steps_with_opacity": [
+          0.0,
+          0.11281496552691998,
+          1.266293011035004
+        ]
+      },
+      "within_vs_alpha": {
+        "slope": -0.09724194953610996,
+        "spearman": -1.0,
+        "monotone": true,
+        "weakly_monotone_increasing_with_opacity": true,
+        "n_distinguishable_levels": 3,
+        "steps_with_opacity": [
+          6.382026220598464e-06,
+          0.012171782045579923,
+          0.08000038157409842
+        ]
+      },
+      "gap_vs_alpha": {
+        "slope": -1.3516372404004127,
+        "spearman": -0.7999999999999999,
+        "monotone": false,
+        "weakly_monotone_increasing_with_opacity": true,
+        "n_distinguishable_levels": 3,
+        "steps_with_opacity": [
+          -6.382026220598464e-06,
+          0.10064318348134005,
+          1.1862926294609055
+        ]
+      },
+      "by_tier": [
+        {
+          "true_provenance": "GHOST",
+          "alpha": 0.05,
+          "within": 0.0922,
+          "between": 1.3791,
+          "fabrication_gap": 1.2869,
+          "accuracy": 0.2438
+        },
+        {
+          "true_provenance": "CURATOR",
+          "alpha": 0.6,
+          "within": 0.0122,
+          "between": 0.1128,
+          "fabrication_gap": 0.1006,
+          "accuracy": 0.9795
+        },
+        {
+          "true_provenance": "POLISHED",
+          "alpha": 0.95,
+          "within": 0.0,
+          "between": 0.0,
+          "fabrication_gap": -0.0,
+          "accuracy": 1.0
+        },
+        {
+          "true_provenance": "CREATOR",
+          "alpha": 1.0,
+          "within": 0.0,
+          "between": 0.0,
+          "fabrication_gap": -0.0,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "truthful": {
+      "between_vs_alpha": {
+        "slope": -1.4428165841190443,
+        "spearman": -0.9486832980505139,
+        "monotone": false,
+        "weakly_monotone_increasing_with_opacity": true,
+        "n_distinguishable_levels": 3,
+        "steps_with_opacity": [
+          0.0,
+          0.04305758476758932,
+          1.3360535096158621
+        ]
+      },
+      "within_vs_alpha": {
+        "slope": -1.3500293410530442,
+        "spearman": -1.0,
+        "monotone": true,
+        "weakly_monotone_increasing_with_opacity": true,
+        "n_distinguishable_levels": 3,
+        "steps_with_opacity": [
+          5.073430989897545e-05,
+          0.02831503993378838,
+          1.2630738969001216
+        ]
+      },
+      "gap_vs_alpha": {
+        "slope": -0.09278724306600056,
+        "spearman": -0.7999999999999999,
+        "monotone": false,
+        "weakly_monotone_increasing_with_opacity": true,
+        "n_distinguishable_levels": 3,
+        "steps_with_opacity": [
+          -5.073430989897545e-05,
+          0.01474254483380094,
+          0.07297961271574058
+        ]
+      },
+      "by_tier": [
+        {
+          "true_provenance": "GHOST",
+          "alpha": 0.05,
+          "within": 1.2914,
+          "between": 1.3791,
+          "fabrication_gap": 0.0877,
+          "accuracy": 0.257
+        },
+        {
+          "true_provenance": "CURATOR",
+          "alpha": 0.6,
+          "within": 0.0284,
+          "between": 0.0431,
+          "fabrication_gap": 0.0147,
+          "accuracy": 0.9928
+        },
+        {
+          "true_provenance": "POLISHED",
+          "alpha": 0.95,
+          "within": 0.0001,
+          "between": 0.0,
+          "fabrication_gap": -0.0001,
+          "accuracy": 1.0
+        },
+        {
+          "true_provenance": "CREATOR",
+          "alpha": 1.0,
+          "within": 0.0,
+          "between": 0.0,
+          "fabrication_gap": -0.0,
+          "accuracy": 1.0
+        }
+      ]
+    }
+  },
+  "dose_response_graded": true,
+  "dissociation_graded": true,
+  "verdict": "confirmed: disagreement under a human claim rises monotonically as intent transmission falls, and the fabrication gap rises with it \u2014 the four-tier design is carrying real signal rather than relabelling a binary contrast"
+}

@@ -1,0 +1,272 @@
+{
+  "check": "R-5",
+  "question": "Has the uptake measure been measuring understanding, or just belief movement?",
+  "plain_language": "Several experiments measure how much a reader 'takes on' from a work. The measure is a distance between what the reader believed before and after, so a reader who ends up confidently wrong scores almost as highly as one who ends up right: both moved a long way. This splits that one number into three, the important one being how much closer to the truth the reader actually got, which can go negative and which the old measure cannot express.",
+  "criteria": {
+    "quantities": [
+      "movement",
+      "error_reduction",
+      "trust_factor"
+    ],
+    "disagreement_is_a_finding": true
+  },
+  "formula_correction": "the specification writes error reduction with the divergence arguments the wrong way round, which makes every term infinite against a point mass on the truth and leaves a value determined by the epsilon it is floored at. Corrected to the reduction in the surprisal of the truth.",
+  "prior_reference": "computed against the uniform prior each reader's own prior was perturbed from, because the committed files do not persist the per-reader prior. Declared rather than hidden: between-cell comparisons are unaffected because the reference is shared, and absolute single-reader values are approximate. The rerun carries the real prior.",
+  "cells": [
+    {
+      "experiment": "E2",
+      "available": true,
+      "cell": "CREATOR / SIG_CREATOR",
+      "n": 4000,
+      "accuracy": 1.0,
+      "movement_as_committed": 3.1920605678405654,
+      "movement_unweighted": 1.386294290514118,
+      "error_reduction": 1.3862943558792131,
+      "error_reduction_sd": 2.088584645510917e-07,
+      "share_confidently_wrong": 0.0,
+      "movement_of_the_confidently_wrong": NaN,
+      "error_reduction_of_the_confidently_wrong": NaN,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E2",
+      "available": true,
+      "cell": "CREATOR / SIG_GHOST",
+      "n": 4000,
+      "accuracy": 0.9985,
+      "movement_as_committed": 2.9792003380855165,
+      "movement_unweighted": 1.293850267314842,
+      "error_reduction": 1.3595944972130403,
+      "error_reduction_sd": 0.0926440097047934,
+      "share_confidently_wrong": 0.0,
+      "movement_of_the_confidently_wrong": NaN,
+      "error_reduction_of_the_confidently_wrong": NaN,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E2",
+      "available": true,
+      "cell": "GHOST / SIG_CREATOR",
+      "n": 4000,
+      "accuracy": 0.2385,
+      "movement_as_committed": 2.985751268316616,
+      "movement_unweighted": 1.2966953001655417,
+      "error_reduction": -5.9639811836652985,
+      "error_reduction_sd": 6.116089462434815,
+      "share_confidently_wrong": 0.7615,
+      "movement_of_the_confidently_wrong": 1.298230272222093,
+      "error_reduction_of_the_confidently_wrong": -8.25988418754971,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E2",
+      "available": true,
+      "cell": "GHOST / SIG_GHOST",
+      "n": 4000,
+      "accuracy": 0.259,
+      "movement_as_committed": 0.21563977326991818,
+      "movement_unweighted": 0.0936511636099938,
+      "error_reduction": -0.09121680434946534,
+      "error_reduction_sd": 0.429394364487375,
+      "share_confidently_wrong": 0.0005,
+      "movement_of_the_confidently_wrong": 0.9826954380636257,
+      "error_reduction_of_the_confidently_wrong": -2.031993182293712,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "CREATOR / claimed_human",
+      "n": 4000,
+      "accuracy": 1.0,
+      "movement_as_committed": 3.1920605678405654,
+      "movement_unweighted": 1.386294290514118,
+      "error_reduction": 1.3862943558792131,
+      "error_reduction_sd": 2.088584645510917e-07,
+      "share_confidently_wrong": 0.0,
+      "movement_of_the_confidently_wrong": NaN,
+      "error_reduction_of_the_confidently_wrong": NaN,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "CREATOR / truthful",
+      "n": 4000,
+      "accuracy": 1.0,
+      "movement_as_committed": 3.1920584841497193,
+      "movement_unweighted": 1.3862933855786816,
+      "error_reduction": 1.3862942587165155,
+      "error_reduction_sd": 5.650248661424139e-06,
+      "share_confidently_wrong": 0.0,
+      "movement_of_the_confidently_wrong": NaN,
+      "error_reduction_of_the_confidently_wrong": NaN,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "CURATOR / claimed_human",
+      "n": 4000,
+      "accuracy": 0.98075,
+      "movement_as_committed": 3.1664031006835076,
+      "movement_unweighted": 1.3751513941081939,
+      "error_reduction": 1.293433521894773,
+      "error_reduction_sd": 0.6862216813126018,
+      "share_confidently_wrong": 0.01925,
+      "movement_of_the_confidently_wrong": 1.281585143684261,
+      "error_reduction_of_the_confidently_wrong": -3.339388816968616,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "CURATOR / truthful",
+      "n": 4000,
+      "accuracy": 0.99175,
+      "movement_as_committed": 3.1257795008444242,
+      "movement_unweighted": 1.3575087888630342,
+      "error_reduction": 1.3534969406656934,
+      "error_reduction_sd": 0.34225787514266176,
+      "share_confidently_wrong": 0.0055,
+      "movement_of_the_confidently_wrong": 1.1039106490840445,
+      "error_reduction_of_the_confidently_wrong": -2.3994777619280274,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "GHOST / claimed_human",
+      "n": 4000,
+      "accuracy": 0.24425,
+      "movement_as_committed": 2.986180981426127,
+      "movement_unweighted": 1.2968819221978038,
+      "error_reduction": -5.834068341085249,
+      "error_reduction_sd": 6.033010056821886,
+      "share_confidently_wrong": 0.75575,
+      "movement_of_the_confidently_wrong": 1.2966144650680074,
+      "error_reduction_of_the_confidently_wrong": -8.16160937434588,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "GHOST / truthful",
+      "n": 4000,
+      "accuracy": 0.24675,
+      "movement_as_committed": 0.2047144375646033,
+      "movement_unweighted": 0.08890635060023498,
+      "error_reduction": -0.09223405712858201,
+      "error_reduction_sd": 0.4323800179944304,
+      "share_confidently_wrong": 0.002,
+      "movement_of_the_confidently_wrong": 0.9561200798518489,
+      "error_reduction_of_the_confidently_wrong": -2.1558177578703037,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "POLISHED / claimed_human",
+      "n": 4000,
+      "accuracy": 1.0,
+      "movement_as_committed": 3.192055279212472,
+      "movement_unweighted": 1.3862919936921203,
+      "error_reduction": 1.386294102879096,
+      "error_reduction_sd": 1.0745149113118916e-05,
+      "share_confidently_wrong": 0.0,
+      "movement_of_the_confidently_wrong": NaN,
+      "error_reduction_of_the_confidently_wrong": NaN,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E17",
+      "available": true,
+      "cell": "POLISHED / truthful",
+      "n": 4000,
+      "accuracy": 1.0,
+      "movement_as_committed": 3.1920131681936867,
+      "movement_unweighted": 1.3862737051090346,
+      "error_reduction": 1.3862910809592834,
+      "error_reduction_sd": 0.00016064558377810626,
+      "share_confidently_wrong": 0.0,
+      "movement_of_the_confidently_wrong": NaN,
+      "error_reduction_of_the_confidently_wrong": NaN,
+      "trust_factor": 2.302585092994046
+    },
+    {
+      "experiment": "E19",
+      "available": false,
+      "why": "needs real_goal_posterior and true_goal; has ['arm', 'content', 'omega', 'seed_rep', 'observer', 'true_goal', 'explore_mass', 'final_entropy', 'real_goal_entropy', 'modal_real_goal', 'modal_goal_full', 'correct', 'engaged_fraction', 'cum_deep', 'modal_is_explore', 'real_posterior', 'full_posterior']"
+    }
+  ],
+  "measure_agreement": [
+    {
+      "experiment": "E17",
+      "cells": 8,
+      "movement_vs_accuracy": 0.8878560065057217,
+      "error_reduction_vs_accuracy": 0.9385906354489059,
+      "measures_rank_conditions_differently": false
+    },
+    {
+      "experiment": "E2",
+      "cells": 4,
+      "movement_vs_accuracy": 0.4,
+      "error_reduction_vs_accuracy": 1.0,
+      "measures_rank_conditions_differently": false
+    }
+  ],
+  "cells_with_negative_error_reduction": [
+    {
+      "experiment": "E2",
+      "cell": "GHOST / SIG_CREATOR",
+      "accuracy": 0.2385,
+      "movement_unweighted": 1.2966953001655417,
+      "error_reduction": -5.9639811836652985
+    },
+    {
+      "experiment": "E2",
+      "cell": "GHOST / SIG_GHOST",
+      "accuracy": 0.259,
+      "movement_unweighted": 0.0936511636099938,
+      "error_reduction": -0.09121680434946534
+    },
+    {
+      "experiment": "E17",
+      "cell": "GHOST / claimed_human",
+      "accuracy": 0.24425,
+      "movement_unweighted": 1.2968819221978038,
+      "error_reduction": -5.834068341085249
+    },
+    {
+      "experiment": "E17",
+      "cell": "GHOST / truthful",
+      "accuracy": 0.24675,
+      "movement_unweighted": 0.08890635060023498,
+      "error_reduction": -0.09223405712858201
+    }
+  ],
+  "needs_rerun": {
+    "E30": "carries psi_analogue but not the posterior, so error reduction cannot be recomputed. This is the experiment the decomposition matters most for, and the rerun supplies it",
+    "E31": "carries prior_drift but not the posterior",
+    "E20": "carries neither the posterior nor a prior to measure movement against",
+    "E32": "carries psi_analogue but not the posterior",
+    "E4": "raw file not committed"
+  },
+  "trust_factor_range": {
+    "kappa": [
+      0.1,
+      0.5,
+      0.9,
+      0.99
+    ],
+    "factor": [
+      0.10536051565782628,
+      0.6931471805599453,
+      2.302585092994046,
+      4.605170185988091
+    ],
+    "ratio_across_the_swept_range": 43.70869065356567
+  },
+  "verdict": "ERROR_REDUCTION_GOES_NEGATIVE_WHERE_MOVEMENT_CANNOT",
+  "statement": "**The decomposition separates cells the old measure could not.** In 4 cell(s) error reduction is NEGATIVE: the reader ended further from the truth than it started. The clearest is GHOST / SIG_CREATOR in E2, where movement reads 1.297, which looks like substantial uptake, while error reduction reads -5.964, which says the reader was moved away from the answer. The measure on record cannot express that at all, because a distance has no sign.\n\n**The trust weight is now reported separately** rather than multiplied in. It runs from 0.105 to 4.605 across the range one experiment sweeps, a factor of 44, which is larger than most effects in this project. Any sweep that varied trust and reported uptake was reporting the product of two things.\n\n**Five experiments cannot be decomposed from committed data** and are named rather than skipped: E30 carries psi_analogue but not the posterior, so error reduction cannot be recomputed. This is the experiment the decomposition matters most for, and the rerun supplies it; E31 carries prior_drift but not the posterior; E20 carries neither the posterior nor a prior to measure movement against; E32 carries psi_analogue but not the posterior; E4 raw file not committed. The first of those is the one the decomposition matters most for."
+}

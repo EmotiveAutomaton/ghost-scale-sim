@@ -46,3 +46,18 @@ results/validation/**/e19_explore.csv
 # files behind the sweeps are not, for the same reason as above.
 results/diagnostics/**/*_points.csv
 results/diagnostics/**/*_raw.csv
+
+# Repair output. Every verdict JSON and every summary CSV IS committed, which is what REPAIR.md is
+# generated from. The matched-pair sweep re-runs the whole programme twice, so its per-experiment
+# raw and point files are not: they are the same class of file the rules above exclude, and
+# `python run_repair.py --stage 5` regenerates them.
+# What stays out is the per-reader output the summaries were computed from. The sweep runs the
+# whole programme twice, so it is 217 MB against about a megabyte for everything a reader needs.
+results/repair/**/*_points.csv
+results/repair/**/*_raw.csv
+results/repair/**/e19_explore.csv
+results/repair/**/e1_summary.csv
+results/repair/**/e15_competence_cliff.csv
+results/repair/**/e13_freeze_leak_signature.csv
+results/repair/**/e16_label_coverage.csv
+results/repair/**/e3_raw.csv

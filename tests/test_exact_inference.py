@@ -144,13 +144,22 @@ def test_exact_agent_completes_a_rollout_through_the_shared_loop():
     assert res.cum_deep >= 4
 
 
-def test_learning_is_refused_rather_than_approximated():
-    """A half-exact agent that quietly falls back is worse than no exact agent at all."""
+def test_learning_is_refused_unless_the_agent_was_given_dirichlet_parameters():
+    """SUPERSEDED BY THE REPAIR PASS, and updated rather than deleted so the change is visible.
+
+    This test used to assert that the exact agent refused Dirichlet learning outright, which was
+    correct when it could not do it: a half-exact agent that quietly falls back is worse than no
+    exact agent at all. The repair pass gave it an exact-attribution update, so six experiments that
+    were unreachable are now reachable.
+
+    What must still hold is the narrower version of the same guarantee: an agent that was never
+    given Dirichlet parameters refuses rather than inventing them.
+    """
     cfg = load_config()
     gm = build_shared_model(cfg)
     agent = make_exact_agent(gm, build_D(cfg, np.random.default_rng(61)), cfg)
     with pytest.raises(NotImplementedError):
-        agent.update_A()
+        agent.update_A([0, 0, 0])
 
 
 def test_validation_criteria_are_hash_locked(tmp_path):

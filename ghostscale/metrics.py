@@ -173,6 +173,103 @@ def between_observer_entropy(posteriors: list[np.ndarray]) -> float:
     return shannon_entropy(counts / counts.sum())
 
 
+def between_observer_entropy_corrected(posteriors: list[np.ndarray]) -> float:
+    """``between_observer_entropy`` with the Miller-Madow bias correction added.
+
+        H_MM = H_plugin + (m - 1) / 2N        m = goals actually voted for, N = readers
+
+    ADDED BESIDE THE ORIGINAL, NEVER SUBSTITUTED (repair R-4). The plug-in entropy of a count
+    vector is biased low by roughly (K-1)/2N nats: negligible at the 4000 readers version 1 ran
+    at, 0.025 at 60, 0.099 at 16. Every committed number was produced by the plug-in form, so
+    swapping the estimator would change what those numbers mean without changing any file. Both
+    are reported everywhere.
+
+    The observed support ``m`` is used rather than the available ``K``, which is what makes this
+    a correction rather than a constant offset: a genuinely unanimous population has m = 1 and
+    is left alone.
+    """
+    if len(posteriors) == 0:
+        return 0.0
+    num_goals = np.asarray(posteriors[0]).size
+    modal = np.array([int(np.argmax(p)) for p in posteriors])
+    counts = np.bincount(modal, minlength=num_goals).astype(float)
+    n = float(counts.sum())
+    m = float(np.count_nonzero(counts))
+    return float(shannon_entropy(counts / n) + (m - 1.0) / (2.0 * n))
+
+
+def mean_pairwise_js(posteriors: list[np.ndarray], max_pairs: int = 20000,
+                     rng: np.random.Generator | None = None) -> float:
+    """Mean Jensen-Shannon divergence between readers' FULL posteriors, in nats (repair R-2).
+
+    THE STATISTIC ``between_observer_entropy`` SHOULD HAVE BEEN PAIRED WITH, and the reason is
+    that the modal-goal entropy cannot tell two populations apart that are not remotely alike:
+
+      * readers each CERTAIN OF A DIFFERENT answer, which is the disagreement the framework claims;
+      * readers who are ALL EQUALLY LOST and whose single best guess is close to a coin toss.
+
+    Both produce the same count vector and therefore the same entropy. Measured on the committed
+    cells, three pairs score within 0.05 of each other on modal-goal entropy while differing by up
+    to elevenfold on this. It is near zero when everyone is equally unsure, because their beliefs
+    are then nearly identical, and large only when readers genuinely differ.
+
+    Sub-sampled above ``max_pairs`` because the pair count is quadratic: 200 readers is 19,900
+    pairs and 4,000 is eight million.
+    """
+    P = np.asarray([np.asarray(p, dtype=float) for p in posteriors], dtype=float)
+    if P.ndim != 2 or P.shape[0] < 2:
+        return 0.0
+    P = P / P.sum(axis=1, keepdims=True)
+    n = P.shape[0]
+    if n * (n - 1) // 2 <= max_pairs:
+        idx = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    else:
+        rng = np.random.default_rng(0) if rng is None else rng
+        a, b = rng.integers(0, n, max_pairs), rng.integers(0, n, max_pairs)
+        idx = [(int(i), int(j)) for i, j in zip(a, b) if i != j]
+    return float(np.mean([js_divergence(P[i], P[j]) for i, j in idx]))
+
+
+def error_reduction(posterior: np.ndarray, prior: np.ndarray, true_goal: int) -> float:
+    """How much closer to the truth the reader got, in nats. Signed (repair R-5).
+
+        error_reduction = KL(truth || prior) - KL(truth || posterior)
+                        = log posterior[g*] - log prior[g*]
+
+    THE MEASURE ``psi_analogue`` SHOULD HAVE BEEN, and the difference is not cosmetic.
+    ``psi_analogue`` is a DISTANCE, KL(posterior || prior), so it counts any movement as uptake.
+    A reader who becomes confidently WRONG has moved just as far from where it started as one who
+    became confidently right, and measured on this model it scores 87% as much. That makes the
+    reported measure U-shaped in how well the reader actually understood, with a minimum in the
+    middle, so any experiment regressing it on a difficulty manipulation whose arms straddle that
+    minimum returns a flat result for reasons unconnected to the manipulation.
+
+    This one is monotone in accuracy and goes NEGATIVE when the reader moves away from the truth,
+    which is the behaviour the distance cannot express.
+
+    ONE DIRECTION MATTERS AND THE OTHER IS UNDEFINED. Written the other way round, as
+    KL(prior || truth) - KL(posterior || truth), every term is infinite: the truth is a point mass
+    and KL(p || point mass) diverges for any p with mass elsewhere. Floored at some epsilon it
+    returns a finite number that is a function of the epsilon rather than of the data. The form
+    above has no such problem and equals the reduction in the surprisal of the truth.
+    """
+    p = np.asarray(posterior, dtype=float)
+    q = np.asarray(prior, dtype=float)
+    g = int(true_goal)
+    return float(np.log(max(p[g], _EPS)) - np.log(max(q[g], _EPS)))
+
+
+def trust_factor(kappa: float) -> float:
+    """The multiplicative trust weight inside ``psi_analogue``, reported on its own (repair R-5).
+
+    ``psi_analogue`` is this factor times a belief distance. Over the range one experiment sweeps
+    the factor alone changes by more than fortyfold, which is larger than most effects in this
+    project, so any sweep that varies trust and reports uptake is reporting a product of two
+    things. Separated so the two can be read apart.
+    """
+    return float(-np.log(1.0 - min(float(kappa), 1.0 - 1e-6)))
+
+
 def within_observer_entropy(posterior: np.ndarray) -> float:
     """Shannon entropy (nats) of a single observer's goal posterior.
 

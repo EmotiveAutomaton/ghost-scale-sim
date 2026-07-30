@@ -1,0 +1,166 @@
+{
+  "experiment": "E16 \u2014 labelling coverage threshold",
+  "primary_outcome": "ghost_col_err \u2014 KL(learned GHOST column || true synth), thresholded at E7's competence_kl; see the module docstring for why creator_mi is NOT the primary",
+  "arms": {
+    "ai_only/naive": {
+      "competence_threshold": 0.18438487639611625,
+      "reached": true,
+      "err_at_full_coverage": 0.108406036646256,
+      "criterion": "KL(learned GHOST column || true synth) <= 1.0",
+      "creator_mi_threshold": {
+        "threshold": 1.0,
+        "target_mi": 1.0070351721452295,
+        "full_coverage_mi": 1.023807410057725,
+        "zero_coverage_mi": 0.6883626518078156,
+        "gain_from_full_coverage": 0.3354447582499094,
+        "criterion": "95% of the gain this arm gets from full coverage"
+      },
+      "ghost_err_by_coverage": {
+        "0.0": 1.7367,
+        "0.1": 1.2154,
+        "0.2": 0.9601,
+        "0.3": 0.9579,
+        "0.4": 0.8948,
+        "0.5": 0.8647,
+        "0.6": 0.4939,
+        "0.7": 0.4798,
+        "0.8": 0.595,
+        "1.0": 0.1084
+      },
+      "mi_by_coverage": {
+        "0.0": 0.6884,
+        "0.1": 0.7043,
+        "0.2": 0.6703,
+        "0.3": 0.7522,
+        "0.4": 0.7678,
+        "0.5": 0.8538,
+        "0.6": 0.8886,
+        "0.7": 0.9049,
+        "0.8": 0.9701,
+        "1.0": 1.0238
+      }
+    },
+    "ai_only/regime_aware": {
+      "competence_threshold": 0.16449220838709125,
+      "reached": true,
+      "err_at_full_coverage": 0.03915421300110103,
+      "criterion": "KL(learned GHOST column || true synth) <= 1.0",
+      "creator_mi_threshold": {
+        "threshold": 1.0,
+        "target_mi": 0.9950650290985819,
+        "full_coverage_mi": 1.0110337253889514,
+        "zero_coverage_mi": 0.6916597995815613,
+        "gain_from_full_coverage": 0.3193739258073901,
+        "criterion": "95% of the gain this arm gets from full coverage"
+      },
+      "ghost_err_by_coverage": {
+        "0.0": 1.6758,
+        "0.1": 1.2998,
+        "0.2": 0.835,
+        "0.3": 0.5159,
+        "0.4": 0.1535,
+        "0.5": 0.0508,
+        "0.6": 0.041,
+        "0.7": 0.0426,
+        "0.8": 0.039,
+        "1.0": 0.0392
+      },
+      "mi_by_coverage": {
+        "0.0": 0.6917,
+        "0.1": 0.7146,
+        "0.2": 0.6477,
+        "0.3": 0.7132,
+        "0.4": 0.6585,
+        "0.5": 0.7688,
+        "0.6": 0.8109,
+        "0.7": 0.8643,
+        "0.8": 0.9589,
+        "1.0": 1.011
+      }
+    },
+    "symmetric/naive": {
+      "competence_threshold": 0.1841971680533354,
+      "reached": true,
+      "err_at_full_coverage": 0.0361612597249077,
+      "criterion": "KL(learned GHOST column || true synth) <= 1.0",
+      "creator_mi_threshold": {
+        "threshold": 1.0,
+        "target_mi": 1.0015829573690684,
+        "full_coverage_mi": 1.0162609997047565,
+        "zero_coverage_mi": 0.7227001529909987,
+        "gain_from_full_coverage": 0.2935608467137578,
+        "criterion": "95% of the gain this arm gets from full coverage"
+      },
+      "ghost_err_by_coverage": {
+        "0.0": 2.0352,
+        "0.1": 1.1827,
+        "0.2": 0.9657,
+        "0.3": 0.4711,
+        "0.4": 0.2098,
+        "0.5": 0.2563,
+        "0.6": 0.0965,
+        "0.7": 0.0466,
+        "0.8": 0.0393,
+        "1.0": 0.0362
+      },
+      "mi_by_coverage": {
+        "0.0": 0.7227,
+        "0.1": 0.7595,
+        "0.2": 0.8192,
+        "0.3": 0.8883,
+        "0.4": 0.8688,
+        "0.5": 0.9409,
+        "0.6": 0.9744,
+        "0.7": 0.9535,
+        "0.8": 0.9654,
+        "1.0": 1.0163
+      }
+    },
+    "symmetric/regime_aware": {
+      "competence_threshold": 0.17511323668639855,
+      "reached": true,
+      "err_at_full_coverage": 0.03743892435307077,
+      "criterion": "KL(learned GHOST column || true synth) <= 1.0",
+      "creator_mi_threshold": {
+        "threshold": 1.0,
+        "target_mi": 0.9954085315087131,
+        "full_coverage_mi": 1.013750411693257,
+        "zero_coverage_mi": 0.6469128080023817,
+        "gain_from_full_coverage": 0.36683760369087526,
+        "criterion": "95% of the gain this arm gets from full coverage"
+      },
+      "ghost_err_by_coverage": {
+        "0.0": 1.8509,
+        "0.1": 1.3104,
+        "0.2": 0.8971,
+        "0.3": 0.7479,
+        "0.4": 0.1487,
+        "0.5": 0.1846,
+        "0.6": 0.0782,
+        "0.7": 0.0494,
+        "0.8": 0.0414,
+        "1.0": 0.0374
+      },
+      "mi_by_coverage": {
+        "0.0": 0.6469,
+        "0.1": 0.7976,
+        "0.2": 0.8208,
+        "0.3": 0.8774,
+        "0.4": 0.8869,
+        "0.5": 0.9392,
+        "0.6": 0.9608,
+        "0.7": 0.9572,
+        "0.8": 0.9751,
+        "1.0": 1.0138
+      }
+    }
+  },
+  "policy_cell": "ai_only/regime_aware",
+  "headline_threshold": 0.16449220838709125,
+  "naive_threshold_same_regime": 0.18438487639611625,
+  "awareness_lowers_the_threshold": true,
+  "symmetric_control_shows_no_awareness_effect": true,
+  "control_interpretation": "under symmetric labelling, absence of a label is genuinely uninformative, so a regime-aware reader should gain nothing over a naive one. That the two agree there is what licenses attributing the ai_only difference to the contrapositive inference rather than to the likelihood change itself.",
+  "caveat_on_any_quoted_number": "the regime_aware reader is given the TRUE coverage, the most generous assumption available, so its threshold is a LOWER BOUND on what a real deployment needs; a reader with a miscalibrated belief about coverage can only do worse",
+  "why_naive_may_show_no_gain_from_absence": "build_A1_observer assigns P(UNSIGNED | provenance) identically across tiers, so for a naive reader an unlabelled artifact is uninformative by construction at any coverage. Any ai_only gain it shows comes only from the labels it does see."
+}

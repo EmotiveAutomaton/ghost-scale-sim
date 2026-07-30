@@ -1,0 +1,290 @@
+{
+  "check": "R-11 / R-12",
+  "question": "Run every reachable experiment with the solver exact and the seeding fixed. What moves?",
+  "plain_language": "The validation pass rechecked five experiments with the arithmetic done exactly rather than approximately, and three conclusions changed. This runs every experiment that can be run, including six that were blocked until the learning path was rebuilt, and reports every headline quantity both ways.",
+  "design": "matched pairs. The baseline arm is re-run now on the old code path rather than read off disk, so a difference between the pair is attributable to the change and not to anything that drifted since. Three things move together in the repaired arm and that is deliberate: separating them would need three full programmes and would still not isolate anything, because re-seeding alone re-randomises every reader.",
+  "withheld": {
+    "E8": "withheld; it has never passed its own control and the repair pass does not change that"
+  },
+  "experiments_attempted": 26,
+  "experiments_completed": 23,
+  "experiments_incomplete": [
+    "E34",
+    "E14",
+    "E12"
+  ],
+  "outcomes_moved": [
+    "E19",
+    "E31"
+  ],
+  "boolean_flips": [
+    {
+      "experiment": "E19",
+      "quantity": "positive_control_passed"
+    },
+    {
+      "experiment": "E20",
+      "quantity": "any_cell_crashes"
+    },
+    {
+      "experiment": "E31",
+      "quantity": "update_tracks_recovered_depth"
+    }
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "experiment": "E1",
+      "module": "e1_crash",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E5",
+      "module": "e5_precision_baseline",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E2",
+      "module": "e2_variance",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E17",
+      "module": "e17_tier_dose_response",
+      "baseline_ok": true,
+      "baseline_outcome": "confirmed: disagreement under a human claim rises monotonically as intent transmission falls, and the fabrication gap rises with it \u2014 the four-tier design is carrying real signal rather than relabelling a binary contrast",
+      "repaired_ok": true,
+      "repaired_outcome": "confirmed: disagreement under a human claim rises monotonically as intent transmission falls, and the fabrication gap rises with it \u2014 the four-tier design is carrying real signal rather than relabelling a binary contrast",
+      "outcome_moved": false,
+      "spearman_rho__baseline": null,
+      "spearman_rho__repaired": null
+    },
+    {
+      "experiment": "E3",
+      "module": "e3_titration",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E4",
+      "module": "e4_trust_exploit",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E19",
+      "module": "e19_explore",
+      "baseline_ok": true,
+      "baseline_outcome": "CRASH_SURVIVES",
+      "repaired_ok": true,
+      "repaired_outcome": "INCONCLUSIVE",
+      "outcome_moved": true,
+      "positive_control_passed__baseline": true,
+      "positive_control_passed__repaired": false,
+      "positive_control_passed__flipped": true,
+      "foreign_absorbed__baseline": false,
+      "foreign_absorbed__repaired": false,
+      "foreign_absorbed__flipped": false
+    },
+    {
+      "experiment": "E20",
+      "module": "e20_omega_sweep",
+      "baseline_ok": true,
+      "baseline_outcome": "INTERIOR_PEAK",
+      "repaired_ok": true,
+      "repaired_outcome": "INTERIOR_PEAK",
+      "outcome_moved": false,
+      "fabrication_peak_omega__baseline": 0.1,
+      "fabrication_peak_omega__repaired": 0.1,
+      "fabrication_peak_omega__delta": 0.0,
+      "fabrication_peak_value__baseline": 0.3018488336926586,
+      "fabrication_peak_value__repaired": 0.30296320064771054,
+      "fabrication_peak_value__delta": 0.0011143669550519597,
+      "engagement_crossing_omega__baseline": 0.04115283331707792,
+      "engagement_crossing_omega__repaired": 0.06684900016617737,
+      "engagement_crossing_omega__delta": 0.02569616684909945,
+      "fabrication_peak_is_interior__baseline": true,
+      "fabrication_peak_is_interior__repaired": true,
+      "fabrication_peak_is_interior__flipped": false,
+      "any_cell_crashes__baseline": true,
+      "any_cell_crashes__repaired": false,
+      "any_cell_crashes__flipped": true
+    },
+    {
+      "experiment": "E21",
+      "module": "e21_model_comparison",
+      "baseline_ok": true,
+      "baseline_outcome": "MACHINERY_PARTLY_NECESSARY",
+      "repaired_ok": true,
+      "repaired_outcome": "MACHINERY_PARTLY_NECESSARY",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E32",
+      "module": "e32_omega_d",
+      "baseline_ok": true,
+      "baseline_outcome": "TWO_DIMENSIONS",
+      "repaired_ok": true,
+      "repaired_outcome": "TWO_DIMENSIONS",
+      "outcome_moved": false,
+      "measures_indistinguishable__baseline": 0,
+      "measures_indistinguishable__repaired": 0,
+      "measures_indistinguishable__delta": 0.0
+    },
+    {
+      "experiment": "E15",
+      "module": "e15_competence_cliff",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false,
+      "logistic_d50__baseline": 0.8781173954655348,
+      "logistic_d50__repaired": 0.8589875039655154,
+      "logistic_d50__delta": -0.019129891500019425
+    },
+    {
+      "experiment": "E28",
+      "module": "e28_beta",
+      "baseline_ok": true,
+      "baseline_outcome": "BETA_IS_SEPARABLE_OVER_PART_OF_THE_RANGE",
+      "repaired_ok": true,
+      "repaired_outcome": "BETA_IS_SEPARABLE_OVER_PART_OF_THE_RANGE",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E29",
+      "module": "e29_gates",
+      "baseline_ok": true,
+      "baseline_outcome": "GATES_PARTLY_DISSOCIATE",
+      "repaired_ok": true,
+      "repaired_outcome": "GATES_PARTLY_DISSOCIATE",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E30",
+      "module": "e30_depth",
+      "baseline_ok": true,
+      "baseline_outcome": "DEPTH_MOVES_NOTHING",
+      "repaired_ok": true,
+      "repaired_outcome": "DEPTH_MOVES_NOTHING",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E31",
+      "module": "e31_two_gates",
+      "baseline_ok": true,
+      "baseline_outcome": "ONE_MECHANISM_OPPOSITE_SIGNS",
+      "repaired_ok": true,
+      "repaired_outcome": "DEPTH_IS_NOT_THE_COMMON_PATH",
+      "outcome_moved": true,
+      "update_tracks_mu_rho__baseline": 0.8857142857142857,
+      "update_tracks_mu_rho__repaired": 0.6,
+      "update_tracks_mu_rho__delta": -0.2857142857142857,
+      "exploit_mu_gap__baseline": 0.18739021543200063,
+      "exploit_mu_gap__repaired": 0.8319163786440276,
+      "exploit_mu_gap__delta": 0.6445261632120269,
+      "fabrication_gap__baseline": 0.025,
+      "fabrication_gap__repaired": 0.004166666666666667,
+      "fabrication_gap__delta": -0.020833333333333336,
+      "update_tracks_recovered_depth__baseline": true,
+      "update_tracks_recovered_depth__repaired": false,
+      "update_tracks_recovered_depth__flipped": true,
+      "dishonest_label_inflates_depth__baseline": true,
+      "dishonest_label_inflates_depth__repaired": true,
+      "dishonest_label_inflates_depth__flipped": false
+    },
+    {
+      "experiment": "E33",
+      "module": "e33_latent_goal",
+      "baseline_ok": true,
+      "baseline_outcome": "READS_THE_LATENT_WITHOUT_A_TRACE",
+      "repaired_ok": true,
+      "repaired_outcome": "READS_THE_LATENT_WITHOUT_A_TRACE",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E7",
+      "module": "e7_learn_ghost",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E16",
+      "module": "e16_label_coverage",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E9",
+      "module": "e9_poison_starve",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E18",
+      "module": "e18_deferred_estimator",
+      "baseline_ok": true,
+      "baseline_outcome": "the estimator fix does NOT remove the generational contraction. Early-step misattribution is therefore not the whole of it: a second contributor exists, the single-generation measurement does not explain the chain, and E8 stays withheld.",
+      "repaired_ok": true,
+      "repaired_outcome": "the estimator fix does NOT remove the generational contraction. Early-step misattribution is therefore not the whole of it: a second contributor exists, the single-generation measurement does not explain the chain, and E8 stays withheld.",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E13",
+      "module": "e13_freeze_leak_signature",
+      "baseline_ok": true,
+      "baseline_outcome": "shared_axis",
+      "repaired_ok": true,
+      "repaired_outcome": "shared_axis",
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E6",
+      "module": "e6_corpus_corruption",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
+    },
+    {
+      "experiment": "E6b",
+      "module": "e6b_corpus_biased",
+      "baseline_ok": true,
+      "baseline_outcome": "NOT falsified \u2014 the bias axis produces the predicted corruption; downstream V2 stages may proceed.",
+      "repaired_ok": true,
+      "repaired_outcome": "NOT falsified \u2014 the bias axis produces the predicted corruption; downstream V2 stages may proceed.",
+      "outcome_moved": false
+    }
+  ],
+  "verdict": "SOME_VERDICTS_MOVE_UNDER_THE_REPAIRED_MODEL",
+  "statement": "23 of 26 reachable experiments completed in both arms.\n\n**These outcomes moved under the repaired model:** E19, E31. Each is reported with both values, and the original is retained.\n\nIndividual verdict components that flipped: E19.positive_control_passed; E20.any_cell_crashes; E31.update_tracks_recovered_depth.\n\n**3 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34, E14, E12. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.\n\nThe withheld experiment stays withheld and was not run."
+}

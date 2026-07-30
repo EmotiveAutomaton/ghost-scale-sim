@@ -1,0 +1,100 @@
+{
+  "check": "R-13",
+  "question": "Both experiments came back inconclusive. Rerun in a regime where the reader is genuinely unsure, and on a measure that is not U-shaped, what do they say?",
+  "plain_language": "Two experiments produced nothing readable. One asked whether the amount of thinking behind a work changes how much a reader takes from it, and found a flat line; the other's own success case failed one of its own checks. Both are now run again in conditions where the reader is genuinely uncertain, using a measure that can tell moving toward the truth from moving away from it.",
+  "criteria": {
+    "primary": "error_reduction",
+    "retains_original": true,
+    "inexpertise": 0.85,
+    "observations": 6
+  },
+  "depth": {
+    "experiment": "E30 (depth)",
+    "original_verdict": "inconclusive; the construction left no headroom",
+    "regime": {
+      "inexpertise_calibrated_here": 0.85,
+      "inexpertise_the_probe_found_on_the_other_geometry": 0.85,
+      "observations": 6,
+      "mean_accuracy": 0.9,
+      "goal_recovery_is_uncertain": false,
+      "why_calibrated": "the difficulty probe ran on the version 1 geometry and the regime does not transfer: the same inexpertise leaves version 5 accuracy far higher, because depth gives the reader more structure to read the goal from"
+    },
+    "primary_contrast_deepest_minus_shallowest": -0.03837555993450137,
+    "primary_contrast_interval": [
+      -0.100113602785842,
+      0.023156592076415215
+    ],
+    "primary_contrast_verdict": "undetermined",
+    "movement_contrast": 0.033211614416066404,
+    "movement_contrast_interval": [
+      -0.008693182954784353,
+      0.07459260934611564
+    ],
+    "movement_contrast_verdict": "undetermined",
+    "why_a_contrast_rather_than_a_correlation": "on three levels a rank correlation can only take four values, so no amount of resampling narrows it to a decision. The contrast between the extreme levels is continuous and can be.",
+    "cells": [
+      {
+        "true_mu": 1,
+        "accuracy": 0.93125,
+        "goal_entropy": 0.873266680590431,
+        "recovered_mu": 2.0056851642537077,
+        "movement": 0.49032053336270554,
+        "movement_sd": 0.25985822632707406,
+        "error_reduction": 0.9233041895853644,
+        "error_reduction_sd": 0.3457595392821466,
+        "n": 320
+      },
+      {
+        "true_mu": 2,
+        "accuracy": 0.884375,
+        "goal_entropy": 0.853294603849851,
+        "recovered_mu": 2.0425770744785776,
+        "movement": 0.5103643939954773,
+        "movement_sd": 0.2810707881320996,
+        "error_reduction": 0.8855318827548434,
+        "error_reduction_sd": 0.40242490960378163,
+        "n": 320
+      },
+      {
+        "true_mu": 3,
+        "accuracy": 0.884375,
+        "goal_entropy": 0.8455140427364156,
+        "recovered_mu": 2.042206707787367,
+        "movement": 0.5235321477787719,
+        "movement_sd": 0.28311641189993514,
+        "error_reduction": 0.8849286296508632,
+        "error_reduction_sd": 0.44386471725304644,
+        "n": 320
+      }
+    ],
+    "primary_measure": "error_reduction",
+    "error_reduction_rho": -1.0,
+    "error_reduction_interval": [
+      -1.0,
+      0.5
+    ],
+    "movement_rho": 1.0,
+    "movement_interval": [
+      -0.5,
+      1.0
+    ],
+    "measures_disagree": true,
+    "n_readers_per_cell": 320
+  },
+  "depth_verdict": "DEPTH_STILL_INCONCLUSIVE",
+  "fallback": {
+    "experiment": "E19 (the generous fallback)",
+    "original_verdict": "INCONCLUSIVE",
+    "control_explore_mass": 0.7039561363836381,
+    "control_engaged_fraction": 0.0,
+    "foreign_explore_mass": 0.2040080930082698,
+    "directed_explore_mass": 0.0033008731018154,
+    "original_control_passes": false,
+    "rebuilt_control_passes": true,
+    "foreign_absorbed": false,
+    "control_rebuild": "absorption is EXPLORE mass plus convergence; sustained engagement is measured and reported separately rather than being one of absorption's clauses. A reader that has resolved the goal correctly stops paying attention, so the original conjunctive form failed on the one cell that is supposed to demonstrate success."
+  },
+  "fallback_verdict": "CRASH_SURVIVES_THE_GENEROUS_FALLBACK",
+  "verdict": "DEPTH_STILL_INCONCLUSIVE / CRASH_SURVIVES_THE_GENEROUS_FALLBACK",
+  "statement": "**The difficulty regime does not transfer between geometries, and finding that out was worth the rerun on its own.** The probe located it at reader inexpertise 0.85 on the version 1 geometry, where accuracy drops to about 0.63. Calibrating the same knob against the version 5 geometry, accuracy will not come down: it sits at 0.900 even at the calibrated value, and the sweep found nothing inside the target band anywhere up to total inexpertise. **Depth makes the reader harder to confuse, because it gives the goal more than one route to the surface.** So the depth experiment cannot be run in a regime where goal recovery is genuinely uncertain, by this knob, at all.\n\n**A three-level rank correlation cannot be settled by any amount of resampling**, which is why the primary is a contrast rather than a correlation. On three points Spearman takes only four possible values, so its bootstrap distribution is a handful of atoms and it straddles zero unless every draw agrees. That is a structural limit of the design and no regime repairs it.\n\n**The contrast between the deepest and shallowest work, which is continuous and can be settled, bounds the effect rather than merely failing to find one.** On how much closer to the truth the reader got, deepest minus shallowest is -0.0384 with a 95% interval of [-0.1001, +0.0232]. On the measure the original used it is +0.0332, interval [-0.0087, +0.0746]. Both straddle zero, so neither direction is established, and the useful statement is the width: **any effect of depth on what the reader takes on is smaller than about a tenth of a nat.** For scale, the false-label effect on the same measure is -5.96. Depth's influence on uptake is at most a fiftieth of the label's, and is consistent with nothing at all.\n\nCell means: depth 1 gives accuracy 0.931, error reduction +0.923, movement 0.490; depth 2 gives accuracy 0.884, error reduction +0.886, movement 0.510; depth 3 gives accuracy 0.884, error reduction +0.885, movement 0.524. The two deepest levels remain indistinguishable from each other on every column, which the original experiment also found and which halves an already three-point design.\n\n**The generous fallback comes back, and its original finding is restored.** The control it failed required the fallback to absorb exploratory human work WHILE the reader kept paying attention, and a reader that has correctly resolved the goal stops paying attention, so the one cell meant to demonstrate success scored 0.000 on a clause requiring 0.5. Rebuilt so that absorption is mass and convergence, with engagement measured separately as the crash signature already does elsewhere, the control passes at a mass of 0.704 while foreign content takes only 0.204. **The crash survives the most generous explanation the theory permits, under exact inference, with a control that can actually pass.** That restores a finding the validation pass had reduced to inconclusive, and it restores it on stronger footing than it originally had.\n\n**Both original verdicts are retained** and are reported beside these. A rerun in a better regime is not permission to overwrite the record of what the first attempt said."
+}

@@ -228,15 +228,20 @@ def test_the_offered_seed_replacement_is_collision_free():
     assert len(seen) == 8 * 30 * 120
 
 
-def test_the_shipped_seed_function_still_collides_and_only_across_cells():
-    """Pins the DIRECTION of the known defect, which is what makes it benign.
+def test_the_legacy_seed_function_still_collides_and_only_across_cells():
+    """Pins the DIRECTION of the known defect, which is what makes the historical numbers stand.
+
+    UPDATED BY THE REPAIR PASS. This used to test ``observer_seed``, which was the colliding
+    function; the repair made the collision-free scheme the default and kept the old one reachable,
+    so the test now names the legacy function explicitly. That is the right target: what has to stay
+    true is a fact about the code that produced the committed record, not about the current default.
 
     If a future change moved collisions inside a (cell, seed) group this would fail, because that is
     the unit the between-reader statistic assumes independence over.
     """
     from ghostscale.diagnostics.d5_d6_power_and_seeds import _audit
-    from ghostscale.experiments._common import observer_seed
-    a = _audit(observer_seed, 4, 20, 200)
+    from ghostscale.experiments._common import legacy_observer_seed
+    a = _audit(legacy_observer_seed, 4, 20, 200)
     assert a["collisions_total"] > 0, "the documented defect has been fixed without updating D-6"
     assert a["collisions_within_a_cell_and_seed"] == 0
     assert a["collisions_across_seeds_within_a_cell"] == 0

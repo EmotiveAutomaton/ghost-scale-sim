@@ -1,0 +1,310 @@
+{
+  "verdict": "TWO_DIMENSIONS",
+  "indistinguishable_measures": [],
+  "reading": "they differ on every measure. The second dimension is whether the failure is DETECTABLE TO THE OBSERVER: a mis-aimed template fails silently and confidently, an out-of-range one fails loudly and stays unresolved.",
+  "experiment": "E32 \u2014 are foreign content and an unskilled reader the same thing?",
+  "measures_indistinguishable": 0,
+  "measures_total": 5,
+  "per_measure": {
+    "engaged_fraction": {
+      "foreign_content": [
+        0.6935119047619047,
+        0.6083690476190476,
+        0.3379404761904762,
+        0.10801190476190475,
+        0.011119047619047619,
+        0.00011904761904761905
+      ],
+      "unskilled_reader": [
+        3.571428571428571e-05,
+        8.333333333333333e-05,
+        9.523809523809523e-05,
+        0.00021428571428571427,
+        0.00027380952380952377,
+        2.3809523809523807e-05
+      ],
+      "mean_abs_gap": 0.2930575396825397,
+      "gap_relative_to_range": 0.42258481680485704,
+      "indistinguishable": false
+    },
+    "within_observer": {
+      "foreign_content": [
+        1.2346114019461674,
+        0.638366196606617,
+        0.47940766050941297,
+        0.4345417058708552,
+        0.32390008158059397,
+        0.07830480336168334
+      ],
+      "unskilled_reader": [
+        0.859094058770459,
+        0.8435472462047828,
+        0.8355067410475452,
+        0.7842128834769977,
+        0.5380821677697982,
+        0.06030298351154563
+      ],
+      "mean_abs_gap": 0.25310875949291517,
+      "gap_relative_to_range": 0.2155385719113847,
+      "indistinguishable": false
+    },
+    "between_observer": {
+      "foreign_content": [
+        1.378942057745884,
+        0.9648615153159622,
+        0.636269556941387,
+        0.36728780166213415,
+        0.1398186474970868,
+        0.0052456734667315685
+      ],
+      "unskilled_reader": [
+        1.319844913042619,
+        1.2827439597955697,
+        1.2484725868721118,
+        1.1242737736953226,
+        0.5920832609874149,
+        0.01154148665616492
+      ],
+      "mean_abs_gap": 0.36745483630442455,
+      "gap_relative_to_range": 0.2674934872870373,
+      "indistinguishable": false
+    },
+    "accuracy": {
+      "foreign_content": [
+        0.24283333333333335,
+        0.6746666666666666,
+        0.8056666666666666,
+        0.8945,
+        0.9691666666666666,
+        0.9991666666666666
+      ],
+      "unskilled_reader": [
+        0.4091666666666667,
+        0.4503333333333333,
+        0.488,
+        0.5873333333333334,
+        0.8451666666666666,
+        0.9981666666666666
+      ],
+      "mean_abs_gap": 0.1900833333333333,
+      "gap_relative_to_range": 0.251322168356104,
+      "indistinguishable": false
+    },
+    "psi_analogue": {
+      "foreign_content": [
+        0.3141174619285153,
+        1.7213259934298455,
+        2.1063403100412574,
+        2.2069186947500894,
+        2.4698989837567824,
+        3.049837160939307
+      ],
+      "unskilled_reader": [
+        1.2024027367033425,
+        1.2411436403695073,
+        1.255650253844605,
+        1.379319465588032,
+        1.9657640677017505,
+        3.1049224730948324
+      ],
+      "mean_abs_gap": 0.6009961902340721,
+      "gap_relative_to_range": 0.2153486853540181,
+      "indistinguishable": false
+    }
+  },
+  "matching_curve": [
+    {
+      "omega": 0.0,
+      "target_effective_overlap_nats": -0.012276384296057784,
+      "matched_d": 0.945128628108705,
+      "achieved_effective_overlap_nats": -0.012276384297807525,
+      "competent_reader_ceiling_nats": 1.006542138225516
+    },
+    {
+      "omega": 0.05,
+      "target_effective_overlap_nats": 0.03866454183002087,
+      "matched_d": 0.9352460439881725,
+      "achieved_effective_overlap_nats": 0.03866454183008778,
+      "competent_reader_ceiling_nats": 1.006542138225516
+    },
+    {
+      "omega": 0.1,
+      "target_effective_overlap_nats": 0.0896054679560995,
+      "matched_d": 0.9241553724273217,
+      "achieved_effective_overlap_nats": 0.08960546795664227,
+      "competent_reader_ceiling_nats": 1.006542138225516
+    },
+    {
+      "omega": 0.2,
+      "target_effective_overlap_nats": 0.19148732020825682,
+      "matched_d": 0.8977847068222218,
+      "achieved_effective_overlap_nats": 0.19148732020884687,
+      "competent_reader_ceiling_nats": 1.006542138225516
+    },
+    {
+      "omega": 0.4,
+      "target_effective_overlap_nats": 0.3952510247125716,
+      "matched_d": 0.8228425661250185,
+      "achieved_effective_overlap_nats": 0.3952510247121713,
+      "competent_reader_ceiling_nats": 1.006542138225516
+    },
+    {
+      "omega": 0.7,
+      "target_effective_overlap_nats": 0.7008965814690431,
+      "matched_d": 0.612035586751972,
+      "achieved_effective_overlap_nats": 0.7008965814689718,
+      "competent_reader_ceiling_nats": 1.006542138225516
+    }
+  ],
+  "matching_definition": "MI(features; goal) under the observer's OWN likelihood on the content it sees, in nats. Solved for d by bisection, computed before any rollout, and locked.",
+  "precursor": {
+    "status": "unavailable",
+    "note": "INDICATIVE ONLY. E15 ran at 8 features under a different design and E20 at 16; the two are not matched on effective overlap and cannot settle C3. They show direction."
+  },
+  "cell_table": [
+    {
+      "arm": "foreign_content",
+      "omega": 0.0,
+      "d": 0.945128628108705,
+      "n": 6000,
+      "engaged_fraction": 0.6935119047619047,
+      "within_observer": 1.2346114019461674,
+      "between_observer": 1.378942057745884,
+      "accuracy": 0.24283333333333335,
+      "psi_analogue": 0.3141174619285153,
+      "cum_deep": 19.70916666666667
+    },
+    {
+      "arm": "foreign_content",
+      "omega": 0.05,
+      "d": 0.9352460439881725,
+      "n": 6000,
+      "engaged_fraction": 0.6083690476190476,
+      "within_observer": 0.638366196606617,
+      "between_observer": 0.9648615153159622,
+      "accuracy": 0.6746666666666666,
+      "psi_analogue": 1.7213259934298455,
+      "cum_deep": 18.517166666666668
+    },
+    {
+      "arm": "foreign_content",
+      "omega": 0.1,
+      "d": 0.9241553724273217,
+      "n": 6000,
+      "engaged_fraction": 0.3379404761904762,
+      "within_observer": 0.47940766050941297,
+      "between_observer": 0.636269556941387,
+      "accuracy": 0.8056666666666666,
+      "psi_analogue": 2.1063403100412574,
+      "cum_deep": 14.731166666666667
+    },
+    {
+      "arm": "foreign_content",
+      "omega": 0.2,
+      "d": 0.8977847068222218,
+      "n": 6000,
+      "engaged_fraction": 0.10801190476190475,
+      "within_observer": 0.4345417058708552,
+      "between_observer": 0.36728780166213415,
+      "accuracy": 0.8945,
+      "psi_analogue": 2.2069186947500894,
+      "cum_deep": 11.512166666666667
+    },
+    {
+      "arm": "foreign_content",
+      "omega": 0.4,
+      "d": 0.8228425661250185,
+      "n": 6000,
+      "engaged_fraction": 0.011119047619047619,
+      "within_observer": 0.32390008158059397,
+      "between_observer": 0.1398186474970868,
+      "accuracy": 0.9691666666666666,
+      "psi_analogue": 2.4698989837567824,
+      "cum_deep": 10.155666666666667
+    },
+    {
+      "arm": "foreign_content",
+      "omega": 0.7,
+      "d": 0.612035586751972,
+      "n": 6000,
+      "engaged_fraction": 0.00011904761904761905,
+      "within_observer": 0.07830480336168334,
+      "between_observer": 0.0052456734667315685,
+      "accuracy": 0.9991666666666666,
+      "psi_analogue": 3.049837160939307,
+      "cum_deep": 10.001666666666667
+    },
+    {
+      "arm": "unskilled_reader",
+      "omega": 0.0,
+      "d": 0.945128628108705,
+      "n": 6000,
+      "engaged_fraction": 3.571428571428571e-05,
+      "within_observer": 0.859094058770459,
+      "between_observer": 1.319844913042619,
+      "accuracy": 0.4091666666666667,
+      "psi_analogue": 1.2024027367033425,
+      "cum_deep": 10.0005
+    },
+    {
+      "arm": "unskilled_reader",
+      "omega": 0.05,
+      "d": 0.9352460439881725,
+      "n": 6000,
+      "engaged_fraction": 8.333333333333333e-05,
+      "within_observer": 0.8435472462047828,
+      "between_observer": 1.2827439597955697,
+      "accuracy": 0.4503333333333333,
+      "psi_analogue": 1.2411436403695073,
+      "cum_deep": 10.001166666666666
+    },
+    {
+      "arm": "unskilled_reader",
+      "omega": 0.1,
+      "d": 0.9241553724273217,
+      "n": 6000,
+      "engaged_fraction": 9.523809523809523e-05,
+      "within_observer": 0.8355067410475452,
+      "between_observer": 1.2484725868721118,
+      "accuracy": 0.488,
+      "psi_analogue": 1.255650253844605,
+      "cum_deep": 10.001333333333333
+    },
+    {
+      "arm": "unskilled_reader",
+      "omega": 0.2,
+      "d": 0.8977847068222218,
+      "n": 6000,
+      "engaged_fraction": 0.00021428571428571427,
+      "within_observer": 0.7842128834769977,
+      "between_observer": 1.1242737736953226,
+      "accuracy": 0.5873333333333334,
+      "psi_analogue": 1.379319465588032,
+      "cum_deep": 10.003
+    },
+    {
+      "arm": "unskilled_reader",
+      "omega": 0.4,
+      "d": 0.8228425661250185,
+      "n": 6000,
+      "engaged_fraction": 0.00027380952380952377,
+      "within_observer": 0.5380821677697982,
+      "between_observer": 0.5920832609874149,
+      "accuracy": 0.8451666666666666,
+      "psi_analogue": 1.9657640677017505,
+      "cum_deep": 10.003833333333333
+    },
+    {
+      "arm": "unskilled_reader",
+      "omega": 0.7,
+      "d": 0.612035586751972,
+      "n": 6000,
+      "engaged_fraction": 2.3809523809523807e-05,
+      "within_observer": 0.06030298351154563,
+      "between_observer": 0.01154148665616492,
+      "accuracy": 0.9981666666666666,
+      "psi_analogue": 3.1049224730948324,
+      "cum_deep": 10.000333333333334
+    }
+  ]
+}

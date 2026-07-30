@@ -1,0 +1,38 @@
+{
+  "experiment": "E13",
+  "spec": "V3 \u00a71 C4, \u00a75 (report which outcome obtained)",
+  "shared_quantity": "mean over goals of KL(learned CREATOR/DEEP column || true), nats",
+  "shared_axis": "effective Dirichlet sample count (concentration mass - prior)",
+  "recursion_fit": {
+    "c": 0.3374730257560246,
+    "b": 0.0910539422865053,
+    "n_points": 2400,
+    "mean_eff_sample_count": 278.1073817899828,
+    "mean_creator_col_kl": 0.56993275183443
+  },
+  "freeze": {
+    "eff_sample_count": 127.60210759333924,
+    "creator_col_kl": 0.3540465186268666,
+    "col_change_rate": 0.0038405408459645917,
+    "deep_per_genuine": 1.8506927772090234,
+    "contamination_independence": {
+      "0.0": 0.3521,
+      "0.3": 0.3662,
+      "0.6": 0.3438
+    }
+  },
+  "control": {
+    "creator_col_kl": 0.0704694494128151,
+    "col_change_rate": 0.002599727053755721,
+    "deep_per_genuine": 6.0
+  },
+  "recursion_col_change_rate": 0.0011601808563263464,
+  "classification": {
+    "outcome": 1,
+    "label": "shared_axis",
+    "predicted_kl": 0.5247902095649917,
+    "ratio": 0.6746439094592529,
+    "statement": "the freeze and the leak fall on one finite-sample axis; the E9 freeze is an artifact of premature convergence, which is what D4 predicts a correctly specified model's freeze would turn out to be"
+  },
+  "reporting_requirement": "V3 \u00a75: state explicitly which of the three C4 outcomes obtained. If they are different effects, flag the second one as an open problem in the framework, in those words."
+}

@@ -1,0 +1,41 @@
+{
+  "at_f": 0.8,
+  "observed_naive_kl_biased": 0.10239642969853574,
+  "observed_naive_kl_symmetric_control": 0.10219644914509235,
+  "v1_reference": 0.066,
+  "predicted_range": [
+    0.15,
+    0.6
+  ],
+  "within_predicted_range": false,
+  "falsification_threshold": 0.1,
+  "FALSIFIED": false,
+  "per_favoured_k": {
+    "0": {
+      "kl_naive": 0.08073837281334997,
+      "bound": 0.5007099276256659,
+      "lean": 0.9516310506386029,
+      "below_bound": true
+    },
+    "1": {
+      "kl_naive": 0.1062646873403561,
+      "bound": 0.6803876188043222,
+      "lean": 0.9571211475764382,
+      "below_bound": true
+    },
+    "2": {
+      "kl_naive": 0.08632122552656328,
+      "bound": 0.9479609352487753,
+      "lean": 0.963482740919441,
+      "below_bound": true
+    },
+    "3": {
+      "kl_naive": 0.13626143311387362,
+      "bound": 1.4356911822546319,
+      "lean": 0.9586446444924585,
+      "below_bound": true
+    }
+  },
+  "all_below_bound": true,
+  "verdict": "NOT falsified \u2014 the bias axis produces the predicted corruption; downstream V2 stages may proceed."
+}

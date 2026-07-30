@@ -1,0 +1,6 @@
+parameter,standard,assessable,fitted_to,estimator,rank_correlation,slope,identifiable_fraction,identifiable_from,identifiable_to,reading
+kappa (trust in the label),narrow,True,the reader,least squares on the reader's own behaviour: engagement trace and answer,0.9831920802501751,0.7,0.5,0.1,0.6,measurable over part of the range
+kappa (trust in the label),wide,True,the reader,least squares on the reader's own behaviour: engagement trace and graded confidence,1.0,1.0,1.0,0.1,0.9,measurable across the range
+omega (how readable the content is),,True,an analyst holding the model,"maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",1.0,0.9951704545454545,1.0,0.0,1.0,measurable across the range
+mu (depth of the maker's thinking),,True,the reader,"posterior mean, read off the reader's own belief. Asks whether the READER can identify the value.",1.0,0.31794849687804144,0.5,1.0,2.0,measurable over part of the range
+theta (the value-alignment gate),,True,an analyst holding the model,"matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",1.0,0.9546875,0.875,0.0,7.0,measurable over part of the range

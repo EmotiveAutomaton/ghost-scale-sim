@@ -6,7 +6,11 @@ apart.
 - **[specs/](specs/)** say what was going to be built and what it was going to predict. They are
   written before the code and are not edited afterwards.
 - **[writeups/](writeups/)** say what actually happened, including every place the answer disagreed
-  with the spec.
+  with the spec. **They describe the record as it stood when each version was built, and they are
+  not edited afterwards.** Three later passes have checked and repaired that record; wherever a
+  number in a write-up has been superseded, [../VALIDATION.md](../VALIDATION.md),
+  [../DIAGNOSTICS.md](../DIAGNOSTICS.md) and [../REPAIR.md](../REPAIR.md) say so and carry the
+  original beside the replacement. Read a write-up as history rather than as the current state.
 - **[decisions/](decisions/)** record design choices signed off before a build, with the evidence
   that motivated them.
 - **[EXPERIMENTS.md](EXPERIMENTS.md)** is the consolidated plain-language table of every question
@@ -31,6 +35,7 @@ staying separable.
 | [specs/SPEC_V5.md](specs/SPEC_V5.md) | Version 5. Replaces rationality with model depth, makes provenance evidence rather than a parallel channel, and asks whether foreign content and an unskilled reader are the same failure. Adds N21. |
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Not a new version: nothing in it asks a new question about the world. Every item asks whether the answers already recorded can be trusted. Its results are in [../VALIDATION.md](../VALIDATION.md). |
 | [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass. Two probes on the apparatus, ahead of any repair: can the model's own parameters be recovered from its own data, and is there a regime where reading the goal is genuinely uncertain. Five further instrument checks were added on the way. Its results are in [../DIAGNOSTICS.md](../DIAGNOSTICS.md). |
+| [specs/SPEC_REPAIR.md](specs/SPEC_REPAIR.md) | The repair pass. Closes the gap the diagnostics named, between an apparatus built to demonstrate and one audited as though it measures. Every change either makes something measurable that was not, or removes something. Its results are in [../REPAIR.md](../REPAIR.md). |
 | [specs/SPEC_PUBLIC_ASSETS.md](specs/SPEC_PUBLIC_ASSETS.md) | The specification for the public-facing material: the README rewrite and the distribution slides in `figures/social/`. |
 
 ## The write-ups
@@ -57,5 +62,8 @@ staying separable.
 2. [../VALIDATION.md](../VALIDATION.md), for how much of it survived being checked.
 3. [../DIAGNOSTICS.md](../DIAGNOSTICS.md), for what the instruments can and cannot measure. Read
    this before quoting any specific number, because it is where the limits on the numbers live.
-4. [EXPERIMENTS.md](EXPERIMENTS.md), if you want the table without the later-checking column.
-5. A write-up, then its spec, if you want to see a specific number's whole history.
+4. [../REPAIR.md](../REPAIR.md), for what was fixed and what the fixes changed. In particular it is
+   where the split between "how far the reader moved" and "how much closer to the truth it got"
+   is explained, and that split changes how several results read.
+5. [EXPERIMENTS.md](EXPERIMENTS.md), if you want the table without the later-checking column.
+6. A write-up, then its spec, if you want to see a specific number's whole history.

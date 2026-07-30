@@ -132,6 +132,20 @@ def make_learner_agent(om: GenerativeModel, D: object, cfg: Config,
            if use_param_info_gain is None else bool(use_param_info_gain))
     pA = build_pA(om, cfg, prior_strength=prior_strength, oracle_A0=oracle_A0)
 
+    # THE SOLVER SWITCH REACHES THE LEARNER TOO (repair R-10). Six experiments were unreachable
+    # under exact inference because ExactAgent refused Dirichlet learning rather than approximating
+    # it, and two of those carry public claims. It now attributes counts under the exact joint's
+    # marginals instead of the factorised ones: an exact E-step with the same conjugate M-step. The
+    # parameter uncertainty is still handled the way pymdp handles it, and ``ExactAgent.update_A``
+    # says so in as many words rather than letting the name overstate it.
+    if bool(cfg.get("inference.exact", False)):
+        from .exact import make_exact_agent
+        agent = make_exact_agent(om, D, cfg).attach_pA(pA)
+        agent.lr_pA = lr
+        agent.modalities_to_learn = [K.M_FEATURES]
+        agent.reset()
+        return agent
+
     agent = Agent(
         A=om.A, pA=pA, B=om.B, C=om.C, D=D,
         control_fac_idx=[K.F_ATTENTION],

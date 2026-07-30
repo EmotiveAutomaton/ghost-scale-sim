@@ -1,0 +1,218 @@
+{
+  "verdict": "INCONCLUSIVE",
+  "statement": "EXPLORE failed to absorb exploratory HUMAN content, which is its positive control. A fallback hypothesis that explains nothing cannot be credited with having failed to explain foreign content in particular, so E19 cannot rule on hypothesis-space poverty. Fix the control before reading the foreign cell.",
+  "positive_control_passed": false,
+  "foreign_absorbed": false,
+  "cells": {
+    "foreign/explore_off": {
+      "explore_mass": 0.0,
+      "final_entropy": 1.2011021272840674,
+      "engaged_fraction": 0.842875,
+      "mass_ok": false,
+      "converged_ok": false,
+      "absorbed": false,
+      "criterion": "EXPLORE mass >= 0.5 AND final entropy <= 0.5"
+    },
+    "foreign/explore_on": {
+      "explore_mass": 0.20400809300826983,
+      "final_entropy": 1.486160339000009,
+      "engaged_fraction": 0.69775,
+      "mass_ok": false,
+      "converged_ok": false,
+      "absorbed": false,
+      "criterion": "EXPLORE mass >= 0.5 AND final entropy <= 0.5"
+    },
+    "human_directed/explore_off": {
+      "explore_mass": 0.0,
+      "final_entropy": 0.0037418194574369004,
+      "engaged_fraction": 0.0,
+      "mass_ok": false,
+      "converged_ok": true,
+      "absorbed": false,
+      "criterion": "EXPLORE mass >= 0.5 AND final entropy <= 0.5"
+    },
+    "human_directed/explore_on": {
+      "explore_mass": 0.0033008731018154018,
+      "final_entropy": 0.013917302858384795,
+      "engaged_fraction": 0.0,
+      "mass_ok": false,
+      "converged_ok": true,
+      "absorbed": false,
+      "criterion": "EXPLORE mass >= 0.5 AND final entropy <= 0.5"
+    },
+    "human_exploratory/explore_off": {
+      "explore_mass": 0.0,
+      "final_entropy": 0.9993793684272848,
+      "engaged_fraction": 0.0018214285714285713,
+      "mass_ok": false,
+      "converged_ok": false,
+      "absorbed": false,
+      "criterion": "EXPLORE mass >= 0.5 AND final entropy <= 0.5"
+    },
+    "human_exploratory/explore_on": {
+      "explore_mass": 0.7039561363836381,
+      "final_entropy": 0.737460538270707,
+      "engaged_fraction": 0.0,
+      "mass_ok": true,
+      "converged_ok": false,
+      "absorbed": false,
+      "criterion": "EXPLORE mass >= 0.5 AND final entropy <= 0.5"
+    }
+  },
+  "crash_signature": {
+    "foreign/explore_off": {
+      "final_entropy": 1.2011021272840674,
+      "engaged_fraction": 0.842875,
+      "unresolved": true,
+      "disengaged": false,
+      "crashed": false,
+      "criterion": "final entropy > 0.5 (unresolved) AND engaged fraction < 0.5 (gave up)"
+    },
+    "foreign/explore_on": {
+      "final_entropy": 1.486160339000009,
+      "engaged_fraction": 0.69775,
+      "unresolved": true,
+      "disengaged": false,
+      "crashed": false,
+      "criterion": "final entropy > 0.5 (unresolved) AND engaged fraction < 0.5 (gave up)"
+    },
+    "human_directed/explore_off": {
+      "final_entropy": 0.0037418194574369004,
+      "engaged_fraction": 0.0,
+      "unresolved": false,
+      "disengaged": true,
+      "crashed": false,
+      "criterion": "final entropy > 0.5 (unresolved) AND engaged fraction < 0.5 (gave up)"
+    },
+    "human_directed/explore_on": {
+      "final_entropy": 0.013917302858384795,
+      "engaged_fraction": 0.0,
+      "unresolved": false,
+      "disengaged": true,
+      "crashed": false,
+      "criterion": "final entropy > 0.5 (unresolved) AND engaged fraction < 0.5 (gave up)"
+    },
+    "human_exploratory/explore_off": {
+      "final_entropy": 0.9993793684272848,
+      "engaged_fraction": 0.0018214285714285713,
+      "unresolved": true,
+      "disengaged": true,
+      "crashed": true,
+      "criterion": "final entropy > 0.5 (unresolved) AND engaged fraction < 0.5 (gave up)"
+    },
+    "human_exploratory/explore_on": {
+      "final_entropy": 0.737460538270707,
+      "engaged_fraction": 0.0,
+      "unresolved": true,
+      "disengaged": true,
+      "crashed": true,
+      "criterion": "final entropy > 0.5 (unresolved) AND engaged fraction < 0.5 (gave up)"
+    }
+  },
+  "experiment": "E19 \u2014 does the crash survive a generous hypothesis space?",
+  "stage": 1,
+  "cell_table": [
+    {
+      "arm": "explore_off",
+      "content": "foreign",
+      "n": 4000,
+      "explore_mass": 0.0,
+      "explore_mass_sd": 0.0,
+      "final_entropy": 1.2011021272840674,
+      "final_entropy_sd": 0.3746613064010601,
+      "real_goal_entropy": 1.2011021272840672,
+      "engaged_fraction": 0.842875,
+      "engaged_fraction_sd": 0.3516935025277496,
+      "between_observer": 1.3779485534775489,
+      "between_observer_sd": 0.005898514935216959,
+      "between_observer_full": 1.3779485534775489,
+      "modal_is_explore": 0.0,
+      "accuracy": NaN
+    },
+    {
+      "arm": "explore_on",
+      "content": "foreign",
+      "n": 4000,
+      "explore_mass": 0.20400809300826983,
+      "explore_mass_sd": 0.05634468133917784,
+      "final_entropy": 1.486160339000009,
+      "final_entropy_sd": 0.2695919848163712,
+      "real_goal_entropy": 1.2411792971387186,
+      "engaged_fraction": 0.69775,
+      "engaged_fraction_sd": 0.45882905219376546,
+      "between_observer": 1.3791195337160977,
+      "between_observer_sd": 0.0043493443488097135,
+      "between_observer_full": 1.59890826960758,
+      "modal_is_explore": 0.18925,
+      "accuracy": NaN
+    },
+    {
+      "arm": "explore_off",
+      "content": "human_directed",
+      "n": 4000,
+      "explore_mass": 0.0,
+      "explore_mass_sd": 0.0,
+      "final_entropy": 0.0037418194574369004,
+      "final_entropy_sd": 0.026356300564956976,
+      "real_goal_entropy": 0.0037418194574368934,
+      "engaged_fraction": 0.0,
+      "engaged_fraction_sd": 0.0,
+      "between_observer": 0.0,
+      "between_observer_sd": 0.0,
+      "between_observer_full": 0.0,
+      "modal_is_explore": 0.0,
+      "accuracy": 1.0
+    },
+    {
+      "arm": "explore_on",
+      "content": "human_directed",
+      "n": 4000,
+      "explore_mass": 0.0033008731018154018,
+      "explore_mass_sd": 0.02593582066423535,
+      "final_entropy": 0.013917302858384795,
+      "final_entropy_sd": 0.064847501820941,
+      "real_goal_entropy": 0.0032659156449110402,
+      "engaged_fraction": 0.0,
+      "engaged_fraction_sd": 0.0,
+      "between_observer": 0.0,
+      "between_observer_sd": 0.0,
+      "between_observer_full": 0.00629581318943335,
+      "modal_is_explore": 0.001,
+      "accuracy": 1.0
+    },
+    {
+      "arm": "explore_off",
+      "content": "human_exploratory",
+      "n": 4000,
+      "explore_mass": 0.0,
+      "explore_mass_sd": 0.0,
+      "final_entropy": 0.9993793684272848,
+      "final_entropy_sd": 0.3828972093179359,
+      "real_goal_entropy": 0.9993793684272848,
+      "engaged_fraction": 0.0018214285714285713,
+      "engaged_fraction_sd": 0.015296594142699184,
+      "between_observer": 1.378469467284216,
+      "between_observer_sd": 0.0045092369139781135,
+      "between_observer_full": 1.378469467284216,
+      "modal_is_explore": 0.0,
+      "accuracy": NaN
+    },
+    {
+      "arm": "explore_on",
+      "content": "human_exploratory",
+      "n": 4000,
+      "explore_mass": 0.7039561363836381,
+      "explore_mass_sd": 0.22179510665516933,
+      "final_entropy": 0.737460538270707,
+      "final_entropy_sd": 0.3193636762483423,
+      "real_goal_entropy": 0.9982430529367167,
+      "engaged_fraction": 0.0,
+      "engaged_fraction_sd": 0.0,
+      "between_observer": 1.3797032321707194,
+      "between_observer_sd": 0.004900166995665229,
+      "between_observer_full": 0.48774941075544137,
+      "modal_is_explore": 0.89025,
+      "accuracy": NaN
+    }
+  ]
+}

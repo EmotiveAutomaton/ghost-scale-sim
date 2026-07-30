@@ -1,0 +1,901 @@
+{
+  "check": "R-6 / R-8a",
+  "question": "Fitted to what the reader produces rather than to what it was shown, which parameters are measurable, and over what range?",
+  "plain_language": "To measure something about a reader you have to look at what the reader does, not at what it was shown. The earlier pass looked at what it was shown, which is why trust came back unmeasurable. Fitted properly, trust is measurable up to a point and then stops mattering: past that point two readers with different trust behave identically, so there is nothing left to measure. That is a fact about the model rather than a limit on the measurement.",
+  "criteria": {
+    "observability": [
+      "narrow",
+      "wide"
+    ],
+    "primary_in_prose": "narrow",
+    "identifiable_se": 2.0
+  },
+  "correction_to_the_earlier_pass": "the diagnostics pass fitted trust to the observation tape, which the world generates and which contains no trust parameter. Its UNIDENTIFIABLE verdict answered the wrong question and is superseded here. The original verdict is retained in results/diagnostics/p1_recovery.json.",
+  "channel_crossover": 0.5378460930307519,
+  "recovery": [
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.1,
+      "recovered_mean": 0.1,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.2,
+      "recovered_mean": 0.2,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.3,
+      "recovered_mean": 0.3,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.4,
+      "recovered_mean": 0.38,
+      "recovered_sd": 0.04472135954999581,
+      "recovered_sem": 0.020000000000000004,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.5,
+      "recovered_mean": 0.41999999999999993,
+      "recovered_sd": 0.08366600265340755,
+      "recovered_sem": 0.03741657386773941,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.6,
+      "recovered_mean": 0.6,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.7,
+      "recovered_mean": 0.62,
+      "recovered_sd": 0.04472135954999579,
+      "recovered_sem": 0.019999999999999997,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.8,
+      "recovered_mean": 0.62,
+      "recovered_sd": 0.04472135954999579,
+      "recovered_sem": 0.019999999999999997,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "fitted_to": "the reader",
+      "true": 0.9,
+      "recovered_mean": 0.62,
+      "recovered_sd": 0.04472135954999579,
+      "recovered_sem": 0.019999999999999997,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.1,
+      "recovered_mean": 0.1,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.2,
+      "recovered_mean": 0.2,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.3,
+      "recovered_mean": 0.3,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.4,
+      "recovered_mean": 0.4,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.5,
+      "recovered_mean": 0.5,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.6,
+      "recovered_mean": 0.6,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.7,
+      "recovered_mean": 0.7,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.8,
+      "recovered_mean": 0.8,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "fitted_to": "the reader",
+      "true": 0.9,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 5
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.0,
+      "recovered_mean": 0.0015625,
+      "recovered_sd": 0.00625,
+      "recovered_sem": 0.0015625,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.1,
+      "recovered_mean": 0.096875,
+      "recovered_sd": 0.02015564437074637,
+      "recovered_sem": 0.005038911092686593,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.2,
+      "recovered_mean": 0.1859375,
+      "recovered_sd": 0.02230237281845439,
+      "recovered_sem": 0.005575593204613597,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.30000000000000004,
+      "recovered_mean": 0.290625,
+      "recovered_sd": 0.02393567769390846,
+      "recovered_sem": 0.005983919423477115,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.4,
+      "recovered_mean": 0.39531250000000007,
+      "recovered_sd": 0.037880018919389864,
+      "recovered_sem": 0.009470004729847466,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.5,
+      "recovered_mean": 0.4890625,
+      "recovered_sd": 0.04079292218020179,
+      "recovered_sem": 0.010198230545050448,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.6000000000000001,
+      "recovered_mean": 0.5906250000000001,
+      "recovered_sd": 0.04170831252080732,
+      "recovered_sem": 0.01042707813020183,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.7000000000000001,
+      "recovered_mean": 0.6890625,
+      "recovered_sd": 0.03158157426939536,
+      "recovered_sem": 0.00789539356734884,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.8,
+      "recovered_mean": 0.7890625,
+      "recovered_sd": 0.028822372675868797,
+      "recovered_sem": 0.007205593168967199,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.9,
+      "recovered_mean": 0.8890625,
+      "recovered_sd": 0.030233466556119554,
+      "recovered_sem": 0.007558366639029888,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": "not applicable",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "fitted_to": "an analyst holding the model",
+      "true": 1.0,
+      "recovered_mean": 0.996875,
+      "recovered_sd": 0.008539125638299635,
+      "recovered_sem": 0.002134781409574909,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "mu (depth of the maker's thinking)",
+      "standard": "not applicable",
+      "estimator": "posterior mean, read off the reader's own belief. Asks whether the READER can identify the value.",
+      "fitted_to": "the reader",
+      "true": 1.0,
+      "recovered_mean": 1.5573536054054378,
+      "recovered_sd": 0.07777620350322205,
+      "recovered_sem": 0.02749804045603661,
+      "n_seeds": 8
+    },
+    {
+      "parameter": "mu (depth of the maker's thinking)",
+      "standard": "not applicable",
+      "estimator": "posterior mean, read off the reader's own belief. Asks whether the READER can identify the value.",
+      "fitted_to": "the reader",
+      "true": 2.0,
+      "recovered_mean": 2.140675666327624,
+      "recovered_sd": 0.24499054136446294,
+      "recovered_sem": 0.08661723656268755,
+      "n_seeds": 8
+    },
+    {
+      "parameter": "mu (depth of the maker's thinking)",
+      "standard": "not applicable",
+      "estimator": "posterior mean, read off the reader's own belief. Asks whether the READER can identify the value.",
+      "fitted_to": "the reader",
+      "true": 3.0,
+      "recovered_mean": 2.1932505991615208,
+      "recovered_sd": 0.2374738145250714,
+      "recovered_sem": 0.08395967230245721,
+      "n_seeds": 8
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 0.0,
+      "recovered_mean": 0.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 1.0,
+      "recovered_mean": 1.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 2.0,
+      "recovered_mean": 2.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 3.0,
+      "recovered_mean": 3.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 4.0,
+      "recovered_mean": 4.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 5.0,
+      "recovered_mean": 5.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 6.0,
+      "recovered_mean": 6.119791666666667,
+      "recovered_sd": 0.10259226876870926,
+      "recovered_sem": 0.05129613438435463,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 7.0,
+      "recovered_mean": 7.104166666666667,
+      "recovered_sd": 0.1839950180484968,
+      "recovered_sem": 0.0919975090242484,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": "not applicable",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "fitted_to": "an analyst holding the model",
+      "true": 8.0,
+      "recovered_mean": 7.182291666666667,
+      "recovered_sd": 0.3273662965694998,
+      "recovered_sem": 0.1636831482847499,
+      "n_seeds": 4
+    }
+  ],
+  "identifiability_map": [
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "narrow",
+      "assessable": true,
+      "fitted_to": "the reader",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and answer",
+      "grid": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "recovered": [
+        0.1,
+        0.2,
+        0.3,
+        0.38,
+        0.41999999999999993,
+        0.6,
+        0.62,
+        0.62,
+        0.62
+      ],
+      "rank_correlation": 0.9831920802501751,
+      "slope": 0.7,
+      "identifiable_fraction": 0.5,
+      "identifiable_from": 0.1,
+      "identifiable_to": 0.6,
+      "reading": "measurable over part of the range",
+      "steps": [
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "gap": 0.1,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.2,
+          "to": 0.3,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.3,
+          "to": 0.4,
+          "gap": 0.08000000000000002,
+          "pooled_se": 0.020000000000000004,
+          "distinguishable": true
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "gap": 0.039999999999999925,
+          "pooled_se": 0.042426406871192854,
+          "distinguishable": false
+        },
+        {
+          "from": 0.5,
+          "to": 0.6,
+          "gap": 0.18000000000000005,
+          "pooled_se": 0.03741657386773941,
+          "distinguishable": true
+        },
+        {
+          "from": 0.6,
+          "to": 0.7,
+          "gap": 0.020000000000000018,
+          "pooled_se": 0.019999999999999997,
+          "distinguishable": false
+        },
+        {
+          "from": 0.7,
+          "to": 0.8,
+          "gap": 0.0,
+          "pooled_se": 0.028284271247461894,
+          "distinguishable": false
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "gap": 0.0,
+          "pooled_se": 0.028284271247461894,
+          "distinguishable": false
+        }
+      ]
+    },
+    {
+      "parameter": "kappa (trust in the label)",
+      "standard": "wide",
+      "assessable": true,
+      "fitted_to": "the reader",
+      "estimator": "least squares on the reader's own behaviour: engagement trace and graded confidence",
+      "grid": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "recovered": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "rank_correlation": 1.0,
+      "slope": 1.0,
+      "identifiable_fraction": 1.0,
+      "identifiable_from": 0.1,
+      "identifiable_to": 0.9,
+      "reading": "measurable across the range",
+      "steps": [
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "gap": 0.1,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.2,
+          "to": 0.3,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.3,
+          "to": 0.4,
+          "gap": 0.10000000000000003,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.5,
+          "to": 0.6,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.6,
+          "to": 0.7,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.7,
+          "to": 0.8,
+          "gap": 0.10000000000000009,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        }
+      ]
+    },
+    {
+      "parameter": "omega (how readable the content is)",
+      "standard": null,
+      "assessable": true,
+      "fitted_to": "an analyst holding the model",
+      "estimator": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+      "grid": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "recovered": [
+        0.0015625,
+        0.096875,
+        0.1859375,
+        0.290625,
+        0.39531250000000007,
+        0.4890625,
+        0.5906250000000001,
+        0.6890625,
+        0.7890625,
+        0.8890625,
+        0.996875
+      ],
+      "rank_correlation": 1.0,
+      "slope": 0.9951704545454545,
+      "identifiable_fraction": 1.0,
+      "identifiable_from": 0.0,
+      "identifiable_to": 1.0,
+      "reading": "measurable across the range",
+      "steps": [
+        {
+          "from": 0.0,
+          "to": 0.1,
+          "gap": 0.09531250000000001,
+          "pooled_se": 0.0052756071925419154,
+          "distinguishable": true
+        },
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "gap": 0.0890625,
+          "pooled_se": 0.007515175618928231,
+          "distinguishable": true
+        },
+        {
+          "from": 0.2,
+          "to": 0.30000000000000004,
+          "gap": 0.10468750000000002,
+          "pooled_se": 0.008178907705189002,
+          "distinguishable": true
+        },
+        {
+          "from": 0.30000000000000004,
+          "to": 0.4,
+          "gap": 0.10468750000000004,
+          "pooled_se": 0.011202155205584327,
+          "distinguishable": true
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "gap": 0.09374999999999994,
+          "pooled_se": 0.013917072099882697,
+          "distinguishable": true
+        },
+        {
+          "from": 0.5,
+          "to": 0.6000000000000001,
+          "gap": 0.10156250000000006,
+          "pooled_se": 0.014585193333766037,
+          "distinguishable": true
+        },
+        {
+          "from": 0.6000000000000001,
+          "to": 0.7000000000000001,
+          "gap": 0.09843749999999996,
+          "pooled_se": 0.013079036582128927,
+          "distinguishable": true
+        },
+        {
+          "from": 0.7000000000000001,
+          "to": 0.8,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.010689144610304428,
+          "distinguishable": true
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.010442675862376787,
+          "distinguishable": true
+        },
+        {
+          "from": 0.9,
+          "to": 1.0,
+          "gap": 0.10781249999999998,
+          "pooled_se": 0.007854056144226792,
+          "distinguishable": true
+        }
+      ]
+    },
+    {
+      "parameter": "mu (depth of the maker's thinking)",
+      "standard": null,
+      "assessable": true,
+      "fitted_to": "the reader",
+      "estimator": "posterior mean, read off the reader's own belief. Asks whether the READER can identify the value.",
+      "grid": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "recovered": [
+        1.5573536054054378,
+        2.140675666327624,
+        2.1932505991615208
+      ],
+      "rank_correlation": 1.0,
+      "slope": 0.31794849687804144,
+      "identifiable_fraction": 0.5,
+      "identifiable_from": 1.0,
+      "identifiable_to": 2.0,
+      "reading": "measurable over part of the range",
+      "steps": [
+        {
+          "from": 1.0,
+          "to": 2.0,
+          "gap": 0.5833220609221863,
+          "pooled_se": 0.0908773233467976,
+          "distinguishable": true
+        },
+        {
+          "from": 2.0,
+          "to": 3.0,
+          "gap": 0.05257493283389669,
+          "pooled_se": 0.12063072677760248,
+          "distinguishable": false
+        }
+      ]
+    },
+    {
+      "parameter": "theta (the value-alignment gate)",
+      "standard": null,
+      "assessable": true,
+      "fitted_to": "an analyst holding the model",
+      "estimator": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all.",
+      "grid": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0
+      ],
+      "recovered": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.119791666666667,
+        7.104166666666667,
+        7.182291666666667
+      ],
+      "rank_correlation": 1.0,
+      "slope": 0.9546875,
+      "identifiable_fraction": 0.875,
+      "identifiable_from": 0.0,
+      "identifiable_to": 7.0,
+      "reading": "measurable over part of the range",
+      "steps": [
+        {
+          "from": 0.0,
+          "to": 1.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 1.0,
+          "to": 2.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 2.0,
+          "to": 3.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 3.0,
+          "to": 4.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 4.0,
+          "to": 5.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 5.0,
+          "to": 6.0,
+          "gap": 1.119791666666667,
+          "pooled_se": 0.05129613438435463,
+          "distinguishable": true
+        },
+        {
+          "from": 6.0,
+          "to": 7.0,
+          "gap": 0.984375,
+          "pooled_se": 0.10533202300081602,
+          "distinguishable": true
+        },
+        {
+          "from": 7.0,
+          "to": 8.0,
+          "gap": 0.078125,
+          "pooled_se": 0.18776505185756504,
+          "distinguishable": false
+        }
+      ]
+    }
+  ],
+  "verdict": "TRUST_IS_MEASURABLE_OVER_PART_OF_ITS_RANGE",
+  "statement": "**The earlier verdict was wrong and it was mine.** Trust looked unidentifiable because it was fitted to the observation tape, and the tape is generated by the world, which contains no trust parameter. Fitted to what the reader itself produces, it recovers.\n\n**Under the narrow standard**, what the reader does and says, trust is identifiable over 50% of the swept range, from 0.10 to 0.60, and saturates above that. Above the saturation point readers with different trust are behaviourally identical: same engagement, same answer, every time.\n\n**Under the wide standard**, which additionally lets the reader report graded confidence, it is identifiable over 100% of the range. The pair brackets what any real reporting process could deliver: the narrow figure is a floor and the wide one a ceiling.\n\n**The saturation point is not arbitrary.** The channel-accounting check locates, in closed form, the trust level at which the label's evidence per glance overtakes the work's: 0.538. Above it the label has already won and additional trust has nothing left to change, which is exactly where behaviour stops varying. Saturation is what a parameter looks like once it has won its argument.\n\n**The consequence is uncomfortable and it should be said plainly.** The model's default trust sits ABOVE that point. So at the setting every headline experiment runs, trust is not a measurable quantity even in principle, and claims of the form 'a reader with this much trust does X' are stipulations rather than measurements at that setting. What remains sayable, and is observable, is ordinal: this reader is in the regime where the label dominates the work.\n\n**And it gives a human study its design.** Do not try to measure trust directly, and do not run the study with content where the label overwhelms what is on the page: everyone looks the same there and nothing is learned. Run it where the work can argue back, which is the only regime in which individual differences in trust have observable consequences.\n\n**The rest of the map**, carried forward unchanged because their estimators did not change: omega (how readable the content is) is measurable across the range (100% of its range), fitted to an analyst holding the model; mu (depth of the maker's thinking) is measurable over part of the range (50% of its range), fitted to the reader; theta (the value-alignment gate) is measurable over part of the range (88% of its range), fitted to an analyst holding the model. The distinction between fitting to the reader and fitting to an analyst's model is not decoration: the second asks whether a value is identifiable in principle, which is strictly easier, and for readability that gap is the whole version 4 reframe."
+}

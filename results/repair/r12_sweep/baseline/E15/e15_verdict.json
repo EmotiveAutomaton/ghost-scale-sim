@@ -1,0 +1,133 @@
+{
+  "experiment": "E15 \u2014 competence cliff or knee",
+  "note_on_window": "swept 0.40-1.00 rather than the 0.30-0.70 originally proposed: E10's successive accuracy drops are still accelerating at d=0.9, so the transition midpoint lies above 0.7 and a 0.3-0.7 window would stop before the collapse it is meant to resolve",
+  "shape_by_metric": {
+    "goal_accuracy": {
+      "fits": {
+        "linear": {
+          "params": [
+            1.2645651912464042,
+            -0.7325495916688775
+          ],
+          "aic": -51.36703617878557,
+          "r2": 0.6118363319142076
+        },
+        "hinge": {
+          "params": [
+            0.9927124998899187,
+            0.6840225662917242,
+            -2.3539523831343687
+          ],
+          "aic": -111.00330617466119,
+          "r2": 0.9936252657158905
+        },
+        "logistic": {
+          "params": [
+            0.07903739682911103,
+            1.0066857241743592,
+            0.8781173954655348,
+            0.08071769259912796
+          ],
+          "aic": -111.05968608269862,
+          "r2": 0.9944419328363757
+        }
+      },
+      "best_by_aic": "logistic",
+      "aic_margin_over_linear": 59.69264990391305,
+      "logistic_d50": 0.8781173954655348,
+      "logistic_width": 0.08071769259912796,
+      "sharp_by_width": false
+    },
+    "psi": {
+      "fits": {
+        "linear": {
+          "params": [
+            3.553401305533965,
+            -1.1318549475499764
+          ],
+          "aic": -50.739992710361214,
+          "r2": 0.78302780480198
+        },
+        "hinge": {
+          "params": [
+            3.226760403248435,
+            0.4719207841746917,
+            -1.8394488469146872
+          ],
+          "aic": -69.14801086713703,
+          "r2": 0.9443415076575887
+        },
+        "logistic": {
+          "params": [
+            2.369930400633081,
+            3.2223136390319644,
+            0.6988651805853028,
+            0.06262413102924676
+          ],
+          "aic": -91.19183388036994,
+          "r2": 0.98879552631619
+        }
+      },
+      "best_by_aic": "logistic",
+      "aic_margin_over_linear": 40.45184117000873,
+      "logistic_d50": 0.6988651805853028,
+      "logistic_width": 0.06262413102924676,
+      "sharp_by_width": false
+    },
+    "final_entropy": {
+      "fits": {
+        "linear": {
+          "params": [
+            -0.13835217244266168,
+            0.49283246115433715
+          ],
+          "aic": -75.90768608955428,
+          "r2": 0.7855584318183992
+        },
+        "hinge": {
+          "params": [
+            0.005247289770965458,
+            0.47696446372356033,
+            0.8088690544647626
+          ],
+          "aic": -95.9171880685347,
+          "r2": 0.9505611199631719
+        },
+        "logistic": {
+          "params": [
+            0.37873136761103504,
+            0.005403754809744119,
+            0.6999709667909507,
+            0.0640836823862855
+          ],
+          "aic": -120.08041054533192,
+          "r2": 0.9913589653385435
+        }
+      },
+      "best_by_aic": "logistic",
+      "aic_margin_over_linear": 44.17272445577764,
+      "logistic_d50": 0.6999709667909507,
+      "logistic_width": 0.0640836823862855,
+      "sharp_by_width": false
+    }
+  },
+  "headline_metric": "goal_accuracy",
+  "verdict_shape": "logistic",
+  "logistic_d50": 0.8781173954655348,
+  "logistic_width": 0.08071769259912796,
+  "width_vs_evidence": {
+    "corpus_sizes": [
+      75,
+      300,
+      1200
+    ],
+    "widths": [
+      0.0489141476094531,
+      0.048929384652055444,
+      0.04727793469013269
+    ],
+    "width_ratio": 0.9665492909661949,
+    "narrows_with_evidence": false
+  },
+  "interpretation": "narrows_with_evidence TRUE: the width shrinks as evidence per observer grows, which is the finite-size signature of a genuine threshold \u2014 'competence cliff' is earned. FALSE: the width is set by the model rather than by resolution, so this is an intrinsically smooth crossover, however steep it looks, and it must be reported as a knee. AIC picking 'logistic' or 'hinge' over 'linear' establishes only that the curve is not a straight line, which is a much weaker claim than a cliff."
+}

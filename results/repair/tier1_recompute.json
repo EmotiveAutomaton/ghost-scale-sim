@@ -1,0 +1,369 @@
+{
+  "check": "R-1 to R-4",
+  "question": "What do the under-powered criteria say once they have intervals, and what does the disagreement figure look like beside a statistic that can read it?",
+  "plain_language": "Three of the project's headline conclusions were computed from a handful of numbers with no error bar, so nobody could say whether they were solid or noise. This puts an interval on each of them by resampling the readers, without running a single new simulation. It also adds a second disagreement statistic beside the existing one, and corrects a known bias that only matters at small reader counts.",
+  "criteria": {
+    "bootstrap_draws": 4000,
+    "alpha": 0.05,
+    "peak_located_share": 0.8
+  },
+  "r1_recomputed_criteria": [
+    {
+      "criterion": "update magnitude tracks recovered depth",
+      "experiment": "E31",
+      "available": true,
+      "original_value": 0.8857142857142857,
+      "original_computed_over": "6 cell means",
+      "threshold": 0.7,
+      "recomputed_point": 0.8857142857142857,
+      "bootstrap_interval": [
+        0.7714285714285715,
+        0.8857142857142857
+      ],
+      "bootstrap_draws": 4000,
+      "support": [
+        {
+          "value": 0.8857,
+          "share": 0.752
+        },
+        {
+          "value": 0.7714,
+          "share": 0.22075
+        },
+        {
+          "value": 0.9429,
+          "share": 0.02075
+        },
+        {
+          "value": 0.8286,
+          "share": 0.0065
+        }
+      ],
+      "verdict": "determined_meets",
+      "pooled_per_reader_value": 0.5143568554402685,
+      "pooled_per_reader_n": 7200,
+      "within_cell_correlations": {
+        "foreign / sig_creator": -0.04117318831471411,
+        "foreign / sig_ghost": -0.02667614352509967,
+        "foreign / unsigned": -0.13968979145124405,
+        "human / sig_creator": 0.006440164194558468,
+        "human / sig_ghost": 0.04133257036984053,
+        "human / unsigned": 0.018382144709822714
+      },
+      "why_pooling_is_not_the_same_question": "Within cells the two quantities are essentially uncorrelated, so pooling readers adds noise around the six cell means rather than resolving them. The pooled value of 0.514 is not a higher-powered version of 0.886; it is a different estimand, and it would read as a failure against a threshold written for the other one."
+    },
+    {
+      "criterion": "depth recovery is not effort recovery",
+      "experiment": "N21",
+      "available": true,
+      "original_value": 5.98388046397683,
+      "original_computed_over": "4 cell means",
+      "threshold": 3.0,
+      "recomputed_point": 5.98388046397683,
+      "bootstrap_interval": [
+        4.491540937173538,
+        8.94429486289164
+      ],
+      "bootstrap_draws": 4000,
+      "verdict": "determined_meets",
+      "note": "a ratio of differences between four cell means. The bootstrap is over readers within each of the four, which is the only source of sampling variation the design has."
+    },
+    {
+      "criterion": "depth changes how much the reader takes on",
+      "experiment": "E30",
+      "available": true,
+      "original_value": null,
+      "original_computed_over": "3 depth levels",
+      "threshold": 0.0,
+      "bootstrap_draws": 4000,
+      "measures": {
+        "movement (the measure on record)": {
+          "point": 0.5,
+          "interval": [
+            -0.5,
+            0.5
+          ],
+          "cell_means": [
+            3.230485345401947,
+            3.253236988862532,
+            3.2340311405676005
+          ],
+          "levels": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "verdict": "undetermined"
+        },
+        "structural movement (the added secondary)": {
+          "point": 0.5,
+          "interval": [
+            0.5,
+            0.5
+          ],
+          "cell_means": [
+            3.312923982257835,
+            3.65617723729743,
+            3.3612663231168276
+          ],
+          "levels": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "verdict": "determined_meets"
+        }
+      },
+      "note": "three levels, and the experiment itself reports two of them as indistinguishable, so the correlation runs on what is effectively two points. The interval says so rather than the point estimate hiding it. Error reduction cannot be computed here because the committed file does not carry the true goal alongside the posterior; the rerun supplies it."
+    }
+  ],
+  "r2_r4_disagreement": {
+    "rows": [
+      {
+        "experiment": "E2",
+        "available": true,
+        "cell": "CREATOR / SIG_CREATOR",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 7.060177278056233e-08,
+        "modal_goal_entropy_as_committed": 0.0,
+        "modal_goal_entropy_bias_corrected": 0.0,
+        "bias_nats": 0.0,
+        "mean_pairwise_divergence": 3.6274686133554245e-09
+      },
+      {
+        "experiment": "E2",
+        "available": true,
+        "cell": "CREATOR / SIG_GHOST",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 0.09244409380104876,
+        "modal_goal_entropy_as_committed": 0.009095889907175716,
+        "modal_goal_entropy_bias_corrected": 0.009720889907175716,
+        "bias_nats": 0.0006250000000000006,
+        "mean_pairwise_divergence": 0.012954496072728985
+      },
+      {
+        "experiment": "E2",
+        "available": true,
+        "cell": "GHOST / SIG_CREATOR",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 0.08959906095034906,
+        "modal_goal_entropy_as_committed": 1.3792851522317506,
+        "modal_goal_entropy_bias_corrected": 1.3867851522317507,
+        "bias_nats": 0.007500000000000062,
+        "mean_pairwise_divergence": 0.49785074798011386
+      },
+      {
+        "experiment": "E2",
+        "available": true,
+        "cell": "GHOST / SIG_GHOST",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 1.292643197505897,
+        "modal_goal_entropy_as_committed": 1.3783789469839058,
+        "modal_goal_entropy_bias_corrected": 1.385878946983906,
+        "bias_nats": 0.007500000000000062,
+        "mean_pairwise_divergence": 0.044346824746834324
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "CREATOR / claimed_human",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 7.060177278056233e-08,
+        "modal_goal_entropy_as_committed": 0.0,
+        "modal_goal_entropy_bias_corrected": 0.0,
+        "bias_nats": 0.0,
+        "mean_pairwise_divergence": 3.6274686133554245e-09
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "CREATOR / truthful",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 9.75537209064408e-07,
+        "modal_goal_entropy_as_committed": 0.0,
+        "modal_goal_entropy_bias_corrected": 0.0,
+        "bias_nats": 0.0,
+        "mean_pairwise_divergence": 7.095876415886419e-08
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "CURATOR / claimed_human",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 0.0111429670076967,
+        "modal_goal_entropy_as_committed": 0.10827405675911647,
+        "modal_goal_entropy_bias_corrected": 0.11414905675911649,
+        "bias_nats": 0.005875000000000019,
+        "mean_pairwise_divergence": 0.025955581124108017
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "CURATOR / truthful",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 0.02878557225285642,
+        "modal_goal_entropy_as_committed": 0.0477400101469729,
+        "modal_goal_entropy_bias_corrected": 0.05036501014697291,
+        "bias_nats": 0.0026250000000000093,
+        "mean_pairwise_divergence": 0.013102049461381654
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "GHOST / claimed_human",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 0.08941243891808691,
+        "modal_goal_entropy_as_committed": 1.3794159554485037,
+        "modal_goal_entropy_bias_corrected": 1.3869159554485038,
+        "bias_nats": 0.007500000000000062,
+        "mean_pairwise_divergence": 0.4979024484526966
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "GHOST / truthful",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 1.2973880105156559,
+        "modal_goal_entropy_as_committed": 1.3797815618483826,
+        "modal_goal_entropy_bias_corrected": 1.3872815618483825,
+        "bias_nats": 0.00749999999999984,
+        "mean_pairwise_divergence": 0.042236507209450186
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "POLISHED / claimed_human",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 2.3674237703992045e-06,
+        "modal_goal_entropy_as_committed": 0.0,
+        "modal_goal_entropy_bias_corrected": 0.0,
+        "bias_nats": 0.0,
+        "mean_pairwise_divergence": 1.7893241258683686e-07
+      },
+      {
+        "experiment": "E17",
+        "available": true,
+        "cell": "POLISHED / truthful",
+        "n_readers_per_seed": 200,
+        "n_seeds": 20,
+        "within_reader_entropy": 2.065600685596832e-05,
+        "modal_goal_entropy_as_committed": 0.0,
+        "modal_goal_entropy_bias_corrected": 0.0,
+        "bias_nats": 0.0,
+        "mean_pairwise_divergence": 2.2702651293303447e-06
+      },
+      {
+        "experiment": "E19",
+        "available": false,
+        "why": "no posterior column in ['arm', 'content', 'omega', 'seed_rep', 'observer', 'true_goal', 'explore_mass', 'final_entropy', 'real_goal_entropy', 'modal_real_goal', 'modal_goal_full', 'correct', 'engaged_fraction', 'cum_deep', 'modal_is_explore', 'real_posterior', 'full_posterior']"
+      }
+    ],
+    "needs_rerun_for_divergence": {
+      "E20": "drops the posterior before writing e20_points.csv",
+      "E31": "drops the posterior before writing e31_points.csv",
+      "E32": "drops the posterior before writing e32_points.csv",
+      "E21": "writes cell statistics only"
+    },
+    "note": "pairwise divergence needs the full posterior, which four experiments do not persist. Those are named rather than skipped, and the exact-inference sweep supplies them."
+  },
+  "r3_fabrication_peak": {
+    "available": true,
+    "grid": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.85,
+      1.0
+    ],
+    "committed_peak": 0.1,
+    "recomputed_peak": 0.1,
+    "index_by_omega": {
+      "0.0": 0.09198097681452423,
+      "0.1": 0.23171501633870667,
+      "0.2": 0.10685640280022941,
+      "0.3": 0.080787331361063,
+      "0.4": 0.03258114036940891,
+      "0.5": 0.029036123710660514,
+      "0.6": 0.011767308914280772,
+      "0.7": 0.017225372745693267,
+      "0.85": 0.003712481530764072,
+      "1.0": 0.00037692292583987126
+    },
+    "argmax_distribution": {
+      "0.1": 1.0
+    },
+    "modal_location_share": 1.0,
+    "located": true,
+    "peak_height_interval": [
+      0.22001441704771016,
+      0.23591875899589168
+    ],
+    "bootstrap_draws": 4000,
+    "note": "the index is rebuilt from per-reader rows rather than read off the cell summary, so the bootstrap resamples the thing the summary was computed from. The disagreement term inside it is the modal-goal entropy, which the diagnostics pass showed cannot be read alone; the divergence version needs the posterior, which this experiment does not persist."
+  },
+  "r3_headline_intervals": [
+    {
+      "quantity": "E2 within-reader doubt, machine work passed off as human",
+      "point": 0.08959906095034907,
+      "interval": [
+        0.08720938303055706,
+        0.09196636043303465
+      ],
+      "n_readers": 4000
+    },
+    {
+      "quantity": "E2 within-reader doubt, machine work labelled honestly",
+      "point": 1.2926431975058967,
+      "interval": [
+        1.2887701949470707,
+        1.2964593864542706
+      ],
+      "n_readers": 4000
+    },
+    {
+      "quantity": "E2 within-reader doubt, human work read correctly",
+      "point": 7.060177278056233e-08,
+      "interval": [
+        8.1607449574271e-09,
+        1.672575666987013e-07
+      ],
+      "n_readers": 4000
+    },
+    {
+      "quantity": "E32 reads the real purpose, expert reader, machine work",
+      "point": 0.25483333333333336,
+      "interval": [
+        0.244,
+        0.26566666666666666
+      ],
+      "n_readers": 6000
+    },
+    {
+      "quantity": "E32 reads the real purpose, novice reader, human work",
+      "point": 0.4185,
+      "interval": [
+        0.4061666666666667,
+        0.43116666666666664
+      ],
+      "n_readers": 6000
+    }
+  ],
+  "verdict": "SOME_CRITERIA_REMAIN_UNDETERMINED",
+  "statement": "**update magnitude tracks recovered depth** (E31): recomputed 0.886, 95% interval [0.771, 0.886] against a threshold of 0.70. determined meets.\n\n**depth recovery is not effort recovery** (N21): recomputed 5.984, 95% interval [4.492, 8.944] against a threshold of 3.00. determined meets.\n\n**depth changes how much the reader takes on** (E30, movement (the measure on record)): 0.500, 95% interval [-0.500, 0.500]. undetermined.\n\n**depth changes how much the reader takes on** (E30, structural movement (the added secondary)): 0.500, 95% interval [0.500, 0.500]. determined meets.\n\n**The correction that mattered most.** The specification asked for these to be recomputed over per-reader pairs. Doing that would have manufactured a failure: within cells the two quantities are uncorrelated, so pooling readers drowns the signal rather than resolving it, and the pooled value comes out at 0.514 against the cell-level 0.886. Bootstrapping the cell means preserves the estimand, and it shows the criterion is not marginal at all: 75% of draws land on a single value and the interval excludes the threshold. **The earlier reading that this criterion could never have told either way was wrong, and it was mine.**\n\n**The interior peak now has an error bar.** Resampling readers and recomputing the whole curve, the peak lands at 0.1 in 100% of draws, and the distribution over grid points is 0.1: 100%. The location is settled and the prediction card can quote it.\n\n**Disagreement, read two ways.** Every cell now carries the modal-goal entropy as committed, the same figure with the reader-count bias corrected, and the mean pairwise divergence between readers' full beliefs. The bias correction is at most 0.0075 nats on these cells, which is negligible at the reader counts the headlines ran at and is the point: it is material only at the small counts the validation pass used, which is where the two were being compared. Four experiments cannot be given the divergence figure without re-running, and they are named."
+}

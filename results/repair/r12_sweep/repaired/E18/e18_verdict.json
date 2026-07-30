@@ -1,0 +1,66 @@
+{
+  "experiment": "E18 \u2014 deferred commitment versus the online estimator",
+  "infer_steps": 6,
+  "note": "run at V3's own inference budget, with the estimator as the only variable. The deferred estimator's single-generation bias is flat in the budget, so nothing here depends on where the budget was set.",
+  "arms": {
+    "deferred": {
+      "leak_slope": {
+        "slope": 0.0011665584763110753,
+        "se": 0.0005416633526579412,
+        "t": 2.153659594260484
+      },
+      "n11_verdict": {
+        "slope": 0.0011665584763110753,
+        "t": 2.153659594260484,
+        "t_ok": false,
+        "slope_ok": false,
+        "passed": false,
+        "criterion": "|t| < 2.0 AND |slope| < 0.001"
+      },
+      "creator_col_kl_slope": {
+        "slope": 0.0006995770705200685,
+        "se": 0.00014452946018206098,
+        "t": 4.840376969780588
+      },
+      "creator_col_kl_gen0": 0.0015205446617354557,
+      "creator_col_kl_final": 0.004834042302113214,
+      "kl_payload_gen0": 0.0011025590853270652,
+      "kl_payload_final": 0.006737363464264379,
+      "c_entropy_gen0": 1.2747073653609255,
+      "c_entropy_final": 1.2931780649156026,
+      "fraction_to_uniform_gen0": -0.04880554368124046,
+      "fraction_to_uniform_final": 0.12480045724077593
+    },
+    "online": {
+      "leak_slope": {
+        "slope": 0.015907645112133786,
+        "se": 0.001595428967003408,
+        "t": 9.970763626043532
+      },
+      "n11_verdict": {
+        "slope": 0.015907645112133786,
+        "t": 9.970763626043532,
+        "t_ok": false,
+        "slope_ok": false,
+        "passed": false,
+        "criterion": "|t| < 2.0 AND |slope| < 0.001"
+      },
+      "creator_col_kl_slope": {
+        "slope": 0.05456036712303776,
+        "se": 0.010328039670520523,
+        "t": 5.282741823578604
+      },
+      "creator_col_kl_gen0": 0.08890219518559868,
+      "creator_col_kl_final": 0.3921667999958613,
+      "kl_payload_gen0": 0.0042411667286877406,
+      "kl_payload_final": 0.08131872573888613,
+      "c_entropy_gen0": 1.2971215398781915,
+      "c_entropy_final": 1.3743810963976808,
+      "fraction_to_uniform_gen0": 0.1618651561691819,
+      "fraction_to_uniform_final": 0.8880272920781459
+    }
+  },
+  "control_arm_still_leaks": true,
+  "deferred_passes_n11": false,
+  "verdict": "the estimator fix does NOT remove the generational contraction. Early-step misattribution is therefore not the whole of it: a second contributor exists, the single-generation measurement does not explain the chain, and E8 stays withheld."
+}
