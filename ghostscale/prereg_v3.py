@@ -338,7 +338,7 @@ def assert_prereg_locked_v3(path: Path) -> dict:
     if not path.exists():
         raise RuntimeError(
             f"{path} not found. No V3 experiment may run before its acceptance criteria are "
-            "pre-registered (V3 spec §6). Run: python run_all_v3.py --prereg-only")
+            "pre-registered (V3 spec §6). Run: python scripts/run_all_v3.py --prereg-only")
     payload = json.loads(path.read_text(encoding="utf-8"))
     stated = payload.get("content_hash")
     recomputed = hashlib.sha256(_canonical(payload).encode()).hexdigest()

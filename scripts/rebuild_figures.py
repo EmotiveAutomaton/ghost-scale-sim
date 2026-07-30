@@ -11,8 +11,8 @@ It calls the same ``make_*_figure`` functions the experiments call, so there is 
 place where any given label is written. If a label looks wrong here, fix it in the experiment
 module; this file only supplies the data.
 
-    python rebuild_figures.py                 # results/ -> figures/
-    python rebuild_figures.py --results DIR --figures DIR
+    python scripts/rebuild_figures.py                 # results/ -> figures/
+    python scripts/rebuild_figures.py --results DIR --figures DIR
 
 Anything whose CSV is missing is skipped and reported, not faked.
 """

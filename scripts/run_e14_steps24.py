@@ -20,7 +20,8 @@ The reportable route is to fix the ESTIMATOR so the bias is absent at any ``infe
 ``ghostscale/learning.py``, deferred commitment. This run exists to check the mechanism, and to
 bound how much of the contraction early-step misattribution actually accounts for.
 
-Writes to ``results_e14_steps24/`` so it cannot be mistaken for, or overwrite, the reportable
+Writes to ``results/diagnostics/e14_steps24/`` so it cannot be mistaken for, or overwrite,
+the reportable
 E14 cell.
 """
 from __future__ import annotations
@@ -32,7 +33,7 @@ from pathlib import Path
 from ghostscale.config import load_config
 from ghostscale.experiments import e14_engagement_floor as E14, _common as C
 
-OUT = Path(__file__).resolve().parent / "results_e14_steps24"
+OUT = Path(__file__).resolve().parents[1] / "results" / "diagnostics" / "e14_steps24"
 OVERRIDES = {"experiments.e14.infer_steps": 24}
 # Pre-registered before the run, from the single-generation scaling measurement.
 PREDICTION = {

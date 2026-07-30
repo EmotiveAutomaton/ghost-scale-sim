@@ -1,0 +1,91 @@
+{
+  "check": "V-8",
+  "question": "Does the strongest result survive being rebuilt from its own description, in code that shares nothing with the original?",
+  "plain_language": "The single most legible finding in the project was rewritten from scratch, using only the plain-English description of it and none of the original code, settings or random seeds. If a finding only exists in the code that produced it, it is not a finding about anything. This is the check that tells them apart.",
+  "criteria": {
+    "direction_required": true,
+    "order_of_magnitude_factor": 10.0,
+    "why_not_stricter": "the reimplementation shares no parameter with the original, so a matching magnitude would mean two people picked the same arbitrary constants"
+  },
+  "original": {
+    "source": "results/e31_verdict.json",
+    "uptake_multiple": 21.791448753165046,
+    "view_shift_under_false_label": 0.848222760220235,
+    "view_shift_under_honest_label": 0.03892456944135194,
+    "update_tracks_mu_rho": 0.8857142857142857,
+    "update_tracks_mu_rho_required": 0.7,
+    "limitation": "The observer takes the label at face value when forming its depth prior and cannot doubt it, because provenance and mu are no longer in one factor (see the module docstring). The exploit measured here is therefore an UPPER BOUND: a reader who could doubt the label would be harder to fool. Quote it as a warning, not as a reassurance."
+  },
+  "reimplementation": {
+    "what_this_is": "an independent reimplementation of the two-gates result, from the prose description alone, sharing no code and no parameter with the original",
+    "readers_per_cell": 400,
+    "own_parameters": {
+      "purposes": 3,
+      "signs": 6,
+      "depths": 3,
+      "marks_per_work": 9,
+      "encounters": 5,
+      "legibility": 0.72,
+      "machine_leak": 0.12
+    },
+    "believed_depth_under_false_label": 0.6955381043120386,
+    "believed_depth_under_honest_label": 0.4471682415734199,
+    "view_shift_under_false_label": 0.9421600325255304,
+    "view_shift_under_honest_label": 0.6523226430193769,
+    "uptake_multiple": 1.4443160031431623,
+    "update_tracks_believed_depth_rho": 1.0,
+    "direction_matches": true,
+    "limitation_reproduced": "the reader here also cannot doubt the label it conditioned on, so this multiple is an upper bound for the same reason the original's is. That was not a design choice. It is what the description says the reader does, and reimplementing the description reproduces the limitation along with the result",
+    "cells": [
+      {
+        "content": "machine",
+        "label": "passed_off_as_human",
+        "believed_depth": 0.6955381043120386,
+        "view_shift_nats": 0.9421600325255304,
+        "wrong_purpose_rate": 0.6
+      },
+      {
+        "content": "machine",
+        "label": "labelled_honestly",
+        "believed_depth": 0.4471682415734199,
+        "view_shift_nats": 0.6523226430193769,
+        "wrong_purpose_rate": 0.5975
+      },
+      {
+        "content": "machine",
+        "label": "no_label",
+        "believed_depth": 0.5775703963300525,
+        "view_shift_nats": 0.8284963351892811,
+        "wrong_purpose_rate": 0.6025
+      },
+      {
+        "content": "human",
+        "label": "passed_off_as_human",
+        "believed_depth": 0.8937326778877527,
+        "view_shift_nats": 1.1133132105313053,
+        "wrong_purpose_rate": 0.0
+      },
+      {
+        "content": "human",
+        "label": "labelled_honestly",
+        "believed_depth": 0.7131964448004999,
+        "view_shift_nats": 1.093527517655892,
+        "wrong_purpose_rate": 0.0
+      },
+      {
+        "content": "human",
+        "label": "no_label",
+        "believed_depth": 0.8138017858273521,
+        "view_shift_nats": 1.1108164361510824,
+        "wrong_purpose_rate": 0.0
+      }
+    ]
+  },
+  "direction_matches": true,
+  "mechanism_matches": true,
+  "magnitude_within_an_order_of_magnitude": false,
+  "multiples_factor_apart": 15.087729212818983,
+  "independence": "scripts/independent_two_gates.py imports numpy and the standard library only. It does not import ghostscale, does not read results/, and every parameter in it is declared at the top of the file.",
+  "verdict": "MECHANISM_REPLICATES_MAGNITUDE_DOES_NOT",
+  "statement": "The MECHANISM replicates and the MAGNITUDE does not. In separate code written from the prose alone, a false label still inflates the reader's estimate of how much thinking went into machine-made work, and how far the reader moves still tracks that estimate whichever channel produced it, and the rank correlation across all six conditions is 1.00. But the uptake multiple is 1.4x against the original's 21.8x, a factor of 15 apart and outside the order of magnitude committed before the reimplementation was written.\n\n**The honest reading, and it is the more useful one.** The 22-fold figure is a property of this model's particular dimensions and is not the claim. The claim that survives independent construction is directional: a false provenance label makes a reader take on substantially more from machine-made work than an honest one does, through an inflated estimate of the thinking behind it. Every public-facing use of the multiple has to be stated that way, as a direction with a model-specific size, and the specific number must not be quoted as though it transfers."
+}

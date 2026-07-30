@@ -1,0 +1,146 @@
+{
+  "check": "V-2",
+  "question": "Would a model of this shape produce these results anyway?",
+  "scrambled_provenance": {
+    "arm": "V-2a",
+    "question": "If provenance stops telling you anything about the content, does the label effect go away?",
+    "arms": {
+      "intact": {
+        "alpha": {
+          "CREATOR": 1.0,
+          "POLISHED": 0.95,
+          "CURATOR": 0.6,
+          "GHOST": 0.05
+        },
+        "within_under_false_label": 0.0870835265658397,
+        "within_under_honest_label": 1.2940949300893418,
+        "between_under_false_label": 1.3645699679730383,
+        "disagreement_ceiling": 1.3862943611198906,
+        "honest_doubt_multiple": 14.860387275553641,
+        "confident_under_false_label": true,
+        "disagreement_near_ceiling": true,
+        "reportable": true
+      },
+      "flattened": {
+        "alpha": {
+          "CREATOR": 0.6499999999999999,
+          "POLISHED": 0.6499999999999999,
+          "CURATOR": 0.6499999999999999,
+          "GHOST": 0.6499999999999999
+        },
+        "within_under_false_label": 0.326399662140457,
+        "within_under_honest_label": 0.3201865446328031,
+        "between_under_false_label": 1.3539259640494223,
+        "disagreement_ceiling": 1.3862943611198906,
+        "honest_doubt_multiple": 0.9809646938146025,
+        "confident_under_false_label": true,
+        "disagreement_near_ceiling": true,
+        "reportable": false
+      },
+      "permuted": {
+        "alpha": {
+          "CREATOR": 0.05,
+          "POLISHED": 0.6,
+          "CURATOR": 0.95,
+          "GHOST": 1.0
+        },
+        "within_under_false_label": 1.298304110784632,
+        "within_under_honest_label": 0.0879518408471959,
+        "between_under_false_label": 1.3629285696810736,
+        "disagreement_ceiling": 1.3862943611198906,
+        "honest_doubt_multiple": 0.0677436358065924,
+        "confident_under_false_label": false,
+        "disagreement_near_ceiling": true,
+        "reportable": false
+      }
+    },
+    "effect_intact": 14.860387275553641,
+    "effect_flattened": 0.9809646938146025,
+    "effect_permuted": 0.0677436358065924,
+    "residual_fraction_allowed": 0.1,
+    "vanishes_when_mapping_destroyed": true,
+    "survives_pure_relabelling": true,
+    "log_magnitude_intact": 2.6986991005619694,
+    "log_magnitude_permuted": 2.6920247600686906,
+    "direction_inverted_by_reversal": true,
+    "deviation": {
+      "what_changed": "the permutation clause was restated from 'the effect survives, same reportability bar' to 'the effect's log magnitude is preserved and its direction inverts'",
+      "why": "the permutation is a reversal of alpha, so GHOST inherits CREATOR's transparency and vice versa. Under that reversal the effect MUST invert; a direction-sensitive bar was asking whether a reversal reverses. The restatement follows from the construction, not from the measurement.",
+      "original_clause_retained_and_still_computed": true,
+      "original_clause_outcome": "FAILS"
+    },
+    "not_applicable_to": {
+      "experiments": [
+        "E19",
+        "E20",
+        "E32"
+      ],
+      "why": "every artifact in them is GHOST and unsigned, so there is no provenance-to-content mapping present to scramble. The corresponding construction check for those results is V-4."
+    },
+    "verdict": "PROVENANCE_MAPPING_IS_LOAD_BEARING",
+    "statement": "Destroying the provenance-to-content mapping removes the label effect. Reversing it leaves the effect the same size and turns it upside down. The result is attached to what a provenance tier means about content, not to the tier's name and not to the model being delicate."
+  },
+  "random_parameter_false_positive_rate": {
+    "arm": "V-2b",
+    "question": "How often does a randomly parameterised model of this architecture return something we would have reported as a finding?",
+    "plain_language": "The model has a shape and it has settings. This check keeps the shape, throws the settings away, picks new ones at random a few hundred times, and asks how often the random version still produces the headline. That fraction is the rate at which the apparatus manufactures findings out of nothing, and nobody had it before. It runs twice: once with the settings drawn freely, and once with the two design decisions the model has held since version 1 left in place, so the two halves of the headline can be told apart.",
+    "draws_requested_per_arm": 300,
+    "per_draw_scale": {
+      "n_observers": 15,
+      "n_seeds": 4
+    },
+    "percentile_committed": 97.5,
+    "arms": {
+      "unconstrained": {
+        "usable_draws": 300,
+        "false_positive_rate": 0.0,
+        "clause_rates": {
+          "confident_under_false_label": 1.0,
+          "disagreement_near_ceiling": 0.0,
+          "honest_doubt_doubles": 1.0
+        },
+        "effect_percentiles": {
+          "p50": 22.676425622363013,
+          "p95": 800736.3235488626,
+          "p_committed": 12865361.85736668,
+          "max": 7.140280344422022e+19
+        },
+        "what_it_asks": "the likelihood family drawn freely, subject only to the format constraints. This is the spec's arm and it answers: what does the architecture do on its own?",
+        "designed_effect_outside_random_distribution": false
+      },
+      "within_partition": {
+        "usable_draws": 300,
+        "false_positive_rate": 0.64,
+        "clause_rates": {
+          "confident_under_false_label": 1.0,
+          "disagreement_near_ceiling": 0.64,
+          "honest_doubt_doubles": 1.0
+        },
+        "effect_percentiles": {
+          "p50": 16.918069308981103,
+          "p95": 38.16689222044473,
+          "p_committed": 41.29338112152987,
+          "max": 66.78715916836244
+        },
+        "what_it_asks": "the same, but drawn INSIDE the goal/feature partition and with the synthetic distribution symmetrised across goals, as V1 constructs it. This answers: what does the architecture plus its two design decisions do?",
+        "designed_effect_outside_random_distribution": false
+      }
+    },
+    "headline_false_positive_rate": 0.64,
+    "headline_arm": "within_partition",
+    "alpha_committed_before_run": 0.05,
+    "designed_model_effect": 14.860387275553641,
+    "confident_invention_is_architectural": true,
+    "disagreement_rate_among_free_random_models": 0.0,
+    "reportability_bar": {
+      "confident_entropy_nats": 0.5,
+      "disagreement_ceiling_fraction": 0.9,
+      "honest_doubt_multiple": 2.0,
+      "provenance": "every clause borrowed from a threshold this project already applied before V-2 existed"
+    },
+    "verdict": "EFFECT_IS_ARCHITECTURE_DEPENDENT",
+    "statement": "With the likelihood family drawn freely, 100% of random models produce confident belief under a false label and 0% produce disagreement near its ceiling. Confident commitment under a false label is therefore a property of the architecture: a randomly parameterised reader does it too. What a random model does NOT supply is the DISAGREEMENT that makes the commitment invention rather than consensus, and that half of the headline is the half the theory is entitled to. Inside the architecture's own two constructions, the goal/feature partition and the symmetrised synthetic distribution, 64.0% of random parameterisations clear the whole reportability bar against the 5% committed before the run, and the designed model's effect (14.9x) sits INSIDE the random distribution's 97.5th percentile (41.3x). The claim is reported as architecture-dependent, in the same cell as the claim, per the spec's constraint that a failed check is not deleted."
+  },
+  "verdict": "PROVENANCE_MAPPING_IS_LOAD_BEARING / EFFECT_IS_ARCHITECTURE_DEPENDENT",
+  "statement": "Destroying the provenance-to-content mapping removes the label effect. Reversing it leaves the effect the same size and turns it upside down. The result is attached to what a provenance tier means about content, not to the tier's name and not to the model being delicate. With the likelihood family drawn freely, 100% of random models produce confident belief under a false label and 0% produce disagreement near its ceiling. Confident commitment under a false label is therefore a property of the architecture: a randomly parameterised reader does it too. What a random model does NOT supply is the DISAGREEMENT that makes the commitment invention rather than consensus, and that half of the headline is the half the theory is entitled to. Inside the architecture's own two constructions, the goal/feature partition and the symmetrised synthetic distribution, 64.0% of random parameterisations clear the whole reportability bar against the 5% committed before the run, and the designed model's effect (14.9x) sits INSIDE the random distribution's 97.5th percentile (41.3x). The claim is reported as architecture-dependent, in the same cell as the claim, per the spec's constraint that a failed check is not deleted."
+}

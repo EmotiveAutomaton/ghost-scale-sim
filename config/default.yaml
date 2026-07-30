@@ -167,6 +167,37 @@ agent:
   use_states_info_gain: true
 
 # ---------------------------------------------------------------------------
+# Which solver does the observer's inference (validation item V-1).
+# ---------------------------------------------------------------------------
+inference:
+  exact: false           # false = pymdp legacy's variational (mean-field) solver, which every
+                         # experiment before V5 ran on and which every committed number in
+                         # results/ was produced by. It factorises the posterior across hidden
+                         # state factors, and by Jensen's inequality that penalises hypotheses
+                         # whose evidence lives in a COMBINATION of factors. V5 caught it doing
+                         # real damage (see ghostscale/v5_model.py and N21).
+                         #
+                         # true  = ghostscale/exact.py, which carries the belief over the full
+                         # joint. Same A, B, C, D, same policy set, same gamma, same action
+                         # rule — the ONLY difference is the factorisation, so any number that
+                         # moves was moved by it. Set by run_validation.py; never the default,
+                         # because flipping it silently would change what every committed
+                         # results file means.
+
+# ---------------------------------------------------------------------------
+# Validation pass scale (V-1 through V-7). Reduced from the headline runs and stated as
+# such: the question is whether a verdict SURVIVES a change of solver or a change of
+# parameter, which needs enough observers to resolve the effect and not the full-scale
+# precision the headline number was quoted at. Every validation output records the scale
+# it ran at beside the number.
+# ---------------------------------------------------------------------------
+validation:
+  n_observers: 60
+  n_seeds: 16
+  random_model_draws: 300   # V-2b, the false-positive rate of the architecture
+  seed_block_offset: 700003 # V-7, a disjoint seed block
+
+# ---------------------------------------------------------------------------
 # Behavioural regret (V2 C5) — the alignment harm metric, reported alongside KL
 # EVERYWHERE. "A KL of 1.0 that preserves the argmax may be harmless; a KL of 0.05
 # that flips it is catastrophic."

@@ -1,0 +1,132 @@
+{
+  "check": "V-4",
+  "question": "What is forced by construction?",
+  "plain_language": "For each finding, this names the one design decision the finding depends on, then breaks that decision on purpose and checks the finding goes away. A finding that survives having its own foundations removed was not a finding at all; it was built in. A third possibility also gets recorded: sometimes the model refuses to be broken that way, which means the decision is part of the definition rather than a setting, and that changes how strongly the finding can be stated.",
+  "scale": {
+    "n_observers": 60,
+    "n_seeds": 16
+  },
+  "how_to_read": {
+    "result_disappeared": "the wanted outcome: the property is load-bearing and the claim is about the modelled world rather than the plumbing",
+    "result_survived": "unwelcome: the property named was not what was holding the result up, so either the claim is stronger than stated or the mechanism is not the one being claimed",
+    "alteration_unreachable": "a construction assertion refused the alteration. Not a failure. It means the property is a definition rather than a free parameter, and the claim is downstream of a definition"
+  },
+  "alterations": [
+    {
+      "claim": "The same machine-made content is read as certain or uncertain depending only on what the label says",
+      "claim_id": "label_effect",
+      "downstream_of": "the reader being able to read the provenance label at all (kappa > 0)",
+      "alteration": "kappa set to 0, so the label carries no information",
+      "expected": "the effect disappears",
+      "baseline_primary": 14.860387275553641,
+      "altered_primary": 0.9921598810332137,
+      "outcome": "result_disappeared",
+      "altered_verdict_holds": false
+    },
+    {
+      "claim": "The same machine-made content is read as certain or uncertain depending only on what the label says",
+      "claim_id": "label_effect",
+      "downstream_of": "synthetic content being structured rather than high-entropy noise (N6)",
+      "alteration": "the synthetic distribution replaced with a near-uniform one",
+      "expected": "the effect changes character: a uniform synth is low-information for a different reason and the crash becomes the strawman's crash",
+      "note_on_attribution": "THIS ROW MISSES ITS OWN TARGET, and the measurement is kept with the correction attached rather than reassigned. A uniform distribution is goal-symmetric BY DEFINITION, being equidistant from every goal signature, so replacing the structured synth with a uniform one preserves the property the effect actually depends on while changing the property it does not. That the label effect survives here is therefore informative about neither. The alteration that does bite is the next row, which turns the symmetrisation off; it was added after this one came back 'survived' and the reason was traced.",
+      "baseline_primary": 14.860387275553641,
+      "altered_primary": 15.36117589718952,
+      "outcome": "result_survived",
+      "altered_verdict_holds": true
+    },
+    {
+      "claim": "Readers become confident AND disagree with each other, so the confidence is invention rather than shared error",
+      "claim_id": "label_effect",
+      "downstream_of": "the synthetic distribution being goal-SYMMETRIC (V1 deviation 2)",
+      "alteration": "the goal-symmetrisation switched off, so the frozen synthetic draw leans toward one goal by chance",
+      "expected": "the disagreement collapses into consensus: every reader hallucinates the SAME goal, which is confident shared error rather than invention",
+      "baseline_primary": 14.860387275553641,
+      "altered_primary": 112.57290663080116,
+      "outcome": "result_disappeared",
+      "altered_verdict_holds": false
+    },
+    {
+      "claim": "Confident invention peaks in the middle of the readability axis",
+      "claim_id": "interior_peak",
+      "downstream_of": "foreign content being goal-directed rather than noise (C1 property 1)",
+      "alteration": "the foreign family drawn near-uniform, with its goal anchor removed",
+      "expected": "the interior peak disappears; the failure reverts to unidentifiability",
+      "baseline_primary": 0.3076322728884394,
+      "outcome": "alteration_unreachable",
+      "altered_primary": null,
+      "refusal": "AssertionError: N18/C1 property 1: MI(features; foreign_goal) = 0.0050 nats is below the floor 0.8556 (85% of the human family's 1.0065). Foreign content that is not itself goal-informative has silently reverted to V3's goal-empty model, and every V4 result would be V3's result in new vocabulary."
+    },
+    {
+      "claim": "Confident invention peaks in the middle of the readability axis",
+      "claim_id": "interior_peak",
+      "downstream_of": "the human and foreign feature blocks being disjoint",
+      "alteration": "the foreign family's support floor raised across the whole feature space",
+      "expected": "the interior peak disappears or moves; if the construction refuses the alteration, disjointness is a definition and the claim is downstream of one",
+      "baseline_primary": 0.3076322728884394,
+      "outcome": "alteration_unreachable",
+      "altered_primary": null,
+      "refusal": "AssertionError: N18/C1 property 1: MI(features; foreign_goal) = 0.4005 nats is below the floor 0.8556 (85% of the human family's 1.0065). Foreign content that is not itself goal-informative has silently reverted to V3's goal-empty model, and every V4 result would be V3's result in new vocabulary."
+    }
+  ],
+  "architectural_audit": {
+    "disjoint_feature_partition": {
+      "what_it_is": "the human and foreign feature blocks do not overlap. Adopted because no such partition existed at the original feature count, so the feature space was doubled from eight to sixteen",
+      "chosen_on_theoretical_grounds": false,
+      "why_it_was_adopted": "the alternative was for foreign content to overlap the reader's own support, which is the V4 spec's own pre-mortem failure #1: foreign content becomes unidentifiable rather than foreign, and V4 reports V3's results in new vocabulary",
+      "claims_downstream_of_it": [
+        {
+          "claim": "Confident invention peaks in the middle of the readability axis, not at the unreadable end",
+          "experiment": "E20",
+          "why": "the peak's LOCATION is a location on an axis whose zero point is 'no shared features at all', which only exists because the two blocks are disjoint"
+        },
+        {
+          "claim": "Attention stops being sustained below about 4% overlap",
+          "experiment": "E20",
+          "why": "the crossing point is measured on the same axis"
+        },
+        {
+          "claim": "Content with real structure the reader cannot parse holds attention indefinitely",
+          "experiment": "E19",
+          "why": "'cannot parse' is implemented as 'lives on features every one of the reader's hypotheses puts at floor', which is the partition"
+        },
+        {
+          "claim": "The most generous fallback hypothesis absorbs exploratory human work and does nothing for machine work",
+          "experiment": "E19",
+          "why": "the fallback is flat across the human block and at floor across the foreign one, which is a property of the partition and was the reason the space was doubled"
+        },
+        {
+          "claim": "Being out of your depth and reading something foreign are different failures",
+          "experiment": "E32",
+          "why": "one arm degrades the reader's templates and the other moves the content off the block those templates cover"
+        },
+        {
+          "claim": "Real generated content sits somewhere on the overlap axis, and a human study could locate it",
+          "experiment": "E34",
+          "why": "the prediction card's axis IS the partition; without it there is no axis to place real content on"
+        }
+      ],
+      "what_a_different_partitioning_would_do": "A partially overlapping partition removes the axis's zero point: there would be no omega at which the reader's hypotheses are all at floor, so 'fully foreign' would stop being a location and the interior peak would have no interior to sit in. A partition with unequal block sizes would keep the axis but change where the peak falls on it, because the peak's location is set by how much in-family structure is needed to make an explanation seem available. In both cases the SHAPE of the claim, an interior maximum, is what would transfer, and the specific value would not. That is why the prediction card is written as a location to be measured rather than as a number to be trusted."
+    },
+    "rebuilt_effort_parameter": {
+      "position": "reported as a construction commitment rather than an emergent finding: the model was rebuilt so that 'offhand but deep' is representable, which makes the dissociation possible before it is measured",
+      "narrower_question": "with the effort axis pinned at its maximum, so no offhand corner exists, does depth still separate?",
+      "n21_verdict_under_exact_inference": "BETA_CAN_MANUFACTURE_DEPTH",
+      "recovered_depth_by_true_depth_at_max_effort": {
+        "1": 1.5302175674383784,
+        "3": 2.438683396852836
+      },
+      "separation_at_pinned_effort": 0.9084658294144576,
+      "depth_separates_without_the_offhand_corner": true,
+      "reading": "Depth still separates with the effort axis pinned, so the depth estimator is reading structure in the artifact and not the effort knob renamed. The DISSOCIATION remains a construction commitment; the READABILITY of depth does not."
+    }
+  },
+  "counts": {
+    "disappeared": 2,
+    "survived": 1,
+    "unreachable": 2,
+    "total": 5
+  },
+  "verdict": "SOME_CLAIMS_SURVIVE_LOSING_THEIR_OWN_FOUNDATIONS",
+  "statement": "2 of 5 claims disappear when the property they were said to depend on is removed, which is the wanted outcome. the claim \"The same machine-made content is read as certain or uncertain dependin\" survived the removal of synthetic content being structured rather than high-entropy noise (N6), and that row misses its own target rather than refuting the claim; see its note_on_attribution, and the row directly below it, which was added once the reason was traced and which does remove the claim. Survivals are reported rather than dropped: a claim that outlives its own stated mechanism is either stronger than stated or explained by something else, and the honest position is to say which of those has not yet been established."
+}

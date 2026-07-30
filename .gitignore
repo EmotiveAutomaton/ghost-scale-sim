@@ -26,5 +26,17 @@ results/e6_raw.csv
 # Smoke-scale and diagnostic run outputs. --quick and labelled diagnostics write here so they
 # can never overwrite, or be mistaken for, a reportable run in results/ and figures/.
 results_quick/
-results_e14_steps24/*.csv
-results_e14_steps24/figures/
+results/diagnostics/*/*.csv
+results/diagnostics/*/figures/
+
+# Validation output. Every verdict JSON, the hash-locked criteria, and every per-cell SUMMARY
+# under results/validation/ ARE committed: that is what VALIDATION.md is generated from and what
+# a reader needs to check a number without re-running anything. About 0.5 MB.
+#
+# What stays out is the per-observer raw files the summaries were computed from. The pass re-runs
+# five experiment families twice, sweeps nine parameters over three levels each, and runs 600
+# random-model draws, so those come to 28.6 MB against 0.5 MB for everything else. They are
+# regenerated exactly from the recorded seeds by `python run_validation.py`.
+results/validation/**/*_points.csv
+results/validation/**/*_raw.csv
+results/validation/**/e19_explore.csv

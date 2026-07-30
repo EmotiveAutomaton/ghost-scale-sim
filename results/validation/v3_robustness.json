@@ -1,0 +1,636 @@
+{
+  "check": "V-3",
+  "question": "Are the headline results knife-edge or robust?",
+  "framing": "A scoping exercise, not a pass/fail. A result that holds across the whole range and a result that holds in a narrow window are both real; they are different claims, and the point of this matrix is to make the README able to say which is which.",
+  "plain_language": "Every setting in the model was chosen by somebody. This check moves each one to a low and a high value in turn and asks whether the finding is still there. A finding that only appears at one setting is a much smaller claim than a finding that survives the whole range, and both get described accurately.",
+  "scale": {
+    "n_observers": 60,
+    "n_seeds": 16,
+    "note": "the readability-axis headline runs at half the seeds; see HEADLINES"
+  },
+  "criteria": {
+    "weaken_fraction": 0.5,
+    "tuned_window_fraction": 0.4
+  },
+  "sweeps": [
+    {
+      "parameter": "effort_cost",
+      "plain_language": "how much it costs the reader to look closely",
+      "levels": [
+        "low",
+        "default",
+        "high"
+      ],
+      "why_this_range": "the low and high ends are the ends of E3's own committed sweep, so the range is the one the project already explored rather than one chosen here",
+      "headlines": [
+        "label_effect",
+        "interior_peak"
+      ]
+    },
+    {
+      "parameter": "label_precision",
+      "plain_language": "how much the reader trusts the label",
+      "levels": [
+        "low",
+        "default",
+        "high"
+      ],
+      "why_this_range": "E4 swept kappa from 0 to 0.99 and located a threshold near 0.20; the low end sits above that threshold deliberately, so this measures robustness inside the regime the claim is made in rather than the already-published collapse below it",
+      "headlines": [
+        "label_effect",
+        "interior_peak"
+      ]
+    },
+    {
+      "parameter": "planning_horizon",
+      "plain_language": "how far ahead the reader plans",
+      "levels": [
+        "myopic",
+        "default",
+        "longer"
+      ],
+      "why_this_range": "policy_len = 1 collapses the attention dynamics by the config's own note, so it is included precisely because it is the adversarial end",
+      "headlines": [
+        "label_effect",
+        "interior_peak"
+      ]
+    },
+    {
+      "parameter": "prior_strength",
+      "plain_language": "how strong the reader's starting hunch is",
+      "levels": [
+        "weak",
+        "default",
+        "strong"
+      ],
+      "why_this_range": "reader heterogeneity is what the between-reader measure is made of, so this is the parameter most likely to move a disagreement number",
+      "headlines": [
+        "label_effect",
+        "interior_peak"
+      ]
+    },
+    {
+      "parameter": "separation_floor",
+      "plain_language": "how distinguishable the maker's possible purposes are",
+      "levels": [
+        "shallow",
+        "default",
+        "sharp"
+      ],
+      "why_this_range": "the peak mass is what the pairwise Jensen-Shannon floor is asserted against; 0.60 is close to where that assertion starts to bind",
+      "headlines": [
+        "label_effect",
+        "interior_peak"
+      ]
+    },
+    {
+      "parameter": "opacity_ramp",
+      "plain_language": "the Ghost Scale opacity values read as recoverable intent",
+      "levels": [
+        "compressed",
+        "default",
+        "stretched"
+      ],
+      "why_this_range": "this is the framework's one empirical commitment, so a result that depends on the exact published values rather than on their ordering is a much weaker claim. Compressed pulls all four tiers halfway to their mean; stretched pushes them to the full 0 - 1 range",
+      "headlines": [
+        "label_effect",
+        "interior_peak"
+      ]
+    },
+    {
+      "parameter": "observer_count",
+      "plain_language": "how many readers are simulated",
+      "levels": [
+        "half",
+        "default",
+        "double"
+      ],
+      "why_this_range": "included because the between-reader measures are the ones whose estimates depend on the number of readers; it is a power check wearing a robustness hat, and V-7 does the same job at a different seed block",
+      "headlines": [
+        "label_effect"
+      ]
+    },
+    {
+      "parameter": "goal_count",
+      "plain_language": "how many purposes the reader considers",
+      "levels": [
+        "two",
+        "default",
+        "default_again"
+      ],
+      "why_this_range": "the disagreement ceiling is ln(goals), so this changes the yardstick as well as the measurement, and the verdict has to survive that. Only the downward direction is available: the feature partition tiles eight features into four pairs, so more goals needs more features, which is the next sweep",
+      "headlines": [
+        "label_effect"
+      ]
+    },
+    {
+      "parameter": "feature_count",
+      "plain_language": "how much detail the work carries",
+      "levels": [
+        "eight",
+        "default",
+        "sixteen"
+      ],
+      "why_this_range": "the whole V4 reframe needed the feature space doubled to get a disjoint partition, which makes the feature count a parameter with a documented history of mattering",
+      "headlines": [
+        "label_effect"
+      ]
+    }
+  ],
+  "not_swept": {
+    "number_of_encounters": "belongs to the sequential designs (E29, E31), which are not among V-3's two swept headlines; V-1 covers E31 under the solver check and its own pre-registration covers the encounter count",
+    "interactions_between_parameters": "the sweep is axis-aligned. A full factorial is not affordable and diagonal knife edges are therefore unmeasured"
+  },
+  "headlines": {
+    "label_effect": {
+      "plain_language": "the same machine-made content read as certain or uncertain depending only on what the label says",
+      "baseline_primary": 14.860387275553641,
+      "baseline_primary_name": "how many times more doubt an honest label leaves",
+      "cells_run": 27,
+      "holds": 22,
+      "weakens": 3,
+      "flips": 2,
+      "unreachable": 0,
+      "flipped_by": [
+        "goal_count",
+        "feature_count"
+      ],
+      "weakened_by": [
+        "effort_cost",
+        "label_precision",
+        "opacity_ramp"
+      ],
+      "reported_as_tuned": false,
+      "boolean_gate_applied": true,
+      "boolean_gate_note": "the verdict-level boolean was checked in every cell",
+      "scope_sentence": "The same machine-made content read as certain or uncertain depending only on what the label says holds in 22 of 27 swept cells, and is lost only when feature_count or goal_count changes. That is the boundary of the claim and the README states it."
+    },
+    "interior_peak": {
+      "plain_language": "confident invention peaks in the middle of the readability axis, not at the unreadable end",
+      "baseline_primary": 0.3076322728884394,
+      "baseline_primary_name": "how much confident invention at the peak",
+      "cells_run": 17,
+      "holds": 17,
+      "weakens": 0,
+      "flips": 0,
+      "unreachable": 1,
+      "flipped_by": [],
+      "weakened_by": [],
+      "reported_as_tuned": false,
+      "boolean_gate_applied": true,
+      "boolean_gate_note": "the verdict-level boolean was checked in every cell",
+      "scope_sentence": "Confident invention peaks in the middle of the readability axis, not at the unreadable end holds in 17 of 17 swept cells and no swept parameter reverses or halves it.",
+      "peak_locations_observed": [
+        0.1
+      ],
+      "peak_location_is_stable": true
+    }
+  },
+  "matrix": [
+    {
+      "headline": "label_effect",
+      "parameter": "effort_cost",
+      "level": "low",
+      "value": 0.05,
+      "primary": 21.887004283765233,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "effort_cost",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "effort_cost",
+      "level": "high",
+      "value": 0.75,
+      "primary": 4.662418987693617,
+      "label": "weakens",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "effort_cost",
+      "level": "low",
+      "value": 0.05,
+      "primary": 0.31673603441330006,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "effort_cost",
+      "level": "default",
+      "value": "default",
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "effort_cost",
+      "level": "high",
+      "value": 0.75,
+      "primary": 0.26266849083888594,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "label_precision",
+      "level": "low",
+      "value": 0.3,
+      "primary": 3.0769953205560165,
+      "label": "weakens",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "label_precision",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "label_precision",
+      "level": "high",
+      "value": 0.99,
+      "primary": 14.860387275553657,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "label_precision",
+      "level": "low",
+      "value": 0.3,
+      "primary": 0.3093905819664677,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "label_precision",
+      "level": "default",
+      "value": "default",
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "label_precision",
+      "level": "high",
+      "value": 0.99,
+      "primary": 0.30683318514507607,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "planning_horizon",
+      "level": "myopic",
+      "value": 1,
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "planning_horizon",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "planning_horizon",
+      "level": "longer",
+      "value": 3,
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "planning_horizon",
+      "level": "myopic",
+      "value": 1,
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "planning_horizon",
+      "level": "default",
+      "value": "default",
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "planning_horizon",
+      "level": "longer",
+      "value": 3,
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "prior_strength",
+      "level": "weak",
+      "value": 0.01,
+      "primary": 14.874737407011079,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "prior_strength",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "prior_strength",
+      "level": "strong",
+      "value": 0.5,
+      "primary": 15.088722436971597,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "prior_strength",
+      "level": "weak",
+      "value": 0.01,
+      "primary": 0.2592349356815022,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "prior_strength",
+      "level": "default",
+      "value": "default",
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "prior_strength",
+      "level": "strong",
+      "value": 0.5,
+      "primary": 0.3145341410954911,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "separation_floor",
+      "level": "shallow",
+      "value": 0.6,
+      "primary": 12.291080220823826,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "separation_floor",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "separation_floor",
+      "level": "sharp",
+      "value": 0.98,
+      "primary": 15.757294899425741,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "separation_floor",
+      "level": "shallow",
+      "value": 0.6,
+      "primary": null,
+      "label": "unreachable",
+      "reason": "AssertionError: human signatures carry 0.105 mass in the foreign block; the partition is not disjoint and pre-mortem failure #1 is live"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "separation_floor",
+      "level": "default",
+      "value": "default",
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "separation_floor",
+      "level": "sharp",
+      "value": 0.98,
+      "primary": 0.30749324618018703,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "opacity_ramp",
+      "level": "compressed",
+      "value": 0.5,
+      "primary": 5.015700906354817,
+      "label": "weakens",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "opacity_ramp",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "opacity_ramp",
+      "level": "stretched",
+      "value": 1.0,
+      "primary": 15.707411644071254,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "opacity_ramp",
+      "level": "compressed",
+      "value": 0.5,
+      "primary": 0.28031944734212527,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "opacity_ramp",
+      "level": "default",
+      "value": "default",
+      "primary": 0.3076322728884394,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "opacity_ramp",
+      "level": "stretched",
+      "value": 1.0,
+      "primary": 0.32264011674080406,
+      "label": "holds",
+      "reason": "",
+      "peak_omega": 0.1
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "observer_count",
+      "level": "half",
+      "value": 0.5,
+      "primary": 14.62008941565294,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "observer_count",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "observer_count",
+      "level": "double",
+      "value": 2.0,
+      "primary": 14.53031997869615,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "observer_count",
+      "level": "-",
+      "value": null,
+      "primary": null,
+      "label": "not_run",
+      "reason": "observer_count is swept for label_effect only; see the sweep's own note"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "goal_count",
+      "level": "two",
+      "value": 2,
+      "primary": 9.138094305942703,
+      "label": "flips",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "goal_count",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "goal_count",
+      "level": "default_again",
+      "value": 4,
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "goal_count",
+      "level": "-",
+      "value": null,
+      "primary": null,
+      "label": "not_run",
+      "reason": "goal_count is swept for label_effect only; see the sweep's own note"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "feature_count",
+      "level": "eight",
+      "value": 8,
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": ""
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "feature_count",
+      "level": "default",
+      "value": "default",
+      "primary": 14.860387275553641,
+      "label": "holds",
+      "reason": "the default; the reference cell"
+    },
+    {
+      "headline": "label_effect",
+      "parameter": "feature_count",
+      "level": "sixteen",
+      "value": 16,
+      "primary": 1.266695781943695,
+      "label": "flips",
+      "reason": ""
+    },
+    {
+      "headline": "interior_peak",
+      "parameter": "feature_count",
+      "level": "-",
+      "value": null,
+      "primary": null,
+      "label": "not_run",
+      "reason": "feature_count is swept for label_effect only; see the sweep's own note"
+    }
+  ],
+  "verdict": "BOTH_HEADLINES_HOLD_ACROSS_THE_SWEPT_RANGE",
+  "statement": "The same machine-made content read as certain or uncertain depending only on what the label says holds in 22 of 27 swept cells, and is lost only when feature_count or goal_count changes. That is the boundary of the claim and the README states it. Confident invention peaks in the middle of the readability axis, not at the unreadable end holds in 17 of 17 swept cells and no swept parameter reverses or halves it."
+}

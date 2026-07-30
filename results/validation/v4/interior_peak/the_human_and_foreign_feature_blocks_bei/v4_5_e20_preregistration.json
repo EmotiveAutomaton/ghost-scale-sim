@@ -1,0 +1,35 @@
+{
+  "version": "V4.5 / E20",
+  "written_before": "E20 is run",
+  "separate_file_because": "v4_5_preregistration.json was already locked and its experiments had already reported. A hash-locked pre-registration that acquires new content after its experiments run is not a pre-registration.",
+  "omega_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.85,
+    1.0
+  ],
+  "primary_outcomes": [
+    "engaged_fraction",
+    "crash_signature",
+    "fabrication_index"
+  ],
+  "why_engagement_is_primary": "V4.5 \u00a76. E19's unpredicted finding is that observers do NOT disengage from goal-foreign content (0.746 across free steps, no resolution, crash_signature false in every cell). That inverts V1-V3's metabolic prediction. H1 and H3 in the preprint both assume goal-empty content and both invert under goal-foreign: goal-empty predicts an autonomic drop within 2-4 seconds, goal-foreign predicts sustained arousal with no resolution. A single pupillometry measurement discriminates them, which makes this the sharpest and cheapest empirical prediction the framework has produced.",
+  "confident_entropy_max": 0.35,
+  "disagreement_entropy_min": 1.1,
+  "thresholds_shared_with_e21_because": "the same phenomenon measured in two experiments should not be measured with two bespoke thresholds",
+  "predicted": "confident fabrication peaks at LOW BUT NONZERO omega \u2014 enough in-family structure to make an explanation seem available, not enough to make it correct (V4 \u00a7E20)",
+  "falsification": "a peak at omega = 0 means the misspecification model behaves like the unidentifiability model it replaced on this measure, and the reframe buys nothing here",
+  "outcomes": [
+    "INTERIOR_PEAK",
+    "PEAK_AT_ZERO",
+    "PEAK_AT_ONE"
+  ],
+  "observer": "four real goals, EXPLORE disabled. E19 established that EXPLORE is inert on foreign content (0.2036 mass against a 0.2000 flat baseline, chosen slightly LESS often than chance), so including it would add an arm that E19 has already shown does nothing while doubling the sweep's cost. Stated so the choice is visible rather than assumed.",
+  "content_hash": "96e8c50faa7d493dcc786d00b389da8958fe9c771249a6e0d24cc95edb200d7b"
+}

@@ -275,6 +275,16 @@ def make_v45_observer(world: V45World, rng: np.random.Generator,
     D = build_v45_D(world.cfg, rng, len(world.beta_levels),
                     social_shift=social_shift, social_weight=social_weight)
     a = world.cfg.agent
+    # The solver switch, exactly as in ``generative_model.make_agent``; see validation item V-1.
+    if bool(world.cfg.get("inference.exact", False)):
+        from .exact import ExactAgent
+        return ExactAgent(
+            A=world.gm.A, B=world.gm.B, C=world.gm.C, D=D,
+            control_fac_idx=[K.F_ATTENTION],
+            policy_len=int(a.policy_len), gamma=float(a.gamma),
+            action_selection=str(a.action_selection),
+            use_utility=bool(a.use_utility),
+            use_states_info_gain=bool(a.use_states_info_gain), rng=rng)
     return Agent(
         A=world.gm.A, B=world.gm.B, C=world.gm.C, D=D,
         control_fac_idx=[K.F_ATTENTION],

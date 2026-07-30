@@ -502,7 +502,19 @@ def build_observer_model(world: GenerativeModel, cfg: Config, d_i: float,
 
 def make_agent(gm: GenerativeModel, D: object, cfg: Config,
                kappa: float | None = None) -> Agent:
-    """Construct a pymdp legacy Agent for one observer (Spec §3.7)."""
+    """Construct the agent for one observer (Spec §3.7).
+
+    THE SOLVER IS A CONFIG SWITCH, and that is the whole design of validation item V-1.
+    ``inference.exact: true`` returns an ``ExactAgent`` — the same A, B, C, D, the same policy
+    set, the same gamma, the same action rule, and a belief over the full joint instead of a
+    factorised one. Every experiment therefore re-runs under exact inference through its own
+    unmodified code path, so a number that moves was moved by the factorisation and not by a
+    second implementation of the experiment. Defaults to false, so nothing already committed
+    changes meaning.
+    """
+    if bool(cfg.get("inference.exact", False)):
+        from .exact import make_exact_agent
+        return make_exact_agent(gm, D, cfg)
     a = cfg.agent
     return Agent(
         A=gm.A, B=gm.B, C=gm.C, D=D,

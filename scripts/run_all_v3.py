@@ -24,11 +24,11 @@ leftover file from a previous run. Stage 3 deletes the E8 outputs before it rege
 so the gate cannot pass on stale evidence.
 
 Usage:
-    python run_all_v3.py --prereg-only     # write the criteria, run nothing
-    python run_all_v3.py                   # full programme, gated
-    python run_all_v3.py --quick           # smoke scale (NOT reportable)
-    python run_all_v3.py --stage 1         # one stage
-    python run_all_v3.py --from-stage 2    # resume
+    python scripts/run_all_v3.py --prereg-only     # write the criteria, run nothing
+    python scripts/run_all_v3.py                   # full programme, gated
+    python scripts/run_all_v3.py --quick           # smoke scale (NOT reportable)
+    python scripts/run_all_v3.py --stage 1         # one stage
+    python scripts/run_all_v3.py --from-stage 2    # resume
 """
 from __future__ import annotations
 

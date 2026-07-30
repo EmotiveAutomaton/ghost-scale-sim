@@ -1,0 +1,57 @@
+{
+  "quick": false,
+  "ignore_gates": true,
+  "criteria_hash": "fccfbd5e9bc3d469df3172e91c17f2f8a11180044113573d4f58d8ca2bb5c414",
+  "stages": {
+    "1": {
+      "title": "V-1  the solver check",
+      "seconds": 292.6,
+      "verdicts": {
+        "v1": "A_VERDICT_FLIPPED_UNDER_EXACT_INFERENCE"
+      }
+    },
+    "2": {
+      "title": "V-2  scrambled provenance and the random-model false-positive rate",
+      "seconds": 35.9,
+      "verdicts": {
+        "v2": "PROVENANCE_MAPPING_IS_LOAD_BEARING / EFFECT_IS_ARCHITECTURE_DEPENDENT"
+      }
+    },
+    "3": {
+      "title": "V-3, V-4  robustness and construction audit",
+      "seconds": 186.4,
+      "verdicts": {
+        "v3": "BOTH_HEADLINES_HOLD_ACROSS_THE_SWEPT_RANGE",
+        "v4": "SOME_CLAIMS_SURVIVE_LOSING_THEIR_OWN_FOUNDATIONS"
+      }
+    },
+    "4": {
+      "title": "V-5, V-6, V-7  superseded criteria, cross-version consistency, seed and scale",
+      "seconds": 175.0,
+      "verdicts": {
+        "v5": "SOME_VERDICTS_DEPEND_ON_THE_RESTATED_CRITERION",
+        "v6": "CONSISTENT_ACROSS_VERSIONS",
+        "v7": "SEED_AND_SCALE_INDEPENDENT"
+      }
+    },
+    "5": {
+      "title": "V-8, V-9  independent reimplementation and the forward prediction",
+      "seconds": 1.1,
+      "verdicts": {
+        "v8": "MECHANISM_REPLICATES_MAGNITUDE_DOES_NOT",
+        "v9": "PREDICTION_LOCKED"
+      }
+    }
+  },
+  "gate_notes": [
+    {
+      "stage": 2,
+      "note": "a headline effect sits inside the distribution a randomly parameterised model of the same architecture produces. It is reported as architecture-dependent and it does not get a figure. The remaining checks are still informative, so the pass continues."
+    },
+    {
+      "stage": 5,
+      "note": "the independent reimplementation reproduces the mechanism and not the magnitude. The specific multiple may not be quoted as though it transfers; the direction may."
+    }
+  ],
+  "total_seconds": 690.9
+}

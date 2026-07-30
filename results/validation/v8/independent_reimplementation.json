@@ -1,0 +1,65 @@
+{
+  "what_this_is": "an independent reimplementation of the two-gates result, from the prose description alone, sharing no code and no parameter with the original",
+  "readers_per_cell": 400,
+  "own_parameters": {
+    "purposes": 3,
+    "signs": 6,
+    "depths": 3,
+    "marks_per_work": 9,
+    "encounters": 5,
+    "legibility": 0.72,
+    "machine_leak": 0.12
+  },
+  "believed_depth_under_false_label": 0.6955381043120386,
+  "believed_depth_under_honest_label": 0.4471682415734199,
+  "view_shift_under_false_label": 0.9421600325255304,
+  "view_shift_under_honest_label": 0.6523226430193769,
+  "uptake_multiple": 1.4443160031431623,
+  "update_tracks_believed_depth_rho": 1.0,
+  "direction_matches": true,
+  "limitation_reproduced": "the reader here also cannot doubt the label it conditioned on, so this multiple is an upper bound for the same reason the original's is. That was not a design choice. It is what the description says the reader does, and reimplementing the description reproduces the limitation along with the result",
+  "cells": [
+    {
+      "content": "machine",
+      "label": "passed_off_as_human",
+      "believed_depth": 0.6955381043120386,
+      "view_shift_nats": 0.9421600325255304,
+      "wrong_purpose_rate": 0.6
+    },
+    {
+      "content": "machine",
+      "label": "labelled_honestly",
+      "believed_depth": 0.4471682415734199,
+      "view_shift_nats": 0.6523226430193769,
+      "wrong_purpose_rate": 0.5975
+    },
+    {
+      "content": "machine",
+      "label": "no_label",
+      "believed_depth": 0.5775703963300525,
+      "view_shift_nats": 0.8284963351892811,
+      "wrong_purpose_rate": 0.6025
+    },
+    {
+      "content": "human",
+      "label": "passed_off_as_human",
+      "believed_depth": 0.8937326778877527,
+      "view_shift_nats": 1.1133132105313053,
+      "wrong_purpose_rate": 0.0
+    },
+    {
+      "content": "human",
+      "label": "labelled_honestly",
+      "believed_depth": 0.7131964448004999,
+      "view_shift_nats": 1.093527517655892,
+      "wrong_purpose_rate": 0.0
+    },
+    {
+      "content": "human",
+      "label": "no_label",
+      "believed_depth": 0.8138017858273521,
+      "view_shift_nats": 1.1108164361510824,
+      "wrong_purpose_rate": 0.0
+    }
+  ]
+}

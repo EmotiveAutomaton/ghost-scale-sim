@@ -1,0 +1,31 @@
+{
+  "check": "V-9",
+  "question": "Can this project be wrong about something in advance?",
+  "plain_language": "Everything in this repository was predicted by people who already knew the theory, and the literature check happened afterwards. That means nothing here is a forward test. This is one: a complete prediction covering which way, how big, and four named ways it could fail, for an experiment that does not exist yet, written down and sealed with a hash before anybody builds it.",
+  "prediction": {
+    "title": "The reader equipped with a hypothesis for what the maker was AVOIDING",
+    "status": "PRE-REGISTERED. The experiment is not built. Nothing has been run.",
+    "why_this_one": "It is the natural next experiment regardless of validation, and it is the only candidate where the theory makes a prediction that does not follow from anything already measured. Every existing hypothesis space in this project is a space of things a maker might have been TRYING TO DO. Avoidance is a different shape of intention: the maker's purpose is specified by what is absent rather than by what is present, which means the evidence for it is a hole in the distribution rather than a peak in it.",
+    "the_setup": "The maker holds an avoidance goal: some region of the feature space it will not enter. Otherwise it behaves exactly as an existing maker does. Two readers see its work. The FIRST holds only the existing hypothesis space, meaning purposes as things being pursued. The SECOND additionally holds avoidance hypotheses, one per region, in the same likelihood family. Both are otherwise identical, including their priors and their random stream.",
+    "the_prediction": {
+      "primary_outcome": "recovered intent on avoidance-driven work, reader two against reader one",
+      "direction": "reader two recovers the maker's actual constraint and reader one does not, so the accuracy gap is positive",
+      "magnitude": "reader two's accuracy on avoidance-driven work exceeds reader one's by at least 0.30 in absolute terms, on a four-alternative task where chance is 0.25. Stated as an absolute gap rather than a ratio because reader one is predicted to be near chance and a ratio against chance is unstable.",
+      "secondary_outcome_and_it_is_the_interesting_one": "reader one is predicted to be CONFIDENT and WRONG rather than uncertain: within-reader doubt below 0.5 nats with accuracy at or below chance. Avoidance leaves a hole, the existing hypotheses all have support inside that hole, and the one whose peak sits furthest from it wins by default. That is the same failure mode as the partial-overlap peak, arriving by a different route, and if it holds it is the second independent instance of one mechanism.",
+      "cost_prediction": "reader two pays MORE attention, not less, because an avoidance hypothesis is confirmed by continued absence and absence accumulates slowly. Predicted at least 1.5x the deep looks of reader one."
+    },
+    "named_failure_branches": {
+      "NO_GAP": "reader two does no better. Avoidance is not recoverable from a hole in this geometry, and the framework's claim that intention can be read from what is absent is unsupported in simulation. This is the outcome that costs the most and it is a real possibility: the hole may simply be too weak a signal at this feature count, in which case the result is about the geometry and has to be reported as inconclusive rather than negative.",
+      "GAP_BUT_READER_ONE_IS_UNCERTAIN": "reader two wins and reader one is appropriately unsure rather than confidently wrong. The primary prediction holds and the interesting secondary one fails, which would separate the two mechanisms this prediction claims are the same.",
+      "GAP_REVERSES": "reader one does BETTER. The avoidance hypotheses act as an absorbing fallback the way a uniform EXPLORE signature would, and the extra hypotheses hurt. This would be a direct hit on the framework and would be reported as one.",
+      "READER_TWO_PAYS_LESS": "the cost prediction inverts. An avoidance hypothesis resolves faster than a pursuit hypothesis, which would contradict the metabolic account the whole engagement story rests on."
+    },
+    "what_is_committed_and_what_is_not": "COMMITTED: the direction, the 0.30 absolute accuracy gap, the 0.5 nat confidence threshold on reader one, the 1.5x attention ratio, and the four branches above. NOT COMMITTED: the feature count, the number of avoidance regions, the observer count and the seeds, because those are scale decisions and fixing them now without having built anything would be pre-registering guesses as though they were design.",
+    "how_this_gets_scored": "The experiment is built and run once. Its outcome is matched against the branches above by their stated thresholds, and the branch that fires is reported whatever it is. If none fires cleanly, that is recorded as the prediction having been under-specified, which is itself a result about how well this framework can be made to commit in advance."
+  },
+  "locked_before": "the experiment exists",
+  "content_hash": "c9d8c782ed4c2ccbdce4d9c9b8a98ff5bc931fe9ec6fbef3b239dc09f5263153",
+  "lock_intact": true,
+  "verdict": "PREDICTION_LOCKED",
+  "statement": "A full prediction for the avoidance-reader experiment is written down and hash-locked before the experiment exists: the direction, the magnitude, and four named ways it can fail, including one that would be a direct hit on the framework. This is the only genuinely out-of-sample test the project can generate for itself, and it is now the largest thing it owes."
+}

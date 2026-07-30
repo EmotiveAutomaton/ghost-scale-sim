@@ -87,7 +87,7 @@ def resolve_sample_size(cfg: Config, res_dir: Path, require_e12: bool = True) ->
     placeholder is exactly how a hardcoded sample size would come back.
 
     ``require_e12=False`` means the caller is deliberately opting OUT of the E12 wiring — a
-    ``--quick`` smoke run, or ``restore_v2_e8.py`` reproducing a V2-parameter cell — and it
+    ``--quick`` smoke run, or ``scripts/restore_v2_e8.py`` reproducing a V2-parameter cell — and it
     takes the config value WITHOUT consulting the threshold file.
 
     That last clause is load-bearing and was a real bug: an earlier version consulted
@@ -153,7 +153,7 @@ def run(cfg: Config, out_dir: Path | None = None, workers: int = 1,
         only_contamination: float | None = None) -> pd.DataFrame:
     """``only_contamination`` restricts the run to one f level.
 
-    Used by ``run_all_v3.py`` stage 3 to run E8's f = 0 arm ALONE at full scale, so the
+    Used by ``scripts/run_all_v3.py`` stage 3 to run E8's f = 0 arm ALONE at full scale, so the
     repaired N11 is evaluated at the scale of the experiment it gates without E8's f > 0 arms
     having been run first. Stage 4 then re-runs the whole grid; the f = 0 cells are seeded
     identically and reproduce the gated numbers exactly.

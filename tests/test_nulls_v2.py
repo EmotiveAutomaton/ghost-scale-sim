@@ -260,7 +260,7 @@ def test_N11_gate_on_full_scale_e8_output(cfg):
         pytest.skip("E8 has not been run; nothing to gate")
 
     # This null gates E8 — meaning E8 AS V3 SPECIFIES IT, under C1 seeding at the
-    # E12-determined sample size. ``restore_v2_e8.py`` deliberately writes a V2-parameter run
+    # E12-determined sample size. ``scripts/restore_v2_e8.py`` deliberately writes a V2-parameter run
     # into the same filenames, and judging that with V3's criterion would be gating the wrong
     # experiment: it would report the V2 leak as a V3 failure. The skip is narrow (it fires
     # only when the run is demonstrably the V2 seeding rule) and cannot mask a real V3 failure.

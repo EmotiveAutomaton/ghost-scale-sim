@@ -4,13 +4,16 @@
 PYTHON ?= python
 WORKERS ?=
 
-.PHONY: all quick test invariants nulls clean e1 e2 e3 e4 e5 e6
+.PHONY: all quick test invariants nulls validate figures clean e1 e2 e3 e4 e5 e6
 
 all:            ## run all six experiments + tests at full spec scale
 	$(PYTHON) run_all.py $(if $(WORKERS),--workers $(WORKERS),)
 
 quick:          ## fast smoke-scale run of everything
 	$(PYTHON) run_all.py --quick $(if $(WORKERS),--workers $(WORKERS),)
+
+validate:       ## run the validation pass (V-1 .. V-9), writes results/validation/
+	$(PYTHON) run_validation.py $(if $(WORKERS),--workers $(WORKERS),)
 
 test:           ## run the full test suite (invariants + nulls)
 	$(PYTHON) -m pytest -q
@@ -20,6 +23,10 @@ invariants:     ## model-invariant tests only (Spec §10)
 
 nulls:          ## null-condition tests only (Spec §9)
 	$(PYTHON) -m pytest tests/test_nulls.py -q
+
+figures:        ## redraw research charts from committed CSVs, then the social slides
+	$(PYTHON) scripts/rebuild_figures.py
+	$(PYTHON) scripts/make_social_figures.py
 
 e1:; $(PYTHON) -m ghostscale.experiments.e1_crash $(if $(WORKERS),--workers $(WORKERS),)
 e2:; $(PYTHON) -m ghostscale.experiments.e2_variance $(if $(WORKERS),--workers $(WORKERS),)

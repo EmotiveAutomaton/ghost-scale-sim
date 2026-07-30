@@ -699,6 +699,19 @@ def make_v5_observer(world: V5World, rng: np.random.Generator,
         for j, extra in enumerate(extra_modalities):
             A[len(world.gm.A) + j] = np.asarray(extra, dtype=float)
             C_[len(world.gm.C) + j] = np.zeros(np.asarray(extra).shape[0])
+    # The solver switch, exactly as in ``generative_model.make_agent``; see validation item V-1.
+    if bool(world.cfg.get("inference.exact", False)):
+        from .exact import ExactAgent
+        a = world.cfg.agent
+        return ExactAgent(
+            A=A, B=world.gm.B, C=C_, D=D,
+            control_fac_idx=[F_ATTENTION],
+            policy_len=int(a.policy_len),
+            gamma=float(a.gamma),
+            action_selection=str(a.action_selection),
+            use_utility=bool(a.use_utility),
+            use_states_info_gain=bool(a.use_states_info_gain),
+            rng=rng)
     a = world.cfg.agent
     return Agent(
         A=A, B=world.gm.B, C=C_, D=D,

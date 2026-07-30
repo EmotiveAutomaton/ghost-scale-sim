@@ -18,10 +18,10 @@ The gates are enforced here rather than left to discipline: stage 1 reads
 refuses to start unless N11 has passed. ``--force`` overrides, and says so loudly.
 
 Usage:
-    python run_all_v2.py                 # full programme, gated
-    python run_all_v2.py --quick         # smoke scale
-    python run_all_v2.py --stage 1       # one stage
-    python run_all_v2.py --from-stage 3  # resume
+    python scripts/run_all_v2.py                 # full programme, gated
+    python scripts/run_all_v2.py --quick         # smoke scale
+    python scripts/run_all_v2.py --stage 1       # one stage
+    python scripts/run_all_v2.py --from-stage 3  # resume
 """
 from __future__ import annotations
 

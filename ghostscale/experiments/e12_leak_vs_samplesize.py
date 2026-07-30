@@ -29,7 +29,7 @@ averaging cannot touch it. The 1/M gain therefore has a FLOOR that only larger N
 FALSIFICATION (V3 §1 C2, verbatim in force): if the without-averaging slope does NOT shrink
 with N, the leak is not finite-sample estimation error, the entire V3 diagnosis is wrong, and
 E8 must not be run until the structural reason is found. That verdict is written to
-``results/e12_threshold.json`` and ``run_all_v3.py`` refuses to proceed on it.
+``results/e12_threshold.json`` and ``scripts/run_all_v3.py`` refuses to proceed on it.
 
 N13 (V3 §3, as amended by decision D8) is computed here rather than only in the test suite,
 because the number it produces — the exponent of the leak's decline in N — is a REPORTED

@@ -1,0 +1,42 @@
+{
+  "document": "Ghost Scale Simulation \u2014 validation pass criteria",
+  "spec": "docs/specs/SPEC_VALIDATION.md",
+  "written_before": "any validation check ran",
+  "v1": {
+    "peak_tolerance_steps": 1,
+    "spread_standard_errors": 2.0,
+    "boolean_outcomes_must_match": true,
+    "targets": [
+      "E20 \u2014 the collapse-and-invention sweep across the readability axis",
+      "E19 \u2014 sustained attention on unreadable content",
+      "E31 \u2014 the two-gates result",
+      "E32 \u2014 the silent-versus-loud failure comparison",
+      "E2  \u2014 the label-induced disagreement result"
+    ]
+  },
+  "v2": {
+    "scrambled_residual_fraction": 0.1,
+    "random_model_percentile": 97.5,
+    "random_model_alpha": 0.05,
+    "random_model_min_draws": 100
+  },
+  "v3": {
+    "weaken_fraction": 0.5,
+    "tuned_window_fraction": 0.4
+  },
+  "v7": {
+    "scale_drift_fraction": 0.25
+  },
+  "v8": {
+    "direction_required": true,
+    "order_of_magnitude_factor": 10.0
+  },
+  "scale": {
+    "n_observers": 60,
+    "n_seeds": 16,
+    "random_model_draws": 300,
+    "seed_block_offset": 700003,
+    "note": "Reduced from the headline runs, as the spec permits, and recorded beside every number. The question is whether a verdict SURVIVES a change of solver or parameter, which needs enough observers to resolve the effect rather than the precision the headline number was quoted at."
+  },
+  "content_hash": "fccfbd5e9bc3d469df3172e91c17f2f8a11180044113573d4f58d8ca2bb5c414"
+}

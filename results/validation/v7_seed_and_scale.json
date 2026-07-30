@@ -1,0 +1,64 @@
+{
+  "check": "V-7",
+  "question": "Do the headlines survive a different seed block and twice the scale?",
+  "plain_language": "Random draws can flatter a result, and a result measured on too few readers can look solid and then move when you measure it properly. This re-runs the headlines on a completely separate set of random seeds and again at double the number of readers, and reports how far the numbers moved rather than only whether the conclusion survived.",
+  "seed_block_offset": 700003,
+  "scale": {
+    "n_observers": 60,
+    "n_seeds": 16
+  },
+  "criteria": {
+    "material_drift_fraction": 0.25
+  },
+  "table": [
+    {
+      "headline": "label_effect",
+      "arm": "other_seed_block",
+      "reference_effect": 14.860387275553641,
+      "arm_effect": 14.41933278925701,
+      "relative_drift": 0.029679878331448046,
+      "verdict_holds": true,
+      "material_drift": false
+    },
+    {
+      "headline": "label_effect",
+      "arm": "double_scale",
+      "reference_effect": 14.860387275553641,
+      "arm_effect": 14.37578778353349,
+      "relative_drift": 0.032610152281653614,
+      "verdict_holds": true,
+      "material_drift": false
+    },
+    {
+      "headline": "interior_peak",
+      "arm": "other_seed_block",
+      "reference_effect": 0.3076322728884394,
+      "arm_effect": 0.2847220764968728,
+      "relative_drift": 0.07447266886681561,
+      "verdict_holds": true,
+      "material_drift": false
+    },
+    {
+      "headline": "interior_peak",
+      "arm": "double_scale",
+      "reference_effect": 0.3076322728884394,
+      "arm_effect": 0.3139548514082165,
+      "relative_drift": 0.020552390230104092,
+      "verdict_holds": true,
+      "material_drift": false
+    },
+    {
+      "headline": "interior_peak",
+      "arm": "peak_location_across_arms",
+      "reference_effect": 0.1,
+      "arm_effect": 0.1,
+      "relative_drift": 0.0,
+      "verdict_holds": true,
+      "material_drift": false
+    }
+  ],
+  "under_powered": [],
+  "verdicts_that_flipped": [],
+  "verdict": "SEED_AND_SCALE_INDEPENDENT",
+  "statement": "Every headline holds on a disjoint seed block and at double scale, with effect sizes stable to within a quarter of themselves."
+}

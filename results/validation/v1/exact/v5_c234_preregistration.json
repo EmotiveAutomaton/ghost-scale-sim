@@ -1,0 +1,117 @@
+{
+  "version": "V5-C234",
+  "scope": "C2/E31, C3/E32, C4/E33. C1 is covered by v5_preregistration.json.",
+  "E31": {
+    "claim": "C2: the generative crash is a CORRECTLY low mu and the trust exploit is a FALSELY high mu \u2014 one mechanism, opposite signs.",
+    "design": "2 content (human / foreign) x 3 label (unsigned / SIG_CREATOR / SIG_GHOST) x 2 theta (open / closed), over 4 sequential encounters with the gated update carried between them. Sequential for E29's reason: theta gates the update, so in a single-artifact design it changes nothing observable and would appear to dissociate on the strength of its own definition.",
+    "provenance_path": "a mu prior CONDITIONED ON THE OBSERVED LABEL, which is where decision 10 landed after the factor merge; see v5_model.",
+    "primary": "Spearman(recovered mu, prior drift) across all cells",
+    "thresholds": {
+      "update_tracks_mu_rho": 0.7,
+      "exploit_mu_gap": 0.15,
+      "fabrication_gap": 0.05
+    },
+    "outcomes": [
+      "ONE_MECHANISM_OPPOSITE_SIGNS",
+      "DEPTH_IS_NOT_THE_COMMON_PATH",
+      "NO_EXPLOIT",
+      "NEITHER"
+    ]
+  },
+  "E32": {
+    "claim": "C3: omega and observer inexpertise d may be one channel.",
+    "omega_grid": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.7
+    ],
+    "matching": "MI(features; goal) under the observer's OWN likelihood on the content it sees, in nats; d solved by bisection. COMPUTED AND LOCKED BEFORE ANY ROLLOUT, because it is a free parameter that would otherwise decide the result.",
+    "matching_curve": [
+      {
+        "omega": 0.0,
+        "target_effective_overlap_nats": -0.012276384296057784,
+        "matched_d": 0.945128628108705,
+        "achieved_effective_overlap_nats": -0.012276384297807525,
+        "competent_reader_ceiling_nats": 1.006542138225516
+      },
+      {
+        "omega": 0.05,
+        "target_effective_overlap_nats": 0.03866454183002087,
+        "matched_d": 0.9352460439881725,
+        "achieved_effective_overlap_nats": 0.03866454183008778,
+        "competent_reader_ceiling_nats": 1.006542138225516
+      },
+      {
+        "omega": 0.1,
+        "target_effective_overlap_nats": 0.0896054679560995,
+        "matched_d": 0.9241553724273217,
+        "achieved_effective_overlap_nats": 0.08960546795664227,
+        "competent_reader_ceiling_nats": 1.006542138225516
+      },
+      {
+        "omega": 0.2,
+        "target_effective_overlap_nats": 0.19148732020825682,
+        "matched_d": 0.8977847068222218,
+        "achieved_effective_overlap_nats": 0.19148732020884687,
+        "competent_reader_ceiling_nats": 1.006542138225516
+      },
+      {
+        "omega": 0.4,
+        "target_effective_overlap_nats": 0.3952510247125716,
+        "matched_d": 0.8228425661250185,
+        "achieved_effective_overlap_nats": 0.3952510247121713,
+        "competent_reader_ceiling_nats": 1.006542138225516
+      },
+      {
+        "omega": 0.7,
+        "target_effective_overlap_nats": 0.7008965814690431,
+        "matched_d": 0.612035586751972,
+        "achieved_effective_overlap_nats": 0.7008965814689718,
+        "competent_reader_ceiling_nats": 1.006542138225516
+      }
+    ],
+    "indistinguishable_frac": 0.1,
+    "prediction": "they DIVERGE. A mis-aimed template fails silently \u2014 confident, wrong, idiosyncratic. An out-of-range one fails loudly \u2014 uncertain and sustained. The second dimension is whether the failure is detectable to the observer.",
+    "outcomes": [
+      "ONE_VARIABLE",
+      "TWO_DIMENSIONS",
+      "PARTLY_DISTINGUISHABLE"
+    ]
+  },
+  "E33": {
+    "claim": "C4: a large part of what makes something art is a goal that shapes the creator's behaviour while the creator has no access to it, and an observer can sometimes extract it anyway.",
+    "arms": [
+      "human_unaware",
+      "deceptive",
+      "generative"
+    ],
+    "divergence_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "construction": {
+      "goal_latent": "drives the creator's policy; not represented in its own model",
+      "goal_declared": "what the creator believes and would report; delivered as a fourth observation modality with its own precision, parallel to the provenance signal's kappa",
+      "divergence": "UNIFORM over the other goals. The assumption-free choice; a systematic or flattering variant is a separate arm and is not run here.",
+      "productive_conflict": "when latent != declared the creator SUPPRESSES the declared goal's features while pursuing the latent one, so the artifact carries a signature that is neither. The trace is present or absent, and its STRENGTH does not scale with the divergence RATE \u2014 otherwise 'divergence increases depth' would be true by construction and E33 would prove nothing."
+    },
+    "categorical_claim": "V5 decision 18, 'no conscious' rather than 'no unconscious': a generative system emits a plausible self-report produced by the same process as its output rather than by introspection, so its declaration is CONFABULATED and uncorrelated with what drove emission. What it cannot produce is not a divergence \u2014 it is a divergence that leaves a TRACE. The deceptive arm is the control that stops the generative arm from being true by definition.",
+    "thresholds": {
+      "beats_self_model_margin": 0.05,
+      "trace_separation": 0.1
+    },
+    "outcomes": [
+      "TRACE_IS_REAL_AND_READABLE",
+      "TRACE_IS_REAL_BUT_UNREAD",
+      "READS_THE_LATENT_WITHOUT_A_TRACE",
+      "NO_CATEGORICAL_DIFFERENCE"
+    ]
+  },
+  "content_hash": "1ca6955094b7eb81997c7cd9f0c635c6aa35ccb202645c677b42b3fabc4ebea7"
+}

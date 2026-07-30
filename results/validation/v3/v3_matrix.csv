@@ -1,0 +1,49 @@
+headline,parameter,level,value,primary,label,reason,peak_omega
+label_effect,effort_cost,low,0.05,21.887004283765233,holds,,
+label_effect,effort_cost,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,effort_cost,high,0.75,4.662418987693617,weakens,,
+interior_peak,effort_cost,low,0.05,0.31673603441330006,holds,,0.1
+interior_peak,effort_cost,default,default,0.3076322728884394,holds,the default; the reference cell,
+interior_peak,effort_cost,high,0.75,0.26266849083888594,holds,,0.1
+label_effect,label_precision,low,0.3,3.0769953205560165,weakens,,
+label_effect,label_precision,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,label_precision,high,0.99,14.860387275553657,holds,,
+interior_peak,label_precision,low,0.3,0.3093905819664677,holds,,0.1
+interior_peak,label_precision,default,default,0.3076322728884394,holds,the default; the reference cell,
+interior_peak,label_precision,high,0.99,0.30683318514507607,holds,,0.1
+label_effect,planning_horizon,myopic,1,14.860387275553641,holds,,
+label_effect,planning_horizon,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,planning_horizon,longer,3,14.860387275553641,holds,,
+interior_peak,planning_horizon,myopic,1,0.3076322728884394,holds,,0.1
+interior_peak,planning_horizon,default,default,0.3076322728884394,holds,the default; the reference cell,
+interior_peak,planning_horizon,longer,3,0.3076322728884394,holds,,0.1
+label_effect,prior_strength,weak,0.01,14.874737407011079,holds,,
+label_effect,prior_strength,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,prior_strength,strong,0.5,15.088722436971597,holds,,
+interior_peak,prior_strength,weak,0.01,0.2592349356815022,holds,,0.1
+interior_peak,prior_strength,default,default,0.3076322728884394,holds,the default; the reference cell,
+interior_peak,prior_strength,strong,0.5,0.3145341410954911,holds,,0.1
+label_effect,separation_floor,shallow,0.6,12.291080220823826,holds,,
+label_effect,separation_floor,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,separation_floor,sharp,0.98,15.757294899425741,holds,,
+interior_peak,separation_floor,shallow,0.6,,unreachable,AssertionError: human signatures carry 0.105 mass in the foreign block; the partition is not disjoint and pre-mortem failure #1 is live,
+interior_peak,separation_floor,default,default,0.3076322728884394,holds,the default; the reference cell,
+interior_peak,separation_floor,sharp,0.98,0.30749324618018703,holds,,0.1
+label_effect,opacity_ramp,compressed,0.5,5.015700906354817,weakens,,
+label_effect,opacity_ramp,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,opacity_ramp,stretched,1.0,15.707411644071254,holds,,
+interior_peak,opacity_ramp,compressed,0.5,0.28031944734212527,holds,,0.1
+interior_peak,opacity_ramp,default,default,0.3076322728884394,holds,the default; the reference cell,
+interior_peak,opacity_ramp,stretched,1.0,0.32264011674080406,holds,,0.1
+label_effect,observer_count,half,0.5,14.62008941565294,holds,,
+label_effect,observer_count,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,observer_count,double,2.0,14.53031997869615,holds,,
+interior_peak,observer_count,-,,,not_run,observer_count is swept for label_effect only; see the sweep's own note,
+label_effect,goal_count,two,2,9.138094305942703,flips,,
+label_effect,goal_count,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,goal_count,default_again,4,14.860387275553641,holds,,
+interior_peak,goal_count,-,,,not_run,goal_count is swept for label_effect only; see the sweep's own note,
+label_effect,feature_count,eight,8,14.860387275553641,holds,,
+label_effect,feature_count,default,default,14.860387275553641,holds,the default; the reference cell,
+label_effect,feature_count,sixteen,16,1.266695781943695,flips,,
+interior_peak,feature_count,-,,,not_run,feature_count is swept for label_effect only; see the sweep's own note,

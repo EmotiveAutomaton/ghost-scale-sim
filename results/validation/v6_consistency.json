@@ -1,0 +1,44 @@
+{
+  "check": "V-6",
+  "question": "Where two versions measure the same thing, do they agree, and do the boundary reductions still hold?",
+  "plain_language": "Each version of the model has to be able to become the previous one when you turn its new machinery off. Those reductions are already tests; this runs them and, more usefully, finds every place where two different versions measured the same real quantity and puts the two numbers side by side.",
+  "boundary_regressions_pass": true,
+  "boundary_regression_log": "results/validation/v6/boundary_regression_pytest.txt",
+  "boundary_regression_tail": [
+    "................s........................................                [100%]"
+  ],
+  "shared_quantities": [
+    {
+      "quantity": "sustained attention on fully foreign content",
+      "measured_in": [
+        "E19 (V4)",
+        "E20 (V4.5)"
+      ],
+      "values": [
+        0.7244642857142858,
+        0.6255773809523809
+      ],
+      "absolute_gap": 0.09888690476190487,
+      "standard_errors_apart": 1.6544199102784205,
+      "agree": true,
+      "note": "the nominally identical condition. E20 ran at three times the seeds, which its own deviation V4.5-6 declares, so a gap here is a measurement-precision question rather than a contradiction. It is still the same number twice and it should be quoted as a range"
+    },
+    {
+      "quantity": "within-reader doubt on GHOST content under a false human label, in nats",
+      "measured_in": [
+        "E2 (V1)",
+        "E17 (V3)"
+      ],
+      "values": [
+        0.089599060950349,
+        0.0894124389180869
+      ],
+      "absolute_gap": 0.00018662203226210705,
+      "agree": true,
+      "note": "E17 is E2's dose-response follow-up on the same geometry, so these should be close; a gap would mean one of the two is measuring something else"
+    }
+  ],
+  "disagreements": [],
+  "verdict": "CONSISTENT_ACROSS_VERSIONS",
+  "statement": "Every boundary reduction holds and every quantity measured by two versions agrees within its own spread."
+}

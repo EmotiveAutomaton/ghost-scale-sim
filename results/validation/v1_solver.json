@@ -1,0 +1,604 @@
+{
+  "check": "V-1",
+  "question": "Does the inference approximation distort the headline results?",
+  "plain_language": "Every experiment before version 5 used a fast approximate way of updating the reader's beliefs. That shortcut is known to have been badly wrong once, in a case version 5 caught. This check re-runs the headline experiments with the shortcut removed, using exact arithmetic over every combination of possibilities, and puts the two answers next to each other.",
+  "solver_sanity_check": {
+    "max_goal_discrepancy": 1.4210854715202004e-14,
+    "max_provenance_discrepancy": 3.3306690738754696e-16,
+    "tolerance": 1e-09
+  },
+  "scale": {
+    "n_observers": 60,
+    "n_seeds": 16,
+    "note": "both arms at the same reduced scale, so the reduction cannot be mistaken for a solver effect; the committed full-scale number is carried as a third column"
+  },
+  "criteria": {
+    "peak_tolerance_steps": 1,
+    "spread_standard_errors": 2.0,
+    "booleans_must_match_exactly": true
+  },
+  "interior_peak_holds": true,
+  "all_booleans_match": false,
+  "all_scalars_within_spread": false,
+  "targets": {
+    "e20": {
+      "label": "the collapse-and-invention sweep across the readability axis",
+      "note": "the interior peak is the load-bearing location in the project. If it moves, every claim anchored to it moves with it.",
+      "outcome_approx": "INTERIOR_PEAK",
+      "outcome_exact": "INTERIOR_PEAK",
+      "outcome_survives": true,
+      "seconds_approx": 39.6,
+      "seconds_exact": 7.0,
+      "quantities": [
+        {
+          "target": "e20",
+          "quantity": "fabrication_peak_omega",
+          "kind": "scalar",
+          "approx_reduced": 0.1,
+          "exact_reduced": 0.1,
+          "committed_full_scale": 0.1,
+          "sem_across_cells": 0.09999999999999998,
+          "agrees": true
+        },
+        {
+          "target": "e20",
+          "quantity": "fabrication_peak_value",
+          "kind": "scalar",
+          "approx_reduced": 0.315716610896449,
+          "exact_reduced": 0.3080887500076838,
+          "committed_full_scale": 0.3018488336926586,
+          "sem_across_cells": 0.03165281220757771,
+          "agrees": true
+        },
+        {
+          "target": "e20",
+          "quantity": "engagement_crossing_omega",
+          "kind": "scalar",
+          "approx_reduced": 0.021706016755521675,
+          "exact_reduced": 0.013094083414161021,
+          "committed_full_scale": 0.04115283331707792,
+          "sem_across_cells": 0.021022864695715255,
+          "agrees": true
+        },
+        {
+          "target": "e20",
+          "quantity": "fabrication_peak_is_interior",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": true,
+          "committed_full_scale": true,
+          "sem_across_cells": NaN,
+          "agrees": true
+        },
+        {
+          "target": "e20",
+          "quantity": "any_cell_crashes",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": true,
+          "committed_full_scale": true,
+          "sem_across_cells": NaN,
+          "agrees": true
+        }
+      ]
+    },
+    "e19": {
+      "label": "sustained attention on unreadable content",
+      "note": "the result that inverted the framework's own metabolic prediction. It is measured on content the observer cannot express, which is the case where a solver that penalises latent structure would be expected to misbehave.",
+      "outcome_approx": "CRASH_SURVIVES",
+      "outcome_exact": "INCONCLUSIVE",
+      "outcome_survives": false,
+      "seconds_approx": 38.2,
+      "seconds_exact": 7.0,
+      "quantities": [
+        {
+          "target": "e19",
+          "quantity": "foreign_engaged_fraction",
+          "kind": "scalar",
+          "approx_reduced": 0.683407738095238,
+          "exact_reduced": 0.6824404761904762,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.014998406628288384,
+          "agrees": true
+        },
+        {
+          "target": "e19",
+          "quantity": "foreign_final_entropy",
+          "kind": "scalar",
+          "approx_reduced": 1.4881072202503456,
+          "exact_reduced": 1.4832679112616023,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.008462764115105385,
+          "agrees": true
+        },
+        {
+          "target": "e19",
+          "quantity": "foreign_explore_mass",
+          "kind": "scalar",
+          "approx_reduced": 0.2033249183825205,
+          "exact_reduced": 0.2029081232984279,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.001754431920967964,
+          "agrees": true
+        },
+        {
+          "target": "e19",
+          "quantity": "positive_control_passed",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": false,
+          "committed_full_scale": true,
+          "sem_across_cells": NaN,
+          "agrees": false
+        },
+        {
+          "target": "e19",
+          "quantity": "foreign_absorbed",
+          "kind": "boolean",
+          "approx_reduced": false,
+          "exact_reduced": false,
+          "committed_full_scale": false,
+          "sem_across_cells": NaN,
+          "agrees": true
+        }
+      ]
+    },
+    "e31": {
+      "label": "the two-gates result",
+      "note": "the strongest and most legible thing in the project, and the one that becomes the public headline. It runs on the V5 geometry, which is the geometry N21 found the defect in.",
+      "outcome_approx": "ONE_MECHANISM_OPPOSITE_SIGNS",
+      "outcome_exact": "DEPTH_IS_NOT_THE_COMMON_PATH",
+      "outcome_survives": false,
+      "seconds_approx": 33.5,
+      "seconds_exact": 9.9,
+      "quantities": [
+        {
+          "target": "e31",
+          "quantity": "update_tracks_mu_rho",
+          "kind": "scalar",
+          "approx_reduced": 0.8857142857142857,
+          "exact_reduced": 0.6,
+          "committed_full_scale": 0.8857142857142857,
+          "sem_across_cells": NaN,
+          "agrees": false
+        },
+        {
+          "target": "e31",
+          "quantity": "exploit_mu_gap",
+          "kind": "scalar",
+          "approx_reduced": 0.1871552862072663,
+          "exact_reduced": 0.8306060515857654,
+          "committed_full_scale": 0.18739021543200063,
+          "sem_across_cells": 0.052518450308452855,
+          "agrees": false
+        },
+        {
+          "target": "e31",
+          "quantity": "fabrication_gap",
+          "kind": "scalar",
+          "approx_reduced": 0.03125,
+          "exact_reduced": 0.0,
+          "committed_full_scale": 0.025,
+          "sem_across_cells": 0.005396688828870585,
+          "agrees": false
+        },
+        {
+          "target": "e31",
+          "quantity": "update_tracks_recovered_depth",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": false,
+          "committed_full_scale": true,
+          "sem_across_cells": NaN,
+          "agrees": false
+        },
+        {
+          "target": "e31",
+          "quantity": "dishonest_label_inflates_depth",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": true,
+          "committed_full_scale": true,
+          "sem_across_cells": NaN,
+          "agrees": true
+        },
+        {
+          "target": "e31",
+          "quantity": "mu_theta_dissociate_on_behaviour",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": true,
+          "committed_full_scale": true,
+          "sem_across_cells": NaN,
+          "agrees": true
+        }
+      ]
+    },
+    "e32": {
+      "label": "the silent-versus-loud failure comparison",
+      "note": "the most counterintuitive measured result, and it rests on a contrast between two failures rather than on either one alone.",
+      "outcome_approx": "TWO_DIMENSIONS",
+      "outcome_exact": "TWO_DIMENSIONS",
+      "outcome_survives": true,
+      "seconds_approx": 124.0,
+      "seconds_exact": 12.9,
+      "quantities": [
+        {
+          "target": "e32",
+          "quantity": "foreign_within_at_matched",
+          "kind": "scalar",
+          "approx_reduced": 1.265264027988561,
+          "exact_reduced": 1.264869468642791,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.10091665010847026,
+          "agrees": true
+        },
+        {
+          "target": "e32",
+          "quantity": "inexpert_within_at_matched",
+          "kind": "scalar",
+          "approx_reduced": 0.6901918340759065,
+          "exact_reduced": 0.8890890642827501,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.10091665010847026,
+          "agrees": true
+        },
+        {
+          "target": "e32",
+          "quantity": "foreign_engaged_at_matched",
+          "kind": "scalar",
+          "approx_reduced": 0.5424107142857142,
+          "exact_reduced": 0.5301339285714286,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.06397022375258683,
+          "agrees": true
+        },
+        {
+          "target": "e32",
+          "quantity": "inexpert_engaged_at_matched",
+          "kind": "scalar",
+          "approx_reduced": 0.0006696428571428,
+          "exact_reduced": 0.0005208333333333,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.06397022375258683,
+          "agrees": true
+        },
+        {
+          "target": "e32",
+          "quantity": "two_dimensions",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": true,
+          "committed_full_scale": null,
+          "sem_across_cells": NaN,
+          "agrees": true
+        }
+      ]
+    },
+    "e2": {
+      "label": "the label-induced disagreement result",
+      "note": "the original result, from V1, on the original 8-feature geometry. It is here because it is the oldest thing still being quoted.",
+      "outcome_approx": "LABEL_INDUCES_CONFIDENCE",
+      "outcome_exact": "LABEL_INDUCES_CONFIDENCE",
+      "outcome_survives": true,
+      "seconds_approx": 13.4,
+      "seconds_exact": 5.2,
+      "quantities": [
+        {
+          "target": "e2",
+          "quantity": "ghost_as_creator_within",
+          "kind": "scalar",
+          "approx_reduced": 0.0871049843446114,
+          "exact_reduced": 0.0870835265658397,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.00496338801707195,
+          "agrees": true
+        },
+        {
+          "target": "e2",
+          "quantity": "ghost_as_creator_between",
+          "kind": "scalar",
+          "approx_reduced": 1.3645699679730383,
+          "exact_reduced": 1.3645699679730383,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.0067929448506844,
+          "agrees": true
+        },
+        {
+          "target": "e2",
+          "quantity": "ghost_as_ghost_within",
+          "kind": "scalar",
+          "approx_reduced": 1.2939258970414882,
+          "exact_reduced": 1.2940949300893418,
+          "committed_full_scale": null,
+          "sem_across_cells": 0.00972787023295545,
+          "agrees": true
+        },
+        {
+          "target": "e2",
+          "quantity": "creator_as_creator_within",
+          "kind": "scalar",
+          "approx_reduced": 1.558417847916965e-08,
+          "exact_reduced": 1.5557884754462413e-08,
+          "committed_full_scale": null,
+          "sem_across_cells": 1.4472840593415826e-08,
+          "agrees": true
+        },
+        {
+          "target": "e2",
+          "quantity": "label_induces_confidence",
+          "kind": "boolean",
+          "approx_reduced": true,
+          "exact_reduced": true,
+          "committed_full_scale": null,
+          "sem_across_cells": NaN,
+          "agrees": true
+        }
+      ]
+    }
+  },
+  "table": [
+    {
+      "target": "e20",
+      "quantity": "fabrication_peak_omega",
+      "kind": "scalar",
+      "approx_reduced": 0.1,
+      "exact_reduced": 0.1,
+      "committed_full_scale": 0.1,
+      "sem_across_cells": 0.09999999999999998,
+      "agrees": true
+    },
+    {
+      "target": "e20",
+      "quantity": "fabrication_peak_value",
+      "kind": "scalar",
+      "approx_reduced": 0.315716610896449,
+      "exact_reduced": 0.3080887500076838,
+      "committed_full_scale": 0.3018488336926586,
+      "sem_across_cells": 0.03165281220757771,
+      "agrees": true
+    },
+    {
+      "target": "e20",
+      "quantity": "engagement_crossing_omega",
+      "kind": "scalar",
+      "approx_reduced": 0.021706016755521675,
+      "exact_reduced": 0.013094083414161021,
+      "committed_full_scale": 0.04115283331707792,
+      "sem_across_cells": 0.021022864695715255,
+      "agrees": true
+    },
+    {
+      "target": "e20",
+      "quantity": "fabrication_peak_is_interior",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": true,
+      "committed_full_scale": true,
+      "sem_across_cells": NaN,
+      "agrees": true
+    },
+    {
+      "target": "e20",
+      "quantity": "any_cell_crashes",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": true,
+      "committed_full_scale": true,
+      "sem_across_cells": NaN,
+      "agrees": true
+    },
+    {
+      "target": "e19",
+      "quantity": "foreign_engaged_fraction",
+      "kind": "scalar",
+      "approx_reduced": 0.683407738095238,
+      "exact_reduced": 0.6824404761904762,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.014998406628288384,
+      "agrees": true
+    },
+    {
+      "target": "e19",
+      "quantity": "foreign_final_entropy",
+      "kind": "scalar",
+      "approx_reduced": 1.4881072202503456,
+      "exact_reduced": 1.4832679112616023,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.008462764115105385,
+      "agrees": true
+    },
+    {
+      "target": "e19",
+      "quantity": "foreign_explore_mass",
+      "kind": "scalar",
+      "approx_reduced": 0.2033249183825205,
+      "exact_reduced": 0.2029081232984279,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.001754431920967964,
+      "agrees": true
+    },
+    {
+      "target": "e19",
+      "quantity": "positive_control_passed",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": false,
+      "committed_full_scale": true,
+      "sem_across_cells": NaN,
+      "agrees": false
+    },
+    {
+      "target": "e19",
+      "quantity": "foreign_absorbed",
+      "kind": "boolean",
+      "approx_reduced": false,
+      "exact_reduced": false,
+      "committed_full_scale": false,
+      "sem_across_cells": NaN,
+      "agrees": true
+    },
+    {
+      "target": "e31",
+      "quantity": "update_tracks_mu_rho",
+      "kind": "scalar",
+      "approx_reduced": 0.8857142857142857,
+      "exact_reduced": 0.6,
+      "committed_full_scale": 0.8857142857142857,
+      "sem_across_cells": NaN,
+      "agrees": false
+    },
+    {
+      "target": "e31",
+      "quantity": "exploit_mu_gap",
+      "kind": "scalar",
+      "approx_reduced": 0.1871552862072663,
+      "exact_reduced": 0.8306060515857654,
+      "committed_full_scale": 0.18739021543200063,
+      "sem_across_cells": 0.052518450308452855,
+      "agrees": false
+    },
+    {
+      "target": "e31",
+      "quantity": "fabrication_gap",
+      "kind": "scalar",
+      "approx_reduced": 0.03125,
+      "exact_reduced": 0.0,
+      "committed_full_scale": 0.025,
+      "sem_across_cells": 0.005396688828870585,
+      "agrees": false
+    },
+    {
+      "target": "e31",
+      "quantity": "update_tracks_recovered_depth",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": false,
+      "committed_full_scale": true,
+      "sem_across_cells": NaN,
+      "agrees": false
+    },
+    {
+      "target": "e31",
+      "quantity": "dishonest_label_inflates_depth",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": true,
+      "committed_full_scale": true,
+      "sem_across_cells": NaN,
+      "agrees": true
+    },
+    {
+      "target": "e31",
+      "quantity": "mu_theta_dissociate_on_behaviour",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": true,
+      "committed_full_scale": true,
+      "sem_across_cells": NaN,
+      "agrees": true
+    },
+    {
+      "target": "e32",
+      "quantity": "foreign_within_at_matched",
+      "kind": "scalar",
+      "approx_reduced": 1.265264027988561,
+      "exact_reduced": 1.264869468642791,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.10091665010847026,
+      "agrees": true
+    },
+    {
+      "target": "e32",
+      "quantity": "inexpert_within_at_matched",
+      "kind": "scalar",
+      "approx_reduced": 0.6901918340759065,
+      "exact_reduced": 0.8890890642827501,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.10091665010847026,
+      "agrees": true
+    },
+    {
+      "target": "e32",
+      "quantity": "foreign_engaged_at_matched",
+      "kind": "scalar",
+      "approx_reduced": 0.5424107142857142,
+      "exact_reduced": 0.5301339285714286,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.06397022375258683,
+      "agrees": true
+    },
+    {
+      "target": "e32",
+      "quantity": "inexpert_engaged_at_matched",
+      "kind": "scalar",
+      "approx_reduced": 0.0006696428571428,
+      "exact_reduced": 0.0005208333333333,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.06397022375258683,
+      "agrees": true
+    },
+    {
+      "target": "e32",
+      "quantity": "two_dimensions",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": true,
+      "committed_full_scale": null,
+      "sem_across_cells": NaN,
+      "agrees": true
+    },
+    {
+      "target": "e2",
+      "quantity": "ghost_as_creator_within",
+      "kind": "scalar",
+      "approx_reduced": 0.0871049843446114,
+      "exact_reduced": 0.0870835265658397,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.00496338801707195,
+      "agrees": true
+    },
+    {
+      "target": "e2",
+      "quantity": "ghost_as_creator_between",
+      "kind": "scalar",
+      "approx_reduced": 1.3645699679730383,
+      "exact_reduced": 1.3645699679730383,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.0067929448506844,
+      "agrees": true
+    },
+    {
+      "target": "e2",
+      "quantity": "ghost_as_ghost_within",
+      "kind": "scalar",
+      "approx_reduced": 1.2939258970414882,
+      "exact_reduced": 1.2940949300893418,
+      "committed_full_scale": null,
+      "sem_across_cells": 0.00972787023295545,
+      "agrees": true
+    },
+    {
+      "target": "e2",
+      "quantity": "creator_as_creator_within",
+      "kind": "scalar",
+      "approx_reduced": 1.558417847916965e-08,
+      "exact_reduced": 1.5557884754462413e-08,
+      "committed_full_scale": null,
+      "sem_across_cells": 1.4472840593415826e-08,
+      "agrees": true
+    },
+    {
+      "target": "e2",
+      "quantity": "label_induces_confidence",
+      "kind": "boolean",
+      "approx_reduced": true,
+      "exact_reduced": true,
+      "committed_full_scale": null,
+      "sem_across_cells": NaN,
+      "agrees": true
+    }
+  ],
+  "verdict": "A_VERDICT_FLIPPED_UNDER_EXACT_INFERENCE",
+  "statement": "At least one verdict is a property of the approximation rather than of the model: e19.positive_control_passed, e31.update_tracks_recovered_depth. Those claims are reported with the failure attached, in the same cell as the claim."
+}
