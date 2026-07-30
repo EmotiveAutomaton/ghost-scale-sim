@@ -204,14 +204,15 @@ The validation pass rechecked five experiments with the arithmetic done exactly 
 | E13 | yes | shared_axis | shared_axis | no |
 | E6 | yes | — | — | no |
 | E6b | yes | NOT falsified — the bias axis produces the predicted corrupt | NOT falsified — the bias axis produces the predicted corrupt | no |
+| E14 | yes | — | — | no |
 
-23 of 26 reachable experiments completed in both arms.
+24 of 26 reachable experiments completed in both arms.
 
 **These outcomes moved under the repaired model:** E19, E31. Each is reported with both values, and the original is retained.
 
 Individual verdict components that flipped: E19.positive_control_passed; E20.any_cell_crashes; E31.update_tracks_recovered_depth.
 
-**3 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34, E14, E12. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.
+**2 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34, E12. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.
 
 The withheld experiment stays withheld and was not run.
 
