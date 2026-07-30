@@ -96,9 +96,21 @@ class ExactAgent:
                  gamma: float = 16.0, action_selection: str = "deterministic",
                  use_utility: bool = True, use_states_info_gain: bool = True,
                  rng: np.random.Generator | None = None):
-        self.A = [np.asarray(A[m], dtype=float) for m in range(len(A))]
-        self.B = [np.asarray(B[f], dtype=float) for f in range(len(B))]
-        self.C = [np.asarray(C[m], dtype=float) for m in range(len(C))]
+        self.A = utils.obj_array(len(A))
+        for m in range(len(A)):
+            self.A[m] = np.asarray(A[m], dtype=float)
+        # B IS AN OBJECT ARRAY, NOT A LIST, and that is not cosmetic. pymdp's control helpers
+        # inspect ``.dtype`` on the container, so a plain list makes ``metrics.policy_efe_terms``
+        # raise AttributeError while ``metrics.epistemic_value`` succeeds and silently returns the
+        # FACTORISED answer for an exact agent. One of those is a crash and the other is the exact
+        # failure mode this whole file exists to remove. See ``efe_terms`` below for the fix to the
+        # second half.
+        self.B = utils.obj_array(len(B))
+        for f in range(len(B)):
+            self.B[f] = np.asarray(B[f], dtype=float)
+        self.C = utils.obj_array(len(C))
+        for m in range(len(C)):
+            self.C[m] = np.asarray(C[m], dtype=float)
         self.D = D
         self.num_factors = len(self.B)
         self.num_modalities = len(self.A)
@@ -182,6 +194,12 @@ class ExactAgent:
         self.q_pi = None
         self.G = None
         self._n_steps = 0
+        # THE SEQUENCE LOG-EVIDENCE, log P(o_1..o_T), accumulated as the sum of the one-step
+        # predictive normalisers. The filter already computes each one, so this is free, and it is
+        # what makes parameter fitting possible: a candidate parameter value is scored by replaying
+        # a fixed observation tape and reading this number off. Nothing else in the project can
+        # produce a likelihood for a parameter that is not a hidden state.
+        self.log_evidence = 0.0
         return self.qs
 
     # ------------------------------------------------------------------ #
@@ -217,6 +235,10 @@ class ExactAgent:
         self.qs_joint = post / total
         self.qs = self._marginals(self.qs_joint)
         self._n_steps += 1
+        # ``total`` is exactly P(o_t | o_1..o_{t-1}) under this model, because ``prior`` was
+        # normalised and the likelihood is a proper conditional. Summing the logs gives the
+        # sequence log-evidence with no extra work.
+        self.log_evidence += float(np.log(total))
         return self.qs
 
     # ------------------------------------------------------------------ #
@@ -280,6 +302,66 @@ class ExactAgent:
             action[f] = a
         self.action = action
         return action
+
+    # ------------------------------------------------------------------ #
+    # Exact counterparts of the reported EFE quantities (D-4).
+    # ------------------------------------------------------------------ #
+    def efe_terms(self, policy) -> tuple[float, float]:
+        """Exact (pragmatic, epistemic-total) for one policy.
+
+        The exact counterpart of ``metrics.policy_efe_terms``, which cannot be used on this agent:
+        it builds its predictive states from the factorised marginals, so on an exact agent it
+        would report the mean-field answer under an exact agent's name. E1 and E5 are the
+        experiments that record these, and this is what they would need to run under exact
+        inference.
+        """
+        return self._policy_terms(policy)
+
+    def epistemic_value_about(self, policy, factor: int = K.F_GOAL) -> float:
+        """Exact expected information gain about ONE factor, I(s_factor ; o), over the horizon.
+
+        This is Spec section 6's ``epistemic_value``, the quantity whose collapse to zero on
+        machine-made content is E1's claim. ``metrics.epistemic_value`` computes it from an outer
+        product of marginals; here the predictive state is the true joint, so the mutual
+        information is the real one.
+        """
+        pol = np.asarray(policy)
+        b = self.qs_joint
+        total = 0.0
+        cube_axes = tuple(i for i in range(self.num_factors) if i != factor)
+        for tau in range(pol.shape[0]):
+            b = self._transition(pol[tau]) @ b
+            prior_marg = b.reshape(self.num_states).sum(axis=cube_axes)
+            h_prior = _entropy(prior_marg)
+            # Joint predictive over observations, carrying the state axis, then the posterior
+            # marginal over the target factor for each observation cell.
+            W = b[None, :] * self._L[0]
+            for Lm in self._L[1:]:
+                W = W[..., None, :] * Lm
+            n_obs_cells = int(np.prod([Lm.shape[0] for Lm in self._L]))
+            flat = W.reshape(n_obs_cells, self._n_joint)
+            p_o = flat.sum(axis=1)
+            exp_post_h = 0.0
+            for c in np.nonzero(p_o > 1e-15)[0]:
+                post = flat[c] / p_o[c]
+                marg = post.reshape(self.num_states).sum(axis=cube_axes)
+                exp_post_h += p_o[c] * _entropy(marg)
+            total += max(h_prior - exp_post_h, 0.0)
+        return float(total)
+
+    def replay(self, tape) -> float:
+        """Score a FIXED (observation, action) tape under this agent's model; returns log-evidence.
+
+        The action sequence is imposed rather than chosen, which is the whole point. A candidate
+        parameter value changes what the agent would decide, so letting it decide would compare two
+        different observation sequences and the likelihood ratio would mean nothing. Fixing the
+        actions makes the comparison a likelihood over one dataset, which is what a fit needs.
+        """
+        self.reset()
+        for obs, action in tape:
+            self.infer_states(obs)
+            self.action = None if action is None else np.asarray(action, dtype=float)
+        return float(self.log_evidence)
 
     # Anything that would silently be approximate.
     def infer_parameters(self, *a, **k):

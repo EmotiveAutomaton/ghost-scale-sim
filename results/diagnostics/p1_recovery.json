@@ -1,0 +1,1137 @@
+{
+  "check": "P-1",
+  "question": "If the model generates data at a known parameter value, can the value be recovered from that data?",
+  "plain_language": "Before trusting a model you make it produce data with a setting you chose, then try to read the setting back out of the data. If you cannot, the setting is not measurable, and any finding that depends on it is describing an arbitrary choice rather than anything about the world. This is a routine first check and this project had never run it.",
+  "estimators": {
+    "mu": "posterior mean, read off the reader's own belief. Asks whether the READER can identify the value.",
+    "kappa": "maximum exact sequence log-evidence over a grid, on a fixed observation tape.",
+    "omega": "maximum likelihood under an ANALYST'S model containing omega, which the observer's model does not. Asks whether the value is identifiable in principle, a strictly easier question.",
+    "theta (lambda)": "matched to the observed prior drift across a sequence of encounters, because theta enters no observation likelihood at all."
+  },
+  "criteria": {
+    "min_grid": 9,
+    "min_seeds": 16,
+    "recovered_rho": 0.9,
+    "recovered_slope": [
+      0.7,
+      1.3
+    ],
+    "recovered_usable": 0.7,
+    "distinguishable_se": 2.0,
+    "tradeoff_correlation": 0.5
+  },
+  "seeds_per_grid_point": 16,
+  "marginal_invariance_precheck": {
+    "kappa": {
+      "quantity": "mean over goals of P(signal | provenance, goal)",
+      "max_abs_change_across_range": 0.64,
+      "why": "A[1] is constant in the goal, so marginalising over goals changes nothing and the parameter is fully visible in the marginal.",
+      "invariant_in_the_marginal": false
+    },
+    "omega": {
+      "quantity": "mean over foreign goals of P(feature | foreign goal, omega)",
+      "max_abs_change_across_range": 0.1440974786358234,
+      "why": "omega interpolates the whole family toward the human one, so the goal-marginal moves with it and the parameter is visible in the marginal.",
+      "invariant_in_the_marginal": false
+    },
+    "mu": {
+      "quantity": "two marginals, because they answer different questions: mean over SUB-GOALS (a design invariant, meant to be zero) and mean over GOALS (the measurement)",
+      "max_abs_change_across_range": 0.11132075471698114,
+      "subgoal_marginal_deviation": 5.551115123125783e-17,
+      "goal_marginal_deviation": 0.11132075471698114,
+      "why": "The sub-goal marginal is invariant to 5.6e-17, which is the design working rather than failing: the mode family averages exactly to the version 4 goal signature and the chains are doubly stochastic, so a deep artifact and a shallow one have identical time-averaged feature histograms and depth lives in the ORDER. The GOAL marginal is NOT invariant, at 0.111, and that is the difference between depth and the rationality parameter it replaced: version 4.5's beta was zero here by construction, which left finite-sample luck in the coupling as its only evidence channel and produced compression at both ends. Depth has a real channel through the sub-goal, which persists in time, so evidence accumulates across a block.",
+      "raw": {
+        "subgoal_marginal_deviation": 5.551115123125783e-17,
+        "full_marginal_deviation": 8.326672684688674e-17,
+        "goal_marginal_deviation": 0.11132075471698114,
+        "reading": "subgoal_marginal_deviation and full_marginal_deviation are DESIGN INVARIANTS and should be ~0: the mode family averages exactly to sig[g], so there is no depth evidence in the flat likelihood and a reader who counts features without regard to order cannot tell a deep artifact from a shallow one. goal_marginal_deviation is the E28 analogue and is a MEASUREMENT. For beta it was zero BY CONSTRUCTION, which left finite-sample luck in the (beta, goal) coupling as the only evidence channel and produced the compression at both ends. Nonzero here means mu's evidence flows through the (mu, sub-goal) coupling, and the sub-goal persists in time, so evidence accumulates across a block instead of resting on a lucky draw."
+      },
+      "invariant_in_the_marginal": false
+    },
+    "theta": {
+      "quantity": "any likelihood",
+      "max_abs_change_across_range": 0.0,
+      "why": "theta appears in no observation likelihood whatsoever. It gates what the observer carries forward between encounters, so it is invisible within a single artifact by construction and can only be seen in the trajectory of the prior across a sequence.",
+      "invariant_in_the_marginal": true
+    }
+  },
+  "recovery": [
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.1,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.2,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.30000000000000004,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.4,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.5,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.6,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.7000000000000001,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.8,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "true": 0.9,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.1,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.2,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.30000000000000004,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.4,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.5,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.6,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.7000000000000001,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.8,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "true": 0.9,
+      "recovered_mean": 0.9,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "profile_flat_fraction": 1.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.0,
+      "recovered_mean": 0.0015625,
+      "recovered_sd": 0.00625,
+      "recovered_sem": 0.0015625,
+      "profile_flat_fraction": 0.9375,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.1,
+      "recovered_mean": 0.096875,
+      "recovered_sd": 0.02015564437074637,
+      "recovered_sem": 0.005038911092686593,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.2,
+      "recovered_mean": 0.1859375,
+      "recovered_sd": 0.02230237281845439,
+      "recovered_sem": 0.005575593204613597,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.30000000000000004,
+      "recovered_mean": 0.290625,
+      "recovered_sd": 0.02393567769390846,
+      "recovered_sem": 0.005983919423477115,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.4,
+      "recovered_mean": 0.39531250000000007,
+      "recovered_sd": 0.037880018919389864,
+      "recovered_sem": 0.009470004729847466,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.5,
+      "recovered_mean": 0.4890625,
+      "recovered_sd": 0.04079292218020179,
+      "recovered_sem": 0.010198230545050448,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.6000000000000001,
+      "recovered_mean": 0.5906250000000001,
+      "recovered_sd": 0.04170831252080732,
+      "recovered_sem": 0.01042707813020183,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.7000000000000001,
+      "recovered_mean": 0.6890625,
+      "recovered_sd": 0.03158157426939536,
+      "recovered_sem": 0.00789539356734884,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.8,
+      "recovered_mean": 0.7890625,
+      "recovered_sd": 0.028822372675868797,
+      "recovered_sem": 0.007205593168967199,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 0.9,
+      "recovered_mean": 0.8890625,
+      "recovered_sd": 0.030233466556119554,
+      "recovered_sem": 0.007558366639029888,
+      "profile_flat_fraction": 0.0,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "omega",
+      "dataset": "foreign feature draws, analyst's model",
+      "true": 1.0,
+      "recovered_mean": 0.996875,
+      "recovered_sd": 0.008539125638299635,
+      "recovered_sem": 0.002134781409574909,
+      "profile_flat_fraction": 0.875,
+      "median_curvature": NaN,
+      "n_seeds": 16
+    },
+    {
+      "parameter": "mu",
+      "dataset": "the reader's own posterior, exact inference",
+      "true": 1.0,
+      "recovered_mean": 1.5573536054054378,
+      "recovered_sd": 0.07777620350322205,
+      "recovered_sem": 0.02749804045603661,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 8
+    },
+    {
+      "parameter": "mu",
+      "dataset": "the reader's own posterior, exact inference",
+      "true": 2.0,
+      "recovered_mean": 2.140675666327624,
+      "recovered_sd": 0.24499054136446294,
+      "recovered_sem": 0.08661723656268755,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 8
+    },
+    {
+      "parameter": "mu",
+      "dataset": "the reader's own posterior, exact inference",
+      "true": 3.0,
+      "recovered_mean": 2.1932505991615208,
+      "recovered_sd": 0.2374738145250714,
+      "recovered_sem": 0.08395967230245721,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 8
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 0.0,
+      "recovered_mean": 0.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "mean_observed_drift": 1.1911508052895678,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 1.0,
+      "recovered_mean": 1.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "mean_observed_drift": 0.010084654905139668,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 2.0,
+      "recovered_mean": 2.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "mean_observed_drift": 2.3198571536813353e-05,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 3.0,
+      "recovered_mean": 3.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "mean_observed_drift": 4.425654538544725e-08,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 4.0,
+      "recovered_mean": 4.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "mean_observed_drift": 7.970211631950327e-11,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 5.0,
+      "recovered_mean": 5.0,
+      "recovered_sd": 0.0,
+      "recovered_sem": 0.0,
+      "mean_observed_drift": -3.841724239381637e-12,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 6.0,
+      "recovered_mean": 6.119791666666667,
+      "recovered_sd": 0.10259226876870926,
+      "recovered_sem": 0.05129613438435463,
+      "mean_observed_drift": -3.99963623688278e-12,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 7.0,
+      "recovered_mean": 7.104166666666667,
+      "recovered_sd": 0.1839950180484968,
+      "recovered_sem": 0.0919975090242484,
+      "mean_observed_drift": -3.999949933432206e-12,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": "prior drift over a sequence of encounters",
+      "true": 8.0,
+      "recovered_mean": 7.182291666666667,
+      "recovered_sd": 0.3273662965694998,
+      "recovered_sem": 0.1636831482847499,
+      "mean_observed_drift": -3.999944162689888e-12,
+      "profile_flat_fraction": NaN,
+      "median_curvature": NaN,
+      "n_seeds": 4
+    }
+  ],
+  "scores": [
+    {
+      "parameter": "kappa",
+      "dataset": "honest labels throughout",
+      "grid_points": 9,
+      "grid": [
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6,
+        0.7000000000000001,
+        0.8,
+        0.9
+      ],
+      "rank_correlation": NaN,
+      "slope": -3.9900402004936986e-16,
+      "usable_range_fraction": 0.0,
+      "distinguishable_steps": [
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.2,
+          "to": 0.30000000000000004,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.30000000000000004,
+          "to": 0.4,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.5,
+          "to": 0.6,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.6,
+          "to": 0.7000000000000001,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.7000000000000001,
+          "to": 0.8,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        }
+      ],
+      "bias_by_point": [
+        {
+          "true": 0.1,
+          "recovered": 0.9,
+          "bias": 0.8
+        },
+        {
+          "true": 0.2,
+          "recovered": 0.9,
+          "bias": 0.7
+        },
+        {
+          "true": 0.30000000000000004,
+          "recovered": 0.9,
+          "bias": 0.6
+        },
+        {
+          "true": 0.4,
+          "recovered": 0.9,
+          "bias": 0.5
+        },
+        {
+          "true": 0.5,
+          "recovered": 0.9,
+          "bias": 0.4
+        },
+        {
+          "true": 0.6,
+          "recovered": 0.9,
+          "bias": 0.30000000000000004
+        },
+        {
+          "true": 0.7000000000000001,
+          "recovered": 0.9,
+          "bias": 0.19999999999999996
+        },
+        {
+          "true": 0.8,
+          "recovered": 0.9,
+          "bias": 0.09999999999999998
+        },
+        {
+          "true": 0.9,
+          "recovered": 0.9,
+          "bias": 0.0
+        }
+      ],
+      "mean_abs_bias": 0.4,
+      "classification": "UNIDENTIFIABLE",
+      "grid_meets_spec": true
+    },
+    {
+      "parameter": "kappa",
+      "dataset": "machine work passed off as human",
+      "grid_points": 9,
+      "grid": [
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6,
+        0.7000000000000001,
+        0.8,
+        0.9
+      ],
+      "rank_correlation": NaN,
+      "slope": -3.9900402004936986e-16,
+      "usable_range_fraction": 0.0,
+      "distinguishable_steps": [
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.2,
+          "to": 0.30000000000000004,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.30000000000000004,
+          "to": 0.4,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.5,
+          "to": 0.6,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.6,
+          "to": 0.7000000000000001,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.7000000000000001,
+          "to": 0.8,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "gap": 0.0,
+          "pooled_se": 0.0,
+          "distinguishable": false
+        }
+      ],
+      "bias_by_point": [
+        {
+          "true": 0.1,
+          "recovered": 0.9,
+          "bias": 0.8
+        },
+        {
+          "true": 0.2,
+          "recovered": 0.9,
+          "bias": 0.7
+        },
+        {
+          "true": 0.30000000000000004,
+          "recovered": 0.9,
+          "bias": 0.6
+        },
+        {
+          "true": 0.4,
+          "recovered": 0.9,
+          "bias": 0.5
+        },
+        {
+          "true": 0.5,
+          "recovered": 0.9,
+          "bias": 0.4
+        },
+        {
+          "true": 0.6,
+          "recovered": 0.9,
+          "bias": 0.30000000000000004
+        },
+        {
+          "true": 0.7000000000000001,
+          "recovered": 0.9,
+          "bias": 0.19999999999999996
+        },
+        {
+          "true": 0.8,
+          "recovered": 0.9,
+          "bias": 0.09999999999999998
+        },
+        {
+          "true": 0.9,
+          "recovered": 0.9,
+          "bias": 0.0
+        }
+      ],
+      "mean_abs_bias": 0.4,
+      "classification": "UNIDENTIFIABLE",
+      "grid_meets_spec": true
+    },
+    {
+      "parameter": "omega",
+      "dataset": null,
+      "grid_points": 11,
+      "grid": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "rank_correlation": 1.0,
+      "slope": 0.9951704545454545,
+      "usable_range_fraction": 1.0,
+      "distinguishable_steps": [
+        {
+          "from": 0.0,
+          "to": 0.1,
+          "gap": 0.09531250000000001,
+          "pooled_se": 0.0052756071925419154,
+          "distinguishable": true
+        },
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "gap": 0.0890625,
+          "pooled_se": 0.007515175618928231,
+          "distinguishable": true
+        },
+        {
+          "from": 0.2,
+          "to": 0.30000000000000004,
+          "gap": 0.10468750000000002,
+          "pooled_se": 0.008178907705189002,
+          "distinguishable": true
+        },
+        {
+          "from": 0.30000000000000004,
+          "to": 0.4,
+          "gap": 0.10468750000000004,
+          "pooled_se": 0.011202155205584327,
+          "distinguishable": true
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "gap": 0.09374999999999994,
+          "pooled_se": 0.013917072099882697,
+          "distinguishable": true
+        },
+        {
+          "from": 0.5,
+          "to": 0.6000000000000001,
+          "gap": 0.10156250000000006,
+          "pooled_se": 0.014585193333766037,
+          "distinguishable": true
+        },
+        {
+          "from": 0.6000000000000001,
+          "to": 0.7000000000000001,
+          "gap": 0.09843749999999996,
+          "pooled_se": 0.013079036582128927,
+          "distinguishable": true
+        },
+        {
+          "from": 0.7000000000000001,
+          "to": 0.8,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.010689144610304428,
+          "distinguishable": true
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "gap": 0.09999999999999998,
+          "pooled_se": 0.010442675862376787,
+          "distinguishable": true
+        },
+        {
+          "from": 0.9,
+          "to": 1.0,
+          "gap": 0.10781249999999998,
+          "pooled_se": 0.007854056144226792,
+          "distinguishable": true
+        }
+      ],
+      "bias_by_point": [
+        {
+          "true": 0.0,
+          "recovered": 0.0015625,
+          "bias": 0.0015625
+        },
+        {
+          "true": 0.1,
+          "recovered": 0.096875,
+          "bias": -0.0031250000000000028
+        },
+        {
+          "true": 0.2,
+          "recovered": 0.1859375,
+          "bias": -0.014062500000000006
+        },
+        {
+          "true": 0.30000000000000004,
+          "recovered": 0.290625,
+          "bias": -0.009375000000000022
+        },
+        {
+          "true": 0.4,
+          "recovered": 0.39531250000000007,
+          "bias": -0.004687499999999956
+        },
+        {
+          "true": 0.5,
+          "recovered": 0.4890625,
+          "bias": -0.010937499999999989
+        },
+        {
+          "true": 0.6000000000000001,
+          "recovered": 0.5906250000000001,
+          "bias": -0.009375000000000022
+        },
+        {
+          "true": 0.7000000000000001,
+          "recovered": 0.6890625,
+          "bias": -0.010937500000000044
+        },
+        {
+          "true": 0.8,
+          "recovered": 0.7890625,
+          "bias": -0.010937500000000044
+        },
+        {
+          "true": 0.9,
+          "recovered": 0.8890625,
+          "bias": -0.010937500000000044
+        },
+        {
+          "true": 1.0,
+          "recovered": 0.996875,
+          "bias": -0.0031250000000000444
+        }
+      ],
+      "mean_abs_bias": 0.008096590909090927,
+      "classification": "RECOVERED",
+      "grid_meets_spec": true
+    },
+    {
+      "parameter": "mu",
+      "dataset": null,
+      "grid_points": 3,
+      "grid": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rank_correlation": 1.0,
+      "slope": 0.31794849687804144,
+      "usable_range_fraction": 0.5,
+      "distinguishable_steps": [
+        {
+          "from": 1.0,
+          "to": 2.0,
+          "gap": 0.5833220609221863,
+          "pooled_se": 0.0908773233467976,
+          "distinguishable": true
+        },
+        {
+          "from": 2.0,
+          "to": 3.0,
+          "gap": 0.05257493283389669,
+          "pooled_se": 0.12063072677760248,
+          "distinguishable": false
+        }
+      ],
+      "bias_by_point": [
+        {
+          "true": 1.0,
+          "recovered": 1.5573536054054378,
+          "bias": 0.5573536054054378
+        },
+        {
+          "true": 2.0,
+          "recovered": 2.140675666327624,
+          "bias": 0.14067566632762407
+        },
+        {
+          "true": 3.0,
+          "recovered": 2.1932505991615208,
+          "bias": -0.8067494008384792
+        }
+      ],
+      "mean_abs_bias": 0.5015928908571804,
+      "classification": "COMPRESSED",
+      "grid_meets_spec": false
+    },
+    {
+      "parameter": "theta (lambda)",
+      "dataset": null,
+      "grid_points": 9,
+      "grid": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0
+      ],
+      "rank_correlation": 1.0,
+      "slope": 0.9546875,
+      "usable_range_fraction": 0.875,
+      "distinguishable_steps": [
+        {
+          "from": 0.0,
+          "to": 1.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 1.0,
+          "to": 2.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 2.0,
+          "to": 3.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 3.0,
+          "to": 4.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 4.0,
+          "to": 5.0,
+          "gap": 1.0,
+          "pooled_se": 0.0,
+          "distinguishable": true
+        },
+        {
+          "from": 5.0,
+          "to": 6.0,
+          "gap": 1.119791666666667,
+          "pooled_se": 0.05129613438435463,
+          "distinguishable": true
+        },
+        {
+          "from": 6.0,
+          "to": 7.0,
+          "gap": 0.984375,
+          "pooled_se": 0.10533202300081602,
+          "distinguishable": true
+        },
+        {
+          "from": 7.0,
+          "to": 8.0,
+          "gap": 0.078125,
+          "pooled_se": 0.18776505185756504,
+          "distinguishable": false
+        }
+      ],
+      "bias_by_point": [
+        {
+          "true": 0.0,
+          "recovered": 0.0,
+          "bias": 0.0
+        },
+        {
+          "true": 1.0,
+          "recovered": 1.0,
+          "bias": 0.0
+        },
+        {
+          "true": 2.0,
+          "recovered": 2.0,
+          "bias": 0.0
+        },
+        {
+          "true": 3.0,
+          "recovered": 3.0,
+          "bias": 0.0
+        },
+        {
+          "true": 4.0,
+          "recovered": 4.0,
+          "bias": 0.0
+        },
+        {
+          "true": 5.0,
+          "recovered": 5.0,
+          "bias": 0.0
+        },
+        {
+          "true": 6.0,
+          "recovered": 6.119791666666667,
+          "bias": 0.11979166666666696
+        },
+        {
+          "true": 7.0,
+          "recovered": 7.104166666666667,
+          "bias": 0.10416666666666696
+        },
+        {
+          "true": 8.0,
+          "recovered": 7.182291666666667,
+          "bias": -0.817708333333333
+        }
+      ],
+      "mean_abs_bias": 0.11574074074074077,
+      "classification": "RECOVERED",
+      "grid_meets_spec": true
+    }
+  ],
+  "pair_checks": [
+    {
+      "pair": "(kappa, omega)",
+      "runnable": true,
+      "n_draws": 32,
+      "error_correlation": 0.11246408412936253,
+      "kappa_error_sd": 0.22741756748325315,
+      "omega_error_sd": 0.028254908312539254,
+      "trading_off": false,
+      "note": "a strong correlation between the two recovery errors would mean neither is separately identifiable whatever the single-parameter sweeps say"
+    },
+    {
+      "pair": "(mu, effort)",
+      "runnable": false,
+      "error_correlation": NaN,
+      "trading_off": null,
+      "note": "NOT RUNNABLE, and the reason is the finding. Effort has no estimator anywhere in this model: no agent carries a posterior over it and it enters no likelihood an analyst could profile, because version 5 replaced it as a hidden state with depth. So the joint recovery of the pair cannot be computed at all. What CAN be said about their entanglement is what the construction audit already says: with the effort axis pinned at its maximum, depth still separates by 0.91, so the depth estimate is not the effort knob renamed."
+    }
+  ],
+  "unidentifiable": [
+    "kappa (honest labels throughout)",
+    "kappa (machine work passed off as human)"
+  ],
+  "compressed": [
+    "mu"
+  ],
+  "recovered": [
+    "omega",
+    "theta (lambda)"
+  ],
+  "verdict": "AT_LEAST_ONE_LOAD_BEARING_PARAMETER_IS_UNIDENTIFIABLE",
+  "statement": "Four parameters, three estimators, and four different answers.\n\n**kappa, honest labels throughout: UNIDENTIFIABLE.** Rank correlation not defined, slope -0.00, usable range 0% of the swept span. Reading: the estimate is CONSTANT across the whole grid, so there is no ordering to correlate. The likelihood is monotone in the parameter rather than peaked, and the estimate runs to whichever end of the grid the data pushes it. No dataset this model can generate locates this parameter.\n\n**kappa, machine work passed off as human: UNIDENTIFIABLE.** Rank correlation not defined, slope -0.00, usable range 0% of the swept span. Reading: the estimate is CONSTANT across the whole grid, so there is no ordering to correlate. The likelihood is monotone in the parameter rather than peaked, and the estimate runs to whichever end of the grid the data pushes it. No dataset this model can generate locates this parameter.\n\n**omega: RECOVERED.** Rank correlation 1.00, slope 1.00, usable range 100% of the swept span. Reading: ordering, magnitude and range all hold.\n\n**mu: COMPRESSED.** Rank correlation 1.00, slope 0.32, usable range 50% of the swept span. Reading: the ordering survives perfectly and the magnitude does not: a slope of 0.32 means a true change is reported as roughly a third of itself. Directions transfer, magnitudes do not, which is the same conclusion the independent rebuild reached about the label effect by a different route.\n\n**theta (lambda): RECOVERED.** Rank correlation 1.00, slope 0.95, usable range 88% of the swept span. Reading: ordering, magnitude and range all hold.\n\nA parameter classified unidentifiable cannot support a claim. That applies to kappa (honest labels throughout), kappa (machine work passed off as human), and the claims resting on it have to be restated.\n\nThe cheap pre-check the spec asks for is necessary and NOT sufficient, and this pass establishes that. Trust passes it comfortably, its likelihood is fully visible in the goal marginal, and it is still not recoverable. The reason is invisible to the pre-check: the likelihood is MONOTONE in trust rather than peaked, because a sharper label channel makes whatever signal arrived more probable under some provenance and the reader is free to move its provenance belief to accommodate it. So the estimate runs to whichever end of the grid the data pushes it, and it runs to opposite ends on the two datasets, which is the signature.\n\nOne of the two pairs the spec names cannot be run at all: (mu, effort), because version 5 replaced it as a hidden state with depth. So the joint recovery of the pair cannot be computed at all. What CAN be said about their entanglement is what the construction audit already says: with the effort axis pinned at its maximum, depth still separates by 0.91, so the depth estimate is not the effort knob renamed."
+}

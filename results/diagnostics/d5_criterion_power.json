@@ -1,0 +1,132 @@
+{
+  "check": "D-5",
+  "question": "How many independent things does each pre-registered criterion actually see?",
+  "plain_language": "A measurement rule can be written down in advance, applied exactly, and still be incapable of telling its two answers apart, because it is averaging over too few things. This counts, for every headline criterion in the project, how many independent units it is computed over and how many were available.",
+  "criteria": {
+    "min_independent_units": 12
+  },
+  "table": [
+    {
+      "experiment": "E31",
+      "criterion": "update magnitude tracks recovered depth",
+      "statistic": "Spearman rank correlation",
+      "computed_over": "the open-gate cells: 2 content levels x 3 labels",
+      "units": 6,
+      "units_available": 7200,
+      "note": "the project's public headline. The validation pass measured 0.886 approximate against 0.600 exact and called it a flip; both sit inside what six points give by chance. Per-reader pairs were available and not used.",
+      "under_powered": true,
+      "units_wasted": 7194,
+      "could_use_more": true
+    },
+    {
+      "experiment": "E20",
+      "criterion": "confident fabrication peaks in the interior",
+      "statistic": "argmax over a grid, plus an interiority test",
+      "computed_over": "the 8 points of the overlap grid",
+      "units": 8,
+      "units_available": 8,
+      "note": "an argmax over 8 grid points is the design, not a shortfall: the claim IS about which grid point is highest. What it cannot do is put an interval on the location, and the location is what every downstream claim is anchored to.",
+      "under_powered": true,
+      "units_wasted": 0,
+      "could_use_more": false
+    },
+    {
+      "experiment": "E20",
+      "criterion": "the engagement crossing point",
+      "statistic": "linear interpolation of the 0.50 crossing, with an across-seed SE",
+      "computed_over": "60 seed replicates per grid point",
+      "units": 60,
+      "units_available": 60,
+      "note": "version 4.5's deviation 6 raised the seed count from 20 to 60 precisely because the crossing sat inside its own standard error. That is the right response and the number is adequately powered.",
+      "under_powered": false,
+      "units_wasted": 0,
+      "could_use_more": false
+    },
+    {
+      "experiment": "E15",
+      "criterion": "the competence transition is a knee, not a cliff",
+      "statistic": "AIC comparison of three fits, plus a width-versus-evidence test",
+      "computed_over": "15 grid points on the inexpertise axis, at 4 evidence levels",
+      "units": 15,
+      "units_available": 15,
+      "note": "adequate for a shape comparison; the width test is the load-bearing part.",
+      "under_powered": false,
+      "units_wasted": 0,
+      "could_use_more": false
+    },
+    {
+      "experiment": "E17",
+      "criterion": "invention is graded by opacity",
+      "statistic": "tie-aware weak monotonicity across tiers",
+      "computed_over": "4 provenance tiers",
+      "units": 4,
+      "units_available": 4,
+      "note": "four tiers give three steps, which is the minimum a monotonicity claim can be made on. The framework has four tiers, so this is a ceiling rather than a choice, and the claim should be stated as an ordering rather than a trend.",
+      "under_powered": true,
+      "units_wasted": 0,
+      "could_use_more": false
+    },
+    {
+      "experiment": "N21",
+      "criterion": "depth recovery is not effort recovery",
+      "statistic": "ratio of two simple effects",
+      "computed_over": "the 4 cells of a 2 x 2",
+      "units": 4,
+      "units_available": 1920,
+      "note": "a ratio of differences between four cell means, with no interval. The validation pass found this verdict reverses under exact inference, and with four cells there is no way to say whether the reversal is real.",
+      "under_powered": true,
+      "units_wasted": 1916,
+      "could_use_more": true
+    },
+    {
+      "experiment": "E21",
+      "criterion": "a counting classifier reproduces the dissociation",
+      "statistic": "comparison of two cell means against the full model's",
+      "computed_over": "3 arms x 20 seeds",
+      "units": 60,
+      "units_available": 12000,
+      "note": "adequately powered at the seed level.",
+      "under_powered": false,
+      "units_wasted": 11940,
+      "could_use_more": true
+    },
+    {
+      "experiment": "E32",
+      "criterion": "foreign content and an unskilled reader differ",
+      "statistic": "5 measures compared at matched overlap, each against a range fraction",
+      "computed_over": "6 matched overlap levels x 2 arms",
+      "units": 12,
+      "units_available": 72000,
+      "note": "twelve cells for five measures. It survived exact inference on all five, which is the strongest thing a small denominator can be asked to do.",
+      "under_powered": false,
+      "units_wasted": 71988,
+      "could_use_more": true
+    },
+    {
+      "experiment": "E30",
+      "criterion": "depth changes how much the reader takes on",
+      "statistic": "regression of update magnitude on depth level",
+      "computed_over": "3 depth levels",
+      "units": 3,
+      "units_available": 3600,
+      "note": "three levels, two of which the experiment itself reports as indistinguishable from each other. That leaves two, and a null on two points is not a null.",
+      "under_powered": true,
+      "units_wasted": 3597,
+      "could_use_more": true
+    }
+  ],
+  "under_powered": [
+    "E31: update magnitude tracks recovered depth",
+    "E20: confident fabrication peaks in the interior",
+    "E17: invention is graded by opacity",
+    "N21: depth recovery is not effort recovery",
+    "E30: depth changes how much the reader takes on"
+  ],
+  "under_powered_with_data_available": [
+    "E31: update magnitude tracks recovered depth",
+    "N21: depth recovery is not effort recovery",
+    "E30: depth changes how much the reader takes on"
+  ],
+  "verdict": "SOME_CRITERIA_CANNOT_SEPARATE_THEIR_OWN_OUTCOMES",
+  "statement": "5 of 9 primary criteria are computed over fewer than 12 independent units, which is too few for the statistic each one uses to separate its two outcomes: E31 update magnitude tracks recovered depth (6 units); E20 confident fabrication peaks in the interior (8 units); E17 invention is graded by opacity (4 units); N21 depth recovery is not effort recovery (4 units); E30 depth changes how much the reader takes on (3 units).\n\n3 of those had more data available and did not use it. The clearest case is the two-gates result, whose rank correlation runs over six cells while 2,400 per-reader pairs sit in the same run. That is the criterion the project's public headline rests on, and it is also the one the validation pass reported as flipping under exact inference. Both the 0.886 and the 0.600 are inside what six points produce by chance, so the honest statement is not that the verdict flipped but that the criterion was never able to tell.\n\nThe remaining cases are ceilings rather than choices: four provenance tiers and three depth levels are what the framework has. Those claims should be stated as orderings rather than as trends, which is a smaller claim and an accurate one."
+}

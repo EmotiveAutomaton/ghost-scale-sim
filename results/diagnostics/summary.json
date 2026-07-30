@@ -1,0 +1,46 @@
+{
+  "quick": false,
+  "criteria_hash": "c07837a57450e33469a00fe42f6dbdc1e03e7063c9d5a7138a63970154059309",
+  "scale": {
+    "p1_seeds": 16,
+    "p2_readers": 60,
+    "p2_seeds": 6,
+    "d2_readers": 80,
+    "d2_seeds": 6
+  },
+  "stages": {
+    "1": {
+      "title": "the cheap checks: D-1 channels, D-3 disagreement, D-4 coverage, D-5 power, D-6 seeds",
+      "seconds": 35.4,
+      "verdicts": {
+        "d1": "LABEL_WINS_AT_THE_DEFAULT_WITH_MARGIN",
+        "d3": "DISAGREEMENT_NUMBER_IS_NOT_IDENTIFIED_ON_ITS_OWN",
+        "d4": "COVERAGE_GAP_AND_THE_SHORTCUT_DRIFTS",
+        "d5": "SOME_CRITERIA_CANNOT_SEPARATE_THEIR_OWN_OUTCOMES",
+        "d6": "COLLISIONS_ARE_CROSS_CELL_ONLY_AND_BENIGN_IN_DIRECTION"
+      }
+    },
+    "2": {
+      "title": "P-1 parameter recovery",
+      "seconds": 26.4,
+      "verdicts": {
+        "p1": "AT_LEAST_ONE_LOAD_BEARING_PARAMETER_IS_UNIDENTIFIABLE"
+      }
+    },
+    "3": {
+      "title": "P-2 the goal-difficulty probe",
+      "seconds": 18.9,
+      "verdicts": {
+        "p2": "REGIME_FOUND"
+      }
+    },
+    "4": {
+      "title": "D-2 the uptake response curve",
+      "seconds": 17.0,
+      "verdicts": {
+        "d2": "UPTAKE_IS_NON_MONOTONE_IN_RECOVERY"
+      }
+    }
+  },
+  "total_seconds": 97.7
+}

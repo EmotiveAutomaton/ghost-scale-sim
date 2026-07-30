@@ -26,6 +26,19 @@ arithmetic and do not survive its removal, and the one result rebuilt independen
 description reproduced the mechanism but not the size of the effect. Details in
 [VALIDATION.md](VALIDATION.md), and each affected row of the table below carries its own status.
 
+**A second pass then checked the instruments themselves**, which is a different question: not whether
+the recorded answers can be trusted, but whether the measurements can answer at all. It found four
+things worth knowing before any of this is read closely. **Trust in the label cannot be measured** at
+all: no data this model generates locates it, so it is a modelling choice rather than a quantity.
+**Reading the label and reading the work are two competing streams of evidence** that arrive at every
+glance and disagree on a lie, and which one wins is decided by an inequality with a crossover at trust
+0.54, so the trust exploit is a claim about labels trusted above that rather than about labels.
+**The amount a reader takes on is U-shaped in how well it read the work**, because a confidently
+wrong reader has moved as far from its starting point as a correct one, which is a better explanation
+of one flat result than the one on record. And **the disagreement figure cannot be read on its own**,
+because confident readers who differ and unsure readers who are guessing produce the same number. All
+of it is in [DIAGNOSTICS.md](DIAGNOSTICS.md).
+
 ## A claim this repository withdrew
 
 The framework used to say that producing confident, mutually contradictory readings of empty
@@ -85,17 +98,19 @@ caught seven times.
 literature search done specifically to check whether any of this was already known. Nothing in that
 column informed any design. It is a coherence check, not evidence.
 
-**The "validation" column** records what the pass in [VALIDATION.md](VALIDATION.md) did to the row.
-"Not individually checked" means exactly that: the pass covered five headline families and the
-checks that could be run across all of them, and it did not re-run everything. A blank would read
-as "fine" to anyone who did not look.
+**The "later checking" column** records what the two subsequent passes did to the row: the
+validation pass in [VALIDATION.md](VALIDATION.md), which asked whether the answer can be trusted, and
+the diagnostics pass in [DIAGNOSTICS.md](DIAGNOSTICS.md), which asked whether the instrument could
+answer at all. "Not individually checked" means exactly that: between them they covered five headline
+families and the checks that generalise, and they did not re-run everything. A blank would read as
+"fine" to anyone who did not look.
 
-| The question | What came back | Found afterward | Validation |
+| The question | What came back | Found afterward | Later checking |
 |---|---|---|---|
 | **Does a viewer give up on something made without a purpose behind it?** | Yes, and it falls out of ordinary cost-benefit reasoning. No special mechanism for disliking machines was needed, and none was built in. | — | Superseded. This holds under goal-empty content and inverts under goal-foreign, which is the better model. See the row on disengagement below. |
-| **If you lie about who made something, what happens to the viewer?** | Every viewer becomes confident. No two agree on anything. Told the truth about the same object, they become appropriately unsure instead. | Well replicated. Several studies hold the artwork constant and change only the stated author, and find the same collapse in appreciation. Mind-perception mediates it. | **Survives exact inference** to four decimal places, and survives a different seed block and double scale. **But the confident half is architectural:** 64% of randomly parameterised models of this shape reproduce it, and the disagreement half requires a specific design decision. See below. |
+| **If you lie about who made something, what happens to the viewer?** | Every viewer becomes confident. No two agree on anything. Told the truth about the same object, they become appropriately unsure instead. | Well replicated. Several studies hold the artwork constant and change only the stated author, and find the same collapse in appreciation. Mind-perception mediates it. | **Survives exact inference** to four decimal places, and survives a different seed block and double scale. **But the confident half is architectural:** 64% of randomly parameterised models of this shape reproduce it, and the disagreement half requires a specific design decision. Diagnostics adds two limits. The effect is a race between the label and the content, both arriving every glance, and it only goes this way above trust 0.54; below that the content wins and the reader ends up believing the truth. And **trust itself cannot be measured** from anything this model generates, so "how much a reader trusts a label" is a setting rather than a quantity. |
 | **Does the labelling scheme pay for itself?** | Roughly halves wasted effort. Costs one to three points of accuracy on genuinely human work, because a label-aware viewer occasionally walks away from something real. | — | Not individually checked. |
-| **Where exactly does invented meaning happen?** | Trust has a sharp switch, not a slope: below roughly one-fifth trust in the label, invention stops. Even a fully sceptical viewer with no label at all invents about one time in five. | — | Not individually checked. Trust is one of the parameters swept in the robustness matrix, and the label result holds across it. |
+| **Where exactly does invented meaning happen?** | Trust has a sharp switch, not a slope: below roughly one-fifth trust in the label, invention stops. Even a fully sceptical viewer with no label at all invents about one time in five. | — | Not re-run, but diagnostics locates a switch of its own nearby and it is not the same one: the label channel stops beating the content channel at trust 0.54, computed in closed form from the transparency values. A threshold in this region should be attributed to that race before it is attributed to anything about trust. |
 | **Is trust in provenance just general decisiveness renamed?** | No. Trust changes the *gap* between how a viewer treats human and machine work. Decisiveness only moves the overall level and never produces the gap. | — | Not individually checked. |
 | **Can you learn to spot hollow content without being told?** | No. The learner folds machine structure into its picture of what humans are like, and loses about a third of its ability to read genuine work. With honest labels it builds a clean picture quickly. | Model collapse is established in machine learning. No human equivalent has been measured. | Not individually checked. The exact-inference solver does not support the learning path, so this one could not be re-run under it, and that gap is real. |
 | **Are there two different kinds of damage?** | Yes, separable. Absorbing bad material scales with how much of it there is. Not absorbing good material does not. It is fully present even at zero contamination, because it is driven by walking away rather than by what is in the pile. | **Strong support for the second kind.** Cognitive offloading reduces engagement including self-monitoring; skipping effort impairs skill acquisition; and users perform worse than never-users once the tools are removed. Almost nothing on the first kind. | Not individually checked. |
@@ -104,7 +119,7 @@ as "fine" to anyone who did not look.
 | **How much labelling is enough?** | About a third of machine content, **but only for viewers who know the labelling convention exists.** Viewers who do not know need three-quarters, and never build a reliable picture at any coverage. | **Directly relevant, and it complicates us.** The implied truth effect: warning-labelling *some* false headlines makes the unlabelled ones look truer. Replicated for AI content as an implied authenticity effect. Same inference, opposite valence. The literature calls coverage the key variable and has never produced a threshold. | Not individually checked. The number is a lower bound by construction: the convention-aware reader is handed the true coverage, which is the most generous assumption available. |
 | **Does invention scale with how hollow something is?** | Yes, smoothly. Telling the truth about hollow content converts near-certainty into honest uncertainty. | — | Not individually checked, but its GHOST cell agrees with the label-effect result to four decimal places across two versions. |
 | **Is mislabelling symmetric?** | No. Same confidence either way, but the disagreement differs enormously. Human work called machine-made is still read correctly. Machine work called human produces maximum disagreement. | **Direction holds, consequences reverse.** Expert artists detect AI images well but produce more false accusations than automated tools, and false accusation is socially costly. We measure damage to understanding; the world measures damage to people. | Not individually checked. |
-| **How miscalibrated does a false label make you?** | Every one of four thousand viewers landed in the highest confidence band while performing at chance. Not a bad tail. Unanimous near-certainty about nothing. | — | Not individually checked. It is a restatement of the label-effect row, so it inherits that row's architecture-dependence. |
+| **How miscalibrated does a false label make you?** | Every one of four thousand viewers landed in the highest confidence band while performing at chance. Not a bad tail. Unanimous near-certainty about nothing. | — | Not individually checked. It is a restatement of the label-effect row, so it inherits both that row's architecture-dependence and its trust threshold. |
 | **Does the collapse survive a more generous set of explanations?** | Yes. Adding "they were just exploring" as an available explanation absorbed exploratory *human* work convincingly and did nothing at all for machine work. It was chosen *less often than random guessing*. | — | **Does not survive exact inference.** The experiment's own positive control fails once the shortcut is removed, which makes the verdict inconclusive rather than reversed. This is the most damaging single finding of the pass and it is the reason the row above it is now the load-bearing one. |
 | **Do viewers actually disengage from machine content, or keep paying?** | **They keep paying.** Content with real structure the viewer cannot parse holds attention indefinitely, because every look keeps promising an answer that never arrives. This inverts the earlier prediction. | **One suggestive hit.** Eye-tracking found AI-labelled artworks produce more dispersed gaze. Dispersed is not disengaged, it is searching without settling. | The measurement survives exact inference (attention 0.683 approximate against 0.682 exact). The *verdict* it was reported inside does not; see the row above. |
 | **Where along the readability axis does it break?** | In the middle, not at the empty end. Invention peaks where the content is about a tenth readable: enough familiar structure to make an explanation seem available, not enough to make it right. **The collapse and the invention peak occupy the same narrow band**, which the framework had always treated as two separate phenomena. | — | **The strongest result in the project after validation.** The peak sits at the same place under exact inference, in all seventeen cells of the robustness sweep, on a disjoint seed block, and at double scale. Its axis is downstream of a design decision rather than a measurement, and that is stated in full in [VALIDATION.md](VALIDATION.md). |
@@ -113,8 +128,8 @@ as "fine" to anyone who did not look.
 | **Is unreadable content the same as an unskilled reader?** | No, and they are opposites. At an identical information deficit, the unskilled reader quits almost immediately and feels reasonably settled; the expert facing unreadable content keeps working and stays lost. **The second dimension is whether you can tell you are failing.** A badly aimed template fails silently, out-of-range content fails loudly. **And the unskilled reader of human work is substantially more accurate than the expert reader of machine work.** | — | **Survives exact inference** on all five measures and on the verdict. |
 | **Can a viewer know a maker better than the maker knows themselves?** | Yes, and the margin grows the more wrong the maker's self-account is. The viewer's accuracy stays flat as the maker's self-report degrades to nothing. *Scope: the viewer is told how unreliable the report is, so this is a calibrated reader discounting a known-bad source.* | — | Not individually checked. |
 | **Does self-blindness leave a mark on the work?** | **Yes on the object, no to the viewer.** Work made by a maker driven by something they cannot see is measurably marked; work by a liar, or by a system with no self-model, is not. But no viewer in this model can tell the three apart, because the readings differ in the fourth decimal place. **The mark exists and is unreadable**, which is a different result from there being no mark, and only measuring the object directly could distinguish them. | — | Not individually checked. |
-| **Does how much thought went in change how much you take away?** | **Inconclusive, and the construction is at fault.** Depth was visible and absorption was flat, but the measure written down in advance could not have moved, because depth was deliberately built so the goal is equally readable at every level. Two of the three depth levels also turned out indistinguishable. **What did show up unpredicted: depth drove attention roughly six-fold and absorption not at all.** | — | Not individually re-run. Its dissociation is reported as a construction commitment rather than a finding; see the next row. |
-| **Is "depth" just "effort" wearing a hat?** | No. Depth reading tracks depth about six times more than it tracks effort, and effort cannot make a viewer see depth that is not there. | — | **Does not survive exact inference:** the null returns the opposite verdict, that effort *can* manufacture depth. Separately, the dissociation was made representable by rebuilding the effort parameter before it was measured, so it is a construction commitment. What does survive is narrower and still worth having: with the effort axis pinned so no "offhand but deep" corner exists, depth still separates by 0.91, so the depth estimator is reading structure in the work rather than the effort setting renamed. |
+| **Does how much thought went in change how much you take away?** | **Inconclusive, and the construction is at fault.** Depth was visible and absorption was flat, but the measure written down in advance could not have moved, because depth was deliberately built so the goal is equally readable at every level. Two of the three depth levels also turned out indistinguishable. **What did show up unpredicted: depth drove attention roughly six-fold and absorption not at all.** | — | **Diagnostics offers a better explanation than the one on record.** Absorption is U-shaped in how well the reader read the work, because a confidently wrong reader has moved as far from its starting point as a correct one, so a manipulation whose arms straddle the minimum returns a flat result for reasons unconnected to it. That is a different diagnosis from "no headroom" and it has a different repair. A regime where goal recovery is genuinely uncertain does exist, so this can be rerun on a fair footing, provided both arms stay on one side of the trough. |
+| **Is "depth" just "effort" wearing a hat?** | No. Depth reading tracks depth about six times more than it tracks effort, and effort cannot make a viewer see depth that is not there. | — | **Does not survive exact inference:** the null returns the opposite verdict, that effort *can* manufacture depth. Separately, the dissociation was made representable by rebuilding the effort parameter before it was measured, so it is a construction commitment. What does survive is narrower and still worth having: with the effort axis pinned so no "offhand but deep" corner exists, depth still separates by 0.91, so the depth estimator is reading structure in the work rather than the effort setting renamed. Diagnostics adds that depth **recovers in order but not in magnitude**: a known depth is read back at about a third of its true change, and the two deepest levels are not separable. Directions transfer, sizes do not. |
 | **↳ Two experiments were removed from this table**, because they were run against a version of the model later found to be wrong. They are uninterpretable rather than embarrassing. | See ["What was removed"](#what-was-removed) below. | — | — |
 
 Every number above traces to a committed CSV in [results/](results/) and a chart in
@@ -290,9 +305,14 @@ python -m ghostscale.experiments.e1_crash
 python run_validation.py
 python scripts/write_validation_md.py
 
+# the diagnostics pass on the instruments (writes results/diagnostics/, then DIAGNOSTICS.md)
+python run_diagnostics.py
+python scripts/write_diagnostics_md.py
+
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/rebuild_figures.py
 python scripts/make_social_figures.py
+python scripts/make_diagnostic_figures.py
 
 # tests
 pytest -q
@@ -412,11 +432,15 @@ named gap, and that argument gets weaker if it claims more ground than it holds.
 ```
 README.md                     this page
 VALIDATION.md                 generated from results/validation/, never hand-written
+DIAGNOSTICS.md                generated from results/diagnostics/, never hand-written
 run_all.py                    the experiment programme
 run_validation.py             the validation pass, V-1 through V-9
+run_diagnostics.py            the diagnostics pass on the instruments, P-1, P-2 and D-1 to D-6
 
 ghostscale/                   generative_model, creators, environment, observer, learning, metrics
 ghostscale/exact.py           exact joint inference; the solver the validation pass substitutes in
+ghostscale/fitting.py         parameter estimation by exact likelihood, for the three parameters
+                              that are not hidden states and so have no posterior to read
 ghostscale/v4_model.py        hypothesis-space overlap; goal-foreign content
 ghostscale/v4_5_model.py      the three-gate observer
 ghostscale/v5_model.py        model depth as a hierarchy the reader infers
@@ -424,6 +448,7 @@ ghostscale/latent_goal.py     the goal a maker does not know it has
 ghostscale/experiments/       e1 through e34, each runnable standalone
 ghostscale/prereg_*.py        acceptance criteria as executable, hash-locked code
 ghostscale/validation/        the nine checks, plus their own hash-locked criteria
+ghostscale/diagnostics/       the eight instrument checks, plus their own separate lock
 
 tests/                        model invariants, the null suite (N1 to N21), exact-inference tests
 config/default.yaml           every parameter, for every version, plus the solver switch
@@ -435,10 +460,12 @@ docs/decisions/               design decisions signed off before each build
 
 results/                      summary CSVs and JSON verdicts (committed)
 results/validation/           one verdict file per check, plus the side-by-side tables
+results/diagnostics/          one verdict file per instrument check, plus the recovery sweeps
 results/diagnostics/          labelled diagnostic runs, kept separate so they cannot be mistaken
                               for reportable output
 figures/                      every research chart (committed)
 figures/social/               the five distribution slides, the PDF, the preview image
+figures/diagnostics/          the recovery panels, the difficulty axis, the uptake curve
 notebooks/walkthrough.ipynb   runs E1 and E2 end to end, narrated
 scripts/                      chart rebuilders, the version-specific runners, the VALIDATION.md
                               generator, and the independent reimplementation of the two-gates

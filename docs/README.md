@@ -30,6 +30,7 @@ staying separable.
 | [specs/SPEC_V4_5.md](specs/SPEC_V4_5.md) | Version 4.5. The three-gate observer, and the promotion of the metabolic question from a column to a headline. |
 | [specs/SPEC_V5.md](specs/SPEC_V5.md) | Version 5. Replaces rationality with model depth, makes provenance evidence rather than a parallel channel, and asks whether foreign content and an unskilled reader are the same failure. Adds N21. |
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Not a new version: nothing in it asks a new question about the world. Every item asks whether the answers already recorded can be trusted. Its results are in [../VALIDATION.md](../VALIDATION.md). |
+| [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass. Two probes on the apparatus, ahead of any repair: can the model's own parameters be recovered from its own data, and is there a regime where reading the goal is genuinely uncertain. Five further instrument checks were added on the way. Its results are in [../DIAGNOSTICS.md](../DIAGNOSTICS.md). |
 | [specs/SPEC_PUBLIC_ASSETS.md](specs/SPEC_PUBLIC_ASSETS.md) | The specification for the public-facing material: the README rewrite and the distribution slides in `figures/social/`. |
 
 ## The write-ups
@@ -54,5 +55,7 @@ staying separable.
 
 1. The top-level [README](../README.md), for what was asked and what came back.
 2. [../VALIDATION.md](../VALIDATION.md), for how much of it survived being checked.
-3. [EXPERIMENTS.md](EXPERIMENTS.md), if you want the table without the validation column.
-4. A write-up, then its spec, if you want to see a specific number's whole history.
+3. [../DIAGNOSTICS.md](../DIAGNOSTICS.md), for what the instruments can and cannot measure. Read
+   this before quoting any specific number, because it is where the limits on the numbers live.
+4. [EXPERIMENTS.md](EXPERIMENTS.md), if you want the table without the later-checking column.
+5. A write-up, then its spec, if you want to see a specific number's whole history.

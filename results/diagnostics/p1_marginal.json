@@ -1,0 +1,34 @@
+{
+  "kappa": {
+    "quantity": "mean over goals of P(signal | provenance, goal)",
+    "max_abs_change_across_range": 0.64,
+    "why": "A[1] is constant in the goal, so marginalising over goals changes nothing and the parameter is fully visible in the marginal.",
+    "invariant_in_the_marginal": false
+  },
+  "omega": {
+    "quantity": "mean over foreign goals of P(feature | foreign goal, omega)",
+    "max_abs_change_across_range": 0.1440974786358234,
+    "why": "omega interpolates the whole family toward the human one, so the goal-marginal moves with it and the parameter is visible in the marginal.",
+    "invariant_in_the_marginal": false
+  },
+  "mu": {
+    "quantity": "two marginals, because they answer different questions: mean over SUB-GOALS (a design invariant, meant to be zero) and mean over GOALS (the measurement)",
+    "max_abs_change_across_range": 0.11132075471698114,
+    "subgoal_marginal_deviation": 5.551115123125783e-17,
+    "goal_marginal_deviation": 0.11132075471698114,
+    "why": "The sub-goal marginal is invariant to 5.6e-17, which is the design working rather than failing: the mode family averages exactly to the version 4 goal signature and the chains are doubly stochastic, so a deep artifact and a shallow one have identical time-averaged feature histograms and depth lives in the ORDER. The GOAL marginal is NOT invariant, at 0.111, and that is the difference between depth and the rationality parameter it replaced: version 4.5's beta was zero here by construction, which left finite-sample luck in the coupling as its only evidence channel and produced compression at both ends. Depth has a real channel through the sub-goal, which persists in time, so evidence accumulates across a block.",
+    "raw": {
+      "subgoal_marginal_deviation": 5.551115123125783e-17,
+      "full_marginal_deviation": 8.326672684688674e-17,
+      "goal_marginal_deviation": 0.11132075471698114,
+      "reading": "subgoal_marginal_deviation and full_marginal_deviation are DESIGN INVARIANTS and should be ~0: the mode family averages exactly to sig[g], so there is no depth evidence in the flat likelihood and a reader who counts features without regard to order cannot tell a deep artifact from a shallow one. goal_marginal_deviation is the E28 analogue and is a MEASUREMENT. For beta it was zero BY CONSTRUCTION, which left finite-sample luck in the (beta, goal) coupling as the only evidence channel and produced the compression at both ends. Nonzero here means mu's evidence flows through the (mu, sub-goal) coupling, and the sub-goal persists in time, so evidence accumulates across a block instead of resting on a lucky draw."
+    },
+    "invariant_in_the_marginal": false
+  },
+  "theta": {
+    "quantity": "any likelihood",
+    "max_abs_change_across_range": 0.0,
+    "why": "theta appears in no observation likelihood whatsoever. It gates what the observer carries forward between encounters, so it is invisible within a single artifact by construction and can only be seen in the trajectory of the prior across a sequence.",
+    "invariant_in_the_marginal": true
+  }
+}

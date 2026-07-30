@@ -1,0 +1,92 @@
+{
+  "check": "D-6",
+  "question": "Are the simulated readers actually distinct?",
+  "plain_language": "Every simulated reader gets its own random seed, derived from which experiment cell it is in, which repeat, and which reader it is. If two readers get the same seed they are the same reader, and some statistics assume they are not. This checks.",
+  "criteria": {
+    "within_group_collisions_allowed": 0
+  },
+  "envelopes": [
+    {
+      "envelope": "E20 overlap sweep",
+      "shipped_cells": 8,
+      "shipped_seeds": 60,
+      "shipped_readers": 200,
+      "shipped_slots": 96000,
+      "shipped_distinct_seeds": 49450,
+      "shipped_collisions_total": 46550,
+      "shipped_collisions_within_a_cell_and_seed": 0,
+      "shipped_collisions_across_seeds_within_a_cell": 0,
+      "shipped_collisions_across_cells": 46550,
+      "shipped_duplicate_fraction": 0.48489583333333336,
+      "shipped_example": "{\"first\": {\"cell\": 0, \"seed\": 10, \"reader\": 0}, \"second\": {\"cell\": 1, \"seed\": 0, \"reader\": 67}}",
+      "replacement_collisions": 0
+    },
+    {
+      "envelope": "E2 label cells",
+      "shipped_cells": 4,
+      "shipped_seeds": 20,
+      "shipped_readers": 4000,
+      "shipped_slots": 320000,
+      "shipped_distinct_seeds": 202010,
+      "shipped_collisions_total": 117990,
+      "shipped_collisions_within_a_cell_and_seed": 0,
+      "shipped_collisions_across_seeds_within_a_cell": 0,
+      "shipped_collisions_across_cells": 117990,
+      "shipped_duplicate_fraction": 0.36871875,
+      "shipped_example": "{\"first\": {\"cell\": 0, \"seed\": 10, \"reader\": 0}, \"second\": {\"cell\": 1, \"seed\": 0, \"reader\": 67}}",
+      "replacement_collisions": 0
+    },
+    {
+      "envelope": "E31 two gates",
+      "shipped_cells": 12,
+      "shipped_seeds": 20,
+      "shipped_readers": 60,
+      "shipped_slots": 14400,
+      "shipped_distinct_seeds": 14400,
+      "shipped_collisions_total": 0,
+      "shipped_collisions_within_a_cell_and_seed": 0,
+      "shipped_collisions_across_seeds_within_a_cell": 0,
+      "shipped_collisions_across_cells": 0,
+      "shipped_duplicate_fraction": 0.0,
+      "shipped_example": "null",
+      "replacement_collisions": 0
+    },
+    {
+      "envelope": "E32 matched arms",
+      "shipped_cells": 12,
+      "shipped_seeds": 30,
+      "shipped_readers": 200,
+      "shipped_slots": 72000,
+      "shipped_distinct_seeds": 42740,
+      "shipped_collisions_total": 29260,
+      "shipped_collisions_within_a_cell_and_seed": 0,
+      "shipped_collisions_across_seeds_within_a_cell": 0,
+      "shipped_collisions_across_cells": 29260,
+      "shipped_duplicate_fraction": 0.4063888888888889,
+      "shipped_example": "{\"first\": {\"cell\": 0, \"seed\": 10, \"reader\": 0}, \"second\": {\"cell\": 1, \"seed\": 0, \"reader\": 67}}",
+      "replacement_collisions": 0
+    },
+    {
+      "envelope": "validation reduced scale",
+      "shipped_cells": 8,
+      "shipped_seeds": 16,
+      "shipped_readers": 60,
+      "shipped_slots": 7680,
+      "shipped_distinct_seeds": 7680,
+      "shipped_collisions_total": 0,
+      "shipped_collisions_within_a_cell_and_seed": 0,
+      "shipped_collisions_across_seeds_within_a_cell": 0,
+      "shipped_collisions_across_cells": 0,
+      "shipped_duplicate_fraction": 0.0,
+      "shipped_example": "null",
+      "replacement_collisions": 0
+    }
+  ],
+  "collision_structure": "cell c, seed s, reader i collides with cell c+1, seed s-10, reader i+67, from 100003 - 10*10007 = -67",
+  "collisions_within_group": 0,
+  "collisions_across_cells": 193800,
+  "replacement_is_collision_free": true,
+  "replacement": "ghostscale.diagnostics.d5_d6_power_and_seeds.collision_free_observer_seed, offered and deliberately not wired in",
+  "verdict": "COLLISIONS_ARE_CROSS_CELL_ONLY_AND_BENIGN_IN_DIRECTION",
+  "statement": "The per-reader seed function is documented as collision-resistant and is not. On the overlap sweep's own envelope it produces 46550 duplicate seeds across 96000 slots, a duplicate fraction of 48%, and the structure is solvable in closed form: cell c, seed s, reader i receives the same seed as cell c+1, seed s-10, reader i+67, because 100003 - 10*10007 = -67.\n\n**The direction is benign and that is measured rather than assumed.** Every collision is ACROSS cells; there are none inside a single (cell, seed) group, which is the unit the between-reader statistic is computed over. So no disagreement number and no across-seed standard error is affected. What the collisions do is make cross-cell comparisons partly paired, which correlates the errors between cells and makes differences MORE precise than the unpaired standard error implies. Conservative, not anti-conservative.\n\nTwo things are still wrong with it. The docstring asserts something false, and the collision structure moves inside a cell under a different choice of cardinalities: it takes only a run with at least 10007 readers, or a change to the multipliers, for the same arithmetic to start duplicating readers within a group. A hash-based replacement removes the class and is provided here, verified collision-free on every envelope above, unwired, because adopting it would change every committed number."
+}

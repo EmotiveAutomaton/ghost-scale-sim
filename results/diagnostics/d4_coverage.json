@@ -1,0 +1,116 @@
+{
+  "check": "D-4",
+  "question": "How much of the work can the exact solver reach, and how wrong is the shortcut where it can be measured?",
+  "plain_language": "The validation pass rechecked five experiments with the arithmetic done exactly rather than approximately, and three conclusions changed. This asks the obvious follow-up: how many of the others could even be rechecked, and for the ones that could not, is the approximation drifting a little or a lot?",
+  "coverage": {
+    "experiments_total": 30,
+    "checked_under_exact_by_the_validation_pass": [
+      "E2",
+      "E19",
+      "E20",
+      "E31",
+      "E32"
+    ],
+    "structurally_unreachable_before_this_pass": [
+      "E1",
+      "E10",
+      "E11",
+      "E13",
+      "E16",
+      "E18",
+      "E5",
+      "E6b",
+      "E7",
+      "E8",
+      "E9"
+    ],
+    "made_reachable_by_this_pass": [
+      "E1",
+      "E5"
+    ],
+    "still_structurally_unreachable": [
+      "E10",
+      "E11",
+      "E13",
+      "E16",
+      "E18",
+      "E6b",
+      "E7",
+      "E8",
+      "E9"
+    ],
+    "reachable_but_never_checked": [
+      "E12",
+      "E14",
+      "E15",
+      "E17",
+      "E21",
+      "E28",
+      "E29",
+      "E3",
+      "E30",
+      "E33",
+      "E34",
+      "E4",
+      "E6",
+      "N21"
+    ],
+    "fraction_checked": 0.16666666666666666,
+    "fraction_still_unreachable": 0.3
+  },
+  "blockers": {
+    "dirichlet_learning": {
+      "why": "the observer updates its own likelihood with Dirichlet counts. ExactAgent refuses this rather than approximating it, so these cannot run under exact inference without an exact learning path being written",
+      "experiments": [
+        "E7",
+        "E9",
+        "E13",
+        "E16",
+        "E18",
+        "E8"
+      ],
+      "public_claims_at_risk": [
+        "an unlabelled learner loses about a third of its ability to read intent from genuine human work, and honest labels cut that error about a hundredfold (E7)",
+        "31% of machine content must be labelled for a convention-aware reader and 74% for one who does not know the convention (E16)"
+      ]
+    },
+    "recorded_efe_terms": {
+      "why": "records the pragmatic and epistemic decomposition through pymdp's control helpers, which build predictive states from the factorised marginals. FIXED alongside this pass: ExactAgent.efe_terms and .epistemic_value_about are exact counterparts, so these are now reachable",
+      "experiments": [
+        "E1",
+        "E5"
+      ],
+      "public_claims_at_risk": [
+        "readers stop looking closely at work with no intent behind it, and the Curator tier costs the most deep looks (E1)",
+        "trust in the label is a different knob from general decisiveness (E5)"
+      ]
+    },
+    "distributional_observations": {
+      "why": "the behavioural-regret path passes a distribution rather than an observation index, which the exact filter does not accept",
+      "experiments": [
+        "E10",
+        "E11",
+        "E6b"
+      ],
+      "public_claims_at_risk": [
+        "the reader's own skill caps what can be recovered (E10)",
+        "distance between belief distributions explains 66% of the variance in actual harm (E11)"
+      ]
+    }
+  },
+  "efe_drift_summary": {
+    "epistemic_total_max_abs_error": 0.1385451281327228,
+    "epistemic_total_mean_abs_error_early": 0.01927807847361412,
+    "epistemic_total_mean_abs_error_late": 9.00140953555469e-06,
+    "epistemic_goal_max_abs_error": 0.05199559193296466,
+    "pragmatic_max_abs_error": 5.329070518200751e-15,
+    "max_joint_vs_product_kl": 0.05775933470972596,
+    "worst_cell": "machine work passed off as human",
+    "worst_t": 2,
+    "error_at_t1": 9.00160908745562e-06
+  },
+  "efe_drift_note": "Both estimators are read off the SAME exact agent at every step, so the difference is the factorisation and not a different trajectory. At t = 1 the belief IS a product of its marginals, so agreement there is a construction fact and not evidence.",
+  "the_fix_made_here": "ExactAgent.efe_terms and ExactAgent.epistemic_value_about. Before this pass metrics.policy_efe_terms raised AttributeError on an exact agent while metrics.epistemic_value succeeded and silently returned the FACTORISED answer, which is the more dangerous of the two failures and is the class of defect this project has been bitten by seven times. A test now fails if the two disagree beyond tolerance on a construction where they must agree.",
+  "verdict": "COVERAGE_GAP_AND_THE_SHORTCUT_DRIFTS",
+  "statement": "The validation pass checked 5 of 30 experiments under exact inference, and three of its verdicts moved. 11 experiments were structurally unreachable; this pass makes 2 of those reachable by giving the exact agent its own expected-free-energy accessors, which leaves 9 that still cannot run: E10, E11, E13, E16, E18, E6b, E7, E8, E9. Six of the remaining ones are blocked by Dirichlet learning and three by distributional observations.\n\nTwo public claims sit on the learning path and cannot currently be validated at all: the unlabelled learner losing a third of its ability to read human work, and the 31% versus 74% labelling-coverage figures. Those are named here rather than left to be discovered.\n\nOn the cells that can be reached, the shortcut's error in the expected free energy is TRANSIENT AND PEAKS EARLY. It is 9.00e-06 nats at the first timestep, which is essentially zero because the belief is a product of its marginals before any evidence arrives. It rises to 0.139 nats at timestep 2, where the joint is furthest from that product (0.058 nats of divergence), and decays to 9.00e-06 nats by the end of the run as the belief concentrates and becomes nearly a point mass, which is nearly a product again.\n\n**That shape is the thing to worry about, because it lands in the decision window.** The expected free energy is what decides whether the reader keeps looking, and the error is largest in the first handful of timesteps. Experiments whose free decision begins after a long forced window see the error only once it has decayed: the overlap sweep forces ten steps and is therefore safe. The one that is not is the selectivity measure, which the version 1 deviations record as being taken over THE FIRST THREE FREE STEPS precisely to catch the decision that matters, and which is also one of the experiments the shortcut could not be swapped out of until this pass. Re-running it under exact inference is now possible and is the cheapest outstanding check in the project."
+}

@@ -1,0 +1,42 @@
+parameter,dataset,true,recovered_mean,recovered_sd,recovered_sem,profile_flat_fraction,median_curvature,n_seeds,mean_observed_drift
+kappa,honest labels throughout,0.1,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.2,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.30000000000000004,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.4,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.5,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.6,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.7000000000000001,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.8,0.9,0.0,0.0,1.0,,16,
+kappa,honest labels throughout,0.9,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.1,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.2,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.30000000000000004,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.4,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.5,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.6,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.7000000000000001,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.8,0.9,0.0,0.0,1.0,,16,
+kappa,machine work passed off as human,0.9,0.9,0.0,0.0,1.0,,16,
+omega,"foreign feature draws, analyst's model",0.0,0.0015625,0.00625,0.0015625,0.9375,,16,
+omega,"foreign feature draws, analyst's model",0.1,0.096875,0.02015564437074637,0.005038911092686593,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.2,0.1859375,0.02230237281845439,0.005575593204613597,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.30000000000000004,0.290625,0.02393567769390846,0.005983919423477115,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.4,0.39531250000000007,0.037880018919389864,0.009470004729847466,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.5,0.4890625,0.04079292218020179,0.010198230545050448,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.6000000000000001,0.5906250000000001,0.04170831252080732,0.01042707813020183,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.7000000000000001,0.6890625,0.03158157426939536,0.00789539356734884,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.8,0.7890625,0.028822372675868797,0.007205593168967199,0.0,,16,
+omega,"foreign feature draws, analyst's model",0.9,0.8890625,0.030233466556119554,0.007558366639029888,0.0,,16,
+omega,"foreign feature draws, analyst's model",1.0,0.996875,0.008539125638299635,0.002134781409574909,0.875,,16,
+mu,"the reader's own posterior, exact inference",1.0,1.5573536054054378,0.07777620350322205,0.02749804045603661,,,8,
+mu,"the reader's own posterior, exact inference",2.0,2.140675666327624,0.24499054136446294,0.08661723656268755,,,8,
+mu,"the reader's own posterior, exact inference",3.0,2.1932505991615208,0.2374738145250714,0.08395967230245721,,,8,
+theta (lambda),prior drift over a sequence of encounters,0.0,0.0,0.0,0.0,,,4,1.1911508052895678
+theta (lambda),prior drift over a sequence of encounters,1.0,1.0,0.0,0.0,,,4,0.010084654905139668
+theta (lambda),prior drift over a sequence of encounters,2.0,2.0,0.0,0.0,,,4,2.3198571536813353e-05
+theta (lambda),prior drift over a sequence of encounters,3.0,3.0,0.0,0.0,,,4,4.425654538544725e-08
+theta (lambda),prior drift over a sequence of encounters,4.0,4.0,0.0,0.0,,,4,7.970211631950327e-11
+theta (lambda),prior drift over a sequence of encounters,5.0,5.0,0.0,0.0,,,4,-3.841724239381637e-12
+theta (lambda),prior drift over a sequence of encounters,6.0,6.119791666666667,0.10259226876870926,0.05129613438435463,,,4,-3.99963623688278e-12
+theta (lambda),prior drift over a sequence of encounters,7.0,7.104166666666667,0.1839950180484968,0.0919975090242484,,,4,-3.999949933432206e-12
+theta (lambda),prior drift over a sequence of encounters,8.0,7.182291666666667,0.3273662965694998,0.1636831482847499,,,4,-3.999944162689888e-12

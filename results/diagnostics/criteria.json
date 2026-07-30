@@ -1,0 +1,78 @@
+{
+  "document": "Ghost Scale Simulation \u2014 diagnostics pass criteria",
+  "spec": "DIAGNOSTICS_P1_P2_SPEC.md",
+  "written_before": "any diagnostic sweep ran",
+  "separate_from": "results/validation/criteria.json, which has reported and is sealed",
+  "p1": {
+    "min_grid_points": 9,
+    "min_seeds_per_point": 16,
+    "classification": {
+      "RECOVERED": {
+        "rho_at_least": 0.9,
+        "slope_in": [
+          0.7,
+          1.3
+        ],
+        "usable_range_at_least": 0.7
+      },
+      "COMPRESSED": {
+        "rho_at_least": 0.9,
+        "slope_below": 0.7
+      },
+      "PARTIALLY_RECOVERED": {
+        "usable_range_between": [
+          0.4,
+          0.7
+        ]
+      },
+      "UNIDENTIFIABLE": {
+        "rho_below": 0.7,
+        "or_usable_range_below": 0.4
+      }
+    },
+    "distinguishable_standard_errors": 2.0,
+    "tradeoff_correlation": 0.5,
+    "marginal_invariance_tolerance": 1e-09,
+    "consequence": "A parameter classified UNIDENTIFIABLE cannot support a claim, and every claim resting on it has to be restated or withdrawn. COMPRESSED is survivable and changes what may be said: directions transfer, magnitudes do not.",
+    "estimator_note": "THE SPEC'S SECTION 1.1 SAYS 'run the model's own inference on those observations'. That is well defined for mu, which is a hidden state the observer has a posterior over. It is NOT defined for kappa, omega or theta, none of which is a hidden state and none of which the observer can represent. Those three are estimated by MAXIMISING THE EXACT SEQUENCE LOG-EVIDENCE over a grid, using a model that does contain the parameter, on a fixed observation tape. That is the standard simulate-then-fit form of parameter recovery, and it answers a different question from the mu case: whether an ideal analyst holding the correct model could identify the value, not whether the observer inside the model can. For omega the distinction is the entire point of the version 4 reframe, and it is reported beside every omega number rather than left for a reader to notice."
+  },
+  "p2": {
+    "target_band": [
+      0.55,
+      0.85
+    ],
+    "ceiling": 0.9,
+    "uptake_variance_factor": 1.25,
+    "outcomes": [
+      "REGIME_FOUND",
+      "ACCURACY_MOVES_UPTAKE_DOES_NOT",
+      "NO_REGIME"
+    ],
+    "knob_note": "The spec names three knobs: signature separation, observations before the decision, and number of goals. Measured before this lock was written, the first and third do not move goal accuracy at all: peak mass from 0.90 down to 0.22 and goal count from 4 up to 8 both leave accuracy at 1.000, because every deep observation is an independent draw from a goal-dependent distribution and any non-zero per-observation evidence accumulates to certainty over 24 looks. Those two are therefore run as single confirmatory cells at their extremes and reported as measured-dead rather than swept. A FOURTH KNOB IS ADDED AND MADE PRIMARY: reader inexpertise, which introduces systematic rather than sampling error and so does not average out over the run. The addition is declared here, before the sweep, with the measurement that motivated it."
+  },
+  "d1": {
+    "report_crossover": true,
+    "safe_margin_nats": 0.5
+  },
+  "d2": {
+    "nonmonotone_dip": 0.1
+  },
+  "d3": {
+    "bias_fraction": 0.02,
+    "argmax_null_tolerance": 0.05
+  },
+  "d5": {
+    "min_independent_units": 12
+  },
+  "d6": {
+    "within_group_collisions_allowed": 0
+  },
+  "constraints": [
+    "Nothing in results/ outside results/diagnostics/ is written.",
+    "No existing experiment is re-run and no existing verdict is recomputed.",
+    "Exact inference throughout. If a sweep is unaffordable at exact, the grid is reduced rather than falling back to the approximation, and the dropped cells are named.",
+    "Both P-1 and P-2 must be able to return the unwelcome answer. UNIDENTIFIABLE for a load-bearing parameter and NO_REGIME are both live possibilities.",
+    "No repairs. Nothing in the model changes. The one code change made alongside this pass is D-4's: ExactAgent gains exact expected-free-energy accessors and a sequence log-evidence, neither of which any committed number depends on."
+  ],
+  "content_hash": "c07837a57450e33469a00fe42f6dbdc1e03e7063c9d5a7138a63970154059309"
+}

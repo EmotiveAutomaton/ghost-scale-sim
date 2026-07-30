@@ -1,0 +1,305 @@
+{
+  "check": "D-3",
+  "question": "Is 'no two readers agree' measuring disagreement, or the readers' own uncertainty scattering their argmaxes?",
+  "plain_language": "The project's disagreement number counts each reader's single best guess and measures how spread out those guesses are. That works when readers are sure of themselves and differ. It breaks when readers are all equally unsure, because then their best guess is close to a coin toss and the coin tosses scatter on their own. This check builds the coin-toss version of each population, using each reader's actual uncertainty, and asks whether the real number is any bigger.",
+  "criteria": {
+    "argmax_null_tolerance": 0.05,
+    "bias_fraction": 0.02
+  },
+  "scale_bias": [
+    {
+      "reported_at": "E2 (version 1 headline)",
+      "n_readers": 4000,
+      "bias_nats": -0.000375,
+      "bias_as_fraction_of_ceiling": 0.00027050532016668064,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "E17",
+      "n_readers": 4000,
+      "bias_nats": -0.000375,
+      "bias_as_fraction_of_ceiling": 0.00027050532016668064,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "E19",
+      "n_readers": 200,
+      "bias_nats": -0.0075,
+      "bias_as_fraction_of_ceiling": 0.005410106403333613,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "E20",
+      "n_readers": 200,
+      "bias_nats": -0.0075,
+      "bias_as_fraction_of_ceiling": 0.005410106403333613,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "E21",
+      "n_readers": 200,
+      "bias_nats": -0.0075,
+      "bias_as_fraction_of_ceiling": 0.005410106403333613,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "E32",
+      "n_readers": 200,
+      "bias_nats": -0.0075,
+      "bias_as_fraction_of_ceiling": 0.005410106403333613,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "E31",
+      "n_readers": 60,
+      "bias_nats": -0.025,
+      "bias_as_fraction_of_ceiling": 0.018033688011112044,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "validation pass reduced scale",
+      "n_readers": 60,
+      "bias_nats": -0.025,
+      "bias_as_fraction_of_ceiling": 0.018033688011112044,
+      "scale_sensitive": false
+    },
+    {
+      "reported_at": "validation V-2b per random draw",
+      "n_readers": 15,
+      "bias_nats": -0.1,
+      "bias_as_fraction_of_ceiling": 0.07213475204444818,
+      "scale_sensitive": true
+    }
+  ],
+  "scale_bias_empirical_check": [
+    {
+      "n_readers": 16,
+      "measured": 1.2886649280716256,
+      "analytic_prediction": 1.2925443611198906,
+      "ceiling": 1.3862943611198906
+    },
+    {
+      "n_readers": 30,
+      "measured": 1.3351861686342221,
+      "analytic_prediction": 1.3362943611198905,
+      "ceiling": 1.3862943611198906
+    },
+    {
+      "n_readers": 60,
+      "measured": 1.3588618779063346,
+      "analytic_prediction": 1.3612943611198907,
+      "ceiling": 1.3862943611198906
+    },
+    {
+      "n_readers": 200,
+      "measured": 1.3786378226890763,
+      "analytic_prediction": 1.3787943611198905,
+      "ceiling": 1.3862943611198906
+    },
+    {
+      "n_readers": 1000,
+      "measured": 1.3848350788600143,
+      "analytic_prediction": 1.3847943611198905,
+      "ceiling": 1.3862943611198906
+    },
+    {
+      "n_readers": 4000,
+      "measured": 1.3859388437902012,
+      "analytic_prediction": 1.3859193611198906,
+      "ceiling": 1.3862943611198906
+    }
+  ],
+  "argmax_noise_null": [
+    {
+      "cell": "E2 machine work passed off as human",
+      "source": "e2_points.csv",
+      "available": true,
+      "why_this_cell": "the headline. Within-reader entropy near 0.09, so the readers are sharply peaked and the disagreement should be real.",
+      "observed_between": 1.3792851522317506,
+      "null_mean": 1.3792880585528287,
+      "null_sd": 0.0016954155384394942,
+      "excess_over_null": -2.906321077744689e-06,
+      "mean_within_reader_entropy": 0.08959906095034906,
+      "entropy_ceiling": 1.3862943611198906,
+      "mean_pairwise_js": 0.49785074798011386,
+      "null_determinism": 0.9815385254343744,
+      "n_readers": 200,
+      "n_seeds": 20,
+      "standard_deviations_above_null": -0.0017142234525110846,
+      "indistinguishable_from_argmax_noise": true,
+      "flatness": 0.06463206045068828,
+      "null_is_degenerate": true,
+      "js_ceiling": 0.6931471805599453
+    },
+    {
+      "cell": "E2 machine work labelled honestly",
+      "source": "e2_points.csv",
+      "available": true,
+      "why_this_cell": "the honest-label comparison cell, where readers are nearly flat. If the null explains this one and not the cell above, the contrast between them is exactly what it is claimed to be.",
+      "observed_between": 1.3783789469839058,
+      "null_mean": 1.3788110905600144,
+      "null_sd": 0.006131028349010668,
+      "excess_over_null": -0.0004321435761085568,
+      "mean_within_reader_entropy": 1.292643197505897,
+      "entropy_ceiling": 1.3862943611198906,
+      "mean_pairwise_js": 0.044346824746834324,
+      "null_determinism": 0.39628338628541016,
+      "n_readers": 200,
+      "n_seeds": 20,
+      "standard_deviations_above_null": -0.07048468079229965,
+      "indistinguishable_from_argmax_noise": true,
+      "flatness": 0.9324449653403052,
+      "null_is_degenerate": false,
+      "js_ceiling": 0.6931471805599453
+    },
+    {
+      "cell": "E2 human work read correctly",
+      "source": "e2_points.csv",
+      "available": true,
+      "why_this_cell": "the positive control. Readers agree and are right, so both observed and null must be near zero.",
+      "observed_between": 0.0,
+      "null_mean": 0.0,
+      "null_sd": 0.0,
+      "excess_over_null": 0.0,
+      "mean_within_reader_entropy": 7.060177277645449e-08,
+      "entropy_ceiling": 1.3862943611198906,
+      "mean_pairwise_js": 3.6274686110235387e-09,
+      "null_determinism": 0.9999999947593441,
+      "n_readers": 200,
+      "n_seeds": 20,
+      "standard_deviations_above_null": NaN,
+      "indistinguishable_from_argmax_noise": true,
+      "flatness": 5.092841373128016e-08,
+      "null_is_degenerate": true,
+      "js_ceiling": 0.6931471805599453
+    },
+    {
+      "cell": "E19 foreign content, fallback available",
+      "source": "e19_explore.csv",
+      "available": false,
+      "why_this_cell": "the foreign-content cell. Within-reader entropy near 1.25 against a 1.386 ceiling, so this is where the null is most likely to explain the whole number.",
+      "note": "no posterior column in ['arm', 'content', 'omega', 'seed_rep', 'observer', 'true_goal', 'explore_mass', 'final_entropy', 'real_goal_entropy', 'modal_real_goal', 'modal_goal_full', 'correct', 'engaged_fraction', 'cum_deep', 'modal_is_explore', 'real_posterior', 'full_posterior']"
+    },
+    {
+      "cell": "E19 exploratory human content",
+      "source": "e19_explore.csv",
+      "available": false,
+      "why_this_cell": "the cell whose absorption the fallback is supposed to explain.",
+      "note": "no posterior column in ['arm', 'content', 'omega', 'seed_rep', 'observer', 'true_goal', 'explore_mass', 'final_entropy', 'real_goal_entropy', 'modal_real_goal', 'modal_goal_full', 'correct', 'engaged_fraction', 'cum_deep', 'modal_is_explore', 'real_posterior', 'full_posterior']"
+    },
+    {
+      "cell": "E20/E32 fully foreign content (omega = 0)",
+      "source": "fresh probe in results/diagnostics/",
+      "available": true,
+      "why_this_cell": "where the readability sweep and the two-dimensions result both take their most extreme cell, and where within-reader entropy is highest",
+      "observed_between": 1.380560332525657,
+      "null_mean": 1.3784820453030366,
+      "null_sd": 0.006376641135291807,
+      "excess_over_null": 0.0020782872226204527,
+      "mean_within_reader_entropy": 1.2337809118846352,
+      "entropy_ceiling": 1.3862943611198906,
+      "mean_pairwise_js": 0.07435971344912029,
+      "null_determinism": 0.3987583857588368,
+      "n_readers": 200,
+      "n_seeds": 6,
+      "standard_deviations_above_null": 0.32592193578498224,
+      "indistinguishable_from_argmax_noise": true,
+      "flatness": 0.8899848015597133,
+      "null_is_degenerate": false,
+      "js_ceiling": 0.6931471805599453
+    },
+    {
+      "cell": "E20 partial overlap (omega = 0.10)",
+      "source": "fresh probe in results/diagnostics/",
+      "available": true,
+      "why_this_cell": "the interior peak. The fabrication index multiplies confidence by DISAGREEMENT, so if the disagreement term is argmax noise here the index is measuring one thing and not two",
+      "observed_between": 0.6620178635559771,
+      "null_mean": 0.7459415600471994,
+      "null_sd": 0.04100850775247956,
+      "excess_over_null": -0.08392369649122222,
+      "mean_within_reader_entropy": 0.48596047164601375,
+      "entropy_ceiling": 1.3862943611198906,
+      "mean_pairwise_js": 0.1037045438217478,
+      "null_determinism": 0.796118985805963,
+      "n_readers": 200,
+      "n_seeds": 6,
+      "standard_deviations_above_null": -2.0464947663487663,
+      "indistinguishable_from_argmax_noise": false,
+      "flatness": 0.3505463812558829,
+      "null_is_degenerate": false,
+      "js_ceiling": 0.6931471805599453
+    },
+    {
+      "cell": "E32 unskilled reader on human work (d = 0.945)",
+      "source": "fresh probe in results/diagnostics/",
+      "available": true,
+      "why_this_cell": "the matched arm of the two-dimensions result. Confidently wrong readers should produce disagreement the null cannot explain, and that is the claim",
+      "observed_between": 1.3290735894901233,
+      "null_mean": 1.3500095137284926,
+      "null_sd": 0.014366738837196134,
+      "excess_over_null": -0.020935924238369357,
+      "mean_within_reader_entropy": 0.8531897407622586,
+      "entropy_ceiling": 1.3862943611198906,
+      "mean_pairwise_js": 0.2338070579175161,
+      "null_determinism": 0.6425667375835814,
+      "n_readers": 200,
+      "n_seeds": 6,
+      "standard_deviations_above_null": -1.4572495870924658,
+      "indistinguishable_from_argmax_noise": true,
+      "flatness": 0.6154463039675254,
+      "null_is_degenerate": false,
+      "js_ceiling": 0.6931471805599453
+    }
+  ],
+  "null_degenerate_because_peaked": [
+    "E2 machine work passed off as human",
+    "E2 human work read correctly"
+  ],
+  "null_reproduces_because_flat": [
+    "E2 machine work labelled honestly",
+    "E20/E32 fully foreign content (omega = 0)",
+    "E32 unskilled reader on human work (d = 0.945)"
+  ],
+  "redundancy_with_within_observer": {
+    "n_cells": 6,
+    "spearman_between_vs_within": 0.5428571428571428,
+    "spearman_js_vs_within": -0.08571428571428572,
+    "r2_between_from_within": 0.407410079717931,
+    "r2_js_from_within": 0.13044529032741736
+  },
+  "pairs_the_shipped_statistic_cannot_separate": [
+    {
+      "cell_a": "E2 machine work passed off as human",
+      "cell_b": "E2 machine work labelled honestly",
+      "between_entropy_a": 1.3792851522317506,
+      "between_entropy_b": 1.3783789469839058,
+      "between_gap": 0.0009062052478447935,
+      "pairwise_js_a": 0.49785074798011386,
+      "pairwise_js_b": 0.044346824746834324,
+      "js_gap": 0.45350392323327954
+    },
+    {
+      "cell_a": "E2 machine work passed off as human",
+      "cell_b": "E20/E32 fully foreign content (omega = 0)",
+      "between_entropy_a": 1.3792851522317506,
+      "between_entropy_b": 1.380560332525657,
+      "between_gap": 0.001275180293906386,
+      "pairwise_js_a": 0.49785074798011386,
+      "pairwise_js_b": 0.07435971344912029,
+      "js_gap": 0.42349103453099357
+    },
+    {
+      "cell_a": "E2 machine work labelled honestly",
+      "cell_b": "E32 unskilled reader on human work (d = 0.945)",
+      "between_entropy_a": 1.3783789469839058,
+      "between_entropy_b": 1.3290735894901233,
+      "between_gap": 0.04930535749378251,
+      "pairwise_js_a": 0.044346824746834324,
+      "pairwise_js_b": 0.2338070579175161,
+      "js_gap": 0.18946023317068178
+    }
+  ],
+  "recommended_replacement": "mean pairwise Jensen-Shannon divergence over the full posteriors, reported beside the modal-goal entropy rather than instead of it, so the existing numbers stay readable.",
+  "verdict": "DISAGREEMENT_NUMBER_IS_NOT_IDENTIFIED_ON_ITS_OWN",
+  "statement": "The disagreement statistic cannot be read on its own, and this is a fact about the statistic rather than about any result.\n\nIt counts each reader's single best guess and measures how spread out the guesses are. Two completely different populations produce the same spread: readers who are each certain of a DIFFERENT answer, and readers who are all equally unsure and therefore guessing. Both give the same count vector and so the same entropy. The vote-resampling null confirms it from both directions at once, reproducing the observed value in 2 cells because peaked posteriors resample to themselves and in 3 because flat ones resample to noise.\n\nMeasured directly: 41% of the variation in the between-reader number across the checked cells is explained by a straight line on the mean WITHIN-reader number. It is close to a restatement of how unsure the readers are.\n\n**This does not invalidate the headline**, because the headline is always the conjunction, and the fabrication index multiplies confidence by disagreement rather than reporting either alone. What it does invalidate is quoting the disagreement figure by itself as a second independent piece of evidence, which is how it reads in the results files and in the README.\n\n**The fix is a better statistic and it is one line.** Mean pairwise Jensen-Shannon divergence between readers' full posteriors is near zero when everyone is equally unsure, because their beliefs are then nearly identical, and large only when readers are confident about different things. It separates 3 pair(s) of cells the shipped statistic reports as indistinguishable: the cells \"E2 machine work passed off as human\" and \"E2 machine work labelled honestly\" both score about 1.38 on modal-goal entropy while scoring 0.498 against 0.044 on pairwise divergence; the cells \"E2 machine work passed off as human\" and \"E20/E32 fully foreign content (omega = 0)\" both score about 1.38 on modal-goal entropy while scoring 0.498 against 0.074 on pairwise divergence; the cells \"E2 machine work labelled honestly\" and \"E32 unskilled reader on human work (d = 0.945)\" both score about 1.38 on modal-goal entropy while scoring 0.044 against 0.234 on pairwise divergence.\n\nSeparately, the estimator is downward biased by about (K-1)/2N nats, so numbers reported at validation V-2b per random draw are not on the same scale as those reported at 4000 readers. The bias is analytic, confirmed empirically here, and correctable in one line; the correction is offered as a separate function rather than substituted, because swapping the estimator would change what every committed number means without changing the files."
+}

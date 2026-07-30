@@ -1,0 +1,6 @@
+envelope,shipped_cells,shipped_seeds,shipped_readers,shipped_slots,shipped_distinct_seeds,shipped_collisions_total,shipped_collisions_within_a_cell_and_seed,shipped_collisions_across_seeds_within_a_cell,shipped_collisions_across_cells,shipped_duplicate_fraction,shipped_example,replacement_collisions
+E20 overlap sweep,8,60,200,96000,49450,46550,0,0,46550,0.48489583333333336,"{""first"": {""cell"": 0, ""seed"": 10, ""reader"": 0}, ""second"": {""cell"": 1, ""seed"": 0, ""reader"": 67}}",0
+E2 label cells,4,20,4000,320000,202010,117990,0,0,117990,0.36871875,"{""first"": {""cell"": 0, ""seed"": 10, ""reader"": 0}, ""second"": {""cell"": 1, ""seed"": 0, ""reader"": 67}}",0
+E31 two gates,12,20,60,14400,14400,0,0,0,0,0.0,null,0
+E32 matched arms,12,30,200,72000,42740,29260,0,0,29260,0.4063888888888889,"{""first"": {""cell"": 0, ""seed"": 10, ""reader"": 0}, ""second"": {""cell"": 1, ""seed"": 0, ""reader"": 67}}",0
+validation reduced scale,8,16,60,7680,7680,0,0,0,0,0.0,null,0

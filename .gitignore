@@ -26,8 +26,8 @@ results/e6_raw.csv
 # Smoke-scale and diagnostic run outputs. --quick and labelled diagnostics write here so they
 # can never overwrite, or be mistaken for, a reportable run in results/ and figures/.
 results_quick/
-results/diagnostics/*/*.csv
-results/diagnostics/*/figures/
+results/diagnostics/e14_steps24/*.csv
+results/diagnostics/e14_steps24/figures/
 
 # Validation output. Every verdict JSON, the hash-locked criteria, and every per-cell SUMMARY
 # under results/validation/ ARE committed: that is what VALIDATION.md is generated from and what
@@ -40,3 +40,9 @@ results/diagnostics/*/figures/
 results/validation/**/*_points.csv
 results/validation/**/*_raw.csv
 results/validation/**/e19_explore.csv
+
+# Diagnostics output. Every verdict JSON and every summary CSV IS committed, which is what
+# DIAGNOSTICS.md is generated from and what a reader needs to check a number. The per-observer point
+# files behind the sweeps are not, for the same reason as above.
+results/diagnostics/**/*_points.csv
+results/diagnostics/**/*_raw.csv
