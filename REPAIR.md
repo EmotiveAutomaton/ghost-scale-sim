@@ -205,14 +205,15 @@ The validation pass rechecked five experiments with the arithmetic done exactly 
 | E6 | yes | — | — | no |
 | E6b | yes | NOT falsified — the bias axis produces the predicted corrupt | NOT falsified — the bias axis produces the predicted corrupt | no |
 | E14 | yes | — | — | no |
+| E12 | yes | — | — | no |
 
-24 of 26 reachable experiments completed in both arms.
+25 of 26 reachable experiments completed in both arms.
 
 **These outcomes moved under the repaired model:** E19, E31. Each is reported with both values, and the original is retained.
 
 Individual verdict components that flipped: E19.positive_control_passed; E20.any_cell_crashes; E31.update_tracks_recovered_depth.
 
-**2 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34, E12. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.
+**1 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.
 
 The withheld experiment stays withheld and was not run.
 
@@ -264,4 +265,4 @@ The withheld experiment stays withheld, its failing test stays in the suite, and
 
 The minimal-model programme, which is the subtraction this pass's rule was written against. For each surviving result, find the smallest model that still produces it. Then the minimal models become a family, and comparison replaces single-model validation as the frame: with one model a failure is uninterpretable, and with a family it tells you which commitment was wrong.
 
-*Generated from results/repair/ on 2026-07-30 by `scripts/write_repair_md.py`. Every number above is read out of a verdict file; none is typed in.*
+*Generated from results/repair/ on 2026-07-31 by `scripts/write_repair_md.py`. Every number above is read out of a verdict file; none is typed in.*

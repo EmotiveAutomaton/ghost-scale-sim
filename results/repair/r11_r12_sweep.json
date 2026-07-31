@@ -7,10 +7,9 @@
     "E8": "withheld; it has never passed its own control and the repair pass does not change that"
   },
   "experiments_attempted": 26,
-  "experiments_completed": 24,
+  "experiments_completed": 25,
   "experiments_incomplete": [
-    "E34",
-    "E12"
+    "E34"
   ],
   "outcomes_moved": [
     "E19",
@@ -291,8 +290,17 @@
       "repaired_ok": true,
       "repaired_outcome": null,
       "outcome_moved": false
+    },
+    {
+      "experiment": "E12",
+      "module": "e12_leak_vs_samplesize",
+      "baseline_ok": true,
+      "baseline_outcome": null,
+      "repaired_ok": true,
+      "repaired_outcome": null,
+      "outcome_moved": false
     }
   ],
   "verdict": "SOME_VERDICTS_MOVE_UNDER_THE_REPAIRED_MODEL",
-  "statement": "24 of 26 reachable experiments completed in both arms.\n\n**These outcomes moved under the repaired model:** E19, E31. Each is reported with both values, and the original is retained.\n\nIndividual verdict components that flipped: E19.positive_control_passed; E20.any_cell_crashes; E31.update_tracks_recovered_depth.\n\n**2 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34, E12. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.\n\nThe withheld experiment stays withheld and was not run."
+  "statement": "25 of 26 reachable experiments completed in both arms.\n\n**These outcomes moved under the repaired model:** E19, E31. Each is reported with both values, and the original is retained.\n\nIndividual verdict components that flipped: E19.positive_control_passed; E20.any_cell_crashes; E31.update_tracks_recovered_depth.\n\n**1 experiment(s) had not finished in both arms when this was written and are named rather than left out:** E34. They are the two ordered last on purpose, because they dominate the wall clock; the list is cheap-first so a run that is cut short still covers the majority.\n\nThe withheld experiment stays withheld and was not run."
 }

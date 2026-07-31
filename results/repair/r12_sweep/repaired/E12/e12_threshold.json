@@ -1,0 +1,129 @@
+{
+  "experiment": "E12",
+  "spec": "V3 \u00a71 C2, \u00a73 N13",
+  "condition": "f = 0, honest signal \u2014 the condition that failed N11 in V2",
+  "N13": {
+    "b": 0.16568071545375643,
+    "intercept": -6.172907852665741,
+    "se": 0.020555213007606172,
+    "t": 8.060277234414869,
+    "n_points": 5,
+    "dropped": 0,
+    "passed": false,
+    "consistent_with_one_over_N": false,
+    "predicted_exponent": -1.0,
+    "consistent_band": [
+      -1.5,
+      -0.5
+    ],
+    "criterion": "gate: log|slope| ~ log N coefficient b significantly < 0 (t < -2.0); reported: b in [-1.5, -0.5] means 1/N finite-sample error",
+    "if_refuted": "the leak is not finite-sample estimation error; C1 is not the right fix, the V3 diagnosis is wrong, and E8 must not run"
+  },
+  "loglog_fit_with_averaging": {
+    "b": 0.17821028410308684,
+    "intercept": -6.219116222113062,
+    "se": 0.050757018693588556,
+    "t": 3.5110471160434353,
+    "n_points": 5,
+    "dropped": 0
+  },
+  "slopes_without_averaging": [
+    {
+      "n_artifacts": 100,
+      "slope": 0.00450563219932932,
+      "se": 0.0033978648153187236,
+      "t": 1.3260186747325575
+    },
+    {
+      "n_artifacts": 300,
+      "slope": 0.005084133657351031,
+      "se": 0.0023783140887474615,
+      "t": 2.137704889949413
+    },
+    {
+      "n_artifacts": 1000,
+      "slope": 0.006659598872529086,
+      "se": 0.0023285124839487457,
+      "t": 2.8600228336485376
+    },
+    {
+      "n_artifacts": 3000,
+      "slope": 0.008646708781013342,
+      "se": 0.0022927975947274067,
+      "t": 3.7712481908117836
+    },
+    {
+      "n_artifacts": 10000,
+      "slope": 0.0089755053480336,
+      "se": 0.0025596788239192377,
+      "t": 3.506496699570615
+    }
+  ],
+  "slopes_with_averaging": [
+    {
+      "n_artifacts": 100,
+      "slope": 0.0042842449731961725,
+      "se": 0.002196634153451141,
+      "t": 1.9503680057351278,
+      "n11_passed": false
+    },
+    {
+      "n_artifacts": 300,
+      "slope": 0.004929746160990465,
+      "se": 0.0022671243100557516,
+      "t": 2.174448987699857,
+      "n11_passed": false
+    },
+    {
+      "n_artifacts": 1000,
+      "slope": 0.008466191140464705,
+      "se": 0.002358678795596417,
+      "t": 3.589378577647296,
+      "n11_passed": false
+    },
+    {
+      "n_artifacts": 3000,
+      "slope": 0.009294792033348086,
+      "se": 0.002557461651540964,
+      "t": 3.634381781540159,
+      "n11_passed": false
+    },
+    {
+      "n_artifacts": 10000,
+      "slope": 0.00870430135715189,
+      "se": 0.002507747226496589,
+      "t": 3.4709644039013074,
+      "n11_passed": false
+    }
+  ],
+  "m_sweep": [
+    {
+      "m_observers": 1,
+      "n_artifacts": 1000,
+      "slope": 0.014729673068469548,
+      "se": 0.004833949570137043,
+      "t": 3.047130065126426
+    },
+    {
+      "m_observers": 5,
+      "n_artifacts": 1000,
+      "slope": 0.008466191140464705,
+      "se": 0.002358678795596417,
+      "t": 3.589378577647296
+    },
+    {
+      "m_observers": 20,
+      "n_artifacts": 1000,
+      "slope": 0.005879702322433063,
+      "se": 0.0016335768010613486,
+      "t": 3.5992812328217267
+    }
+  ],
+  "sample_size_decision": {
+    "found": false,
+    "n_artifacts": null,
+    "reason": "no swept sample size passed the pre-registered N11 criterion with averaging; E8 does not run"
+  },
+  "e8_may_run": false,
+  "if_e8_may_not_run": "V3 \u00a71 C2: if the without-averaging slope does not shrink with N, the leak is not finite-sample estimation error and the entire V3 diagnosis is wrong. Report this loudly; the loop is lossy for a structural reason C1 does not address, and E8 must not be run until that reason is found."
+}
