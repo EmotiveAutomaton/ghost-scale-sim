@@ -170,6 +170,17 @@ the code's own account of itself as given.*
 
 ---
 
+## Where the theory should be updated
+
+**The security argument's mechanism.** The framework reaches self-policing disclosure through
+Zahavian signalling — honesty is stable because the honest signal is *wasteful*. Signalling theory
+has since moved to a **trade-off** account: honesty holds where deception is costly relative to what
+it gains. E51 produced a detection-rate threshold, which is a trade-off result, without being aimed
+at one. **The conclusion survives; the stated justification should be updated.** See
+[EVIDENCE.md](EVIDENCE.md).
+
+---
+
 ## What is still open
 
 1. **N21 remains split.** The pre-registered depth-versus-effort contrast fails under exact

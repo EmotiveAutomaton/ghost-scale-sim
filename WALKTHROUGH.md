@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-one pictures, in the order that makes the argument.** Each one is meant to be readable in
+**Twenty-three pictures, in the order that makes the argument.** Each one is meant to be readable in
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
@@ -235,6 +235,35 @@ one who skims.**
 The project's longest-running open question, settled by changing *what* was measured rather than
 *how*. The criterion was scored on the work's purpose — which the model deliberately holds equally
 readable at every depth, so it could never have moved.
+
+---
+
+## Part six — how much of any of this is the theory?
+
+### 22. I threw my own settings away
+
+![How much of this is the theory](figures/walkthrough/22_how_much_is_the_theory.png)
+
+The most important number in this project is not a result. Keep the shape of the model, randomise
+everything the theory specifies, and count how often the finding still appears.
+
+**Two of three headlines appear every time.** They are properties of building a reader this shape at
+all — which *is* the theory, but is the part shared with any account of the same shape. It does not
+distinguish this framework from a competitor built the same way.
+
+One result survives at zero. That is where the specific commitments earn their keep.
+
+### 23. Honest marking is self-policing, at a price
+
+![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
+
+The proposal's answer to bad actors, simulated for the first time in eight versions. It works — and
+it comes with a condition rather than a reassurance: **you have to catch half the liars.**
+
+*The framework reaches this through Zahavian signalling, on which honesty is stable because the
+honest signal is wasteful. Signalling theory has since moved to a trade-off account, and a
+detection-rate threshold is a trade-off result. The simulation landed on the current position
+without being aimed at it.*
 
 ---
 

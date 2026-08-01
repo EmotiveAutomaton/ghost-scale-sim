@@ -152,8 +152,12 @@ prediction verbatim. And four places the world pushes back:
   labelled content loses trust *and unlabelled content gains it*.
 - **Counterarguing research** says engaging carefully with something you reject produces *more*
   resistance, not less. E46 sides with the sleeper-effect minority.
-- **Signalling theory abandoned the handicap principle** two decades ago. E51's result is right and
-  the framework's stated justification for it is out of date.
+- **Signalling theory abandoned the handicap principle.** The framework reaches its security
+  argument through Zahavian signalling — honesty is stable because the honest signal is *wasteful*.
+  Modern work holds that honesty is maintained by **trade-offs**: what matters is that deception is
+  costly relative to what it gains. E51 finds a detection-rate threshold, which *is* a trade-off
+  account. **The simulation landed on the current position without being aimed at it**, so the
+  conclusion survives and the stated mechanism should be updated.
 
 ---
 

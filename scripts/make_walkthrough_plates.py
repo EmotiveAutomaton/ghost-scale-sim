@@ -731,6 +731,104 @@ def plate_21_two_gates_settled():
            "rather than how it was measured.")
 
 
+
+# =========================================================================== #
+# 22 - how much of this is the theory (the severity rates).
+# =========================================================================== #
+def plate_22_how_much_is_the_theory():
+    d = load("v8/s1_severity.json")
+    rates = d["rates"]
+    ref = d.get("reference_point", {})
+
+    # Short, plain labels. The full finding names are in the footer's source file; a bar chart
+    # whose labels need two lines each is not readable in two seconds.
+    SHORT = {
+        "E2/R-5 a false label moves you the wrong way": "a false label misleads you",
+        "E36 depth moves the method, not the purpose": "depth transmits method",
+        "E37 the wall is a distinct failure": "legible and empty",
+    }
+    labels, vals = [], []
+    for name, r in rates.items():
+        v = r.get("false_positive_rate")
+        if v is None or v != v:
+            continue
+        labels.append(SHORT.get(name, name[:28]))
+        vals.append(float(v))
+    if ref.get("false_positive_rate") is not None:
+        labels.append("certainty under a false label")
+        vals.append(float(ref["false_positive_rate"]))
+
+    order = sorted(range(len(vals)), key=lambda i: vals[i])     # ascending, so 0% sits at bottom
+    labels = [labels[i] for i in order]
+    vals = [vals[i] for i in order]
+
+    fig, ax = plate(
+        "I threw my own settings away and checked how much of this was ever mine.",
+        "Keep the shape of the model, randomise everything the theory specifies, and count how "
+        "often the finding still appears. If it appears every time, it came from the shape.",
+        "S-1 - results/v8/s1_severity.json - share of randomly parameterised models that "
+        "reproduce each finding")
+    # A wider left margin than the house default, because these labels are the axis.
+    pos = ax.get_position()
+    ax.set_position([0.26, pos.y0, 0.62, pos.height])
+
+    colors = [MACHINE if v > 0.5 else HUMAN for v in vals]
+    bars = ax.barh(labels, vals, color=colors, height=0.5)
+    for b, v in zip(bars, vals):
+        ax.text(v + 0.025, b.get_y() + b.get_height() / 2, f"{v:.0%}",
+                va="center", ha="left", fontsize=16, fontweight="bold", color=INK)
+    ax.set_xlim(0, 1.25)
+    ax.tick_params(axis="y", labelsize=12)
+    clean_axis(ax, "", "")
+    ax.set_xticks([])
+    annotate(ax, 0.16, 0.02, "needed the theory", color=HUMAN,
+             fontsize=12.5, weight="bold", va="center")
+    annotate(ax, 1.02, len(vals) - 1.5, "came from the\narchitecture,\nnot the theory",
+             color=MACHINE, fontsize=12, weight="bold", va="center")
+    record(save(fig, "22_how_much_is_the_theory"),
+           "The most important number here is not a result. It costs the project its two "
+           "biggest-sounding claims.")
+
+
+# =========================================================================== #
+# 23 - honest marking is self-policing, at a price.
+# =========================================================================== #
+def plate_23_honesty_pays_at_a_price():
+    d = load("v8/e51_creator.json")
+    eq = [r for r in d["equilibrium"] if abs(float(r["leak"])) < 1e-9]
+    eq.sort(key=lambda r: r["detection"])
+    x = [float(r["detection"]) for r in eq]
+    liar = [float(r["defector_payoff"]) for r in eq]
+    honest = [float(r["honest_payoff"]) for r in eq]
+    thr = d.get("detection_rate_where_honesty_pays", {}).get("tight_gate")
+
+    fig, ax = plate(
+        "Marking your work honestly only pays if half the liars get caught.",
+        "A maker who labels honestly loses something: the label lowers what readers take from the "
+        "work. A maker who lies gets the uptake of honest work. Whether honesty survives depends "
+        "entirely on how often lying is noticed.",
+        "E51 - results/v8/e51_creator.json - what each strategy earns, by how often a lie is detected")
+    ax.plot(x, liar, "-o", color=MACHINE, lw=2.8, ms=9)
+    ax.plot(x, honest, "-o", color=HUMAN, lw=2.8, ms=9)
+    zero_line(ax)
+    if thr is not None:
+        ax.axvline(float(thr), color=INK, lw=1.4, ls="--")
+        annotate(ax, float(thr) + 0.015, max(liar) * 0.55,
+                 f"honesty wins\nabove {float(thr):.0%}", color=INK,
+                 fontsize=12.5, weight="bold")
+    annotate(ax, x[0] + 0.01, liar[0] + 0.06, "lying", color=MACHINE,
+             fontsize=13, weight="bold")
+    annotate(ax, x[0] + 0.01, honest[0] - 0.18, "marking it honestly", color=HUMAN,
+             fontsize=13, weight="bold")
+    ax.set_xticks([0, 0.25, 0.5, 0.75, 1.0])
+    ax.set_xticklabels(["never", "25%", "half", "75%", "always"])
+    clean_axis(ax, "what the strategy earns", "how often a lie is caught")
+    ax.set_yticks([])
+    record(save(fig, "23_honesty_pays_at_a_price"),
+           "The framework's answer to bad actors, simulated for the first time. It works, and it "
+           "comes with a condition rather than a reassurance.")
+
+
 PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_04_method_not_purpose, plate_05_intent_unlocks, plate_06_two_mechanisms,
           plate_07_reputation_blindness, plate_08_expertise_substitutes,
@@ -738,7 +836,8 @@ PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_11_self_report, plate_12_two_damages, plate_13_no_mind_needed,
           plate_14_knee_not_cliff, plate_15_coverage, plate_16_channel_race,
           plate_17_withheld, plate_18_what_tom_buys, plate_19_zero_shot,
-          plate_20_rejection_is_not_protection, plate_21_two_gates_settled]
+          plate_20_rejection_is_not_protection, plate_21_two_gates_settled,
+          plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price]
 
 
 def main() -> None:

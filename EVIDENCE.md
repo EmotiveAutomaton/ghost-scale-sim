@@ -90,4 +90,45 @@ interesting rows in a different way.
 
 **And four rows where nobody has asked the question** — E4's no-label baseline, E30/E31's method-versus-purpose split, E36's within-encounter ordering, and E49's bimodality. Those are the project's real forward predictions, arrived at honestly: not sealed in advance, but genuinely unasked.
 
+---
+
+## The author's reading of the four disagreements
+
+Recorded because a disagreement with no interpretation attached is just a loose end, and because
+two of these are testable.
+
+**E19 — less attention on AI content.** *Not a failure of the finding so much as a missing layer.*
+The proposed reading: readers have begun learning the **surface signature** of generated content and
+disengage on that, before any attempt to read intent. That is a learned detector sitting in front of
+the mechanism this model implements — and it predicts something specific and unpleasant: **it will
+misfire.** A detector trained on surface features will fire on human work that happens to share
+them. **Buildable, and it would reconcile E19 with the eye-tracking result rather than choosing
+between them.**
+
+**E16 — the implied-authenticity effect.** Accepted without argument. The reading: this is a
+**transition cost**. A convention only works once enough people hold it, and until then partial
+adoption has a corrosive effect on exactly the content it fails to cover. That is a real price of
+implementation rather than a flaw in the proposal, and it should be stated as one — a disclosure
+scheme is worse than nothing at low coverage and better than nothing above it, which is what E16's
+threshold already says.
+
+**E46 — counterarguing produces more resistance, not less.** The proposed reading, and it is the
+most interesting of the four: there is probably a **pre-emptive adversarial mode** — a stance in
+which you take something apart at a distance with the gate already shut, rather than closing it
+reactively once you have understood. Given how much of human history is social adversarial play, it
+would be strange if that channel did not exist.
+
+*The implication is the useful part.* If such a mode exists, it is architecture that could be
+**pointed at generated content deliberately** — which would make the Ghost Scale's protective effect
+larger than anything measured here, because a label that triggers adversarial reading does more than
+a label that triggers dismissal. **Buildable: a reader whose gate is pre-closed rather than
+reactively closed, and the prediction is lower drift at the same engagement.**
+
+**E51 — signalling theory.** Accepted. The framework arrived at its security argument through
+Zahavian signalling and modern theory has moved to a trade-off account. The simulation independently
+produced a trade-off result. The conclusion stands; the stated mechanism is updated wherever it
+appears.
+
+---
+
 *Searched August 2026. Nothing here informed any design.*

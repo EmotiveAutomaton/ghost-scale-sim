@@ -14,6 +14,24 @@ the reputational cost exceeds what the lie gained, so honesty is stable above so
 That is a claim about an equilibrium and it needs two agents.
 
 -----------------------------------------------------------------------------------------
+A CORRECTION TO THE FRAMEWORK'S OWN FRAMING, ARRIVED AT BY RUNNING IT.
+
+The framework reaches this argument through ZAHAVIAN SIGNALLING -- the handicap principle, on which
+a signal is honest only if it is WASTEFUL, because the waste is what a low-quality signaller cannot
+afford. That is where the hypothesis came from and it is worth saying so.
+
+**Signalling theory has moved off that position, and this experiment lands on the newer one without
+having been aimed at it.** Honesty is now understood to be maintained by TRADE-OFFS rather than by
+cost: what matters is not that the signal is expensive but that DECEPTION is expensive relative to
+what it gains. (Honesty in signalling games is maintained by trade-offs rather than costs, BMC
+Biology 2022; general signalling theory, J. Evol. Biol. 2026.)
+
+What this experiment finds is a DETECTION-RATE THRESHOLD, which is a trade-off account: honesty
+wins where being caught costs more than lying gains. Nothing here depends on the honest signal being
+wasteful. So the result supports the framework's conclusion and not its stated mechanism, and both
+are reported.
+
+-----------------------------------------------------------------------------------------
 WHAT IS DELIBERATELY NOT BUILT, per the author's decision.
 
 A maker that chooses HOW MUCH TO DELEGATE to a tool -- the cognitive-surrender dynamic -- is a
