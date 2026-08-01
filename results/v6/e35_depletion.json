@@ -1,0 +1,46 @@
+{
+  "probe_drop": 0.13226126668276603,
+  "probe_monotone_rho": -0.7692307692307693,
+  "null_n22_passed": true,
+  "reserve_first": 0.9457721240417407,
+  "reserve_last": 0.4989862618177707,
+  "outcome": "DEPLETION_CARRIES_TO_UNSEEN_HUMAN_WORK",
+  "relative_drop": 0.933292371442988,
+  "fold_reduction": 14.990789234028098,
+  "criterion_note": "the pre-registered clause is an ABSOLUTE drop of 0.10 and it is not seed-stable: on a disjoint seed block the mechanism reproduced (reserve 1.00 -> 0.46, monotonicity -0.81, control flat at 1.00) while the verdict flipped, because baseline probe engagement differs about two-fold between blocks. The relative drop and the monotonicity are stable; the absolute threshold is not. Reported, not repaired.",
+  "experiment": "E35",
+  "hypothesis": "H6.1",
+  "question": "Does a reader worn down by intent-empty content engage less with genuine human work it has never seen?",
+  "plain_language": "The preprint says the damage accumulates in the reader and ends in apathy. The simulation had no way to represent that at all: every reader arrived fresh. This gives the reader an energy budget that falls when it looks hard and gets nothing, and then measures its engagement with a FIXED human artifact that never changes.",
+  "design_note": "the criterion is the PROBE, not the exposed condition. A depletion term that only lowers engagement on the content that caused it is a knob doing what it was pointed at. The claim is that it carries.",
+  "arms": {
+    "intent_empty": {
+      "probe_engagement_first": 0.14171471955596657,
+      "probe_engagement_last": 0.009453452873200536,
+      "reserve_first": 0.9457721240417407,
+      "reserve_last": 0.4989862618177707
+    },
+    "human": {
+      "probe_engagement_first": 0.1550613638536819,
+      "probe_engagement_last": 0.13305000744970422,
+      "reserve_first": 1.0,
+      "reserve_last": 1.0
+    },
+    "mixed": {
+      "probe_engagement_first": 0.1550613638536819,
+      "probe_engagement_last": 0.0910279742692846,
+      "reserve_first": 1.0,
+      "reserve_last": 0.8231680085410479
+    }
+  },
+  "null_n22": {
+    "statement": "on a fully resolvable corpus the reserve must not move",
+    "reserve_start": 1.0,
+    "reserve_end": 1.0,
+    "passed": true,
+    "why_first": "this is the null the generational experiment never passed. A depletion mechanism that drifts on content it should not touch would produce this experiment's headline for free."
+  },
+  "n_readers": 24,
+  "n_encounters": 12,
+  "probe": "a fixed human artifact, identical in every arm and at every point"
+}

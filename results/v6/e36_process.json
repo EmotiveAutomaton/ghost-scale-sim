@@ -1,0 +1,158 @@
+{
+  "experiment": "E36",
+  "hypotheses": [
+    "H6.3",
+    "H6.4",
+    "H6.12"
+  ],
+  "question": "Does the reader recover the maker's PROCESS, does the goal gate that recovery, and does depth move it where it cannot move goal uptake?",
+  "plain_language": "Every measure of what a reader takes on, in every version of this project, has scored how much of the maker's PURPOSE it got. Depth is built so the purpose is equally readable however deep the work is, so that measure could not move with depth whatever was true. This scores what the reader got of the maker's METHOD, which the reader has been quietly tracking all along and nobody ever read out.",
+  "null_n28": {
+    "statement": "at the shallowest depth there is no process, so recovery is at chance",
+    "decided_on": "process error reduction (mean log-probability of the truth vs uniform)",
+    "measured_information": -0.02229967415321919,
+    "tolerance": 0.05,
+    "passed": true,
+    "accuracy_reported_beside_it": 0.23055555555555557,
+    "accuracy_chance": 0.25,
+    "why_not_accuracy": "at mu = 1 the sub-goal posterior never leaves its uniform prior, so its argmax is a tie broken to index zero, while the true mode is autocorrelated because the chain dwells. Accuracy then measures how often the artifact happened to sit in mode zero and came out BELOW nominal chance, which no amount of information could produce. The information measure is exactly zero on an unmoved posterior whatever the truth was. Declared rather than quietly substituted.",
+    "why_it_is_the_gate": "if process recovery moved at mu = 1 it would be reading goal information, which is the exact trap depth was built to avoid"
+  },
+  "H6.4": {
+    "deepest_minus_shallowest": 0.1794735852119774,
+    "interval": [
+      0.09897529492426363,
+      0.26708698015226795
+    ],
+    "excludes_zero_positive": true,
+    "outcome": "DEPTH_MOVES_PROCESS_UPTAKE"
+  },
+  "H6.4_goal_comparison": {
+    "deepest_minus_shallowest": -0.027779750405322545,
+    "interval": [
+      -0.11562390269732711,
+      0.05836565811872571
+    ],
+    "note": "the measure E30 used, on these same cells. Reported beside the process measure rather than instead of it: the claim is that one can move where the other provably cannot."
+  },
+  "H6.3": {
+    "process_recovery_goal_right": 0.388063063063063,
+    "process_recovery_goal_wrong": 0.340909090909091,
+    "ordering_gap": 0.04715397215397199,
+    "outcome": "PROCESS_IS_INDEPENDENT_OF_GOAL",
+    "n_goal_right": 185,
+    "n_goal_wrong": 55
+  },
+  "H6.3b_temporal": {
+    "process_before_settling": 0.05040903695992494,
+    "process_after_settling": 0.13047826518425804,
+    "gain_after_settling": 0.0800692282243331,
+    "interval": [
+      0.04056722067185378,
+      0.12184138723810493
+    ],
+    "n_rollouts": 102,
+    "excludes_zero_positive": true,
+    "outcome": "RESOLVING_THE_GOAL_UNLOCKS_THE_PROCESS"
+  },
+  "H6.12": {
+    "whole_accuracy": 0.4114583333333333,
+    "window_accuracy": 0.4154761904761905,
+    "gap": 0.004017857142857184,
+    "outcome": "EXTRACTION_IS_SCALE_INVARIANT"
+  },
+  "cells": [
+    {
+      "mu": 1,
+      "beta": 0.1,
+      "goal_accuracy": 0.4,
+      "goal_error_reduction": -0.14109021562006405,
+      "process_accuracy": 0.23229166666666665,
+      "process_error_reduction": -0.011964016473349525,
+      "window_accuracy": 0.2333333333333333,
+      "whole_accuracy": 0.23229166666666665
+    },
+    {
+      "mu": 1,
+      "beta": 0.25,
+      "goal_accuracy": 0.825,
+      "goal_error_reduction": 0.8255052335810944,
+      "process_accuracy": 0.19479166666666667,
+      "process_error_reduction": -0.02044996332663651,
+      "window_accuracy": 0.19702380952380952,
+      "whole_accuracy": 0.19479166666666667
+    },
+    {
+      "mu": 1,
+      "beta": 1.0,
+      "goal_accuracy": 1.0,
+      "goal_error_reduction": 1.3655705038800856,
+      "process_accuracy": 0.26458333333333334,
+      "process_error_reduction": -0.034485042659671526,
+      "window_accuracy": 0.2648809523809524,
+      "whole_accuracy": 0.26458333333333334
+    },
+    {
+      "mu": 2,
+      "beta": 0.1,
+      "goal_accuracy": 0.55,
+      "goal_error_reduction": 0.4509224632301029,
+      "process_accuracy": 0.36354166666666665,
+      "process_error_reduction": 0.013739942453255539,
+      "window_accuracy": 0.37083333333333335,
+      "whole_accuracy": 0.36354166666666665
+    },
+    {
+      "mu": 2,
+      "beta": 0.25,
+      "goal_accuracy": 0.8,
+      "goal_error_reduction": 0.8160122906156593,
+      "process_accuracy": 0.38541666666666663,
+      "process_error_reduction": 0.07301514551876376,
+      "window_accuracy": 0.3892857142857143,
+      "whole_accuracy": 0.38541666666666663
+    },
+    {
+      "mu": 2,
+      "beta": 1.0,
+      "goal_accuracy": 1.0,
+      "goal_error_reduction": 1.3818087573266236,
+      "process_accuracy": 0.3875,
+      "process_error_reduction": 0.20170906270013583,
+      "window_accuracy": 0.38511904761904764,
+      "whole_accuracy": 0.3875
+    },
+    {
+      "mu": 3,
+      "beta": 0.1,
+      "goal_accuracy": 0.45,
+      "goal_error_reduction": 0.13882597798286536,
+      "process_accuracy": 0.32395833333333335,
+      "process_error_reduction": 0.03781617872943972,
+      "window_accuracy": 0.325,
+      "whole_accuracy": 0.32395833333333335
+    },
+    {
+      "mu": 3,
+      "beta": 0.25,
+      "goal_accuracy": 0.825,
+      "goal_error_reduction": 0.7888036057183866,
+      "process_accuracy": 0.36770833333333336,
+      "process_error_reduction": 0.048753604259214496,
+      "window_accuracy": 0.35892857142857143,
+      "whole_accuracy": 0.36770833333333336
+    },
+    {
+      "mu": 3,
+      "beta": 1.0,
+      "goal_accuracy": 1.0,
+      "goal_error_reduction": 1.337790753474763,
+      "process_accuracy": 0.4354166666666667,
+      "process_error_reduction": 0.14498854255230584,
+      "window_accuracy": 0.4458333333333333,
+      "whole_accuracy": 0.4354166666666667
+    }
+  ],
+  "bootstrap_draws": 4000,
+  "design_note": "goal recovery is made to vary with the rationality knob, which attenuates which goal the execution modes serve while leaving the mode structure standing. That dissociation is already in the model and is what H6.3 needs."
+}

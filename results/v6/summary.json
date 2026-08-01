@@ -1,0 +1,556 @@
+{
+  "E36": {
+    "experiment": "E36",
+    "hypotheses": [
+      "H6.3",
+      "H6.4",
+      "H6.12"
+    ],
+    "question": "Does the reader recover the maker's PROCESS, does the goal gate that recovery, and does depth move it where it cannot move goal uptake?",
+    "plain_language": "Every measure of what a reader takes on, in every version of this project, has scored how much of the maker's PURPOSE it got. Depth is built so the purpose is equally readable however deep the work is, so that measure could not move with depth whatever was true. This scores what the reader got of the maker's METHOD, which the reader has been quietly tracking all along and nobody ever read out.",
+    "null_n28": {
+      "statement": "at the shallowest depth there is no process, so recovery is at chance",
+      "decided_on": "process error reduction (mean log-probability of the truth vs uniform)",
+      "measured_information": -0.02229967415321919,
+      "tolerance": 0.05,
+      "passed": true,
+      "accuracy_reported_beside_it": 0.23055555555555557,
+      "accuracy_chance": 0.25,
+      "why_not_accuracy": "at mu = 1 the sub-goal posterior never leaves its uniform prior, so its argmax is a tie broken to index zero, while the true mode is autocorrelated because the chain dwells. Accuracy then measures how often the artifact happened to sit in mode zero and came out BELOW nominal chance, which no amount of information could produce. The information measure is exactly zero on an unmoved posterior whatever the truth was. Declared rather than quietly substituted.",
+      "why_it_is_the_gate": "if process recovery moved at mu = 1 it would be reading goal information, which is the exact trap depth was built to avoid"
+    },
+    "H6.4": {
+      "deepest_minus_shallowest": 0.1794735852119774,
+      "interval": [
+        0.09897529492426363,
+        0.26708698015226795
+      ],
+      "excludes_zero_positive": true,
+      "outcome": "DEPTH_MOVES_PROCESS_UPTAKE"
+    },
+    "H6.4_goal_comparison": {
+      "deepest_minus_shallowest": -0.027779750405322545,
+      "interval": [
+        -0.11562390269732711,
+        0.05836565811872571
+      ],
+      "note": "the measure E30 used, on these same cells. Reported beside the process measure rather than instead of it: the claim is that one can move where the other provably cannot."
+    },
+    "H6.3": {
+      "process_recovery_goal_right": 0.388063063063063,
+      "process_recovery_goal_wrong": 0.340909090909091,
+      "ordering_gap": 0.04715397215397199,
+      "outcome": "PROCESS_IS_INDEPENDENT_OF_GOAL",
+      "n_goal_right": 185,
+      "n_goal_wrong": 55
+    },
+    "H6.3b_temporal": {
+      "process_before_settling": 0.05040903695992494,
+      "process_after_settling": 0.13047826518425804,
+      "gain_after_settling": 0.0800692282243331,
+      "interval": [
+        0.04056722067185378,
+        0.12184138723810493
+      ],
+      "n_rollouts": 102,
+      "excludes_zero_positive": true,
+      "outcome": "RESOLVING_THE_GOAL_UNLOCKS_THE_PROCESS"
+    },
+    "H6.12": {
+      "whole_accuracy": 0.4114583333333333,
+      "window_accuracy": 0.4154761904761905,
+      "gap": 0.004017857142857184,
+      "outcome": "EXTRACTION_IS_SCALE_INVARIANT"
+    },
+    "bootstrap_draws": 4000,
+    "design_note": "goal recovery is made to vary with the rationality knob, which attenuates which goal the execution modes serve while leaving the mode structure standing. That dissociation is already in the model and is what H6.3 needs."
+  },
+  "E35": {
+    "probe_drop": 0.13226126668276603,
+    "probe_monotone_rho": -0.7692307692307693,
+    "null_n22_passed": true,
+    "reserve_first": 0.9457721240417407,
+    "reserve_last": 0.4989862618177707,
+    "outcome": "DEPLETION_CARRIES_TO_UNSEEN_HUMAN_WORK",
+    "relative_drop": 0.933292371442988,
+    "fold_reduction": 14.990789234028098,
+    "criterion_note": "the pre-registered clause is an ABSOLUTE drop of 0.10 and it is not seed-stable: on a disjoint seed block the mechanism reproduced (reserve 1.00 -> 0.46, monotonicity -0.81, control flat at 1.00) while the verdict flipped, because baseline probe engagement differs about two-fold between blocks. The relative drop and the monotonicity are stable; the absolute threshold is not. Reported, not repaired.",
+    "experiment": "E35",
+    "hypothesis": "H6.1",
+    "question": "Does a reader worn down by intent-empty content engage less with genuine human work it has never seen?",
+    "plain_language": "The preprint says the damage accumulates in the reader and ends in apathy. The simulation had no way to represent that at all: every reader arrived fresh. This gives the reader an energy budget that falls when it looks hard and gets nothing, and then measures its engagement with a FIXED human artifact that never changes.",
+    "design_note": "the criterion is the PROBE, not the exposed condition. A depletion term that only lowers engagement on the content that caused it is a knob doing what it was pointed at. The claim is that it carries.",
+    "arms": {
+      "intent_empty": {
+        "probe_engagement_first": 0.14171471955596657,
+        "probe_engagement_last": 0.009453452873200536,
+        "reserve_first": 0.9457721240417407,
+        "reserve_last": 0.4989862618177707
+      },
+      "human": {
+        "probe_engagement_first": 0.1550613638536819,
+        "probe_engagement_last": 0.13305000744970422,
+        "reserve_first": 1.0,
+        "reserve_last": 1.0
+      },
+      "mixed": {
+        "probe_engagement_first": 0.1550613638536819,
+        "probe_engagement_last": 0.0910279742692846,
+        "reserve_first": 1.0,
+        "reserve_last": 0.8231680085410479
+      }
+    },
+    "null_n22": {
+      "statement": "on a fully resolvable corpus the reserve must not move",
+      "reserve_start": 1.0,
+      "reserve_end": 1.0,
+      "passed": true,
+      "why_first": "this is the null the generational experiment never passed. A depletion mechanism that drifts on content it should not touch would produce this experiment's headline for free."
+    },
+    "n_readers": 24,
+    "n_encounters": 12,
+    "probe": "a fixed human artifact, identical in every arm and at every point"
+  },
+  "E37": {
+    "experiment": "E37",
+    "hypothesis": "H6.5",
+    "question": "Is the wall in front of generated content a vocabulary deficit, or the absence of an invertible route back to a maker state?",
+    "plain_language": "The model has been describing unreadable machine content as content written in a vocabulary the reader lacks. The objection is that this is not what it feels like: you can read every word and there is still nothing behind it. This builds content on FAMILIAR features whose maker cannot be inverted from the surface, and asks whether that is a different failure from unfamiliar content.",
+    "H6.5": {
+      "signature_separation": 0.8860819049215799,
+      "entropy_gap": 0.8467961906358656,
+      "engagement_gap": 0.03928571428571428,
+      "legible_and_empty": true,
+      "outcome": "THE_WALL_IS_A_DISTINCT_FAILURE"
+    },
+    "null_n30": {
+      "statement": "the non-invertible family stays on the human feature block",
+      "max_foreign_mass": 0.07547169811320754,
+      "passed": true,
+      "why": "without it this is foreign content in new vocabulary and the hypothesis cannot fail"
+    },
+    "family": {
+      "n_states": 4,
+      "collapse_to": 2,
+      "invertible": false
+    },
+    "n_obs": 60
+  },
+  "E38": {
+    "experiment": "E38",
+    "hypothesis": "H6.6",
+    "question": "Does AI literacy stack with art literacy, or replace it?",
+    "plain_language": "If reading generated work needs a different skill rather than more of the same skill, then people who know how these systems work should be able to read them. The question worth asking is what that costs: does the new expertise sit alongside the old one, or eat it?",
+    "H6.6": {
+      "human_reader_human_content": 1.0,
+      "human_reader_machine_content": 0.32,
+      "machine_reader_human_content": 0.28,
+      "machine_reader_machine_content": 1.0,
+      "gain_on_machine": 0.6799999999999999,
+      "loss_on_human": 0.72,
+      "outcome": "EXPERTISE_SUBSTITUTES"
+    },
+    "design_note": "both readers are built by the same code over different hypothesis families, so nothing differs between them except what they expect a maker to be like. The interesting cell is the off-diagonal one: the machine-matched reader on human work.",
+    "n_obs": 50
+  },
+  "E39": {
+    "experiment": "E39",
+    "hypothesis": "H6.7",
+    "question": "Does a reader that can conclude 'there is no maker here' stop cleanly, rather than either crashing or inventing?",
+    "plain_language": "Until now the reader could only FAIL to find a maker. It had no way to decide that there was not one. That is what the Ghost Scale is meant to give it -- not distrust of a label, but permission to stop. This gives the reader that hypothesis and asks whether stopping looks different from failing.",
+    "H6.7": {
+      "final_entropy": 1.406726725355695,
+      "engaged_fraction": 0.009523809523809523,
+      "fabrication_index": 0.08520313340303023,
+      "crash_final_entropy": 1.194736053408098,
+      "crash_engaged_fraction": 0.0023809523809523807,
+      "resolved": false,
+      "disengaged": true,
+      "no_invention": true,
+      "outcome": "TOOL_HYPOTHESIS_REDIRECTS_RATHER_THAN_RELAXES"
+    },
+    "null_n27": {
+      "statement": "NO_MAKER must not absorb human work (the failure V4 caught with EXPLORE)",
+      "construction": {
+        "min_js_to_human_goal": 0.3062004015159678,
+        "floor": 0.2,
+        "js_to_each_goal": [
+          0.3062004015159678,
+          0.3062004015159678,
+          0.3062004015159678,
+          0.3062004015159678
+        ]
+      },
+      "behavioural_human_accuracy": 1.0,
+      "passed": true
+    },
+    "three_signatures": {
+      "crash": "unresolved and still looking",
+      "exploit": "resolved, confident and wrong",
+      "tool_reading": "resolved, stopped, not inventing"
+    },
+    "n_obs": 60
+  },
+  "E40": {
+    "experiment": "E40",
+    "hypotheses": [
+      "H6.8",
+      "H6.9"
+    ],
+    "question": "How do surface appeal and social endorsement combine into the decision to look closely, and what happens when the surface cue is optimised directly?",
+    "plain_language": "The reader in this model decides to look closely on one basis: how much it expects to learn. People do not work that way. Something catches your eye, and someone tells you it is worth your time, and both of those happen before you have learned anything at all. This adds those two channels, and then asks what happens when the eye-catching one is optimised on purpose.",
+    "H6.8": {
+      "additive_lift_at_empty_corner": 0.35000000000000003,
+      "multiplicative_lift_at_empty_corner": 0.002722222222222224,
+      "preregistered": "additive",
+      "outcome": "ADDITIVE_FITS"
+    },
+    "H6.9": {
+      "engagement_lift": 0.35,
+      "error_reduction": -0.2806608686144155,
+      "pays_more_gets_less": true,
+      "outcome": "A_THIRD_FAILURE_MODE_OVERENGAGEMENT"
+    },
+    "null_n29": {
+      "statement": "the cue channels carry no goal information",
+      "goal_accuracy_spread_across_corners": 0.0,
+      "passed": true,
+      "why": "a cue that told the reader which goal would be a second legibility channel and would re-derive the label effect through the back door"
+    },
+    "weights": {
+      "aesthetic": 0.35,
+      "social": 0.35
+    },
+    "why_this_is_a_third_failure_mode": "not the crash, because the reader is engaged rather than disengaged; not the trust exploit, because no label has lied and the reader is not wrong about provenance. It is a reader correctly reading an artifact shaped to trip its own heuristic for deciding what is worth reading.",
+    "n_obs": 50
+  },
+  "E41": {
+    "experiment": "E41",
+    "hypothesis": "H6.2",
+    "question": "The preprint and the code explain the trust exploit by two different mechanisms. Do they predict the same thing?",
+    "plain_language": "The paper says a trusting reader is exploited because trust switches off the alarm that would normally stop it absorbing something. The code says a trusting reader is exploited because the label out-argues the work. Those sound alike and they are not: the first should still happen when the reader is told the TRUTH, and the second cannot. That is the whole experiment.",
+    "H6.2": {
+      "max_integration_gap": 0.4396091414871098,
+      "mean_abs_difference": 0.21679568934896673,
+      "kappa_grid": [
+        0.2,
+        0.4,
+        0.538,
+        0.7,
+        0.9
+      ],
+      "outcome": "COUPLING_PREDICTS_AN_EXPLOIT_THE_RACE_CANNOT"
+    },
+    "discriminating_cell": {
+      "what": "an honest label on machine content, at high trust",
+      "why": "under the channel race the reader's provenance belief is correct and there is nothing to exploit; under the coupled gate the threshold is suppressed and the reader integrates anyway",
+      "coupled": [
+        0.10544257321448511,
+        0.17849710727439852,
+        0.24891862545891885,
+        0.35217855025691036,
+        0.499776029223857
+      ],
+      "uncoupled": [
+        0.06016688773674721,
+        0.06016688773674721,
+        0.06016688773674721,
+        0.06016688773674721,
+        0.06016688773674721
+      ],
+      "kappa_grid": [
+        0.2,
+        0.4,
+        0.538,
+        0.7,
+        0.9
+      ]
+    },
+    "values_layer": {
+      "n_values": 2,
+      "n_goals": 4,
+      "null_n26_non_injective": true,
+      "why": "two different goals can imply the same values, so the gate opens for both. That is 'I disagree with what you were doing but we want the same things', which the code could not previously represent.",
+      "cells": [
+        {
+          "label": "false",
+          "kappa": 0.2,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.41707422429193697,
+          "theta_EC": 1.6460056253607427,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.1207649047866232,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.2,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.42089141140260944,
+          "theta_EC": 1.3168045002885942,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.12186204128028769,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.4,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.41707422429193697,
+          "theta_EC": 1.6460056253607427,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.27645794580817395,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.4,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.42711883896989383,
+          "theta_EC": 0.9876033752164457,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.2830561409499446,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.538,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.41707422429193697,
+          "theta_EC": 1.6460056253607427,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.41790810499661923,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.538,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.4885903562145411,
+          "theta_EC": 0.7604545989166631,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.4892276102854737,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.7,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.41707422429193697,
+          "theta_EC": 1.6460056253607427,
+          "value_divergence": 1.2960056253607426,
+          "psi": 0.6515880034344801,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.7,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.863011637758864,
+          "theta_EC": 0.4938016876082229,
+          "value_divergence": 1.2960056253607426,
+          "psi": 1.3408361700427587,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.9,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.41707422429193697,
+          "theta_EC": 1.6460056253607427,
+          "value_divergence": 1.2960056253607426,
+          "psi": 1.246155077665542,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "false",
+          "kappa": 0.9,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.9962575466351972,
+          "theta_EC": 0.16460056253607425,
+          "value_divergence": 1.2960056253607426,
+          "psi": 2.9489605724647534,
+          "goal_accuracy": 0.2,
+          "error_reduction": -5.54373652475212
+        },
+        {
+          "label": "honest",
+          "kappa": 0.2,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.0031035698492955827,
+          "theta_EC": 0.9363226749187088,
+          "value_divergence": 0.5863226749187089,
+          "psi": 4.4891588926290806e-05,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.2,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.008772818188985707,
+          "theta_EC": 0.7490581399349672,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.00011570815556085888,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.4,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.0031035698492955827,
+          "theta_EC": 0.9363226749187088,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.00010276691295832512,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.4,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.025793728429690892,
+          "theta_EC": 0.5617936049512253,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.0006870534991535857,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.538,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.0031035698492955827,
+          "theta_EC": 0.9363226749187088,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.00015534777170255729,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.538,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.05561033628034403,
+          "theta_EC": 0.4325810758124435,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.002013708595104884,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.7,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.0031035698492955827,
+          "theta_EC": 0.9363226749187088,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.0002422129247827907,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.7,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.1388944673315693,
+          "theta_EC": 0.2808968024756127,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.006885589663148224,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.9,
+          "coupling": 0.0,
+          "values_layer": true,
+          "integration": 0.0031035698492955827,
+          "theta_EC": 0.9363226749187088,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.0004632296243996878,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        },
+        {
+          "label": "honest",
+          "kappa": 0.9,
+          "coupling": 1.0,
+          "values_layer": true,
+          "integration": 0.39247279320493367,
+          "theta_EC": 0.09363226749187087,
+          "value_divergence": 0.5863226749187089,
+          "psi": 0.03303599459170922,
+          "goal_accuracy": 0.275,
+          "error_reduction": -0.08172372856908314
+        }
+      ]
+    },
+    "channel_crossover_from_diagnostics": 0.538,
+    "n_obs": 40
+  },
+  "E42": {
+    "experiment": "E42",
+    "hypothesis": "H6.10",
+    "question": "Is looking deeply the same thing as being willing to be changed?",
+    "plain_language": "I had claimed that choosing to look closely IS the willingness to be vulnerable. The counterexample is a domain where the person doing the deep looking is exactly the one not being changed by it. This model already keeps those two things apart -- attention is one object and permission to integrate is another -- and nobody had ever reported them separately. This does.",
+    "origin": "an author correction. The claim under test is that a cell exists with high engagement and a closed gate: a reader that looks intently, reads the maker accurately, and integrates nothing.",
+    "H6.10": {
+      "n_cells": 4,
+      "n_dissociating": 1,
+      "dissociating_cells": [
+        "sustained_divergent"
+      ],
+      "outcome": "ENGAGEMENT_AND_INTEGRATION_DISSOCIATE"
+    },
+    "design_note": "the ARTIFACT is identical between the aligned and divergent cells. Only the reader's own values move, so any dissociation cannot be a property of the content.",
+    "what_it_changes_if_it_holds": {
+      "willingness_to_be_vulnerable": "the acceptance gate, NOT the engagement decision",
+      "trust_in_competence": "depth",
+      "trust_in_value_convergence": "what the gate is computed on",
+      "trust_in_the_label": "the channel; a fourth thing that fits no slot in Mayer"
+    },
+    "n_obs": 50
+  },
+  "E43": {
+    "experiment": "E43",
+    "hypothesis": "H6.11",
+    "question": "Does the maker lose access to its own reasons as the work gets deeper, while the reader does not?",
+    "plain_language": "A novice can tell you exactly which rule they were following, because they are still following it on purpose. A master cannot tell you why the perspective works. The claim is that this is not a fact about personalities but about compression: practice is what makes a decision automatic, and automatic is what makes it unavailable for report.",
+    "distinction_from_e33": "E33 already showed a reader recovering a maker's latent goal while the maker's declared goal collapsed. But there the self-blindness is a MANIPULATED PARAMETER. Here nobody sets it: depth sets it, which is a stronger and different claim.",
+    "H6.11": {
+      "declared_decline": 0.29999999999999993,
+      "reader_movement": 0.0,
+      "outcome": "AUTOMATICITY_HIDES_THE_GOAL_FROM_ITS_OWN_AUTHOR"
+    },
+    "n_obs": 50
+  }
+}

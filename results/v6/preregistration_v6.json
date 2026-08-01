@@ -1,0 +1,87 @@
+{
+  "version": "V6",
+  "scope": "Alignment of the simulation to the Intent Extraction Limit, plus six theory extensions and two author corrections. Every addition is independently switchable and OFF by default; with all switches off V6 must reproduce V5 (null N23).",
+  "what_is_deliberately_not_built": [
+    "no creator agent, so Zahavian signalling and the whole reputational-cost security argument remain UNTESTED IN SIMULATION. Named as an open hole, not discovered later.",
+    "no recursive/fractal hierarchy; the scaled version (sub-window recovery) is built instead",
+    "no affective/mirror channel",
+    "no creator-side cognitive-surrender dynamics"
+  ],
+  "terms_of_the_formal_model_now_implemented": [
+    "theta_base(E): metabolic reserve, absent from V1-V5 entirely",
+    "sigmoid(k * ...): the graded gate, replaced in V1-V5 by a binary decision",
+    "kappa -> theta coupling: ABSENT from V1-V5, and a different mechanism from the channel race the code uses. Built as a SWITCH so the two can be compared (H6.2)."
+  ],
+  "H6.1": {
+    "probe_drop": 0.1,
+    "monotone_rho": 0.7,
+    "null_first": "N22 reserve tolerance 0.020 on a fully resolvable corpus",
+    "criterion_is_the_probe": "engagement on human work the reader has NEVER SEEN"
+  },
+  "H6.2": {
+    "integration_gap": 0.2,
+    "outcomes": [
+      "COUPLING_PREDICTS_AN_EXPLOIT_THE_RACE_CANNOT",
+      "MECHANISMS_BEHAVIOURALLY_IDENTICAL",
+      "RACE_ALONE_ACCOUNTS_FOR_THE_EXPLOIT"
+    ],
+    "note": "a comparison, not a prediction: all three outcomes are informative"
+  },
+  "H6.3": {
+    "ordering_gap": 0.15
+  },
+  "H6.4": {
+    "contrast_must_exceed": 0.0,
+    "bootstrap_draws": 4000,
+    "note": "E30 measured GOAL uptake, which depth is constructed to hold constant"
+  },
+  "H6.5": {
+    "signature_separation": 0.3
+  },
+  "H6.6": {
+    "crossover": 0.1
+  },
+  "H6.7": {
+    "resolved": 0.5,
+    "disengaged": 0.5,
+    "no_invention": 0.1
+  },
+  "H6.8": {
+    "preregistered_form": "additive"
+  },
+  "H6.9": {
+    "overengagement": 0.1,
+    "no_uptake": 0.0
+  },
+  "H6.10": {
+    "engaged": 0.5,
+    "integration": 0.1,
+    "origin": "an author correction: the top engages deeply with the gate shut"
+  },
+  "H6.11": {
+    "decline": 0.1,
+    "reader_flat": 0.1,
+    "origin": "an author correction: the subconscious holds the PRACTISED goals"
+  },
+  "H6.12": {
+    "shape_tolerance": 0.25
+  },
+  "nulls": {
+    "N22": "depletion must not accumulate on a fully resolvable corpus",
+    "N23": "with every switch off, V6 reproduces V5",
+    "N24": "as k -> infinity the graded gate reproduces the binary decision",
+    "N25": "no preference over provenance; every new channel gets zero preference",
+    "N26": "the values map is non-injective, or it is the goal renamed",
+    "N27": "NO_MAKER must not absorb human work (the EXPLORE failure V4 caught)",
+    "N28": "at mu = 1 process recovery is at chance whatever goal recovery is",
+    "N29": "cue channels carry no goal information",
+    "N30": "non-invertible content stays on the human block"
+  },
+  "inference": "exact by default; V6 is the first version for which that is true",
+  "unchanged": {
+    "E8": "stays withheld with its xfail(strict) marker",
+    "E27": "the V3 residual stays open",
+    "retention": "every original measure retained and reported beside its replacement"
+  },
+  "content_hash": "d6c5bf4b5729e8918552f001a672fb976c73a3ca90d9696da4120401161ce5b9"
+}

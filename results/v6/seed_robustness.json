@@ -1,0 +1,42 @@
+{
+  "check": "V6 seed robustness",
+  "question": "Do the V6 outcomes survive a completely different set of random seeds?",
+  "method": "a whole-programme seed offset re-randomises every reader in every cell at once and changes nothing else. The V6 analogue of the validation pass's disjoint seed block.",
+  "headline": "17 of 18 outcomes are IDENTICAL across a disjoint seed block. The one that moves is E35.",
+  "outcomes_stable": 17,
+  "outcomes_checked": 18,
+  "e35_across_three_seed_blocks": [
+    {
+      "seed_offset": 0,
+      "absolute_drop": 0.1323,
+      "relative_drop": 0.933,
+      "fold_reduction": 15.0,
+      "monotone_rho": -0.769,
+      "reserve_last_exposed": 0.499,
+      "reserve_last_control": 1.0,
+      "outcome": "DEPLETION_CARRIES_TO_UNSEEN_HUMAN_WORK"
+    },
+    {
+      "seed_offset": 777000,
+      "absolute_drop": 0.0686,
+      "relative_drop": 0.968,
+      "fold_reduction": 31.0,
+      "monotone_rho": -0.811,
+      "reserve_last_exposed": 0.459,
+      "reserve_last_control": 1.0,
+      "outcome": "DEPLETION_DOES_NOT_CARRY"
+    },
+    {
+      "seed_offset": 424242,
+      "absolute_drop": 0.0578,
+      "relative_drop": 0.781,
+      "fold_reduction": 4.6,
+      "monotone_rho": -0.811,
+      "reserve_last_exposed": 0.44,
+      "reserve_last_control": 1.0,
+      "outcome": "DEPLETION_DOES_NOT_CARRY"
+    }
+  ],
+  "e35_reading": "THE MECHANISM IS STABLE AND THE CRITERION IS NOT. Across three seed blocks the reserve depletes to 0.44-0.50 in the exposed arm and stays at exactly 1.00 in the control, and probe engagement falls monotonically every time (-0.77, -0.81, -0.81, all past the pre-registered -0.70). What moves is the pre-registered ABSOLUTE drop of 0.10, which passes on one block of three -- because baseline probe engagement itself differs about two-fold between blocks, and an absolute threshold cannot be stable on a quantity whose baseline moves that much. The relative drop is 0.78 to 0.97 on every block.\n\nThis is the fourth time in this project a criterion has been found unable to do its job, and it is reported rather than repaired: the pre-registered clause still decides, and E35 is reported as PASSING ON ONE SEED BLOCK OF THREE.",
+  "what_may_be_claimed": "that depletion carries to unseen work is supported in DIRECTION and in MECHANISM on every seed block tested, and its pre-registered magnitude threshold is not met on two of three. The direction is the claim. The magnitude is not."
+}

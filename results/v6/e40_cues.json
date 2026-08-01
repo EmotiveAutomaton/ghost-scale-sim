@@ -1,0 +1,109 @@
+{
+  "experiment": "E40",
+  "hypotheses": [
+    "H6.8",
+    "H6.9"
+  ],
+  "question": "How do surface appeal and social endorsement combine into the decision to look closely, and what happens when the surface cue is optimised directly?",
+  "plain_language": "The reader in this model decides to look closely on one basis: how much it expects to learn. People do not work that way. Something catches your eye, and someone tells you it is worth your time, and both of those happen before you have learned anything at all. This adds those two channels, and then asks what happens when the eye-catching one is optimised on purpose.",
+  "corners": [
+    {
+      "corner": "beautiful_endorsed",
+      "engagement_additive": 0.7077777777777777,
+      "engagement_multiplicative": 0.014175,
+      "information_gain": 0.007777777777777777
+    },
+    {
+      "corner": "beautiful_unendorsed",
+      "engagement_additive": 0.3577777777777778,
+      "engagement_multiplicative": 0.0105,
+      "information_gain": 0.007777777777777777
+    },
+    {
+      "corner": "plain",
+      "engagement_additive": 0.007777777777777777,
+      "engagement_multiplicative": 0.007777777777777777,
+      "information_gain": 0.007777777777777777
+    },
+    {
+      "corner": "ugly_endorsed",
+      "engagement_additive": 0.3577777777777778,
+      "engagement_multiplicative": 0.0105,
+      "information_gain": 0.007777777777777777
+    }
+  ],
+  "H6.8": {
+    "additive_lift_at_empty_corner": 0.35000000000000003,
+    "multiplicative_lift_at_empty_corner": 0.002722222222222224,
+    "preregistered": "additive",
+    "outcome": "ADDITIVE_FITS"
+  },
+  "decoupling": [
+    {
+      "regime": "decoupled",
+      "mu": 1.0,
+      "engagement": 0.37,
+      "error_reduction": -0.2806608686144155,
+      "process_error_reduction": -0.001951938878587156,
+      "information_gain": 0.02
+    },
+    {
+      "regime": "decoupled",
+      "mu": 2.0,
+      "engagement": 0.4277777777777778,
+      "error_reduction": 1.409395717905194,
+      "process_error_reduction": 0.05823975577032767,
+      "information_gain": 0.07777777777777778
+    },
+    {
+      "regime": "decoupled",
+      "mu": 3.0,
+      "engagement": 0.47,
+      "error_reduction": 1.38657493337115,
+      "process_error_reduction": 0.04644524440885101,
+      "information_gain": 0.12
+    },
+    {
+      "regime": "honest",
+      "mu": 1.0,
+      "engagement": 0.02,
+      "error_reduction": -0.2806608686144155,
+      "process_error_reduction": -0.001951938878587156,
+      "information_gain": 0.02
+    },
+    {
+      "regime": "honest",
+      "mu": 2.0,
+      "engagement": 0.25277777777777777,
+      "error_reduction": 1.409395717905194,
+      "process_error_reduction": 0.05823975577032767,
+      "information_gain": 0.07777777777777778
+    },
+    {
+      "regime": "honest",
+      "mu": 3.0,
+      "engagement": 0.47,
+      "error_reduction": 1.38657493337115,
+      "process_error_reduction": 0.04644524440885101,
+      "information_gain": 0.12
+    }
+  ],
+  "H6.9": {
+    "engagement_lift": 0.35,
+    "error_reduction": -0.2806608686144155,
+    "pays_more_gets_less": true,
+    "outcome": "A_THIRD_FAILURE_MODE_OVERENGAGEMENT"
+  },
+  "null_n29": {
+    "statement": "the cue channels carry no goal information",
+    "goal_accuracy_spread_across_corners": 0.0,
+    "passed": true,
+    "why": "a cue that told the reader which goal would be a second legibility channel and would re-derive the label effect through the back door"
+  },
+  "weights": {
+    "aesthetic": 0.35,
+    "social": 0.35
+  },
+  "why_this_is_a_third_failure_mode": "not the crash, because the reader is engaged rather than disengaged; not the trust exploit, because no label has lied and the reader is not wrong about provenance. It is a reader correctly reading an artifact shaped to trip its own heuristic for deciding what is worth reading.",
+  "n_obs": 50
+}

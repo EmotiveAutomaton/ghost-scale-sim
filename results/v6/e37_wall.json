@@ -1,0 +1,57 @@
+{
+  "experiment": "E37",
+  "hypothesis": "H6.5",
+  "question": "Is the wall in front of generated content a vocabulary deficit, or the absence of an invertible route back to a maker state?",
+  "plain_language": "The model has been describing unreadable machine content as content written in a vocabulary the reader lacks. The objection is that this is not what it feels like: you can read every word and there is still nothing behind it. This builds content on FAMILIAR features whose maker cannot be inverted from the surface, and asks whether that is a different failure from unfamiliar content.",
+  "cells": {
+    "human": {
+      "goal_accuracy": 1.0,
+      "final_entropy": 0.00031187268117494906,
+      "engaged_fraction": 0.16904761904761906,
+      "error_reduction": 1.3966756945698715,
+      "movement": 1.3963898655501263,
+      "process_accuracy": 0.37569444444444444,
+      "between_observer": 1.3698615354811865,
+      "pairwise_divergence": 0.5227230660611251
+    },
+    "foreign": {
+      "goal_accuracy": 0.2,
+      "final_entropy": 1.1848329544437712,
+      "engaged_fraction": 0.0023809523809523807,
+      "error_reduction": -0.29037321303527636,
+      "movement": 0.17601966611441727,
+      "process_accuracy": 0.27569444444444446,
+      "between_observer": 1.3787014135508056,
+      "pairwise_divergence": 0.09671134838703281
+    },
+    "noninvertible": {
+      "goal_accuracy": 0.38333333333333336,
+      "final_entropy": 0.3380367638079056,
+      "engaged_fraction": 0.04166666666666666,
+      "error_reduction": -1.0985824904369033,
+      "movement": 1.03420493545388,
+      "process_accuracy": 0.2611111111111111,
+      "between_observer": 1.2957479207365667,
+      "pairwise_divergence": 0.4191514293838029
+    }
+  },
+  "H6.5": {
+    "signature_separation": 0.8860819049215799,
+    "entropy_gap": 0.8467961906358656,
+    "engagement_gap": 0.03928571428571428,
+    "legible_and_empty": true,
+    "outcome": "THE_WALL_IS_A_DISTINCT_FAILURE"
+  },
+  "null_n30": {
+    "statement": "the non-invertible family stays on the human feature block",
+    "max_foreign_mass": 0.07547169811320754,
+    "passed": true,
+    "why": "without it this is foreign content in new vocabulary and the hypothesis cannot fail"
+  },
+  "family": {
+    "n_states": 4,
+    "collapse_to": 2,
+    "invertible": false
+  },
+  "n_obs": 60
+}

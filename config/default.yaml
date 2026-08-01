@@ -794,3 +794,60 @@ quick:
       n_observers: 40
       n_seeds: 4
       n_timesteps: 12
+
+# ---------------------------------------------------------------------------
+# V6 — the Intent Extraction Limit, implemented.
+#
+# EVERY SWITCH HERE IS OFF BY DEFAULT AND THAT IS THE DESIGN. V6 adds more at once than any
+# previous version, and the pre-mortem's "too many changes to attribute anything" failure is
+# closed by construction: with every switch off a V6 run reproduces V5 elementwise (null N23),
+# so any single addition can be turned on alone and its effect is attributable to it.
+# ---------------------------------------------------------------------------
+v6:
+  depletion:
+    # theta_base(E). In the preprint's equation with its own symbol; absent from V1-V5 entirely.
+    enabled: false
+    rate: 0.08         # fall per fully-unresolved engaged encounter
+    recovery: 0.02     # return per encounter toward the ceiling
+    floor: 0.20        # a reader is never entirely spent; without this the model predicts
+                       # terminal apathy, which is stronger than anything the theory claims
+  gate:
+    # coupling = c in theta_EC = (theta_base(E) + lambda*D_KL) * (1 - kappa)^c.
+    # c = 0 is V1-V5 exactly (kappa does not enter). c = 1 is the preprint's stated
+    # "kappa -> 1 implies theta_EC -> 0". E41 runs BOTH and compares; neither is the default,
+    # because the comparison is the experiment.
+    coupling: 0.0
+    lam: 1.0
+    k_gain: 8.0
+    # theta_0 -- the gate's BASELINE threshold, which is theta_base(E) at a full reserve.
+    #
+    # SET TO A NON-ZERO VALUE BEFORE THE FIRST FULL RUN, AND DECLARED. At theta_0 = 0 the
+    # threshold is nothing but the divergence term, so it is co-determined with the precision
+    # term it is compared against, and kappa has almost nothing left to suppress. Measured that
+    # way the coupling moved integration by 0.045, which would have been reported as "the two
+    # mechanisms are behaviourally identical" when what it actually showed is that the gate had
+    # no scale. A gate needs a baseline or it is not a gate.
+    theta_0: 0.35        # the sigmoid's gain. V1-V5 used a binary decision, i.e. k = infinity.
+  cues:
+    enabled: false
+    mode: additive     # PRE-REGISTERED. "multiplicative" is built alongside for the comparison.
+    w_aesthetic: 0.35
+    w_social: 0.35
+  values:
+    enabled: false
+    n_values: 2        # must be < num_goals, or the map is the goal renamed (null N26)
+  no_maker:
+    enabled: false
+  noninvertible:
+    enabled: false
+    collapse_to: 2     # maker states per distinct surface; > 1 is what makes it non-invertible
+  machine_matched:
+    enabled: false
+  self_report:
+    graded: false
+    base: 0.95
+    decay: 0.30        # accuracy lost across the full depth range
+  scale:
+    n_obs: 40
+    n_timesteps: 24
+    subwindow_fraction: 0.25

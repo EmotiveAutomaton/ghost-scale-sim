@@ -36,6 +36,7 @@ staying separable.
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Not a new version: nothing in it asks a new question about the world. Every item asks whether the answers already recorded can be trusted. Its results are in [../VALIDATION.md](../VALIDATION.md). |
 | [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass. Two probes on the apparatus, ahead of any repair: can the model's own parameters be recovered from its own data, and is there a regime where reading the goal is genuinely uncertain. Five further instrument checks were added on the way. Its results are in [../DIAGNOSTICS.md](../DIAGNOSTICS.md). |
 | [specs/SPEC_REPAIR.md](specs/SPEC_REPAIR.md) | The repair pass. Closes the gap the diagnostics named, between an apparatus built to demonstrate and one audited as though it measures. Every change either makes something measurable that was not, or removes something. Its results are in [../REPAIR.md](../REPAIR.md). |
+| [specs/SPEC_V6.md](specs/SPEC_V6.md) | Version 6. Not a new question about the world: it asks whether the simulation and the theory it claims to implement are the same object. Three terms of the Intent Extraction Limit had no counterpart in the code, and one of them is a mechanism disagreement rather than an omission. Adds six theory extensions, two author corrections, and nulls N22 through N30. Its results are in [../RESULTS_V6.md](../RESULTS_V6.md). |
 | [specs/SPEC_PUBLIC_ASSETS.md](specs/SPEC_PUBLIC_ASSETS.md) | The specification for the public-facing material: the README rewrite and the distribution slides in `figures/social/`. |
 
 ## The write-ups
@@ -47,6 +48,7 @@ staying separable.
 | [writeups/RESULTS_V3.md](writeups/RESULTS_V3.md) | 3 | The finite-sample diagnosis of the recursion leak was refuted by version 3's own gate. The estimator bias was located and fixed. E8 stayed withheld. |
 | [writeups/RESULTS_V4.md](writeups/RESULTS_V4.md) | 4 | Goal-empty became goal-foreign, and the metabolic prediction inverted. The feature space had to double. |
 | [writeups/RESULTS_V4_5.md](writeups/RESULTS_V4_5.md) | 4.5 | The three-gate model, the readability sweep, and four unwelcome results including the counting classifier that withdrew a claim. |
+| [../RESULTS_V6.md](../RESULTS_V6.md) | 6 | Generated, not hand-written. The equation had terms the code did not. Depletion, the two trust mechanisms, process recovery, and the reason the depth result was null. |
 | [writeups/RESULTS_V5.md](writeups/RESULTS_V5.md) | 5 | Depth replaces effort. Two gates rather than three. And the variational solver caught misreading depth entirely, which is what the validation pass then went after across the whole body of work. |
 
 ## The decisions
@@ -66,4 +68,6 @@ staying separable.
    where the split between "how far the reader moved" and "how much closer to the truth it got"
    is explained, and that split changes how several results read.
 5. [EXPERIMENTS.md](EXPERIMENTS.md), if you want the table without the later-checking column.
-6. A write-up, then its spec, if you want to see a specific number's whole history.
+6. [../RESULTS_V6.md](../RESULTS_V6.md), for the version that checked the code against the
+   equation rather than against its own results, and found three terms missing.
+7. A write-up, then its spec, if you want to see a specific number's whole history.

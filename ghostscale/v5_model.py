@@ -285,7 +285,13 @@ def build_execution_modes(sig_g: np.ndarray, n_sub: int,
         # way is a family that cannot carry much depth, and that is worth seeing.
         centred = modes - sig_g[None, :]
         neg = centred < 0
-        scale = float(np.min(sig_g[None, :][neg] / -centred[neg])) if neg.any() else 1.0
+        # V6 FIX. ``sig_g[None, :]`` has shape (1, F) and ``neg`` has shape (S, F), so indexing
+        # the first by the second raises rather than broadcasting. The path was unreachable with
+        # the human goal family, whose mass is concentrated enough that the projection never
+        # goes negative, and it crashed the moment V6 built a world over a FLATTER family.
+        # Broadcasting explicitly is what the surrounding arithmetic already assumes.
+        sig_b = np.broadcast_to(sig_g[None, :], centred.shape)
+        scale = float(np.min(sig_b[neg] / -centred[neg])) if neg.any() else 1.0
         modes = sig_g[None, :] + centred * (scale * (1.0 - 1e-9))
 
     modes = np.clip(modes, 0.0, None)

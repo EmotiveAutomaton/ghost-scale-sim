@@ -61,3 +61,7 @@ results/repair/**/e15_competence_cliff.csv
 results/repair/**/e13_freeze_leak_signature.csv
 results/repair/**/e16_label_coverage.csv
 results/repair/**/e3_raw.csv
+
+# V6 output. Every verdict JSON and every summary CSV IS committed -- 633 KB in total, which is
+# what RESULTS_V6.md is generated from and what a reader needs to check a number without
+# re-running anything. Nothing here is large enough to need excluding, so nothing is.

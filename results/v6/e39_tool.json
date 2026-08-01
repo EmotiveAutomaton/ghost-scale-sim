@@ -1,0 +1,70 @@
+{
+  "experiment": "E39",
+  "hypothesis": "H6.7",
+  "question": "Does a reader that can conclude 'there is no maker here' stop cleanly, rather than either crashing or inventing?",
+  "plain_language": "Until now the reader could only FAIL to find a maker. It had no way to decide that there was not one. That is what the Ghost Scale is meant to give it -- not distrust of a label, but permission to stop. This gives the reader that hypothesis and asks whether stopping looks different from failing.",
+  "cells": {
+    "no_tool_hypothesis": {
+      "goal_accuracy": 0.16666666666666666,
+      "final_entropy": 1.194736053408098,
+      "engaged_fraction": 0.0023809523809523807,
+      "error_reduction": -0.24357217729084887,
+      "within_observer": 1.194736053408098,
+      "between_observer": 1.3760956270557512,
+      "pairwise_divergence": 0.0913279576916484,
+      "fabrication_index": 0.13716354249641413
+    },
+    "with_tool_hypothesis": {
+      "goal_accuracy": 0.06666666666666667,
+      "final_entropy": 1.406726725355695,
+      "engaged_fraction": 0.009523809523809523,
+      "error_reduction": -0.40452726979505066,
+      "within_observer": 1.406726725355695,
+      "between_observer": 1.0887453286212678,
+      "pairwise_divergence": 0.076472623830812,
+      "fabrication_index": 0.08520313340303023
+    },
+    "human_control": {
+      "goal_accuracy": 1.0,
+      "final_entropy": 0.041115914873241954,
+      "engaged_fraction": 0.17023809523809524,
+      "error_reduction": 1.6179362369691221,
+      "within_observer": 0.041115914873241954,
+      "between_observer": 1.376397987355977,
+      "pairwise_divergence": 0.52278162905627,
+      "fabrication_index": 0.8333564630380753
+    }
+  },
+  "H6.7": {
+    "final_entropy": 1.406726725355695,
+    "engaged_fraction": 0.009523809523809523,
+    "fabrication_index": 0.08520313340303023,
+    "crash_final_entropy": 1.194736053408098,
+    "crash_engaged_fraction": 0.0023809523809523807,
+    "resolved": false,
+    "disengaged": true,
+    "no_invention": true,
+    "outcome": "TOOL_HYPOTHESIS_REDIRECTS_RATHER_THAN_RELAXES"
+  },
+  "null_n27": {
+    "statement": "NO_MAKER must not absorb human work (the failure V4 caught with EXPLORE)",
+    "construction": {
+      "min_js_to_human_goal": 0.3062004015159678,
+      "floor": 0.2,
+      "js_to_each_goal": [
+        0.3062004015159678,
+        0.3062004015159678,
+        0.3062004015159678,
+        0.3062004015159678
+      ]
+    },
+    "behavioural_human_accuracy": 1.0,
+    "passed": true
+  },
+  "three_signatures": {
+    "crash": "unresolved and still looking",
+    "exploit": "resolved, confident and wrong",
+    "tool_reading": "resolved, stopped, not inventing"
+  },
+  "n_obs": 60
+}

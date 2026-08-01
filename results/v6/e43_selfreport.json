@@ -1,0 +1,39 @@
+{
+  "experiment": "E43",
+  "hypothesis": "H6.11",
+  "question": "Does the maker lose access to its own reasons as the work gets deeper, while the reader does not?",
+  "plain_language": "A novice can tell you exactly which rule they were following, because they are still following it on purpose. A master cannot tell you why the perspective works. The claim is that this is not a fact about personalities but about compression: practice is what makes a decision automatic, and automatic is what makes it unavailable for report.",
+  "distinction_from_e33": "E33 already showed a reader recovering a maker's latent goal while the maker's declared goal collapsed. But there the self-blindness is a MANIPULATED PARAMETER. Here nobody sets it: depth sets it, which is a stronger and different claim.",
+  "cells": [
+    {
+      "mu": 1,
+      "p_self_report": 0.95,
+      "declared_accuracy": 0.98,
+      "reader_accuracy": 1.0,
+      "reader_error_reduction": 1.4131401266014194,
+      "process_accuracy": 0.27166666666666667
+    },
+    {
+      "mu": 2,
+      "p_self_report": 0.8,
+      "declared_accuracy": 0.76,
+      "reader_accuracy": 1.0,
+      "reader_error_reduction": 1.3730220501226602,
+      "process_accuracy": 0.37416666666666665
+    },
+    {
+      "mu": 3,
+      "p_self_report": 0.6499999999999999,
+      "declared_accuracy": 0.68,
+      "reader_accuracy": 1.0,
+      "reader_error_reduction": 1.4101570165448225,
+      "process_accuracy": 0.4666666666666666
+    }
+  ],
+  "H6.11": {
+    "declared_decline": 0.29999999999999993,
+    "reader_movement": 0.0,
+    "outcome": "AUTOMATICITY_HIDES_THE_GOAL_FROM_ITS_OWN_AUTHOR"
+  },
+  "n_obs": 50
+}

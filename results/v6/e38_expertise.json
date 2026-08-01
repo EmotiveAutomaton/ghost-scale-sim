@@ -1,0 +1,55 @@
+{
+  "experiment": "E38",
+  "hypothesis": "H6.6",
+  "question": "Does AI literacy stack with art literacy, or replace it?",
+  "plain_language": "If reading generated work needs a different skill rather than more of the same skill, then people who know how these systems work should be able to read them. The question worth asking is what that costs: does the new expertise sit alongside the old one, or eat it?",
+  "cells": [
+    {
+      "reader": "human",
+      "content": "human",
+      "goal_accuracy": 1.0,
+      "final_entropy": 0.00041086787167288576,
+      "engaged_fraction": 0.11333333333333334,
+      "error_reduction": 1.3702882948173534,
+      "process_accuracy": 0.3383333333333334
+    },
+    {
+      "reader": "human",
+      "content": "machine",
+      "goal_accuracy": 0.32,
+      "final_entropy": 1.1847459677519747,
+      "engaged_fraction": 0.76,
+      "error_reduction": -0.2875616598412058,
+      "process_accuracy": 0.25666666666666665
+    },
+    {
+      "reader": "machine",
+      "content": "human",
+      "goal_accuracy": 0.28,
+      "final_entropy": 1.0248345435200934,
+      "engaged_fraction": 0.0,
+      "error_reduction": -0.579209609458273,
+      "process_accuracy": 0.2791666666666667
+    },
+    {
+      "reader": "machine",
+      "content": "machine",
+      "goal_accuracy": 1.0,
+      "final_entropy": 6.038047139175854e-06,
+      "engaged_fraction": 0.056666666666666664,
+      "error_reduction": 1.3703343355550333,
+      "process_accuracy": 0.3175
+    }
+  ],
+  "H6.6": {
+    "human_reader_human_content": 1.0,
+    "human_reader_machine_content": 0.32,
+    "machine_reader_human_content": 0.28,
+    "machine_reader_machine_content": 1.0,
+    "gain_on_machine": 0.6799999999999999,
+    "loss_on_human": 0.72,
+    "outcome": "EXPERTISE_SUBSTITUTES"
+  },
+  "design_note": "both readers are built by the same code over different hypothesis families, so nothing differs between them except what they expect a maker to be like. The interesting cell is the off-diagonal one: the machine-matched reader on human work.",
+  "n_obs": 50
+}
