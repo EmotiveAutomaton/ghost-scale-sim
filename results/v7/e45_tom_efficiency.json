@@ -1,0 +1,62 @@
+{
+  "experiment": "E45",
+  "hypotheses": [
+    "H7.1",
+    "H7.2"
+  ],
+  "question": "E21 showed a reader with no maker-model can produce the confident, contradictory signature. What does the maker-model actually buy?",
+  "plain_language": "The experiment that made this project withdraw a claim asked whether you NEED to imagine a maker to end up confidently wrong about one. You don't. But that was never the interesting question. If imagining a maker is worth its cost, the payoff is that you already own the machinery -- so you need far less evidence, and you can read an intention you have never encountered. Neither had been measured.",
+  "relationship_to_e21": "E21 is not overturned and its withdrawal stands. What changes is the scope: 'not necessary to produce the signature' is what E21 established, and 'not necessary' is what it has been read as. These are different claims and only the first was tested.",
+  "H7.1": {
+    "evidence_the_simulator_needs": 4,
+    "evidence_the_counter_needs": 512,
+    "efficiency_ratio": 128.0,
+    "competence_bar": 0.8,
+    "simulator_accuracy": 0.84,
+    "counter_accuracy_by_training_size": {
+      "4": 0.5266666666666666,
+      "8": 0.6866666666666666,
+      "16": 0.7333333333333333,
+      "32": 0.7533333333333333,
+      "64": 0.7333333333333333,
+      "128": 0.7866666666666666,
+      "256": 0.7933333333333333,
+      "512": 0.8066666666666666
+    },
+    "outcome": "SIMULATION_IS_A_SAMPLE_EFFICIENCY_DEVICE"
+  },
+  "H7.2": {
+    "simulator_on_an_unseen_intent": 0.7666666666666667,
+    "counter_on_an_unseen_intent_best": 0.5733333333333334,
+    "chance": 0.5,
+    "n_held_out": 2,
+    "counter_by_training_size": {
+      "4": 0.36666666666666664,
+      "8": 0.47333333333333333,
+      "16": 0.4533333333333333,
+      "32": 0.3933333333333333,
+      "64": 0.46,
+      "128": 0.5733333333333334,
+      "256": 0.5066666666666667,
+      "512": 0.5333333333333333
+    },
+    "outcome": "SIMULATION_READS_AN_INTENT_IT_HAS_NEVER_SEEN",
+    "note": "the counter's training set contains zero examples of the held-out intention and more training makes no difference, which is the point: it is not short of data, it is short of a way to represent something it has not seen"
+  },
+  "scored_quantity": "evidence needed to reach a fixed competence, not competence at a fixed evidence level. The second confounds the ceiling with the rate and the claim is about the rate.",
+  "n_obs": 150,
+  "train_sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "test_conditions": {
+    "tier": "CURATOR (partial intent transmission)",
+    "glances": 3
+  }
+}

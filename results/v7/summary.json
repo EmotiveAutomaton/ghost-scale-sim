@@ -1,0 +1,474 @@
+{
+  "CLOSURES": {
+    "check": "V7 closures",
+    "question": "The four results version 6 would not draw. Settle them or retire them.",
+    "C-1": {
+      "closure": "C-1",
+      "experiment": "E31",
+      "question": "Does what a reader takes on track its own estimate of how much thinking went into the work, whichever channel produced that estimate?",
+      "scored_on_the_method": {
+        "rho": 0.9318885448916409,
+        "interval": [
+          0.7710702152869472,
+          0.9768913625261227
+        ],
+        "bar": 0.7,
+        "holds": true
+      },
+      "scored_on_the_purpose": {
+        "rho": 0.6215111535090632,
+        "note": "the measure the criterion originally used, retained. Depth is constructed so the purpose is equally recoverable at every depth, so this quantity cannot track depth whatever is true of the reader."
+      },
+      "history": {
+        "approximate_solver": 0.886,
+        "exact_solver": 0.6,
+        "retrofit_reconstruction": 0.833
+      },
+      "cells": [
+        {
+          "cell": "foreign/sig_creator/mu1",
+          "recovered_mu": 1.0029734017174952,
+          "goal_uptake": -8.405583444475432,
+          "process_uptake": -0.027821202520083917,
+          "goal_accuracy": 0.275
+        },
+        {
+          "cell": "foreign/sig_creator/mu2",
+          "recovered_mu": 1.0590592690228253,
+          "goal_uptake": -8.29323322246075,
+          "process_uptake": -0.02316068947601079,
+          "goal_accuracy": 0.275
+        },
+        {
+          "cell": "foreign/sig_creator/mu3",
+          "recovered_mu": 1.0023926568382675,
+          "goal_uptake": -8.134277116362608,
+          "process_uptake": -0.021722354650962984,
+          "goal_accuracy": 0.3
+        },
+        {
+          "cell": "foreign/sig_ghost/mu1",
+          "recovered_mu": 2.0007214856023157,
+          "goal_uptake": -0.12705132862525992,
+          "process_uptake": -0.0016451248794377871,
+          "goal_accuracy": 0.275
+        },
+        {
+          "cell": "foreign/sig_ghost/mu2",
+          "recovered_mu": 2.009528867884976,
+          "goal_uptake": -0.1287522392961112,
+          "process_uptake": 0.010138748321668117,
+          "goal_accuracy": 0.3
+        },
+        {
+          "cell": "foreign/sig_ghost/mu3",
+          "recovered_mu": 2.0065660317924054,
+          "goal_uptake": -0.10439028739122877,
+          "process_uptake": 0.009184074562992462,
+          "goal_accuracy": 0.325
+        },
+        {
+          "cell": "foreign/unsigned/mu1",
+          "recovered_mu": 1.9755371918842024,
+          "goal_uptake": -0.4714772469740818,
+          "process_uptake": -0.009697788147607994,
+          "goal_accuracy": 0.25
+        },
+        {
+          "cell": "foreign/unsigned/mu2",
+          "recovered_mu": 2.07430834805785,
+          "goal_uptake": -0.6891355890204223,
+          "process_uptake": 0.04441405066500871,
+          "goal_accuracy": 0.25
+        },
+        {
+          "cell": "foreign/unsigned/mu3",
+          "recovered_mu": 2.0234785074830706,
+          "goal_uptake": -0.37672193807751636,
+          "process_uptake": 0.020719299067869547,
+          "goal_accuracy": 0.275
+        },
+        {
+          "cell": "human/sig_creator/mu1",
+          "recovered_mu": 1.5412607943678118,
+          "goal_uptake": 1.3390368763290819,
+          "process_uptake": -0.06237305953113317,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/sig_creator/mu2",
+          "recovered_mu": 2.21131611829804,
+          "goal_uptake": 1.3390368763290819,
+          "process_uptake": 0.18641391601551255,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/sig_creator/mu3",
+          "recovered_mu": 2.3038574712448177,
+          "goal_uptake": 1.3390368763290819,
+          "process_uptake": 0.1827098950347819,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/sig_ghost/mu1",
+          "recovered_mu": 2.007803051841114,
+          "goal_uptake": 1.3001304064119412,
+          "process_uptake": -0.0010332407904462882,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/sig_ghost/mu2",
+          "recovered_mu": 2.08581098798105,
+          "goal_uptake": 1.305026974249743,
+          "process_uptake": 0.020678811689404226,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/sig_ghost/mu3",
+          "recovered_mu": 2.0977110931866223,
+          "goal_uptake": 1.3082162275127365,
+          "process_uptake": 0.03304809880937226,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/unsigned/mu1",
+          "recovered_mu": 1.6309874265395572,
+          "goal_uptake": 1.3390368761377638,
+          "process_uptake": -0.05699992339729891,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/unsigned/mu2",
+          "recovered_mu": 2.220077556267447,
+          "goal_uptake": 1.3390368762396279,
+          "process_uptake": 0.18064653462685762,
+          "goal_accuracy": 1.0
+        },
+        {
+          "cell": "human/unsigned/mu3",
+          "recovered_mu": 2.315566801240856,
+          "goal_uptake": 1.3390368763166052,
+          "process_uptake": 0.1801365863909316,
+          "goal_accuracy": 1.0
+        }
+      ],
+      "n_cells": 18,
+      "n_obs": 40,
+      "outcome": "ONE_MECHANISM_CONFIRMED_ON_THE_METHOD"
+    },
+    "C-2": {
+      "closure": "C-2",
+      "experiment": "N21",
+      "question": "Is depth just effort wearing a hat?",
+      "on_recovered_depth": {
+        "mu_effect_at_full_effort": 0.6287399922015664,
+        "mu_effect_at_low_effort": 0.14101765969112767,
+        "effort_false_depth_effect": 0.30540413802221145,
+        "dominance_ratio": 1.2602279341688407,
+        "bar": 3.0,
+        "holds": false
+      },
+      "on_the_method": {
+        "mu_effect": 0.1526852282351171,
+        "effort_false_effect": 0.0015788426796442614,
+        "dominance_ratio": 96.70705650642756,
+        "note": "the measure C-1 established is the right one for depth. Reported beside the pre-registered quantity, deciding nothing."
+      },
+      "cells": [
+        {
+          "cell": "committed_deep",
+          "recovered_mu": 2.2875860474481358,
+          "process_uptake": 0.16950364177861404,
+          "goal_uptake": 1.3871343455517278
+        },
+        {
+          "cell": "committed_shallow",
+          "recovered_mu": 1.6588460552465694,
+          "process_uptake": -0.041884811743284664,
+          "goal_uptake": 1.3871343454582745
+        },
+        {
+          "cell": "offhand_deep",
+          "recovered_mu": 2.1052678529599085,
+          "process_uptake": 0.050518348525406556,
+          "goal_uptake": 0.8620396044222168
+        },
+        {
+          "cell": "offhand_shallow",
+          "recovered_mu": 1.9642501932687808,
+          "process_uptake": -0.043463654422928925,
+          "goal_uptake": 0.8686194800994537
+        }
+      ],
+      "outcome": "EFFORT_CAN_MANUFACTURE_DEPTH"
+    },
+    "C-3": {
+      "closure": "C-3",
+      "experiment": "E20",
+      "question": "Do the collapse and the invention peak occupy the same narrow band?",
+      "peak_omega": 0.05,
+      "peak_fabrication": 0.4005401830342625,
+      "omegas_where_the_crash_signature_fires": [],
+      "co_located": false,
+      "rows": [
+        {
+          "omega": 0.0,
+          "within_observer": 1.1895670770671152,
+          "between_observer": 1.337010143043762,
+          "engaged_fraction": 1.0,
+          "fabrication_index": 0.13686373410740696,
+          "unresolved": true,
+          "disengaged": false,
+          "crashed": false
+        },
+        {
+          "omega": 0.05,
+          "within_observer": 0.600368184282552,
+          "between_observer": 0.9794341698023807,
+          "engaged_fraction": 0.8464285714285715,
+          "fabrication_index": 0.4005401830342625,
+          "unresolved": true,
+          "disengaged": false,
+          "crashed": false
+        },
+        {
+          "omega": 0.1,
+          "within_observer": 0.21862519832026658,
+          "between_observer": 0.34878038491802865,
+          "engaged_fraction": 0.5321428571428571,
+          "fabrication_index": 0.21191463486557624,
+          "unresolved": false,
+          "disengaged": false,
+          "crashed": false
+        },
+        {
+          "omega": 0.15,
+          "within_observer": 0.0762085995016023,
+          "between_observer": 0.34878038491802865,
+          "engaged_fraction": 0.46785714285714286,
+          "fabrication_index": 0.2377611353118962,
+          "unresolved": false,
+          "disengaged": true,
+          "crashed": false
+        },
+        {
+          "omega": 0.2,
+          "within_observer": 0.03356087504832839,
+          "between_observer": -0.0,
+          "engaged_fraction": 0.25535714285714284,
+          "fabrication_index": -0.0,
+          "unresolved": false,
+          "disengaged": true,
+          "crashed": false
+        },
+        {
+          "omega": 0.3,
+          "within_observer": 0.031231053796739,
+          "between_observer": -0.0,
+          "engaged_fraction": 0.12321428571428572,
+          "fabrication_index": -0.0,
+          "unresolved": false,
+          "disengaged": true,
+          "crashed": false
+        },
+        {
+          "omega": 0.5,
+          "within_observer": 0.00229991080454477,
+          "between_observer": -0.0,
+          "engaged_fraction": 0.04821428571428571,
+          "fabrication_index": -0.0,
+          "unresolved": false,
+          "disengaged": true,
+          "crashed": false
+        },
+        {
+          "omega": 0.7,
+          "within_observer": 0.11660822307498704,
+          "between_observer": -0.0,
+          "engaged_fraction": 0.0,
+          "fabrication_index": -0.0,
+          "unresolved": false,
+          "disengaged": true,
+          "crashed": false
+        },
+        {
+          "omega": 1.0,
+          "within_observer": 0.0046213783863920214,
+          "between_observer": -0.0,
+          "engaged_fraction": 0.01607142857142857,
+          "fabrication_index": -0.0,
+          "unresolved": false,
+          "disengaged": true,
+          "crashed": false
+        }
+      ],
+      "outcome": "CO_LOCATION_RETIRED",
+      "consequence": "the claim comes OUT of the README and the prediction card. The peak is unchanged and is not in question; what does not survive is the coincidence, which held under the approximate solver because the reader was left more uncertain at partial overlap than exact arithmetic leaves it."
+    },
+    "C-4": {
+      "closure": "C-4",
+      "experiment": "E35",
+      "question": "Does a reader worn down by content that gives it nothing disengage from work it has never seen?",
+      "relative_drop": 0.9999999998644368,
+      "absolute_drop": 0.14171471953675527,
+      "monotone_rho": -0.9773081201334817,
+      "fold_reduction": 7376630127.926086,
+      "n_encounters": 30,
+      "pre_registered_clause": {
+        "statement": "an ABSOLUTE drop of at least 0.10",
+        "value": 0.14171471953675527,
+        "verdict_under_it": "DEPLETION_CARRIES_TO_UNSEEN_HUMAN_WORK",
+        "why_it_is_retained_and_not_used": "an absolute bar on a quantity whose baseline varies two-fold between seed blocks cannot be stable, and it was not: the mechanism reproduced on three blocks and the clause passed on one. Retained and reported, as every superseded criterion in this project is."
+      },
+      "outcome": "DEPLETION_CARRIES_TO_UNSEEN_WORK"
+    }
+  },
+  "E45": {
+    "experiment": "E45",
+    "hypotheses": [
+      "H7.1",
+      "H7.2"
+    ],
+    "question": "E21 showed a reader with no maker-model can produce the confident, contradictory signature. What does the maker-model actually buy?",
+    "plain_language": "The experiment that made this project withdraw a claim asked whether you NEED to imagine a maker to end up confidently wrong about one. You don't. But that was never the interesting question. If imagining a maker is worth its cost, the payoff is that you already own the machinery -- so you need far less evidence, and you can read an intention you have never encountered. Neither had been measured.",
+    "relationship_to_e21": "E21 is not overturned and its withdrawal stands. What changes is the scope: 'not necessary to produce the signature' is what E21 established, and 'not necessary' is what it has been read as. These are different claims and only the first was tested.",
+    "H7.1": {
+      "evidence_the_simulator_needs": 4,
+      "evidence_the_counter_needs": 512,
+      "efficiency_ratio": 128.0,
+      "competence_bar": 0.8,
+      "simulator_accuracy": 0.84,
+      "counter_accuracy_by_training_size": {
+        "4": 0.5266666666666666,
+        "8": 0.6866666666666666,
+        "16": 0.7333333333333333,
+        "32": 0.7533333333333333,
+        "64": 0.7333333333333333,
+        "128": 0.7866666666666666,
+        "256": 0.7933333333333333,
+        "512": 0.8066666666666666
+      },
+      "outcome": "SIMULATION_IS_A_SAMPLE_EFFICIENCY_DEVICE"
+    },
+    "H7.2": {
+      "simulator_on_an_unseen_intent": 0.7666666666666667,
+      "counter_on_an_unseen_intent_best": 0.5733333333333334,
+      "chance": 0.5,
+      "n_held_out": 2,
+      "counter_by_training_size": {
+        "4": 0.36666666666666664,
+        "8": 0.47333333333333333,
+        "16": 0.4533333333333333,
+        "32": 0.3933333333333333,
+        "64": 0.46,
+        "128": 0.5733333333333334,
+        "256": 0.5066666666666667,
+        "512": 0.5333333333333333
+      },
+      "outcome": "SIMULATION_READS_AN_INTENT_IT_HAS_NEVER_SEEN",
+      "note": "the counter's training set contains zero examples of the held-out intention and more training makes no difference, which is the point: it is not short of data, it is short of a way to represent something it has not seen"
+    },
+    "scored_quantity": "evidence needed to reach a fixed competence, not competence at a fixed evidence level. The second confounds the ceiling with the rate and the claim is about the rate.",
+    "n_obs": 150,
+    "train_sizes": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "test_conditions": {
+      "tier": "CURATOR (partial intent transmission)",
+      "glances": 3
+    }
+  },
+  "E46": {
+    "experiment": "E46",
+    "hypothesis": "H7.3",
+    "question": "Can a reader look at something, reject it every time, and be unchanged?",
+    "plain_language": "In this model a reader that disagrees with something absorbs exactly none of it. People do not work that way, and the theory never said they did: to decide you disagree with a claim you have to work out what it says, and working out what it says means running it. The act of refusing is itself a small act of taking on.",
+    "why_this_is_a_correction_not_an_addition": "the preprint already contains this term -- 'the calculation of the value disagreement itself implies simulation, which inherently drives Hebbian learning due to gating imperfections... likely the mechanism for indoctrination and propaganda'. The code never had it. This is the same class of finding version 6 made three times.",
+    "drift_by_leak": {
+      "0.0": {
+        "final_drift": 2.3559115766125062e-05,
+        "monotone_rho": 0.9679422057870294
+      },
+      "0.02": {
+        "final_drift": 0.001732855597826944,
+        "monotone_rho": 0.9954887218045113
+      },
+      "0.05": {
+        "final_drift": 0.008913975059403716,
+        "monotone_rho": 0.9954887218045113
+      },
+      "0.1": {
+        "final_drift": 0.027610804611892966,
+        "monotone_rho": 0.9924812030075187
+      },
+      "0.2": {
+        "final_drift": 0.07244837721834509,
+        "monotone_rho": 0.9624060150375939
+      }
+    },
+    "final_drift_by_leak": {
+      "0.0": 2.3559115766125062e-05,
+      "0.02": 0.001732855597826944,
+      "0.05": 0.008913975059403716,
+      "0.1": 0.027610804611892966,
+      "0.2": 0.07244837721834509
+    },
+    "engagement": {
+      "reads_it_closely": 0.060829515327465354,
+      "skims_it": 0.008579993552664662,
+      "ratio": 7.089692428565255,
+      "reading": "the reader who studies it carefully in order to refute it is more affected than the one who skims, because the leak passes a fraction of what was RECOVERED and careful reading recovers more"
+    },
+    "what_a_reader_absorbs_of_its_own_invention": {
+      "drift_on_content_with_no_recoverable_intent": 0.014779667819152614,
+      "reading": "fully foreign content is the condition this project has spent four versions showing makes readers confidently WRONG. Such a reader has recovered something -- a fabrication -- and the leak passes it. So a reader that invents an intent then absorbs its own invention, and the drift is comparable to what real intent produces."
+    },
+    "null_n32": {
+      "statement": "the leak must PASS rather than MANUFACTURE: no drift at zero leak, and drift monotone in the leak",
+      "restated": "the null was first written as 'no drift on unrecoverable content' and the condition chosen for it was foreign content, which this model says produces confident fabrication. That asked the model to violate its own headline. Restated before scoring; the original condition is reported above as a result.",
+      "drift_on_unrecoverable_content": 0.014779667819152614,
+      "drift_at_zero_leak": 2.3559115766125062e-05,
+      "passed": true,
+      "why": "without this the leak is a drift knob and every number here would be the knob's rather than the mechanism's"
+    },
+    "the_graded_gate_already_leaked": {
+      "drift_at_zero_leak": 2.3559115766125062e-05,
+      "drift_at_the_largest_leak": 0.07244837721834509,
+      "ratio": 3075.173870596468,
+      "note": "version 6 replaced the binary engagement decision with a sigmoid, and a sigmoid never reaches zero. So the graded gate already leaked a little and nobody noticed -- E42 reported integration as 0.00 because that is what 3e-06 looks like at two decimal places. The only versions of this model that could protect a reader perfectly were the ones with the binary gate."
+    },
+    "leak_is_swept_not_chosen": "there is no principled value for the leak, so choosing one and reporting the consequence would be reporting the choice. The output is the shape of drift against leak. The leak stays OFF by default in the model.",
+    "outcome": "REJECTION_IS_NOT_PROTECTION",
+    "n_readers": 16,
+    "n_encounters": 20,
+    "leaks": [
+      0.0,
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ]
+  },
+  "E47": {
+    "experiment": "E47",
+    "hypothesis": "H7.4",
+    "question": "If trust lowers the guard rather than merely misinforming, does a disclosure regime need more coverage than the current figure?",
+    "plain_language": "The project's one policy number says about a third of machine content has to be labelled. That number was produced by a model in which telling the truth is fully protective. If the published theory is right that trust lowers the guard, then an honest label no longer keeps the material out, and the number should move.",
+    "threshold_under_the_channel_race": 0.8,
+    "threshold_under_the_coupled_gate": 0.8,
+    "threshold_moved": false,
+    "clean_picture_bar": 0.25,
+    "outcome": "THE_COVERAGE_FIGURE_IS_ROBUST_TO_THE_MECHANISM",
+    "this_is_conditional_and_is_reported_as_such": "nothing here establishes that the coupled mechanism is the true one. E41 established only that the two are distinguishable. This says what the policy number would be IF the paper's mechanism is right, which is the question that has to be asked before relying on a threshold.",
+    "relationship_to_e16": "E16's figure is not overturned. It is the answer under one of two mechanisms, and until the mechanism is settled the honest statement is a range rather than a number.",
+    "n_readers": 12,
+    "n_artifacts": 16
+  }
+}

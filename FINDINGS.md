@@ -172,16 +172,22 @@ the code's own account of itself as given.*
 
 ## What is still open
 
-1. **The project has no forward test.** One is written, hash-locked and unbuilt: a prediction about
+1. **N21 remains split.** The pre-registered depth-versus-effort contrast fails under exact
+   inference; on what actually transfers, depth dominates effort ninety-fold. The reader's
+   *estimate* of depth is contaminated by effort and the *transfer* is not, and no single number
+   states that.
+2. **The project has no forward test.** One is written, hash-locked and unbuilt: a prediction about
    readers facing work defined by what its maker *avoided*. Until it exists, everything here is a
    theory checked against itself. This is the largest single thing the project owes.
-2. **The security argument is entirely untested.** The framework's answer to bad actors is that
+3. **The security argument is entirely untested.** The framework's answer to bad actors is that
    honest marking is costly and therefore self-policing. That has a formal appendix in the preprint
    and not one line of simulation, because it needs a maker that chooses when to lie.
-3. **The crash/peak co-location claim needs revising or re-establishing** under exact inference.
 4. **Three experiments still cannot run under exact inference** — a known, bounded gap.
 5. **The headline effect's size depends on which content model you believe**, and the largest
    numbers come from the description the project itself replaced on theoretical grounds.
+
+*The crash/peak co-location claim has been retired rather than revised: it does not survive exact
+inference and has been removed from the README and the prediction card.*
 
 ---
 

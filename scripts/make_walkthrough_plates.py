@@ -595,13 +595,150 @@ def plate_17_withheld():
            "Narrowly missing is exactly the case a no-exceptions rule exists for.")
 
 
+
+def _g(x, n=3):
+    return f"{float(x):.{n}g}"
+
+
+# =========================================================================== #
+# 18 - what modelling a maker buys (the E21 attack).
+# =========================================================================== #
+def plate_18_what_tom_buys():
+    d = load("v7/e45_tom_efficiency.json")
+    h1 = d["H7.1"]
+    sim, cnt = h1["evidence_the_simulator_needs"], h1["evidence_the_counter_needs"]
+
+    fig, ax = plate(
+        "Imagining a maker is not about being right. It is about being cheap.",
+        "How many worked examples each kind of reader needs before it can read intent reliably. "
+        "One already owns the machinery and only has to ask which intention is running. The other "
+        "has to learn the whole map from scratch.",
+        "E45 - results/v7/e45_tom_efficiency.json - examples needed to reach 80% accuracy")
+    bars = ax.bar(["Simulates the maker", "Counts what it has seen"], [sim, cnt],
+                  color=[HUMAN, MACHINE], width=0.5)
+    for b, v in zip(bars, [sim, cnt]):
+        ax.text(b.get_x() + b.get_width() / 2, v * 1.08, str(int(v)), ha="center",
+                va="bottom", fontsize=20, fontweight="bold", color=INK)
+    ax.set_yscale("log")
+    ax.set_ylim(1, cnt * 6)
+    clean_axis(ax, "worked examples needed (log scale)")
+    ax.set_yticks([])
+    annotate(ax, 0.5, cnt * 2.2, str(int(cnt / max(sim, 1))) + "x less evidence",
+             color=HUMAN, ha="center", fontsize=15, weight="bold")
+    record(save(fig, "18_what_imagining_a_maker_buys"),
+           "The experiment that made this project withdraw a claim asked whether you NEED to "
+           "imagine a maker. You do not. It never asked what imagining one buys.")
+
+
+# =========================================================================== #
+# 19 - reading an intent nobody has shown you.
+# =========================================================================== #
+def plate_19_zero_shot():
+    d = load("v7/e45_tom_efficiency.json")["H7.2"]
+    by = {int(k): float(v) for k, v in d["counter_by_training_size"].items()}
+    xs = sorted(by)
+    sim = float(d["simulator_on_an_unseen_intent"])
+    chance = float(d["chance"])
+
+    fig, ax = plate(
+        "You can recognise a purpose nobody has ever shown you. A pattern-matcher cannot.",
+        "Reading an intention that appears nowhere in the training data. More data does not help "
+        "the pattern-matcher, because its problem was never a shortage of examples.",
+        "E45 - results/v7/e45_tom_efficiency.json - accuracy on a held-out intention")
+    ax.plot(range(len(xs)), [by[x] for x in xs], "-o", color=MACHINE, lw=2.6, ms=8)
+    ax.axhline(sim, color=HUMAN, lw=2.8)
+    ax.axhline(chance, color=NEUTRAL, lw=1.4, ls=":")
+    annotate(ax, 0.05, sim + 0.03, "a reader that simulates", color=HUMAN,
+             fontsize=12.5, weight="bold")
+    annotate(ax, 0.05, chance + 0.025, "pure guessing", color=MUTED, fontsize=10.5)
+    annotate(ax, len(xs) - 1.05, by[xs[-1]] - 0.09, "a reader that counts", color=MACHINE,
+             fontsize=12.5, weight="bold", ha="right")
+    ax.set_xticks(range(len(xs)))
+    ax.set_xticklabels([str(x) for x in xs], fontsize=10)
+    ax.set_ylim(0, 1.0)
+    clean_axis(ax, "gets the intention right", "worked examples it was trained on")
+    ax.set_yticks([0, 0.5, 1.0])
+    ax.set_yticklabels(["never", "half", "always"])
+    record(save(fig, "19_reading_an_unseen_intent"),
+           "This is what cheating the solution space means. A reader that can run the generator "
+           "gets the whole space; a reader that has to observe it only ever has the part it saw.")
+
+
+# =========================================================================== #
+# 20 - rejection is not protection.
+# =========================================================================== #
+def plate_20_rejection_is_not_protection():
+    d = load("v7/e46_gate_leak.json")
+    by = d["drift_by_leak"]
+    ks = sorted(by, key=lambda k: float(k))
+    drift = [float(by[k]["final_drift"]) for k in ks]
+
+    fig, ax = plate(
+        "You cannot read something, reject it, and walk away unchanged.",
+        "To decide you disagree with something you first have to work out what it says, and "
+        "working out what it says means partly running it. Refusing is itself a small act of "
+        "taking on, and it compounds.",
+        "E46 - results/v7/e46_gate_leak.json - drift in a reader's own beliefs after repeatedly "
+        "rejecting everything it was shown")
+    labels = [f"{float(k):.0%}" for k in ks]
+    bars = ax.bar(labels, drift,
+                  color=[NEUTRAL if float(k) == 0 else MACHINE for k in ks], width=0.55)
+    bar_labels(ax, bars, drift, fmt="{:.3f}", fontsize=12.5, color=INK)
+    ax.set_ylim(0, max(drift) * 1.45)
+    clean_axis(ax, "how far the reader moved", "how leaky the guard is")
+    ax.set_yticks([])
+    eng = d.get("engagement", {})
+    if eng.get("ratio"):
+        annotate(ax, (len(ks) - 1) / 2.0, max(drift) * 1.24,
+                 "and the reader who studies it carefully to refute it\n"
+                 "drifts " + str(int(round(eng["ratio"]))) + "x more than the one who skims",
+                 color=MACHINE, ha="center", fontsize=12.5, weight="bold")
+    record(save(fig, "20_rejection_is_not_protection"),
+           "The theory always contained this term and the code never did. It is the proposed "
+           "mechanism for indoctrination: you are changed by what you refuse.")
+
+
+# =========================================================================== #
+# 21 - the two gates, settled.
+# =========================================================================== #
+def plate_21_two_gates_settled():
+    d = load("v7/closures.json")["C-1"]
+    m, g = d["scored_on_the_method"], d["scored_on_the_purpose"]
+    hist = d["history"]
+
+    fig, ax = plate(
+        "A disagreement that ran for three passes was a measurement pointed at the wrong thing.",
+        "Does what a reader takes away track its own sense of how much thinking went in? The "
+        "criterion was scored on the work's PURPOSE, which this model deliberately holds equally "
+        "readable at every depth, so it could never have moved.",
+        "E31 / C-1 - results/v7/closures.json - rank correlation, on E31's own design")
+    vals = [float(g["rho"]), float(m["rho"])]
+    bars = ax.bar(["Scored on the purpose\n(held constant by design)",
+                   "Scored on the method\n(what the theory names)"],
+                  vals, color=[NEUTRAL, HUMAN], width=0.5)
+    bar_labels(ax, bars, vals, fmt="{:.2f}", fontsize=16, color=INK)
+    ax.axhline(float(m["bar"]), color=MACHINE, lw=1.6, ls="--")
+    annotate(ax, -0.46, float(m["bar"]) + 0.02, "the bar it had to clear",
+             color=MACHINE, fontsize=11, weight="bold")
+    ax.set_ylim(0, 1.20)
+    clean_axis(ax, "how tightly uptake tracks perceived depth")
+    ax.set_yticks([])
+    annotate(ax, 1, vals[1] + 0.09,
+             _g(hist["approximate"]) + ", then " + _g(hist["exact"]) + ", then this",
+             color=MUTED, ha="center", fontsize=10.5)
+    record(save(fig, "21_pointed_at_the_wrong_thing"),
+           "The project's longest-running open question, settled by changing what was measured "
+           "rather than how it was measured.")
+
+
 PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_04_method_not_purpose, plate_05_intent_unlocks, plate_06_two_mechanisms,
           plate_07_reputation_blindness, plate_08_expertise_substitutes,
           plate_09_pays_more_gets_less, plate_10_looking_vs_being_changed,
           plate_11_self_report, plate_12_two_damages, plate_13_no_mind_needed,
           plate_14_knee_not_cliff, plate_15_coverage, plate_16_channel_race,
-          plate_17_withheld]
+          plate_17_withheld, plate_18_what_tom_buys, plate_19_zero_shot,
+          plate_20_rejection_is_not_protection, plate_21_two_gates_settled]
 
 
 def main() -> None:

@@ -147,7 +147,29 @@ def disgust_threshold(value_divergence: float, kappa: float, reserve: MetabolicR
     return float(raw * (1.0 - k) ** c)
 
 
-def gate(omega_precision: float, theta: float, k_gain: float = 8.0) -> float:
+def gate(omega_precision: float, theta: float, k_gain: float = 8.0,
+         leak: float = 0.0) -> float:
+    """``leak + (1 - leak) * sigmoid(k * (omega - theta_EC))``.
+
+    THE LEAK IS A V7 ADDITION AND THE THEORY ALWAYS HAD IT. The gate as V1-V6 built it can shut
+    completely: a reader that rejects material integrates exactly none of it, which measured out at
+    0.00 in E42. The preprint says otherwise, in as many words -- computing the value disagreement
+    *itself* requires simulating the thing, and that simulation drives learning through gating
+    imperfections, "likely the mechanism for indoctrination and propaganda".
+
+    So a perfectly closed gate is not a strong reader. It is a missing term. You cannot look at
+    something without taking a little of it on, because looking IS partly running it.
+
+    DEFAULTS TO ZERO, which reproduces the V6 gate exactly (null N31). This is not adopted as the
+    model's standing behaviour: turning it on changes every result in the repository, and an
+    addition that silently rewrites the record is the accretion problem the repair pass was written
+    against. What it changes is measured and reported; it is not switched on by fiat.
+    """
+    lk = float(np.clip(leak, 0.0, 1.0))
+    return lk + (1.0 - lk) * _sigmoid_gate(omega_precision, theta, k_gain)
+
+
+def _sigmoid_gate(omega_precision: float, theta: float, k_gain: float = 8.0) -> float:
     """``sigmoid(k * (omega - theta_EC))`` -- the graded gate the code never had.
 
     V1-V5 replaced this with a binary engagement decision, declared as a deviation. The

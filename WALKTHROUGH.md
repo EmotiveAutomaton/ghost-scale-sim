@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Seventeen pictures, in the order that makes the argument.** Each one is meant to be readable in
+**Twenty-one pictures, in the order that makes the argument.** Each one is meant to be readable in
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
@@ -195,20 +195,64 @@ Narrowly missing is exactly the case a no-exceptions rule exists for.
 
 ---
 
+## Part five — what the machinery is for, and what it cannot keep out
+
+### 18. What imagining a maker actually buys
+
+![Imagining a maker is about being cheap](figures/walkthrough/18_what_imagining_a_maker_buys.png)
+
+Plate 13 is the result that made this project withdraw a claim: you do not need to imagine a maker
+to end up confidently wrong about one. True, and it stands.
+
+But it answered a narrower question than it has been read as answering. It asked whether a
+maker-model is needed to produce a *signature*. It never asked what the maker-model *buys* — and if
+imagining another mind is worth what it costs to run, the payoff was never going to be a signature.
+
+### 19. Reading a purpose nobody has shown you
+
+![You can recognise a purpose nobody has shown you](figures/walkthrough/19_reading_an_unseen_intent.png)
+
+This is the sharper half, and it is what *cheating the solution space* means. A reader that can
+**run** the generator has the whole space available. A reader that has to **observe** the space only
+ever has the part it happened to see — and more examples do not fix that, because its problem was
+never a shortage of examples.
+
+### 20. Rejection is not protection
+
+![You cannot reject something and be unchanged](figures/walkthrough/20_rejection_is_not_protection.png)
+
+To decide you disagree with something, you first have to work out what it says. Working out what it
+says means partly running it. So refusing is itself a small act of taking on, and it compounds.
+
+The theory always contained this term; the code never did. And the second half is worse than the
+first: **the reader who studies it carefully in order to refute it drifts seven times more than the
+one who skims.**
+
+### 21. A disagreement that turned out to be a measurement error
+
+![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
+
+The project's longest-running open question, settled by changing *what* was measured rather than
+*how*. The criterion was scored on the work's purpose — which the model deliberately holds equally
+readable at every depth, so it could never have moved.
+
+---
+
 ## What is not drawn yet, and why
 
-A plate makes a claim legible in two seconds, which also makes it hard to qualify. Four results
-carry an open question that a plate would paper over, so they are named here instead.
+Version 6 held four results out of this walkthrough because each carried an open question a plate
+would paper over. **Version 7 closed all four** — and one of them closed by being retired.
 
-| result | why it is not drawn |
+| result | what happened |
 |---|---|
-| **The collapse and the invention peak occupying the same band** | The peak is settled. The *co-location* is not: under exact arithmetic the reader at that point ends up less uncertain, so the conjunction stops holding. Needs re-establishing or retiring before it is drawn. |
-| **The two-gates criterion at 0.83** | That number comes from the retrofit, which re-ran the relevant cells with the new measure. The experiment itself has not been re-run with process uptake as its scored primary. The reading is almost certainly right and the number should not be posted until it comes from the experiment rather than from a reconstruction of it. |
-| **Depletion carrying to unseen work** | The mechanism reproduces on every seed block tested. The pre-registered magnitude threshold is met on one of three, because it is an absolute threshold on a quantity whose baseline moves. The direction is drawable; the size is not, and a plate would imply the size. |
-| **Depth versus effort** | Reverses under exact arithmetic and has not been re-scored on the method measure. Same fix as the two-gates item, and probably the same outcome, but it has not been run. |
+| **The two-gates criterion** | **Settled, and drawn** (plate 21). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
+| **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
+| **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-fold — so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
+| **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver, and it has been removed from the README and from the prediction card. |
 
-**Four experiments' worth of work would close all of it**, and that work is listed in
-[FINDINGS.md](FINDINGS.md) under "What is still open".
+One result stays undrawable, and it is the honest kind: **N21's split**. Two measures disagree about
+the same manipulation, one of them is the pre-registered one, and it fails. That is a paragraph, not
+a picture.
 
 ---
 

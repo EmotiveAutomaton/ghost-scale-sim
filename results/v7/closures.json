@@ -1,0 +1,324 @@
+{
+  "check": "V7 closures",
+  "question": "The four results version 6 would not draw. Settle them or retire them.",
+  "C-1": {
+    "closure": "C-1",
+    "experiment": "E31",
+    "question": "Does what a reader takes on track its own estimate of how much thinking went into the work, whichever channel produced that estimate?",
+    "scored_on_the_method": {
+      "rho": 0.9318885448916409,
+      "interval": [
+        0.7710702152869472,
+        0.9768913625261227
+      ],
+      "bar": 0.7,
+      "holds": true
+    },
+    "scored_on_the_purpose": {
+      "rho": 0.6215111535090632,
+      "note": "the measure the criterion originally used, retained. Depth is constructed so the purpose is equally recoverable at every depth, so this quantity cannot track depth whatever is true of the reader."
+    },
+    "history": {
+      "approximate_solver": 0.886,
+      "exact_solver": 0.6,
+      "retrofit_reconstruction": 0.833
+    },
+    "cells": [
+      {
+        "cell": "foreign/sig_creator/mu1",
+        "recovered_mu": 1.0029734017174952,
+        "goal_uptake": -8.405583444475432,
+        "process_uptake": -0.027821202520083917,
+        "goal_accuracy": 0.275
+      },
+      {
+        "cell": "foreign/sig_creator/mu2",
+        "recovered_mu": 1.0590592690228253,
+        "goal_uptake": -8.29323322246075,
+        "process_uptake": -0.02316068947601079,
+        "goal_accuracy": 0.275
+      },
+      {
+        "cell": "foreign/sig_creator/mu3",
+        "recovered_mu": 1.0023926568382675,
+        "goal_uptake": -8.134277116362608,
+        "process_uptake": -0.021722354650962984,
+        "goal_accuracy": 0.3
+      },
+      {
+        "cell": "foreign/sig_ghost/mu1",
+        "recovered_mu": 2.0007214856023157,
+        "goal_uptake": -0.12705132862525992,
+        "process_uptake": -0.0016451248794377871,
+        "goal_accuracy": 0.275
+      },
+      {
+        "cell": "foreign/sig_ghost/mu2",
+        "recovered_mu": 2.009528867884976,
+        "goal_uptake": -0.1287522392961112,
+        "process_uptake": 0.010138748321668117,
+        "goal_accuracy": 0.3
+      },
+      {
+        "cell": "foreign/sig_ghost/mu3",
+        "recovered_mu": 2.0065660317924054,
+        "goal_uptake": -0.10439028739122877,
+        "process_uptake": 0.009184074562992462,
+        "goal_accuracy": 0.325
+      },
+      {
+        "cell": "foreign/unsigned/mu1",
+        "recovered_mu": 1.9755371918842024,
+        "goal_uptake": -0.4714772469740818,
+        "process_uptake": -0.009697788147607994,
+        "goal_accuracy": 0.25
+      },
+      {
+        "cell": "foreign/unsigned/mu2",
+        "recovered_mu": 2.07430834805785,
+        "goal_uptake": -0.6891355890204223,
+        "process_uptake": 0.04441405066500871,
+        "goal_accuracy": 0.25
+      },
+      {
+        "cell": "foreign/unsigned/mu3",
+        "recovered_mu": 2.0234785074830706,
+        "goal_uptake": -0.37672193807751636,
+        "process_uptake": 0.020719299067869547,
+        "goal_accuracy": 0.275
+      },
+      {
+        "cell": "human/sig_creator/mu1",
+        "recovered_mu": 1.5412607943678118,
+        "goal_uptake": 1.3390368763290819,
+        "process_uptake": -0.06237305953113317,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/sig_creator/mu2",
+        "recovered_mu": 2.21131611829804,
+        "goal_uptake": 1.3390368763290819,
+        "process_uptake": 0.18641391601551255,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/sig_creator/mu3",
+        "recovered_mu": 2.3038574712448177,
+        "goal_uptake": 1.3390368763290819,
+        "process_uptake": 0.1827098950347819,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/sig_ghost/mu1",
+        "recovered_mu": 2.007803051841114,
+        "goal_uptake": 1.3001304064119412,
+        "process_uptake": -0.0010332407904462882,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/sig_ghost/mu2",
+        "recovered_mu": 2.08581098798105,
+        "goal_uptake": 1.305026974249743,
+        "process_uptake": 0.020678811689404226,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/sig_ghost/mu3",
+        "recovered_mu": 2.0977110931866223,
+        "goal_uptake": 1.3082162275127365,
+        "process_uptake": 0.03304809880937226,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/unsigned/mu1",
+        "recovered_mu": 1.6309874265395572,
+        "goal_uptake": 1.3390368761377638,
+        "process_uptake": -0.05699992339729891,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/unsigned/mu2",
+        "recovered_mu": 2.220077556267447,
+        "goal_uptake": 1.3390368762396279,
+        "process_uptake": 0.18064653462685762,
+        "goal_accuracy": 1.0
+      },
+      {
+        "cell": "human/unsigned/mu3",
+        "recovered_mu": 2.315566801240856,
+        "goal_uptake": 1.3390368763166052,
+        "process_uptake": 0.1801365863909316,
+        "goal_accuracy": 1.0
+      }
+    ],
+    "n_cells": 18,
+    "n_obs": 40,
+    "outcome": "ONE_MECHANISM_CONFIRMED_ON_THE_METHOD"
+  },
+  "C-2": {
+    "closure": "C-2",
+    "experiment": "N21",
+    "question": "Is depth just effort wearing a hat?",
+    "on_recovered_depth": {
+      "mu_effect_at_full_effort": 0.6287399922015664,
+      "mu_effect_at_low_effort": 0.14101765969112767,
+      "effort_false_depth_effect": 0.30540413802221145,
+      "dominance_ratio": 1.2602279341688407,
+      "bar": 3.0,
+      "holds": false
+    },
+    "on_the_method": {
+      "mu_effect": 0.1526852282351171,
+      "effort_false_effect": 0.0015788426796442614,
+      "dominance_ratio": 96.70705650642756,
+      "note": "the measure C-1 established is the right one for depth. Reported beside the pre-registered quantity, deciding nothing."
+    },
+    "cells": [
+      {
+        "cell": "committed_deep",
+        "recovered_mu": 2.2875860474481358,
+        "process_uptake": 0.16950364177861404,
+        "goal_uptake": 1.3871343455517278
+      },
+      {
+        "cell": "committed_shallow",
+        "recovered_mu": 1.6588460552465694,
+        "process_uptake": -0.041884811743284664,
+        "goal_uptake": 1.3871343454582745
+      },
+      {
+        "cell": "offhand_deep",
+        "recovered_mu": 2.1052678529599085,
+        "process_uptake": 0.050518348525406556,
+        "goal_uptake": 0.8620396044222168
+      },
+      {
+        "cell": "offhand_shallow",
+        "recovered_mu": 1.9642501932687808,
+        "process_uptake": -0.043463654422928925,
+        "goal_uptake": 0.8686194800994537
+      }
+    ],
+    "outcome": "EFFORT_CAN_MANUFACTURE_DEPTH"
+  },
+  "C-3": {
+    "closure": "C-3",
+    "experiment": "E20",
+    "question": "Do the collapse and the invention peak occupy the same narrow band?",
+    "peak_omega": 0.05,
+    "peak_fabrication": 0.4005401830342625,
+    "omegas_where_the_crash_signature_fires": [],
+    "co_located": false,
+    "rows": [
+      {
+        "omega": 0.0,
+        "within_observer": 1.1895670770671152,
+        "between_observer": 1.337010143043762,
+        "engaged_fraction": 1.0,
+        "fabrication_index": 0.13686373410740696,
+        "unresolved": true,
+        "disengaged": false,
+        "crashed": false
+      },
+      {
+        "omega": 0.05,
+        "within_observer": 0.600368184282552,
+        "between_observer": 0.9794341698023807,
+        "engaged_fraction": 0.8464285714285715,
+        "fabrication_index": 0.4005401830342625,
+        "unresolved": true,
+        "disengaged": false,
+        "crashed": false
+      },
+      {
+        "omega": 0.1,
+        "within_observer": 0.21862519832026658,
+        "between_observer": 0.34878038491802865,
+        "engaged_fraction": 0.5321428571428571,
+        "fabrication_index": 0.21191463486557624,
+        "unresolved": false,
+        "disengaged": false,
+        "crashed": false
+      },
+      {
+        "omega": 0.15,
+        "within_observer": 0.0762085995016023,
+        "between_observer": 0.34878038491802865,
+        "engaged_fraction": 0.46785714285714286,
+        "fabrication_index": 0.2377611353118962,
+        "unresolved": false,
+        "disengaged": true,
+        "crashed": false
+      },
+      {
+        "omega": 0.2,
+        "within_observer": 0.03356087504832839,
+        "between_observer": -0.0,
+        "engaged_fraction": 0.25535714285714284,
+        "fabrication_index": -0.0,
+        "unresolved": false,
+        "disengaged": true,
+        "crashed": false
+      },
+      {
+        "omega": 0.3,
+        "within_observer": 0.031231053796739,
+        "between_observer": -0.0,
+        "engaged_fraction": 0.12321428571428572,
+        "fabrication_index": -0.0,
+        "unresolved": false,
+        "disengaged": true,
+        "crashed": false
+      },
+      {
+        "omega": 0.5,
+        "within_observer": 0.00229991080454477,
+        "between_observer": -0.0,
+        "engaged_fraction": 0.04821428571428571,
+        "fabrication_index": -0.0,
+        "unresolved": false,
+        "disengaged": true,
+        "crashed": false
+      },
+      {
+        "omega": 0.7,
+        "within_observer": 0.11660822307498704,
+        "between_observer": -0.0,
+        "engaged_fraction": 0.0,
+        "fabrication_index": -0.0,
+        "unresolved": false,
+        "disengaged": true,
+        "crashed": false
+      },
+      {
+        "omega": 1.0,
+        "within_observer": 0.0046213783863920214,
+        "between_observer": -0.0,
+        "engaged_fraction": 0.01607142857142857,
+        "fabrication_index": -0.0,
+        "unresolved": false,
+        "disengaged": true,
+        "crashed": false
+      }
+    ],
+    "outcome": "CO_LOCATION_RETIRED",
+    "consequence": "the claim comes OUT of the README and the prediction card. The peak is unchanged and is not in question; what does not survive is the coincidence, which held under the approximate solver because the reader was left more uncertain at partial overlap than exact arithmetic leaves it."
+  },
+  "C-4": {
+    "closure": "C-4",
+    "experiment": "E35",
+    "question": "Does a reader worn down by content that gives it nothing disengage from work it has never seen?",
+    "relative_drop": 0.9999999998644368,
+    "absolute_drop": 0.14171471953675527,
+    "monotone_rho": -0.9773081201334817,
+    "fold_reduction": 7376630127.926086,
+    "n_encounters": 30,
+    "pre_registered_clause": {
+      "statement": "an ABSOLUTE drop of at least 0.10",
+      "value": 0.14171471953675527,
+      "verdict_under_it": "DEPLETION_CARRIES_TO_UNSEEN_HUMAN_WORK",
+      "why_it_is_retained_and_not_used": "an absolute bar on a quantity whose baseline varies two-fold between seed blocks cannot be stable, and it was not: the mechanism reproduced on three blocks and the clause passed on one. Retained and reported, as every superseded criterion in this project is."
+    },
+    "outcome": "DEPLETION_CARRIES_TO_UNSEEN_WORK"
+  }
+}

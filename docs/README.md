@@ -42,6 +42,7 @@ Read these in order if you want to know how much of the work survived being chec
 | [../DIAGNOSTICS.md](../DIAGNOSTICS.md) | Can the instruments answer at all? | Four limits that bound how strongly any number can be stated |
 | [../REPAIR.md](../REPAIR.md) | What can be fixed, and what does fixing change? | The uptake measure gained a sign, and the headline reversed with it |
 | [../RESULTS_V6.md](../RESULTS_V6.md) | Is the code the same object as the theory? | Three terms of the equation had no counterpart in the code |
+| [../RESULTS_V7.md](../RESULTS_V7.md) | What does the withdrawn claim's machinery actually buy? | 128× less evidence, and reading an intent nobody has shown you |
 
 **Read [../DIAGNOSTICS.md](../DIAGNOSTICS.md) before quoting any specific number**, because that is
 where the limits on the numbers live.
@@ -60,6 +61,7 @@ where the limits on the numbers live.
 | [specs/SPEC_V4_5.md](specs/SPEC_V4_5.md) | The three-gate reader, and the metabolic question promoted to a headline. |
 | [specs/SPEC_V5.md](specs/SPEC_V5.md) | Depth replaces effort; provenance becomes evidence rather than a parallel channel. Null N21. |
 | [specs/SPEC_V6.md](specs/SPEC_V6.md) | **Not a new question about the world.** Asks whether the simulation and the theory are the same object. Six extensions, two author corrections, nulls N22–N30. |
+| [specs/SPEC_V7.md](specs/SPEC_V7.md) | Version 7. Closes the four results version 6 would not draw, and attacks E21 on the axis it was never tested on. Nulls N31–N34. |
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Nothing in it asks a new question about the world. |
 | [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass on the instruments, ahead of any repair. |
 | [specs/SPEC_REPAIR.md](specs/SPEC_REPAIR.md) | The repair pass. Every change either makes something measurable that was not, or removes something. |
@@ -76,6 +78,7 @@ where the limits on the numbers live.
 | [writeups/RESULTS_V4_5.md](writeups/RESULTS_V4_5.md) | 4.5 | Four unwelcome results, including the counting classifier that withdrew a claim. |
 | [writeups/RESULTS_V5.md](writeups/RESULTS_V5.md) | 5 | Depth replaces effort — and the shortcut caught misreading depth entirely. |
 | [../RESULTS_V6.md](../RESULTS_V6.md) | 6 | Generated, not hand-written. The equation had terms the code did not. |
+| [../RESULTS_V7.md](../RESULTS_V7.md) | 7 | Generated. Four closures, and what imagining a maker buys. |
 
 ## The decisions
 

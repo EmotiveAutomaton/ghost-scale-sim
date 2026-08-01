@@ -1,0 +1,71 @@
+{
+  "experiment": "E46",
+  "hypothesis": "H7.3",
+  "question": "Can a reader look at something, reject it every time, and be unchanged?",
+  "plain_language": "In this model a reader that disagrees with something absorbs exactly none of it. People do not work that way, and the theory never said they did: to decide you disagree with a claim you have to work out what it says, and working out what it says means running it. The act of refusing is itself a small act of taking on.",
+  "why_this_is_a_correction_not_an_addition": "the preprint already contains this term -- 'the calculation of the value disagreement itself implies simulation, which inherently drives Hebbian learning due to gating imperfections... likely the mechanism for indoctrination and propaganda'. The code never had it. This is the same class of finding version 6 made three times.",
+  "drift_by_leak": {
+    "0.0": {
+      "final_drift": 2.3559115766125062e-05,
+      "monotone_rho": 0.9679422057870294
+    },
+    "0.02": {
+      "final_drift": 0.001732855597826944,
+      "monotone_rho": 0.9954887218045113
+    },
+    "0.05": {
+      "final_drift": 0.008913975059403716,
+      "monotone_rho": 0.9954887218045113
+    },
+    "0.1": {
+      "final_drift": 0.027610804611892966,
+      "monotone_rho": 0.9924812030075187
+    },
+    "0.2": {
+      "final_drift": 0.07244837721834509,
+      "monotone_rho": 0.9624060150375939
+    }
+  },
+  "final_drift_by_leak": {
+    "0.0": 2.3559115766125062e-05,
+    "0.02": 0.001732855597826944,
+    "0.05": 0.008913975059403716,
+    "0.1": 0.027610804611892966,
+    "0.2": 0.07244837721834509
+  },
+  "engagement": {
+    "reads_it_closely": 0.060829515327465354,
+    "skims_it": 0.008579993552664662,
+    "ratio": 7.089692428565255,
+    "reading": "the reader who studies it carefully in order to refute it is more affected than the one who skims, because the leak passes a fraction of what was RECOVERED and careful reading recovers more"
+  },
+  "what_a_reader_absorbs_of_its_own_invention": {
+    "drift_on_content_with_no_recoverable_intent": 0.014779667819152614,
+    "reading": "fully foreign content is the condition this project has spent four versions showing makes readers confidently WRONG. Such a reader has recovered something -- a fabrication -- and the leak passes it. So a reader that invents an intent then absorbs its own invention, and the drift is comparable to what real intent produces."
+  },
+  "null_n32": {
+    "statement": "the leak must PASS rather than MANUFACTURE: no drift at zero leak, and drift monotone in the leak",
+    "restated": "the null was first written as 'no drift on unrecoverable content' and the condition chosen for it was foreign content, which this model says produces confident fabrication. That asked the model to violate its own headline. Restated before scoring; the original condition is reported above as a result.",
+    "drift_on_unrecoverable_content": 0.014779667819152614,
+    "drift_at_zero_leak": 2.3559115766125062e-05,
+    "passed": true,
+    "why": "without this the leak is a drift knob and every number here would be the knob's rather than the mechanism's"
+  },
+  "the_graded_gate_already_leaked": {
+    "drift_at_zero_leak": 2.3559115766125062e-05,
+    "drift_at_the_largest_leak": 0.07244837721834509,
+    "ratio": 3075.173870596468,
+    "note": "version 6 replaced the binary engagement decision with a sigmoid, and a sigmoid never reaches zero. So the graded gate already leaked a little and nobody noticed -- E42 reported integration as 0.00 because that is what 3e-06 looks like at two decimal places. The only versions of this model that could protect a reader perfectly were the ones with the binary gate."
+  },
+  "leak_is_swept_not_chosen": "there is no principled value for the leak, so choosing one and reporting the consequence would be reporting the choice. The output is the shape of drift against leak. The leak stays OFF by default in the model.",
+  "outcome": "REJECTION_IS_NOT_PROTECTION",
+  "n_readers": 16,
+  "n_encounters": 20,
+  "leaks": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "experiment": "E47",
+  "hypothesis": "H7.4",
+  "question": "If trust lowers the guard rather than merely misinforming, does a disclosure regime need more coverage than the current figure?",
+  "plain_language": "The project's one policy number says about a third of machine content has to be labelled. That number was produced by a model in which telling the truth is fully protective. If the published theory is right that trust lowers the guard, then an honest label no longer keeps the material out, and the number should move.",
+  "threshold_under_the_channel_race": 0.8,
+  "threshold_under_the_coupled_gate": 0.8,
+  "threshold_moved": false,
+  "clean_picture_bar": 0.25,
+  "curve": [
+    {
+      "coupling": 0.0,
+      "coverage": 0.0,
+      "picture_error": 0.7607066493775557
+    },
+    {
+      "coupling": 0.0,
+      "coverage": 0.2,
+      "picture_error": 0.7527917689598408
+    },
+    {
+      "coupling": 0.0,
+      "coverage": 0.4,
+      "picture_error": 0.7073042269968252
+    },
+    {
+      "coupling": 0.0,
+      "coverage": 0.6,
+      "picture_error": 0.5675967816323636
+    },
+    {
+      "coupling": 0.0,
+      "coverage": 0.8,
+      "picture_error": 0.2154258196463292
+    },
+    {
+      "coupling": 0.0,
+      "coverage": 1.0,
+      "picture_error": 0.0006420989386742392
+    },
+    {
+      "coupling": 1.0,
+      "coverage": 0.0,
+      "picture_error": 0.7306474979165559
+    },
+    {
+      "coupling": 1.0,
+      "coverage": 0.2,
+      "picture_error": 0.7185411960265817
+    },
+    {
+      "coupling": 1.0,
+      "coverage": 0.4,
+      "picture_error": 0.668828022399549
+    },
+    {
+      "coupling": 1.0,
+      "coverage": 0.6,
+      "picture_error": 0.5297002818931714
+    },
+    {
+      "coupling": 1.0,
+      "coverage": 0.8,
+      "picture_error": 0.19414262236575955
+    },
+    {
+      "coupling": 1.0,
+      "coverage": 1.0,
+      "picture_error": 0.027148535853449923
+    }
+  ],
+  "outcome": "THE_COVERAGE_FIGURE_IS_ROBUST_TO_THE_MECHANISM",
+  "this_is_conditional_and_is_reported_as_such": "nothing here establishes that the coupled mechanism is the true one. E41 established only that the two are distinguishable. This says what the policy number would be IF the paper's mechanism is right, which is the question that has to be asked before relying on a threshold.",
+  "relationship_to_e16": "E16's figure is not overturned. It is the answer under one of two mechanisms, and until the mechanism is settled the honest statement is a range rather than a number.",
+  "n_readers": 12,
+  "n_artifacts": 16
+}
