@@ -118,6 +118,8 @@ The section a stranger should use to decide whether to trust the rest.
 | E14 | Readers were quitting before they worked it out | **Mine, and it died.** Forcing them to keep looking made it worse. |
 | E29 | A spike in value divergence separates the gates | **The pre-registration's own prediction, and it died.** Low assumed rationality spikes too. |
 | N21 | Depth is not effort | **Still open, and reported as failing.** The pre-registered contrast returns *effort can manufacture depth* under exact inference (ratio 1.26 against a bar of 3.0). On what actually transfers, depth dominates effort **97-fold** — so the *estimate* of depth is contaminated by effort while the *transfer* is not. Both reported; the original decides. |
+| E54 | A label saying *read this differently* is the affordance the Ghost Scale needs | **Failed, and it is the proposal that pays.** The mechanism is real — a gate shut *before* engaging protects where one shut after does not (+0.015, interval [0.011, 0.019]). It is also small: 6% of drift. Applied to only the marked half of a stream it disappears, and **neither label separates from no label at all.** Second time this project has looked for a mechanism by which the Ghost Scale would work and not found one. |
+| E53 | Sharper AI-detection will produce *more* false accusation | **Failed, and the disagreement it was built on was mine.** A learned surface heuristic does discriminate (0.63 hit, 0.23 false alarm) and never stops misfiring. But sharpening it makes misfiring **rarer**, not commoner — 0.43 → 0.23. And the eye-tracking result it was meant to reconcile was never in conflict: the model already reads machine work less than human work. **The two were being scored against each other in error.** |
 | E20 | The collapse and the invention peak occupy one band | **Retired.** The peak is unchanged and is not in question. The co-location held under a superseded solver: exact arithmetic leaves the reader *less* uncertain at partial overlap, so the conjunction stops holding. **Removed from this README and the prediction card.** |
 
 ### The generational question, and the instrument findings
@@ -261,6 +263,30 @@ A low rate means the theory's **specific** commitments are doing the work. **On 
 that is one tested result: the wall.** That is a narrower foundation than this document used to
 imply, and it is also a much clearer target.
 
+### And what is each finding actually made of?
+
+That rate says how much of a result is architectural. It does not say **which part** of the
+architecture. So the complementary pass: keep the settings, strip the *shape* — remove one
+structural commitment at a time and see what dies. Each of the six is a decision about what a reader
+*is*; none is a parameter.
+
+| finding | dies without | doesn't need |
+|---|---|---|
+| A false label moves you away from the truth | modelling a maker · a shared body plan | costly attention · provenance-as-state · hierarchy · holding a distribution |
+| **The wall is a distinct failure** | modelling a maker · **holding a distribution** | costly attention · provenance-as-state · hierarchy · a shared body plan |
+| Depth moves the method, not the purpose | modelling a maker · a shared body plan | costly attention · provenance-as-state · hierarchy · holding a distribution |
+
+**Every finding dies when the reader stops modelling a maker and starts classifying a surface.**
+That is the one commitment the whole project rests on — the one E21 attacked and E45 defended.
+
+And the wall is the odd one out twice over. It is the only finding that needs the reader to hold a
+*distribution* rather than a best guess, which is exactly right: the finding **is** a claim about
+the shape of a posterior, and a reader keeping only its best guess cannot notice it read every word
+and found nobody there. It is also the only finding with a 0% false-positive rate. Two passes from
+opposite directions agree on which result is genuinely about the theory.
+
+Full grid, and the row that could not be read: [RESULTS_V9.md](RESULTS_V9.md).
+
 ---
 
 ## A claim this repository withdrew
@@ -337,12 +363,18 @@ interpretable, which is the distinction being drawn.
 
 ## What died
 
-Seven ideas were tested and killed, and the list is in the table above under
+Nine ideas were tested and killed, and the list is in the table above under
 [the results that came back against the framework](#the-results-that-came-back-against-the-framework).
-Two of them were the author's own and one was the framework's claim about its own necessity.
+Three of them were the author's own, one was the framework's claim about its own necessity, and one
+was the proposal this whole project is named after.
 
-The fourth died to a test the author approved knowing it had two possible outcomes: his claim
-survives, or his claim weakens. There was no version where it got stronger.
+One died to a test the author approved knowing it had two possible outcomes: his claim survives, or
+his claim weakens. There was no version where it got stronger.
+
+**The last two are the ones to read if you only read two.** E53 killed a reconciliation the author
+proposed and found the disagreement it was built on had been a comparison error. E54 killed the
+mechanism by which the Ghost Scale was supposed to work — the effect is real, and too small to carry
+a label.
 
 ### How the scoreboard is counted
 
@@ -354,7 +386,7 @@ reinterpreted is not counted as held.
 | outcome | count | which |
 |---|---|---|
 | held | 26 | E1–E7, E9, E10, E16–E20, E31–E33, E35–E38, E40–E43, E48–E51 |
-| held in part | 7 | E21, E28, E29, E30, E39, E49, E52 |
+| held in part | 9 | E21, E28, E29, E30, E39, E49, E52, E53, E54 |
 | did not hold | 5 | E11, E12, E14, E15, N21 |
 | retired after a later pass | 1 | E20's crash/peak co-location |
 | classification refused | 1 | E13 |
@@ -366,9 +398,10 @@ reinterpreted is not counted as held.
 1. **Two of the three headlines tested for it are architectural** — see
    [How much of this is the theory?](#how-much-of-this-is-the-theory). A held prediction whose
    false-positive rate is 100% is still held. It is just not distinguishing evidence.
-2. **Across versions 6 and 7 a design or criterion was changed after seeing a null in seven
-   places** — thirteen designs and eleven criteria tried in total. Each change is documented where
-   it happened; the ledger is in `results/v8/s1_severity.json`. A high hit rate with a forking-paths
+2. **Across versions 6, 7 and 9 a design or criterion was changed after seeing a result in eleven
+   places** — seven found by the version 8 audit, four more added openly by version 9. Each change
+   is documented where it happened; the version 6–7 ledger is in `results/v8/s1_severity.json` and
+   version 9's is a table in [RESULTS_V9.md](RESULTS_V9.md). A high hit rate with a forking-paths
    count that size should be read with that in mind.
 3. **The project has no forward test.** It had one sealed prediction, and its status was withdrawn
    in version 8 because the author does not recognise authoring it. The experiment was run anyway
@@ -436,10 +469,11 @@ reaches for and finds already there.
 - **Version 5's construct corrections are theoretically motivated and largely untested.** They are
   more defensible than what they replace, which is not the same as being right.
 - **A literature search has been run and it is retrospective.** It happened after the simulations,
-  it is reported in its own column, and it informed no design. It is a coherence check. The project
-  has exactly one forward test, it is written down in
-  [VALIDATION.md](VALIDATION.md) as a hash-locked prediction, and the experiment it predicts has
-  not been built.
+  it is reported in its own column, and it informed no design. It is a coherence check.
+- **The project has no forward test.** It had one sealed prediction. Its status was withdrawn in
+  version 8 because the author does not recognise authoring it, and a commitment nobody remembers
+  making is not a forward test. The experiment was run anyway (E52) and its primary held. The
+  hash-locked card is still in [VALIDATION.md](VALIDATION.md); what it is not is evidence.
 
 ## Install and run
 
@@ -475,6 +509,13 @@ python scripts/write_results_v6.py
 # version 7 (writes results/v7/, then RESULTS_V7.md)
 python run_v7.py
 python scripts/write_results_v7.py
+
+# version 8 (writes results/v8/, then RESULTS_V8.md) — the severity pass runs last
+python run_v8.py
+python scripts/write_results_v8.py
+
+# version 9 — the minimal-model programme, and the two literature experiments
+python run_v9.py
 
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/make_walkthrough_plates.py

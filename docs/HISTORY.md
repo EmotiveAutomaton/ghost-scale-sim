@@ -94,6 +94,49 @@ same object. Reading the preprint's formal model against the shipped code found 
 no counterpart in the code**, one of which is a disagreement about mechanism rather than an
 omission. Details in [../RESULTS_V6.md](../RESULTS_V6.md).
 
+### V7 — closing what version 6 would not draw, and answering the attack on E21
+
+Version 6 ran four experiments it then refused to draw conclusions from, because in each case the
+measurement was pointed at the wrong quantity. Version 7 closed all four. The largest was the
+two-gates disagreement, which had produced three inconsistent passes: the criterion was scoring
+*goal* uptake on a design that holds goal uptake constant. Re-scored on process uptake it came back
+at **0.93, interval [0.771, 0.977]**.
+
+The version also answered a direct attack on E21 — *you are using your own architecture to simulate
+theirs, so you are cheating the solution space*. E45 asked what the maker-model actually buys and
+found two things a counting classifier cannot get at any scale: it needs **4 examples where the
+counter needs 512**, and it reads an intention it has never been shown. More training does not close
+either gap. [../RESULTS_V7.md](../RESULTS_V7.md).
+
+### V8 — the reader gets a mind of its own, and the severity check lands
+
+The reader acquires a hierarchy, a cost for being changed, and a memory that fades toward a
+permanent residue rather than to zero. A maker that can choose to lie put the security argument in
+code for the first time, and found honesty self-policing **only above a detection rate of 0.5**.
+
+But the version is remembered for the severity pass, which asks the question nobody wants to ask
+about their own work: keep the model's shape, throw its settings away, redraw at random, and count
+how often the finding still appears. **100%, 98% and 0%.** Two of the three headlines are properties
+of the architecture rather than evidence for the specific theory. The same pass collected the
+forking-paths ledger — seven places across versions 6 and 7 where a design or a criterion changed
+after seeing a null. [../RESULTS_V8.md](../RESULTS_V8.md).
+
+### V9 — what the findings are made of, and the last modelling version
+
+Severity says how much of a result is architectural. It does not say **which part**. So the
+complement: keep the settings and strip the *shape* — remove one structural commitment at a time.
+**Every surviving finding dies when the reader stops modelling a maker and starts classifying a
+surface.** Hierarchy and costly attention turn out to be free. The wall is the only finding that
+needs the reader to hold a distribution rather than a best guess, which is the second pass to single
+it out as the one genuinely about the theory.
+
+Two experiments rode along, both built from the author's reading of places the published literature
+disagreed with the simulation. Both predictions failed, and one of them found the disagreement had
+been a comparison error in the first place. The other killed the mechanism by which the Ghost Scale
+was supposed to work. [../RESULTS_V9.md](../RESULTS_V9.md).
+
+**After this the remaining questions need human subjects, and this apparatus cannot answer them.**
+
 ---
 
 ## The audit passes

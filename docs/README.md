@@ -46,6 +46,7 @@ Read these in order if you want to know how much of the work survived being chec
 | [../RESULTS_V6.md](../RESULTS_V6.md) | Is the code the same object as the theory? | Three terms of the equation had no counterpart in the code |
 | [../RESULTS_V7.md](../RESULTS_V7.md) | What does the withdrawn claim's machinery actually buy? | 128× less evidence, and reading an intent nobody has shown you |
 | [../RESULTS_V8.md](../RESULTS_V8.md) | How much of any of this is the theory? | Two of three headlines reproduce in every random model of the same shape |
+| [../RESULTS_V9.md](../RESULTS_V9.md) | Which part of the architecture is each finding made of? | Every one of them dies when the reader stops modelling a maker |
 
 **Read [../DIAGNOSTICS.md](../DIAGNOSTICS.md) before quoting any specific number**, because that is
 where the limits on the numbers live.
@@ -70,6 +71,7 @@ where the limits on the numbers live.
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Nothing in it asks a new question about the world. |
 | [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass on the instruments, ahead of any repair. |
 | [specs/SPEC_REPAIR.md](specs/SPEC_REPAIR.md) | The repair pass. Every change either makes something measurable that was not, or removes something. |
+| [specs/SPEC_V9.md](specs/SPEC_V9.md) | **The last modelling version.** Keep the settings and strip the shape: six structural ablations against four findings. Plus the two experiments the published disagreements asked for. Nulls N41–N44. |
 | [specs/SPEC_PUBLIC_ASSETS.md](specs/SPEC_PUBLIC_ASSETS.md) | The public-facing material: the README rewrite and the distribution slides. |
 
 ## The write-ups
@@ -85,6 +87,7 @@ where the limits on the numbers live.
 | [../RESULTS_V6.md](../RESULTS_V6.md) | 6 | Generated, not hand-written. The equation had terms the code did not. |
 | [../RESULTS_V7.md](../RESULTS_V7.md) | 7 | Generated. Four closures, and what imagining a maker buys. |
 | [../RESULTS_V8.md](../RESULTS_V8.md) | 8 | Generated. The reader gets a mind, and the severity check lands. |
+| [../RESULTS_V9.md](../RESULTS_V9.md) | 9 | Generated. What the findings are made of, and two predictions that failed. |
 
 ## The decisions
 

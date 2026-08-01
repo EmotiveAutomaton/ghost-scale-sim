@@ -1,0 +1,293 @@
+{
+  "MIN": {
+    "check": "the minimal-model programme",
+    "question": "Version 8 kept the shape and randomised the settings. This keeps the settings and strips the shape: which structural commitment is each finding made of?",
+    "plain_language": "A finding that survives having every one of its foundations removed was never a finding about anything. A finding that dies when you remove one specific thing tells you what it is made of -- and a claim with a named load-bearing commitment is a claim somebody can argue with.",
+    "commitments": {
+      "generative": "the reader models a maker producing the work, not a surface-to-label map",
+      "costly_attention": "looking is expensive and the reader chooses",
+      "provenance_as_state": "origin is inferred, and held apart from purpose",
+      "hierarchy": "the maker has levels and the reader represents them",
+      "distributional": "the reader holds a distribution, not a best guess",
+      "shared_likelihood": "reader and maker draw on the same family: the body plan"
+    },
+    "grid": {
+      "the label effect": {
+        "none": true,
+        "generative": false,
+        "costly_attention": true,
+        "provenance_as_state": true,
+        "hierarchy": true,
+        "distributional": true,
+        "shared_likelihood": false
+      },
+      "legible and empty": {
+        "none": true,
+        "generative": false,
+        "costly_attention": true,
+        "provenance_as_state": true,
+        "hierarchy": true,
+        "distributional": false,
+        "shared_likelihood": true
+      },
+      "depth transmits method": {
+        "none": true,
+        "generative": false,
+        "costly_attention": true,
+        "provenance_as_state": true,
+        "hierarchy": true,
+        "distributional": true,
+        "shared_likelihood": false
+      },
+      "sustained futile attention": {
+        "none": false,
+        "generative": false,
+        "costly_attention": false,
+        "provenance_as_state": false,
+        "hierarchy": false,
+        "distributional": false,
+        "shared_likelihood": false
+      }
+    },
+    "minimal_models": {
+      "the label effect": {
+        "holds_intact": true,
+        "load_bearing": [
+          "generative",
+          "shared_likelihood"
+        ],
+        "survives_removal_of": [
+          "costly_attention",
+          "distributional",
+          "hierarchy",
+          "provenance_as_state"
+        ]
+      },
+      "legible and empty": {
+        "holds_intact": true,
+        "load_bearing": [
+          "distributional",
+          "generative"
+        ],
+        "survives_removal_of": [
+          "costly_attention",
+          "hierarchy",
+          "provenance_as_state",
+          "shared_likelihood"
+        ]
+      },
+      "depth transmits method": {
+        "holds_intact": true,
+        "load_bearing": [
+          "generative",
+          "shared_likelihood"
+        ],
+        "survives_removal_of": [
+          "costly_attention",
+          "distributional",
+          "hierarchy",
+          "provenance_as_state"
+        ]
+      },
+      "sustained futile attention": {
+        "holds_intact": false,
+        "load_bearing": null,
+        "survives_removal_of": null,
+        "note": "this finding does not reproduce in the ablation harness's own baseline, so its row is UNINFORMATIVE rather than damning. The harness runs at reduced length and forced-attention budget to make a 4x7 grid affordable, and this finding is the one most sensitive to both. Its ablation row should not be read."
+      }
+    },
+    "null_n41": {
+      "statement": "the label effect survives at least one ablation",
+      "passed": true,
+      "why": "it has a 100% false-positive rate, so it cannot plausibly require all six commitments; if it does, the ablations are too destructive and this programme measures whether the model runs"
+    },
+    "null_n42": {
+      "statement": "at least one finding dies to at least one removal",
+      "passed": true,
+      "why": "otherwise the ablations never reached the mechanism"
+    },
+    "n_obs": 20
+  },
+  "E53E54": {
+    "check": "V9 reconciliation experiments",
+    "E53": {
+      "experiment": "E53",
+      "hypotheses": [
+        "H9.1",
+        "H9.2"
+      ],
+      "question": "Have readers learned a SURFACE signature of generated content that fires before any attempt to read intent -- and does it misfire?",
+      "plain_language": "Eye-tracking finds people spending LESS time on AI content, not more, which is the opposite of what this model predicts. The proposed explanation is not that the model is wrong but that a layer is missing: people have started recognising what generated work LOOKS like and bailing early, before the part this model describes ever runs.",
+      "curve": [
+        {
+          "n_train": 0,
+          "hit_rate_on_machine": 0.0,
+          "false_alarm_on_careful_human": 0.0,
+          "false_alarm_on_fast_human": 0.0,
+          "engagement_on_machine": 0.008333333333333333,
+          "engagement_on_careful_human": 0.14375
+        },
+        {
+          "n_train": 8,
+          "hit_rate_on_machine": 0.45,
+          "false_alarm_on_careful_human": 0.425,
+          "false_alarm_on_fast_human": 0.325,
+          "engagement_on_machine": 0.004791666666666667,
+          "engagement_on_careful_human": 0.08177083333333332
+        },
+        {
+          "n_train": 32,
+          "hit_rate_on_machine": 0.6,
+          "false_alarm_on_careful_human": 0.525,
+          "false_alarm_on_fast_human": 0.375,
+          "engagement_on_machine": 0.0012499999999999998,
+          "engagement_on_careful_human": 0.058750000000000004
+        },
+        {
+          "n_train": 128,
+          "hit_rate_on_machine": 0.675,
+          "false_alarm_on_careful_human": 0.4,
+          "false_alarm_on_fast_human": 0.35,
+          "engagement_on_machine": 0.0012499999999999998,
+          "engagement_on_careful_human": 0.07999999999999999
+        },
+        {
+          "n_train": 512,
+          "hit_rate_on_machine": 0.625,
+          "false_alarm_on_careful_human": 0.225,
+          "false_alarm_on_fast_human": 0.175,
+          "engagement_on_machine": 0.0012499999999999998,
+          "engagement_on_careful_human": 0.11010416666666667
+        }
+      ],
+      "deviation_from_spec": "the spec had the detector firing from a GLANCE. It cannot: a skim emits the same feature distribution for machine and human work to three decimals, so origin has no glance-level surface in this model at all. The detector was moved to three DEEP looks -- a first-paragraph read. Which is itself a finding: whatever people are recognising on sight, this model does not contain it.",
+      "H9.1": {
+        "outcome": "A_LEARNED_SURFACE_HEURISTIC_WORKS_AND_MISFIRES",
+        "restated_before_scoring": "as specced this asked whether the detector produces LESS engagement with machine work. Unscoreable: engagement with machine work is 0.036 before any detector exists against 0.13 for human work, so there is no room to fall. Per the rule set in E45, a floor in both arms is an absent measurement, not a null. Rescored on discrimination, which is what the proposal needs.",
+        "why_the_floor_is_itself_the_answer": "the model ALREADY reads machine work less than human work. The eye-tracking disagreement was never with this comparison -- it was with E19's middle-legibility regime, which is about how readable a thing is rather than where it came from. The two were being scored against each other in error.",
+        "hit_rate_on_machine": 0.625,
+        "false_alarm_on_careful_human": 0.225,
+        "false_alarm_on_fast_human": 0.175,
+        "engagement_on_machine_untrained": 0.008333333333333333,
+        "engagement_on_machine_trained": 0.0012499999999999998
+      },
+      "H9.2": {
+        "outcome": "SHARPENING_THE_DETECTOR_REDUCES_MISFIRING",
+        "false_alarm_on_fast_human_by_training": {
+          "0": 0.0,
+          "8": 0.325,
+          "32": 0.375,
+          "128": 0.35,
+          "512": 0.175
+        },
+        "false_alarm_on_careful_human_by_training": {
+          "0": 0.0,
+          "8": 0.425,
+          "32": 0.525,
+          "128": 0.4,
+          "512": 0.225
+        },
+        "concentrates_on_fast_human_work": false,
+        "what_it_is_really_detecting": "effort, not origin. The two are confounded at depth in this model, which is precisely why the detector cannot tell a machine from a person in a hurry."
+      },
+      "null_n43": {
+        "statement": "the detector carries no goal information",
+        "max_association_score_vs_goal_correct": 0.10557639833555298,
+        "passed": true,
+        "why": "otherwise it is a second legibility channel, not an origin heuristic"
+      },
+      "why_it_matters": "it reconciles this model with the eye-tracking rather than choosing between them, and it predicts something socially unpleasant and testable: as detection improves, false accusations of machine authorship should rise, and concentrate on human work that happens to share the surface."
+    },
+    "E54": {
+      "experiment": "E54",
+      "hypotheses": [
+        "H9.3",
+        "H9.4"
+      ],
+      "question": "Is there a stance in which the gate is shut BEFORE engaging -- and if so, is that what the Ghost Scale should be triggering?",
+      "plain_language": "Research on counterarguing says that engaging carefully with something you disagree with makes you MORE resistant, not less, which cuts against what this model found. The proposed resolution is a stance people already have: taking something apart at a distance, with the guard up before you start, rather than letting it in and deciding afterwards.",
+      "stances": [
+        {
+          "stance": "adversarial",
+          "drift": 0.2523192332605917,
+          "engagement": 0.5680338541666666,
+          "mean_gate": 0.6419909151260895
+        },
+        {
+          "stance": "sympathetic",
+          "drift": 0.2674042020857243,
+          "engagement": 0.5680338541666666,
+          "mean_gate": 0.6769292394500517
+        }
+      ],
+      "H9.3": {
+        "sympathetic_drift": 0.2674042020857243,
+        "adversarial_drift": 0.2523192332605917,
+        "sympathetic_minus_adversarial": {
+          "difference": 0.015084968825132614,
+          "interval": [
+            0.010832047357536824,
+            0.019400906447409223
+          ],
+          "separated_from_zero": true
+        },
+        "outcome": "A_PRE_SHUT_GATE_PROTECTS"
+      },
+      "null_n44": {
+        "statement": "adversarial mode must not protect merely by looking less",
+        "engagement_sympathetic": 0.5680338541666666,
+        "engagement_adversarial": 0.5680338541666666,
+        "passed": true,
+        "how": "ENFORCED, NOT OBSERVED. Both arms replay the same attention trace from the same encounter, so engagement is identical by construction and any difference in drift has to come from the gate. Reported as a design property rather than as an empirical result.",
+        "why": "otherwise it is dismissal wearing a new name"
+      },
+      "labels": [
+        {
+          "label": "do_not_read",
+          "drift": 0.272683281210626,
+          "accuracy": 1.0
+        },
+        {
+          "label": "none",
+          "drift": 0.24258426552506884,
+          "accuracy": 1.0
+        },
+        {
+          "label": "read_differently",
+          "drift": 0.24910448758218773,
+          "accuracy": 1.0
+        }
+      ],
+      "H9.4": {
+        "outcome": "THE_TWO_LABELS_ARE_EQUIVALENT",
+        "do_not_read_minus_read_differently": {
+          "difference": 0.0235787936284383,
+          "interval": [
+            -0.011847132880517485,
+            0.06032377515153494
+          ],
+          "separated_from_zero": false
+        },
+        "no_label_minus_read_differently": {
+          "difference": -0.006520222057118853,
+          "interval": [
+            -0.015967881124715696,
+            0.0028274965607121613
+          ],
+          "separated_from_zero": false
+        },
+        "no_label_minus_do_not_read": {
+          "difference": -0.030099015685557146,
+          "interval": [
+            -0.0670914516262071,
+            0.00655727165274201
+          ],
+          "separated_from_zero": false
+        },
+        "how_to_read_this": "the stance effect in H9.3 is real and it is small -- about 6% of total drift. Here it is applied to only the marked half of the stream, which halves it again, and at that size it disappears into the between-reader spread. NEITHER label separates from no label at all. The honest reading is not that dismissal wins; it is that a gate intervention this size does not survive being turned into a policy.",
+        "caveat_on_the_measure": "drift is movement from the starting belief, not error. It counts being moved toward the truth the same as being misled. This project separates the two elsewhere and does not here, following E42 and E46 for comparability.",
+        "why_it_matters": "E39 found a 'there is no maker here' hypothesis buys nothing and concluded the affordance would have to act on the GATE. This is a gate intervention, and at this size it does not carry a label. The practical objection stands: the adoptable label is not demonstrably the effective one, and neither label is demonstrably effective. That is the second place this project has looked for a mechanism by which the Ghost Scale would work and not found one."
+      }
+    }
+  }
+}

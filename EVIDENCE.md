@@ -131,4 +131,38 @@ appears.
 
 ---
 
+## Both buildable readings were built, and both were wrong
+
+Version 9 built the two readings marked *buildable* above. Neither prediction survived, and the
+record of what was expected is directly above this line, unedited.
+
+**E53, against the E19 reading.** The learned detector exists and behaves as described — it
+discriminates (0.63 hit against 0.23 false alarm) and it never stops misfiring. **But the prediction
+drawn from it was backwards.** Sharpening the detector makes misfiring *rarer*, not commoner: false
+alarms on human work fall from 0.43 to 0.23 as training goes from 8 examples to 512. The socially
+unpleasant forecast — that better detection means more false accusation — is not supported. If there
+is a warning here it is about the *early* detector, which fires on nearly half of all human work.
+
+**And the disagreement was mine, not the literature's.** The reconciliation turned out to be
+unnecessary: this model *already* reads machine work less than human work — 0.008 engagement against
+0.144. The eye-tracking result was never in conflict with that comparison. It conflicts with E19's
+**middle-legibility** regime, which is a claim about how readable a thing is, not about where it
+came from. The two were being scored against each other in error.
+
+**E54, against the E46 reading.** The pre-emptive adversarial mode is real: a gate shut before
+engaging protects where one shut reactively does not, **+0.015 with interval [0.011, 0.019]**, at
+engagement matched by construction rather than by hope.
+
+**The implication marked as "the useful part" does not follow.** The effect is about 6% of total
+drift. Applied to only the marked half of a stream it halves again and disappears into the
+between-reader spread — **neither a "read this differently" label nor a "do not read this" label
+separates from no label at all.** So the claim that a mode-switch label would make the Ghost Scale's
+protective effect *larger* than anything measured here is withdrawn. The mode exists; it is too
+small to carry a policy.
+
+This is the second time the project has looked for a mechanism by which the Ghost Scale would work
+and not found one. E39 was the first.
+
+---
+
 *Searched August 2026. Nothing here informed any design.*

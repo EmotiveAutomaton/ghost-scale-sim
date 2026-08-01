@@ -1,0 +1,109 @@
+{
+  "check": "the minimal-model programme",
+  "question": "Version 8 kept the shape and randomised the settings. This keeps the settings and strips the shape: which structural commitment is each finding made of?",
+  "plain_language": "A finding that survives having every one of its foundations removed was never a finding about anything. A finding that dies when you remove one specific thing tells you what it is made of -- and a claim with a named load-bearing commitment is a claim somebody can argue with.",
+  "commitments": {
+    "generative": "the reader models a maker producing the work, not a surface-to-label map",
+    "costly_attention": "looking is expensive and the reader chooses",
+    "provenance_as_state": "origin is inferred, and held apart from purpose",
+    "hierarchy": "the maker has levels and the reader represents them",
+    "distributional": "the reader holds a distribution, not a best guess",
+    "shared_likelihood": "reader and maker draw on the same family: the body plan"
+  },
+  "grid": {
+    "the label effect": {
+      "none": true,
+      "generative": false,
+      "costly_attention": true,
+      "provenance_as_state": true,
+      "hierarchy": true,
+      "distributional": true,
+      "shared_likelihood": false
+    },
+    "legible and empty": {
+      "none": true,
+      "generative": false,
+      "costly_attention": true,
+      "provenance_as_state": true,
+      "hierarchy": true,
+      "distributional": false,
+      "shared_likelihood": true
+    },
+    "depth transmits method": {
+      "none": true,
+      "generative": false,
+      "costly_attention": true,
+      "provenance_as_state": true,
+      "hierarchy": true,
+      "distributional": true,
+      "shared_likelihood": false
+    },
+    "sustained futile attention": {
+      "none": false,
+      "generative": false,
+      "costly_attention": false,
+      "provenance_as_state": false,
+      "hierarchy": false,
+      "distributional": false,
+      "shared_likelihood": false
+    }
+  },
+  "minimal_models": {
+    "the label effect": {
+      "holds_intact": true,
+      "load_bearing": [
+        "generative",
+        "shared_likelihood"
+      ],
+      "survives_removal_of": [
+        "costly_attention",
+        "distributional",
+        "hierarchy",
+        "provenance_as_state"
+      ]
+    },
+    "legible and empty": {
+      "holds_intact": true,
+      "load_bearing": [
+        "distributional",
+        "generative"
+      ],
+      "survives_removal_of": [
+        "costly_attention",
+        "hierarchy",
+        "provenance_as_state",
+        "shared_likelihood"
+      ]
+    },
+    "depth transmits method": {
+      "holds_intact": true,
+      "load_bearing": [
+        "generative",
+        "shared_likelihood"
+      ],
+      "survives_removal_of": [
+        "costly_attention",
+        "distributional",
+        "hierarchy",
+        "provenance_as_state"
+      ]
+    },
+    "sustained futile attention": {
+      "holds_intact": false,
+      "load_bearing": null,
+      "survives_removal_of": null,
+      "note": "this finding does not reproduce in the ablation harness's own baseline, so its row is UNINFORMATIVE rather than damning. The harness runs at reduced length and forced-attention budget to make a 4x7 grid affordable, and this finding is the one most sensitive to both. Its ablation row should not be read."
+    }
+  },
+  "null_n41": {
+    "statement": "the label effect survives at least one ablation",
+    "passed": true,
+    "why": "it has a 100% false-positive rate, so it cannot plausibly require all six commitments; if it does, the ablations are too destructive and this programme measures whether the model runs"
+  },
+  "null_n42": {
+    "statement": "at least one finding dies to at least one removal",
+    "passed": true,
+    "why": "otherwise the ablations never reached the mechanism"
+  },
+  "n_obs": 20
+}

@@ -253,6 +253,26 @@ distinguish this framework from a competitor built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
 
+### 24. And what is each finding actually made of?
+
+![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
+
+That rate says how much of a result is architectural. It does not say **which part**. So the
+complement: keep the settings and strip the shape instead — remove one structural commitment at a
+time, six of them, each a decision about what a reader *is*.
+
+**Every finding dies the moment the reader stops imagining a maker and starts pattern-matching a
+surface.** That is the one load-bearing commitment in the project. The model can lose its hierarchy,
+its costly attention, and its separate belief about origin, and keep every result.
+
+And *legible and empty* is the odd one out for the second time. It is the only finding that needs
+the reader to hold a **distribution** rather than a best guess — which is exactly right, because
+"I read every word and there was nobody there" *is* a statement about the shape of an uncertainty.
+It is also the only finding with a 0% false-positive rate. Two unrelated audits, same answer.
+
+*One row is missing from this plate: sustained futile attention did not reproduce in the ablation
+harness's own baseline, so it has no answer here rather than a bad one.*
+
 ### 23. Honest marking is self-policing, at a price
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
@@ -292,5 +312,10 @@ a picture.
 - **The shapes are the claims; the numbers are properties of this model's dimensions.** Rebuilt from
   the prose alone by someone with no access to the code, the central effect points the same way and
   comes out fifteen times smaller. Quote directions. Do not quote multiples.
-- **There is no forward test yet.** One is written, sealed with a hash, and unbuilt. Until it
-  exists, this is a theory checked carefully against itself.
+- **There is no forward test.** There was one sealed prediction and its status was withdrawn in
+  version 8, because the author does not recognise authoring it. This is a theory checked carefully
+  against itself.
+- **The proposal it is named after has no demonstrated mechanism.** Twice this project has gone
+  looking for how a Ghost Scale label would actually protect a reader, and twice it has come back
+  without one — E39 and E54. The proposal is not refuted. It is unsupported, which is a different
+  thing and should be said in its own sentence.

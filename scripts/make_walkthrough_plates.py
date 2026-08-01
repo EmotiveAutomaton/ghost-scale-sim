@@ -14,10 +14,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from ghostscale.plates import (COOL, GRID, HIGHLIGHT, HUMAN, INK, MACHINE, MUTED, NEUTRAL,
+from ghostscale.plates import (COOL, GRID, HIGHLIGHT, HUMAN, INK, MACHINE, MUTED, NEUTRAL, PAPER,
                                annotate, bar_labels, clean_axis, on_bar, plate, save, zero_line)
 
 REPO = Path(__file__).resolve().parents[1]
@@ -829,6 +830,70 @@ def plate_23_honesty_pays_at_a_price():
            "comes with a condition rather than a reassurance.")
 
 
+# =========================================================================== #
+# 24 - what each finding is actually made of.
+# =========================================================================== #
+def plate_24_what_its_made_of():
+    """The ablation grid as a grid, because that IS the finding.
+
+    A bar chart would have to pick one number and this result is a pattern: one column is solid
+    red and the rest are almost solid green. The eye should land on that column before it reads
+    a single label, which is why the maker column is drawn first and left of everything else.
+    """
+    d = load("v9/summary.json")["MIN"]["minimal_models"]
+
+    ROWS = [("the label effect", "a false label misleads you"),
+            ("legible and empty", "legible and empty"),
+            ("depth transmits method", "depth transmits method")]
+    COLS = [("generative", "imagining\na maker"),
+            ("shared_likelihood", "a shared\nbody plan"),
+            ("distributional", "holding a\ndistribution"),
+            ("provenance_as_state", "inferring\nwhere it\ncame from"),
+            ("hierarchy", "levels in\nthe maker"),
+            ("costly_attention", "looking\ncosts\nsomething")]
+
+    fig, ax = plate(
+        "I removed one piece of the model at a time to see what each finding is made of.",
+        "Every result in this project dies the moment the reader stops imagining a maker and "
+        "starts pattern-matching a surface. Nothing else is load-bearing everywhere.",
+        "V9 minimal-model programme - results/v9/summary.json - a finding 'dies' when it no "
+        "longer appears with that structural commitment removed")
+
+    pos = ax.get_position()
+    ax.set_position([0.235, pos.y0 + 0.02, 0.70, pos.height - 0.02])
+
+    for r, (key, row_label) in enumerate(ROWS):
+        needs = set(d[key]["load_bearing"])
+        y = len(ROWS) - 1 - r
+        for c, (ck, _) in enumerate(COLS):
+            dead = ck in needs
+            ax.add_patch(plt.Rectangle((c - 0.44, y - 0.36), 0.88, 0.72,
+                                       facecolor=MACHINE if dead else HUMAN,
+                                       edgecolor=PAPER, linewidth=2.5, zorder=2))
+            ax.text(c, y, "DIES" if dead else "fine", ha="center", va="center",
+                    color=PAPER, fontsize=12 if dead else 11,
+                    fontweight="bold" if dead else "normal", zorder=3)
+        ax.text(-0.72, y, row_label, ha="right", va="center", fontsize=12.5, color=INK)
+
+    for c, (_, cl) in enumerate(COLS):
+        ax.text(c, len(ROWS) - 0.52, cl, ha="center", va="bottom", fontsize=10.5,
+                color=INK if c == 0 else MUTED,
+                fontweight="bold" if c == 0 else "normal", linespacing=1.2)
+
+    ax.set_xlim(-0.6, len(COLS) - 0.4)
+    ax.set_ylim(-0.55, len(ROWS) + 0.30)
+    ax.set_xticks([]); ax.set_yticks([])
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.text(0, -0.52, "remove this and\neverything falls over", ha="center", va="top",
+            fontsize=11.5, color=MACHINE, fontweight="bold", linespacing=1.25)
+    ax.text(4.5, -0.52, "the model can lose these and keep every result",
+            ha="center", va="top", fontsize=11, color=MUTED)
+
+    record(save(fig, "24_what_its_made_of"),
+           "One commitment holds the whole project up. Everything else is scaffolding.")
+
+
 PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_04_method_not_purpose, plate_05_intent_unlocks, plate_06_two_mechanisms,
           plate_07_reputation_blindness, plate_08_expertise_substitutes,
@@ -837,7 +902,8 @@ PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_14_knee_not_cliff, plate_15_coverage, plate_16_channel_race,
           plate_17_withheld, plate_18_what_tom_buys, plate_19_zero_shot,
           plate_20_rejection_is_not_protection, plate_21_two_gates_settled,
-          plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price]
+          plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price,
+          plate_24_what_its_made_of]
 
 
 def main() -> None:

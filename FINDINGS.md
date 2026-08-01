@@ -162,6 +162,18 @@ the code's own account of itself as given.*
 | E42 | Is looking deeply the same as being willing to be changed? | **No, and the model already kept them apart.** There is a stable regime with high engagement and a closed gate: a reader that looks intently, reads the maker accurately, and integrates nothing. |
 | E43 | Does the maker lose access to its own reasons as the work deepens? | **Yes.** Practice compresses decisions, and compression is what makes a decision unavailable for report — while the reader is unaffected. |
 
+### Version 9 — what each finding is made of, and two attempts to reconcile the literature
+
+*The complement of the severity pass. Severity asks how much of a result is architectural; this asks
+**which part** of the architecture. Keep the settings, strip the shape, remove one structural
+commitment at a time.*
+
+| # | The question | Where it stands |
+|---|---|---|
+| MIN | Which structural commitment is each finding actually made of? | **All of them rest on one.** No surviving finding outlives replacing the maker-modelling reader with a surface classifier. Hierarchy and costly attention are free — no finding needs them. And **the wall is the only finding that needs the reader to hold a distribution** rather than a best guess, which is exactly right, because the finding *is* a claim about the shape of a posterior. |
+| E53 | Have readers learned a surface signature of generated work that fires before intent-reading? | **Yes, and the prediction drawn from it was backwards.** A learned heuristic discriminates (0.63 against 0.23) and never stops misfiring. But sharpening it makes misfiring **rarer**, not commoner. The eye-tracking result this was built to reconcile turns out not to have been in conflict: the model already reads machine work less than human work, and the two were being scored against each other in error. |
+| E54 | Is there a stance where the gate shuts *before* engaging — and is that what the Ghost Scale should trigger? | **The stance is real; the affordance is not.** A pre-shut gate protects where a reactively-shut one does not (+0.015, interval [0.011, 0.019]) at engagement matched by construction. It protects by about 6%, and when applied to only the marked half of a stream **neither label separates from no label at all.** |
+
 ### Not answerable in simulation
 
 | # | The question | Where it stands |
@@ -187,14 +199,19 @@ at one. **The conclusion survives; the stated justification should be updated.**
    inference; on what actually transfers, depth dominates effort ninety-fold. The reader's
    *estimate* of depth is contaminated by effort and the *transfer* is not, and no single number
    states that.
-2. **The project has no forward test.** One is written, hash-locked and unbuilt: a prediction about
-   readers facing work defined by what its maker *avoided*. Until it exists, everything here is a
-   theory checked against itself. This is the largest single thing the project owes.
-3. **The security argument is entirely untested.** The framework's answer to bad actors is that
-   honest marking is costly and therefore self-policing. That has a formal appendix in the preprint
-   and not one line of simulation, because it needs a maker that chooses when to lie.
-4. **Three experiments still cannot run under exact inference** — a known, bounded gap.
-5. **The headline effect's size depends on which content model you believe**, and the largest
+2. **The project has no forward test.** There was one sealed prediction; its status was withdrawn
+   in version 8 because the author does not recognise authoring it, and a commitment nobody
+   remembers making is not a forward test. The experiment ran anyway (E52) and its primary held.
+   Everything here is still a theory checked against itself, and **this is the largest single thing
+   the project owes.**
+3. **No human data anywhere.** The sharpest available test is the acquisition test — expose a
+   reader to work above its level and measure what it can then *produce*. It needs subjects and
+   money and is named as the top external priority, deliberately not simulated.
+4. **The Ghost Scale has no demonstrated mechanism.** Two attempts, two failures: E39 found that a
+   hypothesis about the maker buys nothing, and E54 found that the gate intervention it pointed to
+   is real but too small to carry a label. The proposal is not refuted; it is unsupported.
+5. **Three experiments still cannot run under exact inference** — a known, bounded gap.
+6. **The headline effect's size depends on which content model you believe**, and the largest
    numbers come from the description the project itself replaced on theoretical grounds.
 
 *The crash/peak co-location claim has been retired rather than revised: it does not survive exact
