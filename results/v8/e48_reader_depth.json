@@ -13,97 +13,97 @@
     "note": "every V1-V7 result was measured on calibration and is not reinterpreted, which is the discipline applied when effort was replaced by depth"
   },
   "H8.1": {
-    "reading_gap_on_deep_work": 1.361299457876548,
+    "reading_gap_on_deep_work": 1.3628104607575846,
     "cells": [
       {
         "reader_depth": 1,
         "maker_depth": 1,
-        "reading": 1.4575603313838925,
-        "raw": 1.4575603313838925,
-        "process": -0.03727345859834142,
+        "reading": 1.4449843689649768,
+        "raw": 1.4449843689649768,
+        "process": -0.02033132009629355,
         "accuracy": 1.0
       },
       {
         "reader_depth": 1,
         "maker_depth": 2,
         "reading": 1.0,
-        "raw": 2.3241004563341483,
-        "process": 0.16134932308757619,
+        "raw": 2.3043650630994357,
+        "process": 0.18034235395899545,
         "accuracy": 1.0
       },
       {
         "reader_depth": 1,
         "maker_depth": 3,
         "reading": 1.0,
-        "raw": 2.361299457876548,
-        "process": 0.21188183243836867,
+        "raw": 2.3628104607575846,
+        "process": 0.1852641576400603,
         "accuracy": 1.0
       },
       {
         "reader_depth": 2,
         "maker_depth": 1,
-        "reading": 1.4575603313838925,
-        "raw": 1.4575603313838925,
-        "process": -0.03727345859834142,
+        "reading": 1.4449843689649768,
+        "raw": 1.4449843689649768,
+        "process": -0.02033132009629355,
         "accuracy": 1.0
       },
       {
         "reader_depth": 2,
         "maker_depth": 2,
-        "reading": 1.9650550144813173,
-        "raw": 2.3241004563341483,
-        "process": 0.16134932308757619,
+        "reading": 1.961176330107493,
+        "raw": 2.3043650630994357,
+        "process": 0.18034235395899545,
         "accuracy": 1.0
       },
       {
         "reader_depth": 2,
         "maker_depth": 3,
-        "reading": 1.9728041175712436,
-        "raw": 2.361299457876548,
-        "process": 0.21188183243836867,
+        "reading": 1.9693553541737365,
+        "raw": 2.3628104607575846,
+        "process": 0.1852641576400603,
         "accuracy": 1.0
       },
       {
         "reader_depth": 3,
         "maker_depth": 1,
-        "reading": 1.4575603313838925,
-        "raw": 1.4575603313838925,
-        "process": -0.03727345859834142,
+        "reading": 1.4449843689649768,
+        "raw": 1.4449843689649768,
+        "process": -0.02033132009629355,
         "accuracy": 1.0
       },
       {
         "reader_depth": 3,
         "maker_depth": 2,
-        "reading": 1.9650550144813173,
-        "raw": 2.3241004563341483,
-        "process": 0.16134932308757619,
+        "reading": 1.961176330107493,
+        "raw": 2.3043650630994357,
+        "process": 0.18034235395899545,
         "accuracy": 1.0
       },
       {
         "reader_depth": 3,
         "maker_depth": 3,
-        "reading": 2.361299457876548,
-        "raw": 2.361299457876548,
-        "process": 0.21188183243836867,
+        "reading": 2.3628104607575846,
+        "raw": 2.3628104607575846,
+        "process": 0.1852641576400603,
         "accuracy": 1.0
       }
     ],
     "outcome": "READER_DEPTH_CAPS_WHAT_IS_SEEN"
   },
   "H8.2": {
-    "compression_vs_gap_rho": -0.9105716255624839,
-    "compression_when_matched": 0.9173849445911666,
+    "compression_vs_gap_rho": -0.9051820650160766,
+    "compression_when_matched": 0.9162599390088959,
     "outcome": "THE_COMPRESSION_WAS_THE_MISSING_READER_DEPTH",
     "note": "the diagnostics pass found a known depth reading back at about a third of its true value and could not say why"
   },
   "H8.3": {
-    "growth_on_deep_work": 0.6018945816001705,
+    "growth_on_deep_work": 0.6894598630568993,
     "growth_on_shallow_work": 0.0,
     "by_arm": [
       {
         "reader_depth_start": 1,
         "arm": "exposed_to_deep_work",
-        "growth": 0.8025261088002273
+        "growth": 0.9192798174091992
       },
       {
         "reader_depth_start": 1,
@@ -113,7 +113,7 @@
       {
         "reader_depth_start": 2,
         "arm": "exposed_to_deep_work",
-        "growth": 0.40126305440011373
+        "growth": 0.4596399087045996
       },
       {
         "reader_depth_start": 2,
@@ -130,6 +130,6 @@
     "passed": true,
     "why": "without it a deeper reader is simply a better reader, and every number here is a main effect rather than the interaction the claim needs"
   },
-  "n_obs": 24,
-  "n_exposures": 10
+  "n_obs": 40,
+  "n_exposures": 12
 }

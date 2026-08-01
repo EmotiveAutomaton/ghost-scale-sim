@@ -9,20 +9,20 @@
   },
   "rates": {
     "E36 depth moves the method, not the purpose": {
-      "draws_scored": 40,
-      "false_positive_rate": 0.975
+      "draws_scored": 60,
+      "false_positive_rate": 0.9833333333333333
     },
     "E37 the wall is a distinct failure": {
-      "draws_scored": 40,
+      "draws_scored": 60,
       "false_positive_rate": 0.0
     },
     "E2/R-5 a false label moves you the wrong way": {
-      "draws_scored": 40,
+      "draws_scored": 60,
       "false_positive_rate": 1.0
     }
   },
-  "usable_draws": 40,
-  "draws_attempted": 40,
+  "usable_draws": 60,
+  "draws_attempted": 60,
   "forking_paths_ledger": {
     "statement": "across versions 6 and 7 a design or criterion was changed AFTER seeing a null in seven places. Each change is individually defensible and is documented where it happened. The aggregate has a shape.",
     "entries": [

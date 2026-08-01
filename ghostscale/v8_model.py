@@ -149,18 +149,40 @@ class DecayingBelief:
     belief: np.ndarray
     baseline: np.ndarray
     rate: float = 0.05              # how fast an association weakens per encounter
-    floor: float = 0.15             # the share that never fades
+    floor: float = 0.15             # the share of what was learned that never fades
     history: list = field(default_factory=list)
+    _residual: np.ndarray = None    # the permanent trace of everything integrated so far
+
+    def __post_init__(self):
+        self.belief = np.asarray(self.belief, dtype=float)
+        self.baseline = np.asarray(self.baseline, dtype=float)
+        if self._residual is None:
+            self._residual = self.belief - self.baseline
 
     def decay(self) -> np.ndarray:
-        """One step of forgetting. Pulls toward the baseline but never all the way."""
-        keep = self.floor + (1.0 - self.floor) * (1.0 - float(self.rate))
-        self.belief = normalize(keep * self.belief + (1.0 - keep) * self.baseline)
+        """One step of forgetting, toward a permanent residue rather than toward nothing.
+
+        THE FIRST VERSION OF THIS DECAYED GEOMETRICALLY TO THE BASELINE, which is erasure with
+        extra steps: after enough encounters the reader was exactly as it started, and the floor
+        parameter only controlled how long that took. That is not what the author specified --
+        "old associations weaken, but they don't seem to ever quite disappear" -- and the
+        difference matters, because a reader that fully forgets has no history and a reader that
+        keeps a residue accumulates one.
+
+        So the target is baseline PLUS a permanent share of everything ever integrated. What fades
+        is the recent, vivid part. What remains is a trace that further forgetting cannot remove.
+        """
+        target = self.baseline + float(self.floor) * self._residual
+        keep = 1.0 - float(self.rate)
+        self.belief = normalize(keep * self.belief + (1.0 - keep) * target)
         return self.belief
 
     def integrate(self, evidence: np.ndarray, weight: float) -> np.ndarray:
         w = float(np.clip(weight, 0.0, 1.0))
         self.belief = normalize((1.0 - w) * self.belief + w * np.asarray(evidence, dtype=float))
+        # Everything integrated leaves a mark on the residue, which is what makes exposure
+        # cumulative even under forgetting.
+        self._residual = self._residual + w * (np.asarray(evidence, dtype=float) - self.baseline)
         return self.belief
 
     def drift(self) -> float:

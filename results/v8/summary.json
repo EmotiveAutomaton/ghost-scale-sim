@@ -1,0 +1,344 @@
+{
+  "E48": {
+    "experiment": "E48",
+    "hypotheses": [
+      "H8.1",
+      "H8.2",
+      "H8.3"
+    ],
+    "question": "Can a reader see further up a hierarchy than it has built itself? And does reading a deeper maker leave the reader deeper?",
+    "plain_language": "The model has always had a reader that infers a maker without ever being one. It has no compiled structure of its own, so nothing stops it reading a master as accurately as another master would. The theory says the opposite: you see the decisions in a bridge because you have made those decisions.",
+    "construct_split": {
+      "calibration": "how well-aimed the reader's templates are; whether it is RIGHT",
+      "depth": "how many levels it has itself; how far up someone else's it can SEE",
+      "note": "every V1-V7 result was measured on calibration and is not reinterpreted, which is the discipline applied when effort was replaced by depth"
+    },
+    "H8.1": {
+      "reading_gap_on_deep_work": 1.3628104607575846,
+      "cells": [
+        {
+          "reader_depth": 1,
+          "maker_depth": 1,
+          "reading": 1.4449843689649768,
+          "raw": 1.4449843689649768,
+          "process": -0.02033132009629355,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 1,
+          "maker_depth": 2,
+          "reading": 1.0,
+          "raw": 2.3043650630994357,
+          "process": 0.18034235395899545,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 1,
+          "maker_depth": 3,
+          "reading": 1.0,
+          "raw": 2.3628104607575846,
+          "process": 0.1852641576400603,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 2,
+          "maker_depth": 1,
+          "reading": 1.4449843689649768,
+          "raw": 1.4449843689649768,
+          "process": -0.02033132009629355,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 2,
+          "maker_depth": 2,
+          "reading": 1.961176330107493,
+          "raw": 2.3043650630994357,
+          "process": 0.18034235395899545,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 2,
+          "maker_depth": 3,
+          "reading": 1.9693553541737365,
+          "raw": 2.3628104607575846,
+          "process": 0.1852641576400603,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 3,
+          "maker_depth": 1,
+          "reading": 1.4449843689649768,
+          "raw": 1.4449843689649768,
+          "process": -0.02033132009629355,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 3,
+          "maker_depth": 2,
+          "reading": 1.961176330107493,
+          "raw": 2.3043650630994357,
+          "process": 0.18034235395899545,
+          "accuracy": 1.0
+        },
+        {
+          "reader_depth": 3,
+          "maker_depth": 3,
+          "reading": 2.3628104607575846,
+          "raw": 2.3628104607575846,
+          "process": 0.1852641576400603,
+          "accuracy": 1.0
+        }
+      ],
+      "outcome": "READER_DEPTH_CAPS_WHAT_IS_SEEN"
+    },
+    "H8.2": {
+      "compression_vs_gap_rho": -0.9051820650160766,
+      "compression_when_matched": 0.9162599390088959,
+      "outcome": "THE_COMPRESSION_WAS_THE_MISSING_READER_DEPTH",
+      "note": "the diagnostics pass found a known depth reading back at about a third of its true value and could not say why"
+    },
+    "H8.3": {
+      "growth_on_deep_work": 0.6894598630568993,
+      "growth_on_shallow_work": 0.0,
+      "by_arm": [
+        {
+          "reader_depth_start": 1,
+          "arm": "exposed_to_deep_work",
+          "growth": 0.9192798174091992
+        },
+        {
+          "reader_depth_start": 1,
+          "arm": "exposed_to_shallow_work",
+          "growth": 0.0
+        },
+        {
+          "reader_depth_start": 2,
+          "arm": "exposed_to_deep_work",
+          "growth": 0.4596399087045996
+        },
+        {
+          "reader_depth_start": 2,
+          "arm": "exposed_to_shallow_work",
+          "growth": 0.0
+        }
+      ],
+      "outcome": "APPRECIATION_INSTALLS_CAPABILITY",
+      "why_it_matters": "this is the author's hypothesis and it is 'art is a virus' stated mechanically. If perception and action are the same computation, the hierarchy used to READ is the hierarchy used to MAKE, and appreciation is acquisition rather than recognition."
+    },
+    "null_n37": {
+      "statement": "at maker depth 1 there is no hierarchy to see, so reader depth buys nothing",
+      "reading_spread_across_readers": 0.0,
+      "passed": true,
+      "why": "without it a deeper reader is simply a better reader, and every number here is a main effect rather than the interaction the claim needs"
+    },
+    "n_obs": 40,
+    "n_exposures": 12
+  },
+  "E49": {
+    "experiment": "E49",
+    "hypothesis": "H8.4",
+    "question": "Can this model represent a readymade -- almost nothing on the surface, an enormous amount compressed behind it?",
+    "plain_language": "Depth has always been measured over a sequence, so something with almost no surface carries almost nothing to read, and a urinal on a plinth scores as empty. That is the reading the theory exists to argue against. Measured as hierarchy per unit of surface, one act that needs three levels to explain is the densest thing there is.",
+    "H8.4_density": {
+      "readymade": 0.925,
+      "ordinary_work": 0.06666666666666667,
+      "sprawl": 0.041666666666666664,
+      "readymade_is_densest": true,
+      "outcome": "THE_READYMADE_IS_DENSE_NOT_EMPTY"
+    },
+    "H8.4_bimodality": {
+      "by_artifact": {
+        "readymade": {
+          "coefficient": 0.6239477279116343,
+          "split": true,
+          "n": 80,
+          "mean": 0.925,
+          "sd": 0.3985734054019045
+        },
+        "sketch": {
+          "coefficient": 0.9246489625982062,
+          "split": true,
+          "n": 80,
+          "mean": 0.2666666666666666,
+          "sd": 0.08216480300177609
+        },
+        "ordinary_work": {
+          "coefficient": 0.9246489625982062,
+          "split": true,
+          "n": 80,
+          "mean": 0.06666666666666665,
+          "sd": 0.020541200750444022
+        },
+        "sprawl": {
+          "coefficient": NaN,
+          "split": false,
+          "n": 80
+        }
+      },
+      "readymade_splits_the_room": true,
+      "outcome": "READERS_SPLIT_RATHER_THAN_SHRUG",
+      "why_it_matters": "whether you see a readymade depends on whether you POSSESS a structure, not on how much evidence you gathered. So the population should split rather than converge on mild disappointment -- which is what conceptual art actually does to a room, and is a different prediction from 'it is weak work'."
+    },
+    "null_n39": {
+      "statement": "density must not simply reward shortness",
+      "sprawl_below_readymade": true,
+      "passed": true,
+      "acknowledged_limitation": {
+        "short_and_empty": 0.5,
+        "long_and_deep": 0.125,
+        "short_empty_beats_long_deep": true,
+        "note": "a ratio does favour brevity, and that is stated rather than hidden. The guard is that the NUMERATOR must be there: an artifact with no hierarchy behind it scores at the floor however short it is, which the sprawl and sketch comparisons test. A measure that could not be gamed by brevity at all would not be a compression measure."
+      }
+    },
+    "n_obs": 80
+  },
+  "E50": {
+    "experiment": "E50",
+    "hypothesis": "H8.5",
+    "question": "Are grabbing attention and keeping it two different decisions?",
+    "plain_language": "With one engagement decision repeated, this model scores slop and shock art the same: both end with nothing recovered. The theory says they are different things. One was never looked at; the other was looked at hard and then abandoned, and the abandonment is the point, because it is a promise that was not kept.",
+    "separation": {
+      "on_the_two_stage_trace": 0.525,
+      "on_the_single_engagement_measure": 0.0,
+      "outcome": "SHOCK_ART_AND_SLOP_SEPARATE_ON_THE_TRACE"
+    },
+    "the_quiet_masterpiece": {
+      "peak": 0.1,
+      "recovered_if_looked_at": 0.08078326813673534,
+      "captured": 0.0,
+      "note": "the other direction the essay cares about: everything behind it and nothing on the surface. Nobody looks, so nobody finds out, and a single-decision model scores it the same as slop."
+    },
+    "n_obs": 80
+  },
+  "E51": {
+    "experiment": "E51",
+    "hypothesis": "H8.6",
+    "question": "Is honest marking self-policing? The framework's answer to bad actors has been asserted for eight versions and never simulated.",
+    "plain_language": "Marking your work honestly costs you: the mark lowers what readers take from it. Lying gets you the uptake of honest work. The proposal's security argument is that being caught costs more than the lie gained, so honesty holds up on its own above some rate of detection. That is a claim about an equilibrium and it needs a maker who can choose.",
+    "detection_rate_where_honesty_pays": {
+      "tight_gate": 0.25,
+      "leaky_gate": 0.25
+    },
+    "H8.6": {
+      "an_honest_equilibrium_exists": true,
+      "a_leaky_reader_makes_defection_cheaper": false,
+      "outcome": "HONEST_MARKING_IS_SELF_POLICING_ABOVE_A_DETECTION_RATE"
+    },
+    "null_n40": {
+      "statement": "lying must pay when it is never caught, or the payoff is rigged",
+      "passed": true,
+      "why": "without it an honest equilibrium is an artefact of the scoring rather than a result about signalling"
+    },
+    "what_was_deliberately_not_built": "a maker that chooses HOW MUCH TO DELEGATE to a tool. That is a second decision and a two-decision maker makes attribution hard in exactly the way the repair pass was written against. This maker makes one choice: declare honestly, or claim to be human.",
+    "reputation_cost": 2.0,
+    "n_makers": 24,
+    "n_encounters": 12
+  },
+  "E52": {
+    "experiment": "E52",
+    "question": "Can a reader recover an intention defined by what its maker WOULD NOT do, and what happens to a reader that has no hypothesis of that shape?",
+    "plain_language": "Every hypothesis in this project is a thing a maker might be trying to do. Avoidance is a different shape: the purpose is what is absent, so the evidence is a hole rather than a peak. A reader with no word for that has to explain the hole with something, and the prediction is that it picks confidently and wrongly.",
+    "epistemic_status": {
+      "was_described_as": "the project's only forward test, sealed with a content hash",
+      "is_now": "a good experiment whose sealed status is withdrawn",
+      "why": "the author does not recognise authoring the sealed prediction; it appears to have come out of an exchange with a different model. A sealed prediction is worth what the commitment behind it was worth, and a commitment nobody remembers making is not a forward test.",
+      "consequence": "the project has NO forward test, and the scoreboard is corrected to say so. That costs it its only such claim and the correction is made anyway."
+    },
+    "sealed_criteria": {
+      "accuracy_gap": 0.3,
+      "confidence": 0.5,
+      "attention_ratio": 1.5
+    },
+    "measured": {
+      "accuracy_gap": 0.85,
+      "attention_ratio": 0.9815950920245399,
+      "chance": 0.25,
+      "primary_holds": true,
+      "confidently_wrong": false,
+      "cost_prediction_holds": false
+    },
+    "branch": "GAP_BUT_READER_ONE_IS_UNCERTAIN",
+    "why_it_is_still_worth_running": "the secondary prediction -- that the unequipped reader is confidently WRONG rather than uncertain -- would be the interior-peak mechanism arriving by a different route, and that would make it two independent instances of one thing.",
+    "n_obs": 80
+  },
+  "S1": {
+    "check": "S-1 severity",
+    "question": "How often does a randomly parameterised model of this shape produce the finding, with the theory's settings thrown away?",
+    "plain_language": "If a result shows up in most random models of the same shape, it is a property of having built a reader like this at all, and the theory is not entitled to it. That is not the same as the result being wrong. It is the difference between evidence FOR the theory and evidence ABOUT the architecture.",
+    "reference_point": {
+      "finding": "the label effect (E2), measured during the validation pass",
+      "false_positive_rate": 0.64,
+      "note": "nearly two thirds of randomly parameterised readers reproduce it, which is why it is now reported as architecture-dependent"
+    },
+    "rates": {
+      "E36 depth moves the method, not the purpose": {
+        "draws_scored": 60,
+        "false_positive_rate": 0.9833333333333333
+      },
+      "E37 the wall is a distinct failure": {
+        "draws_scored": 60,
+        "false_positive_rate": 0.0
+      },
+      "E2/R-5 a false label moves you the wrong way": {
+        "draws_scored": 60,
+        "false_positive_rate": 1.0
+      }
+    },
+    "usable_draws": 60,
+    "draws_attempted": 60,
+    "forking_paths_ledger": {
+      "statement": "across versions 6 and 7 a design or criterion was changed AFTER seeing a null in seven places. Each change is individually defensible and is documented where it happened. The aggregate has a shape.",
+      "entries": [
+        {
+          "experiment": "E35 depletion",
+          "designs_tried": 2,
+          "criteria_tried": 2,
+          "what_changed": "content type: low-legibility hierarchical -> foreign; absolute -> relative"
+        },
+        {
+          "experiment": "E42 vulnerability",
+          "designs_tried": 2,
+          "criteria_tried": 1,
+          "what_changed": "regime changed to the one known to sustain attention"
+        },
+        {
+          "experiment": "E45 efficiency",
+          "designs_tried": 2,
+          "criteria_tried": 1,
+          "what_changed": "task made harder; held-out goals 1 -> 2"
+        },
+        {
+          "experiment": "E36 process",
+          "designs_tried": 1,
+          "criteria_tried": 3,
+          "what_changed": "null statistic accuracy -> information; a second temporal ordering test added"
+        },
+        {
+          "experiment": "E46 leak",
+          "designs_tried": 1,
+          "criteria_tried": 2,
+          "what_changed": "absolute magnitude -> ratio; the null restated"
+        },
+        {
+          "experiment": "E38 expertise",
+          "designs_tried": 2,
+          "criteria_tried": 1,
+          "what_changed": "machine family degenerate -> well-formed"
+        },
+        {
+          "experiment": "C-3 co-location",
+          "designs_tried": 2,
+          "criteria_tried": 1,
+          "what_changed": "one artifact per cell rather than per observer"
+        }
+      ],
+      "total_designs_tried": 12,
+      "total_criteria_tried": 11,
+      "why_it_is_reported": "a criterion that a false theory would also pass is not evidence, and neither is a design chosen because the previous one came back flat. Collecting the count is free and it is the same question the false-positive rates ask, from the other end."
+    },
+    "how_to_read_a_rate": {
+      "high": "the finding is architectural; the theory is not entitled to it",
+      "low": "the theory's specific commitments are what produce it, and that is worth a lot"
+    }
+  }
+}

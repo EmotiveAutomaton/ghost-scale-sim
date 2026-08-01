@@ -1,0 +1,96 @@
+{
+  "experiment": "E49",
+  "hypothesis": "H8.4",
+  "question": "Can this model represent a readymade -- almost nothing on the surface, an enormous amount compressed behind it?",
+  "plain_language": "Depth has always been measured over a sequence, so something with almost no surface carries almost nothing to read, and a urinal on a plinth scores as empty. That is the reading the theory exists to argue against. Measured as hierarchy per unit of surface, one act that needs three levels to explain is the densest thing there is.",
+  "cells": [
+    {
+      "artifact": "ordinary_work",
+      "density": 0.06666666666666667,
+      "density_sd": 0.02054120075044402,
+      "true_density": 0.08333333333333333,
+      "levels_seen": 1.6,
+      "extent": 24.0,
+      "true_depth": 2.0
+    },
+    {
+      "artifact": "readymade",
+      "density": 0.925,
+      "density_sd": 0.3985734054019045,
+      "true_density": 1.5,
+      "levels_seen": 1.85,
+      "extent": 2.0,
+      "true_depth": 3.0
+    },
+    {
+      "artifact": "sketch",
+      "density": 0.26666666666666666,
+      "density_sd": 0.08216480300177607,
+      "true_density": 0.3333333333333333,
+      "levels_seen": 1.6,
+      "extent": 6.0,
+      "true_depth": 2.0
+    },
+    {
+      "artifact": "sprawl",
+      "density": 0.041666666666666664,
+      "density_sd": 0.0,
+      "true_density": 0.041666666666666664,
+      "levels_seen": 1.0,
+      "extent": 24.0,
+      "true_depth": 1.0
+    }
+  ],
+  "H8.4_density": {
+    "readymade": 0.925,
+    "ordinary_work": 0.06666666666666667,
+    "sprawl": 0.041666666666666664,
+    "readymade_is_densest": true,
+    "outcome": "THE_READYMADE_IS_DENSE_NOT_EMPTY"
+  },
+  "H8.4_bimodality": {
+    "by_artifact": {
+      "readymade": {
+        "coefficient": 0.6239477279116343,
+        "split": true,
+        "n": 80,
+        "mean": 0.925,
+        "sd": 0.3985734054019045
+      },
+      "sketch": {
+        "coefficient": 0.9246489625982062,
+        "split": true,
+        "n": 80,
+        "mean": 0.2666666666666666,
+        "sd": 0.08216480300177609
+      },
+      "ordinary_work": {
+        "coefficient": 0.9246489625982062,
+        "split": true,
+        "n": 80,
+        "mean": 0.06666666666666665,
+        "sd": 0.020541200750444022
+      },
+      "sprawl": {
+        "coefficient": NaN,
+        "split": false,
+        "n": 80
+      }
+    },
+    "readymade_splits_the_room": true,
+    "outcome": "READERS_SPLIT_RATHER_THAN_SHRUG",
+    "why_it_matters": "whether you see a readymade depends on whether you POSSESS a structure, not on how much evidence you gathered. So the population should split rather than converge on mild disappointment -- which is what conceptual art actually does to a room, and is a different prediction from 'it is weak work'."
+  },
+  "null_n39": {
+    "statement": "density must not simply reward shortness",
+    "sprawl_below_readymade": true,
+    "passed": true,
+    "acknowledged_limitation": {
+      "short_and_empty": 0.5,
+      "long_and_deep": 0.125,
+      "short_empty_beats_long_deep": true,
+      "note": "a ratio does favour brevity, and that is stated rather than hidden. The guard is that the NUMERATOR must be there: an artifact with no hierarchy behind it scores at the floor however short it is, which the sprawl and sketch comparisons test. A measure that could not be gamed by brevity at all would not be a compression measure."
+    }
+  },
+  "n_obs": 80
+}

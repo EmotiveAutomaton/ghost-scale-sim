@@ -1,0 +1,110 @@
+{
+  "experiment": "E51",
+  "hypothesis": "H8.6",
+  "question": "Is honest marking self-policing? The framework's answer to bad actors has been asserted for eight versions and never simulated.",
+  "plain_language": "Marking your work honestly costs you: the mark lowers what readers take from it. Lying gets you the uptake of honest work. The proposal's security argument is that being caught costs more than the lie gained, so honesty holds up on its own above some rate of detection. That is a claim about an equilibrium and it needs a maker who can choose.",
+  "equilibrium": [
+    {
+      "leak": 0.0,
+      "detection": 0.0,
+      "defector_payoff": 0.44242293579337416,
+      "honest_payoff": 0.008248151895970971,
+      "honesty_pays": false
+    },
+    {
+      "leak": 0.0,
+      "detection": 0.1,
+      "defector_payoff": 0.3035340469044852,
+      "honest_payoff": 0.008248151895970971,
+      "honesty_pays": false
+    },
+    {
+      "leak": 0.0,
+      "detection": 0.25,
+      "defector_payoff": -0.07146595309551486,
+      "honest_payoff": 0.008248151895970971,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.0,
+      "detection": 0.5,
+      "defector_payoff": -0.7520215086510705,
+      "honest_payoff": 0.008248151895970971,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.0,
+      "detection": 0.75,
+      "defector_payoff": -1.168688175317737,
+      "honest_payoff": 0.008248151895970971,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.0,
+      "detection": 1.0,
+      "defector_payoff": -1.557577064206626,
+      "honest_payoff": 0.008248151895970971,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.1,
+      "detection": 0.0,
+      "defector_payoff": 0.4430597031296841,
+      "honest_payoff": 0.017579775479023407,
+      "honesty_pays": false
+    },
+    {
+      "leak": 0.1,
+      "detection": 0.1,
+      "defector_payoff": 0.30417081424079534,
+      "honest_payoff": 0.017579775479023407,
+      "honesty_pays": false
+    },
+    {
+      "leak": 0.1,
+      "detection": 0.25,
+      "defector_payoff": -0.07082918575920465,
+      "honest_payoff": 0.017579775479023407,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.1,
+      "detection": 0.5,
+      "defector_payoff": -0.7513847413147602,
+      "honest_payoff": 0.017579775479023407,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.1,
+      "detection": 0.75,
+      "defector_payoff": -1.1680514079814268,
+      "honest_payoff": 0.017579775479023407,
+      "honesty_pays": true
+    },
+    {
+      "leak": 0.1,
+      "detection": 1.0,
+      "defector_payoff": -1.5569402968703159,
+      "honest_payoff": 0.017579775479023407,
+      "honesty_pays": true
+    }
+  ],
+  "detection_rate_where_honesty_pays": {
+    "tight_gate": 0.25,
+    "leaky_gate": 0.25
+  },
+  "H8.6": {
+    "an_honest_equilibrium_exists": true,
+    "a_leaky_reader_makes_defection_cheaper": false,
+    "outcome": "HONEST_MARKING_IS_SELF_POLICING_ABOVE_A_DETECTION_RATE"
+  },
+  "null_n40": {
+    "statement": "lying must pay when it is never caught, or the payoff is rigged",
+    "passed": true,
+    "why": "without it an honest equilibrium is an artefact of the scoring rather than a result about signalling"
+  },
+  "what_was_deliberately_not_built": "a maker that chooses HOW MUCH TO DELEGATE to a tool. That is a second decision and a two-decision maker makes attribution hard in exactly the way the repair pass was written against. This maker makes one choice: declare honestly, or claim to be human.",
+  "reputation_cost": 2.0,
+  "n_makers": 24,
+  "n_encounters": 12
+}

@@ -1,10 +1,12 @@
 # Ghost Scale Simulation
 
+![The Ghost Scale, drawn by a human and rendered by a machine](figures/ghost_scale_pair.png)
+
+*Left: 100% intent. Right: 60%. Same figure, same information.*
+
 A working model of how people work out what someone was trying to do when they made something.
 
-> ## ◐ Curator text — 60%
-> **From here to [What this is](#what-this-is): human and AI both, human-directed.**
-> Everything after that point is ghost text. Nothing here is 100%.
+> **◐ Curator — 60% down to [What this is](#what-this-is). ○ Ghost — 5% after that.**
 
 ---
 

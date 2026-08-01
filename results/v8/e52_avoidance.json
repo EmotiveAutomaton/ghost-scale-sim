@@ -1,0 +1,41 @@
+{
+  "experiment": "E52",
+  "question": "Can a reader recover an intention defined by what its maker WOULD NOT do, and what happens to a reader that has no hypothesis of that shape?",
+  "plain_language": "Every hypothesis in this project is a thing a maker might be trying to do. Avoidance is a different shape: the purpose is what is absent, so the evidence is a hole rather than a peak. A reader with no word for that has to explain the hole with something, and the prediction is that it picks confidently and wrongly.",
+  "epistemic_status": {
+    "was_described_as": "the project's only forward test, sealed with a content hash",
+    "is_now": "a good experiment whose sealed status is withdrawn",
+    "why": "the author does not recognise authoring the sealed prediction; it appears to have come out of an exchange with a different model. A sealed prediction is worth what the commitment behind it was worth, and a commitment nobody remembers making is not a forward test.",
+    "consequence": "the project has NO forward test, and the scoreboard is corrected to say so. That costs it its only such claim and the correction is made anyway."
+  },
+  "cells": {
+    "pursuit_only": {
+      "accuracy": 0.0,
+      "within_observer": 0.6765865209554353,
+      "engaged_fraction": 0.0125,
+      "deep_looks": 8.15
+    },
+    "holds_avoidance": {
+      "accuracy": 0.85,
+      "within_observer": 0.43537711233068965,
+      "engaged_fraction": 0.0,
+      "deep_looks": 8.0
+    }
+  },
+  "sealed_criteria": {
+    "accuracy_gap": 0.3,
+    "confidence": 0.5,
+    "attention_ratio": 1.5
+  },
+  "measured": {
+    "accuracy_gap": 0.85,
+    "attention_ratio": 0.9815950920245399,
+    "chance": 0.25,
+    "primary_holds": true,
+    "confidently_wrong": false,
+    "cost_prediction_holds": false
+  },
+  "branch": "GAP_BUT_READER_ONE_IS_UNCERTAIN",
+  "why_it_is_still_worth_running": "the secondary prediction -- that the unequipped reader is confidently WRONG rather than uncertain -- would be the interior-peak mechanism arriving by a different route, and that would make it two independent instances of one thing.",
+  "n_obs": 80
+}

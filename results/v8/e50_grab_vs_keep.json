@@ -1,0 +1,60 @@
+{
+  "experiment": "E50",
+  "hypothesis": "H8.5",
+  "question": "Are grabbing attention and keeping it two different decisions?",
+  "plain_language": "With one engagement decision repeated, this model scores slop and shock art the same: both end with nothing recovered. The theory says they are different things. One was never looked at; the other was looked at hard and then abandoned, and the abandonment is the point, because it is a promise that was not kept.",
+  "cells": [
+    {
+      "arm": "quiet_masterpiece",
+      "peak": 0.1,
+      "tail": 0.007360146411791382,
+      "collapse": 0.09263985358820861,
+      "captured": 0.0,
+      "sustained": 0.0,
+      "recovered": 0.08078326813673534,
+      "single_stage": 0.07604166666666666
+    },
+    {
+      "arm": "real_work",
+      "peak": 0.6,
+      "tail": 0.04416087847074829,
+      "collapse": 0.5558391215292516,
+      "captured": 1.0,
+      "sustained": 0.0875,
+      "recovered": 0.08078326813673534,
+      "single_stage": 0.07604166666666666
+    },
+    {
+      "arm": "shock_art",
+      "peak": 0.6,
+      "tail": 2.7694470756732454e-05,
+      "collapse": 0.5999723055292432,
+      "captured": 1.0,
+      "sustained": 0.0,
+      "recovered": 0.016190384329357658,
+      "single_stage": 0.04895833333333333
+    },
+    {
+      "arm": "slop",
+      "peak": 0.075,
+      "tail": 3.4618088445915567e-06,
+      "collapse": 0.0749965381911554,
+      "captured": 0.0,
+      "sustained": 0.0,
+      "recovered": 0.016190384329357658,
+      "single_stage": 0.04895833333333333
+    }
+  ],
+  "separation": {
+    "on_the_two_stage_trace": 0.525,
+    "on_the_single_engagement_measure": 0.0,
+    "outcome": "SHOCK_ART_AND_SLOP_SEPARATE_ON_THE_TRACE"
+  },
+  "the_quiet_masterpiece": {
+    "peak": 0.1,
+    "recovered_if_looked_at": 0.08078326813673534,
+    "captured": 0.0,
+    "note": "the other direction the essay cares about: everything behind it and nothing on the surface. Nobody looks, so nobody finds out, and a single-decision model scores it the same as slop."
+  },
+  "n_obs": 80
+}
