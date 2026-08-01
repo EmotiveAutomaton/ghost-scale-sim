@@ -1,0 +1,80 @@
+{
+  "check": "S-1 severity",
+  "question": "How often does a randomly parameterised model of this shape produce the finding, with the theory's settings thrown away?",
+  "plain_language": "If a result shows up in most random models of the same shape, it is a property of having built a reader like this at all, and the theory is not entitled to it. That is not the same as the result being wrong. It is the difference between evidence FOR the theory and evidence ABOUT the architecture.",
+  "reference_point": {
+    "finding": "the label effect (E2), measured during the validation pass",
+    "false_positive_rate": 0.64,
+    "note": "nearly two thirds of randomly parameterised readers reproduce it, which is why it is now reported as architecture-dependent"
+  },
+  "rates": {
+    "E36 depth moves the method, not the purpose": {
+      "draws_scored": 40,
+      "false_positive_rate": 0.975
+    },
+    "E37 the wall is a distinct failure": {
+      "draws_scored": 40,
+      "false_positive_rate": 0.0
+    },
+    "E2/R-5 a false label moves you the wrong way": {
+      "draws_scored": 40,
+      "false_positive_rate": 1.0
+    }
+  },
+  "usable_draws": 40,
+  "draws_attempted": 40,
+  "forking_paths_ledger": {
+    "statement": "across versions 6 and 7 a design or criterion was changed AFTER seeing a null in seven places. Each change is individually defensible and is documented where it happened. The aggregate has a shape.",
+    "entries": [
+      {
+        "experiment": "E35 depletion",
+        "designs_tried": 2,
+        "criteria_tried": 2,
+        "what_changed": "content type: low-legibility hierarchical -> foreign; absolute -> relative"
+      },
+      {
+        "experiment": "E42 vulnerability",
+        "designs_tried": 2,
+        "criteria_tried": 1,
+        "what_changed": "regime changed to the one known to sustain attention"
+      },
+      {
+        "experiment": "E45 efficiency",
+        "designs_tried": 2,
+        "criteria_tried": 1,
+        "what_changed": "task made harder; held-out goals 1 -> 2"
+      },
+      {
+        "experiment": "E36 process",
+        "designs_tried": 1,
+        "criteria_tried": 3,
+        "what_changed": "null statistic accuracy -> information; a second temporal ordering test added"
+      },
+      {
+        "experiment": "E46 leak",
+        "designs_tried": 1,
+        "criteria_tried": 2,
+        "what_changed": "absolute magnitude -> ratio; the null restated"
+      },
+      {
+        "experiment": "E38 expertise",
+        "designs_tried": 2,
+        "criteria_tried": 1,
+        "what_changed": "machine family degenerate -> well-formed"
+      },
+      {
+        "experiment": "C-3 co-location",
+        "designs_tried": 2,
+        "criteria_tried": 1,
+        "what_changed": "one artifact per cell rather than per observer"
+      }
+    ],
+    "total_designs_tried": 12,
+    "total_criteria_tried": 11,
+    "why_it_is_reported": "a criterion that a false theory would also pass is not evidence, and neither is a design chosen because the previous one came back flat. Collecting the count is free and it is the same question the false-positive rates ask, from the other end."
+  },
+  "how_to_read_a_rate": {
+    "high": "the finding is architectural; the theory is not entitled to it",
+    "low": "the theory's specific commitments are what produce it, and that is worth a lot"
+  }
+}

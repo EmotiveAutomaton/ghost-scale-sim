@@ -851,3 +851,24 @@ v6:
     n_obs: 40
     n_timesteps: 24
     subwindow_fraction: 0.25
+
+# ---------------------------------------------------------------------------
+# V8 — the reader gets a mind of its own. ALL SWITCHES OFF BY DEFAULT (null N35).
+# ---------------------------------------------------------------------------
+v8:
+  reader_depth:
+    enabled: false
+    levels: 3          # how many levels of hierarchy this reader has compiled for itself
+    growth_rate: 0.05  # how fast exposure to deeper work grows it (H8.3)
+  integration_cost:
+    enabled: false
+    rate: 1.0          # what being changed costs, per nat of belief movement
+  forgetting:
+    enabled: false
+    rate: 0.05         # how fast an association weakens per encounter
+    floor: 0.15        # the share that never fades: associations weaken, they do not vanish
+  density:
+    enabled: false
+    floor_extent: 1    # the shortest observable extent that can carry a hierarchy
+  attention:
+    two_stage: false   # capture and sustain as separate decisions

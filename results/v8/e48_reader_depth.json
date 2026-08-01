@@ -1,0 +1,135 @@
+{
+  "experiment": "E48",
+  "hypotheses": [
+    "H8.1",
+    "H8.2",
+    "H8.3"
+  ],
+  "question": "Can a reader see further up a hierarchy than it has built itself? And does reading a deeper maker leave the reader deeper?",
+  "plain_language": "The model has always had a reader that infers a maker without ever being one. It has no compiled structure of its own, so nothing stops it reading a master as accurately as another master would. The theory says the opposite: you see the decisions in a bridge because you have made those decisions.",
+  "construct_split": {
+    "calibration": "how well-aimed the reader's templates are; whether it is RIGHT",
+    "depth": "how many levels it has itself; how far up someone else's it can SEE",
+    "note": "every V1-V7 result was measured on calibration and is not reinterpreted, which is the discipline applied when effort was replaced by depth"
+  },
+  "H8.1": {
+    "reading_gap_on_deep_work": 1.361299457876548,
+    "cells": [
+      {
+        "reader_depth": 1,
+        "maker_depth": 1,
+        "reading": 1.4575603313838925,
+        "raw": 1.4575603313838925,
+        "process": -0.03727345859834142,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 1,
+        "maker_depth": 2,
+        "reading": 1.0,
+        "raw": 2.3241004563341483,
+        "process": 0.16134932308757619,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 1,
+        "maker_depth": 3,
+        "reading": 1.0,
+        "raw": 2.361299457876548,
+        "process": 0.21188183243836867,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 2,
+        "maker_depth": 1,
+        "reading": 1.4575603313838925,
+        "raw": 1.4575603313838925,
+        "process": -0.03727345859834142,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 2,
+        "maker_depth": 2,
+        "reading": 1.9650550144813173,
+        "raw": 2.3241004563341483,
+        "process": 0.16134932308757619,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 2,
+        "maker_depth": 3,
+        "reading": 1.9728041175712436,
+        "raw": 2.361299457876548,
+        "process": 0.21188183243836867,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 3,
+        "maker_depth": 1,
+        "reading": 1.4575603313838925,
+        "raw": 1.4575603313838925,
+        "process": -0.03727345859834142,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 3,
+        "maker_depth": 2,
+        "reading": 1.9650550144813173,
+        "raw": 2.3241004563341483,
+        "process": 0.16134932308757619,
+        "accuracy": 1.0
+      },
+      {
+        "reader_depth": 3,
+        "maker_depth": 3,
+        "reading": 2.361299457876548,
+        "raw": 2.361299457876548,
+        "process": 0.21188183243836867,
+        "accuracy": 1.0
+      }
+    ],
+    "outcome": "READER_DEPTH_CAPS_WHAT_IS_SEEN"
+  },
+  "H8.2": {
+    "compression_vs_gap_rho": -0.9105716255624839,
+    "compression_when_matched": 0.9173849445911666,
+    "outcome": "THE_COMPRESSION_WAS_THE_MISSING_READER_DEPTH",
+    "note": "the diagnostics pass found a known depth reading back at about a third of its true value and could not say why"
+  },
+  "H8.3": {
+    "growth_on_deep_work": 0.6018945816001705,
+    "growth_on_shallow_work": 0.0,
+    "by_arm": [
+      {
+        "reader_depth_start": 1,
+        "arm": "exposed_to_deep_work",
+        "growth": 0.8025261088002273
+      },
+      {
+        "reader_depth_start": 1,
+        "arm": "exposed_to_shallow_work",
+        "growth": 0.0
+      },
+      {
+        "reader_depth_start": 2,
+        "arm": "exposed_to_deep_work",
+        "growth": 0.40126305440011373
+      },
+      {
+        "reader_depth_start": 2,
+        "arm": "exposed_to_shallow_work",
+        "growth": 0.0
+      }
+    ],
+    "outcome": "APPRECIATION_INSTALLS_CAPABILITY",
+    "why_it_matters": "this is the author's hypothesis and it is 'art is a virus' stated mechanically. If perception and action are the same computation, the hierarchy used to READ is the hierarchy used to MAKE, and appreciation is acquisition rather than recognition."
+  },
+  "null_n37": {
+    "statement": "at maker depth 1 there is no hierarchy to see, so reader depth buys nothing",
+    "reading_spread_across_readers": 0.0,
+    "passed": true,
+    "why": "without it a deeper reader is simply a better reader, and every number here is a main effect rather than the interaction the claim needs"
+  },
+  "n_obs": 24,
+  "n_exposures": 10
+}
