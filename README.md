@@ -2,6 +2,22 @@
 
 A working model of how people work out what someone was trying to do when they made something.
 
+---
+
+## Where to start
+
+| you want | read |
+|---|---|
+| **every question and its current answer** | **[FINDINGS.md](FINDINGS.md)** — one page, current state |
+| how the record got that way | [docs/HISTORY.md](docs/HISTORY.md) — six versions and four audit passes, one narrative |
+| the limits on any specific number | [DIAGNOSTICS.md](DIAGNOSTICS.md) — read before quoting |
+| everything else | [docs/README.md](docs/README.md) — the map |
+
+The rest of this page is the public framing: what was asked, what came back, and what not to
+believe about it.
+
+---
+
 ## What this is
 
 When you look at a piece of work you run a guess about the person behind it. Why this word, this
@@ -49,6 +65,17 @@ trusting reader can never learn that a source lies**, at any number of encounter
 prediction the fixed-trust model could not make. And the three headline criteria that had no error
 bars now have them: two hold, one bounds its effect near zero. All of it is in
 [REPAIR.md](REPAIR.md).
+
+**A fourth pass then checked the code against the theory it implements**, which is a different
+question again and the first one nobody had asked: the three earlier passes all took the code's own
+account of itself as given. Reading the published equation against the shipped code found **three
+terms with no counterpart in the code**. Two were omissions — there was no way for a reader to get
+tired, and no way for it to be partly engaged. The third was not: **the paper and the code explain
+the trust exploit by different mechanisms**, and the paper's version predicts something the code
+structurally cannot produce — a reader that is told the truth, believes it, and absorbs the work
+anyway. That version also settled the project's longest-running open question, by noticing that its
+criterion had been pointed at the one quantity the design holds constant. All of it is in
+[RESULTS_V6.md](RESULTS_V6.md).
 
 ## A claim this repository withdrew
 
@@ -324,6 +351,10 @@ python scripts/write_diagnostics_md.py
 python run_repair.py
 python scripts/write_repair_md.py
 
+# version 6 (writes results/v6/, then RESULTS_V6.md)
+python run_v6.py
+python scripts/write_results_v6.py
+
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/rebuild_figures.py
 python scripts/make_social_figures.py
@@ -446,13 +477,17 @@ named gap, and that argument gets weaker if it claims more ground than it holds.
 
 ```
 README.md                     this page
+FINDINGS.md                   every question and its CURRENT answer; the one page to read
+docs/HISTORY.md               how the record got that way, six versions and four passes
 VALIDATION.md                 generated from results/validation/, never hand-written
 DIAGNOSTICS.md                generated from results/diagnostics/, never hand-written
 REPAIR.md                     generated from results/repair/, never hand-written
+RESULTS_V6.md                 generated from results/v6/, never hand-written
 run_all.py                    the experiment programme
 run_validation.py             the validation pass, V-1 through V-9
 run_diagnostics.py            the diagnostics pass on the instruments, P-1, P-2 and D-1 to D-6
 run_repair.py                 the repair pass, R-1 through R-13
+run_v6.py                     version 6, E35 through E43, plus the retrofit
 
 ghostscale/                   generative_model, creators, environment, observer, learning, metrics
 ghostscale/exact.py           exact joint inference; the solver the validation pass substitutes in
@@ -467,6 +502,9 @@ ghostscale/prereg_*.py        acceptance criteria as executable, hash-locked cod
 ghostscale/validation/        the nine checks, plus their own hash-locked criteria
 ghostscale/diagnostics/       the eight instrument checks, plus their own separate lock
 ghostscale/repair/            the repair pass, plus a third separate lock
+ghostscale/v6_model.py        the Intent Extraction Limit: depletion, the graded gate, the
+                              trust-to-threshold coupling, process recovery
+ghostscale/v6/                version 6's experiments, plus a fourth separate lock
 
 tests/                        model invariants, the null suite (N1 to N21), exact-inference tests
 config/default.yaml           every parameter, for every version, plus the solver switch

@@ -552,5 +552,280 @@
       "outcome": "AUTOMATICITY_HIDES_THE_GOAL_FROM_ITS_OWN_AUTHOR"
     },
     "n_obs": 50
+  },
+  "RETROFIT": {
+    "check": "V6 retrofit",
+    "question": "Does the new machinery change any earlier answer?",
+    "plain_language": "Version 6 added three things the theory had and the code did not, and demonstrated them on new experiments. That is not the same as knowing what they do to the old ones. This goes back.",
+    "families": {
+      "depth": {
+        "family": "depth",
+        "experiments": [
+          "E31",
+          "E30",
+          "N21"
+        ],
+        "what_v6_adds": "process recovery: how much of the maker's METHOD the reader got",
+        "cells": [
+          {
+            "label": "false",
+            "true_mu": 1,
+            "recovered_mu": 1.4846294493926615,
+            "goal_uptake": 1.407158745145551,
+            "process_uptake": -0.07699418864072757,
+            "process_accuracy": 0.20520833333333335,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "false",
+            "true_mu": 2,
+            "recovered_mu": 2.2782674628906023,
+            "goal_uptake": 1.407158745145551,
+            "process_uptake": 0.23424905255553555,
+            "process_accuracy": 0.4229166666666667,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "false",
+            "true_mu": 3,
+            "recovered_mu": 2.3786393099572187,
+            "goal_uptake": 1.407158745145551,
+            "process_uptake": 0.19804573064559053,
+            "process_accuracy": 0.40625,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "honest",
+            "true_mu": 1,
+            "recovered_mu": 1.9997576276064237,
+            "goal_uptake": 1.3637179749706374,
+            "process_uptake": -0.008951335448779796,
+            "process_accuracy": 0.23020833333333335,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "honest",
+            "true_mu": 2,
+            "recovered_mu": 2.1003023855466973,
+            "goal_uptake": 1.3718871513079154,
+            "process_uptake": 0.03537608150469844,
+            "process_accuracy": 0.3875,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "honest",
+            "true_mu": 3,
+            "recovered_mu": 2.0991056018434624,
+            "goal_uptake": 1.370849367818069,
+            "process_uptake": 0.02503195077115309,
+            "process_accuracy": 0.31875,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "unsigned",
+            "true_mu": 1,
+            "recovered_mu": 1.5534681736804725,
+            "goal_uptake": 1.4071587447727736,
+            "process_uptake": -0.06458285499170584,
+            "process_accuracy": 0.21770833333333334,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "unsigned",
+            "true_mu": 2,
+            "recovered_mu": 2.2803720339257425,
+            "goal_uptake": 1.407158744317379,
+            "process_uptake": 0.21739548872854625,
+            "process_accuracy": 0.428125,
+            "goal_accuracy": 1.0
+          },
+          {
+            "label": "unsigned",
+            "true_mu": 3,
+            "recovered_mu": 2.3800952037650704,
+            "goal_uptake": 1.4071587451427974,
+            "process_uptake": 0.17958284861894033,
+            "process_accuracy": 0.3875,
+            "goal_accuracy": 1.0
+          }
+        ],
+        "uptake_tracks_recovered_depth_on_goal": 0.22037063867676338,
+        "uptake_tracks_recovered_depth_on_process": 0.8333333333333334,
+        "reading": "E31's pre-registered criterion is that uptake tracks the reader's depth estimate, and it was measured on GOAL uptake -- a quantity the depth construction holds constant on purpose. Re-scored on process uptake, which is what the theory names, the same cells give a different and more interpretable answer. Both are reported; the original is not replaced."
+      },
+      "trust": {
+        "family": "trust",
+        "experiments": [
+          "E2",
+          "E17",
+          "E4"
+        ],
+        "what_v6_adds": "the coupling between trust and the acceptance threshold",
+        "cells": [
+          {
+            "content": "human_work",
+            "label": "claimed_human",
+            "coupling": 0.0,
+            "within_observer": 1.9492064231541073e-17,
+            "between_observer": 1.2588473036026393,
+            "goal_uptake": 1.407512552764002,
+            "integration": 0.007947725538056085,
+            "goal_accuracy": 1.0
+          },
+          {
+            "content": "human_work",
+            "label": "claimed_human",
+            "coupling": 1.0,
+            "within_observer": 1.9492064231541073e-17,
+            "between_observer": 1.2588473036026393,
+            "goal_uptake": 1.407512552764002,
+            "integration": 0.9986159886208792,
+            "goal_accuracy": 1.0
+          },
+          {
+            "content": "human_work",
+            "label": "truthful",
+            "coupling": 0.0,
+            "within_observer": 1.9492064231541073e-17,
+            "between_observer": 1.2588473036026393,
+            "goal_uptake": 1.407512552764002,
+            "integration": 0.007947725538056085,
+            "goal_accuracy": 1.0
+          },
+          {
+            "content": "human_work",
+            "label": "truthful",
+            "coupling": 1.0,
+            "within_observer": 1.9492064231541073e-17,
+            "between_observer": 1.2588473036026393,
+            "goal_uptake": 1.407512552764002,
+            "integration": 0.9986159886208792,
+            "goal_accuracy": 1.0
+          },
+          {
+            "content": "machine_work",
+            "label": "claimed_human",
+            "coupling": 0.0,
+            "within_observer": 0.1876025484723374,
+            "between_observer": 1.2396080398477984,
+            "goal_uptake": -7.601575211998304,
+            "integration": 0.010397097218456438,
+            "goal_accuracy": 0.2
+          },
+          {
+            "content": "machine_work",
+            "label": "claimed_human",
+            "coupling": 1.0,
+            "within_observer": 0.1876025484723374,
+            "between_observer": 1.2396080398477984,
+            "goal_uptake": -7.601575211998304,
+            "integration": 0.97862656637951,
+            "goal_accuracy": 0.2
+          },
+          {
+            "content": "machine_work",
+            "label": "truthful",
+            "coupling": 0.0,
+            "within_observer": 1.292326166458953,
+            "between_observer": 1.3054616844516953,
+            "goal_uptake": -0.08625105274390918,
+            "integration": 0.05549681198048637,
+            "goal_accuracy": 0.225
+          },
+          {
+            "content": "machine_work",
+            "label": "truthful",
+            "coupling": 1.0,
+            "within_observer": 1.292326166458953,
+            "between_observer": 1.3054616844516953,
+            "goal_uptake": -0.08625105274390918,
+            "integration": 0.5476977918219277,
+            "goal_accuracy": 0.225
+          }
+        ],
+        "machine_work_integration": {
+          "passed_off_as_human__channel_race": 0.010397097218456438,
+          "passed_off_as_human__coupled_gate": 0.97862656637951,
+          "labelled_honestly__channel_race": 0.05549681198048637,
+          "labelled_honestly__coupled_gate": 0.5476977918219277
+        },
+        "reading": "The label effect on BELIEF is unchanged: the coupling acts on the gate, not on the likelihood, so what the reader comes to think is untouched. What the coupling changes is what the reader is allowed to KEEP, and it changes it most in the cell the code could not reach at all -- machine work labelled honestly."
+      },
+      "sequential": {
+        "family": "sequential",
+        "experiments": [
+          "E6",
+          "E7",
+          "E9"
+        ],
+        "what_v6_adds": "a metabolic reserve carried across the corpus",
+        "by_contamination": [
+          {
+            "contamination": 0.0,
+            "reserve_final": 1.0,
+            "engaged": 0.11388888888888889,
+            "accuracy_on_human": 1.0
+          },
+          {
+            "contamination": 0.3,
+            "reserve_final": 0.9231490920186917,
+            "engaged": 0.2586805555555555,
+            "accuracy_on_human": 0.7875
+          },
+          {
+            "contamination": 0.6,
+            "reserve_final": 0.9231490920186917,
+            "engaged": 0.37916666666666665,
+            "accuracy_on_human": 0.56875
+          }
+        ],
+        "on_the_human_share_only": [
+          {
+            "contamination": 0.0,
+            "engaged_on_human": 0.11388888888888889,
+            "accuracy_on_human": 1.0,
+            "uptake_on_human": 1.392425330055528
+          },
+          {
+            "contamination": 0.3,
+            "engaged_on_human": 0.11642512077294687,
+            "accuracy_on_human": 1.0,
+            "uptake_on_human": 1.3943437298486268
+          },
+          {
+            "contamination": 0.6,
+            "engaged_on_human": 0.10360360360360361,
+            "accuracy_on_human": 1.0,
+            "uptake_on_human": 1.3822854342582345
+          }
+        ],
+        "reading": "The corpus experiments measured what a contaminated stream does to the reader's MODEL. This measures what it does to the reader's WILLINGNESS, on the human share of the same stream -- work that is perfectly readable and that the reader increasingly does not bother to read."
+      }
+    },
+    "out_of_scope": {
+      "E1": "no trust parameter varied, no depth, single artifact",
+      "E3": "sweeps effort cost; no depth, no sequence, trust fixed",
+      "E5": "trust versus decisiveness; the coupling acts on the GATE, which E5 does not measure",
+      "E10": "reader skill on a fixed corpus; no depth hierarchy and no sequence",
+      "E11": "belief distance against harm; a measurement comparison, not a reader manipulation",
+      "E12": "sample-size sweep on the generational relay, which stays withheld",
+      "E13": "freeze versus leak; a learning-path diagnostic",
+      "E14": "forced engagement; V6's gate acts after inference and cannot change a forced arm",
+      "E15": "competence transition shape; no depth, no sequence",
+      "E16": "labelling coverage; a corpus-level policy question with no reader sequence",
+      "E18": "estimator timing on the relay, which stays withheld",
+      "E19": "the generous fallback; already rerun in the repair pass with a rebuilt control",
+      "E20": "the readability sweep; no depth hierarchy, and its cells are single artifacts",
+      "E21": "model comparison; the baselines have no gate and no depth to retrofit",
+      "E28": "rationality, the construct V5 retired; kept as a record, not extended",
+      "E29": "gate dissociation; superseded by E41 and E42, which measure the gate directly",
+      "E32": "foreign content versus unskilled reader; no depth hierarchy in either arm",
+      "E34": "a prediction card; nothing to run",
+      "E8": "withheld, and stays withheld"
+    },
+    "why_out_of_scope_is_listed": "an experiment with no trust parameter cannot be changed by a trust coupling, and saying so is more useful than running it and reporting a null that means 'this was never in scope'. A blank would read as 'checked and fine' to anyone who did not look, which is the failure this project's later-checking column exists to prevent.",
+    "n_obs": 40,
+    "n_readers": 16,
+    "n_encounters": 10
   }
 }

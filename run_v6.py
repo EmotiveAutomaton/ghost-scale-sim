@@ -33,6 +33,7 @@ STAGES = [
     ("E41", "ghostscale.v6.e41_coupling", "two mechanisms for one phenomenon"),
     ("E42", "ghostscale.v6.e42_vulnerability", "engagement is not integration"),
     ("E43", "ghostscale.v6.e43_selfreport", "automaticity hides the work from its author"),
+    ("RETROFIT", "ghostscale.v6.retrofit", "does the new machinery change any earlier answer"),
 ]
 
 
@@ -73,7 +74,10 @@ def main() -> None:
                 if name == "E35":
                     kwargs = dict(workers=args.workers, n_readers=6, n_encounters=6,
                                   n_timesteps=12, forced_k=6)
-            elif name == "E35":
+                if name == "RETROFIT":
+                    kwargs = dict(workers=args.workers, n_obs=8, n_timesteps=12,
+                                  n_readers=4, n_encounters=4)
+            elif name in ("E35", "RETROFIT"):
                 kwargs = dict(workers=args.workers)
             verdict = mod.run(cfg, **kwargs)
             summary[name] = {k: v for k, v in verdict.items()
