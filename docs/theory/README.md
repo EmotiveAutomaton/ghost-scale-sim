@@ -32,7 +32,9 @@ something with nobody in it.
 
 | file | what it is |
 |---|---|
-| [WHY_V6_EXISTS.md](WHY_V6_EXISTS.md) | The origin document for version 6. Written as a working register after reading the preprint and the essay against the shipped code, it is where the three missing equation terms were found and where the six extensions and two corrections came from. Effectively the reasoning behind [SPEC_V6](../specs/SPEC_V6.md). |
+| [Art as an Algorithmic Virus (PDF)](Art%20as%20an%20Algorithmic%20Virus%20-%20Unifying%20the%20Generative%20Crash%20and%20AI%20Value%20Convergence%20via%20Cognitive%20Affordances-1.pdf) | The preprint. **The authority for anything mathematical.** |
+| [Art_as_an_Algorithmic_Virus_preprint.md](Art_as_an_Algorithmic_Virus_preprint.md) | A machine transcription of the same, kept so the text is greppable and diffable. Equations survive the two-column extraction badly; read those against the PDF. |
+| [Art_a_unifying_model.md](Art_a_unifying_model.md) | The artist-facing essay, in full. The plain-language source for most of the vocabulary below. |
 
 ## The vocabulary, and how it maps onto the code
 

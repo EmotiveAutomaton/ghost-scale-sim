@@ -61,6 +61,7 @@ where the limits on the numbers live.
 | [specs/SPEC_V4_5.md](specs/SPEC_V4_5.md) | The three-gate reader, and the metabolic question promoted to a headline. |
 | [specs/SPEC_V5.md](specs/SPEC_V5.md) | Depth replaces effort; provenance becomes evidence rather than a parallel channel. Null N21. |
 | [specs/SPEC_V6.md](specs/SPEC_V6.md) | **Not a new question about the world.** Asks whether the simulation and the theory are the same object. Six extensions, two author corrections, nulls N22–N30. |
+| [specs/PLAN_V8.md](specs/PLAN_V8.md) | **A planning document, not a spec.** What a sweep of the code and the theory turned up, what should be built next, and the decisions that are the author's. Nothing in it is locked. |
 | [specs/SPEC_V7.md](specs/SPEC_V7.md) | Version 7. Closes the four results version 6 would not draw, and attacks E21 on the axis it was never tested on. Nulls N31–N34. |
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Nothing in it asks a new question about the world. |
 | [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass on the instruments, ahead of any repair. |
