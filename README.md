@@ -6,12 +6,14 @@ A working model of how people work out what someone was trying to do when they m
 
 ## Where to start
 
-| you want | read |
-|---|---|
-| **every question and its current answer** | **[FINDINGS.md](FINDINGS.md)** — one page, current state |
-| how the record got that way | [docs/HISTORY.md](docs/HISTORY.md) — six versions and four audit passes, one narrative |
-| the limits on any specific number | [DIAGNOSTICS.md](DIAGNOSTICS.md) — read before quoting |
-| everything else | [docs/README.md](docs/README.md) — the map |
+| you want | read | how long |
+|---|---|---|
+| **the whole argument, in pictures** | **[WALKTHROUGH.md](WALKTHROUGH.md)** | 5 minutes |
+| every question and its current answer | [FINDINGS.md](FINDINGS.md) | 15 minutes |
+| the theory this implements, and the vocabulary | [docs/theory/](docs/theory/) | 10 minutes |
+| how the record got this way — six versions, four audit passes | [docs/HISTORY.md](docs/HISTORY.md) | 15 minutes |
+| the limits on any specific number | [DIAGNOSTICS.md](DIAGNOSTICS.md) | read before quoting |
+| everything else | [docs/README.md](docs/README.md) — the map | |
 
 The rest of this page is the public framing: what was asked, what came back, and what not to
 believe about it.
@@ -98,25 +100,30 @@ made.
 
 ## The distinction everyone gets wrong
 
-Three different things get confused constantly. They are not the same and they make different
-predictions.
+Four different things get confused constantly. They are not the same and they make different
+predictions. *(In the code these are `goal_empty`, `goal_foreign`, the value gate, and the
+non-invertible family; the theory's words are used here.)*
 
-- **Goal-empty is wood grain.** Structure with no purpose behind it, because no purpose was
-  involved. Versions 1 to 3 modelled machine-made content this way.
-- **Goal-foreign is a page in a script you cannot read.** A real purpose, pursued by a real
-  process, expressed in a vocabulary your reading apparatus has no entry for. Version 4 replaced
-  goal-empty with this, because it is a better description of a generative model, which is trained
-  on purposeful human output and inherits its shape.
-- **Value divergence is a person who wants something you do not want.** That is a third thing
-  again, it is not what either of the above describes, and the model keeps it in its own parameter.
+- **Intent-empty is wood grain.** Structure with nothing behind it, because nothing was deciding.
+  Versions 1 to 3 modelled machine-made content this way.
+- **Intent-foreign is a page in a script you cannot read.** Real intent, pursued by a real process,
+  expressed in a vocabulary your reading apparatus has no entry for. Version 4 replaced
+  intent-empty with this, because it is a better description of a generative model — trained on
+  purposeful human output and inheriting its shape.
+- **Intent-unrecoverable is every word familiar and nobody there.** The vocabulary is yours; the
+  route back from the surface to a state you could occupy does not exist, because many maker-states
+  produce the same surface. Version 6 added this, and it is the one that matches what people
+  actually report about generated text.
+- **Value divergence is a person who wants something you do not want.** A fourth thing again, not
+  what any of the above describes, and the model keeps it in its own parameter.
 
-None of the three is "the goal is repugnant". That is a fourth thing and the model does not contain
+None of the four is "the intent is repugnant". That is a fifth thing and the model does not contain
 it.
 
-**The switch from goal-empty to goal-foreign inverted a headline result.** Under goal-empty, readers
-disengage from machine-made content: nothing is identifiable, so paying attention stops being worth
-it. Under goal-foreign they do the opposite. They keep looking, keep paying, and never get
-anywhere. The failure to read intent survives and gets worse. The saving of effort does not.
+**The switch from intent-empty to intent-foreign inverted a headline result.** Under intent-empty,
+readers disengage: nothing is identifiable, so paying attention stops being worth it. Under
+intent-foreign they do the opposite. They keep looking, keep paying, and never get anywhere. The
+failure to read intent survives and gets worse. The saving of effort does not.
 
 Both cannot be right, and which one holds depends on a fact about real machine-made content that a
 simulation cannot settle: **how much human-shaped structure it actually carries.** That question is
@@ -127,51 +134,115 @@ locate real content on the axis rather than argue about it.
 
 ## What was tested, and what came back
 
-One table. Plain-English questions, plain-English answers, numbers inline. There is no second
-technical version of it, deliberately: a technical table and a plain-English table drift apart
-within three revisions, and that is the same instrument-versus-claim failure this repository has
-caught seven times.
+**Experiments are numbered in the order they were run and listed in the order they matter to the
+theory.** Those are two different orderings and conflating them is how a results table becomes a
+diary. The numbers are stable identifiers, nothing more; a low number means early, not important.
 
-**The "found afterward" column** lists published work located *after* the simulations ran, in a
-literature search done specifically to check whether any of this was already known. Nothing in that
-column informed any design. It is a coherence check, not evidence.
+Every row is a question about **appreciation** in the framework's sense: identifying the actions
+that produced an artifact, using them to infer what the maker was for, and letting the values that
+implies decide whether the method is taken on board. Where a later pass changed a row, the current
+reading is what appears here and the earlier one is named. Full provenance for any row is in
+[FINDINGS.md](FINDINGS.md); the visual version is [WALKTHROUGH.md](WALKTHROUGH.md).
 
-**The "later checking" column** records what the two subsequent passes did to the row: the
-validation pass in [VALIDATION.md](VALIDATION.md), which asked whether the answer can be trusted, and
-the diagnostics pass in [DIAGNOSTICS.md](DIAGNOSTICS.md), which asked whether the instrument could
-answer at all. "Not individually checked" means exactly that: between them they covered five headline
-families and the checks that generalise, and they did not re-run everything. A blank would read as
-"fine" to anyone who did not look.
+### The load-bearing results
 
-| The question | What came back | Found afterward | Later checking |
-|---|---|---|---|
-| **Does a viewer give up on something made without a purpose behind it?** | Yes, and it falls out of ordinary cost-benefit reasoning. No special mechanism for disliking machines was needed, and none was built in. | — | Superseded. This holds under goal-empty content and inverts under goal-foreign, which is the better model. See the row on disengagement below. |
-| **If you lie about who made something, what happens to the viewer?** | Every viewer becomes confident. No two agree on anything. Told the truth about the same object, they become appropriately unsure instead. | Well replicated. Several studies hold the artwork constant and change only the stated author, and find the same collapse in appreciation. Mind-perception mediates it. | **Survives exact inference** to four decimal places, and survives a different seed block and double scale. **But the confident half is architectural:** 64% of randomly parameterised models of this shape reproduce it, and the disagreement half requires a specific design decision. Diagnostics adds two limits. The effect is a race between the label and the content, both arriving every glance, and it only goes this way above trust 0.54; below that the content wins and the reader ends up believing the truth. Trust is measurable below that crossover and not above it, and the default sits above. **The repair sharpens the result.** Measured as how much closer to the truth the reader got rather than how far it moved, honest human work scores +1.39 and the same machine work passed off as human scores **-5.96**: opposite signs, and the lie moves readers away from the answer four times further than the truth moves them toward it. |
-| **Does the labelling scheme pay for itself?** | Roughly halves wasted effort. Costs one to three points of accuracy on genuinely human work, because a label-aware viewer occasionally walks away from something real. | — | Not individually checked. |
-| **Where exactly does invented meaning happen?** | Trust has a sharp switch, not a slope: below roughly one-fifth trust in the label, invention stops. Even a fully sceptical viewer with no label at all invents about one time in five. | — | Not re-run, but diagnostics locates a switch of its own nearby and it is not the same one: the label channel stops beating the content channel at trust 0.54, computed in closed form from the transparency values. A threshold in this region should be attributed to that race before it is attributed to anything about trust. |
-| **Is trust in provenance just general decisiveness renamed?** | No. Trust changes the *gap* between how a viewer treats human and machine work. Decisiveness only moves the overall level and never produces the gap. | — | Not individually checked. |
-| **Can you learn to spot hollow content without being told?** | No. The learner folds machine structure into its picture of what humans are like, and loses about a third of its ability to read genuine work. With honest labels it builds a clean picture quickly. | Model collapse is established in machine learning. No human equivalent has been measured. | Not individually checked. The exact-inference solver does not support the learning path, so this one could not be re-run under it, and that gap is real. |
-| **Are there two different kinds of damage?** | Yes, separable. Absorbing bad material scales with how much of it there is. Not absorbing good material does not. It is fully present even at zero contamination, because it is driven by walking away rather than by what is in the pile. | **Strong support for the second kind.** Cognitive offloading reduces engagement including self-monitoring; skipping effort impairs skill acquisition; and users perform worse than never-users once the tools are removed. Almost nothing on the first kind. | Not individually checked. |
-| **Does a viewer's own skill cap what can be extracted?** | Yes, on a corpus with zero machine content anywhere. Hold the material perfectly constant, vary only the reader, and extraction collapses. | Expertise is known to moderate aesthetic processing broadly, and artists' eye movements are measurably less driven by surface features than novices'. The threshold shape is untested. | Not individually checked, but it shares its geometry with the two-dimensions result below, which does survive exact inference. |
-| **Is that collapse a cliff or a knee?** | A knee. A real cliff sharpens as you add evidence; this one did not budge across sixteen times the data. **And belief accuracy breaks down well before choice accuracy does:** a rater's internal picture rots while their picks stay right. | **One direct hit.** Experts rating AI safety responses agreed so little that roughly nine-tenths of the variance in a label reflected the rater rather than the response. Reward models trained on that learn rater habits. | Not individually checked. |
-| **How much labelling is enough?** | About a third of machine content, **but only for viewers who know the labelling convention exists.** Viewers who do not know need three-quarters, and never build a reliable picture at any coverage. | **Directly relevant, and it complicates us.** The implied truth effect: warning-labelling *some* false headlines makes the unlabelled ones look truer. Replicated for AI content as an implied authenticity effect. Same inference, opposite valence. The literature calls coverage the key variable and has never produced a threshold. | Not individually checked. The number is a lower bound by construction: the convention-aware reader is handed the true coverage, which is the most generous assumption available. |
-| **Does invention scale with how hollow something is?** | Yes, smoothly. Telling the truth about hollow content converts near-certainty into honest uncertainty. | — | Not individually checked, but its GHOST cell agrees with the label-effect result to four decimal places across two versions. |
-| **Is mislabelling symmetric?** | No. Same confidence either way, but the disagreement differs enormously. Human work called machine-made is still read correctly. Machine work called human produces maximum disagreement. | **Direction holds, consequences reverse.** Expert artists detect AI images well but produce more false accusations than automated tools, and false accusation is socially costly. We measure damage to understanding; the world measures damage to people. | Not individually checked. |
-| **How miscalibrated does a false label make you?** | Every one of four thousand viewers landed in the highest confidence band while performing at chance. Not a bad tail. Unanimous near-certainty about nothing. | — | Not individually checked. It is a restatement of the label-effect row, so it inherits both that row's architecture-dependence and its trust threshold. |
-| **Does the collapse survive a more generous set of explanations?** | Yes. Adding "they were just exploring" as an available explanation absorbed exploratory *human* work convincingly and did nothing at all for machine work. It was chosen *less often than random guessing*. | — | **Lost, then restored.** Under exact inference the experiment's own positive control failed, making the verdict inconclusive. The reason turned out to be in the control rather than the result: it required the fallback to absorb human work *while the reader kept paying attention*, and a reader that has correctly resolved the goal stops paying attention, so the one cell meant to demonstrate success failed one of its own clauses. Rebuilt with engagement measured separately, the control passes at 0.70 and foreign content takes 0.20. **The finding stands, on stronger footing than it originally had.** |
-| **Do viewers actually disengage from machine content, or keep paying?** | **They keep paying.** Content with real structure the viewer cannot parse holds attention indefinitely, because every look keeps promising an answer that never arrives. This inverts the earlier prediction. | **One suggestive hit.** Eye-tracking found AI-labelled artworks produce more dispersed gaze. Dispersed is not disengaged, it is searching without settling. | The measurement survives exact inference (attention 0.683 approximate against 0.682 exact). The *verdict* it was reported inside does not; see the row above. |
-| **Where along the readability axis does it break?** | In the middle, not at the empty end. Invention peaks where the content is about a tenth readable: enough familiar structure to make an explanation seem available, not enough to make it right. **The collapse and the invention peak occupy the same narrow band**, which the framework had always treated as two separate phenomena. | — | **The strongest result in the project after validation.** The peak sits at the same place under exact inference, in all seventeen cells of the robustness sweep, on a disjoint seed block, and at double scale. Its axis is downstream of a design decision rather than a measurement, and that is stated in full in [VALIDATION.md](VALIDATION.md). |
-| **Is a model of the maker's mind actually necessary?** | **Partly, and the unwelcome half comes first.** A simple counting classifier that never represents a maker at all reproduces the confident-and-inconsistent pattern, through nothing more than small-sample overfitting. What it *cannot* do is respond to a label, or keep paying attention to something it cannot resolve. Both of those need the full machinery. | Nobody has asked this question. Our negative is the only data point that exists. | Not individually checked. The random-model result strengthens the unwelcome half: it is not only a counting classifier that does this, it is a randomly parameterised reader of this shape. |
-| **Are the collapse and the trust exploit the same mechanism?** | **Yes**, as originally reported. The same machine-made object, labelled honestly, reads as shallow and moves the viewer barely at all. Passed off as human, it reads as deeper and moves them twenty-two times as far. | — | **The effect survives and gets larger. The explanation does not.** Under exact inference the dishonest label still inflates the reader's estimate of the thinking behind the work, four times more strongly than reported. But "how far the reader moves tracks that estimate whichever channel produced it" falls from 0.886 to 0.600 and misses its pre-registered bar. And rebuilt independently from the prose alone, the direction holds while the multiple comes out fifteen times smaller. **The direction is the claim. The number is not.** |
-| **Is unreadable content the same as an unskilled reader?** | No, and they are opposites. At an identical information deficit, the unskilled reader quits almost immediately and feels reasonably settled; the expert facing unreadable content keeps working and stays lost. **The second dimension is whether you can tell you are failing.** A badly aimed template fails silently, out-of-range content fails loudly. **And the unskilled reader of human work is substantially more accurate than the expert reader of machine work.** | — | **Survives exact inference** on all five measures and on the verdict. |
-| **Can a viewer know a maker better than the maker knows themselves?** | Yes, and the margin grows the more wrong the maker's self-account is. The viewer's accuracy stays flat as the maker's self-report degrades to nothing. *Scope: the viewer is told how unreliable the report is, so this is a calibrated reader discounting a known-bad source.* | — | Not individually checked. |
-| **Does self-blindness leave a mark on the work?** | **Yes on the object, no to the viewer.** Work made by a maker driven by something they cannot see is measurably marked; work by a liar, or by a system with no self-model, is not. But no viewer in this model can tell the three apart, because the readings differ in the fourth decimal place. **The mark exists and is unreadable**, which is a different result from there being no mark, and only measuring the object directly could distinguish them. | — | Not individually checked. |
-| **Does how much thought went in change how much you take away?** | **Inconclusive, and the construction is at fault.** Depth was visible and absorption was flat, but the measure written down in advance could not have moved, because depth was deliberately built so the goal is equally readable at every level. Two of the three depth levels also turned out indistinguishable. **What did show up unpredicted: depth drove attention roughly six-fold and absorption not at all.** | — | **Diagnostics found a better explanation and the repair tested it.** Absorption is U-shaped in how well the reader read the work, because a confidently wrong reader has moved as far from its starting point as a correct one. Rerun on a signed measure that is not U-shaped, the result is still null, but now it is BOUNDED rather than merely absent: any effect of depth on uptake is under a tenth of a nat, against the false label's -5.96 on the same measure. The rerun also established that the difficulty regime does not transfer to this geometry at all, because depth gives the goal more than one route to the surface, so the reader cannot be made uncertain by blunting its templates. |
-| **Is "depth" just "effort" wearing a hat?** | No. Depth reading tracks depth about six times more than it tracks effort, and effort cannot make a viewer see depth that is not there. | — | **Does not survive exact inference:** the null returns the opposite verdict, that effort *can* manufacture depth. Separately, the dissociation was made representable by rebuilding the effort parameter before it was measured, so it is a construction commitment. What does survive is narrower and still worth having: with the effort axis pinned so no "offhand but deep" corner exists, depth still separates by 0.91, so the depth estimator is reading structure in the work rather than the effort setting renamed. Diagnostics adds that depth **recovers in order but not in magnitude**: a known depth is read back at about a third of its true change, and the two deepest levels are not separable. Directions transfer, sizes do not. |
-| **↳ Two experiments were removed from this table**, because they were run against a version of the model later found to be wrong. They are uninterpretable rather than embarrassing. | See ["What was removed"](#what-was-removed) below. | — | — |
+The ones the framework actually rests on. If these are wrong, the argument is wrong.
 
-Every number above traces to a committed CSV in [results/](results/) and a chart in
-[figures/](figures/).
+| # | The question | Where it stands |
+|---|---|---|
+| E2 | **What does a false claim of authorship do to a reader?** | Every reader becomes certain, and no two agree on what they are certain of. Told the truth about the same object they become appropriately unsure instead. On a signed measure of uptake, the lie carries readers **away** from the maker's actual intent — four times further wrong than the truth carries them right. |
+| E36 | **Does working out what someone was for unlock how they did it?** | **Yes, and this is the clearest confirmation of the theory's central mechanism.** Within a single reading, on the same object, a reader picks up 2.6× more of the maker's method *after* it settles on what the work was for. Intent is the key; the method is what the key opens. |
+| E30 · E36 | **Does compressed intent transmit?** | **Yes — as method, which is what the theory says.** Depth changes how much of the maker's *process* a reader takes on, and provably cannot change how much of the *purpose* it takes on, because the construction holds the purpose equally readable at every depth. For five versions the measurement was pointed at the purpose and found nothing. |
+| E20 | **Where on the readability axis does appreciation break?** | **In the middle, at about a tenth readable** — not at the empty end. Enough familiar structure to make an explanation seem available, not enough to make it right. The most robust result here: same location under every check applied to it. |
+| E19 | **Do readers disengage from intentless work, or keep paying?** | **They keep paying.** Content with real structure the reader cannot parse holds attention indefinitely, because every look keeps promising an answer that never arrives. This inverted the framework's own earlier prediction, and the inversion is the finding. |
+| D-1 | **What is the trust exploit made of?** | Two streams of evidence about origin arrive at every glance and, on a lie, disagree. Which wins is an inequality with a crossover computable in closed form. **Every claim of the form "a label does X" is really "a label trusted above 0.54 does X"** — narrower than the original claim, and the accurate one. |
+| E41 | **Does trust exploit you by fooling you, or by lowering your guard?** | **These are different mechanisms and the published theory uses the one the code never had.** The paper's version predicts a reader that is *told the truth, believes it, and absorbs the work anyway*. The code's version structurally cannot produce that. The discriminating cell separates them cleanly. |
+| R-8b | **Can a reader learn that a source lies?** | **Not if it trusts labels enough** — at any number of encounters. Detecting a lie means noticing the label and the work disagree, and past the crossover the label wins that argument before the disagreement registers. Not slow learning: learning that cannot start. |
+
+### The generative crash, and what kind of failure it is
+
+| # | The question | Where it stands |
+|---|---|---|
+| E37 | **Is the wall a missing vocabulary, or a missing inversion?** | **A missing inversion.** Content built from entirely familiar material whose maker cannot be reconstructed produces a signature neither existing condition does: **legible and empty**. That is the complaint people actually make about generated text, and it is not "I cannot parse this". |
+| E32 | **Is unreadable content the same as an unskilled reader?** | **No, opposites.** At an identical information deficit the unskilled reader quits almost immediately and feels settled; the expert facing unreadable content keeps working and stays lost. **The second dimension is whether you can tell you are failing** — a badly aimed template fails silently, out-of-range content fails loudly. |
+| E1 | **Do readers give up on work made with no intent behind it?** | Yes, and out of ordinary cost-benefit reasoning: no special mechanism for disliking machines was needed and none was built in. *Scope: this holds for intent-**empty** content. Under the better description — intent-**foreign** — readers do the opposite. See E19.* An unexpected finding rides along: the Ghost Scale tier meant to say *don't spend effort here* is the one readers spend most on. **The model and the published design disagree, and the design is probably right about people.** |
+| E10 | **Does a reader's own expertise cap what can be recovered?** | **Yes**, measured on a corpus with *zero* machine content anywhere. Hold the material perfectly constant, vary only the reader, and recovery collapses. |
+| E40 | **What happens when the signal of depth is optimised directly?** | **A third failure mode: readers pay more and get less.** Not the crash — the reader is fully engaged. Not the trust exploit — nobody lied. A reader correctly reading something built to trip its own heuristic for what is worth reading. This is the alignment argument in miniature. |
+| E38 | **Does understanding the machine protect you?** | **Yes, by swapping a skill out rather than adding one.** A reader tuned to machine output reads it perfectly and loses half its accuracy on human work. A crossover, not an upgrade. |
+| E39 | **Can a reader be given permission to stop?** | **Not by a hypothesis about the maker.** Giving the reader an explicit "there is no maker here" option cut invention by about a third and produced no resolution — because that option is redundant with what the reader already knows about origin. **If the Ghost Scale is to let a brain stand down, the relaxation has to act on the gate, not on the hypothesis space.** |
+
+### What a contaminated corpus does over time
+
+| # | The question | Where it stands |
+|---|---|---|
+| E6 · E9 | **Are there two kinds of damage?** | **Yes, separable.** Absorbing bad material scales with how much there is. *Failing to absorb good material does not* — it is fully present at zero contamination, because it is driven by walking away rather than by what is in the pile. |
+| E7 | **Can a reader learn to spot intentless work unaided?** | **No.** It folds machine structure into its picture of what people are like and loses about a third of its ability to read genuine work. With honest labels it builds a clean picture roughly six times faster. |
+| E16 | **How much labelling is enough?** | **About a third — but only for readers who know the convention exists.** Readers who do not need three-quarters and never build a reliable picture at any coverage. A lower bound by construction. |
+| E35 | **Does the damage accumulate in the reader?** | **Yes in direction, on every seed block tested.** A reader worn down by content that holds its attention and gives nothing back engages far less with a *fixed human artifact it has never seen*. The magnitude threshold written in advance is met on one seed block of three, and that threshold was badly chosen; the direction is the claim. |
+
+### Reading the maker
+
+| # | The question | Where it stands |
+|---|---|---|
+| E17 | **Does invention scale with how little intent survives?** | **Yes, graded.** Doubt under a human claim rises as transmitted intent falls, and the fabrication gap rises with it. State it as an ordering rather than a slope: four tiers give three steps. |
+| A1 | **Is mislabelling symmetric?** | **No, and sharply.** Human work called machine-made is still read *accurately* — what is lost is the willingness to look. Machine work called human produces disagreement at 99.5% of the ceiling. One costs attention; the other costs the model. |
+| A2 | **How miscalibrated does a false label make you?** | **Unanimously.** All four thousand readers landed in the highest confidence band while performing at chance. |
+| E4 | **Where does invented meaning start?** | A switch rather than a slope: below roughly one-fifth trust, invention largely stops. And the half that gets quoted less — even a fully sceptical reader with no label at all invents about one time in five. |
+| E33 | **Can a reader know a maker better than the maker knows themselves?** | **Yes**, and the margin grows as the maker's self-account degrades. The self-blindness half splits: work by a maker driven by something it cannot see **is** measurably marked on the object, and **no reader in this model can tell** — the readings differ in the fourth decimal place. The mark exists and is unreadable. |
+| E43 | **Does automaticity hide the work from its own author?** | **Yes.** The more practised the work, the less reliably its maker can name its purpose, while the reader is unaffected. Practice compresses decisions and compression is what puts them out of reach. Here nobody sets that — depth sets it. |
+| E42 | **Is appreciation the same as being willing to be changed?** | **No.** A reader can study something closely, read its maker accurately, and let none of it in. Attention is what you spend; letting it land is a separate decision, and every combination of the two is reachable. |
+| E3 | **Does the labelling scheme pay for itself?** | **Roughly halves wasted effort**, at one to three points of accuracy on genuinely human work, because a label-aware reader occasionally walks away from something real. |
+| E5 | **Is trust in provenance just decisiveness renamed?** | **No.** Trust changes the *gap* between how a reader treats human and machine work. Decisiveness only moves the overall level and never produces the gap. |
+| N21 | **Is depth just effort wearing a hat?** | The *readability* of depth is established: with the effort axis pinned so no "offhand but deep" corner exists, depth still separates. The *dissociation* is a construction commitment — the effort parameter was rebuilt to make that corner representable before it was measured. Both logged; the original criterion is retained and reported as failing. |
+
+### The results that came back against the framework
+
+Kept prominently, because this is the section a stranger should use to decide whether to trust
+everything above it.
+
+| # | The question | What happened |
+|---|---|---|
+| E21 | **Is modelling the maker as a mind necessary for confident invention?** | **No, and the framework withdrew the claim.** A classifier that counts features and never represents a maker reproduces the confident-and-contradictory pattern, through small-sample overfitting. What it *cannot* do is respond to a label or keep paying attention to something it cannot resolve — and those are the two the framework now rests on. |
+| E15 | **Is the competence collapse a cliff?** | **No — a knee. The author's own claim, tested knowing it could only survive or weaken.** A real threshold sharpens as evidence accumulates; this one did not budge across sixteen times the data. The sharper secondary finding: belief accuracy breaks down well before choice accuracy does. A rater's internal picture rots while their picks stay right. |
+| E12 | **Is the generational leak ordinary sampling noise?** | **No — the framework's own diagnosis, and it died.** The leak does not shrink across a hundredfold more material, and under the repaired model it slightly grows. |
+| E14 | **Were readers quitting before they worked it out?** | **No — my hypothesis, and it died.** Forcing them to keep looking made things worse. |
+| E11 | **Is distance between beliefs a poor proxy for harm?** | **No — the prediction failed.** It is a decent proxy, and the two measures together explain more than either alone. |
+| E18 | **Was passing one reader's estimate forward the whole problem?** | **No.** Fixing that channel left the damage where it was. A second contributor exists and has not been found. |
+| E13 | **Are the freeze and the leak two different defects?** | **One shared axis.** Notable for how it was scored: the criterion written to classify it produced a usable-looking number and was *thrown away*, because it needed a precondition it did not have. |
+
+### Not reported
+
+| # | The question | Why |
+|---|---|---|
+| E8 | **Does damage compound across generations?** | **Withheld three times.** Its own honesty check — *with zero contamination, show zero damage* — failed every time, so real decay cannot be told apart from the instrument's own noise. **This is not "we found no effect"; it is "we could not measure".** The failing test stays in the suite as a visible marker so any future fix has to switch it off deliberately. |
+| E34 | **Where does real generated content sit on the readability axis?** | **Not answerable in simulation, and that is the point.** Everything about disengagement depends on how much human-shaped structure real output carries. Written as a prediction card a human study can use to locate it, rather than an argument to have. |
+| E28 · E29 | The retired rationality construct, and gate dissociation | Kept as records of a mis-specified construct rather than extended. Superseded by E41 and E42, which measure the gate directly. |
+
+### Where the literature landed afterwards
+
+A retrospective search, run *after* the simulations, to check whether any of this was already known.
+**It informed no design.** It is a coherence check, not evidence.
+
+- **The label effect (E2) is well replicated.** Several studies hold the artwork constant, change
+  only the stated author, and find the same collapse in appreciation — mediated by mind-perception,
+  which is the mechanism this model proposes.
+- **The second kind of corpus damage (E6/E9) has strong support.** Cognitive offloading reduces
+  engagement including self-monitoring; skipping effort impairs skill acquisition; users perform
+  worse than never-users once the tools are removed. Almost nothing on the first kind.
+- **The coverage result (E16) is complicated by the implied truth effect.** Warning-labelling *some*
+  false headlines makes the unlabelled ones look truer, replicated for AI content as an implied
+  authenticity effect. Same inference, opposite valence.
+- **The knee (E15) has one direct hit.** Experts rating AI safety responses agreed so little that
+  roughly nine-tenths of the variance in a label reflected the rater rather than the response.
+- **Sustained attention (E19) has one suggestive hit.** Eye-tracking finds AI-labelled artworks
+  produce more dispersed gaze. Dispersed is not disengaged — it is searching without settling.
+- **The asymmetry (A1) holds in direction and reverses in consequence.** Expert artists detect AI
+  images well but produce more false accusations than automated tools, and false accusation is
+  socially costly. We measure damage to understanding; the world measures damage to people.
+- **Nobody has asked E21's question.** Our negative is the only data point that exists.
+
+Every number above traces to a committed CSV in [results/](results/). The visual version of this
+table is [WALKTHROUGH.md](WALKTHROUGH.md); the per-row provenance is [FINDINGS.md](FINDINGS.md).
 
 ---
 
@@ -356,6 +427,7 @@ python run_v6.py
 python scripts/write_results_v6.py
 
 # redraw every chart from the committed CSVs, without re-running anything
+python scripts/make_walkthrough_plates.py
 python scripts/rebuild_figures.py
 python scripts/make_social_figures.py
 python scripts/make_diagnostic_figures.py
@@ -509,10 +581,13 @@ ghostscale/v6/                version 6's experiments, plus a fourth separate lo
 tests/                        model invariants, the null suite (N1 to N21), exact-inference tests
 config/default.yaml           every parameter, for every version, plus the solver switch
 
-docs/EXPERIMENTS.md           the consolidated plain-language table this README's version came from
-docs/specs/                   the build spec each version was written against, and this pass's spec
+WALKTHROUGH.md                seventeen plates, in the order that makes the argument
+docs/theory/                  the theory this implements, and the code-to-theory vocabulary
+docs/HISTORY.md               six versions and four audit passes, as one narrative
+docs/specs/                   the build spec each version was written against
 docs/writeups/                RESULTS_V1 through RESULTS_V5: the full record, with every deviation
 docs/decisions/               design decisions signed off before each build
+docs/EXPERIMENTS.md           the original plain-language table, superseded by FINDINGS.md
 
 results/                      summary CSVs and JSON verdicts (committed)
 results/validation/           one verdict file per check, plus the side-by-side tables
@@ -521,7 +596,8 @@ results/repair/               one verdict file per repair item, plus the matched
                               which every reachable experiment was run under both code paths
 results/diagnostics/          labelled diagnostic runs, kept separate so they cannot be mistaken
                               for reportable output
-figures/                      every research chart (committed)
+figures/walkthrough/          the seventeen plates WALKTHROUGH.md is built from
+figures/archive/              the per-experiment research charts from versions 1 to 5
 figures/social/               the five distribution slides, the PDF, the preview image
 figures/diagnostics/          the recovery panels, the difficulty axis, the uptake curve
 notebooks/walkthrough.ipynb   runs E1 and E2 end to end, narrated
