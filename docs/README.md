@@ -4,7 +4,9 @@
 
 1. **[../FINDINGS.md](../FINDINGS.md)** — every question the project asked and where its answer
    stands *today*. One page, current state, no archaeology.
-2. **[HISTORY.md](HISTORY.md)** — how the record got that way. Six versions and four audit passes
+2. **[../EVIDENCE.md](../EVIDENCE.md)** — what the world has published, next to what this
+   predicted. Disagreements italicised.
+3. **[HISTORY.md](HISTORY.md)** — how the record got that way. Six versions and four audit passes
    in one narrative, so you do not have to read six write-ups.
 
 Everything below is the underlying material. You only need it if you want to check a specific
@@ -43,6 +45,7 @@ Read these in order if you want to know how much of the work survived being chec
 | [../REPAIR.md](../REPAIR.md) | What can be fixed, and what does fixing change? | The uptake measure gained a sign, and the headline reversed with it |
 | [../RESULTS_V6.md](../RESULTS_V6.md) | Is the code the same object as the theory? | Three terms of the equation had no counterpart in the code |
 | [../RESULTS_V7.md](../RESULTS_V7.md) | What does the withdrawn claim's machinery actually buy? | 128× less evidence, and reading an intent nobody has shown you |
+| [../RESULTS_V8.md](../RESULTS_V8.md) | How much of any of this is the theory? | Two of three headlines reproduce in every random model of the same shape |
 
 **Read [../DIAGNOSTICS.md](../DIAGNOSTICS.md) before quoting any specific number**, because that is
 where the limits on the numbers live.
@@ -61,6 +64,7 @@ where the limits on the numbers live.
 | [specs/SPEC_V4_5.md](specs/SPEC_V4_5.md) | The three-gate reader, and the metabolic question promoted to a headline. |
 | [specs/SPEC_V5.md](specs/SPEC_V5.md) | Depth replaces effort; provenance becomes evidence rather than a parallel channel. Null N21. |
 | [specs/SPEC_V6.md](specs/SPEC_V6.md) | **Not a new question about the world.** Asks whether the simulation and the theory are the same object. Six extensions, two author corrections, nulls N22–N30. |
+| [specs/SPEC_V8.md](specs/SPEC_V8.md) | Version 8. The reader gets a hierarchy of its own, a cost for being changed, and a memory that fades. Plus the severity check, a maker that can lie, and the readymade. Nulls N35–N40. |
 | [specs/PLAN_V8.md](specs/PLAN_V8.md) | **A planning document, not a spec.** What a sweep of the code and the theory turned up, what should be built next, and the decisions that are the author's. Nothing in it is locked. |
 | [specs/SPEC_V7.md](specs/SPEC_V7.md) | Version 7. Closes the four results version 6 would not draw, and attacks E21 on the axis it was never tested on. Nulls N31–N34. |
 | [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Nothing in it asks a new question about the world. |
@@ -80,6 +84,7 @@ where the limits on the numbers live.
 | [writeups/RESULTS_V5.md](writeups/RESULTS_V5.md) | 5 | Depth replaces effort — and the shortcut caught misreading depth entirely. |
 | [../RESULTS_V6.md](../RESULTS_V6.md) | 6 | Generated, not hand-written. The equation had terms the code did not. |
 | [../RESULTS_V7.md](../RESULTS_V7.md) | 7 | Generated. Four closures, and what imagining a maker buys. |
+| [../RESULTS_V8.md](../RESULTS_V8.md) | 8 | Generated. The reader gets a mind, and the severity check lands. |
 
 ## The decisions
 

@@ -16,6 +16,7 @@ A working model of how people work out what someone was trying to do when they m
 |---|---|---|
 | **the whole argument, in pictures** | **[WALKTHROUGH.md](WALKTHROUGH.md)** | 5 minutes |
 | every question and its current answer | [FINDINGS.md](FINDINGS.md) | 15 minutes |
+| what the world has published, next to what this predicted | [EVIDENCE.md](EVIDENCE.md) | 10 minutes |
 | the theory this implements, and the vocabulary | [docs/theory/](docs/theory/) | 10 minutes |
 | how the record got this way — six versions, four audit passes | [docs/HISTORY.md](docs/HISTORY.md) | 15 minutes |
 | the limits on any specific number | [DIAGNOSTICS.md](DIAGNOSTICS.md) | read before quoting |
@@ -34,6 +35,7 @@ believe about it.
 |---|---|
 | [What this is](#what-this-is) | the model in a paragraph, and the five audit passes |
 | [What was tested, and what came back](#what-was-tested-and-what-came-back) | **every experiment and its current answer** |
+| [How much of this is the theory?](#how-much-of-this-is-the-theory) | the false-positive rates, and why they matter |
 | [A claim this repository withdrew](#a-claim-this-repository-withdrew) | and what later work established in its place |
 | [The distinction everyone gets wrong](#the-distinction-everyone-gets-wrong) | four things that get confused constantly |
 | [How this was kept honest](#how-this-was-kept-honest) | pre-registration, nulls, and what the checks found |
@@ -137,38 +139,21 @@ The section a stranger should use to decide whether to trust the rest.
 
 ### Where the literature landed afterwards
 
-A retrospective search, run *after* the simulations, to check whether any of this was already known.
-**It informed no design.** It is a coherence check, not evidence.
+A retrospective search, run *after* the simulations, informing no design. **The full table is
+[EVIDENCE.md](EVIDENCE.md)** — one row per experiment, with links, and disagreements italicised.
 
-- **The label effect (E2) is well replicated.** Several studies hold the artwork constant, change
-  only the stated author, and find the same collapse in appreciation — mediated by mind-perception,
-  which is the mechanism this model proposes.
-- **The second kind of corpus damage (E6/E9) has strong support.** Cognitive offloading reduces
-  engagement including self-monitoring; skipping effort impairs skill acquisition; users perform
-  worse than never-users once the tools are removed. Almost nothing on the first kind.
-- **The coverage result (E16) is complicated by the implied truth effect.** Warning-labelling *some*
-  false headlines makes the unlabelled ones look truer, replicated for AI content as an implied
-  authenticity effect. Same inference, opposite valence.
-- **The knee (E15) has one direct hit.** Experts rating AI safety responses agreed so little that
-  roughly nine-tenths of the variance in a label reflected the rater rather than the response.
-- **Sustained attention (E19) has one suggestive hit.** Eye-tracking finds AI-labelled artworks
-  produce more dispersed gaze. Dispersed is not disengaged — it is searching without settling.
-- **The asymmetry (A1) holds in direction and reverses in consequence.** Expert artists detect AI
-  images well but produce more false accusations than automated tools, and false accusation is
-  socially costly. We measure damage to understanding; the world measures damage to people.
-- **Nobody has asked E21's question.** Our negative is the only data point that exists.
+The short version. Six independent agreements, one of them in participants' own words: readers
+describe AI text as *"well-written... but it lacked a soul"*, which is E37's legible-and-empty
+prediction verbatim. And four places the world pushes back:
 
-Every number above traces to a committed CSV in [results/](results/). The visual version of this
-table is [WALKTHROUGH.md](WALKTHROUGH.md); the per-row provenance is [FINDINGS.md](FINDINGS.md).
-
----
-
----
-
-> ## ○ Ghost text — 5%
-> **Everything from here down is generated, human-curated, not word-by-word written.**
-> Checkable, not composed. Skim it, or hand it to a model.
-> *Prompt: an extended working session; the author set every question and decision.*
+- **Eye-tracking finds *less* attention on AI content, not more** — which contradicts E19 and
+  supports E1, and effectively scores the E34 prediction card against the newer of the two accounts.
+- **The implied-authenticity effect** gives partial labelling an asymmetry E16 does not contain:
+  labelled content loses trust *and unlabelled content gains it*.
+- **Counterarguing research** says engaging carefully with something you reject produces *more*
+  resistance, not less. E46 sides with the sleeper-effect minority.
+- **Signalling theory abandoned the handicap principle** two decades ago. E51's result is right and
+  the framework's stated justification for it is out of date.
 
 ---
 
@@ -242,6 +227,37 @@ buys. **It buys almost everything: a reader that simulates needs four examples w
 reader needs five hundred and twelve, and reads an intent it has never encountered where the counter
 sits at chance no matter how much data it is given.** The withdrawal stands; its scope was much
 narrower than it has been read. All of it is in [RESULTS_V7.md](RESULTS_V7.md).
+
+## How much of this is the theory?
+
+**The most important number in this repository is not a result. It is a rate.**
+
+The model has a *shape* — a reader inferring a hidden purpose from what it sees, under a cost — and
+it has *settings*: which features mean which goals, how transparent each tier is. The theory
+specifies the settings. The shape is closer to how anyone would build a model like this.
+
+So: keep the shape, throw the settings away, redraw them at random, and count how often the finding
+survives. If it survives every time, the finding came from the shape.
+
+| finding | reproduces in randomly parameterised models |
+|---|---|
+| A false label moves you away from the truth | **100%** |
+| Depth moves the method, not the purpose | **98%** |
+| Confident belief under a false label *(validation pass)* | **64%** |
+| **The wall is a distinct failure** | **0%** |
+
+**This does not throw any result out.** Every one is true and reproducible. What changes is the
+sentence you may write after it.
+
+A high rate means the result comes from the theory's **structural** commitment — reading intent
+under a metabolic budget — which *is* the theory, but is the part shared with any account of the
+same shape. It does not distinguish this framework from a competitor built the same way.
+
+A low rate means the theory's **specific** commitments are doing the work. **On the evidence so far
+that is one tested result: the wall.** That is a narrower foundation than this document used to
+imply, and it is also a much clearer target.
+
+---
 
 ## A claim this repository withdrew
 
@@ -326,25 +342,34 @@ survives, or his claim weakens. There was no version where it got stronger.
 
 ### How the scoreboard is counted
 
-"Held" means the prediction was written down before the run, in a spec, a pre-registration file or
-a signed-off decisions document, and the measured outcome met the criterion as stated. Not "broadly
-went the right way". Anything that needed the criterion softened, the framing widened or the
-outcome reinterpreted is not counted as held.
+"Held" means the prediction was written down before the run, in a spec or a hash-locked
+pre-registration, and the measured outcome met the criterion **as stated**. Not "broadly went the
+right way". Anything that needed the criterion softened, the framing widened or the outcome
+reinterpreted is not counted as held.
 
 | outcome | count | which |
 |---|---|---|
-| held | 15 | E1, E2, E3, E4, E5, E6b, E7, E10, E16, E17, E18, E19, E20, E31, E32 |
-| held in part | 6 | E6, E9, E21, E28, E29, E33 |
-| did not hold | 5 | E11, E12, E14, E15, E30 |
-| classification undefined | 1 | E13 |
+| held | 26 | E1–E7, E9, E10, E16–E20, E31–E33, E35–E38, E40–E43, E48–E51 |
+| held in part | 7 | E21, E28, E29, E30, E39, E49, E52 |
+| did not hold | 5 | E11, E12, E14, E15, N21 |
+| retired after a later pass | 1 | E20's crash/peak co-location |
+| classification refused | 1 | E13 |
 | withheld, never passed its own control | 1 | E8 |
 | not answerable in simulation | 1 | E34 |
 
-The validation pass moves three of these. E19 and E31 held under the approximate solver and do not
-hold under the exact one, and N21 reverses. The counts above are the record as it was made; the
-column in the table is the record as it stands.
+**Three things this count does not tell you, and they matter more than the count.**
 
----
+1. **Two of the three headlines tested for it are architectural** — see
+   [How much of this is the theory?](#how-much-of-this-is-the-theory). A held prediction whose
+   false-positive rate is 100% is still held. It is just not distinguishing evidence.
+2. **Across versions 6 and 7 a design or criterion was changed after seeing a null in seven
+   places** — thirteen designs and eleven criteria tried in total. Each change is documented where
+   it happened; the ledger is in `results/v8/s1_severity.json`. A high hit rate with a forking-paths
+   count that size should be read with that in mind.
+3. **The project has no forward test.** It had one sealed prediction, and its status was withdrawn
+   in version 8 because the author does not recognise authoring it. The experiment was run anyway
+   (E52) and its primary held; but a commitment nobody remembers making is not a forward test, and
+   the record now says the count is zero.
 
 ## How this was kept honest
 
@@ -571,6 +596,7 @@ named gap, and that argument gets weaker if it claims more ground than it holds.
 ```
 README.md                     this page
 FINDINGS.md                   every question and its CURRENT answer; the one page to read
+EVIDENCE.md                   what the world has published, next to what this predicted
 docs/HISTORY.md               how the record got that way, six versions and four passes
 VALIDATION.md                 generated from results/validation/, never hand-written
 DIAGNOSTICS.md                generated from results/diagnostics/, never hand-written
@@ -583,6 +609,7 @@ run_diagnostics.py            the diagnostics pass on the instruments, P-1, P-2 
 run_repair.py                 the repair pass, R-1 through R-13
 run_v6.py                     version 6, E35 through E43, plus the retrofit
 run_v7.py                     version 7, the four closures and E45 through E47
+run_v8.py                     version 8, E48 through E52, plus the severity sweep
 
 ghostscale/                   generative_model, creators, environment, observer, learning, metrics
 ghostscale/exact.py           exact joint inference; the solver the validation pass substitutes in

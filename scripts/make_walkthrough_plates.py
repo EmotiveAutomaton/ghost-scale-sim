@@ -724,7 +724,7 @@ def plate_21_two_gates_settled():
     clean_axis(ax, "how tightly uptake tracks perceived depth")
     ax.set_yticks([])
     annotate(ax, 1, vals[1] + 0.09,
-             _g(hist["approximate"]) + ", then " + _g(hist["exact"]) + ", then this",
+             _g(hist["approximate_solver"]) + ", then " + _g(hist["exact_solver"]) + ", then this",
              color=MUTED, ha="center", fontsize=10.5)
     record(save(fig, "21_pointed_at_the_wrong_thing"),
            "The project's longest-running open question, settled by changing what was measured "
