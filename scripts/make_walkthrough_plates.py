@@ -209,9 +209,12 @@ def plate_03_the_wall():
 
     # "You keep it." carries the threat, so it is underlined. Matplotlib has no underline, so the
     # rule is drawn from the text's own measured extent.
-    keep = ax.text(2, settled[2] + 19, "You keep it.", color=MACHINE, ha="center", va="bottom",
+    # The caption sits higher than the other two, and the rule sits tighter under its own text.
+    # At the old spacing the underline landed just above the value label and read as a hat on the
+    # 76, which is the kind of thing that only shows up once the whole plate is rendered.
+    keep = ax.text(2, settled[2] + 27, "You keep it.", color=MACHINE, ha="center", va="bottom",
                    fontsize=11.5, fontweight="bold", zorder=5)
-    ax.text(2, settled[2] + 27, "you walk away certain,\nholding an answer you invented.",
+    ax.text(2, settled[2] + 35, "you walk away certain,\nholding an answer you invented.",
             color=MACHINE, ha="center", va="bottom", fontsize=11.5, fontweight="bold",
             linespacing=1.35, zorder=5)
     fig.canvas.draw()
@@ -219,7 +222,7 @@ def plate_03_the_wall():
     inv = ax.transData.inverted()
     x0, y0 = inv.transform((bb.x0, bb.y0))
     x1, _ = inv.transform((bb.x1, bb.y0))
-    ax.plot([x0, x1], [y0 - 2.4, y0 - 2.4], color=MACHINE, lw=1.8, zorder=5,
+    ax.plot([x0, x1], [y0 - 1.1, y0 - 1.1], color=MACHINE, lw=1.8, zorder=5,
             solid_capstyle="butt")
     record(save(fig, "03_legible_and_empty"),
            "A third kind of failure, built because the existing account did not match what people "
