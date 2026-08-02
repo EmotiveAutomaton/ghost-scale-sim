@@ -1,4 +1,5 @@
 # Ghost Scale Simulation — convenience targets.
+# Version runners live in runners/ ; run_all.py is the original E1-E34 programme.
 # On Windows without `make`, use the equivalent: python run_all.py
 
 PYTHON ?= python
@@ -13,7 +14,7 @@ quick:          ## fast smoke-scale run of everything
 	$(PYTHON) run_all.py --quick $(if $(WORKERS),--workers $(WORKERS),)
 
 validate:       ## run the validation pass (V-1 .. V-9), writes results/validation/
-	$(PYTHON) run_validation.py $(if $(WORKERS),--workers $(WORKERS),)
+	$(PYTHON) runners/run_validation.py $(if $(WORKERS),--workers $(WORKERS),)
 
 test:           ## run the full test suite (invariants + nulls)
 	$(PYTHON) -m pytest -q

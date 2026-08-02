@@ -1,4 +1,4 @@
-"""The validation pass — V-1 through V-9 of `docs/specs/SPEC_VALIDATION.md`.
+"""The validation pass — V-1 through V-9 of `docs/audits/a1-validation/SPEC.md`.
 
 WHAT THIS PACKAGE IS FOR, AND WHAT IT IS NOT FOR.
 

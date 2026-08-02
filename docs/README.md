@@ -1,110 +1,88 @@
-# The paper trail
+# The map
 
-## If you have five minutes
+Everything in `docs/` and what it is for. If you only want one page, it is
+[FINDINGS.md](../FINDINGS.md); if you want it in pictures, [WALKTHROUGH.md](../WALKTHROUGH.md); if
+you want the narrative, [HISTORY.md](HISTORY.md).
 
-1. **[../FINDINGS.md](../FINDINGS.md)** — every question the project asked and where its answer
-   stands *today*. One page, current state, no archaeology.
-2. **[../EVIDENCE.md](../EVIDENCE.md)** — what the world has published, next to what this
-   predicted. Disagreements italicised.
-3. **[HISTORY.md](HISTORY.md)** — how the record got that way. Six versions and four audit passes
-   in one narrative, so you do not have to read six write-ups.
-
-Everything below is the underlying material. You only need it if you want to check a specific
-number or argue with a specific decision.
+Everything below is the underlying material. You need it if you want to check a specific number or
+argue with a specific decision.
 
 ---
 
-## The five kinds of document, and why they are kept apart
+## The two kinds of document, and why they are kept apart
 
-- **[specs/](specs/)** say what was going to be built and what it was going to predict. Written
-  before the code, **never edited afterwards**.
-- **[writeups/](writeups/)** say what actually happened, including every place the answer disagreed
-  with the spec. They describe the record **as it stood when each version shipped** and are not
-  edited afterwards either. Read them as history.
-- **The four pass documents** at the top level are **generated from verdict files**, never
-  hand-written, so an explanation cannot quietly change a number.
-- **[decisions/](decisions/)** record design choices signed off before a build, with the evidence.
-- **[EXPERIMENTS.md](EXPERIMENTS.md)** is the original plain-language table. **Superseded by
-  [../FINDINGS.md](../FINDINGS.md)**, which carries the current verdicts; kept because it is what
-  the public README's table was derived from.
+**Versions ask new questions about the world.** Each has a `SPEC.md` written *before* its code and a
+`RESULTS.md` written *after* its results, and **neither is edited afterwards.** That is the property
+that makes the record checkable rather than merely tidy: where a number was superseded, the old
+document still says the old thing and the newer one says what replaced it.
 
-Where a spec is now known to be wrong, the correction lives in the write-up that found it, never in
-the spec. A spec quietly amended after its own experiment has run is no longer a record of what was
-predicted, and this project's claim to being checkable rests on those two staying separable.
+**Audit passes ask whether the existing answers can be trusted.** None asks a new question about the
+world. Their `RESULTS.md` files are *generated from verdict files*, never hand-written, so an
+explanation cannot quietly drift away from the number it explains.
+
+Version 6 is the only hybrid: it audits the *code against the published theory* rather than the
+results against themselves, and then builds what was missing.
 
 ---
 
-## The generated pass documents
+## The versions
 
-Read these in order if you want to know how much of the work survived being checked.
+Numbered in run order, named for what each was actually about.
 
-| file | the question it asks | how it came back |
-|---|---|---|
-| [../VALIDATION.md](../VALIDATION.md) | Can the recorded answers be trusted? | Five of nine checks came back against the work |
-| [../DIAGNOSTICS.md](../DIAGNOSTICS.md) | Can the instruments answer at all? | Four limits that bound how strongly any number can be stated |
-| [../REPAIR.md](../REPAIR.md) | What can be fixed, and what does fixing change? | The uptake measure gained a sign, and the headline reversed with it |
-| [../RESULTS_V6.md](../RESULTS_V6.md) | Is the code the same object as the theory? | Three terms of the equation had no counterpart in the code |
-| [../RESULTS_V7.md](../RESULTS_V7.md) | What does the withdrawn claim's machinery actually buy? | 128× less evidence, and reading an intent nobody has shown you |
-| [../RESULTS_V8.md](../RESULTS_V8.md) | How much of any of this is the theory? | Two of three headlines reproduce in every random model of the same shape |
-| [../RESULTS_V9.md](../RESULTS_V9.md) | Which part of the architecture is each finding made of? | Every one of them dies when the reader stops modelling a maker |
-| [../RESULTS_V10.md](../RESULTS_V10.md) | Can reading the maker defend a learner from content written to be absorbed? | Yes, on the case that matters — and surface filtering does nothing on it |
+| | name | the question it asked | what came back |
+|---|---|---|---|
+| **1** | [The Mechanism](versions/v01-the-mechanism/) | can this be written down as a model at all? | three results, two of which still stand |
+| **2** | [The Learner](versions/v02-the-learner/) | what if the reader has to *acquire* what machine content looks like? | heterogeneity belongs in the likelihood, not the prior |
+| **3** | [The Refuted Repair](versions/v03-the-refuted-repair/) | is the generational leak just sampling noise? | **its own gate said no**, and the experiment stayed withheld |
+| **4** | [Foreign Intent](versions/v04-foreign-intent/) | is machine content goal-*empty* or goal-*foreign*? | foreign — **and a headline inverted** |
+| **4.5** | [Three Gates](versions/v04.5-three-gates/) | does confident invention require modelling a mind? | **no**, and the claim was withdrawn |
+| **5** | [Depth Over Effort](versions/v05-depth-over-effort/) | is it how hard they tried, or how much practice is compressed in? | depth — and the fast solver was caught misreading it |
+| **6** | [Code Against Equation](versions/v06-code-against-equation/) | is the simulation the same object as the published theory? | **three terms had no counterpart in the code** |
+| **7** | [The Closures](versions/v07-the-closures/) | what does modelling a maker actually buy? | 4 examples against 512, and reading an unseen intent |
+| **8** | [The Severity Pass](versions/v08-the-severity-pass/) | how often does a *randomly built* model of this shape do it too? | **two of three headlines: every time** |
+| **9** | [Minimal Models](versions/v09-minimal-models/) | which structural commitment is each finding made of? | **every one dies without the maker-model** |
+| **10** | [Reader As Defence](versions/v10-reader-as-defence/) | can reading intent defend a learner from content written to be absorbed? | yes — and surface filtering does nothing at all |
 
-**Read [../DIAGNOSTICS.md](../DIAGNOSTICS.md) before quoting any specific number**, because that is
-where the limits on the numbers live.
+Each directory holds `SPEC.md` and `RESULTS.md`. Versions 2, 3 and 8 also carry a `PLAN.md` or a
+`DECISIONS.md` — working documents kept because they contain reasoning that did *not* survive into
+the spec, which is often worth more than the reasoning that did.
+
+**After version 10 the remaining questions need human subjects or real models, and this apparatus is
+neither.**
 
 ---
 
-## The build specs
+## The audit passes
+
+| | pass | the question it asks | how it came back |
+|---|---|---|---|
+| **A1** | [Validation](audits/a1-validation/) | can the recorded answers be trusted? | **five of nine checks came back against the work** |
+| **A2** | [Diagnostics](audits/a2-diagnostics/) | can the instruments answer at all? | four limits that bound how strongly any number can be stated |
+| **A3** | [Repair](audits/a3-repair/) | what can be fixed, and what does fixing change? | the uptake measure gained a sign, and the headline reversed with it |
+
+**Read [the diagnostics pass](audits/a2-diagnostics/RESULTS.md) before quoting any specific number.**
+That is where the limits on the numbers live.
+
+---
+
+## Everything else
 
 | file | what it is |
 |---|---|
-| [specs/SPEC_V1.md](specs/SPEC_V1.md) | The original build. Hypotheses H1–H6, nulls N1–N7, the parameter table, the invariant tests. |
-| [specs/SPEC_V2.md](specs/SPEC_V2.md) | The learner, reader heterogeneity, biased machine content. Nulls N8–N12. |
-| [specs/PLAN_V2.md](specs/PLAN_V2.md) | The longer working plan behind version 2, including reasoning that did not survive into the spec. |
-| [specs/SPEC_V3.md](specs/SPEC_V3.md) | Written to repair the generational experiment under a diagnosis that version 3's own gate then refuted. Nulls N13–N15. |
-| [specs/SPEC_V4.md](specs/SPEC_V4.md) | **The reframe.** Changes what machine-made content *is*, from goal-empty to goal-foreign, and tests whether the earlier results survive. Nulls N16–N20. |
-| [specs/SPEC_V4_5.md](specs/SPEC_V4_5.md) | The three-gate reader, and the metabolic question promoted to a headline. |
-| [specs/SPEC_V5.md](specs/SPEC_V5.md) | Depth replaces effort; provenance becomes evidence rather than a parallel channel. Null N21. |
-| [specs/SPEC_V6.md](specs/SPEC_V6.md) | **Not a new question about the world.** Asks whether the simulation and the theory are the same object. Six extensions, two author corrections, nulls N22–N30. |
-| [specs/SPEC_V8.md](specs/SPEC_V8.md) | Version 8. The reader gets a hierarchy of its own, a cost for being changed, and a memory that fades. Plus the severity check, a maker that can lie, and the readymade. Nulls N35–N40. |
-| [specs/PLAN_V8.md](specs/PLAN_V8.md) | **A planning document, not a spec.** What a sweep of the code and the theory turned up, what should be built next, and the decisions that are the author's. Nothing in it is locked. |
-| [specs/SPEC_V7.md](specs/SPEC_V7.md) | Version 7. Closes the four results version 6 would not draw, and attacks E21 on the axis it was never tested on. Nulls N31–N34. |
-| [specs/SPEC_VALIDATION.md](specs/SPEC_VALIDATION.md) | The validation pass. Nothing in it asks a new question about the world. |
-| [specs/SPEC_DIAGNOSTICS.md](specs/SPEC_DIAGNOSTICS.md) | The diagnostics pass on the instruments, ahead of any repair. |
-| [specs/SPEC_REPAIR.md](specs/SPEC_REPAIR.md) | The repair pass. Every change either makes something measurable that was not, or removes something. |
-| [specs/SPEC_V9.md](specs/SPEC_V9.md) | **The last modelling version.** Keep the settings and strip the shape: six structural ablations against four findings. Plus the two experiments the published disagreements asked for. Nulls N41–N44. |
-| [specs/SPEC_V10.md](specs/SPEC_V10.md) | **The last simulation version.** Whether reading intent is itself a defence, and whether the defence leaks. Records the author's stated response to each outcome before the runs. Nulls N45–N51. |
-| [specs/SPEC_PUBLIC_ASSETS.md](specs/SPEC_PUBLIC_ASSETS.md) | The public-facing material: the README rewrite and the distribution slides. |
-
-## The write-ups
-
-| file | version | the short version |
-|---|---|---|
-| [writeups/RESULTS_V1.md](writeups/RESULTS_V1.md) | 1 | The crash, the trust exploit, the labelling trade-off. Seven deviations. |
-| [writeups/RESULTS_V2.md](writeups/RESULTS_V2.md) | 2 | Heterogeneity moves from prior to likelihood. Biased content accumulates. |
-| [writeups/RESULTS_V3.md](writeups/RESULTS_V3.md) | 3 | The finite-sample diagnosis refuted by its own gate. Estimator bug found and fixed. |
-| [writeups/RESULTS_V4.md](writeups/RESULTS_V4.md) | 4 | Goal-empty became goal-foreign, and the metabolic prediction inverted. |
-| [writeups/RESULTS_V4_5.md](writeups/RESULTS_V4_5.md) | 4.5 | Four unwelcome results, including the counting classifier that withdrew a claim. |
-| [writeups/RESULTS_V5.md](writeups/RESULTS_V5.md) | 5 | Depth replaces effort — and the shortcut caught misreading depth entirely. |
-| [../RESULTS_V6.md](../RESULTS_V6.md) | 6 | Generated, not hand-written. The equation had terms the code did not. |
-| [../RESULTS_V7.md](../RESULTS_V7.md) | 7 | Generated. Four closures, and what imagining a maker buys. |
-| [../RESULTS_V8.md](../RESULTS_V8.md) | 8 | Generated. The reader gets a mind, and the severity check lands. |
-| [../RESULTS_V9.md](../RESULTS_V9.md) | 9 | Generated. What the findings are made of, and two predictions that failed. |
-| [../RESULTS_V10.md](../RESULTS_V10.md) | 10 | Generated. The reader as a defence, and the one arm its own control disqualified. |
-
-## The decisions
-
-| file | what it covers |
-|---|---|
-| [decisions/DECISIONS_V2.md](decisions/DECISIONS_V2.md) | Version 2's five signed-off decisions, with the measurements behind them. |
-| [decisions/DECISIONS_V3.md](decisions/DECISIONS_V3.md) | Version 3's decisions, and an incident worth recording: a smoke run that overwrote committed output, and the two hardening changes that followed. |
+| [HISTORY.md](HISTORY.md) | ten versions and three audit passes as one narrative, so nobody has to read eleven write-ups to learn why a number is what it is |
+| [EXPERIMENTS.md](EXPERIMENTS.md) | the original plain-language experiment table. Superseded by [FINDINGS.md](../FINDINGS.md), kept as a record of how the questions were first posed |
+| [theory/](theory/) | the preprint this implements, plus the crosswalk from its vocabulary to the code's |
+| [assets/SPEC.md](assets/SPEC.md) | the spec for the public-facing material: the README rewrite and the distribution slides |
 
 ---
 
-## Reading order, if you are starting cold and want the whole thing
+## Conventions that hold everywhere
 
-1. [../FINDINGS.md](../FINDINGS.md) — the current state.
-2. [HISTORY.md](HISTORY.md) — how it got there.
-3. [../DIAGNOSTICS.md](../DIAGNOSTICS.md) — the limits on the numbers.
-4. [../README.md](../README.md) — the public framing, the scope section, and how to run it.
-5. A write-up, then its spec, if you want one number's whole provenance.
+- **A spec is written before its code and never edited afterwards.** Deviations are logged in the
+  matching `RESULTS.md`, with the original criterion retained and still computed.
+- **Acceptance criteria are executable and content-hash locked** before any run, so the written
+  criterion and the applied criterion are the same object and cannot drift apart.
+- **Every headline effect has a null that must come out null.** There are fifty-one, N1 through N51.
+  Three of them fail, and they are reported as failing rather than dropped.
+- **Generated documents say so at the top.** If a file was produced from verdict files, editing it
+  by hand is a bug.

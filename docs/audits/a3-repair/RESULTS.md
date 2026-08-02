@@ -1,6 +1,6 @@
 # The repair pass: from demonstration to measurement
 
-Generated from the verdict files in [results/repair/](results/repair/). Regenerate with `python scripts/write_repair_md.py`.
+Generated from the verdict files in [results/repair/](../../../results/repair/). Regenerate with `python scripts/write_repair_md.py`.
 
 ---
 

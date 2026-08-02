@@ -1,6 +1,6 @@
 # Version 6: the Intent Extraction Limit, implemented
 
-Generated from the verdict files in [results/v6/](results/v6/). Regenerate with `python scripts/write_results_v6.py`. Criteria hash-locked at `d6c5bf4b5729e891` before any cell ran.
+Generated from the verdict files in [results/v6/](../../../results/v6/). Regenerate with `python scripts/write_results_v6.py`. Criteria hash-locked at `d6c5bf4b5729e891` before any cell ran.
 
 ---
 

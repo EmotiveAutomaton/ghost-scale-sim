@@ -115,18 +115,133 @@ def _wrap(text: str, width: int) -> list:
     return out
 
 
-def on_bar(ax, x, y, text, fontsize=11.5, color=PAPER, ha="center", va="center"):
+def on_bar(ax, x, y, text, fontsize=11.5, color=PAPER, ha="center", va="center",
+           bar=None, pad=0.90, min_fontsize=7.5):
     """A note printed ON a bar, in the paper colour so it reads against the fill.
 
     The first version printed these in the bar's own colour, which is invisible.
+
+    THE SECOND BUG WAS WORSE BECAUSE IT WAS SILENT. A note wider than its bar does not wrap and
+    does not warn -- it renders straight through both edges and gets clipped, so the flagship
+    plate read "ur times further wro / the truth takes you" for as long as nobody looked closely.
+    Nothing in the pipeline can catch that: the figure is valid, the file is written, the caption
+    is right, and only an eye on the image knows.
+
+    So the text now MEASURES ITSELF against the bar it sits on. Pass ``bar`` (a matplotlib patch)
+    and the fontsize shrinks until the rendered width fits inside it. If it will not fit even at
+    ``min_fontsize`` the note is moved off the bar and placed beside it in the bar's own colour,
+    which is the honest fallback: a legible note next to the bar beats an illegible one on it.
     """
-    ax.text(x, y, text, color=color, ha=ha, va=va, fontsize=fontsize,
-            fontweight="bold", linespacing=1.35, zorder=6)
+    t = ax.text(x, y, text, color=color, ha=ha, va=va, fontsize=fontsize,
+                fontweight="bold", linespacing=1.35, zorder=6)
+    if bar is None:
+        return t
+
+    import textwrap
+
+    fig = ax.figure
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    allowed = bar.get_window_extent(renderer=renderer).width * float(pad)
+
+    def too_wide():
+        return t.get_window_extent(renderer=renderer).width > allowed
+
+    # WRAP FIRST, SHRINK ONLY IF WRAPPING RUNS OUT. Relocating the note was tried and was worse:
+    # a narrow plot has nowhere to put it, so it ends up clipped in a new position and printed in
+    # the bar's own colour over the bar, which is the original invisible-text bug returning by a
+    # different door. Wrapping keeps it where it belongs and where the eye already is.
+    flat = " ".join(str(text).split())
+    width = max(len(line) for line in str(text).split("\n"))
+    while too_wide() and width > 8:
+        width = max(8, int(width * 0.85))
+        t.set_text(textwrap.fill(flat, width))
+        fig.canvas.draw()
+
+    size = float(fontsize)
+    while too_wide() and size > min_fontsize:
+        size = max(min_fontsize, size * 0.92)
+        t.set_fontsize(size)
+        fig.canvas.draw()
+    return t
+
+
+def audit(fig, name: str = "") -> list:
+    """Every problem this file has ever had, checked automatically instead of by eye.
+
+    THE REASON THIS EXISTS. A plate whose text runs off the edge is not an error -- matplotlib
+    renders it, the file writes, the caption is right, and the only thing that knows is an eye on
+    the image. The flagship plate read "ur times further wro / the truth takes you" through an
+    entire outreach plan because nothing in the pipeline could see it.
+
+    Two checks, both for failures that actually happened here:
+
+      CLIPPED   any text whose rendered box leaves the canvas.
+      COLLIDING any two texts whose boxes overlap by enough to be unreadable. This is the bug that
+                struck "the bar it had to clear" through the y-axis label, and the one that
+                overprinted a value on its own history note.
+
+    Returns a list of complaints. Empty means the plate meets the standard: readable at a glance,
+    with nothing hidden behind anything else.
+    """
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    W, H = fig.canvas.get_width_height()
+    problems = []
+
+    # DEDUPE BY IDENTITY. ``findobj`` walks the tree and a legend's label Text is reachable both
+    # through the legend and through the axes, so without this every legend entry collides with
+    # itself and the audit cries wolf on plates that are fine.
+    seen, texts = set(), []
+    for t in fig.findobj(match=lambda o: hasattr(o, "get_text")):
+        if id(t) in seen or not getattr(t, "get_text", None):
+            continue
+        if not str(t.get_text()).strip() or not t.get_visible():
+            continue
+        seen.add(id(t))
+        texts.append(t)
+
+    # Legend entries are excluded from the COLLISION check, though not from the clipping one.
+    # Matplotlib lays a legend out itself and its entries never visually overlap; what they do is
+    # appear more than once in the object tree, which made the audit report every legend as
+    # colliding with itself. An audit that cries wolf gets switched off, so it must not.
+    legend_texts = set()
+    for ax_ in fig.axes:
+        lg = ax_.get_legend()
+        if lg is not None:
+            legend_texts.update(id(x) for x in lg.findobj(match=lambda o: hasattr(o, "get_text")))
+
+    boxes = []
+    for t in texts:
+        try:
+            bb = t.get_window_extent(renderer=r)
+        except Exception:                                # noqa: BLE001
+            continue
+        label = " ".join(str(t.get_text()).split())[:44]
+        if bb.x0 < -1.0 or bb.y0 < -1.0 or bb.x1 > W + 1.0 or bb.y1 > H + 1.0:
+            problems.append(f"CLIPPED    {name}: {label!r}")
+        if id(t) not in legend_texts:
+            boxes.append((bb, label))
+
+    for i in range(len(boxes)):
+        for j in range(i + 1, len(boxes)):
+            a, la = boxes[i]
+            b, lb = boxes[j]
+            ov_w = min(a.x1, b.x1) - max(a.x0, b.x0)
+            ov_h = min(a.y1, b.y1) - max(a.y0, b.y0)
+            if ov_w <= 2 or ov_h <= 2:
+                continue
+            smaller = min(a.width * a.height, b.width * b.height) or 1.0
+            if (ov_w * ov_h) / smaller > 0.25:
+                problems.append(f"COLLIDING  {name}: {la!r} x {lb!r}")
+    return problems
 
 
 def save(fig, name: str) -> Path:
     PLATE_DIR.mkdir(parents=True, exist_ok=True)
     path = PLATE_DIR / f"{name}.png"
+    for p in audit(fig, name):
+        print(f"  !! {p}")
     fig.savefig(path, bbox_inches=None)
     plt.close(fig)
     return path

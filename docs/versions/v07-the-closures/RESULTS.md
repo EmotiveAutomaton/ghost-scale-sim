@@ -1,6 +1,6 @@
 # Version 7: closing what was held back, and going back at the withdrawn claim
 
-Generated from [results/v7/](results/v7/). Regenerate with `python scripts/write_results_v7.py`. Criteria hash-locked at `796084debdf32cb8` before any cell ran.
+Generated from [results/v7/](../../../results/v7/). Regenerate with `python scripts/write_results_v7.py`. Criteria hash-locked at `796084debdf32cb8` before any cell ran.
 
 ---
 

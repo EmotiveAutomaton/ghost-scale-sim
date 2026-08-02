@@ -1,6 +1,6 @@
 # Diagnostics on the apparatus
 
-Generated from the verdict files in [results/diagnostics/](results/diagnostics/). Regenerate with `python scripts/write_diagnostics_md.py`.
+Generated from the verdict files in [results/diagnostics/](../../../results/diagnostics/). Regenerate with `python scripts/write_diagnostics_md.py`.
 
 ---
 
@@ -12,7 +12,7 @@ Two of them, P-1 and P-2, come from the diagnostics specification. Five more cam
 
 The distinction that matters most for reading what follows: **the validation pass asked whether the recorded answers can be trusted. This pass asks whether the instruments can answer at all.** A finding here does not usually mean a result was wrong. It usually means a result was stated more strongly than the instrument supports.
 
-**The criteria were fixed before any check ran** and hash-locked at `c07837a57450e334`, in [results/diagnostics/criteria.json](results/diagnostics/criteria.json), separate from the validation lock, which has reported and is sealed. Two decisions are recorded in that lock and were made before the sweeps: the estimators P-1 uses for the three parameters that are not hidden states, and P-2's fourth knob.
+**The criteria were fixed before any check ran** and hash-locked at `c07837a57450e334`, in [results/diagnostics/criteria.json](../../../results/diagnostics/criteria.json), separate from the validation lock, which has reported and is sealed. Two decisions are recorded in that lock and were made before the sweeps: the estimators P-1 uses for the three parameters that are not hidden states, and P-2's fourth knob.
 
 ---
 
@@ -35,7 +35,7 @@ The distinction that matters most for reading what follows: **the validation pas
 
 Before trusting a model you make it produce data with a setting you chose, then try to read the setting back out of the data. If you cannot, the setting is not measurable, and any finding that depends on it is describing an arbitrary choice rather than anything about the world. This is a routine first check and this project had never run it.
 
-**The specification's estimator only names an estimator for one of the four parameters, and that is worth stating before any number.** Depth is a hidden state, so the reader carries a posterior over it and the posterior mean is an estimate. Trust, readability and the value gate are not hidden states: no agent in the model carries a belief about any of them. So they are fitted instead, by maximising the likelihood of a fixed dataset over a grid, which required writing a capability the project did not have ([ghostscale/fitting.py](ghostscale/fitting.py)).
+**The specification's estimator only names an estimator for one of the four parameters, and that is worth stating before any number.** Depth is a hidden state, so the reader carries a posterior over it and the posterior mean is an estimate. Trust, readability and the value gate are not hidden states: no agent in the model carries a belief about any of them. So they are fitted instead, by maximising the likelihood of a fixed dataset over a grid, which required writing a capability the project did not have ([ghostscale/fitting.py](../../../ghostscale/fitting.py)).
 
 That forces a distinction which is not a technicality. For depth, recovery asks whether **the reader inside the model** can identify the value. For the other three it asks whether **an ideal analyst holding the correct model** could, which is a strictly easier question. For readability the gap between those two is the entire version 4 reframe.
 

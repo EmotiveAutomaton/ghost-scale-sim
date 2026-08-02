@@ -121,7 +121,7 @@ def _canonical(payload: dict) -> str:
 def criteria_payload(cfg: Config) -> dict:
     return {
         "document": "Ghost Scale Simulation — repair pass criteria",
-        "spec": "docs/specs/SPEC_REPAIR.md",
+        "spec": "docs/audits/a3-repair/SPEC.md",
         "written_before": "any repair recomputation ran",
         "separate_from": ["results/validation/criteria.json", "results/diagnostics/criteria.json"],
         "governing_rule": ("every change either makes something measurable that was not, or removes "

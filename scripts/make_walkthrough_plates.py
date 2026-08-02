@@ -61,7 +61,8 @@ def plate_01_false_label():
     clean_axis(ax, "closer to the truth  →\n←  further from it")
     ax.set_yticks([])
     on_bar(ax, 2, vals[2] * 0.55,
-           "four times further wrong\nthan the truth takes you right", fontsize=12.5)
+           "four times further wrong\nthan the truth takes you right", fontsize=12.5,
+           bar=bars[2])
     record(save(fig, "01_false_label_moves_you_wrong"),
            "The central result. Same object, different label, opposite direction of travel.")
 
@@ -550,6 +551,10 @@ def plate_16_channel_race():
         "by arithmetic, not by psychology — and the tipping point can be computed without running "
         "anything.",
         "D-1 · results/diagnostics/d1_channels.json · evidence per glance, machine work passed off as human")
+    # A wider left margin than the house default: on a horizontal bar chart the category names
+    # ARE the axis, and at the default margin these two ran off the canvas entirely.
+    pos = ax.get_position()
+    ax.set_position([0.235, pos.y0, 0.70, pos.height])
     bars = ax.barh(["What the work says\n(the truth)", "What the label says\n(the lie)"],
                    [content, label], color=[HUMAN, MACHINE], height=0.45)
     for b, v in zip(bars, [content, label]):
@@ -719,12 +724,16 @@ def plate_21_two_gates_settled():
                   vals, color=[NEUTRAL, HUMAN], width=0.5)
     bar_labels(ax, bars, vals, fmt="{:.2f}", fontsize=16, color=INK)
     ax.axhline(float(m["bar"]), color=MACHINE, lw=1.6, ls="--")
-    annotate(ax, -0.46, float(m["bar"]) + 0.02, "the bar it had to clear",
-             color=MACHINE, fontsize=11, weight="bold")
-    ax.set_ylim(0, 1.20)
-    clean_axis(ax, "how tightly uptake tracks perceived depth")
+    # The threshold label sits INSIDE the axes and above the line. Placing it at negative x put
+    # it off the left edge, where it was clipped and collided with the y-axis label at the same
+    # time -- two failures from one coordinate.
+    annotate(ax, 0.5, float(m["bar"]) + 0.05, "the bar it had to clear",
+             color=MACHINE, fontsize=11, weight="bold", ha="center")
+    ax.set_ylim(0, 1.30)
+    clean_axis(ax, "how tightly uptake\ntracks perceived depth")
     ax.set_yticks([])
-    annotate(ax, 1, vals[1] + 0.09,
+    # The history note goes ABOVE the value label rather than under it, or the two overprint.
+    annotate(ax, 1, vals[1] + 0.17,
              _g(hist["approximate_solver"]) + ", then " + _g(hist["exact_solver"]) + ", then this",
              color=MUTED, ha="center", fontsize=10.5)
     record(save(fig, "21_pointed_at_the_wrong_thing"),

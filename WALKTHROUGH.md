@@ -1,16 +1,18 @@
 # The walkthrough
 
-**Twenty-three pictures, in the order that makes the argument.** Each one is meant to be readable in
+**Twenty-five pictures, in the order that makes the argument.** Each one is meant to be readable in
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
 Every number on every plate is read out of a committed results file, named in the plate's own
-footer. Regenerate the whole set with `python scripts/make_walkthrough_plates.py`.
+footer. Regenerate the whole set with `python scripts/make_walkthrough_plates.py` — which also runs
+an automatic audit that fails any plate with text running off the canvas or printed over other text,
+because both of those happened here and neither is visible to anything but an eye on the image.
 
-*The older per-experiment charts have moved to [figures/archive/](figures/archive/). They are still
-correct as records of what their version measured; they are research figures rather than
-explanations, and several of them now mean something different from what they meant when they were
-drawn.*
+*The older per-experiment research charts have been removed. They were working figures from versions
+1 to 5, drawn before this repository had a house style and never brought up to it, and several of
+them meant something different by the end than they did when they were drawn. Every claim they
+carried is in the plates below, redrawn from the same committed data.*
 
 ---
 

@@ -1,6 +1,6 @@
 # What was checked, and what the checks came back with
 
-This page is generated from the verdict files in [results/validation/](results/validation/). Nothing in it is written by hand except the explanations, and none of the explanations can change a number. Regenerate it with `python scripts/write_validation_md.py`.
+This page is generated from the verdict files in [results/validation/](../../../results/validation/). Nothing in it is written by hand except the explanations, and none of the explanations can change a number. Regenerate it with `python scripts/write_validation_md.py`.
 
 ---
 
@@ -16,7 +16,7 @@ A check that fails is not deleted. It is reported with its failure attached, in 
 
 **Scale.** The checks ran at 60 simulated readers and 16 random seeds per cell, with 300 random-model draws. That is reduced from the headline experiments, deliberately and as the specification permits: the question is whether a conclusion *survives* a change of solver or of parameter, which needs enough readers to resolve the effect rather than the precision the headline number was originally quoted at. Every result below carries the scale it ran at.
 
-**The criteria were fixed before the checks ran** and hash-locked: `fccfbd5e9bc3d469`, in [results/validation/criteria.json](results/validation/criteria.json). Editing that file after the fact makes the whole pass refuse to run.
+**The criteria were fixed before the checks ran** and hash-locked: `fccfbd5e9bc3d469`, in [results/validation/criteria.json](../../../results/validation/criteria.json). Editing that file after the fact makes the whole pass refuse to run.
 
 ---
 
@@ -42,7 +42,7 @@ Every experiment before version 5 used a fast approximate way of updating the re
 
 Every experiment before version 5 used pymdp's variational solver, which keeps the reader's beliefs about different unknowns *separately* and updates each one using an average over the others. That shortcut is known to have been badly wrong once: version 5 found it returning the shallow answer for every artifact, confidently, while exact arithmetic on the same observations recovered depth correctly. Version 5 worked around that one case. It did not establish that the earlier results were safe.
 
-So the shortcut was removed rather than worked around. [`ghostscale/exact.py`](ghostscale/exact.py) carries the reader's belief over every combination of unknowns at once and updates it by Bayes' rule with no independence assumption anywhere. The five headline experiments then re-ran **through their own unmodified code**, twice, with one setting flipped. Anything that moved was moved by the factorisation and by nothing else.
+So the shortcut was removed rather than worked around. [`ghostscale/exact.py`](../../../ghostscale/exact.py) carries the reader's belief over every combination of unknowns at once and updates it by Bayes' rule with no independence assumption anywhere. The five headline experiments then re-ran **through their own unmodified code**, twice, with one setting flipped. Anything that moved was moved by the factorisation and by nothing else.
 
 Before any comparison: on a construction where the shortcut is provably exact, the two agents agree to 1.42e-14. A disagreement there would have meant the new code was wrong rather than the old code, and everything below would have been meaningless.
 

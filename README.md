@@ -18,8 +18,9 @@ A working model of how people work out what someone was trying to do when they m
 | every question and its current answer | [FINDINGS.md](FINDINGS.md) | 15 minutes |
 | what the world has published, next to what this predicted | [EVIDENCE.md](EVIDENCE.md) | 10 minutes |
 | the theory this implements, and the vocabulary | [docs/theory/](docs/theory/) | 10 minutes |
-| how the record got this way — six versions, four audit passes | [docs/HISTORY.md](docs/HISTORY.md) | 15 minutes |
-| the limits on any specific number | [DIAGNOSTICS.md](DIAGNOSTICS.md) | read before quoting |
+| how the record got this way — ten versions, three audit passes | [docs/HISTORY.md](docs/HISTORY.md) | 15 minutes |
+| the limits on any specific number | [the diagnostics pass](docs/audits/a2-diagnostics/RESULTS.md) | **read before quoting** |
+| any single version, spec and results together | [docs/versions/](docs/versions/) | |
 | everything else | [docs/README.md](docs/README.md) — the map | |
 
 The rest of this page is the public framing: what was asked, what came back, and what not to
@@ -33,7 +34,7 @@ believe about it.
 
 | | |
 |---|---|
-| [What this is](#what-this-is) | the model in a paragraph, and the five audit passes |
+| [What this is](#what-this-is) | the model in a paragraph, and every pass that checked it |
 | [What was tested, and what came back](#what-was-tested-and-what-came-back) | **every experiment and its current answer** |
 | [How much of this is the theory?](#how-much-of-this-is-the-theory) | the false-positive rates, and why they matter |
 | [A claim this repository withdrew](#a-claim-this-repository-withdrew) | and what later work established in its place |
@@ -190,7 +191,7 @@ and they are stated here rather than buried: one headline is a property of the m
 *architecture* rather than of the theory, two verdicts were produced by a shortcut in the
 arithmetic and do not survive its removal, and the one result rebuilt independently from its own
 description reproduced the mechanism but not the size of the effect. Details in
-[VALIDATION.md](VALIDATION.md), and each affected row of the table below carries its own status.
+[VALIDATION.md](docs/audits/a1-validation/RESULTS.md), and each affected row of the table below carries its own status.
 
 **A second pass then checked the instruments themselves**, which is a different question: not whether
 the recorded answers can be trusted, but whether the measurements can answer at all. It found four
@@ -203,7 +204,7 @@ glance and disagree on a lie, and which one wins is decided by an inequality wit
 wrong reader has moved as far from its starting point as a correct one, which is a better explanation
 of one flat result than the one on record. And **the disagreement figure cannot be read on its own**,
 because confident readers who differ and unsure readers who are guessing produce the same number. All
-of it is in [DIAGNOSTICS.md](DIAGNOSTICS.md).
+of it is in [DIAGNOSTICS.md](docs/audits/a2-diagnostics/RESULTS.md).
 
 **A third pass then repaired what could be repaired**, under one rule: every change either makes
 something measurable that was not, or removes something. Four things came out of it. **The measure
@@ -214,7 +215,7 @@ range, and the earlier verdict was wrong because it was fitted to the wrong data
 trusting reader can never learn that a source lies**, at any number of encounters, which is a
 prediction the fixed-trust model could not make. And the three headline criteria that had no error
 bars now have them: two hold, one bounds its effect near zero. All of it is in
-[REPAIR.md](REPAIR.md).
+[REPAIR.md](docs/audits/a3-repair/RESULTS.md).
 
 **A fourth pass then checked the code against the theory it implements**, which is a different
 question again and the first one nobody had asked: the three earlier passes all took the code's own
@@ -225,7 +226,7 @@ the trust exploit by different mechanisms**, and the paper's version predicts so
 structurally cannot produce — a reader that is told the truth, believes it, and absorbs the work
 anyway. That version also settled the project's longest-running open question, by noticing that its
 criterion had been pointed at the one quantity the design holds constant. All of it is in
-[RESULTS_V6.md](RESULTS_V6.md).
+[RESULTS_V6.md](docs/versions/v06-code-against-equation/RESULTS.md).
 
 **A fifth pass closed what the fourth would not draw, and went back at the withdrawn claim.** Four
 results had been held out of the visual walkthrough because each carried an open question. Three are
@@ -237,7 +238,39 @@ can produce the confident, contradictory signature — it can. It never asked wh
 buys. **It buys almost everything: a reader that simulates needs four examples where a counting
 reader needs five hundred and twelve, and reads an intent it has never encountered where the counter
 sits at chance no matter how much data it is given.** The withdrawal stands; its scope was much
-narrower than it has been read. All of it is in [RESULTS_V7.md](RESULTS_V7.md).
+narrower than it has been read. All of it is in [RESULTS_V7.md](docs/versions/v07-the-closures/RESULTS.md).
+
+**A sixth pass asked how much of any of this was ever the theory**, which is the question nobody
+wants to ask about their own work. Keep the model's *shape*, throw its *settings* away, redraw them
+at random, and count how often the finding still appears. **Two of the three headlines tested
+reproduce every single time.** They are properties of building a reader this shape at all — which
+*is* the theory, but is the part shared with any account built the same way, so they do not
+distinguish this framework from a competitor. One result survives at zero. The same pass collected
+the project's **forking-paths ledger**: the places where a design or a criterion was changed after
+seeing a result. That version also put the security argument into code for the first time and found
+honest marking self-policing **only above a detection rate of 0.5**. All of it is in
+[the severity pass](docs/versions/v08-the-severity-pass/RESULTS.md).
+
+**A seventh pass asked which part of the shape.** Severity says how much of a result is
+architectural; it does not say *which* commitment is doing the work. So the complement: keep the
+settings, strip the shape, and remove one structural commitment at a time. **Every surviving finding
+dies the moment the reader stops modelling a maker and starts classifying a surface.** Hierarchy and
+costly attention turn out to be free — no finding needs them. And *legible and empty* is the only
+finding that requires the reader to hold a **distribution** rather than a best guess, which is
+exactly right, because the finding *is* a claim about the shape of an uncertainty. It is also the
+only finding with a 0% false-positive rate: two unrelated audits, pointing at the same result. All
+of it is in [minimal models](docs/versions/v09-minimal-models/RESULTS.md).
+
+**The last version asked whether any of this is good for anything.** Nine versions describe how
+reading intent goes wrong. The tenth asks whether reading intent is itself a **defence**, against a
+threat that is documented rather than hypothetical: networks publishing at industrial scale
+specifically to be absorbed by models rather than read by people. Against content carrying real
+structure under a false claim of origin, **filtering on surface quality leaves a learner exactly as
+damaged as no filter at all** — which is what this project's own RLHF result predicts, since surface
+quality is the attacker's objective. Reconstructing the maker cuts the damage, restores the
+learner's reading of genuine human work, costs nothing on a clean corpus, and **never reads the
+label**. It also **withheld its own most attractive hypothesis**, because that arm failed the
+clean-corpus control. All of it is in [reader as defence](docs/versions/v10-reader-as-defence/RESULTS.md).
 
 ## How much of this is the theory?
 
@@ -293,7 +326,7 @@ the shape of a posterior, and a reader keeping only its best guess cannot notice
 and found nobody there. It is also the only finding with a 0% false-positive rate. Two passes from
 opposite directions agree on which result is genuinely about the theory.
 
-Full grid, and the row that could not be read: [RESULTS_V9.md](RESULTS_V9.md).
+Full grid, and the row that could not be read: [RESULTS_V9.md](docs/versions/v09-minimal-models/RESULTS.md).
 
 ---
 
@@ -423,13 +456,15 @@ reinterpreted is not counted as held.
   Any effect of a provenance signal has to come through inference, never through wishing. Asserted
   at every construction.
 - Every headline effect has a matching **null condition** that has to come out null. There are
-  twenty-nine of them, in `tests/test_nulls*.py`.
+  **fifty-one** of them, N1 through N51, across `tests/`. Three of them fail and are reported as
+  failing rather than quietly dropped: N21 (depth versus effort), N45 (the intent-gate's
+  clean-corpus cost) and N50 (value drift with nothing to detect).
 - Acceptance criteria are **pre-registered as executable code** and content-hash locked before any
   run. The written criterion and the applied criterion are the same object, so they cannot drift
   apart.
 - **Every deviation is logged**, including two where a criterion was restated after seeing a
   measurement. In both cases the original criterion is retained, still computed, and reported as
-  failing. [VALIDATION.md](VALIDATION.md) recomputes every one of them that the committed data
+  failing. [VALIDATION.md](docs/audits/a1-validation/RESULTS.md) recomputes every one of them that the committed data
   supports and reports which verdicts would change.
 - Some checks exist because the failure they guard against **actually happened** during a build and
   was caught by an assertion rather than by a result. Those are marked as such in the code.
@@ -482,7 +517,7 @@ reaches for and finds already there.
 - **The project has no forward test.** It had one sealed prediction. Its status was withdrawn in
   version 8 because the author does not recognise authoring it, and a commitment nobody remembers
   making is not a forward test. The experiment was run anyway (E52) and its primary held. The
-  hash-locked card is still in [VALIDATION.md](VALIDATION.md); what it is not is evidence.
+  hash-locked card is still in [VALIDATION.md](docs/audits/a1-validation/RESULTS.md); what it is not is evidence.
 
 ## Install and run
 
@@ -500,34 +535,34 @@ python run_all.py
 python -m ghostscale.experiments.e1_crash
 
 # the validation pass (writes results/validation/, then VALIDATION.md)
-python run_validation.py
+python runners/run_validation.py
 python scripts/write_validation_md.py
 
 # the diagnostics pass on the instruments (writes results/diagnostics/, then DIAGNOSTICS.md)
-python run_diagnostics.py
+python runners/run_diagnostics.py
 python scripts/write_diagnostics_md.py
 
 # the repair pass (writes results/repair/, then REPAIR.md)
-python run_repair.py
+python runners/run_repair.py
 python scripts/write_repair_md.py
 
 # version 6 (writes results/v6/, then RESULTS_V6.md)
-python run_v6.py
+python runners/run_v6.py
 python scripts/write_results_v6.py
 
 # version 7 (writes results/v7/, then RESULTS_V7.md)
-python run_v7.py
+python runners/run_v7.py
 python scripts/write_results_v7.py
 
 # version 8 (writes results/v8/, then RESULTS_V8.md) — the severity pass runs last
-python run_v8.py
+python runners/run_v8.py
 python scripts/write_results_v8.py
 
 # version 9 — the minimal-model programme, and the two literature experiments
-python run_v9.py
+python runners/run_v9.py
 
 # version 10 — the reader as a defence; the severity pass runs last
-python run_v10.py
+python runners/run_v10.py
 
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/make_walkthrough_plates.py
@@ -650,67 +685,75 @@ named gap, and that argument gets weaker if it claims more ground than it holds.
 
 ## Repository layout
 
+Every version has a **name** as well as a number, and the name is the theme rather than the
+chronology. Directories sort in run order; the names say what each one was for.
+
 ```
-README.md                     this page
-FINDINGS.md                   every question and its CURRENT answer; the one page to read
-EVIDENCE.md                   what the world has published, next to what this predicted
-docs/HISTORY.md               how the record got that way, six versions and four passes
-VALIDATION.md                 generated from results/validation/, never hand-written
-DIAGNOSTICS.md                generated from results/diagnostics/, never hand-written
-REPAIR.md                     generated from results/repair/, never hand-written
-RESULTS_V6.md                 generated from results/v6/, never hand-written
-RESULTS_V7.md                 generated from results/v7/, never hand-written
-run_all.py                    the experiment programme
-run_validation.py             the validation pass, V-1 through V-9
-run_diagnostics.py            the diagnostics pass on the instruments, P-1, P-2 and D-1 to D-6
-run_repair.py                 the repair pass, R-1 through R-13
-run_v6.py                     version 6, E35 through E43, plus the retrofit
-run_v7.py                     version 7, the four closures and E45 through E47
-run_v8.py                     version 8, E48 through E52, plus the severity sweep
+README.md                       this page
+FINDINGS.md                     every question and its CURRENT answer -- the one page to read
+WALKTHROUGH.md                  25 plates, in the order that makes the argument
+EVIDENCE.md                     what the world has published, next to what this predicted
 
-ghostscale/                   generative_model, creators, environment, observer, learning, metrics
-ghostscale/exact.py           exact joint inference; the solver the validation pass substitutes in
-ghostscale/fitting.py         parameter estimation by exact likelihood, for the three parameters
-                              that are not hidden states and so have no posterior to read
-ghostscale/v4_model.py        hypothesis-space overlap; goal-foreign content
-ghostscale/v4_5_model.py      the three-gate observer
-ghostscale/v5_model.py        model depth as a hierarchy the reader infers
-ghostscale/latent_goal.py     the goal a maker does not know it has
-ghostscale/experiments/       e1 through e34, each runnable standalone
-ghostscale/prereg_*.py        acceptance criteria as executable, hash-locked code
-ghostscale/validation/        the nine checks, plus their own hash-locked criteria
-ghostscale/diagnostics/       the eight instrument checks, plus their own separate lock
-ghostscale/repair/            the repair pass, plus a third separate lock
-ghostscale/v6_model.py        the Intent Extraction Limit: depletion, the graded gate, the
-                              trust-to-threshold coupling, process recovery
-ghostscale/v6/                version 6's experiments, plus a fourth separate lock
+docs/HISTORY.md                 ten versions and three audit passes, as one narrative
+docs/EXPERIMENTS.md             the original plain-language table, superseded by FINDINGS.md
+docs/theory/                    the preprint this implements, and the code-to-theory vocabulary
+docs/assets/SPEC.md             the spec for the public-facing material
 
-tests/                        model invariants, the null suite (N1 to N21), exact-inference tests
-config/default.yaml           every parameter, for every version, plus the solver switch
+docs/versions/                  one directory per version: SPEC.md, RESULTS.md, and where they
+                                exist PLAN.md and DECISIONS.md. Specs were written BEFORE the
+                                code and are never edited after; results are written after and
+                                are never edited either.
+  v01-the-mechanism/            the model as code: cost, inference, zero provenance preference
+  v02-the-learner/              a reader that must acquire what machine content looks like
+  v03-the-refuted-repair/       a fix whose own gate refuted the diagnosis behind it
+  v04-foreign-intent/           goal-empty becomes goal-foreign, and a headline inverts
+  v04.5-three-gates/            three gates, and the counting classifier that withdrew a claim
+  v05-depth-over-effort/        depth replaces effort; the fast solver is caught misreading it
+  v06-code-against-equation/    is the simulation the same object as the published theory?
+  v07-the-closures/             the four results V6 would not draw, and what a maker-model buys
+  v08-the-severity-pass/        the reader gets a mind; how often a random model does it too
+  v09-minimal-models/           strip the shape: which commitment is each finding made of?
+  v10-reader-as-defence/        can reading intent defend a learner? The last simulation version
 
-WALKTHROUGH.md                seventeen plates, in the order that makes the argument
-docs/theory/                  the theory this implements, and the code-to-theory vocabulary
-docs/HISTORY.md               six versions and four audit passes, as one narrative
-docs/specs/                   the build spec each version was written against
-docs/writeups/                RESULTS_V1 through RESULTS_V5: the full record, with every deviation
-docs/decisions/               design decisions signed off before each build
-docs/EXPERIMENTS.md           the original plain-language table, superseded by FINDINGS.md
+docs/audits/                    passes that ask whether existing answers can be trusted. None
+                                asks a new question about the world. Their RESULTS.md files are
+                                GENERATED from verdict files and never hand-written.
+  a1-validation/                nine checks; five came back against the work
+  a2-diagnostics/               what the instruments can and cannot answer. Read before quoting
+  a3-repair/                    what could be fixed, and what fixing changed
 
-results/                      summary CSVs and JSON verdicts (committed)
-results/validation/           one verdict file per check, plus the side-by-side tables
-results/diagnostics/          one verdict file per instrument check, plus the recovery sweeps
-results/repair/               one verdict file per repair item, plus the matched-pair sweep in
-                              which every reachable experiment was run under both code paths
-results/diagnostics/          labelled diagnostic runs, kept separate so they cannot be mistaken
-                              for reportable output
-figures/walkthrough/          the seventeen plates WALKTHROUGH.md is built from
-figures/archive/              the per-experiment research charts from versions 1 to 5
-figures/social/               the five distribution slides, the PDF, the preview image
-figures/diagnostics/          the recovery panels, the difficulty axis, the uptake curve
-notebooks/walkthrough.ipynb   runs E1 and E2 end to end, narrated
-scripts/                      chart rebuilders, the version-specific runners, the VALIDATION.md
-                              generator, and the independent reimplementation of the two-gates
-                              result
+ghostscale/                     generative_model, creators, environment, observer, learning, metrics
+  exact.py                      exact joint inference -- the solver validation substitutes in
+  fitting.py                    parameter estimation by exact likelihood, for the three
+                                parameters that are not hidden states and have no posterior
+  v4_model.py                   hypothesis-space overlap; goal-foreign content
+  v4_5_model.py                 the three-gate observer
+  v5_model.py                   depth as a hierarchy the reader infers
+  v6_model.py                   the Intent Extraction Limit: depletion, the graded gate, the
+                                trust-to-threshold coupling, process recovery
+  v8_model.py                   reader hierarchy, integration cost, decaying belief, density
+  latent_goal.py                the goal a maker does not know it has
+  plates.py                     the figure house style, and the automatic plate audit
+  experiments/                  e1 through e34, each runnable standalone
+  v6/ v7/ v8/ v9/ v10/          later versions, each with its own hash-locked criteria
+  validation/ diagnostics/      the audit passes, each with a separate lock
+  repair/
+  prereg_*.py                   acceptance criteria as executable, hash-locked code
+
+runners/                        one entry point per version and per audit pass
+run_all.py                      the original experiment programme, E1 to E34
+tests/                          model invariants and the null suite -- N1 through N51
+config/default.yaml             every parameter, for every version, plus the solver switch
+
+results/                        committed summary CSVs and JSON verdicts. V1-V5 wrote flat into
+                                results/; V6 onward use one subdirectory per version. See
+                                results/README.md
+figures/walkthrough/            the 25 plates WALKTHROUGH.md is built from
+figures/social/                 the distribution slides, the PDF, the preview image
+figures/diagnostics/            the recovery panels, the difficulty axis, the uptake curve
+notebooks/walkthrough.ipynb     runs E1 and E2 end to end, narrated
+scripts/                        chart rebuilders, the document generators, and the independent
+                                reimplementation of the two-gates result
 ```
 
 Raw per-reader CSVs are not committed, because `e4_raw.csv` alone is 16 MB. Everything a number in
@@ -719,10 +762,10 @@ this README or a chart in `figures/` depends on is committed. Regenerate the raw
 
 Several defaults were recalibrated on contact with the implementation. Each is documented under
 "Deviations" in the matching write-up, with the evidence that motivated it, so any of them can be
-argued with, and [VALIDATION.md](VALIDATION.md) recomputes the originals. The load-bearing
-constraints have not changed: zero reader preference over provenance, structured rather than
-uniform machine-made content, reader heterogeneity, the full null suite, and the honest crosswalk
-above.
+argued with, and [the validation pass](docs/audits/a1-validation/RESULTS.md) recomputes the
+originals. The load-bearing constraints have not changed: zero reader preference over provenance,
+structured rather than uniform machine-made content, reader heterogeneity, the full null suite, and
+the honest crosswalk above.
 
 ## Links
 

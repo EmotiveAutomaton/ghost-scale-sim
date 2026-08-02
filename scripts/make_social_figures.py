@@ -280,7 +280,7 @@ def caveat_for(val: dict, target: str, quantity: str | None = None) -> str | Non
     parts = []
     survives = v1_target_survives(val, target)
     if survives is False:
-        parts.append("changes under exact inference (VALIDATION.md)")
+        parts.append("changes under exact inference (../docs/audits/a1-validation/RESULTS.md)")
     v1 = val.get("v1") or {}
     if quantity:
         for row in v1.get("table", []):

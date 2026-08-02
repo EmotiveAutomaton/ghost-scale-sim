@@ -1,6 +1,6 @@
 # Version 8: the reader gets a mind, and the programme gets a severity check
 
-Generated from [results/v8/](results/v8/). Regenerate with `python scripts/write_results_v8.py`. Criteria hash-locked at `b5fdc40e55e7d861` before any cell ran.
+Generated from [results/v8/](../../../results/v8/). Regenerate with `python scripts/write_results_v8.py`. Criteria hash-locked at `b5fdc40e55e7d861` before any cell ran.
 
 ---
 

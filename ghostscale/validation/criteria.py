@@ -101,7 +101,7 @@ def criteria_payload(cfg: Config) -> dict:
     """Everything that could decide a validation verdict, in one hashable object."""
     return {
         "document": "Ghost Scale Simulation — validation pass criteria",
-        "spec": "docs/specs/SPEC_VALIDATION.md",
+        "spec": "docs/audits/a1-validation/SPEC.md",
         "written_before": "any validation check ran",
         "v1": {
             "peak_tolerance_steps": V1_PEAK_TOLERANCE_STEPS,

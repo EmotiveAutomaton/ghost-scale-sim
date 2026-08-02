@@ -56,7 +56,7 @@ promising an answer that never arrives. (RESULTS_V4, REPAIR.md)
 **5. A sufficiently trusting reader cannot learn that a source lies — at any number of
 encounters.** Not slow learning: learning that cannot start. Noticing a lie means noticing that the
 label and the work disagree, and above a computable threshold the label has already won that
-argument before the disagreement can register. (REPAIR.md)
+argument before the disagreement can register. (docs/audits/a3-repair/RESULTS.md)
 
 ---
 
