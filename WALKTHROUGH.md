@@ -76,21 +76,27 @@ danger is having just enough handholds to build a story on.
 
 Three paintings, and one measure: how finished you felt walking away.
 
-**The middle one is the important control.** It is a real maker with a real purpose, working in a
-tradition you have no training for. Versions 1 to 5 of this model believed that was what machine
-content was. You take almost nothing from it, and the point is that **you know that.** Being stopped
-at the door is the protection: you do not walk off with a theory about a person you never reached.
+**The middle one is the control that makes the point.** It is a real maker with a real purpose,
+working in a tradition you have no training for. Versions 1 to 5 of this model believed that was
+what machine content was. You take almost nothing from it, and the point is that **you know that.**
+Being stopped at the door is the protection.
 
 The one on the right is what version 6 built to replace that description, because *legible and
-empty* is the complaint people actually make about generated work. Four different maker states,
-only two distinct surfaces, on material you recognise completely. Nothing is hard to look at.
-Everything is easy to look at, and there is no route from any of it back to a state you could
-occupy.
+empty* is the complaint people actually make about generated work. Four maker states, only two
+distinct surfaces, on material you recognise completely. Nothing is hard to look at, and there is no
+route from any of it back to a state you could occupy.
 
-So you finish it. **76% settled, nearly as done as with a painting you genuinely read**, having
-recovered nothing and unable to tell which of two makers you were looking at.
+**And you do not come away empty. That is the part worth being alarmed about.** Your belief moves
+**1.03** on the AI image against **1.40** on a real painting, so nearly as far, and it moves the
+wrong way. You finish at 76% settled, holding a confident answer you constructed yourself about a
+maker who was never there. Then you keep it.
 
-**Failing to understand something protects you. Being satisfied by it does not.**
+The tell is that viewers who all feel finished **disagree with each other** about what they found,
+nearly as much as on genuine human work. On the painting nobody could read, nobody disagrees at all,
+because nobody committed.
+
+**Failing to understand something protects you. Being satisfied by it is how the false thing gets
+in.**
 
 ### 7. Two kinds of damage
 

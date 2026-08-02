@@ -170,16 +170,35 @@ def plate_03_the_wall():
                 fontsize=15, fontweight="bold", color=INK)
     ax.set_xticks(xs)
     ax.set_xticklabels([o[1] for o in order], fontsize=11)
-    ax.set_ylim(0, 132)
+    ax.set_ylim(0, 158)
     clean_axis(ax, "how finished the viewer felt")
     ax.set_yticks([])
 
+    # "There was nothing to take" was too soft, and it was also not what happened. The viewer's
+    # belief MOVES 1.03 here, nearly as far as on a real painting at 1.40, and it moves the wrong
+    # way. They did not come away empty. They came away carrying something they made up.
+    #
+    # The third note is INK rather than the series colour. That is the Ghost Scale played on the
+    # plate: this reading came from a person, so it is black. The supporting line underneath is
+    # grey, which is this repository's mark for prose with less of a person in it.
     notes = ["you read the intent,\nand you were right",
              "you take almost nothing away,\nand you know that you didn't",
-             "you walk away satisfied.\nThere was nothing to take."]
-    for i, (n, col) in enumerate(zip(notes, [HUMAN, COOL, MACHINE])):
-        annotate(ax, i, settled[i] + 12, n, color=col, fontsize=11.5, weight="bold",
+             "you walk away certain,\nholding an answer you invented.\nYou keep it."]
+    for i, (n, col) in enumerate(zip(notes, [HUMAN, COOL, INK])):
+        annotate(ax, i, settled[i] + 19, n, color=col, fontsize=11.5, weight="bold",
                  ha="center", va="bottom")
+
+    # Lift the axes to make room. The supporting line has to sit clear of the category labels, and
+    # those hang below the axes rather than inside them.
+    pos = ax.get_position()
+    ax.set_position([pos.x0, pos.y0 + 0.085, pos.width, pos.height - 0.085])
+
+    fig.text(0.055, 0.072,
+             f"The belief moves {c['noninvertible']['movement']:.2f} on the AI image against "
+             f"{c['human']['movement']:.2f} on a real painting, and it moves the wrong way.\n"
+             f"Viewers who all feel finished disagree about what they found. Nobody disagrees "
+             f"about the one they could not read.",
+             fontsize=10.5, color=MUTED, va="bottom", linespacing=1.5)
     record(save(fig, "03_legible_and_empty"),
            "A third kind of failure, built because the existing account did not match what people "
            "actually report about generated text.")
