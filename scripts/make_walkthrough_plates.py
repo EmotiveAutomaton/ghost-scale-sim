@@ -115,29 +115,53 @@ def plate_03_the_wall():
     c = d["cells"]
     order = [("human", "Made by a person", HUMAN),
              ("foreign", "Built by an unconstrained\nartificial mind", COOL),
-             ("noninvertible", "Reads perfectly.\nNo one to find.", MACHINE)]
+             ("noninvertible", "Reads perfectly.\nNo one to find.\n(an almanac, a spreadsheet,\na page of specs)", MACHINE)]
+
+    # THE MEASURE CHANGED, AND THE OLD ONE WAS BURYING THE FINDING.
+    #
+    # This plate used to show how-lost-you-are beside how-much-you-kept-looking. The second bar was
+    # a problem twice over. It contradicted E19, which is this project's own headline that readers
+    # KEEP paying on foreign content, because E37 scores free attention after a forced phase and
+    # lands in a different regime. And it spent half the plate on a channel that is not what the
+    # wall is about.
+    #
+    # What the wall actually is, in E37's own numbers: foreign content leaves the reader lost AND
+    # AWARE of it. The wall leaves the reader feeling almost as settled as genuine human work while
+    # being further from the truth than the foreign case. Feeling resolved and being wrong is the
+    # signature, and it is the sentence people actually say.
+    upt = [float(c[k]["error_reduction"]) for k, _, _ in order]
     ent = [float(c[k]["final_entropy"]) for k, _, _ in order]
-    eng = [float(c[k]["engaged_fraction"]) for k, _, _ in order]
+    logn = float(np.log(4))
+    settled = [1.0 - e / logn for e in ent]
 
     fig, ax = plate(
         "\"I read every word and nobody was there\"\nis its own kind of failure.",
-        "It is not that the words are hard. Every one of them is familiar. It is that no maker can be\nreconstructed from them, and that produces a signature neither other condition does.",
-        "E37 · results/v6/e37_wall.json · how unresolved the reader is left, and how long it keeps trying")
+        "It is not that the words are hard. Every one of them is familiar. It is that no maker can "
+        "be reconstructed from them, so the reader finishes feeling settled and is further from the "
+        "truth than when it started.",
+        "E37 · results/v6/e37_wall.json · how much closer to the maker's real intent the reader ends up")
+
     xs = np.arange(3)
-    w = 0.36
-    b1 = ax.bar(xs - w / 2, ent, width=w, color=[o[2] for o in order], alpha=0.95)
-    b2 = ax.bar(xs + w / 2, eng, width=w, color=[o[2] for o in order], alpha=0.42)
+    bars = ax.bar(xs, upt, width=0.5, color=[o[2] for o in order])
+    bar_labels(ax, bars, upt, fmt="{:+.2f}", fontsize=14, color=INK)
+    zero_line(ax)
     ax.set_xticks(xs)
     ax.set_xticklabels([o[1] for o in order], fontsize=11)
-    bar_labels(ax, b1, ent, fmt="{:.2f}", fontsize=11, color=INK)
-    bar_labels(ax, b2, eng, fmt="{:.2f}", fontsize=11, color=MUTED)
-    annotate(ax, -0.32, max(ent) * 1.17, "solid bars: how confused it left you",
-             color=INK, fontsize=11, weight="bold", ha="left")
-    annotate(ax, 0.92, max(ent) * 1.17, "faded bars: how much attention you spent",
-             color=MUTED, fontsize=11, weight="bold", ha="left")
-    ax.set_ylim(0, max(ent) * 1.3)
-    clean_axis(ax)
+    ax.set_ylim(min(upt) * 1.75, max(upt) * 1.55)
+    clean_axis(ax, "closer to the truth  →\n←  further from it")
     ax.set_yticks([])
+
+    # The settled figures live in the per-bar notes rather than in a line underneath. The contrast
+    # only means anything held against its neighbour, and a separate caption made the reader carry
+    # two numbers across the plate to compare them.
+    notes = ["you learned, and you\nfelt sure. Correctly.",
+             f"you got it wrong, and you\ncould tell: felt {settled[1]:.0%} settled",
+             f"you got it MORE wrong,\nand it felt {settled[2]:.0%} settled"]
+    colours = [HUMAN, COOL, MACHINE]
+    for i, (n, col) in enumerate(zip(notes, colours)):
+        y = upt[i] + (0.30 if upt[i] > 0 else -0.30)
+        annotate(ax, i, y, n, color=col, fontsize=11.5, weight="bold", ha="center",
+                 va="bottom" if upt[i] > 0 else "top")
     record(save(fig, "03_legible_and_empty"),
            "A third kind of failure, built because the existing account did not match what people "
            "actually report about generated text.")
@@ -783,10 +807,11 @@ def plate_22_how_much_is_the_theory():
     mine = [1.0 - v for v in vals]
 
     fig, ax = plate(
-        "Almost nobody tries to break their own model.\nI did, and most of my findings did not survive it.",
+        "Everything on this chart is true.\nI checked how much of it is actually evidence for MY theory.",
         "The test: rebuild the model hundreds of times with every setting my theory specifies "
-        "replaced by a random one. If a finding still turns up, my theory was never what produced "
-        "it. Run this on most published models and very little would be left standing.",
+        "replaced by a random one. Anything that still turns up is real, but it is not proof of "
+        "this theory over any other built the same way. Almost no published model is ever put "
+        "through this, and most would not come out of it as well.",
         "S-1 - results/v8/s1_severity.json - 600 randomly parameterised rebuilds per finding")
 
     pos = ax.get_position()
@@ -806,22 +831,30 @@ def plate_22_how_much_is_the_theory():
 
     ax.set_yticks(y, labels, fontsize=12.5)
     ax.set_xlim(0, 1.20)
-    ax.set_ylim(-1.35, len(labels) + 0.16)
+    ax.set_ylim(-2.20, len(labels) + 0.16)
     clean_axis(ax, "", "")
     ax.set_xticks([])
     for s in ax.spines.values():
         s.set_visible(False)
 
-    annotate(ax, 0.02, len(labels) - 0.30, "shows up without my theory",
+    annotate(ax, 0.02, len(labels) - 0.30, "true either way",
              color=MUTED, fontsize=12, weight="bold", va="center", ha="left")
-    annotate(ax, 0.99, len(labels) - 0.30, "needed my theory",
+    annotate(ax, 0.99, len(labels) - 0.30, "only my theory explains it",
              color=HUMAN, fontsize=12, weight="bold", va="center", ha="right")
-    # The qualification belongs INSIDE the frame. In the footer it was clipped, and a caveat
-    # nobody can read is worse than no caveat at all: it looks like a claim with no limits on it.
-    annotate(ax, 0.0, -0.90,
-             "The overall picture still holds together. Most of its individual parts\n"
-             "are not load-bearing, and almost nobody checks that about their own work.",
-             color=INK, fontsize=11.5, weight="bold", va="center", ha="left")
+
+    # THE GHOST SCALE, PLAYED ON THE PLATE ITSELF. The claim a person is standing behind is black
+    # and bold. The qualification is grey, which is this repository's own mark for text with less
+    # of a person in it. The two-tone line is the argument in miniature.
+    #
+    # It lives inside the frame because in the footer it was clipped, and a caveat nobody can read
+    # is worse than no caveat: it reads as a claim with no limits on it.
+    annotate(ax, 0.0, -0.78, "The overall picture holds together.",
+             color=INK, fontsize=12.5, weight="bold", va="center", ha="left")
+    annotate(ax, 0.0, -1.52,
+             "Some of its parts turn out to be unprovable either way, which is not the same as "
+             "wrong.\nMost people never find out which of theirs are, and report them as though "
+             "they had.",
+             color=MUTED, fontsize=11.5, weight="normal", va="center", ha="left")
 
     record(save(fig, "22_how_much_is_the_theory"),
            "Almost nobody publishes this number about their own work. It costs the project its "
