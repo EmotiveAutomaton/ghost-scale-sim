@@ -70,16 +70,24 @@ block, at double scale, in every cell of the robustness sweep, and in every resa
 worst place to be is nearly understandable.** Total nonsense is safe; total clarity is safe; the
 danger is having just enough handholds to build a story on.
 
-### 6. Legible and empty
+### 6. The failure that leaves you satisfied
 
-![Legible and empty is a different failure](figures/walkthrough/03_legible_and_empty.png)
+![The dangerous failure is the one that leaves you satisfied](figures/walkthrough/03_legible_and_empty.png)
 
-The model used to describe unreadable machine content as *written in a vocabulary you don't have*.
+The model used to describe unreadable machine content as *written in a vocabulary you do not have*.
 That is not what people report. What they report is reading every word and finding nobody there.
 
-So version 6 built a third condition: content made of entirely familiar material whose maker cannot
-be reconstructed from it, because several different maker-states produce the same surface. Full
-vocabulary, no inversion. It produces a signature neither existing condition does.
+So version 6 built a third condition, and the construction is the point: **four different maker
+states that emit only two distinct surfaces**, on words the reader knows perfectly. Not unreadable.
+Not empty. **Ambiguous by construction**, which is what wording looks like when several different
+intentions would produce it identically.
+
+The two failures behave completely differently. Content you cannot read leaves the reader at 15%
+settled: it knows it failed, it stops, and it stays out. The ambiguous case leaves it at **76%
+settled**, nearly as finished as genuine human work, having stopped looking while unable to tell
+which of two makers it was reading.
+
+**The failure that stops you protects you. The one that satisfies you does not.**
 
 ### 7. Two kinds of damage
 

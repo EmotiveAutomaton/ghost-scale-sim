@@ -114,8 +114,9 @@ def plate_03_the_wall():
     d = load("v6/e37_wall.json")
     c = d["cells"]
     order = [("human", "Made by a person", HUMAN),
-             ("foreign", "Built by an unconstrained\nartificial mind", COOL),
-             ("noninvertible", "Reads perfectly.\nNo one to find.\n(an almanac, a spreadsheet,\na page of specs)", MACHINE)]
+             ("foreign", "Words you have no\nvocabulary for", COOL),
+             ("noninvertible", "Wording that fits several\nintentions equally well\n"
+                               "(boilerplate, filler, a horoscope)", MACHINE)]
 
     # THE MEASURE CHANGED, AND THE OLD ONE WAS BURYING THE FINDING.
     #
@@ -129,39 +130,46 @@ def plate_03_the_wall():
     # AWARE of it. The wall leaves the reader feeling almost as settled as genuine human work while
     # being further from the truth than the foreign case. Feeling resolved and being wrong is the
     # signature, and it is the sentence people actually say.
-    upt = [float(c[k]["error_reduction"]) for k, _, _ in order]
+    # ONE MEASURE ONLY, AND IT IS HOW SETTLED THE READER FELT.
+    #
+    # Two earlier versions of this plate showed a second series and both were wrong. Free attention
+    # contradicted E19. Signed uptake read as "you cannot learn from a spreadsheet", which is
+    # absurd, and it was absurd because the third condition had been given absurd examples: an
+    # almanac ADVERTISES its purpose, so there is very much somebody to find in one.
+    #
+    # What the third condition actually is: four maker-states collapsed onto two surfaces, on
+    # entirely familiar words. Not unreadable, and not empty. AMBIGUOUS BY CONSTRUCTION, so the
+    # honest analogue is wording that several different intentions would produce identically.
+    # Accuracy is capped at 50% there by that construction, which is exactly why plotting accuracy
+    # invites the misreading. So it is not plotted; it is stated.
     ent = [float(c[k]["final_entropy"]) for k, _, _ in order]
     logn = float(np.log(4))
-    settled = [1.0 - e / logn for e in ent]
+    settled = [100.0 * (1.0 - e / logn) for e in ent]
 
     fig, ax = plate(
-        "\"I read every word and nobody was there\"\nis its own kind of failure.",
-        "It is not that the words are hard. Every one of them is familiar. It is that no maker can "
-        "be reconstructed from them, so the reader finishes feeling settled and is further from the "
-        "truth than when it started.",
-        "E37 · results/v6/e37_wall.json · how much closer to the maker's real intent the reader ends up")
+        "The failure that stops you is the safe one.\nThe dangerous one leaves you satisfied.",
+        "Three kinds of text, and one measure: how settled the reader felt when it put the thing "
+        "down. Only one of the three had earned it.",
+        "E37 · results/v6/e37_wall.json · the third condition is built as four maker-states "
+        "collapsing onto two surfaces, on entirely familiar words")
 
     xs = np.arange(3)
-    bars = ax.bar(xs, upt, width=0.5, color=[o[2] for o in order])
-    bar_labels(ax, bars, upt, fmt="{:+.2f}", fontsize=14, color=INK)
-    zero_line(ax)
+    bars = ax.bar(xs, settled, width=0.5, color=[o[2] for o in order])
+    for b, v in zip(bars, settled):
+        ax.text(b.get_x() + b.get_width() / 2, v + 3, f"{v:.0f}%", ha="center", va="bottom",
+                fontsize=15, fontweight="bold", color=INK)
     ax.set_xticks(xs)
     ax.set_xticklabels([o[1] for o in order], fontsize=11)
-    ax.set_ylim(min(upt) * 1.75, max(upt) * 1.55)
-    clean_axis(ax, "closer to the truth  →\n←  further from it")
+    ax.set_ylim(0, 132)
+    clean_axis(ax, "how settled the reader felt at the end")
     ax.set_yticks([])
 
-    # The settled figures live in the per-bar notes rather than in a line underneath. The contrast
-    # only means anything held against its neighbour, and a separate caption made the reader carry
-    # two numbers across the plate to compare them.
-    notes = ["you learned, and you\nfelt sure. Correctly.",
-             f"you got it wrong, and you\ncould tell: felt {settled[1]:.0%} settled",
-             f"you got it MORE wrong,\nand it felt {settled[2]:.0%} settled"]
-    colours = [HUMAN, COOL, MACHINE]
-    for i, (n, col) in enumerate(zip(notes, colours)):
-        y = upt[i] + (0.30 if upt[i] > 0 else -0.30)
-        annotate(ax, i, y, n, color=col, fontsize=11.5, weight="bold", ha="center",
-                 va="bottom" if upt[i] > 0 else "top")
+    notes = ["settled, and correct.\nIt really had read the maker.",
+             "it knows it failed,\nso it stops and stays out",
+             "it stops looking, and cannot tell\nwhich of two makers it read"]
+    for i, (n, col) in enumerate(zip(notes, [HUMAN, COOL, MACHINE])):
+        annotate(ax, i, settled[i] + 12, n, color=col, fontsize=11.5, weight="bold",
+                 ha="center", va="bottom")
     record(save(fig, "03_legible_and_empty"),
            "A third kind of failure, built because the existing account did not match what people "
            "actually report about generated text.")
