@@ -155,13 +155,41 @@ def plate_03_the_wall():
     logn = float(np.log(4))
     settled = [100.0 * (1.0 - e / logn) for e in ent]
 
+    # THE GHOST SCALE, APPLIED TO THE PROSE ON THE PLATE, AND APPLIED CORRECTLY THIS TIME.
+    #
+    # Black is not "the important bit". Black is THE PART A PERSON WROTE, wherever it happens to
+    # land, including mid-sentence inside grey machine prose. So the subtitle is drawn by hand here
+    # rather than through plate(): the grey runs on until the author's clause, the author's clause
+    # is black, and the switch happens on the same line. That is the whole point of the scale and
+    # it does not survive being rounded to "highlight the punchy part".
+    #
+    # The chart annotation goes back to the series colour, because it is a label on a bar and
+    # labels follow their series.
     fig, ax = plate(
         "Not understanding a painting is safe. You know you missed it.\nAI work is worse: it lets you believe you didn't.",
-        "One measure: how finished the viewer felt when it walked away. Art you have no training "
-        "for stops you at the door, and stopping is the protection. The AI image lets you walk away "
-        "satisfied, having recovered nothing.",
+        "",
         "E37 · results/v6/e37_wall.json · the AI condition is built as four maker-states collapsing "
         "onto two surfaces, on entirely familiar material")
+
+    sub_y, step = 0.793, 0.050
+    grey_lines = [
+        "One measure: how finished the viewer felt when it walked away. Art you have no training",
+        "for stops you at the door, and stopping is the protection. The AI image lets you walk",
+    ]
+    for i, ln in enumerate(grey_lines):
+        fig.text(0.055, sub_y - step * i, ln, fontsize=12, color=MUTED, va="top")
+
+    tail_y = sub_y - step * len(grey_lines)
+    tail = fig.text(0.055, tail_y, "away satisfied, ", fontsize=12, color=MUTED, va="top")
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    x_after = fig.transFigure.inverted().transform(
+        (tail.get_window_extent(renderer=r).x1, 0))[0]
+    fig.text(x_after, tail_y, "confidently learning from slop.",
+             fontsize=12, color=INK, fontweight="bold", va="top")
+
+    pos = ax.get_position()
+    ax.set_position([pos.x0, pos.y0, pos.width, pos.height - 0.10])
 
     xs = np.arange(3)
     bars = ax.bar(xs, settled, width=0.5, color=[o[2] for o in order])
@@ -174,31 +202,25 @@ def plate_03_the_wall():
     clean_axis(ax, "how finished the viewer felt")
     ax.set_yticks([])
 
-    # "There was nothing to take" was too soft, and it was also not what happened. The viewer's
-    # belief MOVES 1.03 here, nearly as far as on a real painting at 1.40, and it moves the wrong
-    # way. They did not come away empty. They came away carrying something they made up.
-    #
-    # The third note is INK rather than the series colour. That is the Ghost Scale played on the
-    # plate: this reading came from a person, so it is black. The supporting line underneath is
-    # grey, which is this repository's mark for prose with less of a person in it.
-    notes = ["you read the intent,\nand you were right",
-             "you take almost nothing away,\nand you know that you didn't",
-             "you walk away certain,\nholding an answer you invented.\nYou keep it."]
-    for i, (n, col) in enumerate(zip(notes, [HUMAN, COOL, INK])):
-        annotate(ax, i, settled[i] + 19, n, color=col, fontsize=11.5, weight="bold",
-                 ha="center", va="bottom")
+    annotate(ax, 0, settled[0] + 19, "you read the intent,\nand you were right",
+             color=HUMAN, fontsize=11.5, weight="bold", ha="center", va="bottom")
+    annotate(ax, 1, settled[1] + 19, "you take almost nothing away,\nand you know that you didn't",
+             color=COOL, fontsize=11.5, weight="bold", ha="center", va="bottom")
 
-    # Lift the axes to make room. The supporting line has to sit clear of the category labels, and
-    # those hang below the axes rather than inside them.
-    pos = ax.get_position()
-    ax.set_position([pos.x0, pos.y0 + 0.085, pos.width, pos.height - 0.085])
-
-    fig.text(0.055, 0.072,
-             f"The belief moves {c['noninvertible']['movement']:.2f} on the AI image against "
-             f"{c['human']['movement']:.2f} on a real painting, and it moves the wrong way.\n"
-             f"Viewers who all feel finished disagree about what they found. Nobody disagrees "
-             f"about the one they could not read.",
-             fontsize=10.5, color=MUTED, va="bottom", linespacing=1.5)
+    # "You keep it." carries the threat, so it is underlined. Matplotlib has no underline, so the
+    # rule is drawn from the text's own measured extent.
+    keep = ax.text(2, settled[2] + 19, "You keep it.", color=MACHINE, ha="center", va="bottom",
+                   fontsize=11.5, fontweight="bold", zorder=5)
+    ax.text(2, settled[2] + 27, "you walk away certain,\nholding an answer you invented.",
+            color=MACHINE, ha="center", va="bottom", fontsize=11.5, fontweight="bold",
+            linespacing=1.35, zorder=5)
+    fig.canvas.draw()
+    bb = keep.get_window_extent(renderer=fig.canvas.get_renderer())
+    inv = ax.transData.inverted()
+    x0, y0 = inv.transform((bb.x0, bb.y0))
+    x1, _ = inv.transform((bb.x1, bb.y0))
+    ax.plot([x0, x1], [y0 - 2.4, y0 - 2.4], color=MACHINE, lw=1.8, zorder=5,
+            solid_capstyle="butt")
     record(save(fig, "03_legible_and_empty"),
            "A third kind of failure, built because the existing account did not match what people "
            "actually report about generated text.")
