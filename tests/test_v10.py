@@ -131,6 +131,34 @@ def test_every_headline_has_a_severity_rate(summary):
 # --------------------------------------------------------------------------- #
 # The bugs that actually happened
 # --------------------------------------------------------------------------- #
+def test_severity_pass_does_not_overwrite_the_results_it_checks(summary):
+    """The bug this pins, and it shipped.
+
+    A severity draw re-runs a real experiment with randomly redrawn settings, and those modules
+    write their verdict to the canonical path. So the pass whose whole job is to check the
+    headlines was OVERWRITING the headlines: the file left on disk afterwards was the last random
+    draw. Nothing reported was wrong, because summary.json kept the real numbers, but anyone
+    opening results/v10/e57_arms_race.json to check a figure got a randomised world with no sign
+    that it was one.
+
+    Nothing in the pipeline could catch it. The files are valid, well-formed and plausible.
+    """
+    from ghostscale.v10 import v10_dir
+    from ghostscale.v10.s2_severity import CLOBBERED
+
+    assert "e57_arms_race.json" in CLOBBERED, "the preserve list must cover every re-run experiment"
+
+    path = v10_dir() / "e57_arms_race.json"
+    if not path.exists():
+        pytest.skip("E57 has not been run")
+    on_disk = json.loads(path.read_text(encoding="utf-8"))
+    disk_fa = [r["human_careful"] for r in on_disk["co_evolution"]]
+    summ_fa = [r["human_careful"] for r in summary["E57"]["co_evolution"]]
+    assert disk_fa == summ_fa, (
+        "the standalone verdict file disagrees with summary.json, which is what a clobbered "
+        "severity draw looks like")
+
+
 def test_goal_posterior_is_per_step_and_must_be_reduced():
     """The bug this pins, and it had two faces from one cause.
 

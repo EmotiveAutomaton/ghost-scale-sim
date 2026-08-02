@@ -118,8 +118,46 @@ def _severity_e57(cfg: Config, n_draws: int, n_obs: int) -> dict:
             "rows": rows}
 
 
+# Every verdict file a severity draw would otherwise overwrite. See _preserve below.
+CLOBBERED = ("e55_intent_gate.json", "e56_selective_gate.json", "e57_arms_race.json")
+
+
+def _preserve(fn):
+    """Run the severity draws without destroying the results they are checking.
+
+    THE BUG THIS FIXES, AND IT WAS SILENT AND IT SHIPPED. A severity draw re-runs a real
+    experiment with randomly redrawn settings, and those experiment modules write their verdict to
+    the canonical path. So the pass whose entire job is to check the headlines was OVERWRITING the
+    headlines, and the file left on disk afterwards was the last random draw rather than the
+    result. ``summary.json`` kept the real numbers, so nothing that was reported was wrong, but
+    anyone opening ``results/v10/e57_arms_race.json`` to check a figure got a randomised world with
+    no warning that it was one.
+
+    Nothing in the pipeline could catch it: the files are valid, well-formed, and plausible.
+
+    So the canonical verdicts are snapshotted before the draws and restored after. The draws' own
+    numbers are not lost; they are recorded per-draw inside this pass's own verdict file, which is
+    where they belong.
+    """
+    def wrapped(*a, **k):
+        from . import v10_dir
+        d = v10_dir()
+        saved = {n: (d / n).read_bytes() for n in CLOBBERED if (d / n).exists()}
+        try:
+            return fn(*a, **k)
+        finally:
+            for n, blob in saved.items():
+                (d / n).write_bytes(blob)
+    return wrapped
+
+
 def run(cfg: Config, n_draws: int = 12, n_artifacts: int = 24, n_learners: int = 1,
         infer_steps: int = 6, n_obs: int = 16, workers: int = 1) -> dict:
+    return _preserve(_run)(cfg, n_draws, n_artifacts, n_learners, infer_steps, n_obs, workers)
+
+
+def _run(cfg: Config, n_draws: int, n_artifacts: int, n_learners: int,
+         infer_steps: int, n_obs: int, workers: int) -> dict:
     cfg = cfg.copy()
     cfg.set("inference.exact", True)
 

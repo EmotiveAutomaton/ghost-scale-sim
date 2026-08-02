@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-five pictures, in the order that makes the argument.** Each one is meant to be readable in
+**Twenty-six pictures, in the order that makes the argument.** Each one is meant to be readable in
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
@@ -254,6 +254,26 @@ all — which *is* the theory, but is the part shared with any account of the sa
 distinguish this framework from a competitor built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
+
+### 26. Why detection is a losing race
+
+![Better detectors mean fewer false accusations, until the content fights back](figures/walkthrough/26_the_arms_race.png)
+
+An earlier version of this project found that detectors misfire *less* as they sharpen, and
+published that as its own prediction failing. It had measured a world with no adversary in it.
+
+Put evasion in, so that detection and evasion improve together, and the misfiring stops falling and
+turns back up: at its worst, **two thirds of careful human writing wrongly flagged.** Switch evasion
+off and the clean decline comes straight back, which is what makes this a finding about the world
+rather than about a new piece of code.
+
+There is a second half that does not fit on the same picture. A reader whose detector stops updating
+does not gradually get fuzzier. Its accusation rate does not move at all while its accuracy drains
+away underneath, until it is firing on people and machines at exactly the same rate with exactly the
+same confidence. **A coin flip that still believes it is a detector.**
+
+This is the argument for changing the target. You cannot win a race against the thing you are
+measuring, and the next plate is what happens when you measure something else.
 
 ### 25. The one thing here that is actually a defence
 

@@ -640,8 +640,7 @@ python runners/run_v10.py
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/make_walkthrough_plates.py
 python scripts/rebuild_figures.py
-python scripts/make_social_figures.py
-python scripts/make_diagnostic_figures.py
+python scripts/make_ghost_scale_pair.py
 
 # tests
 pytest -q
@@ -897,9 +896,7 @@ config/default.yaml             every parameter, for every version, plus the sol
 results/                        committed summary CSVs and JSON verdicts. V1-V5 wrote flat into
                                 results/; V6 onward use one subdirectory per version. See
                                 results/README.md
-figures/walkthrough/            the 25 plates WALKTHROUGH.md is built from
-figures/social/                 the distribution slides, the PDF, the preview image
-figures/diagnostics/            the recovery panels, the difficulty axis, the uptake curve
+figures/walkthrough/            the 26 plates WALKTHROUGH.md is built from
 notebooks/walkthrough.ipynb     runs E1 and E2 end to end, narrated
 scripts/                        chart rebuilders, the document generators, and the independent
                                 reimplementation of the two-gates result

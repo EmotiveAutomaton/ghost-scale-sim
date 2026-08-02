@@ -25,9 +25,10 @@ invariants:     ## model-invariant tests only (Spec §10)
 nulls:          ## null-condition tests only (Spec §9)
 	$(PYTHON) -m pytest tests/test_nulls.py -q
 
-figures:        ## redraw research charts from committed CSVs, then the social slides
+figures:        ## redraw every chart from committed verdict files
 	$(PYTHON) scripts/rebuild_figures.py
-	$(PYTHON) scripts/make_social_figures.py
+	$(PYTHON) scripts/make_walkthrough_plates.py
+	$(PYTHON) scripts/make_ghost_scale_pair.py
 
 e1:; $(PYTHON) -m ghostscale.experiments.e1_crash $(if $(WORKERS),--workers $(WORKERS),)
 e2:; $(PYTHON) -m ghostscale.experiments.e2_variance $(if $(WORKERS),--workers $(WORKERS),)

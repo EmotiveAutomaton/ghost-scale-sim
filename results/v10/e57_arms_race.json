@@ -15,27 +15,27 @@
     },
     {
       "n_train": 8,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 1.0
+      "human_careful": 0.325,
+      "human_fast": 0.425,
+      "machine": 0.5
     },
     {
       "n_train": 32,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 0.9375
+      "human_careful": 0.3,
+      "human_fast": 0.475,
+      "machine": 0.6
     },
     {
       "n_train": 128,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 0.5625
+      "human_careful": 0.65,
+      "human_fast": 0.325,
+      "machine": 0.7
     },
     {
       "n_train": 512,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 0.4375
+      "human_careful": 0.45,
+      "human_fast": 0.275,
+      "machine": 0.5
     }
   ],
   "control_no_evasion": [
@@ -47,82 +47,82 @@
     },
     {
       "n_train": 8,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 1.0
+      "human_careful": 0.325,
+      "human_fast": 0.425,
+      "machine": 0.5
     },
     {
       "n_train": 32,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 1.0
+      "human_careful": 0.225,
+      "human_fast": 0.325,
+      "machine": 0.625
     },
     {
       "n_train": 128,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 1.0
+      "human_careful": 0.25,
+      "human_fast": 0.3,
+      "machine": 0.625
     },
     {
       "n_train": 512,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 1.0
+      "human_careful": 0.175,
+      "human_fast": 0.125,
+      "machine": 0.575
     }
   ],
   "stale_detector": [
     {
       "evasion": 0.0,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 1.0
+      "human_careful": 0.175,
+      "human_fast": 0.125,
+      "machine": 0.575
     },
     {
       "evasion": 0.25,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 0.9375
+      "human_careful": 0.175,
+      "human_fast": 0.125,
+      "machine": 0.475
     },
     {
       "evasion": 0.5,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 0.5625
+      "human_careful": 0.175,
+      "human_fast": 0.125,
+      "machine": 0.325
     },
     {
       "evasion": 0.75,
-      "human_careful": 0.0,
-      "human_fast": 0.0,
-      "machine": 0.4375
+      "human_careful": 0.175,
+      "human_fast": 0.125,
+      "machine": 0.175
     }
   ],
   "H10.7": {
-    "outcome": "MISFIRING_STILL_DECLINES_UNDER_CO_EVOLUTION",
+    "outcome": "MISFIRING_IS_NON_MONOTONE_ONCE_CONTENT_FIGHTS_BACK",
     "false_alarm_by_step_co_evolution": [
       0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
+      0.325,
+      0.3,
+      0.65,
+      0.45
     ],
     "false_alarm_by_step_control": [
       0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
+      0.325,
+      0.225,
+      0.25,
+      0.175
     ]
   },
   "H10.8": {
     "outcome": "THE_STALE_DETECTOR_FAILS_ASYMMETRICALLY",
-    "hit_rate_change": -0.5625,
+    "hit_rate_change": -0.39999999999999997,
     "false_alarm_change": 0.0,
     "how_to_read": "a detector that merely decayed would lose hits and gain false alarms in proportion. One that loses hits while holding its false-alarm rate has not become unreliable -- it has become a detector that mostly says HUMAN and is confident when it is wrong. Aggregate rates hide this, which is what E53 reported."
   },
   "null_n49": {
     "statement": "with evasion off, this harness reproduces E53's monotone decline",
-    "passed": false,
+    "passed": true,
     "why": "otherwise the harness changed the old result and no comparison is valid"
   },
-  "n_obs": 16
+  "n_obs": 40
 }

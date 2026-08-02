@@ -952,6 +952,59 @@ def plate_25_a_defence_that_works():
            "The first constructive result in ten versions, and the only one aimed at alignment.")
 
 
+# =========================================================================== #
+# 26 - the arms race: what happens once the content fights back.
+# =========================================================================== #
+def plate_26_the_arms_race():
+    """Two lines, because the finding IS the divergence between them.
+
+    A bar chart cannot carry this. The claim is not that one number is bigger than another, it is
+    that the SHAPE changes: with nobody fighting back the misfiring falls away cleanly, and with an
+    adversary in the world it stops falling and turns back up. The control line is what makes the
+    other one mean something, so both are drawn and the control is drawn quieter.
+    """
+    d = load("v10/e57_arms_race.json")
+    co = d["co_evolution"]
+    ctrl = d["control_no_evasion"]
+
+    x = list(range(len(co)))
+    labels = [str(r["n_train"]) for r in co]
+    y_co = [float(r["human_careful"]) for r in co]
+    y_ct = [float(r["human_careful"]) for r in ctrl]
+    peak = max(range(len(y_co)), key=lambda i: y_co[i])
+
+    fig, ax = plate(
+        "Better AI detectors mean fewer false accusations, right up until the content fights back.",
+        "How often careful HUMAN writing gets flagged as machine-made, as the detector gets better. "
+        "The grey line is a world with no evasion in it. The red line is one where both sides "
+        "improve together.",
+        "E57 - results/v10/e57_arms_race.json - false-alarm rate on careful human writing; the "
+        "no-evasion arm reproduces the earlier result exactly, so this is not a different rig")
+
+    ax.plot(x, y_ct, "-o", color=NEUTRAL, lw=2.6, ms=8, zorder=3)
+    ax.plot(x, y_co, "-o", color=MACHINE, lw=3.4, ms=10, zorder=4)
+
+    # Below the grey line, not above it. Above, the second line of the label lands exactly on the
+    # series it is naming. The plate audit cannot see that -- it checks text against text, not text
+    # against a drawn line -- which is a reminder that the audit narrows the eyeball job rather
+    # than replacing it.
+    annotate(ax, x[-1] + 0.02, y_ct[-1] - 0.035, "nobody fighting back:\nmisfiring falls away",
+             color=MUTED, fontsize=12, weight="bold", va="top", ha="right")
+    annotate(ax, x[peak], y_co[peak] + 0.055,
+             f"{y_co[peak]:.0%} of careful human writing\nwrongly flagged",
+             color=MACHINE, fontsize=12.5, weight="bold", ha="center")
+    annotate(ax, x[1] - 0.08, y_co[1] + 0.05, "both sides\nimproving together",
+             color=MACHINE, fontsize=12, weight="bold", va="bottom")
+
+    ax.set_ylim(-0.04, max(y_co) * 1.42)
+    ax.set_xlim(-0.45, len(x) - 0.35)
+    ax.set_xticks(x, labels, fontsize=11.5)
+    clean_axis(ax, "false accusations", "examples the detector has learned from")
+    ax.set_yticks([])
+    record(save(fig, "26_the_arms_race"),
+           "The reason detection is a losing race, and the reason the target has to change.")
+
+
 PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_04_method_not_purpose, plate_05_intent_unlocks, plate_06_two_mechanisms,
           plate_07_reputation_blindness, plate_08_expertise_substitutes,
@@ -962,7 +1015,8 @@ PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_20_rejection_is_not_protection, plate_21_two_gates_settled,
           plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price,
           plate_24_what_its_made_of,
-          plate_25_a_defence_that_works]
+          plate_25_a_defence_that_works,
+          plate_26_the_arms_race]
 
 
 def main() -> None:
