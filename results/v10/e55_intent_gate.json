@@ -1,0 +1,332 @@
+{
+  "experiment": "E55",
+  "hypotheses": [
+    "H10.1",
+    "H10.2",
+    "H10.3",
+    "H10.4"
+  ],
+  "question": "Can a reader that reconstructs the maker catch what a reader that inspects the surface cannot -- and what does it cost?",
+  "plain_language": "Coordinated networks now publish at scale specifically to be absorbed by models rather than read by people. Surface filtering cannot catch that, because surface quality is the thing being optimised. The question is whether asking WHO MADE THIS AND WHY catches it instead, and what that costs on genuine work.",
+  "may_not_claim": "the contamination is documented; no causal attribution of real-world model drift to any real-world actor is made here, and none is supported by this experiment",
+  "grid": [
+    {
+      "corpus": "clean",
+      "reader": "intent_handset_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.15063960034072374,
+      "ghost_column_error": 4.795022601890744,
+      "genuine_retained": 1.2335223839124236,
+      "value_drift": 0.008883152797381832,
+      "mean_gate": 0.9214236907501862
+    },
+    {
+      "corpus": "clean",
+      "reader": "intent_learned_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.15226201476151907,
+      "ghost_column_error": 4.795022601879794,
+      "genuine_retained": 1.2356378427408654,
+      "value_drift": 0.003660230231449603,
+      "mean_gate": 0.9748182327067046
+    },
+    {
+      "corpus": "clean",
+      "reader": "intent_plus_rider",
+      "seed": 0.0,
+      "human_model_corrupted": 0.8566131176495655,
+      "ghost_column_error": 4.794872713954567,
+      "genuine_retained": 0.1694152684027165,
+      "value_drift": 0.031075902322417928,
+      "mean_gate": 0.734444590064602
+    },
+    {
+      "corpus": "clean",
+      "reader": "intent_reconstructibility",
+      "seed": 0.0,
+      "human_model_corrupted": 0.15268304890006304,
+      "ghost_column_error": 4.795022601874711,
+      "genuine_retained": 1.2359178717349424,
+      "value_drift": 0.0028484893774552503,
+      "mean_gate": 0.9999907674331711
+    },
+    {
+      "corpus": "clean",
+      "reader": "label_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.15268325065288121,
+      "ghost_column_error": 4.7950226018747095,
+      "genuine_retained": 1.2359162705618723,
+      "value_drift": 0.002848647197572711,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "clean",
+      "reader": "no_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.15268325065288121,
+      "ghost_column_error": 4.7950226018747095,
+      "genuine_retained": 1.2359162705618723,
+      "value_drift": 0.002848647197572711,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "clean",
+      "reader": "surface_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.35623758448238774,
+      "ghost_column_error": 4.795022601883689,
+      "genuine_retained": 1.2378104209661966,
+      "value_drift": 0.001712475666516923,
+      "mean_gate": 0.875
+    },
+    {
+      "corpus": "disguised",
+      "reader": "intent_handset_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.9238983283912445,
+      "ghost_column_error": 4.795022511858225,
+      "genuine_retained": 1.0713606051532363,
+      "value_drift": 0.08539919480892699,
+      "mean_gate": 0.7610758364579038
+    },
+    {
+      "corpus": "disguised",
+      "reader": "intent_learned_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.8880735495869645,
+      "ghost_column_error": 4.795022442439725,
+      "genuine_retained": 1.0647269994749484,
+      "value_drift": 0.08551419182778089,
+      "mean_gate": 0.7773364324899453
+    },
+    {
+      "corpus": "disguised",
+      "reader": "intent_plus_rider",
+      "seed": 0.0,
+      "human_model_corrupted": 0.9989371137489763,
+      "ghost_column_error": 4.79501570359292,
+      "genuine_retained": 0.13309131731369042,
+      "value_drift": 0.023127536132539137,
+      "mean_gate": 0.5103929256283394
+    },
+    {
+      "corpus": "disguised",
+      "reader": "intent_reconstructibility",
+      "seed": 0.0,
+      "human_model_corrupted": 0.889063859117595,
+      "ghost_column_error": 4.795022560706476,
+      "genuine_retained": 1.104102745674948,
+      "value_drift": 0.09091464303198676,
+      "mean_gate": 0.7818738396096908
+    },
+    {
+      "corpus": "disguised",
+      "reader": "label_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 1.1601648713660824,
+      "ghost_column_error": 4.795019325123378,
+      "genuine_retained": 0.8147825261595824,
+      "value_drift": 0.036332539819761644,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "disguised",
+      "reader": "no_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 1.1601648713660824,
+      "ghost_column_error": 4.795019325123378,
+      "genuine_retained": 0.8147825261595824,
+      "value_drift": 0.036332539819761644,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "disguised",
+      "reader": "surface_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.7365068612857172,
+      "ghost_column_error": 4.795022466330454,
+      "genuine_retained": 1.0475053860871575,
+      "value_drift": 0.00574171910443122,
+      "mean_gate": 0.7083333333333334
+    },
+    {
+      "corpus": "empty",
+      "reader": "intent_handset_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.259251857183738,
+      "ghost_column_error": 3.7007934811774277,
+      "genuine_retained": 1.1903296934141465,
+      "value_drift": 0.08062517609490683,
+      "mean_gate": 0.9283663995246201
+    },
+    {
+      "corpus": "empty",
+      "reader": "intent_learned_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.2651761577717,
+      "ghost_column_error": 3.381731185192289,
+      "genuine_retained": 1.1944596006286723,
+      "value_drift": 0.004079009746457592,
+      "mean_gate": 0.9425898014588653
+    },
+    {
+      "corpus": "empty",
+      "reader": "intent_plus_rider",
+      "seed": 0.0,
+      "human_model_corrupted": 0.8775541987465918,
+      "ghost_column_error": 0.16317937283692746,
+      "genuine_retained": 0.19702489946940763,
+      "value_drift": 0.031374845760873446,
+      "mean_gate": 0.5358780561670434
+    },
+    {
+      "corpus": "empty",
+      "reader": "intent_reconstructibility",
+      "seed": 0.0,
+      "human_model_corrupted": 0.3621087399275908,
+      "ghost_column_error": 3.974880727916709,
+      "genuine_retained": 1.2005665352855561,
+      "value_drift": 0.304984061538379,
+      "mean_gate": 0.9565375659915066
+    },
+    {
+      "corpus": "empty",
+      "reader": "label_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.2685868991252169,
+      "ghost_column_error": 0.19150775267754835,
+      "genuine_retained": 1.1964770376885951,
+      "value_drift": 0.01602177024132974,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "empty",
+      "reader": "no_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.2685868991252169,
+      "ghost_column_error": 0.19150775267754835,
+      "genuine_retained": 1.1964770376885951,
+      "value_drift": 0.01602177024132974,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "empty",
+      "reader": "surface_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.2577687354359441,
+      "ghost_column_error": 4.795022601797599,
+      "genuine_retained": 1.1654752743684005,
+      "value_drift": 0.0010170385239470087,
+      "mean_gate": 0.5
+    },
+    {
+      "corpus": "mimic",
+      "reader": "intent_handset_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.22997841282593806,
+      "ghost_column_error": 4.795022601666399,
+      "genuine_retained": 1.1747875529460123,
+      "value_drift": 0.012251614815486714,
+      "mean_gate": 0.8972023609821752
+    },
+    {
+      "corpus": "mimic",
+      "reader": "intent_learned_values",
+      "seed": 0.0,
+      "human_model_corrupted": 0.22959275758665385,
+      "ghost_column_error": 4.7950226015694675,
+      "genuine_retained": 1.175537034399039,
+      "value_drift": 0.018185282578990408,
+      "mean_gate": 0.945381163415674
+    },
+    {
+      "corpus": "mimic",
+      "reader": "intent_plus_rider",
+      "seed": 0.0,
+      "human_model_corrupted": 0.6871990734720156,
+      "ghost_column_error": 4.795022509475837,
+      "genuine_retained": 0.2308059685458566,
+      "value_drift": 0.0032139555909001596,
+      "mean_gate": 0.8871698118753565
+    },
+    {
+      "corpus": "mimic",
+      "reader": "intent_reconstructibility",
+      "seed": 0.0,
+      "human_model_corrupted": 0.23128963149972503,
+      "ghost_column_error": 4.795022601500307,
+      "genuine_retained": 1.178559353411613,
+      "value_drift": 0.024398200076731588,
+      "mean_gate": 0.9946135645263642
+    },
+    {
+      "corpus": "mimic",
+      "reader": "label_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.23166442249454386,
+      "ghost_column_error": 4.795022601493743,
+      "genuine_retained": 1.1763413606720254,
+      "value_drift": 0.024109609468156892,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "mimic",
+      "reader": "no_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.23166442249454386,
+      "ghost_column_error": 4.795022601493743,
+      "genuine_retained": 1.1763413606720254,
+      "value_drift": 0.024109609468156892,
+      "mean_gate": 1.0
+    },
+    {
+      "corpus": "mimic",
+      "reader": "surface_filter",
+      "seed": 0.0,
+      "human_model_corrupted": 0.22346239275429167,
+      "ghost_column_error": 4.795022601517934,
+      "genuine_retained": 1.1413740001717831,
+      "value_drift": 0.06777669511185393,
+      "mean_gate": 0.9583333333333334
+    }
+  ],
+  "H10.1": {
+    "outcome": "INTENT_DOES_NOT_BEAT_SURFACE_ON_EMPTY_GROOMING"
+  },
+  "H10.2": {
+    "outcome": "INTENT_IS_NO_BETTER_ON_MIMICRY_AS_PREDICTED",
+    "predicted_against_interest": true
+  },
+  "H10.3": {
+    "outcome": "THE_DOOM_LOOP_IS_REAL"
+  },
+  "H10.4": {
+    "outcome": "A_SHUT_VALUE_GATE_STOPS_VALUE_DRIFT",
+    "rider_drift": 0.023127536132539137,
+    "ungated_drift": 0.036332539819761644,
+    "value_gated_drift": 0.08539919480892699
+  },
+  "null_n45": {
+    "statement": "on a clean corpus the intent-gate costs nothing",
+    "retention_cost_by_reader": {
+      "intent_reconstructibility": -1.601173070131523e-06,
+      "intent_handset_values": 0.0023938866494486177,
+      "intent_learned_values": 0.0002784278210068436,
+      "intent_plus_rider": 1.0665010021591557
+    },
+    "passed": false,
+    "why": "the honesty check. E8's own control failed three times and left the project's most consequential question permanently withheld. The author recorded before the run that he expected this one to fail."
+  },
+  "null_n46": {
+    "statement": "the surface filter works on something",
+    "passed": true
+  },
+  "null_n50": {
+    "statement": "no value drift on a clean corpus",
+    "passed": true
+  },
+  "n_artifacts": 24,
+  "n_learners": 1,
+  "contamination": 0.3
+}

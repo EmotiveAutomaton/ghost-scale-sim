@@ -62,6 +62,8 @@ If these are wrong, the argument is wrong.
 
 | # | The question | Where it stands |
 |---|---|---|
+| E55 | Can a reader that reconstructs the maker defend itself against content written to be absorbed rather than read? | **Yes, on the case that matters — and inspecting the surface does nothing at all.** Against content carrying real structure under a false claim of origin, a surface-quality filter leaves a learner exactly as damaged as no filter (0.826 against 0.827). Asking *who made this and why* cuts the damage **23%** and restores its reading of genuine human work from 0.84 to **1.00** — at **zero cost on a clean corpus**, and **without ever reading the label**. *Reproduces in 83% of randomly parameterised models: mostly architectural, partly the theory's.* |
+| E56 | Can you take someone's method without taking their purpose? | **Yes, and that is what a guard actually does.** Put your guard up before you start and it blocks purpose and values by about half — and method by **four percent**. Not a stipulation: method arrives continuously from the first look, purpose resolves later, and a guard raised early can only block what has not arrived yet. **You do not adopt your opponent's aims. You adopt their technique.** *Reproduces in 100% of random models — this one is architecture, not evidence for the theory.* |
 | E2 | What does a false claim of authorship do to a reader? | **Every reader becomes certain and no two agree.** Told the truth about the same object they are appropriately unsure. On a signed measure the lie carries readers **away** from the maker's intent — four times further wrong than the truth carries them right. |
 | E36 | Does working out what someone was for unlock how they did it? | **Yes.** Within a single reading, a reader picks up 2.6× more of the maker's method *after* it settles on what the work was for. Intent is the key; the method is what it opens. |
 | E31 · E30 | Does compressed intent transmit? | **Yes — as method.** Depth moves how much of the maker's *process* transfers (ρ 0.93) and provably cannot move how much of the *purpose* does, because the construction holds the purpose equally readable at every depth. Five versions measured the purpose and found nothing. |
@@ -119,6 +121,9 @@ The section a stranger should use to decide whether to trust the rest.
 | E29 | A spike in value divergence separates the gates | **The pre-registration's own prediction, and it died.** Low assumed rationality spikes too. |
 | N21 | Depth is not effort | **Still open, and reported as failing.** The pre-registered contrast returns *effort can manufacture depth* under exact inference (ratio 1.26 against a bar of 3.0). On what actually transfers, depth dominates effort **97-fold** — so the *estimate* of depth is contaminated by effort while the *transfer* is not. Both reported; the original decides. |
 | E54 | A label saying *read this differently* is the affordance the Ghost Scale needs | **Failed, and it is the proposal that pays.** The mechanism is real — a gate shut *before* engaging protects where one shut after does not (+0.015, interval [0.011, 0.019]). It is also small: 6% of drift. Applied to only the marked half of a stream it disappears, and **neither label separates from no label at all.** Second time this project has looked for a mechanism by which the Ghost Scale would work and not found one. |
+| E57 | E53's finding that better detectors misfire *less* | **Overturned by putting an adversary in the world.** E53 swept detector skill against content that never fought back. Sweep both — detection improving, evasion improving with it — and the false-alarm rate stops falling and **peaks at 65% of careful human work**. With evasion switched off the old decline reproduces exactly, so this is not a different harness giving a different answer. **The original conclusion was an artifact of a world with nobody fighting back in it.** |
+| E57b | What happens to a reader whose detector stops updating | **It stops discriminating without stopping accusing.** As content moves away from it, its hit rate on machine work falls 0.575 → **0.175** while its false-alarm rate on human work does not move at all — it ends firing on people and machines at exactly the same rate. It is a coin flip that still believes it is a detector, and its confidence comes from sample size, which only grows. *Aggregate rates hide this completely, which is what E53 reported.* |
+| H10.4 | Values ride in on process even through a shut gate | **Withheld — the instrument failed its own control.** The most attractive idea in version 10. Its test arm damages a learner reading a corpus with **no contamination in it at all**, which means it was measuring a broken update rather than a mechanism. In the human reader the effect is real but **under its own pre-registered bar** (0.193 against 0.2). *Not refuted. Not established. The thing most worth building properly.* |
 | E53 | Sharper AI-detection will produce *more* false accusation | **Failed, and the disagreement it was built on was mine.** A learned surface heuristic does discriminate (0.63 hit, 0.23 false alarm) and never stops misfiring. But sharpening it makes misfiring **rarer**, not commoner — 0.43 → 0.23. And the eye-tracking result it was meant to reconcile was never in conflict: the model already reads machine work less than human work. **The two were being scored against each other in error.** |
 | E20 | The collapse and the invention peak occupy one band | **Retired.** The peak is unchanged and is not in question. The co-location held under a superseded solver: exact arithmetic leaves the reader *less* uncertain at partial overlap, so the conjunction stops holding. **Removed from this README and the prediction card.** |
 
@@ -250,6 +255,9 @@ survives. If it survives every time, the finding came from the shape.
 | A false label moves you away from the truth | **100%** |
 | Depth moves the method, not the purpose | **98%** |
 | Confident belief under a false label *(validation pass)* | **64%** |
+| The gate blocks purpose and passes method *(V10)* | **100%** |
+| Intent-gating beats surface filtering on disguised content *(V10)* | **83%** |
+| A stale detector fails asymmetrically *(V10)* | **75%** |
 | **The wall is a distinct failure** | **0%** |
 
 **This does not throw any result out.** Every one is true and reproducible. What changes is the
@@ -385,12 +393,12 @@ reinterpreted is not counted as held.
 
 | outcome | count | which |
 |---|---|---|
-| held | 26 | E1–E7, E9, E10, E16–E20, E31–E33, E35–E38, E40–E43, E48–E51 |
-| held in part | 9 | E21, E28, E29, E30, E39, E49, E52, E53, E54 |
+| held | 28 | E1–E7, E9, E10, E16–E20, E31–E33, E35–E38, E40–E43, E48–E51, E55, E56 |
+| held in part | 10 | E21, E28, E29, E30, E39, E49, E52, E53, E54, E57 |
 | did not hold | 5 | E11, E12, E14, E15, N21 |
 | retired after a later pass | 1 | E20's crash/peak co-location |
 | classification refused | 1 | E13 |
-| withheld, never passed its own control | 1 | E8 |
+| withheld, never passed its own control | 2 | E8, H10.4 (values riding in on process) |
 | not answerable in simulation | 1 | E34 |
 
 **Three things this count does not tell you, and they matter more than the count.**
@@ -398,11 +406,12 @@ reinterpreted is not counted as held.
 1. **Two of the three headlines tested for it are architectural** — see
    [How much of this is the theory?](#how-much-of-this-is-the-theory). A held prediction whose
    false-positive rate is 100% is still held. It is just not distinguishing evidence.
-2. **Across versions 6, 7 and 9 a design or criterion was changed after seeing a result in eleven
-   places** — seven found by the version 8 audit, four more added openly by version 9. Each change
-   is documented where it happened; the version 6–7 ledger is in `results/v8/s1_severity.json` and
-   version 9's is a table in [RESULTS_V9.md](RESULTS_V9.md). A high hit rate with a forking-paths
-   count that size should be read with that in mind.
+2. **Across versions 6, 7, 9 and 10 a design or criterion was changed after seeing a result in
+   eighteen places** — seven found by the version 8 audit, four added openly by version 9, seven
+   more by version 10. Each change is documented where it happened; the version 6–7 ledger is in
+   `results/v8/s1_severity.json`, and versions 9 and 10 each carry a deviations table in their own
+   results document. A high hit rate with a forking-paths count that size should be read with that
+   in mind.
 3. **The project has no forward test.** It had one sealed prediction, and its status was withdrawn
    in version 8 because the author does not recognise authoring it. The experiment was run anyway
    (E52) and its primary held; but a commitment nobody remembers making is not a forward test, and
@@ -516,6 +525,9 @@ python scripts/write_results_v8.py
 
 # version 9 — the minimal-model programme, and the two literature experiments
 python run_v9.py
+
+# version 10 — the reader as a defence; the severity pass runs last
+python run_v10.py
 
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/make_walkthrough_plates.py

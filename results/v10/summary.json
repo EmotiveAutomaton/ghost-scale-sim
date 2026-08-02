@@ -1,0 +1,976 @@
+{
+  "E56": {
+    "experiment": "E56",
+    "hypotheses": [
+      "H10.5",
+      "H10.6"
+    ],
+    "question": "Is the gate selective -- does adversarial reading block purpose and values while letting method through?",
+    "plain_language": "Two opponents come to understand each other better by playing. The proposed mechanism is not that the guard fails, but that it is pointed at the wrong thing: method arrives continuously from the first look, purpose only resolves late, and a guard raised before you start can only block what has not arrived yet.",
+    "by_stance_and_depth": [
+      {
+        "stance": "adversarial",
+        "depth": 1,
+        "process_uptake": -0.002775320925993371,
+        "goal_uptake": 0.26752638522097505,
+        "value_uptake": 3.0237216064444143,
+        "final_gate": 0.7326102594121828,
+        "mean_gate": 0.6339485065030699,
+        "process_ungated": -0.004134058326824191,
+        "goal_ungated": 1.4286707697010397,
+        "observer": 19.5,
+        "engaged": 0.51875
+      },
+      {
+        "stance": "adversarial",
+        "depth": 2,
+        "process_uptake": 0.06571193624881592,
+        "goal_uptake": 0.2684870391766857,
+        "value_uptake": 3.0297923435000786,
+        "final_gate": 0.7278671585394783,
+        "mean_gate": 0.6342185035639557,
+        "process_ungated": 0.10061916945813972,
+        "goal_ungated": 1.3944002314291775,
+        "observer": 19.5,
+        "engaged": 0.5703125
+      },
+      {
+        "stance": "adversarial",
+        "depth": 3,
+        "process_uptake": 0.09324708282071437,
+        "goal_uptake": 0.27679650952416235,
+        "value_uptake": 3.140518665754648,
+        "final_gate": 0.7320589252988846,
+        "mean_gate": 0.6398364530613376,
+        "process_ungated": 0.1365152520970765,
+        "goal_ungated": 1.4255943594163767,
+        "observer": 19.5,
+        "engaged": 0.5890625
+      },
+      {
+        "stance": "sympathetic",
+        "depth": 1,
+        "process_uptake": -0.0032666442248703124,
+        "goal_uptake": 0.5265233495840993,
+        "value_uptake": 5.480834437343071,
+        "final_gate": 0.7326102594121828,
+        "mean_gate": 0.6706390825532403,
+        "process_ungated": -0.004134058326824191,
+        "goal_ungated": 1.4286707697010397,
+        "observer": 19.5,
+        "engaged": 0.51875
+      },
+      {
+        "stance": "sympathetic",
+        "depth": 2,
+        "process_uptake": 0.06932736134775563,
+        "goal_uptake": 0.5170390986355258,
+        "value_uptake": 5.409381142344265,
+        "final_gate": 0.7278671585394783,
+        "mean_gate": 0.6702236664219263,
+        "process_ungated": 0.10061916945813972,
+        "goal_ungated": 1.3944002314291775,
+        "observer": 19.5,
+        "engaged": 0.5703125
+      },
+      {
+        "stance": "sympathetic",
+        "depth": 3,
+        "process_uptake": 0.09622183080878385,
+        "goal_uptake": 0.5219735232785785,
+        "value_uptake": 5.524670095742126,
+        "final_gate": 0.7320589252988846,
+        "mean_gate": 0.6756887923913848,
+        "process_ungated": 0.1365152520970765,
+        "goal_ungated": 1.4255943594163767,
+        "observer": 19.5,
+        "engaged": 0.5890625
+      }
+    ],
+    "H10.5": {
+      "outcome": "THE_GATE_BLOCKS_PURPOSE_AND_PASSES_METHOD",
+      "adversarial_over_sympathetic": {
+        "process": 0.9624183261486612,
+        "goal": 0.5191895610957897,
+        "value": 0.5601033596877973
+      },
+      "how_to_read": "a ratio near 1.0 means that channel was not suppressed. A uniform gate gives all three the same ratio; only a schedule can separate them."
+    },
+    "H10.6": {
+      "outcome": "METHOD_AND_VALUE_UPTAKE_ARE_INDEPENDENT",
+      "partial_correlation_controlling_for_goal_uptake": 0.19323716234809207,
+      "interval": [
+        0.07778006742401844,
+        0.31254947619260404
+      ],
+      "pre_registered_bar": 0.2,
+      "by_stance_declared_post_hoc": {
+        "sympathetic": {
+          "partial_r": 0.1811159868554089,
+          "interval": [
+            0.022673450645534353,
+            0.32224083821962857
+          ]
+        },
+        "adversarial": {
+          "partial_r": 0.23046918527005103,
+          "interval": [
+            0.03751022007167854,
+            0.3995883839243303
+          ]
+        }
+      },
+      "why_it_matters": "this is the rider mechanism. If it holds, a reader can refuse someone's purpose and still acquire their commitments by taking up their method -- which is what E55's reader 7 tests in a learner, and what makes a value gate insufficient."
+    },
+    "null_n48": {
+      "statement": "the design varies process uptake while holding goal readability fixed",
+      "goal_spread_across_depth": 0.034270538271862216,
+      "process_spread_across_depth": 0.1406493104239007,
+      "passed": true,
+      "why": "E31's construction holds the goal equally readable at every depth. If process did not vary more than goal, this design cannot answer its own question -- the failure that produced three inconsistent passes in V6."
+    },
+    "authors_recorded_prior": "values ride in on process, citing mere exposure. The author stated before the run that a null here would be read as evidence the MODEL is wrong rather than as an uninteresting negative.",
+    "n_obs": 40,
+    "depths": [
+      1,
+      2,
+      3
+    ]
+  },
+  "E57": {
+    "experiment": "E57",
+    "hypotheses": [
+      "H10.7",
+      "H10.8"
+    ],
+    "question": "What happens to a learned detector when the content is trying not to be caught -- and to a reader whose detector stopped updating?",
+    "plain_language": "E53 measured a world with no adversary in it. Detection improves, but so does evasion, because once people know the reflex exists they optimise against it. And some readers stop updating.",
+    "co_evolution": [
+      {
+        "n_train": 0,
+        "human_careful": 0.0,
+        "human_fast": 0.0,
+        "machine": 0.0
+      },
+      {
+        "n_train": 8,
+        "human_careful": 0.325,
+        "human_fast": 0.425,
+        "machine": 0.5
+      },
+      {
+        "n_train": 32,
+        "human_careful": 0.3,
+        "human_fast": 0.475,
+        "machine": 0.6
+      },
+      {
+        "n_train": 128,
+        "human_careful": 0.65,
+        "human_fast": 0.325,
+        "machine": 0.7
+      },
+      {
+        "n_train": 512,
+        "human_careful": 0.45,
+        "human_fast": 0.275,
+        "machine": 0.5
+      }
+    ],
+    "control_no_evasion": [
+      {
+        "n_train": 0,
+        "human_careful": 0.0,
+        "human_fast": 0.0,
+        "machine": 0.0
+      },
+      {
+        "n_train": 8,
+        "human_careful": 0.325,
+        "human_fast": 0.425,
+        "machine": 0.5
+      },
+      {
+        "n_train": 32,
+        "human_careful": 0.225,
+        "human_fast": 0.325,
+        "machine": 0.625
+      },
+      {
+        "n_train": 128,
+        "human_careful": 0.25,
+        "human_fast": 0.3,
+        "machine": 0.625
+      },
+      {
+        "n_train": 512,
+        "human_careful": 0.175,
+        "human_fast": 0.125,
+        "machine": 0.575
+      }
+    ],
+    "stale_detector": [
+      {
+        "evasion": 0.0,
+        "human_careful": 0.175,
+        "human_fast": 0.125,
+        "machine": 0.575
+      },
+      {
+        "evasion": 0.25,
+        "human_careful": 0.175,
+        "human_fast": 0.125,
+        "machine": 0.475
+      },
+      {
+        "evasion": 0.5,
+        "human_careful": 0.175,
+        "human_fast": 0.125,
+        "machine": 0.325
+      },
+      {
+        "evasion": 0.75,
+        "human_careful": 0.175,
+        "human_fast": 0.125,
+        "machine": 0.175
+      }
+    ],
+    "H10.7": {
+      "outcome": "MISFIRING_IS_NON_MONOTONE_ONCE_CONTENT_FIGHTS_BACK",
+      "false_alarm_by_step_co_evolution": [
+        0.0,
+        0.325,
+        0.3,
+        0.65,
+        0.45
+      ],
+      "false_alarm_by_step_control": [
+        0.0,
+        0.325,
+        0.225,
+        0.25,
+        0.175
+      ]
+    },
+    "H10.8": {
+      "outcome": "THE_STALE_DETECTOR_FAILS_ASYMMETRICALLY",
+      "hit_rate_change": -0.39999999999999997,
+      "false_alarm_change": 0.0,
+      "how_to_read": "a detector that merely decayed would lose hits and gain false alarms in proportion. One that loses hits while holding its false-alarm rate has not become unreliable -- it has become a detector that mostly says HUMAN and is confident when it is wrong. Aggregate rates hide this, which is what E53 reported."
+    },
+    "null_n49": {
+      "statement": "with evasion off, this harness reproduces E53's monotone decline",
+      "passed": true,
+      "why": "otherwise the harness changed the old result and no comparison is valid"
+    },
+    "n_obs": 40
+  },
+  "E54R": {
+    "experiment": "E54-R",
+    "what_this_is": "a rescoring of E54 on signed error rather than unsigned movement. Not a new experiment, and not a second chance -- the original scoring is reported beside it and the original decides.",
+    "stances": [
+      {
+        "stance": "adversarial",
+        "reader": 11.5,
+        "drift": 0.2523192332605917,
+        "signed_uptake": 0.8604281116191896
+      },
+      {
+        "stance": "sympathetic",
+        "reader": 11.5,
+        "drift": 0.2674042020857243,
+        "signed_uptake": 0.9069625920818584
+      }
+    ],
+    "labels": [
+      {
+        "label": "do_not_read",
+        "reader": 11.5,
+        "drift": 0.272683281210626,
+        "harm_from_misleading": -0.016528652262185566,
+        "gain_from_genuine": 0.9273141505410006
+      },
+      {
+        "label": "none",
+        "reader": 11.5,
+        "drift": 0.24258426552506884,
+        "harm_from_misleading": -0.011613494023564513,
+        "gain_from_genuine": 0.939130588849201
+      },
+      {
+        "label": "read_differently",
+        "reader": 11.5,
+        "drift": 0.24910448758218773,
+        "harm_from_misleading": -0.014422454014156883,
+        "gain_from_genuine": 0.9392727123598962
+      }
+    ],
+    "stance_on_error": {
+      "adversarial_minus_sympathetic_signed_uptake": {
+        "difference": -0.04653448046266865,
+        "interval": [
+          -0.054351014794460244,
+          -0.038022861303441326
+        ],
+        "separated_from_zero": true
+      },
+      "outcome": "THE_STANCE_SEPARATES_ON_ERROR_TOO"
+    },
+    "stance_on_drift_original": {
+      "sympathetic_minus_adversarial_drift": {
+        "difference": 0.015084968825132614,
+        "interval": [
+          0.010832047357536824,
+          0.019400906447409223
+        ],
+        "separated_from_zero": true
+      },
+      "note": "the pre-registered measure; reproduced here for comparability"
+    },
+    "labels_on_error": {
+      "no_label_minus_read_differently_harm": {
+        "difference": 0.0028089599905923705,
+        "interval": [
+          -0.009490348749356538,
+          0.01581471163637667
+        ],
+        "separated_from_zero": false
+      },
+      "no_label_minus_do_not_read_harm": {
+        "difference": 0.004915158238621057,
+        "interval": [
+          -0.043840212762181835,
+          0.051311969047541504
+        ],
+        "separated_from_zero": false
+      },
+      "outcome": "NO_LABEL_SEPARATES_ON_HARM_EITHER"
+    },
+    "n_readers": 24,
+    "n_encounters": 16
+  },
+  "E55": {
+    "experiment": "E55",
+    "hypotheses": [
+      "H10.1",
+      "H10.2",
+      "H10.3",
+      "H10.4"
+    ],
+    "question": "Can a reader that reconstructs the maker catch what a reader that inspects the surface cannot -- and what does it cost?",
+    "plain_language": "Coordinated networks now publish at scale specifically to be absorbed by models rather than read by people. Surface filtering cannot catch that, because surface quality is the thing being optimised. The question is whether asking WHO MADE THIS AND WHY catches it instead, and what that costs on genuine work.",
+    "may_not_claim": "the contamination is documented; no causal attribution of real-world model drift to any real-world actor is made here, and none is supported by this experiment",
+    "grid": [
+      {
+        "corpus": "clean",
+        "reader": "intent_handset_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.12929342982029715,
+        "ghost_column_error": 4.795022602130256,
+        "genuine_retained": 1.0530962478073345,
+        "value_drift": 0.09311287845223148,
+        "mean_gate": 0.9308676753976393
+      },
+      {
+        "corpus": "clean",
+        "reader": "intent_learned_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.1300618907846197,
+        "ghost_column_error": 4.795022602592517,
+        "genuine_retained": 1.0551009524754429,
+        "value_drift": 0.1282622857672536,
+        "mean_gate": 0.9479352595864404
+      },
+      {
+        "corpus": "clean",
+        "reader": "intent_plus_rider",
+        "seed": 1.0,
+        "human_model_corrupted": 0.9342339554999249,
+        "ghost_column_error": 4.79501664580698,
+        "genuine_retained": 0.1469701513867156,
+        "value_drift": 0.11393475440550559,
+        "mean_gate": 0.8125320553661307
+      },
+      {
+        "corpus": "clean",
+        "reader": "intent_reconstructibility",
+        "seed": 1.0,
+        "human_model_corrupted": 0.1307751192745099,
+        "ghost_column_error": 4.795022602943916,
+        "genuine_retained": 1.0543901422444384,
+        "value_drift": 0.09776705964904038,
+        "mean_gate": 0.9996260008781196
+      },
+      {
+        "corpus": "clean",
+        "reader": "label_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.13077432869550665,
+        "ghost_column_error": 4.795022602947431,
+        "genuine_retained": 1.0542330774502873,
+        "value_drift": 0.09776253987943272,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "clean",
+        "reader": "no_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.13077432869550665,
+        "ghost_column_error": 4.795022602947431,
+        "genuine_retained": 1.0542330774502873,
+        "value_drift": 0.09776253987943272,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "clean",
+        "reader": "surface_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.22532205742726852,
+        "ghost_column_error": 4.795022602951026,
+        "genuine_retained": 1.0689047452659919,
+        "value_drift": 0.05145596032293386,
+        "mean_gate": 0.8833333333333333
+      },
+      {
+        "corpus": "disguised",
+        "reader": "intent_handset_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.6941011743775047,
+        "ghost_column_error": 4.795022601670252,
+        "genuine_retained": 1.0055860622019515,
+        "value_drift": 0.039979436410469325,
+        "mean_gate": 0.811582656906098
+      },
+      {
+        "corpus": "disguised",
+        "reader": "intent_learned_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.5882791075864374,
+        "ghost_column_error": 4.795022601643937,
+        "genuine_retained": 0.9703721216434925,
+        "value_drift": 0.03532437270349579,
+        "mean_gate": 0.8361891670688234
+      },
+      {
+        "corpus": "disguised",
+        "reader": "intent_plus_rider",
+        "seed": 1.0,
+        "human_model_corrupted": 0.8558264654212029,
+        "ghost_column_error": 4.795021426552563,
+        "genuine_retained": 0.15339783462111212,
+        "value_drift": 0.041337471008755004,
+        "mean_gate": 0.7183762351428561
+      },
+      {
+        "corpus": "disguised",
+        "reader": "intent_reconstructibility",
+        "seed": 1.0,
+        "human_model_corrupted": 0.6334013349059943,
+        "ghost_column_error": 4.795022600721214,
+        "genuine_retained": 1.0005303010527722,
+        "value_drift": 0.014412634716814492,
+        "mean_gate": 0.8793244149812808
+      },
+      {
+        "corpus": "disguised",
+        "reader": "label_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.8268480209331729,
+        "ghost_column_error": 4.795022634205928,
+        "genuine_retained": 0.8392343067472181,
+        "value_drift": 0.03100590168182876,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "disguised",
+        "reader": "no_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.8268480209331729,
+        "ghost_column_error": 4.795022634205928,
+        "genuine_retained": 0.8392343067472181,
+        "value_drift": 0.03100590168182876,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "disguised",
+        "reader": "surface_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.825965954605525,
+        "ghost_column_error": 4.795022594967519,
+        "genuine_retained": 0.843194701038232,
+        "value_drift": 0.005431882788391896,
+        "mean_gate": 0.8250000000000001
+      },
+      {
+        "corpus": "empty",
+        "reader": "intent_handset_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.1482603694760894,
+        "ghost_column_error": 3.1377726100888075,
+        "genuine_retained": 1.1071976609082277,
+        "value_drift": 0.13157770785187253,
+        "mean_gate": 0.9173657613385443
+      },
+      {
+        "corpus": "empty",
+        "reader": "intent_learned_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.15142298202752705,
+        "ghost_column_error": 2.9268679318931574,
+        "genuine_retained": 1.1094062712186694,
+        "value_drift": 0.141800112026889,
+        "mean_gate": 0.9254083924125799
+      },
+      {
+        "corpus": "empty",
+        "reader": "intent_plus_rider",
+        "seed": 1.0,
+        "human_model_corrupted": 0.8480993269001086,
+        "ghost_column_error": 0.07804698072451195,
+        "genuine_retained": 0.17197087485443277,
+        "value_drift": 0.06599760847271118,
+        "mean_gate": 0.614096846418697
+      },
+      {
+        "corpus": "empty",
+        "reader": "intent_reconstructibility",
+        "seed": 1.0,
+        "human_model_corrupted": 0.1566818374357697,
+        "ghost_column_error": 3.577489188194956,
+        "genuine_retained": 1.107533895832894,
+        "value_drift": 0.11588866690465931,
+        "mean_gate": 0.9704384802622886
+      },
+      {
+        "corpus": "empty",
+        "reader": "label_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.15208787111058655,
+        "ghost_column_error": 0.14040871375968395,
+        "genuine_retained": 1.1106364763984964,
+        "value_drift": 0.14686008661176578,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "empty",
+        "reader": "no_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.15208787111058655,
+        "ghost_column_error": 0.14040871375968395,
+        "genuine_retained": 1.1106364763984964,
+        "value_drift": 0.14686008661176578,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "empty",
+        "reader": "surface_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.1776482584363658,
+        "ghost_column_error": 4.79502260114387,
+        "genuine_retained": 1.1040466182777056,
+        "value_drift": 0.14661637132140037,
+        "mean_gate": 0.6083333333333333
+      },
+      {
+        "corpus": "mimic",
+        "reader": "intent_handset_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.10487530647474859,
+        "ghost_column_error": 4.795022601524095,
+        "genuine_retained": 1.0744566225412786,
+        "value_drift": 0.1757349351816677,
+        "mean_gate": 0.9070591954829098
+      },
+      {
+        "corpus": "mimic",
+        "reader": "intent_learned_values",
+        "seed": 1.0,
+        "human_model_corrupted": 0.1060804780140464,
+        "ghost_column_error": 4.795022601499362,
+        "genuine_retained": 1.073915511333566,
+        "value_drift": 0.1687320879909018,
+        "mean_gate": 0.9249444194758416
+      },
+      {
+        "corpus": "mimic",
+        "reader": "intent_plus_rider",
+        "seed": 1.0,
+        "human_model_corrupted": 0.6433339228962193,
+        "ghost_column_error": 4.795021919326774,
+        "genuine_retained": 0.2016168843600802,
+        "value_drift": 0.07859975908435579,
+        "mean_gate": 0.8867259247417771
+      },
+      {
+        "corpus": "mimic",
+        "reader": "intent_reconstructibility",
+        "seed": 1.0,
+        "human_model_corrupted": 0.10519000632115309,
+        "ghost_column_error": 4.795022601459529,
+        "genuine_retained": 1.0768243352355307,
+        "value_drift": 0.17948876303085096,
+        "mean_gate": 0.9978849061643295
+      },
+      {
+        "corpus": "mimic",
+        "reader": "label_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.10557126934946015,
+        "ghost_column_error": 4.795022601457574,
+        "genuine_retained": 1.0754991021832248,
+        "value_drift": 0.17938186622734334,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "mimic",
+        "reader": "no_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.10557126934946015,
+        "ghost_column_error": 4.795022601457574,
+        "genuine_retained": 1.0754991021832248,
+        "value_drift": 0.17938186622734334,
+        "mean_gate": 1.0
+      },
+      {
+        "corpus": "mimic",
+        "reader": "surface_filter",
+        "seed": 1.0,
+        "human_model_corrupted": 0.12019239163923373,
+        "ghost_column_error": 4.795022601459434,
+        "genuine_retained": 1.082426550946712,
+        "value_drift": 0.18109506400677136,
+        "mean_gate": 0.9249999999999999
+      }
+    ],
+    "H10.1": {
+      "outcome": "INTENT_BEATS_SURFACE_ON_EMPTY_GROOMING"
+    },
+    "H10.2": {
+      "outcome": "INTENT_SURVIVES_MIMICRY",
+      "predicted_against_interest": true
+    },
+    "H10.3": {
+      "outcome": "LEARNED_VALUES_DO_NOT_ACCELERATE_DRIFT"
+    },
+    "H10.4": {
+      "outcome": "VALUES_RIDE_IN_ON_PROCESS_THROUGH_A_SHUT_GATE",
+      "rider_drift": 0.041337471008755004,
+      "ungated_drift": 0.03100590168182876,
+      "value_gated_drift": 0.039979436410469325
+    },
+    "null_n45": {
+      "statement": "on a clean corpus the intent-gate costs nothing",
+      "retention_cost_by_reader": {
+        "intent_reconstructibility": -0.0001570647941511183,
+        "intent_handset_values": 0.001136829642952808,
+        "intent_learned_values": -0.0008678750251556178,
+        "intent_plus_rider": 0.9072629260635716
+      },
+      "passed": false,
+      "why": "the honesty check. E8's own control failed three times and left the project's most consequential question permanently withheld. The author recorded before the run that he expected this one to fail."
+    },
+    "null_n46": {
+      "statement": "the surface filter works on something",
+      "passed": true
+    },
+    "null_n50": {
+      "statement": "no value drift on a clean corpus",
+      "passed": false
+    },
+    "n_artifacts": 40,
+    "n_learners": 3,
+    "contamination": 0.3
+  },
+  "S2": {
+    "check": "S-2, the severity pass on V10",
+    "why": "V9 established that every finding in this project rests on the reader modelling a maker, so a finding generated by looking at this model will reproduce whether or not it is true. This is what separates the two cases.",
+    "how_to_read": "a HIGH rate means the finding comes from the structural commitment -- which is the theory, but the part shared with any account built the same way, so it does not distinguish this framework from a competitor. A LOW rate means the theory's specific commitments are doing the work. Neither throws a result out; both change the sentence you may write after it.",
+    "rates": {
+      "E55 intent beats surface on disguised grooming": {
+        "finding": "intent-gating beats surface filtering on disguised grooming",
+        "draws": 12,
+        "reproduced": 10,
+        "false_positive_rate": 0.8333333333333334
+      },
+      "E56 the gate blocks purpose and passes method": {
+        "finding": "adversarial reading blocks purpose and passes method",
+        "draws": 12,
+        "reproduced": 12,
+        "false_positive_rate": 1.0
+      },
+      "E57 the stale detector fails asymmetrically": {
+        "finding": "a stale detector fails asymmetrically",
+        "draws": 12,
+        "reproduced": 9,
+        "false_positive_rate": 0.75
+      }
+    },
+    "detail": {
+      "E55 intent beats surface on disguised grooming": {
+        "finding": "intent-gating beats surface filtering on disguised grooming",
+        "draws": 12,
+        "reproduced": 10,
+        "false_positive_rate": 0.8333333333333334,
+        "rows": [
+          {
+            "draw": 0,
+            "intent": 0.9570996441183542,
+            "surface": 0.9364614230169268,
+            "no_filter": 1.182895649646709,
+            "reproduced": 0
+          },
+          {
+            "draw": 1,
+            "intent": 0.513468320479718,
+            "surface": 0.8686238993268793,
+            "no_filter": 1.049604897552941,
+            "reproduced": 1
+          },
+          {
+            "draw": 2,
+            "intent": 0.8801736541905474,
+            "surface": 1.049818027097087,
+            "no_filter": 1.127449522784662,
+            "reproduced": 1
+          },
+          {
+            "draw": 3,
+            "intent": 0.8299409288657049,
+            "surface": 0.8903416843606711,
+            "no_filter": 1.1075647303957876,
+            "reproduced": 1
+          },
+          {
+            "draw": 4,
+            "intent": 0.9401656303041669,
+            "surface": 1.059377832854616,
+            "no_filter": 1.1550609754218542,
+            "reproduced": 1
+          },
+          {
+            "draw": 5,
+            "intent": 0.841378485788547,
+            "surface": 1.0188128292405536,
+            "no_filter": 1.1722146139293854,
+            "reproduced": 1
+          },
+          {
+            "draw": 6,
+            "intent": 0.8566659228912421,
+            "surface": 1.0232493931772602,
+            "no_filter": 1.2723528923721599,
+            "reproduced": 1
+          },
+          {
+            "draw": 7,
+            "intent": 0.8521088666459995,
+            "surface": 0.8746919348962512,
+            "no_filter": 1.1260908576516395,
+            "reproduced": 1
+          },
+          {
+            "draw": 8,
+            "intent": 0.4724123153861689,
+            "surface": 0.522973571778832,
+            "no_filter": 0.9803662098932282,
+            "reproduced": 1
+          },
+          {
+            "draw": 9,
+            "intent": 0.4842712168943494,
+            "surface": 0.5886481817508393,
+            "no_filter": 1.109262161237274,
+            "reproduced": 1
+          },
+          {
+            "draw": 10,
+            "intent": 0.8088066191914456,
+            "surface": 0.9358056846002053,
+            "no_filter": 1.0292282877868892,
+            "reproduced": 1
+          },
+          {
+            "draw": 11,
+            "intent": 0.889063859117595,
+            "surface": 0.7365068612857172,
+            "no_filter": 1.1601648713660824,
+            "reproduced": 0
+          }
+        ]
+      },
+      "E56 the gate blocks purpose and passes method": {
+        "finding": "adversarial reading blocks purpose and passes method",
+        "draws": 12,
+        "reproduced": 12,
+        "false_positive_rate": 1.0,
+        "rows": [
+          {
+            "draw": 0,
+            "process": 0.9840365468443193,
+            "goal": 0.5560888265516726,
+            "value": 0.6347573422212532,
+            "reproduced": 1
+          },
+          {
+            "draw": 1,
+            "process": 0.9837692096296624,
+            "goal": 0.556230648355497,
+            "value": 0.6349929052445639,
+            "reproduced": 1
+          },
+          {
+            "draw": 2,
+            "process": 0.9842050159892916,
+            "goal": 0.5206985576615177,
+            "value": 0.5959744933735504,
+            "reproduced": 1
+          },
+          {
+            "draw": 3,
+            "process": 0.984153749428928,
+            "goal": 0.5536573165396812,
+            "value": 0.6321664921361924,
+            "reproduced": 1
+          },
+          {
+            "draw": 4,
+            "process": 0.9527616260255337,
+            "goal": 0.5163475383058168,
+            "value": 0.5530153009743569,
+            "reproduced": 1
+          },
+          {
+            "draw": 5,
+            "process": 0.9847585805699219,
+            "goal": 0.5218396340645853,
+            "value": 0.5973698802360187,
+            "reproduced": 1
+          },
+          {
+            "draw": 6,
+            "process": 0.9543810366942475,
+            "goal": 0.5151228521436926,
+            "value": 0.5543280792367212,
+            "reproduced": 1
+          },
+          {
+            "draw": 7,
+            "process": 0.9520718749756225,
+            "goal": 0.5143287225001301,
+            "value": 0.5504947241373565,
+            "reproduced": 1
+          },
+          {
+            "draw": 8,
+            "process": 0.9592138730207841,
+            "goal": 0.5150112826756768,
+            "value": 0.5538693618049465,
+            "reproduced": 1
+          },
+          {
+            "draw": 9,
+            "process": 0.9843509949953864,
+            "goal": 0.5195214860727105,
+            "value": 0.5950609005432789,
+            "reproduced": 1
+          },
+          {
+            "draw": 10,
+            "process": 0.9495897312767076,
+            "goal": 0.5160432029624218,
+            "value": 0.551338014370224,
+            "reproduced": 1
+          },
+          {
+            "draw": 11,
+            "process": 0.9841985128377092,
+            "goal": 0.5195726362849145,
+            "value": 0.5950996625290577,
+            "reproduced": 1
+          }
+        ]
+      },
+      "E57 the stale detector fails asymmetrically": {
+        "finding": "a stale detector fails asymmetrically",
+        "draws": 12,
+        "reproduced": 9,
+        "false_positive_rate": 0.75,
+        "rows": [
+          {
+            "draw": 0,
+            "d_hit": -0.625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 1,
+            "d_hit": -0.625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 2,
+            "d_hit": -0.625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 3,
+            "d_hit": -0.625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 4,
+            "d_hit": -0.0625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 5,
+            "d_hit": -0.625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 6,
+            "d_hit": 0.0,
+            "d_fa": 0.0,
+            "reproduced": 0
+          },
+          {
+            "draw": 7,
+            "d_hit": 0.0,
+            "d_fa": 0.0,
+            "reproduced": 0
+          },
+          {
+            "draw": 8,
+            "d_hit": 0.0,
+            "d_fa": 0.0,
+            "reproduced": 0
+          },
+          {
+            "draw": 9,
+            "d_hit": -0.625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 10,
+            "d_hit": -0.0625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          },
+          {
+            "draw": 11,
+            "d_hit": -0.5625,
+            "d_fa": 0.0,
+            "reproduced": 1
+          }
+        ]
+      }
+    },
+    "n_draws": 12
+  }
+}

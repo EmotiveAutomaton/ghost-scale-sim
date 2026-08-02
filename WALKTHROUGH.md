@@ -253,6 +253,27 @@ distinguish this framework from a competitor built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
 
+### 25. The one thing here that is actually a defence
+
+![Filtering on how good it looks does nothing](figures/walkthrough/25_a_defence_that_works.png)
+
+Every result before this one describes something going wrong. This is the only one that does
+something about it.
+
+Networks now publish at industrial scale specifically so that **AI systems** will absorb them, not
+so that people will read them — 150+ domains, roughly three million articles a year, and almost no
+human visitors, which is the tell. Filtering that out by how good the writing looks does **nothing**,
+because looking good is the whole objective. It is the same shape as the RLHF result: optimise the
+signal and the signal stops carrying information.
+
+Asking *who made this, and why* cuts the damage by about a quarter, restores the learner's reading
+of genuine human work, and **costs nothing on a clean stream** — while never once looking at a
+label. That last part matters most. The Ghost Scale failed twice as something makers apply. **This is
+the same idea as something readers do, and nobody has to agree to it.**
+
+*Read the direction, not the size: 83% of randomly parameterised models of this shape do it too, so
+most of this is architecture rather than evidence for the specific theory.*
+
 ### 24. And what is each finding actually made of?
 
 ![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)

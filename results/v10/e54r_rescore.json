@@ -1,0 +1,84 @@
+{
+  "experiment": "E54-R",
+  "what_this_is": "a rescoring of E54 on signed error rather than unsigned movement. Not a new experiment, and not a second chance -- the original scoring is reported beside it and the original decides.",
+  "stances": [
+    {
+      "stance": "adversarial",
+      "reader": 11.5,
+      "drift": 0.2523192332605917,
+      "signed_uptake": 0.8604281116191896
+    },
+    {
+      "stance": "sympathetic",
+      "reader": 11.5,
+      "drift": 0.2674042020857243,
+      "signed_uptake": 0.9069625920818584
+    }
+  ],
+  "labels": [
+    {
+      "label": "do_not_read",
+      "reader": 11.5,
+      "drift": 0.272683281210626,
+      "harm_from_misleading": -0.016528652262185566,
+      "gain_from_genuine": 0.9273141505410006
+    },
+    {
+      "label": "none",
+      "reader": 11.5,
+      "drift": 0.24258426552506884,
+      "harm_from_misleading": -0.011613494023564513,
+      "gain_from_genuine": 0.939130588849201
+    },
+    {
+      "label": "read_differently",
+      "reader": 11.5,
+      "drift": 0.24910448758218773,
+      "harm_from_misleading": -0.014422454014156883,
+      "gain_from_genuine": 0.9392727123598962
+    }
+  ],
+  "stance_on_error": {
+    "adversarial_minus_sympathetic_signed_uptake": {
+      "difference": -0.04653448046266865,
+      "interval": [
+        -0.054351014794460244,
+        -0.038022861303441326
+      ],
+      "separated_from_zero": true
+    },
+    "outcome": "THE_STANCE_SEPARATES_ON_ERROR_TOO"
+  },
+  "stance_on_drift_original": {
+    "sympathetic_minus_adversarial_drift": {
+      "difference": 0.015084968825132614,
+      "interval": [
+        0.010832047357536824,
+        0.019400906447409223
+      ],
+      "separated_from_zero": true
+    },
+    "note": "the pre-registered measure; reproduced here for comparability"
+  },
+  "labels_on_error": {
+    "no_label_minus_read_differently_harm": {
+      "difference": 0.0028089599905923705,
+      "interval": [
+        -0.009490348749356538,
+        0.01581471163637667
+      ],
+      "separated_from_zero": false
+    },
+    "no_label_minus_do_not_read_harm": {
+      "difference": 0.004915158238621057,
+      "interval": [
+        -0.043840212762181835,
+        0.051311969047541504
+      ],
+      "separated_from_zero": false
+    },
+    "outcome": "NO_LABEL_SEPARATES_ON_HARM_EITHER"
+  },
+  "n_readers": 24,
+  "n_encounters": 16
+}

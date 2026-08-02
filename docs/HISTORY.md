@@ -135,7 +135,29 @@ disagreed with the simulation. Both predictions failed, and one of them found th
 been a comparison error in the first place. The other killed the mechanism by which the Ghost Scale
 was supposed to work. [../RESULTS_V9.md](../RESULTS_V9.md).
 
-**After this the remaining questions need human subjects, and this apparatus cannot answer them.**
+### V10 — the reader as a defence, and the last simulation version
+
+Every version to nine asked what happens to a reader. This one asked whether **reading intent is
+itself a defence**, against a threat that is documented rather than hypothetical: networks
+publishing at industrial scale specifically to be absorbed by models rather than read by people.
+
+The answer is yes, on the case that matches the real one. Against content carrying real structure
+under a false claim of origin, surface-quality filtering leaves a learner **exactly as damaged as no
+filter at all** — which is what E40 predicts, since surface quality is the attacker's objective.
+Asking who made this and why cuts the damage 23%, restores the learner's reading of genuine human
+work, costs nothing on a clean corpus, and never reads the label. **The Ghost Scale failed twice as
+a label makers apply; this is the same idea as a capability readers have, and it needs no social
+adoption.**
+
+The version also caught itself. Its most attractive hypothesis — that values ride in on process
+through a shut gate — was **withheld because its test arm failed the clean-corpus control**, which
+is the null the author had recorded, before the run, as the one he most expected to fail. It failed,
+and in failing it disqualified the invalid arm and left the headline standing.
+
+[../RESULTS_V10.md](../RESULTS_V10.md).
+
+**After this the remaining questions need human subjects or real models, and this apparatus is
+neither.**
 
 ---
 

@@ -174,6 +174,21 @@ commitment at a time.*
 | E53 | Have readers learned a surface signature of generated work that fires before intent-reading? | **Yes, and the prediction drawn from it was backwards.** A learned heuristic discriminates (0.63 against 0.23) and never stops misfiring. But sharpening it makes misfiring **rarer**, not commoner. The eye-tracking result this was built to reconcile turns out not to have been in conflict: the model already reads machine work less than human work, and the two were being scored against each other in error. |
 | E54 | Is there a stance where the gate shuts *before* engaging — and is that what the Ghost Scale should trigger? | **The stance is real; the affordance is not.** A pre-shut gate protects where a reactively-shut one does not (+0.015, interval [0.011, 0.019]) at engagement matched by construction. It protects by about 6%, and when applied to only the marked half of a stream **neither label separates from no label at all.** |
 
+### Version 10 — the reader as a defence, and the last simulation version
+
+*The first constructive result in the project. Everything to nine described what goes wrong; this
+asks whether reading intent is itself a defence, against a documented threat rather than a
+hypothetical one.*
+
+| # | The question | Where it stands |
+|---|---|---|
+| E55 | Can a reader that reconstructs the maker defend itself against content written to be absorbed rather than read? | **Yes, on the case that matters, and inspecting the surface does nothing at all.** Against content carrying real structure under a false claim of origin, a surface-quality filter leaves a learner exactly as damaged as no filter (0.826 vs 0.827) — which is what E40 predicts, because surface quality is the attacker's objective. Asking *who made this and why* cuts damage **23%**, restores reading of genuine work from 0.84 to **1.00**, costs **nothing on a clean corpus**, and **never reads the label**. Reproduces in 83% of random models. |
+| E55b | Is convincing mimicry the danger? | **No — disguise is.** Every reader does *better* on perfectly-mimicked content than on a clean corpus. Content that reproduces genuine intent-structure teaches a learner true things about how purposes make surfaces. It only matters if you care about provenance for its own sake. **The predicted-against-interest hypothesis failed, and the failure is the more useful finding.** |
+| E56 | Can you take someone's method without taking their purpose? | **Yes, and that is what a raised guard actually does.** Adversarial reading blocks purpose and values by about half and method by **four percent**. Not stipulated — method arrives continuously from the first look, purpose resolves late, and a guard raised early can only block what has not arrived yet. Reproduces in **100%** of random models: architecture, not evidence for the theory. |
+| E57 | Does better detection mean fewer false accusations? | **Not once the content fights back.** E53 said yes; it swept detector skill against content that never adapted. Sweep both and the false-alarm rate stops falling and peaks at **65%** of careful human work. With evasion off the old decline reproduces exactly, so this is not a different harness giving a different answer. |
+| E57b | What happens to a reader whose detector stops updating? | **It stops discriminating without stopping accusing.** Hit rate on machine work falls 0.575 → 0.175 while its false-alarm rate does not move at all — it ends firing on people and machines at the same rate, with confidence that grows with sample size. Aggregate rates hide this completely. |
+| H10.4 | Do values ride in on process even through a shut gate? | **Withheld — the instrument failed its own control.** The version's most attractive idea. Its test arm damages a learner reading a corpus with *no contamination in it*, so it measured a broken update rather than a mechanism. In the human reader the effect is real but **under its own pre-registered bar** (0.193 vs 0.2). Not refuted, not established, and the thing most worth building properly. |
+
 ### Not answerable in simulation
 
 | # | The question | Where it stands |
@@ -207,9 +222,13 @@ at one. **The conclusion survives; the stated justification should be updated.**
 3. **No human data anywhere.** The sharpest available test is the acquisition test — expose a
    reader to work above its level and measure what it can then *produce*. It needs subjects and
    money and is named as the top external priority, deliberately not simulated.
-4. **The Ghost Scale has no demonstrated mechanism.** Two attempts, two failures: E39 found that a
-   hypothesis about the maker buys nothing, and E54 found that the gate intervention it pointed to
-   is real but too small to carry a label. The proposal is not refuted; it is unsupported.
+4. **The Ghost Scale has no demonstrated mechanism *as a label*.** Two attempts, two failures: E39
+   found a hypothesis about the maker buys nothing, and E54 found the gate intervention it pointed
+   to is real but too small to carry a label — a verdict that now stands on two independent
+   measures after E54-R rescored it on error. **But E55 found the mechanism on the other side of
+   the transaction.** As a *reader-side capability* — reject what you cannot attribute a maker and
+   a purpose to — it works, costs nothing on clean data, and needs no social adoption. The scale
+   fails as something makers apply and succeeds as something readers do.
 5. **Three experiments still cannot run under exact inference** — a known, bounded gap.
 6. **The headline effect's size depends on which content model you believe**, and the largest
    numbers come from the description the project itself replaced on theoretical grounds.

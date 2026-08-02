@@ -894,6 +894,55 @@ def plate_24_what_its_made_of():
            "One commitment holds the whole project up. Everything else is scaffolding.")
 
 
+# =========================================================================== #
+# 25 - the one thing here that is actually a defence.
+# =========================================================================== #
+def plate_25_a_defence_that_works():
+    """Two grouped bars, because the finding IS the pairing: the surface filter does nothing and
+    costs something, the intent gate does something and costs nothing."""
+    d = load("v10/summary.json")["E55"]
+    g = pd.DataFrame(d["grid"])
+
+    def cell(corpus, reader, col):
+        r = g[(g.corpus == corpus) & (g.reader == reader)]
+        return float(r[col].iloc[0])
+
+    readers = [("no_filter", "no filter"),
+               ("surface_filter", "filter on how\ngood it looks"),
+               ("intent_reconstructibility", "ask who made it\nand why")]
+    poisoned = [cell("disguised", r, "human_model_corrupted") for r, _ in readers]
+    clean = [cell("clean", r, "human_model_corrupted") for r, _ in readers]
+
+    fig, ax = plate(
+        "Filtering AI slop by how good it looks does nothing. Asking who wrote it works.",
+        "Damage to what a learner understands about people, after reading a stream salted with "
+        "content built to be absorbed by machines rather than read by anyone. Lower is better.",
+        "E55 - results/v10/summary.json - reproduces in 83% of randomly parameterised models, so "
+        "most of this is architecture; read the direction")
+
+    x = np.arange(len(readers))
+    w = 0.36
+    b1 = ax.bar(x - w / 2, poisoned, w, color=MACHINE, label="poisoned stream")
+    b2 = ax.bar(x + w / 2, clean, w, color=HUMAN, label="clean stream")
+    for bars, vals in ((b1, poisoned), (b2, clean)):
+        for b, v in zip(bars, vals):
+            ax.text(b.get_x() + b.get_width() / 2, v + 0.02, f"{v:.2f}",
+                    ha="center", va="bottom", fontsize=13, fontweight="bold", color=INK)
+
+    ax.set_xticks(x, [lbl for _, lbl in readers], fontsize=11.5, linespacing=1.25)
+    ax.set_ylim(0, max(poisoned) * 1.32)
+    clean_axis(ax, "damage to its model of people", "")
+    ax.set_yticks([])
+    ax.legend(frameon=False, fontsize=11, loc="upper right")
+    annotate(ax, 1.0, poisoned[1] + 0.14, "no better than\ndoing nothing",
+             color=MACHINE, fontsize=11.5, weight="bold", ha="center")
+    annotate(ax, 2.0, poisoned[2] + 0.14, "a quarter less damage,\nand free on clean data",
+             color=HUMAN, fontsize=11.5, weight="bold", ha="center")
+
+    record(save(fig, "25_a_defence_that_works"),
+           "The first constructive result in ten versions, and the only one aimed at alignment.")
+
+
 PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_04_method_not_purpose, plate_05_intent_unlocks, plate_06_two_mechanisms,
           plate_07_reputation_blindness, plate_08_expertise_substitutes,
@@ -903,7 +952,8 @@ PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_17_withheld, plate_18_what_tom_buys, plate_19_zero_shot,
           plate_20_rejection_is_not_protection, plate_21_two_gates_settled,
           plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price,
-          plate_24_what_its_made_of]
+          plate_24_what_its_made_of,
+          plate_25_a_defence_that_works]
 
 
 def main() -> None:

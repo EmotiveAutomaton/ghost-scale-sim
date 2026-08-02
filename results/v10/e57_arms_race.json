@@ -1,0 +1,128 @@
+{
+  "experiment": "E57",
+  "hypotheses": [
+    "H10.7",
+    "H10.8"
+  ],
+  "question": "What happens to a learned detector when the content is trying not to be caught -- and to a reader whose detector stopped updating?",
+  "plain_language": "E53 measured a world with no adversary in it. Detection improves, but so does evasion, because once people know the reflex exists they optimise against it. And some readers stop updating.",
+  "co_evolution": [
+    {
+      "n_train": 0,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.0
+    },
+    {
+      "n_train": 8,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 1.0
+    },
+    {
+      "n_train": 32,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.9375
+    },
+    {
+      "n_train": 128,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.5625
+    },
+    {
+      "n_train": 512,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.4375
+    }
+  ],
+  "control_no_evasion": [
+    {
+      "n_train": 0,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.0
+    },
+    {
+      "n_train": 8,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 1.0
+    },
+    {
+      "n_train": 32,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 1.0
+    },
+    {
+      "n_train": 128,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 1.0
+    },
+    {
+      "n_train": 512,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 1.0
+    }
+  ],
+  "stale_detector": [
+    {
+      "evasion": 0.0,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 1.0
+    },
+    {
+      "evasion": 0.25,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.9375
+    },
+    {
+      "evasion": 0.5,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.5625
+    },
+    {
+      "evasion": 0.75,
+      "human_careful": 0.0,
+      "human_fast": 0.0,
+      "machine": 0.4375
+    }
+  ],
+  "H10.7": {
+    "outcome": "MISFIRING_STILL_DECLINES_UNDER_CO_EVOLUTION",
+    "false_alarm_by_step_co_evolution": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "false_alarm_by_step_control": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "H10.8": {
+    "outcome": "THE_STALE_DETECTOR_FAILS_ASYMMETRICALLY",
+    "hit_rate_change": -0.5625,
+    "false_alarm_change": 0.0,
+    "how_to_read": "a detector that merely decayed would lose hits and gain false alarms in proportion. One that loses hits while holding its false-alarm rate has not become unreliable -- it has become a detector that mostly says HUMAN and is confident when it is wrong. Aggregate rates hide this, which is what E53 reported."
+  },
+  "null_n49": {
+    "statement": "with evasion off, this harness reproduces E53's monotone decline",
+    "passed": false,
+    "why": "otherwise the harness changed the old result and no comparison is valid"
+  },
+  "n_obs": 16
+}
