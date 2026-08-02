@@ -50,9 +50,9 @@ def plate_01_false_label():
     vals = [float(p[1]["error_reduction"]) for p in picks]
 
     fig, ax = plate(
-        "Being lied to about authorship doesn't just waste your time.\nIt moves you away from the truth.",
-        "How much closer to the maker's actual intent a reader ends up. Above zero is learning; "
-        "below zero is being led away.",
+        "Lying about who made something doesn't waste your time.\nIt leaves you knowing less than before you started.",
+        "How much closer to the truth about the maker a reader ends up. Above the line, reading "
+        "taught you something. Below it, reading cost you ground you already had.",
         "E2 · results/repair/r5_uptake.json · reduction in the surprisal of the true intent, in nats")
     bars = ax.bar([p[0] for p in picks], vals, color=[p[2] for p in picks], width=0.55)
     bar_labels(ax, bars, vals, fmt="{:+.2f}", fontsize=15, color=INK)
@@ -61,7 +61,7 @@ def plate_01_false_label():
     clean_axis(ax, "closer to the truth  →\n←  further from it")
     ax.set_yticks([])
     on_bar(ax, 2, vals[2] * 0.55,
-           "four times further wrong\nthan the truth takes you right", fontsize=12.5,
+           "you end up further from\nthe truth than before\nyou opened it", fontsize=12.5,
            bar=bars[2])
     record(save(fig, "01_false_label_moves_you_wrong"),
            "The central result. Same object, different label, opposite direction of travel.")
@@ -77,9 +77,10 @@ def plate_02_interior_peak():
              for r in t1["interior_peak"]["rows"]} if "interior_peak" in t1 else {}
 
     fig, ax = plate(
-        "Invention peaks where content is almost readable — not where it is empty.",
-        "Enough familiar structure to make an explanation seem available; not enough to make it "
-        "right. The worst place to be is nearly understandable.",
+        "Total nonsense is safe. Total clarity is safe.\nThe danger zone is content that is almost readable.",
+        "Partial structure is worse than none. Enough familiar shape to make an explanation seem "
+        "available, not enough to make it right, so the reader builds a confident story about "
+        "somebody who was never there.",
         "E20 · results/e20_omega_sweep.csv · confident-and-contradictory readings, by how much of "
         "the content the reader has vocabulary for")
     x = df.omega.to_numpy()
@@ -89,10 +90,11 @@ def plate_02_interior_peak():
     peak = int(np.argmax(y))
     ax.scatter([x[peak]], [y[peak]], s=150, color=MACHINE, zorder=4)
     annotate(ax, x[peak] + 0.035, y[peak],
-             f"peak at {x[peak]:.0%} readable\n({y[peak]:.2f})", color=MACHINE,
+             f"worst at {x[peak]:.0%} readable", color=MACHINE,
              va="center", fontsize=12.5, weight="bold")
-    annotate(ax, 0.005, y[0] * 0.55, "totally\nforeign", color=MUTED, fontsize=10.5, va="top")
-    annotate(ax, 0.93, max(y) * 0.12, "fully\nreadable", color=MUTED, fontsize=10.5, ha="right")
+    annotate(ax, 0.005, y[0] * 0.55, "nothing you\nrecognise", color=MUTED, fontsize=10.5, va="top")
+    annotate(ax, 0.95, max(y) * 0.12, "everything you\nrecognise", color=MUTED, fontsize=10.5,
+             ha="right")
     if share:
         annotate(ax, 0.52, max(y) * 0.80,
                  "the peak lands in the same place in\n100% of resampled runs",
@@ -111,16 +113,15 @@ def plate_02_interior_peak():
 def plate_03_the_wall():
     d = load("v6/e37_wall.json")
     c = d["cells"]
-    order = [("human", "Human work", HUMAN),
-             ("foreign", "Written in a language\nyou don't read", COOL),
+    order = [("human", "Made by a person", HUMAN),
+             ("foreign", "Built by an unconstrained\nartificial mind", COOL),
              ("noninvertible", "Every word familiar,\nnobody behind it", MACHINE)]
     ent = [float(c[k]["final_entropy"]) for k, _, _ in order]
     eng = [float(c[k]["engaged_fraction"]) for k, _, _ in order]
 
     fig, ax = plate(
-        "\"I can read every word and there's nothing there\" is a different failure\nfrom \"I can't parse this.\"",
-        "Content built from familiar material whose maker cannot be reconstructed produces a "
-        "signature neither existing condition does: legible, and empty.",
+        "\"I read every word and nobody was there\"\nis its own kind of failure.",
+        "It is not that the words are hard. Every one of them is familiar. It is that no maker can be\nreconstructed from them, and that produces a signature neither other condition does.",
         "E37 · results/v6/e37_wall.json · how unresolved the reader is left, and how long it keeps trying")
     xs = np.arange(3)
     w = 0.36
@@ -154,7 +155,7 @@ def plate_04_method_not_purpose():
     goal = [float(c["goal_error_reduction"]) for c in cells]
 
     fig, ax = plate(
-        "Depth changes how much of the method you pick up.\nIt cannot change how much of the purpose you get — by design.",
+        "Depth changes how much of the method you pick up.\nIt cannot change how much of the purpose you get, by design.",
         "The model is built so a deep work and a shallow one state their purpose equally clearly. "
         "For five versions we measured the purpose, and found nothing.",
         "E30 / E36 · results/v6/e36_process.json · what a reader takes away, scored two ways")
@@ -201,7 +202,7 @@ def plate_05_intent_unlocks():
              f"{after / before:.1f}× more, same reader, same object",
              color=HUMAN, ha="center", fontsize=13, weight="bold")
     record(save(fig, "05_intent_unlocks_the_method"),
-           "Intent is the key that makes the method readable. Not in the essay or the preprint — "
+           "Intent is the key that makes the method readable. Not in the essay or the preprint, "
            "it came out of a conversation and then held.")
 
 
@@ -217,7 +218,7 @@ def plate_06_two_mechanisms():
     fig, ax = plate(
         "If trust switches off your guard, honesty stops being enough.",
         "Two accounts of the same effect. One says you absorb machine work because you were "
-        "fooled about its source. The other says trust itself lowered the guard — so you absorb "
+        "fooled about its source. The other says trust itself lowered the guard, so you absorb "
         "it even when told the truth.",
         "E41 · results/v6/retrofit.json · how much of the work the reader is allowed to keep")
     xs = np.arange(2)
@@ -279,7 +280,7 @@ def plate_08_expertise_substitutes():
     fig, ax = plate(
         "Learning to read machine work doesn't add a skill. It swaps one out.",
         "Two readers, identical except for what they expect a maker to be like. The reader tuned "
-        "to machines reads machine work perfectly — and loses half its accuracy on human work.",
+        "to machines reads machine work perfectly, and loses half its accuracy on human work.",
         "E38 · results/v6/e38_expertise.json · share of makers' intent correctly recovered")
     xs = np.arange(2)
     w = 0.34
@@ -326,7 +327,7 @@ def plate_09_pays_more_gets_less():
              f"{decoup / honest:.1f}× the attention,\nand it learns {uptake:+.2f}",
              color=MACHINE, ha="center", fontsize=12.5, weight="bold")
     record(save(fig, "09_pays_more_gets_less"),
-           "A third failure mode. Not the crash — the reader is engaged. Not the lie — nobody "
+           "A third failure mode. Not the crash, because the reader is engaged. Not the lie, because nobody "
            "lied. A reader correctly reading something built to trip its own heuristic.")
 
 
@@ -396,7 +397,7 @@ def plate_11_self_report():
     ax.set_yticks([0, 0.5, 1.0])
     ax.set_yticklabels(["never", "half", "always"])
     record(save(fig, "11_the_master_cannot_explain"),
-           "The reader ends up knowing the maker better than the maker knows themselves — and "
+           "The reader ends up knowing the maker better than the maker knows themselves, and "
            "here nobody set that. Practice sets it.")
 
 
@@ -412,7 +413,7 @@ def plate_12_two_damages():
     fig, ax = plate(
         "One kind of damage scales with how much slop you consume.\nThe other is already there at zero.",
         "Absorbing bad material gets worse the more there is. Failing to absorb good material "
-        "does not — it is driven by walking away, not by what is in the pile.",
+        "does not. It is driven by walking away, not by what is in the pile.",
         "E9 · results/e9_summary.csv · error in the reader's model of what people are like")
     x = both.contamination.to_numpy()
     ax.plot(x, both.shape_kl.to_numpy(), "-o", color=MACHINE, lw=2.6, ms=9)
@@ -489,7 +490,7 @@ def plate_14_knee_not_cliff():
     fig, ax = plate(
         "Competence doesn't fall off a cliff. It bends.",
         "A real threshold sharpens as you gather more evidence. This one did not budge across "
-        "sixteen times the data — so its shape comes from the model, not from a boundary in the "
+        "sixteen times the data, so its shape comes from the model, not from a boundary in the "
         "world.",
         f"E15 · results/e15_verdict.json · width of the transition, at three evidence levels "
         f"(ratio {w['width_ratio']:.2f})")
@@ -520,7 +521,7 @@ def plate_15_coverage():
     fig, ax = plate(
         "Labelling only protects readers who know the labelling exists.",
         "How much machine content has to be labelled before a reader keeps a clean picture of "
-        "what people are like. Readers who don't know the convention need far more — and never "
+        "what people are like. Readers who don't know the convention need far more, and never "
         "get fully there.",
         "E16 · results/e16_verdict.json · a lower bound: the aware reader is handed the true coverage")
     bars = ax.bar(["Knows the convention", "Doesn't know it"], [aware, naive],
@@ -548,7 +549,7 @@ def plate_16_channel_race():
     fig, ax = plate(
         "Two witnesses arrive with every glance, and on a lie they disagree.",
         "The work argues for the truth. The label argues for the lie. Which one wins is settled "
-        "by arithmetic, not by psychology — and the tipping point can be computed without running "
+        "by arithmetic, not by psychology, and the tipping point can be computed without running "
         "anything.",
         "D-1 · results/diagnostics/d1_channels.json · evidence per glance, machine work passed off as human")
     # A wider left margin than the house default: on a horizontal bar chart the category names
@@ -581,7 +582,7 @@ def plate_17_withheld():
     fig, ax = plate(
         "One experiment has been withheld three times, and stays withheld.",
         "It asks whether damage compounds as each generation learns from the last. Its own "
-        "honesty check — with zero contamination, show zero damage — has failed every time. So "
+        "honesty check, which is to show zero damage when there is zero contamination, has failed every time. So "
         "real decay cannot be told apart from the instrument's own noise.",
         "E8 · a failing test is kept in the suite as a visible marker, so any future fix has to "
         "switch it off deliberately")
@@ -746,16 +747,24 @@ def plate_21_two_gates_settled():
 # 22 - how much of this is the theory (the severity rates).
 # =========================================================================== #
 def plate_22_how_much_is_the_theory():
+    """Rewritten, because the first version could not be read by someone who was there for it.
+
+    The old encoding was backwards. It plotted the share of random rebuilds that reproduced each
+    finding, so a LONG bar meant a WEAK result. The eye reads long as strong, always, and no
+    amount of labelling fixes an encoding that is fighting the reader.
+
+    Every bar is now the same length, because every bar is one finding, and the question is how
+    much of it is mine. Teal is the part that needed the theory. Grey is the part any model of
+    this shape produces on its own.
+    """
     d = load("v8/s1_severity.json")
     rates = d["rates"]
     ref = d.get("reference_point", {})
 
-    # Short, plain labels. The full finding names are in the footer's source file; a bar chart
-    # whose labels need two lines each is not readable in two seconds.
     SHORT = {
         "E2/R-5 a false label moves you the wrong way": "a false label misleads you",
-        "E36 depth moves the method, not the purpose": "depth transmits method",
-        "E37 the wall is a distinct failure": "legible and empty",
+        "E36 depth moves the method, not the purpose": "practice shows in the work",
+        "E37 the wall is a distinct failure": "legible, and nobody home",
     }
     labels, vals = [], []
     for name, r in rates.items():
@@ -765,39 +774,52 @@ def plate_22_how_much_is_the_theory():
         labels.append(SHORT.get(name, name[:28]))
         vals.append(float(v))
     if ref.get("false_positive_rate") is not None:
-        labels.append("certainty under a false label")
+        labels.append("readers turn certain")
         vals.append(float(ref["false_positive_rate"]))
 
-    order = sorted(range(len(vals)), key=lambda i: vals[i])     # ascending, so 0% sits at bottom
+    order = sorted(range(len(vals)), key=lambda i: -vals[i])   # most-mine at the bottom
     labels = [labels[i] for i in order]
     vals = [vals[i] for i in order]
+    mine = [1.0 - v for v in vals]
 
     fig, ax = plate(
-        "I threw my own settings away and checked how much of this was ever mine.",
-        "Keep the shape of the model, randomise everything the theory specifies, and count how "
-        "often the finding still appears. If it appears every time, it came from the shape.",
-        "S-1 - results/v8/s1_severity.json - share of randomly parameterised models that "
-        "reproduce each finding")
-    # A wider left margin than the house default, because these labels are the axis.
-    pos = ax.get_position()
-    ax.set_position([0.26, pos.y0, 0.62, pos.height])
+        "I rebuilt my model with the theory taken out,\nto see what I could still take credit for.",
+        "Each bar is one finding. The grey part is how much of it showed up anyway in a model "
+        "built the same way with random settings. The teal part is what was left over, and the "
+        "teal part is the only bit that is evidence for this theory rather than for the method.",
+        "S-1 - results/v8/s1_severity.json - 600 randomly parameterised rebuilds per finding")
 
-    colors = [MACHINE if v > 0.5 else HUMAN for v in vals]
-    bars = ax.barh(labels, vals, color=colors, height=0.5)
-    for b, v in zip(bars, vals):
-        ax.text(v + 0.025, b.get_y() + b.get_height() / 2, f"{v:.0%}",
-                va="center", ha="left", fontsize=16, fontweight="bold", color=INK)
-    ax.set_xlim(0, 1.25)
-    ax.tick_params(axis="y", labelsize=12)
+    pos = ax.get_position()
+    ax.set_position([0.30, pos.y0, 0.60, pos.height])
+
+    y = np.arange(len(labels))
+    ax.barh(y, vals, color=NEUTRAL, height=0.52)
+    ax.barh(y, mine, left=vals, color=HUMAN, height=0.52)
+
+    for i, (v, m) in enumerate(zip(vals, mine)):
+        if m >= 0.12:
+            ax.text(vals[i] + m / 2, i, f"{m:.0%}", va="center", ha="center",
+                    fontsize=15, fontweight="bold", color=PAPER)
+        else:
+            ax.text(1.015, i, f"{m:.0%}", va="center", ha="left",
+                    fontsize=15, fontweight="bold", color=INK)
+
+    ax.set_yticks(y, labels, fontsize=12.5)
+    ax.set_xlim(0, 1.20)
+    ax.set_ylim(-0.62, len(labels) + 0.16)
     clean_axis(ax, "", "")
     ax.set_xticks([])
-    annotate(ax, 0.16, 0.02, "needed the theory", color=HUMAN,
-             fontsize=12.5, weight="bold", va="center")
-    annotate(ax, 1.02, len(vals) - 1.5, "came from the\narchitecture,\nnot the theory",
-             color=MACHINE, fontsize=12, weight="bold", va="center")
+    for s in ax.spines.values():
+        s.set_visible(False)
+
+    annotate(ax, 0.02, len(labels) - 0.30, "would have happened anyway",
+             color=MUTED, fontsize=12, weight="bold", va="center", ha="left")
+    annotate(ax, 0.99, len(labels) - 0.30, "actually mine",
+             color=HUMAN, fontsize=12, weight="bold", va="center", ha="right")
+
     record(save(fig, "22_how_much_is_the_theory"),
-           "The most important number here is not a result. It costs the project its two "
-           "biggest-sounding claims.")
+           "Almost nobody publishes this number about their own work. It costs the project its "
+           "two biggest-sounding claims.")
 
 
 # =========================================================================== #
