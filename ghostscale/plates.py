@@ -237,12 +237,36 @@ def audit(fig, name: str = "") -> list:
     return problems
 
 
+FRAME = (101, 104, 97)   # the same grey as the rendered panel of the Ghost Scale pair
+FRAME_PX = 16            # thicker than strictly needed, so the plate has an edge on any background
+
+
+def _frame(path: Path) -> None:
+    """Put a grey border on a finished plate.
+
+    Applied AFTER savefig rather than as a figure edge, for two reasons. The audit measures text
+    against the canvas, so growing the canvas first would move every coordinate it checks. And a
+    matplotlib figure edge is drawn INSIDE the canvas, which eats layout the plate has already
+    budgeted. Compositing afterwards leaves the plate untouched and adds an edge around it.
+
+    The tone is the grey from the Ghost Scale pair's rendered panel, deliberately: the whole figure
+    set is machine-drawn, and the border says so in the project's own vocabulary.
+    """
+    from PIL import Image
+
+    im = Image.open(path).convert("RGB")
+    out = Image.new("RGB", (im.width + 2 * FRAME_PX, im.height + 2 * FRAME_PX), FRAME)
+    out.paste(im, (FRAME_PX, FRAME_PX))
+    out.save(path)
+
+
 def save(fig, name: str) -> Path:
     PLATE_DIR.mkdir(parents=True, exist_ok=True)
     path = PLATE_DIR / f"{name}.png"
     for p in audit(fig, name):
         print(f"  !! {p}")
     fig.savefig(path, bbox_inches=None)
+    _frame(path)
     plt.close(fig)
     return path
 

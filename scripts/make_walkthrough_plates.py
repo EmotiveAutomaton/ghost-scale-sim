@@ -923,29 +923,44 @@ def plate_25_a_defence_that_works():
     clean = [cell("clean", r, "human_model_corrupted") for r, _ in readers]
 
     fig, ax = plate(
-        "Filtering AI slop by how good it looks does nothing. Asking who wrote it works.",
-        "Damage to what a learner understands about people, after reading a stream salted with "
-        "content built to be absorbed by machines rather than read by anyone. Lower is better.",
+        "Filtering AI slop by how good it looks is worse than not filtering at all.",
+        "Each bar is how WRONG the learner ends up about real people after reading a stream. "
+        "Taller is worse. The red bar is a stream salted with content built to be absorbed by "
+        "machines; the teal bar is the same learner on a clean stream, which is the cost of the "
+        "filter itself.",
         "E55 - results/v10/summary.json - reproduces in 83% of randomly parameterised models, so "
         "most of this is architecture; read the direction")
 
     x = np.arange(len(readers))
     w = 0.36
     b1 = ax.bar(x - w / 2, poisoned, w, color=MACHINE, label="poisoned stream")
-    b2 = ax.bar(x + w / 2, clean, w, color=HUMAN, label="clean stream")
+    b2 = ax.bar(x + w / 2, clean, w, color=HUMAN, label="clean stream (the filter's own cost)")
     for bars, vals in ((b1, poisoned), (b2, clean)):
         for b, v in zip(bars, vals):
             ax.text(b.get_x() + b.get_width() / 2, v + 0.02, f"{v:.2f}",
                     ha="center", va="bottom", fontsize=13, fontweight="bold", color=INK)
 
     ax.set_xticks(x, [lbl for _, lbl in readers], fontsize=11.5, linespacing=1.25)
-    ax.set_ylim(0, max(poisoned) * 1.32)
-    clean_axis(ax, "damage to its model of people", "")
+    ax.set_ylim(0, max(poisoned) * 1.46)
+    clean_axis(ax, "how wrong it ends up about people", "")
     ax.set_yticks([])
-    ax.legend(frameon=False, fontsize=11, loc="upper right")
-    annotate(ax, 1.0, poisoned[1] + 0.14, "no better than\ndoing nothing",
+    # The legend goes ABOVE the axes, horizontally. Inside the frame it collided with the teal
+    # annotation, and there is no free corner: the tallest bars are on the left and the callouts
+    # are on the right.
+    ax.legend(frameon=False, fontsize=11.5, ncol=2, loc="lower left",
+              bbox_to_anchor=(0.0, 1.005, 1.0, 0.1), borderaxespad=0.0)
+    # The axis has no ticks by design, so the direction has to be stated or the whole plate can be
+    # read upside down. This is the single thing a reader most needs and cannot infer.
+    annotate(ax, -0.47, max(poisoned) * 1.30, "worse ↑", color=MUTED, fontsize=11,
+             weight="bold", ha="left")
+
+    # WORSE, not merely no better, and the second bar is the reason. It gives nothing back on the
+    # poisoned stream and it damages the clean one, because it throws away real work it misreads.
+    annotate(ax, 1.0, poisoned[1] + 0.13,
+             "worse than doing nothing:\nno help on the poison,\nand it damages clean text",
              color=MACHINE, fontsize=11.5, weight="bold", ha="center")
-    annotate(ax, 2.0, poisoned[2] + 0.14, "a quarter less damage,\nand free on clean data",
+    annotate(ax, 2.0, poisoned[2] + 0.13,
+             "a quarter less damage,\nand free on clean text",
              color=HUMAN, fontsize=11.5, weight="bold", ha="center")
 
     record(save(fig, "25_a_defence_that_works"),
