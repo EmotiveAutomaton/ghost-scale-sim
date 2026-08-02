@@ -70,24 +70,27 @@ block, at double scale, in every cell of the robustness sweep, and in every resa
 worst place to be is nearly understandable.** Total nonsense is safe; total clarity is safe; the
 danger is having just enough handholds to build a story on.
 
-### 6. The failure that leaves you satisfied
+### 6. Not understanding is the safe failure
 
-![The dangerous failure is the one that leaves you satisfied](figures/walkthrough/03_legible_and_empty.png)
+![Not understanding a painting is safe; AI work lets you believe you understood](figures/walkthrough/03_legible_and_empty.png)
 
-The model used to describe unreadable machine content as *written in a vocabulary you do not have*.
-That is not what people report. What they report is reading every word and finding nobody there.
+Three paintings, and one measure: how finished you felt walking away.
 
-So version 6 built a third condition, and the construction is the point: **four different maker
-states that emit only two distinct surfaces**, on words the reader knows perfectly. Not unreadable.
-Not empty. **Ambiguous by construction**, which is what wording looks like when several different
-intentions would produce it identically.
+**The middle one is the important control.** It is a real maker with a real purpose, working in a
+tradition you have no training for. Versions 1 to 5 of this model believed that was what machine
+content was. You take almost nothing from it, and the point is that **you know that.** Being stopped
+at the door is the protection: you do not walk off with a theory about a person you never reached.
 
-The two failures behave completely differently. Content you cannot read leaves the reader at 15%
-settled: it knows it failed, it stops, and it stays out. The ambiguous case leaves it at **76%
-settled**, nearly as finished as genuine human work, having stopped looking while unable to tell
-which of two makers it was reading.
+The one on the right is what version 6 built to replace that description, because *legible and
+empty* is the complaint people actually make about generated work. Four different maker states,
+only two distinct surfaces, on material you recognise completely. Nothing is hard to look at.
+Everything is easy to look at, and there is no route from any of it back to a state you could
+occupy.
 
-**The failure that stops you protects you. The one that satisfies you does not.**
+So you finish it. **76% settled, nearly as done as with a painting you genuinely read**, having
+recovered nothing and unable to tell which of two makers you were looking at.
+
+**Failing to understand something protects you. Being satisfied by it does not.**
 
 ### 7. Two kinds of damage
 

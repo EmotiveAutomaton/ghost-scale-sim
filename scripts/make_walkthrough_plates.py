@@ -113,10 +113,19 @@ def plate_02_interior_peak():
 def plate_03_the_wall():
     d = load("v6/e37_wall.json")
     c = d["cells"]
-    order = [("human", "Made by a person", HUMAN),
-             ("foreign", "Words you have no\nvocabulary for", COOL),
-             ("noninvertible", "Wording that fits several\nintentions equally well\n"
-                               "(boilerplate, filler, a horoscope)", MACHINE)]
+    # SAY WHICH ONE IS THE AI ONE. Four versions of this plate did not, and that is why it kept
+    # reading wrong to everybody including its author.
+    #
+    #   human          a maker you can reach: familiar surface, recoverable purpose
+    #   foreign        a REAL maker with a REAL purpose in a vocabulary you do not have. This is
+    #                  what versions 1 to 5 believed machine content was, and reads far more
+    #                  honestly as a person whose tradition you do not know, because that is what
+    #                  the construction actually contains
+    #   noninvertible  what version 6 built to REPLACE that, because "legible and empty" is the
+    #                  complaint people make about generated text. This is the AI condition
+    order = [("human", "A painting by someone\nwhose world you share", HUMAN),
+             ("foreign", "A painting from a tradition\nyou know nothing about", COOL),
+             ("noninvertible", "An AI-generated image", MACHINE)]
 
     # THE MEASURE CHANGED, AND THE OLD ONE WAS BURYING THE FINDING.
     #
@@ -147,11 +156,12 @@ def plate_03_the_wall():
     settled = [100.0 * (1.0 - e / logn) for e in ent]
 
     fig, ax = plate(
-        "The failure that stops you is the safe one.\nThe dangerous one leaves you satisfied.",
-        "Three kinds of text, and one measure: how settled the reader felt when it put the thing "
-        "down. Only one of the three had earned it.",
-        "E37 · results/v6/e37_wall.json · the third condition is built as four maker-states "
-        "collapsing onto two surfaces, on entirely familiar words")
+        "Not understanding a painting is safe. You know you missed it.\nAI work is worse: it lets you believe you didn't.",
+        "One measure: how finished the viewer felt when it walked away. Art you have no training "
+        "for stops you at the door, and stopping is the protection. The AI image lets you walk away "
+        "satisfied, having recovered nothing.",
+        "E37 · results/v6/e37_wall.json · the AI condition is built as four maker-states collapsing "
+        "onto two surfaces, on entirely familiar material")
 
     xs = np.arange(3)
     bars = ax.bar(xs, settled, width=0.5, color=[o[2] for o in order])
@@ -161,12 +171,12 @@ def plate_03_the_wall():
     ax.set_xticks(xs)
     ax.set_xticklabels([o[1] for o in order], fontsize=11)
     ax.set_ylim(0, 132)
-    clean_axis(ax, "how settled the reader felt at the end")
+    clean_axis(ax, "how finished the viewer felt")
     ax.set_yticks([])
 
-    notes = ["settled, and correct.\nIt really had read the maker.",
-             "it knows it failed,\nso it stops and stays out",
-             "it stops looking, and cannot tell\nwhich of two makers it read"]
+    notes = ["you read the intent,\nand you were right",
+             "you take almost nothing away,\nand you know that you didn't",
+             "you walk away satisfied.\nThere was nothing to take."]
     for i, (n, col) in enumerate(zip(notes, [HUMAN, COOL, MACHINE])):
         annotate(ax, i, settled[i] + 12, n, color=col, fontsize=11.5, weight="bold",
                  ha="center", va="bottom")
