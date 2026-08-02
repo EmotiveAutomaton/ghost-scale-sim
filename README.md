@@ -6,7 +6,8 @@
 
 A working model of how people work out what someone was trying to do when they made something.
 
-> **◐ Curator — 60% down to [What this is](#what-this-is). ○ Ghost — 5% after that.**
+> **◐ Curator — 60% intent density down to [What this is](#what-this-is).**
+> **○ Ghost — 5% after that, and there is a note at the line explaining what to do about it.**
 
 ---
 
@@ -169,6 +170,35 @@ prediction verbatim. And four places the world pushes back:
 
 ---
 
+## ○ Ghost — everything below this line
+
+**Intent density from here on: about 5%.** Everything above was written by a person, argued over,
+and cut. Everything below was drafted by a machine from that person's notes and results, checked
+for accuracy, and **not read end to end by the author.** That is a statement about *how much
+deciding went into the prose*, not about whether the numbers are right — every figure below traces
+to a committed verdict file, and the accuracy claims are the ones this repository is most careful
+about.
+
+**So this repository is applying its own instrument to itself, and the honest reading is: don't
+read this part the way you read the part above.** The findings say that highly legible text with
+little intent behind it is exactly the material a reader will build a confident, wrong theory from.
+Below the line the density is low and the volume is high. That is the regime.
+
+**What to do instead, which is also the project's own proposal working as intended:** hand this
+section to a language model and ask it for the parts you need. That is not a workaround. Reading
+intent is metabolically expensive, this section has little to recover, and spending a person's
+attention on it is the specific waste the whole model is about. The section is written to be
+machine-read — dense, explicit, heavily cross-referenced — for exactly that reason.
+
+**And the warning itself is most of the protection.** The project's own results are consistent on
+this: a reader who *knows* the origin reads accurately and simply declines to spend, while a reader
+who is misled builds a confident theory about someone who was never there. **The damage in this
+model comes from being wrong about provenance, not from exposure to low-intent text.** So: knowing
+is enough. Nobody is claiming a paragraph can hurt you. People are resilient, this is a repository
+of simulation results, and the label is here because the project would be incoherent without it.
+
+---
+
 ## What this is
 
 When you look at a piece of work you run a guess about the person behind it. Why this word, this
@@ -327,6 +357,32 @@ and found nobody there. It is also the only finding with a 0% false-positive rat
 opposite directions agree on which result is genuinely about the theory.
 
 Full grid, and the row that could not be read: [RESULTS_V9.md](docs/versions/v09-minimal-models/RESULTS.md).
+
+---
+
+## Every version at a glance
+
+*Numbered in run order, named for what each was about. Specs were written before the code and never
+edited after; results were written after and never edited either. Full material in
+[docs/versions/](docs/versions/).*
+
+| | name | built | asked | came back | nulls |
+|---|---|---|---|---|---|
+| **1** | The Mechanism | cost, inference, zero provenance preference | can this be a model at all? | three results, two still standing | N1–N7 |
+| **2** | The Learner | a reader that must acquire machine content's shape | what if the reader has to learn? | heterogeneity is in the likelihood, not the prior | N8–N12 |
+| **3** | The Refuted Repair | a fix for the generational leak | is the leak sampling noise? | **its own gate said no**; experiment stayed withheld | N13–N15 |
+| **4** | Foreign Intent | goal-foreign replaces goal-empty | what *is* machine content? | **a headline inverted**: readers keep paying | N16–N20 |
+| **4.5** | Three Gates | a three-gate reader, a counting classifier | does invention need a theory of mind? | **no** — claim withdrawn | — |
+| **5** | Depth Over Effort | depth as a hierarchy the reader infers | effort, or compressed practice? | depth; and the fast solver was caught misreading it | N21 |
+| **6** | Code Against Equation | depletion, graded gate, κ→θ coupling, process recovery | is the code the same object as the theory? | **three terms had no counterpart in the code** | N22–N30 |
+| **7** | The Closures | evidence-efficiency and zero-shot tests | what does a maker-model buy? | 4 examples vs 512; reads an unseen intent | N31–N34 |
+| **8** | The Severity Pass | reader hierarchy, integration cost, decaying belief, a lying maker | how often does a *random* model do it too? | **100% / 98% / 0%** | N35–N40 |
+| **9** | Minimal Models | six structural ablations | which commitment is each finding made of? | **all die without the maker-model** | N41–N44 |
+| **10** | Reader As Defence | an intent-gate on a learner's absorption | is reading intent a *defence*? | yes, where surface filtering does nothing | N45–N51 |
+
+**Three audit passes** sit alongside, in [docs/audits/](docs/audits/): validation (five of nine
+checks came back against the work), diagnostics (four limits on what the instruments can answer),
+and repair (the uptake measure gained a sign, and the headline reversed with it).
 
 ---
 
@@ -658,6 +714,57 @@ The sigmoid gate of the closed form is replaced by the binary engagement decisio
 reimplements the intuition, which is engagement-gated, trust-weighted surprise about the goal. It is
 not a port of the equation and no equivalence is claimed.
 
+### The reader acquires a mind of its own (version 8)
+
+Three additions, each of which makes something representable that was not.
+
+**A hierarchy the reader owns.** Until version 8 the *maker* had levels and the reader did not. A
+reader can now only recognise as far as it has itself built — which makes "you cannot see what you
+have not done" a structural property rather than an assumption, and it is what the human acquisition
+test would target.
+
+**A cost for being changed.** Integration is no longer free. Absorbing something is an expenditure,
+separate from the expenditure of looking at it, which is what lets attention and uptake come apart
+cleanly rather than by stipulation.
+
+**A memory that fades to a residue, not to zero.** Belief decays toward `baseline + floor ×
+residual`. The first implementation decayed geometrically to baseline, which is erasure with extra
+steps; associations weaken and do not quite disappear, and the model now says so.
+
+### The Intent Extraction Limit, and the three terms that were missing
+
+The published equation is
+
+```
+Ψ = sigmoid(k·(ω − θ_E,C(κ))) · [−ln(1−κ)] · D_KL(Q(R|τ) ‖ P₀(R))
+     with  θ_E,C(κ) = θ_base(E) + λ·D_KL(Q ‖ P_c)
+```
+
+Version 6 read it against the shipped code and found three things absent: **θ_base(E)**, the
+metabolic reserve; the **gate gain k**, which makes the gate graded rather than binary; and the
+**κ→θ coupling**, which is not an omission but a *disagreement about mechanism*. The code's exploit
+works by the label out-arguing the work. The paper's works by trust lowering the guard — and only the
+paper's version predicts a reader told the truth, believing it, and absorbing the work anyway.
+
+**ω is two different objects** in the two documents. In the preprint it is the reader's precision
+weighting, which is an *output*. In the code it is feature overlap between hypothesis families, which
+is an *input*. Anywhere the two are compared, that has to be said first.
+
+### The intent gate (version 10)
+
+The mechanism is one line and no new parameter: the learner's Dirichlet learning rate is set from
+the gate, and the commit happens *after* inference resolves. So the reader works out who made the
+thing first, and only then decides how much of it comes in — which is the ratchet the version is
+built on. Four gates were compared: no filter, a surface-quality filter, a provenance-label filter,
+and the intent-gate in three variants (reconstructibility alone, hand-set values, values learned
+from what has already been absorbed).
+
+**The reconstructibility-only variant is the proposal**, and it is deliberately value-free: it
+rejects what it cannot attribute a maker and a purpose to, and holds no view about what anyone should
+want. It never reads the provenance signal, which is asserted by test rather than claimed.
+
+---
+
 ## Relationship to existing work
 
 This model fills a named gap in the active-inference literature on Theory of Mind. The honest
@@ -682,6 +789,31 @@ named gap, and that argument gets weaker if it claims more ground than it holds.
 2. **What happens when the other has no preferences.** Existing work assumes the observed other is
    an agent with preferences. This model asks what happens when it is not, and finds the inference
    does not fail gracefully. Under high trust it fabricates. (E2, E4)
+
+### Where version 10 sits, which is a different literature entirely
+
+The training-side result lands next to machine-generated-text detection and to pretraining data
+curation, and it does not overlap either.
+
+| that field does | this does instead |
+|---|---|
+| **surface-statistical detection** — perplexity, burstiness, learned classifiers | reconstructs the *maker*, not the generator |
+| **perturbation methods** (DetectGPT, Binoculars) — token-prediction consistency under masking | intent-attribution consistency, which is a different object and will be the first thing a reviewer conflates |
+| **supervised classifiers** on labelled human/AI corpora | no origin label anywhere in the gate; asserted by test |
+| **quality / reward-model filtering** of pretraining data | scores the inferred **author**, not the artifact |
+| **watermarking and source attribution** | requires cooperation from the generator; this requires none |
+
+Two points of contact worth naming because they support the work rather than compete with it. The
+detection field's own reviews now report that surface statistics are increasingly insufficient as
+models grow more fluent, and that supervised detectors fail to generalise across domains and against
+adversarial paraphrasing — **which is this project's own arms-race result, arrived at independently
+and published by other people.** That is a coherence check, not a citation of convenience.
+
+Work on inferring latent intent with language models does exist and is active, but it is about
+**user** intent in interactive settings — dialogue, agents, recommendation. Artifact-level *author*
+intent, used as a corpus instrument, appears unoccupied. **That claim rests on a few search rounds
+rather than a literature review**, and a proper one is the first task of any follow-on work, because
+finding out cheaply that someone has already done it is a good outcome.
 
 ## Repository layout
 
