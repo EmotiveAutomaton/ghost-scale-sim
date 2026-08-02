@@ -115,7 +115,7 @@ def plate_03_the_wall():
     c = d["cells"]
     order = [("human", "Made by a person", HUMAN),
              ("foreign", "Built by an unconstrained\nartificial mind", COOL),
-             ("noninvertible", "Every word familiar,\nnobody behind it", MACHINE)]
+             ("noninvertible", "Reads perfectly.\nNo one to find.", MACHINE)]
     ent = [float(c[k]["final_entropy"]) for k, _, _ in order]
     eng = [float(c[k]["engaged_fraction"]) for k, _, _ in order]
 
@@ -131,10 +131,10 @@ def plate_03_the_wall():
     ax.set_xticklabels([o[1] for o in order], fontsize=11)
     bar_labels(ax, b1, ent, fmt="{:.2f}", fontsize=11, color=INK)
     bar_labels(ax, b2, eng, fmt="{:.2f}", fontsize=11, color=MUTED)
-    annotate(ax, -0.18, max(ent) * 1.14, "solid: how lost you are left",
-             color=INK, fontsize=10.5, weight="bold")
-    annotate(ax, 1.05, max(ent) * 1.14, "faded: how long you keep trying",
-             color=MUTED, fontsize=10.5, weight="bold")
+    annotate(ax, -0.32, max(ent) * 1.17, "solid bars: how confused it left you",
+             color=INK, fontsize=11, weight="bold", ha="left")
+    annotate(ax, 0.92, max(ent) * 1.17, "faded bars: how much attention you spent",
+             color=MUTED, fontsize=11, weight="bold", ha="left")
     ax.set_ylim(0, max(ent) * 1.3)
     clean_axis(ax)
     ax.set_yticks([])
@@ -783,10 +783,10 @@ def plate_22_how_much_is_the_theory():
     mine = [1.0 - v for v in vals]
 
     fig, ax = plate(
-        "I rebuilt my model with the theory taken out,\nto see what I could still take credit for.",
-        "Each bar is one finding. The grey part is how much of it showed up anyway in a model "
-        "built the same way with random settings. The teal part is what was left over, and the "
-        "teal part is the only bit that is evidence for this theory rather than for the method.",
+        "Almost nobody tries to break their own model.\nI did, and most of my findings did not survive it.",
+        "The test: rebuild the model hundreds of times with every setting my theory specifies "
+        "replaced by a random one. If a finding still turns up, my theory was never what produced "
+        "it. Run this on most published models and very little would be left standing.",
         "S-1 - results/v8/s1_severity.json - 600 randomly parameterised rebuilds per finding")
 
     pos = ax.get_position()
@@ -806,16 +806,22 @@ def plate_22_how_much_is_the_theory():
 
     ax.set_yticks(y, labels, fontsize=12.5)
     ax.set_xlim(0, 1.20)
-    ax.set_ylim(-0.62, len(labels) + 0.16)
+    ax.set_ylim(-1.35, len(labels) + 0.16)
     clean_axis(ax, "", "")
     ax.set_xticks([])
     for s in ax.spines.values():
         s.set_visible(False)
 
-    annotate(ax, 0.02, len(labels) - 0.30, "would have happened anyway",
+    annotate(ax, 0.02, len(labels) - 0.30, "shows up without my theory",
              color=MUTED, fontsize=12, weight="bold", va="center", ha="left")
-    annotate(ax, 0.99, len(labels) - 0.30, "actually mine",
+    annotate(ax, 0.99, len(labels) - 0.30, "needed my theory",
              color=HUMAN, fontsize=12, weight="bold", va="center", ha="right")
+    # The qualification belongs INSIDE the frame. In the footer it was clipped, and a caveat
+    # nobody can read is worse than no caveat at all: it looks like a claim with no limits on it.
+    annotate(ax, 0.0, -0.90,
+             "The overall picture still holds together. Most of its individual parts\n"
+             "are not load-bearing, and almost nobody checks that about their own work.",
+             color=INK, fontsize=11.5, weight="bold", va="center", ha="left")
 
     record(save(fig, "22_how_much_is_the_theory"),
            "Almost nobody publishes this number about their own work. It costs the project its "
