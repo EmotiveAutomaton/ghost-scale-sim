@@ -25,34 +25,50 @@ LEFT = FIG / "Ghostscale_creator.png"      # 100% intent, drawn by a person
 RIGHT = FIG / "Ghostscale_curator.jpeg"    # 60% intent, rendered by a machine
 OUT = FIG / "ghost_scale_pair.png"
 
-GUTTER = 8          # a thin seam so the two panels do not appear to be one image
-SEAM = (24, 24, 26)  # near-black, so it reads as a division rather than as background
+BORDER = 46             # thick enough that the two tones are the first thing you see
+BLACK = (0, 0, 0)       # the drawn panel: 100% intent
+GREY = (101, 104, 97)   # the rendered panel, sampled from its own existing edge
 
 
 def main() -> None:
     left = Image.open(LEFT).convert("RGB")
     right = Image.open(RIGHT).convert("RGB")
 
+    # Scale to a common CONTENT height first, so the two borders come out the same thickness.
+    # Bordering first and scaling after would make one frame visibly thinner than the other.
     height = max(left.height, right.height)
 
     def scaled(im: Image.Image) -> Image.Image:
         if im.height == height:
             return im
-        w = round(im.width * height / im.height)
-        return im.resize((w, height), Image.LANCZOS)
+        return im.resize((round(im.width * height / im.height), height), Image.LANCZOS)
 
     left, right = scaled(left), scaled(right)
-    canvas = Image.new("RGB", (left.width + GUTTER + right.width, height), SEAM)
+
+    def framed(im: Image.Image, colour) -> Image.Image:
+        out = Image.new("RGB", (im.width + 2 * BORDER, im.height + 2 * BORDER), colour)
+        out.paste(im, (BORDER, BORDER))
+        return out
+
+    left, right = framed(left, BLACK), framed(right, GREY)
+
+    # No gutter. The two frames meet, so black against grey IS the division, which is the whole
+    # point of giving them different border tones in the first place.
+    canvas = Image.new("RGB", (left.width + right.width, left.height), BLACK)
     canvas.paste(left, (0, 0))
-    canvas.paste(right, (left.width + GUTTER, 0))
+    canvas.paste(right, (left.width, 0))
     canvas.save(OUT)
 
     px = canvas.convert("RGB")
-    corners = [px.getpixel(p) for p in
-               ((0, 0), (canvas.width - 1, 0), (0, height - 1), (canvas.width - 1, height - 1))]
-    print(f"wrote {OUT.relative_to(REPO)}  {canvas.size}")
-    print(f"  corner tones: {corners}")
-    assert all(sum(c) < 400 for c in corners[:1]), "left edge should be dark"
+    corners = {"top-left": px.getpixel((0, 0)),
+               "top-right": px.getpixel((canvas.width - 1, 0)),
+               "bottom-left": px.getpixel((0, canvas.height - 1)),
+               "bottom-right": px.getpixel((canvas.width - 1, canvas.height - 1))}
+    print(f"wrote {OUT.relative_to(REPO)}  {canvas.size}  border {BORDER}px")
+    for k, v in corners.items():
+        print(f"  {k:<13} {v}")
+    assert corners["top-left"] == BLACK, "the drawn panel must be framed in black"
+    assert corners["top-right"] == GREY, "the rendered panel must be framed in grey"
 
 
 if __name__ == "__main__":
