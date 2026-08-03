@@ -831,11 +831,9 @@ def plate_19_zero_shot():
     ax.axhline(chance, color=NEUTRAL, lw=1.4, ls=":", zorder=2)
     annotate(ax, 0.05, band["highest"] + 0.035, "a reader that simulates", color=HUMAN,
              fontsize=12.5, weight="bold")
-    annotate(ax, len(xs) - 1.05, 0.30,
-             "The green reader has no learning curve because it is given no examples at all.\n"
-             "It is one reader measured eight times, and the band is the spread of those\n"
-             "eight draws. Isolate the random seeds and all eight land on the same number.",
-             color=HUMAN, fontsize=10, ha="right", va="top")
+    # The explanation of why the green line has no learning curve lives in the walkthrough and in
+    # the verdict file. On the plate it was three lines of apparatus competing with two lines of
+    # data, and the contrast is the whole point.
     annotate(ax, 0.05, chance + 0.025, "pure guessing", color=MUTED, fontsize=10.5)
     annotate(ax, 0.05, by[xs[0]] - 0.035, "a reader that counts", color=MACHINE,
              fontsize=12.5, weight="bold", va="top")
