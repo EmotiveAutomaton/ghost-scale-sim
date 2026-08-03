@@ -1,0 +1,80 @@
+{
+  "check": "V-11 \u2014 the two controls plates 5 and 11 needed",
+  "V-11a": {
+    "check": "V-11a \u2014 E36's temporal ordering against a placebo split",
+    "question": "does method uptake rise because the reader settled on the goal, or merely because the later window has more evidence in it?",
+    "real_gain": 0.05961507547057358,
+    "sham_gain": 0.039522696165112,
+    "real_minus_sham": 0.02009237930546157,
+    "interval": [
+      0.001374554582125112,
+      0.038489081627336705
+    ],
+    "excludes_zero_positive": true,
+    "n_rollouts": 320,
+    "mean_settled_at": 6.409375,
+    "mean_sham_at": 6.990625,
+    "outcome": "SETTLING_DOES_WORK_THE_CLOCK_DOES_NOT",
+    "how_to_read": "the sham split sits at the same average depth in the reading as the real one, so any gain it reproduces is what the clock buys. Whatever is left over is what settling buys. A null here does not make E36 false; it makes the temporal plate a picture of elapsed evidence and the ordering claim unsupported by it."
+  },
+  "V-11b": {
+    "check": "V-11b \u2014 the maker sat down in front of its own work",
+    "question": "can a maker recover a purpose off its own artifact that it can no longer declare?",
+    "by_depth": {
+      "1": {
+        "declared": 0.9833333333333333,
+        "read_own_work": 0.825,
+        "process_recovered": 0.25173611111111105,
+        "n": 120
+      },
+      "2": {
+        "declared": 0.8166666666666667,
+        "read_own_work": 0.8416666666666667,
+        "process_recovered": 0.29027777777777775,
+        "n": 120
+      },
+      "3": {
+        "declared": 0.6333333333333333,
+        "read_own_work": 0.7916666666666666,
+        "process_recovered": 0.23680555555555557,
+        "n": 120
+      }
+    },
+    "at_the_deepest": {
+      "declared": 0.6333333333333333,
+      "read_own_work": 0.7916666666666666,
+      "advantage": 0.15833333333333333,
+      "interval": [
+        0.05,
+        0.275
+      ],
+      "n": 120
+    },
+    "excludes_zero_positive": true,
+    "the_interaction": {
+      "advantage_at_the_shallowest": -0.15833333333333333,
+      "advantage_at_the_deepest": 0.15833333333333333,
+      "tipping": 0.31666666666666665,
+      "interval": [
+        0.18333333333333332,
+        0.45
+      ],
+      "excludes_zero_positive": true,
+      "why_this_is_the_statistic": "on a scribble the maker should WIN, because a novice can just tell you what they were doing. The claim is that the balance tips with depth, so the level at any one depth decides nothing and the change across depths decides everything."
+    },
+    "outcome": "THE_BALANCE_TIPS_TOWARD_THE_WORK_AS_DEPTH_RISES",
+    "how_to_read": "the reader here has the maker's own body plan and a flat prior over goals, so it is the same person with no memory of which intention was running. If it beats the declared report, then the work is a better record of the intent than the maker is, which is what the plate's second sentence claims and what E43 never tested.",
+    "what_it_still_cannot_show": "self-report is modelled as a probability that falls with depth, not derived from the maker's own machinery. So this establishes that the ARTIFACT carries recoverable intent at depths where the declared channel is degraded; it does not derive the degradation. E43 is the same in this respect and says so."
+  },
+  "declared_deviation": {
+    "what": "both tests were first run at n_obs=40 (V-11a) and n_obs=60 (V-11b) and both intervals crossed zero. They were re-run at n_obs=120 and both cleared.",
+    "why_this_is_declared": "raising n after seeing a null is a forking path, and this project logs them rather than letting them pass. The point estimates barely moved -- V-11a's real-minus-sham went 0.0147 to 0.0201 and V-11b's tipping was already large at the smaller n -- so this reads as a power problem rather than as a different answer. It is still a decision made after seeing a result and it is on the ledger.",
+    "v11a_at_n40": {
+      "real_minus_sham": 0.014667526357117596,
+      "interval": [
+        -0.022273380974800246,
+        0.050443053452141354
+      ]
+    }
+  }
+}

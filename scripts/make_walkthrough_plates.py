@@ -273,31 +273,43 @@ def plate_04_method_not_purpose():
 # 05 — intent unlocks the method.
 # =========================================================================== #
 def plate_05_intent_unlocks():
-    d = load("v6/e36_process.json")["H6.3b_temporal"]
-    before, after = float(d["process_before_settling"]), float(d["process_after_settling"])
-    lo, hi = [float(x) for x in d["interval"]]
+    """Redrawn around its own control, because the control is the reason to believe it.
+
+    The old plate drew method uptake before and after the reader settles on the goal, and a reader
+    is entitled to object that "after" is simply LATER -- the second window always has more
+    evidence behind it, so both quantities could accrue with looking and settling could be doing
+    nothing. V-11a runs the separator: split each rollout at a sham point drawn from the same
+    distribution of settling times, so the sham window sits at the same average depth in the
+    reading (6.92 against 6.94), and see how much of the gain survives.
+
+    Most of it does not. The clock buys two thirds. What is left is real -- interval clear of zero
+    -- and it is a third of what the plate used to imply, so the plate now shows the control rather
+    than the claim.
+    """
+    v = load("v6/v11_two_confounds.json")["V-11a"]
+    real, sham = float(v["real_gain"]), float(v["sham_gain"])
+    lo, hi = [float(x) for x in v["interval"]]
 
     fig, ax = plate(
         r"The Math of Empathy: simulating a creator to find $\it{why}$ they did something "
-        r"makes it easy to find out $\it{how}$, and learn from them.",
-        f"Inside a single reading, on the same object: how much of the maker's method the reader "
-        f"picks up before and after it settles on what the work was for. The interval is a "
-        f"bootstrap — resample the {d['n_rollouts']} readings with replacement a few thousand "
-        f"times, recompute the gain each time, and keep the middle 95% of what comes back. It "
-        f"runs [{lo:+.3f}, {hi:+.3f}] and does not touch zero, so the ordering is not an artefact "
-        f"of which readings happened to be drawn.",
-        f"E36 · results/v6/e36_process.json · {d['n_rollouts']} readings · gain "
-        f"{after - before:+.3f} · the pre-registered form failed and is reported as failing",
+        r"helps you find out $\it{how}$, and learn from them.",
+        f"Both bars are the same {v['n_rollouts']} readings cut in two, scored on how much more "
+        f"of the maker's method the reader picks up after the cut. Grey cuts at a random point, "
+        f"green cuts where that reader settled on what the work was for, and both cuts fall at "
+        f"the same average depth. So grey is what more looking buys, and the gap is what "
+        f"understanding the purpose buys on top.",
+        f"V-11a · results/v6/v11_two_confounds.json · {v['n_rollouts']} readings · difference "
+        f"{v['real_minus_sham']:+.3f}, bootstrap interval [{lo:+.3f}, {hi:+.3f}]",
         authored=True)
-    bars = ax.bar(["Before you work out\nwhat it was for",
-                   "After you work out\nwhat it was for"],
-                  [before, after], color=[NEUTRAL, HUMAN], width=0.5)
-    bar_labels(ax, bars, [before, after], fmt="{:.3f}", fontsize=15, color=INK)
-    ax.set_ylim(0, after * 1.45)
-    clean_axis(ax, "how much of the method you pick up")
+    bars = ax.bar(["Split at a random point\n(what more looking buys)",
+                   "Split where the reader settled\non what it was for"],
+                  [sham, real], color=[NEUTRAL, HUMAN], width=0.5)
+    bar_labels(ax, bars, [sham, real], fmt="{:+.3f}", fontsize=15, color=INK)
+    ax.set_ylim(0, real * 1.52)
+    clean_axis(ax, "extra method picked up")
     ax.set_yticks([])
-    annotate(ax, 0.5, after * 1.22,
-             f"{after / before:.1f}× more, same reader, same object",
+    annotate(ax, 0.5, real * 1.34,
+             f"working out the purpose adds {v['real_minus_sham']:+.3f} on top of that",
              color=HUMAN, ha="center", fontsize=13, weight="bold")
     record(save(fig, "05_intent_unlocks_the_method"),
            "Intent is the key that makes the method readable. Not in the essay or the preprint, "
@@ -485,15 +497,13 @@ def plate_11_self_report():
     process = [float(c["process_accuracy"]) for c in cells]
     reader = [float(c["reader_accuracy"]) for c in cells]
 
+    tip = load("v6/v11_two_confounds.json")["V-11b"]["the_interaction"]
     fig, ax = plate(
-        "Expertise involves folding procedures into your subconscious until they are automatic. "
-        "Paradoxically, experts can sometimes even learn about themselves from their own "
-        "process. Happy little accidents.",
-        "Nobody sets the maker's self-blindness here. Depth sets it, which is what makes this a "
-        "claim about practice rather than about personalities. As the work gets deeper the maker "
-        "names its own purpose less and less reliably, while more and more of its method is left "
-        "in the work where a reader can pick it up. The model measures a reader doing that "
-        "picking up; it never sits the maker down in front of their own work.",
+        "Expertise bakes in until you can no longer consciously reach it. "
+        "It transfers anyway. Happy little accidents.",
+        f"Nobody sets the maker's self-blindness here — depth sets it. And past a certain depth "
+        f"your own work becomes a better record of what you meant than your memory of it: the "
+        f"balance tips by {tip['tipping']:+.2f} between a scribble and a master's work.",
         "E43 · results/v6/e43_selfreport.json · the maker naming its own purpose, against how "
         "much of its method a reader recovers off the work",
         authored=True)

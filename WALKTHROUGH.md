@@ -368,57 +368,63 @@ moves.
 
 ### 21. The math of empathy
 
-![Work out what someone was trying to do and their choices start making sense](figures/walkthrough/05_intent_unlocks_the_method.png)
+![Working out the purpose is what makes the method readable](figures/walkthrough/05_intent_unlocks_the_method.png)
 
 The claim: you work out what someone was *for* first, and that is what makes their choices
-readable — every move can then be read as being in service of it. It is in neither the preprint nor
-the essay. It came out of a conversation.
+readable. It is in neither the preprint nor the essay. It came out of a conversation.
 
-**Read the two forms of this test together, because only one of them holds.**
+**Its first two forms both had a problem, and the third is the one to read.**
 
-The **pre-registered** form is a between-reader contrast: do readers who end up *right* about the
-goal recover more of the method than readers who end up *wrong*? Gap of 0.047 against a required
-0.15. **It fails, and it is reported as failing:** `PROCESS_IS_INDEPENDENT_OF_GOAL`.
+The **pre-registered** form is a between-reader contrast — do readers who end up *right* about the
+goal recover more method than readers who end up *wrong*? Gap 0.047 against a required 0.15. **It
+fails and is reported as failing.**
 
-The **temporal** form was added afterwards and declared as added. Within a single reading, on the
-same object, method uptake before the goal settles is 0.050 and after it is 0.130 — a gain of
-0.080, bootstrap interval [+0.041, +0.122] over 102 readings, not touching zero.
+The **temporal** form was added afterwards and declared: within one reading, method uptake before
+the goal settles is 0.050 and after it is 0.130. That looked decisive and it had an obvious hole —
+*after* is simply **later**, and the later window always has more evidence behind it.
 
-The version-6 write-up argues the two are not in conflict, because *once you know what someone was
-for you can read their actions as being in service of it* is a within-reader claim and the
-pre-registered criterion tested a between-reader one. That is a fair reading. **It is also the case
-that "after settling" is later in the reading than "before settling", so the later window always has
-more evidence behind it**, and this design cannot separate *resolving the goal unlocked the method*
-from *both accrue as you keep looking*. A time-matched control would separate them and has not been
-run.
+**V-11a is the separator, and it cost the result two thirds of its size.** Cut each reading at a
+sham point drawn from the same distribution of settling times, so the sham cut falls at the same
+average depth (7.0 against 6.4), and score the same quantity. The sham cut reproduces **+0.040 of
+the +0.060**. What is left — **+0.020, bootstrap interval [+0.001, +0.038]** — is what settling
+buys once the clock is paid for. *Most of the effect was elapsed evidence. A third of it was not,
+and that third is the finding.*
 
-So: a real result, honestly declared, with a confound it has not been cleared of. Good enough to
-publish in a walkthrough. **Not the thing to open a carousel with.**
+*Declared: V-11a first ran at 40 readings per cell and its interval crossed zero. It was re-run at
+120 and cleared. The point estimate barely moved, so this reads as power rather than as a different
+answer, but raising n after seeing a null is a forking path and it is on the ledger.*
 
-### 22. Expertise folds into the subconscious
+### 22. Expertise bakes in
 
 ![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
 
-A novice can tell you exactly which rule they were following, because they are still following it on
-purpose. Practice compresses decisions into automatic routines, and compression is precisely what
-puts them out of reach of report. The maker names its own purpose correctly **0.98** of the time on
-a scribble and **0.68** on a master's work.
+A novice can tell you exactly which rule they were following, because they are still following it
+on purpose. Practice compresses decisions into automatic routines, and compression is precisely
+what puts them out of reach of report. The maker names its own purpose correctly **0.98** of the
+time on a scribble and **0.68** on a master's work, while how much of their **method** a reader
+lifts off the work rises from **0.27 to 0.47**. Two lines crossing.
 
-Note what is *not* happening here: nobody is setting the maker's self-blindness. **Depth sets it**,
+Note what is *not* happening: nobody is setting the maker's self-blindness. **Depth sets it**,
 which is a stronger and different claim from E33, where self-blindness was a knob.
 
-The plate used to draw the maker's self-report against the *reader's accuracy on the purpose*, and
-that reader scores 1.00 in all three cells — pinned at the ceiling, a flat line carrying no
-information. It now draws the pair that actually moves in opposite directions: what the maker can
-say about why falls from 0.98 to 0.68, while how much of their **method** a reader lifts off the
-work rises from **0.27 to 0.47**. The better you get, the less you can explain, and the more of your
-process is sitting in the work for someone else to take.
+**The second sentence of the title was an extension, and V-11b went and tested it.** Nothing in E43
+puts the maker in the reader's seat — it compares a maker's declared accuracy against a *separate*
+reader's. So: take the artifact a maker produced, hand it to an observer with that maker's own body
+plan and a flat prior over goals — the same person, with no memory of which intention was running —
+and see what it recovers.
 
-**One claim in the title runs past the experiment.** *Experts can sometimes learn about themselves
-from their own process* is a natural extension — reading intent off work is general, and your own
-work is work — but this model never sits a maker down in front of their own artifact. What it
-measures is a **reader** recovering what the maker cannot report. The extension is plausible and
-untested, and the plate says so in grey.
+The statistic that decides it is an **interaction**, not a level, because on a scribble the maker
+*should* win: a novice can simply tell you what they were doing. And that is what happens. Reading
+your own work loses by **0.16** on a scribble and wins by **0.16** on a master's work — a tipping of
+**+0.32, interval [+0.18, +0.45]** at 120 readings per depth.
+
+**Past a certain depth, your own work is a better record of what you meant than your memory of it.**
+That is *happy little accidents*, and it is now measured rather than asserted.
+
+*What it still cannot show: self-report is modelled as a probability that falls with depth rather
+than derived from the maker's own machinery. This establishes that the artifact carries recoverable
+intent at depths where the declared channel is degraded. It does not derive the degradation. E43 is
+the same in this respect and says so.*
 
 ### 23. Labelling needs a convention
 
