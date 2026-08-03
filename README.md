@@ -16,7 +16,7 @@ A working model of how people work out what someone was trying to do when they m
 | you want | read | how much of a person is in it |
 |---|---|---|
 | **the fastest true picture** | **this page, down to the marker** | ◐ Curator, 60% |
-| the whole argument, in pictures | [WALKTHROUGH.md](WALKTHROUGH.md) | ○ Ghost, 5% |
+| the whole argument, in pictures | [WALKTHROUGH.md](WALKTHROUGH.md) | mixed ◐ Curator and ○ Ghost |
 | every question and its current answer | [FINDINGS.md](FINDINGS.md) | ○ Ghost, 5% |
 | what the world published, next to what this predicted | [EVIDENCE.md](EVIDENCE.md) | ○ Ghost, 5% |
 | the theory this implements | [docs/theory/](docs/theory/) | mixed Polished and Curator |
@@ -839,7 +839,7 @@ chronology. Directories sort in run order; the names say what each one was for.
 ```
 README.md                       this page
 FINDINGS.md                     every question and its CURRENT answer -- the one page to read
-WALKTHROUGH.md                  25 plates, in the order that makes the argument
+WALKTHROUGH.md                  26 plates, in the order they are being published
 EVIDENCE.md                     what the world has published, next to what this predicted
 
 docs/HISTORY.md                 ten versions and three audit passes, as one narrative

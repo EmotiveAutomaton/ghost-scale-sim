@@ -856,7 +856,7 @@ def plate_20_rejection_is_not_protection():
         "fixed 10% leak; nobody added that leak, version 6's smooth guard already had it",
         authored=True,
         second="Unfortunately, the same result implies that engaging with unlabelled AI "
-               r"content can $\it{actively\ erode\ away\ your\ expertise}$.")
+               r"content can $\it{actively\ erode\ your\ expertise}$.")
     bars = ax.bar(["Skims it\n(two looks)", "Studies it closely\nto refute it (sixteen looks)"],
                   [skim, close], color=[NEUTRAL, MACHINE], width=0.5)
     bar_labels(ax, bars, [skim, close], fmt="{:.3f}", fontsize=15, color=INK)

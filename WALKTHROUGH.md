@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-six pictures, in the order that makes the argument.** Each one is meant to be readable in
+**Twenty-six pictures, in the order they are being published.** Each one is meant to be readable in
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
@@ -9,16 +9,49 @@ footer. Regenerate the whole set with `python scripts/make_walkthrough_plates.py
 an automatic audit that fails any plate with text running off the canvas or printed over other text,
 because both of those happened here and neither is visible to anything but an eye on the image.
 
-*The older per-experiment research charts have been removed. They were working figures from versions
-1 to 5, drawn before this repository had a house style and never brought up to it, and several of
-them meant something different by the end than they did when they were drawn. Every claim they
-carried is in the plates below, redrawn from the same committed data.*
+---
+
+## Read the title colour first
+
+**The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as
+claims.**
+
+| what you see | tier | what it means |
+|---|---|---|
+| **A black title** | **◐ Curator, 60%** | A person chose the claim, wrote the headline, and checked it against the results file. A machine drew everything else. The headline itself is Polished — the words are the author's, the grammar is not. |
+| *A grey title* | **○ Ghost, 5%** | A machine wrote the headline from the author's numbers, end to end. **Grey means not yet been through the author. It does not mean less important, and it does not mean less true.** |
+
+Grey plates are still being worked through. Several of them carry the project's strongest results and
+are waiting on a headline in the author's own hand, not on better evidence.
 
 ---
 
-## Part one — what happens when you lie about who made something
+## Carousel one — *we are aiming detection at the wrong thing*
 
-### 1. The central result
+*Published. Six plates.*
+
+### 1. The one thing here that is actually a defence
+
+![Filtering on how good it looks does nothing](figures/walkthrough/25_a_defence_that_works.png)
+
+Every result in this project except this one describes something going wrong. This is the only one
+that does something about it.
+
+Networks now publish at industrial scale specifically so that **AI systems** will absorb them, not
+so that people will read them — 150+ domains, roughly three million articles a year, and almost no
+human visitors, which is the tell. Filtering that out by how good the writing looks does **nothing**,
+because looking good is the whole objective. It is the same shape as the RLHF result: optimise the
+signal and the signal stops carrying information.
+
+Asking *who made this, and why* cuts the damage by about a quarter, restores the learner's reading
+of genuine human work, and **costs nothing on a clean stream** — while never once looking at a
+label. That last part matters most. The Ghost Scale failed twice as something makers apply. **This is
+the same idea as something readers do, and nobody has to agree to it.**
+
+*Read the direction, not the size: 83% of randomly parameterised models of this shape do it too, so
+most of this is architecture rather than evidence for the specific theory.*
+
+### 2. What a false label does
 
 ![A false label moves you away from the truth](figures/walkthrough/01_false_label_moves_you_wrong.png)
 
@@ -27,41 +60,11 @@ The measure that made this visible is newer than the result. For five versions t
 reader who ends up confidently wrong has moved just as far as one who ends up right. Given a sign,
 the three cells stop looking similar and start having opposite signs.
 
-### 2. The two witnesses
+Told honestly that a machine made it, a reader barely moves: **−0.09**. Told a person made it,
+**−5.96**. Sixty-six times further, and negative, which means movement *away from* the truth rather
+than a failure to learn.
 
-![Two witnesses arrive with every glance](figures/walkthrough/16_two_witnesses.png)
-
-Why the lie works at all. The reader gets two pieces of evidence about origin at every glance: what
-the label says, and what the work itself says. On a lie they point in opposite directions, and which
-one wins is decided by an inequality you can solve on paper. **This was computed with no simulation
-at all, and it predicted the shape of several results that had already been run.**
-
-### 3. Honesty is not always enough
-
-![If trust lowers your guard, honesty stops being enough](figures/walkthrough/06_honesty_is_not_enough.png)
-
-The most consequential thing version 6 found, and it is a disagreement between the published theory
-and its own implementation. The code models a **con**: you were lied to, you were fooled, the fix is
-disclosure. The paper models something worse: trust *itself* lowers the guard, so a trusted source
-gets absorbed **even when it tells you exactly what it is**. Disclosure does not fix that one.
-
-Both accounts produce the famous result. Only one of them survives being told the truth.
-
-### 4. Reputation blindness
-
-![The readers most inclined to believe a label can never learn the labeller lies](figures/walkthrough/07_reputation_blindness.png)
-
-Follow the previous plate through and you get a prediction the earlier model structurally could not
-make. To learn that a source lies you have to notice the label and the work disagreeing — and above
-the crossover, the label has already won that argument before the disagreement can register.
-
-Not slow learning. Learning that cannot start.
-
----
-
-## Part two — what unreadable content does to a reader
-
-### 5. Where it breaks
+### 3. Where it actually breaks
 
 ![Invention peaks in the middle, not at the empty end](figures/walkthrough/02_invention_peaks_in_the_middle.png)
 
@@ -70,7 +73,7 @@ block, at double scale, in every cell of the robustness sweep, and in every resa
 worst place to be is nearly understandable.** Total nonsense is safe; total clarity is safe; the
 danger is having just enough handholds to build a story on.
 
-### 6. Not understanding is the safe failure
+### 4. Not understanding is the safe failure
 
 ![Not understanding a painting is safe; AI work lets you believe you understood](figures/walkthrough/03_legible_and_empty.png)
 
@@ -98,72 +101,90 @@ because nobody committed.
 **Failing to understand something protects you. Being satisfied by it is how the false thing gets
 in.**
 
-### 7. Two kinds of damage
+### 5. I threw my own settings away
 
-![One kind of damage scales; the other is already there at zero](figures/walkthrough/12_two_kinds_of_damage.png)
+![How much of this is the theory](figures/walkthrough/22_how_much_is_the_theory.png)
 
-Absorbing bad material gets worse the more of it there is — the obvious kind. The other kind is
-driven by *walking away*, so it is fully present in a corpus with no machine content in it at all.
-The second has the strongest independent support of anything in this project.
+The most important number in this project is not a result. Keep the shape of the model, randomise
+everything the theory specifies, and count how often the finding still appears.
 
-### 8. Labelling needs a convention
+**Two of three headlines appear every time.** They are properties of building a reader this shape at
+all — which *is* the theory, but is the part shared with any account of the same shape. It does not
+distinguish this framework from a competitor built the same way.
 
-![Labelling only protects readers who know the labelling exists](figures/walkthrough/15_labels_need_a_convention.png)
+One result survives at zero. That is where the specific commitments earn their keep.
 
-The policy number. And a lower bound, because the aware reader here is handed the true coverage,
-which is the most generous assumption available.
+### 6. Why detection is a losing race
 
----
+![Better detectors mean fewer false accusations, until the content fights back](figures/walkthrough/26_the_arms_race.png)
 
-## Part three — reading the maker
+An earlier version of this project found that detectors misfire *less* as they sharpen, and
+published that as its own prediction failing. It had measured a world with no adversary in it.
 
-### 9. Depth moves the method, not the purpose
+Put evasion in, so that detection and evasion improve together, and the misfiring stops falling and
+turns back up: at its worst, **two thirds of careful human writing wrongly flagged.** Switch evasion
+off and the clean decline comes straight back, which is what makes this a finding about the world
+rather than about a new piece of code.
 
-![Depth changes how much of the method you pick up](figures/walkthrough/04_depth_moves_the_method.png)
-
-**Five versions looked for an effect in the one place the design guarantees there isn't one.**
-
-Depth here is the Zen master's circle against the child's scribble: what differs is compressed
-practice, not effort spent. The construction deliberately makes a deep work and a shallow one state
-their purpose *equally clearly* — that is what stops "depth" being "clarity" with a new name.
-
-And then the experiment measured whether depth changes how much of the **purpose** you get. It
-couldn't. Not "it didn't" — it *couldn't*. Measured on how much of the **method** transfers, it
-moves.
-
-### 10. Intent unlocks the method
-
-![Work out what someone was trying to do and their choices start making sense](figures/walkthrough/05_intent_unlocks_the_method.png)
-
-The claim: you work out what someone was *for* first, and that is what makes their choices
-readable — every move can then be read as being in service of it.
-
-It is in neither the preprint nor the essay. It came out of a conversation, and it holds — inside a
-single reading, on the same object, before and after the reader settles on the purpose.
-
-### 11. The master cannot explain themselves
-
-![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
-
-A novice can tell you exactly which rule they were following, because they are still following it on
-purpose. Practice compresses decisions into automatic routines, and compression is precisely what
-puts them out of reach of report.
-
-Note what is *not* happening here: nobody is setting the maker's self-blindness. Depth sets it.
-
-### 12. Looking is not the same as being changed
-
-![Paying attention and being willing to be changed are not the same thing](figures/walkthrough/10_looking_is_not_being_changed.png)
-
-Attention is what you spend. Whether what you find is allowed to change you is a separate decision,
-and every combination of the two is reachable. The model always kept them apart; no version had ever
-reported them separately.
+There is a second half that does not fit on the same picture. A reader whose detector stops updating
+does not gradually get fuzzier. Its accusation rate does not move at all while its accuracy drains
+away underneath, until it is firing on people and machines at exactly the same rate with exactly the
+same confidence. **A coin flip that still believes it is a detector.**
 
 ---
 
-## Part four — the unwelcome results
+## Carousel two — *the case for intent*
 
-### 13. You don't need a mind to invent one
+*Next out. Five plates. Each one is the objection raised by the one before it.*
+
+### 7. What simulating a creator buys
+
+![Imagining a maker is about being cheap](figures/walkthrough/18_what_imagining_a_maker_buys.png)
+
+Plate 10 below is the result that made this project withdraw a claim: you do not need to imagine a
+maker to end up confidently wrong about one. True, and it stands.
+
+But it answered a narrower question than it has been read as answering. It asked whether a
+maker-model is needed to produce a *signature*. It never asked what the maker-model *buys* — and if
+imagining another mind is worth what it costs to run, the payoff was never going to be a signature.
+
+**Four worked examples against five hundred and twelve, to clear the same bar.** This is a
+sample-efficiency result and not a compute result: per inference, the reader that simulates a
+creator is the *more* expensive one. What it saves is evidence.
+
+### 8. Reading a goal nobody has shown you
+
+![You can recognise a purpose nobody has shown you](figures/walkthrough/19_reading_an_unseen_intent.png)
+
+The obvious objection to the plate above is *that is just a prior — give the counter more data.* So:
+a goal held out of training entirely.
+
+A reader that can **run** the generator has the whole space available. A reader that has to
+**observe** the space only ever has the part it happened to see — and more examples do not fix that,
+because its problem was never a shortage of examples. The simulator gets it right about three times
+in four. The counter sits at guessing across a 128-fold increase in training data and never leaves.
+
+### 9. And what is each finding actually made of?
+
+![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
+
+The severity rate on plate 5 says how much of a result is architectural. It does not say **which
+part**. So the complement: keep the settings and strip the shape instead — remove one structural
+commitment at a time, six of them, each a decision about what a reader *is*.
+
+**Every finding dies the moment the reader stops simulating the creator and starts pattern-matching
+a surface.** That is the one load-bearing commitment in the project. The model can lose its
+hierarchy, its costly attention, and its separate belief about origin, and keep every result.
+
+And *legible and empty* is the odd one out for the second time. It is the only finding that needs
+the reader to hold a **distribution** rather than a best guess — which is exactly right, because
+"I read every word and there was nobody there" *is* a statement about the shape of an uncertainty.
+It is also the only finding with a 0% false-positive rate. Two unrelated audits, same answer.
+
+*One row is missing from this plate: sustained futile attention did not reproduce in the ablation
+harness's own baseline, so it has no answer here rather than a bad one.*
+
+### 10. You don't need a mind to invent one
 
 ![A counting classifier does it too](figures/walkthrough/13_no_mind_needed.png)
 
@@ -182,23 +203,30 @@ to 0.92. It has no channel for the information, because a label is a claim about
 does not have one. The signature was never the evidence for a maker-model; being able to hear a
 label is, and so is being able to keep paying attention to something you cannot resolve.
 
-### 14. A knee, not a cliff
+### 11. Rejection is not protection
 
-![Competence bends rather than falling off a cliff](figures/walkthrough/14_a_knee_not_a_cliff.png)
+![You cannot reject something and be unchanged](figures/walkthrough/20_rejection_is_not_protection.png)
 
-The author's own claim, tested knowing it could only survive or weaken. A genuine threshold gets
-sharper as you gather evidence; this one did not move across sixteen times the data, so its shape
-comes from the model rather than from a boundary in the world.
+To decide you disagree with something, you first have to work out what it says. Working out what it
+says means partly running it. So refusing is itself a small act of taking on, and it compounds.
 
-### 15. Expertise substitutes
+The theory always contained this term; the code never did. And the second half is worse than the
+first, which is why it is the picture rather than a caption on it: **the reader who studies it
+carefully in order to refute it drifts seven times more than the one who skims** — same content,
+same guard, eight times the looking. The effort you spend disagreeing is the channel.
 
-![Learning to read machine work swaps a skill out](figures/walkthrough/08_expertise_substitutes.png)
+Seal the guard completely and the drift really does fall to 0.00002. No version of this reader
+after version 5 has a guard that seals, because version 6 replaced the binary gate with a sigmoid,
+and a sigmoid never reaches zero. Shown content with no creator to recover, the reader invents one
+and then absorbs its own invention, and that lands about as hard (0.015) as a real intent does.
 
-The prediction was that people who understand these systems would be spared the crash. They are —
-by trading away the human channel. The adaptation that protects you is the same adaptation that
-costs you.
+---
 
-### 16. Pays more, gets less
+## Carousel three — *what it costs to be a reader*
+
+*Drafted. Five plates, all still on grey titles.*
+
+### 12. Pays more, gets less
 
 ![Optimise the signal of depth and readers pay more for less](figures/walkthrough/09_pays_more_gets_less.png)
 
@@ -208,6 +236,49 @@ reader correctly reading something built to trip its own heuristic for deciding 
 reading.
 
 This is the alignment argument, in miniature, inside the model.
+
+*Attention goes from almost none to more than a third, and the reader learns exactly the same amount
+either way — a negative amount. The ratio is off a denominator of 0.02, so quote the direction.*
+
+### 13. Two kinds of damage
+
+![One kind of damage scales; the other is already there at zero](figures/walkthrough/12_two_kinds_of_damage.png)
+
+Absorbing bad material gets worse the more of it there is — the obvious kind. The other kind is
+driven by *walking away*, so it is fully present in a corpus with no machine content in it at all.
+The second has the strongest independent support of anything in this project.
+
+### 14. Expertise substitutes
+
+![Learning to read machine work swaps a skill out](figures/walkthrough/08_expertise_substitutes.png)
+
+The prediction was that people who understand these systems would be spared the crash. They are —
+by trading away the human channel. The adaptation that protects you is the same adaptation that
+costs you.
+
+### 15. Reputation blindness
+
+![The readers most inclined to believe a label can never learn the labeller lies](figures/walkthrough/07_reputation_blindness.png)
+
+To learn that a source lies you have to notice the label and the work disagreeing — and above the
+crossover, the label has already won that argument before the disagreement can register.
+
+Not slow learning. Learning that cannot start.
+
+### 16. Looking is not the same as being changed
+
+![Paying attention and being willing to be changed are not the same thing](figures/walkthrough/10_looking_is_not_being_changed.png)
+
+Attention is what you spend. Whether what you find is allowed to change you is a separate decision,
+and every combination of the two is reachable. The model always kept them apart; no version had ever
+reported them separately. The release valve at the end of an uncomfortable set.
+
+---
+
+## Carousel four — *the ledger*
+
+*Drafted. Runs immediately before any demo, because it is what buys the demo a hearing. Two of its
+five slides are text plates that do not exist yet.*
 
 ### 17. The experiment that stayed withheld
 
@@ -219,47 +290,89 @@ real decay cannot be told apart from the instrument's own noise.
 
 Narrowly missing is exactly the case a no-exceptions rule exists for.
 
+### 18. A knee, not a cliff
+
+![Competence bends rather than falling off a cliff](figures/walkthrough/14_a_knee_not_a_cliff.png)
+
+The author's own claim, tested knowing it could only survive or weaken. A genuine threshold gets
+sharper as you gather evidence; this one did not move across sixteen times the data, so its shape
+comes from the model rather than from a boundary in the world.
+
+There was no version of that test where the claim got stronger.
+
+**Also in this carousel, not yet drawn:** plate 5 reprised as the anchor rather than as a caveat; the
+withheld version-10 rider, which damaged a learner reading nothing but honest human writing and was
+recorded in advance as the check most expected to fail; and the forking-paths ledger, eighteen places
+across four versions where a design or a criterion changed after a result was seen.
+
 ---
 
-## Part five — what the machinery is for, and what it cannot keep out
+## Not in a carousel yet
 
-### 18. What imagining a maker actually buys
+*Single posts and connective tissue. All grey, all still waiting on a headline.*
 
-![Imagining a maker is about being cheap](figures/walkthrough/18_what_imagining_a_maker_buys.png)
+### 19. The two witnesses
 
-Plate 13 is the result that made this project withdraw a claim: you do not need to imagine a maker
-to end up confidently wrong about one. True, and it stands.
+![Two witnesses arrive with every glance](figures/walkthrough/16_two_witnesses.png)
 
-But it answered a narrower question than it has been read as answering. It asked whether a
-maker-model is needed to produce a *signature*. It never asked what the maker-model *buys* — and if
-imagining another mind is worth what it costs to run, the payoff was never going to be a signature.
+Why the lie works at all. The reader gets two pieces of evidence about origin at every glance: what
+the label says, and what the work itself says. On a lie they point in opposite directions, and which
+one wins is decided by an inequality you can solve on paper. **This was computed with no simulation
+at all, and it predicted the shape of several results that had already been run.**
 
-### 19. Reading a purpose nobody has shown you
+### 20. Honesty is not always enough
 
-![You can recognise a purpose nobody has shown you](figures/walkthrough/19_reading_an_unseen_intent.png)
+![If trust lowers your guard, honesty stops being enough](figures/walkthrough/06_honesty_is_not_enough.png)
 
-This is the sharper half, and it is what *cheating the solution space* means. A reader that can
-**run** the generator has the whole space available. A reader that has to **observe** the space only
-ever has the part it happened to see — and more examples do not fix that, because its problem was
-never a shortage of examples.
+The most consequential thing version 6 found, and it is a disagreement between the published theory
+and its own implementation. The code models a **con**: you were lied to, you were fooled, the fix is
+disclosure. The paper models something worse: trust *itself* lowers the guard, so a trusted source
+gets absorbed **even when it tells you exactly what it is**. Disclosure does not fix that one.
 
-### 20. Rejection is not protection
+Both accounts produce the famous result. Only one of them survives being told the truth.
 
-![You cannot reject something and be unchanged](figures/walkthrough/20_rejection_is_not_protection.png)
+### 21. Depth moves the method, not the purpose
 
-To decide you disagree with something, you first have to work out what it says. Working out what it
-says means partly running it. So refusing is itself a small act of taking on, and it compounds.
+![Depth changes how much of the method you pick up](figures/walkthrough/04_depth_moves_the_method.png)
 
-The theory always contained this term; the code never did. And the second half is worse than the
-first, which is why it is now the picture rather than a caption on it: **the reader who studies it
-carefully in order to refute it drifts seven times more than the one who skims** — same content,
-same guard, eight times the looking. The effort you spend disagreeing is the channel.
+**Five versions looked for an effect in the one place the design guarantees there isn't one.**
 
-Seal the guard completely and the drift really does fall to 0.00002. No version of this reader
-after version 5 has a guard that seals, because version 6 replaced the binary gate with a sigmoid,
-and a sigmoid never reaches zero.
+Depth here is the Zen master's circle against the child's scribble: what differs is compressed
+practice, not effort spent. The construction deliberately makes a deep work and a shallow one state
+their purpose *equally clearly* — that is what stops "depth" being "clarity" with a new name.
 
-### 21. A disagreement that turned out to be a measurement error
+And then the experiment measured whether depth changes how much of the **purpose** you get. It
+couldn't. Not "it didn't" — it *couldn't*. Measured on how much of the **method** transfers, it
+moves.
+
+### 22. Intent unlocks the method
+
+![Work out what someone was trying to do and their choices start making sense](figures/walkthrough/05_intent_unlocks_the_method.png)
+
+The claim: you work out what someone was *for* first, and that is what makes their choices
+readable — every move can then be read as being in service of it.
+
+It is in neither the preprint nor the essay. It came out of a conversation, and it holds — inside a
+single reading, on the same object, before and after the reader settles on the purpose.
+
+### 23. The master cannot explain themselves
+
+![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
+
+A novice can tell you exactly which rule they were following, because they are still following it on
+purpose. Practice compresses decisions into automatic routines, and compression is precisely what
+puts them out of reach of report.
+
+Note what is *not* happening here: nobody is setting the maker's self-blindness. Depth sets it.
+
+### 24. Labelling needs a convention
+
+![Labelling only protects readers who know the labelling exists](figures/walkthrough/15_labels_need_a_convention.png)
+
+The policy number. And a lower bound, because the aware reader here is handed the true coverage,
+which is the most generous assumption available.
+
+### 25. A disagreement that turned out to be a measurement error
 
 ![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
 
@@ -267,85 +380,7 @@ The project's longest-running open question, settled by changing *what* was meas
 *how*. The criterion was scored on the work's purpose — which the model deliberately holds equally
 readable at every depth, so it could never have moved.
 
----
-
-## Part six — how much of any of this is the theory?
-
-### 22. I threw my own settings away
-
-![How much of this is the theory](figures/walkthrough/22_how_much_is_the_theory.png)
-
-The most important number in this project is not a result. Keep the shape of the model, randomise
-everything the theory specifies, and count how often the finding still appears.
-
-**Two of three headlines appear every time.** They are properties of building a reader this shape at
-all — which *is* the theory, but is the part shared with any account of the same shape. It does not
-distinguish this framework from a competitor built the same way.
-
-One result survives at zero. That is where the specific commitments earn their keep.
-
-### 26. Why detection is a losing race
-
-![Better detectors mean fewer false accusations, until the content fights back](figures/walkthrough/26_the_arms_race.png)
-
-An earlier version of this project found that detectors misfire *less* as they sharpen, and
-published that as its own prediction failing. It had measured a world with no adversary in it.
-
-Put evasion in, so that detection and evasion improve together, and the misfiring stops falling and
-turns back up: at its worst, **two thirds of careful human writing wrongly flagged.** Switch evasion
-off and the clean decline comes straight back, which is what makes this a finding about the world
-rather than about a new piece of code.
-
-There is a second half that does not fit on the same picture. A reader whose detector stops updating
-does not gradually get fuzzier. Its accusation rate does not move at all while its accuracy drains
-away underneath, until it is firing on people and machines at exactly the same rate with exactly the
-same confidence. **A coin flip that still believes it is a detector.**
-
-This is the argument for changing the target. You cannot win a race against the thing you are
-measuring, and the next plate is what happens when you measure something else.
-
-### 25. The one thing here that is actually a defence
-
-![Filtering on how good it looks does nothing](figures/walkthrough/25_a_defence_that_works.png)
-
-Every result before this one describes something going wrong. This is the only one that does
-something about it.
-
-Networks now publish at industrial scale specifically so that **AI systems** will absorb them, not
-so that people will read them — 150+ domains, roughly three million articles a year, and almost no
-human visitors, which is the tell. Filtering that out by how good the writing looks does **nothing**,
-because looking good is the whole objective. It is the same shape as the RLHF result: optimise the
-signal and the signal stops carrying information.
-
-Asking *who made this, and why* cuts the damage by about a quarter, restores the learner's reading
-of genuine human work, and **costs nothing on a clean stream** — while never once looking at a
-label. That last part matters most. The Ghost Scale failed twice as something makers apply. **This is
-the same idea as something readers do, and nobody has to agree to it.**
-
-*Read the direction, not the size: 83% of randomly parameterised models of this shape do it too, so
-most of this is architecture rather than evidence for the specific theory.*
-
-### 24. And what is each finding actually made of?
-
-![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
-
-That rate says how much of a result is architectural. It does not say **which part**. So the
-complement: keep the settings and strip the shape instead — remove one structural commitment at a
-time, six of them, each a decision about what a reader *is*.
-
-**Every finding dies the moment the reader stops imagining a maker and starts pattern-matching a
-surface.** That is the one load-bearing commitment in the project. The model can lose its hierarchy,
-its costly attention, and its separate belief about origin, and keep every result.
-
-And *legible and empty* is the odd one out for the second time. It is the only finding that needs
-the reader to hold a **distribution** rather than a best guess — which is exactly right, because
-"I read every word and there was nobody there" *is* a statement about the shape of an uncertainty.
-It is also the only finding with a 0% false-positive rate. Two unrelated audits, same answer.
-
-*One row is missing from this plate: sustained futile attention did not reproduce in the ablation
-harness's own baseline, so it has no answer here rather than a bad one.*
-
-### 23. Honest marking is self-policing, at a price
+### 26. Honest marking is self-policing, at a price
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 
@@ -361,12 +396,18 @@ without being aimed at it.*
 
 ## What is not drawn yet, and why
 
+*The older per-experiment research charts have been removed. They were working figures from versions
+1 to 5, drawn before this repository had a house style and never brought up to it, and several of
+them meant something different by the end than they did when they were drawn. Every claim they
+carried is in the plates above, redrawn from the same committed data.*
+
+A plate makes a claim legible in two seconds, which means it also makes a claim hard to qualify.
 Version 6 held four results out of this walkthrough because each carried an open question a plate
 would paper over. **Version 7 closed all four** — and one of them closed by being retired.
 
 | result | what happened |
 |---|---|
-| **The two-gates criterion** | **Settled, and drawn** (plate 21). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
+| **The two-gates criterion** | **Settled, and drawn** (plate 25). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
 | **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
 | **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-fold — so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
 | **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver, and it has been removed from the README and from the prediction card. |

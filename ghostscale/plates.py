@@ -114,9 +114,14 @@ def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: boo
 
     # THE SCALE, APPLIED TO THE HEADLINE ITSELF.
     #
-    # ``authored`` says a person wrote this title. Those are Polished tier: the words are the
-    # author's, the grammar is not, and they run in black. Every other title on the set was
-    # written by a machine from the author's results, which is Ghost tier, and those run in grey.
+    # ``authored`` says a person wrote this title, and it runs in black.
+    #
+    # THE TITLE AND THE PLATE SIT AT DIFFERENT TIERS, which is the honest way to score this. An
+    # authored TITLE is Polished: the words are the author's, the grammar is not. The PLATE
+    # carrying it is CURATOR -- a person chose the claim and the framing, and a machine drew
+    # everything else from the results. A plate whose title is still grey is a machine's summary
+    # of somebody else's numbers end to end, which is GHOST, and grey on this set therefore means
+    # 'not yet been through the author' rather than 'less important'.
     #
     # A reader who never learns what the colours mean loses nothing. A reader who does gets the
     # project's own instrument applied to the project's own slides, which is the only honest place
