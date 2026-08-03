@@ -595,11 +595,13 @@ def plate_13_no_mind_needed():
                         "A counting classifier\n(simulates nothing)"], fontsize=12.5)
     bar_labels(ax, b1, lied, fmt="{:.2f}", fontsize=13, color=INK)
     bar_labels(ax, b2, told, fmt="{:.2f}", fontsize=13, color=INK)
-    ax.set_ylim(0, 1.62)
+    ax.set_ylim(0, 1.40)
     clean_axis(ax, "how sure it ends up")
     ax.set_yticks([])
-    annotate(ax, -0.44, 1.54, "told a person made it", color=MACHINE, fontsize=12, weight="bold")
-    annotate(ax, 0.30, 1.54, "told honestly that nobody did", color=COOL, fontsize=12,
+    # Clear of the y-axis line. Both of these used to start left of the spine, which read as a
+    # misalignment rather than as a legend.
+    annotate(ax, -0.30, 1.31, "told a person made it", color=MACHINE, fontsize=12, weight="bold")
+    annotate(ax, 0.42, 1.31, "told honestly that nobody did", color=COOL, fontsize=12,
              weight="bold")
     # THE TWO ARROWS ARE THE PLATE. One pair collapses and the other does not, and the eye has to
     # get that before it reads a number, so each pair carries its own black arrow and its own
@@ -610,10 +612,14 @@ def plate_13_no_mind_needed():
                                 connectionstyle="arc3,rad=-0.25"))
     annotate(ax, 0.10, 0.62, "the truth\nlands", color=INK, fontsize=12.5, weight="bold",
              ha="left")
-    ax.annotate("", xy=(1 + w / 2, 1.14), xytext=(1 - w / 2, 1.14),
-                arrowprops=dict(arrowstyle="->", color=INK, lw=2.2))
-    annotate(ax, 1 + w * 0.25, 1.20, "the truth changes\nnothing at all", color=INK,
-             fontsize=12.5, weight="bold", ha="center")
+    # ACROSS the pair rather than above it. The left arrow travels through the space between two
+    # bars of different height; the right one has nowhere to travel except through the bars
+    # themselves, and putting it overhead made it look like a bracket rather than a journey.
+    flat = told[1] * 0.70
+    ax.annotate("", xy=(1 + w / 2, flat), xytext=(1 - w / 2, flat),
+                arrowprops=dict(arrowstyle="->", color=INK, lw=2.2), zorder=4)
+    annotate(ax, 1, flat - 0.05, "the truth changes\nnothing at all", color=INK,
+             fontsize=12.5, weight="bold", ha="center", va="top", zorder=4)
     record(save(fig, "13_no_mind_needed"),
            "A claim this project withdrew, using its own experiment. Kept prominently on purpose.")
 
@@ -848,23 +854,18 @@ def plate_20_rejection_is_not_protection():
         "",
         "E46 - results/v7/e46_gate_leak.json - drift after repeatedly rejecting everything, at a "
         "fixed 10% leak; nobody added that leak, version 6's smooth guard already had it",
-        authored=True)
+        authored=True,
+        second="Unfortunately, the same result implies that engaging with unlabelled AI "
+               r"content can $\it{actively\ erode\ away\ your\ expertise}$.")
     bars = ax.bar(["Skims it\n(two looks)", "Studies it closely\nto refute it (sixteen looks)"],
                   [skim, close], color=[NEUTRAL, MACHINE], width=0.5)
     bar_labels(ax, bars, [skim, close], fmt="{:.3f}", fontsize=15, color=INK)
-    ax.set_ylim(0, close * 1.82)
+    ax.set_ylim(0, close * 1.22)
     clean_axis(ax)
     ax.set_yticks([])
-    annotate(ax, 1, close * 1.20,
+    annotate(ax, 1, close * 1.12,
              str(int(round(eng["ratio"]))) + "x further from where it started",
              color=MACHINE, ha="center", fontsize=14, weight="bold")
-    # THE AUTHOR'S SECOND SENTENCE, KEPT IN BLACK AND MOVED OFF THE TITLE. It is a separate claim
-    # from the one in the headline and it was making a four-line title, so it runs here in INK --
-    # the scale's rule is about whose words they are, not about where on the plate they sit.
-    annotate(ax, -0.34, close * 1.72,
-             "Unfortunately, the same result implies that engaging with unlabelled\n"
-             "AI content can actively erode away your expertise.",
-             color=INK, ha="left", fontsize=14.5, weight="bold", va="top")
     record(save(fig, "20_rejection_is_not_protection"),
            "The theory always contained this term and the code never did. It is the proposed "
            "mechanism for indoctrination: you are changed by what you refuse.")

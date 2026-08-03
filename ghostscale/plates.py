@@ -74,12 +74,13 @@ def _apply_rc() -> None:
         # house font so the italic does not arrive in a different typeface than its own sentence.
         "mathtext.fontset": "custom",
         "mathtext.rm": _FONT,
-        "mathtext.it": f"{_FONT}:italic",
+        "mathtext.it": f"{_FONT}:italic:bold",
         "mathtext.bf": f"{_FONT}:bold",
     })
 
 
-def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: bool = False):
+def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: bool = False,
+          second: str = ""):
     """A figure with the finding in the title and the provenance in the footer.
 
     The proportions are deliberate: 16:9-ish, because these are meant to survive being posted
@@ -130,6 +131,17 @@ def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: boo
     fig.text(0.055, 0.028, footer, fontsize=8.5, color=MUTED, va="bottom")
 
     axes_top = sub_y - 0.050 * len(sub_lines) - 0.030
+
+    # A SECOND BLOCK OF THE AUTHOR'S OWN WORDS, which is a different thing from a subtitle. It
+    # runs black at the same left margin as the title with a blank row above it, and the axes
+    # start below it, so the y-axis line cannot cut through it the way it did when this text was
+    # drawn inside the plot.
+    if second.strip():
+        second_lines = _wrap(second, 74)
+        fig.text(0.055, axes_top - 0.030, "\n".join(second_lines), fontsize=15,
+                 fontweight="bold", color=INK, va="top", linespacing=1.28)
+        axes_top -= 0.030 + 0.058 * len(second_lines) + 0.030
+
     bottom = 0.155
     ax = fig.add_axes([0.075, bottom, 0.86, max(axes_top - bottom, 0.30)])
     return fig, ax
@@ -321,8 +333,9 @@ def zero_line(ax):
     ax.axhline(0, color=INK, lw=1.1, zorder=1)
 
 
-def annotate(ax, x, y, text, color=INK, ha="left", va="bottom", fontsize=11, weight="normal"):
-    ax.text(x, y, text, color=color, ha=ha, va=va, fontsize=fontsize, fontweight=weight)
+def annotate(ax, x, y, text, color=INK, ha="left", va="bottom", fontsize=11, weight="normal",
+             **kw):
+    ax.text(x, y, text, color=color, ha=ha, va=va, fontsize=fontsize, fontweight=weight, **kw)
 
 
 def clean_axis(ax, ylabel: str = "", xlabel: str = ""):
