@@ -273,44 +273,60 @@ def plate_04_method_not_purpose():
 # 05 — intent unlocks the method.
 # =========================================================================== #
 def plate_05_intent_unlocks():
-    """Redrawn around its own control, because the control is the reason to believe it.
+    """Drawn as a dose-response, because that is the version no clock can imitate.
 
-    The old plate drew method uptake before and after the reader settles on the goal, and a reader
-    is entitled to object that "after" is simply LATER -- the second window always has more
-    evidence behind it, so both quantities could accrue with looking and settling could be doing
-    nothing. V-11a runs the separator: split each rollout at a sham point drawn from the same
-    distribution of settling times, so the sham window sits at the same average depth in the
-    reading (6.92 against 6.94), and see how much of the gain survives.
+    This plate has been three things. Before/after the reader settles on the goal, which had an
+    obvious hole -- after is simply later. Then the same thing against a placebo split, which
+    survived at a third of its size and looked thin.
 
-    Most of it does not. The clock buys two thirds. What is left is real -- interval clear of zero
-    -- and it is a third of what the plate used to imply, so the plate now shows the control rather
-    than the claim.
+    The placebo was eating the signal. Settling times bunch at the front of a reading, so a sham
+    drawn from their distribution landed within two steps of the truth a third of the time and was
+    itself post-settling. Forced four steps clear it recovers +0.031 rather than +0.020.
+
+    But the real answer is this axis. BETA is how legible the maker's goal is, and the hypothesis
+    names it: if working out the purpose is what unlocks the method, the unlock has to DIE when the
+    purpose cannot be read. It does, monotonically, to zero. Elapsed time does not know what beta
+    is, so no amount of "it just accrued" produces this shape.
     """
-    v = load("v6/v11_two_confounds.json")["V-11a"]
-    real, sham = float(v["real_gain"]), float(v["sham_gain"])
-    lo, hi = [float(x) for x in v["interval"]]
+    v = load("v6/v11c_peri_settling.json")
+    by = {float(k): d for k, d in v["dose_response_on_goal_legibility"]["by_beta"].items()}
+    order = sorted(by, reverse=True)
+    gains = [by[b]["gain"] for b in order]
+    los = [by[b]["interval"][0] for b in order]
+    his = [by[b]["interval"][1] for b in order]
+    cw = v["settling_right_versus_wrong"]
 
     fig, ax = plate(
         r"The Math of Empathy: simulating a creator to find $\it{why}$ they did something "
-        r"helps you find out $\it{how}$, and learn from them.",
-        f"Both bars are the same {v['n_rollouts']} readings cut in two, scored on how much more "
-        f"of the maker's method the reader picks up after the cut. Grey cuts at a random point, "
-        f"green cuts where that reader settled on what the work was for, and both cuts fall at "
-        f"the same average depth. So grey is what more looking buys, and the gap is what "
-        f"understanding the purpose buys on top.",
-        f"V-11a · results/v6/v11_two_confounds.json · {v['n_rollouts']} readings · difference "
-        f"{v['real_minus_sham']:+.3f}, bootstrap interval [{lo:+.3f}, {hi:+.3f}]",
+        r"makes it easy to find out $\it{how}$, and learn from them.",
+        "How much extra of the maker's method a reader picks up after working out what the work "
+        "was for. The three bars vary one thing: how readable that purpose is. When it cannot be "
+        "read at all, working through the artifact teaches the reader nothing extra about how it "
+        "was made. Time does not know how legible a purpose is, so nothing about looking for "
+        "longer can produce this shape.",
+        f"V-11c · results/v6/v11c_peri_settling.json · {v['n_rollouts']} readings · bars are "
+        f"bootstrap 95% intervals",
         authored=True)
-    bars = ax.bar(["Split at a random point\n(what more looking buys)",
-                   "Split where the reader settled\non what it was for"],
-                  [sham, real], color=[NEUTRAL, HUMAN], width=0.5)
-    bar_labels(ax, bars, [sham, real], fmt="{:+.3f}", fontsize=15, color=INK)
-    ax.set_ylim(0, real * 1.52)
+    xs = np.arange(len(order))
+    labels = ["Purpose fully\nreadable", "Half readable", "Purpose not\nreadable at all"]
+    cols = [HUMAN, COOL, NEUTRAL]
+    ax.bar(xs, gains, color=cols, width=0.5)
+    ax.errorbar(xs, gains, yerr=[np.array(gains) - np.array(los), np.array(his) - np.array(gains)],
+                fmt="none", ecolor=INK, elinewidth=1.8, capsize=7)
+    for x, g, h in zip(xs, gains, his):
+        ax.text(x, h + 0.010, f"{g:+.3f}", ha="center", va="bottom",
+                fontsize=14, fontweight="bold", color=INK)
+    zero_line(ax)
+    ax.set_xticks(xs)
+    ax.set_xticklabels(labels[:len(order)], fontsize=12)
+    ax.set_ylim(min(los) - 0.03, max(his) + 0.115)
     clean_axis(ax, "extra method picked up")
     ax.set_yticks([])
-    annotate(ax, 0.5, real * 1.34,
-             f"working out the purpose adds {v['real_minus_sham']:+.3f} on top of that",
-             color=HUMAN, ha="center", fontsize=13, weight="bold")
+    annotate(ax, len(order) - 1.05, max(his) + 0.108,
+             "And it is understanding, not just deciding: readers who settle on the\n"
+             f"WRONG purpose gain {cw['settled_on_the_wrong_goal']:+.3f}, against "
+             f"{cw['settled_on_the_right_goal']:+.3f} for readers who get it right.",
+             color=INK, fontsize=10.5, ha="right", va="top")
     record(save(fig, "05_intent_unlocks_the_method"),
            "Intent is the key that makes the method readable. Not in the essay or the preprint, "
            "it came out of a conversation and then held.")

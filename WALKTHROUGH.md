@@ -371,28 +371,56 @@ moves.
 ![Working out the purpose is what makes the method readable](figures/walkthrough/05_intent_unlocks_the_method.png)
 
 The claim: you work out what someone was *for* first, and that is what makes their choices
-readable. It is in neither the preprint nor the essay. It came out of a conversation.
+readable. It is in neither the preprint nor the essay. It came out of a conversation. It has now
+been tested four times and the fourth is the one to read.
 
-**Its first two forms both had a problem, and the third is the one to read.**
+| form | what it did |
+|---|---|
+| **pre-registered, between readers** | readers who ended up *right* about the goal against readers who ended up *wrong*, on whole-rollout process recovery. Gap 0.047 against a required 0.15. **Fails, reported as failing.** |
+| **temporal, added and declared** | method uptake before the goal settles, 0.050, against after, 0.130. Decisive-looking, with an obvious hole: *after* is simply **later**. |
+| **V-11a, placebo split** | cut each reading at a sham point drawn from the settling-time distribution. Survives at **+0.020**, [+0.001, +0.038]. Looked thin. |
+| **V-11c, this plate** | the control was eating the signal, and the axis the hypothesis actually names had never been used. |
 
-The **pre-registered** form is a between-reader contrast — do readers who end up *right* about the
-goal recover more method than readers who end up *wrong*? Gap 0.047 against a required 0.15. **It
-fails and is reported as failing.**
+**Why V-11a understated it.** Settling times bunch hard at the front of a reading — 104 of 320
+readings settle at step 2. A sham drawn from that distribution lands within two steps of the truth
+about a third of the time, so a third of the "control" readings were themselves post-settling.
+Forced four steps clear, the same test returns **+0.031** rather than +0.020.
 
-The **temporal** form was added afterwards and declared: within one reading, method uptake before
-the goal settles is 0.050 and after it is 0.130. That looked decisive and it had an obvious hole —
-*after* is simply **later**, and the later window always has more evidence behind it.
+**Where the information actually arrives.** Align every reading on its own settling step and average
+the reader's information about the maker's true execution mode, step by step. It sits at **+0.036**
+in the five steps before, and **+0.097** from the arrival step onward. The jump is at lag −1, one
+step before the detector fires, which is correct: the observation that drops the goal entropy below
+threshold is the observation that carries the information, and the threshold is noticed afterwards.
+Fit the pre-event slope and carry it forward and a pure accumulation predicts 0.067. The actual
+level is **+0.030 above that line.** It is a step, not a ramp.
 
-**V-11a is the separator, and it cost the result two thirds of its size.** Cut each reading at a
-sham point drawn from the same distribution of settling times, so the sham cut falls at the same
-average depth (7.0 against 6.4), and score the same quantity. The sham cut reproduces **+0.040 of
-the +0.060**. What is left — **+0.020, bootstrap interval [+0.001, +0.038]** — is what settling
-buys once the clock is paid for. *Most of the effect was elapsed evidence. A third of it was not,
-and that third is the finding.*
+**And the axis nobody had used.** Beta is how legible the maker's goal is, and the hypothesis names
+it directly: if working out the purpose is what unlocks the method, then the unlock must die when
+the purpose cannot be read.
 
-*Declared: V-11a first ran at 40 readings per cell and its interval crossed zero. It was re-run at
-120 and cleared. The point estimate barely moved, so this reads as power rather than as a different
-answer, but raising n after seeing a null is a forking path and it is on the ledger.*
+| how readable the purpose is | extra method picked up |
+|---|---|
+| fully | **+0.123** [+0.079, +0.168] |
+| half | **+0.046** [+0.014, +0.080] |
+| not at all | **−0.002** [−0.040, +0.034] |
+
+**Monotone, and zero at the bottom.** Elapsed time does not know what beta is. No amount of *it just
+accrued* produces that shape.
+
+**And it is understanding rather than commitment.** Readers who settle on the *wrong* goal gain
+**+0.007**. Readers who settle on the right one gain **+0.070** — a difference of **+0.064**,
+interval [+0.012, +0.116]. It is not that the reader stopped being uncertain. It is what it became
+certain *of*.
+
+**On the size.** The whole process signal a reader extracts across an entire reading is about
+**0.091 nats**, so the far-sham difference is about **a third of everything the reader ever gets
+about how the work was made**, and at full goal legibility the unlock is larger than the average
+whole-reading total. The raw numbers look small because nats are small here. Against their own
+denominator they are not.
+
+*Declared: V-11a first ran at 40 readings per cell with an interval crossing zero and was re-run at
+120. The point estimate barely moved. Raising n after a null is a forking path and it is on the
+ledger.*
 
 ### 22. Expertise bakes in
 

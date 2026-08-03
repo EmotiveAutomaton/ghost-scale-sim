@@ -1,0 +1,106 @@
+{
+  "check": "V-11c \u2014 what V-11a's control threw away, and the effect in interpretable units",
+  "why": "V-11a drew its sham split from the distribution of settling times, and settling times bunch at the front of the reading, so a third of shams landed within two steps of the truth and were themselves post-settling. The control was subtracting signal along with the clock.",
+  "peri_settling": {
+    "curve_by_lag": {
+      "-6": 0.021029370038386033,
+      "-5": 0.0346854084506116,
+      "-4": 0.042434160664723414,
+      "-3": 0.04338754265626914,
+      "-2": 0.04015265945924273,
+      "-1": 0.08870680778640934,
+      "0": 0.09443239003259529,
+      "1": 0.08804746801305592,
+      "2": 0.08019728118232221,
+      "3": 0.11901957530598153,
+      "4": 0.11178597119962363,
+      "5": 0.09474094207406811,
+      "6": 0.10150233825165023
+    },
+    "n_by_lag": {
+      "-6": 133,
+      "-5": 151,
+      "-4": 179,
+      "-3": 216,
+      "-2": 320,
+      "-1": 320,
+      "0": 320,
+      "1": 320,
+      "2": 320,
+      "3": 318,
+      "4": 317,
+      "5": 311,
+      "6": 310
+    },
+    "arrival_lag": -1,
+    "mean_before": 0.036337828253846585,
+    "mean_after": 0.09730409673071327,
+    "step_at_arrival": 0.06096626847686669,
+    "step_if_you_put_the_event_at_lag_zero": 0.05346628935634014,
+    "pre_event_slope_per_step": 0.00469487130473709,
+    "what_a_pure_ramp_predicts_after": 0.06685449173463764,
+    "above_the_ramp": 0.03044960499607563,
+    "how_to_read": "if the reader were simply accumulating, the pre-event slope carried forward would predict the post-event level. Whatever sits above that line arrived at the settling step and not before it."
+  },
+  "far_sham": {
+    "real_gain": 0.05961507547057358,
+    "sham_gain": 0.028403610407927427,
+    "difference": 0.03121146506264615,
+    "interval": [
+      0.006877273300569522,
+      0.05534337984053925
+    ],
+    "excludes_zero_positive": true,
+    "n": 320,
+    "min_distance": 4
+  },
+  "dose_response_on_goal_legibility": {
+    "by_beta": {
+      "1.0": {
+        "gain": 0.1228460197376216,
+        "interval": [
+          0.0785995515345791,
+          0.16838579696416658
+        ],
+        "n": 107
+      },
+      "0.25": {
+        "gain": 0.04620104930394309,
+        "interval": [
+          0.014293062996860105,
+          0.07954032969618076
+        ],
+        "n": 132
+      },
+      "0.1": {
+        "gain": -0.002052326783487088,
+        "interval": [
+          -0.040268902931683316,
+          0.03353255376087811
+        ],
+        "n": 81
+      }
+    },
+    "legible_minus_illegible": 0.12489834652110869,
+    "how_to_read": "beta is how readable the goal is. The hypothesis says the unlock is caused by recovering the purpose, so it must shrink as the purpose becomes unrecoverable. Nothing about elapsed time cares about beta, so a gradient here is evidence no clock can produce."
+  },
+  "settling_right_versus_wrong": {
+    "settled_on_the_right_goal": 0.07013800222973783,
+    "settled_on_the_wrong_goal": 0.006603350098934834,
+    "difference": 0.06353465213080299,
+    "interval": [
+      0.011831556159503955,
+      0.11592440973430007
+    ],
+    "excludes_zero_positive": true,
+    "n_right": 267,
+    "n_wrong": 53,
+    "how_to_read": "settling is COMMITMENT; settling on the RIGHT goal is UNDERSTANDING. If both unlock equally then what matters is that the reader stopped being uncertain rather than what it became certain of, and the hypothesis is about confidence rather than about purpose."
+  },
+  "effect_in_context": {
+    "whole_reading_process_information": 0.09139988892178422,
+    "share_of_all_process_information": 0.3414825272857331,
+    "how_to_read": "the raw number is in nats and nats are small here. The total process information a reader extracts across an entire reading is the denominator that makes it legible."
+  },
+  "n_rollouts": 320
+}
