@@ -299,11 +299,11 @@ def plate_05_intent_unlocks():
     fig, ax = plate(
         r"The Math of Empathy: simulating a creator to find $\it{why}$ they did something "
         r"makes it easy to find out $\it{how}$, and learn from them.",
-        "How much extra of the maker's method a reader picks up after working out what the work "
-        "was for. The three bars vary one thing: how readable that purpose is. When it cannot be "
-        "read at all, working through the artifact teaches the reader nothing extra about how it "
-        "was made. Time does not know how legible a purpose is, so nothing about looking for "
-        "longer can produce this shape.",
+        f"Extra method the reader picks up after working out what the work was for, against how "
+        f"readable that purpose is. Elapsed time cannot see that axis. And settling on the WRONG "
+        f"purpose gains {cw['settled_on_the_wrong_goal']:+.3f} against "
+        f"{cw['settled_on_the_right_goal']:+.3f} for the right one: understanding, not just "
+        f"deciding.",
         f"V-11c · results/v6/v11c_peri_settling.json · {v['n_rollouts']} readings · bars are "
         f"bootstrap 95% intervals",
         authored=True)
@@ -319,14 +319,9 @@ def plate_05_intent_unlocks():
     zero_line(ax)
     ax.set_xticks(xs)
     ax.set_xticklabels(labels[:len(order)], fontsize=12)
-    ax.set_ylim(min(los) - 0.03, max(his) + 0.115)
+    ax.set_ylim(min(los) - 0.03, max(his) + 0.045)
     clean_axis(ax, "extra method picked up")
     ax.set_yticks([])
-    annotate(ax, len(order) - 1.05, max(his) + 0.108,
-             "And it is understanding, not just deciding: readers who settle on the\n"
-             f"WRONG purpose gain {cw['settled_on_the_wrong_goal']:+.3f}, against "
-             f"{cw['settled_on_the_right_goal']:+.3f} for readers who get it right.",
-             color=INK, fontsize=10.5, ha="right", va="top")
     record(save(fig, "05_intent_unlocks_the_method"),
            "Intent is the key that makes the method readable. Not in the essay or the preprint, "
            "it came out of a conversation and then held.")
