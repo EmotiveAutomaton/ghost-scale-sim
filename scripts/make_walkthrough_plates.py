@@ -510,8 +510,8 @@ def plate_11_self_report():
 
     tip = load("v6/v11_two_confounds.json")["V-11b"]["the_interaction"]
     fig, ax = plate(
-        "Expertise bakes in until you can no longer consciously reach it. "
-        "It transfers anyway. Happy little accidents.",
+        "Expertise bakes in until the creator can no longer consciously reach it, becoming "
+        "happy little accidents. Skills transfer anyway.",
         f"Nobody sets the maker's self-blindness here — depth sets it. And past a certain depth "
         f"your own work becomes a better record of what you meant than your memory of it: the "
         f"balance tips by {tip['tipping']:+.2f} between a scribble and a master's work.",

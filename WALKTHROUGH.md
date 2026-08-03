@@ -422,7 +422,7 @@ denominator they are not.
 120. The point estimate barely moved. Raising n after a null is a forking path and it is on the
 ledger.*
 
-### 22. Expertise bakes in
+### 22. Expertise bakes in, and skills transfer anyway
 
 ![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
 
