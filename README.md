@@ -52,7 +52,7 @@ Short rows on purpose. Full provenance for any of them is in [FINDINGS.md](FINDI
 | E31 · E30 | Does a master's work transmit anything a scribble does not? | **Yes, but it is the method, not the purpose.** Depth moves how much of the *process* transfers and provably cannot move how much of the *purpose* does. Five versions measured the purpose and found nothing. |
 | E36 | Does working out what someone was for unlock how they did it? | **Yes.** Inside one reading, a reader picks up far more of the method *after* it settles on the purpose. Intent is the key; method is what it opens. |
 | E56 | Can you take someone's technique without taking their aims? | **That is exactly what a raised guard does, and it is where indoctrination lives.** Guard up before you start and it blocks purpose and values by about half, and method by four percent. Method arrives from the first line, purpose resolves late, and a guard raised early can only block what has not arrived yet. **So roughly 6% gets through the guard directly, and more rides in on the method**, because practised method is where a maker's unspoken commitments are stored. You refuse someone's aims, take their technique, and the aims arrive later anyway. |
-| E45 | What does imagining a maker actually buy? | **Evidence efficiency, and reading an intent nobody has shown you.** A counting reader needs 512 worked examples to clear the bar and a reader that simulates is given none, and the counter never catches up on the second axis. |
+| E45 | What does imagining a maker actually buy? | **The efficiency half is withdrawn; the zero-shot half stands.** The simulator was built with the world's own emission map, so it needs no examples by definition and that test could not fail. What survives is reading a goal nobody has shown you, which still holds when the map is perturbed halfway to random. |
 | E43 | Can a maker say why they did it? | **Less and less, the better they get.** Practice compresses decisions, and compression is what puts them out of reach of report. |
 | E33 | Can a reader know a maker better than the maker knows themselves? | **Yes**, and the margin grows as self-knowledge degrades. Work driven by something its maker cannot see is measurably marked, and no reader can read the mark. |
 | E42 | Is paying attention the same as being willing to change? | **No.** A reader can study something closely, read its maker accurately, and let none of it in. |
@@ -282,9 +282,12 @@ band does not survive exact arithmetic, and it has been removed from this page a
 prediction card. And the experiment that made this project withdraw its central claim was attacked
 on the axis it had never been tested on. It asked whether a reader *without* a model of the maker
 can produce the confident, contradictory signature — it can. It never asked what the maker-model
-buys. **It buys almost everything: a counting reader needs five hundred and twelve worked examples
-to clear the bar, a reader that simulates is given none and clears it anyway, and it reads an intent
-it has never encountered where the counter sits at chance no matter how much data it is given.** The withdrawal stands; its scope was much
+buys. **Half of that answer has since been withdrawn.** The efficiency comparison handed the
+simulating reader the world's own emission map, so it needed no examples by construction rather than
+by merit and the test could not fail; at the counter's full training budget the gap is five points.
+**What survives is the sharper half: it reads an intent it has never encountered, where the counter
+sits at chance no matter how much data it is given, and that advantage holds when its map is
+perturbed halfway to random.** The withdrawal stands; its scope was much
 narrower than it has been read. All of it is in [RESULTS_V7.md](docs/versions/v07-the-closures/RESULTS.md).
 
 **A sixth pass asked how much of any of this was ever the theory**, which is the question nobody
@@ -392,7 +395,7 @@ edited after; results were written after and never edited either. Full material 
 | **4.5** | Three Gates | a three-gate reader, a counting classifier | does invention need a theory of mind? | **no** — claim withdrawn | — |
 | **5** | Depth Over Effort | depth as a hierarchy the reader infers | effort, or compressed practice? | depth; and the fast solver was caught misreading it | N21 |
 | **6** | Code Against Equation | depletion, graded gate, κ→θ coupling, process recovery | is the code the same object as the theory? | **three terms had no counterpart in the code** | N22–N30 |
-| **7** | The Closures | evidence-efficiency and zero-shot tests | what does a maker-model buy? | 512 examples against none; reads an unseen goal | N31–N34 |
+| **7** | The Closures | evidence-efficiency and zero-shot tests | what does a maker-model buy? | efficiency half withdrawn as an oracle; reads an unseen goal | N31–N34 |
 | **8** | The Severity Pass | reader hierarchy, integration cost, decaying belief, a lying maker | how often does a *random* model do it too? | **100% / 98% / 0%** | N35–N40 |
 | **9** | Minimal Models | six structural ablations | which commitment is each finding made of? | **all die without the maker-model** | N41–N44 |
 | **10** | Reader As Defence | an intent-gate on a learner's absorption | is reading intent a *defence*? | yes, where surface filtering does nothing | N45–N51 |

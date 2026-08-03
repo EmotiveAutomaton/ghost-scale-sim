@@ -757,43 +757,60 @@ def _g(x, n=3):
 # 18 - what modelling a maker buys (the E21 attack).
 # =========================================================================== #
 def plate_18_what_tom_buys():
+    """Rebuilt as two curves, because the two-bar version was drawing a tautology.
+
+    The bars said "4 examples against 512" and then, after an audit, "given none and clears the
+    bar anyway". Both were wrong in the same way, and a reader who objected that you cannot
+    simulate a maker from nothing was right to. The simulator is constructed with the WORLD's
+    generative model -- ``make_agent(gm, ...)`` against ``Environment(cfg, gm, ...)``, the same
+    object, which ``build_shared_model`` calls ground truth in its own docstring. It needs no
+    examples because it was handed the emission map, not because it learned efficiently. H7.1
+    cannot fail however the world is built, and a test that cannot fail is not evidence.
+
+    Drawn as the two learning curves, the honest shape is visible and it is a much smaller claim:
+    the counter climbs from chance to 0.81 and the oracle sits at about 0.84 the whole way. The
+    gap at full training is four points. That is what this experiment actually measured.
+    """
     d = load("v7/e45_tom_efficiency.json")
     h1 = d["H7.1"]
-    sim, cnt = h1["evidence_the_simulator_needs"], h1["evidence_the_counter_needs"]
+    cnt_by = {int(k): float(v) for k, v in h1["counter_accuracy_by_training_size"].items()}
+    sim_by = {int(k): float(v) for k, v in h1["simulator_accuracy_by_training_size"].items()}
+    per_goal = {int(k): int(v) for k, v in d["examples_per_goal_by_training_size"].items()}
+    bar = float(h1["competence_bar"])
+    xs = sorted(cnt_by)
 
     fig, ax = plate(
-        "Using this personal expertise to translate an artifact into a maker doesn't just "
-        "make you right. It is also extremely cheap.",
-        "Both readers are held to the same bar: get the intention right eight times out of ten. "
-        "The one that counts features has to learn the whole map from examples, and the map is "
-        "large. The one that already owns the machinery for making things is given no worked "
-        "examples at all, and clears the bar anyway.",
-        "E45 - results/v7/e45_tom_efficiency.json - examples needed to reach 80% accuracy; the "
-        "simulator consumes none, so its 4 is the sweep's floor and not a requirement",
-        authored=True)
-    # LINEAR, deliberately. This was drawn on a log axis and the log axis was lying by being
-    # tidy: 4 against 512 came out looking like a one-to-five difference, which is the single
-    # most understated number in the project. On a linear axis the cheap reader is a sliver,
-    # and the sliver IS the finding.
-    bars = ax.bar(["Simulates the maker", "Counts what it has seen"], [sim, cnt],
-                  color=[HUMAN, MACHINE], width=0.5)
-    for b, v in zip(bars, [sim, cnt]):
-        ax.text(b.get_x() + b.get_width() / 2, v + cnt * 0.035, str(int(v)), ha="center",
-                va="bottom", fontsize=20, fontweight="bold", color=INK)
-    ax.set_ylim(0, cnt * 1.34)
-    clean_axis(ax, "worked examples needed")
-    ax.set_yticks([])
-    # NOT "128x less evidence", WHICH IS WHAT THIS SAID AND IT WAS NOT TRUE. The sweep starts at
-    # four, and the simulator is already over the bar at four, so the ratio is a property of where
-    # the x-axis begins rather than of the reader. Start lower and it rises; start higher and it
-    # falls. The claim with no such ceiling is the one drawn now: the simulator is given none.
-    annotate(ax, 0, cnt * 0.34,
-             "already over the bar\nwith none of its own.\n" + str(int(sim)) + " is just the\n"
-             "smallest we tested",
-             color=HUMAN, ha="center", fontsize=13.5, weight="bold")
+        "This experiment cannot show what I built it to show. The reader that needs "
+        "no examples was handed the answer key.",
+        "The flat green reader was constructed with the world's own emission map, the same object "
+        "the artifacts are generated from. It needs no worked examples because it was told, not "
+        "because it learned efficiently, and no arrangement of this world could have made it fail. "
+        "What is left is the red curve, and a five-point gap at the end of it.",
+        "E45 - results/v7/e45_tom_efficiency.json - accuracy against training size, all four "
+        "goals in play; 1, 2, 3 and 4 are one example per goal and are the same condition")
+    ax.plot(range(len(xs)), [sim_by[x] for x in xs], "-o", color=HUMAN, lw=2.6, ms=8)
+    ax.plot(range(len(xs)), [cnt_by[x] for x in xs], "-o", color=MACHINE, lw=2.6, ms=8)
+    ax.axhline(bar, color=NEUTRAL, lw=1.4, ls=":")
+    annotate(ax, len(xs) - 1.05, bar - 0.03, "the bar both are scored against",
+             color=MUTED, fontsize=10.5, ha="right", va="top")
+    annotate(ax, 0.05, sim_by[xs[0]] + 0.035, "handed the world's map", color=HUMAN,
+             fontsize=12.5, weight="bold")
+    annotate(ax, 0.05, cnt_by[xs[0]] - 0.035, "learning it by counting", color=MACHINE,
+             fontsize=12.5, weight="bold", va="top")
+    annotate(ax, len(xs) - 1.05, 0.22,
+             f"At the counter's full budget the gap is "
+             f"{sim_by[xs[-1]] - cnt_by[xs[-1]]:.2f}.\nThe efficiency claim was an oracle against "
+             "a learner.\nThe zero-shot claim on the next plate is not.",
+             color=INK, fontsize=10.5, ha="right", va="top")
+    ax.set_xticks(range(len(xs)))
+    ax.set_xticklabels([f"{x}\n({per_goal[x]}/goal)" for x in xs], fontsize=9)
+    ax.set_ylim(0, 1.0)
+    clean_axis(ax, "gets the goal right", "worked examples the counter was trained on")
+    ax.set_yticks([0, 0.5, 1.0])
+    ax.set_yticklabels(["never", "half", "always"])
     record(save(fig, "18_what_imagining_a_maker_buys"),
-           "The experiment that made this project withdraw a claim asked whether you NEED to "
-           "imagine a maker. You do not. It never asked what imagining one buys.")
+           "Kept in the walkthrough as a failed measurement rather than deleted. The hypothesis "
+           "may well be true; this experiment assumed it instead of testing it.")
 
 
 # =========================================================================== #

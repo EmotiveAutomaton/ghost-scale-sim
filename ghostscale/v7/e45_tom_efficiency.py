@@ -139,7 +139,15 @@ def _paired_run(cfg: Config, gm, n_train: int, n_obs: int, n_timesteps: int, for
 
 def _train_on(cfg: Config, env: Environment, ng: int, goals: list, n_train: int,
               rng) -> NoToMClassifier:
-    """A counting classifier trained only on the listed intentions."""
+    """A counting classifier trained only on the listed intentions.
+
+    THE FLOOR OF THE SWEEP IS DEGENERATE AND THE PUBLISHED "4" INHERITED IT. ``per_goal`` is
+    ``n_train // len(goals)`` clamped up to 1, so with four goals every one of n_train = 1, 2, 3
+    and 4 gives ONE example per goal and produces byte-identical accuracy. "The simulator needs
+    four examples and the counter needs 512" was therefore never a statement about four examples;
+    the smallest distinct condition on this sweep is 8. ``examples_per_goal`` is now reported
+    alongside every training size so this is visible in the verdict rather than buried here.
+    """
     clf = NoToMClassifier.__new__(NoToMClassifier)
     nf = int(cfg.cardinalities.num_features)
     clf.n_goals, clf.n_features = ng, nf
@@ -262,6 +270,8 @@ def run(cfg: Config, n_obs: int = 60, n_timesteps: int = 12, forced_k: int = 12,
             "simulator_accuracy_across_sizes": sim_curve,
             "counter_accuracy_by_training_size": {int(r.n_train): float(r.counter_accuracy)
                                                   for r in curve.itertuples()},
+            "simulator_accuracy_by_training_size": {int(r.n_train): float(r.simulator_accuracy)
+                                                    for r in curve.itertuples()},
             "outcome": h71,
             "how_to_read_the_ratio": (
                 "DO NOT read the ratio as 'the simulator needed four examples'. It needed none. "
@@ -299,6 +309,30 @@ def run(cfg: Config, n_obs: int = 60, n_timesteps: int = 12, forced_k: int = 12,
         "scored_quantity": ("evidence needed to reach a fixed competence, not competence at a "
                             "fixed evidence level. The second confounds the ceiling with the "
                             "rate and the claim is about the rate."),
+        "examples_per_goal_by_training_size": {
+            int(n): int(max(int(n) // ng, 1)) for n in TRAIN_SIZES},
+        "what_this_cannot_show": {
+            "the_simulator_is_an_oracle": (
+                "THIS IS THE LIMITATION THAT GOVERNS EVERYTHING ABOVE. The simulator is built by "
+                "``make_agent(gm, ...)`` and the environment emits by ``Environment(cfg, gm, ...)`` "
+                "-- the same gm. ``build_shared_model`` calls itself ground truth. So the "
+                "simulator's likelihood is not an estimate of the world's emission map, it IS the "
+                "world's emission map, the same array. It therefore needs no training examples by "
+                "DEFINITION and not by measurement, and H7.1 cannot fail however the world is "
+                "built. A comparison between a reader holding the true likelihood and a reader "
+                "estimating it from counts is an oracle against a learner. Read H7.1 as a "
+                "statement of the model's assumption -- reader and maker share a body plan -- and "
+                "not as evidence for it."),
+            "the_degenerate_floor": (
+                "n_train is split across goals and clamped at one example each, so 1, 2, 3 and 4 "
+                "are the same condition. The smallest distinct training size here is 8."),
+            "what_survives_the_objection": (
+                "H7.2. Perturbing the simulator's own signature away from the world's (the "
+                "codebase's inexpertise parameter d, which is what an observer model IS for) "
+                "leaves the held-out-goal advantage standing well past a half-random likelihood, "
+                "while the H7.1 advantage is gone by then. The efficiency claim is the oracle. "
+                "The zero-shot claim is not, and it is the one to keep."),
+        },
         "n_obs": int(n_obs), "train_sizes": list(TRAIN_SIZES),
         "test_conditions": {"tier": "CURATOR (partial intent transmission)",
                             "glances": int(TEST_GLANCES)},

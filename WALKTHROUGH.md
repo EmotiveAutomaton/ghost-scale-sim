@@ -137,28 +137,42 @@ same confidence. **A coin flip that still believes it is a detector.**
 
 *Next out. Five plates. Each one is the objection raised by the one before it.*
 
-### 7. What simulating a creator buys
+### 7. The efficiency claim, withdrawn
 
-![Imagining a maker is about being cheap](figures/walkthrough/18_what_imagining_a_maker_buys.png)
+![The reader that needs no examples was handed the answer key](figures/walkthrough/18_what_imagining_a_maker_buys.png)
 
 Plate 10 below is the result that made this project withdraw a claim: you do not need to imagine a
-maker to end up confidently wrong about one. True, and it stands.
+maker to end up confidently wrong about one. True, and it stands. E45 was built to ask the narrower
+question it left open — not whether a maker-model is *needed* to produce a signature, but what one
+*buys*. The answer it gave was that a simulating reader clears the competence bar on far less
+evidence than a counting one.
 
-But it answered a narrower question than it has been read as answering. It asked whether a
-maker-model is needed to produce a *signature*. It never asked what the maker-model *buys* — and if
-imagining another mind is worth what it costs to run, the payoff was never going to be a signature.
+**That answer does not survive contact with the code, and the objection that killed it is the
+obvious one: you cannot simulate a maker from nothing.**
 
-**The counter needs five hundred and twelve worked examples to clear the bar. The simulator is
-given none.**
+    e45_tom_efficiency.py:121   agent = make_agent(gm, d, cfg)            # gm is the world model
+    e45_tom_efficiency.py:107   env   = Environment(cfg, gm, rng, ...)    # the SAME gm emits
 
-*Do not quote this as "128 times less evidence", which is how the plate first put it.* The sweep
-starts at four and the simulator is already over the bar there, so a ratio against four is a
-property of where the x-axis begins rather than of the reader. Start the sweep lower and the ratio
-rises; start it higher and it falls. The unbounded claim is the true one, and it is the stronger
-one anyway.
+`build_shared_model` describes itself as ground truth in its own docstring, and `A[0]` is verified
+identical between the two. So the simulator's likelihood is not an estimate of the world's emission
+map — it *is* the world's emission map, the same array. It needs no worked examples by definition
+rather than by measurement, and **no arrangement of this world could have made H7.1 fail.** A test
+that cannot fail is not evidence. It is an oracle against a learner.
 
-This is also a sample-efficiency result and not a compute result: per inference, the reader that
-simulates a creator is the *more* expensive one. What it saves is evidence.
+Three things follow, and all three are now on the plate:
+
+- **The efficiency result is withdrawn.** What is left is the counter's real learning curve, from
+  0.53 at one example per goal to 0.81 at 128, against an oracle sitting at about 0.84 throughout.
+  **The gap at full training is five points.**
+- **"128 times less evidence" was never a finding**, and neither was the "4" that replaced it. The
+  ratio was a property of where the sweep starts.
+- **The floor of that sweep is degenerate.** Training examples are split across goals and clamped at
+  one each, so with four goals n_train of 1, 2, 3 and 4 are the *same condition* and return
+  byte-identical accuracy. The smallest distinct training size on this plate is 8.
+
+The plate is kept rather than deleted. The hypothesis may well be true — a reader that shares the
+maker's body plan should need less evidence — but this experiment assumed it instead of testing it,
+and that distinction is the whole point of the two audits further down.
 
 ### 8. Reading a goal nobody has shown you
 
@@ -184,6 +198,16 @@ consumed by the counter's classifier and by nothing else. Its eight values move 
 building that classifier draws a size-dependent number of values from the generator the artifacts
 come from next. Give the classifier its own generator and the simulator returns **0.8467 at every
 one of the eight sizes**, identically. Both facts are now on the plate.
+
+**Why this hypothesis survives the audit that withdrew the one above it.** The oracle objection
+applies here too — the simulator holds the world's emission map, including the row for the goal it
+has never been shown. So the test that matters is what happens when that map is taken away.
+Perturbing the simulator's own signature away from the world's, using the codebase's own
+inexpertise parameter, the held-out-goal advantage is still standing at a **half-random likelihood**
+(0.71 against the counter's 0.53, chance 0.50), where the efficiency advantage on plate 7 has
+already gone to nothing. **The two hypotheses lean on the oracle to very different degrees, and only
+one of them falls over when it is removed.** That sweep is a scratch audit and is not yet a
+committed experiment; it should become one.
 
 ### 9. And what is each finding actually made of?
 
