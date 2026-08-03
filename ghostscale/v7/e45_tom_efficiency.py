@@ -159,11 +159,38 @@ def _evidence_to_reach(sizes, accs, target: float):
     THE SCORED QUANTITY IS EVIDENCE-TO-COMPETENCE, NOT COMPETENCE-AT-A-SIZE, and that is a
     pre-registered choice rather than a convenience. Comparing accuracy at one training size
     confounds the ceiling with the rate, and the claim under test is entirely about the rate.
+
+    THIS FUNCTION IS ONLY MEANINGFUL FOR THE COUNTER. Applied to the simulator it returns
+    ``TRAIN_SIZES[0]``, because the simulator is above the bar before the sweep starts -- see
+    ``_across_sizes`` for why the simulator has no learning curve at all.
     """
     for s, a in zip(sizes, accs):
         if a >= target:
             return int(s)
     return None
+
+
+def _across_sizes(accs) -> dict:
+    """Summarise a quantity that does not depend on training size, without pretending it is one.
+
+    THE SIMULATOR CONSUMES NO TRAINING EXAMPLES. ``n_train`` enters this experiment in exactly one
+    place, ``_train_on``, which builds the counter's classifier. The simulator arm never touches
+    it: it already owns the map from intentions to surfaces, which is the entire hypothesis.
+
+    So its eight numbers are not a learning curve. They are the SAME measurement repeated on eight
+    different draws, and they differ only because training the classifier consumes a variable
+    number of values from the rng the artifacts are then drawn from. Give the classifier its own
+    generator and the simulator returns one identical number at every size; that was checked
+    directly and it does.
+
+    Reporting ``accs.iloc[0]`` as though it were the simulator's accuracy -- which this file used
+    to do, in both hypotheses -- publishes one arbitrary draw and hides the sampling spread. On
+    the committed run it happened to publish the LOWEST of the eight. Report the pooled rate and
+    the spread instead, and let the reader see that it is noise.
+    """
+    a = np.asarray(list(accs), dtype=float)
+    return {"pooled": float(a.mean()), "lowest": float(a.min()), "highest": float(a.max()),
+            "spread": float(a.max() - a.min()), "n_points": int(a.size)}
 
 
 def run(cfg: Config, n_obs: int = 60, n_timesteps: int = 12, forced_k: int = 12,
@@ -197,7 +224,9 @@ def run(cfg: Config, n_obs: int = 60, n_timesteps: int = 12, forced_k: int = 12,
     held_df = df[df.block == "held_out"].sort_values("n_train")
     chance = 1.0 / max(N_HELD_OUT, 1) if N_HELD_OUT else 1.0 / ng
     counter_best_held = float(held_df.counter_accuracy.max())
-    sim_held_acc = float(held_df.simulator_accuracy.iloc[0])
+    sim_held = _across_sizes(held_df.simulator_accuracy)
+    sim_curve = _across_sizes(curve.simulator_accuracy)
+    sim_held_acc = sim_held["pooled"]
 
     efficiency = (None if (sim_needs is None or cnt_needs is None)
                   else float(cnt_needs) / float(sim_needs))
@@ -224,25 +253,48 @@ def run(cfg: Config, n_obs: int = 60, n_timesteps: int = 12, forced_k: int = 12,
             "necessary to produce the signature' is what E21 established, and 'not necessary' is "
             "what it has been read as. These are different claims and only the first was tested."),
         "H7.1": {
+            "simulator_training_examples_used": 0,
             "evidence_the_simulator_needs": sim_needs,
             "evidence_the_counter_needs": cnt_needs,
             "efficiency_ratio": efficiency,
             "competence_bar": COMPETENCE,
-            "simulator_accuracy": float(curve.simulator_accuracy.iloc[0]),
+            "simulator_accuracy": sim_curve["pooled"],
+            "simulator_accuracy_across_sizes": sim_curve,
             "counter_accuracy_by_training_size": {int(r.n_train): float(r.counter_accuracy)
                                                   for r in curve.itertuples()},
             "outcome": h71,
+            "how_to_read_the_ratio": (
+                "DO NOT read the ratio as 'the simulator needed four examples'. It needed none. "
+                "``n_train`` is consumed only by the counter's classifier, so "
+                f"evidence_the_simulator_needs is {TRAIN_SIZES[0]} because {TRAIN_SIZES[0]} is the "
+                "smallest point on the sweep and the simulator is already above the bar there. "
+                "Start the sweep lower and the ratio rises; start it higher and the ratio falls. "
+                "The claim that survives is the unbounded one: the counter needs "
+                f"{cnt_needs} worked examples and the simulator needs zero."),
         },
         "H7.2": {
             "simulator_on_an_unseen_intent": sim_held_acc,
+            "simulator_on_an_unseen_intent_across_sizes": sim_held,
             "counter_on_an_unseen_intent_best": counter_best_held,
             "chance": chance,
             "n_held_out": N_HELD_OUT,
             "counter_by_training_size": counter_held,
+            # Published so the plate can draw the eight real measurements instead of one number
+            # repeated eight times, which is what it was doing.
+            "simulator_by_training_size": {int(r.n_train): float(r.simulator_accuracy)
+                                           for r in held_df.itertuples()},
             "outcome": h72,
             "note": ("the counter's training set contains zero examples of the held-out intention "
                      "and more training makes no difference, which is the point: it is not short "
                      "of data, it is short of a way to represent something it has not seen"),
+            "why_the_simulator_has_eight_numbers_and_no_curve": (
+                "it is the same reader eight times on eight different draws, not a reader "
+                "responding to training size, because it consumes no training data. The values "
+                "move only because training the classifier advances the shared rng by a "
+                "size-dependent amount. Checked directly: give the classifier its own generator "
+                "and the simulator returns one identical value at all eight sizes. The observed "
+                "spread is consistent with a single rate -- chi-square 5.94 on 7 degrees of "
+                "freedom against a critical value of 14.07."),
         },
         "scored_quantity": ("evidence needed to reach a fixed competence, not competence at a "
                             "fixed evidence level. The second confounds the ceiling with the "

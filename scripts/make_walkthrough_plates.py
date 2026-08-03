@@ -765,10 +765,11 @@ def plate_18_what_tom_buys():
         "Using this personal expertise to translate an artifact into a maker doesn't just "
         "make you right. It is also extremely cheap.",
         "Both readers are held to the same bar: get the intention right eight times out of ten. "
-        "The one that already owns the machinery for making things only has to ask which intention "
-        "is running. The one that counts features has to learn the whole map from examples, and "
-        "the map is large.",
-        "E45 - results/v7/e45_tom_efficiency.json - examples needed to reach 80% accuracy",
+        "The one that counts features has to learn the whole map from examples, and the map is "
+        "large. The one that already owns the machinery for making things is given no worked "
+        "examples at all, and clears the bar anyway.",
+        "E45 - results/v7/e45_tom_efficiency.json - examples needed to reach 80% accuracy; the "
+        "simulator consumes none, so its 4 is the sweep's floor and not a requirement",
         authored=True)
     # LINEAR, deliberately. This was drawn on a log axis and the log axis was lying by being
     # tidy: 4 against 512 came out looking like a one-to-five difference, which is the single
@@ -782,8 +783,14 @@ def plate_18_what_tom_buys():
     ax.set_ylim(0, cnt * 1.34)
     clean_axis(ax, "worked examples needed")
     ax.set_yticks([])
-    annotate(ax, 0, cnt * 0.30, str(int(cnt / max(sim, 1))) + "x less evidence\nto clear the "
-             "same bar", color=HUMAN, ha="center", fontsize=15, weight="bold")
+    # NOT "128x less evidence", WHICH IS WHAT THIS SAID AND IT WAS NOT TRUE. The sweep starts at
+    # four, and the simulator is already over the bar at four, so the ratio is a property of where
+    # the x-axis begins rather than of the reader. Start lower and it rises; start higher and it
+    # falls. The claim with no such ceiling is the one drawn now: the simulator is given none.
+    annotate(ax, 0, cnt * 0.34,
+             "already over the bar\nwith none of its own.\n" + str(int(sim)) + " is just the\n"
+             "smallest we tested",
+             color=HUMAN, ha="center", fontsize=13.5, weight="bold")
     record(save(fig, "18_what_imagining_a_maker_buys"),
            "The experiment that made this project withdraw a claim asked whether you NEED to "
            "imagine a maker. You do not. It never asked what imagining one buys.")
@@ -793,9 +800,26 @@ def plate_18_what_tom_buys():
 # 19 - reading an intent nobody has shown you.
 # =========================================================================== #
 def plate_19_zero_shot():
+    """The simulator is drawn as EIGHT MEASUREMENTS, not as one number repeated eight times.
+
+    The first version drew a single flat rule across the whole axis, because the verdict published
+    a single scalar for the simulator. That was two mistakes stacked. The scalar was the first of
+    eight and happened to be the lowest, and drawing it flat asserted a stability the plate had
+    never measured -- a reader is entitled to find a perfectly level line across a 128-fold sweep
+    suspicious, and here it would have been right to.
+
+    What is true is stranger and better: the simulator has no learning curve because it consumes
+    no training examples. Its eight values move only because training the classifier draws a
+    size-dependent number of values from the shared generator. Give the classifier its own and the
+    simulator returns one identical number at all eight sizes. So the honest drawing is the real
+    scatter with its own band, which shows both that it does not climb and that it is not a
+    suspiciously perfect line.
+    """
     d = load("v7/e45_tom_efficiency.json")["H7.2"]
     by = {int(k): float(v) for k, v in d["counter_by_training_size"].items()}
+    sim_by = {int(k): float(v) for k, v in d["simulator_by_training_size"].items()}
     xs = sorted(by)
+    band = d["simulator_on_an_unseen_intent_across_sizes"]
     sim = float(d["simulator_on_an_unseen_intent"])
     chance = float(d["chance"])
 
@@ -803,20 +827,27 @@ def plate_19_zero_shot():
         "Using the simulating power of empathy to bridge a gap in your understanding, you can "
         "correctly identify goals you've never heard of. A pattern-matcher fails at this.",
         "The goal being read here appears nowhere in either reader's training data. The simulator "
-        "gets it right about three times in four. The pattern-matcher is not short of examples: "
+        "gets it right about four times in five. The pattern-matcher is not short of examples: "
         "give it 128 times more and it stays at guessing, because its problem was never a "
         "shortage. It has no way to represent something it has not already seen.",
         "E45 - results/v7/e45_tom_efficiency.json - accuracy on a held-out intention, against a "
         "two-way choice",
         authored=True)
-    ax.plot(range(len(xs)), [by[x] for x in xs], "-o", color=MACHINE, lw=2.6, ms=8)
-    ax.axhline(sim, color=HUMAN, lw=2.8)
-    ax.axhline(chance, color=NEUTRAL, lw=1.4, ls=":")
-    annotate(ax, 0.05, sim + 0.03, "a reader that simulates", color=HUMAN,
+    ax.fill_between([-0.45, len(xs) - 0.55], band["lowest"], band["highest"],
+                    color=HUMAN, alpha=0.15, lw=0, zorder=1)
+    ax.plot(range(len(xs)), [sim_by[x] for x in xs], "-o", color=HUMAN, lw=2.6, ms=8, zorder=3)
+    ax.plot(range(len(xs)), [by[x] for x in xs], "-o", color=MACHINE, lw=2.6, ms=8, zorder=3)
+    ax.axhline(chance, color=NEUTRAL, lw=1.4, ls=":", zorder=2)
+    annotate(ax, 0.05, band["highest"] + 0.035, "a reader that simulates", color=HUMAN,
              fontsize=12.5, weight="bold")
+    annotate(ax, len(xs) - 1.05, 0.30,
+             "The green reader has no learning curve because it is given no examples at all.\n"
+             "It is one reader measured eight times, and the band is the spread of those\n"
+             "eight draws. Isolate the random seeds and all eight land on the same number.",
+             color=HUMAN, fontsize=10, ha="right", va="top")
     annotate(ax, 0.05, chance + 0.025, "pure guessing", color=MUTED, fontsize=10.5)
-    annotate(ax, len(xs) - 1.05, by[xs[-1]] - 0.17, "a reader that counts", color=MACHINE,
-             fontsize=12.5, weight="bold", ha="right")
+    annotate(ax, 0.05, by[xs[0]] - 0.035, "a reader that counts", color=MACHINE,
+             fontsize=12.5, weight="bold", va="top")
     ax.set_xticks(range(len(xs)))
     ax.set_xticklabels([str(x) for x in xs], fontsize=10)
     ax.set_ylim(0, 1.0)

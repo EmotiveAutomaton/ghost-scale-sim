@@ -148,9 +148,17 @@ But it answered a narrower question than it has been read as answering. It asked
 maker-model is needed to produce a *signature*. It never asked what the maker-model *buys* — and if
 imagining another mind is worth what it costs to run, the payoff was never going to be a signature.
 
-**Four worked examples against five hundred and twelve, to clear the same bar.** This is a
-sample-efficiency result and not a compute result: per inference, the reader that simulates a
-creator is the *more* expensive one. What it saves is evidence.
+**The counter needs five hundred and twelve worked examples to clear the bar. The simulator is
+given none.**
+
+*Do not quote this as "128 times less evidence", which is how the plate first put it.* The sweep
+starts at four and the simulator is already over the bar there, so a ratio against four is a
+property of where the x-axis begins rather than of the reader. Start the sweep lower and the ratio
+rises; start it higher and it falls. The unbounded claim is the true one, and it is the stronger
+one anyway.
+
+This is also a sample-efficiency result and not a compute result: per inference, the reader that
+simulates a creator is the *more* expensive one. What it saves is evidence.
 
 ### 8. Reading a goal nobody has shown you
 
@@ -161,8 +169,21 @@ a goal held out of training entirely.
 
 A reader that can **run** the generator has the whole space available. A reader that has to
 **observe** the space only ever has the part it happened to see — and more examples do not fix that,
-because its problem was never a shortage of examples. The simulator gets it right about three times
-in four. The counter sits at guessing across a 128-fold increase in training data and never leaves.
+because its problem was never a shortage of examples. The simulator gets it right **0.82** of the
+time, pooled over the eight measurements. The counter sits at guessing across a 128-fold increase
+in training data and never leaves.
+
+**The simulator's line is not flat, and it should not have looked flat.** The verdict used to
+publish a single number for it — the first of eight, which happened to be the lowest — and the
+plate drew that one number straight across the axis, asserting a stability nothing had measured.
+The eight real values run 0.77 to 0.85. That spread is noise: chi-square 5.94 on 7 degrees of
+freedom against a critical value of 14.07, at n=150 per point.
+
+What *is* true is that the simulator has no learning curve at all, because training size is
+consumed by the counter's classifier and by nothing else. Its eight values move only because
+building that classifier draws a size-dependent number of values from the generator the artifacts
+come from next. Give the classifier its own generator and the simulator returns **0.8467 at every
+one of the eight sizes**, identically. Both facts are now on the plate.
 
 ### 9. And what is each finding actually made of?
 
