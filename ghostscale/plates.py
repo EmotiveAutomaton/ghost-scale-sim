@@ -70,10 +70,16 @@ def _apply_rc() -> None:
         "figure.dpi": 160,
         "savefig.dpi": 160,
         "font.size": 11,
+        # Mathtext is only ever used for a single italicised word inside a title. Point it at the
+        # house font so the italic does not arrive in a different typeface than its own sentence.
+        "mathtext.fontset": "custom",
+        "mathtext.rm": _FONT,
+        "mathtext.it": f"{_FONT}:italic",
+        "mathtext.bf": f"{_FONT}:bold",
     })
 
 
-def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6)):
+def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: bool = False):
     """A figure with the finding in the title and the provenance in the footer.
 
     The proportions are deliberate: 16:9-ish, because these are meant to survive being posted
@@ -91,8 +97,18 @@ def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6)):
 
     fig = plt.figure(figsize=size)
     top = 0.955
+
+    # THE SCALE, APPLIED TO THE HEADLINE ITSELF.
+    #
+    # ``authored`` says a person wrote this title. Those are Polished tier: the words are the
+    # author's, the grammar is not, and they run in black. Every other title on the set was
+    # written by a machine from the author's results, which is Ghost tier, and those run in grey.
+    #
+    # A reader who never learns what the colours mean loses nothing. A reader who does gets the
+    # project's own instrument applied to the project's own slides, which is the only honest place
+    # to start using it.
     fig.text(0.055, top, "\n".join(title_lines), fontsize=19, fontweight="bold",
-             color=INK, va="top", linespacing=1.22)
+             color=INK if authored else MUTED, va="top", linespacing=1.22)
 
     sub_y = top - 0.072 * len(title_lines) - 0.018
     fig.text(0.055, sub_y, "\n".join(sub_lines), fontsize=12, color=MUTED,
@@ -220,13 +236,18 @@ def audit(fig, name: str = "") -> list:
         label = " ".join(str(t.get_text()).split())[:44]
         if bb.x0 < -1.0 or bb.y0 < -1.0 or bb.x1 > W + 1.0 or bb.y1 > H + 1.0:
             problems.append(f"CLIPPED    {name}: {label!r}")
-        if id(t) not in legend_texts:
-            boxes.append((bb, label))
+        boxes.append((bb, label, id(t) in legend_texts))
 
     for i in range(len(boxes)):
         for j in range(i + 1, len(boxes)):
-            a, la = boxes[i]
-            b, lb = boxes[j]
+            a, la, a_leg = boxes[i]
+            b, lb, b_leg = boxes[j]
+            # Skip only legend-against-legend. The first version skipped anything involving a
+            # legend at all, which let a legend sit straight on top of an annotation without a
+            # word of complaint -- the exact failure the audit exists to catch, hidden inside the
+            # fix for a different one.
+            if a_leg and b_leg:
+                continue
             ov_w = min(a.x1, b.x1) - max(a.x0, b.x0)
             ov_h = min(a.y1, b.y1) - max(a.y0, b.y0)
             if ov_w <= 2 or ov_h <= 2:

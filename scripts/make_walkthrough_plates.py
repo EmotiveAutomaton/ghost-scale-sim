@@ -50,10 +50,13 @@ def plate_01_false_label():
     vals = [float(p[1]["error_reduction"]) for p in picks]
 
     fig, ax = plate(
-        "Lying about who made something doesn't waste your time.\nIt leaves you knowing less than before you started.",
-        "How much closer to the truth about the maker a reader ends up. Above the line, reading "
-        "taught you something. Below it, reading cost you ground you already had.",
-        "E2 · results/repair/r5_uptake.json · reduction in the surprisal of the true intent, in nats")
+        "Learning from falsely labelled AI work leaves you knowing less\nabout its maker than before you read it.",
+        "One reading, and how much closer to the truth about that maker it left the reader. Above "
+        "the line, reading taught you something. Below it, reading cost you ground you already "
+        "had. Told the truth, a reader stays put; told a person made it, the reader builds a "
+        "confident theory about somebody who was never there.",
+        "E2 · results/repair/r5_uptake.json · reduction in the surprisal of the true intent, in nats",
+        authored=True)
     bars = ax.bar([p[0] for p in picks], vals, color=[p[2] for p in picks], width=0.55)
     bar_labels(ax, bars, vals, fmt="{:+.2f}", fontsize=15, color=INK)
     zero_line(ax)
@@ -77,12 +80,13 @@ def plate_02_interior_peak():
              for r in t1["interior_peak"]["rows"]} if "interior_peak" in t1 else {}
 
     fig, ax = plate(
-        "Total nonsense is safe. Total clarity is safe.\nThe danger zone is content that is almost readable.",
-        "Partial structure is worse than none. Enough familiar shape to make an explanation seem "
-        "available, not enough to make it right, so the reader builds a confident story about "
-        "somebody who was never there.",
+        "You safely ignore total nonsense, and you easily parse work inside your expertise. "
+        "Inventing a fake creator happens most when things are just a little human.",
+        "Invention is how often the reader produces a confident, mutually contradictory reading. "
+        "It does not rise with how alien the work is. It peaks where the reader has just enough "
+        "familiar shape to make an explanation seem available and not enough to make it right.",
         "E20 · results/e20_omega_sweep.csv · confident-and-contradictory readings, by how much of "
-        "the content the reader has vocabulary for")
+        "the content the reader has vocabulary for", authored=True)
     x = df.omega.to_numpy()
     y = df.fabrication_index.to_numpy()
     ax.plot(x, y, color=NEUTRAL, lw=2.2, zorder=2)
@@ -166,15 +170,16 @@ def plate_03_the_wall():
     # The chart annotation goes back to the series colour, because it is a label on a bar and
     # labels follow their series.
     fig, ax = plate(
-        "Not understanding a painting is safe. You know you missed it.\nAI work is worse: it lets you believe you didn't.",
+        "You notice when you have failed to get anything from a painting. You do not "
+        "notice when AI work leaves you confidently wrong.",
         "",
         "E37 · results/v6/e37_wall.json · the AI condition is built as four maker-states collapsing "
-        "onto two surfaces, on entirely familiar material")
+        "onto two surfaces, on entirely familiar material", authored=True)
 
     sub_y, step = 0.793, 0.050
     grey_lines = [
-        "One measure: how finished the viewer felt when it walked away. Art you have no training",
-        "for stops you at the door, and stopping is the protection. The AI image lets you walk",
+        "One measure: how finished the viewer felt on walking away. Art you have no training for",
+        "stops you at the door, and being stopped is the protection. The AI image lets you leave",
     ]
     for i, ln in enumerate(grey_lines):
         fig.text(0.055, sub_y - step * i, ln, fontsize=12, color=MUTED, va="top")
@@ -198,7 +203,7 @@ def plate_03_the_wall():
                 fontsize=15, fontweight="bold", color=INK)
     ax.set_xticks(xs)
     ax.set_xticklabels([o[1] for o in order], fontsize=11)
-    ax.set_ylim(0, 158)
+    ax.set_ylim(0, 172)
     clean_axis(ax, "how finished the viewer felt")
     ax.set_yticks([])
 
@@ -214,7 +219,7 @@ def plate_03_the_wall():
     # 76, which is the kind of thing that only shows up once the whole plate is rendered.
     keep = ax.text(2, settled[2] + 27, "You keep it.", color=MACHINE, ha="center", va="bottom",
                    fontsize=11.5, fontweight="bold", zorder=5)
-    ax.text(2, settled[2] + 35, "you walk away certain,\nholding an answer you invented.",
+    ax.text(2, settled[2] + 40, "you walk away certain,\nholding an answer you invented.",
             color=MACHINE, ha="center", va="bottom", fontsize=11.5, fontweight="bold",
             linespacing=1.35, zorder=5)
     fig.canvas.draw()
@@ -869,12 +874,14 @@ def plate_22_how_much_is_the_theory():
     mine = [1.0 - v for v in vals]
 
     fig, ax = plate(
-        "Everything on this chart is true.\nI checked how much of it is actually evidence for MY theory.",
-        "The test: rebuild the model hundreds of times with every setting my theory specifies "
-        "replaced by a random one. Anything that still turns up is real, but it is not proof of "
-        "this theory over any other built the same way. Almost no published model is ever put "
-        "through this, and most would not come out of it as well.",
-        "S-1 - results/v8/s1_severity.json - 600 randomly parameterised rebuilds per finding")
+        "Modelled, none of my theory's main predictions were refuted. Then I went several "
+        "steps further and checked how much of it is evidence for $\\it{my}$ theory specifically.",
+        "The further step: rebuild the model hundreds of times with every setting the theory "
+        "specifies replaced by a random one. Whatever still turns up is true, and it is not proof "
+        "of this account over any other built the same way. Almost no published model is put "
+        "through this at all.",
+        "S-1 - results/v8/s1_severity.json - 600 randomly parameterised rebuilds per finding",
+        authored=True)
 
     pos = ax.get_position()
     ax.set_position([0.30, pos.y0, 0.60, pos.height])
@@ -893,7 +900,7 @@ def plate_22_how_much_is_the_theory():
 
     ax.set_yticks(y, labels, fontsize=12.5)
     ax.set_xlim(0, 1.20)
-    ax.set_ylim(-2.20, len(labels) + 0.16)
+    ax.set_ylim(-2.55, len(labels) + 0.16)
     clean_axis(ax, "", "")
     ax.set_xticks([])
     for s in ax.spines.values():
@@ -912,7 +919,7 @@ def plate_22_how_much_is_the_theory():
     # is worse than no caveat: it reads as a claim with no limits on it.
     annotate(ax, 0.0, -0.78, "The overall picture holds together.",
              color=INK, fontsize=12.5, weight="bold", va="center", ha="left")
-    annotate(ax, 0.0, -1.52,
+    annotate(ax, 0.0, -1.72,
              "Some of its parts turn out to be unprovable either way, which is not the same as "
              "wrong.\nMost people never find out which of theirs are, and report them as though "
              "they had.",
@@ -1046,13 +1053,13 @@ def plate_25_a_defence_that_works():
     clean = [cell("clean", r, "human_model_corrupted") for r, _ in readers]
 
     fig, ax = plate(
-        "Filtering AI slop by how good it looks is worse than not filtering at all.",
-        "Each bar is how WRONG the learner ends up about real people after reading a stream. "
-        "Taller is worse. The red bar is a stream salted with content built to be absorbed by "
-        "machines; the teal bar is the same learner on a clean stream, which is the cost of the "
-        "filter itself.",
+        "Right now, you identify human work most easily by trying to connect with the maker's "
+        "intent, not by looking for surface-level quality.",
+        "A reader learning from a stream salted with text built to be absorbed by machines. "
+        "Filtering on how good the writing looks does nothing, because looking good is what the "
+        "writer optimised for. Taller bars are worse: how wrong it ends up about real people.",
         "E55 - results/v10/summary.json - reproduces in 83% of randomly parameterised models, so "
-        "most of this is architecture; read the direction")
+        "most of this is architecture; read the direction", authored=True)
 
     x = np.arange(len(readers))
     w = 0.36
@@ -1064,7 +1071,7 @@ def plate_25_a_defence_that_works():
                     ha="center", va="bottom", fontsize=13, fontweight="bold", color=INK)
 
     ax.set_xticks(x, [lbl for _, lbl in readers], fontsize=11.5, linespacing=1.25)
-    ax.set_ylim(0, max(poisoned) * 1.46)
+    ax.set_ylim(0, max(poisoned) * 1.78)
     clean_axis(ax, "how wrong it ends up about people", "")
     ax.set_yticks([])
     # The legend goes ABOVE the axes, horizontally. Inside the frame it collided with the teal
