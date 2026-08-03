@@ -172,8 +172,11 @@ require a reader that models the maker as a mind. That is false, and the experim
 is in this repository.**
 
 A classifier that counts features and never represents a maker reproduces the pattern, through
-nothing more than small-sample overfitting. What it *cannot* do is respond to a label, or keep
-paying attention to something it cannot resolve — and those are the two the framework now rests on.
+nothing more than small-sample overfitting. On empty content carrying a creator's label the two
+readers end up **0.92 certain against 0.92, disagreeing 0.99 against 0.99** — the same object, to
+two decimal places, on both halves of the signature. What the counter *cannot* do is respond to a
+label, or keep paying attention to something it cannot resolve, and those are the two the framework
+now rests on.
 
 ### 14. A knee, not a cliff
 
@@ -244,8 +247,13 @@ To decide you disagree with something, you first have to work out what it says. 
 says means partly running it. So refusing is itself a small act of taking on, and it compounds.
 
 The theory always contained this term; the code never did. And the second half is worse than the
-first: **the reader who studies it carefully in order to refute it drifts seven times more than the
-one who skims.**
+first, which is why it is now the picture rather than a caption on it: **the reader who studies it
+carefully in order to refute it drifts seven times more than the one who skims** — same content,
+same guard, eight times the looking. The effort you spend disagreeing is the channel.
+
+Seal the guard completely and the drift really does fall to 0.00002. No version of this reader
+after version 5 has a guard that seals, because version 6 replaced the binary gate with a sigmoid,
+and a sigmoid never reaches zero.
 
 ### 21. A disagreement that turned out to be a measurement error
 

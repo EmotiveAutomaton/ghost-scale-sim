@@ -533,39 +533,58 @@ def plate_12_two_damages():
 # 13 — a counting classifier does it too.
 # =========================================================================== #
 def plate_13_no_mind_needed():
+    """Redrawn twice over, because the first version was averaging away the finding.
+
+    It took the mean of every row for each arm -- across all three content types and all three
+    declared signals, including honestly-labelled human work where both readers sit at zero.
+    That produced 'uncertainty 0.77 against 0.19', which looks like a large DIFFERENCE between
+    the two readers and so argues against the plate's own title.
+
+    The claim being withdrawn is about one cell: empty content carrying a creator's label. In
+    that cell the two readers are the same object. It is also plotted as CERTAINTY now, because
+    the old plate drew entropy and called it uncertainty, so a shorter bar meant a more confident
+    reader and every instinct the eye has was pointing backwards.
+    """
     df = pd.read_csv(R / "e21_cell_stats.csv")
-    col = "within_observer" if "within_observer" in df.columns else df.columns[2]
-    between = "between_observer" if "between_observer" in df.columns else df.columns[3]
-    arms = df[df.get("cell", df.columns[1]).astype(str).str.contains("ghost|GHOST|claimed",
-                                                                     case=False, na=False)] \
-        if "cell" in df.columns else df
-    full = df[df.arm.astype(str).str.contains("A_active", na=False)]
-    naive = df[df.arm.astype(str).str.contains("E_no_tom", na=False)]
+    cell = df[(df.content == "goal_empty") & (df.declared_signal == "SIG_CREATOR")]
+    full = cell[cell.arm.astype(str).str.startswith("A_active")]
+    # The counter at its most resolved. The claim under test is that NO reader without a
+    # maker-model can produce this signature, so one that does is enough to withdraw it.
+    counters = cell[cell.arm.astype(str).str.startswith("E_no_tom")]
+    naive = counters.loc[[counters.within_observer.idxmin()]]
     if not len(full) or not len(naive):
         return
-    vals = [float(full[col].mean()), float(naive[col].mean())]
-    dis = [float(full[between].mean()), float(naive[between].mean())]
+
+    hmax = float(np.log(4))       # four goal states, so this is 'no idea at all'
+    certain = [1 - float(full.within_observer.iloc[0]) / hmax,
+               1 - float(naive.within_observer.iloc[0]) / hmax]
+    dis = [float(full.between_observer.iloc[0]) / hmax,
+           float(naive.between_observer.iloc[0]) / hmax]
 
     fig, ax = plate(
         "You don't need to imagine a mind to invent one.",
-        "A classifier that counts features and never represents a maker reproduces the same "
-        "confident, mutually contradictory readings. The framework used to claim this required "
-        "modelling another mind. It doesn't.",
-        "E21 · results/e21_cell_stats.csv · how certain each reader is, and how much they disagree")
+        "Both readers are shown the same empty content under the same false creator label. One "
+        "of them models a maker. The other counts features and represents no maker at all. On "
+        "the signature this project was built around, they are the same object.",
+        "E21 - results/e21_cell_stats.csv - empty content under a creator label; certainty is "
+        "1 minus the reader's own entropy, disagreement is the spread between readers")
     xs = np.arange(2)
     w = 0.34
-    b1 = ax.bar(xs - w / 2, vals, width=w, color=COOL)
+    b1 = ax.bar(xs - w / 2, certain, width=w, color=COOL)
     b2 = ax.bar(xs + w / 2, dis, width=w, color=MACHINE)
     ax.set_xticks(xs)
     ax.set_xticklabels(["The full model\n(imagines a maker)",
                         "A counting classifier\n(imagines nothing)"], fontsize=12)
-    bar_labels(ax, b1, vals, fmt="{:.2f}", fontsize=12, color=INK)
-    bar_labels(ax, b2, dis, fmt="{:.2f}", fontsize=12, color=INK)
-    ax.set_ylim(0, max(dis) * 1.35)
+    bar_labels(ax, b1, certain, fmt="{:.2f}", fontsize=13, color=INK)
+    bar_labels(ax, b2, dis, fmt="{:.2f}", fontsize=13, color=INK)
+    ax.set_ylim(0, 1.42)
     clean_axis(ax)
     ax.set_yticks([])
-    annotate(ax, -0.44, max(dis) * 1.22, "uncertainty", color=COOL, fontsize=11.5, weight="bold")
-    annotate(ax, 0.40, max(dis) * 1.22, "disagreement", color=MACHINE, fontsize=11.5, weight="bold")
+    annotate(ax, -0.44, 1.30, "how sure it ends up", color=COOL, fontsize=11.5, weight="bold")
+    annotate(ax, 0.40, 1.30, "how much readers disagree", color=MACHINE, fontsize=11.5,
+             weight="bold")
+    annotate(ax, 0.5, 1.13, "the same, to two decimal places, on both measures",
+             color=INK, ha="center", fontsize=13, weight="bold")
     record(save(fig, "13_no_mind_needed"),
            "A claim this project withdrew, using its own experiment. Kept prominently on purpose.")
 
@@ -713,17 +732,20 @@ def plate_18_what_tom_buys():
         "One already owns the machinery and only has to ask which intention is running. The other "
         "has to learn the whole map from scratch.",
         "E45 - results/v7/e45_tom_efficiency.json - examples needed to reach 80% accuracy")
+    # LINEAR, deliberately. This was drawn on a log axis and the log axis was lying by being
+    # tidy: 4 against 512 came out looking like a one-to-five difference, which is the single
+    # most understated number in the project. On a linear axis the cheap reader is a sliver,
+    # and the sliver IS the finding.
     bars = ax.bar(["Simulates the maker", "Counts what it has seen"], [sim, cnt],
                   color=[HUMAN, MACHINE], width=0.5)
     for b, v in zip(bars, [sim, cnt]):
-        ax.text(b.get_x() + b.get_width() / 2, v * 1.08, str(int(v)), ha="center",
+        ax.text(b.get_x() + b.get_width() / 2, v + cnt * 0.035, str(int(v)), ha="center",
                 va="bottom", fontsize=20, fontweight="bold", color=INK)
-    ax.set_yscale("log")
-    ax.set_ylim(1, cnt * 6)
-    clean_axis(ax, "worked examples needed (log scale)")
+    ax.set_ylim(0, cnt * 1.34)
+    clean_axis(ax, "worked examples needed")
     ax.set_yticks([])
-    annotate(ax, 0.5, cnt * 2.2, str(int(cnt / max(sim, 1))) + "x less evidence",
-             color=HUMAN, ha="center", fontsize=15, weight="bold")
+    annotate(ax, 0, cnt * 0.30, str(int(cnt / max(sim, 1))) + "x less evidence\nto read intent "
+             "just as well", color=HUMAN, ha="center", fontsize=15, weight="bold")
     record(save(fig, "18_what_imagining_a_maker_buys"),
            "The experiment that made this project withdraw a claim asked whether you NEED to "
            "imagine a maker. You do not. It never asked what imagining one buys.")
@@ -767,31 +789,39 @@ def plate_19_zero_shot():
 # 20 - rejection is not protection.
 # =========================================================================== #
 def plate_20_rejection_is_not_protection():
+    """Redrawn, because the first version charted the knob and annotated the result.
+
+    The old plate's x-axis was how leaky I had set the guard, which is a parameter I chose, so
+    the bars could only ever say 'a bigger leak lets more through'. The finding was the caption
+    floating above them. Now the finding is the bars: two readers, the same leak, and the one
+    who works hardest at refusing is the one who moves most.
+    """
     d = load("v7/e46_gate_leak.json")
+    eng = d["engagement"]
+    skim, close = float(eng["skims_it"]), float(eng["reads_it_closely"])
     by = d["drift_by_leak"]
-    ks = sorted(by, key=lambda k: float(k))
-    drift = [float(by[k]["final_drift"]) for k in ks]
+    perfect = float(by["0.0"]["final_drift"])
 
     fig, ax = plate(
         "You cannot read something, reject it, and walk away unchanged.",
-        "To decide you disagree with something you first have to work out what it says, and "
-        "working out what it says means partly running it. Refusing is itself a small act of "
-        "taking on, and it compounds.",
-        "E46 - results/v7/e46_gate_leak.json - drift in a reader's own beliefs after repeatedly "
-        "rejecting everything it was shown")
-    labels = [f"{float(k):.0%}" for k in ks]
-    bars = ax.bar(labels, drift,
-                  color=[NEUTRAL if float(k) == 0 else MACHINE for k in ks], width=0.55)
-    bar_labels(ax, bars, drift, fmt="{:.3f}", fontsize=12.5, color=INK)
-    ax.set_ylim(0, max(drift) * 1.45)
-    clean_axis(ax, "how far the reader moved", "how leaky the guard is")
+        "Two readers, both refusing everything they are shown. To decide you disagree with "
+        "something you first have to work out what it says, and working out what it says means "
+        "partly running it. Refusing is itself a small act of taking on, and it compounds.",
+        "E46 - results/v7/e46_gate_leak.json - how far a reader's own beliefs moved after "
+        "repeatedly rejecting everything, at a fixed 10% leak")
+    bars = ax.bar(["Skims it\n(two looks)", "Studies it closely\nto refute it (sixteen looks)"],
+                  [skim, close], color=[NEUTRAL, MACHINE], width=0.5)
+    bar_labels(ax, bars, [skim, close], fmt="{:.3f}", fontsize=15, color=INK)
+    ax.set_ylim(0, close * 1.42)
+    clean_axis(ax, "how far the reader moved")
     ax.set_yticks([])
-    eng = d.get("engagement", {})
-    if eng.get("ratio"):
-        annotate(ax, (len(ks) - 1) / 2.0, max(drift) * 1.24,
-                 "and the reader who studies it carefully to refute it\n"
-                 "drifts " + str(int(round(eng["ratio"]))) + "x more than the one who skims",
-                 color=MACHINE, ha="center", fontsize=12.5, weight="bold")
+    annotate(ax, 1, close * 1.16,
+             str(int(round(eng["ratio"]))) + "x further from where it started",
+             color=MACHINE, ha="center", fontsize=14, weight="bold")
+    annotate(ax, -0.42, close * 1.30,
+             "Seal the guard completely and the drift does go to "
+             f"{perfect:.5f}.\nNo version of this reader after version 5 has a guard that seals.",
+             color=MUTED, ha="left", fontsize=11, va="top")
     record(save(fig, "20_rejection_is_not_protection"),
            "The theory always contained this term and the code never did. It is the proposed "
            "mechanism for indoctrination: you are changed by what you refuse.")
