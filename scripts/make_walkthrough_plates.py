@@ -278,11 +278,17 @@ def plate_05_intent_unlocks():
     lo, hi = [float(x) for x in d["interval"]]
 
     fig, ax = plate(
-        "Work out what someone was trying to do, and their choices start making sense.",
-        "Inside a single reading: how much of the maker's method the reader picks up, before and "
-        "after it settles on what the work was for.",
-        f"E36 · results/v6/e36_process.json · {d['n_rollouts']} readings · "
-        f"gain {after - before:+.3f}, 95% interval [{lo:+.3f}, {hi:+.3f}]")
+        r"The Math of Empathy: simulating a creator to find $\it{why}$ they did something "
+        r"makes it easy to find out $\it{how}$, and learn from them.",
+        f"Inside a single reading, on the same object: how much of the maker's method the reader "
+        f"picks up before and after it settles on what the work was for. The interval is a "
+        f"bootstrap — resample the {d['n_rollouts']} readings with replacement a few thousand "
+        f"times, recompute the gain each time, and keep the middle 95% of what comes back. It "
+        f"runs [{lo:+.3f}, {hi:+.3f}] and does not touch zero, so the ordering is not an artefact "
+        f"of which readings happened to be drawn.",
+        f"E36 · results/v6/e36_process.json · {d['n_rollouts']} readings · gain "
+        f"{after - before:+.3f} · the pre-registered form failed and is reported as failing",
+        authored=True)
     bars = ax.bar(["Before you work out\nwhat it was for",
                    "After you work out\nwhat it was for"],
                   [before, after], color=[NEUTRAL, HUMAN], width=0.5)
@@ -462,30 +468,57 @@ def plate_10_looking_vs_being_changed():
 # 11 — the master cannot explain themselves.
 # =========================================================================== #
 def plate_11_self_report():
+    """Redrawn against a different pair of series, because the old pair had a dead line in it.
+
+    It plotted the maker's self-report against the READER'S GOAL ACCURACY, and the reader scores
+    1.00, 1.00, 1.00 -- pinned at the ceiling in all three cells. A flat line at the top of a
+    chart carries no information and invites the eye to read a comparison that is not there.
+
+    The pair that matches the finding is the maker's self-report against how much of the maker's
+    METHOD a reader gets off the work. Those move in opposite directions, which is the paradox:
+    the better you get, the less you can say about why, and the more of your process is sitting
+    in the work for somebody else to pick up.
+    """
     d = load("v6/e43_selfreport.json")
     cells = sorted(d["cells"], key=lambda c: c["mu"])
     declared = [float(c["declared_accuracy"]) for c in cells]
+    process = [float(c["process_accuracy"]) for c in cells]
     reader = [float(c["reader_accuracy"]) for c in cells]
 
     fig, ax = plate(
-        "The more practised the work, the less its maker can say why.",
-        "A novice can tell you exactly which rule they were following, because they are still "
-        "following it on purpose. Practice compresses decisions, and compression is what puts "
-        "them out of reach.",
-        "E43 · results/v6/e43_selfreport.json · how often the maker names its own purpose correctly, "
-        "against how often a reader does")
+        "Expertise involves folding procedures into your subconscious until they are automatic. "
+        "Paradoxically, experts can sometimes even learn about themselves from their own "
+        "process. Happy little accidents.",
+        "Nobody sets the maker's self-blindness here. Depth sets it, which is what makes this a "
+        "claim about practice rather than about personalities. As the work gets deeper the maker "
+        "names its own purpose less and less reliably, while more and more of its method is left "
+        "in the work where a reader can pick it up. The model measures a reader doing that "
+        "picking up; it never sits the maker down in front of their own work.",
+        "E43 · results/v6/e43_selfreport.json · the maker naming its own purpose, against how "
+        "much of its method a reader recovers off the work",
+        authored=True)
     xs = np.arange(len(cells))
-    ax.plot(xs, reader, "-o", color=HUMAN, lw=2.6, ms=9)
-    ax.plot(xs, declared, "-o", color=MACHINE, lw=2.6, ms=9)
-    annotate(ax, xs[-1] + 0.05, reader[-1], "what a reader\nworks out",
-             color=HUMAN, va="center", fontsize=11.5, weight="bold")
-    annotate(ax, xs[-1] + 0.05, declared[-1], "what the maker\ncan tell you",
-             color=MACHINE, va="center", fontsize=11.5, weight="bold")
+    ax.plot(xs, declared, "-o", color=MACHINE, lw=2.8, ms=10)
+    ax.plot(xs, process, "-o", color=HUMAN, lw=2.8, ms=10)
+    for x, v in zip(xs, declared):
+        ax.text(x, v + 0.045, f"{v:.2f}", ha="center", fontsize=12, fontweight="bold",
+                color=INK)
+    for x, v in zip(xs, process):
+        ax.text(x, v - 0.045, f"{v:.2f}", ha="center", va="top", fontsize=12,
+                fontweight="bold", color=INK)
+    # Parked off the lines. Both labels used to sit ON their own series, which the collision
+    # audit does not catch because a line is not text.
+    annotate(ax, 1.28, 1.14,
+             "what the maker can tell you\nabout why they did it", color=MACHINE,
+             fontsize=12, weight="bold", va="top")
+    annotate(ax, 1.28, 0.21,
+             "how much of their method\nis readable in the work", color=HUMAN,
+             fontsize=12, weight="bold", va="top")
     ax.set_xticks(xs)
-    ax.set_xticklabels(["a scribble", "practised work", "a master's work"], fontsize=11.5)
-    ax.set_xlim(-0.2, len(cells) - 0.3)
-    ax.set_ylim(0, 1.12)
-    clean_axis(ax, "gets the purpose right")
+    ax.set_xticklabels(["a scribble", "practised work", "a master's work"], fontsize=12.5)
+    ax.set_xlim(-0.25, len(cells) - 0.75 + 0.5)
+    ax.set_ylim(0, 1.16)
+    clean_axis(ax)
     ax.set_yticks([0, 0.5, 1.0])
     ax.set_yticklabels(["never", "half", "always"])
     record(save(fig, "11_the_master_cannot_explain"),

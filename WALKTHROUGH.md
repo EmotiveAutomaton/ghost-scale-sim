@@ -366,25 +366,59 @@ And then the experiment measured whether depth changes how much of the **purpose
 couldn't. Not "it didn't" — it *couldn't*. Measured on how much of the **method** transfers, it
 moves.
 
-### 21. Intent unlocks the method
+### 21. The math of empathy
 
 ![Work out what someone was trying to do and their choices start making sense](figures/walkthrough/05_intent_unlocks_the_method.png)
 
 The claim: you work out what someone was *for* first, and that is what makes their choices
-readable — every move can then be read as being in service of it.
+readable — every move can then be read as being in service of it. It is in neither the preprint nor
+the essay. It came out of a conversation.
 
-It is in neither the preprint nor the essay. It came out of a conversation, and it holds — inside a
-single reading, on the same object, before and after the reader settles on the purpose.
+**Read the two forms of this test together, because only one of them holds.**
 
-### 22. The master cannot explain themselves
+The **pre-registered** form is a between-reader contrast: do readers who end up *right* about the
+goal recover more of the method than readers who end up *wrong*? Gap of 0.047 against a required
+0.15. **It fails, and it is reported as failing:** `PROCESS_IS_INDEPENDENT_OF_GOAL`.
+
+The **temporal** form was added afterwards and declared as added. Within a single reading, on the
+same object, method uptake before the goal settles is 0.050 and after it is 0.130 — a gain of
+0.080, bootstrap interval [+0.041, +0.122] over 102 readings, not touching zero.
+
+The version-6 write-up argues the two are not in conflict, because *once you know what someone was
+for you can read their actions as being in service of it* is a within-reader claim and the
+pre-registered criterion tested a between-reader one. That is a fair reading. **It is also the case
+that "after settling" is later in the reading than "before settling", so the later window always has
+more evidence behind it**, and this design cannot separate *resolving the goal unlocked the method*
+from *both accrue as you keep looking*. A time-matched control would separate them and has not been
+run.
+
+So: a real result, honestly declared, with a confound it has not been cleared of. Good enough to
+publish in a walkthrough. **Not the thing to open a carousel with.**
+
+### 22. Expertise folds into the subconscious
 
 ![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
 
 A novice can tell you exactly which rule they were following, because they are still following it on
 purpose. Practice compresses decisions into automatic routines, and compression is precisely what
-puts them out of reach of report.
+puts them out of reach of report. The maker names its own purpose correctly **0.98** of the time on
+a scribble and **0.68** on a master's work.
 
-Note what is *not* happening here: nobody is setting the maker's self-blindness. Depth sets it.
+Note what is *not* happening here: nobody is setting the maker's self-blindness. **Depth sets it**,
+which is a stronger and different claim from E33, where self-blindness was a knob.
+
+The plate used to draw the maker's self-report against the *reader's accuracy on the purpose*, and
+that reader scores 1.00 in all three cells — pinned at the ceiling, a flat line carrying no
+information. It now draws the pair that actually moves in opposite directions: what the maker can
+say about why falls from 0.98 to 0.68, while how much of their **method** a reader lifts off the
+work rises from **0.27 to 0.47**. The better you get, the less you can explain, and the more of your
+process is sitting in the work for someone else to take.
+
+**One claim in the title runs past the experiment.** *Experts can sometimes learn about themselves
+from their own process* is a natural extension — reading intent off work is general, and your own
+work is work — but this model never sits a maker down in front of their own artifact. What it
+measures is a **reader** recovering what the maker cannot report. The extension is plausible and
+untested, and the plate says so in grey.
 
 ### 23. Labelling needs a convention
 
