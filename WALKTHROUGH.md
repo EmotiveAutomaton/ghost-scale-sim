@@ -474,7 +474,7 @@ readable at every depth, so it could never have moved.
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 
 The proposal's answer to bad actors, simulated for the first time in eight versions. It works — and
-it comes with a condition rather than a reassurance: **you have to catch half the liars.**
+it comes with a condition rather than a reassurance: **you have to catch a quarter of the liars.**
 
 *The framework reaches this through Zahavian signalling, on which honesty is stable because the
 honest signal is wasteful. Signalling theory has since moved to a trade-off account, and a

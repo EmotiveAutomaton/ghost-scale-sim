@@ -20,6 +20,13 @@ PLATES = REPO / "figures" / "walkthrough"
 OUT_DIR = REPO.parent                      # the Ghost Scale Simulation folder, outside the repo
 
 CAROUSELS = {
+    "carousel-3-why-disclosure-does-not-save-you": [
+        "16_two_witnesses",
+        "07_reputation_blindness",
+        "06_honesty_is_not_enough",
+        "15_labels_need_a_convention",
+        "23_honesty_pays_at_a_price",
+    ],
     "carousel-2-the-case-for-intent": [
         "11_the_master_cannot_explain",
         "05_intent_unlocks_the_method",
@@ -27,13 +34,14 @@ CAROUSELS = {
         "24_what_its_made_of",
         "20_rejection_is_not_protection",
     ],
+    # As posted: FIVE. 26_the_arms_race was an addition that never went out and is still
+    # unspent -- it is the natural opener for a later set rather than a sixth slide here.
     "carousel-1-aimed-at-the-wrong-thing": [
         "25_a_defence_that_works",
         "01_false_label_moves_you_wrong",
         "02_invention_peaks_in_the_middle",
         "03_legible_and_empty",
         "22_how_much_is_the_theory",
-        "26_the_arms_race",
     ],
 }
 

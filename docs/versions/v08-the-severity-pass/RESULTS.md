@@ -77,7 +77,7 @@ With one engagement decision repeated, this model scores slop and shock art the 
 
 Marking your work honestly costs you: the mark lowers what readers take from it. Lying gets you the uptake of honest work. The proposal's security argument is that being caught costs more than the lie gained, so honesty holds up on its own above some rate of detection. That is a claim about an equilibrium and it needs a maker who can choose.
 
-**HONEST_MARKING_IS_SELF_POLICING_ABOVE_A_DETECTION_RATE** — the threshold is a detection rate of **0.25**. You have to catch half the liars.
+**HONEST_MARKING_IS_SELF_POLICING_ABOVE_A_DETECTION_RATE** — the threshold is a detection rate of **0.25**, at both the tight and the leaky gate. Below it, lying out-earns honest marking.
 
 A leaky reader does **not** make defection cheaper (False), so half of this hypothesis fails.
 

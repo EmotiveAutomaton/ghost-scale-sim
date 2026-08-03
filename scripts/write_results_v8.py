@@ -137,7 +137,8 @@ def main():
     h = e51.get("H8.6", {})
     thr = e51.get("detection_rate_where_honesty_pays", {})
     A(f"**{h.get('outcome')}** — the threshold is a detection rate of "
-      f"**{f(thr.get('tight_gate'), 2)}**. You have to catch half the liars.")
+      f"**{f(thr.get('tight_gate'), 2)}**, at both the tight and the leaky gate. Below it, "
+      "lying out-earns honest marking.")
     A("")
     A(f"A leaky reader does **not** make defection cheaper "
       f"({h.get('a_leaky_reader_makes_defection_cheaper')}), so half of this hypothesis fails.")

@@ -87,7 +87,7 @@ Short rows on purpose. Full provenance for any of them is in [FINDINGS.md](FINDI
 | E40 | What happens when the signal of depth is optimised directly? | **Readers pay more and get less.** Not a crash, not a lie: a reader correctly reading something built to trip its own heuristic. This is the RLHF argument in one line. |
 | E38 | Does understanding the machine protect you? | **Yes, by swapping a skill out.** A machine-tuned reader reads machine work perfectly and loses half its accuracy on human work. A crossover, not an upgrade. |
 | E1 | Do readers abandon work made with no intent behind it? | Yes, from plain cost and benefit, with no built-in dislike of machines. *Holds for intent-empty content; under intent-foreign, the better description, they do the opposite.* An unwelcome rider: the tier meant to say *do not spend effort here* is the one readers spend most on. **The model and the design disagree, and the design is probably right.** |
-| E51 | Is honest marking self-policing? | **Only above a detection rate of 0.5.** You have to catch half the liars. |
+| E51 | Is honest marking self-policing? | **Only above a detection rate of 0.25.** Below that, lying out-earns marking honestly and the scheme eats itself. |
 
 ### Results that came back against the framework
 

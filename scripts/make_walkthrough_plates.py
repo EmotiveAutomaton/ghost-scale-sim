@@ -1038,7 +1038,7 @@ def plate_23_honesty_pays_at_a_price():
     thr = d.get("detection_rate_where_honesty_pays", {}).get("tight_gate")
 
     fig, ax = plate(
-        "Marking your work honestly only pays if half the liars get caught.",
+        "Marking your work honestly only pays once a quarter of the liars get caught.",
         "A maker who labels honestly loses something: the label lowers what readers take from the "
         "work. A maker who lies gets the uptake of honest work. Whether honesty survives depends "
         "entirely on how often lying is noticed.",
