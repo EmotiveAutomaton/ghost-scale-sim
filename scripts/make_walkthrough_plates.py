@@ -545,12 +545,19 @@ def plate_13_no_mind_needed():
     the old plate drew entropy and called it uncertainty, so a shorter bar meant a more confident
     reader and every instinct the eye has was pointing backwards.
 
-    AND THEN REDRAWN AGAIN, because 'here are two identical numbers' does not survive three
-    seconds of a stranger's attention. Worse, it reads as the model failing its own test. The
-    withdrawal is real and it stays in the subtitle, but the picture now shows the thing that
-    was sitting in the same results file the whole time: change the label from a lie to the
-    truth, and my reader drops from 0.92 certain to 0.04 while the counter does not move by a
-    hundredth. The signature was never the evidence. Being able to hear a label is.
+    A THIRD VERSION DREW THE LABEL RESPONSE AND HAS BEEN REVERTED. It put my reader's collapse
+    from 0.92 certain to 0.04 -- when the same empty artifact is honestly labelled -- next to the
+    counter, which does not move. That reads as a slam dunk and it is not a measurement.
+    ``run_no_tom_classifier`` computes its posterior from the feature counts and the class prior;
+    ``declared_signal`` never enters it, and the classifier has no provenance state to put it in.
+    So "it cannot hear the label" is true by construction, in exactly the way E45's efficiency
+    result was, and drawing it as a contrast between two readers asserts a discovery where there
+    is only a definition.
+
+    What is left is the real withdrawal, which is empirical and did not have to come out this way:
+    a counter that never represents a creator reproduces the confident, contradictory signature.
+    That the two numbers are boring to look at is a fact about the finding, not a reason to find a
+    livelier one.
     """
     df = pd.read_csv(R / "e21_cell_stats.csv")
     cell = df[(df.content == "goal_empty") & (df.declared_signal == "SIG_CREATOR")]
@@ -563,63 +570,36 @@ def plate_13_no_mind_needed():
         return
 
     hmax = float(np.log(4))       # four goal states, so this is 'no idea at all'
-
-    def certainty(rows, sig):
-        r = rows[rows.declared_signal == sig] if "declared_signal" in rows else rows
-        return 1 - float(r.within_observer.iloc[0]) / hmax
-
-    arm_full = str(full.arm.iloc[0])
-    arm_naive = str(naive.arm.iloc[0])
-    cellc = df[(df.content == "goal_empty")]
-    lied = [certainty(cellc[cellc.arm == arm_full], "SIG_CREATOR"),
-            certainty(cellc[cellc.arm == arm_naive], "SIG_CREATOR")]
-    told = [certainty(cellc[cellc.arm == arm_full], "SIG_GHOST"),
-            certainty(cellc[cellc.arm == arm_naive], "SIG_GHOST")]
+    certain = [1 - float(full.within_observer.iloc[0]) / hmax,
+               1 - float(naive.within_observer.iloc[0]) / hmax]
+    dis = [float(full.between_observer.iloc[0]) / hmax,
+           float(naive.between_observer.iloc[0]) / hmax]
 
     fig, ax = plate(
-        "With properly labeled AI content, trying to empathise with a creator who isn't there "
-        "raises a red flag for you. A simple classifier hallucinates regardless.",
-        "I used to claim that the confident, contradictory reading of empty content needed a "
-        "reader that simulates a creator. It does not, and my own experiment is what withdrew "
-        "that: told a person made it, both readers commit equally hard to somebody who was never "
-        "there. The difference only shows when you tell them the truth. Then one of them stops.",
-        "E21 - results/e21_cell_stats.csv - the same empty artifact under a false creator label "
-        "and an honest one; certainty is 1 minus the reader's own entropy over what it was for",
-        authored=True)
+        "You don't need to imagine a mind to invent one.",
+        "Both readers are shown the same empty content under the same false creator label. One of "
+        "them simulates a creator. The other counts features and represents no creator at all. On "
+        "the signature this project was built around, they are the same object, and the claim "
+        "that this signature required a maker-model is withdrawn.",
+        "E21 - results/e21_cell_stats.csv - empty content under a creator label; certainty is 1 "
+        "minus the reader's own entropy, disagreement is the spread between readers")
     xs = np.arange(2)
     w = 0.34
-    b1 = ax.bar(xs - w / 2, lied, width=w, color=MACHINE)
-    b2 = ax.bar(xs + w / 2, told, width=w, color=COOL)
+    b1 = ax.bar(xs - w / 2, certain, width=w, color=COOL)
+    b2 = ax.bar(xs + w / 2, dis, width=w, color=MACHINE)
     ax.set_xticks(xs)
     ax.set_xticklabels(["My reader\n(simulates the creator)",
                         "A counting classifier\n(simulates nothing)"], fontsize=12.5)
-    bar_labels(ax, b1, lied, fmt="{:.2f}", fontsize=13, color=INK)
-    bar_labels(ax, b2, told, fmt="{:.2f}", fontsize=13, color=INK)
-    ax.set_ylim(0, 1.40)
-    clean_axis(ax, "how sure it ends up")
+    bar_labels(ax, b1, certain, fmt="{:.2f}", fontsize=13, color=INK)
+    bar_labels(ax, b2, dis, fmt="{:.2f}", fontsize=13, color=INK)
+    ax.set_ylim(0, 1.42)
+    clean_axis(ax)
     ax.set_yticks([])
-    # Clear of the y-axis line. Both of these used to start left of the spine, which read as a
-    # misalignment rather than as a legend.
-    annotate(ax, -0.30, 1.31, "told a person made it", color=MACHINE, fontsize=12, weight="bold")
-    annotate(ax, 0.42, 1.31, "told honestly that nobody did", color=COOL, fontsize=12,
+    annotate(ax, -0.30, 1.30, "how sure it ends up", color=COOL, fontsize=11.5, weight="bold")
+    annotate(ax, 0.44, 1.30, "how much readers disagree", color=MACHINE, fontsize=11.5,
              weight="bold")
-    # THE TWO ARROWS ARE THE PLATE. One pair collapses and the other does not, and the eye has to
-    # get that before it reads a number, so each pair carries its own black arrow and its own
-    # black two-line label sitting the same distance along it. The right-hand arrow is flat on
-    # purpose: a horizontal line between two equal bars IS the finding.
-    ax.annotate("", xy=(w / 2, told[0] + 0.22), xytext=(-w / 2, lied[0] - 0.04),
-                arrowprops=dict(arrowstyle="->", color=INK, lw=2.2,
-                                connectionstyle="arc3,rad=-0.25"))
-    annotate(ax, 0.10, 0.62, "the truth\nlands", color=INK, fontsize=12.5, weight="bold",
-             ha="left")
-    # ACROSS the pair rather than above it. The left arrow travels through the space between two
-    # bars of different height; the right one has nowhere to travel except through the bars
-    # themselves, and putting it overhead made it look like a bracket rather than a journey.
-    flat = told[1] * 0.70
-    ax.annotate("", xy=(1 + w / 2, flat), xytext=(1 - w / 2, flat),
-                arrowprops=dict(arrowstyle="->", color=INK, lw=2.2), zorder=4)
-    annotate(ax, 1, flat - 0.05, "the truth changes\nnothing at all", color=INK,
-             fontsize=12.5, weight="bold", ha="center", va="top", zorder=4)
+    annotate(ax, 0.5, 1.13, "the same, to two decimal places, on both measures",
+             color=INK, ha="center", fontsize=13, weight="bold")
     record(save(fig, "13_no_mind_needed"),
            "A claim this project withdrew, using its own experiment. Kept prominently on purpose.")
 
@@ -751,66 +731,6 @@ def plate_17_withheld():
 
 def _g(x, n=3):
     return f"{float(x):.{n}g}"
-
-
-# =========================================================================== #
-# 18 - what modelling a maker buys (the E21 attack).
-# =========================================================================== #
-def plate_18_what_tom_buys():
-    """Rebuilt as two curves, because the two-bar version was drawing a tautology.
-
-    The bars said "4 examples against 512" and then, after an audit, "given none and clears the
-    bar anyway". Both were wrong in the same way, and a reader who objected that you cannot
-    simulate a maker from nothing was right to. The simulator is constructed with the WORLD's
-    generative model -- ``make_agent(gm, ...)`` against ``Environment(cfg, gm, ...)``, the same
-    object, which ``build_shared_model`` calls ground truth in its own docstring. It needs no
-    examples because it was handed the emission map, not because it learned efficiently. H7.1
-    cannot fail however the world is built, and a test that cannot fail is not evidence.
-
-    Drawn as the two learning curves, the honest shape is visible and it is a much smaller claim:
-    the counter climbs from chance to 0.81 and the oracle sits at about 0.84 the whole way. The
-    gap at full training is four points. That is what this experiment actually measured.
-    """
-    d = load("v7/e45_tom_efficiency.json")
-    h1 = d["H7.1"]
-    cnt_by = {int(k): float(v) for k, v in h1["counter_accuracy_by_training_size"].items()}
-    sim_by = {int(k): float(v) for k, v in h1["simulator_accuracy_by_training_size"].items()}
-    per_goal = {int(k): int(v) for k, v in d["examples_per_goal_by_training_size"].items()}
-    bar = float(h1["competence_bar"])
-    xs = sorted(cnt_by)
-
-    fig, ax = plate(
-        "This experiment cannot show what I built it to show. The reader that needs "
-        "no examples was handed the answer key.",
-        "The flat green reader was constructed with the world's own emission map, the same object "
-        "the artifacts are generated from. It needs no worked examples because it was told, not "
-        "because it learned efficiently, and no arrangement of this world could have made it fail. "
-        "What is left is the red curve, and a five-point gap at the end of it.",
-        "E45 - results/v7/e45_tom_efficiency.json - accuracy against training size, all four "
-        "goals in play; 1, 2, 3 and 4 are one example per goal and are the same condition")
-    ax.plot(range(len(xs)), [sim_by[x] for x in xs], "-o", color=HUMAN, lw=2.6, ms=8)
-    ax.plot(range(len(xs)), [cnt_by[x] for x in xs], "-o", color=MACHINE, lw=2.6, ms=8)
-    ax.axhline(bar, color=NEUTRAL, lw=1.4, ls=":")
-    annotate(ax, len(xs) - 1.05, bar - 0.03, "the bar both are scored against",
-             color=MUTED, fontsize=10.5, ha="right", va="top")
-    annotate(ax, 0.05, sim_by[xs[0]] + 0.035, "handed the world's map", color=HUMAN,
-             fontsize=12.5, weight="bold")
-    annotate(ax, 0.05, cnt_by[xs[0]] - 0.035, "learning it by counting", color=MACHINE,
-             fontsize=12.5, weight="bold", va="top")
-    annotate(ax, len(xs) - 1.05, 0.22,
-             f"At the counter's full budget the gap is "
-             f"{sim_by[xs[-1]] - cnt_by[xs[-1]]:.2f}.\nThe efficiency claim was an oracle against "
-             "a learner.\nThe zero-shot claim on the next plate is not.",
-             color=INK, fontsize=10.5, ha="right", va="top")
-    ax.set_xticks(range(len(xs)))
-    ax.set_xticklabels([f"{x}\n({per_goal[x]}/goal)" for x in xs], fontsize=9)
-    ax.set_ylim(0, 1.0)
-    clean_axis(ax, "gets the goal right", "worked examples the counter was trained on")
-    ax.set_yticks([0, 0.5, 1.0])
-    ax.set_yticklabels(["never", "half", "always"])
-    record(save(fig, "18_what_imagining_a_maker_buys"),
-           "Kept in the walkthrough as a failed measurement rather than deleted. The hypothesis "
-           "may well be true; this experiment assumed it instead of testing it.")
 
 
 # =========================================================================== #
@@ -1283,7 +1203,7 @@ PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_09_pays_more_gets_less, plate_10_looking_vs_being_changed,
           plate_11_self_report, plate_12_two_damages, plate_13_no_mind_needed,
           plate_14_knee_not_cliff, plate_15_coverage, plate_16_channel_race,
-          plate_17_withheld, plate_18_what_tom_buys, plate_19_zero_shot,
+          plate_17_withheld, plate_19_zero_shot,
           plate_20_rejection_is_not_protection, plate_21_two_gates_settled,
           plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price,
           plate_24_what_its_made_of,

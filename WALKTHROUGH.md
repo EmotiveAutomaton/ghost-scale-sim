@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-six pictures, in the order they are being published.** Each one is meant to be readable in
+**Twenty-five pictures, in the order they are being published.** Each one is meant to be readable in
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
@@ -135,46 +135,17 @@ same confidence. **A coin flip that still believes it is a detector.**
 
 ## Carousel two — *the case for intent*
 
-*Next out. Five plates. Each one is the objection raised by the one before it.*
+*Next out. Four plates. Each one is the objection raised by the one before it.*
 
-### 7. The efficiency claim, withdrawn
+*A fifth plate stood at the head of this carousel and has been deleted. E45's
+efficiency result turned out to be an oracle against a learner -- the simulating
+reader was constructed with the world's own emission map, so it needed no training
+examples by definition and the test could not fail. The measurement is invalid, so
+the plate is gone rather than caveated. What it claimed is recorded in
+`results/v7/e45_tom_efficiency.json` under `what_this_cannot_show`, and the check is
+committed as `scripts/audit_e45_oracle.py`.*
 
-![The reader that needs no examples was handed the answer key](figures/walkthrough/18_what_imagining_a_maker_buys.png)
-
-Plate 10 below is the result that made this project withdraw a claim: you do not need to imagine a
-maker to end up confidently wrong about one. True, and it stands. E45 was built to ask the narrower
-question it left open — not whether a maker-model is *needed* to produce a signature, but what one
-*buys*. The answer it gave was that a simulating reader clears the competence bar on far less
-evidence than a counting one.
-
-**That answer does not survive contact with the code, and the objection that killed it is the
-obvious one: you cannot simulate a maker from nothing.**
-
-    e45_tom_efficiency.py:121   agent = make_agent(gm, d, cfg)            # gm is the world model
-    e45_tom_efficiency.py:107   env   = Environment(cfg, gm, rng, ...)    # the SAME gm emits
-
-`build_shared_model` describes itself as ground truth in its own docstring, and `A[0]` is verified
-identical between the two. So the simulator's likelihood is not an estimate of the world's emission
-map — it *is* the world's emission map, the same array. It needs no worked examples by definition
-rather than by measurement, and **no arrangement of this world could have made H7.1 fail.** A test
-that cannot fail is not evidence. It is an oracle against a learner.
-
-Three things follow, and all three are now on the plate:
-
-- **The efficiency result is withdrawn.** What is left is the counter's real learning curve, from
-  0.53 at one example per goal to 0.81 at 128, against an oracle sitting at about 0.84 throughout.
-  **The gap at full training is five points.**
-- **"128 times less evidence" was never a finding**, and neither was the "4" that replaced it. The
-  ratio was a property of where the sweep starts.
-- **The floor of that sweep is degenerate.** Training examples are split across goals and clamped at
-  one each, so with four goals n_train of 1, 2, 3 and 4 are the *same condition* and return
-  byte-identical accuracy. The smallest distinct training size on this plate is 8.
-
-The plate is kept rather than deleted. The hypothesis may well be true — a reader that shares the
-maker's body plan should need less evidence — but this experiment assumed it instead of testing it,
-and that distinction is the whole point of the two audits further down.
-
-### 8. Reading a goal nobody has shown you
+### 7. Reading a goal nobody has shown you
 
 ![You can recognise a purpose nobody has shown you](figures/walkthrough/19_reading_an_unseen_intent.png)
 
@@ -209,7 +180,7 @@ already gone to nothing. **The two hypotheses lean on the oracle to very differe
 one of them falls over when it is removed.** That sweep is a scratch audit and is not yet a
 committed experiment; it should become one.
 
-### 9. And what is each finding actually made of?
+### 8. And what is each finding actually made of?
 
 ![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
 
@@ -229,7 +200,7 @@ It is also the only finding with a 0% false-positive rate. Two unrelated audits,
 *One row is missing from this plate: sustained futile attention did not reproduce in the ablation
 harness's own baseline, so it has no answer here rather than a bad one.*
 
-### 10. You don't need a mind to invent one
+### 9. You don't need a mind to invent one
 
 ![A counting classifier does it too](figures/walkthrough/13_no_mind_needed.png)
 
@@ -242,13 +213,18 @@ nothing more than small-sample overfitting. On empty content carrying a creator'
 readers end up **0.92 certain against 0.92, disagreeing 0.99 against 0.99** — the same object, to
 two decimal places, on both halves of the signature.
 
-**Then change the label from a lie to the truth.** Told honestly that no person was behind the
-work, the maker-modelling reader drops from **0.92 certain to 0.04**. The counter goes from 0.92
-to 0.92. It has no channel for the information, because a label is a claim about a maker and it
-does not have one. The signature was never the evidence for a maker-model; being able to hear a
-label is, and so is being able to keep paying attention to something you cannot resolve.
+**A version of this plate drew the label response and has been reverted.** It showed my reader
+collapsing from 0.92 certain to 0.04 when the same empty artifact is honestly labelled, against a
+counter that does not move — which reads as a decisive win and is not a measurement.
+`run_no_tom_classifier` computes its posterior from feature counts and the class prior;
+`declared_signal` never enters it, and the classifier has no provenance state to put it in. **"It
+cannot hear the label" is true by construction**, in exactly the way E45's efficiency result was.
 
-### 11. Rejection is not protection
+What is left is the withdrawal, and the withdrawal is empirical: it did not have to come out this
+way, and it did. The two numbers being dull to look at is a fact about the finding rather than a
+reason to go looking for a livelier one.
+
+### 10. Rejection is not protection
 
 ![You cannot reject something and be unchanged](figures/walkthrough/20_rejection_is_not_protection.png)
 
@@ -271,7 +247,7 @@ and then absorbs its own invention, and that lands about as hard (0.015) as a re
 
 *Drafted. Five plates, all still on grey titles.*
 
-### 12. Pays more, gets less
+### 11. Pays more, gets less
 
 ![Optimise the signal of depth and readers pay more for less](figures/walkthrough/09_pays_more_gets_less.png)
 
@@ -285,7 +261,7 @@ This is the alignment argument, in miniature, inside the model.
 *Attention goes from almost none to more than a third, and the reader learns exactly the same amount
 either way — a negative amount. The ratio is off a denominator of 0.02, so quote the direction.*
 
-### 13. Two kinds of damage
+### 12. Two kinds of damage
 
 ![One kind of damage scales; the other is already there at zero](figures/walkthrough/12_two_kinds_of_damage.png)
 
@@ -293,7 +269,7 @@ Absorbing bad material gets worse the more of it there is — the obvious kind. 
 driven by *walking away*, so it is fully present in a corpus with no machine content in it at all.
 The second has the strongest independent support of anything in this project.
 
-### 14. Expertise substitutes
+### 13. Expertise substitutes
 
 ![Learning to read machine work swaps a skill out](figures/walkthrough/08_expertise_substitutes.png)
 
@@ -301,7 +277,7 @@ The prediction was that people who understand these systems would be spared the 
 by trading away the human channel. The adaptation that protects you is the same adaptation that
 costs you.
 
-### 15. Reputation blindness
+### 14. Reputation blindness
 
 ![The readers most inclined to believe a label can never learn the labeller lies](figures/walkthrough/07_reputation_blindness.png)
 
@@ -310,7 +286,7 @@ crossover, the label has already won that argument before the disagreement can r
 
 Not slow learning. Learning that cannot start.
 
-### 16. Looking is not the same as being changed
+### 15. Looking is not the same as being changed
 
 ![Paying attention and being willing to be changed are not the same thing](figures/walkthrough/10_looking_is_not_being_changed.png)
 
@@ -325,7 +301,7 @@ reported them separately. The release valve at the end of an uncomfortable set.
 *Drafted. Runs immediately before any demo, because it is what buys the demo a hearing. Two of its
 five slides are text plates that do not exist yet.*
 
-### 17. The experiment that stayed withheld
+### 16. The experiment that stayed withheld
 
 ![One experiment has been withheld three times](figures/walkthrough/17_the_withheld_experiment.png)
 
@@ -335,7 +311,7 @@ real decay cannot be told apart from the instrument's own noise.
 
 Narrowly missing is exactly the case a no-exceptions rule exists for.
 
-### 18. A knee, not a cliff
+### 17. A knee, not a cliff
 
 ![Competence bends rather than falling off a cliff](figures/walkthrough/14_a_knee_not_a_cliff.png)
 
@@ -356,7 +332,7 @@ across four versions where a design or a criterion changed after a result was se
 
 *Single posts and connective tissue. All grey, all still waiting on a headline.*
 
-### 19. The two witnesses
+### 18. The two witnesses
 
 ![Two witnesses arrive with every glance](figures/walkthrough/16_two_witnesses.png)
 
@@ -365,7 +341,7 @@ the label says, and what the work itself says. On a lie they point in opposite d
 one wins is decided by an inequality you can solve on paper. **This was computed with no simulation
 at all, and it predicted the shape of several results that had already been run.**
 
-### 20. Honesty is not always enough
+### 19. Honesty is not always enough
 
 ![If trust lowers your guard, honesty stops being enough](figures/walkthrough/06_honesty_is_not_enough.png)
 
@@ -376,7 +352,7 @@ gets absorbed **even when it tells you exactly what it is**. Disclosure does not
 
 Both accounts produce the famous result. Only one of them survives being told the truth.
 
-### 21. Depth moves the method, not the purpose
+### 20. Depth moves the method, not the purpose
 
 ![Depth changes how much of the method you pick up](figures/walkthrough/04_depth_moves_the_method.png)
 
@@ -390,7 +366,7 @@ And then the experiment measured whether depth changes how much of the **purpose
 couldn't. Not "it didn't" — it *couldn't*. Measured on how much of the **method** transfers, it
 moves.
 
-### 22. Intent unlocks the method
+### 21. Intent unlocks the method
 
 ![Work out what someone was trying to do and their choices start making sense](figures/walkthrough/05_intent_unlocks_the_method.png)
 
@@ -400,7 +376,7 @@ readable — every move can then be read as being in service of it.
 It is in neither the preprint nor the essay. It came out of a conversation, and it holds — inside a
 single reading, on the same object, before and after the reader settles on the purpose.
 
-### 23. The master cannot explain themselves
+### 22. The master cannot explain themselves
 
 ![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
 
@@ -410,14 +386,14 @@ puts them out of reach of report.
 
 Note what is *not* happening here: nobody is setting the maker's self-blindness. Depth sets it.
 
-### 24. Labelling needs a convention
+### 23. Labelling needs a convention
 
 ![Labelling only protects readers who know the labelling exists](figures/walkthrough/15_labels_need_a_convention.png)
 
 The policy number. And a lower bound, because the aware reader here is handed the true coverage,
 which is the most generous assumption available.
 
-### 25. A disagreement that turned out to be a measurement error
+### 24. A disagreement that turned out to be a measurement error
 
 ![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
 
@@ -425,7 +401,7 @@ The project's longest-running open question, settled by changing *what* was meas
 *how*. The criterion was scored on the work's purpose — which the model deliberately holds equally
 readable at every depth, so it could never have moved.
 
-### 26. Honest marking is self-policing, at a price
+### 25. Honest marking is self-policing, at a price
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 

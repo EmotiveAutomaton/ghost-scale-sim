@@ -842,7 +842,7 @@ chronology. Directories sort in run order; the names say what each one was for.
 ```
 README.md                       this page
 FINDINGS.md                     every question and its CURRENT answer -- the one page to read
-WALKTHROUGH.md                  26 plates, in the order they are being published
+WALKTHROUGH.md                  25 plates, in the order they are being published
 EVIDENCE.md                     what the world has published, next to what this predicted
 
 docs/HISTORY.md                 ten versions and three audit passes, as one narrative
@@ -899,7 +899,7 @@ config/default.yaml             every parameter, for every version, plus the sol
 results/                        committed summary CSVs and JSON verdicts. V1-V5 wrote flat into
                                 results/; V6 onward use one subdirectory per version. See
                                 results/README.md
-figures/walkthrough/            the 26 plates WALKTHROUGH.md is built from
+figures/walkthrough/            the 25 plates WALKTHROUGH.md is built from
 notebooks/walkthrough.ipynb     runs E1 and E2 end to end, narrated
 scripts/                        chart rebuilders, the document generators, and the independent
                                 reimplementation of the two-gates result
