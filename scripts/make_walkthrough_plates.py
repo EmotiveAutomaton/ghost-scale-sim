@@ -577,12 +577,12 @@ def plate_13_no_mind_needed():
             certainty(cellc[cellc.arm == arm_naive], "SIG_GHOST")]
 
     fig, ax = plate(
-        "A feature-counter invents a maker exactly as confidently as my reader does. "
-        "It also cannot hear you when you tell it the truth.",
+        "Told the truth, trying to empathise with a creator who isn't there raises a red flag "
+        "for you. A simple classifier hallucinates freely either way.",
         "I used to claim that the confident, contradictory reading of empty content needed a "
-        "reader that models a maker. It does not, and my own experiment is what withdrew that: "
-        "told a person made it, both readers commit equally hard to somebody who was never there. "
-        "Then tell them honestly that no person did. Only one of them can hear it.",
+        "reader that simulates a creator. It does not, and my own experiment is what withdrew "
+        "that: told a person made it, both readers commit equally hard to somebody who was never "
+        "there. The difference only shows when you tell them the truth. Then one of them stops.",
         "E21 - results/e21_cell_stats.csv - the same empty artifact under a false creator label "
         "and an honest one; certainty is 1 minus the reader's own entropy over what it was for")
     xs = np.arange(2)
@@ -590,8 +590,8 @@ def plate_13_no_mind_needed():
     b1 = ax.bar(xs - w / 2, lied, width=w, color=MACHINE)
     b2 = ax.bar(xs + w / 2, told, width=w, color=COOL)
     ax.set_xticks(xs)
-    ax.set_xticklabels(["My reader\n(imagines a maker)",
-                        "A counting classifier\n(imagines nothing)"], fontsize=12.5)
+    ax.set_xticklabels(["My reader\n(simulates the creator)",
+                        "A counting classifier\n(simulates nothing)"], fontsize=12.5)
     bar_labels(ax, b1, lied, fmt="{:.2f}", fontsize=13, color=INK)
     bar_labels(ax, b2, told, fmt="{:.2f}", fontsize=13, color=INK)
     ax.set_ylim(0, 1.46)
@@ -752,7 +752,7 @@ def plate_18_what_tom_buys():
 
     fig, ax = plate(
         "Using this personal expertise to translate an artifact into a maker doesn't just "
-        "make you right. It is also extremely cheap in evidence.",
+        "make you right. It is also extremely cheap.",
         "Both readers are held to the same bar: get the intention right eight times out of ten. "
         "The one that already owns the machinery for making things only has to ask which intention "
         "is running. The one that counts features has to learn the whole map from examples, and "
@@ -790,11 +790,11 @@ def plate_19_zero_shot():
 
     fig, ax = plate(
         "Using the simulating power of empathy to bridge a gap in your understanding, you can "
-        "read a purpose you have never been shown. A pattern-matcher fails at this.",
-        "The intention being read here appears nowhere in either reader's training data. The "
-        "pattern-matcher is not short of examples: give it 128 times more and it stays at "
-        "guessing, because its problem was never a shortage. It has no way to represent something "
-        "it has not already seen.",
+        "correctly identify goals you've never heard of. A pattern-matcher fails at this.",
+        "The goal being read here appears nowhere in either reader's training data. The simulator "
+        "gets it right about three times in four. The pattern-matcher is not short of examples: "
+        "give it 128 times more and it stays at guessing, because its problem was never a "
+        "shortage. It has no way to represent something it has not already seen.",
         "E45 - results/v7/e45_tom_efficiency.json - accuracy on a held-out intention, against a "
         "two-way choice",
         authored=True)
@@ -835,30 +835,36 @@ def plate_20_rejection_is_not_protection():
     perfect = float(by["0.0"]["final_drift"])
 
     fig, ax = plate(
-        "One of this model's emergent properties is predicting the mechanism for indoctrination "
-        "or marketing. Unfortunately, the same result implies that engaging with unlabelled AI "
-        "content can actively erode away your expertise. Empathy is automatic.",
+        "An emergent property of this model is the mechanism for indoctrination, "
+        "and for marketing. Empathy is automatic.",
         "Two readers, both refusing everything they are shown. To decide you disagree with "
-        "something you first have to work out what it says, and working out what it says means "
-        "partly running it. What gets through the guard is not the content. It is the effort you "
-        "spent deciding what to disagree with.",
-        "E46 - results/v7/e46_gate_leak.json - how far a reader's own beliefs moved after "
-        "repeatedly rejecting everything, at a fixed 10% leak",
+        "something you first have to work out what it says, and that means partly running it. "
+        "What gets through the guard is not the content. It is the effort you spent disagreeing.",
+        "E46 - results/v7/e46_gate_leak.json - drift after repeatedly rejecting everything, at a "
+        "fixed 10% leak; nobody added that leak, version 6's smooth guard already had it",
         authored=True)
     bars = ax.bar(["Skims it\n(two looks)", "Studies it closely\nto refute it (sixteen looks)"],
                   [skim, close], color=[NEUTRAL, MACHINE], width=0.5)
     bar_labels(ax, bars, [skim, close], fmt="{:.3f}", fontsize=15, color=INK)
-    ax.set_ylim(0, close * 1.52)
-    clean_axis(ax, "how far the reader moved")
+    ax.set_ylim(0, close * 1.82)
+    clean_axis(ax)
     ax.set_yticks([])
-    annotate(ax, 1, close * 1.16,
+    annotate(ax, 1, close * 1.20,
              str(int(round(eng["ratio"]))) + "x further from where it started",
              color=MACHINE, ha="center", fontsize=14, weight="bold")
     invented = float(d["what_a_reader_absorbs_of_its_own_invention"]
                      ["drift_on_content_with_no_recoverable_intent"])
-    annotate(ax, -0.36, close * 1.50,
-             "Nobody put this leak in: version 6 made the guard smooth, and a smooth guard never "
-             "quite shuts.\nShown content with no maker to recover, the reader invents one and "
+    # THE AUTHOR'S SECOND SENTENCE, KEPT IN BLACK AND MOVED OFF THE TITLE. It is a separate claim
+    # from the one in the headline and it was making a four-line title, so it runs here in INK --
+    # the scale's rule is about whose words they are, not about where on the plate they sit.
+    annotate(ax, -0.42, close * 1.76,
+             "Unfortunately, the same result implies that engaging with unlabelled\n"
+             "AI content can actively erode away your expertise.",
+             color=INK, ha="left", fontsize=13.5, weight="bold", va="top")
+    # Parked in the dead space above the short bar rather than across the top, where it was
+    # running into the 7x callout.
+    annotate(ax, -0.42, close * 0.78,
+             "Shown content with no creator to\nrecover, the reader invents one and\nthen "
              f"absorbs its own invention ({invented:.3f}).",
              color=MUTED, ha="left", fontsize=10.5, va="top")
     record(save(fig, "20_rejection_is_not_protection"),
@@ -1054,18 +1060,18 @@ def plate_24_what_its_made_of():
     ROWS = [("the label effect", "a false label misleads you"),
             ("legible and empty", "legible and empty"),
             ("depth transmits method", "depth transmits method")]
-    COLS = [("generative", "imagining\na maker"),
+    COLS = [("generative", "simulating\nthe creator"),
             ("shared_likelihood", "a shared\nbody plan"),
             ("distributional", "holding a\ndistribution"),
             ("provenance_as_state", "inferring\nwhere it\ncame from"),
-            ("hierarchy", "levels in\nthe maker"),
+            ("hierarchy", "levels in\nthe creator"),
             ("costly_attention", "looking\ncosts\nsomething")]
 
     fig, ax = plate(
         "Just like last time, I was particularly careful with validation.",
         "So I removed one piece of the model at a time to see what each finding is actually made "
-        "of. Every result in this project dies the moment the reader stops imagining a maker and "
-        "starts pattern-matching a surface. Nothing else is load-bearing everywhere.",
+        "of. Every result in this project dies the moment the reader stops simulating the creator "
+        "and starts pattern-matching a surface. Nothing else is load-bearing everywhere.",
         "V9 minimal-model programme - results/v9/summary.json - a finding 'dies' when it no "
         "longer appears with that structural commitment removed", authored=True)
 
@@ -1095,10 +1101,13 @@ def plate_24_what_its_made_of():
     ax.set_xticks([]); ax.set_yticks([])
     for s in ax.spines.values():
         s.set_visible(False)
-    ax.text(0, -0.52, "removing this is what\nshows it to be load-bearing", ha="center", va="top",
-            fontsize=11.5, color=MACHINE, fontweight="bold", linespacing=1.25)
-    ax.text(4.5, -0.52, "the model can lose these and keep every result",
-            ha="center", va="top", fontsize=11, color=MUTED)
+    # The two notes are a matched pair and have to LOOK like one, which the first version did not:
+    # one line against two, bold red against light grey, so the eye read the left one as a warning
+    # label rather than as half of a comparison. Same shape, same length, same size now.
+    ax.text(0, -0.52, "removing this\nkills every finding", ha="center", va="top",
+            fontsize=11, color=MACHINE, fontweight="bold", linespacing=1.35)
+    ax.text(4.0, -0.52, "removing any of these\nchanges nothing at all",
+            ha="center", va="top", fontsize=11, color=MUTED, linespacing=1.35)
 
     record(save(fig, "24_what_its_made_of"),
            "One commitment holds the whole project up. Everything else is scaffolding.")
