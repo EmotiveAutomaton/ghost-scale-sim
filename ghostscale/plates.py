@@ -92,7 +92,18 @@ def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: boo
     height they actually needed.
     """
     _apply_rc()
-    title_lines = _wrap(title, 62)
+
+    # THE TITLE SETS ITS OWN SIZE. A three-sentence authored title wrapped to six lines at 19pt
+    # and pushed the axes up underneath the subtitle, where the layout clamp let the plot overrun
+    # its own text. Cutting the author's words to fit the typography is the wrong way round, so
+    # the typography gives way instead: step down through wider, smaller settings and take the
+    # first that fits in four lines. Short titles are untouched and still render at 19.
+    for _w, _size in ((62, 19), (74, 16.5), (88, 14.5), (104, 13)):
+        title_lines = _wrap(title, _w)
+        if len(title_lines) <= 4:
+            break
+    title_size = _size
+    title_step = 0.072 * (title_size / 19.0)
     sub_lines = _wrap(subtitle, 104)
 
     fig = plt.figure(figsize=size)
@@ -107,10 +118,10 @@ def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: boo
     # A reader who never learns what the colours mean loses nothing. A reader who does gets the
     # project's own instrument applied to the project's own slides, which is the only honest place
     # to start using it.
-    fig.text(0.055, top, "\n".join(title_lines), fontsize=19, fontweight="bold",
+    fig.text(0.055, top, "\n".join(title_lines), fontsize=title_size, fontweight="bold",
              color=INK if authored else MUTED, va="top", linespacing=1.22)
 
-    sub_y = top - 0.072 * len(title_lines) - 0.018
+    sub_y = top - title_step * len(title_lines) - 0.018
     fig.text(0.055, sub_y, "\n".join(sub_lines), fontsize=12, color=MUTED,
              va="top", linespacing=1.32)
 

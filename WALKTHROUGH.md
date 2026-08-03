@@ -174,9 +174,13 @@ is in this repository.**
 A classifier that counts features and never represents a maker reproduces the pattern, through
 nothing more than small-sample overfitting. On empty content carrying a creator's label the two
 readers end up **0.92 certain against 0.92, disagreeing 0.99 against 0.99** — the same object, to
-two decimal places, on both halves of the signature. What the counter *cannot* do is respond to a
-label, or keep paying attention to something it cannot resolve, and those are the two the framework
-now rests on.
+two decimal places, on both halves of the signature.
+
+**Then change the label from a lie to the truth.** Told honestly that no person was behind the
+work, the maker-modelling reader drops from **0.92 certain to 0.04**. The counter goes from 0.92
+to 0.92. It has no channel for the information, because a label is a claim about a maker and it
+does not have one. The signature was never the evidence for a maker-model; being able to hear a
+label is, and so is being able to keep paying attention to something you cannot resolve.
 
 ### 14. A knee, not a cliff
 
