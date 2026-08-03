@@ -50,11 +50,12 @@ def plate_01_false_label():
     vals = [float(p[1]["error_reduction"]) for p in picks]
 
     fig, ax = plate(
-        "Learning from falsely labelled AI work leaves you knowing less\nabout its maker than before you read it.",
-        "One reading, and how much closer to the truth about that maker it left the reader. Above "
-        "the line, reading taught you something. Below it, reading cost you ground you already "
-        "had. Told the truth, a reader stays put; told a person made it, the reader builds a "
-        "confident theory about somebody who was never there.",
+        "AI generations falsely labelled as human actively lead you away from an accurate "
+        "understanding of the world.",
+        "Each bar is one reading, and where it left the reader's belief about what produced the "
+        "work. Above the line, closer to the truth than before it started. Below the line, further "
+        "away. Told honestly that a machine made it, a reader barely moves. Told a person made it, "
+        "it commits hard to an answer that was never there.",
         "E2 · results/repair/r5_uptake.json · reduction in the surprisal of the true intent, in nats",
         authored=True)
     bars = ax.bar([p[0] for p in picks], vals, color=[p[2] for p in picks], width=0.55)
