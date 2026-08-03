@@ -104,7 +104,9 @@ def plate(title: str, subtitle: str, footer: str, size=(9.6, 5.6), authored: boo
             break
     title_size = _size
     title_step = 0.072 * (title_size / 19.0)
-    sub_lines = _wrap(subtitle, 104)
+    # An empty subtitle means the plate has none, not that it has a blank one. Reserving a line
+    # for it leaves a hole between the title and the plot that reads as a mistake.
+    sub_lines = _wrap(subtitle, 104) if subtitle.strip() else []
 
     fig = plt.figure(figsize=size)
     top = 0.955

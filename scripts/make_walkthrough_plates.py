@@ -577,14 +577,15 @@ def plate_13_no_mind_needed():
             certainty(cellc[cellc.arm == arm_naive], "SIG_GHOST")]
 
     fig, ax = plate(
-        "Told the truth, trying to empathise with a creator who isn't there raises a red flag "
-        "for you. A simple classifier hallucinates freely either way.",
+        "With properly labeled AI content, trying to empathise with a creator who isn't there "
+        "raises a red flag for you. A simple classifier hallucinates regardless.",
         "I used to claim that the confident, contradictory reading of empty content needed a "
         "reader that simulates a creator. It does not, and my own experiment is what withdrew "
         "that: told a person made it, both readers commit equally hard to somebody who was never "
         "there. The difference only shows when you tell them the truth. Then one of them stops.",
         "E21 - results/e21_cell_stats.csv - the same empty artifact under a false creator label "
-        "and an honest one; certainty is 1 minus the reader's own entropy over what it was for")
+        "and an honest one; certainty is 1 minus the reader's own entropy over what it was for",
+        authored=True)
     xs = np.arange(2)
     w = 0.34
     b1 = ax.bar(xs - w / 2, lied, width=w, color=MACHINE)
@@ -594,21 +595,25 @@ def plate_13_no_mind_needed():
                         "A counting classifier\n(simulates nothing)"], fontsize=12.5)
     bar_labels(ax, b1, lied, fmt="{:.2f}", fontsize=13, color=INK)
     bar_labels(ax, b2, told, fmt="{:.2f}", fontsize=13, color=INK)
-    ax.set_ylim(0, 1.46)
+    ax.set_ylim(0, 1.62)
     clean_axis(ax, "how sure it ends up")
     ax.set_yticks([])
-    annotate(ax, -0.44, 1.34, "told a person made it", color=MACHINE, fontsize=12, weight="bold")
-    annotate(ax, 0.30, 1.34, "told honestly that nobody did", color=COOL, fontsize=12,
+    annotate(ax, -0.44, 1.54, "told a person made it", color=MACHINE, fontsize=12, weight="bold")
+    annotate(ax, 0.30, 1.54, "told honestly that nobody did", color=COOL, fontsize=12,
              weight="bold")
-    # The whole point of the redraw: the eye has to land on ONE pair collapsing and the other
-    # not moving. Everything else on this plate is there to make that comparison legible.
+    # THE TWO ARROWS ARE THE PLATE. One pair collapses and the other does not, and the eye has to
+    # get that before it reads a number, so each pair carries its own black arrow and its own
+    # black two-line label sitting the same distance along it. The right-hand arrow is flat on
+    # purpose: a horizontal line between two equal bars IS the finding.
     ax.annotate("", xy=(w / 2, told[0] + 0.22), xytext=(-w / 2, lied[0] - 0.04),
                 arrowprops=dict(arrowstyle="->", color=INK, lw=2.2,
                                 connectionstyle="arc3,rad=-0.25"))
-    annotate(ax, 0.10, 0.58, "the truth lands", color=INK, fontsize=12.5, weight="bold",
+    annotate(ax, 0.10, 0.62, "the truth\nlands", color=INK, fontsize=12.5, weight="bold",
              ha="left")
-    annotate(ax, 1, told[1] + 0.20, "the truth changes nothing at all",
-             color=COOL, ha="center", fontsize=12.5, weight="bold")
+    ax.annotate("", xy=(1 + w / 2, 1.14), xytext=(1 - w / 2, 1.14),
+                arrowprops=dict(arrowstyle="->", color=INK, lw=2.2))
+    annotate(ax, 1 + w * 0.25, 1.20, "the truth changes\nnothing at all", color=INK,
+             fontsize=12.5, weight="bold", ha="center")
     record(save(fig, "13_no_mind_needed"),
            "A claim this project withdrew, using its own experiment. Kept prominently on purpose.")
 
@@ -804,7 +809,7 @@ def plate_19_zero_shot():
     annotate(ax, 0.05, sim + 0.03, "a reader that simulates", color=HUMAN,
              fontsize=12.5, weight="bold")
     annotate(ax, 0.05, chance + 0.025, "pure guessing", color=MUTED, fontsize=10.5)
-    annotate(ax, len(xs) - 1.05, by[xs[-1]] - 0.09, "a reader that counts", color=MACHINE,
+    annotate(ax, len(xs) - 1.05, by[xs[-1]] - 0.17, "a reader that counts", color=MACHINE,
              fontsize=12.5, weight="bold", ha="right")
     ax.set_xticks(range(len(xs)))
     ax.set_xticklabels([str(x) for x in xs], fontsize=10)
@@ -837,9 +842,10 @@ def plate_20_rejection_is_not_protection():
     fig, ax = plate(
         "An emergent property of this model is the mechanism for indoctrination, "
         "and for marketing. Empathy is automatic.",
-        "Two readers, both refusing everything they are shown. To decide you disagree with "
-        "something you first have to work out what it says, and that means partly running it. "
-        "What gets through the guard is not the content. It is the effort you spent disagreeing.",
+        # NO GREY HERE, DELIBERATELY. This plate ran black, grey, black, grey down the page and
+        # read as four competing blocks. The author's two sentences are the whole argument and
+        # the qualifications live in the repository, which is what the footer is for.
+        "",
         "E46 - results/v7/e46_gate_leak.json - drift after repeatedly rejecting everything, at a "
         "fixed 10% leak; nobody added that leak, version 6's smooth guard already had it",
         authored=True)
@@ -852,21 +858,13 @@ def plate_20_rejection_is_not_protection():
     annotate(ax, 1, close * 1.20,
              str(int(round(eng["ratio"]))) + "x further from where it started",
              color=MACHINE, ha="center", fontsize=14, weight="bold")
-    invented = float(d["what_a_reader_absorbs_of_its_own_invention"]
-                     ["drift_on_content_with_no_recoverable_intent"])
     # THE AUTHOR'S SECOND SENTENCE, KEPT IN BLACK AND MOVED OFF THE TITLE. It is a separate claim
     # from the one in the headline and it was making a four-line title, so it runs here in INK --
     # the scale's rule is about whose words they are, not about where on the plate they sit.
-    annotate(ax, -0.42, close * 1.76,
+    annotate(ax, -0.34, close * 1.72,
              "Unfortunately, the same result implies that engaging with unlabelled\n"
              "AI content can actively erode away your expertise.",
-             color=INK, ha="left", fontsize=13.5, weight="bold", va="top")
-    # Parked in the dead space above the short bar rather than across the top, where it was
-    # running into the 7x callout.
-    annotate(ax, -0.42, close * 0.78,
-             "Shown content with no creator to\nrecover, the reader invents one and\nthen "
-             f"absorbs its own invention ({invented:.3f}).",
-             color=MUTED, ha="left", fontsize=10.5, va="top")
+             color=INK, ha="left", fontsize=14.5, weight="bold", va="top")
     record(save(fig, "20_rejection_is_not_protection"),
            "The theory always contained this term and the code never did. It is the proposed "
            "mechanism for indoctrination: you are changed by what you refuse.")
