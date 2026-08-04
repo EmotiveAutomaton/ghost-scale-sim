@@ -4,6 +4,10 @@
 about two seconds. If you get to the end you will know what this project claims, what it withdrew,
 and what it still cannot answer.
 
+> **Mixed, and scored plate by plate. The mark sits at the end of each heading.**
+> **◐ Curator, 60% — ten plates. ○ Ghost, 5% — fifteen plates.**
+> **This page's own prose is ◐ Curator, 60%.**
+
 Every number on every plate is read out of a committed results file, named in the plate's own
 footer. Regenerate the whole set with `python scripts/make_walkthrough_plates.py` — which also runs
 an automatic audit that fails any plate with text running off the canvas or printed over other text,
@@ -26,11 +30,27 @@ are waiting on a headline in the author's own hand, not on better evidence.
 
 ---
 
+## Contents
+
+| | the argument it makes | plates | tiers | status |
+|---|---|---|---|---|
+| **[Carousel one](#carousel-one--we-are-aiming-detection-at-the-wrong-thing)** | *we are aiming detection at the wrong thing* | [1](#1-the-one-thing-here-that-is-actually-a-defence-) – [6](#6-why-detection-is-a-losing-race-) | 5 ◐ · 1 ○ | **Published** |
+| **[Carousel two](#carousel-two--the-case-for-intent)** | *the case for intent* | [7](#7-reading-a-goal-nobody-has-shown-you-) – [10](#10-rejection-is-not-protection-) | 3 ◐ · 1 ○ | **Next out** |
+| **[Carousel three](#carousel-three--what-it-costs-to-be-a-reader)** | *what it costs to be a reader* | [11](#11-pays-more-gets-less-) – [15](#15-looking-is-not-the-same-as-being-changed-) | 5 ○ | Drafted |
+| **[Carousel four](#carousel-four--the-ledger)** | *the ledger* | [16](#16-the-experiment-that-stayed-withheld-) – [17](#17-a-knee-not-a-cliff-) | 2 ○ | Drafted, 3 slides undrawn |
+| **[Not in a carousel yet](#not-in-a-carousel-yet)** | single posts and connective tissue | [18](#18-the-two-witnesses-) – [25](#25-honest-marking-is-self-policing-at-a-price-) | 2 ◐ · 6 ○ | Loose |
+
+Two sections close the page: **[what is not drawn yet, and why](#what-is-not-drawn-yet-and-why)**,
+and **[what the whole thing does not do](#what-the-whole-thing-does-not-do)**. Read the second one
+if you read nothing else.
+
+---
+
 ## Carousel one — *we are aiming detection at the wrong thing*
 
-*Published. Six plates.*
+> **Published.** Six plates, five of them on the author's own headline.
 
-### 1. The one thing here that is actually a defence
+### 1. The one thing here that is actually a defence ◐
 
 ![Filtering on how good it looks does nothing](figures/walkthrough/25_a_defence_that_works.png)
 
@@ -51,7 +71,7 @@ the same idea as something readers do, and nobody has to agree to it.**
 *Read the direction, not the size: 83% of randomly parameterised models of this shape do it too, so
 most of this is architecture rather than evidence for the specific theory.*
 
-### 2. What a false label does
+### 2. What a false label does ◐
 
 ![A false label moves you away from the truth](figures/walkthrough/01_false_label_moves_you_wrong.png)
 
@@ -64,7 +84,7 @@ Told honestly that a machine made it, a reader barely moves: **−0.09**. Told a
 **−5.96**. Sixty-six times further, and negative, which means movement *away from* the truth rather
 than a failure to learn.
 
-### 3. Where it actually breaks
+### 3. Where it actually breaks ◐
 
 ![Invention peaks in the middle, not at the empty end](figures/walkthrough/02_invention_peaks_in_the_middle.png)
 
@@ -73,7 +93,7 @@ block, at double scale, in every cell of the robustness sweep, and in every resa
 worst place to be is nearly understandable.** Total nonsense is safe; total clarity is safe; the
 danger is having just enough handholds to build a story on.
 
-### 4. Not understanding is the safe failure
+### 4. Not understanding is the safe failure ◐
 
 ![Not understanding a painting is safe; AI work lets you believe you understood](figures/walkthrough/03_legible_and_empty.png)
 
@@ -101,7 +121,7 @@ because nobody committed.
 **Failing to understand something protects you. Being satisfied by it is how the false thing gets
 in.**
 
-### 5. I threw my own settings away
+### 5. I threw my own settings away ◐
 
 ![How much of this is the theory](figures/walkthrough/22_how_much_is_the_theory.png)
 
@@ -114,7 +134,7 @@ distinguish this framework from a competitor built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
 
-### 6. Why detection is a losing race
+### 6. Why detection is a losing race ○
 
 ![Better detectors mean fewer false accusations, until the content fights back](figures/walkthrough/26_the_arms_race.png)
 
@@ -135,22 +155,22 @@ same confidence. **A coin flip that still believes it is a detector.**
 
 ## Carousel two — *the case for intent*
 
-*Next out. Four plates. Each one is the objection raised by the one before it.*
+> **Next out.** Four plates. Each one is the objection raised by the one before it.
 
 *A fifth plate stood at the head of this carousel and has been deleted. E45's
-efficiency result turned out to be an oracle against a learner -- the simulating
+efficiency result turned out to be an oracle against a learner — the simulating
 reader was constructed with the world's own emission map, so it needed no training
 examples by definition and the test could not fail. The measurement is invalid, so
 the plate is gone rather than caveated. What it claimed is recorded in
 `results/v7/e45_tom_efficiency.json` under `what_this_cannot_show`, and the check is
 committed as `scripts/audit_e45_oracle.py`.*
 
-### 7. Reading a goal nobody has shown you
+### 7. Reading a goal nobody has shown you ◐
 
 ![You can recognise a purpose nobody has shown you](figures/walkthrough/19_reading_an_unseen_intent.png)
 
-The obvious objection to the plate above is *that is just a prior — give the counter more data.* So:
-a goal held out of training entirely.
+The obvious objection to the withdrawn plate is *that is just a prior — give the counter more data.*
+So: a goal held out of training entirely.
 
 A reader that can **run** the generator has the whole space available. A reader that has to
 **observe** the space only ever has the part it happened to see — and more examples do not fix that,
@@ -175,12 +195,12 @@ applies here too — the simulator holds the world's emission map, including the
 has never been shown. So the test that matters is what happens when that map is taken away.
 Perturbing the simulator's own signature away from the world's, using the codebase's own
 inexpertise parameter, the held-out-goal advantage is still standing at a **half-random likelihood**
-(0.71 against the counter's 0.53, chance 0.50), where the efficiency advantage on plate 7 has
+(0.71 against the counter's 0.53, chance 0.50), where the withdrawn efficiency advantage has
 already gone to nothing. **The two hypotheses lean on the oracle to very different degrees, and only
 one of them falls over when it is removed.** That sweep is a scratch audit and is not yet a
 committed experiment; it should become one.
 
-### 8. And what is each finding actually made of?
+### 8. And what is each finding actually made of? ◐
 
 ![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
 
@@ -200,7 +220,7 @@ It is also the only finding with a 0% false-positive rate. Two unrelated audits,
 *One row is missing from this plate: sustained futile attention did not reproduce in the ablation
 harness's own baseline, so it has no answer here rather than a bad one.*
 
-### 9. You don't need a mind to invent one
+### 9. You don't need a mind to invent one ○
 
 ![A counting classifier does it too](figures/walkthrough/13_no_mind_needed.png)
 
@@ -224,7 +244,7 @@ What is left is the withdrawal, and the withdrawal is empirical: it did not have
 way, and it did. The two numbers being dull to look at is a fact about the finding rather than a
 reason to go looking for a livelier one.
 
-### 10. Rejection is not protection
+### 10. Rejection is not protection ◐
 
 ![You cannot reject something and be unchanged](figures/walkthrough/20_rejection_is_not_protection.png)
 
@@ -245,9 +265,9 @@ and then absorbs its own invention, and that lands about as hard (0.015) as a re
 
 ## Carousel three — *what it costs to be a reader*
 
-*Drafted. Five plates, all still on grey titles.*
+> **Drafted.** Five plates, all still on grey titles.
 
-### 11. Pays more, gets less
+### 11. Pays more, gets less ○
 
 ![Optimise the signal of depth and readers pay more for less](figures/walkthrough/09_pays_more_gets_less.png)
 
@@ -261,7 +281,7 @@ This is the alignment argument, in miniature, inside the model.
 *Attention goes from almost none to more than a third, and the reader learns exactly the same amount
 either way — a negative amount. The ratio is off a denominator of 0.02, so quote the direction.*
 
-### 12. Two kinds of damage
+### 12. Two kinds of damage ○
 
 ![One kind of damage scales; the other is already there at zero](figures/walkthrough/12_two_kinds_of_damage.png)
 
@@ -269,7 +289,7 @@ Absorbing bad material gets worse the more of it there is — the obvious kind. 
 driven by *walking away*, so it is fully present in a corpus with no machine content in it at all.
 The second has the strongest independent support of anything in this project.
 
-### 13. Expertise substitutes
+### 13. Expertise substitutes ○
 
 ![Learning to read machine work swaps a skill out](figures/walkthrough/08_expertise_substitutes.png)
 
@@ -277,7 +297,7 @@ The prediction was that people who understand these systems would be spared the 
 by trading away the human channel. The adaptation that protects you is the same adaptation that
 costs you.
 
-### 14. Reputation blindness
+### 14. Reputation blindness ○
 
 ![The readers most inclined to believe a label can never learn the labeller lies](figures/walkthrough/07_reputation_blindness.png)
 
@@ -286,7 +306,7 @@ crossover, the label has already won that argument before the disagreement can r
 
 Not slow learning. Learning that cannot start.
 
-### 15. Looking is not the same as being changed
+### 15. Looking is not the same as being changed ○
 
 ![Paying attention and being willing to be changed are not the same thing](figures/walkthrough/10_looking_is_not_being_changed.png)
 
@@ -298,10 +318,10 @@ reported them separately. The release valve at the end of an uncomfortable set.
 
 ## Carousel four — *the ledger*
 
-*Drafted. Runs immediately before any demo, because it is what buys the demo a hearing. Two of its
-five slides are text plates that do not exist yet.*
+> **Drafted.** Runs immediately before any demo, because it is what buys the demo a hearing.
+> Two of its five slides are drawn; the other three are text plates that do not exist yet.
 
-### 16. The experiment that stayed withheld
+### 16. The experiment that stayed withheld ○
 
 ![One experiment has been withheld three times](figures/walkthrough/17_the_withheld_experiment.png)
 
@@ -311,7 +331,7 @@ real decay cannot be told apart from the instrument's own noise.
 
 Narrowly missing is exactly the case a no-exceptions rule exists for.
 
-### 17. A knee, not a cliff
+### 17. A knee, not a cliff ○
 
 ![Competence bends rather than falling off a cliff](figures/walkthrough/14_a_knee_not_a_cliff.png)
 
@@ -321,18 +341,22 @@ comes from the model rather than from a boundary in the world.
 
 There was no version of that test where the claim got stronger.
 
-**Also in this carousel, not yet drawn:** plate 5 reprised as the anchor rather than as a caveat; the
-withheld version-10 rider, which damaged a learner reading nothing but honest human writing and was
-recorded in advance as the check most expected to fail; and the forking-paths ledger, eighteen places
-across four versions where a design or a criterion changed after a result was seen.
+### Also in this carousel, not yet drawn
+
+- **Plate 5 reprised** as the anchor rather than as a caveat.
+- **The withheld version-10 rider**, which damaged a learner reading nothing but honest human
+  writing and was recorded in advance as the check most expected to fail.
+- **The forking-paths ledger**, eighteen places across four versions where a design or a criterion
+  changed after a result was seen.
 
 ---
 
 ## Not in a carousel yet
 
-*Single posts and connective tissue. All grey, all still waiting on a headline.*
+> **Loose.** Single posts and connective tissue. Six still waiting on a headline; two already carry
+> the author's own.
 
-### 18. The two witnesses
+### 18. The two witnesses ○
 
 ![Two witnesses arrive with every glance](figures/walkthrough/16_two_witnesses.png)
 
@@ -341,7 +365,7 @@ the label says, and what the work itself says. On a lie they point in opposite d
 one wins is decided by an inequality you can solve on paper. **This was computed with no simulation
 at all, and it predicted the shape of several results that had already been run.**
 
-### 19. Honesty is not always enough
+### 19. Honesty is not always enough ○
 
 ![If trust lowers your guard, honesty stops being enough](figures/walkthrough/06_honesty_is_not_enough.png)
 
@@ -352,7 +376,7 @@ gets absorbed **even when it tells you exactly what it is**. Disclosure does not
 
 Both accounts produce the famous result. Only one of them survives being told the truth.
 
-### 20. Depth moves the method, not the purpose
+### 20. Depth moves the method, not the purpose ○
 
 ![Depth changes how much of the method you pick up](figures/walkthrough/04_depth_moves_the_method.png)
 
@@ -366,7 +390,7 @@ And then the experiment measured whether depth changes how much of the **purpose
 couldn't. Not "it didn't" — it *couldn't*. Measured on how much of the **method** transfers, it
 moves.
 
-### 21. The math of empathy
+### 21. The math of empathy ◐
 
 ![Working out the purpose is what makes the method readable](figures/walkthrough/05_intent_unlocks_the_method.png)
 
@@ -422,7 +446,7 @@ denominator they are not.
 120. The point estimate barely moved. Raising n after a null is a forking path and it is on the
 ledger.*
 
-### 22. Expertise bakes in, and skills transfer anyway
+### 22. Expertise bakes in, and skills transfer anyway ◐
 
 ![The more practised the work, the less its maker can say why](figures/walkthrough/11_the_master_cannot_explain.png)
 
@@ -454,14 +478,14 @@ than derived from the maker's own machinery. This establishes that the artifact 
 intent at depths where the declared channel is degraded. It does not derive the degradation. E43 is
 the same in this respect and says so.*
 
-### 23. Labelling needs a convention
+### 23. Labelling needs a convention ○
 
 ![Labelling only protects readers who know the labelling exists](figures/walkthrough/15_labels_need_a_convention.png)
 
 The policy number. And a lower bound, because the aware reader here is handed the true coverage,
 which is the most generous assumption available.
 
-### 24. A disagreement that turned out to be a measurement error
+### 24. A disagreement that turned out to be a measurement error ○
 
 ![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
 
@@ -469,7 +493,7 @@ The project's longest-running open question, settled by changing *what* was meas
 *how*. The criterion was scored on the work's purpose — which the model deliberately holds equally
 readable at every depth, so it could never have moved.
 
-### 25. Honest marking is self-policing, at a price
+### 25. Honest marking is self-policing, at a price ○
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 
@@ -496,7 +520,7 @@ would paper over. **Version 7 closed all four** — and one of them closed by be
 
 | result | what happened |
 |---|---|
-| **The two-gates criterion** | **Settled, and drawn** (plate 25). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
+| **The two-gates criterion** | **Settled, and drawn** (plate 24). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
 | **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
 | **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-fold — so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
 | **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver, and it has been removed from the README and from the prediction card. |
@@ -521,3 +545,8 @@ a picture.
   looking for how a Ghost Scale label would actually protect a reader, and twice it has come back
   without one — E39 and E54. The proposal is not refuted. It is unsupported, which is a different
   thing and should be said in its own sentence.
+
+---
+
+*[← the fastest true picture](README.md) · [every question and its current answer](FINDINGS.md) ·
+[what the world published, next to what this predicted](EVIDENCE.md)*
