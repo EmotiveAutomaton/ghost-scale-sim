@@ -1,0 +1,97 @@
+{
+  "test": "S-6 \u2014 does surface decay across an artifact while content does not?",
+  "for": "Sounding Line, SURFACE_AND_DEPTH.md",
+  "IMPORTANT": "a purpose-built construction, not the V5 world. The shared model has one decision stream and no creator-side budget; splitting it is new machinery and this repository is otherwise closed. Read it as what a two-stream creator does.",
+  "construction": {
+    "positions": 40,
+    "budget": 12.0,
+    "surface_cost": 0.55,
+    "content_cost": 0.55,
+    "cache_hit_rate_when_practised": 0.85,
+    "note": "both streams cost the same. The only difference is the cache."
+  },
+  "by_creator": {
+    "practised": {
+      "surface": {
+        "slope_per_position": -0.03703681988742964,
+        "interval": [
+          -0.03709030253283302,
+          -0.03697888719512195
+        ],
+        "declines": true,
+        "flat": false
+      },
+      "content": {
+        "slope_per_position": -0.005653142589118199,
+        "interval": [
+          -0.0059634556754221395,
+          -0.005341211303939963
+        ],
+        "declines": true,
+        "flat": false
+      },
+      "surface_density": 0.4548125,
+      "content_density": 0.9181875
+    },
+    "novice": {
+      "surface": {
+        "slope_per_position": -0.028142589118198887,
+        "interval": [
+          -0.028142589118198887,
+          -0.028142589118198887
+        ],
+        "declines": true,
+        "flat": false
+      },
+      "content": {
+        "slope_per_position": -0.02992495309568481,
+        "interval": [
+          -0.02992495309568481,
+          -0.02992495309568481
+        ],
+        "declines": true,
+        "flat": false
+      },
+      "surface_density": 0.25,
+      "content_density": 0.275
+    },
+    "synthetic": {
+      "surface": {
+        "slope_per_position": -6.4314766764761e-18,
+        "interval": [
+          -6.4314766764761e-18,
+          -6.4314766764761e-18
+        ],
+        "declines": false,
+        "flat": true
+      },
+      "content": {
+        "slope_per_position": -6.4314766764761e-18,
+        "interval": [
+          -6.4314766764761e-18,
+          -6.4314766764761e-18
+        ],
+        "declines": false,
+        "flat": true
+      },
+      "surface_density": 1.0,
+      "content_density": 1.0
+    }
+  },
+  "practised_surface_decays_faster_than_content": {
+    "content_slope_minus_surface_slope": 0.031383677298311444,
+    "interval": [
+      0.031068931754221388,
+      0.03169238977485928
+    ],
+    "surface_decays_faster": true
+  },
+  "predictions": {
+    "S1_surface_decays_FASTER_than_content_for_a_practised_creator": true,
+    "S2_a_creator_with_no_budget_shows_a_FLAT_surface": true,
+    "a_novice_shows_decay_in_both": true
+  },
+  "outcome": "ALL_THREE_PREDICTIONS_HOLD",
+  "what_would_have_falsified_it": "content decaying as fast as surface for a practised creator, which would make the cache irrelevant; or a synthetic creator whose surface also declined, which would remove the positive machine signature and leave only an absence.",
+  "the_honest_caveat": "this construction BUILDS IN the asymmetry it then measures: content is cached and surface is not. It is a consistency check on the theory's arithmetic, not evidence that real practice works this way. What it earns is the direction of the third prediction, which does not follow trivially: a budgetless creator is FLAT rather than merely high."
+}

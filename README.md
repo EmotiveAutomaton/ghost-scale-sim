@@ -900,10 +900,31 @@ results/                        committed summary CSVs and JSON verdicts. V1-V5 
                                 results/; V6 onward use one subdirectory per version. See
                                 results/README.md
 figures/walkthrough/            the 25 plates WALKTHROUGH.md is built from
+ghostscale/validation/soundingline/   THE ONE LIVING PART OF THIS REPO -- see below
 notebooks/walkthrough.ipynb     runs E1 and E2 end to end, narrated
 scripts/                        chart rebuilders, the document generators, and the independent
                                 reimplementation of the two-gates result
 ```
+
+### The one living part of this repository
+
+**Everything in `ghostscale/v1` through `v10` is closed.** Pre-registered, run, reported, and left
+alone. A number in this README should be the same number next year.
+
+`ghostscale/validation/soundingline/` is the exception and is expected to churn. Another project —
+Sounding Line, which reads real text and therefore has no ground truth — sends this simulation
+questions about **mechanism**, and that directory answers them. Its questions arrive from outside,
+new modules appear whenever the next one needs answering, and nothing in it is a Ghost Scale
+hypothesis: S-1 asks whether a statistic in somebody else's pipeline is broken, which is a fair use
+of a simulator and is not a finding about readers.
+
+Two rules hold there, both learned the hard way here. Nothing may call a versioned `run()` — the
+V10 severity pass re-ran real experiments to audit them and overwrote the very verdicts it was
+checking. And anything claiming to use an experiment's rollouts must reproduce that experiment's
+committed number first, because a harness that re-randomises is running a different experiment
+rather than a control.
+
+Read anything under it as work in progress. Read everything else as settled.
 
 Raw per-reader CSVs are not committed, because `e4_raw.csv` alone is 16 MB. Everything a number in
 this README or a chart in `figures/` depends on is committed. Regenerate the raw files with

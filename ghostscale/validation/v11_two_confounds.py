@@ -67,6 +67,18 @@ from ..prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 E43_MU = (1, 2, 3)
 
 
+REPO = __import__("pathlib").Path(__file__).resolve().parents[2]
+
+
+def _out():
+    """V-11 is a validation pass, so it writes under results/validation/ like
+    every other one. It wrote into results/v6/ for a week, which put a check ON
+    version 6 inside version 6's own results, and that was simply untidy."""
+    d = REPO / "results" / "validation" / "v11"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
 def _gain_at(enc, split: int, n_sub: int) -> float:
     """Process uptake after ``split`` minus before it, on one rollout."""
     before = V6.process_recovery(enc.subgoal_posteriors[:split],
@@ -134,8 +146,7 @@ def run_a(cfg: Config, n_obs: int = 40, n_timesteps: int = 24, forced_k: int = 2
     lo, hi = percentile_interval(draws)
     survives = bool(np.isfinite(lo) and lo > 0.0)
 
-    out = v6_dir()
-    df.to_csv(out / "v11a_placebo_split.csv", index=False)
+    df.to_csv(_out() / "v11a_placebo_split.csv", index=False)
     return {
         "check": "V-11a — E36's temporal ordering against a placebo split",
         "question": ("does method uptake rise because the reader settled on the goal, or merely "
@@ -161,6 +172,9 @@ def run_a(cfg: Config, n_obs: int = 40, n_timesteps: int = 24, forced_k: int = 2
 def run_b(cfg: Config, n_obs: int = 60, n_timesteps: int = 24, forced_k: int = 12) -> dict:
     """V-11b: the maker reads its own artifact, against what the maker can declare."""
     world, _cfg_b, cfg_r, n_mu, n_sub, ng = H.build_world_and_config(cfg)
+    # READ from v6, WRITE to validation. The blanket rewire that moved the outputs
+    # briefly redirected this read as well, which is the whole reason a helper named
+    # _out() should never be used for an input path.
     e43 = json.loads((v6_dir() / "e43_selfreport.json").read_text(encoding="utf-8"))
     p_report_by_mu = {int(c["mu"]): float(c["p_self_report"]) for c in e43["cells"]}
     rows = []
@@ -220,8 +234,7 @@ def run_b(cfg: Config, n_obs: int = 60, n_timesteps: int = 24, forced_k: int = 1
     ilo, ihi = percentile_interval(idraws)
     tips = bool(np.isfinite(ilo) and ilo > 0.0)
 
-    out = v6_dir()
-    df.to_csv(out / "v11b_maker_reads_itself.csv", index=False)
+    df.to_csv(_out() / "v11b_maker_reads_itself.csv", index=False)
     return {
         "check": "V-11b — the maker sat down in front of its own work",
         "question": ("can a maker recover a purpose off its own artifact that it can no longer "
@@ -263,6 +276,6 @@ def run(cfg: Config, **kw) -> dict:
     a = run_a(cfg, **{k: v for k, v in kw.items() if k in ("n_obs", "n_timesteps", "forced_k")})
     b = run_b(cfg, **{k: v for k, v in kw.items() if k in ("n_obs", "n_timesteps", "forced_k")})
     verdict = {"check": "V-11 — the two controls plates 5 and 11 needed", "V-11a": a, "V-11b": b}
-    (v6_dir() / "v11_two_confounds.json").write_text(
+    (_out() / "v11_two_confounds.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

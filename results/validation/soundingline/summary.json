@@ -1,0 +1,380 @@
+{
+  "S1": {
+    "test": "S-1 \u2014 is the unlock ratio measuring what process_error_reduction measures?",
+    "for": "Sounding Line, Gate 3 primary",
+    "n_rollouts": 467,
+    "resolved_thresholds_swept": [
+      0.75,
+      0.9,
+      0.95
+    ],
+    "n28_at_mu_1": {
+      "0.75": {
+        "n": 0,
+        "verdict": "NOT_MEASURABLE"
+      },
+      "0.9": {
+        "mean_ratio": 0.1111111111111111,
+        "interval": [
+          0.0,
+          0.3333333333333333
+        ],
+        "n": 3,
+        "contains_one": false,
+        "verdict": "FAILS_N28"
+      },
+      "0.95": {
+        "mean_ratio": 0.7524531024531025,
+        "interval": [
+          0.23807720057720055,
+          1.3238095238095238
+        ],
+        "n": 12,
+        "contains_one": true,
+        "verdict": "PASSES_N28"
+      }
+    },
+    "agreement_with_process_error_reduction": {
+      "0.75": {
+        "across_cells": NaN,
+        "n_cells": 0,
+        "across_rollouts": NaN,
+        "n_rollouts": 0
+      },
+      "0.9": {
+        "across_cells": 0.38166947039939597,
+        "n_cells": 6,
+        "across_rollouts": 0.03838817911966146,
+        "n_rollouts": 12
+      },
+      "0.95": {
+        "across_cells": 0.08281834435988844,
+        "n_cells": 9,
+        "across_rollouts": 0.148162419397178,
+        "n_rollouts": 89
+      }
+    },
+    "undefined_ratios": {
+      "0.75": {
+        "nan_or_inf": 467,
+        "of": 467
+      },
+      "0.9": {
+        "nan_or_inf": 455,
+        "of": 467
+      },
+      "0.95": {
+        "nan_or_inf": 378,
+        "of": 467
+      }
+    },
+    "threshold_free_concentration_ratio": {
+      "n28_at_mu_1": {
+        "mean_ratio": 17.65214447744383,
+        "interval": [
+          4.538011143760196,
+          37.425718092463775
+        ],
+        "n": 147,
+        "contains_one": false,
+        "verdict": "FAILS_N28"
+      },
+      "agreement_across_rollouts": 0.08550633609427835,
+      "n_defined": 467,
+      "of": 467
+    },
+    "what_would_have_falsified_the_worry": "a count ratio whose interval covers 1.0 at mu = 1, and which correlates with process_error_reduction across cells. Then the two are interchangeable in an environment with ground truth and the primary inherits E36's support.",
+    "what_this_cannot_show": "nothing about real text. 'A decision was recovered' is mapped here onto 'the sub-goal posterior resolved below an entropy threshold', which is the nearest honest analogue of a statistic that never consults the truth. A different mapping could behave differently and the threshold is swept for that reason."
+  },
+  "S2": {
+    "test": "S-2 \u2014 does flattened intent read as posterior concentration at matched density?",
+    "for": "Sounding Line, C-22 and purpose_breadth",
+    "construction": {
+      "mu": 3,
+      "beta": 1.0,
+      "dominant_share": 0.7,
+      "n_goals": 4,
+      "positions_per_artifact": 24,
+      "note": "decision density identical in both arms by construction"
+    },
+    "purpose_breadth": {
+      "flattened": 0.44980703970653846,
+      "layered": 0.5582359677211931,
+      "difference": -0.10842892801465465,
+      "interval": [
+        -0.19552616820843646,
+        -0.0224181268813252
+      ],
+      "excludes_zero": true
+    },
+    "goal_accuracy_should_not_fall": {
+      "flattened": 0.8583333333333333,
+      "layered": 0.7916666666666666,
+      "difference": 0.06666666666666665,
+      "interval": [
+        -0.033333333333333326,
+        0.15833333333333333
+      ],
+      "excludes_zero": false
+    },
+    "process_recovery_should_not_fall": {
+      "flattened": -0.012390377842941617,
+      "layered": -0.006979538051372946,
+      "difference": -0.005410839791568671,
+      "interval": [
+        -0.02728629499375508,
+        0.015238860129612525
+      ],
+      "excludes_zero": false
+    },
+    "outcome": "BREADTH_SEPARATES_THE_TWO",
+    "construct_is_confounded": false,
+    "how_to_read": "the claim needs breadth to fall for flattened work while accuracy and process recovery hold. If process recovery falls too, 'flattened' has become 'shallower' and the measure is reading depth rather than concentration.",
+    "what_would_have_falsified_it": "identical purpose_breadth across the two arms. Then concentration of terminal values is invisible to a goal posterior and Sounding Line's purpose_breadth is measuring something else."
+  },
+  "S3": {
+    "test": "S-3 \u2014 two affect layers, and whether a louder shield gives the concealer away",
+    "for": "Sounding Line, family_v3.yaml leaked and emblematic channels",
+    "IMPORTANT": "this test does NOT use the V5 world. It is a minimal purpose-built two-channel emitter, because the shared model has one emission channel and adding a second is new generative machinery. Read it as what a two-channel emitter does, not as what the Ghost Scale reader does.",
+    "construction": {
+      "n_states": 4,
+      "n_symbols": 8,
+      "emissions_per_artifact": 12,
+      "amplifications": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "concealment": "display pushed AWAY from the leak and amplified"
+    },
+    "is_the_leak_readable_at_all": {
+      "accuracy": 0.8990625,
+      "chance": 0.25,
+      "verdict": "LEAK_IS_READABLE"
+    },
+    "divergence_by_amplification": {
+      "1.0": {
+        "concealing": 12.334671599425135,
+        "candid": 0.44662426679528294,
+        "separation": 11.888047332629853,
+        "interval": [
+          10.807226791314038,
+          12.927600027188536
+        ],
+        "excludes_zero": true,
+        "detector_balanced_accuracy": 0.845
+      },
+      "2.0": {
+        "concealing": 15.056119101856462,
+        "candid": 0.5401939950064284,
+        "separation": 14.515925106850034,
+        "interval": [
+          13.421556797359179,
+          15.626437449124776
+        ],
+        "excludes_zero": true,
+        "detector_balanced_accuracy": 0.8425
+      },
+      "4.0": {
+        "concealing": 15.302881476155125,
+        "candid": 0.6508599611062093,
+        "separation": 14.652021515048917,
+        "interval": [
+          13.59097274272159,
+          15.715369501255118
+        ],
+        "excludes_zero": true,
+        "detector_balanced_accuracy": 0.8975
+      },
+      "8.0": {
+        "concealing": 17.862540921128737,
+        "candid": 0.6978480480739673,
+        "separation": 17.16469287305477,
+        "interval": [
+          16.239673408432143,
+          18.084820317065308
+        ],
+        "excludes_zero": true,
+        "detector_balanced_accuracy": 0.9625
+      }
+    },
+    "does_a_louder_shield_help_the_concealer": {
+      "balanced_accuracy_at_lowest_amplification": 0.845,
+      "balanced_accuracy_at_highest": 0.9625,
+      "separation_at_lowest": 11.888047332629853,
+      "separation_at_highest": 17.16469287305477,
+      "verdict": "THE_SHIELD_GIVES_THEM_AWAY",
+      "how_to_read": "the curator's claim is that performing louder to cover up makes concealment MORE detectable. That predicts detector accuracy RISING with amplification."
+    },
+    "what_would_have_falsified_it": "divergence failing to separate the two conditions, or separation shrinking as the shield gets louder. Either would make the leaked layer a dead end."
+  },
+  "S45": {
+    "test": "S-4 and S-5 \u2014 does inference order buy anything, and is it accuracy or cost?",
+    "for": "Sounding Line, the purpose-first loop and the anomaly entry point",
+    "why_merged": "both are questions about the order evidence is consumed in, and this reader runs exact inference over the full joint. Bayesian updating on the same evidence set is order-independent, so no reordering can change the final posterior. Sounding Line's own S-5 note says exactly this. The answerable half of both is cost.",
+    "by_arm": {
+      "anomaly_first": {
+        "steps_to_settle": 8.631481481481481,
+        "settled_fraction": 0.8111111111111111,
+        "goal_accuracy": 0.7518518518518519,
+        "process_recovery": -0.027962208117902072,
+        "n": 540
+      },
+      "forward": {
+        "steps_to_settle": 9.057407407407407,
+        "settled_fraction": 0.7814814814814814,
+        "goal_accuracy": 0.7518518518518519,
+        "process_recovery": -0.026315615654745418,
+        "n": 540
+      },
+      "reverse": {
+        "steps_to_settle": 8.492592592592592,
+        "settled_fraction": 0.8277777777777777,
+        "goal_accuracy": 0.7537037037037037,
+        "process_recovery": -0.04263973302390003,
+        "n": 540
+      }
+    },
+    "cost_contrasts": {
+      "reverse_minus_forward_steps": {
+        "mean_difference": -0.5648148148148148,
+        "interval": [
+          -1.10375,
+          -0.003657407407407239
+        ],
+        "n": 540,
+        "excludes_zero": true
+      },
+      "anomaly_first_minus_forward_steps": {
+        "mean_difference": -0.42592592592592593,
+        "interval": [
+          -0.8074537037037037,
+          -0.05
+        ],
+        "n": 540,
+        "excludes_zero": true
+      }
+    },
+    "accuracy_checks_that_should_not_move": {
+      "reverse_minus_forward_accuracy": {
+        "mean_difference": 0.001851851851851852,
+        "interval": [
+          -0.007407407407407408,
+          0.011111111111111112
+        ],
+        "n": 540,
+        "excludes_zero": false
+      },
+      "anomaly_first_minus_forward_accuracy": {
+        "mean_difference": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "n": 540,
+        "excludes_zero": false
+      },
+      "how_to_read": "these are a HARNESS CHECK and not a result. All three arms see the same observations in a different order, so final accuracy should be unchanged. If it moves, the reorder changed the evidence and the cost numbers cannot be trusted."
+    },
+    "n_rollouts": 1620,
+    "what_would_have_falsified_the_claim": "reverse or anomaly-first settling in fewer DEEP steps than forward, with accuracy unchanged. That would make the entry point a genuine efficiency and not a story."
+  },
+  "S6": {
+    "test": "S-6 \u2014 does surface decay across an artifact while content does not?",
+    "for": "Sounding Line, SURFACE_AND_DEPTH.md",
+    "IMPORTANT": "a purpose-built construction, not the V5 world. The shared model has one decision stream and no creator-side budget; splitting it is new machinery and this repository is otherwise closed. Read it as what a two-stream creator does.",
+    "construction": {
+      "positions": 40,
+      "budget": 12.0,
+      "surface_cost": 0.55,
+      "content_cost": 0.55,
+      "cache_hit_rate_when_practised": 0.85,
+      "note": "both streams cost the same. The only difference is the cache."
+    },
+    "by_creator": {
+      "practised": {
+        "surface": {
+          "slope_per_position": -0.03703681988742964,
+          "interval": [
+            -0.03709030253283302,
+            -0.03697888719512195
+          ],
+          "declines": true,
+          "flat": false
+        },
+        "content": {
+          "slope_per_position": -0.005653142589118199,
+          "interval": [
+            -0.0059634556754221395,
+            -0.005341211303939963
+          ],
+          "declines": true,
+          "flat": false
+        },
+        "surface_density": 0.4548125,
+        "content_density": 0.9181875
+      },
+      "novice": {
+        "surface": {
+          "slope_per_position": -0.028142589118198887,
+          "interval": [
+            -0.028142589118198887,
+            -0.028142589118198887
+          ],
+          "declines": true,
+          "flat": false
+        },
+        "content": {
+          "slope_per_position": -0.02992495309568481,
+          "interval": [
+            -0.02992495309568481,
+            -0.02992495309568481
+          ],
+          "declines": true,
+          "flat": false
+        },
+        "surface_density": 0.25,
+        "content_density": 0.275
+      },
+      "synthetic": {
+        "surface": {
+          "slope_per_position": -6.4314766764761e-18,
+          "interval": [
+            -6.4314766764761e-18,
+            -6.4314766764761e-18
+          ],
+          "declines": false,
+          "flat": true
+        },
+        "content": {
+          "slope_per_position": -6.4314766764761e-18,
+          "interval": [
+            -6.4314766764761e-18,
+            -6.4314766764761e-18
+          ],
+          "declines": false,
+          "flat": true
+        },
+        "surface_density": 1.0,
+        "content_density": 1.0
+      }
+    },
+    "practised_surface_decays_faster_than_content": {
+      "content_slope_minus_surface_slope": 0.031383677298311444,
+      "interval": [
+        0.031068931754221388,
+        0.03169238977485928
+      ],
+      "surface_decays_faster": true
+    },
+    "predictions": {
+      "S1_surface_decays_FASTER_than_content_for_a_practised_creator": true,
+      "S2_a_creator_with_no_budget_shows_a_FLAT_surface": true,
+      "a_novice_shows_decay_in_both": true
+    },
+    "outcome": "ALL_THREE_PREDICTIONS_HOLD",
+    "what_would_have_falsified_it": "content decaying as fast as surface for a practised creator, which would make the cache irrelevant; or a synthetic creator whose surface also declined, which would remove the positive machine signature and leave only an absence.",
+    "the_honest_caveat": "this construction BUILDS IN the asymmetry it then measures: content is cached and surface is not. It is a consistency check on the theory's arithmetic, not evidence that real practice works this way. What it earns is the direction of the third prediction, which does not follow trivially: a budgetless creator is FLAT rather than merely high."
+  }
+}

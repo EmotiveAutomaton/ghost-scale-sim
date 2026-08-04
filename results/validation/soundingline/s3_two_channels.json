@@ -1,0 +1,77 @@
+{
+  "test": "S-3 \u2014 two affect layers, and whether a louder shield gives the concealer away",
+  "for": "Sounding Line, family_v3.yaml leaked and emblematic channels",
+  "IMPORTANT": "this test does NOT use the V5 world. It is a minimal purpose-built two-channel emitter, because the shared model has one emission channel and adding a second is new generative machinery. Read it as what a two-channel emitter does, not as what the Ghost Scale reader does.",
+  "construction": {
+    "n_states": 4,
+    "n_symbols": 8,
+    "emissions_per_artifact": 12,
+    "amplifications": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "concealment": "display pushed AWAY from the leak and amplified"
+  },
+  "is_the_leak_readable_at_all": {
+    "accuracy": 0.8990625,
+    "chance": 0.25,
+    "verdict": "LEAK_IS_READABLE"
+  },
+  "divergence_by_amplification": {
+    "1.0": {
+      "concealing": 12.334671599425135,
+      "candid": 0.44662426679528294,
+      "separation": 11.888047332629853,
+      "interval": [
+        10.807226791314038,
+        12.927600027188536
+      ],
+      "excludes_zero": true,
+      "detector_balanced_accuracy": 0.845
+    },
+    "2.0": {
+      "concealing": 15.056119101856462,
+      "candid": 0.5401939950064284,
+      "separation": 14.515925106850034,
+      "interval": [
+        13.421556797359179,
+        15.626437449124776
+      ],
+      "excludes_zero": true,
+      "detector_balanced_accuracy": 0.8425
+    },
+    "4.0": {
+      "concealing": 15.302881476155125,
+      "candid": 0.6508599611062093,
+      "separation": 14.652021515048917,
+      "interval": [
+        13.59097274272159,
+        15.715369501255118
+      ],
+      "excludes_zero": true,
+      "detector_balanced_accuracy": 0.8975
+    },
+    "8.0": {
+      "concealing": 17.862540921128737,
+      "candid": 0.6978480480739673,
+      "separation": 17.16469287305477,
+      "interval": [
+        16.239673408432143,
+        18.084820317065308
+      ],
+      "excludes_zero": true,
+      "detector_balanced_accuracy": 0.9625
+    }
+  },
+  "does_a_louder_shield_help_the_concealer": {
+    "balanced_accuracy_at_lowest_amplification": 0.845,
+    "balanced_accuracy_at_highest": 0.9625,
+    "separation_at_lowest": 11.888047332629853,
+    "separation_at_highest": 17.16469287305477,
+    "verdict": "THE_SHIELD_GIVES_THEM_AWAY",
+    "how_to_read": "the curator's claim is that performing louder to cover up makes concealment MORE detectable. That predicts detector accuracy RISING with amplification."
+  },
+  "what_would_have_falsified_it": "divergence failing to separate the two conditions, or separation shrinking as the shield gets louder. Either would make the leaked layer a dead end."
+}

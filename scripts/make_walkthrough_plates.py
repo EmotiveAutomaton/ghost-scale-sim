@@ -288,7 +288,7 @@ def plate_05_intent_unlocks():
     purpose cannot be read. It does, monotonically, to zero. Elapsed time does not know what beta
     is, so no amount of "it just accrued" produces this shape.
     """
-    v = load("v6/v11c_peri_settling.json")
+    v = load("validation/v11/v11c_peri_settling.json")
     by = {float(k): d for k, d in v["dose_response_on_goal_legibility"]["by_beta"].items()}
     order = sorted(by, reverse=True)
     gains = [by[b]["gain"] for b in order]
@@ -304,7 +304,7 @@ def plate_05_intent_unlocks():
         f"purpose gains {cw['settled_on_the_wrong_goal']:+.3f} against "
         f"{cw['settled_on_the_right_goal']:+.3f} for the right one: understanding, not just "
         f"deciding.",
-        f"V-11c · results/v6/v11c_peri_settling.json · {v['n_rollouts']} readings · bars are "
+        f"V-11c · results/validation/v11/v11c_peri_settling.json · {v['n_rollouts']} readings · bars are "
         f"bootstrap 95% intervals",
         authored=True)
     xs = np.arange(len(order))
@@ -508,7 +508,7 @@ def plate_11_self_report():
     process = [float(c["process_accuracy"]) for c in cells]
     reader = [float(c["reader_accuracy"]) for c in cells]
 
-    tip = load("v6/v11_two_confounds.json")["V-11b"]["the_interaction"]
+    tip = load("validation/v11/v11_two_confounds.json")["V-11b"]["the_interaction"]
     fig, ax = plate(
         "Expertise bakes in until the creator can no longer consciously reach it, becoming "
         "happy little accidents. Skills transfer anyway.",

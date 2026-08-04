@@ -43,12 +43,24 @@ from .. import v6_model as V6
 from ..config import Config
 from ..prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 from ..v5_model import make_v5_observer
-from ..v6 import SEED_OFFSET, harness as H, v6_dir
+from ..v6 import SEED_OFFSET, harness as H
 from ..v6.e36_process import BETA_GRID, MU_GRID, RESOLVED_ENTROPY
 
 _EPS = 1e-12
 LAGS = tuple(range(-6, 7))       # steps either side of the settling event
 FAR = 4                          # a sham must be at least this far from the truth to count
+
+
+REPO = __import__("pathlib").Path(__file__).resolve().parents[2]
+
+
+def _out():
+    """V-11 is a validation pass, so it writes under results/validation/ like
+    every other one. It wrote into results/v6/ for a week, which put a check ON
+    version 6 inside version 6's own results, and that was simply untidy."""
+    d = REPO / "results" / "validation" / "v11"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
 
 
 def _per_step_logp(enc, n_sub: int) -> np.ndarray:
@@ -234,7 +246,7 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
         },
         "n_rollouts": int(len(df)),
     }
-    df.to_csv(v6_dir() / "v11c_peri_settling.csv", index=False)
-    (v6_dir() / "v11c_peri_settling.json").write_text(
+    df.to_csv(_out() / "v11c_peri_settling.csv", index=False)
+    (_out() / "v11c_peri_settling.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict
