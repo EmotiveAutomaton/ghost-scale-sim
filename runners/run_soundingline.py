@@ -43,6 +43,17 @@ STAGES = [
      "does channel divergence survive a reader that does not know the channel?"),
     ("T5", "ghostscale.validation.soundingline.t5_detection",
      "auxiliary: is the process posterior a better maker-detector than the goal posterior?"),
+    # ---- third batch: measurement rather than new questions ------------------------------
+    ("T6", "ghostscale.validation.soundingline.t6_information_budget",
+     "what one observation carries about each latent, exactly. Corrects T-1's reading"),
+    ("T7", "ghostscale.validation.soundingline.t7_posthoc",
+     "multiplicity control and bounded nulls, over results already on disk"),
+    ("T8", "ghostscale.validation.soundingline.t8_multivariate_detection",
+     "a combined detector, held out and confirmed on fresh seeds"),
+    ("T9", "ghostscale.validation.soundingline.t9_concentration",
+     "S-2's question, on an emitter that works"),
+    ("T10", "ghostscale.validation.soundingline.t10_boundary_recovery",
+     "the decision's identity is unrecoverable; is its location?"),
 ]
 
 SCALE = {
@@ -56,6 +67,11 @@ SCALE = {
     "T3": dict(n_obs=150),
     "T4": dict(n_obs=400, n_emissions=12),
     "T5": dict(n_obs=200),
+    "T6": dict(n_obs=4000),
+    "T7": dict(),
+    "T8": dict(n_obs=150),
+    "T9": dict(n_obs=250),
+    "T10": dict(n_obs=120),
 }
 QUICK = {
     "S1": dict(n_obs=12, n_timesteps=24, forced_k=24),
@@ -68,6 +84,11 @@ QUICK = {
     "T3": dict(n_obs=20),
     "T4": dict(n_obs=60, n_emissions=12),
     "T5": dict(n_obs=30),
+    "T6": dict(n_obs=400),
+    "T7": dict(),
+    "T8": dict(n_obs=30),
+    "T9": dict(n_obs=40),
+    "T10": dict(n_obs=20),
 }
 
 

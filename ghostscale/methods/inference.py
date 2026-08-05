@@ -135,6 +135,46 @@ def equivalence(sample, bound: float, bound_source: str, alpha: float = 0.05) ->
     }
 
 
+def equivalence_from_interval(difference: float, interval, bound: float, bound_source: str,
+                              interval_level: float = 0.95) -> dict:
+    """TOST by interval inclusion, so a null can be bounded from a COMMITTED VERDICT alone.
+
+    A confidence interval lying entirely inside ``[-bound, +bound]`` is equivalence at the same
+    alpha the interval was built at -- that is the standard CI form of the two one-sided tests, and
+    it needs the interval rather than the raw sample. Every verdict in this repository stores an
+    interval; almost none of them commits the per-rollout data the sample-based test would need,
+    because the per-rollout files are gitignored on purpose. So this is the form that actually
+    works on what is on disk, on a fresh clone, forever.
+
+    It is CONSERVATIVE at a 95% interval: the exact correspondence is with a 90% interval, so a
+    95% one demands more before it will call something equivalent. Being harder to pass in the
+    direction of "we cannot bound this" is the right way round for a repository whose nulls are
+    load-bearing.
+
+    A pass means: *the effect is smaller than* ``bound``. A fail means the data cannot rule out an
+    effect that large -- NOT that an effect exists.
+    """
+    lo, hi = float(interval[0]), float(interval[1])
+    b = abs(float(bound))
+    if not (np.isfinite(lo) and np.isfinite(hi)):
+        return {"skipped": "interval is not finite"}
+    inside = bool(lo >= -b and hi <= b)
+    return {
+        "difference": float(difference), "interval": [lo, hi],
+        "bound": b, "bound_source": str(bound_source),
+        "interval_level": float(interval_level),
+        "equivalent": inside,
+        "widest_excursion": float(max(abs(lo), abs(hi))),
+        "headroom": float(b - max(abs(lo), abs(hi))),
+        "how_to_read": (
+            "equivalent = the whole interval lies inside +/- bound, so the effect is bounded "
+            "below it. This is TOST in confidence-interval form and it is conservative at a 95% "
+            "interval (the exact correspondence is with 90%). NOT equivalent does not mean an "
+            "effect exists; it means the data cannot rule out one of that size. headroom is how "
+            "much room was left -- a small positive headroom is a bound that only just held."),
+    }
+
+
 def smallest_effect_of_interest(reference_effect: float, fraction: float = 0.10,
                                 label: str = "") -> tuple:
     """A defensible equivalence bound: a fraction of a live effect measured on the same axis.

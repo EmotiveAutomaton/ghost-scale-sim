@@ -27,6 +27,8 @@ SL = REPO / "results" / "validation" / "soundingline"
 GATED = {
     "s2_flattened_intent", "s3_two_channels",
     "t1_triangle", "t2_automaticity", "t3_countability", "t4_uncertain_reader", "t5_detection",
+    "t6_information_budget", "t7_posthoc", "t8_multivariate_detection", "t9_concentration",
+    "t10_boundary_recovery",
 }
 
 

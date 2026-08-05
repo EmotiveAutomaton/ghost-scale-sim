@@ -1,0 +1,191 @@
+{
+  "test": "T-6 \u2014 the exact information budget of one observation",
+  "for": "Sounding Line; corrects T-1's reading of the triangle",
+  "method": "closed form from world.subsig. No rollouts, no sampling, no estimator. Every number is a property of the generative model.",
+  "cardinalities": {
+    "n_depth": 3,
+    "n_goals": 4,
+    "n_modes": 4,
+    "n_features": 16
+  },
+  "THE_CORRECTION": "T-1 reported goal->process as a dead edge and read the triangle as running backwards. The coupling I(mode;F | goal) / I(mode;F) is 1.6x at beta = 1.0 and exactly 1.0x at every lower beta. T-1's cells with goal headroom are beta = 0.25 and 0.10, where there is no coupling to find BY CONSTRUCTION; the only cell with coupling is beta = 1.0, which is the cell where the reader saturates and T-1 flagged a ceiling. goal->process is not dead. It is an edge this model can only create under a setting that removes the headroom needed to measure it, and T-1's +0.0017 at beta = 1.0 is the whole of the observable coupling.",
+  "pairwise_pid_by_depth": {
+    "mu1": {
+      "total_mutual_information_bits": 1.4521333512637247,
+      "redundant_bits": 6.406853007629829e-16,
+      "unique_source_a_bits": 1.4521333512637231,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 8.881784197001252e-16,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+      "mu_index": 0
+    },
+    "mu2": {
+      "total_mutual_information_bits": 1.8782900817777808,
+      "redundant_bits": 0.29663520738810184,
+      "unique_source_a_bits": 1.1554981438756229,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 0.4261567305140561,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+      "mu_index": 1
+    },
+    "mu3": {
+      "total_mutual_information_bits": 1.8782900817777808,
+      "redundant_bits": 0.2705662180556205,
+      "unique_source_a_bits": 1.1815671332081041,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 0.4261567305140561,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+      "mu_index": 2
+    }
+  },
+  "goal_and_depth_with_mode_marginalised": {
+    "total_mutual_information_bits": 1.452133351263724,
+    "redundant_bits": 0.0,
+    "unique_source_a_bits": 1.4521333512637242,
+    "unique_source_b_bits": 0.0,
+    "synergistic_bits": -2.220446049250313e-16,
+    "estimator": "PID_WB (Williams-Beer I_min)",
+    "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information."
+  },
+  "mode_and_depth_with_goal_marginalised": {
+    "total_mutual_information_bits": 0.18906714181457399,
+    "redundant_bits": 0.0,
+    "unique_source_a_bits": 0.02662207870613775,
+    "unique_source_b_bits": 0.0,
+    "synergistic_bits": 0.16244506310843623,
+    "estimator": "PID_WB (Williams-Beer I_min)",
+    "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information."
+  },
+  "three_way_budget": {
+    "total_bits": 1.7362378382730945,
+    "alone": {
+      "goal": 1.4521333512637242,
+      "mode": 0.02662207870613731,
+      "depth": -8.881784197001252e-16
+    },
+    "given_the_other_two": {
+      "goal": 1.5471706964585197,
+      "mode": 0.28410448700936985,
+      "depth": 0.23676331560681607
+    },
+    "context_multiplier": {
+      "goal": 1.0654467064695463,
+      "mode": 10.67176196665191,
+      "depth": Infinity
+    },
+    "how_to_read": "alone is what the latent carries by itself; given_the_other_two is what it adds once you already know the rest. A latent with a small solo term and a large conditional one is readable only in context, which is what 'coupled inference problems' has to mean if it means anything measurable."
+  },
+  "coupling_by_goal_legibility": {
+    "1.00": {
+      "total_bits": 1.87829008177778,
+      "I_goal": 1.4521333512637238,
+      "I_mode": 0.2705662180556203,
+      "I_mode_given_goal": 0.4261567305140561,
+      "coupling_multiplier": 1.5750552067311339
+    },
+    "0.50": {
+      "total_bits": 0.6378720025307079,
+      "I_goal": 0.3540765686010241,
+      "I_mode": 0.2705662180556203,
+      "I_mode_given_goal": 0.28379543392968376,
+      "coupling_multiplier": 1.0488945588593175
+    },
+    "0.25": {
+      "total_bits": 0.367817416404554,
+      "I_goal": 0.09405938771359335,
+      "I_mode": 0.2705662180556194,
+      "I_mode_given_goal": 0.27375802869096066,
+      "coupling_multiplier": 1.0117967817944113
+    },
+    "0.10": {
+      "total_bits": 0.28708964263040393,
+      "I_goal": 0.015984912164216603,
+      "I_mode": 0.2705662180556212,
+      "I_mode_given_goal": 0.2711047304661873,
+      "coupling_multiplier": 1.0019903165089716
+    },
+    "0.00": {
+      "total_bits": 0.2705662180556194,
+      "I_goal": -8.881784197001252e-16,
+      "I_mode": 0.2705662180556203,
+      "I_mode_given_goal": 0.2705662180556203,
+      "coupling_multiplier": 1.0
+    }
+  },
+  "coupling_multiplier_by_beta": {
+    "1.00": 1.5750552067311339,
+    "0.50": 1.0488945588593175,
+    "0.25": 1.0117967817944113,
+    "0.10": 1.0019903165089716,
+    "0.00": 1.0
+  },
+  "what_would_have_falsified_the_correction": "a coupling multiplier above 1 at beta = 0.25 and 0.10. That would mean the goal genuinely carries information about the mode in the cells T-1 measured, and the dead goal->process edge would be a finding about the reader rather than a property of the emission.",
+  "what_this_cannot_show": "anything about a reader. This is what ONE OBSERVATION carries in principle. A reader integrating twenty-four of them, with a prior and a policy, can do better or worse than these numbers and T-1 is where that is measured.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t6_information_budget.py",
+    "sha256": "94ea58371941fb9fde2af6e7571d68bb9a3e70c2b9f8f7d5b780e9a0d73492ca",
+    "git_commit": "ff069fe",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 5,
+    "n_ran": 5,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "harness_matches_the_creator",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the emission rule is reproduced here rather than imported, because the creator applies it one draw at a time and returns no distribution. This compares the lifted rule against actual creator draws; a mismatch would make every number in this module describe a world nobody runs.",
+        "observed": 0.026885496578892804,
+        "expected": 0.0,
+        "tolerance": 0.06
+      },
+      {
+        "name": "mode_information_is_invariant_in_beta",
+        "kind": "identity",
+        "passed": true,
+        "detail": "beta mixes the emission toward the goal-marginal of the mode family, so it must leave information about WHICH MODE untouched at every level. This is the fact that makes the coupling table interpretable.",
+        "observed": 1.7763568394002505e-15,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "n28_no_mode_information_at_shallowest_depth",
+        "kind": "identity",
+        "passed": true,
+        "detail": "at mu = 1 every mode emits the goal signature exactly, so an emission carries no unique or synergistic mode information. Null N28, recovered from the likelihood with no rollouts.",
+        "observed": 8.881784197001252e-16,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "depth_is_invisible_without_the_chain",
+        "kind": "identity",
+        "passed": true,
+        "detail": "with the execution mode marginalised out, depth contributes exactly zero unique information. This is depth_marginal_invariance and E30's null, arrived at analytically.",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "total_information_within_channel_capacity",
+        "kind": "identity",
+        "passed": true,
+        "detail": "one observation cannot carry more than log2(n_features) bits.",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

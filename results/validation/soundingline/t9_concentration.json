@@ -1,0 +1,263 @@
+{
+  "test": "T-9 \u2014 is concentrated intent visible as posterior concentration?",
+  "for": "Sounding Line, C-22 and purpose_breadth. S-2's question, on a working emitter",
+  "WHY_THIS_EXISTS": "S-2 is withdrawn because its manipulation never reached the reader, not because its question was answered. This asks the question. The emitter is t2_automaticity.mixed_deep_features, which builds each position from world.subsig[mu, active_goal, mode] directly, so the drive mixture is actually in the observations.",
+  "construction": {
+    "read_tier": "CURATOR",
+    "read_glances": 3,
+    "mu": 3,
+    "beta": 1.0,
+    "n_goals": 4,
+    "dominant_shares": [
+      0.4,
+      0.55,
+      0.7,
+      0.85,
+      1.0
+    ],
+    "n_per_arm": 250,
+    "note": "decision density identical across share arms by construction"
+  },
+  "series_by_dominant_share": {
+    "0.40": {
+      "purpose_breadth": 0.7250232157804213,
+      "goal_accuracy": 0.38,
+      "process": 0.00019786602137812715,
+      "true_mixture_breadth": 0.9135783725428996
+    },
+    "0.55": {
+      "purpose_breadth": 0.6921135200156311,
+      "goal_accuracy": 0.496,
+      "process": 0.011164164560099889,
+      "true_mixture_breadth": 0.7960466850561829
+    },
+    "0.70": {
+      "purpose_breadth": 0.6809189979192766,
+      "goal_accuracy": 0.572,
+      "process": 0.0011626947007210466,
+      "true_mixture_breadth": 0.6414848253616083
+    },
+    "0.85": {
+      "purpose_breadth": 0.5675848214614297,
+      "goal_accuracy": 0.744,
+      "process": 0.001080020068990418,
+      "true_mixture_breadth": 0.37478985248846314
+    },
+    "1.00": {
+      "purpose_breadth": 0.5303077553128764,
+      "goal_accuracy": 0.808,
+      "process": 0.012610394830426207,
+      "true_mixture_breadth": 0.0
+    }
+  },
+  "contrasts": {
+    "dominant_70_minus_flat_40_breadth": {
+      "mean_a": 0.6809189979192766,
+      "mean_b": 0.7250232157804213,
+      "difference": -0.04410421786114474,
+      "interval": [
+        -0.09223099439508271,
+        0.006090110437587884
+      ],
+      "excludes_zero": false,
+      "n": 250,
+      "max_abs_paired_deviation": 0.9450348455364601
+    },
+    "dominant_70_minus_flat_40_goal_accuracy": {
+      "mean_a": 0.572,
+      "mean_b": 0.38,
+      "difference": 0.192,
+      "interval": [
+        0.1,
+        0.28
+      ],
+      "excludes_zero": true,
+      "n": 250,
+      "max_abs_paired_deviation": 1.0
+    },
+    "dominant_70_minus_flat_40_process": {
+      "mean_a": 0.0011626947007210466,
+      "mean_b": 0.00019786602137812715,
+      "difference": 0.0009648286793429195,
+      "interval": [
+        -0.005483357560779862,
+        0.007762126344338723
+      ],
+      "excludes_zero": false,
+      "n": 250,
+      "max_abs_paired_deviation": 0.23914063284220832
+    },
+    "dominant_70_minus_single_drive_breadth": {
+      "mean_a": 0.6809189979192766,
+      "mean_b": 0.5303077553128764,
+      "difference": 0.15061124260640002,
+      "interval": [
+        0.0885996593168206,
+        0.2146223358574627
+      ],
+      "excludes_zero": true,
+      "n": 250,
+      "max_abs_paired_deviation": 0.9900064718681714
+    }
+  },
+  "difficulty_control": {
+    "curve": [
+      {
+        "alpha": 0.2,
+        "goal_accuracy": 0.412,
+        "purpose_breadth": 0.7747647518323265
+      },
+      {
+        "alpha": 0.3,
+        "goal_accuracy": 0.54,
+        "purpose_breadth": 0.7325972759715198
+      },
+      {
+        "alpha": 0.4,
+        "goal_accuracy": 0.632,
+        "purpose_breadth": 0.6837836508876011
+      },
+      {
+        "alpha": 0.5,
+        "goal_accuracy": 0.752,
+        "purpose_breadth": 0.5992412801626729
+      },
+      {
+        "alpha": 0.6,
+        "goal_accuracy": 0.836,
+        "purpose_breadth": 0.47071742469718125
+      },
+      {
+        "alpha": 0.7,
+        "goal_accuracy": 0.864,
+        "purpose_breadth": 0.3958990972376305
+      },
+      {
+        "alpha": 0.8,
+        "goal_accuracy": 0.912,
+        "purpose_breadth": 0.3343220763448991
+      },
+      {
+        "alpha": 0.9,
+        "goal_accuracy": 0.976,
+        "purpose_breadth": 0.24325560679825253
+      }
+    ],
+    "matched": {
+      "0.40": {
+        "goal_accuracy": 0.38,
+        "breadth": 0.7250232157804213,
+        "breadth_of_equally_hard_single_drive_work": 0.7747647518323265,
+        "excess": -0.04974153605190523,
+        "in_range_of_difficulty_curve": false,
+        "excess_above_single_drive_baseline": -0.0664905815124367
+      },
+      "0.55": {
+        "goal_accuracy": 0.496,
+        "breadth": 0.6921135200156311,
+        "breadth_of_equally_hard_single_drive_work": 0.7470923457986721,
+        "excess": -0.05497882578304103,
+        "in_range_of_difficulty_curve": true,
+        "excess_above_single_drive_baseline": -0.0717278712435725
+      },
+      "0.70": {
+        "goal_accuracy": 0.572,
+        "breadth": 0.6809189979192766,
+        "breadth_of_equally_hard_single_drive_work": 0.7156186237684177,
+        "excess": -0.0346996258491411,
+        "in_range_of_difficulty_curve": true,
+        "excess_above_single_drive_baseline": -0.05144867130967257
+      },
+      "0.85": {
+        "goal_accuracy": 0.744,
+        "breadth": 0.5675848214614297,
+        "breadth_of_equally_hard_single_drive_work": 0.6048774382110014,
+        "excess": -0.03729261674957163,
+        "in_range_of_difficulty_curve": true,
+        "excess_above_single_drive_baseline": -0.05404166221010309
+      },
+      "1.00": {
+        "goal_accuracy": 0.808,
+        "breadth": 0.5303077553128764,
+        "breadth_of_equally_hard_single_drive_work": 0.513558709852345,
+        "excess": 0.016749045460531464,
+        "in_range_of_difficulty_curve": true,
+        "excess_above_single_drive_baseline": 0.0
+      }
+    },
+    "excess_above_baseline_by_share": {
+      "0.40": -0.0664905815124367,
+      "0.55": -0.0717278712435725,
+      "0.70": -0.05144867130967257,
+      "0.85": -0.05404166221010309,
+      "1.00": 0.0
+    },
+    "verdict": "BREADTH_IS_LARGELY_A_DIFFICULTY_METER",
+    "how_to_read": "the curve is single-drive work made progressively harder to read by lowering the channel's alpha. If a mixture arm sits ABOVE it at the same goal accuracy, the extra breadth is concentration rather than difficulty. If it sits on the curve, purpose_breadth cannot tell 'a dominant purpose' from 'a hard read'."
+  },
+  "goal_accuracy_should_not_move": {
+    "difference": 0.192,
+    "interval": [
+      0.1,
+      0.28
+    ],
+    "bound": 0.05,
+    "bound_source": "5 percentage points of goal accuracy: below this a breadth difference cannot be attributed to the work having become harder to read",
+    "interval_level": 0.95,
+    "equivalent": false,
+    "widest_excursion": 0.28,
+    "headroom": -0.23000000000000004,
+    "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+  },
+  "equivalence_bound": {
+    "bound": 0.015061124260640003,
+    "source": "10% of the 70%-versus-single-drive breadth difference, the largest live effect here (+0.1506) measured on the same axis in the same run"
+  },
+  "what_would_have_falsified_it": "breadth flat across the dominant-share sweep, which would make posterior entropy blind to concentration entirely; or the excess vanishing against the difficulty curve, which would make it a legibility meter with a suggestive name.",
+  "what_this_cannot_show": "anything about corporate text. 'Concentration' here is the entropy of a drive mixture this module sets by hand. Whether real institutional writing has that shape is exactly what a simulation cannot say.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t9_concentration.py",
+    "sha256": "2e27afc21f612bbc22b68428986dc322ab3974f1a79212ec7f30592c754a6e31",
+    "git_commit": "ff069fe",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "mixture_reaches_the_reader",
+        "kind": "live",
+        "passed": true,
+        "detail": "forcing the mixture to a constant must change what the reader sees. THIS IS THE GATE S-2 FAILED AT EXACTLY 0.0, and it is here so the gate is shown to discriminate rather than merely to exist: same check, same shape, working emitter, and it passes.",
+        "observed": 0.29404497273184604,
+        "expected": 0.01
+      },
+      {
+        "name": "single_drive_has_zero_true_mixture_breadth",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a mixture concentrated on one drive has zero entropy by construction.",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "true_mixture_breadth_is_monotone_in_share",
+        "kind": "identity",
+        "passed": true,
+        "detail": "the generative mixture's own entropy must fall as the dominant share rises. A check on the construction, not on the reader.",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

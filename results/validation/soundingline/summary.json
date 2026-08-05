@@ -16966,5 +16966,3127 @@
       ],
       "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
     }
+  },
+  "T6": {
+    "test": "T-6 \u2014 the exact information budget of one observation",
+    "for": "Sounding Line; corrects T-1's reading of the triangle",
+    "method": "closed form from world.subsig. No rollouts, no sampling, no estimator. Every number is a property of the generative model.",
+    "cardinalities": {
+      "n_depth": 3,
+      "n_goals": 4,
+      "n_modes": 4,
+      "n_features": 16
+    },
+    "THE_CORRECTION": "T-1 reported goal->process as a dead edge and read the triangle as running backwards. The coupling I(mode;F | goal) / I(mode;F) is 1.6x at beta = 1.0 and exactly 1.0x at every lower beta. T-1's cells with goal headroom are beta = 0.25 and 0.10, where there is no coupling to find BY CONSTRUCTION; the only cell with coupling is beta = 1.0, which is the cell where the reader saturates and T-1 flagged a ceiling. goal->process is not dead. It is an edge this model can only create under a setting that removes the headroom needed to measure it, and T-1's +0.0017 at beta = 1.0 is the whole of the observable coupling.",
+    "pairwise_pid_by_depth": {
+      "mu1": {
+        "total_mutual_information_bits": 1.4521333512637247,
+        "redundant_bits": 6.406853007629829e-16,
+        "unique_source_a_bits": 1.4521333512637231,
+        "unique_source_b_bits": 0.0,
+        "synergistic_bits": 8.881784197001252e-16,
+        "estimator": "PID_WB (Williams-Beer I_min)",
+        "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+        "mu_index": 0
+      },
+      "mu2": {
+        "total_mutual_information_bits": 1.8782900817777808,
+        "redundant_bits": 0.29663520738810184,
+        "unique_source_a_bits": 1.1554981438756229,
+        "unique_source_b_bits": 0.0,
+        "synergistic_bits": 0.4261567305140561,
+        "estimator": "PID_WB (Williams-Beer I_min)",
+        "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+        "mu_index": 1
+      },
+      "mu3": {
+        "total_mutual_information_bits": 1.8782900817777808,
+        "redundant_bits": 0.2705662180556205,
+        "unique_source_a_bits": 1.1815671332081041,
+        "unique_source_b_bits": 0.0,
+        "synergistic_bits": 0.4261567305140561,
+        "estimator": "PID_WB (Williams-Beer I_min)",
+        "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+        "mu_index": 2
+      }
+    },
+    "goal_and_depth_with_mode_marginalised": {
+      "total_mutual_information_bits": 1.452133351263724,
+      "redundant_bits": 0.0,
+      "unique_source_a_bits": 1.4521333512637242,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": -2.220446049250313e-16,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information."
+    },
+    "mode_and_depth_with_goal_marginalised": {
+      "total_mutual_information_bits": 0.18906714181457399,
+      "redundant_bits": 0.0,
+      "unique_source_a_bits": 0.02662207870613775,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 0.16244506310843623,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information."
+    },
+    "three_way_budget": {
+      "total_bits": 1.7362378382730945,
+      "alone": {
+        "goal": 1.4521333512637242,
+        "mode": 0.02662207870613731,
+        "depth": -8.881784197001252e-16
+      },
+      "given_the_other_two": {
+        "goal": 1.5471706964585197,
+        "mode": 0.28410448700936985,
+        "depth": 0.23676331560681607
+      },
+      "context_multiplier": {
+        "goal": 1.0654467064695463,
+        "mode": 10.67176196665191,
+        "depth": Infinity
+      },
+      "how_to_read": "alone is what the latent carries by itself; given_the_other_two is what it adds once you already know the rest. A latent with a small solo term and a large conditional one is readable only in context, which is what 'coupled inference problems' has to mean if it means anything measurable."
+    },
+    "coupling_by_goal_legibility": {
+      "1.00": {
+        "total_bits": 1.87829008177778,
+        "I_goal": 1.4521333512637238,
+        "I_mode": 0.2705662180556203,
+        "I_mode_given_goal": 0.4261567305140561,
+        "coupling_multiplier": 1.5750552067311339
+      },
+      "0.50": {
+        "total_bits": 0.6378720025307079,
+        "I_goal": 0.3540765686010241,
+        "I_mode": 0.2705662180556203,
+        "I_mode_given_goal": 0.28379543392968376,
+        "coupling_multiplier": 1.0488945588593175
+      },
+      "0.25": {
+        "total_bits": 0.367817416404554,
+        "I_goal": 0.09405938771359335,
+        "I_mode": 0.2705662180556194,
+        "I_mode_given_goal": 0.27375802869096066,
+        "coupling_multiplier": 1.0117967817944113
+      },
+      "0.10": {
+        "total_bits": 0.28708964263040393,
+        "I_goal": 0.015984912164216603,
+        "I_mode": 0.2705662180556212,
+        "I_mode_given_goal": 0.2711047304661873,
+        "coupling_multiplier": 1.0019903165089716
+      },
+      "0.00": {
+        "total_bits": 0.2705662180556194,
+        "I_goal": -8.881784197001252e-16,
+        "I_mode": 0.2705662180556203,
+        "I_mode_given_goal": 0.2705662180556203,
+        "coupling_multiplier": 1.0
+      }
+    },
+    "coupling_multiplier_by_beta": {
+      "1.00": 1.5750552067311339,
+      "0.50": 1.0488945588593175,
+      "0.25": 1.0117967817944113,
+      "0.10": 1.0019903165089716,
+      "0.00": 1.0
+    },
+    "what_would_have_falsified_the_correction": "a coupling multiplier above 1 at beta = 0.25 and 0.10. That would mean the goal genuinely carries information about the mode in the cells T-1 measured, and the dead goal->process edge would be a finding about the reader rather than a property of the emission.",
+    "what_this_cannot_show": "anything about a reader. This is what ONE OBSERVATION carries in principle. A reader integrating twenty-four of them, with a prior and a policy, can do better or worse than these numbers and T-1 is where that is measured.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t6_information_budget.py",
+      "sha256": "94ea58371941fb9fde2af6e7571d68bb9a3e70c2b9f8f7d5b780e9a0d73492ca",
+      "git_commit": "ff069fe",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 5,
+      "n_ran": 5,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "harness_matches_the_creator",
+          "kind": "positive",
+          "passed": true,
+          "detail": "the emission rule is reproduced here rather than imported, because the creator applies it one draw at a time and returns no distribution. This compares the lifted rule against actual creator draws; a mismatch would make every number in this module describe a world nobody runs.",
+          "observed": 0.026885496578892804,
+          "expected": 0.0,
+          "tolerance": 0.06
+        },
+        {
+          "name": "mode_information_is_invariant_in_beta",
+          "kind": "identity",
+          "passed": true,
+          "detail": "beta mixes the emission toward the goal-marginal of the mode family, so it must leave information about WHICH MODE untouched at every level. This is the fact that makes the coupling table interpretable.",
+          "observed": 1.7763568394002505e-15,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "n28_no_mode_information_at_shallowest_depth",
+          "kind": "identity",
+          "passed": true,
+          "detail": "at mu = 1 every mode emits the goal signature exactly, so an emission carries no unique or synergistic mode information. Null N28, recovered from the likelihood with no rollouts.",
+          "observed": 8.881784197001252e-16,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "depth_is_invisible_without_the_chain",
+          "kind": "identity",
+          "passed": true,
+          "detail": "with the execution mode marginalised out, depth contributes exactly zero unique information. This is depth_marginal_invariance and E30's null, arrived at analytically.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "total_information_within_channel_capacity",
+          "kind": "identity",
+          "passed": true,
+          "detail": "one observation cannot carry more than log2(n_features) bits.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "T7": {
+    "test": "T-7 \u2014 multiplicity control and bounded nulls, over committed results",
+    "for": "Sounding Line; re-scores batch one and two without re-running anything",
+    "method": "reads results/validation/soundingline/*.json. No simulation. FDR over hand-declared families; TOST in confidence-interval form for the nulls.",
+    "WHY_FAMILIES_ARE_DECLARED_BY_HAND": "an auto-harvesting first pass reported S-45's cost contrasts as failing correction. They only failed because the harvester included S-45's own accuracy checks, which S-45 explicitly calls a harness check rather than a result. Against the real family of two they survive at p_adj = 0.044. FDR's answer depends entirely on what you call a family, and a script that decides that for you produces the same kind of authoritative-looking artifact as a threshold fitted on test labels.",
+    "fdr_by_declared_family": {
+      "t1_triangle::edges_at_1_nat": {
+        "why_a_family": "the six directed edges, across all seven cells. One family because they are one question asked seven ways, and the headline reads across cells.",
+        "n_tests": 42,
+        "n_significant_uncorrected": 24,
+        "n_significant_corrected": 22,
+        "n_lost_to_correction": 2,
+        "claims_lost": [
+          "mu1_beta1.0|depth->goal",
+          "mu1_beta1.0|goal->process"
+        ],
+        "per_entry": {
+          "mu3_beta1.0|goal->process": {
+            "p_approx": 1.6334517249916303e-07,
+            "p_adjusted": 5.277305573049882e-07,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|goal->depth": {
+            "p_approx": 0.2214991591944726,
+            "p_adjusted": 0.30009563503767256,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->goal": {
+            "p_approx": 0.18506064200278338,
+            "p_adjusted": 0.25931146517162623,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->goal": {
+            "p_approx": 0.17350616773544525,
+            "p_adjusted": 0.25931146517162623,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->process": {
+            "p_approx": 0.7271269597824443,
+            "p_adjusted": 0.825387359753045,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->depth": {
+            "p_approx": 0.18522247512259016,
+            "p_adjusted": 0.25931146517162623,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|process->goal": {
+            "p_approx": 8.745480095662117e-08,
+            "p_adjusted": 3.060918033481741e-07,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->goal": {
+            "p_approx": 0.18463141077543943,
+            "p_adjusted": 0.25931146517162623,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->process": {
+            "p_approx": 0.2756933305778564,
+            "p_adjusted": 0.36184749638343655,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->depth": {
+            "p_approx": 0.7913889586608582,
+            "p_adjusted": 0.8528147309908997,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|process->goal": {
+            "p_approx": 1.1981727570109513e-06,
+            "p_adjusted": 3.3548837196306636e-06,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->goal": {
+            "p_approx": 0.7918993930629783,
+            "p_adjusted": 0.8528147309908997,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->process": {
+            "p_approx": 0.7159879767492787,
+            "p_adjusted": 0.825387359753045,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|goal->depth": {
+            "p_approx": 0.37348830632636254,
+            "p_adjusted": 0.4537771750679317,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|process->goal": {
+            "p_approx": 0.0009609266320038667,
+            "p_adjusted": 0.002124153607587495,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->goal": {
+            "p_approx": 0.36427929433232853,
+            "p_adjusted": 0.4537771750679317,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal->process": {
+            "p_approx": 0.890985983935527,
+            "p_adjusted": 0.9355352831323034,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->depth": {
+            "p_approx": 0.08738140891049273,
+            "p_adjusted": 0.14517834751383307,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|process->goal": {
+            "p_approx": 3.449490324491933e-07,
+            "p_adjusted": 1.0348470973475798e-06,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->goal": {
+            "p_approx": 0.0898723103657062,
+            "p_adjusted": 0.14517834751383307,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal->process": {
+            "p_approx": 0.04956768715891191,
+            "p_adjusted": 0.08674345252809584,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->depth": {
+            "p_approx": 0.022397766687139553,
+            "p_adjusted": 0.04275937276635733,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process->goal": {
+            "p_approx": 0.3781476458899431,
+            "p_adjusted": 0.4537771750679317,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->depth": {
+            "p_approx": 1.949107542031925e-12,
+            "p_adjusted": 7.44204697866735e-12,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->goal": {
+            "p_approx": 0.02895552257491274,
+            "p_adjusted": 0.052875302093318914,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|depth->process": {
+            "p_approx": 4.533537627771089e-05,
+            "p_adjusted": 0.00011200504727434455,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->process": {
+            "p_approx": 0.0027847401565259666,
+            "p_adjusted": 0.0058479543287045304,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->depth": {
+            "p_approx": 0.9903565793741775,
+            "p_adjusted": 0.9904375212736403,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->goal": {
+            "p_approx": 0.0004980256839570707,
+            "p_adjusted": 0.001162059929233165,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process->depth": {
+            "p_approx": 9.920628994741776e-06,
+            "p_adjusted": 2.604165111119716e-05,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|depth->goal": {
+            "p_approx": 0.9904375212736403,
+            "p_adjusted": 0.9904375212736403,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->process": {
+            "p_approx": 0.007329946348052507,
+            "p_adjusted": 0.014659892696105015,
+            "survives_correction": true
+          }
+        }
+      },
+      "t1_triangle::budget_matched_edges": {
+        "why_a_family": "the same six edges at matched delivered information. A separate family: it is a robustness restatement of the first, not additional evidence for it.",
+        "n_tests": 126,
+        "n_significant_uncorrected": 54,
+        "n_significant_corrected": 42,
+        "n_lost_to_correction": 12,
+        "claims_lost": [
+          "mu1_beta1.0|depth->goal|duty0.1250",
+          "mu1_beta1.0|depth->goal|duty0.3333",
+          "mu1_beta1.0|goal->depth|duty0.1250",
+          "mu1_beta1.0|goal->depth|duty0.3333",
+          "mu1_beta1.0|goal->process|duty0.1250",
+          "mu1_beta1.0|goal->process|duty0.3333",
+          "mu1_beta1.0|process->depth|duty0.0417",
+          "mu1_beta1.0|process->goal|duty0.0417",
+          "mu2_beta0.1|depth->goal|duty0.0417",
+          "mu2_beta0.1|goal->depth|duty0.1250",
+          "mu3_beta0.1|process->goal|duty0.1250",
+          "mu3_beta1.0|goal->process|duty0.1250"
+        ],
+        "per_entry": {
+          "mu3_beta1.0|goal->process|duty0.0417": {
+            "p_approx": 0.23033887521606,
+            "p_adjusted": 0.34550831282409,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|goal->depth|duty0.0417": {
+            "p_approx": 0.7734120244365588,
+            "p_adjusted": 0.8834139015168435,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|goal->process|duty0.1250": {
+            "p_approx": 0.01734272387042224,
+            "p_adjusted": 0.05081821413193493,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|goal->depth|duty0.1250": {
+            "p_approx": 0.1758118732302556,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|goal->process|duty0.3333": {
+            "p_approx": 0.08159425375938723,
+            "p_adjusted": 0.17153494091266422,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|goal->depth|duty0.3333": {
+            "p_approx": 0.17525526426792104,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->goal|duty0.0417": {
+            "p_approx": 0.1850689934028673,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->depth|duty0.0417": {
+            "p_approx": 2.6643132144954507e-12,
+            "p_adjusted": 1.3987644376101116e-11,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|process->goal|duty0.1250": {
+            "p_approx": 0.3336889777609584,
+            "p_adjusted": 0.4724136089649523,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->depth|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|process->goal|duty0.3333": {
+            "p_approx": 0.27014259211783087,
+            "p_adjusted": 0.3867950750778033,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->depth|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->goal|duty0.0417": {
+            "p_approx": 0.1922336841207719,
+            "p_adjusted": 0.3018449017453811,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->process|duty0.0417": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->goal|duty0.1250": {
+            "p_approx": 0.17580349561755515,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->process|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->goal|duty0.3333": {
+            "p_approx": 0.17395623236767177,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->process|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->process|duty0.0417": {
+            "p_approx": 0.6602522017970491,
+            "p_adjusted": 0.8076871594798853,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->depth|duty0.0417": {
+            "p_approx": 0.23585944083499877,
+            "p_adjusted": 0.3479653282115226,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->process|duty0.1250": {
+            "p_approx": 0.9739268394881397,
+            "p_adjusted": 0.9914263610405287,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->depth|duty0.1250": {
+            "p_approx": 0.06788634699599161,
+            "p_adjusted": 0.15274428074098112,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->process|duty0.3333": {
+            "p_approx": 0.8160923506053903,
+            "p_adjusted": 0.8836539010617074,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->depth|duty0.3333": {
+            "p_approx": 0.15560175280603694,
+            "p_adjusted": 0.27613832188113596,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|process->goal|duty0.0417": {
+            "p_approx": 0.07315824694762307,
+            "p_adjusted": 0.16064535275840314,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|process->depth|duty0.0417": {
+            "p_approx": 0.00048318919565581986,
+            "p_adjusted": 0.0017906423133127443,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->goal|duty0.1250": {
+            "p_approx": 0.005034547081465002,
+            "p_adjusted": 0.016265459801656158,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->depth|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->goal|duty0.3333": {
+            "p_approx": 2.1079890988318084e-07,
+            "p_adjusted": 9.158849188027858e-07,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->depth|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->goal|duty0.0417": {
+            "p_approx": 0.1848931415853201,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->process|duty0.0417": {
+            "p_approx": 8.648331828453593e-09,
+            "p_adjusted": 4.035888186611677e-08,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->goal|duty0.1250": {
+            "p_approx": 0.20301399564874778,
+            "p_adjusted": 0.30818992110532795,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->process|duty0.1250": {
+            "p_approx": 4.218847493575595e-15,
+            "p_adjusted": 2.416249019047841e-14,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->goal|duty0.3333": {
+            "p_approx": 0.17825712137647987,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->process|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->process|duty0.0417": {
+            "p_approx": 0.5974197987950525,
+            "p_adjusted": 0.7491328321016948,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->depth|duty0.0417": {
+            "p_approx": 0.7364669767831695,
+            "p_adjusted": 0.8513287988502694,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->process|duty0.1250": {
+            "p_approx": 0.6439619316458558,
+            "p_adjusted": 0.795482386150763,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->depth|duty0.1250": {
+            "p_approx": 0.7875380486359611,
+            "p_adjusted": 0.8836539010617074,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->process|duty0.3333": {
+            "p_approx": 0.5760048435538441,
+            "p_adjusted": 0.7330970736139834,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->depth|duty0.3333": {
+            "p_approx": 0.8019202388356743,
+            "p_adjusted": 0.8836539010617074,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|process->goal|duty0.0417": {
+            "p_approx": 0.9914263610405287,
+            "p_adjusted": 0.9914263610405287,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|process->depth|duty0.0417": {
+            "p_approx": 3.6637359812630166e-14,
+            "p_adjusted": 2.0070901462571308e-13,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->goal|duty0.1250": {
+            "p_approx": 0.025395307812007717,
+            "p_adjusted": 0.06872683614377813,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|process->depth|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->goal|duty0.3333": {
+            "p_approx": 0.0005758752112980936,
+            "p_adjusted": 0.002073150760673137,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->depth|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->goal|duty0.0417": {
+            "p_approx": 0.2685470310810345,
+            "p_adjusted": 0.3867950750778033,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->process|duty0.0417": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->goal|duty0.1250": {
+            "p_approx": 0.8205357652715854,
+            "p_adjusted": 0.8836539010617074,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->process|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->goal|duty0.3333": {
+            "p_approx": 0.796339083185805,
+            "p_adjusted": 0.8836539010617074,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->process|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->process|duty0.0417": {
+            "p_approx": 0.6004953654148506,
+            "p_adjusted": 0.7491328321016948,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|goal->depth|duty0.0417": {
+            "p_approx": 0.8125483296242217,
+            "p_adjusted": 0.8836539010617074,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|goal->process|duty0.1250": {
+            "p_approx": 0.6958584670132602,
+            "p_adjusted": 0.8430592965737576,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|goal->depth|duty0.1250": {
+            "p_approx": 0.44572157808770285,
+            "p_adjusted": 0.58500957124011,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|goal->process|duty0.3333": {
+            "p_approx": 0.7782455799076955,
+            "p_adjusted": 0.8834139015168435,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|goal->depth|duty0.3333": {
+            "p_approx": 0.360669058637209,
+            "p_adjusted": 0.49938792734382786,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|process->goal|duty0.0417": {
+            "p_approx": 0.18069051616508225,
+            "p_adjusted": 0.2951733312501428,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|process->depth|duty0.0417": {
+            "p_approx": 4.986491219938216e-10,
+            "p_adjusted": 2.4165303604315973e-09,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->goal|duty0.1250": {
+            "p_approx": 0.10634360693638523,
+            "p_adjusted": 0.20301961324218998,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|process->depth|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->goal|duty0.3333": {
+            "p_approx": 0.00462732775855712,
+            "p_adjusted": 0.015343244673110453,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->depth|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->goal|duty0.0417": {
+            "p_approx": 0.7361604793825678,
+            "p_adjusted": 0.8513287988502694,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->process|duty0.0417": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->goal|duty0.1250": {
+            "p_approx": 0.42057238949246534,
+            "p_adjusted": 0.5637459688941556,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->process|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->goal|duty0.3333": {
+            "p_approx": 0.349972821967548,
+            "p_adjusted": 0.48996195075456717,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->process|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal->process|duty0.0417": {
+            "p_approx": 0.13578538190939882,
+            "p_adjusted": 0.24441368743691785,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->depth|duty0.0417": {
+            "p_approx": 0.23750014465230906,
+            "p_adjusted": 0.3479653282115226,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->process|duty0.1250": {
+            "p_approx": 0.5208818112003946,
+            "p_adjusted": 0.6697051858290787,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->depth|duty0.1250": {
+            "p_approx": 0.02878185839022196,
+            "p_adjusted": 0.07253028314335934,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->process|duty0.3333": {
+            "p_approx": 0.7064062927023635,
+            "p_adjusted": 0.8476875512428362,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->depth|duty0.3333": {
+            "p_approx": 0.09478755874724154,
+            "p_adjusted": 0.18661300628363178,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|process->goal|duty0.0417": {
+            "p_approx": 0.44259622498877427,
+            "p_adjusted": 0.58500957124011,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|process->depth|duty0.0417": {
+            "p_approx": 7.402137732537284e-06,
+            "p_adjusted": 2.9145917321865555e-05,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->goal|duty0.1250": {
+            "p_approx": 0.9164212840550678,
+            "p_adjusted": 0.9542899321565169,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|process->depth|duty0.1250": {
+            "p_approx": 3.5910680207251744e-08,
+            "p_adjusted": 1.6159806093263285e-07,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->goal|duty0.3333": {
+            "p_approx": 0.10976238588844778,
+            "p_adjusted": 0.2064188152529018,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|process->depth|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->goal|duty0.0417": {
+            "p_approx": 0.025636200783790253,
+            "p_adjusted": 0.06872683614377813,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->process|duty0.0417": {
+            "p_approx": 3.424815986363683e-12,
+            "p_adjusted": 1.7261072571272963e-11,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->goal|duty0.1250": {
+            "p_approx": 0.08996822129869209,
+            "p_adjusted": 0.17993644259738417,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->process|duty0.1250": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->goal|duty0.3333": {
+            "p_approx": 0.08439665044254996,
+            "p_adjusted": 0.17153494091266422,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->process|duty0.3333": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal->process|duty0.0417": {
+            "p_approx": 0.7178014524390535,
+            "p_adjusted": 0.8513287988502694,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->depth|duty0.0417": {
+            "p_approx": 0.08224772605285469,
+            "p_adjusted": 0.17153494091266422,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->process|duty0.1250": {
+            "p_approx": 0.04715298267623025,
+            "p_adjusted": 0.11002362624453725,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->depth|duty0.1250": {
+            "p_approx": 0.027947909876524513,
+            "p_adjusted": 0.07186605396820589,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->process|duty0.3333": {
+            "p_approx": 0.035695225503313166,
+            "p_adjusted": 0.08649227718110498,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->depth|duty0.3333": {
+            "p_approx": 0.023189220139134825,
+            "p_adjusted": 0.06492981638957751,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->goal|duty0.0417": {
+            "p_approx": 0.019414321396406198,
+            "p_adjusted": 0.0555955567260723,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->depth|duty0.0417": {
+            "p_approx": 0.04423996347105219,
+            "p_adjusted": 0.10517425278023729,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->goal|duty0.1250": {
+            "p_approx": 0.07394786079355065,
+            "p_adjusted": 0.16064535275840314,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->depth|duty0.1250": {
+            "p_approx": 0.008931523744609482,
+            "p_adjusted": 0.02813429979551987,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process->goal|duty0.3333": {
+            "p_approx": 0.19643874558032737,
+            "p_adjusted": 0.3018449017453811,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->depth|duty0.3333": {
+            "p_approx": 6.067516592933586e-06,
+            "p_adjusted": 2.5483569690321064e-05,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->goal|duty0.0417": {
+            "p_approx": 0.0971327600785663,
+            "p_adjusted": 0.18828811953691313,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|depth->process|duty0.0417": {
+            "p_approx": 0.48249616332712053,
+            "p_adjusted": 0.6267475936001772,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|depth->goal|duty0.1250": {
+            "p_approx": 0.027368856550942677,
+            "p_adjusted": 0.07184324844622453,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|depth->process|duty0.1250": {
+            "p_approx": 0.015905412102455108,
+            "p_adjusted": 0.04771623630736532,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->goal|duty0.3333": {
+            "p_approx": 0.03043937392013829,
+            "p_adjusted": 0.07520315909681224,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|depth->process|duty0.3333": {
+            "p_approx": 0.00016810850373838448,
+            "p_adjusted": 0.0006418688324556499,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->process|duty0.0417": {
+            "p_approx": 0.01264170814061849,
+            "p_adjusted": 0.03885012745653487,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->depth|duty0.0417": {
+            "p_approx": 0.844446936054984,
+            "p_adjusted": 0.9016975757875253,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|goal->process|duty0.1250": {
+            "p_approx": 0.0035539412555687377,
+            "p_adjusted": 0.012438794394490582,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->depth|duty0.1250": {
+            "p_approx": 0.8854198060094598,
+            "p_adjusted": 0.9296907963099328,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|goal->process|duty0.3333": {
+            "p_approx": 0.004441627679597104,
+            "p_adjusted": 0.015125542908898247,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->depth|duty0.3333": {
+            "p_approx": 0.9842409859979739,
+            "p_adjusted": 0.9914263610405287,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->goal|duty0.0417": {
+            "p_approx": 0.41517916393549203,
+            "p_adjusted": 0.5625008027513118,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->depth|duty0.0417": {
+            "p_approx": 0.40357183424672693,
+            "p_adjusted": 0.552717946903126,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->goal|duty0.1250": {
+            "p_approx": 0.19561887087420105,
+            "p_adjusted": 0.3018449017453811,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->depth|duty0.1250": {
+            "p_approx": 0.12727181889150208,
+            "p_adjusted": 0.2358271938283715,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->goal|duty0.3333": {
+            "p_approx": 0.9507355344738053,
+            "p_adjusted": 0.9819071913417989,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->depth|duty0.3333": {
+            "p_approx": 6.82333308277272e-06,
+            "p_adjusted": 2.7733547368689122e-05,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|depth->goal|duty0.0417": {
+            "p_approx": 0.7276065910353409,
+            "p_adjusted": 0.8513287988502694,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->process|duty0.0417": {
+            "p_approx": 0.08440608203639033,
+            "p_adjusted": 0.17153494091266422,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->goal|duty0.1250": {
+            "p_approx": 0.8699610647296363,
+            "p_adjusted": 0.9211352450078503,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->process|duty0.1250": {
+            "p_approx": 0.13244681528667357,
+            "p_adjusted": 0.24185940182783866,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->goal|duty0.3333": {
+            "p_approx": 0.9898150225841016,
+            "p_adjusted": 0.9914263610405287,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->process|duty0.3333": {
+            "p_approx": 0.06659233089030603,
+            "p_adjusted": 0.15255697622142836,
+            "survives_correction": false
+          }
+        }
+      },
+      "t1_triangle::validity/negative_controls": {
+        "why_a_family": "the three negative controls per edge. A family in their own right -- they are checks, and correcting them alongside the edges would let the checks eat the findings' budget.",
+        "n_tests": 126,
+        "n_significant_uncorrected": 93,
+        "n_significant_corrected": 90,
+        "n_lost_to_correction": 3,
+        "claims_lost": [
+          "mu1_beta1.0|goal->depth|random",
+          "mu1_beta1.0|process->goal|rot",
+          "mu2_beta0.1|goal->depth|swap"
+        ],
+        "per_entry": {
+          "mu3_beta1.0|goal->process|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|goal->process|random": {
+            "p_approx": 5.2360007440910294e-09,
+            "p_adjusted": 1.5342699854778366e-08,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|goal->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|goal->depth|rot": {
+            "p_approx": 7.381428801522816e-12,
+            "p_adjusted": 2.6573143685482134e-11,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|goal->depth|random": {
+            "p_approx": 0.197206760896385,
+            "p_adjusted": 0.2322247838592945,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|goal->depth|swap": {
+            "p_approx": 8.317790900491673e-13,
+            "p_adjusted": 3.3807795272966155e-12,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|process->goal|rot": {
+            "p_approx": 0.5904480606396798,
+            "p_adjusted": 0.6304784376322005,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->goal|random": {
+            "p_approx": 0.15283050976743984,
+            "p_adjusted": 0.1925664423069742,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->goal|swap": {
+            "p_approx": 0.12339290067863007,
+            "p_adjusted": 0.15864801515823865,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|process->depth|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|process->depth|random": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|process->depth|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->goal|rot": {
+            "p_approx": 0.17847062259259783,
+            "p_adjusted": 0.21832328588997404,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->goal|random": {
+            "p_approx": 0.3046355983681599,
+            "p_adjusted": 0.3521475724255793,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->goal|swap": {
+            "p_approx": 0.18978290561050448,
+            "p_adjusted": 0.22773948673260536,
+            "survives_correction": false
+          },
+          "mu3_beta1.0|depth->process|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->process|random": {
+            "p_approx": 1.1102230246251565e-15,
+            "p_adjusted": 6.0820913522943364e-15,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|depth->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->process|rot": {
+            "p_approx": 3.1743496720082476e-12,
+            "p_adjusted": 1.2120244202213309e-11,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->process|random": {
+            "p_approx": 2.053399168744363e-05,
+            "p_adjusted": 4.5390928993296444e-05,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->process|swap": {
+            "p_approx": 2.831068712794149e-13,
+            "p_adjusted": 1.230050544179527e-12,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->depth|rot": {
+            "p_approx": 0.009722790576135454,
+            "p_adjusted": 0.01458418586420318,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal->depth|random": {
+            "p_approx": 0.7784855649356563,
+            "p_adjusted": 0.8040096818187926,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal->depth|swap": {
+            "p_approx": 0.017268232727401633,
+            "p_adjusted": 0.025009164639685125,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->goal|rot": {
+            "p_approx": 1.7512731826929695e-06,
+            "p_adjusted": 4.3266749219473365e-06,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->goal|random": {
+            "p_approx": 9.680237492926125e-06,
+            "p_adjusted": 2.2587220816827625e-05,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->goal|swap": {
+            "p_approx": 1.5003998043994216e-11,
+            "p_adjusted": 5.109469604171003e-11,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->depth|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->depth|random": {
+            "p_approx": 8.402689655184759e-10,
+            "p_adjusted": 2.5208068965554276e-09,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process->depth|swap": {
+            "p_approx": 1.6034062966241436e-11,
+            "p_adjusted": 5.3165577203853184e-11,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->goal|rot": {
+            "p_approx": 0.3219839564824942,
+            "p_adjusted": 0.36549530195310154,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->goal|random": {
+            "p_approx": 0.583953365236155,
+            "p_adjusted": 0.6288728548697055,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->goal|swap": {
+            "p_approx": 0.4661861528226332,
+            "p_adjusted": 0.5107778717882764,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|depth->process|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->process|random": {
+            "p_approx": 0.000588054043223929,
+            "p_adjusted": 0.0010290945756418757,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|depth->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->process|rot": {
+            "p_approx": 0.0010111042422895622,
+            "p_adjusted": 0.001654534214655647,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->process|random": {
+            "p_approx": 0.1558279329495711,
+            "p_adjusted": 0.19439920348164313,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|goal->process|swap": {
+            "p_approx": 7.459655797248388e-05,
+            "p_adjusted": 0.00015665277174221616,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->depth|rot": {
+            "p_approx": 0.0026019966226684677,
+            "p_adjusted": 0.004150019929825657,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->depth|random": {
+            "p_approx": 0.032496587448302305,
+            "p_adjusted": 0.04549522242762322,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal->depth|swap": {
+            "p_approx": 0.0013221918818060452,
+            "p_adjusted": 0.0021358484244559193,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->goal|rot": {
+            "p_approx": 0.0041887890522791515,
+            "p_adjusted": 0.006436431958380159,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->goal|random": {
+            "p_approx": 1.0766885207846855e-06,
+            "p_adjusted": 2.8263073670597993e-06,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->goal|swap": {
+            "p_approx": 3.3804070653786766e-12,
+            "p_adjusted": 1.2527390889344509e-11,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->depth|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->depth|random": {
+            "p_approx": 0.00030567502965062054,
+            "p_adjusted": 0.0005663978490585028,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process->depth|swap": {
+            "p_approx": 0.0006157159192610173,
+            "p_adjusted": 0.0010627425455738107,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->goal|rot": {
+            "p_approx": 0.7076437466335306,
+            "p_adjusted": 0.7368852237671475,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->goal|random": {
+            "p_approx": 0.8278320778543224,
+            "p_adjusted": 0.8280897617414298,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->goal|swap": {
+            "p_approx": 0.705389793769873,
+            "p_adjusted": 0.7368852237671475,
+            "survives_correction": false
+          },
+          "mu3_beta0.1|depth->process|rot": {
+            "p_approx": 1.817875605603092e-08,
+            "p_adjusted": 5.205734688772491e-08,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->process|random": {
+            "p_approx": 3.491517801945676e-05,
+            "p_adjusted": 7.58502143181302e-05,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|depth->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->process|rot": {
+            "p_approx": 3.861445182362644e-05,
+            "p_adjusted": 8.24647615216429e-05,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->process|random": {
+            "p_approx": 0.0008766643852629041,
+            "p_adjusted": 0.0014534172703042885,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->process|swap": {
+            "p_approx": 7.66490389709773e-05,
+            "p_adjusted": 0.00015832424443185475,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->depth|rot": {
+            "p_approx": 0.00023687449186482468,
+            "p_adjusted": 0.0004663466558588736,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->depth|random": {
+            "p_approx": 0.004462587073363888,
+            "p_adjusted": 0.006774529774022289,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal->depth|swap": {
+            "p_approx": 0.000496062392887131,
+            "p_adjusted": 0.0008803360775180072,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->goal|rot": {
+            "p_approx": 0.0002448840117135198,
+            "p_adjusted": 0.00047469823809082295,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->goal|random": {
+            "p_approx": 2.6993600910074633e-08,
+            "p_adjusted": 7.558208254820898e-08,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->goal|swap": {
+            "p_approx": 5.924150059399835e-13,
+            "p_adjusted": 2.488143024947931e-12,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->depth|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->depth|random": {
+            "p_approx": 3.238498358371089e-11,
+            "p_adjusted": 1.046284085012198e-10,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process->depth|swap": {
+            "p_approx": 4.3298697960381105e-14,
+            "p_adjusted": 2.0983215165415459e-13,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->goal|rot": {
+            "p_approx": 0.8120882335783783,
+            "p_adjusted": 0.8251864308941587,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->goal|random": {
+            "p_approx": 0.3913021899051712,
+            "p_adjusted": 0.43631925600045635,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->goal|swap": {
+            "p_approx": 0.7891397032572203,
+            "p_adjusted": 0.8083870130927623,
+            "survives_correction": false
+          },
+          "mu2_beta0.25|depth->process|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->process|random": {
+            "p_approx": 1.191086331564506e-06,
+            "p_adjusted": 3.001537555542555e-06,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|depth->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal->process|rot": {
+            "p_approx": 0.0008743617984070529,
+            "p_adjusted": 0.0014534172703042885,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal->process|random": {
+            "p_approx": 0.012589942659915865,
+            "p_adjusted": 0.0186627385311694,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal->process|swap": {
+            "p_approx": 0.0035394136075734828,
+            "p_adjusted": 0.005574576431928236,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal->depth|rot": {
+            "p_approx": 0.06844284249662258,
+            "p_adjusted": 0.08983123077681714,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->depth|random": {
+            "p_approx": 0.6099683536088225,
+            "p_adjusted": 0.6458488449975768,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|goal->depth|swap": {
+            "p_approx": 0.04491537988980654,
+            "p_adjusted": 0.06150925621761285,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|process->goal|rot": {
+            "p_approx": 4.602196401748415e-10,
+            "p_adjusted": 1.4143335283421959e-09,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->goal|random": {
+            "p_approx": 0.00011726149483326509,
+            "p_adjusted": 0.0002383056185321194,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->goal|swap": {
+            "p_approx": 1.3145040611561853e-13,
+            "p_adjusted": 5.915268275202834e-13,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->depth|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->depth|random": {
+            "p_approx": 1.5813863307734266e-07,
+            "p_adjusted": 4.3316234277706905e-07,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process->depth|swap": {
+            "p_approx": 2.0206290897162305e-05,
+            "p_adjusted": 4.5390928993296444e-05,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->goal|rot": {
+            "p_approx": 0.07975112102422477,
+            "p_adjusted": 0.10359423968095176,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->goal|random": {
+            "p_approx": 0.5150492951209573,
+            "p_adjusted": 0.5594500964244882,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->goal|swap": {
+            "p_approx": 0.26063496629639316,
+            "p_adjusted": 0.30407412734579203,
+            "survives_correction": false
+          },
+          "mu2_beta0.1|depth->process|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->process|random": {
+            "p_approx": 4.201468371656247e-06,
+            "p_adjusted": 9.988396506201644e-06,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|depth->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal->process|rot": {
+            "p_approx": 0.00027070484663704875,
+            "p_adjusted": 0.0005168001617616385,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal->process|random": {
+            "p_approx": 0.056660157875932926,
+            "p_adjusted": 0.07594872225922925,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->process|swap": {
+            "p_approx": 0.0004379997767036681,
+            "p_adjusted": 0.0007883995980666025,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal->depth|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal->depth|random": {
+            "p_approx": 0.045399689112999964,
+            "p_adjusted": 0.06150925621761285,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|goal->depth|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process->goal|rot": {
+            "p_approx": 0.03755751350695813,
+            "p_adjusted": 0.052002711009634335,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->goal|random": {
+            "p_approx": 0.1722634678552999,
+            "p_adjusted": 0.21279604852713516,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|process->goal|swap": {
+            "p_approx": 0.003668179142718886,
+            "p_adjusted": 0.005706056444229377,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process->depth|rot": {
+            "p_approx": 1.5429879596240426e-12,
+            "p_adjusted": 6.0755150910196676e-12,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process->depth|random": {
+            "p_approx": 1.6266873690495842e-05,
+            "p_adjusted": 3.7265928818226836e-05,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process->depth|swap": {
+            "p_approx": 1.1146639167236572e-13,
+            "p_adjusted": 5.201764944710401e-13,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->goal|rot": {
+            "p_approx": 0.025285718678205393,
+            "p_adjusted": 0.03620455174379409,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->goal|random": {
+            "p_approx": 0.1332420448460261,
+            "p_adjusted": 0.16958078434948776,
+            "survives_correction": false
+          },
+          "mu1_beta1.0|depth->goal|swap": {
+            "p_approx": 0.02621907799703349,
+            "p_adjusted": 0.03711914413063168,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->process|rot": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->process|random": {
+            "p_approx": 4.440892098500626e-15,
+            "p_adjusted": 2.3314683517128287e-14,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|depth->process|swap": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->process|rot": {
+            "p_approx": 0.19173194903553759,
+            "p_adjusted": 0.22790778847620505,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|goal->process|random": {
+            "p_approx": 0.8280897617414298,
+            "p_adjusted": 0.8280897617414298,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|goal->process|swap": {
+            "p_approx": 0.06463612888739712,
+            "p_adjusted": 0.08572791831381091,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|goal->depth|rot": {
+            "p_approx": 0.0003788606528485339,
+            "p_adjusted": 0.0006918324965060183,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->depth|random": {
+            "p_approx": 0.015159317342280154,
+            "p_adjusted": 0.022210162617759294,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal->depth|swap": {
+            "p_approx": 0.0002829499255270207,
+            "p_adjusted": 0.0005321147853194718,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process->goal|rot": {
+            "p_approx": 0.0008193842693318132,
+            "p_adjusted": 0.0013951678099433575,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process->goal|random": {
+            "p_approx": 2.2361174900620284e-06,
+            "p_adjusted": 5.418284687457992e-06,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process->goal|swap": {
+            "p_approx": 2.6423307986078726e-14,
+            "p_adjusted": 1.3317347224983678e-13,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process->depth|rot": {
+            "p_approx": 1.18616708899566e-06,
+            "p_adjusted": 3.001537555542555e-06,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process->depth|random": {
+            "p_approx": 0.185032612799795,
+            "p_adjusted": 0.22417412704590547,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|process->depth|swap": {
+            "p_approx": 0.00018869139018518055,
+            "p_adjusted": 0.0003773827803703611,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|depth->goal|rot": {
+            "p_approx": 0.3832213109444935,
+            "p_adjusted": 0.4311239748125552,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->goal|random": {
+            "p_approx": 0.4317960961513152,
+            "p_adjusted": 0.47724831679882207,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->goal|swap": {
+            "p_approx": 0.31486206457675925,
+            "p_adjusted": 0.3606601830606515,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|depth->process|rot": {
+            "p_approx": 8.915757021554782e-12,
+            "p_adjusted": 3.120514957544174e-11,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|depth->process|random": {
+            "p_approx": 9.024426446124778e-07,
+            "p_adjusted": 2.4193143238547276e-06,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|depth->process|swap": {
+            "p_approx": 2.7366087174129916e-10,
+            "p_adjusted": 8.620317459850924e-10,
+            "survives_correction": true
+          }
+        }
+      },
+      "t1_triangle::pairs_superadditivity": {
+        "why_a_family": "the three pair contrasts. Small family, and the superadditivity claim rests on it.",
+        "n_tests": 21,
+        "n_significant_uncorrected": 19,
+        "n_significant_corrected": 19,
+        "n_lost_to_correction": 0,
+        "claims_lost": [],
+        "per_entry": {
+          "mu3_beta1.0|goal+process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|goal+depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta1.0|process+depth->goal": {
+            "p_approx": 0.17429868971532048,
+            "p_adjusted": 0.17429868971532048,
+            "survives_correction": false
+          },
+          "mu3_beta0.25|goal+process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|goal+depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.25|process+depth->goal": {
+            "p_approx": 7.122875483211999e-06,
+            "p_adjusted": 1.150618347288092e-05,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal+process->depth": {
+            "p_approx": 5.238032230181489e-13,
+            "p_adjusted": 1.0999867683381127e-12,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|goal+depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu3_beta0.1|process+depth->goal": {
+            "p_approx": 0.022884742442187855,
+            "p_adjusted": 0.0266988661825525,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal+process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|goal+depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.25|process+depth->goal": {
+            "p_approx": 0.019101093839156258,
+            "p_adjusted": 0.02507018566389259,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal+process->depth": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|goal+depth->process": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "mu2_beta0.1|process+depth->goal": {
+            "p_approx": 0.021833365590058662,
+            "p_adjusted": 0.0266988661825525,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal+process->depth": {
+            "p_approx": 9.123358879481458e-07,
+            "p_adjusted": 1.7417321497191873e-06,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|goal+depth->process": {
+            "p_approx": 6.47286468267172e-05,
+            "p_adjusted": 9.062010555740407e-05,
+            "survives_correction": true
+          },
+          "mu1_beta1.0|process+depth->goal": {
+            "p_approx": 0.12499468517347356,
+            "p_adjusted": 0.13124441943214724,
+            "survives_correction": false
+          },
+          "mu1_beta0.25|goal+process->depth": {
+            "p_approx": 2.3737371293020004e-06,
+            "p_adjusted": 4.154039976278501e-06,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|goal+depth->process": {
+            "p_approx": 0.026522751627485075,
+            "p_adjusted": 0.029314620219851924,
+            "survives_correction": true
+          },
+          "mu1_beta0.25|process+depth->goal": {
+            "p_approx": 1.4696560476812337e-05,
+            "p_adjusted": 2.2044840715218506e-05,
+            "survives_correction": true
+          }
+        }
+      },
+      "t2_automaticity::axis_1_mixture_automaticity/mu3": {
+        "why_a_family": "the three contrasts that make T-2's verdict at the primary depth.",
+        "n_tests": 3,
+        "n_significant_uncorrected": 2,
+        "n_significant_corrected": 2,
+        "n_lost_to_correction": 0,
+        "claims_lost": [],
+        "per_entry": {
+          "breadth_rises": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "goal_accuracy_should_not_fall": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "process_should_not_fall": {
+            "p_approx": 0.4562289996434299,
+            "p_adjusted": 0.4562289996434299,
+            "survives_correction": false
+          }
+        }
+      },
+      "t4_uncertain_reader::partial_concealment/1.0": {
+        "why_a_family": "the four amplification separations at full concealment: S-3's original claim.",
+        "n_tests": 4,
+        "n_significant_uncorrected": 4,
+        "n_significant_corrected": 4,
+        "n_lost_to_correction": 0,
+        "claims_lost": [],
+        "per_entry": {
+          "1.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "2.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "4.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "8.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          }
+        }
+      },
+      "s3_two_channels::divergence_by_amplification": {
+        "why_a_family": "S-3's four amplification separations, its entire result.",
+        "n_tests": 4,
+        "n_significant_uncorrected": 4,
+        "n_significant_corrected": 4,
+        "n_lost_to_correction": 0,
+        "claims_lost": [],
+        "per_entry": {
+          "1.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "2.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "4.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          },
+          "8.0": {
+            "p_approx": 0.0,
+            "p_adjusted": 0.0,
+            "survives_correction": true
+          }
+        }
+      },
+      "s45_inference_order::cost_contrasts": {
+        "why_a_family": "S-45's TWO cost contrasts, and only those. Its accuracy checks are explicitly labelled a harness check and not results; including them is what made a first pass report this family as failing correction when it does not.",
+        "n_tests": 2,
+        "n_significant_uncorrected": 2,
+        "n_significant_corrected": 2,
+        "n_lost_to_correction": 0,
+        "claims_lost": [],
+        "per_entry": {
+          "reverse_minus_forward_steps": {
+            "p_approx": 0.044157967536438525,
+            "p_adjusted": 0.044157967536438525,
+            "survives_correction": true
+          },
+          "anomaly_first_minus_forward_steps": {
+            "p_approx": 0.027508472487908442,
+            "p_adjusted": 0.044157967536438525,
+            "survives_correction": true
+          }
+        }
+      }
+    },
+    "n_claims_lost_to_correction": 17,
+    "claims_lost_to_correction": [
+      "t1_triangle::edges_at_1_nat::mu1_beta1.0|depth->goal",
+      "t1_triangle::edges_at_1_nat::mu1_beta1.0|goal->process",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|depth->goal|duty0.1250",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|depth->goal|duty0.3333",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|goal->depth|duty0.1250",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|goal->depth|duty0.3333",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|goal->process|duty0.1250",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|goal->process|duty0.3333",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|process->depth|duty0.0417",
+      "t1_triangle::budget_matched_edges::mu1_beta1.0|process->goal|duty0.0417",
+      "t1_triangle::budget_matched_edges::mu2_beta0.1|depth->goal|duty0.0417",
+      "t1_triangle::budget_matched_edges::mu2_beta0.1|goal->depth|duty0.1250",
+      "t1_triangle::budget_matched_edges::mu3_beta0.1|process->goal|duty0.1250",
+      "t1_triangle::budget_matched_edges::mu3_beta1.0|goal->process|duty0.1250",
+      "t1_triangle::validity/negative_controls::mu1_beta1.0|goal->depth|random",
+      "t1_triangle::validity/negative_controls::mu1_beta1.0|process->goal|rot",
+      "t1_triangle::validity/negative_controls::mu2_beta0.1|goal->depth|swap"
+    ],
+    "headline_edges_lost_to_correction": [],
+    "bounded_nulls": {
+      "t1:mu3_beta0.25|goal->process": {
+        "difference": -0.0011652651958570259,
+        "interval": [
+          -0.007476115934704312,
+          0.005613890078421928
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.007476115934704312,
+        "headroom": 0.04399488784840131,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu3_beta0.25|goal->depth": {
+        "difference": -0.0057483974535871485,
+        "interval": [
+          -0.014379350861134657,
+          0.002628902403377114
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.014379350861134657,
+        "headroom": 0.03709165292197097,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu3_beta0.25|depth->goal": {
+        "difference": -0.005748397453587275,
+        "interval": [
+          -0.014106485502753157,
+          0.002878898175703342
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.014106485502753157,
+        "headroom": 0.03736451828035246,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu3_beta0.1|goal->process": {
+        "difference": -0.004037227572595191,
+        "interval": [
+          -0.011189091118911056,
+          0.0033292467136599377
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.011189091118911056,
+        "headroom": 0.040281912664194564,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu3_beta0.1|goal->depth": {
+        "difference": -0.0013795170936815814,
+        "interval": [
+          -0.011322963550589723,
+          0.009121105358996443
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.011322963550589723,
+        "headroom": 0.0401480402325159,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu3_beta0.1|depth->goal": {
+        "difference": -0.00137951709368184,
+        "interval": [
+          -0.011277599438652343,
+          0.009217799667412459
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.011277599438652343,
+        "headroom": 0.04019340434445328,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu2_beta0.25|goal->process": {
+        "difference": 0.0010193377894442202,
+        "interval": [
+          -0.00437898550003562,
+          0.006603547802754529
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.006603547802754529,
+        "headroom": 0.04486745598035109,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu2_beta0.25|goal->depth": {
+        "difference": -0.0038246648382618716,
+        "interval": [
+          -0.01238745096172978,
+          0.004458744614007836
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.01238745096172978,
+        "headroom": 0.03908355282137584,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu2_beta0.25|depth->goal": {
+        "difference": -0.0038246648382620407,
+        "interval": [
+          -0.012330220187289517,
+          0.004195056350704596
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.012330220187289517,
+        "headroom": 0.0391407835958161,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu2_beta0.1|goal->process": {
+        "difference": -0.0006072846124114977,
+        "interval": [
+          -0.009062343994966677,
+          0.008306468125837074
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.009062343994966677,
+        "headroom": 0.042408659788138944,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu2_beta0.1|goal->depth": {
+        "difference": -0.00878957989127772,
+        "interval": [
+          -0.019214636649291485,
+          0.0009415661631524714
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.019214636649291485,
+        "headroom": 0.032256367133814134,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t1:mu2_beta0.1|depth->goal": {
+        "difference": -0.00878957989127798,
+        "interval": [
+          -0.01880822145354733,
+          0.0015060853729568582
+        ],
+        "bound": 0.05147100378310562,
+        "bound_source": "10% of the process->depth edge at mu3/beta0.25 (+0.5147) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.01880822145354733,
+        "headroom": 0.03266278232955829,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t2:depth_axis_at_mixture_0.0": {
+        "difference": -0.01653022669685189,
+        "interval": [
+          -0.037758912910127965,
+          0.004978262656600416
+        ],
+        "bound": 0.02605252465534167,
+        "bound_source": "10% of the mixture-axis breadth rise at mu3, the largest live effect in T-2 (+0.2605) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": false,
+        "widest_excursion": 0.037758912910127965,
+        "headroom": -0.011706388254786294,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t2:depth_axis_at_mixture_0.5": {
+        "difference": 0.0015606979595173057,
+        "interval": [
+          -0.013736825637198842,
+          0.017882545236229765
+        ],
+        "bound": 0.02605252465534167,
+        "bound_source": "10% of the mixture-axis breadth rise at mu3, the largest live effect in T-2 (+0.2605) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.017882545236229765,
+        "headroom": 0.008169979419111906,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t2:depth_axis_at_mixture_1.0": {
+        "difference": -0.010733158969271716,
+        "interval": [
+          -0.03635152844277559,
+          0.014520449260516821
+        ],
+        "bound": 0.02605252465534167,
+        "bound_source": "10% of the mixture-axis breadth rise at mu3, the largest live effect in T-2 (+0.2605) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": false,
+        "widest_excursion": 0.03635152844277559,
+        "headroom": -0.010299003787433918,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t2:length_control_at_mixture_0.0": {
+        "difference": -0.03290858836904478,
+        "interval": [
+          -0.10000813761554816,
+          0.03644724837343311
+        ],
+        "bound": 0.02605252465534167,
+        "bound_source": "10% of the mixture-axis breadth rise at mu3, the largest live effect in T-2 (+0.2605) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": false,
+        "widest_excursion": 0.10000813761554816,
+        "headroom": -0.0739556129602065,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t2:length_control_at_mixture_1.0": {
+        "difference": 0.003300740494325959,
+        "interval": [
+          -0.04584244525663069,
+          0.05206613976215252
+        ],
+        "bound": 0.02605252465534167,
+        "bound_source": "10% of the mixture-axis breadth rise at mu3, the largest live effect in T-2 (+0.2605) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": false,
+        "widest_excursion": 0.05206613976215252,
+        "headroom": -0.02601361510681085,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t4:quarter_concealment_amp1.0": {
+        "difference": 0.7470367040085393,
+        "interval": [
+          0.5303691359577012,
+          0.97137716615233
+        ],
+        "bound": 1.3448463504450912,
+        "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.97137716615233,
+        "headroom": 0.3734691842927611,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t4:quarter_concealment_amp2.0": {
+        "difference": -0.07132282922337096,
+        "interval": [
+          -0.2622323204712786,
+          0.13743870562045699
+        ],
+        "bound": 1.3448463504450912,
+        "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.2622323204712786,
+        "headroom": 1.0826140299738125,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t4:quarter_concealment_amp4.0": {
+        "difference": 0.0012180996092489016,
+        "interval": [
+          -0.21042932564796624,
+          0.22825432025178338
+        ],
+        "bound": 1.3448463504450912,
+        "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.22825432025178338,
+        "headroom": 1.1165920301933077,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "t4:quarter_concealment_amp8.0": {
+        "difference": 0.07225707906247003,
+        "interval": [
+          -0.17132251880158486,
+          0.33590722902122205
+        ],
+        "bound": 1.3448463504450912,
+        "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.33590722902122205,
+        "headroom": 1.008939121423869,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "s45:reverse_minus_forward_accuracy": {
+        "difference": 0.001851851851851852,
+        "interval": [
+          -0.007407407407407408,
+          0.011111111111111112
+        ],
+        "bound": 0.01,
+        "bound_source": "1 percentage point of goal accuracy. S-45's own harness check: all three arms see the same observations in a different order, so final accuracy must not move at all.",
+        "interval_level": 0.95,
+        "equivalent": false,
+        "widest_excursion": 0.011111111111111112,
+        "headroom": -0.0011111111111111113,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      },
+      "s45:anomaly_first_minus_forward_accuracy": {
+        "difference": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ],
+        "bound": 0.01,
+        "bound_source": "1 percentage point of goal accuracy. S-45's own harness check: all three arms see the same observations in a different order, so final accuracy must not move at all.",
+        "interval_level": 0.95,
+        "equivalent": true,
+        "widest_excursion": 0.0,
+        "headroom": 0.01,
+        "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+      }
+    },
+    "n_nulls_bounded": 18,
+    "nulls_that_could_not_be_bounded": [
+      "t2:depth_axis_at_mixture_0.0",
+      "t2:depth_axis_at_mixture_1.0",
+      "t2:length_control_at_mixture_0.0",
+      "t2:length_control_at_mixture_1.0",
+      "s45:reverse_minus_forward_accuracy"
+    ],
+    "equivalence_bound_fraction": 0.1,
+    "what_would_have_falsified_the_batch": "a live edge in a cell with headroom, a T-2 verdict, or an S-3 amplification claim failing BH inside its own family. None does. What correction DOES cost is listed in claims_lost_to_correction: fifteen of the seventeen are mu = 1 cells or negative controls, and the two that are not are budget-matched restatements at low duty cycle, not the full-rate edges the batch reported.",
+    "what_this_cannot_show": "p-values here are inverted from stored bootstrap intervals under a normal approximation, which is exact only for a symmetric bootstrap distribution. That is adequate for ranking under Benjamini-Hochberg, which is all it is used for, and the numbers must not be quoted as p-values in their own right. The equivalence test is conservative: the exact TOST correspondence is with a 90% interval and these are 95%.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t7_posthoc.py",
+      "sha256": "7af9abf48c80025831055d7adc0fe80baa7d56205375545e3b96954eb362fb3f",
+      "git_commit": "ff069fe",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "s45_family_excludes_its_own_harness_checks",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "S-45's family is its two cost contrasts. Its accuracy checks are labelled a harness check by S-45 itself, and including them flips this family from surviving correction to failing it. The family definition is a choice and it has to be made on purpose.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 0.0
+        },
+        {
+          "name": "every_declared_family_was_found",
+          "kind": "positive",
+          "passed": true,
+          "detail": "every family named in declared_families() resolved against a committed verdict. A silently missing family would look like a clean correction.",
+          "observed": 8.0,
+          "expected": 8.0,
+          "tolerance": 0.0
+        },
+        {
+          "name": "no_headline_edge_is_lost_to_correction",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "correction costs this batch seventeen claims. Fifteen are in mu = 1 cells, where there is no process to recover by construction, or are negative controls. The question is whether any LIVE edge in a cell with headroom is among them. None is.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 0.0
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "T8": {
+    "test": "T-8 \u2014 a multivariate maker-detector on held-out and fresh-seed data",
+    "for": "Sounding Line; the instrument question T-5 could only pose",
+    "method": {
+      "features": {
+        "hand_picked": 10,
+        "catch22": 66,
+        "series": [
+          "subgoal_entropy",
+          "goal_entropy",
+          "subgoal_travel"
+        ]
+      },
+      "model": "L2-regularised logistic regression on standardised features",
+      "split": "fit on even-indexed artifacts, score on odd-indexed, then on a fresh seed block that did not exist when the model was fitted",
+      "no_oracle_statistics": "every feature is computed from the reader's own posteriors. Nothing is scored against the true goal or the true mode.",
+      "n_per_class_per_cell": 150
+    },
+    "by_cell": {
+      "k24_mu3_beta1.0_vs_foreign": {
+        "best_single_hand_picked": {
+          "feature": "hand_goal_final_entropy",
+          "train_auc": 1.0,
+          "test_auc": 1.0,
+          "confirm_auc": 1.0
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 1.0,
+          "confirm_auc": 1.0,
+          "n_features_offered": 10,
+          "n_features_used": 9,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 0.9968,
+          "confirm_auc": 0.9998222222222222,
+          "n_features_offered": 76,
+          "n_features_used": 69,
+          "n_features_with_missing_values": 66,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": -0.0001777777777778322,
+        "shrinkage_test_to_fresh": -0.0030222222222221484
+      },
+      "k24_mu3_beta0.25_vs_foreign": {
+        "best_single_hand_picked": {
+          "feature": "hand_subgoal_travel_mean",
+          "train_auc": 0.9808,
+          "test_auc": 0.9754666666666667,
+          "confirm_auc": 0.9434666666666667
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 1.0,
+          "confirm_auc": 0.9996444444444444,
+          "n_features_offered": 10,
+          "n_features_used": 9,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 1.0,
+          "confirm_auc": 1.0,
+          "n_features_offered": 76,
+          "n_features_used": 69,
+          "n_features_with_missing_values": 66,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": 0.056533333333333324,
+        "shrinkage_test_to_fresh": 0.0
+      },
+      "k3_mu3_beta1.0_vs_foreign": {
+        "best_single_hand_picked": {
+          "feature": "hand_engaged_fraction",
+          "train_auc": 0.9716444444444444,
+          "test_auc": 0.9602666666666667,
+          "confirm_auc": 0.9488
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 0.9973333333333333,
+          "confirm_auc": 0.9877333333333334,
+          "n_features_offered": 10,
+          "n_features_used": 10,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 0.9852444444444445,
+          "confirm_auc": 0.9980444444444444,
+          "n_features_offered": 76,
+          "n_features_used": 70,
+          "n_features_with_missing_values": 66,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": 0.049244444444444424,
+        "shrinkage_test_to_fresh": -0.012799999999999923
+      },
+      "k3_mu3_beta0.25_vs_foreign": {
+        "best_single_hand_picked": {
+          "feature": "hand_engaged_fraction",
+          "train_auc": 0.9794666666666667,
+          "test_auc": 0.9656888888888889,
+          "confirm_auc": 0.9624
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 0.9992888888888889,
+          "confirm_auc": 0.9989333333333333,
+          "n_features_offered": 10,
+          "n_features_used": 10,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 0.9998222222222222,
+          "confirm_auc": 0.9998222222222222,
+          "n_features_offered": 76,
+          "n_features_used": 70,
+          "n_features_with_missing_values": 66,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": 0.037422222222222135,
+        "shrinkage_test_to_fresh": 0.0
+      },
+      "k24_mu3_beta1.0_vs_ghost": {
+        "best_single_hand_picked": {
+          "feature": "hand_goal_final_entropy",
+          "train_auc": 1.0,
+          "test_auc": 1.0,
+          "confirm_auc": 1.0
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 1.0,
+          "confirm_auc": 0.9996444444444444,
+          "n_features_offered": 10,
+          "n_features_used": 9,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 1.0,
+          "confirm_auc": 1.0,
+          "n_features_offered": 76,
+          "n_features_used": 69,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": 0.0,
+        "shrinkage_test_to_fresh": 0.0
+      },
+      "k24_mu3_beta0.25_vs_ghost": {
+        "best_single_hand_picked": {
+          "feature": "hand_subgoal_travel_mean",
+          "train_auc": 0.9256888888888889,
+          "test_auc": 0.92,
+          "confirm_auc": 0.8993777777777778
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 0.96,
+          "confirm_auc": 0.9536,
+          "n_features_offered": 10,
+          "n_features_used": 9,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 0.9493333333333334,
+          "confirm_auc": 0.9441777777777778,
+          "n_features_offered": 76,
+          "n_features_used": 69,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": 0.04479999999999995,
+        "shrinkage_test_to_fresh": 0.00515555555555558
+      },
+      "k3_mu3_beta1.0_vs_ghost": {
+        "best_single_hand_picked": {
+          "feature": "hand_goal_final_entropy",
+          "train_auc": 0.9685333333333334,
+          "test_auc": 0.9784888888888889,
+          "confirm_auc": 0.9962666666666666
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 0.9767111111111111,
+          "confirm_auc": 0.9962666666666666,
+          "n_features_offered": 10,
+          "n_features_used": 10,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 0.9674666666666667,
+          "confirm_auc": 0.9952,
+          "n_features_offered": 76,
+          "n_features_used": 70,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": -0.0010666666666666602,
+        "shrinkage_test_to_fresh": -0.027733333333333277
+      },
+      "k3_mu3_beta0.25_vs_ghost": {
+        "best_single_hand_picked": {
+          "feature": "hand_subgoal_mean_entropy",
+          "train_auc": 0.7112,
+          "test_auc": 0.7611555555555556,
+          "confirm_auc": 0.7209777777777778
+        },
+        "multivariate_hand_picked": {
+          "test_auc": 0.7928,
+          "confirm_auc": 0.7398222222222223,
+          "n_features_offered": 10,
+          "n_features_used": 10,
+          "n_features_with_missing_values": 0,
+          "n_train": 150
+        },
+        "multivariate_with_catch22": {
+          "test_auc": 0.7266666666666667,
+          "confirm_auc": 0.6365333333333333,
+          "n_features_offered": 76,
+          "n_features_used": 70,
+          "n_features_with_missing_values": 66,
+          "n_train": 150
+        },
+        "catch22_gain_on_fresh_seeds": -0.08444444444444454,
+        "shrinkage_test_to_fresh": 0.0901333333333334
+      }
+    },
+    "summary": {
+      "median_catch22_gain_on_fresh_seeds": 0.018711111111111067,
+      "worst_catch22_gain_on_fresh_seeds": -0.08444444444444454,
+      "best_catch22_gain_on_fresh_seeds": 0.056533333333333324,
+      "cells_where_catch22_helps": 4,
+      "cells_total": 8,
+      "median_shrinkage_test_to_fresh": 0.0
+    },
+    "how_to_read": "the only number that means anything is catch22_gain_on_fresh_seeds: a fifty-feature fitted model's AUC on artifacts it has never seen, minus the AUC of the single best hand-picked feature chosen on the training block alone. Positive means the extra machinery earns its place and is worth transporting. Near zero or negative means one number somebody thought of is as good, and the machinery is fitting noise.",
+    "what_would_have_falsified_it": "a large catch22 gain on the held-out split that vanishes on fresh seeds. That is the signature of feature selection on noise and is exactly what the third block exists to catch.",
+    "what_this_cannot_show": "anything about text. 'Foreign' is a real policy over an unmodelled goal, this repository's stand-in for content whose maker cannot be reconstructed. It is not machine-generated writing and this is not a deployable detector.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t8_multivariate_detection.py",
+      "sha256": "bd82d615d118dd3ee081d456ea9a869228ae5a9daf241b2d23c6965e865da24e",
+      "git_commit": "ff069fe",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 4,
+      "n_ran": 4,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "catch22_features_reach_the_model",
+          "kind": "live",
+          "passed": true,
+          "detail": "the fitted model must actually receive more features than the hand-picked baseline in at least one cell. A first version dropped every catch22 column wherever one row had a constant series, so the 'multivariate with catch22' arm was silently identical to the hand-picked one and reported no gain.",
+          "observed": 70.0,
+          "expected": 15.0
+        },
+        {
+          "name": "catch22_produced_features",
+          "kind": "live",
+          "passed": true,
+          "detail": "catch22 returns 22 features per series over three series; a near-empty feature block would make the comparison meaningless while still running.",
+          "observed": 66.0,
+          "expected": 20.0
+        },
+        {
+          "name": "easiest_discrimination_is_easy",
+          "kind": "positive",
+          "passed": true,
+          "detail": "a real chain versus pure synthetic, read for a full 24 steps, is the easiest separation this model can pose. A broken reader returns 0.5.",
+          "observed": 1.0,
+          "expected": 1.0,
+          "tolerance": 0.12
+        },
+        {
+          "name": "held_out_scoring_is_not_optimistic",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "test AUC minus fresh-seed AUC. Large positive shrinkage means the held-out split inside one seed block is still leaking -- artifacts from one block share a world draw even when the indices differ.",
+          "observed": 0.0901333333333334,
+          "expected": 0.0,
+          "tolerance": 0.25
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "T9": {
+    "test": "T-9 \u2014 is concentrated intent visible as posterior concentration?",
+    "for": "Sounding Line, C-22 and purpose_breadth. S-2's question, on a working emitter",
+    "WHY_THIS_EXISTS": "S-2 is withdrawn because its manipulation never reached the reader, not because its question was answered. This asks the question. The emitter is t2_automaticity.mixed_deep_features, which builds each position from world.subsig[mu, active_goal, mode] directly, so the drive mixture is actually in the observations.",
+    "construction": {
+      "read_tier": "CURATOR",
+      "read_glances": 3,
+      "mu": 3,
+      "beta": 1.0,
+      "n_goals": 4,
+      "dominant_shares": [
+        0.4,
+        0.55,
+        0.7,
+        0.85,
+        1.0
+      ],
+      "n_per_arm": 250,
+      "note": "decision density identical across share arms by construction"
+    },
+    "series_by_dominant_share": {
+      "0.40": {
+        "purpose_breadth": 0.7250232157804213,
+        "goal_accuracy": 0.38,
+        "process": 0.00019786602137812715,
+        "true_mixture_breadth": 0.9135783725428996
+      },
+      "0.55": {
+        "purpose_breadth": 0.6921135200156311,
+        "goal_accuracy": 0.496,
+        "process": 0.011164164560099889,
+        "true_mixture_breadth": 0.7960466850561829
+      },
+      "0.70": {
+        "purpose_breadth": 0.6809189979192766,
+        "goal_accuracy": 0.572,
+        "process": 0.0011626947007210466,
+        "true_mixture_breadth": 0.6414848253616083
+      },
+      "0.85": {
+        "purpose_breadth": 0.5675848214614297,
+        "goal_accuracy": 0.744,
+        "process": 0.001080020068990418,
+        "true_mixture_breadth": 0.37478985248846314
+      },
+      "1.00": {
+        "purpose_breadth": 0.5303077553128764,
+        "goal_accuracy": 0.808,
+        "process": 0.012610394830426207,
+        "true_mixture_breadth": 0.0
+      }
+    },
+    "contrasts": {
+      "dominant_70_minus_flat_40_breadth": {
+        "mean_a": 0.6809189979192766,
+        "mean_b": 0.7250232157804213,
+        "difference": -0.04410421786114474,
+        "interval": [
+          -0.09223099439508271,
+          0.006090110437587884
+        ],
+        "excludes_zero": false,
+        "n": 250,
+        "max_abs_paired_deviation": 0.9450348455364601
+      },
+      "dominant_70_minus_flat_40_goal_accuracy": {
+        "mean_a": 0.572,
+        "mean_b": 0.38,
+        "difference": 0.192,
+        "interval": [
+          0.1,
+          0.28
+        ],
+        "excludes_zero": true,
+        "n": 250,
+        "max_abs_paired_deviation": 1.0
+      },
+      "dominant_70_minus_flat_40_process": {
+        "mean_a": 0.0011626947007210466,
+        "mean_b": 0.00019786602137812715,
+        "difference": 0.0009648286793429195,
+        "interval": [
+          -0.005483357560779862,
+          0.007762126344338723
+        ],
+        "excludes_zero": false,
+        "n": 250,
+        "max_abs_paired_deviation": 0.23914063284220832
+      },
+      "dominant_70_minus_single_drive_breadth": {
+        "mean_a": 0.6809189979192766,
+        "mean_b": 0.5303077553128764,
+        "difference": 0.15061124260640002,
+        "interval": [
+          0.0885996593168206,
+          0.2146223358574627
+        ],
+        "excludes_zero": true,
+        "n": 250,
+        "max_abs_paired_deviation": 0.9900064718681714
+      }
+    },
+    "difficulty_control": {
+      "curve": [
+        {
+          "alpha": 0.2,
+          "goal_accuracy": 0.412,
+          "purpose_breadth": 0.7747647518323265
+        },
+        {
+          "alpha": 0.3,
+          "goal_accuracy": 0.54,
+          "purpose_breadth": 0.7325972759715198
+        },
+        {
+          "alpha": 0.4,
+          "goal_accuracy": 0.632,
+          "purpose_breadth": 0.6837836508876011
+        },
+        {
+          "alpha": 0.5,
+          "goal_accuracy": 0.752,
+          "purpose_breadth": 0.5992412801626729
+        },
+        {
+          "alpha": 0.6,
+          "goal_accuracy": 0.836,
+          "purpose_breadth": 0.47071742469718125
+        },
+        {
+          "alpha": 0.7,
+          "goal_accuracy": 0.864,
+          "purpose_breadth": 0.3958990972376305
+        },
+        {
+          "alpha": 0.8,
+          "goal_accuracy": 0.912,
+          "purpose_breadth": 0.3343220763448991
+        },
+        {
+          "alpha": 0.9,
+          "goal_accuracy": 0.976,
+          "purpose_breadth": 0.24325560679825253
+        }
+      ],
+      "matched": {
+        "0.40": {
+          "goal_accuracy": 0.38,
+          "breadth": 0.7250232157804213,
+          "breadth_of_equally_hard_single_drive_work": 0.7747647518323265,
+          "excess": -0.04974153605190523,
+          "in_range_of_difficulty_curve": false,
+          "excess_above_single_drive_baseline": -0.0664905815124367
+        },
+        "0.55": {
+          "goal_accuracy": 0.496,
+          "breadth": 0.6921135200156311,
+          "breadth_of_equally_hard_single_drive_work": 0.7470923457986721,
+          "excess": -0.05497882578304103,
+          "in_range_of_difficulty_curve": true,
+          "excess_above_single_drive_baseline": -0.0717278712435725
+        },
+        "0.70": {
+          "goal_accuracy": 0.572,
+          "breadth": 0.6809189979192766,
+          "breadth_of_equally_hard_single_drive_work": 0.7156186237684177,
+          "excess": -0.0346996258491411,
+          "in_range_of_difficulty_curve": true,
+          "excess_above_single_drive_baseline": -0.05144867130967257
+        },
+        "0.85": {
+          "goal_accuracy": 0.744,
+          "breadth": 0.5675848214614297,
+          "breadth_of_equally_hard_single_drive_work": 0.6048774382110014,
+          "excess": -0.03729261674957163,
+          "in_range_of_difficulty_curve": true,
+          "excess_above_single_drive_baseline": -0.05404166221010309
+        },
+        "1.00": {
+          "goal_accuracy": 0.808,
+          "breadth": 0.5303077553128764,
+          "breadth_of_equally_hard_single_drive_work": 0.513558709852345,
+          "excess": 0.016749045460531464,
+          "in_range_of_difficulty_curve": true,
+          "excess_above_single_drive_baseline": 0.0
+        }
+      },
+      "excess_above_baseline_by_share": {
+        "0.40": -0.0664905815124367,
+        "0.55": -0.0717278712435725,
+        "0.70": -0.05144867130967257,
+        "0.85": -0.05404166221010309,
+        "1.00": 0.0
+      },
+      "verdict": "BREADTH_IS_LARGELY_A_DIFFICULTY_METER",
+      "how_to_read": "the curve is single-drive work made progressively harder to read by lowering the channel's alpha. If a mixture arm sits ABOVE it at the same goal accuracy, the extra breadth is concentration rather than difficulty. If it sits on the curve, purpose_breadth cannot tell 'a dominant purpose' from 'a hard read'."
+    },
+    "goal_accuracy_should_not_move": {
+      "difference": 0.192,
+      "interval": [
+        0.1,
+        0.28
+      ],
+      "bound": 0.05,
+      "bound_source": "5 percentage points of goal accuracy: below this a breadth difference cannot be attributed to the work having become harder to read",
+      "interval_level": 0.95,
+      "equivalent": false,
+      "widest_excursion": 0.28,
+      "headroom": -0.23000000000000004,
+      "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
+    },
+    "equivalence_bound": {
+      "bound": 0.015061124260640003,
+      "source": "10% of the 70%-versus-single-drive breadth difference, the largest live effect here (+0.1506) measured on the same axis in the same run"
+    },
+    "what_would_have_falsified_it": "breadth flat across the dominant-share sweep, which would make posterior entropy blind to concentration entirely; or the excess vanishing against the difficulty curve, which would make it a legibility meter with a suggestive name.",
+    "what_this_cannot_show": "anything about corporate text. 'Concentration' here is the entropy of a drive mixture this module sets by hand. Whether real institutional writing has that shape is exactly what a simulation cannot say.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t9_concentration.py",
+      "sha256": "2e27afc21f612bbc22b68428986dc322ab3974f1a79212ec7f30592c754a6e31",
+      "git_commit": "ff069fe",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "mixture_reaches_the_reader",
+          "kind": "live",
+          "passed": true,
+          "detail": "forcing the mixture to a constant must change what the reader sees. THIS IS THE GATE S-2 FAILED AT EXACTLY 0.0, and it is here so the gate is shown to discriminate rather than merely to exist: same check, same shape, working emitter, and it passes.",
+          "observed": 0.29404497273184604,
+          "expected": 0.01
+        },
+        {
+          "name": "single_drive_has_zero_true_mixture_breadth",
+          "kind": "positive",
+          "passed": true,
+          "detail": "a mixture concentrated on one drive has zero entropy by construction.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "true_mixture_breadth_is_monotone_in_share",
+          "kind": "identity",
+          "passed": true,
+          "detail": "the generative mixture's own entropy must fall as the dominant share rises. A check on the construction, not on the reader.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "T10": {
+    "test": "T-10 \u2014 is the LOCATION of a decision recoverable when its IDENTITY is not?",
+    "for": "Sounding Line; whether T-3's negative retires seam-finding as well as counting",
+    "WHY_THIS_EXISTS": "T-3 established that the sub-goal posterior floors at ~2.33 effective modes and never resolves onto one, so 'which decision' is undefined. 'When did the maker switch' is a different question: a belief can travel from one uncertain state to another, and the travel is visible even when neither endpoint is.",
+    "method": {
+      "signals": [
+        "per-step L1 travel of the sub-goal posterior",
+        "per-step absolute change in sub-goal entropy"
+      ],
+      "target": "the creator's true mode-switch steps, which the reader never sees",
+      "null": "circular shift of the signal, which preserves its autocorrelation and destroys only its alignment. A permutation null would be too easy: a smooth series beats shuffled noise for reasons unrelated to seams.",
+      "n_timesteps": 48,
+      "dwells": [
+        4.0,
+        9.2,
+        20.0
+      ],
+      "n_per_cell": 120
+    },
+    "overall": {
+      "n": 1398,
+      "auc_travel": 0.5796204038456257,
+      "null_travel": 0.4983492181430353,
+      "lift_travel": 0.08127118570259045,
+      "auc_entropy_change": 0.5441447142022845,
+      "null_entropy_change": 0.49945144778529593,
+      "lift_entropy_change": 0.044693266416988564,
+      "mean_switches_per_artifact": 6.613733905579399
+    },
+    "by_cell": {
+      "dwell4.0_mu2_beta1.0": {
+        "n": 120,
+        "auc_travel": 0.6503602547071738,
+        "null_travel": 0.4965512972208123,
+        "lift_travel": 0.15380895748636153,
+        "auc_entropy_change": 0.5645318053349089,
+        "null_entropy_change": 0.5016677943527315,
+        "lift_entropy_change": 0.06286401098217742,
+        "mean_switches_per_artifact": 11.383333333333333
+      },
+      "dwell4.0_mu2_beta0.25": {
+        "n": 120,
+        "auc_travel": 0.5364411291839362,
+        "null_travel": 0.4994486628818243,
+        "lift_travel": 0.03699246630211184,
+        "auc_entropy_change": 0.5013827184962767,
+        "null_entropy_change": 0.497577128557312,
+        "lift_entropy_change": 0.003805589938964682,
+        "mean_switches_per_artifact": 11.683333333333334
+      },
+      "dwell4.0_mu3_beta1.0": {
+        "n": 120,
+        "auc_travel": 0.6242841214162608,
+        "null_travel": 0.49548395788043725,
+        "lift_travel": 0.12880016353582352,
+        "auc_entropy_change": 0.5515629979771873,
+        "null_entropy_change": 0.499594701241942,
+        "lift_entropy_change": 0.051968296735245334,
+        "mean_switches_per_artifact": 11.766666666666667
+      },
+      "dwell4.0_mu3_beta0.25": {
+        "n": 120,
+        "auc_travel": 0.5104097333782723,
+        "null_travel": 0.49883089297560423,
+        "lift_travel": 0.0115788404026681,
+        "auc_entropy_change": 0.49457912553335964,
+        "null_entropy_change": 0.500439650495445,
+        "lift_entropy_change": -0.005860524962085389,
+        "mean_switches_per_artifact": 11.441666666666666
+      },
+      "dwell9.2_mu2_beta1.0": {
+        "n": 119,
+        "auc_travel": 0.6607131208369783,
+        "null_travel": 0.49587174240197446,
+        "lift_travel": 0.16484137843500385,
+        "auc_entropy_change": 0.5913374599239878,
+        "null_entropy_change": 0.4982594562305046,
+        "lift_entropy_change": 0.09307800369348318,
+        "mean_switches_per_artifact": 4.9411764705882355
+      },
+      "dwell9.2_mu2_beta0.25": {
+        "n": 119,
+        "auc_travel": 0.5245848230935252,
+        "null_travel": 0.5008561729011636,
+        "lift_travel": 0.02372865019236159,
+        "auc_entropy_change": 0.5089368767933757,
+        "null_entropy_change": 0.49846175187569547,
+        "lift_entropy_change": 0.010475124917680267,
+        "mean_switches_per_artifact": 5.319327731092437
+      },
+      "dwell9.2_mu3_beta1.0": {
+        "n": 120,
+        "auc_travel": 0.612556675980022,
+        "null_travel": 0.5002190501319952,
+        "lift_travel": 0.11233762584802676,
+        "auc_entropy_change": 0.5952989784617988,
+        "null_entropy_change": 0.49908058843242303,
+        "lift_entropy_change": 0.09621839002937577,
+        "mean_switches_per_artifact": 5.541666666666667
+      },
+      "dwell9.2_mu3_beta0.25": {
+        "n": 119,
+        "auc_travel": 0.533312217235214,
+        "null_travel": 0.4980384624666734,
+        "lift_travel": 0.035273754768540666,
+        "auc_entropy_change": 0.5149204579915282,
+        "null_entropy_change": 0.5021097649783065,
+        "lift_entropy_change": 0.012810693013221686,
+        "mean_switches_per_artifact": 5.378151260504202
+      },
+      "dwell20.0_mu2_beta1.0": {
+        "n": 113,
+        "auc_travel": 0.6262738375467141,
+        "null_travel": 0.4960625746182822,
+        "lift_travel": 0.13021126292843188,
+        "auc_entropy_change": 0.5989828865902718,
+        "null_entropy_change": 0.4987357569697868,
+        "lift_entropy_change": 0.10024712962048499,
+        "mean_switches_per_artifact": 2.5132743362831858
+      },
+      "dwell20.0_mu2_beta0.25": {
+        "n": 104,
+        "auc_travel": 0.5360942386003402,
+        "null_travel": 0.49990276239166953,
+        "lift_travel": 0.03619147620867069,
+        "auc_entropy_change": 0.535800456281176,
+        "null_entropy_change": 0.4968563375997363,
+        "lift_entropy_change": 0.03894411868143971,
+        "mean_switches_per_artifact": 2.75
+      },
+      "dwell20.0_mu3_beta1.0": {
+        "n": 113,
+        "auc_travel": 0.618163024056367,
+        "null_travel": 0.4974087891148424,
+        "lift_travel": 0.12075423494152465,
+        "auc_entropy_change": 0.5717079084007883,
+        "null_entropy_change": 0.498565929394565,
+        "lift_entropy_change": 0.07314197900622332,
+        "mean_switches_per_artifact": 2.4690265486725664
+      },
+      "dwell20.0_mu3_beta0.25": {
+        "n": 111,
+        "auc_travel": 0.5165163915495578,
+        "null_travel": 0.501790930521606,
+        "lift_travel": 0.014725461027951803,
+        "auc_entropy_change": 0.5010103378448616,
+        "null_entropy_change": 0.50180995466361,
+        "lift_entropy_change": -0.0007996168187484054,
+        "mean_switches_per_artifact": 2.864864864864865
+      }
+    },
+    "travel_lift_over_null": {
+      "mean_a": 0.5796204038456257,
+      "mean_b": 0.4983492181430353,
+      "difference": 0.08127118570259038,
+      "interval": [
+        0.07170007931112489,
+        0.09081809728581809
+      ],
+      "excludes_zero": true,
+      "n": 1398,
+      "max_abs_paired_deviation": 0.5478723404255319
+    },
+    "switch_rate_readability": {
+      "n": 1398,
+      "n_features": 22,
+      "best_feature": "SP_Summaries_welch_rect_area_5_1",
+      "best_abs_correlation": 0.4447842223333926,
+      "top5": {
+        "SP_Summaries_welch_rect_area_5_1": -0.4447842223333926,
+        "SB_MotifThree_quantile_hh": 0.44043030677132866,
+        "SP_Summaries_welch_rect_centroid": 0.4253578711114428,
+        "CO_HistogramAMI_even_2_5": -0.41364875809148727,
+        "CO_f1ecac": -0.3954296476797918
+      },
+      "how_to_read": "correlation between a canonical trajectory feature and the maker's true switch rate, across artifacts. Locating individual seams is the strong claim; reading the RATE off the trajectory is the weak one, and the weak one is what would transport to text."
+    },
+    "what_would_have_falsified_it": "travel AUC at the circular-shift null. That would mean the reader's belief does not move when the maker switches, and T-3's negative would retire seam-finding too.",
+    "what_this_cannot_show": "that seams are findable in text. The switch times here are ground truth from a generative chain; a real corpus has no such labels, which is why the switch-RATE result matters more than the seam-location one -- a rate can be validated against a held-out property of a corpus, an individual seam cannot.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t10_boundary_recovery.py",
+      "sha256": "c0f078bbb946fc4a318543d70b23549dba64402606a99cab49986006dcd1a85e",
+      "git_commit": "ff069fe",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "circular_null_sits_at_chance",
+          "kind": "identity",
+          "passed": true,
+          "detail": "a circular shift destroys alignment to the truth while preserving the trajectory's own autocorrelation, so its AUC must sit at chance. If it does not, the switch mask itself is structured and the lift is an artifact of where switches fall rather than of the signal.",
+          "observed": 0.0016507818569647115,
+          "expected": 0.0,
+          "tolerance": 0.05
+        },
+        {
+          "name": "switches_actually_occur",
+          "kind": "positive",
+          "passed": true,
+          "detail": "artifacts with no switch or all switches are dropped; this records how many seams a scored artifact actually has.",
+          "observed": 6.613733905579399,
+          "expected": 6.613733905579399,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "travel_responds_to_dwell",
+          "kind": "live",
+          "passed": true,
+          "detail": "how much the lift moves between the shortest and longest dwell. Recorded rather than thresholded: a detector that is flat in dwell is still a detector, it is just one whose difficulty does not depend on the maker.",
+          "observed": 0.008045928594298868,
+          "expected": 0.0
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   }
 }

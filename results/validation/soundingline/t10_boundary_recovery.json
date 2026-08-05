@@ -1,0 +1,225 @@
+{
+  "test": "T-10 \u2014 is the LOCATION of a decision recoverable when its IDENTITY is not?",
+  "for": "Sounding Line; whether T-3's negative retires seam-finding as well as counting",
+  "WHY_THIS_EXISTS": "T-3 established that the sub-goal posterior floors at ~2.33 effective modes and never resolves onto one, so 'which decision' is undefined. 'When did the maker switch' is a different question: a belief can travel from one uncertain state to another, and the travel is visible even when neither endpoint is.",
+  "method": {
+    "signals": [
+      "per-step L1 travel of the sub-goal posterior",
+      "per-step absolute change in sub-goal entropy"
+    ],
+    "target": "the creator's true mode-switch steps, which the reader never sees",
+    "null": "circular shift of the signal, which preserves its autocorrelation and destroys only its alignment. A permutation null would be too easy: a smooth series beats shuffled noise for reasons unrelated to seams.",
+    "n_timesteps": 48,
+    "dwells": [
+      4.0,
+      9.2,
+      20.0
+    ],
+    "n_per_cell": 120
+  },
+  "overall": {
+    "n": 1398,
+    "auc_travel": 0.5796204038456257,
+    "null_travel": 0.4983492181430353,
+    "lift_travel": 0.08127118570259045,
+    "auc_entropy_change": 0.5441447142022845,
+    "null_entropy_change": 0.49945144778529593,
+    "lift_entropy_change": 0.044693266416988564,
+    "mean_switches_per_artifact": 6.613733905579399
+  },
+  "by_cell": {
+    "dwell4.0_mu2_beta1.0": {
+      "n": 120,
+      "auc_travel": 0.6503602547071738,
+      "null_travel": 0.4965512972208123,
+      "lift_travel": 0.15380895748636153,
+      "auc_entropy_change": 0.5645318053349089,
+      "null_entropy_change": 0.5016677943527315,
+      "lift_entropy_change": 0.06286401098217742,
+      "mean_switches_per_artifact": 11.383333333333333
+    },
+    "dwell4.0_mu2_beta0.25": {
+      "n": 120,
+      "auc_travel": 0.5364411291839362,
+      "null_travel": 0.4994486628818243,
+      "lift_travel": 0.03699246630211184,
+      "auc_entropy_change": 0.5013827184962767,
+      "null_entropy_change": 0.497577128557312,
+      "lift_entropy_change": 0.003805589938964682,
+      "mean_switches_per_artifact": 11.683333333333334
+    },
+    "dwell4.0_mu3_beta1.0": {
+      "n": 120,
+      "auc_travel": 0.6242841214162608,
+      "null_travel": 0.49548395788043725,
+      "lift_travel": 0.12880016353582352,
+      "auc_entropy_change": 0.5515629979771873,
+      "null_entropy_change": 0.499594701241942,
+      "lift_entropy_change": 0.051968296735245334,
+      "mean_switches_per_artifact": 11.766666666666667
+    },
+    "dwell4.0_mu3_beta0.25": {
+      "n": 120,
+      "auc_travel": 0.5104097333782723,
+      "null_travel": 0.49883089297560423,
+      "lift_travel": 0.0115788404026681,
+      "auc_entropy_change": 0.49457912553335964,
+      "null_entropy_change": 0.500439650495445,
+      "lift_entropy_change": -0.005860524962085389,
+      "mean_switches_per_artifact": 11.441666666666666
+    },
+    "dwell9.2_mu2_beta1.0": {
+      "n": 119,
+      "auc_travel": 0.6607131208369783,
+      "null_travel": 0.49587174240197446,
+      "lift_travel": 0.16484137843500385,
+      "auc_entropy_change": 0.5913374599239878,
+      "null_entropy_change": 0.4982594562305046,
+      "lift_entropy_change": 0.09307800369348318,
+      "mean_switches_per_artifact": 4.9411764705882355
+    },
+    "dwell9.2_mu2_beta0.25": {
+      "n": 119,
+      "auc_travel": 0.5245848230935252,
+      "null_travel": 0.5008561729011636,
+      "lift_travel": 0.02372865019236159,
+      "auc_entropy_change": 0.5089368767933757,
+      "null_entropy_change": 0.49846175187569547,
+      "lift_entropy_change": 0.010475124917680267,
+      "mean_switches_per_artifact": 5.319327731092437
+    },
+    "dwell9.2_mu3_beta1.0": {
+      "n": 120,
+      "auc_travel": 0.612556675980022,
+      "null_travel": 0.5002190501319952,
+      "lift_travel": 0.11233762584802676,
+      "auc_entropy_change": 0.5952989784617988,
+      "null_entropy_change": 0.49908058843242303,
+      "lift_entropy_change": 0.09621839002937577,
+      "mean_switches_per_artifact": 5.541666666666667
+    },
+    "dwell9.2_mu3_beta0.25": {
+      "n": 119,
+      "auc_travel": 0.533312217235214,
+      "null_travel": 0.4980384624666734,
+      "lift_travel": 0.035273754768540666,
+      "auc_entropy_change": 0.5149204579915282,
+      "null_entropy_change": 0.5021097649783065,
+      "lift_entropy_change": 0.012810693013221686,
+      "mean_switches_per_artifact": 5.378151260504202
+    },
+    "dwell20.0_mu2_beta1.0": {
+      "n": 113,
+      "auc_travel": 0.6262738375467141,
+      "null_travel": 0.4960625746182822,
+      "lift_travel": 0.13021126292843188,
+      "auc_entropy_change": 0.5989828865902718,
+      "null_entropy_change": 0.4987357569697868,
+      "lift_entropy_change": 0.10024712962048499,
+      "mean_switches_per_artifact": 2.5132743362831858
+    },
+    "dwell20.0_mu2_beta0.25": {
+      "n": 104,
+      "auc_travel": 0.5360942386003402,
+      "null_travel": 0.49990276239166953,
+      "lift_travel": 0.03619147620867069,
+      "auc_entropy_change": 0.535800456281176,
+      "null_entropy_change": 0.4968563375997363,
+      "lift_entropy_change": 0.03894411868143971,
+      "mean_switches_per_artifact": 2.75
+    },
+    "dwell20.0_mu3_beta1.0": {
+      "n": 113,
+      "auc_travel": 0.618163024056367,
+      "null_travel": 0.4974087891148424,
+      "lift_travel": 0.12075423494152465,
+      "auc_entropy_change": 0.5717079084007883,
+      "null_entropy_change": 0.498565929394565,
+      "lift_entropy_change": 0.07314197900622332,
+      "mean_switches_per_artifact": 2.4690265486725664
+    },
+    "dwell20.0_mu3_beta0.25": {
+      "n": 111,
+      "auc_travel": 0.5165163915495578,
+      "null_travel": 0.501790930521606,
+      "lift_travel": 0.014725461027951803,
+      "auc_entropy_change": 0.5010103378448616,
+      "null_entropy_change": 0.50180995466361,
+      "lift_entropy_change": -0.0007996168187484054,
+      "mean_switches_per_artifact": 2.864864864864865
+    }
+  },
+  "travel_lift_over_null": {
+    "mean_a": 0.5796204038456257,
+    "mean_b": 0.4983492181430353,
+    "difference": 0.08127118570259038,
+    "interval": [
+      0.07170007931112489,
+      0.09081809728581809
+    ],
+    "excludes_zero": true,
+    "n": 1398,
+    "max_abs_paired_deviation": 0.5478723404255319
+  },
+  "switch_rate_readability": {
+    "n": 1398,
+    "n_features": 22,
+    "best_feature": "SP_Summaries_welch_rect_area_5_1",
+    "best_abs_correlation": 0.4447842223333926,
+    "top5": {
+      "SP_Summaries_welch_rect_area_5_1": -0.4447842223333926,
+      "SB_MotifThree_quantile_hh": 0.44043030677132866,
+      "SP_Summaries_welch_rect_centroid": 0.4253578711114428,
+      "CO_HistogramAMI_even_2_5": -0.41364875809148727,
+      "CO_f1ecac": -0.3954296476797918
+    },
+    "how_to_read": "correlation between a canonical trajectory feature and the maker's true switch rate, across artifacts. Locating individual seams is the strong claim; reading the RATE off the trajectory is the weak one, and the weak one is what would transport to text."
+  },
+  "what_would_have_falsified_it": "travel AUC at the circular-shift null. That would mean the reader's belief does not move when the maker switches, and T-3's negative would retire seam-finding too.",
+  "what_this_cannot_show": "that seams are findable in text. The switch times here are ground truth from a generative chain; a real corpus has no such labels, which is why the switch-RATE result matters more than the seam-location one -- a rate can be validated against a held-out property of a corpus, an individual seam cannot.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t10_boundary_recovery.py",
+    "sha256": "c0f078bbb946fc4a318543d70b23549dba64402606a99cab49986006dcd1a85e",
+    "git_commit": "ff069fe",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "circular_null_sits_at_chance",
+        "kind": "identity",
+        "passed": true,
+        "detail": "a circular shift destroys alignment to the truth while preserving the trajectory's own autocorrelation, so its AUC must sit at chance. If it does not, the switch mask itself is structured and the lift is an artifact of where switches fall rather than of the signal.",
+        "observed": 0.0016507818569647115,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "switches_actually_occur",
+        "kind": "positive",
+        "passed": true,
+        "detail": "artifacts with no switch or all switches are dropped; this records how many seams a scored artifact actually has.",
+        "observed": 6.613733905579399,
+        "expected": 6.613733905579399,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "travel_responds_to_dwell",
+        "kind": "live",
+        "passed": true,
+        "detail": "how much the lift moves between the shortest and longest dwell. Recorded rather than thresholded: a detector that is flat in dwell is still a detector, it is just one whose difficulty does not depend on the maker.",
+        "observed": 0.008045928594298868,
+        "expected": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
