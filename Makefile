@@ -5,7 +5,7 @@
 PYTHON ?= python
 WORKERS ?=
 
-.PHONY: all quick test invariants nulls validate figures clean e1 e2 e3 e4 e5 e6
+.PHONY: all quick test invariants nulls gates soundingline validate figures clean e1 e2 e3 e4 e5 e6
 
 all:            ## run all six experiments + tests at full spec scale
 	$(PYTHON) run_all.py $(if $(WORKERS),--workers $(WORKERS),)
@@ -18,6 +18,12 @@ validate:       ## run the validation pass (V-1 .. V-9), writes results/validati
 
 test:           ## run the full test suite (invariants + nulls)
 	$(PYTHON) -m pytest -q
+
+gates:          ## standing controls + metamorphic relations only (fast; see docs/METHODS.md)
+	$(PYTHON) -m pytest -q tests/test_gates.py tests/test_metamorphic.py
+
+soundingline:   ## run the batch of tests another project asked for, at full scale
+	$(PYTHON) runners/run_soundingline.py
 
 invariants:     ## model-invariant tests only (Spec §10)
 	$(PYTHON) -m pytest tests/test_model_invariants.py -q

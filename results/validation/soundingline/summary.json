@@ -84,9 +84,17 @@
       "of": 467
     },
     "what_would_have_falsified_the_worry": "a count ratio whose interval covers 1.0 at mu = 1, and which correlates with process_error_reduction across cells. Then the two are interchangeable in an environment with ground truth and the primary inherits E36's support.",
-    "what_this_cannot_show": "nothing about real text. 'A decision was recovered' is mapped here onto 'the sub-goal posterior resolved below an entropy threshold', which is the nearest honest analogue of a statistic that never consults the truth. A different mapping could behave differently and the threshold is swept for that reason."
+    "what_this_cannot_show": "nothing about real text. 'A decision was recovered' is mapped here onto 'the sub-goal posterior resolved below an entropy threshold', which is the nearest honest analogue of a statistic that never consults the truth. A different mapping could behave differently and the threshold is swept for that reason.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s1_unlock_statistic.py",
+      "sha256": "5c78c15d4c736b5c835f3a9d930a2ad8c0133ef17269c41710b4328b04de2ae5",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    }
   },
   "S2": {
+    "WITHDRAWN": "2026-08-05. The manipulation never reaches the reader; see the failing live gate below and scripts/audit_s2_mixture.py. Superseded by t2_automaticity.mixed_deep_features, which emits from world.subsig directly.",
+    "withdrawn": true,
     "test": "S-2 \u2014 does flattened intent read as posterior concentration at matched density?",
     "for": "Sounding Line, C-22 and purpose_breadth",
     "construction": {
@@ -130,9 +138,41 @@
     "outcome": "BREADTH_SEPARATES_THE_TWO",
     "construct_is_confounded": false,
     "how_to_read": "the claim needs breadth to fall for flattened work while accuracy and process recovery hold. If process recovery falls too, 'flattened' has become 'shallower' and the measure is reading depth rather than concentration.",
-    "what_would_have_falsified_it": "identical purpose_breadth across the two arms. Then concentration of terminal values is invisible to a goal posterior and Sounding Line's purpose_breadth is measuring something else."
+    "what_would_have_falsified_it": "identical purpose_breadth across the two arms. Then concentration of terminal values is invisible to a goal posterior and Sounding Line's purpose_breadth is measuring something else.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s2_flattened_intent.py",
+      "sha256": "e5ae4fd058236d19cdad4f36e0dcea30f51b1f845bdbfd242ec4730c2b844e71",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 1,
+      "n_ran": 1,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [
+        "mixture_reaches_the_reader"
+      ],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "mixture_reaches_the_reader",
+          "kind": "live",
+          "passed": false,
+          "detail": "forcing the per-position goal mixture to a constant must change the reader's posterior. It does not: V5Environment.sample_feature ignores artifact.goal once a creator is bound, so `actives` never enters the observations. This gate fails by design and is why the module is withdrawn.",
+          "observed": 0.0,
+          "expected": 1e-09,
+          "expected_to_fail": true
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   },
   "S3": {
+    "withdrawn": false,
+    "QUALIFIED": "2026-08-05. detector_balanced_accuracy is an upper bound: the threshold is fitted on the labelled test data and re-fitted per amplification. Frozen at the lowest amplification the accuracy rise is +0.046 rather than +0.125. See T-4.",
     "test": "S-3 \u2014 two affect layers, and whether a louder shield gives the concealer away",
     "for": "Sounding Line, family_v3.yaml leaked and emblematic channels",
     "IMPORTANT": "this test does NOT use the V5 world. It is a minimal purpose-built two-channel emitter, because the shared model has one emission channel and adding a second is new generative machinery. Read it as what a two-channel emitter does, not as what the Ghost Scale reader does.",
@@ -207,7 +247,55 @@
       "verdict": "THE_SHIELD_GIVES_THEM_AWAY",
       "how_to_read": "the curator's claim is that performing louder to cover up makes concealment MORE detectable. That predicts detector accuracy RISING with amplification."
     },
-    "what_would_have_falsified_it": "divergence failing to separate the two conditions, or separation shrinking as the shield gets louder. Either would make the leaked layer a dead end."
+    "what_would_have_falsified_it": "divergence failing to separate the two conditions, or separation shrinking as the shield gets louder. Either would make the leaked layer a dead end.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s3_two_channels.py",
+      "sha256": "6383607e867aea8cfa44af2c0f8f120c971c91ecb4c38870fa9638489800e464",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [
+        "threshold_is_fitted_on_test_labels"
+      ],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "leak_is_readable_at_all",
+          "kind": "positive",
+          "passed": true,
+          "detail": "the state must be recoverable from the involuntary channel alone, well above the 0.25 chance rate, or there is nothing for the divergence to measure.",
+          "observed": 0.8990625,
+          "expected": 1.0,
+          "tolerance": 0.25
+        },
+        {
+          "name": "concealment_reaches_the_divergence",
+          "kind": "live",
+          "passed": true,
+          "detail": "the concealing condition must separate from the candid one at the lowest amplification, or the manipulation is not reaching the statistic.",
+          "observed": 11.888047332629853,
+          "expected": 1.0
+        },
+        {
+          "name": "threshold_is_fitted_on_test_labels",
+          "kind": "no_oracle",
+          "passed": false,
+          "detail": "FAILS BY DESIGN. thr = median of the pooled concealing AND candid divergences is fitted on ground-truth-labelled test data and re-fitted per cell. T-4 re-scores this with the threshold frozen: the headline rise falls from +0.125 to +0.046. Recorded here so the flaw travels with the result.",
+          "observed": 1.0,
+          "expected": 0.0,
+          "tolerance": 0.5,
+          "expected_to_fail": true
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   },
   "S45": {
     "test": "S-4 and S-5 \u2014 does inference order buy anything, and is it accuracy or cost?",
@@ -278,7 +366,13 @@
       "how_to_read": "these are a HARNESS CHECK and not a result. All three arms see the same observations in a different order, so final accuracy should be unchanged. If it moves, the reorder changed the evidence and the cost numbers cannot be trusted."
     },
     "n_rollouts": 1620,
-    "what_would_have_falsified_the_claim": "reverse or anomaly-first settling in fewer DEEP steps than forward, with accuracy unchanged. That would make the entry point a genuine efficiency and not a story."
+    "what_would_have_falsified_the_claim": "reverse or anomaly-first settling in fewer DEEP steps than forward, with accuracy unchanged. That would make the entry point a genuine efficiency and not a story.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s45_inference_order.py",
+      "sha256": "b3f7a1a183524f8ebb2033ce17759fbb77d52bdfb7165641d050fc343998b321",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    }
   },
   "S6": {
     "test": "S-6 \u2014 does surface decay across an artifact while content does not?",
@@ -295,19 +389,19 @@
     "by_creator": {
       "practised": {
         "surface": {
-          "slope_per_position": -0.03703681988742964,
+          "slope_per_position": -0.03703681988742966,
           "interval": [
-            -0.03709030253283302,
-            -0.03697888719512195
+            -0.03709030253283304,
+            -0.03697888719512197
           ],
           "declines": true,
           "flat": false
         },
         "content": {
-          "slope_per_position": -0.005653142589118199,
+          "slope_per_position": -0.0056531425891181986,
           "interval": [
-            -0.0059634556754221395,
-            -0.005341211303939963
+            -0.005963455675422137,
+            -0.005341211303939962
           ],
           "declines": true,
           "flat": false
@@ -326,10 +420,10 @@
           "flat": false
         },
         "content": {
-          "slope_per_position": -0.02992495309568481,
+          "slope_per_position": -0.02992495309568482,
           "interval": [
-            -0.02992495309568481,
-            -0.02992495309568481
+            -0.02992495309568482,
+            -0.02992495309568482
           ],
           "declines": true,
           "flat": false
@@ -339,19 +433,19 @@
       },
       "synthetic": {
         "surface": {
-          "slope_per_position": -6.4314766764761e-18,
+          "slope_per_position": 1.5645057622599112e-17,
           "interval": [
-            -6.4314766764761e-18,
-            -6.4314766764761e-18
+            1.5645057622599112e-17,
+            1.5645057622599112e-17
           ],
           "declines": false,
           "flat": true
         },
         "content": {
-          "slope_per_position": -6.4314766764761e-18,
+          "slope_per_position": 1.5645057622599112e-17,
           "interval": [
-            -6.4314766764761e-18,
-            -6.4314766764761e-18
+            1.5645057622599112e-17,
+            1.5645057622599112e-17
           ],
           "declines": false,
           "flat": true
@@ -361,10 +455,10 @@
       }
     },
     "practised_surface_decays_faster_than_content": {
-      "content_slope_minus_surface_slope": 0.031383677298311444,
+      "content_slope_minus_surface_slope": 0.031383677298311465,
       "interval": [
-        0.031068931754221388,
-        0.03169238977485928
+        0.031068931754221405,
+        0.0316923897748593
       ],
       "surface_decays_faster": true
     },
@@ -375,7 +469,13 @@
     },
     "outcome": "ALL_THREE_PREDICTIONS_HOLD",
     "what_would_have_falsified_it": "content decaying as fast as surface for a practised creator, which would make the cache irrelevant; or a synthetic creator whose surface also declined, which would remove the positive machine signature and leave only an absence.",
-    "the_honest_caveat": "this construction BUILDS IN the asymmetry it then measures: content is cached and surface is not. It is a consistency check on the theory's arithmetic, not evidence that real practice works this way. What it earns is the direction of the third prediction, which does not follow trivially: a budgetless creator is FLAT rather than merely high."
+    "the_honest_caveat": "this construction BUILDS IN the asymmetry it then measures: content is cached and surface is not. It is a consistency check on the theory's arithmetic, not evidence that real practice works this way. What it earns is the direction of the third prediction, which does not follow trivially: a budgetless creator is FLAT rather than merely high.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s6_surface_decay.py",
+      "sha256": "fc791bc27bdbd59979f2088a5d9708dace2593893f636c2d3f586e59ebcea496",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    }
   },
   "T1": {
     "test": "T-1 \u2014 is empathy three coupled inference problems, or a chain?",
@@ -3455,6 +3555,670 @@
         "is_superadditive": true
       }
     },
+    "separation_vs_null": {
+      "mu3_beta1.0|goal->process": {
+        "overlap": 0.060000000000000005,
+        "tau": 0.2,
+        "separated": true,
+        "effect_mean": 0.0016544111980073917,
+        "null_mean": -0.17741679493510717,
+        "null_sd": 0.15560072521002757,
+        "standardised_effect": 1.150837863328766,
+        "bootstrap_p_two_sided": 0.225,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta1.0|goal->depth": {
+        "overlap": 0.015,
+        "tau": 0.2,
+        "separated": true,
+        "effect_mean": 3.7102207528505457e-10,
+        "null_mean": -0.18663954110199213,
+        "null_sd": 0.38541662525826786,
+        "standardised_effect": 0.484253997470781,
+        "bootstrap_p_two_sided": 0.665,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta1.0|process->goal": {
+        "overlap": 0.955,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 1.019380845845852e-09,
+        "null_mean": -2.6447946117058586e-08,
+        "null_sd": 2.7718186615919523e-07,
+        "standardised_effect": 0.09909496369119974,
+        "bootstrap_p_two_sided": 0.02,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta1.0|process->depth": {
+        "overlap": 0.14,
+        "tau": 0.2,
+        "separated": true,
+        "effect_mean": 0.840195004010967,
+        "null_mean": -7.917078996080197,
+        "null_sd": 7.089278167770333,
+        "standardised_effect": 1.2352842973356533,
+        "bootstrap_p_two_sided": 0.185,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta1.0|depth->goal": {
+        "overlap": 0.99,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 3.7102209471395753e-10,
+        "null_mean": -5.984145590165469e-09,
+        "null_sd": 8.39625766426582e-08,
+        "standardised_effect": 0.07569047948500675,
+        "bootstrap_p_two_sided": 0.005,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta1.0|depth->process": {
+        "overlap": 0.125,
+        "tau": 0.2,
+        "separated": true,
+        "effect_mean": 0.35612394352081095,
+        "null_mean": -0.8789435824277717,
+        "null_sd": 0.9666948458630144,
+        "standardised_effect": 1.2776188175969627,
+        "bootstrap_p_two_sided": 0.145,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.25|goal->process": {
+        "overlap": 0.54,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.0011652651958570259,
+        "null_mean": -0.05144535286140822,
+        "null_sd": 0.10052867196314086,
+        "standardised_effect": 0.5001566884717878,
+        "bootstrap_p_two_sided": 0.52,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.25|goal->depth": {
+        "overlap": 0.505,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.0057483974535871485,
+        "null_mean": -0.03612233271872739,
+        "null_sd": 0.21705652952956922,
+        "standardised_effect": 0.13993559802587027,
+        "bootstrap_p_two_sided": 0.79,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.25|process->goal": {
+        "overlap": 0.54,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.16650309403909985,
+        "null_mean": -0.4141516837854616,
+        "null_sd": 0.8891063814203951,
+        "standardised_effect": 0.6530768308027823,
+        "bootstrap_p_two_sided": 0.275,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.25|process->depth": {
+        "overlap": 0.33499999999999996,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.5147100378310562,
+        "null_mean": -0.7467938906302044,
+        "null_sd": 1.552444725240911,
+        "standardised_effect": 0.812591848167411,
+        "bootstrap_p_two_sided": 0.235,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.25|depth->goal": {
+        "overlap": 0.825,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.005748397453587275,
+        "null_mean": -0.004659630789386995,
+        "null_sd": 0.09241445719410715,
+        "standardised_effect": -0.011781345660164805,
+        "bootstrap_p_two_sided": 0.98,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.25|depth->process": {
+        "overlap": 0.355,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.1377913163624635,
+        "null_mean": -0.19812429783127683,
+        "null_sd": 0.3283850371186986,
+        "standardised_effect": 1.0229321565352556,
+        "bootstrap_p_two_sided": 0.15,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.1|goal->process": {
+        "overlap": 0.765,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.004037227572595191,
+        "null_mean": -0.020629285697206096,
+        "null_sd": 0.071798018596924,
+        "standardised_effect": 0.23109353780024436,
+        "bootstrap_p_two_sided": 0.69,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.1|goal->depth": {
+        "overlap": 0.73,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.0013795170936815814,
+        "null_mean": -0.026634111329617145,
+        "null_sd": 0.11915878115179411,
+        "standardised_effect": 0.21194068948862624,
+        "bootstrap_p_two_sided": 0.655,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.1|process->goal": {
+        "overlap": 0.625,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.2616286990107238,
+        "null_mean": -0.5260039437201871,
+        "null_sd": 1.0880274927553726,
+        "standardised_effect": 0.7239087688274057,
+        "bootstrap_p_two_sided": 0.42,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.1|process->depth": {
+        "overlap": 0.4,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.4089182664570008,
+        "null_mean": -0.19199542053551005,
+        "null_sd": 0.777208704603246,
+        "standardised_effect": 0.7731690129477755,
+        "bootstrap_p_two_sided": 0.175,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.1|depth->goal": {
+        "overlap": 0.825,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.00137951709368184,
+        "null_mean": 0.00447946084416948,
+        "null_sd": 0.17346462173315,
+        "standardised_effect": -0.03377621257471453,
+        "bootstrap_p_two_sided": 0.815,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu3_beta0.1|depth->process": {
+        "overlap": 0.245,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.12381099446736804,
+        "null_mean": -0.17379904211524924,
+        "null_sd": 0.2980350637732833,
+        "standardised_effect": 0.9985739020594258,
+        "bootstrap_p_two_sided": 0.12,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.25|goal->process": {
+        "overlap": 0.55,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.0010193377894442202,
+        "null_mean": -0.02544118513076584,
+        "null_sd": 0.09076885968294958,
+        "standardised_effect": 0.2915154273462854,
+        "bootstrap_p_two_sided": 0.745,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.25|goal->depth": {
+        "overlap": 0.44999999999999996,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.0038246648382618716,
+        "null_mean": -0.04755364213282542,
+        "null_sd": 0.19225217997654953,
+        "standardised_effect": 0.227456340416517,
+        "bootstrap_p_two_sided": 0.74,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.25|process->goal": {
+        "overlap": 0.6,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.13883058223637582,
+        "null_mean": -0.4814467550949603,
+        "null_sd": 0.9578595467578314,
+        "standardised_effect": 0.6475660648065309,
+        "bootstrap_p_two_sided": 0.31,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.25|process->depth": {
+        "overlap": 0.315,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.6373711409678045,
+        "null_mean": -0.8926274551588861,
+        "null_sd": 1.7126354470209095,
+        "standardised_effect": 0.8933591785619576,
+        "bootstrap_p_two_sided": 0.18,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.25|depth->goal": {
+        "overlap": 0.845,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.0038246648382620407,
+        "null_mean": 0.0022024008118769066,
+        "null_sd": 0.11495839322441323,
+        "standardised_effect": -0.052428234956045,
+        "bootstrap_p_two_sided": 0.61,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.25|depth->process": {
+        "overlap": 0.28500000000000003,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.16173840873986883,
+        "null_mean": -0.25794471462153806,
+        "null_sd": 0.40615584534655097,
+        "standardised_effect": 1.033305634203821,
+        "bootstrap_p_two_sided": 0.12,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.1|goal->process": {
+        "overlap": 0.745,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.0006072846124114977,
+        "null_mean": -0.014199391381917661,
+        "null_sd": 0.07068423547752166,
+        "standardised_effect": 0.19229332647770658,
+        "bootstrap_p_two_sided": 0.74,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.1|goal->depth": {
+        "overlap": 0.73,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.00878957989127772,
+        "null_mean": -0.01784926563961175,
+        "null_sd": 0.12163642772283761,
+        "standardised_effect": 0.07448168215674295,
+        "bootstrap_p_two_sided": 0.825,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.1|process->goal": {
+        "overlap": 0.555,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.2514138477133152,
+        "null_mean": -0.5796520837445042,
+        "null_sd": 1.100635813001579,
+        "standardised_effect": 0.7550780391121319,
+        "bootstrap_p_two_sided": 0.355,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.1|process->depth": {
+        "overlap": 0.38,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.4592131433546929,
+        "null_mean": -0.3962032681896916,
+        "null_sd": 1.3036323390135456,
+        "standardised_effect": 0.6561791894420749,
+        "bootstrap_p_two_sided": 0.23,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.1|depth->goal": {
+        "overlap": 0.835,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.00878957989127798,
+        "null_mean": 0.0164632645407757,
+        "null_sd": 0.20876199088974623,
+        "standardised_effect": -0.1209647614703507,
+        "bootstrap_p_two_sided": 0.585,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu2_beta0.1|depth->process": {
+        "overlap": 0.29000000000000004,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.12170021830177521,
+        "null_mean": -0.17565292972831537,
+        "null_sd": 0.28017859632961445,
+        "standardised_effect": 1.061298585707351,
+        "bootstrap_p_two_sided": 0.125,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta1.0|goal->process": {
+        "overlap": 0.135,
+        "tau": 0.2,
+        "separated": true,
+        "effect_mean": -0.0008838552522721355,
+        "null_mean": 0.035057104104229075,
+        "null_sd": 0.13998186707043908,
+        "standardised_effect": -0.2567543933273562,
+        "bootstrap_p_two_sided": 0.785,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta1.0|goal->depth": {
+        "overlap": 0.005,
+        "tau": 0.2,
+        "separated": true,
+        "effect_mean": 1.895539414320524e-10,
+        "null_mean": -0.5015254908561645,
+        "null_sd": 0.6416255244222228,
+        "standardised_effect": 0.7816482854190332,
+        "bootstrap_p_two_sided": 0.255,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta1.0|process->goal": {
+        "overlap": 0.935,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 1.1948205091982799e-10,
+        "null_mean": -1.0561378482876193e-09,
+        "null_sd": 5.40003840584106e-09,
+        "standardised_effect": 0.21770584037621185,
+        "bootstrap_p_two_sided": 0.06,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta1.0|process->depth": {
+        "overlap": 0.845,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.3526897036145046,
+        "null_mean": 0.390254486294197,
+        "null_sd": 0.7652283807351571,
+        "standardised_effect": -0.04908963601637963,
+        "bootstrap_p_two_sided": 0.93,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta1.0|depth->goal": {
+        "overlap": 0.93,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 1.8955395530984022e-10,
+        "null_mean": -9.447397619766206e-10,
+        "null_sd": 6.0536784180147604e-09,
+        "standardised_effect": 0.18737264171664414,
+        "bootstrap_p_two_sided": 0.05,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta1.0|depth->process": {
+        "overlap": 0.33,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.03942980573812628,
+        "null_mean": -0.4537748848703045,
+        "null_sd": 0.4806735359461776,
+        "standardised_effect": 1.0260699908048532,
+        "bootstrap_p_two_sided": 0.31,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta0.25|goal->process": {
+        "overlap": 0.74,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": -0.00962288524693718,
+        "null_mean": 0.009141725107860184,
+        "null_sd": 0.06970983548297081,
+        "standardised_effect": -0.2691816760833026,
+        "bootstrap_p_two_sided": 0.64,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta0.25|goal->depth": {
+        "overlap": 0.535,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.00011540425137647303,
+        "null_mean": -0.08807801130826004,
+        "null_sd": 0.35196166616398455,
+        "standardised_effect": 0.2505767645688602,
+        "bootstrap_p_two_sided": 0.63,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta0.25|process->goal": {
+        "overlap": 0.655,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.12976625744906492,
+        "null_mean": -0.6404785709155209,
+        "null_sd": 1.2406051275844134,
+        "standardised_effect": 0.6208621996140965,
+        "bootstrap_p_two_sided": 0.345,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta0.25|process->depth": {
+        "overlap": 0.785,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.13496186942266963,
+        "null_mean": 0.11295819318844715,
+        "null_sd": 0.43680107888528574,
+        "standardised_effect": 0.050374592229432594,
+        "bootstrap_p_two_sided": 0.945,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta0.25|depth->goal": {
+        "overlap": 0.6950000000000001,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.00011540425137679389,
+        "null_mean": -0.0055644515049125135,
+        "null_sd": 0.07566529436908666,
+        "standardised_effect": 0.07506553438599763,
+        "bootstrap_p_two_sided": 0.695,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      },
+      "mu1_beta0.25|depth->process": {
+        "overlap": 0.51,
+        "tau": 0.2,
+        "separated": false,
+        "effect_mean": 0.012369817088942825,
+        "null_mean": -0.10872764207808684,
+        "null_sd": 0.23679643699316472,
+        "standardised_effect": 0.5113989919135702,
+        "bootstrap_p_two_sided": 0.505,
+        "n_effect": 200,
+        "n_null": 200,
+        "bins": 64,
+        "how_to_read": "overlap is the shared area of the effect and null densities, 0 = disjoint and 1 = identical. It is unitless, so a result in nats and a result in AUC can be ranked against each other. It replaces excludes_zero, which measures precision rather than separation and returns true for effects that are visibly inside the noise.",
+        "null_used": "swapped"
+      }
+    },
+    "emission_pid_by_depth": {
+      "mu1": {
+        "total_mutual_information_bits": 1.4521333512637247,
+        "redundant_bits": 6.406853007629829e-16,
+        "unique_source_a_bits": 1.4521333512637231,
+        "unique_source_b_bits": 0.0,
+        "synergistic_bits": 8.881784197001252e-16,
+        "estimator": "PID_WB (Williams-Beer I_min)",
+        "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+        "mu_index": 0
+      },
+      "mu2": {
+        "total_mutual_information_bits": 1.8782900817777808,
+        "redundant_bits": 0.29663520738810184,
+        "unique_source_a_bits": 1.1554981438756229,
+        "unique_source_b_bits": 0.0,
+        "synergistic_bits": 0.4261567305140561,
+        "estimator": "PID_WB (Williams-Beer I_min)",
+        "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+        "mu_index": 1
+      },
+      "mu3": {
+        "total_mutual_information_bits": 1.8782900817777808,
+        "redundant_bits": 0.2705662180556205,
+        "unique_source_a_bits": 1.1815671332081041,
+        "unique_source_b_bits": 0.0,
+        "synergistic_bits": 0.4261567305140561,
+        "estimator": "PID_WB (Williams-Beer I_min)",
+        "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+        "mu_index": 2
+      }
+    },
     "budget_matched_edges": {
       "mu3_beta1.0|goal->process|duty0.0417": {
         "mean_a": 0.18173121083196783,
@@ -5012,6 +5776,78 @@
         "abs_difference": 3.2085608041992897e-16,
         "note": "at one nat per step both of these vertices are fully determined for the reader, so each edge is the conditional mutual information I(goal; depth | data) -- which is SYMMETRIC. These two numbers agreeing to six decimals is an identity the harness has to satisfy, and it is used here as a correctness check rather than reported as a finding."
       }
+    },
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t1_triangle.py",
+      "sha256": "2b531bb07dc82fda4c37209be490e3c1b98c78cda0cf615c712d3ecd455c7ac5",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 6,
+      "n_ran": 6,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "zero_nat_channel_reproduces_control",
+          "kind": "placebo",
+          "passed": true,
+          "detail": "a channel at 1/card fidelity carries zero nats and must reproduce the control exactly. Caught a shared RNG stream and a 1/3 that is not uniform in floating point, both of which moved a headline number.",
+          "observed": 2.6645352591003757e-15,
+          "expected": 0.0,
+          "tolerance": 1e-12
+        },
+        {
+          "name": "supply_channel_actually_reaches_the_reader",
+          "kind": "live",
+          "passed": true,
+          "detail": "the strongest edge at full fidelity must move the reader. The S-2 check: a manipulation that never reaches the measurement.",
+          "observed": 0.5147100378310562,
+          "expected": 0.05
+        },
+        {
+          "name": "perfect_legibility_gives_perfect_goal_recovery",
+          "kind": "positive",
+          "passed": true,
+          "detail": "at beta = 1.0 with a full forced look the goal is fully legible by construction, so accuracy must be exactly 1.0 through the whole stack.",
+          "observed": 1.0,
+          "expected": 1.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "goal_depth_edge_symmetry",
+          "kind": "identity",
+          "passed": true,
+          "detail": "at one nat both vertices are fully determined, so each edge is the symmetric conditional mutual information I(goal; depth | data).",
+          "observed": 3.2085608041992897e-16,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        },
+        {
+          "name": "no_process_recovery_at_mu1",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "at mu = 1 every mode emits the goal signature exactly, so supplying the goal cannot create process recovery. Null N28.",
+          "observed": 0.0008838552522721355,
+          "expected": 0.0,
+          "tolerance": 0.01
+        },
+        {
+          "name": "n28_from_the_likelihood_alone",
+          "kind": "identity",
+          "passed": true,
+          "detail": "null N28 recovered from world.subsig by partial information decomposition, with no rollouts: at the shallowest depth an emission carries no unique or synergistic mode information.",
+          "observed": 8.881784197001252e-16,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
     }
   },
   "T2": {
@@ -5442,7 +6278,51 @@
     "construct_is_confounded_with_difficulty": true,
     "construct_is_confounded_with_shallowness": false,
     "what_would_have_falsified_it": "breadth flat across the automaticity sweep, which would make posterior entropy blind to motivational variety; or goal accuracy falling with it, which would make 'diversity' a synonym for 'noise' and the construct unusable.",
-    "what_this_cannot_show": "that practice CAUSES drive-multiplicity. The depth axis tests whether practice alone moves breadth at a fixed mixture, which is the nearest non-circular question, and it is a question about this model's depth construction rather than about people."
+    "what_this_cannot_show": "that practice CAUSES drive-multiplicity. The depth axis tests whether practice alone moves breadth at a fixed mixture, which is the nearest non-circular question, and it is a question about this model's depth construction rather than about people.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t2_automaticity.py",
+      "sha256": "4ceedacfdc4cf7c45b29bb2006837d18a104c748a6efe7191e788f58fd37500a",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "mixture_reaches_the_reader",
+          "kind": "live",
+          "passed": true,
+          "detail": "turning the drive mixture from a point mass to flat must change the reader's posterior breadth. S-2 shipped without this check and its manipulation never reached the reader at all.",
+          "observed": 0.2605252465534168,
+          "expected": 0.02
+        },
+        {
+          "name": "true_mixture_actually_varies",
+          "kind": "live",
+          "passed": true,
+          "detail": "the generative side of the same check: the drawn mixture itself must differ between the arms, independently of what the reader made of it.",
+          "observed": 0.9551533237608407,
+          "expected": 0.5
+        },
+        {
+          "name": "point_mass_mixture_has_zero_true_breadth",
+          "kind": "positive",
+          "passed": true,
+          "detail": "a mixture concentrated on one drive has zero entropy by construction.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-09
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   },
   "T3": {
     "test": "T-3 \u2014 is a count of recovered decisions ever a well-defined event?",
@@ -6489,7 +7369,52 @@
       "how_to_read": "exp(H) is how many execution modes the reader is effectively still choosing between. One would mean a decision has been recovered. This is the number to quote, because it is free of both the threshold and the mode count."
     },
     "what_would_have_falsified_the_structural_story": "the posterior sharpening with artifact length at a fixed dwell, scored on a measure that is not an order statistic. Partly it does: the mean does fall with length, so the prediction that length is inert was too strong and is reported as wrong. What survives is the ranking -- dwell moves the step density further than length does, and both saturate.",
-    "what_this_cannot_show": "anything about real text. 'A decision was recovered' is mapped onto 'the sub-goal posterior fell below a fraction of maximum entropy', which is the same mapping S-1 used, swept over five thresholds because the mapping is a choice."
+    "what_this_cannot_show": "anything about real text. 'A decision was recovered' is mapped onto 'the sub-goal posterior fell below a fraction of maximum entropy', which is the same mapping S-1 used, swept over five thresholds because the mapping is a choice.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t3_countability.py",
+      "sha256": "200c38665f472523b8564778d5e9bd16a84166e5652cca0de0fb2397801f9753",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "delta_zero_leaves_modes_indistinguishable",
+          "kind": "positive",
+          "passed": true,
+          "detail": "at delta = 0 every execution mode emits the goal signature exactly, so the sub-goal posterior cannot move off uniform and the effective mode count must equal the mode count exactly. A known answer through the whole stack.",
+          "observed": 4.0,
+          "expected": 4.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "mode_distinctness_reaches_the_reader",
+          "kind": "live",
+          "passed": true,
+          "detail": "raising delta from 0 to 1 must sharpen the sub-goal posterior; if it does not, the distinctness knob is not reaching the measurement.",
+          "observed": 0.42704607279363227,
+          "expected": 0.1
+        },
+        {
+          "name": "entropy_within_bounds",
+          "kind": "identity",
+          "passed": true,
+          "detail": "normalised entropy cannot exceed 1. A bound the harness has to satisfy.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   },
   "T4": {
     "test": "T-4 \u2014 does leaked/emblematic divergence survive an uncertain reader?",
@@ -8262,7 +9187,61 @@
       "theta_meaning": "0 candid, 1 = S-3's exact negation, between = partial"
     },
     "what_would_have_falsified_it": "divergence surviving every degradation unchanged, which would mean the signal does not depend on the reader's model at all and S-3 transports for free; or dying at the first perturbation, which would mean it is an oracle result.",
-    "what_this_cannot_show": "anything about real text, and nothing about the Ghost Scale reader. This is the minimal two-channel emitter S-3 built, degraded. The V5 world has one emission channel."
+    "what_this_cannot_show": "anything about real text, and nothing about the Ghost Scale reader. This is the minimal two-channel emitter S-3 built, degraded. The V5 world has one emission channel.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t4_uncertain_reader.py",
+      "sha256": "d933f15e45427e118c62c3a5dba5d9c710d09d134e9db607a0b49f92c82c9be2",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 4,
+      "n_ran": 4,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "reproduces_s3_leak_accuracy",
+          "kind": "positive",
+          "passed": true,
+          "detail": "built from S-3's own seed and affinity matrix, so the leak must be readable at S-3's own rate. Rule 2 of this package: re-scoring another module's result means reproducing its number first.",
+          "observed": 0.9015,
+          "expected": 0.8990625,
+          "tolerance": 0.02
+        },
+        {
+          "name": "candid_display_is_not_concealment",
+          "kind": "positive",
+          "passed": true,
+          "detail": "at theta = 0 the display tracks the leak, so channel divergence must sit near zero. The zero-strength end of the manipulation.",
+          "observed": 0.5838815677454722,
+          "expected": 0.0,
+          "tolerance": 1.5
+        },
+        {
+          "name": "concealment_reaches_the_divergence",
+          "kind": "live",
+          "passed": true,
+          "detail": "full concealment must move the divergence. The manipulation reaches the measurement.",
+          "observed": 15.554387431670978,
+          "expected": 1.0
+        },
+        {
+          "name": "frozen_threshold_does_not_collapse_the_result",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "S-3 fitted its detector threshold on the pooled labelled test data and re-fitted it per cell. This bounds how much of the headline that bought: if fitted and frozen diverge by more than this, the result is the threshold rather than the effect.",
+          "observed": 0.0787500000000001,
+          "expected": 0.0,
+          "tolerance": 0.15
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   },
   "T5": {
     "test": "T-5 (auxiliary) \u2014 is the process posterior a better maker-detector than the goal posterior?",
@@ -15949,6 +16928,43 @@
       }
     },
     "what_would_have_falsified_it": "goal-side statistics matching or beating process-side ones. Then T-1's asymmetry, whatever it says about the reader's internals, would have no consequence for what an instrument should measure.",
-    "what_this_cannot_show": "anything about text. 'Foreign' here is a real policy over an unmodelled goal, which is this repository's stand-in for content whose maker cannot be reconstructed. It is not machine-generated text and this is not a detector."
+    "what_this_cannot_show": "anything about text. 'Foreign' here is a real policy over an unmodelled goal, which is this repository's stand-in for content whose maker cannot be reconstructed. It is not machine-generated text and this is not a detector.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/t5_detection.py",
+      "sha256": "365a0443394d3fe5613d3a32e0c1573dba0604d11beaa6453252a362d449bd50",
+      "git_commit": "b4f5612",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 2,
+      "n_ran": 2,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "synthetic_content_is_separable_at_a_full_look",
+          "kind": "positive",
+          "passed": true,
+          "detail": "a maker with a real chain versus pure synthetic emission, read for the full 24 steps, is the easiest discrimination this model can pose. The tolerance is 0.12 rather than 0.05 deliberately: a positive control has to separate WORKING from BROKEN, not perfect from near-perfect. At full scale this returns 0.997-1.000 and at smoke scale 0.909; a broken reader would return ~0.5, which is nine tolerances away.",
+          "observed": 0.9313734375,
+          "expected": 1.0,
+          "tolerance": 0.12
+        },
+        {
+          "name": "label_permutation_null_sits_at_chance",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "shuffling the class labels must leave every AUC at 0.5. If it does not, the scoring is reading something other than the class.",
+          "observed": 0.009413187500000031,
+          "expected": 0.0,
+          "tolerance": 0.05
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
   }
 }

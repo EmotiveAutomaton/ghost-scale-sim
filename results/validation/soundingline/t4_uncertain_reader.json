@@ -1769,5 +1769,59 @@
     "theta_meaning": "0 candid, 1 = S-3's exact negation, between = partial"
   },
   "what_would_have_falsified_it": "divergence surviving every degradation unchanged, which would mean the signal does not depend on the reader's model at all and S-3 transports for free; or dying at the first perturbation, which would mean it is an oracle result.",
-  "what_this_cannot_show": "anything about real text, and nothing about the Ghost Scale reader. This is the minimal two-channel emitter S-3 built, degraded. The V5 world has one emission channel."
+  "what_this_cannot_show": "anything about real text, and nothing about the Ghost Scale reader. This is the minimal two-channel emitter S-3 built, degraded. The V5 world has one emission channel.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t4_uncertain_reader.py",
+    "sha256": "d933f15e45427e118c62c3a5dba5d9c710d09d134e9db607a0b49f92c82c9be2",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 4,
+    "n_ran": 4,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "reproduces_s3_leak_accuracy",
+        "kind": "positive",
+        "passed": true,
+        "detail": "built from S-3's own seed and affinity matrix, so the leak must be readable at S-3's own rate. Rule 2 of this package: re-scoring another module's result means reproducing its number first.",
+        "observed": 0.9015,
+        "expected": 0.8990625,
+        "tolerance": 0.02
+      },
+      {
+        "name": "candid_display_is_not_concealment",
+        "kind": "positive",
+        "passed": true,
+        "detail": "at theta = 0 the display tracks the leak, so channel divergence must sit near zero. The zero-strength end of the manipulation.",
+        "observed": 0.5838815677454722,
+        "expected": 0.0,
+        "tolerance": 1.5
+      },
+      {
+        "name": "concealment_reaches_the_divergence",
+        "kind": "live",
+        "passed": true,
+        "detail": "full concealment must move the divergence. The manipulation reaches the measurement.",
+        "observed": 15.554387431670978,
+        "expected": 1.0
+      },
+      {
+        "name": "frozen_threshold_does_not_collapse_the_result",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "S-3 fitted its detector threshold on the pooled labelled test data and re-fitted it per cell. This bounds how much of the headline that bought: if fitted and frozen diverge by more than this, the result is the threshold rather than the effect.",
+        "observed": 0.0787500000000001,
+        "expected": 0.0,
+        "tolerance": 0.15
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
 }

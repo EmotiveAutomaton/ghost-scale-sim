@@ -32,6 +32,7 @@ import pandas as pd
 from ...config import Config
 from ...prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 from ...v6 import SEED_OFFSET
+from ...methods import provenance as PROVENANCE
 from . import sl_dir
 
 POSITIONS = 40
@@ -76,7 +77,7 @@ def run(cfg: Config, n_obs: int = 400) -> dict:
             d["i"] = i
             frames.append(d)
     df = pd.concat(frames, ignore_index=True)
-    df.to_csv(sl_dir() / "s6_surface_decay.csv", index=False)
+    df.to_csv(sl_dir() / "s6_surface_decay_points.csv", index=False)
 
     out = {}
     for kind in ("practised", "novice", "synthetic"):
@@ -154,6 +155,7 @@ def run(cfg: Config, n_obs: int = 400) -> dict:
             "prediction, which does not follow trivially: a budgetless creator is FLAT rather "
             "than merely high."),
     }
+    PROVENANCE.stamp(verdict, __file__)
     (sl_dir() / "s6_surface_decay.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

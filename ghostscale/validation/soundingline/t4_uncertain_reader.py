@@ -46,6 +46,8 @@ import pandas as pd
 
 from ...config import Config
 from ...v6 import SEED_OFFSET
+from ...methods import gates as G
+from ...methods import provenance as PROV
 from . import sl_dir
 from . import t_common as T
 
@@ -150,7 +152,10 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
                 block("wrong_cardinality", theta, amp, "none", 0.0, 0.0, ms)
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "t4_uncertain_reader.csv", index=False)
+    df.to_csv(sl_dir() / "t4_uncertain_reader_points.csv", index=False)
+    (df.groupby(["tag", "theta", "amp", "degrade_level", "swap_p", "model_states"])
+       [["divergence", "leak_correct"]].agg(["mean", "std", "count"])
+       .to_csv(sl_dir() / "t4_uncertain_reader_summary.csv"))
 
     def pair(d: pd.DataFrame, theta: float, amp: float):
         a = d[(d.theta == theta) & (d.amp == amp)].divergence.to_numpy()
@@ -240,6 +245,29 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
         breakdown[tag] = [{"level": k, "separation_survives_at_all_amplifications": ok,
                            "mean_balanced_accuracy": acc} for k, ok, acc in alive]
 
+    # ---- standing gates ---------------------------------------------------------------------
+    gr = G.GateReport()
+    _leak = float(df[(df.tag == "theta_sweep") & (df.model_states == N_STATES)].leak_correct.mean())
+    gr.positive("reproduces_s3_leak_accuracy", _leak, 0.8990625, 0.02,
+                detail="built from S-3's own seed and affinity matrix, so the leak must be "
+                       "readable at S-3's own rate. Rule 2 of this package: re-scoring another "
+                       "module's result means reproducing its number first.")
+    gr.positive("candid_display_is_not_concealment",
+                float(ts[(ts.theta == 0.0)].divergence.mean()), 0.0, 1.5,
+                detail="at theta = 0 the display tracks the leak, so channel divergence must sit "
+                       "near zero. The zero-strength end of the manipulation.")
+    gr.live("concealment_reaches_the_divergence",
+            float(ts[(ts.theta == 1.0)].divergence.mean()
+                  - ts[(ts.theta == 0.0)].divergence.mean()), 1.0,
+            detail="full concealment must move the divergence. The manipulation reaches the "
+                   "measurement.")
+    gr.no_oracle("frozen_threshold_does_not_collapse_the_result",
+                 abs(float(fit_rise) - float(frz_rise)), 0.15,
+                 detail="S-3 fitted its detector threshold on the pooled labelled test data and "
+                        "re-fitted it per cell. This bounds how much of the headline that "
+                        "bought: if fitted and frozen diverge by more than this, the result is "
+                        "the threshold rather than the effect.")
+
     verdict = {
         "test": "T-4 — does leaked/emblematic divergence survive an uncertain reader?",
         "for": "Sounding Line, whether the leaked-layer programme transports off the simulator",
@@ -277,6 +305,7 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
             "minimal two-channel emitter S-3 built, degraded. The V5 world has one emission "
             "channel."),
     }
+    PROV.stamp(verdict, __file__, gr)
     (sl_dir() / "t4_uncertain_reader.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

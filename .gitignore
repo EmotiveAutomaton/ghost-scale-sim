@@ -40,6 +40,12 @@ results/diagnostics/e14_steps24/figures/
 results/validation/**/*_points.csv
 results/validation/**/*_raw.csv
 results/validation/**/e19_explore.csv
+# The T-series (second Sounding Line batch) shipped its per-rollout data under bare names --
+# t1_triangle.csv and friends -- which slipped past the rule above and committed 17.5 MB to a
+# repository whose entire library is 2 MB. Those blobs were purged from history and the modules
+# now write `*_points.csv` (ignored) alongside a small `*_summary.csv` (committed). If you add a
+# module here, name the per-rollout file `_points` and the aggregate `_summary`; the naming IS
+# the policy.
 
 # Diagnostics output. Every verdict JSON and every summary CSV IS committed, which is what
 # DIAGNOSTICS.md is generated from and what a reader needs to check a number. The per-observer point

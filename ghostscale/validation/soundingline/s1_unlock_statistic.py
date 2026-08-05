@@ -34,6 +34,7 @@ import pandas as pd
 from ...config import Config
 from ...prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 from ...v6 import SEED_OFFSET
+from ...methods import provenance as PROVENANCE
 from . import sl_dir
 from .common import concentration, process_gain, ratio, resolved_steps, rollouts, usable
 
@@ -122,7 +123,7 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
         "nan_or_inf": int(df[f"count_ratio@{th}"].replace([np.inf, -np.inf], np.nan).isna().sum()),
         "of": int(len(df))} for th in THRESHOLDS}
 
-    df.to_csv(sl_dir() / "s1_unlock_statistic.csv", index=False)
+    df.to_csv(sl_dir() / "s1_unlock_statistic_points.csv", index=False)
     verdict = {
         "test": "S-1 — is the unlock ratio measuring what process_error_reduction measures?",
         "for": "Sounding Line, Gate 3 primary",
@@ -142,6 +143,7 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
             "honest analogue of a statistic that never consults the truth. A different mapping "
             "could behave differently and the threshold is swept for that reason."),
     }
+    PROVENANCE.stamp(verdict, __file__)
     (sl_dir() / "s1_unlock_statistic.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

@@ -54,6 +54,12 @@ from ... import v6_model as V6
 from ...config import Config
 from ...v5_model import MU_LEVELS, mgs_index
 from ...v6 import SEED_OFFSET
+from ...methods import gates as G
+from ...methods import overlap as OV
+from ...methods import pid as PID
+# aliased PROVENANCE, not PROV: this module already binds PROV = K.CREATOR below,
+# and the import was silently shadowed by it.
+from ...methods import provenance as PROVENANCE
 from . import sl_dir
 from .common import build, process_gain, rollouts, usable
 from . import t_common as T
@@ -211,7 +217,15 @@ def run(cfg: Config, n_obs: int = 150, n_obs_robust: int | None = None) -> dict:
                                f"pair:{a}+{b}", seed)
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "t1_triangle.csv", index=False)
+    # PER-ROLLOUT DATA GOES TO A *_points.csv, WHICH .gitignore ALREADY EXCLUDES. The first
+    # version of this module wrote 10.45 MB here under a name that dodged that rule, in a
+    # repository whose entire library is 2 MB. The committed artifact is the verdict JSON plus
+    # the small summary below.
+    df.to_csv(sl_dir() / "t1_triangle_points.csv", index=False)
+    (df.groupby(["mu", "beta", "arm"])[["goal", "process", "depth",
+                                        "goal_acc", "process_acc", "depth_acc"]]
+       .agg(["mean", "std", "count"])
+       .to_csv(sl_dir() / "t1_triangle_summary.csv"))
 
     # ---- edges ------------------------------------------------------------------------------
     def arm(mu, beta, tag):
@@ -333,6 +347,78 @@ def run(cfg: Config, n_obs: int = 150, n_obs_robust: int | None = None) -> dict:
                     "correctness check rather than reported as a finding."),
             }
 
+    # ---- standing gates ---------------------------------------------------------------------
+    gr = G.GateReport()
+    worst_placebo = max((max(d.values()) for d in placebo.values()), default=float("nan"))
+    gr.placebo("zero_nat_channel_reproduces_control", worst_placebo,
+               detail="a channel at 1/card fidelity carries zero nats and must reproduce the "
+                      "control exactly. Caught a shared RNG stream and a 1/3 that is not uniform "
+                      "in floating point, both of which moved a headline number.")
+    live_edge = abs(edges.get("mu3_beta0.25|process->depth", {}).get("difference", float("nan")))
+    gr.live("supply_channel_actually_reaches_the_reader", live_edge, 0.05,
+            detail="the strongest edge at full fidelity must move the reader. The S-2 check: a "
+                   "manipulation that never reaches the measurement.")
+    ceil = ceilings.get("mu3_beta1.0", {})
+    gr.positive("perfect_legibility_gives_perfect_goal_recovery",
+                ceil.get("goal_control_accuracy", float("nan")), 1.0, 1e-9,
+                detail="at beta = 1.0 with a full forced look the goal is fully legible by "
+                       "construction, so accuracy must be exactly 1.0 through the whole stack.")
+    sym_worst = max((d["abs_difference"] for d in symmetry.values()), default=float("nan"))
+    gr.identity("goal_depth_edge_symmetry", sym_worst, 0.0, 1e-9,
+                detail="at one nat both vertices are fully determined, so each edge is the "
+                       "symmetric conditional mutual information I(goal; depth | data).")
+    n28_ok = n28.get("mu1_beta1.0", {}).get("supplying_goal_moves_process", {})
+    gr.no_oracle("no_process_recovery_at_mu1", abs(n28_ok.get("difference", float("nan"))), 0.01,
+                 detail="at mu = 1 every mode emits the goal signature exactly, so supplying the "
+                        "goal cannot create process recovery. Null N28.")
+    _n28_pid = PID.n28_identity_from_pid(np.asarray(world.subsig, dtype=float))
+    if "skipped" in _n28_pid:
+        gr.skip("n28_from_the_likelihood_alone", "identity", _n28_pid["skipped"])
+    else:
+        gr.identity("n28_from_the_likelihood_alone", _n28_pid["worst_abs_deviation"], 0.0, 1e-9,
+                    detail="null N28 recovered from world.subsig by partial information "
+                           "decomposition, with no rollouts: at the shallowest depth an emission "
+                           "carries no unique or synergistic mode information.")
+
+    # ---- separation, replacing excludes_zero as the headline ---------------------------------
+    sep = {}
+    for (mu, beta) in CELLS:
+        key = f"mu{mu}_beta{beta}"
+        ctrl = arm(mu, beta, "control")
+        for src in VERTS:
+            hi = arm(mu, beta, f"supply:{src}@1.00nats")
+            for tgt in VERTS:
+                if tgt == src or not len(hi):
+                    continue
+                sep[f"{key}|{src}->{tgt}"] = OV.score_against_best_null(
+                    hi[tgt].to_numpy() - ctrl[tgt].to_numpy(),
+                    placebo=(arm(mu, beta, f"supply:{src}@0.00nats")[tgt].to_numpy()
+                             - ctrl[tgt].to_numpy()
+                             if len(arm(mu, beta, f"supply:{src}@0.00nats")) else None),
+                    permuted=(arm(mu, beta, f"neg:random:{src}")[tgt].to_numpy()
+                              - ctrl[tgt].to_numpy()
+                              if len(arm(mu, beta, f"neg:random:{src}")) else None),
+                    swapped=(arm(mu, beta, f"neg:swap:{src}")[tgt].to_numpy()
+                             - ctrl[tgt].to_numpy()
+                             if len(arm(mu, beta, f"neg:swap:{src}")) else None))
+
+    # Magnitude within a family: every edge INTO the same vertex, in the same cell, on the same
+    # axis. Cross-cell comparison is not meaningful here because the null's spread collapses where
+    # the reader saturates.
+    rel = {}
+    for (mu, beta) in CELLS:
+        key = f"mu{mu}_beta{beta}"
+        for tgt in VERTS:
+            fam = {k: v for k, v in sep.items()
+                   if k.startswith(key + "|") and k.endswith("->" + tgt)}
+            if len(fam) >= 2:
+                rel[f"{key}|into_{tgt}"] = OV.relative_magnitude(fam)
+
+    pid_by_depth = {}
+    for mi in range(n_mu):
+        pid_by_depth[f"mu{list(MU_LEVELS)[mi]}"] = PID.emission_pid(
+            np.asarray(world.subsig, dtype=float), mi)
+
     verdict = {
         "test": "T-1 — is empathy three coupled inference problems, or a chain?",
         "for": "Sounding Line, the triangle claim; decides chain vs triangle",
@@ -364,9 +450,13 @@ def run(cfg: Config, n_obs: int = 150, n_obs_robust: int | None = None) -> dict:
             "merged_index_order_ok": bool(index_ok),
         },
         "pairs_superadditivity": pairs,
+        "separation_vs_null": sep,
+        "relative_magnitude_within_family": rel,
+        "emission_pid_by_depth": pid_by_depth,
         "budget_matched_edges": budget,
         "mutual_information_symmetry_check": symmetry,
     }
+    PROVENANCE.stamp(verdict, __file__, gr)
     (sl_dir() / "t1_triangle.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

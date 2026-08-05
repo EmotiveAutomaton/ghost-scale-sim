@@ -3076,6 +3076,1086 @@
       "is_superadditive": true
     }
   },
+  "separation_vs_null": {
+    "mu3_beta1.0|goal->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.0016544111980073917,
+      "null_mean": -0.17741679493510717,
+      "null_sd": 0.15560072521002757,
+      "standardised_effect": 1.150837863328766,
+      "per_unit_overlap": 0.060000000000000005,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta1.0|goal->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 3.7102207528505457e-10,
+      "null_mean": -0.18663954110199213,
+      "null_sd": 0.38541662525826786,
+      "standardised_effect": 0.484253997470781,
+      "per_unit_overlap": 0.015,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta1.0|process->goal": {
+      "overlap": 0.0115,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 1.019380845845852e-09,
+      "null_mean": -2.6447946117058586e-08,
+      "null_sd": 2.7718186615919523e-07,
+      "standardised_effect": 0.09909496369119974,
+      "per_unit_overlap": 0.955,
+      "bootstrap_p_two_sided": 0.0985,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta1.0|process->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.840195004010967,
+      "null_mean": -7.917078996080197,
+      "null_sd": 7.089278167770333,
+      "standardised_effect": 1.2352842973356533,
+      "per_unit_overlap": 0.14,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta1.0|depth->goal": {
+      "overlap": 0.1295,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 3.7102209471395753e-10,
+      "null_mean": -5.984145590165469e-09,
+      "null_sd": 8.39625766426582e-08,
+      "standardised_effect": 0.07569047948500675,
+      "per_unit_overlap": 0.99,
+      "bootstrap_p_two_sided": 0.077,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta1.0|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.35612394352081095,
+      "null_mean": -0.8789435824277717,
+      "null_sd": 0.9666948458630144,
+      "standardised_effect": 1.2776188175969627,
+      "per_unit_overlap": 0.125,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.25|goal->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0011652651958570259,
+      "null_mean": -0.05144535286140822,
+      "null_sd": 0.10052867196314086,
+      "standardised_effect": 0.5001566884717878,
+      "per_unit_overlap": 0.54,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.25|goal->depth": {
+      "overlap": 0.092,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0057483974535871485,
+      "null_mean": -0.03612233271872739,
+      "null_sd": 0.21705652952956922,
+      "standardised_effect": 0.13993559802587027,
+      "per_unit_overlap": 0.505,
+      "bootstrap_p_two_sided": 0.046,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.25|process->goal": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.16650309403909985,
+      "null_mean": -0.4141516837854616,
+      "null_sd": 0.8891063814203951,
+      "standardised_effect": 0.6530768308027823,
+      "per_unit_overlap": 0.54,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.25|process->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.5147100378310562,
+      "null_mean": -0.7467938906302044,
+      "null_sd": 1.552444725240911,
+      "standardised_effect": 0.812591848167411,
+      "per_unit_overlap": 0.33499999999999996,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.25|depth->goal": {
+      "overlap": 0.7605,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.005748397453587275,
+      "null_mean": -0.004659630789386995,
+      "null_sd": 0.09241445719410715,
+      "standardised_effect": -0.011781345660164805,
+      "per_unit_overlap": 0.825,
+      "bootstrap_p_two_sided": 0.8545,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.25|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.1377913163624635,
+      "null_mean": -0.19812429783127683,
+      "null_sd": 0.3283850371186986,
+      "standardised_effect": 1.0229321565352556,
+      "per_unit_overlap": 0.355,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.1|goal->process": {
+      "overlap": 0.05900000000000001,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.004037227572595191,
+      "null_mean": -0.020629285697206096,
+      "null_sd": 0.071798018596924,
+      "standardised_effect": 0.23109353780024436,
+      "per_unit_overlap": 0.765,
+      "bootstrap_p_two_sided": 0.0015,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.1|goal->depth": {
+      "overlap": 0.057499999999999996,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0013795170936815814,
+      "null_mean": -0.026634111329617145,
+      "null_sd": 0.11915878115179411,
+      "standardised_effect": 0.21194068948862624,
+      "per_unit_overlap": 0.73,
+      "bootstrap_p_two_sided": 0.0035,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.1|process->goal": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.2616286990107238,
+      "null_mean": -0.5260039437201871,
+      "null_sd": 1.0880274927553726,
+      "standardised_effect": 0.7239087688274057,
+      "per_unit_overlap": 0.625,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.1|process->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.4089182664570008,
+      "null_mean": -0.19199542053551005,
+      "null_sd": 0.777208704603246,
+      "standardised_effect": 0.7731690129477755,
+      "per_unit_overlap": 0.4,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.1|depth->goal": {
+      "overlap": 0.5725,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.00137951709368184,
+      "null_mean": 0.00447946084416948,
+      "null_sd": 0.17346462173315,
+      "standardised_effect": -0.03377621257471453,
+      "per_unit_overlap": 0.825,
+      "bootstrap_p_two_sided": 0.634,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu3_beta0.1|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.12381099446736804,
+      "null_mean": -0.17379904211524924,
+      "null_sd": 0.2980350637732833,
+      "standardised_effect": 0.9985739020594258,
+      "per_unit_overlap": 0.245,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.25|goal->process": {
+      "overlap": 0.005,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.0010193377894442202,
+      "null_mean": -0.02544118513076584,
+      "null_sd": 0.09076885968294958,
+      "standardised_effect": 0.2915154273462854,
+      "per_unit_overlap": 0.55,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.25|goal->depth": {
+      "overlap": 0.013500000000000002,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0038246648382618716,
+      "null_mean": -0.04755364213282542,
+      "null_sd": 0.19225217997654953,
+      "standardised_effect": 0.227456340416517,
+      "per_unit_overlap": 0.44999999999999996,
+      "bootstrap_p_two_sided": 0.0025,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.25|process->goal": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.13883058223637582,
+      "null_mean": -0.4814467550949603,
+      "null_sd": 0.9578595467578314,
+      "standardised_effect": 0.6475660648065309,
+      "per_unit_overlap": 0.6,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.25|process->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.6373711409678045,
+      "null_mean": -0.8926274551588861,
+      "null_sd": 1.7126354470209095,
+      "standardised_effect": 0.8933591785619576,
+      "per_unit_overlap": 0.315,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.25|depth->goal": {
+      "overlap": 0.567,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0038246648382620407,
+      "null_mean": 0.0022024008118769066,
+      "null_sd": 0.11495839322441323,
+      "standardised_effect": -0.052428234956045,
+      "per_unit_overlap": 0.845,
+      "bootstrap_p_two_sided": 0.46,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.25|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.16173840873986883,
+      "null_mean": -0.25794471462153806,
+      "null_sd": 0.40615584534655097,
+      "standardised_effect": 1.033305634203821,
+      "per_unit_overlap": 0.28500000000000003,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.1|goal->process": {
+      "overlap": 0.1385,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0006072846124114977,
+      "null_mean": -0.014199391381917661,
+      "null_sd": 0.07068423547752166,
+      "standardised_effect": 0.19229332647770658,
+      "per_unit_overlap": 0.745,
+      "bootstrap_p_two_sided": 0.0055,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.1|goal->depth": {
+      "overlap": 0.483,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.00878957989127772,
+      "null_mean": -0.01784926563961175,
+      "null_sd": 0.12163642772283761,
+      "standardised_effect": 0.07448168215674295,
+      "per_unit_overlap": 0.73,
+      "bootstrap_p_two_sided": 0.2915,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.1|process->goal": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.2514138477133152,
+      "null_mean": -0.5796520837445042,
+      "null_sd": 1.100635813001579,
+      "standardised_effect": 0.7550780391121319,
+      "per_unit_overlap": 0.555,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.1|process->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.4592131433546929,
+      "null_mean": -0.3962032681896916,
+      "null_sd": 1.3036323390135456,
+      "standardised_effect": 0.6561791894420749,
+      "per_unit_overlap": 0.38,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.1|depth->goal": {
+      "overlap": 0.163,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.00878957989127798,
+      "null_mean": 0.0164632645407757,
+      "null_sd": 0.20876199088974623,
+      "standardised_effect": -0.1209647614703507,
+      "per_unit_overlap": 0.835,
+      "bootstrap_p_two_sided": 0.0725,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu2_beta0.1|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.12170021830177521,
+      "null_mean": -0.17565292972831537,
+      "null_sd": 0.28017859632961445,
+      "standardised_effect": 1.061298585707351,
+      "per_unit_overlap": 0.29000000000000004,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta1.0|goal->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.0008838552522721355,
+      "null_mean": 0.035057104104229075,
+      "null_sd": 0.13998186707043908,
+      "standardised_effect": -0.2567543933273562,
+      "per_unit_overlap": 0.135,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta1.0|goal->depth": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 1.895539414320524e-10,
+      "null_mean": -0.5015254908561645,
+      "null_sd": 0.6416255244222228,
+      "standardised_effect": 0.7816482854190332,
+      "per_unit_overlap": 0.005,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta1.0|process->goal": {
+      "overlap": 0.008,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 1.1948205091982799e-10,
+      "null_mean": -1.0561378482876193e-09,
+      "null_sd": 5.40003840584106e-09,
+      "standardised_effect": 0.21770584037621185,
+      "per_unit_overlap": 0.935,
+      "bootstrap_p_two_sided": 0.0025,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta1.0|process->depth": {
+      "overlap": 0.7195,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": 0.3526897036145046,
+      "null_mean": 0.390254486294197,
+      "null_sd": 0.7652283807351571,
+      "standardised_effect": -0.04908963601637963,
+      "per_unit_overlap": 0.845,
+      "bootstrap_p_two_sided": 0.479,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta1.0|depth->goal": {
+      "overlap": 0.001,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 1.8955395530984022e-10,
+      "null_mean": -9.447397619766206e-10,
+      "null_sd": 6.0536784180147604e-09,
+      "standardised_effect": 0.18737264171664414,
+      "per_unit_overlap": 0.93,
+      "bootstrap_p_two_sided": 0.013,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta1.0|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.03942980573812628,
+      "null_mean": -0.4537748848703045,
+      "null_sd": 0.4806735359461776,
+      "standardised_effect": 1.0260699908048532,
+      "per_unit_overlap": 0.33,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta0.25|goal->process": {
+      "overlap": 0.0165,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": false,
+      "supports_a_positive_edge": false,
+      "effect_mean": -0.00962288524693718,
+      "null_mean": 0.009141725107860184,
+      "null_sd": 0.06970983548297081,
+      "standardised_effect": -0.2691816760833026,
+      "per_unit_overlap": 0.74,
+      "bootstrap_p_two_sided": 0.0005,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta0.25|goal->depth": {
+      "overlap": 0.0125,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.00011540425137647303,
+      "null_mean": -0.08807801130826004,
+      "null_sd": 0.35196166616398455,
+      "standardised_effect": 0.2505767645688602,
+      "per_unit_overlap": 0.535,
+      "bootstrap_p_two_sided": 0.001,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta0.25|process->goal": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.12976625744906492,
+      "null_mean": -0.6404785709155209,
+      "null_sd": 1.2406051275844134,
+      "standardised_effect": 0.6208621996140965,
+      "per_unit_overlap": 0.655,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta0.25|process->depth": {
+      "overlap": 0.7184999999999999,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": 0.13496186942266963,
+      "null_mean": 0.11295819318844715,
+      "null_sd": 0.43680107888528574,
+      "standardised_effect": 0.050374592229432594,
+      "per_unit_overlap": 0.785,
+      "bootstrap_p_two_sided": 0.482,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta0.25|depth->goal": {
+      "overlap": 0.607,
+      "tau": 0.2,
+      "separated_from_null": false,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": false,
+      "effect_mean": 0.00011540425137679389,
+      "null_mean": -0.0055644515049125135,
+      "null_sd": 0.07566529436908666,
+      "standardised_effect": 0.07506553438599763,
+      "per_unit_overlap": 0.6950000000000001,
+      "bootstrap_p_two_sided": 0.292,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    },
+    "mu1_beta0.25|depth->process": {
+      "overlap": 0.0,
+      "tau": 0.2,
+      "separated_from_null": true,
+      "effect_exceeds_null": true,
+      "supports_a_positive_edge": true,
+      "effect_mean": 0.012369817088942825,
+      "null_mean": -0.10872764207808684,
+      "null_sd": 0.23679643699316472,
+      "standardised_effect": 0.5113989919135702,
+      "per_unit_overlap": 0.51,
+      "bootstrap_p_two_sided": 0.0,
+      "n_effect": 200,
+      "n_null": 200,
+      "bins": 64,
+      "bootstrap_draws": 2000,
+      "how_to_read": "THREE FIELDS, THREE DIFFERENT CLAIMS, and the point of separating them is that no single flag can carry all three. separated_from_null: the effect's bootstrapped mean is distinguishable from the scrambled-channel null, i.e. it needs the channel to correspond to the truth. effect_exceeds_null: it is on the helping side of that null. supports_a_positive_edge: both of those AND the effect is above zero -- the only one of the three that licenses 'this edge is alive'. None of them is a magnitude. standardised_effect is the magnitude, in null standard deviations, and an edge can be cleanly separated and still negligible: T-1's +0.0017 goal->process edge is real and is 0.3% of the process->depth edge on the same axis. per_unit_overlap is effect size against individual variation rather than confidence, and is high for almost everything here.",
+      "null_used": "swapped"
+    }
+  },
+  "relative_magnitude_within_family": {
+    "mu3_beta1.0|into_goal": {
+      "largest_abs_effect": 1.019380845845852e-09,
+      "largest_is": "mu3_beta1.0|process->goal",
+      "fraction_of_largest": {
+        "mu3_beta1.0|process->goal": 1.0,
+        "mu3_beta1.0|depth->goal": 0.3639680853588086
+      },
+      "negligible_below_5pc": [],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta1.0|into_process": {
+      "largest_abs_effect": 0.35612394352081095,
+      "largest_is": "mu3_beta1.0|depth->process",
+      "fraction_of_largest": {
+        "mu3_beta1.0|goal->process": 0.004645605071231927,
+        "mu3_beta1.0|depth->process": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu3_beta1.0|goal->process"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta1.0|into_depth": {
+      "largest_abs_effect": 0.840195004010967,
+      "largest_is": "mu3_beta1.0|process->depth",
+      "fraction_of_largest": {
+        "mu3_beta1.0|goal->depth": 4.4159043259463565e-10,
+        "mu3_beta1.0|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu3_beta1.0|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta0.25|into_goal": {
+      "largest_abs_effect": 0.16650309403909985,
+      "largest_is": "mu3_beta0.25|process->goal",
+      "fraction_of_largest": {
+        "mu3_beta0.25|process->goal": 1.0,
+        "mu3_beta0.25|depth->goal": 0.03452426807298477
+      },
+      "negligible_below_5pc": [
+        "mu3_beta0.25|depth->goal"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta0.25|into_process": {
+      "largest_abs_effect": 0.1377913163624635,
+      "largest_is": "mu3_beta0.25|depth->process",
+      "fraction_of_largest": {
+        "mu3_beta0.25|goal->process": 0.008456738977598317,
+        "mu3_beta0.25|depth->process": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu3_beta0.25|goal->process"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta0.25|into_depth": {
+      "largest_abs_effect": 0.5147100378310562,
+      "largest_is": "mu3_beta0.25|process->depth",
+      "fraction_of_largest": {
+        "mu3_beta0.25|goal->depth": 0.011168224886016214,
+        "mu3_beta0.25|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu3_beta0.25|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta0.1|into_goal": {
+      "largest_abs_effect": 0.2616286990107238,
+      "largest_is": "mu3_beta0.1|process->goal",
+      "fraction_of_largest": {
+        "mu3_beta0.1|process->goal": 1.0,
+        "mu3_beta0.1|depth->goal": 0.005272804928886245
+      },
+      "negligible_below_5pc": [
+        "mu3_beta0.1|depth->goal"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta0.1|into_process": {
+      "largest_abs_effect": 0.12381099446736804,
+      "largest_is": "mu3_beta0.1|depth->process",
+      "fraction_of_largest": {
+        "mu3_beta0.1|goal->process": 0.03260798921746205,
+        "mu3_beta0.1|depth->process": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu3_beta0.1|goal->process"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu3_beta0.1|into_depth": {
+      "largest_abs_effect": 0.4089182664570008,
+      "largest_is": "mu3_beta0.1|process->depth",
+      "fraction_of_largest": {
+        "mu3_beta0.1|goal->depth": 0.0033735765966978206,
+        "mu3_beta0.1|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu3_beta0.1|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu2_beta0.25|into_goal": {
+      "largest_abs_effect": 0.13883058223637582,
+      "largest_is": "mu2_beta0.25|process->goal",
+      "fraction_of_largest": {
+        "mu2_beta0.25|process->goal": 1.0,
+        "mu2_beta0.25|depth->goal": 0.02754915218716066
+      },
+      "negligible_below_5pc": [
+        "mu2_beta0.25|depth->goal"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu2_beta0.25|into_process": {
+      "largest_abs_effect": 0.16173840873986883,
+      "largest_is": "mu2_beta0.25|depth->process",
+      "fraction_of_largest": {
+        "mu2_beta0.25|goal->process": 0.006302385422152057,
+        "mu2_beta0.25|depth->process": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu2_beta0.25|goal->process"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu2_beta0.25|into_depth": {
+      "largest_abs_effect": 0.6373711409678045,
+      "largest_is": "mu2_beta0.25|process->depth",
+      "fraction_of_largest": {
+        "mu2_beta0.25|goal->depth": 0.006000687185890437,
+        "mu2_beta0.25|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu2_beta0.25|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu2_beta0.1|into_goal": {
+      "largest_abs_effect": 0.2514138477133152,
+      "largest_is": "mu2_beta0.1|process->goal",
+      "fraction_of_largest": {
+        "mu2_beta0.1|process->goal": 1.0,
+        "mu2_beta0.1|depth->goal": 0.03496060368679713
+      },
+      "negligible_below_5pc": [
+        "mu2_beta0.1|depth->goal"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu2_beta0.1|into_process": {
+      "largest_abs_effect": 0.12170021830177521,
+      "largest_is": "mu2_beta0.1|depth->process",
+      "fraction_of_largest": {
+        "mu2_beta0.1|goal->process": 0.004990004298148736,
+        "mu2_beta0.1|depth->process": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu2_beta0.1|goal->process"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu2_beta0.1|into_depth": {
+      "largest_abs_effect": 0.4592131433546929,
+      "largest_is": "mu2_beta0.1|process->depth",
+      "fraction_of_largest": {
+        "mu2_beta0.1|goal->depth": 0.019140523346233392,
+        "mu2_beta0.1|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu2_beta0.1|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu1_beta1.0|into_goal": {
+      "largest_abs_effect": 1.8955395530984022e-10,
+      "largest_is": "mu1_beta1.0|depth->goal",
+      "fraction_of_largest": {
+        "mu1_beta1.0|process->goal": 0.6303326708457525,
+        "mu1_beta1.0|depth->goal": 1.0
+      },
+      "negligible_below_5pc": [],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu1_beta1.0|into_process": {
+      "largest_abs_effect": 0.03942980573812628,
+      "largest_is": "mu1_beta1.0|depth->process",
+      "fraction_of_largest": {
+        "mu1_beta1.0|goal->process": 0.022415916987830856,
+        "mu1_beta1.0|depth->process": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu1_beta1.0|goal->process"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu1_beta1.0|into_depth": {
+      "largest_abs_effect": 0.3526897036145046,
+      "largest_is": "mu1_beta1.0|process->depth",
+      "fraction_of_largest": {
+        "mu1_beta1.0|goal->depth": 5.374524390404032e-10,
+        "mu1_beta1.0|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu1_beta1.0|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu1_beta0.25|into_goal": {
+      "largest_abs_effect": 0.12976625744906492,
+      "largest_is": "mu1_beta0.25|process->goal",
+      "fraction_of_largest": {
+        "mu1_beta0.25|process->goal": 1.0,
+        "mu1_beta0.25|depth->goal": 0.0008893240326522607
+      },
+      "negligible_below_5pc": [
+        "mu1_beta0.25|depth->goal"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu1_beta0.25|into_process": {
+      "largest_abs_effect": 0.012369817088942825,
+      "largest_is": "mu1_beta0.25|depth->process",
+      "fraction_of_largest": {
+        "mu1_beta0.25|goal->process": 0.7779327032684192,
+        "mu1_beta0.25|depth->process": 1.0
+      },
+      "negligible_below_5pc": [],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    },
+    "mu1_beta0.25|into_depth": {
+      "largest_abs_effect": 0.13496186942266963,
+      "largest_is": "mu1_beta0.25|process->depth",
+      "fraction_of_largest": {
+        "mu1_beta0.25|goal->depth": 0.0008550878249548647,
+        "mu1_beta0.25|process->depth": 1.0
+      },
+      "negligible_below_5pc": [
+        "mu1_beta0.25|goal->depth"
+      ],
+      "how_to_read": "magnitude relative to the biggest effect measured the same way in the same family. An edge can separate from every null, exclude zero, and still sit at 0.3% of the result next to it -- which is a fact about importance that no confidence statistic reports, and the reason `excludes_zero` was misleading in the first place."
+    }
+  },
+  "emission_pid_by_depth": {
+    "mu1": {
+      "total_mutual_information_bits": 1.4521333512637247,
+      "redundant_bits": 6.406853007629829e-16,
+      "unique_source_a_bits": 1.4521333512637231,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 8.881784197001252e-16,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+      "mu_index": 0
+    },
+    "mu2": {
+      "total_mutual_information_bits": 1.8782900817777808,
+      "redundant_bits": 0.29663520738810184,
+      "unique_source_a_bits": 1.1554981438756229,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 0.4261567305140561,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+      "mu_index": 1
+    },
+    "mu3": {
+      "total_mutual_information_bits": 1.8782900817777808,
+      "redundant_bits": 0.2705662180556205,
+      "unique_source_a_bits": 1.1815671332081041,
+      "unique_source_b_bits": 0.0,
+      "synergistic_bits": 0.4261567305140561,
+      "estimator": "PID_WB (Williams-Beer I_min)",
+      "how_to_read": "redundant = either source alone tells you this. unique = one source and not the other. synergistic = only the two together. A source whose UNIQUE term is zero carries nothing the other source does not also carry or that is not readable only jointly -- which is a stronger statement than a low mutual information.",
+      "mu_index": 2
+    }
+  },
   "budget_matched_edges": {
     "mu3_beta1.0|goal->process|duty0.0417": {
       "mean_a": 0.18173121083196783,
@@ -4633,5 +5713,77 @@
       "abs_difference": 3.2085608041992897e-16,
       "note": "at one nat per step both of these vertices are fully determined for the reader, so each edge is the conditional mutual information I(goal; depth | data) -- which is SYMMETRIC. These two numbers agreeing to six decimals is an identity the harness has to satisfy, and it is used here as a correctness check rather than reported as a finding."
     }
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t1_triangle.py",
+    "sha256": "42cbae776039b1308d966f8a9e26f4c92fc0d2449c7d042104992cb7191cd78e",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 6,
+    "n_ran": 6,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "zero_nat_channel_reproduces_control",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a channel at 1/card fidelity carries zero nats and must reproduce the control exactly. Caught a shared RNG stream and a 1/3 that is not uniform in floating point, both of which moved a headline number.",
+        "observed": 2.6645352591003757e-15,
+        "expected": 0.0,
+        "tolerance": 1e-12
+      },
+      {
+        "name": "supply_channel_actually_reaches_the_reader",
+        "kind": "live",
+        "passed": true,
+        "detail": "the strongest edge at full fidelity must move the reader. The S-2 check: a manipulation that never reaches the measurement.",
+        "observed": 0.5147100378310562,
+        "expected": 0.05
+      },
+      {
+        "name": "perfect_legibility_gives_perfect_goal_recovery",
+        "kind": "positive",
+        "passed": true,
+        "detail": "at beta = 1.0 with a full forced look the goal is fully legible by construction, so accuracy must be exactly 1.0 through the whole stack.",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "goal_depth_edge_symmetry",
+        "kind": "identity",
+        "passed": true,
+        "detail": "at one nat both vertices are fully determined, so each edge is the symmetric conditional mutual information I(goal; depth | data).",
+        "observed": 3.2085608041992897e-16,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_process_recovery_at_mu1",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "at mu = 1 every mode emits the goal signature exactly, so supplying the goal cannot create process recovery. Null N28.",
+        "observed": 0.0008838552522721355,
+        "expected": 0.0,
+        "tolerance": 0.01
+      },
+      {
+        "name": "n28_from_the_likelihood_alone",
+        "kind": "identity",
+        "passed": true,
+        "detail": "null N28 recovered from world.subsig by partial information decomposition, with no rollouts: at the shallowest depth an emission carries no unique or synergistic mode information.",
+        "observed": 8.881784197001252e-16,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
   }
 }

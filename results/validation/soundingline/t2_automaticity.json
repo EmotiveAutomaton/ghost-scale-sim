@@ -426,5 +426,49 @@
   "construct_is_confounded_with_difficulty": true,
   "construct_is_confounded_with_shallowness": false,
   "what_would_have_falsified_it": "breadth flat across the automaticity sweep, which would make posterior entropy blind to motivational variety; or goal accuracy falling with it, which would make 'diversity' a synonym for 'noise' and the construct unusable.",
-  "what_this_cannot_show": "that practice CAUSES drive-multiplicity. The depth axis tests whether practice alone moves breadth at a fixed mixture, which is the nearest non-circular question, and it is a question about this model's depth construction rather than about people."
+  "what_this_cannot_show": "that practice CAUSES drive-multiplicity. The depth axis tests whether practice alone moves breadth at a fixed mixture, which is the nearest non-circular question, and it is a question about this model's depth construction rather than about people.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t2_automaticity.py",
+    "sha256": "4ceedacfdc4cf7c45b29bb2006837d18a104c748a6efe7191e788f58fd37500a",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "mixture_reaches_the_reader",
+        "kind": "live",
+        "passed": true,
+        "detail": "turning the drive mixture from a point mass to flat must change the reader's posterior breadth. S-2 shipped without this check and its manipulation never reached the reader at all.",
+        "observed": 0.2605252465534168,
+        "expected": 0.02
+      },
+      {
+        "name": "true_mixture_actually_varies",
+        "kind": "live",
+        "passed": true,
+        "detail": "the generative side of the same check: the drawn mixture itself must differ between the arms, independently of what the reader made of it.",
+        "observed": 0.9551533237608407,
+        "expected": 0.5
+      },
+      {
+        "name": "point_mass_mixture_has_zero_true_breadth",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a mixture concentrated on one drive has zero entropy by construction.",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
 }

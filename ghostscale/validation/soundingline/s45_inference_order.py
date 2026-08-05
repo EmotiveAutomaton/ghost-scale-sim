@@ -38,6 +38,7 @@ from ...prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 from ...v5_model import make_v5_observer
 from ...v6 import SEED_OFFSET, harness as H
 from ...v6.e36_process import BETA_GRID, MU_GRID, RESOLVED_ENTROPY
+from ...methods import provenance as PROVENANCE
 from . import sl_dir
 from .common import build, e36_seed
 
@@ -117,7 +118,7 @@ def run(cfg: Config, n_obs: int = 80, n_timesteps: int = 24, forced_k: int = 24)
                     })
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "s45_inference_order.csv", index=False)
+    df.to_csv(sl_dir() / "s45_inference_order_points.csv", index=False)
     rng = np.random.default_rng(SEED_OFFSET + 90_450)
 
     def paired(a: str, b: str, col: str) -> dict:
@@ -165,6 +166,7 @@ def run(cfg: Config, n_obs: int = 80, n_timesteps: int = 24, forced_k: int = 24)
             "reverse or anomaly-first settling in fewer DEEP steps than forward, with accuracy "
             "unchanged. That would make the entry point a genuine efficiency and not a story."),
     }
+    PROVENANCE.stamp(verdict, __file__)
     (sl_dir() / "s45_inference_order.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

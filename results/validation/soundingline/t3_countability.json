@@ -1043,5 +1043,50 @@
     "how_to_read": "exp(H) is how many execution modes the reader is effectively still choosing between. One would mean a decision has been recovered. This is the number to quote, because it is free of both the threshold and the mode count."
   },
   "what_would_have_falsified_the_structural_story": "the posterior sharpening with artifact length at a fixed dwell, scored on a measure that is not an order statistic. Partly it does: the mean does fall with length, so the prediction that length is inert was too strong and is reported as wrong. What survives is the ranking -- dwell moves the step density further than length does, and both saturate.",
-  "what_this_cannot_show": "anything about real text. 'A decision was recovered' is mapped onto 'the sub-goal posterior fell below a fraction of maximum entropy', which is the same mapping S-1 used, swept over five thresholds because the mapping is a choice."
+  "what_this_cannot_show": "anything about real text. 'A decision was recovered' is mapped onto 'the sub-goal posterior fell below a fraction of maximum entropy', which is the same mapping S-1 used, swept over five thresholds because the mapping is a choice.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t3_countability.py",
+    "sha256": "200c38665f472523b8564778d5e9bd16a84166e5652cca0de0fb2397801f9753",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "delta_zero_leaves_modes_indistinguishable",
+        "kind": "positive",
+        "passed": true,
+        "detail": "at delta = 0 every execution mode emits the goal signature exactly, so the sub-goal posterior cannot move off uniform and the effective mode count must equal the mode count exactly. A known answer through the whole stack.",
+        "observed": 4.0,
+        "expected": 4.0,
+        "tolerance": 1e-06
+      },
+      {
+        "name": "mode_distinctness_reaches_the_reader",
+        "kind": "live",
+        "passed": true,
+        "detail": "raising delta from 0 to 1 must sharpen the sub-goal posterior; if it does not, the distinctness knob is not reaching the measurement.",
+        "observed": 0.42704607279363227,
+        "expected": 0.1
+      },
+      {
+        "name": "entropy_within_bounds",
+        "kind": "identity",
+        "passed": true,
+        "detail": "normalised entropy cannot exceed 1. A bound the harness has to satisfy.",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-06
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
 }

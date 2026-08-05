@@ -42,6 +42,7 @@ from ghostscale.config import load_config                                # noqa:
 from ghostscale.environment import Artifact                              # noqa: E402
 from ghostscale.v5_model import make_v5_observer                         # noqa: E402
 from ghostscale.v6 import harness as H                                   # noqa: E402
+from ghostscale.methods import provenance as PROVENANCE                  # noqa: E402
 from ghostscale.validation.soundingline import sl_dir                    # noqa: E402
 from ghostscale.validation.soundingline.common import build              # noqa: E402
 from ghostscale.validation.soundingline.s2_flattened_intent import (     # noqa: E402
@@ -131,6 +132,7 @@ def main() -> None:
         "differ in the artifact's true goal and in RNG stream position. S-2 should be withdrawn "
         "and re-run against an emitter that actually mixes drives at the emission.")
 
+    PROVENANCE.stamp(out, __file__)
     p = sl_dir() / "audit_s2_mixture.json"
     p.write_text(json.dumps(out, indent=2, default=str), encoding="utf-8")
     print(json.dumps(out, indent=2, default=str))

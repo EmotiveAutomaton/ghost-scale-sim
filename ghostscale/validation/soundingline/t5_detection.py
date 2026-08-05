@@ -42,6 +42,8 @@ from ... import metrics
 from ...config import Config
 from ...v5_model import make_v5_observer, marginal_goal, marginal_mu, marginal_subgoal
 from ...v6 import SEED_OFFSET, harness as H
+from ...methods import gates as G
+from ...methods import provenance as PROV
 from . import sl_dir
 from .common import build
 from . import t_common as T
@@ -172,7 +174,9 @@ def run(cfg: Config, n_obs: int = 400) -> dict:
                 rows.append(r)
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "t5_detection.csv", index=False)
+    df.to_csv(sl_dir() / "t5_detection_points.csv", index=False)
+    (df.groupby(["cls", "mu", "beta", "forced_k"]).mean(numeric_only=True)
+       .to_csv(sl_dir() / "t5_detection_summary.csv"))
 
     feats = [c for c in df.columns if c not in ("cls", "mu", "beta", "i", "forced_k")]
     goal_side = [f for f in feats if f.startswith("goal_")]
@@ -250,6 +254,29 @@ def run(cfg: Config, n_obs: int = 400) -> dict:
                                       for k, c in cells.items()},
         }
 
+    # ---- standing gates ---------------------------------------------------------------------
+    gr = G.GateReport()
+    _full = df[df.forced_k == 24]
+    _pos = _full[_full.cls == "hierarchical"]
+    _neg = _full[_full.cls == "ghost"]
+    gr.positive("synthetic_content_is_separable_at_a_full_look",
+                auc(_pos.goal_max_posterior.to_numpy(), _neg.goal_max_posterior.to_numpy()),
+                1.0, 0.12,
+                detail="a maker with a real chain versus pure synthetic emission, read for the "
+                       "full 24 steps, is the easiest discrimination this model can pose. The "
+                       "tolerance is 0.12 rather than 0.05 deliberately: a positive control has "
+                       "to separate WORKING from BROKEN, not perfect from near-perfect. At full "
+                       "scale this returns 0.997-1.000 and at smoke scale 0.909; a broken reader "
+                       "would return ~0.5, which is nine tolerances away.")
+    _perm_worst = 0.0
+    for cells in out.values():
+        for c in cells.values():
+            for r in c["per_feature"].values():
+                _perm_worst = max(_perm_worst, abs(r["permutation_null_mean"] - 0.5))
+    gr.no_oracle("label_permutation_null_sits_at_chance", _perm_worst, 0.05,
+                 detail="shuffling the class labels must leave every AUC at 0.5. If it does not, "
+                        "the scoring is reading something other than the class.")
+
     verdict = {
         "test": "T-5 (auxiliary) — is the process posterior a better maker-detector than the "
                 "goal posterior?",
@@ -276,6 +303,7 @@ def run(cfg: Config, n_obs: int = 400) -> dict:
             "is this repository's stand-in for content whose maker cannot be reconstructed. It is "
             "not machine-generated text and this is not a detector."),
     }
+    PROV.stamp(verdict, __file__, gr)
     (sl_dir() / "t5_detection.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

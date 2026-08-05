@@ -49,6 +49,8 @@ from ...config import Config
 from ...environment import Artifact
 from ...v5_model import make_v5_observer
 from ...v6 import SEED_OFFSET, harness as H
+from ...methods import gates as G
+from ...methods import provenance as PROV
 from . import sl_dir
 from .common import build
 from . import t_common as T
@@ -199,7 +201,11 @@ def run(cfg: Config, n_obs: int = 200) -> dict:
             rows.append(r)
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "t2_automaticity.csv", index=False)
+    df.to_csv(sl_dir() / "t2_automaticity_points.csv", index=False)
+    (df.groupby(["axis", "automaticity", "mu", "n_timesteps"])
+       [["purpose_breadth", "goal_correct", "process", "true_mixture_breadth"]]
+       .agg(["mean", "std", "count"])
+       .to_csv(sl_dir() / "t2_automaticity_summary.csv"))
 
     def sel(axis, **kw):
         d = df[df.axis == axis]
@@ -322,6 +328,27 @@ def run(cfg: Config, n_obs: int = 200) -> dict:
     shallower = bool(m3["process_should_not_fall"]["excludes_zero"]
                      and m3["process_should_not_fall"]["difference"] < 0)
 
+    # ---- standing gates ---------------------------------------------------------------------
+    # THE LIVE GATE HERE IS THE ONE S-2 NEEDED AND DID NOT HAVE. S-2's mixture was drawn and
+    # discarded because V5Environment.sample_feature ignores artifact.goal; the feature streams
+    # were bit-identical with the manipulation off. This asserts, every run, that turning the
+    # mixture from a point mass to flat actually moves what the reader sees.
+    gr = G.GateReport()
+    _lo = sel("mixture", mu=3, automaticity=0.0)
+    _hi = sel("mixture", mu=3, automaticity=1.0)
+    gr.live("mixture_reaches_the_reader",
+            float(abs(_hi.purpose_breadth.mean() - _lo.purpose_breadth.mean())), 0.02,
+            detail="turning the drive mixture from a point mass to flat must change the reader's "
+                   "posterior breadth. S-2 shipped without this check and its manipulation never "
+                   "reached the reader at all.")
+    gr.live("true_mixture_actually_varies",
+            float(_hi.true_mixture_breadth.mean() - _lo.true_mixture_breadth.mean()), 0.5,
+            detail="the generative side of the same check: the drawn mixture itself must differ "
+                   "between the arms, independently of what the reader made of it.")
+    gr.positive("point_mass_mixture_has_zero_true_breadth",
+                float(_lo.true_mixture_breadth.mean()), 0.0, 1e-9,
+                detail="a mixture concentrated on one drive has zero entropy by construction.")
+
     verdict = {
         "test": "T-2 — does goal diversity rise with automaticity, at fixed decision count?",
         "for": "Sounding Line, purpose_breadth and the soul-as-variety claim",
@@ -358,6 +385,7 @@ def run(cfg: Config, n_obs: int = 200) -> dict:
             "moves breadth at a fixed mixture, which is the nearest non-circular question, and it "
             "is a question about this model's depth construction rather than about people."),
     }
+    PROV.stamp(verdict, __file__, gr)
     (sl_dir() / "t2_automaticity.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

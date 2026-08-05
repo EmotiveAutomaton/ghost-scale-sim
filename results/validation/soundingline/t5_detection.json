@@ -7683,5 +7683,42 @@
     }
   },
   "what_would_have_falsified_it": "goal-side statistics matching or beating process-side ones. Then T-1's asymmetry, whatever it says about the reader's internals, would have no consequence for what an instrument should measure.",
-  "what_this_cannot_show": "anything about text. 'Foreign' here is a real policy over an unmodelled goal, which is this repository's stand-in for content whose maker cannot be reconstructed. It is not machine-generated text and this is not a detector."
+  "what_this_cannot_show": "anything about text. 'Foreign' here is a real policy over an unmodelled goal, which is this repository's stand-in for content whose maker cannot be reconstructed. It is not machine-generated text and this is not a detector.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/t5_detection.py",
+    "sha256": "365a0443394d3fe5613d3a32e0c1573dba0604d11beaa6453252a362d449bd50",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "synthetic_content_is_separable_at_a_full_look",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a maker with a real chain versus pure synthetic emission, read for the full 24 steps, is the easiest discrimination this model can pose. The tolerance is 0.12 rather than 0.05 deliberately: a positive control has to separate WORKING from BROKEN, not perfect from near-perfect. At full scale this returns 0.997-1.000 and at smoke scale 0.909; a broken reader would return ~0.5, which is nine tolerances away.",
+        "observed": 0.9313734375,
+        "expected": 1.0,
+        "tolerance": 0.12
+      },
+      {
+        "name": "label_permutation_null_sits_at_chance",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "shuffling the class labels must leave every AUC at 0.5. If it does not, the scoring is reading something other than the class.",
+        "observed": 0.009413187500000031,
+        "expected": 0.0,
+        "tolerance": 0.05
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
 }

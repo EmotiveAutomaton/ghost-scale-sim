@@ -60,6 +60,8 @@ from ...environment import Artifact
 from ...prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 from ...v5_model import make_v5_observer
 from ...v6 import SEED_OFFSET, harness as H
+from ...methods import gates as G
+from ...methods import provenance as PROVENANCE
 from . import sl_dir
 from .common import build
 
@@ -81,6 +83,52 @@ def _weights(kind: str, ng: int) -> np.ndarray:
     w = np.full(ng, (1.0 - DOMINANT) / max(ng - 1, 1))
     w[0] = DOMINANT
     return w
+
+
+def _mixture_off_deviation(world, cfg_r, n_mu, n_sub, ng, n_obs: int = 24,
+                           n_timesteps: int = 24) -> float:
+    """How much this module's output changes when the mixture is forced off. It is zero.
+
+    The live gate needs a number, and the number is the whole diagnosis. This runs the module's
+    own inner loop twice per artifact -- once with the per-position mixture drawn as designed,
+    once with every position forced to the modal goal -- and returns the largest absolute change
+    in ``purpose_breadth`` across artifacts.
+
+    A working manipulation returns something well away from zero here. This returns exactly 0.0,
+    because ``V5Environment.sample_feature`` never reads ``artifact.goal`` once a creator is
+    bound, so the mixture is drawn and discarded. Same finding as
+    ``scripts/audit_s2_mixture.py``, compressed to one number so it can be a standing gate rather
+    than a script somebody has to remember to run.
+    """
+    worst = 0.0
+    for kind in ("layered", "flattened"):
+        w = _weights(kind, ng)
+        for i in range(int(n_obs)):
+            vals = []
+            for force_off in (False, True):
+                base = 62_000 + (0 if kind == "layered" else 1) * 977
+                art_rng = np.random.default_rng(base * 31 + i)
+                modal = int(np.argmax(w)) if kind == "flattened" else int(art_rng.integers(ng))
+                creator, artifact, env = H.make_artifact_and_env(
+                    world, cfg_r, modal, MU, BETA, n_timesteps, art_rng, provenance=READ_TIER)
+                tape = ObservationTape(env, artifact,
+                                       np.random.default_rng(base * 104729 + i), n_timesteps)
+                actives = art_rng.choice(ng, size=n_timesteps, p=w)
+                if force_off:
+                    actives = np.full(n_timesteps, modal, dtype=int)
+                tape.deep = np.asarray(
+                    [int(env.sample_feature(
+                        Artifact(provenance=READ_TIER, goal=int(actives[t]),
+                                 declared_signal=K.UNSIGNED), K.DEEP, art_rng))
+                     for t in range(n_timesteps)], dtype=int)
+                agent = make_v5_observer(world, np.random.default_rng(base * 7907 + i))
+                enc = H.run_encounter(world, cfg_r, artifact, TapedEnvironment(tape), agent,
+                                      creator, np.random.default_rng(base * 7907 + i),
+                                      n_timesteps, READ_GLANCES, n_sub, n_mu, ng,
+                                      float(world.cfg.signal_model.kappa), true_goal=modal)
+                vals.append(float(metrics.within_observer_entropy(enc.goal_posterior)))
+            worst = max(worst, abs(vals[0] - vals[1]))
+    return float(worst)
 
 
 def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24) -> dict:
@@ -125,7 +173,7 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
             })
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "s2_flattened_intent.csv", index=False)
+    df.to_csv(sl_dir() / "s2_flattened_intent_points.csv", index=False)
     rng = np.random.default_rng(SEED_OFFSET + 90_200)
 
     def contrast(col: str) -> dict:
@@ -145,7 +193,28 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
     separates = bool(breadth["excludes_zero"] and breadth["difference"] < 0)
     confounded = bool(proc["excludes_zero"] and proc["difference"] < 0)
 
+    # ---- the gate that would have caught this module before it shipped -----------------------
+    # A LIVE GATE THAT FAILS ON PURPOSE. The manipulation is drawn and discarded, so forcing the
+    # mixture off changes nothing: max deviation is exactly 0.0 and the feature streams are
+    # bit-identical (scripts/audit_s2_mixture.py). Recording the failure here rather than
+    # deleting the module makes the withdrawal auditable -- the evidence travels with the result
+    # instead of living in a commit message. tests/test_gates.py allows a failing gate only on a
+    # verdict explicitly marked withdrawn, which is what makes this honest rather than a
+    # suppressed error.
+    gr = G.GateReport()
+    _off = _mixture_off_deviation(world, cfg_r, n_mu, n_sub, ng, n_obs=min(int(n_obs), 24))
+    gr.live("mixture_reaches_the_reader", _off, 1e-9, expected_to_fail=True,
+            detail="forcing the per-position goal mixture to a constant must change the reader's "
+                   "posterior. It does not: V5Environment.sample_feature ignores artifact.goal "
+                   "once a creator is bound, so `actives` never enters the observations. This "
+                   "gate fails by design and is why the module is withdrawn.")
+
     verdict = {
+        "WITHDRAWN": (
+            "2026-08-05. The manipulation never reaches the reader; see the failing live gate "
+            "below and scripts/audit_s2_mixture.py. Superseded by "
+            "t2_automaticity.mixed_deep_features, which emits from world.subsig directly."),
+        "withdrawn": True,
         "test": "S-2 — does flattened intent read as posterior concentration at matched density?",
         "for": "Sounding Line, C-22 and purpose_breadth",
         "construction": {"mu": MU, "beta": BETA, "dominant_share": DOMINANT, "n_goals": int(ng),
@@ -166,6 +235,7 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
             "is invisible to a goal posterior and Sounding Line's purpose_breadth is measuring "
             "something else."),
     }
+    PROVENANCE.stamp(verdict, __file__, gr)
     (sl_dir() / "s2_flattened_intent.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

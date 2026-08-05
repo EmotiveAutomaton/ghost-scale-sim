@@ -1,4 +1,6 @@
 {
+  "WITHDRAWN": "2026-08-05. The manipulation never reaches the reader; see the failing live gate below and scripts/audit_s2_mixture.py. Superseded by t2_automaticity.mixed_deep_features, which emits from world.subsig directly.",
+  "withdrawn": true,
   "test": "S-2 \u2014 does flattened intent read as posterior concentration at matched density?",
   "for": "Sounding Line, C-22 and purpose_breadth",
   "construction": {
@@ -42,5 +44,35 @@
   "outcome": "BREADTH_SEPARATES_THE_TWO",
   "construct_is_confounded": false,
   "how_to_read": "the claim needs breadth to fall for flattened work while accuracy and process recovery hold. If process recovery falls too, 'flattened' has become 'shallower' and the measure is reading depth rather than concentration.",
-  "what_would_have_falsified_it": "identical purpose_breadth across the two arms. Then concentration of terminal values is invisible to a goal posterior and Sounding Line's purpose_breadth is measuring something else."
+  "what_would_have_falsified_it": "identical purpose_breadth across the two arms. Then concentration of terminal values is invisible to a goal posterior and Sounding Line's purpose_breadth is measuring something else.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/s2_flattened_intent.py",
+    "sha256": "e5ae4fd058236d19cdad4f36e0dcea30f51b1f845bdbfd242ec4730c2b844e71",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 1,
+    "n_ran": 1,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [
+      "mixture_reaches_the_reader"
+    ],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "mixture_reaches_the_reader",
+        "kind": "live",
+        "passed": false,
+        "detail": "forcing the per-position goal mixture to a constant must change the reader's posterior. It does not: V5Environment.sample_feature ignores artifact.goal once a creator is bound, so `actives` never enters the observations. This gate fails by design and is why the module is withdrawn.",
+        "observed": 0.0,
+        "expected": 1e-09,
+        "expected_to_fail": true
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
 }

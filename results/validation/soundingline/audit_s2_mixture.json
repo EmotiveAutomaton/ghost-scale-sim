@@ -24,5 +24,11 @@
     "residual_difference_after_matching_the_goal": -0.1296964959813306,
     "how_to_read": "S-2's arms differ only in which TRUE goal the artifact has: flattened is always goal 0, layered is a uniform draw. Matching on the goal removes the manipulation entirely, because the mixture was never in the observations. Whatever is left is the residual RNG-stream shift from the extra integers() draw."
   },
-  "what_this_means": "S-2's reported purpose_breadth separation is not a measurement of goal-mixture concentration. The mixture is drawn and then discarded by the environment. The arms differ in the artifact's true goal and in RNG stream position. S-2 should be withdrawn and re-run against an emitter that actually mixes drives at the emission."
+  "what_this_means": "S-2's reported purpose_breadth separation is not a measurement of goal-mixture concentration. The mixture is drawn and then discarded by the environment. The arms differ in the artifact's true goal and in RNG stream position. S-2 should be withdrawn and re-run against an emitter that actually mixes drives at the emission.",
+  "produced_by": {
+    "module": "scripts/audit_s2_mixture.py",
+    "sha256": "f8b880fac1bcea05b75cc77ca52b613dd19cfbe50aac669847162b9c98cfbe20",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  }
 }

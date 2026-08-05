@@ -43,6 +43,8 @@ from ...n21_depth_not_effort import merged_config
 from ...v5_model import (MU_LEVELS, build_subgoal_chains, build_v5_world, make_v5_observer,
                          marginal_subgoal)
 from ...v6 import SEED_OFFSET, harness as H
+from ...methods import gates as G
+from ...methods import provenance as PROV
 from . import sl_dir
 from . import t_common as T
 
@@ -173,7 +175,11 @@ def run(cfg: Config, n_obs: int = 120) -> dict:
             variant("best_case", dwell=d, n_sub_req=ns, n_t=96, fk=96)
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "t3_countability.csv", index=False)
+    df.to_csv(sl_dir() / "t3_countability_points.csv", index=False)
+    (df.groupby(["axis", "dwell", "n_sub", "delta", "mu", "n_timesteps", "prov"])
+       [["mean_effective_modes", "mean_frac_entropy", "process_acc"]]
+       .agg(["mean", "count"])
+       .to_csv(sl_dir() / "t3_countability_summary.csv"))
 
     def summarise(d: pd.DataFrame) -> dict:
         out = {"n": int(len(d)),
@@ -241,6 +247,24 @@ def run(cfg: Config, n_obs: int = 120) -> dict:
             "count_is_well_defined_somewhere": bool(len(top) and float(top.iloc[0]) >= 0.90),
         }
 
+    # ---- standing gates ---------------------------------------------------------------------
+    gr = G.GateReport()
+    _d0 = df[(df.axis == "delta") & (df.delta == 0.0)]
+    gr.positive("delta_zero_leaves_modes_indistinguishable",
+                float(_d0.mean_effective_modes.mean()), float(df.n_sub.min()), 1e-6,
+                detail="at delta = 0 every execution mode emits the goal signature exactly, so "
+                       "the sub-goal posterior cannot move off uniform and the effective mode "
+                       "count must equal the mode count exactly. A known answer through the "
+                       "whole stack.")
+    _d1 = df[(df.axis == "delta") & (df.delta == 1.0)]
+    gr.live("mode_distinctness_reaches_the_reader",
+            float(_d0.mean_effective_modes.mean() - _d1.mean_effective_modes.mean()), 0.1,
+            detail="raising delta from 0 to 1 must sharpen the sub-goal posterior; if it does "
+                   "not, the distinctness knob is not reaching the measurement.")
+    gr.identity("entropy_within_bounds",
+                float(df.mean_frac_entropy.max()), 1.0, 1e-6,
+                detail="normalised entropy cannot exceed 1. A bound the harness has to satisfy.")
+
     verdict = {
         "test": "T-3 — is a count of recovered decisions ever a well-defined event?",
         "for": "Sounding Line, whether to repair or abandon decision-counting instruments",
@@ -291,6 +315,7 @@ def run(cfg: Config, n_obs: int = 120) -> dict:
             "posterior fell below a fraction of maximum entropy', which is the same mapping S-1 "
             "used, swept over five thresholds because the mapping is a choice."),
     }
+    PROV.stamp(verdict, __file__, gr)
     (sl_dir() / "t3_countability.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

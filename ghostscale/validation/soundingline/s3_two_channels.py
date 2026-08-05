@@ -39,6 +39,8 @@ import pandas as pd
 from ...config import Config
 from ...prereg_v6 import BOOTSTRAP_DRAWS, percentile_interval
 from ...v6 import SEED_OFFSET
+from ...methods import gates as G
+from ...methods import provenance as PROVENANCE
 from . import sl_dir
 
 _EPS = 1e-12
@@ -101,7 +103,7 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
                 })
 
     df = pd.DataFrame(rows)
-    df.to_csv(sl_dir() / "s3_two_channels.csv", index=False)
+    df.to_csv(sl_dir() / "s3_two_channels_points.csv", index=False)
 
     leak_readable = float(df.leak_correct.mean())
     chance = 1.0 / N_STATES
@@ -126,7 +128,28 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
     accs = [by_amp[a]["detector_balanced_accuracy"] for a in AMPLIFICATIONS]
     louder_is_worse = bool(accs[-1] > accs[0])
 
+    gr = G.GateReport()
+    gr.positive("leak_is_readable_at_all", leak_readable, 1.0, 0.25,
+                detail="the state must be recoverable from the involuntary channel alone, well "
+                       "above the 0.25 chance rate, or there is nothing for the divergence to "
+                       "measure.")
+    gr.live("concealment_reaches_the_divergence",
+            float(by_amp[AMPLIFICATIONS[0]]["separation"]), 1.0,
+            detail="the concealing condition must separate from the candid one at the lowest "
+                   "amplification, or the manipulation is not reaching the statistic.")
+    gr.no_oracle("threshold_is_fitted_on_test_labels", 1.0, 0.5, expected_to_fail=True,
+                 detail="FAILS BY DESIGN. thr = median of the pooled concealing AND candid "
+                        "divergences is fitted on ground-truth-labelled test data and re-fitted "
+                        "per cell. T-4 re-scores this with the threshold frozen: the headline "
+                        "rise falls from +0.125 to +0.046. Recorded here so the flaw travels "
+                        "with the result.")
+
     verdict = {
+        "withdrawn": False,
+        "QUALIFIED": (
+            "2026-08-05. detector_balanced_accuracy is an upper bound: the threshold is fitted "
+            "on the labelled test data and re-fitted per amplification. Frozen at the lowest "
+            "amplification the accuracy rise is +0.046 rather than +0.125. See T-4."),
         "test": "S-3 — two affect layers, and whether a louder shield gives the concealer away",
         "for": "Sounding Line, family_v3.yaml leaked and emblematic channels",
         "IMPORTANT": (
@@ -156,6 +179,7 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
             "divergence failing to separate the two conditions, or separation shrinking as the "
             "shield gets louder. Either would make the leaked layer a dead end."),
     }
+    PROVENANCE.stamp(verdict, __file__, gr)
     (sl_dir() / "s3_two_channels.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

@@ -67,5 +67,11 @@
     "how_to_read": "these are a HARNESS CHECK and not a result. All three arms see the same observations in a different order, so final accuracy should be unchanged. If it moves, the reorder changed the evidence and the cost numbers cannot be trusted."
   },
   "n_rollouts": 1620,
-  "what_would_have_falsified_the_claim": "reverse or anomaly-first settling in fewer DEEP steps than forward, with accuracy unchanged. That would make the entry point a genuine efficiency and not a story."
+  "what_would_have_falsified_the_claim": "reverse or anomaly-first settling in fewer DEEP steps than forward, with accuracy unchanged. That would make the entry point a genuine efficiency and not a story.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/s45_inference_order.py",
+    "sha256": "b3f7a1a183524f8ebb2033ce17759fbb77d52bdfb7165641d050fc343998b321",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  }
 }

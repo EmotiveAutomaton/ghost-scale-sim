@@ -20,6 +20,8 @@ A working model of how people work out what someone was trying to do when they m
 | every question and its current answer | [FINDINGS.md](FINDINGS.md) | ○ Ghost, 5% |
 | what the world published, next to what this predicted | [EVIDENCE.md](EVIDENCE.md) | ○ Ghost, 5% |
 | the theory this implements | [docs/theory/](docs/theory/) | mixed Polished and Curator |
+| how a result here is checked before it is believed | [docs/METHODS.md](docs/METHODS.md) | ○ Ghost, 5% |
+| the questions another project sent, and the answers | [docs/exchange/](docs/exchange/) | mixed |
 
 *The right-hand column is this project's own instrument, applied to itself. It says how much
 deciding went into the prose, not whether the numbers are right. There is a note at the marker

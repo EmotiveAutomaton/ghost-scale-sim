@@ -1,4 +1,6 @@
 {
+  "withdrawn": false,
+  "QUALIFIED": "2026-08-05. detector_balanced_accuracy is an upper bound: the threshold is fitted on the labelled test data and re-fitted per amplification. Frozen at the lowest amplification the accuracy rise is +0.046 rather than +0.125. See T-4.",
   "test": "S-3 \u2014 two affect layers, and whether a louder shield gives the concealer away",
   "for": "Sounding Line, family_v3.yaml leaked and emblematic channels",
   "IMPORTANT": "this test does NOT use the V5 world. It is a minimal purpose-built two-channel emitter, because the shared model has one emission channel and adding a second is new generative machinery. Read it as what a two-channel emitter does, not as what the Ghost Scale reader does.",
@@ -73,5 +75,53 @@
     "verdict": "THE_SHIELD_GIVES_THEM_AWAY",
     "how_to_read": "the curator's claim is that performing louder to cover up makes concealment MORE detectable. That predicts detector accuracy RISING with amplification."
   },
-  "what_would_have_falsified_it": "divergence failing to separate the two conditions, or separation shrinking as the shield gets louder. Either would make the leaked layer a dead end."
+  "what_would_have_falsified_it": "divergence failing to separate the two conditions, or separation shrinking as the shield gets louder. Either would make the leaked layer a dead end.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/s3_two_channels.py",
+    "sha256": "6383607e867aea8cfa44af2c0f8f120c971c91ecb4c38870fa9638489800e464",
+    "git_commit": "b4f5612",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [
+      "threshold_is_fitted_on_test_labels"
+    ],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "leak_is_readable_at_all",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the state must be recoverable from the involuntary channel alone, well above the 0.25 chance rate, or there is nothing for the divergence to measure.",
+        "observed": 0.8990625,
+        "expected": 1.0,
+        "tolerance": 0.25
+      },
+      {
+        "name": "concealment_reaches_the_divergence",
+        "kind": "live",
+        "passed": true,
+        "detail": "the concealing condition must separate from the candid one at the lowest amplification, or the manipulation is not reaching the statistic.",
+        "observed": 11.888047332629853,
+        "expected": 1.0
+      },
+      {
+        "name": "threshold_is_fitted_on_test_labels",
+        "kind": "no_oracle",
+        "passed": false,
+        "detail": "FAILS BY DESIGN. thr = median of the pooled concealing AND candid divergences is fitted on ground-truth-labelled test data and re-fitted per cell. T-4 re-scores this with the threshold frozen: the headline rise falls from +0.125 to +0.046. Recorded here so the flaw travels with the result.",
+        "observed": 1.0,
+        "expected": 0.0,
+        "tolerance": 0.5,
+        "expected_to_fail": true
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
 }
