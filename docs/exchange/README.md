@@ -17,10 +17,12 @@ what was asked and what was sent back.
 | `batch-2-response.md` | **this repository** | the authored reply: five results, two corrections to batch one, and a validity register. |
 | `batch-2-received-by-sounding-line.md` | Sounding Line | their write-up of the same batch. Kept because it is not a copy — it is what the other project took from it, which is worth being able to compare. |
 | `batch-3-request.md` | Sounding Line | no experiments. Methodology tooling, and the argument for a standing positive control. |
+| `batch-3-response.md` | **this repository** | what the tooling found when pointed at the existing results: T-6 to T-10, and a correction to batch two's headline. |
 
-**Batch three has no response file** because the response was not a document. It was
-`ghostscale/methods/`, the gate blocks now in every verdict, and `tests/test_gates.py`. See
-[docs/METHODS.md](../METHODS.md).
+Batch three was answered twice: once as infrastructure -- `ghostscale/methods/`, the gate blocks
+now in every verdict, and `tests/test_gates.py`, described in [docs/METHODS.md](../METHODS.md) --
+and once as results, when that infrastructure was turned on the batch-two findings and one of them
+did not survive.
 
 ## Two rules that came out of this exchange and are worth keeping
 
