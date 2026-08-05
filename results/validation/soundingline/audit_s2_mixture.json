@@ -1,0 +1,28 @@
+{
+  "mixture_is_inert": {
+    "max_abs_breadth_difference_with_mixture_off": 0.0,
+    "feature_streams_identical_fraction": 1.0,
+    "verdict": "MIXTURE_NEVER_REACHES_THE_READER"
+  },
+  "layered_modal_goal_distribution": [
+    19,
+    37,
+    30,
+    34
+  ],
+  "flattened_modal_goal_distribution": [
+    120,
+    0,
+    0,
+    0
+  ],
+  "reproduced_s2_breadth_difference": -0.10842892801465465,
+  "confound_isolated": {
+    "layered_restricted_to_modal_goal_0_breadth": 0.579503535687869,
+    "n_layered_with_modal_0": 19,
+    "flattened_breadth": 0.44980703970653846,
+    "residual_difference_after_matching_the_goal": -0.1296964959813306,
+    "how_to_read": "S-2's arms differ only in which TRUE goal the artifact has: flattened is always goal 0, layered is a uniform draw. Matching on the goal removes the manipulation entirely, because the mixture was never in the observations. Whatever is left is the residual RNG-stream shift from the extra integers() draw."
+  },
+  "what_this_means": "S-2's reported purpose_breadth separation is not a measurement of goal-mixture concentration. The mixture is drawn and then discarded by the environment. The arms differ in the artifact's true goal and in RNG stream position. S-2 should be withdrawn and re-run against an emitter that actually mixes drives at the emission."
+}

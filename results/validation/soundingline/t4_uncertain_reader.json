@@ -1,0 +1,1773 @@
+{
+  "test": "T-4 \u2014 does leaked/emblematic divergence survive an uncertain reader?",
+  "for": "Sounding Line, whether the leaked-layer programme transports off the simulator",
+  "reproduces_s3": {
+    "s3_leak_accuracy": 0.8990625,
+    "here_leak_accuracy": 0.9015,
+    "note": "built from S-3's own seed and affinity matrix. The leak accuracy is the cheapest check that the construction is the same one."
+  },
+  "S3_THRESHOLD_PROBLEM": {
+    "what": "S-3 sets its detector threshold to the median of the pooled concealing and candid divergences AT THE AMPLIFICATION BEING SCORED. That is fitted on ground-truth-labelled test data and re-fitted per cell, which no reader can do.",
+    "fitted_per_amplification": {
+      "1.0": {
+        "separation": 13.448463504450912,
+        "interval": [
+          12.321108624857501,
+          14.539752592457848
+        ],
+        "threshold": 0.6782845668718596,
+        "balanced_accuracy": 0.8325
+      },
+      "2.0": {
+        "separation": 15.566076490844035,
+        "interval": [
+          14.507141730519466,
+          16.689996886293866
+        ],
+        "threshold": 1.2542463760261704,
+        "balanced_accuracy": 0.8675
+      },
+      "4.0": {
+        "separation": 15.800287193586314,
+        "interval": [
+          14.660164141336017,
+          16.847239944475206
+        ],
+        "threshold": 2.218934866276858,
+        "balanced_accuracy": 0.9
+      },
+      "8.0": {
+        "separation": 17.40272253780265,
+        "interval": [
+          16.526766227971926,
+          18.32521483326503
+        ],
+        "threshold": 4.029021747343063,
+        "balanced_accuracy": 0.9575
+      }
+    },
+    "frozen_at_lowest_amplification": {
+      "1.0": {
+        "threshold": 0.6782845668718596,
+        "balanced_accuracy": 0.8325
+      },
+      "2.0": {
+        "threshold": 0.6782845668718596,
+        "balanced_accuracy": 0.84625
+      },
+      "4.0": {
+        "threshold": 0.6782845668718596,
+        "balanced_accuracy": 0.87
+      },
+      "8.0": {
+        "threshold": 0.6782845668718596,
+        "balanced_accuracy": 0.8787499999999999
+      }
+    },
+    "accuracy_rise_with_fitted_threshold": 0.125,
+    "accuracy_rise_with_frozen_threshold": 0.0462499999999999,
+    "the_shield_still_gives_them_away_under_a_frozen_threshold": true
+  },
+  "partial_concealment": {
+    "0.25": {
+      "1.0": {
+        "separation": 0.7470367040085393,
+        "interval": [
+          0.5303691359577012,
+          0.97137716615233
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.645,
+        "balanced_accuracy_frozen_at_amp1": 0.62
+      },
+      "2.0": {
+        "separation": -0.07132282922337096,
+        "interval": [
+          -0.2622323204712786,
+          0.13743870562045699
+        ],
+        "excludes_zero": false,
+        "balanced_accuracy": 0.51,
+        "balanced_accuracy_frozen_at_amp1": 0.48875
+      },
+      "4.0": {
+        "separation": 0.0012180996092489016,
+        "interval": [
+          -0.21042932564796624,
+          0.22825432025178338
+        ],
+        "excludes_zero": false,
+        "balanced_accuracy": 0.4875,
+        "balanced_accuracy_frozen_at_amp1": 0.50375
+      },
+      "8.0": {
+        "separation": 0.07225707906247003,
+        "interval": [
+          -0.17132251880158486,
+          0.33590722902122205
+        ],
+        "excludes_zero": false,
+        "balanced_accuracy": 0.505,
+        "balanced_accuracy_frozen_at_amp1": 0.5037499999999999
+      }
+    },
+    "0.5": {
+      "1.0": {
+        "separation": 4.974467715942598,
+        "interval": [
+          4.425684778248003,
+          5.5611189776913585
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.7925,
+        "balanced_accuracy_frozen_at_amp1": 0.79625
+      },
+      "2.0": {
+        "separation": 5.1222872902149525,
+        "interval": [
+          4.525185752645711,
+          5.670789069927684
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.7825,
+        "balanced_accuracy_frozen_at_amp1": 0.7725
+      },
+      "4.0": {
+        "separation": 4.866911533972686,
+        "interval": [
+          4.316939944597076,
+          5.444036160527953
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.7775,
+        "balanced_accuracy_frozen_at_amp1": 0.77625
+      },
+      "8.0": {
+        "separation": 4.663504846702199,
+        "interval": [
+          4.100000317922204,
+          5.229665693334962
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.75,
+        "balanced_accuracy_frozen_at_amp1": 0.7525
+      }
+    },
+    "0.75": {
+      "1.0": {
+        "separation": 9.956247370376216,
+        "interval": [
+          9.007123063087366,
+          10.848172149117781
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.82,
+        "balanced_accuracy_frozen_at_amp1": 0.82375
+      },
+      "2.0": {
+        "separation": 13.139453516870937,
+        "interval": [
+          12.057574196844984,
+          14.18737403225751
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.8275,
+        "balanced_accuracy_frozen_at_amp1": 0.8225
+      },
+      "4.0": {
+        "separation": 15.216543270357839,
+        "interval": [
+          14.069843055853353,
+          16.36612015303629
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.84,
+        "balanced_accuracy_frozen_at_amp1": 0.8287500000000001
+      },
+      "8.0": {
+        "separation": 14.825134591297516,
+        "interval": [
+          13.848000470361601,
+          15.86229642954573
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.8925,
+        "balanced_accuracy_frozen_at_amp1": 0.85625
+      }
+    },
+    "1.0": {
+      "1.0": {
+        "separation": 13.448463504450912,
+        "interval": [
+          12.363175975944456,
+          14.565528961004652
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.8325,
+        "balanced_accuracy_frozen_at_amp1": 0.8325
+      },
+      "2.0": {
+        "separation": 15.566076490844035,
+        "interval": [
+          14.485680381322501,
+          16.624429574577217
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.8675,
+        "balanced_accuracy_frozen_at_amp1": 0.84625
+      },
+      "4.0": {
+        "separation": 15.800287193586314,
+        "interval": [
+          14.74762549360984,
+          16.902435767258773
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.9,
+        "balanced_accuracy_frozen_at_amp1": 0.87
+      },
+      "8.0": {
+        "separation": 17.40272253780265,
+        "interval": [
+          16.488430564941588,
+          18.34146186032413
+        ],
+        "excludes_zero": true,
+        "balanced_accuracy": 0.9575,
+        "balanced_accuracy_frozen_at_amp1": 0.8787499999999999
+      }
+    }
+  },
+  "reader_degradations": {
+    "prior_noise": {
+      "theta1.0_degrade_level0.0": {
+        "1.0": {
+          "separation": 12.838018416952973,
+          "interval": [
+            11.785765730123366,
+            13.905936796101823
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8325,
+          "balanced_accuracy_frozen_at_amp1": 0.8325
+        },
+        "2.0": {
+          "separation": 14.47959684981136,
+          "interval": [
+            13.306382207115348,
+            15.563695328280467
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.85,
+          "balanced_accuracy_frozen_at_amp1": 0.83875
+        },
+        "4.0": {
+          "separation": 16.353624989076362,
+          "interval": [
+            15.325821452778072,
+            17.342984494388723
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.91,
+          "balanced_accuracy_frozen_at_amp1": 0.8775
+        },
+        "8.0": {
+          "separation": 16.504004660031292,
+          "interval": [
+            15.519142018844384,
+            17.380892698572527
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9475,
+          "balanced_accuracy_frozen_at_amp1": 0.8775
+        }
+      },
+      "theta1.0_degrade_level0.2": {
+        "1.0": {
+          "separation": 6.928216280911893,
+          "interval": [
+            6.401269757457358,
+            7.484720522573187
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.845,
+          "balanced_accuracy_frozen_at_amp1": 0.8475
+        },
+        "2.0": {
+          "separation": 8.54681357131679,
+          "interval": [
+            7.986134548220855,
+            9.092925248362512
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8775,
+          "balanced_accuracy_frozen_at_amp1": 0.86875
+        },
+        "4.0": {
+          "separation": 8.592063223949264,
+          "interval": [
+            8.081129292123038,
+            9.078979365005484
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.91,
+          "balanced_accuracy_frozen_at_amp1": 0.88375
+        },
+        "8.0": {
+          "separation": 9.690623185476603,
+          "interval": [
+            9.277227156209957,
+            10.121325428803589
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.945,
+          "balanced_accuracy_frozen_at_amp1": 0.88
+        }
+      },
+      "theta1.0_degrade_level0.4": {
+        "1.0": {
+          "separation": 4.7202964890313535,
+          "interval": [
+            4.376976317990626,
+            5.063156823144319
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8475,
+          "balanced_accuracy_frozen_at_amp1": 0.85875
+        },
+        "2.0": {
+          "separation": 4.984330602012623,
+          "interval": [
+            4.650908328392651,
+            5.3018513055983885
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.875,
+          "balanced_accuracy_frozen_at_amp1": 0.8625
+        },
+        "4.0": {
+          "separation": 5.002175540915832,
+          "interval": [
+            4.733736473376665,
+            5.274940806905761
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8925,
+          "balanced_accuracy_frozen_at_amp1": 0.87875
+        },
+        "8.0": {
+          "separation": 5.483334027691343,
+          "interval": [
+            5.2311623544550185,
+            5.727125489754725
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.92,
+          "balanced_accuracy_frozen_at_amp1": 0.875
+        }
+      },
+      "theta1.0_degrade_level0.6": {
+        "1.0": {
+          "separation": 2.6767073745922154,
+          "interval": [
+            2.4415007112709453,
+            2.879724358363739
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8425,
+          "balanced_accuracy_frozen_at_amp1": 0.84125
+        },
+        "2.0": {
+          "separation": 2.5410712469907106,
+          "interval": [
+            2.338907463949932,
+            2.7449332045898687
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8175,
+          "balanced_accuracy_frozen_at_amp1": 0.8262499999999999
+        },
+        "4.0": {
+          "separation": 2.670951745202819,
+          "interval": [
+            2.481308317412899,
+            2.873308377311867
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.855,
+          "balanced_accuracy_frozen_at_amp1": 0.8612500000000001
+        },
+        "8.0": {
+          "separation": 2.770247338858401,
+          "interval": [
+            2.5676475221472828,
+            2.95737081243872
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.89,
+          "balanced_accuracy_frozen_at_amp1": 0.87125
+        }
+      },
+      "theta1.0_degrade_level0.8": {
+        "1.0": {
+          "separation": 0.9219805167707713,
+          "interval": [
+            0.7782525896904844,
+            1.0636389489307332
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7725,
+          "balanced_accuracy_frozen_at_amp1": 0.75875
+        },
+        "2.0": {
+          "separation": 0.7204382283397932,
+          "interval": [
+            0.5670644753514797,
+            0.8672467072567164
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.74625
+        },
+        "4.0": {
+          "separation": 0.6497013304728347,
+          "interval": [
+            0.4872545078647884,
+            0.7891191449364846
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.775,
+          "balanced_accuracy_frozen_at_amp1": 0.7675000000000001
+        },
+        "8.0": {
+          "separation": 0.6432160893443253,
+          "interval": [
+            0.4645337404743029,
+            0.7938468250423729
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7725,
+          "balanced_accuracy_frozen_at_amp1": 0.7875
+        }
+      },
+      "theta1.0_degrade_level0.95": {
+        "1.0": {
+          "separation": -0.3091602313320344,
+          "interval": [
+            -0.4265748091461021,
+            -0.2056804462914028
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.5675,
+          "balanced_accuracy_frozen_at_amp1": 0.41625
+        },
+        "2.0": {
+          "separation": -0.40208971651417735,
+          "interval": [
+            -0.536290162584657,
+            -0.2808472835679501
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.5675,
+          "balanced_accuracy_frozen_at_amp1": 0.40125
+        },
+        "4.0": {
+          "separation": -0.5189036116819874,
+          "interval": [
+            -0.6554319728554276,
+            -0.3927703492897272
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.5325,
+          "balanced_accuracy_frozen_at_amp1": 0.395
+        },
+        "8.0": {
+          "separation": -0.5679553003612061,
+          "interval": [
+            -0.7293952723968044,
+            -0.420212687883966
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.5175,
+          "balanced_accuracy_frozen_at_amp1": 0.38125
+        }
+      },
+      "theta0.5_degrade_level0.0": {
+        "1.0": {
+          "separation": 4.835471979370249,
+          "interval": [
+            4.2380297595452285,
+            5.43112882540639
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7775,
+          "balanced_accuracy_frozen_at_amp1": 0.77875
+        },
+        "2.0": {
+          "separation": 4.585779672498701,
+          "interval": [
+            4.077739518362441,
+            5.134372903977821
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7825,
+          "balanced_accuracy_frozen_at_amp1": 0.77625
+        },
+        "4.0": {
+          "separation": 4.7331290174564815,
+          "interval": [
+            4.172886152055388,
+            5.31535967904121
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.775,
+          "balanced_accuracy_frozen_at_amp1": 0.775
+        },
+        "8.0": {
+          "separation": 4.947119091237555,
+          "interval": [
+            4.340514048936164,
+            5.5632886898828815
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7625,
+          "balanced_accuracy_frozen_at_amp1": 0.7625
+        }
+      },
+      "theta0.5_degrade_level0.2": {
+        "1.0": {
+          "separation": 2.650044135078958,
+          "interval": [
+            2.339717533074556,
+            2.947884443555611
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7875,
+          "balanced_accuracy_frozen_at_amp1": 0.7825
+        },
+        "2.0": {
+          "separation": 2.7661532930334345,
+          "interval": [
+            2.436211794742635,
+            3.1193492999963133
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.795,
+          "balanced_accuracy_frozen_at_amp1": 0.78625
+        },
+        "4.0": {
+          "separation": 2.4298770194955086,
+          "interval": [
+            2.1154829139597293,
+            2.738340928372757
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7775,
+          "balanced_accuracy_frozen_at_amp1": 0.7725
+        },
+        "8.0": {
+          "separation": 2.29485593153005,
+          "interval": [
+            2.0020814309016446,
+            2.620250095121174
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7525,
+          "balanced_accuracy_frozen_at_amp1": 0.7525
+        }
+      },
+      "theta0.5_degrade_level0.4": {
+        "1.0": {
+          "separation": 1.6635123477085247,
+          "interval": [
+            1.4392532499029365,
+            1.871729516541223
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7875,
+          "balanced_accuracy_frozen_at_amp1": 0.7737499999999999
+        },
+        "2.0": {
+          "separation": 1.459623949593826,
+          "interval": [
+            1.242245543199295,
+            1.6763416903635693
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7825,
+          "balanced_accuracy_frozen_at_amp1": 0.7375
+        },
+        "4.0": {
+          "separation": 1.371582753086604,
+          "interval": [
+            1.1399414038392075,
+            1.601322649503623
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7625,
+          "balanced_accuracy_frozen_at_amp1": 0.75
+        },
+        "8.0": {
+          "separation": 1.199183887080478,
+          "interval": [
+            0.9726992886165773,
+            1.423493295338685
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.735,
+          "balanced_accuracy_frozen_at_amp1": 0.7275
+        }
+      },
+      "theta0.5_degrade_level0.6": {
+        "1.0": {
+          "separation": 0.929873430341523,
+          "interval": [
+            0.7679944752634061,
+            1.0862775512279752
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.71375
+        },
+        "2.0": {
+          "separation": 0.7658674046233589,
+          "interval": [
+            0.5874237453455666,
+            0.9290763464840796
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7625,
+          "balanced_accuracy_frozen_at_amp1": 0.71875
+        },
+        "4.0": {
+          "separation": 0.721818239557926,
+          "interval": [
+            0.5439518876922881,
+            0.8993062973298264
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.745,
+          "balanced_accuracy_frozen_at_amp1": 0.70875
+        },
+        "8.0": {
+          "separation": 0.5940017705934362,
+          "interval": [
+            0.40969407520556445,
+            0.7738959863132142
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7275,
+          "balanced_accuracy_frozen_at_amp1": 0.7024999999999999
+        }
+      },
+      "theta0.5_degrade_level0.8": {
+        "1.0": {
+          "separation": 0.3040881827115041,
+          "interval": [
+            0.1731867272376704,
+            0.42432563221984
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.72,
+          "balanced_accuracy_frozen_at_amp1": 0.6375
+        },
+        "2.0": {
+          "separation": 0.1638399725852947,
+          "interval": [
+            0.022208841491690386,
+            0.30122509809928094
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6975,
+          "balanced_accuracy_frozen_at_amp1": 0.59125
+        },
+        "4.0": {
+          "separation": 0.02793820557537141,
+          "interval": [
+            -0.13148641634714978,
+            0.17133496585691887
+          ],
+          "excludes_zero": false,
+          "balanced_accuracy": 0.67,
+          "balanced_accuracy_frozen_at_amp1": 0.6075
+        },
+        "8.0": {
+          "separation": 0.08097102343694951,
+          "interval": [
+            -0.0970234263025155,
+            0.24259241497340947
+          ],
+          "excludes_zero": false,
+          "balanced_accuracy": 0.6675,
+          "balanced_accuracy_frozen_at_amp1": 0.59375
+        }
+      },
+      "theta0.5_degrade_level0.95": {
+        "1.0": {
+          "separation": -0.3582890246251699,
+          "interval": [
+            -0.47728197803496314,
+            -0.2509603573467882
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.4925,
+          "balanced_accuracy_frozen_at_amp1": 0.41625
+        },
+        "2.0": {
+          "separation": -0.45291950662365504,
+          "interval": [
+            -0.5811293084400757,
+            -0.3291731551663089
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.51,
+          "balanced_accuracy_frozen_at_amp1": 0.40125
+        },
+        "4.0": {
+          "separation": -0.5610953789730978,
+          "interval": [
+            -0.7052914227657368,
+            -0.43721946342484197
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.48,
+          "balanced_accuracy_frozen_at_amp1": 0.395
+        },
+        "8.0": {
+          "separation": -0.6042929621379814,
+          "interval": [
+            -0.7654368525196397,
+            -0.4597860510473839
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.4675,
+          "balanced_accuracy_frozen_at_amp1": 0.38125
+        }
+      }
+    },
+    "dirichlet": {
+      "theta1.0_degrade_level0.5": {
+        "1.0": {
+          "separation": 5.992617440375995,
+          "interval": [
+            5.4798345653004645,
+            6.5432723347556845
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8525,
+          "balanced_accuracy_frozen_at_amp1": 0.8512500000000001
+        },
+        "2.0": {
+          "separation": 7.276530942057967,
+          "interval": [
+            6.284409497331657,
+            8.38638031942961
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7875,
+          "balanced_accuracy_frozen_at_amp1": 0.77625
+        },
+        "4.0": {
+          "separation": 10.626517672192161,
+          "interval": [
+            9.618088513634616,
+            11.62576965911178
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8425,
+          "balanced_accuracy_frozen_at_amp1": 0.85625
+        },
+        "8.0": {
+          "separation": 10.13546979495452,
+          "interval": [
+            9.739036006066073,
+            10.536425122888282
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.955,
+          "balanced_accuracy_frozen_at_amp1": 0.87625
+        }
+      },
+      "theta1.0_degrade_level1.0": {
+        "1.0": {
+          "separation": 8.399739487852193,
+          "interval": [
+            7.609016504724276,
+            9.205511531060049
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8625,
+          "balanced_accuracy_frozen_at_amp1": 0.85625
+        },
+        "2.0": {
+          "separation": 8.750418868484404,
+          "interval": [
+            8.096556692073904,
+            9.406166113090148
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9225,
+          "balanced_accuracy_frozen_at_amp1": 0.8925000000000001
+        },
+        "4.0": {
+          "separation": 10.100351954342,
+          "interval": [
+            9.215499794834553,
+            11.00983549308834
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8175,
+          "balanced_accuracy_frozen_at_amp1": 0.8125
+        },
+        "8.0": {
+          "separation": 1.8243054067261166,
+          "interval": [
+            1.5807872591342322,
+            2.0721373770559603
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7475,
+          "balanced_accuracy_frozen_at_amp1": 0.75
+        }
+      },
+      "theta1.0_degrade_level2.0": {
+        "1.0": {
+          "separation": 3.3389427335778783,
+          "interval": [
+            3.014705904046052,
+            3.6698253342735105
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8575,
+          "balanced_accuracy_frozen_at_amp1": 0.865
+        },
+        "2.0": {
+          "separation": 11.872327237892165,
+          "interval": [
+            11.194175613605298,
+            12.57382670248326
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9275,
+          "balanced_accuracy_frozen_at_amp1": 0.89125
+        },
+        "4.0": {
+          "separation": 9.834875373194397,
+          "interval": [
+            9.074902226335222,
+            10.656639752438876
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8825,
+          "balanced_accuracy_frozen_at_amp1": 0.885
+        },
+        "8.0": {
+          "separation": 17.17425767381799,
+          "interval": [
+            16.27716704963215,
+            18.05945107893659
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9225,
+          "balanced_accuracy_frozen_at_amp1": 0.87625
+        }
+      },
+      "theta1.0_degrade_level4.0": {
+        "1.0": {
+          "separation": 5.429786755674994,
+          "interval": [
+            4.823703636036159,
+            6.068243295061987
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.845,
+          "balanced_accuracy_frozen_at_amp1": 0.85375
+        },
+        "2.0": {
+          "separation": 4.347139906379326,
+          "interval": [
+            4.000537050873704,
+            4.707428890380854
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8525,
+          "balanced_accuracy_frozen_at_amp1": 0.8525
+        },
+        "4.0": {
+          "separation": 12.417308325414025,
+          "interval": [
+            11.501519065760329,
+            13.305972239705735
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8725,
+          "balanced_accuracy_frozen_at_amp1": 0.85875
+        },
+        "8.0": {
+          "separation": 5.202832879134939,
+          "interval": [
+            4.686697537886357,
+            5.708981572922851
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.905,
+          "balanced_accuracy_frozen_at_amp1": 0.87
+        }
+      },
+      "theta0.5_degrade_level0.5": {
+        "1.0": {
+          "separation": 2.4442125826473116,
+          "interval": [
+            2.175929587471608,
+            2.7197852869336825
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8025,
+          "balanced_accuracy_frozen_at_amp1": 0.7925
+        },
+        "2.0": {
+          "separation": 3.352277685276285,
+          "interval": [
+            3.004932558638174,
+            3.6989055631301113
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8025,
+          "balanced_accuracy_frozen_at_amp1": 0.80125
+        },
+        "4.0": {
+          "separation": 2.8225311943693763,
+          "interval": [
+            2.4429190012875557,
+            3.2134751356447
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.76,
+          "balanced_accuracy_frozen_at_amp1": 0.7562500000000001
+        },
+        "8.0": {
+          "separation": 2.845960848146046,
+          "interval": [
+            2.4725387666895178,
+            3.244395038612707
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.7675
+        }
+      },
+      "theta0.5_degrade_level1.0": {
+        "1.0": {
+          "separation": 2.0021992038859144,
+          "interval": [
+            1.7680441016806665,
+            2.2410279864945926
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.805,
+          "balanced_accuracy_frozen_at_amp1": 0.80125
+        },
+        "2.0": {
+          "separation": 2.129512220802857,
+          "interval": [
+            1.8725113982803407,
+            2.393269943076832
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8,
+          "balanced_accuracy_frozen_at_amp1": 0.7975
+        },
+        "4.0": {
+          "separation": 2.8247435444666094,
+          "interval": [
+            2.4873623119724675,
+            3.167221427734579
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.785,
+          "balanced_accuracy_frozen_at_amp1": 0.78125
+        },
+        "8.0": {
+          "separation": 2.0588119236897247,
+          "interval": [
+            1.7690067753421528,
+            2.3533463433227677
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.7725
+        }
+      },
+      "theta0.5_degrade_level2.0": {
+        "1.0": {
+          "separation": 2.444313248487052,
+          "interval": [
+            2.1850344319195685,
+            2.6985322072325713
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.83,
+          "balanced_accuracy_frozen_at_amp1": 0.83125
+        },
+        "2.0": {
+          "separation": 2.1701166721705776,
+          "interval": [
+            1.871026875797155,
+            2.47506551917146
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.775,
+          "balanced_accuracy_frozen_at_amp1": 0.75625
+        },
+        "4.0": {
+          "separation": 2.307921394624377,
+          "interval": [
+            2.0121937117304927,
+            2.6012897609053467
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7725,
+          "balanced_accuracy_frozen_at_amp1": 0.7737499999999999
+        },
+        "8.0": {
+          "separation": 3.484716885364433,
+          "interval": [
+            3.0582552983194544,
+            3.9355108832083197
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.75,
+          "balanced_accuracy_frozen_at_amp1": 0.7475
+        }
+      },
+      "theta0.5_degrade_level4.0": {
+        "1.0": {
+          "separation": 1.9275841796360542,
+          "interval": [
+            1.70337278003528,
+            2.1742467403586656
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.79,
+          "balanced_accuracy_frozen_at_amp1": 0.78625
+        },
+        "2.0": {
+          "separation": 1.4696732123430318,
+          "interval": [
+            1.2282369833937243,
+            1.7023695581287297
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.76,
+          "balanced_accuracy_frozen_at_amp1": 0.7362500000000001
+        },
+        "4.0": {
+          "separation": 1.1439129942071207,
+          "interval": [
+            0.9042324744110252,
+            1.3776257215149625
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.74,
+          "balanced_accuracy_frozen_at_amp1": 0.71375
+        },
+        "8.0": {
+          "separation": 1.0908952443333648,
+          "interval": [
+            0.8764865946714258,
+            1.315035848990328
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7425,
+          "balanced_accuracy_frozen_at_amp1": 0.73625
+        }
+      }
+    },
+    "channel_swap": {
+      "theta1.0_swap_p0.0": {
+        "1.0": {
+          "separation": 11.881722712141196,
+          "interval": [
+            10.771583335038114,
+            12.912595710803497
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8225,
+          "balanced_accuracy_frozen_at_amp1": 0.8262499999999999
+        },
+        "2.0": {
+          "separation": 14.93299771983727,
+          "interval": [
+            13.875265080019572,
+            16.111185821980097
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8525,
+          "balanced_accuracy_frozen_at_amp1": 0.83875
+        },
+        "4.0": {
+          "separation": 15.871012268686044,
+          "interval": [
+            14.817563100756942,
+            17.005378531507667
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.91,
+          "balanced_accuracy_frozen_at_amp1": 0.8712500000000001
+        },
+        "8.0": {
+          "separation": 18.068333080442397,
+          "interval": [
+            17.13539208126725,
+            19.01448816291078
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.955,
+          "balanced_accuracy_frozen_at_amp1": 0.88
+        }
+      },
+      "theta1.0_swap_p0.1": {
+        "1.0": {
+          "separation": 12.177659502940488,
+          "interval": [
+            11.184039769894463,
+            13.230963763355488
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8375,
+          "balanced_accuracy_frozen_at_amp1": 0.835
+        },
+        "2.0": {
+          "separation": 14.86862637197834,
+          "interval": [
+            13.728846907531176,
+            15.98241561766068
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8525,
+          "balanced_accuracy_frozen_at_amp1": 0.8362499999999999
+        },
+        "4.0": {
+          "separation": 14.99074288784453,
+          "interval": [
+            14.037396992854802,
+            16.06744737417816
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.91,
+          "balanced_accuracy_frozen_at_amp1": 0.8674999999999999
+        },
+        "8.0": {
+          "separation": 16.706516484467766,
+          "interval": [
+            15.751044438328854,
+            17.708424572321558
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9475,
+          "balanced_accuracy_frozen_at_amp1": 0.87375
+        }
+      },
+      "theta1.0_swap_p0.25": {
+        "1.0": {
+          "separation": 11.143382306864815,
+          "interval": [
+            10.168844333999244,
+            12.132773760390215
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.835,
+          "balanced_accuracy_frozen_at_amp1": 0.83375
+        },
+        "2.0": {
+          "separation": 11.939627021776735,
+          "interval": [
+            10.93994713515003,
+            13.019473864298776
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8175,
+          "balanced_accuracy_frozen_at_amp1": 0.8175
+        },
+        "4.0": {
+          "separation": 13.928190469914297,
+          "interval": [
+            12.909598902396537,
+            14.909649498748248
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.885,
+          "balanced_accuracy_frozen_at_amp1": 0.8725
+        },
+        "8.0": {
+          "separation": 15.233166414517243,
+          "interval": [
+            14.317563254790842,
+            16.177913542750684
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9475,
+          "balanced_accuracy_frozen_at_amp1": 0.87625
+        }
+      },
+      "theta1.0_swap_p0.5": {
+        "1.0": {
+          "separation": 8.773501053240606,
+          "interval": [
+            7.872874383506152,
+            9.65565218745498
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8275,
+          "balanced_accuracy_frozen_at_amp1": 0.8275
+        },
+        "2.0": {
+          "separation": 11.513385582416593,
+          "interval": [
+            10.577039480440904,
+            12.433449017925374
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8775,
+          "balanced_accuracy_frozen_at_amp1": 0.85375
+        },
+        "4.0": {
+          "separation": 13.166763968590761,
+          "interval": [
+            12.213254582727492,
+            14.139379062273031
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.91,
+          "balanced_accuracy_frozen_at_amp1": 0.87375
+        },
+        "8.0": {
+          "separation": 12.987256011429633,
+          "interval": [
+            12.166568796914506,
+            13.819429282900561
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9475,
+          "balanced_accuracy_frozen_at_amp1": 0.88
+        }
+      },
+      "theta0.5_swap_p0.0": {
+        "1.0": {
+          "separation": 5.000993115332961,
+          "interval": [
+            4.435445408167559,
+            5.548219728079036
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7875,
+          "balanced_accuracy_frozen_at_amp1": 0.79625
+        },
+        "2.0": {
+          "separation": 4.901615547265793,
+          "interval": [
+            4.344520770430636,
+            5.454839021725851
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7825,
+          "balanced_accuracy_frozen_at_amp1": 0.78
+        },
+        "4.0": {
+          "separation": 4.991965407425591,
+          "interval": [
+            4.432356196266914,
+            5.5564813241285895
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7825,
+          "balanced_accuracy_frozen_at_amp1": 0.7825
+        },
+        "8.0": {
+          "separation": 5.108068796239642,
+          "interval": [
+            4.521346481882412,
+            5.675006465773638
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.775,
+          "balanced_accuracy_frozen_at_amp1": 0.78
+        }
+      },
+      "theta0.5_swap_p0.1": {
+        "1.0": {
+          "separation": 5.130542477486247,
+          "interval": [
+            4.606614055156647,
+            5.7003504512727154
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7925,
+          "balanced_accuracy_frozen_at_amp1": 0.7949999999999999
+        },
+        "2.0": {
+          "separation": 4.6731821990293,
+          "interval": [
+            4.128600049081364,
+            5.213666953429458
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7825,
+          "balanced_accuracy_frozen_at_amp1": 0.7737499999999999
+        },
+        "4.0": {
+          "separation": 4.443615835178494,
+          "interval": [
+            3.948149610258313,
+            4.980556318296164
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7725,
+          "balanced_accuracy_frozen_at_amp1": 0.775
+        },
+        "8.0": {
+          "separation": 4.826087995319606,
+          "interval": [
+            4.287795811319002,
+            5.36427703422932
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7625,
+          "balanced_accuracy_frozen_at_amp1": 0.7649999999999999
+        }
+      },
+      "theta0.5_swap_p0.25": {
+        "1.0": {
+          "separation": 4.422759010575832,
+          "interval": [
+            3.8932502477845436,
+            4.947252789094238
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.795,
+          "balanced_accuracy_frozen_at_amp1": 0.7975
+        },
+        "2.0": {
+          "separation": 5.00838608660866,
+          "interval": [
+            4.457957047845004,
+            5.530985809799508
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.785,
+          "balanced_accuracy_frozen_at_amp1": 0.77875
+        },
+        "4.0": {
+          "separation": 4.289843912854051,
+          "interval": [
+            3.7667337315565916,
+            4.833014537007184
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.76375
+        },
+        "8.0": {
+          "separation": 3.975762918958833,
+          "interval": [
+            3.475997106337748,
+            4.503447239552714
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7375,
+          "balanced_accuracy_frozen_at_amp1": 0.745
+        }
+      },
+      "theta0.5_swap_p0.5": {
+        "1.0": {
+          "separation": 4.319787567075534,
+          "interval": [
+            3.819083508122735,
+            4.831639855211363
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.775
+        },
+        "2.0": {
+          "separation": 5.139547763031434,
+          "interval": [
+            4.593118914099709,
+            5.743988245335867
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.78,
+          "balanced_accuracy_frozen_at_amp1": 0.7737499999999999
+        },
+        "4.0": {
+          "separation": 4.544549394264675,
+          "interval": [
+            4.050285906036401,
+            5.066496620745776
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7875,
+          "balanced_accuracy_frozen_at_amp1": 0.7887500000000001
+        },
+        "8.0": {
+          "separation": 4.620526740221378,
+          "interval": [
+            4.063917866252257,
+            5.176087504556426
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.78,
+          "balanced_accuracy_frozen_at_amp1": 0.78125
+        }
+      }
+    },
+    "wrong_cardinality": {
+      "theta1.0_model_states2": {
+        "1.0": {
+          "separation": 1.1450165257912093,
+          "interval": [
+            0.9145956480342696,
+            1.375989500582934
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6875,
+          "balanced_accuracy_frozen_at_amp1": 0.6725
+        },
+        "2.0": {
+          "separation": 1.4482202140463039,
+          "interval": [
+            1.1766712632909937,
+            1.7251100871197607
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6675,
+          "balanced_accuracy_frozen_at_amp1": 0.67875
+        },
+        "4.0": {
+          "separation": 1.3854275261672735,
+          "interval": [
+            1.1000334496531372,
+            1.6972849013361695
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6475,
+          "balanced_accuracy_frozen_at_amp1": 0.6825
+        },
+        "8.0": {
+          "separation": 1.4983684368245402,
+          "interval": [
+            1.1941055175638382,
+            1.8361365409497907
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6375,
+          "balanced_accuracy_frozen_at_amp1": 0.66375
+        }
+      },
+      "theta1.0_model_states3": {
+        "1.0": {
+          "separation": 6.324776075074091,
+          "interval": [
+            5.525106146945012,
+            7.156014444193059
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.745,
+          "balanced_accuracy_frozen_at_amp1": 0.73875
+        },
+        "2.0": {
+          "separation": 7.285497389874923,
+          "interval": [
+            6.356454897370297,
+            8.335223379805887
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.71,
+          "balanced_accuracy_frozen_at_amp1": 0.7112499999999999
+        },
+        "4.0": {
+          "separation": 8.403380430000126,
+          "interval": [
+            7.383874579862434,
+            9.438102733733349
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.72,
+          "balanced_accuracy_frozen_at_amp1": 0.7424999999999999
+        },
+        "8.0": {
+          "separation": 10.42840708077604,
+          "interval": [
+            9.38373180865866,
+            11.435734331500523
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.76625
+        }
+      },
+      "theta1.0_model_states4": {
+        "1.0": {
+          "separation": 12.285720649198097,
+          "interval": [
+            11.243049273379393,
+            13.333408501222097
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.845,
+          "balanced_accuracy_frozen_at_amp1": 0.845
+        },
+        "2.0": {
+          "separation": 15.334569902572364,
+          "interval": [
+            14.246452383505835,
+            16.421417795067697
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.87,
+          "balanced_accuracy_frozen_at_amp1": 0.8525
+        },
+        "4.0": {
+          "separation": 15.674654586705813,
+          "interval": [
+            14.621395978114512,
+            16.725407495051115
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9,
+          "balanced_accuracy_frozen_at_amp1": 0.8775
+        },
+        "8.0": {
+          "separation": 17.26619504813522,
+          "interval": [
+            16.277935305901572,
+            18.21340027906578
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.9575,
+          "balanced_accuracy_frozen_at_amp1": 0.8787499999999999
+        }
+      },
+      "theta0.5_model_states2": {
+        "1.0": {
+          "separation": 0.5958130812633822,
+          "interval": [
+            0.42823750716165865,
+            0.7622503761605453
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6425,
+          "balanced_accuracy_frozen_at_amp1": 0.62875
+        },
+        "2.0": {
+          "separation": 0.35866055236477423,
+          "interval": [
+            0.17868791632320863,
+            0.5277507041764907
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6225,
+          "balanced_accuracy_frozen_at_amp1": 0.5875
+        },
+        "4.0": {
+          "separation": 0.43985405691329715,
+          "interval": [
+            0.24383438561015575,
+            0.6266431349181413
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.6175,
+          "balanced_accuracy_frozen_at_amp1": 0.625
+        },
+        "8.0": {
+          "separation": 0.27223067187857897,
+          "interval": [
+            0.06804296788023673,
+            0.46206486244828093
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.5975,
+          "balanced_accuracy_frozen_at_amp1": 0.57375
+        }
+      },
+      "theta0.5_model_states3": {
+        "1.0": {
+          "separation": 2.613850325197928,
+          "interval": [
+            2.253112699731081,
+            2.994405625514496
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.765,
+          "balanced_accuracy_frozen_at_amp1": 0.75125
+        },
+        "2.0": {
+          "separation": 2.2515431905632606,
+          "interval": [
+            1.9128525894944264,
+            2.5986563966223066
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7475,
+          "balanced_accuracy_frozen_at_amp1": 0.74125
+        },
+        "4.0": {
+          "separation": 2.230076603976168,
+          "interval": [
+            1.878983108400022,
+            2.5842684888359777
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.75,
+          "balanced_accuracy_frozen_at_amp1": 0.7424999999999999
+        },
+        "8.0": {
+          "separation": 1.9745434265567385,
+          "interval": [
+            1.620900774391427,
+            2.3293236589611475
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.715,
+          "balanced_accuracy_frozen_at_amp1": 0.7024999999999999
+        }
+      },
+      "theta0.5_model_states4": {
+        "1.0": {
+          "separation": 4.780052300096662,
+          "interval": [
+            4.233725278803658,
+            5.3393894698855675
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7825,
+          "balanced_accuracy_frozen_at_amp1": 0.78125
+        },
+        "2.0": {
+          "separation": 5.45794755889505,
+          "interval": [
+            4.870369931679195,
+            6.054159735068576
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.8,
+          "balanced_accuracy_frozen_at_amp1": 0.8
+        },
+        "4.0": {
+          "separation": 4.948995536352006,
+          "interval": [
+            4.370973112520465,
+            5.549093143722134
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7675,
+          "balanced_accuracy_frozen_at_amp1": 0.77625
+        },
+        "8.0": {
+          "separation": 4.834987377149927,
+          "interval": [
+            4.26927566368994,
+            5.422457649423234
+          ],
+          "excludes_zero": true,
+          "balanced_accuracy": 0.7425,
+          "balanced_accuracy_frozen_at_amp1": 0.7475
+        }
+      }
+    }
+  },
+  "where_it_breaks": {
+    "prior_noise": [
+      {
+        "level": "theta1.0_degrade_level0.0",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.885
+      },
+      {
+        "level": "theta1.0_degrade_level0.2",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.8943749999999999
+      },
+      {
+        "level": "theta1.0_degrade_level0.4",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.88375
+      },
+      {
+        "level": "theta1.0_degrade_level0.6",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.8512500000000001
+      },
+      {
+        "level": "theta1.0_degrade_level0.8",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.771875
+      },
+      {
+        "level": "theta1.0_degrade_level0.95",
+        "separation_survives_at_all_amplifications": false,
+        "mean_balanced_accuracy": 0.54625
+      }
+    ],
+    "channel_swap": [
+      {
+        "level": "theta1.0_swap_p0.0",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.885
+      },
+      {
+        "level": "theta1.0_swap_p0.1",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.8868750000000001
+      },
+      {
+        "level": "theta1.0_swap_p0.25",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.8712499999999999
+      },
+      {
+        "level": "theta1.0_swap_p0.5",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.890625
+      }
+    ],
+    "wrong_cardinality": [
+      {
+        "level": "theta1.0_model_states2",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.6599999999999999
+      },
+      {
+        "level": "theta1.0_model_states3",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.735625
+      },
+      {
+        "level": "theta1.0_model_states4",
+        "separation_survives_at_all_amplifications": true,
+        "mean_balanced_accuracy": 0.893125
+      }
+    ]
+  },
+  "construction": {
+    "n_states": 4,
+    "n_symbols": 8,
+    "emissions_per_artifact": 12,
+    "amplifications": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "thetas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "theta_meaning": "0 candid, 1 = S-3's exact negation, between = partial"
+  },
+  "what_would_have_falsified_it": "divergence surviving every degradation unchanged, which would mean the signal does not depend on the reader's model at all and S-3 transports for free; or dying at the first perturbation, which would mean it is an oracle result.",
+  "what_this_cannot_show": "anything about real text, and nothing about the Ghost Scale reader. This is the minimal two-channel emitter S-3 built, degraded. The V5 world has one emission channel."
+}

@@ -1,5 +1,23 @@
 """S-2 — does flattened intent show up as posterior concentration, at matched decision density?
 
+**WITHDRAWN 2026-08-05. THIS MODULE'S MANIPULATION NEVER REACHES THE READER. DO NOT QUOTE IT.**
+
+The construction below draws a per-position active goal and emits from it by passing a fresh
+``Artifact`` into ``env.sample_feature``. ``V5Environment.sample_feature`` never reads
+``artifact.goal`` once a creator is bound -- it returns ``self.creator.next_feature(rng)``, and the
+creator holds ONE fixed goal for the whole artifact. Only ``artifact.provenance`` is consulted, for
+the alpha lookup. So ``actives`` is drawn and discarded.
+
+``scripts/audit_s2_mixture.py`` shows the feature streams are bit-identical with the mixture forced
+off, in 100% of artifacts, and that the reported ``purpose_breadth`` separation of -0.108
+reproduces exactly under that switch. What the two arms actually differ by is the artifact's TRUE
+goal -- flattened is always goal 0, layered is a uniform draw -- plus the RNG-stream shift from the
+extra ``integers()`` call.
+
+A working emitter is ``t2_automaticity.mixed_deep_features``, which builds the emission from
+``world.subsig[mu, active_goal, mode]`` directly. S-2's actual question -- concentration rather
+than diversity -- has still not been tested and should be re-run there.
+
 THE CURATOR'S CLAIM, in his own correction of a stronger earlier version:
 
     It is unfair to say corporate goals are singular... the SHARE of the goal is

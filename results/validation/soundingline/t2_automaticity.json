@@ -1,0 +1,430 @@
+{
+  "test": "T-2 \u2014 does goal diversity rise with automaticity, at fixed decision count?",
+  "for": "Sounding Line, purpose_breadth and the soul-as-variety claim",
+  "SCOPE": "the MECHANISM half of T-2 is not testable in this model and is not claimed. Nothing here derives drive-multiplicity from automaticity; on the mixture axis the diversity is set by hand, so 'diversity rises with automaticity' is the wiring. What is measured is the reader-side half: whether a reader sees that variety as posterior breadth without losing the goal. The DEPTH axis is the non-circular one -- nothing about mu was built to move breadth.",
+  "EMITTER_NOTE": "S-2's emitter does not work and this module does not use it. V5Environment.sample_feature ignores artifact.goal once a creator is bound, so S-2's per-position mixture is drawn and discarded and its feature streams are bit-identical with the mixture switched off. See scripts/audit_s2_mixture.py. Here the emission is built from world.subsig[mu, active_goal, mode] directly, so the drive mixture actually reaches the reader.",
+  "construction": {
+    "read_tier": "CURATOR",
+    "read_glances": 3,
+    "beta": 1.0,
+    "n_goals": 4,
+    "automaticity_levels": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "note": "decision density identical across mixture arms by construction"
+  },
+  "axis_1_mixture_automaticity": {
+    "mu2": {
+      "series_by_automaticity": {
+        "0.0": {
+          "purpose_breadth": 0.5087954103243262,
+          "goal_accuracy": 0.82,
+          "process": 0.010420422610812297,
+          "true_mixture_breadth": 0.0
+        },
+        "0.25": {
+          "purpose_breadth": 0.6177220393942278,
+          "goal_accuracy": 0.695,
+          "process": 0.010638961636613714,
+          "true_mixture_breadth": 0.44207827207220535
+        },
+        "0.5": {
+          "purpose_breadth": 0.6934016552820867,
+          "goal_accuracy": 0.545,
+          "process": 0.0035850523891487896,
+          "true_mixture_breadth": 0.7240939070805189
+        },
+        "0.75": {
+          "purpose_breadth": 0.727314912480365,
+          "goal_accuracy": 0.395,
+          "process": 4.604881216597967e-05,
+          "true_mixture_breadth": 0.8906457038467509
+        },
+        "1.0": {
+          "purpose_breadth": 0.7260363704071705,
+          "goal_accuracy": 0.215,
+          "process": 0.004972151854363262,
+          "true_mixture_breadth": 0.9541846807183896
+        }
+      },
+      "breadth_rises": {
+        "mean_a": 0.7260363704071705,
+        "mean_b": 0.5087954103243262,
+        "difference": 0.21724096008284433,
+        "interval": [
+          0.16273230085590418,
+          0.2719306490700115
+        ],
+        "excludes_zero": true,
+        "n": 200,
+        "max_abs_paired_deviation": 0.9725716725073865
+      },
+      "goal_accuracy_should_not_fall": {
+        "mean_a": 0.215,
+        "mean_b": 0.82,
+        "difference": -0.605,
+        "interval": [
+          -0.67,
+          -0.54
+        ],
+        "excludes_zero": true,
+        "n": 200,
+        "max_abs_paired_deviation": 1.0
+      },
+      "process_should_not_fall": {
+        "mean_a": 0.004972151854363262,
+        "mean_b": 0.010420422610812297,
+        "difference": -0.005448270756449035,
+        "interval": [
+          -0.014665023378726752,
+          0.003252177731386802
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.33327680549213357
+      },
+      "breadth_monotone": false,
+      "breadth_vs_true_mixture_r": 0.2524757603588721
+    },
+    "mu3": {
+      "series_by_automaticity": {
+        "0.0": {
+          "purpose_breadth": 0.5063466530830315,
+          "goal_accuracy": 0.79,
+          "process": -0.005983544336803693,
+          "true_mixture_breadth": 0.0
+        },
+        "0.25": {
+          "purpose_breadth": 0.6235985320233898,
+          "goal_accuracy": 0.655,
+          "process": -0.004865905803364031,
+          "true_mixture_breadth": 0.4590014508498366
+        },
+        "0.5": {
+          "purpose_breadth": 0.7278079098843182,
+          "goal_accuracy": 0.51,
+          "process": -0.006599384629104992,
+          "true_mixture_breadth": 0.7445013387855568
+        },
+        "0.75": {
+          "purpose_breadth": 0.7573808821808242,
+          "goal_accuracy": 0.4,
+          "process": -0.003715486824941946,
+          "true_mixture_breadth": 0.901022985714069
+        },
+        "1.0": {
+          "purpose_breadth": 0.7668718996364483,
+          "goal_accuracy": 0.215,
+          "process": -0.0024550582602136527,
+          "true_mixture_breadth": 0.9551533237608407
+        }
+      },
+      "breadth_rises": {
+        "mean_a": 0.7668718996364483,
+        "mean_b": 0.5063466530830315,
+        "difference": 0.2605252465534167,
+        "interval": [
+          0.20870014556502786,
+          0.3125221887946286
+        ],
+        "excludes_zero": true,
+        "n": 200,
+        "max_abs_paired_deviation": 0.9980795494648861
+      },
+      "goal_accuracy_should_not_fall": {
+        "mean_a": 0.215,
+        "mean_b": 0.79,
+        "difference": -0.575,
+        "interval": [
+          -0.645,
+          -0.51
+        ],
+        "excludes_zero": true,
+        "n": 200,
+        "max_abs_paired_deviation": 1.0
+      },
+      "process_should_not_fall": {
+        "mean_a": -0.0024550582602136527,
+        "mean_b": -0.005983544336803693,
+        "difference": 0.0035284860765900407,
+        "interval": [
+          -0.005308235793274976,
+          0.013255655983525627
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.4762345874721312
+      },
+      "breadth_monotone": true,
+      "breadth_vs_true_mixture_r": 0.3463118819773114
+    }
+  },
+  "axis_2_depth_automaticity_NON_CIRCULAR": {
+    "automaticity0.0": {
+      "breadth_by_mu": {
+        "1": 0.5016443731495893,
+        "2": 0.4921545428807482,
+        "3": 0.48511414645273737
+      },
+      "goal_accuracy_by_mu": {
+        "1": 0.78,
+        "2": 0.795,
+        "3": 0.785
+      },
+      "process_by_mu": {
+        "1": -0.002419056495290579,
+        "2": 0.008921786925521225,
+        "3": 0.007160611955413346
+      },
+      "mu3_minus_mu1_breadth": {
+        "mean_a": 0.48511414645273737,
+        "mean_b": 0.5016443731495893,
+        "difference": -0.01653022669685189,
+        "interval": [
+          -0.037758912910127965,
+          0.004978262656600416
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.7073038724198202
+      },
+      "mu3_minus_mu1_goal_accuracy": {
+        "mean_a": 0.785,
+        "mean_b": 0.78,
+        "difference": 0.005,
+        "interval": [
+          -0.02,
+          0.03
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 1.0
+      }
+    },
+    "automaticity0.5": {
+      "breadth_by_mu": {
+        "1": 0.640751332313417,
+        "2": 0.6390283629960161,
+        "3": 0.6423120302729344
+      },
+      "goal_accuracy_by_mu": {
+        "1": 0.58,
+        "2": 0.58,
+        "3": 0.58
+      },
+      "process_by_mu": {
+        "1": -0.003177992265086321,
+        "2": 0.0020986701173648604,
+        "3": 0.0004950109670538838
+      },
+      "mu3_minus_mu1_breadth": {
+        "mean_a": 0.6423120302729344,
+        "mean_b": 0.640751332313417,
+        "difference": 0.0015606979595173057,
+        "interval": [
+          -0.013736825637198842,
+          0.017882545236229765
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.7894177094099725
+      },
+      "mu3_minus_mu1_goal_accuracy": {
+        "mean_a": 0.58,
+        "mean_b": 0.58,
+        "difference": 0.0,
+        "interval": [
+          -0.02,
+          0.02
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 1.0
+      }
+    },
+    "automaticity1.0": {
+      "breadth_by_mu": {
+        "1": 0.7781568876441862,
+        "2": 0.7504869206830969,
+        "3": 0.7674237286749144
+      },
+      "goal_accuracy_by_mu": {
+        "1": 0.215,
+        "2": 0.22,
+        "3": 0.195
+      },
+      "process_by_mu": {
+        "1": -0.0033070383037517824,
+        "2": 0.006986546568237936,
+        "3": 0.004686090229249924
+      },
+      "mu3_minus_mu1_breadth": {
+        "mean_a": 0.7674237286749144,
+        "mean_b": 0.7781568876441862,
+        "difference": -0.010733158969271716,
+        "interval": [
+          -0.03635152844277559,
+          0.014520449260516821
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.7774044011612133
+      },
+      "mu3_minus_mu1_goal_accuracy": {
+        "mean_a": 0.195,
+        "mean_b": 0.215,
+        "difference": -0.02,
+        "interval": [
+          -0.05,
+          0.01
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 1.0
+      }
+    }
+  },
+  "axis_3_decision_count_control": {
+    "automaticity0.0": {
+      "breadth_by_length": {
+        "12": 0.5101932511821535,
+        "24": 0.47868782815028715,
+        "48": 0.47728466281310866
+      },
+      "long_minus_short": {
+        "mean_a": 0.47728466281310866,
+        "mean_b": 0.5101932511821535,
+        "difference": -0.03290858836904478,
+        "interval": [
+          -0.10000813761554816,
+          0.03644724837343311
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.9697544245040064
+      }
+    },
+    "automaticity1.0": {
+      "breadth_by_length": {
+        "12": 0.74679000487628,
+        "24": 0.7457931786319394,
+        "48": 0.7500907453706058
+      },
+      "long_minus_short": {
+        "mean_a": 0.7500907453706058,
+        "mean_b": 0.74679000487628,
+        "difference": 0.003300740494325959,
+        "interval": [
+          -0.04584244525663069,
+          0.05206613976215252
+        ],
+        "excludes_zero": false,
+        "n": 200,
+        "max_abs_paired_deviation": 0.9390804694949271
+      }
+    }
+  },
+  "axis_4_difficulty_control_DECISIVE": {
+    "noise_curve": [
+      {
+        "alpha": 0.15,
+        "goal_accuracy": 0.425,
+        "purpose_breadth": 0.7926282419060662
+      },
+      {
+        "alpha": 0.25,
+        "goal_accuracy": 0.475,
+        "purpose_breadth": 0.7703293429538909
+      },
+      {
+        "alpha": 0.35,
+        "goal_accuracy": 0.6,
+        "purpose_breadth": 0.6944979274300455
+      },
+      {
+        "alpha": 0.45,
+        "goal_accuracy": 0.69,
+        "purpose_breadth": 0.6190404859775009
+      },
+      {
+        "alpha": 0.55,
+        "goal_accuracy": 0.77,
+        "purpose_breadth": 0.545451975512602
+      },
+      {
+        "alpha": 0.7,
+        "goal_accuracy": 0.87,
+        "purpose_breadth": 0.41273783332822606
+      },
+      {
+        "alpha": 0.85,
+        "goal_accuracy": 0.965,
+        "purpose_breadth": 0.2716428218707525
+      }
+    ],
+    "matched": {
+      "0.0": {
+        "goal_accuracy": 0.79,
+        "breadth_mixture": 0.5063466530830315,
+        "breadth_of_equally_hard_single_drive_work": 0.5189091470757268,
+        "excess_breadth_attributable_to_diversity": -0.012562493992695267,
+        "in_range_of_noise_curve": true,
+        "baseline_offset_of_the_single_drive_arm": -0.012562493992695267,
+        "excess_above_single_drive_baseline": 0.0
+      },
+      "0.25": {
+        "goal_accuracy": 0.655,
+        "breadth_mixture": 0.6235985320233898,
+        "breadth_of_equally_hard_single_drive_work": 0.6483850465423793,
+        "excess_breadth_attributable_to_diversity": -0.0247865145189895,
+        "in_range_of_noise_curve": true,
+        "baseline_offset_of_the_single_drive_arm": -0.012562493992695267,
+        "excess_above_single_drive_baseline": -0.012224020526294233
+      },
+      "0.5": {
+        "goal_accuracy": 0.51,
+        "breadth_mixture": 0.7278079098843182,
+        "breadth_of_equally_hard_single_drive_work": 0.7490965466072141,
+        "excess_breadth_attributable_to_diversity": -0.021288636722895937,
+        "in_range_of_noise_curve": true,
+        "baseline_offset_of_the_single_drive_arm": -0.012562493992695267,
+        "excess_above_single_drive_baseline": -0.00872614273020067
+      },
+      "0.75": {
+        "goal_accuracy": 0.4,
+        "breadth_mixture": 0.7573808821808242,
+        "breadth_of_equally_hard_single_drive_work": 0.7926282419060662,
+        "excess_breadth_attributable_to_diversity": -0.035247359725241956,
+        "in_range_of_noise_curve": false,
+        "baseline_offset_of_the_single_drive_arm": -0.012562493992695267,
+        "excess_above_single_drive_baseline": -0.02268486573254669
+      },
+      "1.0": {
+        "goal_accuracy": 0.215,
+        "breadth_mixture": 0.7668718996364483,
+        "breadth_of_equally_hard_single_drive_work": 0.7926282419060662,
+        "excess_breadth_attributable_to_diversity": -0.02575634226961787,
+        "in_range_of_noise_curve": false,
+        "baseline_offset_of_the_single_drive_arm": -0.012562493992695267,
+        "excess_above_single_drive_baseline": -0.013193848276922604
+      }
+    },
+    "verdict": "BREADTH_IS_LARGELY_A_DIFFICULTY_METER",
+    "excess_above_baseline_by_automaticity": {
+      "0.0": 0.0,
+      "0.25": -0.012224020526294233,
+      "0.5": -0.00872614273020067,
+      "0.75": -0.02268486573254669,
+      "1.0": -0.013193848276922604
+    },
+    "how_to_read": "the noise curve is single-drive work made progressively harder to read. If a mixture arm sits ABOVE that curve at the same goal accuracy, the extra breadth is diversity rather than difficulty, and purpose_breadth is a usable signal. If it sits on the curve, breadth cannot tell 'many drives' from 'hard to read' and Sounding Line cannot use it as a motivational measure."
+  },
+  "construct_is_confounded_with_difficulty": true,
+  "construct_is_confounded_with_shallowness": false,
+  "what_would_have_falsified_it": "breadth flat across the automaticity sweep, which would make posterior entropy blind to motivational variety; or goal accuracy falling with it, which would make 'diversity' a synonym for 'noise' and the construct unusable.",
+  "what_this_cannot_show": "that practice CAUSES drive-multiplicity. The depth axis tests whether practice alone moves breadth at a fixed mixture, which is the nearest non-circular question, and it is a question about this model's depth construction rather than about people."
+}

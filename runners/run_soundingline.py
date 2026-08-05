@@ -32,6 +32,17 @@ STAGES = [
      "does inference order buy accuracy, or only cost?"),
     ("S6", "ghostscale.validation.soundingline.s6_surface_decay",
      "does surface decay across an artifact while content does not?"),
+    # ---- second batch -------------------------------------------------------------------
+    ("T1", "ghostscale.validation.soundingline.t1_triangle",
+     "chain or triangle? six directed edges, all measured the same way"),
+    ("T2", "ghostscale.validation.soundingline.t2_automaticity",
+     "does drive diversity read as posterior breadth, or only as difficulty?"),
+    ("T3", "ghostscale.validation.soundingline.t3_countability",
+     "is 'a decision was recovered' ever a well-defined event?"),
+    ("T4", "ghostscale.validation.soundingline.t4_uncertain_reader",
+     "does channel divergence survive a reader that does not know the channel?"),
+    ("T5", "ghostscale.validation.soundingline.t5_detection",
+     "auxiliary: is the process posterior a better maker-detector than the goal posterior?"),
 ]
 
 SCALE = {
@@ -40,6 +51,11 @@ SCALE = {
     "S3": dict(n_obs=400, n_emissions=12),
     "S45": dict(n_obs=60, n_timesteps=24, forced_k=24),
     "S6": dict(n_obs=400),
+    "T1": dict(n_obs=200),
+    "T2": dict(n_obs=200),
+    "T3": dict(n_obs=150),
+    "T4": dict(n_obs=400, n_emissions=12),
+    "T5": dict(n_obs=200),
 }
 QUICK = {
     "S1": dict(n_obs=12, n_timesteps=24, forced_k=24),
@@ -47,6 +63,11 @@ QUICK = {
     "S3": dict(n_obs=40, n_emissions=12),
     "S45": dict(n_obs=6, n_timesteps=24, forced_k=24),
     "S6": dict(n_obs=40),
+    "T1": dict(n_obs=20),
+    "T2": dict(n_obs=20),
+    "T3": dict(n_obs=20),
+    "T4": dict(n_obs=60, n_emissions=12),
+    "T5": dict(n_obs=30),
 }
 
 
