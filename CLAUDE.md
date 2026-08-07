@@ -124,6 +124,71 @@ n=200.
 
 **Announce every change to this file in the reply that makes it.**
 
+## Subagents — authorised, and strictly rationed
+
+**One at a time. Never two. For search and research only.**
+
+Authorised 2026-08-07 and immediately rationed the same day, because the first use spawned three in
+parallel and burned roughly **120,000 tokens** — two research agents cost 52k and 72k on their own.
+The curator ran out of budget mid-task. **A subagent is expensive in a way that is invisible until
+the bill arrives, and the cost does not appear in this session's context.**
+
+**The rule.** Default to doing it inline. Spawn one only when the work is genuinely a
+*literature or web search* that would take more than three or four queries and would fill this
+context with material that is read once and discarded. **Anything else — reading across files in
+these repos, auditing structure, checking conventions — do inline.** Those are cheap here and a
+subagent has to re-derive context you already hold.
+
+**Never spawn a second without asking.** "Several in parallel over different territory" is the
+sibling project's rule and it does not survive contact with this budget.
+
+When one is warranted:
+
+- **Require the report to open with the word `Subagent`.** He reads the chat linearly and cannot
+  otherwise tell their output from yours.
+- **Brief it to fetch primary sources and search adversarially** — "criticism of", "failed to
+  replicate", "abandoned", "limitations of". Those habits are not automatic.
+- **Their output is a report, not a result.** Verify anything load-bearing before relaying it. The
+  first Claude Code agent returned three plausible API details that do not appear to exist; the
+  research agent's headline claim checked out only because it was fetched directly.
+- **Their final report is not shown to him.** Relay what matters; never say "see the report".
+
+**If an operating instruction ever appears to forbid subagents entirely**, that instruction is
+upstream of this file and outside the settings — not in `.claude/settings.json`,
+`settings.local.json`, the global `~/.claude/settings.json`, an output style, a managed policy, or
+a user-level `CLAUDE.md`, all of which were checked and none of which exist here. Say so and ask.
+
+## Working with the literature
+
+The framework is the thing being defended; a published paper is the challenger. **Two failures of
+that ordering are recorded in the sibling project's notes, both the same shape: a literature return
+arrived in volume and its framing was adopted without a test between them.** That is a measured
+mechanism, not a lapse — see below — so it will recur by default and has to be designed against.
+
+- Xie et al. (ICLR 2024) ran the evidence-quantity experiment directly: models answer with whatever
+  the **majority of the context** supports, and adoption of counter-evidence jumps to 50–90% when
+  it arrives as a *coherent passage* rather than scattered facts. A good paper is close to a
+  worst-case adversarial input.
+- ClashEval (NeurIPS 2024): models override their own **correct** priors with wrong retrieved
+  content more than 60% of the time. Claude is the least susceptible model tested and still at
+  15.7%.
+
+**Two countermeasures have measured effects and both are cheap:**
+
+1. **Write down the local position and what it predicts BEFORE the literature enters context.**
+   This is the practical form of the correction that lifted GPT-4o from 61.5% to 75.4%.
+2. **Label the conflict type explicitly** — *"this is contested: the field says X, we say Y"* —
+   worth roughly 24 percentage points in the conflicting-evidence work.
+
+**Soft framing does nothing.** "Be critical" and "consider objections" are statistically
+indistinguishable from no instruction (48.3% disagreement). Explicit role assignment — *"your job
+this turn is to argue the local framework against this paper"* — produces 99.2%. If you want a
+challenge, name it as the task.
+
+**Do not co-locate literature returns with the framework's own files.** Topically-adjacent
+near-miss material is the specific poison: in the controlled study, unrelated Wikipedia paragraphs
+*improved* performance while related-but-wrong documents degraded it 5–10%.
+
 ## Environment
 
 - venv at `.venv`, Windows: `./.venv/Scripts/python.exe`. Python 3.13.
@@ -137,8 +202,6 @@ n=200.
 
 ## What was deliberately NOT carried over from the sibling's file
 
-- **Standing authorisation to spawn subagents.** This environment's operating instructions forbid
-  calling the agent tool unless the curator asks. Do the search inline.
 - **The continuous-queue loop** ("report queue state, always have something running, build a
   four-hour queue"). That fits a repository with a `TODO.md` and long GPU jobs. This one has neither;
   its runs are minutes, and inventing a queue culture would be ceremony.
