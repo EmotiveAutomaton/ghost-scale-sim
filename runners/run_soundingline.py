@@ -54,6 +54,9 @@ STAGES = [
      "S-2's question, on an emitter that works"),
     ("T10", "ghostscale.validation.soundingline.t10_boundary_recovery",
      "the decision's identity is unrecoverable; is its location?"),
+    # ---- fourth batch: ground truth about a number ----------------------------------------
+    ("S11", "ghostscale.validation.soundingline.s11_component_count",
+     "does the component-count pipeline recover a planted number?"),
 ]
 
 SCALE = {
@@ -72,6 +75,7 @@ SCALE = {
     "T8": dict(n_obs=150),
     "T9": dict(n_obs=250),
     "T10": dict(n_obs=120),
+    "S11": dict(),
 }
 QUICK = {
     "S1": dict(n_obs=12, n_timesteps=24, forced_k=24),
@@ -89,6 +93,7 @@ QUICK = {
     "T8": dict(n_obs=30),
     "T9": dict(n_obs=40),
     "T10": dict(n_obs=20),
+    "S11": dict(),
 }
 
 
