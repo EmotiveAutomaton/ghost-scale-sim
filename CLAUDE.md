@@ -1,6 +1,6 @@
 # Working notes for an agent picking this up
 
-Read [`README.md`](README.md) down to the marker, then
+Read [`README.md`](README.md) down to "The complete record", then
 [`docs/theory/READING_INTENT.md`](docs/theory/READING_INTENT.md) — the hypothesis store, where
 every claim stands — then [`docs/METHODS.md`](docs/METHODS.md), then the newest file in
 [`docs/exchange/`](docs/exchange/).
@@ -70,7 +70,7 @@ existing at all is the result of refusing to score a values vertex that was a co
 - **A gate records; a test fails.** Gates never raise — a 350-second sweep must not die on a control
   that was expected to fail. `tests/test_gates.py` walks every committed verdict and fails the
   suite, which puts the hard stop where a result would become public.
-- **`ghostscale/v1` through `v10` are closed.** Pre-registered, run, reported, left alone. Do not
+- **`ghostscale/v1` through `v10` are closed.** Pre-specified and hash-locked, run, reported, left alone. Do not
   re-run them to add assertions; re-running changes what re-running means. New work goes in
   `validation/soundingline/`, which the package itself calls its living directory.
 - **Nothing in `ghostscale/methods/` may be required to reproduce a published number.** Every

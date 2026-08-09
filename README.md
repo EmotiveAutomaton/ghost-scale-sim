@@ -1,30 +1,478 @@
 # Ghost Scale Simulation
 
+**An exploratory computational model of cross-agent intent inference, provenance trust, and
+preference learning.** It asks whether an observer can recover a maker's latent goals and
+persistent profile from artifacts, determine when that inference is reliable enough to update its
+own model, and remain appropriately uncertain when provenance is absent, mistaken, or deceptive.
+
+**The repository contains no human or clinical data.** Its contribution is an executable family of
+mechanisms, their failure conditions, and testable predictions for later human and embodied-agent
+studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
+[`10.5281/zenodo.19407789`](https://doi.org/10.5281/zenodo.19407789)).
+
 ![The Ghost Scale, drawn by a human and rendered by a machine](figures/ghost_scale_pair.png)
 
 *Left: 100% intent. Right: 60%. Same figure, same information.*
 
-A working model of how people work out what someone was trying to do when they made something.
+## Research question
 
-> **◐ Curator, 60% intent density, down to [the marker](#-ghost--everything-below-this-line).**
-> **○ Ghost, 5% after it. There is a note at the marker explaining what to do about that.**
+Human observers do more than classify an artifact's visible features: they infer the decisions,
+constraints, competence, effort, and purposes that could have produced it. Ghost Scale Simulation
+formalizes a narrow version of that problem:
 
----
+> Under what conditions can one agent infer another agent's latent purposes or persistent
+> preferences from the artifacts it produces — and when should that inference be blocked from
+> changing the observer?
 
-## Where to start
+The program separates three questions that are often collapsed:
 
-| you want | read | how much of a person is in it |
+1. **Legibility:** does an artifact contain enough structured evidence to constrain an inference
+   about its maker?
+2. **Provenance and trust:** does the observer have adequate reason to treat the apparent source
+   as the real source?
+3. **Learning:** if the inference is sufficiently identified and trustworthy, what — if anything —
+   should the observer update about makers, values, or preferred outcomes?
+
+## What is implemented
+
+The repository contains successive model generations rather than one final validated theory.
+Across those generations it implements:
+
+- active-inference readers (discrete pymdp agents, with an exact-inference reference solver)
+  operating over artifact features and latent causes;
+- explicit provenance signals and trust gates;
+- nulls, ablations, architecture randomization, and alternative classifiers that can disqualify
+  theory-specific interpretations;
+- a reader-side intent gate on a learner's absorption, tested against disguised and adversarial
+  content, in V10;
+- repeated-artifact inference over a persistent maker profile (w) in V11;
+- exact and approximate inference paths, construction invariants, source hashes, and committed
+  verdicts.
+
+Several attractive claims failed these controls and remain recorded as failures. That is part of
+the result, not an exception to it.
+
+## Latest result — and the boundary it exposes
+
+In V11's bounded model family, repeated artifacts make a persistent maker profile increasingly
+identifiable: profile identification accuracy rises from **0.53 at one artifact to 0.98 at
+fifty**, monotonically. Removing the shared profile family — the assumption that reader and maker
+draw from a common, bounded hypothesis space — raises the residual error of the recovered profile
+(L1 distance between the posterior-mean profile and the truth) from **0.009 to 0.249**. The
+matching test of the reader-expertise assumption **failed as pre-specified** (the effect was
+invisible at this observation length) and is reported as failing in the
+[V11 results](docs/versions/v11-the-maker/RESULTS.md).
+
+V11 therefore supplies a **candidate estimator for information that could furnish preferred
+outcomes**. It does **not** yet insert the inferred profile into an active-inference preference
+vector (the C matrix), demonstrate that the four abstract goal channels represent prosocial or
+human values, or test downstream effects on policy. The unbuilt bridge is:
+
+```
+q(w | a_1..n)   →   C   →   policy selection
+```
+
+Only the left-hand inference is presently implemented.
+
+## Relationship to developmental active inference
+
+Developmental active-inference work asks how learned associations can become the preferred
+outcomes that guide a later stage of behavior — see
+[*Active Inference for Learning and Development in Embodied Neuromorphic Agents*](https://www.mdpi.com/1099-4300/26/7/582)
+and the
+[Marr-inspired developmental framework for raising "good" robots](https://shura.shu.ac.uk/35137/1/A_Multidimensional_Approach_to_Raising__Good_Robots%20%281%29.pdf).
+Ghost Scale Simulation approaches a related problem from the social side: how one agent might
+infer another agent's persistent profile from the traces it produces.
+
+| Developmental active inference | Ghost Scale Simulation | Unbuilt bridge |
 |---|---|---|
-| **the whole argument, in pictures** | **[WALKTHROUGH.md](WALKTHROUGH.md)** | mixed ◐ Curator and ○ Ghost |
-| the theory, and where every claim now stands | [docs/theory/](docs/theory/), starting with [READING_INTENT.md](docs/theory/READING_INTENT.md) | mixed |
-| every question and its current answer | [FINDINGS.md](FINDINGS.md) | ○ Ghost, 5% |
-| what the world published, next to what this predicted | [EVIDENCE.md](EVIDENCE.md) | ○ Ghost, 5% |
+| C: preferred outcomes that affect policy selection | Posterior over a maker profile, q(w) | Transform a calibrated posterior into preferred outcomes and test behavioral consequences |
+| Transfer between developmental stages within one agent | Inference across artifacts produced by another maker | Between-agent developmental transfer |
+| Meaningful or prosocial preferences | Four bounded, abstract goal channels | Empirically grounded outcome semantics |
+| Embodied learning and action | Symbolic artifact-feature simulation | Sensorimotor traces, morphology, and embodied policy |
+| Transparent association parameters | Explicit profiles, likelihoods, posteriors, and gates | Identifiability and calibration in real agents |
 
-*The right-hand column is this project's own instrument, applied to itself. It says how much
-deciding went into the prose, not whether the numbers are right. There is a note at the marker
-explaining what to do about the low end.*
+This is a research connection, not an equivalence claim. Ghost Scale Simulation currently models
+a possible input to preference construction, not a complete preference-learning architecture, and
+it is a symbolic computational social-inference model, not an embodied one.
+
+## What this repository does — and does not — show
+
+**It does show:**
+
+- how specified inference architectures behave under controlled synthetic conditions;
+- which headline effects survive null models, ablations, solver comparisons, and architecture
+  randomization — and which are properties of the architecture rather than the theory;
+- failure modes involving missing or deceptive provenance, underdetermined intent, and repeated
+  exposure;
+- executable hypotheses that can be turned into human-subject or embodied-agent experiments.
+
+**It does not show:**
+
+- that humans or robots use the modeled mechanism;
+- that any reported simulation rate estimates a population prevalence or real-world effect size;
+- that the model has recovered human values or prosocial preferences;
+- that Ghost Scale labeling is an established intervention — the direct label mechanism failed in
+  the tested forms (E39, E54);
+- that the proposed neural or metabolic account has been empirically established;
+- clinical safety, effectiveness, equity, or readiness for healthcare deployment.
+
+Most findings have the form: *given model construction M, M implies Y.* They establish
+consequences of assumptions and generate discriminating predictions. They do not by themselves
+establish that the assumptions describe people or deployed AI systems.
+
+## Verify the repository in five minutes
+
+```bash
+git clone https://github.com/EmotiveAutomaton/ghost-scale-sim
+cd ghost-scale-sim
+
+uv sync --frozen          # install the locked, tested environment
+uv run pytest -q          # the full suite: unit, invariants, and committed-verdict gates
+```
+
+Then one representative V11 run, which regenerates a committed verdict deterministically:
+
+```bash
+uv run python runners/run_soundingline.py --only S15
+git diff results/validation/soundingline/s15_convergence.json
+```
+
+Every number in the regenerated verdict should be identical to the committed one; the only
+expected differences are the `produced_by.git_commit` / `git_dirty` provenance fields, which
+record the state of the tree at run time. Restore with
+`git checkout -- results/validation/soundingline/`.
+
+`run_all.py` runs the original V1 experiment program (E1–E6); it is not a runner for every
+experiment or model generation in the repository. Per-version runners are listed under
+[Install and run](#install-and-run).
+
+## Three representative findings
+
+| Finding | Interpretation | Boundary |
+|---|---|---|
+| **Trust changes the response to underdetermination.** False provenance can support confident invention when an artifact poorly constrains intent; an honest provenance signal redirects that confidence toward calibrated uncertainty (E2, E4, E17). | Provenance belongs inside the inference problem, not only in interface metadata. | Demonstrated within specified synthetic architectures; not a measured human effect, and the *confident* half reproduces in 100% of randomly parameterised models of this shape. |
+| **A mark works through shared convention.** Partial labeling protects learning only for a reader whose model includes the labeling convention (31% coverage suffices in-model); an uninformed reader needs 74% and never builds a reliable picture below it (E16, E47). | Common knowledge may be more important than the visual mark itself. | The tested Ghost Scale label mechanism did not establish a general intervention (E39, E54); the coverage figures are model-internal lower bounds. |
+| **Persistent profiles become more identifiable across artifacts.** V11 recovers increasing information about a bounded maker profile from repeated traces, and prices the assumptions that make recovery possible (S-15). | Artifact sequences may support between-agent preference inference. | The profile is abstract and is not yet mapped into a preference vector, prosocial semantics, or action. |
+
+See [`FINDINGS.md`](FINDINGS.md) for the complete experiment and methods ledger, including failed
+predictions, withheld experiments, solver disagreements, architecture effects, and deviations from
+pre-specified criteria.
+
+## Documentation map
+
+| Document | Purpose |
+|---|---|
+| [`README.md`](README.md) | Technical gateway, model boundary, verification, and the complete record |
+| [`WALKTHROUGH.md`](WALKTHROUGH.md) | Visual, public-facing narrative of the findings, in reading order |
+| [`FINDINGS.md`](FINDINGS.md) | Canonical experiment, method, verdict, and failure ledger |
+| [`EVIDENCE.md`](EVIDENCE.md) | Literature archive, classified by evidential relationship to each claim |
+| [`docs/theory/READING_INTENT.md`](docs/theory/READING_INTENT.md) | Living hypothesis store for the broader intent-extraction theory |
+
+Supporting material: [`docs/README.md`](docs/README.md) maps the version specs, audit passes, and
+exchange records; [`docs/METHODS.md`](docs/METHODS.md) documents the methodology layer.
+
+## Human and AI contribution boundary
+
+Abraham Haskins originated the Ghost Scale framework and is responsible for the research
+questions, acceptance of experimental criteria, interpretation of results, and claims made from
+them. Generative AI tools were used extensively for implementation, refactoring, test generation,
+documentation drafting, and literature triage; commit trailers record that participation.
+
+AI-produced code or synthesis is not treated as independent scientific validation. Verification in
+this repository comes from executable tests, construction invariants, null conditions, ablations,
+exact-versus-approximate inference comparisons, architecture randomization, source and criterion
+hashes, and independent reconstruction where explicitly documented. These checks establish
+internal behavior and provenance; they do not substitute for external replication or
+human-subject evidence.
+
+The project applies its own tier notation to its documents — ◐ Curator for human-directed
+synthesis, ○ Ghost for machine drafting from the author's numbers — and scores the
+[walkthrough](WALKTHROUGH.md) plate by plate. This README was restructured on 2026-08-09 and its
+sections await re-tiering; the accuracy standard is unchanged: every figure below traces to a
+committed verdict file.
 
 ---
+
+## Install and run
+
+```bash
+git clone https://github.com/EmotiveAutomaton/ghost-scale-sim
+cd ghost-scale-sim
+
+# the locked, tested environment (preferred); `pip install -e .` also works
+uv sync --frozen
+
+# run the original V1 experiment program (E1-E6), full scale, parallel
+python run_all.py
+
+# one experiment (writes results/eN_*.csv and figures/eN_*.png)
+python -m ghostscale.experiments.e1_crash
+
+# the validation pass (writes results/validation/, then VALIDATION.md)
+python runners/run_validation.py
+python scripts/write_validation_md.py
+
+# the diagnostics pass on the instruments (writes results/diagnostics/, then DIAGNOSTICS.md)
+python runners/run_diagnostics.py
+python scripts/write_diagnostics_md.py
+
+# the repair pass (writes results/repair/, then REPAIR.md)
+python runners/run_repair.py
+python scripts/write_repair_md.py
+
+# version 6 (writes results/v6/, then RESULTS_V6.md)
+python runners/run_v6.py
+python scripts/write_results_v6.py
+
+# version 7 (writes results/v7/, then RESULTS_V7.md)
+python runners/run_v7.py
+python scripts/write_results_v7.py
+
+# version 8 (writes results/v8/, then RESULTS_V8.md) — the severity pass runs last
+python runners/run_v8.py
+python scripts/write_results_v8.py
+
+# version 9 — the minimal-model programme, and the two literature experiments
+python runners/run_v9.py
+
+# version 10 — the reader as a defence; the severity pass runs last
+python runners/run_v10.py
+
+# version 11 — the maker. Lock the criteria first, then run the three modules
+python -m ghostscale.prereg_v11
+python runners/run_soundingline.py --only S12 S14 S15
+
+# redraw every chart from the committed CSVs, without re-running anything
+python scripts/make_walkthrough_plates.py
+python scripts/rebuild_figures.py
+python scripts/make_ghost_scale_pair.py
+
+# tests
+pytest -q
+```
+
+## How the model works
+
+### The one empirical commitment: opacity means recoverable intent
+
+The four published Ghost Scale tiers, CREATOR / POLISHED / CURATOR / GHOST, are drawn at 100%, 95%,
+60% and 5% opacity. The model reads that opacity directly as the fraction of the maker's intent
+that survives into the work:
+
+```
+alpha = {CREATOR: 1.00, POLISHED: 0.95, CURATOR: 0.60, GHOST: 0.05}
+A[0][:, tier, goal, DEEP] = alpha[tier] · sig[goal] + (1 - alpha[tier]) · noise_free_synth
+```
+
+This is the load-bearing assumption of the whole framework, so it is in the open rather than buried
+in an implementation file. If you think opacity and recoverable intent are not the same quantity,
+this is the line to argue with. The validation pass shows the label result survives compressing and
+stretching this ramp, so what matters is the ordering rather than the exact published values.
+
+### Machine-made content is structured, and that is the point
+
+`noise_free_synth` is a structured, non-uniform, goal-independent distribution over features, with
+entropy well below uniform, asserted in code. Machine-made artifacts in this model are not noise.
+They are richly patterned. What they lack is any dependence of that pattern on a goal.
+
+That distinction matters because the obvious strawman, "machine-made content is random noise",
+would produce the same crash for the wrong reason. Null N6 exists to separate them. Both are low
+information. Only the strawman is high entropy.
+
+**And validation found the sharper version of this.** What the disagreement result actually depends
+on is not that the distribution is structured but that it is *goal-symmetric*, sitting equidistant
+from every goal the reader holds. Switch the symmetrisation off and the readers still become
+confident, but they all become confident about the *same* goal, which is shared error rather than
+invention. That was written down as a design decision in version 1 and the pass confirms it is
+load-bearing.
+
+### Depth is in the order, not in the histogram
+
+Version 5 models how much *thinking* sits behind a work as the number of levels of the maker's
+decision hierarchy that reach the surface. It is built so that a deep work and a shallow one have
+**identical** feature histograms, to machine precision: a reader that counts features and ignores
+their order cannot tell them apart at all. What distinguishes them is the order. A deep work moves
+through stages, and a deeper one moves through them in an order that names what it is for.
+
+That constraint is asserted at every build, and it is what stops "depth" from being a second name
+for "legibility", which the model already measures elsewhere.
+
+### What the learner already knows, and why that is a claim
+
+The learner in version 2 does not arrive holding a correct model of what machine-made content looks
+like. It has to acquire one from an unlabelled, already-contaminated corpus. What it starts with is
+a deliberate theoretical position: it knows the shared goal-to-feature family, and it does not know
+how provenance modulates it. Readers share a likelihood family because they share a body plan. What
+they do not share, and have to learn, is which sources carry intent.
+
+It is also forced. A genuinely uninformative prior is not a slow learner, it is an unidentifiable
+one: information between features and goal sits at exactly 0.0000 nats after 400 artifacts and all
+four learned columns stay bit-identical. That measurement is kept as a live test, so if it ever
+stops being true the decision gets revisited instead of inherited.
+
+### Two solvers, and why that matters
+
+The observer's beliefs can be updated two ways. `inference.exact: false` uses pymdp's variational
+solver, which keeps beliefs about different unknowns separately and updates each using an average
+over the others. Every committed number in `results/` was produced that way. `inference.exact: true`
+uses [`ghostscale/exact.py`](ghostscale/exact.py), which carries the belief over every combination
+of unknowns at once with no independence assumption anywhere.
+
+The shortcut is fast and it is known to have been badly wrong once. Version 5 caught it returning
+the shallow answer for every artifact, confidently, while exact arithmetic on the same observations
+recovered depth correctly. Switching solvers is one config flag and every experiment runs unchanged
+under both, which is what made the validation pass a substitution rather than a rewrite.
+
+### The Ψ analogue is a reimplementation, not a port
+
+`metrics.psi_analogue` is a discrete stand-in for the closed-form Ψ of the preprint:
+
+```
+psi = [engaged] · (-ln(1 - κ)) · KL( Q(goal | τ) ‖ P0(goal) )
+```
+
+The sigmoid gate of the closed form is replaced by the binary engagement decision. This
+reimplements the intuition, which is engagement-gated, trust-weighted surprise about the goal. It is
+not a port of the equation and no equivalence is claimed.
+
+### The reader acquires a mind of its own (version 8)
+
+Three additions, each of which makes something representable that was not.
+
+**A hierarchy the reader owns.** Until version 8 the *maker* had levels and the reader did not. A
+reader can now only recognise as far as it has itself built — which makes "you cannot see what you
+have not done" a structural property rather than an assumption, and it is what the human acquisition
+test would target.
+
+**A cost for being changed.** Integration is no longer free. Absorbing something is an expenditure,
+separate from the expenditure of looking at it, which is what lets attention and uptake come apart
+cleanly rather than by stipulation.
+
+**A memory that fades to a residue, not to zero.** Belief decays toward `baseline + floor ×
+residual`. The first implementation decayed geometrically to baseline, which is erasure with extra
+steps; associations weaken and do not quite disappear, and the model now says so.
+
+### The Intent Extraction Limit, and the three terms that were missing
+
+The published equation is
+
+```
+Ψ = sigmoid(k·(ω − θ_E,C(κ))) · [−ln(1−κ)] · D_KL(Q(R|τ) ‖ P₀(R))
+     with  θ_E,C(κ) = θ_base(E) + λ·D_KL(Q ‖ P_c)
+```
+
+Version 6 read it against the shipped code and found three things absent: **θ_base(E)**, the
+metabolic reserve; the **gate gain k**, which makes the gate graded rather than binary; and the
+**κ→θ coupling**, which is not an omission but a *disagreement about mechanism*. The code's exploit
+works by the label out-arguing the work. The paper's works by trust lowering the guard — and only the
+paper's version predicts a reader told the truth, believing it, and absorbing the work anyway.
+
+**ω is two different objects** in the two documents. In the preprint it is the reader's precision
+weighting, which is an *output*. In the code it is feature overlap between hypothesis families, which
+is an *input*. Anywhere the two are compared, that has to be said first.
+
+### The intent gate (version 10)
+
+The mechanism is one line and no new parameter: the learner's Dirichlet learning rate is set from
+the gate, and the commit happens *after* inference resolves. So the reader works out who made the
+thing first, and only then decides how much of it comes in — which is the ratchet the version is
+built on. Four gates were compared: no filter, a surface-quality filter, a provenance-label filter,
+and the intent-gate in three variants (reconstructibility alone, hand-set values, values learned
+from what has already been absorbed).
+
+**The reconstructibility-only variant is the proposal**, and it is deliberately value-free: it
+rejects what it cannot attribute a maker and a purpose to, and holds no view about what anyone should
+want. It never reads the provenance signal, which is asserted by test rather than claimed.
+
+---
+
+## Scope and limits
+
+Stated generously, because the point of a limits section is to be the thing a sceptical reader
+reaches for and finds already there.
+
+- **A simulation of a mechanism, not a study of people.** No human data. Nothing here is evidence
+  about what real readers do.
+- **The specific numbers are properties of this model's dimensions and do not transfer. The shapes
+  are the claims.** The independent reimplementation makes this concrete: rebuilt from the prose
+  alone, the label effect points the same way and comes out fifteen times smaller. Quote directions
+  and orderings. Do not quote multiples.
+- **One headline is architecture-dependent.** Inside this model's own two long-standing design
+  decisions, 64% of randomly parameterised versions reproduce the label effect, and the effect this
+  model produces sits near the middle of what random ones produce. The contribution there is the
+  architecture and its constructions, not the settings, and it should be read that way.
+- **The central assumption is that Ghost Scale opacity can be read directly as the fraction of a
+  maker's intent that survives into the work.** That is a modelling choice, it is stated in the
+  open below rather than buried, and it is the line to argue with.
+- **The readability axis is downstream of a design decision.** The human and machine feature blocks
+  were made disjoint because no such split existed at the original feature count, so the space was
+  doubled. Every claim about that axis inherits it. A different split would keep the shape of the
+  claim, an interior maximum, and would move the specific location. That is why the prediction card
+  is written as a location to be measured rather than a number to be trusted.
+- **The labelling-coverage figure is a lower bound.** The convention-aware reader is handed the
+  true coverage, which is the most generous assumption available, so a real reader can only do
+  worse.
+- **The trust-exploit multiple is an upper bound.** The reader in this build cannot doubt the label
+  it conditioned on, so a reader who could would be harder to fool.
+- **The Ghost Scale's own attention gradient is non-monotone, and in the wrong place.** The tier
+  meant to signal "do not spend effort here" is rendered as the visually loudest element on the
+  page, while the Curator tier's reduced contrast makes it genuinely easy to skip, and E1 finds
+  Curator the most expensive tier for readers. The model and the design disagree, and the design is
+  probably right about human behaviour. The 5% tier is close to a logical impossibility besides:
+  prompting alone constitutes more selection than 5% implies. **This repository's own charting code
+  quietly declined to use the published opacity ramp and substituted a monotone one, which is the
+  argument having been made in code before it was made in prose.**
+- **Version 5's construct corrections are theoretically motivated and largely untested.** They are
+  more defensible than what they replace, which is not the same as being right.
+- **Two of V5's four goals share an identical execution chain** (deviation V5-5): the order
+  channel contributes nothing to distinguishing that one pair, so order-carried goal identity is
+  measured on three effective contrasts rather than four. Emissions still separate the pair at
+  full depth; closed versions are not re-run; new work uses the repaired builder.
+- **A literature search has been run and it is retrospective.** It happened after the simulations,
+  it is reported in its own column, and it informed no design. It is a coherence check.
+- **The project has no forward test.** It had one sealed prediction. Its status was withdrawn in
+  version 8 because the author does not recognise authoring it, and a commitment nobody remembers
+  making is not a forward test. The experiment was run anyway (E52) and its primary held. The
+  hash-locked card is still in [VALIDATION.md](docs/audits/a1-validation/RESULTS.md); what it is not is evidence.
+
+## How this was kept honest
+
+- Readers in the model have **zero preference over provenance**. They cannot want work to be human.
+  Any effect of a provenance signal has to come through inference, never through wishing. Asserted
+  at every construction.
+- Every headline effect has a matching **null condition** that has to come out null. There are
+  **fifty-one** of them, N1 through N51, across `tests/`. Three of them fail and are reported as
+  failing rather than quietly dropped: N21 (depth versus effort), N45 (the intent-gate's
+  clean-corpus cost) and N50 (value drift with nothing to detect).
+- Acceptance criteria are **pre-specified as executable code and content-hash locked before any
+  run**. The written criterion and the applied criterion are the same object, so they cannot drift
+  apart. One qualification, stated exactly: where a specification and its results entered the
+  public history in the same commit, the repository establishes *that* the criteria were fixed and
+  hashed, not an independently timestamped before/after sequence — this is internal
+  pre-specification, not external preregistration, and the word "pre-registered" elsewhere in the
+  record means exactly this.
+- **Every deviation is logged**, including two where a criterion was restated after seeing a
+  measurement. In both cases the original criterion is retained, still computed, and reported as
+  failing. [VALIDATION.md](docs/audits/a1-validation/RESULTS.md) recomputes every one of them that the committed data
+  supports and reports which verdicts would change.
+- Some checks exist because the failure they guard against **actually happened** during a build and
+  was caught by an assertion rather than by a result. Those are marked as such in the code.
+- **The validation pass could return the unwelcome answer, and did.** Its criteria were fixed and
+  hash-locked before it ran, its own restated criterion is logged in its own verdict file, and
+  five of its nine checks came back against the work. Four came back clean: the robustness sweep,
+  the cross-version consistency check, the seed-and-scale check, and the forward prediction, which
+  is locked and not yet testable either way.
+
+
+---
+
+## The complete record
+
+Everything below is the full experiment index and the history of how the record was
+audited — the material a reader needs to check a specific claim rather than to get
+oriented. [FINDINGS.md](FINDINGS.md) is the canonical ledger; these tables are its
+public-face summary and carry every caveat inline.
 
 ## What was tested, and what came back
 
@@ -192,46 +640,10 @@ reading next to the fact that ten separate results elsewhere in this project cam
 **The gap that matters most is still H4's**, because the acquisition test is the sharpest available
 check on whether any of this describes humans, and nothing in ten versions substitutes for it.
 
----
-
-## ○ Ghost — everything below this line
-
-**Intent density from here on: about 5%.** Everything above was written by a person, argued over,
-and cut. Everything below was drafted by a machine from that person's notes and results, checked
-for accuracy, and **not read end to end by the author.** That is a statement about *how much
-deciding went into the prose*, not about whether the numbers are right — every figure below traces
-to a committed verdict file, and the accuracy claims are the ones this repository is most careful
-about.
-
-**So this repository is applying its own instrument to itself, and the honest reading is: don't
-read this part the way you read the part above.** The findings say that highly legible text with
-little intent behind it is exactly the material a reader will build a confident, wrong theory from.
-Below the line the density is low and the volume is high. That is the regime.
-
-**What to do instead, which is also the project's own proposal working as intended:** hand this
-section to a language model and ask it for the parts you need. That is not a workaround. Reading
-intent is metabolically expensive, this section has little to recover, and spending a person's
-attention on it is the specific waste the whole model is about. The section is written to be
-machine-read — dense, explicit, heavily cross-referenced — for exactly that reason.
-
-**And the warning itself is most of the protection.** The project's own results are consistent on
-this: a reader who *knows* the origin reads accurately and simply declines to spend, while a reader
-who is misled builds a confident theory about someone who was never there. **The damage in this
-model comes from being wrong about provenance, not from exposure to low-intent text.** So: knowing
-is enough. Nobody is claiming a paragraph can hurt you. People are resilient, this is a repository
-of simulation results, and the label is here because the project would be incoherent without it.
 
 ---
 
-## What this is
-
-When you look at a piece of work you run a guess about the person behind it. Why this word, this
-shot, this colour. That guess is what this project models: how it is formed, what it costs to keep
-running, and what happens to it when there was no person behind the work at all.
-
-It is a simulation of a proposed mechanism. There are no human subjects anywhere in it and nothing
-here is evidence about what real people do. It is the companion code to *Art as an Algorithmic
-Virus* (Zenodo DOI [`10.5281/zenodo.19407789`](https://doi.org/10.5281/zenodo.19407789)).
+## The record, pass by pass
 
 **All of this is exploratory and theory-derived.** Every prediction came from one prior theory. The
 simulations write that theory down as code and check whether its parts fit together, so agreement
@@ -428,6 +840,7 @@ edited after; results were written after and never edited either. Full material 
 checks came back against the work), diagnostics (four limits on what the instruments can answer),
 and repair (the uptake measure gained a sign, and the headline reversed with it).
 
+
 ---
 
 ## A claim this repository withdrew
@@ -557,270 +970,6 @@ not counted here; V11's own criteria and their one recorded failure are in
    in version 8 because the author does not recognise authoring it. The experiment was run anyway
    (E52) and its primary held; but a commitment nobody remembers making is not a forward test, and
    the record now says the count is zero.
-
-## How this was kept honest
-
-- Readers in the model have **zero preference over provenance**. They cannot want work to be human.
-  Any effect of a provenance signal has to come through inference, never through wishing. Asserted
-  at every construction.
-- Every headline effect has a matching **null condition** that has to come out null. There are
-  **fifty-one** of them, N1 through N51, across `tests/`. Three of them fail and are reported as
-  failing rather than quietly dropped: N21 (depth versus effort), N45 (the intent-gate's
-  clean-corpus cost) and N50 (value drift with nothing to detect).
-- Acceptance criteria are **pre-registered as executable code** and content-hash locked before any
-  run. The written criterion and the applied criterion are the same object, so they cannot drift
-  apart.
-- **Every deviation is logged**, including two where a criterion was restated after seeing a
-  measurement. In both cases the original criterion is retained, still computed, and reported as
-  failing. [VALIDATION.md](docs/audits/a1-validation/RESULTS.md) recomputes every one of them that the committed data
-  supports and reports which verdicts would change.
-- Some checks exist because the failure they guard against **actually happened** during a build and
-  was caught by an assertion rather than by a result. Those are marked as such in the code.
-- **The validation pass could return the unwelcome answer, and did.** Its criteria were fixed and
-  hash-locked before it ran, its own restated criterion is logged in its own verdict file, and
-  five of its nine checks came back against the work. Four came back clean: the robustness sweep,
-  the cross-version consistency check, the seed-and-scale check, and the forward prediction, which
-  is locked and not yet testable either way.
-
-## Scope and limits
-
-Stated generously, because the point of a limits section is to be the thing a sceptical reader
-reaches for and finds already there.
-
-- **A simulation of a mechanism, not a study of people.** No human data. Nothing here is evidence
-  about what real readers do.
-- **The specific numbers are properties of this model's dimensions and do not transfer. The shapes
-  are the claims.** The independent reimplementation makes this concrete: rebuilt from the prose
-  alone, the label effect points the same way and comes out fifteen times smaller. Quote directions
-  and orderings. Do not quote multiples.
-- **One headline is architecture-dependent.** Inside this model's own two long-standing design
-  decisions, 64% of randomly parameterised versions reproduce the label effect, and the effect this
-  model produces sits near the middle of what random ones produce. The contribution there is the
-  architecture and its constructions, not the settings, and it should be read that way.
-- **The central assumption is that Ghost Scale opacity can be read directly as the fraction of a
-  maker's intent that survives into the work.** That is a modelling choice, it is stated in the
-  open below rather than buried, and it is the line to argue with.
-- **The readability axis is downstream of a design decision.** The human and machine feature blocks
-  were made disjoint because no such split existed at the original feature count, so the space was
-  doubled. Every claim about that axis inherits it. A different split would keep the shape of the
-  claim, an interior maximum, and would move the specific location. That is why the prediction card
-  is written as a location to be measured rather than a number to be trusted.
-- **The labelling-coverage figure is a lower bound.** The convention-aware reader is handed the
-  true coverage, which is the most generous assumption available, so a real reader can only do
-  worse.
-- **The trust-exploit multiple is an upper bound.** The reader in this build cannot doubt the label
-  it conditioned on, so a reader who could would be harder to fool.
-- **The Ghost Scale's own attention gradient is non-monotone, and in the wrong place.** The tier
-  meant to signal "do not spend effort here" is rendered as the visually loudest element on the
-  page, while the Curator tier's reduced contrast makes it genuinely easy to skip, and E1 finds
-  Curator the most expensive tier for readers. The model and the design disagree, and the design is
-  probably right about human behaviour. The 5% tier is close to a logical impossibility besides:
-  prompting alone constitutes more selection than 5% implies. **This repository's own charting code
-  quietly declined to use the published opacity ramp and substituted a monotone one, which is the
-  argument having been made in code before it was made in prose.**
-- **Version 5's construct corrections are theoretically motivated and largely untested.** They are
-  more defensible than what they replace, which is not the same as being right.
-- **Two of V5's four goals share an identical execution chain** (deviation V5-5): the order
-  channel contributes nothing to distinguishing that one pair, so order-carried goal identity is
-  measured on three effective contrasts rather than four. Emissions still separate the pair at
-  full depth; closed versions are not re-run; new work uses the repaired builder.
-- **A literature search has been run and it is retrospective.** It happened after the simulations,
-  it is reported in its own column, and it informed no design. It is a coherence check.
-- **The project has no forward test.** It had one sealed prediction. Its status was withdrawn in
-  version 8 because the author does not recognise authoring it, and a commitment nobody remembers
-  making is not a forward test. The experiment was run anyway (E52) and its primary held. The
-  hash-locked card is still in [VALIDATION.md](docs/audits/a1-validation/RESULTS.md); what it is not is evidence.
-
-## Install and run
-
-```bash
-git clone https://github.com/EmotiveAutomaton/ghost-scale-sim
-cd ghost-scale-sim
-
-# with uv (preferred) or pip
-uv sync
-
-# run everything, full scale, parallel
-python run_all.py
-
-# one experiment (writes results/eN_*.csv and figures/eN_*.png)
-python -m ghostscale.experiments.e1_crash
-
-# the validation pass (writes results/validation/, then VALIDATION.md)
-python runners/run_validation.py
-python scripts/write_validation_md.py
-
-# the diagnostics pass on the instruments (writes results/diagnostics/, then DIAGNOSTICS.md)
-python runners/run_diagnostics.py
-python scripts/write_diagnostics_md.py
-
-# the repair pass (writes results/repair/, then REPAIR.md)
-python runners/run_repair.py
-python scripts/write_repair_md.py
-
-# version 6 (writes results/v6/, then RESULTS_V6.md)
-python runners/run_v6.py
-python scripts/write_results_v6.py
-
-# version 7 (writes results/v7/, then RESULTS_V7.md)
-python runners/run_v7.py
-python scripts/write_results_v7.py
-
-# version 8 (writes results/v8/, then RESULTS_V8.md) — the severity pass runs last
-python runners/run_v8.py
-python scripts/write_results_v8.py
-
-# version 9 — the minimal-model programme, and the two literature experiments
-python runners/run_v9.py
-
-# version 10 — the reader as a defence; the severity pass runs last
-python runners/run_v10.py
-
-# version 11 — the maker. Lock the criteria first, then run the three modules
-python -m ghostscale.prereg_v11
-python runners/run_soundingline.py --only S12 S14 S15
-
-# redraw every chart from the committed CSVs, without re-running anything
-python scripts/make_walkthrough_plates.py
-python scripts/rebuild_figures.py
-python scripts/make_ghost_scale_pair.py
-
-# tests
-pytest -q
-```
-
-## How the model works
-
-### The one empirical commitment: opacity means recoverable intent
-
-The four published Ghost Scale tiers, CREATOR / POLISHED / CURATOR / GHOST, are drawn at 100%, 95%,
-60% and 5% opacity. The model reads that opacity directly as the fraction of the maker's intent
-that survives into the work:
-
-```
-alpha = {CREATOR: 1.00, POLISHED: 0.95, CURATOR: 0.60, GHOST: 0.05}
-A[0][:, tier, goal, DEEP] = alpha[tier] · sig[goal] + (1 - alpha[tier]) · noise_free_synth
-```
-
-This is the load-bearing assumption of the whole framework, so it is in the open rather than buried
-in an implementation file. If you think opacity and recoverable intent are not the same quantity,
-this is the line to argue with. The validation pass shows the label result survives compressing and
-stretching this ramp, so what matters is the ordering rather than the exact published values.
-
-### Machine-made content is structured, and that is the point
-
-`noise_free_synth` is a structured, non-uniform, goal-independent distribution over features, with
-entropy well below uniform, asserted in code. Machine-made artifacts in this model are not noise.
-They are richly patterned. What they lack is any dependence of that pattern on a goal.
-
-That distinction matters because the obvious strawman, "machine-made content is random noise",
-would produce the same crash for the wrong reason. Null N6 exists to separate them. Both are low
-information. Only the strawman is high entropy.
-
-**And validation found the sharper version of this.** What the disagreement result actually depends
-on is not that the distribution is structured but that it is *goal-symmetric*, sitting equidistant
-from every goal the reader holds. Switch the symmetrisation off and the readers still become
-confident, but they all become confident about the *same* goal, which is shared error rather than
-invention. That was written down as a design decision in version 1 and the pass confirms it is
-load-bearing.
-
-### Depth is in the order, not in the histogram
-
-Version 5 models how much *thinking* sits behind a work as the number of levels of the maker's
-decision hierarchy that reach the surface. It is built so that a deep work and a shallow one have
-**identical** feature histograms, to machine precision: a reader that counts features and ignores
-their order cannot tell them apart at all. What distinguishes them is the order. A deep work moves
-through stages, and a deeper one moves through them in an order that names what it is for.
-
-That constraint is asserted at every build, and it is what stops "depth" from being a second name
-for "legibility", which the model already measures elsewhere.
-
-### What the learner already knows, and why that is a claim
-
-The learner in version 2 does not arrive holding a correct model of what machine-made content looks
-like. It has to acquire one from an unlabelled, already-contaminated corpus. What it starts with is
-a deliberate theoretical position: it knows the shared goal-to-feature family, and it does not know
-how provenance modulates it. Readers share a likelihood family because they share a body plan. What
-they do not share, and have to learn, is which sources carry intent.
-
-It is also forced. A genuinely uninformative prior is not a slow learner, it is an unidentifiable
-one: information between features and goal sits at exactly 0.0000 nats after 400 artifacts and all
-four learned columns stay bit-identical. That measurement is kept as a live test, so if it ever
-stops being true the decision gets revisited instead of inherited.
-
-### Two solvers, and why that matters
-
-The observer's beliefs can be updated two ways. `inference.exact: false` uses pymdp's variational
-solver, which keeps beliefs about different unknowns separately and updates each using an average
-over the others. Every committed number in `results/` was produced that way. `inference.exact: true`
-uses [`ghostscale/exact.py`](ghostscale/exact.py), which carries the belief over every combination
-of unknowns at once with no independence assumption anywhere.
-
-The shortcut is fast and it is known to have been badly wrong once. Version 5 caught it returning
-the shallow answer for every artifact, confidently, while exact arithmetic on the same observations
-recovered depth correctly. Switching solvers is one config flag and every experiment runs unchanged
-under both, which is what made the validation pass a substitution rather than a rewrite.
-
-### The Ψ analogue is a reimplementation, not a port
-
-`metrics.psi_analogue` is a discrete stand-in for the closed-form Ψ of the preprint:
-
-```
-psi = [engaged] · (-ln(1 - κ)) · KL( Q(goal | τ) ‖ P0(goal) )
-```
-
-The sigmoid gate of the closed form is replaced by the binary engagement decision. This
-reimplements the intuition, which is engagement-gated, trust-weighted surprise about the goal. It is
-not a port of the equation and no equivalence is claimed.
-
-### The reader acquires a mind of its own (version 8)
-
-Three additions, each of which makes something representable that was not.
-
-**A hierarchy the reader owns.** Until version 8 the *maker* had levels and the reader did not. A
-reader can now only recognise as far as it has itself built — which makes "you cannot see what you
-have not done" a structural property rather than an assumption, and it is what the human acquisition
-test would target.
-
-**A cost for being changed.** Integration is no longer free. Absorbing something is an expenditure,
-separate from the expenditure of looking at it, which is what lets attention and uptake come apart
-cleanly rather than by stipulation.
-
-**A memory that fades to a residue, not to zero.** Belief decays toward `baseline + floor ×
-residual`. The first implementation decayed geometrically to baseline, which is erasure with extra
-steps; associations weaken and do not quite disappear, and the model now says so.
-
-### The Intent Extraction Limit, and the three terms that were missing
-
-The published equation is
-
-```
-Ψ = sigmoid(k·(ω − θ_E,C(κ))) · [−ln(1−κ)] · D_KL(Q(R|τ) ‖ P₀(R))
-     with  θ_E,C(κ) = θ_base(E) + λ·D_KL(Q ‖ P_c)
-```
-
-Version 6 read it against the shipped code and found three things absent: **θ_base(E)**, the
-metabolic reserve; the **gate gain k**, which makes the gate graded rather than binary; and the
-**κ→θ coupling**, which is not an omission but a *disagreement about mechanism*. The code's exploit
-works by the label out-arguing the work. The paper's works by trust lowering the guard — and only the
-paper's version predicts a reader told the truth, believing it, and absorbing the work anyway.
-
-**ω is two different objects** in the two documents. In the preprint it is the reader's precision
-weighting, which is an *output*. In the code it is feature overlap between hypothesis families, which
-is an *input*. Anywhere the two are compared, that has to be said first.
-
-### The intent gate (version 10)
-
-The mechanism is one line and no new parameter: the learner's Dirichlet learning rate is set from
-the gate, and the commit happens *after* inference resolves. So the reader works out who made the
-thing first, and only then decides how much of it comes in — which is the ratchet the version is
-built on. Four gates were compared: no filter, a surface-quality filter, a provenance-label filter,
-and the intent-gate in three variants (reconstructibility alone, hand-set values, values learned
-from what has already been absorbed).
-
-**The reconstructibility-only variant is the proposal**, and it is deliberately value-free: it
-rejects what it cannot attribute a maker and a purpose to, and holds no view about what anyone should
-want. It never reads the provenance signal, which is asserted by test rather than claimed.
 
 ---
 

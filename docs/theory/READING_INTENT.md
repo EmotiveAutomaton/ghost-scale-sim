@@ -19,6 +19,10 @@ stretching the ramp — but the mapping itself is a modelling choice, not a meas
 curator's words, what it says, then every result that bears on it, with status. Format, status
 legend and source legend are in [README.md](README.md). Detail for any row:
 [FINDINGS.md](../../FINDINGS.md) (the method archive), then the version document the row names.
+**This file holds living hypotheses; what is actually implemented and executable — and where the
+implementation's claims stop — is stated in the
+[repository gateway](../../README.md#what-is-implemented).** An OPEN row here is a claim nothing
+has run against; a (run) row is a mechanism the simulator has executed.
 Statuses here are **(run)** — a committed verdict in this repository — unless marked **(lit)**,
 published work from [EVIDENCE.md](../../EVIDENCE.md). Every (run) row is a **method** result
 about a constructed world; whether the mechanism transfers to people is exactly what a simulation

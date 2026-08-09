@@ -2,7 +2,7 @@
 
 Committed summary CSVs and JSON verdict files — everything a number in the README or a chart in
 `figures/` depends on. Raw per-reader CSVs are **not** committed, because `e4_raw.csv` alone is
-16 MB. Regenerate them with `python run_all.py`.
+16 MB. Regenerate the V1-family raws with `python run_all.py` (E1-E6); later versions have their own runners under `runners/`.
 
 ## Two layouts, and the reason is historical rather than principled
 

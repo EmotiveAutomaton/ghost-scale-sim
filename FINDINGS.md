@@ -11,6 +11,8 @@ each. A result lands in both in the same pass, or it is lost in one of two ways.
 
 If you want *how the record got this way*, read [docs/HISTORY.md](docs/HISTORY.md).
 If you want a specific number's full provenance, each row names the document that owns it.
+For what the model is and where its claims stop, read the README's
+[technical identity and model boundary](README.md#latest-result--and-the-boundary-it-exposes).
 
 ---
 
@@ -266,9 +268,12 @@ only under a SUPERSEDED marker pointing at the V7 closure that retired it.*
 - **A simulation of a mechanism, not a study of people.** No human data anywhere.
 - **The shapes are the claims; the specific numbers are properties of this model's dimensions.**
   Quote directions and orderings. Do not quote multiples.
-- **Every criterion was written down before its run**, as executable code, content-hash locked.
+- **Every criterion was pre-specified as executable code and content-hash locked before its run.**
   Where one was changed afterwards it is logged, the original is retained and still computed, and
-  it is reported as failing if it fails.
+  it is reported as failing if it fails. Where a specification and its results entered the public
+  history in the same commit, the repository establishes that the criteria were fixed and hashed,
+  not an independently timestamped before/after sequence — "pre-registered" anywhere in this
+  record means that internal pre-specification, not an external registry.
 - **Four separate criteria have now been found unable to do their own job**, each caught by a later
   pass. That is the failure mode this project has most of, and each instance is documented where it
   was found.

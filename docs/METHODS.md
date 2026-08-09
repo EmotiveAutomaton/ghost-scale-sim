@@ -13,9 +13,10 @@ because it makes a project look checked.
 
 > **Nothing in `ghostscale/methods/` may be required to reproduce a published number.**
 
-`ghostscale/v1` through `v10` are closed: pre-registered, run, reported, left alone. What makes
-them reproducible is that `pip install -e .` resolves to the same small set of packages in five
-years as it does today. So every third-party dependency here is an **optional extra**, and every
+`ghostscale/v1` through `v10` are closed: pre-specified, run, reported, left alone. What makes
+them reproducible is a deliberately small core dependency set, now fixed by the committed
+`uv.lock`; long-term reproducibility still depends on Python and platform compatibility and on
+upstream artifacts remaining available. So every third-party dependency here is an **optional extra**, and every
 module that leans on one degrades to a recorded skip rather than an exception:
 
 ```bash
