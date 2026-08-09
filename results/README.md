@@ -38,3 +38,20 @@ replaces it.
 
 That convention is the reason these files are committed at all. A results document can be rewritten;
 a verdict file with a content hash cannot be, quietly.
+
+## Provenance note on the corpus-diet family (2026-08-08)
+
+An audit found that the shared rollout loop dropped a reused observer's prior from the second
+artifact of a corpus onward (`observer.py`; pymdp's `reset()` keeps a stale `action`, the same
+gotcha `regret._reset_to_prior` documents). The fix is one line and is in the code. It touches only
+experiments that march one agent through many artifacts: **E6, E6b, E7, E8, E9, E12, E13** and the
+calibration criterion. Everything else constructs a fresh agent per artifact and is unaffected.
+
+**E6, E6b, E7 and E9 were regenerated at full scale under the fixed harness on 2026-08-08** and
+the committed files are the post-fix runs. Every direction held; the two magnitudes the docs quote
+survived unchanged (labels reach competence ≥6× faster; the unlabeled reader keeps ~74% of its
+reading of genuine work), and E6's degradation curve is steeper post-fix than the pre-fix record
+showed. **E8, E12 and E13 still carry pre-fix numbers** (E8 is withheld anyway; E12/E13 are
+generational sweeps that take tens of core-hours). Until they are regenerated
+(`python -m ghostscale.experiments.e12_leak_vs_samplesize --workers N`, then e13), quote E12/E13
+as directions, not magnitudes.

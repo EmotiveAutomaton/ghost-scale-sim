@@ -139,8 +139,12 @@ def run(cfg: Config, n_obs: int = 400, n_emissions: int = 12) -> dict:
     for theta in THETAS:
         for amp in AMPLIFICATIONS:
             block("theta_sweep", theta, amp, "none", 0.0, 0.0, N_STATES)
-    # 2. Reader degradations, at S-3's full negation and at a partial one.
-    for theta in (1.0, 0.5):
+    # 2. Reader degradations, at S-3's full negation, at a partial one, AND at theta = 0 -- the
+    # degraded CANDID baseline. The first run omitted the 0.0 arm, so the scoring loop's fairness
+    # fallback ("candid arm must be degraded the same way") silently compared every degraded
+    # concealing reader against an UNdegraded baseline, which inflates the separation wherever
+    # degradation raises divergence in both arms.
+    for theta in (1.0, 0.5, 0.0):
         for amp in AMPLIFICATIONS:
             for lvl in (0.0, 0.2, 0.4, 0.6, 0.8, 0.95):
                 block("prior_noise", theta, amp, "prior_noise", lvl, 0.0, N_STATES)

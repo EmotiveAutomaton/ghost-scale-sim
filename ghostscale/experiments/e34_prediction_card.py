@@ -102,8 +102,13 @@ def build_card(res_dir: Path) -> dict:
             "fabrication_peaks_at_omega": float(peak.omega),
             "fabrication_peak_value": float(peak.fabrication_index),
             "crash_signature_true_at_omega": crash.omega.tolist(),
-            "note": ("the crash and the fabrication peak are the SAME narrow band, which the "
-                     "framework had always treated as two separate phenomena."),
+            "note": ("SUPERSEDED, kept for the record: this run's sweep put the crash signature "
+                     "and the fabrication peak in the same narrow band, which the framework had "
+                     "always treated as two separate phenomena. V7's exact-inference closure "
+                     "(results/v7/closures.json, C-3) retired the co-location: the peak is real "
+                     "and interior, the crash signature does not fire there under the repaired "
+                     "solver. Use the peak location from this card and do not use the "
+                     "co-location claim."),
         },
         "the_two_readings": {
             "partially_foreign": (

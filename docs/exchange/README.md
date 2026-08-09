@@ -17,12 +17,13 @@ what was asked and what was sent back.
 | `batch-2-response.md` | **this repository** | the authored reply: five results, two corrections to batch one, and a validity register. |
 | `batch-2-received-by-sounding-line.md` | Sounding Line | their write-up of the same batch. Kept because it is not a copy — it is what the other project took from it, which is worth being able to compare. |
 | `batch-3-request.md` | Sounding Line | no experiments. Methodology tooling, and the argument for a standing positive control. |
-| `batch-3-response.md` | **this repository** | what the tooling found when pointed at the existing results: T-6 to T-10, and a correction to batch two's headline. |
+| *(no batch-3 response document)* | **this repository** | batch three was never answered as a single document. Its answer is the methodology layer itself plus the T-6 … T-10 verdict files in `results/validation/soundingline/`, and the correction to batch two's headline lives in those verdicts. An earlier version of this row listed a `batch-3-response.md` that does not exist. |
 | `batch-4-request.md` | Sounding Line | S-11 … S-15. The first batch where the simulation is the only place the answer exists, because it has ground truth about a number. |
 | `batch-4-response-S11.md` | **this repository** | S-11 only. The component count was a one-line bug: exceedances summed across the spectrum where Horn's rule takes the leading run. S-12 to S-15 are not yet run. |
 
-Batch three was answered twice: once as infrastructure -- `ghostscale/methods/`, the gate blocks
-now in every verdict, and `tests/test_gates.py`, described in [docs/METHODS.md](../METHODS.md) --
+Batch three was answered twice: once as infrastructure -- `ghostscale/methods/`, gate blocks in
+every verdict written since (S-1, S-45 and S-6 predate them and are exempted by name in
+`tests/test_gates.py`), described in [docs/METHODS.md](../METHODS.md) --
 and once as results, when that infrastructure was turned on the batch-two findings and one of them
 did not survive.
 

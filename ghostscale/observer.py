@@ -171,6 +171,14 @@ def rollout_observer(agent, artifact: Artifact, env: Environment, cfg: Config,
         raise ValueError(f"learn_mode must be 'online' or 'deferred', got {learn_mode!r}")
     buffered: list[tuple[list[int], np.ndarray]] = []
     agent.reset()
+    # PYMDP GOTCHA, the same one regret._reset_to_prior documents: Agent.reset() sets qs to
+    # uniform but does NOT clear self.action, so on a REUSED agent the first infer_states of the
+    # next artifact takes empirical_prior = B-propagated(uniform) instead of D. Every observer's
+    # heterogeneous prior — which null N3 calls load-bearing — was silently replaced by a uniform
+    # one from the second artifact onward in every corpus loop (E6, E6b, E7, E8, E9, E12, E13,
+    # and the calibration criterion). A fresh agent has action None already, and ExactAgent.reset
+    # clears it itself, so this line changes reused pymdp agents and nothing else.
+    agent.action = None
     deep_pol, skim_pol = find_named_policies(agent)
     goal_prior = np.asarray(agent.D[K.F_GOAL], dtype=float).copy()
 

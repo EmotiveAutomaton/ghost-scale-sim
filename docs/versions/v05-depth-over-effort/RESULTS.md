@@ -255,7 +255,9 @@ and must report the limitation.
 
 **What a reader takes on tracks how much thought it believes went in, regardless of which
 channel put that belief there** — Spearman 0.886 against a required 0.70, across every open-θ
-cell. And a dishonest label inflates the depth estimate on content that has none: the exploit
+cell. *The pre-registration said "across all cells", and over all twelve the correlation is
+−0.02, because closed-θ cells pin the update at zero by design; see deviation V5-4 before
+quoting this as the pre-registered pass.* And a dishonest label inflates the depth estimate on content that has none: the exploit
 gap is 0.187 against a required 0.15.
 
 `results/e31_verdict.json`, `results/e31_cell_stats.csv`, `figures/e31_two_gates.png`.
@@ -522,9 +524,22 @@ criteria have not moved rather than that the caller happened to build them the s
 criterion changed and no result is affected; recorded because a lock that fires is worth a line
 either way.
 
----
-
-## What V5 changes, in one place
+**V5-4 — E31's primary was scored on a restriction of the pre-registered cell set, and the
+restriction was never logged until an audit found it (2026-08-08).** The locked criterion reads
+"Spearman(recovered mu, prior drift) **across all cells**", bar 0.70. The committed 0.886 is the
+Spearman over the six open-θ cells only; over all twelve cells it is **−0.021**, because a closed
+θ zeroes the update by definition and the six closed cells pin drift at ~0 regardless of recovered
+depth. The restriction is openly commented in `build_verdict` and is the scientifically sensible
+reading — a switch that is off cannot test tracking — but as pre-registered the criterion **fails**,
+and by this repository's own rule the original decides what may be claimed: quote the tracking
+result as *"on the cells where the update is enabled"*, never as the pre-registered pass. Two
+riders found in the same audit: the locked `fabrication_gap` threshold (0.05) is computed and
+recorded in the verdict (observed **0.025**, failing) but never enters the outcome logic, so the
+committed full pass silently ignores a failed bar; and E33's `divergence_raises_recovered_depth:
+true` rests on the bare sign of a Spearman across five cell means whose total range is **0.0011
+μ-units** — statistically indistinguishable from zero at any defensible resampling unit — and
+should not be quoted as a finding. E33's headline (the observer out-reading the maker's
+self-model) does not rest on it.
 
 **C1 — μ replaces β.** μ is the better-specified construct and the worse-performing one. β's
 update effect was real but confounded with legibility; μ removes the confound and the effect

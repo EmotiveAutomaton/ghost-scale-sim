@@ -1,7 +1,7 @@
 {
   "at_f": 0.8,
-  "observed_naive_kl_biased": 0.12376043235127099,
-  "observed_naive_kl_symmetric_control": 0.0826366451978229,
+  "observed_naive_kl_biased": 0.13419957341144345,
+  "observed_naive_kl_symmetric_control": 0.10578088503073443,
   "v1_reference": 0.066,
   "predicted_range": [
     0.15,
@@ -12,30 +12,30 @@
   "FALSIFIED": false,
   "per_favoured_k": {
     "0": {
-      "kl_naive": 0.04576183307191406,
+      "kl_naive": 0.05374772171778159,
       "bound": 0.5007099276256659,
       "lean": 0.9516310506386029,
       "below_bound": true
     },
     "1": {
-      "kl_naive": 0.13741710104270985,
+      "kl_naive": 0.17176307104908478,
       "bound": 0.6803876188043222,
       "lean": 0.9571211475764382,
       "below_bound": true
     },
     "2": {
-      "kl_naive": 0.10155268320820315,
+      "kl_naive": 0.07994034454151405,
       "bound": 0.9479609352487753,
       "lean": 0.963482740919441,
       "below_bound": true
     },
     "3": {
-      "kl_naive": 0.2103101120822568,
+      "kl_naive": 0.23134715633739342,
       "bound": 1.4356911822546319,
       "lean": 0.9586446444924585,
       "below_bound": true
     }
   },
   "all_below_bound": true,
-  "verdict": "NOT falsified \u2014 the bias axis produces the predicted corruption; downstream V2 stages may proceed."
+  "verdict": "NOT falsified \u2014 the bias axis produces corruption above the falsification threshold; downstream V2 stages may proceed. Read within_predicted_range before quoting a size: the observed value can clear the threshold and still sit under the pre-registered prediction band, and in the committed run it does."
 }

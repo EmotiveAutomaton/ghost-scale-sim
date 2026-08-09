@@ -3,9 +3,13 @@
 WHY THEY ARE MERGED. S-4 asks whether reading the method first and deriving the purpose from it
 beats the purpose-first loop. S-5 asks whether entering through an anomaly beats entering through
 the artifact in order. Both are questions about the ORDER in which evidence is consumed, and this
-reader runs exact inference over the full joint when ``inference.exact`` is set. Bayesian updating
-on the same evidence set is order-independent, so **neither reordering can change the final
-posterior.** S-5's own write-up says this; S-4's does not, and it is the same argument.
+reader runs exact inference over the full joint when ``inference.exact`` is set. For the STATIC
+factors, Bayesian updating on the same evidence set is order-independent. For the temporal
+sub-goal chain it is not a theorem -- a reordered tape describes a different generative history --
+so order-invariance of the final posterior is CHECKED empirically rather than assumed
+(``accuracy_checks_that_should_not_move``; the committed run's differences sit inside their
+intervals). S-5's own write-up states the static-factor argument; S-4's does not, and within the
+resolution of that check it is the same argument.
 
 So the answerable half of both is COST, which is the one thing this simulation is built to price:
 the reader pays per DEEP look and may disengage. The question becomes *how many looks does it take

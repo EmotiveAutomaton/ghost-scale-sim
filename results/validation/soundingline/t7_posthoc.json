@@ -2008,57 +2008,57 @@
     "t4:quarter_concealment_amp1.0": {
       "difference": 0.7470367040085393,
       "interval": [
-        0.5303691359577012,
-        0.97137716615233
+        0.5250911673566496,
+        0.9792893665315582
       ],
       "bound": 1.3448463504450912,
       "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
       "interval_level": 0.95,
       "equivalent": true,
-      "widest_excursion": 0.97137716615233,
-      "headroom": 0.3734691842927611,
+      "widest_excursion": 0.9792893665315582,
+      "headroom": 0.365556983913533,
       "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
     },
     "t4:quarter_concealment_amp2.0": {
       "difference": -0.07132282922337096,
       "interval": [
-        -0.2622323204712786,
-        0.13743870562045699
+        -0.26036524415274404,
+        0.12825871339048156
       ],
       "bound": 1.3448463504450912,
       "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
       "interval_level": 0.95,
       "equivalent": true,
-      "widest_excursion": 0.2622323204712786,
-      "headroom": 1.0826140299738125,
+      "widest_excursion": 0.26036524415274404,
+      "headroom": 1.0844811062923472,
       "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
     },
     "t4:quarter_concealment_amp4.0": {
       "difference": 0.0012180996092489016,
       "interval": [
-        -0.21042932564796624,
-        0.22825432025178338
+        -0.21328621764213665,
+        0.22163823882101497
       ],
       "bound": 1.3448463504450912,
       "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
       "interval_level": 0.95,
       "equivalent": true,
-      "widest_excursion": 0.22825432025178338,
-      "headroom": 1.1165920301933077,
+      "widest_excursion": 0.22163823882101497,
+      "headroom": 1.1232081116240762,
       "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
     },
     "t4:quarter_concealment_amp8.0": {
       "difference": 0.07225707906247003,
       "interval": [
-        -0.17132251880158486,
-        0.33590722902122205
+        -0.1667732368762208,
+        0.3290702826490737
       ],
       "bound": 1.3448463504450912,
       "bound_source": "10% of the full-concealment separation at amplification 1.0 (+13.4485) measured on the same axis in the same run",
       "interval_level": 0.95,
       "equivalent": true,
-      "widest_excursion": 0.33590722902122205,
-      "headroom": 1.008939121423869,
+      "widest_excursion": 0.3290702826490737,
+      "headroom": 1.0157760677960175,
       "how_to_read": "equivalent = the whole interval lies inside +/- bound, so the effect is bounded below it. This is TOST in confidence-interval form and it is conservative at a 95% interval (the exact correspondence is with 90%). NOT equivalent does not mean an effect exists; it means the data cannot rule out one of that size. headroom is how much room was left -- a small positive headroom is a bound that only just held."
     },
     "s45:reverse_minus_forward_accuracy": {
@@ -2099,12 +2099,12 @@
     "s45:reverse_minus_forward_accuracy"
   ],
   "equivalence_bound_fraction": 0.1,
-  "what_would_have_falsified_the_batch": "a live edge in a cell with headroom, a T-2 verdict, or an S-3 amplification claim failing BH inside its own family. None does. What correction DOES cost is listed in claims_lost_to_correction: fifteen of the seventeen are mu = 1 cells or negative controls, and the two that are not are budget-matched restatements at low duty cycle, not the full-rate edges the batch reported.",
+  "what_would_have_falsified_the_batch": "a live edge in a cell with headroom, a T-2 verdict, or an S-3 amplification claim failing BH inside its own family. None does. What correction DOES cost is listed in claims_lost_to_correction: thirteen of the seventeen are mu = 1 cells or negative controls, and all four that are not are budget-matched restatements at low duty cycle (two at mu 2, two at mu 3), not the full-rate edges the batch reported.",
   "what_this_cannot_show": "p-values here are inverted from stored bootstrap intervals under a normal approximation, which is exact only for a symmetric bootstrap distribution. That is adequate for ranking under Benjamini-Hochberg, which is all it is used for, and the numbers must not be quoted as p-values in their own right. The equivalence test is conservative: the exact TOST correspondence is with a 90% interval and these are 95%.",
   "produced_by": {
     "module": "ghostscale/validation/soundingline/t7_posthoc.py",
-    "sha256": "7af9abf48c80025831055d7adc0fe80baa7d56205375545e3b96954eb362fb3f",
-    "git_commit": "ff069fe",
+    "sha256": "8a917bcb8bbbd5748e37e737f5945f45e42b923453013f4a7049e14ded72a616",
+    "git_commit": "dadba5e",
     "git_dirty": true
   },
   "gates": {

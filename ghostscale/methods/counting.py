@@ -91,10 +91,11 @@ def vendored_criteria(X: np.ndarray, rng, n_null: int = 3) -> dict:
     # the null threshold is estimated from only three draws, where the "95th percentile" is
     # effectively the maximum of three and roughly one index in four exceeds it by chance.
     #
-    # Measured on a 1200 x 1024 matrix of iid Gaussian noise, true answer zero:
-    #     sum rule, 3 null draws   -> 254        leading run -> 0
-    #     sum rule, 20 null draws  ->  69        leading run -> 0
-    # and on planted structure both rules agree exactly (7 -> 7, 27 -> 27).
+    # Measured, committed (S-11's shuffled-null arm, structureless by construction, true answer
+    # zero): the sum rule returns 250 at n = 1200 and 254 at n = 2400; the leading run returns 0.
+    # On iid Gaussian noise of the same shape the sum rule returns ~280 with three null draws and
+    # ~70-140 with twenty (seed-dependent; side measurement, not committed). On planted structure
+    # both rules agree exactly (7 -> 7, 27 -> 27).
     exceed = ev > thresh
     leading = int(np.argmin(exceed)) if not exceed.all() else int(exceed.size)
     return {"parallel": int(exceed.sum()),

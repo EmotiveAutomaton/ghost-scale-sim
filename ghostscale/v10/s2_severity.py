@@ -118,8 +118,14 @@ def _severity_e57(cfg: Config, n_draws: int, n_obs: int) -> dict:
             "rows": rows}
 
 
-# Every verdict file a severity draw would otherwise overwrite. See _preserve below.
-CLOBBERED = ("e55_intent_gate.json", "e56_selective_gate.json", "e57_arms_race.json")
+# Every file a severity draw would otherwise overwrite. See _preserve below. The first version of
+# this list held only the three verdict JSONs, and the per-rollout CSVs the experiments write into
+# their subdirectories were left to be clobbered -- so the committed e55_learners.csv was the last
+# random draw's data (one learner, seed 0) while the JSON beside it carried the real run. Same
+# silent-shipping failure as the original bug, one directory down.
+CLOBBERED = ("e55_intent_gate.json", "e56_selective_gate.json", "e57_arms_race.json",
+             "e55_intent_gate/e55_learners.csv", "e56_selective_gate/e56_uptake.csv",
+             "e57_arms_race/e57_arms_race.csv")
 
 
 def _preserve(fn):

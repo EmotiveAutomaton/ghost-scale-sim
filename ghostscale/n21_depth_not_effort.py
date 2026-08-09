@@ -62,7 +62,9 @@ dependency and a correct one. The original clause charged it as contamination an
 scored a legitimate limit on recoverability identically to a rename.
 
 The restated clause asks the question the null is FOR: can beta make the observer report depth
-that is not there. Scored on the mu = 1 row the margin is 12x rather than 1.67x.
+that is not there. In the committed verdict the dominance ratio is 5.98 against 1.70 on the
+original clause (an earlier run of this module printed 12x against 1.67x; the committed file
+decides).
 
 THE ORIGINAL CLAUSE IS RETAINED, COMPUTED, AND REPORTED beside the new one as
 ``dominance_ratio_original``. It decides nothing. Two mitigations apply and neither is a

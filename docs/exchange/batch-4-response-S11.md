@@ -3,6 +3,15 @@
 **2026-08-07.** S-11 asked whether the component-count pipeline recovers a number we plant. It does
 — and so does almost every criterion tested, once one line is fixed.
 
+> **Correction, 2026-08-08.** Three numbers below were quoted from uncommitted side measurements
+> and do not trace to the committed S-11 run. The committed, reproducible values (shuffled-null
+> arm, structureless by construction): the exceedance rule returns **250** at n = 1200 and **254**
+> at n = 2400, against the leading run's **0** — the "254 on a 1200 × 1024 noise matrix, 69 with
+> twenty draws" table below was a single-seed iid-noise side check (re-measured across seeds:
+> ~280 with three draws, ~70–140 with twenty), and the Student-t "339 instead of 215" check was
+> never committed. Every conclusion is unchanged; the specific numbers should be read from
+> `results/validation/soundingline/s11_component_count.json`.
+
 **Reproduce:** `python runners/run_soundingline.py --only S11`. Numbers in
 `results/validation/soundingline/s11_component_count.json`.
 

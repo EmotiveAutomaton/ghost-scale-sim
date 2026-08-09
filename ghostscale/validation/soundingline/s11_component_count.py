@@ -324,7 +324,7 @@ def run(cfg: Config, n_obs: int | None = None) -> dict:
             "(1) `summed_exceedances_return_zero_on_structureless_data` documents the defect this "
             "module exists to find: Sounding Line's parallel analysis counts eigenvalues "
             "exceeding the null anywhere in the spectrum rather than taking the leading run, and "
-            "returns 254 components from pure noise. That gate failing IS the result. (2) "
+            "returns ~250 components from structureless data. That gate failing IS the result. (2) "
             "`pr_correction_recovers_chun_benchmark` documents a limit of this module's own "
             "tooling: only the row-side finite-sample correction to the participation ratio is "
             "implemented, so on Chun et al.'s d = 50 benchmark the residual error is 5-8 for wide "
@@ -375,12 +375,14 @@ def run(cfg: Config, n_obs: int | None = None) -> dict:
         "tracking": tracking,
         "THE_FINDING": (
             "Sounding Line's parallel analysis counts eigenvalues exceeding the null anywhere in "
-            "the spectrum. Horn's rule retains the LEADING CONSECUTIVE RUN. On a 1200 x 1024 "
-            "matrix of pure Gaussian noise -- true answer zero -- the summed rule returns 254 "
-            "components with their three null draws and 69 with twenty; the leading-run rule "
-            "returns 0 at every setting. On planted structure the two agree exactly. The retracted "
-            "count was measuring the number of eigenvalue indices, which is why it tracked the "
-            "sample size: min(n, p) grows and so does the number of 5% tests being summed."),
+            "the spectrum. Horn's rule retains the LEADING CONSECUTIVE RUN. On structureless data "
+            "-- this module's shuffled-null arm, true answer zero -- the summed rule returns 250 "
+            "components at n = 1200 and 254 at n = 2400, while the leading-run rule returns 0 at "
+            "every setting. (On iid Gaussian noise of the same shape, an uncommitted side "
+            "measurement: ~280 with three null draws, ~70-140 with twenty, seed-dependent.) On "
+            "planted structure the two rules agree exactly. The retracted count was measuring the "
+            "number of eigenvalue indices, which is why it tracked the sample size: min(n, p) "
+            "grows and so does the number of 5% tests being summed."),
         "what_would_have_falsified_the_worry": (
             "every criterion recovering the planted rank with slope 1 and no sample-size drift. "
             "Then the retracted count would have been a data problem rather than a method one."),

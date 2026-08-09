@@ -372,7 +372,7 @@ def plate_07_reputation_blindness():
     slope = [float(r["slope"]) for r in rows]
 
     fig, ax = plate(
-        "The people most inclined to believe a label are the ones who can never\nfind out the labeller lies.",
+        "The people most inclined to believe a label are the ones who can never find out the labeller lies.",
         "How well a reader learns a source's honesty, by how much it trusted labels to begin with. "
         "Past a threshold, the evidence never arrives: the label wins the argument before the "
         "mismatch can register.",
@@ -401,7 +401,8 @@ def plate_08_expertise_substitutes():
     fig, ax = plate(
         "Learning to read machine work doesn't add a skill. It swaps one out.",
         "Two readers, identical except for what they expect a maker to be like. The reader tuned "
-        "to machines reads machine work perfectly, and loses half its accuracy on human work.",
+        "to machines reads machine work perfectly, and gives up nearly three-quarters of its "
+        "accuracy on human work.",
         "E38 · results/v6/e38_expertise.json · share of makers' intent correctly recovered")
     xs = np.arange(2)
     w = 0.34
@@ -701,8 +702,8 @@ def plate_15_coverage():
     fig, ax = plate(
         "Labelling only protects readers who know the labelling exists.",
         "How much machine content has to be labelled before a reader keeps a clean picture of "
-        "what people are like. Readers who don't know the convention need far more, and never "
-        "get fully there.",
+        "what people are like. Readers who don't know the convention need more than twice as "
+        "much before the same protection arrives.",
         "E16 · results/e16_verdict.json · a lower bound: the aware reader is handed the true coverage")
     bars = ax.bar(["Knows the convention", "Doesn't know it"], [aware, naive],
                   color=[HUMAN, MACHINE], width=0.5)
@@ -764,8 +765,8 @@ def plate_17_withheld():
         "It asks whether damage compounds as each generation learns from the last. Its own "
         "honesty check, which is to show zero damage when there is zero contamination, has failed every time. So "
         "real decay cannot be told apart from the instrument's own noise.",
-        "E8 · a failing test is kept in the suite as a visible marker, so any future fix has to "
-        "switch it off deliberately")
+        "E8 · third withholding's margin, per docs/versions/v04-foreign-intent/RESULTS.md · a "
+        "failing test stays in the suite as a visible marker")
     ax.axis("off")
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -975,7 +976,7 @@ def plate_22_how_much_is_the_theory():
         "specifies replaced by a random one. Whatever still turns up is true, and it is not proof "
         "of this account over any other built the same way. Almost no published model is put "
         "through this at all.",
-        "S-1 - results/v8/s1_severity.json - 600 randomly parameterised rebuilds per finding",
+        "S-1 - results/v8/s1_severity.json - 60 randomly parameterised rebuilds per finding",
         authored=True)
 
     pos = ax.get_position()

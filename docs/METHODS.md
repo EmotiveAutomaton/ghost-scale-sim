@@ -32,7 +32,11 @@ for a check that succeeded.
 
 ## Gates — `methods/gates.py`
 
-Five kinds of standing control, recorded in every verdict JSON under `"gates"`.
+Five kinds of standing control, recorded in verdict JSONs under `"gates"`. Three verdicts carry
+none — S-1, S-45 and S-6 — under `tests/test_gates.py`'s named exemption for modules that audit
+somebody else's statistic rather than running a manipulation of their own. The exemption is
+arguable for S-1 and S-6 (both construct planted data, which is a manipulable arm), and tightening
+it would mean retrofitting gates and re-running both; recorded here rather than hidden.
 
 | kind | the relation | the real defect it is aimed at |
 |---|---|---|

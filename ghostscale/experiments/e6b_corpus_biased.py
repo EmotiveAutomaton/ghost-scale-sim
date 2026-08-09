@@ -210,8 +210,11 @@ def evaluate_gate(df: pd.DataFrame, prereg: dict) -> dict:
         "verdict": ("FALSIFIED — stop. The noise-cancellation diagnosis is wrong and every "
                     "downstream V2 experiment needs rethinking before it is run."
                     if falsified else
-                    "NOT falsified — the bias axis produces the predicted corruption; "
-                    "downstream V2 stages may proceed."),
+                    "NOT falsified — the bias axis produces corruption above the falsification "
+                    "threshold; downstream V2 stages may proceed. Read within_predicted_range "
+                    "before quoting a size: the observed value can clear the threshold and still "
+                    "sit under the pre-registered prediction band, and in the committed run it "
+                    "does."),
     }
 
 

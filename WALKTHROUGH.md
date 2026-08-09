@@ -128,9 +128,10 @@ in.**
 The most important number in this project is not a result. Keep the shape of the model, randomise
 everything the theory specifies, and count how often the finding still appears.
 
-**Two of three headlines appear every time.** They are properties of building a reader this shape at
-all — which *is* the theory, but is the part shared with any account of the same shape. It does not
-distinguish this framework from a competitor built the same way.
+**Two of three headlines appear in almost every draw — one in all 60, one in 59 of them.** They
+are properties of building a reader this shape at all — which *is* the theory, but is the part
+shared with any account of the same shape. It does not distinguish this framework from a competitor
+built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
 
@@ -522,8 +523,8 @@ would paper over. **Version 7 closed all four** — and one of them closed by be
 |---|---|
 | **The two-gates criterion** | **Settled, and drawn** (plate 24). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
 | **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
-| **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-fold — so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
-| **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver, and it has been removed from the README and from the prediction card. |
+| **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-seven-fold — so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
+| **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver; it is gone from the README and stands in the committed prediction card only under a SUPERSEDED marker. |
 
 One result stays undrawable, and it is the honest kind: **N21's split**. Two measures disagree about
 the same manipulation, one of them is the pre-registered one, and it fails. That is a paragraph, not

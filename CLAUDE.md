@@ -59,8 +59,8 @@ existing at all is the result of refusing to score a values vertex that was a co
 
 - **Validate the ruler before the signal. Noise in, zero out.** Run every measure on data whose
   answer you already know before running it on data whose answer you don't. This is not advice; it
-  is how S-11 found that a criterion returns **254 components from a matrix of pure Gaussian
-  noise**, and it cost ten seconds.
+  is how S-11 found that a criterion returns **hundreds of components from structureless data**
+  (250 at n = 1200 in the committed shuffled-null arm), and it cost ten seconds.
 - **Every measure ships with a null that can fail it, written before the run.** In this repository
   that is `ghostscale/methods/gates.py`. A new module in `validation/soundingline/` gets at least
   one `live` gate and one `placebo` or `positive` gate. If you cannot think of a known answer your

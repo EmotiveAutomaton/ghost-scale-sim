@@ -269,9 +269,9 @@ def run(cfg: Config, n_obs: int | None = None) -> dict:
         "what_would_have_falsified_the_batch": (
             "a live edge in a cell with headroom, a T-2 verdict, or an S-3 amplification claim "
             "failing BH inside its own family. None does. What correction DOES cost is listed in "
-            "claims_lost_to_correction: fifteen of the seventeen are mu = 1 cells or negative "
-            "controls, and the two that are not are budget-matched restatements at low duty "
-            "cycle, not the full-rate edges the batch reported."),
+            "claims_lost_to_correction: thirteen of the seventeen are mu = 1 cells or negative "
+            "controls, and all four that are not are budget-matched restatements at low duty "
+            "cycle (two at mu 2, two at mu 3), not the full-rate edges the batch reported."),
         "what_this_cannot_show": (
             "p-values here are inverted from stored bootstrap intervals under a normal "
             "approximation, which is exact only for a symmetric bootstrap distribution. That is "

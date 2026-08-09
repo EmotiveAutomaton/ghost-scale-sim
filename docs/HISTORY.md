@@ -112,7 +112,7 @@ either gap. [../RESULTS_V7.md](versions/v07-the-closures/RESULTS.md).
 
 The reader acquires a hierarchy, a cost for being changed, and a memory that fades toward a
 permanent residue rather than to zero. A maker that can choose to lie put the security argument in
-code for the first time, and found honesty self-policing **only above a detection rate of 0.5**.
+code for the first time, and found honesty self-policing **only above a detection rate of 0.25**.
 
 But the version is remembered for the severity pass, which asks the question nobody wants to ask
 about their own work: keep the model's shape, throw its settings away, redraw at random, and count
