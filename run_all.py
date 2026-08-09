@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-"""Run the whole Ghost Scale Simulation end to end: all six experiments, then the tests.
+"""Run the original V1 experiment program (E1-E6), then the tests.
+
+Later model generations (V2-V11) have their own runners under runners/; this script is
+kept under its original name for compatibility and runs only the six V1 experiments.
 
 Usage:
     python run_all.py                # full spec scale, parallel

@@ -24,9 +24,10 @@ dependencies = [
 
 # EVERYTHING BELOW IS OPTIONAL, AND THAT IS THE POINT.
 #
-# `ghostscale/v1` through `v10` are closed: pre-registered, run, reported and left alone. What
-# makes them reproducible is that `pip install -e .` in 2028 resolves to the same small set of
-# packages it resolves to now. Adding an information-theory library or a sensitivity-analysis
+# `ghostscale/v1` through `v10` are closed: pre-specified, run, reported and left alone. The
+# committed `uv.lock` fixes the dependency graph used by tested installs; long-term
+# reproducibility still depends on Python and platform compatibility and the continued
+# availability of upstream artifacts. Adding an information-theory library or a sensitivity-analysis
 # library to the core dependency list would change what re-running a closed version MEANS, for
 # the benefit of code that does not touch any of them.
 #
