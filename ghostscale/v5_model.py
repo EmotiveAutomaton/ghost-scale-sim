@@ -465,6 +465,66 @@ def stationary(chain: np.ndarray, iters: int = 4000) -> np.ndarray:
     return v / v.sum()
 
 
+def build_subgoal_chains_v5b(n_goals: int, n_sub: int, dwell: float,
+                             next_share: float = 0.7) -> np.ndarray:
+    """The repaired chain builder — V11 repair, deviation V5-5. NEW WORK ONLY.
+
+    ``build_subgoal_chains`` above assigns goal g the cyclic step ``(g % (n_sub - 1)) + 1``,
+    which with four goals and four modes maps goals 0 and 3 to the SAME step and hands them
+    identical chains — contradicting the docstring's "a different cyclic order per goal" for that
+    pair, and with it the claim that goal identity is carried by order alone. With S modes there
+    are only S - 1 non-identity cyclic steps, so four goals cannot all get distinct cycles: the
+    collision is a pigeonhole fact, not a typo, and the fix needs a richer successor family.
+
+    Here each goal's successor map is a DERANGEMENT, drawn from the derangements NOT used by
+    ``goal_mode_permutations`` so the order channel and the mu = 3 emission channel stay
+    uncoupled. A derangement is a permutation, so each mode is the successor of exactly one other
+    (rows sum to 1, the chain stays doubly stochastic, the stationary distribution stays
+    uniform), and no mode ever succeeds itself, which keeps ``dwell`` the only source of
+    self-transition. Pairwise distinctness of the chains is asserted — the assertion the original
+    lacked, and the one that would have caught V5-5 at build time.
+
+    Closed versions keep the original builder untouched: their committed worlds ARE the record.
+    """
+    from itertools import permutations
+
+    base = tuple(range(n_sub))
+    derangements = [p for p in permutations(base) if all(p[i] != i for i in range(n_sub))]
+    emission_perms = {tuple(p) for p in goal_mode_permutations(n_goals, n_sub)}
+    available = [p for p in derangements if tuple(p) not in emission_perms]
+    assert len(available) >= n_goals, (
+        f"only {len(available)} derangements of {n_sub} modes remain after excluding the "
+        f"emission permutations; raise the number of execution modes.")
+
+    p_stay = 1.0 - 1.0 / float(dwell)
+    assert 0.0 < p_stay < 1.0, f"dwell {dwell} gives a degenerate self-transition {p_stay}"
+    leave = 1.0 - p_stay
+    q_next = leave * float(next_share)
+    q_rest = (leave - q_next) / max(n_sub - 2, 1) if n_sub > 2 else 0.0
+
+    chains = np.zeros((n_goals, n_sub, n_sub))
+    for g in range(n_goals):
+        succ = available[g]
+        for s in range(n_sub):
+            nxt = succ[s]
+            for s2 in range(n_sub):
+                if s2 == s:
+                    chains[g, s2, s] = p_stay
+                elif s2 == nxt:
+                    chains[g, s2, s] = q_next
+                else:
+                    chains[g, s2, s] = q_rest
+    assert np.allclose(chains.sum(axis=1), 1.0, atol=1e-12), "chains must be column-stochastic"
+    assert np.allclose(chains.sum(axis=2), 1.0, atol=1e-12), (
+        "chains must be row-stochastic too: each mode the successor of exactly one other")
+    for g1 in range(n_goals):
+        for g2 in range(g1 + 1, n_goals):
+            assert not np.allclose(chains[g1], chains[g2], atol=1e-12), (
+                f"goals {g1} and {g2} share a chain; the whole point of v5b is that they must "
+                f"not (V5-5)")
+    return chains
+
+
 # --------------------------------------------------------------------------- #
 # A, B, D.
 # --------------------------------------------------------------------------- #

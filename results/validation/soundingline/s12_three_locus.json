@@ -1,0 +1,109 @@
+{
+  "test": "S-12 \u2014 does a three-locus structure with a noisy middle read as one mid peak?",
+  "for": "Sounding Line, batch four; G22's residual route, given its first ground truth",
+  "prereg": {
+    "locked": true,
+    "sha256": "1b70445fd77c48552f8c3af9002e79e25f49d3fa74f6c96839f0a6134e1dc714"
+  },
+  "miniature_severity": {
+    "n_draws": 20,
+    "smear_rate": 1.0,
+    "separation_rate": 0.25,
+    "how_to_read": "the fraction of randomly re-parameterised versions of this miniature reproducing each headline. High rates mean the result comes from the construction's shape, which for C7 is the point (any variable-locus world should smear) and for C8 is the risk (the separation should depend on the shared gain being real)."
+  },
+  "design": {
+    "n_units": 200,
+    "n_positions": 30,
+    "n_reps": 40,
+    "constants": {
+      "early_pos": [
+        4,
+        12
+      ],
+      "early_width": 2.0,
+      "early_amp": 1.0,
+      "mid_pos": [
+        10,
+        20
+      ],
+      "mid_width": 4.0,
+      "mid_amp": 2.0,
+      "mid_extra_noise": 0.8,
+      "late_pos": [
+        18,
+        26
+      ],
+      "late_width": 2.0,
+      "late_amp": 1.0,
+      "gain_sigma": 0.4,
+      "mid_gain_sigma": 0.8,
+      "base_noise": 0.25,
+      "one_pos": [
+        12,
+        18
+      ],
+      "one_width": 5.0
+    }
+  },
+  "main": {
+    "unimodal_fraction_three_locus": 1.0,
+    "mode_counts_three_locus": {
+      "1": 40
+    },
+    "auc_residual_separates_worlds": 0.871875,
+    "one_locus_amp_scale": 1.867467546094568
+  },
+  "identity_arm_note": "the arm's first construction kept the default middle (amp 2.0, width 4) and its own gate failed at 0.0: the middle's shoulder outgrows the side peaks, so even fixed loci read unimodal. Recorded because it is independent evidence for the smear mechanism \u2014 amplitude alone can do it \u2014 and the arm now uses matched narrow bumps so it tests what it claims to: that non-overlapping loci are counted.",
+  "identity_arm_trimodal_fraction": 1.0,
+  "placebo_auc_between_identical_one_locus_batches": 0.64,
+  "criteria": {
+    "C7_smear": {
+      "unimodal_fraction": 1.0,
+      "passed": true
+    },
+    "C8_separation": {
+      "auc": 0.871875,
+      "passed": true
+    }
+  },
+  "what_would_have_falsified_the_claim": "the three-locus world staying visibly trimodal under position-averaging (then the field's mid-peak consensus cannot be explained this way), or the residual statistic failing to separate the worlds (then G22's route has no instrument).",
+  "what_must_hold_in_the_real_environment": "per-unit locus positions genuinely vary (the sibling's L14 measured exactly that), and early-late shared gain is the right parametric form for the ratio-variance structure \u2014 which is the part a simulation cannot certify and the real-model residual analysis (G22) must.",
+  "what_this_cannot_show": "that any real depth profile IS a smeared three-locus structure; only that the field's instrument cannot tell, and that a residual instrument can.",
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/s12_three_locus.py",
+    "sha256": "73555a83e43123e8255d6719efb90e00cfd9958e7b0c8e675d1cd2e9ff9f5158",
+    "git_commit": "7405cd4",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "well_separated_loci_read_trimodal",
+        "kind": "positive",
+        "passed": true,
+        "detail": "with loci fixed at 5/15/25 and noise halved, the mean profile must show three modes: the smear is about overlap from variable loci, not about an instrument that cannot count.",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "residual_stat_null_between_identical_worlds",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "instrument 2 between two batches of the same one-locus world must sit at chance; if it separates identical worlds it separates anything.",
+        "observed": 0.14,
+        "expected": 0.0,
+        "tolerance": 0.15
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

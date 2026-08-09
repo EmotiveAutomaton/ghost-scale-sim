@@ -20,15 +20,18 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 SL = REPO / "results" / "validation" / "soundingline"
 
-#: Modules with gates. A module absent from this set is allowed to have none -- S-1, S-4/5 and S-6
-#: audit somebody else's statistic and have no manipulation of their own to gate -- but a module
-#: IN this set that loses its gates is a regression, and ``test_gated_modules_still_have_gates``
-#: is what catches a retrofit being silently reverted.
+#: Modules with gates. A module absent from this set is allowed to have none -- S-4/5 audits an
+#: ordering with no manipulation of its own -- but a module IN this set that loses its gates is a
+#: regression, and ``test_gated_modules_still_have_gates`` is what catches a retrofit being
+#: silently reverted. S-1 and S-6 were exempt until the V11 repair pass (SPEC §5.3) ended the
+#: exemption: S-1 now gates its own harness reproducing E36's phenomenon, S-6 gates its budget
+#: actually reaching the emitter.
 GATED = {
-    "s2_flattened_intent", "s3_two_channels",
+    "s1_unlock_statistic", "s2_flattened_intent", "s3_two_channels", "s6_surface_decay",
     "t1_triangle", "t2_automaticity", "t3_countability", "t4_uncertain_reader", "t5_detection",
     "t6_information_budget", "t7_posthoc", "t8_multivariate_detection", "t9_concentration",
     "t10_boundary_recovery", "s11_component_count",
+    "s12_three_locus", "s14_aperture", "s15_convergence",
 }
 
 

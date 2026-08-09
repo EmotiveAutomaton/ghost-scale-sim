@@ -1,9 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
-**This is the one page to read if you want the current state.** It is a synthesis across six model
-versions and four audit passes, so unlike the generated pass documents it is written by hand. Every
-number in it traces to a verdict file named in the row, and where a number has been superseded the
-current one leads and the earlier one is named.
+**This is the method archive — the wide channel.** One row per experiment, organised by what was
+run, written by hand across eleven model versions and four audit passes. Every number traces to a
+verdict file named in the row, and where a number has been superseded the current one leads and
+the earlier one is named.
+
+**The dense channel is [docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md)** — the
+same results organised by what is *believed*: umbrella hypotheses with the evidence tabled under
+each. A result lands in both in the same pass, or it is lost in one of two ways.
 
 If you want *how the record got this way*, read [docs/HISTORY.md](docs/HISTORY.md).
 If you want a specific number's full provenance, each row names the document that owns it.
@@ -174,7 +178,7 @@ commitment at a time.*
 | E53 | Have readers learned a surface signature of generated work that fires before intent-reading? | **Yes, and the prediction drawn from it was backwards.** A learned heuristic discriminates (0.63 against 0.23) and never stops misfiring. But sharpening it makes misfiring **rarer**, not commoner. The eye-tracking result this was built to reconcile turns out not to have been in conflict: the model already reads machine work less than human work, and the two were being scored against each other in error. |
 | E54 | Is there a stance where the gate shuts *before* engaging — and is that what the Ghost Scale should trigger? | **The stance is real; the affordance is not.** A pre-shut gate protects where a reactively-shut one does not (+0.015, interval [0.011, 0.019]) at engagement matched by construction. It protects by about 6%, and when applied to only the marked half of a stream **neither label separates from no label at all.** |
 
-### Version 10 — the reader as a defence, and the last simulation version
+### Version 10 — the reader as a defence, and the last closed version
 
 *The first constructive result in the project. Everything to nine described what goes wrong; this
 asks whether reading intent is itself a defence, against a documented threat rather than a
@@ -188,6 +192,24 @@ hypothetical one.*
 | E57 | Does better detection mean fewer false accusations? | **Not once the content fights back.** E53 said yes; it swept detector skill against content that never adapted. Sweep both and the false-alarm rate stops falling and peaks at **65%** of careful human work. With evasion off the old decline reproduces exactly, so this is not a different harness giving a different answer. |
 | E57b | What happens to a reader whose detector stops updating? | **It stops discriminating without stopping accusing.** Hit rate on machine work falls 0.575 → 0.175 while its false-alarm rate does not move at all — it ends firing on people and machines at the same rate, with confidence that grows with sample size. Aggregate rates hide this completely. |
 | H10.4 | Do values ride in on process even through a shut gate? | **Withheld — the instrument failed its own control.** The version's most attractive idea. Its test arm damages a learner reading a corpus with *no contamination in it*, so it measured a broken update rather than a mechanism. In the human reader the effect is real but **under its own pre-registered bar** (0.193 vs 0.2). Not refuted, not established, and the thing most worth building properly. |
+
+### Version 11 — the maker: a persistent value profile, and the first three questions it unblocks
+
+*The world gained what T-6 and T-1 said it lacked: a maker that outlives one artifact. Criteria
+hash-locked before the runs (`prereg_v11.py`); all three modules answer batch-four requests, so
+they live with the S-series and are harvested into the sibling's theory folder as well as
+[docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §9.*
+
+| # | The question | Where it stands |
+|---|---|---|
+| S-15 | Does recovery of a maker's value profile improve with more artifacts — and what is left when it stops? | **It converges, and the residual is priced.** Identification 0.53 → 0.98 across one to fifty artifacts, monotone (Spearman 1.0), residual L1 0.009. Removing the bounded profile family costs **0.24 L1** — the first measured price of the convergent-midbrains assumption. **The expertise half of the criterion FAILS as pre-registered**: a half-corrupted reader recovers profiles as well as the expert (margin 0.0003 vs bar 0.05), because goal reading saturates at this observation length — invisible, not zero; queued with the off-ceiling work. Corpus price: **20 artifacts per maker** for 90% identification at curator-tier noise. And the construction discrimination: conjunctive satisfaction reads a profile from ONE artifact (0.97); amplification cannot (0.53). The sibling's single-artifact failure record is the amplification signature. |
+| S-14 | Is an absent drive recoverable from the work? | **Yes — under commission, and only through the pursuit.** A hard-zero channel vs an ε-trace: near-invisible in spontaneous work (0.61), perfectly separable under commission toward the missing channel (1.00), because instruction amplifies multiplicatively and a zero cannot be amplified — the maker routes through substitute drives and the routing is what the reader reads. Pure compliance (λ=1) collapses to exactly 0.5: the discriminator is *how*, not *whether*. The first working mechanism for made-under-duress. |
+| S-12 | Does a three-locus structure with a noisy middle read as a single mid peak? | **Yes, in 100% of runs — and the residual instrument sees through it (AUC 0.87).** Position-averaging smears variable-locus structure into the field's consensus mid peak; the smear is architectural (100% of random re-parameterisations), which is the point — the published mid-peak profiles are uninformative against a three-locus truth. The residual route (fit each unit one peak, correlate early/late residuals) separates the worlds, and its severity rider bounds it honestly: 25% of random parameterisations — an instrument with an operating regime, not a free detector. Its own gate also caught the identity arm's first construction (D-V11-1): amplitude alone can smear even fixed loci. |
+
+*Repairs shipped alongside (SPEC §5): deviation V5-5 logged and pinned (goals 0/3 share a chain
+in closed V5; `build_subgoal_chains_v5b` for new work), T-10's self-comparing gate replaced with
+a planted-seam check (passes at 0.141), S-1/S-6's gate exemption ended (both re-runs reproduce
+their committed verdicts to the digit), and the miniature severity rule added to CLAUDE.md.*
 
 ### Not answerable in simulation
 

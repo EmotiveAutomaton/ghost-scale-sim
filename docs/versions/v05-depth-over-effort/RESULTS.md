@@ -541,6 +541,21 @@ true` rests on the bare sign of a Spearman across five cell means whose total ra
 should not be quoted as a finding. E33's headline (the observer out-reading the maker's
 self-model) does not rest on it.
 
+**V5-5 — goals 0 and 3 share an identical sub-goal chain, contradicting the builder's own
+docstring, found by audit (2026-08-08).** `build_subgoal_chains` assigns goal g the cyclic step
+`(g % (n_sub − 1)) + 1`; with four goals and four modes the steps come out 1, 2, 3, 1, so goals 0
+and 3 get the same cycle — a pigeonhole fact, since S modes admit only S − 1 non-identity cyclic
+steps. Consequence: for that one pair, the ORDER channel contributes nothing to goal identity at
+any depth. At μ = 3 the emission derangements still separate the pair, so nothing collapses; at
+μ = 2 the modes are goal-generic by design and the pair is distinguished by the feature marginal
+alone, exactly as at μ = 1. The docstring's "a different cyclic order per goal" is false for the
+pair, and any statistic pooling goal pairs at μ ≥ 2 slightly understates the order channel. **The
+committed worlds are not re-run** — re-running closed versions changes what re-running means —
+and the repair is forward-only: `build_subgoal_chains_v5b` (V11) derives successor maps from
+derangements disjoint from the emission permutations, asserts pairwise-distinct chains, and is
+used by new work. `tests/test_v5b_chains.py` pins the original collision in place so it cannot be
+"fixed" retroactively.
+
 **C1 — μ replaces β.** μ is the better-specified construct and the worse-performing one. β's
 update effect was real but confounded with legibility; μ removes the confound and the effect
 goes with it. Keep μ for what it measures; do not claim it gates uptake.

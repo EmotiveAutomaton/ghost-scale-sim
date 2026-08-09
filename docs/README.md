@@ -1,11 +1,23 @@
 # The map
 
-Everything in `docs/` and what it is for. If you only want one page, it is
-[FINDINGS.md](../FINDINGS.md); if you want it in pictures, [WALKTHROUGH.md](../WALKTHROUGH.md); if
-you want the narrative, [HISTORY.md](HISTORY.md).
+Everything in `docs/` and what it is for.
 
-Everything below is the underlying material. You need it if you want to check a specific number or
-argue with a specific decision.
+## The two channels
+
+The record runs in two channels, and every result must be in both:
+
+- **The dense channel — what is believed.** [theory/READING_INTENT.md](theory/READING_INTENT.md):
+  every claim under its umbrella hypothesis, with the evidence tabled beneath it and a status on
+  every row. Read this to know where any claim stands. Format and legends:
+  [theory/README.md](theory/README.md).
+- **The wide channel — what was run, and how.** [FINDINGS.md](../FINDINGS.md) (one row per
+  experiment, the method archive), [HISTORY.md](HISTORY.md) (the narrative of how the record got
+  this way), [EVIDENCE.md](../EVIDENCE.md) (the retrospective literature, with links), the
+  version documents (below), and the audit passes (below). Read these to check a number or argue
+  with a decision.
+
+If you only want one page it is the hypothesis store; in pictures,
+[WALKTHROUGH.md](../WALKTHROUGH.md).
 
 ---
 
@@ -42,13 +54,16 @@ Numbered in run order, named for what each was actually about.
 | **8** | [The Severity Pass](versions/v08-the-severity-pass/) | how often does a *randomly built* model of this shape do it too? | **two of three headlines: every time** |
 | **9** | [Minimal Models](versions/v09-minimal-models/) | which structural commitment is each finding made of? | **every one dies without the maker-model** |
 | **10** | [Reader As Defence](versions/v10-reader-as-defence/) | can reading intent defend a learner from content written to be absorbed? | yes — and surface filtering does nothing at all |
+| **11** | [The Maker](versions/v11-the-maker/) | can a maker's *values* be recovered across works? | converges; the shared family costs 0.24 L1 to remove; the expertise half of the criterion **failed as locked** |
 
 Each directory holds `SPEC.md` and `RESULTS.md`. Versions 2, 3 and 8 also carry a `PLAN.md` or a
 `DECISIONS.md` — working documents kept because they contain reasoning that did *not* survive into
 the spec, which is often worth more than the reasoning that did.
 
-**After version 10 the remaining questions need human subjects or real models, and this apparatus is
-neither.**
+**After version 10 the project judged that its remaining questions needed human subjects or real
+models — until the sibling project's batch four asked for the one thing the simulator still uniquely
+could do: build the maker.** Version 11 reopened the apparatus for that, in the living directory;
+versions 1–10 stay closed.
 
 ---
 
@@ -69,9 +84,9 @@ That is where the limits on the numbers live.
 
 | file | what it is |
 |---|---|
+| [theory/](theory/) | **the hypothesis store** ([READING_INTENT.md](theory/READING_INTENT.md)), the essays and preprint it implements, and the vocabulary crosswalk |
 | [HISTORY.md](HISTORY.md) | ten versions and three audit passes as one narrative, so nobody has to read eleven write-ups to learn why a number is what it is |
-| [EXPERIMENTS.md](EXPERIMENTS.md) | the original plain-language experiment table. Superseded by [FINDINGS.md](../FINDINGS.md), kept as a record of how the questions were first posed |
-| [theory/](theory/) | the preprint this implements, plus the crosswalk from its vocabulary to the code's |
+| [archive/](archive/) | superseded documents — nothing deleted, only moved. Currently the V1–V5-era experiment table |
 | [assets/SPEC.md](assets/SPEC.md) | the spec for the public-facing material: the README rewrite and the distribution slides |
 
 ---

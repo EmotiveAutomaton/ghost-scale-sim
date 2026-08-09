@@ -1,0 +1,79 @@
+{
+  "card": {
+    "version": "v11",
+    "title": "The Maker \u2014 a persistent value profile, and what a bounded-family reader recovers",
+    "written_before_code": true,
+    "world_constants": {
+      "profile_family": {
+        "uniform": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "peaked_k": "0.70 on k, 0.10 elsewhere, k in 0..3",
+        "bimodal": [
+          0.4,
+          0.4,
+          0.1,
+          0.1
+        ]
+      },
+      "n_timesteps": 24,
+      "s14": {
+        "epsilon_unused": 0.02,
+        "amplification": 4.0,
+        "compliance_lambda": 0.5
+      },
+      "s15": {
+        "n_makers": 60,
+        "n_artifacts": 50,
+        "n_grid": [
+          1,
+          2,
+          3,
+          5,
+          8,
+          12,
+          20,
+          30,
+          50
+        ],
+        "unbounded_family_size": 64,
+        "wrong_expertise_d": 0.5,
+        "noisy_tier": "CURATOR",
+        "noisy_reader_d": 0.25
+      },
+      "s12": {
+        "n_units": 200,
+        "n_positions": 30,
+        "n_reps": 40
+      }
+    },
+    "criteria": {
+      "C1_convergence": "s15 bounded_clean: accuracy(n=1) <= 0.60 AND accuracy(n=50) >= 0.95 AND spearman(accuracy, n) >= 0.90",
+      "C2_assumption_price": "s15 L1 at n=50: bounded_clean beats unbounded_family by >= 0.05 AND beats wrong_expertise by >= 0.05",
+      "C3_construction_gap": "s15 accuracy at n=1: construction_B minus bounded_clean >= 0.25",
+      "C4_corpus_price": "s15 bounded_noisy: report smallest n with accuracy >= 0.90. No bar",
+      "C5_aperture": "s14: commissioned masked-vs-unused accuracy at n=12 >= 0.85 AND commissioned minus spontaneous accuracy >= 0.20",
+      "C6_how_channel": "s14: with lambda=1 (pure compliance) commissioned accuracy <= 0.60",
+      "C7_smear": "s12: three-locus mean profile reads unimodal in >= 80% of repetitions",
+      "C8_separation": "s12: early-late residual statistic separates the worlds at AUC >= 0.80"
+    },
+    "authors_recorded_priors": {
+      "C3": "The sibling's real-text record \u2014 single-artifact values attempts all failed, within-maker multi-work designs all worked, no acceleration at stacked motivations \u2014 sides with construction A. If B wins the discrimination the record's reading of those results must be revisited.",
+      "C7": "If the three-locus world does NOT smear, the field's mid-peak consensus cannot be explained this way and the trimodal architecture answers to the data as published."
+    },
+    "queued_not_run": [
+      "T-11 off-ceiling T-1 restatement",
+      "T-12 supply arms (G47, G56)",
+      "T-13 residue duel + domains",
+      "T-14 bard/concealer",
+      "T-15 flattened intent",
+      "AL-6 anti-capture",
+      "SV-T severity mini-pass"
+    ]
+  },
+  "sha256_of_this_module": "1b70445fd77c48552f8c3af9002e79e25f49d3fa74f6c96839f0a6134e1dc714",
+  "locked": true
+}

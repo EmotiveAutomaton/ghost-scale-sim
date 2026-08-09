@@ -175,10 +175,18 @@ def run(cfg: Config, n_obs: int = 120) -> dict:
                         "trajectory's own autocorrelation, so its AUC must sit at chance. If it "
                         "does not, the switch mask itself is structured and the lift is an "
                         "artifact of where switches fall rather than of the signal."))
-    gr.positive("switches_actually_occur",
-                float(df.n_switches.mean()), float(df.n_switches.mean()), 1e-9,
-                detail="artifacts with no switch or all switches are dropped; this records how "
-                       "many seams a scored artifact actually has.")
+    # V11 repair (SPEC §5.2): the original gate here compared the mean switch count to itself
+    # and could not fail. Replaced with a planted-seam liveness check; the switch count moved to
+    # the verdict body, where a number that only records belongs.
+    easy = df[(df.dwell == min(DWELLS)) & (df.beta == max(BETAS))]
+    gr.live("planted_seams_are_detected",
+            observed_change=float((easy.auc_travel - easy.null_travel).mean())
+            if len(easy) else float("nan"),
+            min_change=0.02,
+            detail="the planted switches are the manipulation. In the easiest cells (shortest "
+                   "dwell, highest rationality) the travel signal must clear its circular null "
+                   "by a real margin, or the detector is not seeing the seams that are "
+                   "unambiguously there.")
     gr.live("travel_responds_to_dwell",
             float(abs(by_cell.get(f"dwell4.0_mu3_beta{BETAS[0]}", {}).get("lift_travel", 0.0)
                       - by_cell.get(f"dwell20.0_mu3_beta{BETAS[0]}", {}).get("lift_travel", 0.0))),

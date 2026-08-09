@@ -124,6 +124,26 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
         "of": int(len(df))} for th in THRESHOLDS}
 
     df.to_csv(sl_dir() / "s1_unlock_statistic_points.csv", index=False)
+
+    # ---- gates (V11 retrofit; this module's exemption ended with SPEC §5.3) ------------------ #
+    # The manipulation S-1 audits is somebody else's statistic, but the HARNESS is ours, and rule
+    # 2 of this package says a harness claiming an experiment's phenomenon must reproduce it.
+    from ...methods import gates as GATES
+    gr = GATES.GateReport()
+    pg_mu1 = df[df.mu == 1].process_gain.replace([np.inf, -np.inf], np.nan).dropna()
+    pg_mu3 = df[df.mu == 3].process_gain.replace([np.inf, -np.inf], np.nan).dropna()
+    gr.identity("mu1_process_gain_is_zero",
+                float(pg_mu1.mean()) if len(pg_mu1) else float("nan"), 0.0, tol=0.02,
+                detail="at mu = 1 every execution mode emits the goal signature exactly, so "
+                       "there is provably no process to recover and process_error_reduction "
+                       "must read zero. If it does not, the harness is broken, not the world.")
+    gr.live("mu3_process_gain_is_alive",
+            observed_change=float(pg_mu3.mean()) if len(pg_mu3) else float("nan"),
+            min_change=0.005,
+            detail="the harness must reproduce E36's phenomenon — a real post-settle process "
+                   "gain at mu = 3 — before its rollouts may audit a statistic that claims to "
+                   "measure it (package rule 2, formalised).")
+
     verdict = {
         "test": "S-1 — is the unlock ratio measuring what process_error_reduction measures?",
         "for": "Sounding Line, Gate 3 primary",
@@ -143,7 +163,7 @@ def run(cfg: Config, n_obs: int = 120, n_timesteps: int = 24, forced_k: int = 24
             "honest analogue of a statistic that never consults the truth. A different mapping "
             "could behave differently and the threshold is swept for that reason."),
     }
-    PROVENANCE.stamp(verdict, __file__)
+    PROVENANCE.stamp(verdict, __file__, gr)
     (sl_dir() / "s1_unlock_statistic.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict

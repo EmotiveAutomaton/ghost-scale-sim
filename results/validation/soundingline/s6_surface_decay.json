@@ -96,8 +96,38 @@
   "the_honest_caveat": "this construction BUILDS IN the asymmetry it then measures: content is cached and surface is not. It is a consistency check on the theory's arithmetic, not evidence that real practice works this way. What it earns is the direction of the third prediction, which does not follow trivially: a budgetless creator is FLAT rather than merely high.",
   "produced_by": {
     "module": "ghostscale/validation/soundingline/s6_surface_decay.py",
-    "sha256": "fc791bc27bdbd59979f2088a5d9708dace2593893f636c2d3f586e59ebcea496",
-    "git_commit": "b4f5612",
+    "sha256": "3ac8c944511dd327885609b5b0610efb8e3eb15bcfebb55ba75ab411baf14c8a",
+    "git_commit": "7405cd4",
     "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "synthetic_surface_is_flat",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "the budgetless creator emits a constant surface stream by construction, so its slope is zero to floating-point dust; any real deviation is the harness leaking a budget where none exists.",
+        "observed": 1.5645057622599112e-17,
+        "expected": 0.0,
+        "tolerance": 1e-06
+      },
+      {
+        "name": "practised_surface_decays",
+        "kind": "live",
+        "passed": true,
+        "detail": "the depleting budget is the manipulation; if the practised creator's surface stream does not decay, the budget is not reaching the emitter (the S-2 defect class).",
+        "observed": -0.03703681988742966,
+        "expected": 0.005
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
   }
 }

@@ -3,6 +3,11 @@
 **A retrospective literature check, one row per experiment.** It was run *after* the simulations and
 informed no design. It is a coherence check, not evidence for the model.
 
+*Role in the record: this is the literature archive — the wide channel's outside-facing half. The
+rows that change how a claim may be quoted are harvested into the hypothesis store,
+[docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md), as (lit) entries; this file keeps
+the links and the full comparisons.*
+
 **How to read it.** Regular text means the published work **agrees** with the simulation's finding.
 *Italic text means it disagrees, complicates, or cuts against it* — those are the rows worth reading
 first, because a coherence check that only finds agreement has not been run properly.

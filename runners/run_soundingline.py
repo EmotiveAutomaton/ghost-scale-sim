@@ -57,6 +57,13 @@ STAGES = [
     # ---- fourth batch: ground truth about a number ----------------------------------------
     ("S11", "ghostscale.validation.soundingline.s11_component_count",
      "does the component-count pipeline recover a planted number?"),
+    # ---- V11, the maker: batch four's remaining rows --------------------------------------
+    ("S12", "ghostscale.validation.soundingline.s12_three_locus",
+     "does a three-locus structure with a noisy middle read as one mid peak?"),
+    ("S14", "ghostscale.validation.soundingline.s14_aperture",
+     "the motivational aperture: is an absent drive recoverable?"),
+    ("S15", "ghostscale.validation.soundingline.s15_convergence",
+     "does recovery error shrink with more artifacts, and what is left at the end?"),
 ]
 
 SCALE = {
@@ -76,6 +83,9 @@ SCALE = {
     "T9": dict(n_obs=250),
     "T10": dict(n_obs=120),
     "S11": dict(),
+    "S12": dict(),
+    "S14": dict(),
+    "S15": dict(),
 }
 QUICK = {
     "S1": dict(n_obs=12, n_timesteps=24, forced_k=24),
@@ -94,6 +104,9 @@ QUICK = {
     "T9": dict(n_obs=40),
     "T10": dict(n_obs=20),
     "S11": dict(),
+    "S12": dict(),
+    "S14": dict(),
+    "S15": dict(),
 }
 
 

@@ -15,13 +15,10 @@ A working model of how people work out what someone was trying to do when they m
 
 | you want | read | how much of a person is in it |
 |---|---|---|
-| **the fastest true picture** | **this page, down to the marker** | ◐ Curator, 60% |
-| the whole argument, in pictures | [WALKTHROUGH.md](WALKTHROUGH.md) | mixed ◐ Curator and ○ Ghost |
+| **the whole argument, in pictures** | **[WALKTHROUGH.md](WALKTHROUGH.md)** | mixed ◐ Curator and ○ Ghost |
+| the theory, and where every claim now stands | [docs/theory/](docs/theory/), starting with [READING_INTENT.md](docs/theory/READING_INTENT.md) | mixed |
 | every question and its current answer | [FINDINGS.md](FINDINGS.md) | ○ Ghost, 5% |
 | what the world published, next to what this predicted | [EVIDENCE.md](EVIDENCE.md) | ○ Ghost, 5% |
-| the theory this implements | [docs/theory/](docs/theory/) | mixed Polished and Curator |
-| how a result here is checked before it is believed | [docs/METHODS.md](docs/METHODS.md) | ○ Ghost, 5% |
-| the questions another project sent, and the answers | [docs/exchange/](docs/exchange/) | mixed |
 
 *The right-hand column is this project's own instrument, applied to itself. It says how much
 deciding went into the prose, not whether the numbers are right. There is a note at the marker
@@ -31,7 +28,7 @@ explaining what to do about the low end.*
 
 ## What was tested, and what came back
 
-**Numbered in the order they were run. Listed in order of how much they should change your mind.**
+**Numbered in the order they were run. Listed by evidential weight, most load-bearing first.**
 
 Short rows on purpose. Full provenance for any of them is in [FINDINGS.md](FINDINGS.md).
 
@@ -43,21 +40,21 @@ Short rows on purpose. Full provenance for any of them is in [FINDINGS.md](FINDI
 | E19 | Do readers give up on machine-made work? | **No. They keep paying.** Structure they cannot parse holds attention indefinitely, because every look promises an answer that never arrives. This inverted the framework's own prediction. |
 | E20 | Where on the readability axis does it break? | **In the middle, not at the empty end.** Around a tenth readable is worst: enough handholds to build a story on, not enough to make the story right. The most robust result here. |
 | E37 | Is unreadable machine work a vocabulary problem? | **No, an inversion problem.** Familiar material whose maker cannot be reconstructed produces *legible and empty*, which is the complaint people actually make. The one finding two separate audits both single out as genuinely the theory's. |
-| E55 | Can reading intent defend an AI from text written to poison it? | **Yes, and filtering on writing quality does nothing at all.** Against content wearing a false origin, a quality filter leaves a learner as damaged as no filter. Asking who made it and why cuts the damage, restores its grip on human writing, and costs nothing on clean data. |
 | R-8b | Can a reader learn that a source lies to it? | **Not if it trusts labels enough**, at any number of encounters. Spotting a lie means noticing that label and work disagree, and past a threshold the label has already won. |
 | E46 | Can you read something, reject it, and be unchanged? | **No, and this is why propaganda works.** Disagreeing means working out what was said, and that means partly running it. The reader who studies something to refute it takes on more than the one who skims. |
+| E55 | Can reading intent defend an AI from text written to poison it? | **Yes, and filtering on writing quality does nothing at all.** Against content wearing a false origin, a quality filter leaves a learner as damaged as no filter. Asking who made it and why cuts the damage, restores its grip on human writing, and costs nothing on clean data. |
 
 ### What you can and cannot take from another person
 
 | # | The question | Where it stands |
 |---|---|---|
-| E31 · E30 | Does a master's work transmit anything a scribble does not? | **Yes, but it is the method, not the purpose.** Depth moves how much of the *process* transfers and provably cannot move how much of the *purpose* does. Five versions measured the purpose and found nothing. |
 | E36 | Does working out what someone was for unlock how they did it? | **Yes.** Inside one reading, a reader picks up far more of the method *after* it settles on the purpose. Intent is the key; method is what it opens. |
+| E31 · E30 | Does a master's work transmit anything a scribble does not? | **Yes, but it is the method, not the purpose.** Depth moves how much of the *process* transfers and provably cannot move how much of the *purpose* does. Five versions measured the purpose and found nothing. |
 | E56 | Can you take someone's technique without taking their aims? | **That is exactly what a raised guard does, and it is where indoctrination lives.** Guard up before you start and it blocks purpose and values by about half, and method by four percent. Method arrives from the first line, purpose resolves late, and a guard raised early can only block what has not arrived yet. **So the guard's direct protection is small — about five percent on the rescored harm measure (4.7, interval [3.8, 5.4]) — and more rides in on the method**, because practised method is where a maker's unspoken commitments are stored. You refuse someone's aims, take their technique, and the aims arrive later anyway. |
-| E45 | What does imagining a maker actually buy? | **The efficiency half is withdrawn; the zero-shot half stands.** The simulator was built with the world's own emission map, so it needs no examples by definition and that test could not fail. What survives is reading a goal nobody has shown you, which still holds when the map is perturbed halfway to random. |
 | E43 | Can a maker say why they did it? | **Less and less, the better they get.** Practice compresses decisions, and compression is what puts them out of reach of report. |
 | E33 | Can a reader know a maker better than the maker knows themselves? | **Yes**, and the margin grows as self-knowledge degrades. Work driven by something its maker cannot see is measurably marked, and no reader can read the mark. |
 | E42 | Is paying attention the same as being willing to change? | **No.** A reader can study something closely, read its maker accurately, and let none of it in. |
+| E45 | What does imagining a maker actually buy? | **The efficiency half is withdrawn; the zero-shot half stands.** The simulator was built with the world's own emission map, so it needs no examples by definition and that test could not fail. What survives is reading a goal nobody has shown you, which still holds when the map is perturbed halfway to random. |
 
 ### What a diet of it does over time
 
@@ -119,6 +116,14 @@ model's own claims, written down before the run, and they died.*
 | E13 | Are the freeze and the leak two different defects? | **One shared axis.** Notable for how it was scored: the criterion produced a usable-looking number and was thrown away, because it lacked a precondition it needed. |
 | E11 | Is belief distance a poor proxy for harm? | **Better than predicted.** A measurement result, not a hit on the theory. |
 | E34 | Where does real generated content sit on the readability axis? | **Not answerable in simulation, and that is the point.** Written as a prediction card a human study can use. |
+
+*An eleventh version ran after these tables were arranged: the maker build, which gives the world
+a persistent value profile and answers three questions the tables above could not ask — whether
+values converge across many works by one maker (they do, and the price of the shared hypothesis
+family is now a number), whether an absent drive is readable (under commission, yes), and whether
+the field's depth-profile instrument can distinguish a three-locus structure from its consensus
+mid peak (it cannot; the residual instrument can). Rows in [FINDINGS.md](FINDINGS.md) and
+[docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §9.*
 
 ---
 
@@ -313,7 +318,7 @@ exactly right, because the finding *is* a claim about the shape of an uncertaint
 only finding with a 0% false-positive rate: two unrelated audits, pointing at the same result. All
 of it is in [minimal models](docs/versions/v09-minimal-models/RESULTS.md).
 
-**The last version asked whether any of this is good for anything.** Nine versions describe how
+**The tenth version asked whether any of this is good for anything.** Nine versions describe how
 reading intent goes wrong. The tenth asks whether reading intent is itself a **defence**, against a
 threat that is documented rather than hypothetical: networks publishing at industrial scale
 specifically to be absorbed by models rather than read by people. Against content carrying real
@@ -323,6 +328,22 @@ quality is the attacker's objective. Reconstructing the maker cuts the damage, r
 learner's reading of genuine human work, costs nothing on a clean corpus, and **never reads the
 label**. It also **withheld its own most attractive hypothesis**, because that arm failed the
 clean-corpus control. All of it is in [reader as defence](docs/versions/v10-reader-as-defence/RESULTS.md).
+
+**The eleventh gave the world a maker.** Every earlier version varied the reader while the maker
+stayed a fresh goal drawn per artifact; the sibling project's theory says the hardest quantity —
+a maker's standing **values** — is only defined *across* works, and this model's own verdict files
+recorded that the vertex would have to be built before it could be measured. Version 11 built it: a
+persistent value profile, drawn from a small shared family, plus a drive that can be genuinely
+absent rather than merely unused. Three results, criteria hash-locked first: **recovering a
+maker's values converges with more works and the leftover ambiguity is small — unless the reader
+loses the shared hypothesis family, which costs twenty-five times the residual** (the first
+measured price of the "convergent midbrains" assumption; the matching expertise half of that
+criterion *failed* as pre-registered and is reported as failing). **An absent drive is readable —
+but only in commissioned work**, because instruction can only amplify a drive that exists, so the
+maker who lacks one routes around it and the routing shows. And **the standard depth-profile
+instrument smears a three-locus structure into the field's consensus mid peak in every run**,
+while a residual instrument separates the two — with its operating limits measured and attached.
+All of it is in [the maker](docs/versions/v11-the-maker/RESULTS.md).
 
 ## How much of this is the theory?
 
@@ -401,6 +422,7 @@ edited after; results were written after and never edited either. Full material 
 | **8** | The Severity Pass | reader hierarchy, integration cost, decaying belief, a lying maker | how often does a *random* model do it too? | **100% / 98% / 0%** | N35–N40 |
 | **9** | Minimal Models | six structural ablations | which commitment is each finding made of? | **all die without the maker-model** | N41–N44 |
 | **10** | Reader As Defence | an intent-gate on a learner's absorption | is reading intent a *defence*? | yes, where surface filtering does nothing | N45–N51 |
+| **11** | The Maker | a persistent value profile, a drive that can be absent, two emitters | can a maker's *values* be recovered across works? | converges; the shared family is worth 0.24 L1; the expertise half **failed as locked** | — |
 
 **Three audit passes** sit alongside, in [docs/audits/](docs/audits/): validation (five of nine
 checks came back against the work), diagnostics (four limits on what the instruments can answer),
@@ -504,13 +526,21 @@ reinterpreted is not counted as held.
 
 | outcome | count | which |
 |---|---|---|
-| held | 28 | E1–E7, E9, E10, E16–E20, E31–E33, E35–E38, E40–E43, E48–E51, E55, E56 |
+| held | 30 | E1–E7, E9, E10, E16–E20, E31–E33, E35–E38, E40–E43, E48, E50, E51, E55, E56 |
 | held in part | 10 | E21, E28, E29, E30, E39, E49, E52, E53, E54, E57 |
-| did not hold | 5 | E11, E12, E14, E15, N21 |
+| did not hold | 6 | E11, E12, E14, E15, E18, N21 |
 | retired after a later pass | 1 | E20's crash/peak co-location |
 | classification refused | 1 | E13 |
 | withheld, never passed its own control | 2 | E8, H10.4 (values riding in on process) |
 | not answerable in simulation | 1 | E34 |
+
+*Corrected 2026-08-09: the previous table said "held 28" over a list that enumerated 31, carried
+E49 in both the held range and the held-in-part list, and omitted E18 from every bucket. The counts
+now match the lists: E49 sits in held-in-part (its bimodality prediction is untested), E18 in did
+not hold. Audit-pass results (A1, A2, D-1, R-8b), the sibling-service modules (the T and S series),
+and version 11's three results are not pre-registered Ghost Scale predictions and are deliberately
+not counted here; V11's own criteria and their one recorded failure are in
+[its results document](docs/versions/v11-the-maker/RESULTS.md).*
 
 **Three things this count does not tell you, and they matter more than the count.**
 
@@ -590,6 +620,10 @@ reaches for and finds already there.
   argument having been made in code before it was made in prose.**
 - **Version 5's construct corrections are theoretically motivated and largely untested.** They are
   more defensible than what they replace, which is not the same as being right.
+- **Two of V5's four goals share an identical execution chain** (deviation V5-5): the order
+  channel contributes nothing to distinguishing that one pair, so order-carried goal identity is
+  measured on three effective contrasts rather than four. Emissions still separate the pair at
+  full depth; closed versions are not re-run; new work uses the repaired builder.
 - **A literature search has been run and it is retrospective.** It happened after the simulations,
   it is reported in its own column, and it informed no design. It is a coherence check.
 - **The project has no forward test.** It had one sealed prediction. Its status was withdrawn in
@@ -641,6 +675,10 @@ python runners/run_v9.py
 
 # version 10 — the reader as a defence; the severity pass runs last
 python runners/run_v10.py
+
+# version 11 — the maker. Lock the criteria first, then run the three modules
+python -m ghostscale.prereg_v11
+python runners/run_soundingline.py --only S12 S14 S15
 
 # redraw every chart from the committed CSVs, without re-running anything
 python scripts/make_walkthrough_plates.py
@@ -843,13 +881,19 @@ chronology. Directories sort in run order; the names say what each one was for.
 
 ```
 README.md                       this page
-FINDINGS.md                     every question and its CURRENT answer -- the one page to read
+FINDINGS.md                     every question and its CURRENT answer, one row per experiment --
+                                the method archive, the wide channel
 WALKTHROUGH.md                  25 plates, in the order they are being published
 EVIDENCE.md                     what the world has published, next to what this predicted
 
+docs/theory/READING_INTENT.md   the hypothesis store -- every claim under its umbrella
+                                hypothesis, with status. The dense channel, and the one page
+                                to read for where any claim stands
+docs/theory/                    the store's format rules, the essays and preprint this
+                                implements, and the code-to-theory vocabulary
 docs/HISTORY.md                 ten versions and three audit passes, as one narrative
-docs/EXPERIMENTS.md             the original plain-language table, superseded by FINDINGS.md
-docs/theory/                    the preprint this implements, and the code-to-theory vocabulary
+docs/archive/                   superseded documents, nothing deleted -- currently the
+                                V1-V5-era experiment table
 docs/assets/SPEC.md             the spec for the public-facing material
 
 docs/versions/                  one directory per version: SPEC.md, RESULTS.md, and where they
@@ -866,7 +910,8 @@ docs/versions/                  one directory per version: SPEC.md, RESULTS.md, 
   v07-the-closures/             the four results V6 would not draw, and what a maker-model buys
   v08-the-severity-pass/        the reader gets a mind; how often a random model does it too
   v09-minimal-models/           strip the shape: which commitment is each finding made of?
-  v10-reader-as-defence/        can reading intent defend a learner? The last simulation version
+  v10-reader-as-defence/        can reading intent defend a learner? The last closed version
+  v11-the-maker/                a persistent value profile; convergence, the aperture, the smear
 
 docs/audits/                    passes that ask whether existing answers can be trusted. None
                                 asks a new question about the world. Their RESULTS.md files are

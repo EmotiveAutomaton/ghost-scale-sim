@@ -87,9 +87,39 @@
     "what_this_cannot_show": "nothing about real text. 'A decision was recovered' is mapped here onto 'the sub-goal posterior resolved below an entropy threshold', which is the nearest honest analogue of a statistic that never consults the truth. A different mapping could behave differently and the threshold is swept for that reason.",
     "produced_by": {
       "module": "ghostscale/validation/soundingline/s1_unlock_statistic.py",
-      "sha256": "5c78c15d4c736b5c835f3a9d930a2ad8c0133ef17269c41710b4328b04de2ae5",
-      "git_commit": "b4f5612",
+      "sha256": "14c2421c237e49880425e0511782e88427cf483e34c829157240293655845d26",
+      "git_commit": "7405cd4",
       "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 2,
+      "n_ran": 2,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "mu1_process_gain_is_zero",
+          "kind": "identity",
+          "passed": true,
+          "detail": "at mu = 1 every execution mode emits the goal signature exactly, so there is provably no process to recover and process_error_reduction must read zero. If it does not, the harness is broken, not the world.",
+          "observed": 0.016970007372028036,
+          "expected": 0.0,
+          "tolerance": 0.02
+        },
+        {
+          "name": "mu3_process_gain_is_alive",
+          "kind": "live",
+          "passed": true,
+          "detail": "the harness must reproduce E36's phenomenon \u2014 a real post-settle process gain at mu = 3 \u2014 before its rollouts may audit a statistic that claims to measure it (package rule 2, formalised).",
+          "observed": 0.053992385296962514,
+          "expected": 0.005
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
     }
   },
   "S2": {
@@ -472,9 +502,39 @@
     "the_honest_caveat": "this construction BUILDS IN the asymmetry it then measures: content is cached and surface is not. It is a consistency check on the theory's arithmetic, not evidence that real practice works this way. What it earns is the direction of the third prediction, which does not follow trivially: a budgetless creator is FLAT rather than merely high.",
     "produced_by": {
       "module": "ghostscale/validation/soundingline/s6_surface_decay.py",
-      "sha256": "fc791bc27bdbd59979f2088a5d9708dace2593893f636c2d3f586e59ebcea496",
-      "git_commit": "b4f5612",
+      "sha256": "3ac8c944511dd327885609b5b0610efb8e3eb15bcfebb55ba75ab411baf14c8a",
+      "git_commit": "7405cd4",
       "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 2,
+      "n_ran": 2,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "synthetic_surface_is_flat",
+          "kind": "placebo",
+          "passed": true,
+          "detail": "the budgetless creator emits a constant surface stream by construction, so its slope is zero to floating-point dust; any real deviation is the harness leaking a budget where none exists.",
+          "observed": 1.5645057622599112e-17,
+          "expected": 0.0,
+          "tolerance": 1e-06
+        },
+        {
+          "name": "practised_surface_decays",
+          "kind": "live",
+          "passed": true,
+          "detail": "the depleting budget is the manipulation; if the practised creator's surface stream does not decay, the budget is not reaching the emitter (the S-2 defect class).",
+          "observed": -0.03703681988742966,
+          "expected": 0.005
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
     }
   },
   "T1": {
@@ -20045,8 +20105,8 @@
     "what_this_cannot_show": "that seams are findable in text. The switch times here are ground truth from a generative chain; a real corpus has no such labels, which is why the switch-RATE result matters more than the seam-location one -- a rate can be validated against a held-out property of a corpus, an individual seam cannot.",
     "produced_by": {
       "module": "ghostscale/validation/soundingline/t10_boundary_recovery.py",
-      "sha256": "c0f078bbb946fc4a318543d70b23549dba64402606a99cab49986006dcd1a85e",
-      "git_commit": "ff069fe",
+      "sha256": "c9a6c09bc113b59b8ae702456358edda9d4875f4848cada41c35276744a1b531",
+      "git_commit": "7405cd4",
       "git_dirty": true
     },
     "gates": {
@@ -20069,13 +20129,12 @@
           "tolerance": 0.05
         },
         {
-          "name": "switches_actually_occur",
-          "kind": "positive",
+          "name": "planted_seams_are_detected",
+          "kind": "live",
           "passed": true,
-          "detail": "artifacts with no switch or all switches are dropped; this records how many seams a scored artifact actually has.",
-          "observed": 6.613733905579399,
-          "expected": 6.613733905579399,
-          "tolerance": 1e-09
+          "detail": "the planted switches are the manipulation. In the easiest cells (shortest dwell, highest rationality) the travel signal must clear its circular null by a real margin, or the detector is not seeing the seams that are unambiguously there.",
+          "observed": 0.14130456051109253,
+          "expected": 0.02
         },
         {
           "name": "travel_responds_to_dwell",
@@ -20903,6 +20962,544 @@
           "observed": 0.0,
           "expected": 0.0,
           "tolerance": 1e-09
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "S15": {
+    "test": "S-15 \u2014 does recovery error shrink with more artifacts, and at what rate?",
+    "for": "Sounding Line, batch four; the impossibility-literature disagreement stated as a convergence rate and a residual",
+    "prereg": {
+      "locked": true,
+      "sha256": "1b70445fd77c48552f8c3af9002e79e25f49d3fa74f6c96839f0a6134e1dc714"
+    },
+    "severity_note": "runs on the shared V11 maker world \u2014 architecture untested pending SV-T; treat reproduction rates as unknown, not as high",
+    "design": {
+      "n_makers": 60,
+      "n_artifacts": 50,
+      "n_steps": 24,
+      "n_grid": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        20,
+        30,
+        50
+      ],
+      "profile_family": [
+        "bimodal",
+        "peaked_0",
+        "peaked_1",
+        "peaked_2",
+        "peaked_3",
+        "uniform"
+      ],
+      "reader": "exact forced-deep (the ceiling); see SPEC \u00a71"
+    },
+    "arms": {
+      "bounded_clean": {
+        "accuracy_by_n": {
+          "1": 0.5333333333333333,
+          "2": 0.5833333333333334,
+          "3": 0.6166666666666667,
+          "5": 0.6833333333333333,
+          "8": 0.75,
+          "12": 0.8166666666666667,
+          "20": 0.85,
+          "30": 0.9666666666666667,
+          "50": 0.9833333333333333
+        },
+        "l1_by_n": {
+          "1": 0.5356734006734005,
+          "2": 0.4000199634898069,
+          "3": 0.3559398400991218,
+          "5": 0.301355578861428,
+          "8": 0.24547722796253832,
+          "12": 0.16057802827294457,
+          "20": 0.093459941240085,
+          "30": 0.025105340041980072,
+          "50": 0.009261229227507451
+        },
+        "n_makers": 60,
+        "tier": "CREATOR",
+        "construction": "A"
+      },
+      "bounded_noisy": {
+        "accuracy_by_n": {
+          "1": 0.45,
+          "2": 0.4666666666666667,
+          "3": 0.5666666666666667,
+          "5": 0.7333333333333333,
+          "8": 0.8666666666666667,
+          "12": 0.85,
+          "20": 0.9333333333333333,
+          "30": 0.9833333333333333,
+          "50": 1.0
+        },
+        "l1_by_n": {
+          "1": 0.5911891287717653,
+          "2": 0.49534044608214933,
+          "3": 0.4123284293612969,
+          "5": 0.30051164406588016,
+          "8": 0.17238062748122698,
+          "12": 0.1425017691894767,
+          "20": 0.05677494076292271,
+          "30": 0.013826696472186522,
+          "50": 0.002394816769750827
+        },
+        "n_makers": 60,
+        "tier": "CURATOR",
+        "construction": "A"
+      },
+      "unbounded_family": {
+        "accuracy_by_n": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "12": 0.0,
+          "20": 0.0,
+          "30": 0.0,
+          "50": 0.0
+        },
+        "l1_by_n": {
+          "1": 0.620138432176114,
+          "2": 0.536721569604365,
+          "3": 0.46813298491097993,
+          "5": 0.3999295342135721,
+          "8": 0.3525325594326589,
+          "12": 0.33090552221373687,
+          "20": 0.29102526686764507,
+          "30": 0.26893740926614085,
+          "50": 0.2493065940800033
+        },
+        "n_makers": 60,
+        "tier": "CREATOR",
+        "construction": "A"
+      },
+      "wrong_expertise": {
+        "accuracy_by_n": {
+          "1": 0.5666666666666667,
+          "2": 0.55,
+          "3": 0.7166666666666667,
+          "5": 0.75,
+          "8": 0.8166666666666667,
+          "12": 0.7666666666666667,
+          "20": 0.9166666666666666,
+          "30": 0.9666666666666667,
+          "50": 0.9833333333333333
+        },
+        "l1_by_n": {
+          "1": 0.5219360361777275,
+          "2": 0.45870888633877555,
+          "3": 0.37808714201003524,
+          "5": 0.28107578656666443,
+          "8": 0.20484939100518204,
+          "12": 0.17629394615368207,
+          "20": 0.08314130132794037,
+          "30": 0.03043169524736353,
+          "50": 0.009561218153948225
+        },
+        "n_makers": 60,
+        "tier": "CREATOR",
+        "construction": "A"
+      },
+      "construction_B": {
+        "accuracy_by_n": {
+          "1": 0.9666666666666667,
+          "2": 1.0,
+          "3": 1.0,
+          "5": 1.0,
+          "8": 1.0,
+          "12": 1.0,
+          "20": 1.0,
+          "30": 1.0,
+          "50": 1.0
+        },
+        "l1_by_n": {
+          "1": 0.0466683322452516,
+          "2": 0.006064804435679237,
+          "3": 0.0002480645218745784,
+          "5": 3.007006635757231e-06,
+          "8": 5.105982488669744e-10,
+          "12": 7.262708952756232e-17,
+          "20": 0.0,
+          "30": 0.0,
+          "50": 0.0
+        },
+        "n_makers": 60,
+        "tier": "CREATOR",
+        "construction": "B"
+      },
+      "shuffled": {
+        "accuracy_by_n": {
+          "1": 0.11666666666666667,
+          "2": 0.15,
+          "3": 0.11666666666666667,
+          "5": 0.1,
+          "8": 0.08333333333333333,
+          "12": 0.15,
+          "20": 0.16666666666666666,
+          "30": 0.18333333333333332,
+          "50": 0.16666666666666666
+        },
+        "l1_by_n": {
+          "1": 0.7658080808080806,
+          "2": 0.7683124235320088,
+          "3": 0.791612019110217,
+          "5": 0.8110528952661418,
+          "8": 0.8196991855958629,
+          "12": 0.728890981033868,
+          "20": 0.7349007925045415,
+          "30": 0.7087385973097111,
+          "50": 0.7002810684774763
+        },
+        "n_makers": 60,
+        "tier": "CREATOR",
+        "construction": "A"
+      }
+    },
+    "uniform_placebo_world": {
+      "accuracy_by_n": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.4166666666666667,
+        "5": 0.5,
+        "8": 0.25,
+        "12": 0.5833333333333334,
+        "20": 0.8333333333333334,
+        "30": 0.8333333333333334,
+        "50": 1.0
+      },
+      "l1_by_n": {
+        "1": 0.3870370370370373,
+        "2": 0.3473318894191763,
+        "3": 0.29650043426789713,
+        "5": 0.4024464502686087,
+        "8": 0.42838398732118144,
+        "12": 0.2788591444705362,
+        "20": 0.13734478621940835,
+        "30": 0.06046499775114524,
+        "50": 0.0030274500056282952
+      },
+      "n_makers": 12,
+      "tier": "CREATOR",
+      "construction": "A"
+    },
+    "criteria": {
+      "C1_convergence": {
+        "acc_n1": 0.5333333333333333,
+        "acc_n50": 0.9833333333333333,
+        "spearman": 1.0,
+        "passed": true
+      },
+      "C2_assumption_price": {
+        "l1_clean": 0.009261229227507451,
+        "l1_unbounded": 0.2493065940800033,
+        "l1_wrong": 0.009561218153948225,
+        "margin_unbounded": 0.24004536485249586,
+        "margin_wrong": 0.0002999889264407741,
+        "passed": false
+      },
+      "C3_construction_gap": {
+        "acc_B_n1": 0.9666666666666667,
+        "acc_A_n1": 0.5333333333333333,
+        "gap": 0.43333333333333335,
+        "passed": true
+      },
+      "C4_corpus_price": {
+        "n_star_accuracy_0.90": 20,
+        "curve": {
+          "1": 0.45,
+          "2": 0.4666666666666667,
+          "3": 0.5666666666666667,
+          "5": 0.7333333333333333,
+          "8": 0.8666666666666667,
+          "12": 0.85,
+          "20": 0.9333333333333333,
+          "30": 0.9833333333333333,
+          "50": 1.0
+        },
+        "how_to_read": "the smallest number of artifacts by one maker at which the CURATOR-tier inexpert reader identifies the profile 90% of the time. This is the power analysis for the sibling's follower-corpus design: sourced works per maker below this number cannot separate values at this noise, whatever the instrument."
+      }
+    },
+    "what_would_have_falsified_the_claim": "a flat accuracy curve in bounded_clean (the theorems bite at practical n), or a bounded-family asymptote no better than the unbounded one (the convergent-midbrains assumption buys nothing).",
+    "what_must_hold_in_the_real_environment": "a maker's profile is stable on the timescale of the works sampled; the reader's channel family overlaps the maker's (the convergent-midbrains premise \u2014 priced, not assumed, by the unbounded arm); and artifacts reach the reader with tier-like transmission rather than adversarial rewriting.",
+    "what_this_cannot_show": "that human values are profiles over four channels, or that any real corpus behaves like construction A or B. The A/B discrimination borrows its real-world force from measurements the sibling has already made (single-artifact failures, multi-work successes, no stacking acceleration), and only travels as far as those do.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s15_convergence.py",
+      "sha256": "487ecafd00f7b6c30fececf8c2c2cabfbfa651f023fc23b2459b18905c35125e",
+      "git_commit": "7405cd4",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 4,
+      "n_ran": 4,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "bounded_clean_converges",
+          "kind": "positive",
+          "passed": true,
+          "detail": "with the theory's assumptions intact, fifty artifacts must all but settle the profile; if the ceiling arm cannot converge, nothing downstream means anything.",
+          "observed": 0.9833333333333333,
+          "expected": 1.0,
+          "tolerance": 0.05
+        },
+        {
+          "name": "shuffled_makers_read_nothing",
+          "kind": "no_oracle",
+          "passed": true,
+          "detail": "artifacts permuted across makers: every pseudo-maker's evidence is the population mixture, so profile recovery must sit at chance. If it does not, the estimator is reading something other than the evidence.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 0.12
+        },
+        {
+          "name": "uniform_world_reads_uniform",
+          "kind": "positive",
+          "passed": true,
+          "detail": "twelve makers all carrying the uniform profile must all be read as uniform: no spurious individuality from noise (noise in, zero out).",
+          "observed": 1.0,
+          "expected": 1.0,
+          "tolerance": 0.05
+        },
+        {
+          "name": "construction_gap_is_real",
+          "kind": "live",
+          "passed": true,
+          "detail": "the A/B construction switch is the manipulation; if single-artifact recovery does not separate the two emitters, the discrimination arm is not reaching the measurement.",
+          "observed": 0.43333333333333335,
+          "expected": 0.25
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "S12": {
+    "test": "S-12 \u2014 does a three-locus structure with a noisy middle read as one mid peak?",
+    "for": "Sounding Line, batch four; G22's residual route, given its first ground truth",
+    "prereg": {
+      "locked": true,
+      "sha256": "1b70445fd77c48552f8c3af9002e79e25f49d3fa74f6c96839f0a6134e1dc714"
+    },
+    "miniature_severity": {
+      "n_draws": 20,
+      "smear_rate": 1.0,
+      "separation_rate": 0.25,
+      "how_to_read": "the fraction of randomly re-parameterised versions of this miniature reproducing each headline. High rates mean the result comes from the construction's shape, which for C7 is the point (any variable-locus world should smear) and for C8 is the risk (the separation should depend on the shared gain being real)."
+    },
+    "design": {
+      "n_units": 200,
+      "n_positions": 30,
+      "n_reps": 40,
+      "constants": {
+        "early_pos": [
+          4,
+          12
+        ],
+        "early_width": 2.0,
+        "early_amp": 1.0,
+        "mid_pos": [
+          10,
+          20
+        ],
+        "mid_width": 4.0,
+        "mid_amp": 2.0,
+        "mid_extra_noise": 0.8,
+        "late_pos": [
+          18,
+          26
+        ],
+        "late_width": 2.0,
+        "late_amp": 1.0,
+        "gain_sigma": 0.4,
+        "mid_gain_sigma": 0.8,
+        "base_noise": 0.25,
+        "one_pos": [
+          12,
+          18
+        ],
+        "one_width": 5.0
+      }
+    },
+    "main": {
+      "unimodal_fraction_three_locus": 1.0,
+      "mode_counts_three_locus": {
+        "1": 40
+      },
+      "auc_residual_separates_worlds": 0.871875,
+      "one_locus_amp_scale": 1.867467546094568
+    },
+    "identity_arm_note": "the arm's first construction kept the default middle (amp 2.0, width 4) and its own gate failed at 0.0: the middle's shoulder outgrows the side peaks, so even fixed loci read unimodal. Recorded because it is independent evidence for the smear mechanism \u2014 amplitude alone can do it \u2014 and the arm now uses matched narrow bumps so it tests what it claims to: that non-overlapping loci are counted.",
+    "identity_arm_trimodal_fraction": 1.0,
+    "placebo_auc_between_identical_one_locus_batches": 0.64,
+    "criteria": {
+      "C7_smear": {
+        "unimodal_fraction": 1.0,
+        "passed": true
+      },
+      "C8_separation": {
+        "auc": 0.871875,
+        "passed": true
+      }
+    },
+    "what_would_have_falsified_the_claim": "the three-locus world staying visibly trimodal under position-averaging (then the field's mid-peak consensus cannot be explained this way), or the residual statistic failing to separate the worlds (then G22's route has no instrument).",
+    "what_must_hold_in_the_real_environment": "per-unit locus positions genuinely vary (the sibling's L14 measured exactly that), and early-late shared gain is the right parametric form for the ratio-variance structure \u2014 which is the part a simulation cannot certify and the real-model residual analysis (G22) must.",
+    "what_this_cannot_show": "that any real depth profile IS a smeared three-locus structure; only that the field's instrument cannot tell, and that a residual instrument can.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s12_three_locus.py",
+      "sha256": "73555a83e43123e8255d6719efb90e00cfd9958e7b0c8e675d1cd2e9ff9f5158",
+      "git_commit": "7405cd4",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 2,
+      "n_ran": 2,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "well_separated_loci_read_trimodal",
+          "kind": "positive",
+          "passed": true,
+          "detail": "with loci fixed at 5/15/25 and noise halved, the mean profile must show three modes: the smear is about overlap from variable loci, not about an instrument that cannot count.",
+          "observed": 1.0,
+          "expected": 1.0,
+          "tolerance": 0.2
+        },
+        {
+          "name": "residual_stat_null_between_identical_worlds",
+          "kind": "placebo",
+          "passed": true,
+          "detail": "instrument 2 between two batches of the same one-locus world must sit at chance; if it separates identical worlds it separates anything.",
+          "observed": 0.14,
+          "expected": 0.0,
+          "tolerance": 0.15
+        }
+      ],
+      "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+    }
+  },
+  "S14": {
+    "test": "S-14 \u2014 the motivational aperture: is an absent drive recoverable?",
+    "for": "Sounding Line, batch four; the only absence-as-measurable proposal",
+    "prereg": {
+      "locked": true,
+      "sha256": "1b70445fd77c48552f8c3af9002e79e25f49d3fa74f6c96839f0a6134e1dc714"
+    },
+    "severity_note": "runs on the shared V11 maker world \u2014 architecture untested pending SV-T",
+    "design": {
+      "epsilon_unused": 0.02,
+      "amplification": 4.0,
+      "compliance_lambda": 0.5,
+      "n_per_kind": 20,
+      "n_artifacts": 12,
+      "n_steps": 24,
+      "mechanism": "w' \u221d w\u00b7exp(A\u00b7e_k): attention can only amplify what exists"
+    },
+    "by_target_channel": {
+      "0": {
+        "commissioned": 1.0,
+        "spontaneous": 0.6,
+        "commissioned_lambda1": 0.5,
+        "present_vs_masked_commissioned": 1.0
+      },
+      "1": {
+        "commissioned": 1.0,
+        "spontaneous": 0.6,
+        "commissioned_lambda1": 0.5,
+        "present_vs_masked_commissioned": 1.0
+      },
+      "2": {
+        "commissioned": 1.0,
+        "spontaneous": 0.525,
+        "commissioned_lambda1": 0.5,
+        "present_vs_masked_commissioned": 1.0
+      },
+      "3": {
+        "commissioned": 1.0,
+        "spontaneous": 0.7,
+        "commissioned_lambda1": 0.5,
+        "present_vs_masked_commissioned": 1.0
+      }
+    },
+    "means": {
+      "commissioned": 1.0,
+      "spontaneous": 0.60625,
+      "commissioned_lambda1": 0.5,
+      "present_vs_masked_commissioned": 1.0
+    },
+    "criteria": {
+      "C5_aperture": {
+        "commissioned": 1.0,
+        "spontaneous": 0.60625,
+        "gap": 0.39375000000000004,
+        "passed": true
+      },
+      "C6_how_channel": {
+        "commissioned_lambda1": 0.5,
+        "passed": true
+      }
+    },
+    "what_would_have_falsified_the_claim": "commissioned discrimination at chance (the absence leaves no readable mark even under amplification), or spontaneous discrimination as good as commissioned (the aperture is visible without instruction, and the amplification story is not what carries it).",
+    "what_must_hold_in_the_real_environment": "commissioned work with a known brief exists and is identifiable; instruction acts multiplicatively on standing drives (the theory's own amplification mechanism); and compliance and pursuit are at least partly separable in real artifacts. The made-under-duress reading additionally needs real briefs to demand surfaces their makers' drives cannot supply.",
+    "what_this_cannot_show": "that any real maker's drive set is expressible as a profile with hard zeros, or that real commissions amplify rather than replace. The mechanism is the theory's; this establishes it is COHERENT and measurable in a world that has it, not that the world outside does.",
+    "produced_by": {
+      "module": "ghostscale/validation/soundingline/s14_aperture.py",
+      "sha256": "e955ae1018f386cec665d6e52c0ebbac8e957cc7fdf443707fdcdd887b493c88",
+      "git_commit": "7405cd4",
+      "git_dirty": true
+    },
+    "gates": {
+      "all_passed": true,
+      "n_gates": 3,
+      "n_ran": 3,
+      "n_skipped": 0,
+      "n_failed": 0,
+      "failed_names": [],
+      "documented_failures": [],
+      "unexpected_passes": [],
+      "gates": [
+        {
+          "name": "present_vs_masked_is_easy",
+          "kind": "positive",
+          "passed": true,
+          "detail": "a drive at 0.70 against a drive at zero, under commission, is the known answer by construction; an instrument that cannot see THAT sees nothing.",
+          "observed": 1.0,
+          "expected": 1.0,
+          "tolerance": 0.05
+        },
+        {
+          "name": "pure_compliance_reads_nothing",
+          "kind": "placebo",
+          "passed": true,
+          "detail": "at lambda = 1 the pursuit channel is removed and both maker kinds emit identically; discrimination must collapse to chance, or the reader is reading something other than how the goal is pursued.",
+          "observed": 0.0,
+          "expected": 0.0,
+          "tolerance": 0.1
+        },
+        {
+          "name": "commission_reveals_the_aperture",
+          "kind": "live",
+          "passed": true,
+          "detail": "the commission is the manipulation: amplification separates a zero from an epsilon. If commissioned and spontaneous discrimination do not separate, the mechanism is not reaching the measurement.",
+          "observed": 0.39375000000000004,
+          "expected": 0.2
         }
       ],
       "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."

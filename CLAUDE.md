@@ -1,7 +1,9 @@
 # Working notes for an agent picking this up
 
-Read [`README.md`](README.md) down to the marker, then [`docs/METHODS.md`](docs/METHODS.md), then
-the newest file in [`docs/exchange/`](docs/exchange/).
+Read [`README.md`](README.md) down to the marker, then
+[`docs/theory/READING_INTENT.md`](docs/theory/READING_INTENT.md) — the hypothesis store, where
+every claim stands — then [`docs/METHODS.md`](docs/METHODS.md), then the newest file in
+[`docs/exchange/`](docs/exchange/).
 
 **Adapted from the sibling project's `CLAUDE.md`** (Sounding Line, `../../SoundingLine/sounding-line`).
 What carried over is the tone, the reporting standard, and the ruler-validation rules. What did not
@@ -83,6 +85,11 @@ existing at all is the result of refusing to score a values vertex that was a co
   committed once by dodging this and had to be purged from history.
 - **Never seed from `hash()`.** Python randomises string hashing per process; T-3 returned 2.29 on
   one run and 2.05 on the next from identical code. Use `zlib.crc32`.
+- **A purpose-built miniature ships its own random-draw severity check, or its verdict carries
+  "miniature — architecture untested".** The severity passes cover the shared model only; a
+  miniature (S-3, S-6, S-12) is a new architecture whose false-positive rate nobody has measured
+  unless it measures its own. S-12 is the template: twenty redraws of its generative constants,
+  reproduction rates in the verdict.
 - **Line endings are LF** (`.gitattributes`).
 - **Do not narrate per-rollout numbers from a running sweep.** Score once, at the end.
 
@@ -109,9 +116,11 @@ means. **He cannot poke at a result whose question he cannot see.**
 | | |
 |---|---|
 | `results/validation/soundingline/*.json` | the primary record. Verdict, gates, provenance |
+| `docs/theory/READING_INTENT.md` | **the hypothesis store — the dense channel.** Every claim under its umbrella hypothesis, with status. **A result lands here in the same pass that lands it in `FINDINGS.md`**, and the paragraph under a changed table is revisited in the same edit. Format: `docs/theory/README.md` |
 | `docs/exchange/` | what was asked and what was sent back. Both sides, named for who wrote them |
 | `docs/METHODS.md` | why each piece of the methodology layer exists. Update when adding one |
-| `README.md`, `WALKTHROUGH.md`, `FINDINGS.md` | the public face. Ghost Scale notation stays current |
+| `README.md`, `WALKTHROUGH.md`, `FINDINGS.md` | the public face and the method archive — the wide channel. Ghost Scale notation stays current |
+| `docs/archive/` | superseded documents. Nothing deleted, only moved, each with a supersession note |
 
 **When you find a hole in the battery, re-run what it touches.** A control that turns out to be
 wrong changes every past result that leaned on it. Find them, re-run them, say what moved. Do not

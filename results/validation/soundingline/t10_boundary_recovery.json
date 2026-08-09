@@ -179,8 +179,8 @@
   "what_this_cannot_show": "that seams are findable in text. The switch times here are ground truth from a generative chain; a real corpus has no such labels, which is why the switch-RATE result matters more than the seam-location one -- a rate can be validated against a held-out property of a corpus, an individual seam cannot.",
   "produced_by": {
     "module": "ghostscale/validation/soundingline/t10_boundary_recovery.py",
-    "sha256": "c0f078bbb946fc4a318543d70b23549dba64402606a99cab49986006dcd1a85e",
-    "git_commit": "ff069fe",
+    "sha256": "c9a6c09bc113b59b8ae702456358edda9d4875f4848cada41c35276744a1b531",
+    "git_commit": "7405cd4",
     "git_dirty": true
   },
   "gates": {
@@ -203,13 +203,12 @@
         "tolerance": 0.05
       },
       {
-        "name": "switches_actually_occur",
-        "kind": "positive",
+        "name": "planted_seams_are_detected",
+        "kind": "live",
         "passed": true,
-        "detail": "artifacts with no switch or all switches are dropped; this records how many seams a scored artifact actually has.",
-        "observed": 6.613733905579399,
-        "expected": 6.613733905579399,
-        "tolerance": 1e-09
+        "detail": "the planted switches are the manipulation. In the easiest cells (shortest dwell, highest rationality) the travel signal must clear its circular null by a real margin, or the detector is not seeing the seams that are unambiguously there.",
+        "observed": 0.14130456051109253,
+        "expected": 0.02
       },
       {
         "name": "travel_responds_to_dwell",

@@ -4,7 +4,7 @@
 > the crash/peak co-location was retired by V7's exact-inference closure (C-3); E31's
 > "twenty-two times as far" multiple must not be quoted (the independent rebuild, V-8, reproduced
 > the mechanism at 1.4×); E30's "inconclusive" was superseded by the V6 process-uptake result.
-> [FINDINGS.md](../FINDINGS.md) is the current answer sheet; this file is kept as the record of
+> [FINDINGS.md](../../FINDINGS.md) is the current answer sheet; this file is kept as the record of
 > what the early versions said.
 
 Every question below was derived from the theory and then tested in a simulation. The

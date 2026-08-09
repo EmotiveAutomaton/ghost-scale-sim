@@ -1,7 +1,11 @@
 # How the record got this way
 
-Ten model versions and three audit passes, in one narrative. Every version has a name as well as a number; the name is the theme, the number is the order. Written so that nobody has to read six
+Eleven model versions and three audit passes, in one narrative. Every version has a name as well as a number; the name is the theme, the number is the order. Written so that nobody has to read six
 write-ups to understand why a number is what it is.
+
+*Role in the record: the narrative half of the wide channel — the order things happened and why.
+For what was found, [../FINDINGS.md](../FINDINGS.md); for what is believed,
+[theory/READING_INTENT.md](theory/READING_INTENT.md).*
 
 The per-version write-ups are still there and are still the authority on their own version. **They
 are history: none of them has been edited after its version shipped**, which is the property that
@@ -156,8 +160,29 @@ and in failing it disqualified the invalid arm and left the headline standing.
 
 [../RESULTS_V10.md](versions/v10-reader-as-defence/RESULTS.md).
 
-**After this the remaining questions need human subjects or real models, and this apparatus is
-neither.**
+### V11 · The Maker
+
+The sibling project's fourth batch of questions needed something no closed version had: a maker
+that outlives one artifact. The model's own verdict files had recorded the gap — the values vertex
+was a deterministic coarsening of the goal, and the triangle experiment had substituted depth for
+it. Version 11 built the vertex: a persistent value profile from a small shared family, a drive
+that can be genuinely absent (instruction amplifies multiplicatively, and a zero cannot be
+amplified), and two emitters for the two rival accounts of what a profile does.
+
+Three results, criteria hash-locked first. Value recovery **converges** across works and the
+leftover ambiguity is small — and removing the shared hypothesis family costs **0.24 L1**, the
+first measured price of the convergent-midbrains assumption, while removing the reader's expertise
+cost nothing at this observation length, so that half of the criterion **failed as locked** and is
+reported as failing. **An absent drive is readable in commissioned work** and invisible in
+spontaneous work, with the discriminator provably in *how* the goal is pursued. And **the field's
+depth-profile instrument smears a three-locus structure into one mid peak in every run**, while
+the residual instrument separates the worlds inside a measured operating regime. The same pass
+ended the S-1/S-6 gate exemption, replaced T-10's unfailable gate, and logged deviation V5-5.
+[RESULTS](versions/v11-the-maker/RESULTS.md).
+
+**Beyond this, the remaining questions need human subjects or real models, and this apparatus is
+neither.** Versions 1–10 are closed; version 11's modules live in the living directory and are
+expected to grow.
 
 ---
 

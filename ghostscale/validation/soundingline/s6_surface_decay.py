@@ -155,7 +155,20 @@ def run(cfg: Config, n_obs: int = 400) -> dict:
             "prediction, which does not follow trivially: a budgetless creator is FLAT rather "
             "than merely high."),
     }
-    PROVENANCE.stamp(verdict, __file__)
+    # ---- gates (V11 retrofit; this module's exemption ended with SPEC §5.3) ------------------ #
+    from ...methods import gates as GATES
+    gr = GATES.GateReport()
+    gr.placebo("synthetic_surface_is_flat",
+               observed_max_deviation=float(s["surface"]["slope_per_position"]), tol=1e-6,
+               detail="the budgetless creator emits a constant surface stream by construction, "
+                      "so its slope is zero to floating-point dust; any real deviation is the "
+                      "harness leaking a budget where none exists.")
+    gr.live("practised_surface_decays",
+            observed_change=float(p["surface"]["slope_per_position"]), min_change=0.005,
+            detail="the depleting budget is the manipulation; if the practised creator's "
+                   "surface stream does not decay, the budget is not reaching the emitter "
+                   "(the S-2 defect class).")
+    PROVENANCE.stamp(verdict, __file__, gr)
     (sl_dir() / "s6_surface_decay.json").write_text(
         json.dumps(verdict, indent=2, default=str), encoding="utf-8")
     return verdict
