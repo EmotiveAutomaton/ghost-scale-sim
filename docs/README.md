@@ -6,11 +6,11 @@ Everything in `docs/` and what it is for.
 
 The record runs in two channels, and every result must be in both:
 
-- **The dense channel — what is believed.** [theory/READING_INTENT.md](theory/READING_INTENT.md):
+- **The dense channel, what is believed.** [theory/READING_INTENT.md](theory/READING_INTENT.md):
   every claim under its umbrella hypothesis, with the evidence tabled beneath it and a status on
   every row. Read this to know where any claim stands. Format and legends:
   [theory/README.md](theory/README.md).
-- **The wide channel — what was run, and how.** [FINDINGS.md](../FINDINGS.md) (one row per
+- **The wide channel, what was run, and how.** [FINDINGS.md](../FINDINGS.md) (one row per
   experiment, the method archive), [HISTORY.md](HISTORY.md) (the narrative of how the record got
   this way), [EVIDENCE.md](../EVIDENCE.md) (the retrospective literature, with links), the
   version documents (below), and the audit passes (below). Read these to check a number or argue
@@ -46,22 +46,22 @@ Numbered in run order, named for what each was actually about.
 | **1** | [The Mechanism](versions/v01-the-mechanism/) | can this be written down as a model at all? | three results, two of which still stand |
 | **2** | [The Learner](versions/v02-the-learner/) | what if the reader has to *acquire* what machine content looks like? | heterogeneity belongs in the likelihood, not the prior |
 | **3** | [The Refuted Repair](versions/v03-the-refuted-repair/) | is the generational leak just sampling noise? | **its own gate said no**, and the experiment stayed withheld |
-| **4** | [Foreign Intent](versions/v04-foreign-intent/) | is machine content goal-*empty* or goal-*foreign*? | foreign — **and a headline inverted** |
+| **4** | [Foreign Intent](versions/v04-foreign-intent/) | is machine content goal-*empty* or goal-*foreign*? | foreign, **and a headline inverted** |
 | **4.5** | [Three Gates](versions/v04.5-three-gates/) | does confident invention require modelling a mind? | **no**, and the claim was withdrawn |
-| **5** | [Depth Over Effort](versions/v05-depth-over-effort/) | is it how hard they tried, or how much practice is compressed in? | depth — and the fast solver was caught misreading it |
+| **5** | [Depth Over Effort](versions/v05-depth-over-effort/) | is it how hard they tried, or how much practice is compressed in? | depth, and the fast solver was caught misreading it |
 | **6** | [Code Against Equation](versions/v06-code-against-equation/) | is the simulation the same object as the published theory? | **three terms had no counterpart in the code** |
 | **7** | [The Closures](versions/v07-the-closures/) | what does modelling a maker actually buy? | 4 examples against 512, and reading an unseen intent |
 | **8** | [The Severity Pass](versions/v08-the-severity-pass/) | how often does a *randomly built* model of this shape do it too? | **two of three headlines: every time** |
 | **9** | [Minimal Models](versions/v09-minimal-models/) | which structural commitment is each finding made of? | **every one dies without the maker-model** |
-| **10** | [Reader As Defence](versions/v10-reader-as-defence/) | can reading intent defend a learner from content written to be absorbed? | yes — and surface filtering does nothing at all |
+| **10** | [Reader As Defence](versions/v10-reader-as-defence/) | can reading intent defend a learner from content written to be absorbed? | yes, and surface filtering does nothing at all |
 | **11** | [The Maker](versions/v11-the-maker/) | can a maker's *values* be recovered across works? | converges; the shared family costs 0.24 L1 to remove; the expertise half of the criterion **failed as locked** |
 
 Each directory holds `SPEC.md` and `RESULTS.md`. Versions 2, 3 and 8 also carry a `PLAN.md` or a
-`DECISIONS.md` — working documents kept because they contain reasoning that did *not* survive into
+`DECISIONS.md`: working documents kept because they contain reasoning that did *not* survive into
 the spec, which is often worth more than the reasoning that did.
 
 **After version 10 the project judged that its remaining questions needed human subjects or real
-models — until the sibling project's batch four asked for the one thing the simulator still uniquely
+models, until the sibling project's batch four asked for the one thing the simulator still uniquely
 could do: build the maker.** Version 11 reopened the apparatus for that, in the living directory;
 versions 1–10 stay closed.
 
@@ -86,7 +86,7 @@ That is where the limits on the numbers live.
 |---|---|
 | [theory/](theory/) | **the hypothesis store** ([READING_INTENT.md](theory/READING_INTENT.md)), the essays and preprint it implements, and the vocabulary crosswalk |
 | [HISTORY.md](HISTORY.md) | ten versions and three audit passes as one narrative, so nobody has to read eleven write-ups to learn why a number is what it is |
-| [archive/](archive/) | superseded documents — nothing deleted, only moved. Currently the V1–V5-era experiment table |
+| [archive/](archive/) | superseded documents; nothing deleted, only moved. Currently the V1–V5-era experiment table |
 | [assets/SPEC.md](assets/SPEC.md) | the spec for the public-facing material: the README rewrite and the distribution slides |
 
 ---

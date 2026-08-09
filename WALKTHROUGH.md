@@ -2,23 +2,23 @@
 
 **Twenty-five pictures, arranged as one story.** Read in order, they say what a reader does when
 it looks at made work, what machine-made content does to that reading, why lying about origin is
-the sharpest damage, what a steady diet costs, what actually protects — and exactly how much of
+the sharpest damage, what a steady diet costs, what actually protects, and exactly how much of
 all that you should believe. Each plate is meant to be readable in about two seconds. If you get
 to the end you will know what this project claims, what it withdrew, and what it still cannot
 answer.
 
 > **Mixed, and scored plate by plate. The mark sits at the end of each heading.**
-> **◐ Curator, 60% — ten plates. ○ Ghost, 5% — fifteen plates.**
+> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: fifteen plates.**
 > **This page's own prose is ◐ Curator, 60%.**
 
 Every number on every plate is read out of a committed results file, named in the plate's own
-footer. Regenerate the whole set with `python scripts/make_walkthrough_plates.py` — which also runs
+footer. Regenerate the whole set with `python scripts/make_walkthrough_plates.py`, which also runs
 an automatic audit that fails any plate with text running off the canvas or printed over other text,
 because both of those happened here and neither is visible to anything but an eye on the image.
 
 **The numbering here is reading order, not drawing order.** The image filenames keep the order the
 plates were drawn in. Neither ordering changes any number. The story runs in six acts, and the
-closing section — *what the whole thing does not do* — is the one to read if you read nothing
+closing section, *what the whole thing does not do*, is the one to read if you read nothing
 else.
 
 ---
@@ -30,7 +30,7 @@ claims.**
 
 | what you see | tier | what it means |
 |---|---|---|
-| **A black title** | **◐ Curator, 60%** | A person chose the claim, wrote the headline, and checked it against the results file. A machine drew everything else. The headline itself is Polished — the words are the author's, the grammar is not. |
+| **A black title** | **◐ Curator, 60%** | A person chose the claim, wrote the headline, and checked it against the results file. A machine drew everything else. The headline itself is Polished, the words are the author's, the grammar is not. |
 | *A grey title* | **○ Ghost, 5%** | A machine wrote the headline from the author's numbers, end to end. **Grey means not yet been through the author. It does not mean less important, and it does not mean less true.** |
 
 Grey plates are still being worked through. Several of them carry the project's strongest results and
@@ -38,10 +38,10 @@ are waiting on a headline in the author's own hand, not on better evidence.
 
 ---
 
-## Act one — *a reader really does recover the maker*
+## Act one · *a reader really does recover the maker*
 
 *The premise, before anything breaks: when you look at made work, part of what you do is
-reconstruct the person — what they were for, and how they went about it. These four plates are the
+reconstruct the person, what they were for, and how they went about it. These four plates are the
 evidence that the reconstruction is real, ordered, and sometimes better than the maker's own
 memory.*
 
@@ -60,7 +60,7 @@ has now been tested four times and the fourth is the one to read.
 | **V-11a, placebo split** | cut each reading at a sham point drawn from the settling-time distribution. Survives at **+0.020**, [+0.001, +0.038]. Looked thin. |
 | **V-11c, this plate** | the control was eating the signal, and the axis the hypothesis actually names had never been used. |
 
-**Why V-11a understated it.** Settling times bunch hard at the front of a reading — 104 of 320
+**Why V-11a understated it.** Settling times bunch hard at the front of a reading: 104 of 320
 readings settle at step 2. A sham drawn from that distribution lands within two steps of the truth
 about a third of the time, so a third of the "control" readings were themselves post-settling.
 Forced four steps clear, the same test returns **+0.031** rather than +0.020.
@@ -87,7 +87,7 @@ the purpose cannot be read.
 accrued* produces that shape.
 
 **And it is understanding rather than commitment.** Readers who settle on the *wrong* goal gain
-**+0.007**. Readers who settle on the right one gain **+0.070** — a difference of **+0.064**,
+**+0.007**. Readers who settle on the right one gain **+0.070**, a difference of **+0.064**,
 interval [+0.012, +0.116]. It is not that the reader stopped being uncertain. It is what it became
 certain *of*.
 
@@ -109,10 +109,10 @@ ledger.*
 
 Depth here is the Zen master's circle against the child's scribble: what differs is compressed
 practice, not effort spent. The construction deliberately makes a deep work and a shallow one state
-their purpose *equally clearly* — that is what stops "depth" being "clarity" with a new name.
+their purpose *equally clearly*, that is what stops "depth" being "clarity" with a new name.
 
 And then the experiment measured whether depth changes how much of the **purpose** you get. It
-couldn't. Not "it didn't" — it *couldn't*. Measured on how much of the **method** transfers, it
+couldn't. Not "it didn't", it *couldn't*. Measured on how much of the **method** transfers, it
 moves.
 
 ### 3. Expertise bakes in, and skills transfer anyway ◐
@@ -129,14 +129,14 @@ Note what is *not* happening: nobody is setting the maker's self-blindness. **De
 which is a stronger and different claim from E33, where self-blindness was a knob.
 
 **The second sentence of the title was an extension, and V-11b went and tested it.** Nothing in E43
-puts the maker in the reader's seat — it compares a maker's declared accuracy against a *separate*
+puts the maker in the reader's seat, it compares a maker's declared accuracy against a *separate*
 reader's. So: take the artifact a maker produced, hand it to an observer with that maker's own body
-plan and a flat prior over goals — the same person, with no memory of which intention was running —
+plan and a flat prior over goals, the same person, with no memory of which intention was running,
 and see what it recovers.
 
 The statistic that decides it is an **interaction**, not a level, because on a scribble the maker
 *should* win: a novice can simply tell you what they were doing. And that is what happens. Reading
-your own work loses by **0.16** on a scribble and wins by **0.16** on a master's work — a tipping of
+your own work loses by **0.16** on a scribble and wins by **0.16** on a master's work, a tipping of
 **+0.32, interval [+0.18, +0.45]** at 120 readings per depth.
 
 **Past a certain depth, your own work is a better record of what you meant than your memory of it.**
@@ -148,7 +148,7 @@ intent at depths where the declared channel is degraded. It does not derive the 
 the same in this respect and says so.*
 
 *A plate that used to stand ahead of the next one has been deleted. E45's
-efficiency result turned out to be an oracle against a learner — the simulating
+efficiency result turned out to be an oracle against a learner, the simulating
 reader was constructed with the world's own emission map, so it needed no training
 examples by definition and the test could not fail. The measurement is invalid, so
 the plate is gone rather than caveated. What it claimed is recorded in
@@ -159,17 +159,17 @@ committed as `scripts/audit_e45_oracle.py`.*
 
 ![You can recognise a purpose nobody has shown you](figures/walkthrough/19_reading_an_unseen_intent.png)
 
-The obvious objection to the withdrawn plate is *that is just a prior — give the counter more data.*
+The obvious objection to the withdrawn plate is *that is just a prior; give the counter more data.*
 So: a goal held out of training entirely.
 
 A reader that can **run** the generator has the whole space available. A reader that has to
-**observe** the space only ever has the part it happened to see — and more examples do not fix that,
+**observe** the space only ever has the part it happened to see, and more examples do not fix that,
 because its problem was never a shortage of examples. The simulator gets it right **0.82** of the
 time, pooled over the eight measurements. The counter sits at guessing across a 128-fold increase
 in training data and never leaves.
 
 **The simulator's line is not flat, and it should not have looked flat.** The verdict used to
-publish a single number for it — the first of eight, which happened to be the lowest — and the
+publish a single number for it, the first of eight, which happened to be the lowest, and the
 plate drew that one number straight across the axis, asserting a stability nothing had measured.
 The eight real values run 0.77 to 0.85. That spread is noise: chi-square 5.94 on 7 degrees of
 freedom against a critical value of 14.07, at n=150 per point.
@@ -181,7 +181,7 @@ come from next. Give the classifier its own generator and the simulator returns 
 one of the eight sizes**, identically. Both facts are now on the plate.
 
 **Why this hypothesis survives the audit that withdrew the one above it.** The oracle objection
-applies here too — the simulator holds the world's emission map, including the row for the goal it
+applies here too, the simulator holds the world's emission map, including the row for the goal it
 has never been shown. So the test that matters is what happens when that map is taken away.
 Perturbing the simulator's own signature away from the world's, using the codebase's own
 inexpertise parameter, the held-out-goal advantage is still standing at a **half-random likelihood**
@@ -192,10 +192,10 @@ committed experiment; it should become one.
 
 ---
 
-## Act two — *machine-made work breaks the reading — while feeling fine*
+## Act two · *machine-made work breaks the reading while feeling fine*
 
 *Everything in act one assumed there was a person to find. These four plates are what happens when
-there is not. The failure is not confusion — confusion would be safe. It is walking away satisfied,
+there is not. The failure is walking away satisfied,
 holding an answer you built yourself.*
 
 ### 5. Not understanding is the safe failure ◐
@@ -239,7 +239,7 @@ danger is having just enough handholds to build a story on.
 
 ![Learning to read machine work swaps a skill out](figures/walkthrough/08_expertise_substitutes.png)
 
-The prediction was that people who understand these systems would be spared the crash. They are —
+The prediction was that people who understand these systems would be spared the crash. They are,
 by trading away the human channel. The adaptation that protects you is the same adaptation that
 costs you.
 
@@ -255,13 +255,13 @@ reading.
 This is the alignment argument, in miniature, inside the model.
 
 *Attention goes from almost none to more than a third, and the reader learns exactly the same amount
-either way — a negative amount. The ratio is off a denominator of 0.02, so quote the direction.*
+either way, a negative amount. The ratio is off a denominator of 0.02, so quote the direction.*
 
 ---
 
-## Act three — *the label is the weapon*
+## Act three · *the label is the weapon*
 
-*Act two's failures need no deception. These six are what deception adds — and the model's central
+*Act two's failures need no deception. These six are what deception adds, and the model's central
 result lives here: exposure to hollow content wastes your time, but a believed lie about who made
 it rewrites you.*
 
@@ -270,7 +270,7 @@ it rewrites you.*
 ![A false label moves you away from the truth](figures/walkthrough/01_false_label_moves_you_wrong.png)
 
 The measure that made this visible is newer than the result. For five versions the model scored
-*how far a reader's beliefs travelled*, which cannot tell being convinced from being fooled — a
+*how far a reader's beliefs travelled*, which cannot tell being convinced from being fooled: a
 reader who ends up confidently wrong has moved just as far as one who ends up right. Given a sign,
 the three cells stop looking similar and start having opposite signs.
 
@@ -291,7 +291,7 @@ at all, and it predicted the shape of several results that had already been run.
 
 ![The readers most inclined to believe a label can never learn the labeller lies](figures/walkthrough/07_reputation_blindness.png)
 
-To learn that a source lies you have to notice the label and the work disagreeing — and above the
+To learn that a source lies you have to notice the label and the work disagreeing, and above the
 crossover, the label has already won that argument before the disagreement can register.
 
 Not slow learning. Learning that cannot start.
@@ -316,7 +316,7 @@ says means partly running it. So refusing is itself a small act of taking on, an
 
 The theory always contained this term; the code never did. And the second half is worse than the
 first, which is why it is the picture rather than a caption on it: **the reader who studies it
-carefully in order to refute it drifts seven times more than the one who skims** — same content,
+carefully in order to refute it drifts seven times more than the one who skims**: same content,
 same guard, eight times the looking. The effort you spend disagreeing is the channel.
 
 Seal the guard completely and the drift really does fall to 0.00002. No version of this reader
@@ -334,17 +334,17 @@ reported them separately. The release valve at the end of an uncomfortable set.
 
 ---
 
-## Act four — *what a steady diet does*
+## Act four · *what a steady diet does*
 
 *One artifact at a time, the previous acts are recoverable. These three are about volume: what
-changes when the contaminated stream is what you live on — and the one question about it this
+changes when the contaminated stream is what you live on, and the one question about it this
 project refuses to answer rather than answer badly.*
 
 ### 15. Two kinds of damage ○
 
 ![One kind of damage scales; the other is already there at zero](figures/walkthrough/12_two_kinds_of_damage.png)
 
-Absorbing bad material gets worse the more of it there is — the obvious kind. The other kind is
+Absorbing bad material gets worse the more of it there is, the obvious kind. The other kind is
 driven by *walking away*, so it is fully present in a corpus with no machine content in it at all.
 The second has the strongest independent support of anything in this project.
 
@@ -362,7 +362,7 @@ There was no version of that test where the claim got stronger.
 
 ![One experiment has been withheld three times](figures/walkthrough/17_the_withheld_experiment.png)
 
-It asks whether damage compounds as each generation learns from the last — the most consequential
+It asks whether damage compounds as each generation learns from the last, the most consequential
 question the project has, and the one it cannot answer. Its honesty check has failed three times, so
 real decay cannot be told apart from the instrument's own noise.
 
@@ -370,10 +370,10 @@ Narrowly missing is exactly the case a no-exceptions rule exists for.
 
 ---
 
-## Act five — *what actually protects*
+## Act five · *what actually protects*
 
-*Given all of the above, what would help? Three plates on the obvious answers — detect it, label
-it, punish dishonesty — each of which works less than hoped, and then the one result in the whole
+*Given all of the above, what would help? Three plates on the obvious answers: detect it, label
+it, punish dishonesty, each of which works less than hoped, and then the one result in the whole
 project that is genuinely a defence.*
 
 ### 18. Why detection is a losing race ○
@@ -404,7 +404,7 @@ which is the most generous assumption available.
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 
-The proposal's answer to bad actors, simulated for the first time in eight versions. It works — and
+The proposal's answer to bad actors, simulated for the first time in eight versions. It works, and
 it comes with a condition rather than a reassurance: **you have to catch a quarter of the liars.**
 
 *The framework reaches this through Zahavian signalling, on which honesty is stable because the
@@ -420,13 +420,13 @@ Every result in this project except this one describes something going wrong. Th
 that does something about it.
 
 Networks now publish at industrial scale specifically so that **AI systems** will absorb them, not
-so that people will read them — 150+ domains, roughly three million articles a year, and almost no
+so that people will read them: 150+ domains, roughly three million articles a year, and almost no
 human visitors, which is the tell. Filtering that out by how good the writing looks does **nothing**,
 because looking good is the whole objective. It is the same shape as the RLHF result: optimise the
 signal and the signal stops carrying information.
 
 Asking *who made this, and why* cuts the damage by about a quarter, restores the learner's reading
-of genuine human work, and **costs nothing on a clean stream** — while never once looking at a
+of genuine human work, and **costs nothing on a clean stream**, while never once looking at a
 label. That last part matters most. The Ghost Scale failed twice as something makers apply. **This is
 the same idea as something readers do, and nobody has to agree to it.**
 
@@ -435,7 +435,7 @@ most of this is architecture rather than evidence for the specific theory.*
 
 ---
 
-## Act six — *how much of this to believe*
+## Act six · *how much of this to believe*
 
 *The project's habit of auditing itself is the reason to trust anything above. These four plates
 are the audits: a withdrawn claim, a randomisation test on the model's own settings, an ablation of
@@ -451,12 +451,12 @@ is in this repository.**
 
 A classifier that counts features and never represents a maker reproduces the pattern, through
 nothing more than small-sample overfitting. On empty content carrying a creator's label the two
-readers end up **0.92 certain against 0.92, disagreeing 0.99 against 0.99** — the same object, to
+readers end up **0.92 certain against 0.92, disagreeing 0.99 against 0.99**, the same object, to
 two decimal places, on both halves of the signature.
 
 **A version of this plate drew the label response and has been reverted.** It showed my reader
 collapsing from 0.92 certain to 0.04 when the same empty artifact is honestly labelled, against a
-counter that does not move — which reads as a decisive win and is not a measurement.
+counter that does not move, which reads as a decisive win and is not a measurement.
 `run_no_tom_classifier` computes its posterior from feature counts and the class prior;
 `declared_signal` never enters it, and the classifier has no provenance state to put it in. **"It
 cannot hear the label" is true by construction**, in exactly the way E45's efficiency result was.
@@ -472,8 +472,8 @@ reason to go looking for a livelier one.
 The most important number in this project is not a result. Keep the shape of the model, randomise
 everything the theory specifies, and count how often the finding still appears.
 
-**Two of three headlines appear in almost every draw — one in all 60, one in 59 of them.** They
-are properties of building a reader this shape at all — which *is* the theory, but is the part
+**Two of three headlines appear in almost every draw, one in all 60, one in 59 of them.** They
+are properties of building a reader this shape at all, which *is* the theory, but is the part
 shared with any account of the same shape. It does not distinguish this framework from a competitor
 built the same way.
 
@@ -484,7 +484,7 @@ One result survives at zero. That is where the specific commitments earn their k
 ![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
 
 The severity rate on plate 23 says how much of a result is architectural. It does not say **which
-part**. So the complement: keep the settings and strip the shape instead — remove one structural
+part**. So the complement: keep the settings and strip the shape instead: remove one structural
 commitment at a time, six of them, each a decision about what a reader *is*.
 
 **Every finding dies the moment the reader stops simulating the creator and starts pattern-matching
@@ -492,7 +492,7 @@ a surface.** That is the one load-bearing commitment in the project. The model c
 hierarchy, its costly attention, and its separate belief about origin, and keep every result.
 
 And *legible and empty* is the odd one out for the second time. It is the only finding that needs
-the reader to hold a **distribution** rather than a best guess — which is exactly right, because
+the reader to hold a **distribution** rather than a best guess, which is exactly right, because
 "I read every word and there was nobody there" *is* a statement about the shape of an uncertainty.
 It is also the only finding with a 0% false-positive rate. Two unrelated audits, same answer.
 
@@ -504,7 +504,7 @@ harness's own baseline, so it has no answer here rather than a bad one.*
 ![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
 
 The project's longest-running open question, settled by changing *what* was measured rather than
-*how*. The criterion was scored on the work's purpose — which the model deliberately holds equally
+*how*. The criterion was scored on the work's purpose, which the model deliberately holds equally
 readable at every depth, so it could never have moved.
 
 ---
@@ -518,19 +518,19 @@ carried is in the plates above, redrawn from the same committed data.*
 
 A plate makes a claim legible in two seconds, which means it also makes a claim hard to qualify.
 Version 6 held four results out of this walkthrough because each carried an open question a plate
-would paper over. **Version 7 closed all four** — and one of them closed by being retired.
+would paper over. **Version 7 closed all four**, and one of them closed by being retired.
 
 | result | what happened |
 |---|---|
 | **The two-gates criterion** | **Settled, and drawn** (plate 25). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
 | **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
-| **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-seven-fold — so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
+| **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-seven-fold, so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
 | **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver; it is gone from the README and stands in the committed prediction card only under a SUPERSEDED marker. |
 
 Three plates from the ledger remain undrawn: **plate 23 reprised** as an anchor rather than a
 caveat, **the withheld version-10 rider** (which damaged a learner reading nothing but honest human
 writing and was recorded in advance as the check most expected to fail), and **the forking-paths
-ledger** — eighteen places across four versions where a design or a criterion changed after a
+ledger**: eighteen places across four versions where a design or a criterion changed after a
 result was seen.
 
 One result stays undrawable, and it is the honest kind: **N21's split**. Two measures disagree about
@@ -538,7 +538,7 @@ the same manipulation, one of them is the pre-registered one, and it fails. That
 a picture.
 
 **And version 11 has no plates yet.** The maker build (a persistent value profile, and the first
-three results it unblocks — convergence, the aperture, the smear) ran after this page was arranged;
+three results it unblocks: convergence, the aperture, the smear) ran after this page was arranged;
 its results are tabled in [FINDINGS.md](FINDINGS.md) and
 [docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §9.
 
@@ -556,7 +556,7 @@ its results are tabled in [FINDINGS.md](FINDINGS.md) and
   against itself.
 - **The proposal it is named after has no demonstrated mechanism.** Twice this project has gone
   looking for how a Ghost Scale label would actually protect a reader, and twice it has come back
-  without one — E39 and E54. The proposal is not refuted. It is unsupported, which is a different
+  without one: E39 and E54. The proposal is not refuted. It is unsupported, which is a different
   thing and should be said in its own sentence.
 
 ---

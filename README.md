@@ -12,7 +12,11 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 ![The Ghost Scale, drawn by a human and rendered by a machine](figures/ghost_scale_pair.png)
 
-*Left: 100% intent. Right: 60%. Same figure, same information.*
+*Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
+
+> **◐ Curator text from here down to [Install and run](#install-and-run):** a person chose these
+> claims, arranged them, and checked them against the committed results files, writing alongside a
+> machine. Below that line the prose is ○ Ghost, drafted by a machine from the author's numbers.
 
 ## Research question
 
@@ -21,7 +25,7 @@ constraints, competence, effort, and purposes that could have produced it. Ghost
 formalizes a narrow version of that problem:
 
 > Under what conditions can one agent infer another agent's latent purposes or persistent
-> preferences from the artifacts it produces — and when should that inference be blocked from
+> preferences from the artifacts it produces, and when should that inference be blocked from
 > changing the observer?
 
 The program separates three questions that are often collapsed:
@@ -30,8 +34,21 @@ The program separates three questions that are often collapsed:
    about its maker?
 2. **Provenance and trust:** does the observer have adequate reason to treat the apparent source
    as the real source?
-3. **Learning:** if the inference is sufficiently identified and trustworthy, what — if anything —
+3. **Learning:** if the inference is sufficiently identified and trustworthy, what, if anything,
    should the observer update about makers, values, or preferred outcomes?
+
+## Documentation map
+
+| Document | Purpose |
+|---|---|
+| [`README.md`](README.md) | Technical gateway, model boundary, verification, and the complete record |
+| [`WALKTHROUGH.md`](WALKTHROUGH.md) | Visual, public-facing narrative of the findings, in reading order |
+| [`FINDINGS.md`](FINDINGS.md) | Canonical experiment, method, verdict, and failure ledger |
+| [`EVIDENCE.md`](EVIDENCE.md) | Literature archive, classified by evidential relationship to each claim |
+| [`docs/theory/READING_INTENT.md`](docs/theory/READING_INTENT.md) | Living hypothesis store for the broader intent-extraction theory |
+
+Supporting material: [`docs/README.md`](docs/README.md) maps the version specs, audit passes, and
+exchange records; [`docs/METHODS.md`](docs/METHODS.md) documents the methodology layer.
 
 ## What is implemented
 
@@ -52,12 +69,12 @@ Across those generations it implements:
 Several attractive claims failed these controls and remain recorded as failures. That is part of
 the result, not an exception to it.
 
-## Latest result — and the boundary it exposes
+## The latest result, and where the model stops
 
 In V11's bounded model family, repeated artifacts make a persistent maker profile increasingly
 identifiable: profile identification accuracy rises from **0.53 at one artifact to 0.98 at
-fifty**, monotonically. Removing the shared profile family — the assumption that reader and maker
-draw from a common, bounded hypothesis space — raises the residual error of the recovered profile
+fifty**, monotonically. Removing the shared profile family, the assumption that reader and maker
+draw from a common, bounded hypothesis space, raises the residual error of the recovered profile
 (L1 distance between the posterior-mean profile and the truth) from **0.009 to 0.249**. The
 matching test of the reader-expertise assumption **failed as pre-specified** (the effect was
 invisible at this observation length) and is reported as failing in the
@@ -77,7 +94,7 @@ Only the left-hand inference is presently implemented.
 ## Relationship to developmental active inference
 
 Developmental active-inference work asks how learned associations can become the preferred
-outcomes that guide a later stage of behavior — see
+outcomes that guide a later stage of behavior; see
 [*Active Inference for Learning and Development in Embodied Neuromorphic Agents*](https://www.mdpi.com/1099-4300/26/7/582)
 and the
 [Marr-inspired developmental framework for raising "good" robots](https://shura.shu.ac.uk/35137/1/A_Multidimensional_Approach_to_Raising__Good_Robots%20%281%29.pdf).
@@ -96,13 +113,13 @@ This is a research connection, not an equivalence claim. Ghost Scale Simulation 
 a possible input to preference construction, not a complete preference-learning architecture, and
 it is a symbolic computational social-inference model, not an embodied one.
 
-## What this repository does — and does not — show
+## What this repository shows, and what it does not
 
 **It does show:**
 
 - how specified inference architectures behave under controlled synthetic conditions;
 - which headline effects survive null models, ablations, solver comparisons, and architecture
-  randomization — and which are properties of the architecture rather than the theory;
+  randomization, and which are properties of the architecture rather than the theory;
 - failure modes involving missing or deceptive provenance, underdetermined intent, and repeated
   exposure;
 - executable hypotheses that can be turned into human-subject or embodied-agent experiments.
@@ -112,7 +129,7 @@ it is a symbolic computational social-inference model, not an embodied one.
 - that humans or robots use the modeled mechanism;
 - that any reported simulation rate estimates a population prevalence or real-world effect size;
 - that the model has recovered human values or prosocial preferences;
-- that Ghost Scale labeling is an established intervention — the direct label mechanism failed in
+- that Ghost Scale labeling is an established intervention, the direct label mechanism failed in
   the tested forms (E39, E54);
 - that the proposed neural or metabolic account has been empirically established;
 - clinical safety, effectiveness, equity, or readiness for healthcare deployment.
@@ -159,19 +176,6 @@ See [`FINDINGS.md`](FINDINGS.md) for the complete experiment and methods ledger,
 predictions, withheld experiments, solver disagreements, architecture effects, and deviations from
 pre-specified criteria.
 
-## Documentation map
-
-| Document | Purpose |
-|---|---|
-| [`README.md`](README.md) | Technical gateway, model boundary, verification, and the complete record |
-| [`WALKTHROUGH.md`](WALKTHROUGH.md) | Visual, public-facing narrative of the findings, in reading order |
-| [`FINDINGS.md`](FINDINGS.md) | Canonical experiment, method, verdict, and failure ledger |
-| [`EVIDENCE.md`](EVIDENCE.md) | Literature archive, classified by evidential relationship to each claim |
-| [`docs/theory/READING_INTENT.md`](docs/theory/READING_INTENT.md) | Living hypothesis store for the broader intent-extraction theory |
-
-Supporting material: [`docs/README.md`](docs/README.md) maps the version specs, audit passes, and
-exchange records; [`docs/METHODS.md`](docs/METHODS.md) documents the methodology layer.
-
 ## Human and AI contribution boundary
 
 Abraham Haskins originated the Ghost Scale framework and is responsible for the research
@@ -186,13 +190,15 @@ hashes, and independent reconstruction where explicitly documented. These checks
 internal behavior and provenance; they do not substitute for external replication or
 human-subject evidence.
 
-The project applies its own tier notation to its documents — ◐ Curator for human-directed
-synthesis, ○ Ghost for machine drafting from the author's numbers — and scores the
-[walkthrough](WALKTHROUGH.md) plate by plate. This README was restructured on 2026-08-09 and its
-sections await re-tiering; the accuracy standard is unchanged: every figure below traces to a
-committed verdict file.
+The project applies its own tier notation to its documents (◐ Curator for human-directed
+synthesis, ○ Ghost for machine drafting from the author's numbers) and scores the
+[walkthrough](WALKTHROUGH.md) plate by plate. The markers at the top of this page and before
+Install and run carry that notation here.
 
 ---
+
+> **○ Ghost text starts here.** Machine-drafted from the author's numbers; every figure still
+> traces to a committed verdict file.
 
 ## Install and run
 
@@ -229,17 +235,17 @@ python scripts/write_results_v6.py
 python runners/run_v7.py
 python scripts/write_results_v7.py
 
-# version 8 (writes results/v8/, then RESULTS_V8.md) — the severity pass runs last
+# version 8 (writes results/v8/, then RESULTS_V8.md); the severity pass runs last
 python runners/run_v8.py
 python scripts/write_results_v8.py
 
-# version 9 — the minimal-model programme, and the two literature experiments
+# version 9: the minimal-model programme, and the two literature experiments
 python runners/run_v9.py
 
-# version 10 — the reader as a defence; the severity pass runs last
+# version 10: the reader as a defence; the severity pass runs last
 python runners/run_v10.py
 
-# version 11 — the maker. Lock the criteria first, then run the three modules
+# version 11: the maker. Lock the criteria first, then run the three modules
 python -m ghostscale.prereg_v11
 python runners/run_soundingline.py --only S12 S14 S15
 
@@ -306,8 +312,8 @@ a deliberate theoretical position: it knows the shared goal-to-feature family, a
 how provenance modulates it. Readers share a likelihood family because they share a body plan. What
 they do not share, and have to learn, is which sources carry intent.
 
-It is also forced. A genuinely uninformative prior is not a slow learner, it is an unidentifiable
-one: information between features and goal sits at exactly 0.0000 nats after 400 artifacts and all
+It is also forced. A genuinely uninformative prior is unidentifiable rather than merely slow
+to learn: information between features and goal sits at exactly 0.0000 nats after 400 artifacts and all
 four learned columns stay bit-identical. That measurement is kept as a live test, so if it ever
 stops being true the decision gets revisited instead of inherited.
 
@@ -341,7 +347,7 @@ not a port of the equation and no equivalence is claimed.
 Three additions, each of which makes something representable that was not.
 
 **A hierarchy the reader owns.** Until version 8 the *maker* had levels and the reader did not. A
-reader can now only recognise as far as it has itself built — which makes "you cannot see what you
+reader can now only recognise as far as it has itself built, which makes "you cannot see what you
 have not done" a structural property rather than an assumption, and it is what the human acquisition
 test would target.
 
@@ -365,7 +371,7 @@ The published equation is
 Version 6 read it against the shipped code and found three things absent: **θ_base(E)**, the
 metabolic reserve; the **gate gain k**, which makes the gate graded rather than binary; and the
 **κ→θ coupling**, which is not an omission but a *disagreement about mechanism*. The code's exploit
-works by the label out-arguing the work. The paper's works by trust lowering the guard — and only the
+works by the label out-arguing the work. The paper's works by trust lowering the guard, and only the
 paper's version predicts a reader told the truth, believing it, and absorbing the work anyway.
 
 **ω is two different objects** in the two documents. In the preprint it is the reader's precision
@@ -376,7 +382,7 @@ is an *input*. Anywhere the two are compared, that has to be said first.
 
 The mechanism is one line and no new parameter: the learner's Dirichlet learning rate is set from
 the gate, and the commit happens *after* inference resolves. So the reader works out who made the
-thing first, and only then decides how much of it comes in — which is the ratchet the version is
+thing first, and only then decides how much of it comes in, which is the ratchet the version is
 built on. Four gates were compared: no filter, a surface-quality filter, a provenance-label filter,
 and the intent-gate in three variants (reconstructibility alone, hand-set values, values learned
 from what has already been absorbed).
@@ -449,7 +455,7 @@ reaches for and finds already there.
   run**. The written criterion and the applied criterion are the same object, so they cannot drift
   apart. One qualification, stated exactly: where a specification and its results entered the
   public history in the same commit, the repository establishes *that* the criteria were fixed and
-  hashed, not an independently timestamped before/after sequence — this is internal
+  hashed, not an independently timestamped before/after sequence. This is internal
   pre-specification, not external preregistration, and the word "pre-registered" elsewhere in the
   record means exactly this.
 - **Every deviation is logged**, including two where a criterion was restated after seeing a
@@ -470,7 +476,7 @@ reaches for and finds already there.
 ## The complete record
 
 Everything below is the full experiment index and the history of how the record was
-audited — the material a reader needs to check a specific claim rather than to get
+audited, the material a reader needs to check a specific claim rather than to get
 oriented. [FINDINGS.md](FINDINGS.md) is the canonical ledger; these tables are its
 public-face summary and carry every caveat inline.
 
@@ -498,7 +504,7 @@ Short rows on purpose. Full provenance for any of them is in [FINDINGS.md](FINDI
 |---|---|---|
 | E36 | Does working out what someone was for unlock how they did it? | **Yes.** Inside one reading, a reader picks up far more of the method *after* it settles on the purpose. Intent is the key; method is what it opens. |
 | E31 · E30 | Does a master's work transmit anything a scribble does not? | **Yes, but it is the method, not the purpose.** Depth moves how much of the *process* transfers and provably cannot move how much of the *purpose* does. Five versions measured the purpose and found nothing. |
-| E56 | Can you take someone's technique without taking their aims? | **That is exactly what a raised guard does, and it is where indoctrination lives.** Guard up before you start and it blocks purpose and values by about half, and method by four percent. Method arrives from the first line, purpose resolves late, and a guard raised early can only block what has not arrived yet. **So the guard's direct protection is small — about five percent on the rescored harm measure (4.7, interval [3.8, 5.4]) — and more rides in on the method**, because practised method is where a maker's unspoken commitments are stored. You refuse someone's aims, take their technique, and the aims arrive later anyway. |
+| E56 | Can you take someone's technique without taking their aims? | **That is exactly what a raised guard does, and it is where indoctrination lives.** Guard up before you start and it blocks purpose and values by about half, and method by four percent. Method arrives from the first line, purpose resolves late, and a guard raised early can only block what has not arrived yet. **So the guard's direct protection is small, about five percent on the rescored harm measure (4.7, interval [3.8, 5.4]), and more rides in on the method**, because practised method is where a maker's unspoken commitments are stored. You refuse someone's aims, take their technique, and the aims arrive later anyway. |
 | E43 | Can a maker say why they did it? | **Less and less, the better they get.** Practice compresses decisions, and compression is what puts them out of reach of report. |
 | E33 | Can a reader know a maker better than the maker knows themselves? | **Yes**, and the margin grows as self-knowledge degrades. Work driven by something its maker cannot see is measurably marked, and no reader can read the mark. |
 | E42 | Is paying attention the same as being willing to change? | **No.** A reader can study something closely, read its maker accurately, and let none of it in. |
@@ -566,7 +572,7 @@ model's own claims, written down before the run, and they died.*
 | E34 | Where does real generated content sit on the readability axis? | **Not answerable in simulation, and that is the point.** Written as a prediction card a human study can use. |
 
 *An eleventh version ran after these tables were arranged: the maker build, which gives the world
-a persistent value profile and answers three questions the tables above could not ask — whether
+a persistent value profile and answers three questions the tables above could not ask: whether
 values converge across many works by one maker (they do, and the price of the shared hypothesis
 family is now a number), whether an absent drive is readable (under commission, yes), and whether
 the field's depth-profile instrument can distinguish a three-locus structure from its consensus
@@ -686,10 +692,10 @@ bars now have them: two hold, one bounds its effect near zero. All of it is in
 **A fourth pass then checked the code against the theory it implements**, which is a different
 question again and the first one nobody had asked: the three earlier passes all took the code's own
 account of itself as given. Reading the published equation against the shipped code found **three
-terms with no counterpart in the code**. Two were omissions — there was no way for a reader to get
+terms with no counterpart in the code**. Two were omissions: there was no way for a reader to get
 tired, and no way for it to be partly engaged. The third was not: **the paper and the code explain
 the trust exploit by different mechanisms**, and the paper's version predicts something the code
-structurally cannot produce — a reader that is told the truth, believes it, and absorbs the work
+structurally cannot produce, a reader that is told the truth, believes it, and absorbs the work
 anyway. That version also settled the project's longest-running open question, by noticing that its
 criterion had been pointed at the one quantity the design holds constant. All of it is in
 [RESULTS_V6.md](docs/versions/v06-code-against-equation/RESULTS.md).
@@ -700,7 +706,7 @@ now settled and one is **retired**: the claim that the collapse and the inventio
 band does not survive exact arithmetic, and it has been removed from this page and from the
 prediction card. And the experiment that made this project withdraw its central claim was attacked
 on the axis it had never been tested on. It asked whether a reader *without* a model of the maker
-can produce the confident, contradictory signature — it can. It never asked what the maker-model
+can produce the confident, contradictory signature, it can. It never asked what the maker-model
 buys. **Half of that answer has since been withdrawn.** The efficiency comparison handed the
 simulating reader the world's own emission map, so it needed no examples by construction rather than
 by merit and the test could not fail; at the counter's full training budget the gap is five points.
@@ -712,7 +718,7 @@ narrower than it has been read. All of it is in [RESULTS_V7.md](docs/versions/v0
 **A sixth pass asked how much of any of this was ever the theory**, which is the question nobody
 wants to ask about their own work. Keep the model's *shape*, throw its *settings* away, redraw them
 at random, and count how often the finding still appears. **Two of the three headlines tested
-reproduce every single time.** They are properties of building a reader this shape at all — which
+reproduce every single time.** They are properties of building a reader this shape at all, which
 *is* the theory, but is the part shared with any account built the same way, so they do not
 distinguish this framework from a competitor. One result survives at zero. The same pass collected
 the project's **forking-paths ledger**: the places where a design or a criterion was changed after
@@ -724,7 +730,7 @@ honest marking self-policing **only above a detection rate of 0.25**. All of it 
 architectural; it does not say *which* commitment is doing the work. So the complement: keep the
 settings, strip the shape, and remove one structural commitment at a time. **Every surviving finding
 dies the moment the reader stops modelling a maker and starts classifying a surface.** Hierarchy and
-costly attention turn out to be free — no finding needs them. And *legible and empty* is the only
+costly attention turn out to be free, no finding needs them. And *legible and empty* is the only
 finding that requires the reader to hold a **distribution** rather than a best guess, which is
 exactly right, because the finding *is* a claim about the shape of an uncertainty. It is also the
 only finding with a 0% false-positive rate: two unrelated audits, pointing at the same result. All
@@ -735,33 +741,33 @@ reading intent goes wrong. The tenth asks whether reading intent is itself a **d
 threat that is documented rather than hypothetical: networks publishing at industrial scale
 specifically to be absorbed by models rather than read by people. Against content carrying real
 structure under a false claim of origin, **filtering on surface quality leaves a learner exactly as
-damaged as no filter at all** — which is what this project's own RLHF result predicts, since surface
+damaged as no filter at all**, which is what this project's own RLHF result predicts, since surface
 quality is the attacker's objective. Reconstructing the maker cuts the damage, restores the
 learner's reading of genuine human work, costs nothing on a clean corpus, and **never reads the
 label**. It also **withheld its own most attractive hypothesis**, because that arm failed the
 clean-corpus control. All of it is in [reader as defence](docs/versions/v10-reader-as-defence/RESULTS.md).
 
 **The eleventh gave the world a maker.** Every earlier version varied the reader while the maker
-stayed a fresh goal drawn per artifact; the sibling project's theory says the hardest quantity —
-a maker's standing **values** — is only defined *across* works, and this model's own verdict files
+stayed a fresh goal drawn per artifact; the sibling project's theory says the hardest quantity,
+a maker's standing **values**, is only defined *across* works, and this model's own verdict files
 recorded that the vertex would have to be built before it could be measured. Version 11 built it: a
 persistent value profile, drawn from a small shared family, plus a drive that can be genuinely
 absent rather than merely unused. Three results, criteria hash-locked first: **recovering a
-maker's values converges with more works and the leftover ambiguity is small — unless the reader
+maker's values converges with more works and the leftover ambiguity is small, unless the reader
 loses the shared hypothesis family, which costs twenty-five times the residual** (the first
 measured price of the "convergent midbrains" assumption; the matching expertise half of that
-criterion *failed* as pre-registered and is reported as failing). **An absent drive is readable —
+criterion *failed* as pre-registered and is reported as failing). **An absent drive is readable,
 but only in commissioned work**, because instruction can only amplify a drive that exists, so the
 maker who lacks one routes around it and the routing shows. And **the standard depth-profile
 instrument smears a three-locus structure into the field's consensus mid peak in every run**,
-while a residual instrument separates the two — with its operating limits measured and attached.
+while a residual instrument separates the two, with its operating limits measured and attached.
 All of it is in [the maker](docs/versions/v11-the-maker/RESULTS.md).
 
 ## How much of this is the theory?
 
 **The most important number in this repository is not a result. It is a rate.**
 
-The model has a *shape* — a reader inferring a hidden purpose from what it sees, under a cost — and
+The model has a *shape*, a reader inferring a hidden purpose from what it sees, under a cost, and
 it has *settings*: which features mean which goals, how transparent each tier is. The theory
 specifies the settings. The shape is closer to how anyone would build a model like this.
 
@@ -781,8 +787,8 @@ survives. If it survives every time, the finding came from the shape.
 **This does not throw any result out.** Every one is true and reproducible. What changes is the
 sentence you may write after it.
 
-A high rate means the result comes from the theory's **structural** commitment — reading intent
-under a metabolic budget — which *is* the theory, but is the part shared with any account of the
+A high rate means the result comes from the theory's **structural** commitment, reading intent
+under a metabolic budget, which *is* the theory, but is the part shared with any account of the
 same shape. It does not distinguish this framework from a competitor built the same way.
 
 A low rate means the theory's **specific** commitments are doing the work. **On the evidence so far
@@ -792,7 +798,7 @@ imply, and it is also a much clearer target.
 ### And what is each finding actually made of?
 
 That rate says how much of a result is architectural. It does not say **which part** of the
-architecture. So the complementary pass: keep the settings, strip the *shape* — remove one
+architecture. So the complementary pass: keep the settings, strip the *shape*: remove one
 structural commitment at a time and see what dies. Each of the six is a decision about what a reader
 *is*; none is a parameter.
 
@@ -803,7 +809,7 @@ structural commitment at a time and see what dies. Each of the six is a decision
 | Depth moves the method, not the purpose | modelling a maker · a shared body plan | costly attention · provenance-as-state · hierarchy · holding a distribution |
 
 **Every finding dies when the reader stops modelling a maker and starts classifying a surface.**
-That is the one commitment the whole project rests on — the one E21 attacked and E45 defended.
+That is the one commitment the whole project rests on, the one E21 attacked and E45 defended.
 
 And the wall is the odd one out twice over. It is the only finding that needs the reader to hold a
 *distribution* rather than a best guess, which is exactly right: the finding **is** a claim about
@@ -827,7 +833,7 @@ edited after; results were written after and never edited either. Full material 
 | **2** | The Learner | a reader that must acquire machine content's shape | what if the reader has to learn? | heterogeneity is in the likelihood, not the prior | N8–N12 |
 | **3** | The Refuted Repair | a fix for the generational leak | is the leak sampling noise? | **its own gate said no**; experiment stayed withheld | N13–N15 |
 | **4** | Foreign Intent | goal-foreign replaces goal-empty | what *is* machine content? | **a headline inverted**: readers keep paying | N16–N20 |
-| **4.5** | Three Gates | a three-gate reader, a counting classifier | does invention need a theory of mind? | **no** — claim withdrawn | — |
+| **4.5** | Three Gates | a three-gate reader, a counting classifier | does invention need a theory of mind? | **no**; claim withdrawn | — |
 | **5** | Depth Over Effort | depth as a hierarchy the reader infers | effort, or compressed practice? | depth; and the fast solver was caught misreading it | N21 |
 | **6** | Code Against Equation | depletion, graded gate, κ→θ coupling, process recovery | is the code the same object as the theory? | **three terms had no counterpart in the code** | N22–N30 |
 | **7** | The Closures | evidence-efficiency and zero-shot tests | what does a maker-model buy? | efficiency half withdrawn as an oracle; reads an unseen goal | N31–N34 |
@@ -872,7 +878,7 @@ non-invertible family; the theory's words are used here.)*
   Versions 1 to 3 modelled machine-made content this way.
 - **Intent-foreign is a page in a script you cannot read.** Real intent, pursued by a real process,
   expressed in a vocabulary your reading apparatus has no entry for. Version 4 replaced
-  intent-empty with this, because it is a better description of a generative model — trained on
+  intent-empty with this, because it is a better description of a generative model, trained on
   purposeful human output and inheriting its shape.
 - **Intent-unrecoverable is every word familiar and nobody there.** The vocabulary is yours; the
   route back from the surface to a state you could occupy does not exist, because many maker-states
@@ -927,7 +933,7 @@ his claim weakens. There was no version where it got stronger.
 
 **The last two are the ones to read if you only read two.** E53 killed a reconciliation the author
 proposed and found the disagreement it was built on had been a comparison error. E54 killed the
-mechanism by which the Ghost Scale was supposed to work — the effect is real, and too small to carry
+mechanism by which the Ghost Scale was supposed to work, the effect is real, and too small to carry
 a label.
 
 ### How the scoreboard is counted
@@ -957,11 +963,11 @@ not counted here; V11's own criteria and their one recorded failure are in
 
 **Three things this count does not tell you, and they matter more than the count.**
 
-1. **Two of the three headlines tested for it are architectural** — see
+1. **Two of the three headlines tested for it are architectural**; see
    [How much of this is the theory?](#how-much-of-this-is-the-theory). A held prediction whose
    false-positive rate is 100% is still held. It is just not distinguishing evidence.
 2. **Across versions 6, 7, 9 and 10 a design or criterion was changed after seeing a result in
-   eighteen places** — seven found by the version 8 audit, four added openly by version 9, seven
+   eighteen places**: seven found by the version 8 audit, four added openly by version 9, seven
    more by version 10. Each change is documented where it happened; the version 6–7 ledger is in
    `results/v8/s1_severity.json`, and versions 9 and 10 each carry a deviations table in their own
    results document. A high hit rate with a forking-paths count that size should be read with that
@@ -1005,8 +1011,8 @@ curation, and it does not overlap either.
 
 | that field does | this does instead |
 |---|---|
-| **surface-statistical detection** — perplexity, burstiness, learned classifiers | reconstructs the *maker*, not the generator |
-| **perturbation methods** (DetectGPT, Binoculars) — token-prediction consistency under masking | intent-attribution consistency, which is a different object and will be the first thing a reviewer conflates |
+| **surface-statistical detection** (perplexity, burstiness, learned classifiers) | reconstructs the *maker*, not the generator |
+| **perturbation methods** (DetectGPT, Binoculars): token-prediction consistency under masking | intent-attribution consistency, which is a different object and will be the first thing a reviewer conflates |
 | **supervised classifiers** on labelled human/AI corpora | no origin label anywhere in the gate; asserted by test |
 | **quality / reward-model filtering** of pretraining data | scores the inferred **author**, not the artifact |
 | **watermarking and source attribution** | requires cooperation from the generator; this requires none |
@@ -1014,11 +1020,11 @@ curation, and it does not overlap either.
 Two points of contact worth naming because they support the work rather than compete with it. The
 detection field's own reviews now report that surface statistics are increasingly insufficient as
 models grow more fluent, and that supervised detectors fail to generalise across domains and against
-adversarial paraphrasing — **which is this project's own arms-race result, arrived at independently
+adversarial paraphrasing, **which is this project's own arms-race result, arrived at independently
 and published by other people.** That is a coherence check, not a citation of convenience.
 
 Work on inferring latent intent with language models does exist and is active, but it is about
-**user** intent in interactive settings — dialogue, agents, recommendation. Artifact-level *author*
+**user** intent in interactive settings: dialogue, agents, recommendation. Artifact-level *author*
 intent, used as a corpus instrument, appears unoccupied. **That claim rests on a few search rounds
 rather than a literature review**, and a proper one is the first task of any follow-on work, because
 finding out cheaply that someone has already done it is a good outcome.
@@ -1107,14 +1113,14 @@ scripts/                        chart rebuilders, the document generators, and t
 **Everything in `ghostscale/v1` through `v10` is closed.** Pre-registered, run, reported, and left
 alone. A number in this README should be the same number next year.
 
-`ghostscale/validation/soundingline/` is the exception and is expected to churn. Another project —
-Sounding Line, which reads real text and therefore has no ground truth — sends this simulation
+`ghostscale/validation/soundingline/` is the exception and is expected to churn. Another project,
+Sounding Line, which reads real text and therefore has no ground truth, sends this simulation
 questions about **mechanism**, and that directory answers them. Its questions arrive from outside,
 new modules appear whenever the next one needs answering, and nothing in it is a Ghost Scale
 hypothesis: S-1 asks whether a statistic in somebody else's pipeline is broken, which is a fair use
 of a simulator and is not a finding about readers.
 
-Two rules hold there, both learned the hard way here. Nothing may call a versioned `run()` — the
+Two rules hold there, both learned the hard way here. Nothing may call a versioned `run()`: the
 V10 severity pass re-ran real experiments to audit them and overwrote the very verdicts it was
 checking. And anything claiming to use an experiment's rollouts must reproduce that experiment's
 committed number first, because a harness that re-randomises is running a different experiment

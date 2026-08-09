@@ -6,4 +6,4 @@ replaced it.
 
 | file | superseded by |
 |---|---|
-| [EXPERIMENTS.md](EXPERIMENTS.md) | [FINDINGS.md](../../FINDINGS.md) — the V1–V5-era plain-language table, kept as the record of how the questions were first posed |
+| [EXPERIMENTS.md](EXPERIMENTS.md) | [FINDINGS.md](../../FINDINGS.md), the V1–V5-era plain-language table, kept as the record of how the questions were first posed |

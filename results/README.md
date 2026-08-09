@@ -1,13 +1,13 @@
 # What is in here
 
-Committed summary CSVs and JSON verdict files — everything a number in the README or a chart in
+Committed summary CSVs and JSON verdict files: everything a number in the README or a chart in
 `figures/` depends on. Raw per-reader CSVs are **not** committed, because `e4_raw.csv` alone is
 16 MB. Regenerate the V1-family raws with `python run_all.py` (E1-E6); later versions have their own runners under `runners/`.
 
 ## Two layouts, and the reason is historical rather than principled
 
 **Versions 1 to 5 wrote flat into this directory.** `e1_summary.csv`, `e2_cell_stats.csv`,
-`e17_verdict.json`, and so on — one file per experiment per artefact type, all at the top level.
+`e17_verdict.json` and the rest, one file per experiment per artefact type, all at the top level.
 
 **Version 6 onward writes one subdirectory per version.** `v6/`, `v7/`, `v8/`, `v9/`, `v10/`, plus
 `validation/`, `diagnostics/` and `repair/` for the audit passes.
@@ -32,7 +32,7 @@ inconsistency is visible, it is explained here, and it costs nothing but appeara
 ## How to read a verdict file
 
 Each records the criterion **as it was locked before the run**, the measured value, and the pass or
-fail. Where a criterion was restated after seeing a measurement, **both** are present — the original
+fail. Where a criterion was restated after seeing a measurement, **both** are present, the original
 is retained, still computed, and reported as failing if that is what it does. The restatement never
 replaces it.
 

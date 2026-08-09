@@ -3,7 +3,7 @@
 Eleven model versions and three audit passes, in one narrative. Every version has a name as well as a number; the name is the theme, the number is the order. Written so that nobody has to read six
 write-ups to understand why a number is what it is.
 
-*Role in the record: the narrative half of the wide channel — the order things happened and why.
+*Role in the record: the narrative half of the wide channel, the order things happened and why.
 For what was found, [../FINDINGS.md](../FINDINGS.md); for what is believed,
 [theory/READING_INTENT.md](theory/READING_INTENT.md).*
 
@@ -54,14 +54,14 @@ out.
 Written to fix the generational experiment under a diagnosis that the leak was ordinary sampling
 noise. **V3's own gate refuted the diagnosis**: the leak did not shrink across a hundredfold more
 data. A real estimator bug was found and fixed along the way, cutting the error 171-fold, and the
-experiment stayed withheld anyway — it still missed its threshold, narrowly, and narrowly is exactly
+experiment stayed withheld anyway, it still missed its threshold, narrowly, and narrowly is exactly
 the case a no-exceptions rule exists for.
 
 ### V4 · Foreign Intent
 
 **The most consequential version.** V1–V3 modelled machine-made content as *goal-empty*: structure
 with no purpose behind it, like wood grain. V4 replaced that with *goal-foreign*: a real purpose,
-pursued by a real process, expressed in a vocabulary the reader has no entry for — which is a better
+pursued by a real process, expressed in a vocabulary the reader has no entry for, which is a better
 description of a generative model, trained on purposeful human output and inheriting its shape.
 
 Under goal-empty, readers disengage. **Under goal-foreign they do the opposite: they keep looking,
@@ -82,7 +82,7 @@ not necessary for it. The framework's claim about its own necessity was withdraw
 ### V5 · Depth Over Effort
 
 Replaced "how hard was the maker trying" with **how many levels of the maker's decision hierarchy
-reach the surface** — the Zen master's circle rather than the child's scribble, where the difference
+reach the surface**, the Zen master's circle rather than the child's scribble, where the difference
 is compressed practice and not effort expended. Built so that a deep work and a shallow one have
 *identical feature histograms*: a reader that counts and ignores order cannot tell them apart at
 all. Depth lives in the order.
@@ -106,7 +106,7 @@ two-gates disagreement, which had produced three inconsistent passes: the criter
 *goal* uptake on a design that holds goal uptake constant. Re-scored on process uptake it came back
 at **0.93, interval [0.771, 0.977]**.
 
-The version also answered a direct attack on E21 — *you are using your own architecture to simulate
+The version also answered a direct attack on E21: *you are using your own architecture to simulate
 theirs, so you are cheating the solution space*. E45 asked what the maker-model actually buys and
 found two things a counting classifier cannot get at any scale: it needs **4 examples where the
 counter needs 512**, and it reads an intention it has never been shown. More training does not close
@@ -122,13 +122,13 @@ But the version is remembered for the severity pass, which asks the question nob
 about their own work: keep the model's shape, throw its settings away, redraw at random, and count
 how often the finding still appears. **100%, 98% and 0%.** Two of the three headlines are properties
 of the architecture rather than evidence for the specific theory. The same pass collected the
-forking-paths ledger — seven places across versions 6 and 7 where a design or a criterion changed
+forking-paths ledger: seven places across versions 6 and 7 where a design or a criterion changed
 after seeing a null. [../RESULTS_V8.md](versions/v08-the-severity-pass/RESULTS.md).
 
 ### V9 · Minimal Models
 
 Severity says how much of a result is architectural. It does not say **which part**. So the
-complement: keep the settings and strip the *shape* — remove one structural commitment at a time.
+complement: keep the settings and strip the *shape*, removing one structural commitment at a time.
 **Every surviving finding dies when the reader stops modelling a maker and starts classifying a
 surface.** Hierarchy and costly attention turn out to be free. The wall is the only finding that
 needs the reader to hold a distribution rather than a best guess, which is the second pass to single
@@ -147,14 +147,14 @@ publishing at industrial scale specifically to be absorbed by models rather than
 
 The answer is yes, on the case that matches the real one. Against content carrying real structure
 under a false claim of origin, surface-quality filtering leaves a learner **exactly as damaged as no
-filter at all** — which is what E40 predicts, since surface quality is the attacker's objective.
+filter at all**, which is what E40 predicts, since surface quality is the attacker's objective.
 Asking who made this and why cuts the damage 23%, restores the learner's reading of genuine human
 work, costs nothing on a clean corpus, and never reads the label. **The Ghost Scale failed twice as
 a label makers apply; this is the same idea as a capability readers have, and it needs no social
 adoption.**
 
-The version also caught itself. Its most attractive hypothesis — that values ride in on process
-through a shut gate — was **withheld because its test arm failed the clean-corpus control**, which
+The version also caught itself. Its most attractive hypothesis, that values ride in on process
+through a shut gate, was **withheld because its test arm failed the clean-corpus control**, which
 is the null the author had recorded, before the run, as the one he most expected to fail. It failed,
 and in failing it disqualified the invalid arm and left the headline standing.
 
@@ -163,14 +163,14 @@ and in failing it disqualified the invalid arm and left the headline standing.
 ### V11 · The Maker
 
 The sibling project's fourth batch of questions needed something no closed version had: a maker
-that outlives one artifact. The model's own verdict files had recorded the gap — the values vertex
+that outlives one artifact. The model's own verdict files had recorded the gap, the values vertex
 was a deterministic coarsening of the goal, and the triangle experiment had substituted depth for
 it. Version 11 built the vertex: a persistent value profile from a small shared family, a drive
 that can be genuinely absent (instruction amplifies multiplicatively, and a zero cannot be
 amplified), and two emitters for the two rival accounts of what a profile does.
 
 Three results, criteria hash-locked first. Value recovery **converges** across works and the
-leftover ambiguity is small — and removing the shared hypothesis family costs **0.24 L1**, the
+leftover ambiguity is small, and removing the shared hypothesis family costs **0.24 L1**, the
 first measured price of the convergent-midbrains assumption, while removing the reader's expertise
 cost nothing at this observation length, so that half of the criterion **failed as locked** and is
 reported as failing. **An absent drive is readable in commissioned work** and invisible in
@@ -188,19 +188,19 @@ expected to grow.
 
 ## The audit passes
 
-### Validation — can the recorded answers be trusted?
+### Validation: can the recorded answers be trusted?
 
 Nine checks, criteria hash-locked before it started. **Five came back against the work.** Three
 matter most: one headline is a property of the model's *architecture* rather than of the theory,
 two verdicts were produced by the inference shortcut and do not survive its removal, and the one
-result rebuilt independently from its own prose reproduced the mechanism but not the size — fifteen
+result rebuilt independently from its own prose reproduced the mechanism but not the size: fifteen
 times smaller.
 
 The single most consequential finding: with the model's settings thrown away and replaced at random,
 **100% of random readers of this shape still become confident under a false label.** What a random
 reader does *not* produce is the disagreement. The theory is entitled to the second half.
 
-### Diagnostics — can the instruments answer at all?
+### Diagnostics: can the instruments answer at all?
 
 A different question, and it found four things worth knowing before any number is quoted closely.
 Reading the label and reading the work are two competing streams that arrive at every glance and
@@ -209,24 +209,24 @@ well the reader read the work, because a confidently wrong reader has moved as f
 The disagreement figure cannot be read on its own. And five of nine pre-registered criteria are
 computed over too few units to separate their own outcomes.
 
-### Repair — what can be fixed, and what does fixing change?
+### Repair: what can be fixed, and what does fixing change?
 
 One rule: every change either makes something measurable that was not, or removes something. Four
 outcomes. The uptake measure was a *distance*, so being fooled counted as much as being right; split
-into a signed measure the headline cell reverses sign. Trust turned out measurable after all — the
+into a signed measure the headline cell reverses sign. Trust turned out measurable after all; the
 earlier verdict had fitted it to the wrong data. A new prediction the fixed-trust model could not
 make: **a sufficiently trusting reader cannot learn that a source lies.** And the three headline
 criteria that had no error bars now have them.
 
-### The V6 retrofit — does the new machinery change the old answers?
+### The V6 retrofit: does the new machinery change the old answers?
 
 Version 6's additions were demonstrated on new experiments; the retrofit goes back. It is scoped
 honestly: experiments with no trust parameter, no depth and no sequence cannot be touched by a trust
 coupling, a depth measure or a depletion term, and they are **named as out of scope rather than run
 and reported as null**.
 
-Where it does reach, it matters. The two-gates criterion — the project's longest-running open
-question, which two solvers disagreed about across two passes — resolves when scored on the quantity
+Where it does reach, it matters. The two-gates criterion, the project's longest-running open
+question, which two solvers disagreed about across two passes, resolves when scored on the quantity
 the theory actually names.
 
 ---

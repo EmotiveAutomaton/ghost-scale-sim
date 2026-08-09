@@ -1,8 +1,8 @@
-# Theory — the hypothesis store
+# Theory: the hypothesis store
 
 **The dense channel.** Every claim this project makes, organised under umbrella hypotheses, with
-the evidence tabled beneath each — one file, [READING_INTENT.md](READING_INTENT.md). The wide
-channel — how each test was run, in what order, and what its numbers mean exactly — is
+the evidence tabled beneath each, in one file: [READING_INTENT.md](READING_INTENT.md). The wide
+channel (how each test was run, in what order, and what its numbers mean exactly) is
 [FINDINGS.md](../../FINDINGS.md) and the version documents. **If a result is in one channel it
 must be in both**; the maintenance rule at the bottom of the hypothesis store says how.
 
@@ -12,33 +12,33 @@ The format is adopted from the sibling project's theory folder
 **The theory itself lives outside this repository**, in the preprint and the artist-facing essay:
 
 - *Art as an Algorithmic Virus: Unifying the Generative Crash and AI Value Convergence via
-  Cognitive Affordances* — Zenodo, DOI
+  Cognitive Affordances*: Zenodo, DOI
   [`10.5281/zenodo.19407789`](https://doi.org/10.5281/zenodo.19407789)
 - The plain-language version: <https://abrahamhaskins.org/art>
 
 ---
 
-## Format — for the hypothesis store
+## Format for the hypothesis store
 
     TOP OF FILE   the theory in the curator's words, then two or three lines of what it claims,
                   then the one empirical commitment. A visitor gets the shape from the first screen
     EACH SECTION  1. the date of the claim and whose words state it
                   2. THE CLAIM, as a blockquote
-                  3. WHAT IT SAYS — short, plain
+                  3. WHAT IT SAYS, short and plain
                   4. the hypothesis table, with status and evidence
-                  5. WHAT THESE ADD UP TO — a first pass at combining the rows into a claim
+                  5. WHAT THESE ADD UP TO, a first pass at combining the rows into a claim
 
-**Sections run in decreasing load-bearing order** — the core commitment first, then whatever
+**Sections run in decreasing load-bearing order**, the core commitment first, then whatever
 explains the theory most naturally. Not the order things were run in.
 
 **Blockquotes are the curator's words only.** In this repository those come from the essay and
 the preprint (his text, 2026-04) and from the front page above the marker (◐ Curator tier,
-2026-08 — flagged with ◐ when quoted, since that tier is human-and-machine synthesis rather than
+2026-08, flagged with ◐ when quoted, since that tier is human-and-machine synthesis rather than
 untouched prose). Machine text is never blockquoted as his.
 
 **Corrections are folded in, never appended. Superseded material takes a bold status** (RETIRED,
 SUPERSEDED, WITHDRAWN) and stays in the section it belongs to. A hypothesis with a history gets
-its history in the notables column, one line. **Identifiers are stable** — they are the
+its history in the notables column, one line. **Identifiers are stable**, they are the
 experiment IDs (E, A, D, R, H, N, T, S, MIN), never reused, never renumbered.
 
 **A disconfirmed thing gets one row and no elaboration.** State what was checked and what came
@@ -65,7 +65,7 @@ current.
 
 ## Source legend, because they are not equally strong
 
-    (run)   a committed verdict file in this repository. The strongest thing we have — and every
+    (run)   a committed verdict file in this repository. The strongest thing we have, and every
             (run) row is a METHOD result about a constructed world. Whether the mechanism holds in
             people is what a simulation cannot say, and rows resting on a real-world fact say so
     (lit)   published work, from the retrospective search in EVIDENCE.md. READ if fetched and
@@ -76,9 +76,9 @@ current.
 
 | | |
 |---|---|
-| **[READING_INTENT.md](READING_INTENT.md)** | **the hypothesis store** — ten umbrella claims, every result under the one it bears on |
+| **[READING_INTENT.md](READING_INTENT.md)** | **the hypothesis store**: ten umbrella claims, every result under the one it bears on |
 | [Art as an Algorithmic Virus (PDF)](Art%20as%20an%20Algorithmic%20Virus%20-%20Unifying%20the%20Generative%20Crash%20and%20AI%20Value%20Convergence%20via%20Cognitive%20Affordances-1.pdf) | the preprint. **The authority for anything mathematical** |
-| [Art_a_unifying_model.md](Art_a_unifying_model.md) | the artist-facing essay ([public home](https://abrahamhaskins.org/art)), transcribed in full — the rawest form of the intent and the source of most section quotes. **Kept deliberately as material for occasional entropy injection**: sampling the unsharpened original when drafting or curation needs variation the polished record no longer supplies. The technique earns less as the paper's claims sharpen, and the transcript stays so the move is cheap when it is still appropriate |
+| [Art_a_unifying_model.md](Art_a_unifying_model.md) | the artist-facing essay ([public home](https://abrahamhaskins.org/art)), transcribed in full, the rawest form of the intent and the source of most section quotes. **Kept deliberately as material for occasional entropy injection**: sampling the unsharpened original when drafting or curation needs variation the polished record no longer supplies. The technique earns less as the paper's claims sharpen, and the transcript stays so the move is cheap when it is still appropriate |
 | [Art_as_an_Algorithmic_Virus_preprint.md](Art_as_an_Algorithmic_Virus_preprint.md) | machine transcription of the preprint, kept greppable and diffable; equations survive the two-column extraction badly, so read those against the PDF |
 
 ## The vocabulary, and how it maps onto the code
@@ -98,7 +98,7 @@ The simulation's variable names are not the theory's words. This is the crosswal
 | the Ghost Scale tiers | **provenance**, and its opacity α | how much of the maker's intent survives into the object |
 
 **One term is used differently in the two places and it is worth flagging.** In the preprint, ω is
-the reader's own precision weighting — an *output*, which collapses when the inference fails. In
+the reader's own precision weighting, an *output*, which collapses when the inference fails. In
 the code, ω is feature overlap: a fixed property of the content, an *input*. The code's analogue
 of the preprint's ω is the attention decision. They share a letter and are different objects.
 (The E41 row in the store is the measured consequence: the paper's mechanism and the code's are
