@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-seven pictures, arranged as one story.** Read in order, they say what a reader does when
+**Twenty-eight pictures, arranged as one story.** Read in order, they say what a reader does when
 it looks at made work, what machine-made content does to that reading, why lying about origin is
 the sharpest damage, what a steady diet costs, what actually protects, and exactly how much of
 all that you should believe. Each plate is meant to be readable in about two seconds. If you get
@@ -8,7 +8,7 @@ to the end you will know what this project claims, what it withdrew, and what it
 answer.
 
 > **Mixed, and scored plate by plate. The mark sits at the end of each heading.**
-> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: seventeen plates.**
+> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: eighteen plates.**
 > **This page's own prose is ◐ Curator, 60%.**
 
 Every number on every plate is read out of a committed results file, named in the plate's own
@@ -402,7 +402,7 @@ Narrowly missing is exactly the case a no-exceptions rule exists for.
 
 ## Act five · *what actually protects*
 
-*Given all of the above, what would help? Three plates on the obvious answers: detect it, label
+*Given all of the above, what would help? Four plates on the obvious answers: detect it, label
 it, punish dishonesty, each of which works less than hoped, and then the one result in the whole
 project that is genuinely a defence.*
 
@@ -423,14 +423,24 @@ does not gradually get fuzzier. Its accusation rate does not move at all while i
 away underneath, until it is firing on people and machines at exactly the same rate with exactly the
 same confidence. **A coin flip that still believes it is a detector.**
 
-### 21. Labelling needs a convention ○
+### 21. The detector that goes blind, still firing ○
+
+![A detector that stops learning doesn't get noisy; it goes blind while still firing](figures/walkthrough/30_the_stale_detector.png)
+
+The arms race above assumed the detector keeps learning. Freeze it while the content keeps
+evolving and something worse than noise happens: its catch rate on machine work drains from
+57.5% to 17.5% while its accusation rate on careful human writing never moves at all. It ends
+firing on people and machines at exactly the same rate, with exactly the same confidence, and
+any aggregate accuracy number hides the whole slide.
+
+### 22. Labelling needs a convention ○
 
 ![Labelling only protects readers who know the labelling exists](figures/walkthrough/15_labels_need_a_convention.png)
 
 The policy number. And a lower bound, because the aware reader here is handed the true coverage,
 which is the most generous assumption available.
 
-### 22. Honest marking is self-policing, at a price ○
+### 23. Honest marking is self-policing, at a price ○
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 
@@ -442,7 +452,7 @@ honest signal is wasteful. Signalling theory has since moved to a trade-off acco
 detection-rate threshold is a trade-off result. The simulation landed on the current position
 without being aimed at it.*
 
-### 23. The one thing here that is actually a defence ◐
+### 24. The one thing here that is actually a defence ◐
 
 ![Filtering on how good it looks does nothing](figures/walkthrough/25_a_defence_that_works.png)
 
@@ -471,7 +481,7 @@ most of this is architecture rather than evidence for the specific theory.*
 are the audits: a withdrawn claim, a randomisation test on the model's own settings, an ablation of
 its own commitments, and a measurement error found and named.*
 
-### 24. You don't need a mind to invent one ○
+### 25. You don't need a mind to invent one ○
 
 ![A counting classifier does it too](figures/walkthrough/13_no_mind_needed.png)
 
@@ -495,7 +505,7 @@ What is left is the withdrawal, and the withdrawal is empirical: it did not have
 way, and it did. The two numbers being dull to look at is a fact about the finding rather than a
 reason to go looking for a livelier one.
 
-### 25. I threw my own settings away ◐
+### 26. I threw my own settings away ◐
 
 ![How much of this is the theory](figures/walkthrough/22_how_much_is_the_theory.png)
 
@@ -509,11 +519,11 @@ built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
 
-### 26. And what is each finding actually made of? ◐
+### 27. And what is each finding actually made of? ◐
 
 ![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
 
-The severity rate on plate 25 says how much of a result is architectural. It does not say **which
+The severity rate on plate 26 says how much of a result is architectural. It does not say **which
 part**. So the complement: keep the settings and strip the shape instead: remove one structural
 commitment at a time, six of them, each a decision about what a reader *is*.
 
@@ -529,7 +539,7 @@ It is also the only finding with a 0% false-positive rate. Two unrelated audits,
 *One row is missing from this plate: sustained futile attention did not reproduce in the ablation
 harness's own baseline, so it has no answer here rather than a bad one.*
 
-### 27. A disagreement that turned out to be a measurement error ○
+### 28. A disagreement that turned out to be a measurement error ○
 
 ![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
 
@@ -552,12 +562,12 @@ would paper over. **Version 7 closed all four**, and one of them closed by being
 
 | result | what happened |
 |---|---|
-| **The two-gates criterion** | **Settled, and drawn** (plate 27). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
+| **The two-gates criterion** | **Settled, and drawn** (plate 28). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
 | **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
 | **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-seven-fold, so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
 | **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver; it is gone from the README and stands in the committed prediction card only under a SUPERSEDED marker. |
 
-Three plates from the ledger remain undrawn: **plate 25 reprised** as an anchor rather than a
+Three plates from the ledger remain undrawn: **plate 26 reprised** as an anchor rather than a
 caveat, **the withheld version-10 rider** (which damaged a learner reading nothing but honest human
 writing and was recorded in advance as the check most expected to fail), and **the forking-paths
 ledger**: eighteen places across four versions where a design or a criterion changed after a
