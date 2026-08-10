@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-five pictures, arranged as one story.** Read in order, they say what a reader does when
+**Twenty-seven pictures, arranged as one story.** Read in order, they say what a reader does when
 it looks at made work, what machine-made content does to that reading, why lying about origin is
 the sharpest damage, what a steady diet costs, what actually protects, and exactly how much of
 all that you should believe. Each plate is meant to be readable in about two seconds. If you get
@@ -8,7 +8,7 @@ to the end you will know what this project claims, what it withdrew, and what it
 answer.
 
 > **Mixed, and scored plate by plate. The mark sits at the end of each heading.**
-> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: fifteen plates.**
+> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: seventeen plates.**
 > **This page's own prose is ◐ Curator, 60%.**
 
 Every number on every plate is read out of a committed results file, named in the plate's own
@@ -190,6 +190,36 @@ already gone to nothing. **The two hypotheses lean on the oracle to very differe
 one of them falls over when it is removed.** That sweep is a scratch audit and is not yet a
 committed experiment; it should become one.
 
+### 5. Values come into focus across a body of work ○
+
+![Show a reader more works by one maker, and the maker's values come into focus](figures/walkthrough/27_values_into_focus.png)
+
+One work tells you what its maker was doing. A body of work tells you what its maker cares
+about. Version 11 gave the world a persistent maker, a standing set of priorities behind every
+piece, and asked whether a reader can recover it: 53% from a single work, 98% from fifty, and
+works shuffled across makers never leave chance. The signal is the person, not the pile.
+
+The honest riders travel with it. Recovery this clean depends on reader and maker drawing from a
+shared, bounded space of possible priorities; take that away and the leftover error grows nearly
+thirtyfold, which is the first time that assumption has a price. And the matching test of the
+reader's expertise came back too cheap to see at this scale, failed its own pre-specified bar,
+and is reported as failing.
+
+### 6. An absent drive shows only under commission ○
+
+![A drive a maker doesn't have is nearly invisible, until you commission the work](figures/walkthrough/28_the_aperture.png)
+
+Can you tell a maker who LACKS a drive from one who simply never uses it? In their ordinary
+work, barely: the two read almost alike. Commission work aimed at the missing drive and they
+separate completely, because instruction can only amplify a drive that exists. The maker without
+it routes through substitutes, and the routing shows.
+
+The control is the point: strip out how the goal is pursued and keep only the commissioned
+surface, and the discrimination collapses to an exact coin flip. The reader is reading the
+pursuit, nothing else. This is the first working mechanism for work that reads as made under
+duress, and it says where to look: commissioned work whose brief demands what its maker does not
+have.
+
 ---
 
 ## Act two · *machine-made work breaks the reading while feeling fine*
@@ -198,7 +228,7 @@ committed experiment; it should become one.
 there is not. The failure is walking away satisfied,
 holding an answer you built yourself.*
 
-### 5. Not understanding is the safe failure ◐
+### 7. Not understanding is the safe failure ◐
 
 ![Not understanding a painting is safe; AI work lets you believe you understood](figures/walkthrough/03_legible_and_empty.png)
 
@@ -226,7 +256,7 @@ because nobody committed.
 **Failing to understand something protects you. Being satisfied by it is how the false thing gets
 in.**
 
-### 6. Where it actually breaks ◐
+### 8. Where it actually breaks ◐
 
 ![Invention peaks in the middle, not at the empty end](figures/walkthrough/02_invention_peaks_in_the_middle.png)
 
@@ -235,7 +265,7 @@ block, at double scale, in every cell of the robustness sweep, and in every resa
 worst place to be is nearly understandable.** Total nonsense is safe; total clarity is safe; the
 danger is having just enough handholds to build a story on.
 
-### 7. Expertise substitutes ○
+### 9. Expertise substitutes ○
 
 ![Learning to read machine work swaps a skill out](figures/walkthrough/08_expertise_substitutes.png)
 
@@ -243,7 +273,7 @@ The prediction was that people who understand these systems would be spared the 
 by trading away the human channel. The adaptation that protects you is the same adaptation that
 costs you.
 
-### 8. Pays more, gets less ○
+### 10. Pays more, gets less ○
 
 ![Optimise the signal of depth and readers pay more for less](figures/walkthrough/09_pays_more_gets_less.png)
 
@@ -265,7 +295,7 @@ either way, a negative amount. The ratio is off a denominator of 0.02, so quote 
 result lives here: exposure to hollow content wastes your time, but a believed lie about who made
 it rewrites you.*
 
-### 9. What a false label does ◐
+### 11. What a false label does ◐
 
 ![A false label moves you away from the truth](figures/walkthrough/01_false_label_moves_you_wrong.png)
 
@@ -278,7 +308,7 @@ Told honestly that a machine made it, a reader barely moves: **−0.09**. Told a
 **−5.96**. Sixty-six times further, and negative, which means movement *away from* the truth rather
 than a failure to learn.
 
-### 10. The two witnesses ○
+### 12. The two witnesses ○
 
 ![Two witnesses arrive with every glance](figures/walkthrough/16_two_witnesses.png)
 
@@ -287,7 +317,7 @@ the label says, and what the work itself says. On a lie they point in opposite d
 one wins is decided by an inequality you can solve on paper. **This was computed with no simulation
 at all, and it predicted the shape of several results that had already been run.**
 
-### 11. Reputation blindness ○
+### 13. Reputation blindness ○
 
 ![The readers most inclined to believe a label can never learn the labeller lies](figures/walkthrough/07_reputation_blindness.png)
 
@@ -296,7 +326,7 @@ crossover, the label has already won that argument before the disagreement can r
 
 Not slow learning. Learning that cannot start.
 
-### 12. Honesty is not always enough ○
+### 14. Honesty is not always enough ○
 
 ![If trust lowers your guard, honesty stops being enough](figures/walkthrough/06_honesty_is_not_enough.png)
 
@@ -307,7 +337,7 @@ gets absorbed **even when it tells you exactly what it is**. Disclosure does not
 
 Both accounts produce the famous result. Only one of them survives being told the truth.
 
-### 13. Rejection is not protection ◐
+### 15. Rejection is not protection ◐
 
 ![You cannot reject something and be unchanged](figures/walkthrough/20_rejection_is_not_protection.png)
 
@@ -324,7 +354,7 @@ after version 5 has a guard that seals, because version 6 replaced the binary ga
 and a sigmoid never reaches zero. Shown content with no creator to recover, the reader invents one
 and then absorbs its own invention, and that lands about as hard (0.015) as a real intent does.
 
-### 14. Looking is not the same as being changed ○
+### 16. Looking is not the same as being changed ○
 
 ![Paying attention and being willing to be changed are not the same thing](figures/walkthrough/10_looking_is_not_being_changed.png)
 
@@ -340,7 +370,7 @@ reported them separately. The release valve at the end of an uncomfortable set.
 changes when the contaminated stream is what you live on, and the one question about it this
 project refuses to answer rather than answer badly.*
 
-### 15. Two kinds of damage ○
+### 17. Two kinds of damage ○
 
 ![One kind of damage scales; the other is already there at zero](figures/walkthrough/12_two_kinds_of_damage.png)
 
@@ -348,7 +378,7 @@ Absorbing bad material gets worse the more of it there is, the obvious kind. The
 driven by *walking away*, so it is fully present in a corpus with no machine content in it at all.
 The second has the strongest independent support of anything in this project.
 
-### 16. A knee, not a cliff ○
+### 18. A knee, not a cliff ○
 
 ![Competence bends rather than falling off a cliff](figures/walkthrough/14_a_knee_not_a_cliff.png)
 
@@ -358,7 +388,7 @@ comes from the model rather than from a boundary in the world.
 
 There was no version of that test where the claim got stronger.
 
-### 17. The experiment that stayed withheld ○
+### 19. The experiment that stayed withheld ○
 
 ![One experiment has been withheld three times](figures/walkthrough/17_the_withheld_experiment.png)
 
@@ -376,7 +406,7 @@ Narrowly missing is exactly the case a no-exceptions rule exists for.
 it, punish dishonesty, each of which works less than hoped, and then the one result in the whole
 project that is genuinely a defence.*
 
-### 18. Why detection is a losing race ○
+### 20. Why detection is a losing race ○
 
 ![Better detectors mean fewer false accusations, until the content fights back](figures/walkthrough/26_the_arms_race.png)
 
@@ -393,14 +423,14 @@ does not gradually get fuzzier. Its accusation rate does not move at all while i
 away underneath, until it is firing on people and machines at exactly the same rate with exactly the
 same confidence. **A coin flip that still believes it is a detector.**
 
-### 19. Labelling needs a convention ○
+### 21. Labelling needs a convention ○
 
 ![Labelling only protects readers who know the labelling exists](figures/walkthrough/15_labels_need_a_convention.png)
 
 The policy number. And a lower bound, because the aware reader here is handed the true coverage,
 which is the most generous assumption available.
 
-### 20. Honest marking is self-policing, at a price ○
+### 22. Honest marking is self-policing, at a price ○
 
 ![Honesty pays above a detection rate](figures/walkthrough/23_honesty_pays_at_a_price.png)
 
@@ -412,7 +442,7 @@ honest signal is wasteful. Signalling theory has since moved to a trade-off acco
 detection-rate threshold is a trade-off result. The simulation landed on the current position
 without being aimed at it.*
 
-### 21. The one thing here that is actually a defence ◐
+### 23. The one thing here that is actually a defence ◐
 
 ![Filtering on how good it looks does nothing](figures/walkthrough/25_a_defence_that_works.png)
 
@@ -441,7 +471,7 @@ most of this is architecture rather than evidence for the specific theory.*
 are the audits: a withdrawn claim, a randomisation test on the model's own settings, an ablation of
 its own commitments, and a measurement error found and named.*
 
-### 22. You don't need a mind to invent one ○
+### 24. You don't need a mind to invent one ○
 
 ![A counting classifier does it too](figures/walkthrough/13_no_mind_needed.png)
 
@@ -465,7 +495,7 @@ What is left is the withdrawal, and the withdrawal is empirical: it did not have
 way, and it did. The two numbers being dull to look at is a fact about the finding rather than a
 reason to go looking for a livelier one.
 
-### 23. I threw my own settings away ◐
+### 25. I threw my own settings away ◐
 
 ![How much of this is the theory](figures/walkthrough/22_how_much_is_the_theory.png)
 
@@ -479,11 +509,11 @@ built the same way.
 
 One result survives at zero. That is where the specific commitments earn their keep.
 
-### 24. And what is each finding actually made of? ◐
+### 26. And what is each finding actually made of? ◐
 
 ![What each finding is made of](figures/walkthrough/24_what_its_made_of.png)
 
-The severity rate on plate 23 says how much of a result is architectural. It does not say **which
+The severity rate on plate 25 says how much of a result is architectural. It does not say **which
 part**. So the complement: keep the settings and strip the shape instead: remove one structural
 commitment at a time, six of them, each a decision about what a reader *is*.
 
@@ -499,7 +529,7 @@ It is also the only finding with a 0% false-positive rate. Two unrelated audits,
 *One row is missing from this plate: sustained futile attention did not reproduce in the ablation
 harness's own baseline, so it has no answer here rather than a bad one.*
 
-### 25. A disagreement that turned out to be a measurement error ○
+### 27. A disagreement that turned out to be a measurement error ○
 
 ![Pointed at the wrong thing](figures/walkthrough/21_pointed_at_the_wrong_thing.png)
 
@@ -522,12 +552,12 @@ would paper over. **Version 7 closed all four**, and one of them closed by being
 
 | result | what happened |
 |---|---|
-| **The two-gates criterion** | **Settled, and drawn** (plate 25). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
+| **The two-gates criterion** | **Settled, and drawn** (plate 27). Re-run on E31's own design and scored on the method: 0.93, with the interval excluding the bar. |
 | **Depletion carrying to unseen work** | **Settled.** At thirty encounters the probe falls essentially to nothing, monotone at −0.98. The direction was never in doubt; the pre-registered magnitude clause was the wrong *shape* of criterion and is reported as such. |
 | **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-seven-fold, so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
 | **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver; it is gone from the README and stands in the committed prediction card only under a SUPERSEDED marker. |
 
-Three plates from the ledger remain undrawn: **plate 23 reprised** as an anchor rather than a
+Three plates from the ledger remain undrawn: **plate 25 reprised** as an anchor rather than a
 caveat, **the withheld version-10 rider** (which damaged a learner reading nothing but honest human
 writing and was recorded in advance as the check most expected to fail), and **the forking-paths
 ledger**: eighteen places across four versions where a design or a criterion changed after a
@@ -537,10 +567,8 @@ One result stays undrawable, and it is the honest kind: **N21's split**. Two mea
 the same manipulation, one of them is the pre-registered one, and it fails. That is a paragraph, not
 a picture.
 
-**And version 11 has no plates yet.** The maker build (a persistent value profile, and the first
-three results it unblocks: convergence, the aperture, the smear) ran after this page was arranged;
-its results are tabled in [FINDINGS.md](FINDINGS.md) and
-[docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §9.
+**One version-11 result, the smear, has no plate yet**; it is tabled in
+[FINDINGS.md](FINDINGS.md) and [docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §9.
 
 ---
 

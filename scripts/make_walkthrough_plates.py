@@ -1250,6 +1250,227 @@ def plate_26_the_arms_race():
            "The reason detection is a losing race, and the reason the target has to change.")
 
 
+# =========================================================================== #
+# 27 - V11: a maker's values come into focus across a body of work.
+# =========================================================================== #
+def plate_27_values_into_focus():
+    d = load("validation/soundingline/s15_convergence.json")
+    clean = d["arms"]["bounded_clean"]["accuracy_by_n"]
+    shuf = d["arms"]["shuffled"]["accuracy_by_n"]
+    grid = sorted(clean, key=int)
+    x = list(range(len(grid)))
+    y = [float(clean[n]) for n in grid]
+    y_s = [float(shuf[n]) for n in grid]
+
+    fig, ax = plate(
+        "Show a reader more works by one maker, and the maker's values come into focus.",
+        "How often the reader identifies a maker's standing priorities, from the work alone. One "
+        "work is not enough; fifty nearly settles it. Hand the same reader works shuffled across "
+        "makers and it never leaves chance: the signal is the person, not the pile.",
+        "S-15 · results/validation/soundingline/s15_convergence.json · 60 makers, six-profile "
+        "family; the expertise-price criterion failed and is reported as failing")
+    ax.plot(x, y_s, "-o", color=NEUTRAL, lw=2.2, ms=6, zorder=3)
+    ax.plot(x, y, "-o", color=HUMAN, lw=3.4, ms=9, zorder=4)
+    annotate(ax, x[0] + 0.12, y[0] - 0.015, f"{y[0]:.0%} from one work",
+             color=HUMAN, fontsize=12.5, weight="bold", va="top")
+    annotate(ax, x[-1] - 0.15, y[-1] - 0.075, f"{y[-1]:.0%}\nfrom fifty",
+             color=HUMAN, fontsize=12.5, weight="bold", ha="right", va="top")
+    annotate(ax, x[-1] - 0.05, y_s[-1] + 0.04, "works shuffled across makers: chance",
+             color=MUTED, fontsize=11.5, weight="bold", ha="right")
+    ax.set_ylim(0, 1.12)
+    ax.set_xticks(x, grid, fontsize=11)
+    ax.set_yticks([])
+    clean_axis(ax, "makers correctly identified", "works by the same maker, in evidence")
+    record(save(fig, "27_values_into_focus"),
+           "The values vertex exists now, and recovery converges. The leftover ambiguity is "
+           "small, and priced.")
+
+
+# =========================================================================== #
+# 28 - V11: an absent drive shows only when the work is commissioned.
+# =========================================================================== #
+def plate_28_the_aperture():
+    d = load("validation/soundingline/s14_aperture.json")
+    m = d["means"]
+    vals = [float(m["spontaneous"]), float(m["commissioned"]),
+            float(m["commissioned_lambda1"])]
+    labels = ["standing work,\nno commission", "commissioned toward\nthe missing drive",
+              "commission, but pursuit\nchannel stripped"]
+    colors = [NEUTRAL, HUMAN, MACHINE]
+
+    fig, ax = plate(
+        "A drive a maker doesn't have is nearly invisible, until you commission the work.",
+        "Telling a maker who LACKS a drive from one who merely never uses it. In their ordinary "
+        "work the two look almost alike. Commission work aimed at the missing drive and they "
+        "separate completely, because instruction can only amplify a drive that exists; the "
+        "maker without it routes through substitutes, and the routing shows.",
+        "S-14 · results/validation/soundingline/s14_aperture.json · masked (zero) vs unused "
+        "(trace) makers, 12 works each; the discriminator is how the goal is pursued, not "
+        "whether")
+    xs = list(range(3))
+    bars = ax.bar(xs, vals, color=colors, width=0.56)
+    bar_labels(ax, bars, vals, fmt="{:.0%}", fontsize=14, color=INK)
+    ax.axhline(0.5, color=MUTED, lw=1.4, ls="--", zorder=1)
+    annotate(ax, 2.42, 0.505, "coin flip", color=MUTED, fontsize=11, weight="bold",
+             ha="right", va="bottom")
+    ax.set_xticks(xs, labels, fontsize=11)
+    ax.set_ylim(0, 1.18)
+    ax.set_yticks([])
+    clean_axis(ax, "absent vs unused told apart", "")
+    record(save(fig, "28_the_aperture"),
+           "The first working mechanism for work that reads as made under duress.")
+
+
+# =========================================================================== #
+# 29 - V11/S-12: position-averaging melts three signal sites into one peak.
+# =========================================================================== #
+def plate_29_the_smear():
+    d = load("validation/soundingline/s12_three_locus.json")
+    uni = float(d["main"]["unimodal_fraction_three_locus"])
+    auc = float(d["main"]["auc_residual_separates_worlds"])
+    sev = d["miniature_severity"]
+
+    fig, ax = plate(
+        "The standard depth-profile chart cannot see structure that is really there.",
+        "A diagram of the mechanism. Every unit genuinely has three signal sites (thin lines), "
+        "but each unit puts them at slightly different positions, so the field's standard move, "
+        "averaging across units at each position, melts them into one middle peak (bold). An "
+        "instrument that reads the residual after removing each unit's own single peak still "
+        "tells the two worlds apart.",
+        f"S-12 · results/validation/soundingline/s12_three_locus.json · smear: architectural "
+        f"({sev['smear_rate']:.0%} of redraws); residual instrument: {sev['separation_rate']:.0%} "
+        f"of redraws, an operating regime")
+    pos = np.linspace(0, 30, 300)
+
+    def bump(c, w, a):
+        return a * np.exp(-0.5 * ((pos - c) / w) ** 2)
+
+    rng = np.random.default_rng(7)
+    total = np.zeros_like(pos)
+    for _ in range(14):
+        e, mch, l = rng.uniform(5, 11), rng.uniform(11, 19), rng.uniform(19, 25)
+        y = bump(e, 1.6, 0.55) + bump(mch, 3.2, 1.0) + bump(l, 1.6, 0.55)
+        ax.plot(pos, y, color=NEUTRAL, lw=0.9, alpha=0.35, zorder=2)
+        total += y
+    ax.plot(pos, total / 14, color=MACHINE, lw=4.0, zorder=4)
+    annotate(ax, 15, (total / 14).max() + 0.10, f"reads as ONE peak in {uni:.0%} of runs",
+             color=MACHINE, fontsize=13, weight="bold", ha="center")
+    annotate(ax, 0.5, (total / 14).max() + 0.44,
+             f"the residual instrument still separates the worlds: AUC {auc:.2f}  (chance 0.50)",
+             color=HUMAN, fontsize=12, weight="bold", ha="left", va="top")
+    ax.set_xlim(0, 30)
+    ax.set_ylim(0, (total / 14).max() + 0.50)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    clean_axis(ax, "signal", "position in the model (early → late)")
+    record(save(fig, "29_the_smear"),
+           "The mid-peak consensus is uninformative against a three-site truth; the residual "
+           "route is not.")
+
+
+# =========================================================================== #
+# 30 - V10: the stale detector goes blind while still firing.
+# =========================================================================== #
+def plate_30_the_stale_detector():
+    d = load("v10/e57_arms_race.json")
+    rows = d["stale_detector"]
+    x = list(range(len(rows)))
+    hits = [float(r["machine"]) for r in rows]
+    fa = [float(r["human_careful"]) for r in rows]
+
+    fig, ax = plate(
+        "A detector that stops learning doesn't get noisy. It goes blind while still firing.",
+        "Freeze a detector while the content keeps evolving. Its catch rate on machine work "
+        "drains away, and its accusation rate on careful human writing never moves, until it "
+        "fires on people and machines at exactly the same rate, with exactly the same "
+        "confidence. Aggregate accuracy hides this completely.",
+        "E57 · results/v10/e57_arms_race.json · stale-detector arm; hit rate on machine work vs "
+        "false-alarm rate on careful human writing, as evasion improves")
+    ax.plot(x, hits, "-o", color=MACHINE, lw=3.4, ms=10, zorder=4)
+    ax.plot(x, fa, "-o", color=NEUTRAL, lw=2.6, ms=8, zorder=3)
+    annotate(ax, x[0] + 0.06, hits[0] + 0.022, f"catches {hits[0]:.1%} of machine work",
+             color=MACHINE, fontsize=12.5, weight="bold")
+    annotate(ax, x[0] + 0.06, fa[0] - 0.03, f"accuses {fa[0]:.1%} of careful human work",
+             color=MUTED, fontsize=12, weight="bold", va="top")
+    annotate(ax, x[-1] - 0.02, hits[-1] + 0.10,
+             "ends firing on both\nat the same rate", color=MACHINE, fontsize=12.5,
+             weight="bold", ha="right", va="bottom")
+    ax.set_ylim(0, max(hits) * 1.30)
+    ax.set_xticks(x, [f"{float(r['evasion']):.0%}" for r in rows], fontsize=11.5)
+    ax.set_yticks([])
+    clean_axis(ax, "how often it fires", "how far the content has evolved past the detector")
+    record(save(fig, "30_the_stale_detector"),
+           "A coin flip that still believes it is a detector, and the second reason detection "
+           "loses.")
+
+
+# =========================================================================== #
+# 31 - V10: the withheld rider. Not refuted, not established.
+# =========================================================================== #
+def plate_31_the_withheld_rider():
+    e56 = load("v10/e56_selective_gate.json")["H10.6"]
+    n50 = load("v10/e55_intent_gate.json")["null_n50"]
+    r = float(e56["partial_correlation_controlling_for_goal_uptake"])
+    bar = float(e56["pre_registered_bar"])
+    lo, hi = (float(v) for v in e56["interval"][:2])
+
+    fig, ax = plate(
+        "The version's most attractive idea stayed unproven, on purpose.",
+        "Do a maker's values ride in on their METHOD, even through a shut guard? The learner arm "
+        "was disqualified before it could answer: its control measured value drift on a corpus "
+        "with nothing in it, so it was reading its own noise. The reader arm came back real, and "
+        "just under its own pre-specified bar.",
+        "H10.4 / H10.6 · results/v10/e56_selective_gate.json, e55_intent_gate.json · the failing "
+        "clean-corpus control (N50) is kept failing in the suite rather than patched")
+    ax.axis("off")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.text(0.30, 0.70, f"{r:.3f}", ha="center", va="center", fontsize=52,
+            fontweight="bold", color=HUMAN)
+    ax.text(0.30, 0.44, f"the effect, in the reader arm\ninterval [{lo:.2f}, {hi:.2f}]",
+            ha="center", va="center", fontsize=12.5, color=MUTED, linespacing=1.4)
+    ax.text(0.72, 0.70, f"{bar:.3f}", ha="center", va="center", fontsize=52,
+            fontweight="bold", color=INK)
+    ax.text(0.72, 0.44, "the bar it set for itself,\nbefore the run",
+            ha="center", va="center", fontsize=12.5, color=MUTED, linespacing=1.4)
+    ax.text(0.51, 0.57, "vs", ha="center", va="center", fontsize=16, color=MUTED)
+    ax.text(0.5, 0.14,
+            f"the learner arm's clean-corpus control: passed = {n50['passed']}",
+            ha="center", va="center", fontsize=13, color=MACHINE, fontweight="bold")
+    record(save(fig, "31_the_withheld_rider"),
+           "Not refuted, not established, and the thing most worth building properly.")
+
+
+# =========================================================================== #
+# 32 - the forking-paths ledger. Where a design changed after a result.
+# =========================================================================== #
+def plate_32_the_forking_paths():
+    led = load("v8/s1_severity.json")["forking_paths_ledger"]
+
+    fig, ax = plate(
+        "Where a design changed after a result was seen, the record says so.",
+        "Most projects have forking paths. Few count them. The version-8 audit walked its own "
+        "history and logged every place a design or a criterion changed after a result was "
+        "visible; each entry is documented where it happened, and later versions keep their own "
+        "logs in their results documents.",
+        "results/v8/s1_severity.json · forking_paths_ledger · versions 9 and 10 carry their own "
+        "deviation tables")
+    ax.axis("off")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.text(0.5, 0.66, str(len(led["entries"])), ha="center", va="center", fontsize=64,
+            fontweight="bold", color=MACHINE)
+    ax.text(0.5, 0.40, "changes made after a result was visible, versions 6 and 7",
+            ha="center", va="center", fontsize=13.5, color=MUTED)
+    ax.text(0.5, 0.18,
+            f"across {led['total_designs_tried']} designs tried and "
+            f"{led['total_criteria_tried']} criteria tried",
+            ha="center", va="center", fontsize=14, color=INK, fontweight="bold")
+    record(save(fig, "32_the_forking_paths"),
+           "A high hit rate means less next to this number, which is why it is published beside "
+           "it.")
+
+
 PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_04_method_not_purpose, plate_05_intent_unlocks, plate_06_two_mechanisms,
           plate_07_reputation_blindness, plate_08_expertise_substitutes,
@@ -1261,7 +1482,10 @@ PLATES = [plate_01_false_label, plate_02_interior_peak, plate_03_the_wall,
           plate_22_how_much_is_the_theory, plate_23_honesty_pays_at_a_price,
           plate_24_what_its_made_of,
           plate_25_a_defence_that_works,
-          plate_26_the_arms_race]
+          plate_26_the_arms_race,
+          plate_27_values_into_focus, plate_28_the_aperture, plate_29_the_smear,
+          plate_30_the_stale_detector, plate_31_the_withheld_rider,
+          plate_32_the_forking_paths]
 
 
 def main() -> None:
