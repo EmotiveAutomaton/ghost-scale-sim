@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-eight pictures, arranged as one story.** Read in order, they say what a reader does when
+**Twenty-nine pictures, arranged as one story.** Read in order, they say what a reader does when
 it looks at made work, what machine-made content does to that reading, why lying about origin is
 the sharpest damage, what a steady diet costs, what actually protects, and exactly how much of
 all that you should believe. Each plate is meant to be readable in about two seconds. If you get
@@ -8,7 +8,7 @@ to the end you will know what this project claims, what it withdrew, and what it
 answer.
 
 > **Mixed, and scored plate by plate. The mark sits at the end of each heading.**
-> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: eighteen plates.**
+> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: nineteen plates.**
 > **This page's own prose is ◐ Curator, 60%.**
 
 Every number on every plate is read out of a committed results file, named in the plate's own
@@ -547,6 +547,23 @@ The project's longest-running open question, settled by changing *what* was meas
 *how*. The criterion was scored on the work's purpose, which the model deliberately holds equally
 readable at every depth, so it could never have moved.
 
+### 29. The chart the whole field uses cannot see three sites ○
+
+![The standard depth-profile chart cannot see structure that is really there](figures/walkthrough/29_the_smear.png)
+
+This one audits an instrument the field uses, not one of ours. Published depth profiles average
+across units at each position. Give every unit three genuine signal sites at slightly different
+positions, run that standard move, and the three melt into one middle peak in 100% of runs, so
+the literature's mid-peak consensus cannot rule the richer structure out. An instrument that
+reads the residual, after removing each unit's own single best peak, still separates the two
+worlds at AUC 0.87.
+
+Its own severity check keeps it honest twice over. The smear reproduces in every random
+re-parameterisation, which is the point: any variable-position world does this to the standard
+chart. The residual instrument reproduces in only a quarter of them, so it has an operating
+regime, not universal reach, and it should be calibrated before anyone points it at a real
+model.
+
 ---
 
 ## What is not drawn yet, and why
@@ -576,9 +593,6 @@ result was seen.
 One result stays undrawable, and it is the honest kind: **N21's split**. Two measures disagree about
 the same manipulation, one of them is the pre-registered one, and it fails. That is a paragraph, not
 a picture.
-
-**One version-11 result, the smear, has no plate yet**; it is tabled in
-[FINDINGS.md](FINDINGS.md) and [docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §9.
 
 ---
 
