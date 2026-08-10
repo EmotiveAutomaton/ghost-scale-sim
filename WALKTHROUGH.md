@@ -1,6 +1,6 @@
 # The walkthrough
 
-**Twenty-nine pictures, arranged as one story.** Read in order, they say what a reader does when
+**Thirty-one pictures, arranged as one story.** Read in order, they say what a reader does when
 it looks at made work, what machine-made content does to that reading, why lying about origin is
 the sharpest damage, what a steady diet costs, what actually protects, and exactly how much of
 all that you should believe. Each plate is meant to be readable in about two seconds. If you get
@@ -8,7 +8,7 @@ to the end you will know what this project claims, what it withdrew, and what it
 answer.
 
 > **Mixed, and scored plate by plate. The mark sits at the end of each heading.**
-> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: nineteen plates.**
+> **◐ Curator, 60%: ten plates. ○ Ghost, 5%: twenty-one plates.**
 > **This page's own prose is ◐ Curator, 60%.**
 
 Every number on every plate is read out of a committed results file, named in the plate's own
@@ -478,8 +478,9 @@ most of this is architecture rather than evidence for the specific theory.*
 ## Act six · *how much of this to believe*
 
 *The project's habit of auditing itself is the reason to trust anything above. These four plates
-are the audits: a withdrawn claim, a randomisation test on the model's own settings, an ablation of
-its own commitments, and a measurement error found and named.*
+are the audits: a withdrawn claim, a randomisation test on the model's own settings, an ablation
+of its own commitments, a measurement error found and named, a standard instrument from the wider
+field given its first ground truth, and the record's own honesty, plated.*
 
 ### 25. You don't need a mind to invent one ○
 
@@ -564,6 +565,28 @@ chart. The residual instrument reproduces in only a quarter of them, so it has a
 regime, not universal reach, and it should be calibrated before anyone points it at a real
 model.
 
+### 30. The idea that stayed unproven, on purpose ○
+
+![The version's most attractive idea stayed unproven, on purpose](figures/walkthrough/31_the_withheld_rider.png)
+
+Do a maker's values ride in on their method, even through a shut guard? It is the most
+consequential open question version 10 raised, and the record refuses to answer it either way.
+The learner arm was disqualified before it could speak: its own control measured value drift on
+a corpus with nothing in it, so it was reading noise, and that failing control stays failing in
+the test suite rather than getting patched. The reader arm came back real, at 0.193 against a
+pre-specified bar of 0.200. Not refuted, not established, and the thing most worth building
+properly.
+
+### 31. Where a design changed after a result, the record says so ○
+
+![Where a design changed after a result was seen, the record says so](figures/walkthrough/32_the_forking_paths.png)
+
+Most projects have forking paths. Few count them. The version-8 audit walked its own history and
+logged every place a design or a criterion changed after a result was visible: seven, across
+twelve designs tried and eleven criteria tried, each documented where it happened, with later
+versions keeping their own deviation logs. A high hit rate means less next to this number, which
+is why the record publishes them side by side.
+
 ---
 
 ## What is not drawn yet, and why
@@ -584,11 +607,8 @@ would paper over. **Version 7 closed all four**, and one of them closed by being
 | **Depth versus effort** | **Still open, and reported as failing.** The pre-registered contrast still returns *effort can manufacture depth*. On what actually transfers, depth dominates effort ninety-seven-fold, so the reader's *estimate* of depth is contaminated by effort while the *transfer* is not. Not drawn, because a plate cannot carry that split. |
 | **The collapse and the invention peak sharing one band** | **Retired.** The peak is unchanged and is not in question. The co-location held only under a superseded solver; it is gone from the README and stands in the committed prediction card only under a SUPERSEDED marker. |
 
-Three plates from the ledger remain undrawn: **plate 26 reprised** as an anchor rather than a
-caveat, **the withheld version-10 rider** (which damaged a learner reading nothing but honest human
-writing and was recorded in advance as the check most expected to fail), and **the forking-paths
-ledger**: eighteen places across four versions where a design or a criterion changed after a
-result was seen.
+One plate from the ledger remains undrawn: **plate 26 reprised** as an anchor rather than a
+caveat.
 
 One result stays undrawable, and it is the honest kind: **N21's split**. Two measures disagree about
 the same manipulation, one of them is the pre-registered one, and it fails. That is a paragraph, not
