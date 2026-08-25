@@ -335,7 +335,7 @@ The state of every card, its criterion, its gates and its headline numbers are g
   (criterion 0.05). Final log score after four probes: information-chosen −1.03, PyMDP −1.08,
   random −1.03, uncertainty sampling −1.14, free look −1.11. A costly commission is never chosen
   while a free look is available. The first attempt, at ceiling under the mixture likelihood
-  (0.42 nats per probe, log scores near −6.5), is kept as `Q02.attempt1.json`.
+  (0.42 nats per probe, log scores near −6.5), is kept as `attempt1/Q02.attempt1.json`.
 - **Q03.** Self-first selection of two of six episodes against uncertainty sampling, scored on
   the seventh episode's goal under the same prior: +0.016 [−0.001, 0.035] nats. The oracle pair
   scores −0.87 against −1.27 for a random pair, so 0.40 nats of selection value exist and
@@ -363,7 +363,7 @@ The state of every card, its criterion, its gates and its headline numbers are g
   [−0.86, −0.58], random −0.77, uncertainty sampling −0.88. Criterion (aware at least uncertainty)
   met; the margin over random challenges is 0.05 with overlapping intervals. The PyMDP agent
   picks the exact regime-EIG probe 58% of the time. The first attempt, below the uniform prior
-  under the mixture likelihood, is kept as `B04.attempt1.json`.
+  under the mixture likelihood, is kept as `attempt1/B04.attempt1.json`.
 
 ### X. The adversarial matrix, applied to S04's selective gain
 
@@ -407,7 +407,7 @@ number to watch on the confirmation lineage.
   per-feature mixture likelihood, which compounds twenty-four near-identical draws into
   overconfidence: Q02 sat at ceiling (0.005 nats of commission effect against a 0.01 floor, final
   log scores near −6.5) and B04's regime posterior fell below the uniform prior. Both were re-run
-  on the artifact-structured likelihood; the first verdicts are kept as `<ID>.attempt1.json`.
+  on the artifact-structured likelihood; the first verdicts are kept under `attempt1/`.
 - **X survival rule.** The summary flag was tightened from "far gain ≤ 0" to "far gain ≤ 0.05",
   because the far bin sits at 0.03 ± 0.03 under no attack; the X cards were re-run for the flag
   only (numbers unchanged by construction).

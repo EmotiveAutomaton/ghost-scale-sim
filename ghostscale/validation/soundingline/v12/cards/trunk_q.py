@@ -11,7 +11,7 @@ the per-feature mixture likelihood, which treats every feature as an independent
 profile's goal blend. Over twenty-four near-identical draws that likelihood is overconfident by
 construction: it put Q02 at ceiling (each artifact resolved the posterior completely) and B04's
 regime posterior below the uniform prior. The Q cards and B04 were re-run on the structured
-likelihood; the first verdicts are kept beside the new ones as <ID>.attempt1.json.
+likelihood; the first verdicts are kept under attempt1/ beside the new ones.
 """
 from __future__ import annotations
 
