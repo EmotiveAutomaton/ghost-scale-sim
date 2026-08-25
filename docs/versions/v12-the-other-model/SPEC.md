@@ -21,7 +21,8 @@ original beside the replacement.
 | manifest, coverage, runtime, schemas | `v12/manifest.py`, `v12/schemas.py`, `results/v12/` |
 | pre-specification lock | `ghostscale/prereg_v12.py` → `results/v12/prereg_v12_lock.json` |
 | resumable runner and program validator | `runners/run_v12.py`, `runners/validate_v12_program.py` |
-| verdicts | `results/validation/soundingline/v12/<CARD>.json` (+ `.produced` marker) |
+| confirmation pass (wave 5) and generated results packet | `runners/run_v12_confirmation.py`, `runners/report_v12.py` |
+| verdicts | `results/validation/soundingline/v12/<CARD>.json` (+ `.produced` marker); confirmation-lane verdicts under `confirmation/` |
 | tests | `tests/test_v12_gates.py`, `tests/test_v12_metamorphic.py` |
 
 ## Constructions chosen
@@ -50,6 +51,18 @@ confidently wrong and every later PyMDP result is read against that map.
 
 **Floors.** Spec §5.1 floors are recorded per card in the manifest; the validator refuses a card
 that lowers one without an amendment.
+
+**Lineages.** Discovery worlds 0–11 carry every card in waves 0–4. The confirmation lineage 100–111 is
+untouched until the confirmation pass, which re-runs promoted cards there and keeps their verdicts in a
+separate directory. Cards that need fresh worlds during discovery (S08, X12) use a third, transfer lineage
+200–211, so nothing in the discovery record has seen a confirmation world.
+
+**Smoke pass.** Before the queue started, every card ran once on world 0 with verdicts redirected to a
+scratch directory (`GS_V12_WORLD_LIMIT=1`; the runner refuses to start under that cap). The gate
+corrections that pass forced are noted in the card modules; the two that changed what a card measures
+are recorded in `RESULTS.md`: the T-trunk battery moved off the CREATOR ceiling to the CURATOR tier with
+four steps, and F03 gained a readability ladder so the dependency ruler is validated where blocks are
+readable before it is read at the floor.
 
 ## Wave order
 

@@ -1,0 +1,101 @@
+{
+  "card": "R03",
+  "trunk": "R",
+  "wave": 2,
+  "question": "Do goal-dependent habits break subtraction?",
+  "hypothesis": "When a habit stores a previous profile's values, partialling it out deletes profile signal in proportion to how aligned the habit is with the current profile; constrained inversion that models the habit does not.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "cells": {
+      "aligned": {
+        "constrained": -0.5061826180678166,
+        "partialling": -2.188042247378051,
+        "kept": 8.45486111111111
+      },
+      "decoy": {
+        "constrained": -0.7154787202904379,
+        "partialling": -0.6984128247035026,
+        "kept": 11.90625
+      }
+    },
+    "criterion_C_R03": {
+      "partialling_drop_under_alignment": 1.4896294226745486,
+      "constrained_drop_under_alignment": -0.2092961022226213,
+      "passed": true
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "habit shadows",
+  "what_must_hold_outside_the_simulation": "habits can carry the values that formed them",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 3.017,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 1,
+    "n_ran": 1,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "aligned_habit_removes_records_from_partialling",
+        "kind": "live",
+        "passed": true,
+        "detail": "an aligned habit explains more of the profile's own choices, so partialling keeps fewer records",
+        "observed": 3.4513888888888893,
+        "expected": 1.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_r.py",
+    "sha256": "f525fbedee4b86a5ad5b75d3ea109d9b355b9ab4f0f1dfda1ef1d58191762058",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 1,
+    "n_ran": 1,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "aligned_habit_removes_records_from_partialling",
+        "kind": "live",
+        "passed": true,
+        "detail": "an aligned habit explains more of the profile's own choices, so partialling keeps fewer records",
+        "observed": 3.4513888888888893,
+        "expected": 1.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

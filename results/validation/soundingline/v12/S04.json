@@ -1,0 +1,389 @@
+{
+  "card": "S04",
+  "trunk": "S",
+  "wave": 2,
+  "question": "Does self-first beat an information-matched generic prior?",
+  "hypothesis": "Self-first beats an information-matched generic prior selectively for makers near the reader's own measured profile, and not for far makers.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "gain_self_minus_generic_at_n1_by_distance_bin": {
+      "0": {
+        "distance_edge": [
+          -8.960438333510326e-17,
+          0.02247415904419331
+        ],
+        "mean": 0.5997528919839225,
+        "interval": [
+          0.4757536289109944,
+          0.7425584510241926
+        ],
+        "n_units": 12,
+        "n_rows": 860
+      },
+      "1": {
+        "distance_edge": [
+          0.02247415904419331,
+          0.08231605555303909
+        ],
+        "mean": -0.08828958123647553,
+        "interval": [
+          -0.12780218234556268,
+          -0.049636815106717184
+        ],
+        "n_units": 10,
+        "n_rows": 860
+      },
+      "2": {
+        "distance_edge": [
+          0.08231605555303909,
+          0.1393309392890911
+        ],
+        "mean": -0.15097275684509065,
+        "interval": [
+          -0.21560889105670006,
+          -0.0885574834872742
+        ],
+        "n_units": 11,
+        "n_rows": 870
+      },
+      "3": {
+        "distance_edge": [
+          0.1393309392890911,
+          0.2199768255791941
+        ],
+        "mean": -0.20249435916451142,
+        "interval": [
+          -0.30180679667593585,
+          -0.10292043959816606
+        ],
+        "n_units": 10,
+        "n_rows": 860
+      },
+      "4": {
+        "distance_edge": [
+          0.2199768255791941,
+          0.410062901305269
+        ],
+        "mean": -0.002303919693227582,
+        "interval": [
+          -0.04882867881267725,
+          0.044538089463613637
+        ],
+        "n_units": 7,
+        "n_rows": 870
+      }
+    },
+    "gain_self_minus_permuted_at_n1_by_distance_bin": {
+      "0": {
+        "distance_edge": [
+          -8.960438333510326e-17,
+          0.02247415904419331
+        ],
+        "mean": 0.5533001540301459,
+        "interval": [
+          0.4477597396219449,
+          0.6575582398321789
+        ],
+        "n_units": 12,
+        "n_rows": 860
+      },
+      "1": {
+        "distance_edge": [
+          0.02247415904419331,
+          0.08231605555303909
+        ],
+        "mean": 0.16662890055796356,
+        "interval": [
+          0.10995665646466524,
+          0.24562301037684015
+        ],
+        "n_units": 10,
+        "n_rows": 860
+      },
+      "2": {
+        "distance_edge": [
+          0.08231605555303909,
+          0.1393309392890911
+        ],
+        "mean": -0.0383171013242244,
+        "interval": [
+          -0.12184298330784439,
+          0.05099680583711597
+        ],
+        "n_units": 11,
+        "n_rows": 870
+      },
+      "3": {
+        "distance_edge": [
+          0.1393309392890911,
+          0.2199768255791941
+        ],
+        "mean": -0.18873386266387995,
+        "interval": [
+          -0.3478370709528359,
+          -0.038799395637735115
+        ],
+        "n_units": 10,
+        "n_rows": 860
+      },
+      "4": {
+        "distance_edge": [
+          0.2199768255791941,
+          0.410062901305269
+        ],
+        "mean": -0.4432245082939742,
+        "interval": [
+          -0.5182248968033443,
+          -0.3752635315163648
+        ],
+        "n_units": 7,
+        "n_rows": 870
+      }
+    },
+    "hidden_goal_gain_by_bin": {
+      "0": {
+        "distance_edge": [
+          -8.960438333510326e-17,
+          0.02247415904419331
+        ],
+        "mean": 0.08917678287326185,
+        "interval": [
+          0.05556239907649981,
+          0.13099575303259395
+        ],
+        "n_units": 12,
+        "n_rows": 860
+      },
+      "1": {
+        "distance_edge": [
+          0.02247415904419331,
+          0.08231605555303909
+        ],
+        "mean": -0.0007020568143058542,
+        "interval": [
+          -0.0102910346109425,
+          0.007797164161746131
+        ],
+        "n_units": 10,
+        "n_rows": 860
+      },
+      "2": {
+        "distance_edge": [
+          0.08231605555303909,
+          0.1393309392890911
+        ],
+        "mean": -0.01738160066611071,
+        "interval": [
+          -0.03043036774959923,
+          -0.0030985623655082712
+        ],
+        "n_units": 11,
+        "n_rows": 870
+      },
+      "3": {
+        "distance_edge": [
+          0.1393309392890911,
+          0.2199768255791941
+        ],
+        "mean": -0.050193104337695825,
+        "interval": [
+          -0.0718250582108088,
+          -0.03075635828512827
+        ],
+        "n_units": 10,
+        "n_rows": 860
+      },
+      "4": {
+        "distance_edge": [
+          0.2199768255791941,
+          0.410062901305269
+        ],
+        "mean": -0.06985539188941282,
+        "interval": [
+          -0.08813852101840086,
+          -0.050394315341963786
+        ],
+        "n_units": 7,
+        "n_rows": 870
+      }
+    },
+    "route_mean_log_score_by_n": {
+      "self_first": {
+        "1": -1.5933189329557413,
+        "2": -1.4121954408482102,
+        "4": -1.0492697764012848,
+        "8": -0.7066773860924219,
+        "12": -0.518978593712232,
+        "20": -0.3043574939357373,
+        "50": -0.11438846349115515
+      },
+      "population": {
+        "1": -1.4850082778632852,
+        "2": -1.326803788922395,
+        "4": -0.9879713574035386,
+        "8": -0.6656644918599925,
+        "12": -0.49917493620258857,
+        "20": -0.2942316246188522,
+        "50": -0.10963920671928916
+      },
+      "generic": {
+        "1": -1.6239584213291185,
+        "2": -1.4527922558424191,
+        "4": -1.0925600174692254,
+        "8": -0.7429046398834706,
+        "12": -0.5365663735663995,
+        "20": -0.3131633973675728,
+        "50": -0.11741570322043143
+      },
+      "permuted": {
+        "1": -1.6020889942258814,
+        "2": -1.4237379371816579,
+        "4": -1.0624205156038813,
+        "8": -0.7152265896035238,
+        "12": -0.532574518871422,
+        "20": -0.31708487794729784,
+        "50": -0.12269657656317132
+      },
+      "random_local": {
+        "1": -1.6055966819509724,
+        "2": -1.4257305638603133,
+        "4": -1.0615259603022222,
+        "8": -0.7128936323546883,
+        "12": -0.5201118993501803,
+        "20": -0.30448878222423864,
+        "50": -0.11388794189854849
+      },
+      "oracle": {
+        "1": -0.01982854719128729,
+        "2": -0.021186048432465774,
+        "4": -0.01564174480000607,
+        "8": -0.013644713795489953,
+        "12": -0.009292581786467144,
+        "20": -0.0035375919311974864,
+        "50": -0.004058007088800635
+      }
+    },
+    "criterion_C_S04": {
+      "near_gain": 0.5997528919839225,
+      "far_gain": -0.002303919693227582,
+      "passed": true
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {
+    "n_rows": 181440
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "worlds": 12,
+    "pairs": 4320
+  },
+  "coverage": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "coordinate privilege",
+  "what_must_hold_outside_the_simulation": "a reader's measured self-model and a maker's profile live in a shared, bounded hypothesis family whose distances mean the same thing for both",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 108.701,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "oracle_prior_is_the_ceiling",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the oracle prior must score at least as well as every other route at first evidence",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "permuted_self_loses_the_gain",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "the permuted-self prior keeps every marginal of the self prior; whatever the self prior gains at the nearest distance beyond the permuted one is correspondence, not entropy",
+        "observed": 0.5533001540301459,
+        "expected": 0.0,
+        "tolerance": 0.5997528929839224
+      },
+      {
+        "name": "information_matching_holds",
+        "kind": "identity",
+        "passed": true,
+        "detail": "generic and self priors are entropy-matched by construction (tested in test_v12_metamorphic)",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-06
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_s.py",
+    "sha256": "b47f67adc09800ecfefd67cbabef3475f026bf5efcea851dbef53f1c49ae46c7",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "oracle_prior_is_the_ceiling",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the oracle prior must score at least as well as every other route at first evidence",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "permuted_self_loses_the_gain",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "the permuted-self prior keeps every marginal of the self prior; whatever the self prior gains at the nearest distance beyond the permuted one is correspondence, not entropy",
+        "observed": 0.5533001540301459,
+        "expected": 0.0,
+        "tolerance": 0.5997528929839224
+      },
+      {
+        "name": "information_matching_holds",
+        "kind": "identity",
+        "passed": true,
+        "detail": "generic and self priors are entropy-matched by construction (tested in test_v12_metamorphic)",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-06
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

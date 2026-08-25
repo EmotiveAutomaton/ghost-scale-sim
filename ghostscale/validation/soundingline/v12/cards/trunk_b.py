@@ -169,82 +169,52 @@ def run_B03(card, cfg, workers=1, lane="both"):
     return finish(card, v, gr, __file__, decide_state(gr))
 
 
-def _joint_hyps(world, names):
-    return [(n, r) for n in names for r in REGIMES]
-
-
-def _joint_emissions(world, hyps, p):
-    from .trunk_q import _cw
-    E = np.zeros((len(hyps), world.nf))
-    for i, (n, r) in enumerate(hyps):
-        E[i] = X.reader_emission(world, world.sig, None, _cw(world.family[n], p, world.ng), 0, "CREATOR", r, n)
-    return E
-
-
-def _eig_regime(E, q, groups, n_steps, rng, draws=150):
-    """EIG about the regime marginal from one commissioned artifact under emissions E[h]."""
-    q = np.asarray(q, float)
-    G_ = np.asarray(groups)
-
-    def hreg(qq):
-        return H(np.array([qq[G_ == g].sum() for g in range(3)]))
-    h0 = hreg(q)
-    posts = []
-    for _ in range(draws):
-        h = rng.choice(len(q), p=q)
-        f = rng.choice(E.shape[1], size=n_steps, p=E[h])
-        ll = np.log(np.maximum(E[:, f], 1e-300)).sum(axis=1) + np.log(np.maximum(q, 1e-300))
-        qq = np.exp(ll - ll.max())
-        posts.append(hreg(qq / qq.sum()))
-    return float(h0 - np.mean(posts))
-
-
 def run_B04(card, cfg, workers=1, lane="both"):
     v = new_verdict(card, lane, "Commissioned challenges chosen for information about the regime "
                     "separate scaffolding (bard) from strategic shaping (concealer) better than "
                     "uncertainty sampling or random challenges.", "CONSTRUCTED_MECHANISM")
-    from .trunk_q import probe_artifact, uncertainty_probe
+    from .trunk_q import Model, probe_artifact, uncertainty_probe, pymdp_probe, DEVIATION
     from .. import pymdp_reader as PR
     res = {}
     agree = []
     with C.timed(v):
         for wid, world in worlds_for(cfg, lane):
             names = world.family_names
-            hyps = _joint_hyps(world, names)
-            groups = [REGIMES.index(r) for _, r in hyps]
-            P = world.ng + 1
-            E = np.stack([_joint_emissions(world, hyps, p) for p in range(P)])
+            hyps = [(f"{n}|{r}", n, r, world.family[n]) for n in names for r in REGIMES]
+            model = Model(world, world.sig, "CREATOR", hyps)
+            groups = np.array([REGIMES.index(h[2]) for h in hyps])
             rng = C.rng_for("B04", wid, 0)
             for r in REGIMES:
                 for m in population(world, 6, rng, regimes=(r,), prefix=r):
                     for pol in ("regime_aware", "uncertainty", "random"):
                         prng = C.rng_for("B04", wid, 1, m.id + pol)
-                        q = np.full(len(hyps), 1 / len(hyps))
+                        q = np.full(model.K, 1 / model.K)
                         for _ in range(4):
                             if pol == "regime_aware":
-                                p = int(np.argmax([_eig_regime(E[pp], q, groups, 24, prng) for pp in range(P)]))
+                                p = int(np.argmax(model.eig_all(q, 24, prng, 100, groups=groups)))
                             elif pol == "uncertainty":
-                                p = uncertainty_probe(E, q)
+                                p = uncertainty_probe(model.mixture, q)
                             else:
-                                p = int(prng.integers(P))
+                                p = int(prng.integers(model.P))
                             a = probe_artifact(world, m, p, prng)
-                            ll = np.log(np.maximum(q, 1e-300)) + np.log(np.maximum(E[p][:, a["features"]], 1e-300)).sum(axis=1)
-                            q = np.exp(ll - ll.max())
-                            q /= q.sum()
-                        mg = np.array([q[np.asarray(groups) == g].sum() for g in range(3)])
+                            q = model.posterior(q, [a])
+                        mg = np.bincount(groups, weights=q, minlength=3)
                         res.setdefault(pol, {}).setdefault(wid, []).append(float(np.log(max(mg[REGIMES.index(r)], 1e-12))))
-            ag = PR.build_reader(E, np.full(len(hyps), 1 / len(hyps)), probe_costs=np.zeros(P))
+            ag = PR.build_reader(model.mixture, np.full(model.K, 1 / model.K), probe_costs=np.zeros(model.P))
             ag.infer_states([0, 0])
-            ag.infer_policies()
-            pm = int(ag.sample_action()[1])
-            ex = int(np.argmax([_eig_regime(E[pp], np.full(len(hyps), 1 / len(hyps)), groups, 1, C.rng_for("B04", wid, 2), 400) for pp in range(P)]))
+            pm = pymdp_probe(ag)
+            ex = int(np.argmax(model.eig_all(np.full(model.K, 1 / model.K), 24, C.rng_for("B04", wid, 2), 300, groups=groups)))
             agree.append(float(pm == ex))
     table = {p: C.hboot(d, np.random.default_rng(C.seed("B04" + p)), draws=300) for p, d in res.items()}
     gr = G.GateReport()
-    gr.live("challenges_carry_regime_information", observed_change=float(table["regime_aware"]["mean"] - np.log(1 / 3)), min_change=0.1,
-            detail="after four challenges the regime log score must beat the uniform guess")
+    gr.positive("regime_posterior_is_no_worse_than_its_prior", observed=float(table["random"]["mean"] >= np.log(1 / 3) - 0.1), expected=1.0, tol=0.0,
+                detail="after four random challenges the regime log score may not sit below the uniform prior beyond 0.1 nats; a "
+                       "posterior that reads the regime worse than ignorance is a broken instrument, which is what the first run showed")
+    gr.live("challenges_carry_regime_information", observed_change=float(table["random"]["mean"] - np.log(1 / 3)), min_change=0.1,
+            detail="after four random challenges the regime log score must beat the uniform guess: the instrument reads regimes at "
+                   "all. Whether information-chosen challenges read them better is the criterion, not a control")
     v["results"] = {"regime_log_score_by_policy": table, "pymdp_agrees_with_exact_regime_eig": float(np.mean(agree)),
-                    "criterion_C_B04": {"passed": bool(table["regime_aware"]["mean"] >= table["uncertainty"]["mean"])}}
+                    "criterion_C_B04": {"passed": bool(table["regime_aware"]["mean"] >= table["uncertainty"]["mean"])}, "deviation": DEVIATION}
     v["what_must_hold_outside_the_simulation"] = "a maker can be challenged with a commission"
     return finish(card, v, gr, __file__, decide_state(gr))
 

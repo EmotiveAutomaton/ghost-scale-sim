@@ -63,7 +63,8 @@ label, and paying attention to something unresolvable, have no baseline reproduc
 commitment now rests on ablation rather than assertion. Within one encounter the inference has an
 order (purpose first, then method: E36), a ceiling set by the reader rather than the artifact
 (E10, E48), and a failure mode where the reader's picture degrades invisibly while its choices
-still look right (E15), which is the shape of every quiet failure in the rest of this file.
+still look right (E15), which is the shape of every quiet failure in the rest of this file. The reader's own organization as its first model of a maker, the self-first prior, is
+tested in §11: it wins near itself, loses elsewhere, and corrects.
 
 ## §2. The wall (familiar words, nobody home) is a distinct failure, and the reader keeps paying
 
@@ -292,13 +293,14 @@ all, and where the criteria failed at their own jobs.
 | — | Criteria did their own jobs | **Four failures, each caught by a later pass (run)** | A six-cell rank correlation deciding a headline; a permutation check that could never pass; a monotonicity criterion punishing guaranteed ties; an absolute threshold on a two-fold-varying baseline. A fifth caught before it ran. **This is the failure mode the project has most of** |
 | — | The record is forward-tested | **REJECTED: count zero** | Eighteen logged places where a design or criterion changed after seeing a result (7 found by V8, 4 added by V9, 7 by V10); the one sealed prediction was disowned and E52's held primary does not restore it. **The largest single thing the project owes** |
 | — | The harness the corpus family ran on was sound | **REJECTED, then repaired (2026-08-08)** | A reused observer's prior was silently wiped from the second artifact onward (E6–E9, E12, E13, calibration). E6/E6b/E7/E9 regenerated at full scale: every direction held. E8 withheld regardless; E12/E13 direction-level until regenerated |
+| V12 | The exact path was exact | **REJECTED, then repaired (D-V12-1)** | The Q trunk's and B04's "exact" reader scored artifacts with a per-feature mixture likelihood, overconfident by construction; caught by the version's own first run (a card at ceiling, a regime posterior below its prior), re-run on the structured likelihood, first verdicts kept. And an identity the apparatus had not stated: supply gains for an exact reader are symmetric (T05), so directionality is never an information result |
 
 **What these add up to.** The apparatus's honest self-description in one sentence: **directions
 and orderings are trustworthy; sizes are properties of this model's dimensions; two of three
 headlines are shared with any model of this shape; the wall is the theory's own; and the whole
 record is a theory checked against itself, with zero forward tests.** Every criterion failure was
 found by a *later* pass, which is the argument for keeping the pass cadence rather than for
-trusting any single layer of it.
+trusting any single layer of it. V12 added a kind found within the version: a likelihood defect caught by its own first run.
 
 ## §9. Service results for the sibling: validated rulers, and instruments killed before use
 
@@ -332,6 +334,12 @@ transfers.**
 | S-15 | Value-profile recovery converges with artifacts per maker, and the residual is priced | **SUPPORTED (run, V11), with the expertise half of C2 REJECTED as pre-registered** | 0.53 → 0.98 over 1..50 artifacts, residual L1 0.009. The bounded family (convergent midbrains) is worth **0.24 L1**; breaking the reader's expertise cost 0.0003 against a 0.05 bar: goal reading saturates at this length, so the price is *invisible, not zero* (queued with T-11). **Corpus price: 20 works per maker** at curator-tier noise. Construction discrimination: conjunctive satisfaction reads a profile from one artifact (0.97), amplification cannot (0.53); **the sibling's single-artifact failure record is the amplification signature** |
 | S-14 | An absent drive is recoverable | **SUPPORTED (run, V11)** | Near-invisible in spontaneous work (0.61), perfect under commission toward the missing channel (1.00), and pure compliance collapses to exactly 0.5, the discriminator is *how the goal is pursued*, nothing else. Instruction amplifies multiplicatively; a zero cannot be amplified. The made-under-duress mechanism, first working form |
 | S-12 | A three-locus structure with a noisy middle reads as one mid peak | **SUPPORTED (run, V11), both halves** | The smear: 100% of runs, and 100% of random re-parameterisations: architectural, which is the point: published mid-peak profiles are uninformative against a three-locus truth. The residual instrument (G22's route) separates the worlds at AUC 0.87, in **25%** of random parameterisations, so it has an operating regime, not universality. Its own gate caught the identity arm's first construction: amplitude alone can smear fixed loci (D-V11-1) |
+| S-02/S-10 (V12) | A similarity ruler recovers planted distance on separate axes | **SUPPORTED (run, V12); the decomposition REJECTED** | Spearman 1.00 / 1.00 / 0.99 / 0.95 on profile, observation, habit, policy; the axes explain 7% of pair-level gain variance and policy similarity 0.4% |
+| R-02/R-05 (V12) | Values are read from opportunity records, not choice counts | **SUPPORTED (run, V12)** | held-out choices: opportunity reader −0.87 against −1.29 for cost-blind and count readers, which sit on the population prior; a choice against a large cost moves the posterior eightfold |
+| F-03 (V12) | A dependency statistic separates layered from flattened intent | **VALIDATED (run, V12), with its operating regime** | AUC 1.00 at 128 steps × 60 blocks, 0.96 at 32 × 60, chance at 4 × 12; every ruler at chance on null pairs |
+| D-03 (V12) | Artifacts distinguish a director from a shared brief at matched coherence | **SUPPORTED (run, V12)** | structure reader 0.81, coherence baseline 0.50 |
+| B-01 (V12) | Three reading regimes can be built with no surface difference | **SUPPORTED (run, V12)** | entropy and pair mass matched to machine precision; a surface classifier at chance |
+| I-02 (V12) | S-14/S-15 hold under random re-parameterisation | **SUPPORTED (run, V12)** | over 50 random worlds: convergence 82%, one-artifact conjunctive reading 94%, commission recovers an absent drive 100%, pure compliance collapses 100% |
 
 **What these add up to.** The service work killed three instruments (breadth, the unlock ratio,
 decision-counting) and one criterion family (parallel analysis) *before* real corpora were spent
@@ -346,8 +354,7 @@ trimodal architecture from its own consensus, while the residual route can, with
 operating regime. What the sibling should take: size the follower corpus at ~20 works per maker,
 read its own single-artifact failure record as evidence for amplification over conjunctive
 satisfaction, and build the residual analysis before conceding anything to the mid-peak
-literature. Queued here: T-12's supply arms (G47 at last askable), T-11's off-ceiling
-restatement, and the habit-residue build (T-13).
+literature. The three items queued here in V11 have run in V12: the supply arms (T02–T05, symmetric by identity), the off-ceiling restatement of expertise (S03: the price exists, 0.28 nats on the profile), and the habit residue (R03: partialling out an aligned habit deletes 1.5 nats of profile signal).
 
 ## §10. The preprint's six hypotheses: the standing crosswalk
 
@@ -366,6 +373,55 @@ is refuted; none is confirmed in people.
 | H6 | Bypassing the firewall writes AI content straight to predictive models | **Answered worse than posed (run).** No hypnosis needed: the firewall is porous by default (E46), the guard blocks ~5% (E54/E56), and the *mechanism* of the bypass is exactly the E41 fork, which the code cannot currently express in the paper's version |
 
 ---
+
+## §11. The other model: reading a maker from oneself, from opportunities, from a regime, and from many hands
+
+**2026-08, the V12 specification:**
+
+> Self-first means estimating a difference from a measured self-model.
+
+**What it says.** The reader's own generative organization is the first model it has of any
+maker. V12 built the objects that let that be tested rather than assumed: a measured self-model,
+a similarity ruler, priors matched on information, opportunity records beside artifacts, regimes
+matched on surface, a bridge from a maker posterior to the reader's own preferences, and
+production under many hands. Sixty-two cards, pre-registered and hash-locked, all resolved, one
+closed as an instrument failure; the curator packet is
+[docs/versions/v12-the-other-model/RESULTS.md](../versions/v12-the-other-model/RESULTS.md) and
+every card is generated into its `RESULTS_PACKET.md`. Discovery lane; the confirmation lineage
+is recorded in `results/v12/CONFIRMATION.json`.
+
+| # | hypothesis | status | notables |
+|---|---|---|---|
+| S04 | Starting from a measured self-model beats a generic prior of the same information | **SUPPORTED (run), selectively** | +0.60 nats on the nearest fifth of makers, −0.09 to −0.20 on the middle fifths, no difference on the farthest; on average worse than a population prior (−1.59 against −1.49). A prior with the same entropy and permuted correspondence loses the whole near gain: correspondence, not confidence. Transfers to fresh worlds and a second convention (S08); turns into a loss on an anti-similar family |
+| S05/S06 | Projection is a stable bias | **REJECTED (run)** | self-directed error 0.25 → 0.01 across 1..50 artifacts; correction half-life four artifacts; zero order effect on the final posterior; calibration equal to the generic route at fifty |
+| S07 | The self route predicts a maker's hidden next choice | **REJECTED (run)** | −0.007 nats at first evidence; within 0.01 of zero at every dose |
+| S09 | The self-first reader abstains better | **SUPPORTED (run)** | risk 0.53 against 0.69 at 60% coverage on near makers |
+| S03 | Expertise prices profile recovery off ceiling (T-11's debt) | **SUPPORTED (run)** | 99 off-ceiling cells: goal gap 0.09 [0.07, 0.13], profile gap 0.28 nats. V11's C2 was a ceiling |
+| Q01–Q06 | Active probe choice makes a maker-reader better | **REJECTED at this construction (run); Q02 INSTRUMENT FAILED** | probes differ by 0.05 nats of expected information; commissions inert as probes (0.001 nats against a free look); episode selection captures 0.02 of the 0.40 nats available; the PyMDP agent does choose the informative probe (89%). The one live case: challenges chosen for information about the regime, +0.16 over uncertainty sampling (B04). Against planted evidence, modelling the planting is worth 3.4 nats and choosing probes 0.3 (Q06) |
+| B02/B03/B06 | Regime is readable, and the cooperative assumption is a bet | **SUPPORTED (run)** | regimes matched on every surface statistic to machine precision (B01); cooperation +0.8 on bards, −10 on concealers; a switched regime recovered in five artifacts (identity-keyed reader: fifteen); an accurate model of a concealer raises own payoff 0.73 against 0.64, cooperation not required |
+| B05 | Partial concealment has type-specific signatures | **BOUNDARY (run)** | mimicry unreadable to the neutral reader (−0.55) and transparent to the aware one (−0.02); deflection and omission make the aware reader confidently wrong 37% and 27% of the time |
+| U02/U03/U04 | Reconstruction accuracy and uptake weight are one lever | **REJECTED (run)** | weight moves the policy, accuracy decides whether it helps; wrong-and-confident moves the wrong way 56% against at most 23%; reliability drives movement (+0.62), competence does not (+0.04) |
+| U05/U07/U08 | Exposure moves belief before preference, and reliable counter-evidence reverses it | **SUPPORTED (run)** | belief +0.49, preference +0.19; harm reversed 85% with a quarter of the mass left on the false source; movement accumulates and reverses under later reliable context |
+| R02–R05, R07 | Values are read from opportunities, not counts | **SUPPORTED (run)** | opportunity reader −0.87 against cost-blind and count readers at the population floor (−1.29); the same choice moves the posterior eightfold against a large cost; transfers to a second domain (+0.9 over identity-only) and to changed costs, commissions and new goals; partialling out an aligned habit deletes 1.5 nats |
+| R06/R08 | Current goal and standing profile are jointly recoverable; a count reader abstains on equifinal pairs | **REJECTED (run), both** | joint reader no better than single-latent readers; count reader abstains 59% against an 80% bar |
+| T02–T05 | Supplying one latent buys the other asymmetrically | **REJECTED by identity (run)** | for an exact reader the gain is a conditional mutual information, symmetric: goal → profile 0.085, profile → goal 0.085; directionality 0.000 in every cell. The process latent is inert (0.00). Apparent directionality in this record's earlier temporal results is a property of readers or ceilings, not of information |
+| T06 | A topology can be read from a supply matrix | **Equivalence classes only (run)** | neutral worlds: the isolated-slot class; bard worlds: the common-cause class, separated by intervening on the slot (1.57 nats observed against 0.0003 intervened) |
+| D02–D07 | Upstream control reaches further and survives rewriting; artifacts can tell a director from a shared brief | **SUPPORTED (run)** | reach 1.0 director against 0.25 local; director attribution 0.92 after a full rewrite where the local hand falls to chance; structure reader 0.81 against a coherence baseline at 0.50; identical artifacts with different histories abstained on (0.97) and separated by records (1.00) and by later artifacts (0.87) |
+| F01–F05 | Layered intent is readable from the artifact | **BOUNDARY (run)** | the dependency ruler reaches AUC 1.00 at 128 steps × 60 blocks, 0.96 at 32 × 60, 0.51 at the spec floor of 4 × 12, where every ruler is at chance; a director's hand survives local flattening (1.00) and half a rewrite (0.92) |
+| X01–X12 | The self-first gain is an artifact of solver, labels, order, convention or world | **REJECTED (run) for eight attacks; dissolves under the three that remove its material** | bit-identical under shuffled labels and a changed convention; a third survives the PyMDP solver, two thirds a histogram reader; destroyed by permuting correspondence, diluted to nothing by wrong labels or equifinal twins; an adaptive maker costs the reader 0.37 nats on far makers |
+
+**What these add up to.** The other model is real and expensive. A reader that starts from
+itself reads makers like itself far better than any information-matched prior and pays for it
+everywhere else; it corrects, it calibrates, it abstains well, and it does not predict what the
+maker will do next any better than a generic reader. Values are legible only against what was on
+offer, which is a statement about records, not about artifacts. Regime is a real latent with a
+real price for guessing it wrong. What supplying one latent buys for another is symmetric for an
+exact reader, so every "purpose first, then method" result in this record is a claim about
+readers and should be re-read as one. Upstream control is the thing that survives rewriting, and
+it is readable from the artifact where coherence is not. And active reading, the part of the
+theory closest to the essay's "continuously seeking evidence of actions", bought almost nothing
+here, because the artifacts of this construction already carry what a probe would ask for; the
+construction where probes matter has not been built.
 
 ## The maintenance rule
 

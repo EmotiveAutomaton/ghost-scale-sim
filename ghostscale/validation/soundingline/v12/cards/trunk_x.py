@@ -159,7 +159,7 @@ def _attack(card, cfg, lane, attack):
             for i in range(6):
                 rng = np.random.default_rng(C.seed(f"X07:world:{i}"))
                 worlds.append((300 + i, make_world(cfg, params=random_params(rng), rng=rng)))
-            for wid, world in worlds_for(cfg, "discovery", limit=6):
+            for wid, world in worlds_for(cfg, "confirmation" if lane == "confirmation" else "discovery", limit=6):
                 base.append(s04_effect(world, wid, "none", 0.0))
             for wid, world in worlds:
                 att.append(s04_effect(world, wid, "none", 0.0))
@@ -171,7 +171,7 @@ def _attack(card, cfg, lane, attack):
                 att.append(s04_effect(world, wid, "none", 0.0))
             plac = [0.0]
         else:
-            for wid, world in worlds_for(cfg, "discovery"):
+            for wid, world in worlds_for(cfg, "confirmation" if lane == "confirmation" else "discovery"):
                 b = s04_effect(world, wid, "none", 0.0)
                 p = s04_effect(world, wid, attack, 0.0)
                 a = s04_effect(world, wid, attack, 1.0)
@@ -183,7 +183,9 @@ def _attack(card, cfg, lane, attack):
            "attacked": {"near": agg(att, "near"), "far": agg(att, "far"), "all": agg(att, "all")},
            "identity_statistic": float(max(x["identity"] for x in att)), "attack": name, "detail": detail}
     res["delta_near"] = res["attacked"]["near"] - res["unattacked"]["near"]
-    res["survives"] = bool(res["attacked"]["near"] >= 0.05 and res["attacked"]["far"] <= 0.0)
+    # survival: the near-bin gain keeps the S04 bar and the far bin shows no gain beyond noise (0.05)
+    res["survives"] = bool(res["attacked"]["near"] >= 0.05 and res["attacked"]["far"] <= 0.05)
+    res["survival_rule"] = "near gain >= 0.05 and far gain <= 0.05 under attack"
     gr = G.GateReport()
     gr.placebo("zero_strength_reproduces_unattacked", observed_max_deviation=float(max(plac)), tol=1e-12)
     if attack in ("X01", "X02", "X06", "X08"):

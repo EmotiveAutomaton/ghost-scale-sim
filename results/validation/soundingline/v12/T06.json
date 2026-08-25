@@ -1,0 +1,639 @@
+{
+  "card": "T06",
+  "trunk": "T",
+  "wave": 3,
+  "question": "Which topology predicts the supply matrix?",
+  "hypothesis": "Held-out interventions (do versus observe on the slot) pick the topology class the supply matrix cannot; where several topologies predict the same matrix the equivalence class is reported and no topology is claimed.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "per_world": {
+      "world0|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.0022917290976598283,
+        "do_gain": 0.0022917290976598283,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world0|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.5717600618665926,
+        "do_gain": 0.0003364795735939291,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world1|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": -0.004360413372788122,
+        "do_gain": -0.004360413372788122,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world1|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.5934227226060693,
+        "do_gain": -0.006088718241192055,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world2|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.004126528606886616,
+        "do_gain": 0.004126528606886578,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world2|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.612327917253781,
+        "do_gain": -0.008084168376887997,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world3|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.0028364768473992602,
+        "do_gain": 0.0028364768473992602,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world3|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.5945849815048712,
+        "do_gain": 0.007667722006455411,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world4|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.0016391504053794392,
+        "do_gain": 0.0016391504053794392,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world4|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.7367493940547967,
+        "do_gain": 0.00017018231113467565,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world5|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.004050751498824715,
+        "do_gain": 0.004050751498824715,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world5|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.2625178831830193,
+        "do_gain": -0.006704614187426726,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world6|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": true,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.010685842742746017,
+        "do_gain": 0.010685842742746017,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 2,
+          "river": 2,
+          "triangle_goal_to_slot": 2,
+          "flat_factor_graph": 3,
+          "isolated_slot": 3
+        },
+        "equivalence_class": [
+          "chain_with_independent_slot",
+          "flat_factor_graph",
+          "isolated_slot"
+        ]
+      },
+      "world6|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.54547923578721,
+        "do_gain": -0.004071916003642078,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world7|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.0005417806745778025,
+        "do_gain": 0.0005417806745778048,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world7|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.440001709455852,
+        "do_gain": -0.004634356486361451,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world8|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.0009036122921351986,
+        "do_gain": 0.0009036122921351986,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world8|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.5852391427215442,
+        "do_gain": -0.002887113491405135,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world9|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.006091257538905755,
+        "do_gain": 0.006091257538905755,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world9|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.6847004170453803,
+        "do_gain": -0.0002517955553797774,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world10|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": true,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 0.017025338614593443,
+        "do_gain": 0.017025338614593443,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 2,
+          "river": 2,
+          "triangle_goal_to_slot": 2,
+          "flat_factor_graph": 3,
+          "isolated_slot": 3
+        },
+        "equivalence_class": [
+          "chain_with_independent_slot",
+          "flat_factor_graph",
+          "isolated_slot"
+        ]
+      },
+      "world10|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.505881624486408,
+        "do_gain": -0.016442688254414348,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      },
+      "world11|neutral": {
+        "measured": {
+          "obs_equals_do_slot": true,
+          "slot_helps_goal": false,
+          "slot_helps_profile": false,
+          "goal_helps_profile": true
+        },
+        "obs_gain": -0.0020228085955837738,
+        "do_gain": -0.0020228085955837738,
+        "scores": {
+          "chain_with_independent_slot": 2,
+          "common_cause_profile": 1,
+          "river": 1,
+          "triangle_goal_to_slot": 1,
+          "flat_factor_graph": 2,
+          "isolated_slot": 4
+        },
+        "equivalence_class": [
+          "isolated_slot"
+        ]
+      },
+      "world11|bard": {
+        "measured": {
+          "obs_equals_do_slot": false,
+          "slot_helps_goal": true,
+          "slot_helps_profile": true,
+          "goal_helps_profile": true
+        },
+        "obs_gain": 1.5975453544481724,
+        "do_gain": -0.007198182662122167,
+        "scores": {
+          "chain_with_independent_slot": 3,
+          "common_cause_profile": 4,
+          "river": 4,
+          "triangle_goal_to_slot": 4,
+          "flat_factor_graph": 3,
+          "isolated_slot": 1
+        },
+        "equivalence_class": [
+          "common_cause_profile",
+          "river",
+          "triangle_goal_to_slot"
+        ]
+      }
+    },
+    "note": "the flat factor graph and the chain-with-independent-slot are one equivalence class on every statistic here; where the slot's edge to the surface is weak (small cue), the isolated-slot topology joins that class. No claim separates them"
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "factorization",
+  "what_must_hold_outside_the_simulation": "interventions on a process latent are possible",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 0.964,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "neutral_regime_rejects_profile_to_slot_edges",
+        "kind": "positive",
+        "passed": true,
+        "detail": "under the neutral regime the slot is independent of the profile by construction: do equals observe, and no topology with a profile-to-slot edge may survive. Whether the slot's own edge to the surface is strong enough to separate an independent slot from an isolated one is a property of the cue strength, reported, not gated",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "bard_regime_rejects_the_independent_slot",
+        "kind": "positive",
+        "passed": true,
+        "detail": "under bard the slot is a deterministic function of the profile: observing it is not intervening on it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_t.py",
+    "sha256": "589c9d6653c35d1ae3c4c27823f27c97ebc94a1c14cbe4a0e72ed8385a1937fd",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "neutral_regime_rejects_profile_to_slot_edges",
+        "kind": "positive",
+        "passed": true,
+        "detail": "under the neutral regime the slot is independent of the profile by construction: do equals observe, and no topology with a profile-to-slot edge may survive. Whether the slot's own edge to the surface is strong enough to separate an independent slot from an isolated one is a property of the cue strength, reported, not gated",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "bard_regime_rejects_the_independent_slot",
+        "kind": "positive",
+        "passed": true,
+        "detail": "under bard the slot is a deterministic function of the profile: observing it is not intervening on it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

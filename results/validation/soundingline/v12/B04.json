@@ -1,0 +1,136 @@
+{
+  "card": "B04",
+  "trunk": "B",
+  "wave": 2,
+  "question": "Does an active challenge separate scaffolding from strategic shaping?",
+  "hypothesis": "Commissioned challenges chosen for information about the regime separate scaffolding (bard) from strategic shaping (concealer) better than uncertainty sampling or random challenges.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "regime_log_score_by_policy": {
+      "regime_aware": {
+        "mean": -0.713994676112272,
+        "interval": [
+          -0.8632765424954855,
+          -0.5755201925952759
+        ],
+        "n_units": 12,
+        "n_rows": 216
+      },
+      "uncertainty": {
+        "mean": -0.8779402644384611,
+        "interval": [
+          -1.06155337763131,
+          -0.7185469697345975
+        ],
+        "n_units": 12,
+        "n_rows": 216
+      },
+      "random": {
+        "mean": -0.7684300095912546,
+        "interval": [
+          -0.9867897749203478,
+          -0.6118423211218839
+        ],
+        "n_units": 12,
+        "n_rows": 216
+      }
+    },
+    "pymdp_agrees_with_exact_regime_eig": 0.5833333333333334,
+    "criterion_C_B04": {
+      "passed": true
+    },
+    "deviation": "D-V12-1: the exact path is scored with the artifact-structured likelihood (one goal per artifact); the first discovery verdict, scored with a per-feature mixture likelihood, is kept as attempt1"
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "random challenge",
+  "what_must_hold_outside_the_simulation": "a maker can be challenged with a commission",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 69.594,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "regime_posterior_is_no_worse_than_its_prior",
+        "kind": "positive",
+        "passed": true,
+        "detail": "after four random challenges the regime log score may not sit below the uniform prior beyond 0.1 nats; a posterior that reads the regime worse than ignorance is a broken instrument, which is what the first run showed",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "challenges_carry_regime_information",
+        "kind": "live",
+        "passed": true,
+        "detail": "after four random challenges the regime log score must beat the uniform guess: the instrument reads regimes at all. Whether information-chosen challenges read them better is the criterion, not a control",
+        "observed": 0.33018227907685516,
+        "expected": 0.1
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_b.py",
+    "sha256": "b427f4e65b33ce627d7bb1bb0e8ce79da628f1768c320713baef5ed1079ddea9",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "regime_posterior_is_no_worse_than_its_prior",
+        "kind": "positive",
+        "passed": true,
+        "detail": "after four random challenges the regime log score may not sit below the uniform prior beyond 0.1 nats; a posterior that reads the regime worse than ignorance is a broken instrument, which is what the first run showed",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "challenges_carry_regime_information",
+        "kind": "live",
+        "passed": true,
+        "detail": "after four random challenges the regime log score must beat the uniform guess: the instrument reads regimes at all. Whether information-chosen challenges read them better is the criterion, not a control",
+        "observed": 0.33018227907685516,
+        "expected": 0.1
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

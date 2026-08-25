@@ -213,6 +213,35 @@ in closed V5; `build_subgoal_chains_v5b` for new work), T-10's self-comparing ga
 a planted-seam check (passes at 0.141), S-1/S-6's gate exemption ended (both re-runs reproduce
 their committed verdicts to the digit), and the miniature severity rule added to CLAUDE.md.*
 
+### Version 12, the other model: the reader's self as its first model of a maker
+
+*The version that built what the spec called the other model: a measured self-model, priors
+matched on information, opportunity records, surface-matched regimes, a bridge from a maker
+posterior to the reader's own preferences, and production under many hands. Sixty-two cards
+pre-registered and hash-locked (`prereg_v12.py`), run as a resumable queue, one closed as an
+instrument failure. Every card is generated into
+[docs/versions/v12-the-other-model/RESULTS_PACKET.md](docs/versions/v12-the-other-model/RESULTS_PACKET.md);
+the curator packet is [RESULTS.md](docs/versions/v12-the-other-model/RESULTS.md); the hypothesis
+ledger is [docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §11.*
+
+| # | The question | Where it stands |
+|---|---|---|
+| S04–S09 | Does a reader that starts from itself read makers better than a generic prior with the same information? | **Only makers like itself, and it pays everywhere else.** +0.60 nats on the nearest fifth of makers at first evidence, −0.09 to −0.20 on the middle fifths, nothing on the farthest; worse than a plain population prior on average. A prior with the same entropy and permuted correspondence loses the whole gain. Projection decays 0.25 → 0.01 with evidence, corrects with a four-artifact half-life, leaves no order effect, calibrates as well as the generic route, abstains better (risk 0.53 against 0.69), and does not predict the maker's next choice (S07 null). Survives fresh worlds, a second convention, and eight of twelve attacks; dies of the three that remove its material |
+| S03 | Does expertise price profile recovery off ceiling? | **Yes.** 99 off-ceiling cells: the expert reads goals 0.09 better and profiles 0.28 nats better. V11's C2 was a ceiling |
+| Q01–Q06 | Does choosing what to look at make a maker-reader better? | **Not in this construction.** Probes differ by 0.05 nats; commissions are inert as probes (Q02 closed, instrument failure); episode selection captures 0.02 of 0.40 nats available. The PyMDP agent does pick the informative probe (89%). Against planted evidence, modelling the planting is worth 3.4 nats and choosing probes 0.3 |
+| B01–B06 | Is a maker's reading regime readable, and what does assuming cooperation cost? | **Readable; cooperation is a bet.** Regimes matched on every surface statistic; cooperation +0.8 nats on bards and −10 on concealers; a switched regime recovered in five artifacts; regime-chosen challenges +0.16 over uncertainty sampling; an accurate model of a concealer raises own payoff without cooperation |
+| U01–U08 | Are reconstruction, trust and uptake separate levers? | **Yes.** Weight moves the policy, accuracy decides whether it helps (wrong-and-confident 56% wrong direction against at most 23%); reliability drives movement, competence does not; belief moves before preference; counter-evidence reverses 85% |
+| R01–R08 | Are values read from opportunities rather than counts? | **Yes, and the count reader learns nothing.** Opportunity reader −0.87 against −1.29 for cost-blind and count readers (the population floor); a choice against a large cost moves the posterior eightfold; transfers to a second domain and to prospective targets; partialling out an aligned habit deletes 1.5 nats. The joint goal-and-profile reader and the abstention criterion both failed |
+| T01–T06 | What does supplying one latent buy for another? | **Symmetric, by identity.** For an exact reader the gain is a conditional mutual information: goal → profile 0.085, profile → goal 0.085, directionality 0.000 everywhere. The process latent is inert. Topology is read only as an equivalence class, and only by intervening |
+| D01–D07 | Who controlled what, in an artifact made by many hands? | **Upstream control is the thing that survives.** Director attribution 0.92 after a full rewrite where the local hand falls to chance; structure reader 0.81 against a coherence baseline at 0.50; identical artifacts with different histories abstained on and separated by records |
+| F01–F05 | Is layered intent readable from the artifact? | **In principle yes; at the floor no.** Dependency ruler AUC 1.00 at 128 steps × 60 blocks, 0.51 at the spec's 4 × 12; a director's hand survives local flattening and half a rewrite |
+
+*Deviations recorded (RESULTS.md, Controls, repairs, and failures): the Q trunk's and B04's exact
+path was first scored with a per-feature mixture likelihood, overconfident by construction, caught
+by its own first run and re-run on the structured likelihood with the first verdicts kept
+(D-V12-1); the T battery moved off the CREATOR ceiling; F03 gained a readability ladder; the X
+survival rule was tightened after seeing the unattacked far bin.*
+
 ### Not answerable in simulation
 
 | # | The question | Where it stands |
@@ -256,6 +285,13 @@ at one. **The conclusion survives; the stated justification should be updated.**
 5. **Three experiments still cannot run under exact inference**, a known, bounded gap.
 6. **The headline effect's size depends on which content model you believe**, and the largest
    numbers come from the description the project itself replaced on theoretical grounds.
+7. **Which self-first claim the theory wants.** V12 found the self-first reader wins near itself,
+   loses in the middle distances, and is worse than a population prior on average. As a mechanism
+   to detect in readers that is a signature; as advice it is false. The essay's "intensely
+   empathizing with the creators" has to say which it means.
+8. **A construction where probes matter.** Active reading bought almost nothing in V12 because
+   the artifacts already carry what a probe would ask for. The question stands; the world to ask
+   it in has not been built.
 
 *The crash/peak co-location claim has been retired rather than revised: it does not survive exact
 inference. It has been removed from the README, and the committed prediction card now carries it

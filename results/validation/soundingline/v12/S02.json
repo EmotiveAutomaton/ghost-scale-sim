@@ -1,0 +1,204 @@
+{
+  "card": "S02",
+  "trunk": "S",
+  "wave": 1,
+  "question": "Does the similarity ruler recover planted orderings one axis at a time?",
+  "hypothesis": "Measured distance recovers planted orderings one axis at a time and does not merely identify source labels.",
+  "claim_ceiling": "METHOD",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "spearman_by_axis": {
+      "profile": 1.0,
+      "observation": 0.9999999999999999,
+      "habit": 0.9916666666666666,
+      "policy": 0.9510124056399811
+    },
+    "per_world": {
+      "profile": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "observation": [
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999
+      ],
+      "habit": [
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.8999999999999998,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999
+      ],
+      "policy": [
+        0.9646703334624276,
+        0.9629764421934138,
+        0.9646703334624276,
+        0.932868014776853,
+        0.9081328780214061,
+        0.9629764421934138,
+        0.9646703334624276,
+        0.9612914427534583,
+        0.9222672418816614,
+        0.9382847385474288,
+        0.9646703334624276,
+        0.9646703334624276
+      ]
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "source-label identification",
+  "what_must_hold_outside_the_simulation": "the axes are measurable on real makers at all, which requires records",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 0.786,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 4,
+    "n_ran": 4,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "profile_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "observation_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 0.9999999999999999,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "habit_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 0.9916666666666666,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "policy_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 0.9510124056399811,
+        "expected": 1.0,
+        "tolerance": 0.2
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_s.py",
+    "sha256": "b47f67adc09800ecfefd67cbabef3475f026bf5efcea851dbef53f1c49ae46c7",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 4,
+    "n_ran": 4,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "profile_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "observation_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 0.9999999999999999,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "habit_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 0.9916666666666666,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "policy_axis_recovers_ordering",
+        "kind": "positive",
+        "passed": true,
+        "detail": "rank correlation between the planted ordering and the measured distance",
+        "observed": 0.9510124056399811,
+        "expected": 1.0,
+        "tolerance": 0.2
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "card": "T04",
+  "trunk": "T",
+  "wave": 2,
+  "question": "Does supplying the mechanic unlock goal, process, and profile?",
+  "hypothesis": "Supplying the maker's mechanic (its own realization template) unlocks goal, process and profile recovery relative to a generic template; related and wrong mechanics are ordered between.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "log_score": {
+      "profile|correct": {
+        "mean": -1.5272077742949155,
+        "interval": [
+          -1.5843054715532747,
+          -1.4586474994831258
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "goal|correct": {
+        "mean": -0.18144930158938052,
+        "interval": [
+          -0.21485477479239745,
+          -0.15189162564458714
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "slot|correct": {
+        "mean": -1.0540594335498368,
+        "interval": [
+          -1.203463942905379,
+          -0.9123767423991905
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "profile|related": {
+        "mean": -1.5353628260707561,
+        "interval": [
+          -1.5890931835283075,
+          -1.4629401269797009
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "goal|related": {
+        "mean": -0.21141200706126287,
+        "interval": [
+          -0.24649794264996489,
+          -0.179235100063595
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "slot|related": {
+        "mean": -1.0925487187096126,
+        "interval": [
+          -1.2296374951732165,
+          -0.9581799470375039
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "profile|wrong": {
+        "mean": -1.5524444726995439,
+        "interval": [
+          -1.606564439083457,
+          -1.4910147012510282
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "goal|wrong": {
+        "mean": -0.31944372765056656,
+        "interval": [
+          -0.3588185404748424,
+          -0.271574525468546
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "slot|wrong": {
+        "mean": -1.270761134110251,
+        "interval": [
+          -1.4201558145183932,
+          -1.1205413397055595
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "profile|generic": {
+        "mean": -1.5497368583234628,
+        "interval": [
+          -1.6149198403578824,
+          -1.4887822117937315
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "goal|generic": {
+        "mean": -0.4133027922117297,
+        "interval": [
+          -0.4751402357879463,
+          -0.35105401826622135
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      },
+      "slot|generic": {
+        "mean": -1.2114858045689547,
+        "interval": [
+          -1.3250401298169525,
+          -1.0777113113572316
+        ],
+        "n_units": 12,
+        "n_rows": 7200
+      }
+    },
+    "gain_over_generic": {
+      "profile|correct": 0.022529084028547253,
+      "goal|correct": 0.2318534906223492,
+      "slot|correct": 0.15742637101911794,
+      "profile|related": 0.014374032252706614,
+      "goal|related": 0.20189078515046685,
+      "slot|related": 0.11893708585934215,
+      "profile|wrong": -0.0027076143760811355,
+      "goal|wrong": 0.09385906456116316,
+      "slot|wrong": -0.05927532954129622
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "process trace supplied",
+  "what_must_hold_outside_the_simulation": "a maker's mechanic is a template a reader could be handed",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 1.514,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "correct_mechanic_beats_wrong_mechanic",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "mechanic_matters",
+        "kind": "live",
+        "passed": true,
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "observed": 0.2318534906223492,
+        "expected": 0.02
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_t.py",
+    "sha256": "589c9d6653c35d1ae3c4c27823f27c97ebc94a1c14cbe4a0e72ed8385a1937fd",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "correct_mechanic_beats_wrong_mechanic",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "mechanic_matters",
+        "kind": "live",
+        "passed": true,
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "observed": 0.2318534906223492,
+        "expected": 0.02
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

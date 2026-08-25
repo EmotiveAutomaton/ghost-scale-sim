@@ -1,0 +1,270 @@
+{
+  "card": "I04",
+  "trunk": "I",
+  "wave": 0,
+  "question": "Do no-information, shuffled, and false-correspondence nulls return calibrated uncertainty?",
+  "hypothesis": "No-information, shuffled, and permuted-correspondence readers sit at chance; policy-preserving surface shuffles keep the result and surface-preserving policy shuffles lose it.",
+  "claim_ceiling": "METHOD",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "aggregate": {
+      "no_information_acc": 0.17592592592592593,
+      "shuffled_acc": 0.1597222222222222,
+      "self_prior_acc_2": 0.7083333333333334,
+      "permuted_prior_acc_2": 0.3958333333333333,
+      "generic_prior_acc_2": 0.40740740740740744,
+      "style_kept_policy_shuffled_acc": 0.043981481481481476,
+      "policy_kept_style_shuffled_acc": 0.7870370370370371,
+      "chance": 0.16666666666666666
+    },
+    "by_world": {
+      "0": {
+        "no_information_acc": 0.08333333333333333,
+        "shuffled_acc": 0.19444444444444445,
+        "self_prior_acc_2": 0.8611111111111112,
+        "permuted_prior_acc_2": 0.6388888888888888,
+        "generic_prior_acc_2": 0.6666666666666666,
+        "style_kept_policy_shuffled_acc": 0.05555555555555555,
+        "policy_kept_style_shuffled_acc": 0.8333333333333334,
+        "chance": 0.16666666666666666
+      },
+      "1": {
+        "no_information_acc": 0.2777777777777778,
+        "shuffled_acc": 0.16666666666666666,
+        "self_prior_acc_2": 0.5833333333333334,
+        "permuted_prior_acc_2": 0.4166666666666667,
+        "generic_prior_acc_2": 0.3055555555555556,
+        "style_kept_policy_shuffled_acc": 0.027777777777777776,
+        "policy_kept_style_shuffled_acc": 0.6944444444444444,
+        "chance": 0.16666666666666666
+      },
+      "2": {
+        "no_information_acc": 0.1388888888888889,
+        "shuffled_acc": 0.1111111111111111,
+        "self_prior_acc_2": 0.8333333333333334,
+        "permuted_prior_acc_2": 0.4166666666666667,
+        "generic_prior_acc_2": 0.6111111111111112,
+        "style_kept_policy_shuffled_acc": 0.05555555555555555,
+        "policy_kept_style_shuffled_acc": 0.8055555555555556,
+        "chance": 0.16666666666666666
+      },
+      "3": {
+        "no_information_acc": 0.1388888888888889,
+        "shuffled_acc": 0.1388888888888889,
+        "self_prior_acc_2": 0.6111111111111112,
+        "permuted_prior_acc_2": 0.3055555555555556,
+        "generic_prior_acc_2": 0.2222222222222222,
+        "style_kept_policy_shuffled_acc": 0.0,
+        "policy_kept_style_shuffled_acc": 0.7222222222222222,
+        "chance": 0.16666666666666666
+      },
+      "4": {
+        "no_information_acc": 0.19444444444444445,
+        "shuffled_acc": 0.19444444444444445,
+        "self_prior_acc_2": 0.7222222222222222,
+        "permuted_prior_acc_2": 0.2222222222222222,
+        "generic_prior_acc_2": 0.3888888888888889,
+        "style_kept_policy_shuffled_acc": 0.0,
+        "policy_kept_style_shuffled_acc": 0.6388888888888888,
+        "chance": 0.16666666666666666
+      },
+      "5": {
+        "no_information_acc": 0.16666666666666666,
+        "shuffled_acc": 0.1388888888888889,
+        "self_prior_acc_2": 0.6666666666666666,
+        "permuted_prior_acc_2": 0.3611111111111111,
+        "generic_prior_acc_2": 0.3055555555555556,
+        "style_kept_policy_shuffled_acc": 0.05555555555555555,
+        "policy_kept_style_shuffled_acc": 0.8611111111111112,
+        "chance": 0.16666666666666666
+      },
+      "6": {
+        "no_information_acc": 0.19444444444444445,
+        "shuffled_acc": 0.1388888888888889,
+        "self_prior_acc_2": 0.8333333333333334,
+        "permuted_prior_acc_2": 0.4722222222222222,
+        "generic_prior_acc_2": 0.5277777777777778,
+        "style_kept_policy_shuffled_acc": 0.1111111111111111,
+        "policy_kept_style_shuffled_acc": 0.6666666666666666,
+        "chance": 0.16666666666666666
+      },
+      "7": {
+        "no_information_acc": 0.19444444444444445,
+        "shuffled_acc": 0.19444444444444445,
+        "self_prior_acc_2": 0.7777777777777778,
+        "permuted_prior_acc_2": 0.3888888888888889,
+        "generic_prior_acc_2": 0.6111111111111112,
+        "style_kept_policy_shuffled_acc": 0.08333333333333333,
+        "policy_kept_style_shuffled_acc": 0.9166666666666666,
+        "chance": 0.16666666666666666
+      },
+      "8": {
+        "no_information_acc": 0.19444444444444445,
+        "shuffled_acc": 0.1388888888888889,
+        "self_prior_acc_2": 0.7222222222222222,
+        "permuted_prior_acc_2": 0.3333333333333333,
+        "generic_prior_acc_2": 0.3888888888888889,
+        "style_kept_policy_shuffled_acc": 0.08333333333333333,
+        "policy_kept_style_shuffled_acc": 0.8611111111111112,
+        "chance": 0.16666666666666666
+      },
+      "9": {
+        "no_information_acc": 0.1388888888888889,
+        "shuffled_acc": 0.1388888888888889,
+        "self_prior_acc_2": 0.5833333333333334,
+        "permuted_prior_acc_2": 0.3888888888888889,
+        "generic_prior_acc_2": 0.19444444444444445,
+        "style_kept_policy_shuffled_acc": 0.0,
+        "policy_kept_style_shuffled_acc": 0.7222222222222222,
+        "chance": 0.16666666666666666
+      },
+      "10": {
+        "no_information_acc": 0.25,
+        "shuffled_acc": 0.1388888888888889,
+        "self_prior_acc_2": 0.6388888888888888,
+        "permuted_prior_acc_2": 0.3611111111111111,
+        "generic_prior_acc_2": 0.2777777777777778,
+        "style_kept_policy_shuffled_acc": 0.027777777777777776,
+        "policy_kept_style_shuffled_acc": 0.8333333333333334,
+        "chance": 0.16666666666666666
+      },
+      "11": {
+        "no_information_acc": 0.1388888888888889,
+        "shuffled_acc": 0.2222222222222222,
+        "self_prior_acc_2": 0.6666666666666666,
+        "permuted_prior_acc_2": 0.4444444444444444,
+        "generic_prior_acc_2": 0.3888888888888889,
+        "style_kept_policy_shuffled_acc": 0.027777777777777776,
+        "policy_kept_style_shuffled_acc": 0.8888888888888888,
+        "chance": 0.16666666666666666
+      }
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "residual structure",
+  "what_must_hold_outside_the_simulation": "nothing; nulls for the readers used downstream",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 8.829,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 4,
+    "n_ran": 4,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "no_information_acc_at_chance",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "a reader given no maker-dependent information must sit at chance",
+        "observed": 0.009259259259259273,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "shuffled_acc_at_chance",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "a reader given no maker-dependent information must sit at chance",
+        "observed": -0.0069444444444444475,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "permuted_prior_no_gain_over_generic",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "the permuted self prior keeps the self prior's entropy but breaks its correspondence; with the same two artifacts it must do no better than the information-matched generic prior",
+        "observed": -0.011574074074074125,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "policy_not_style_carries_recovery",
+        "kind": "live",
+        "passed": true,
+        "detail": "keeping the policy and changing the surface must keep recovery; keeping the surface and changing the policy must lose it",
+        "observed": 0.7430555555555556,
+        "expected": 0.1
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_i.py",
+    "sha256": "6b96afc49115043e1e84af3b94704234d158c01429f9cbbfbe975be93e4c88bd",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 4,
+    "n_ran": 4,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "no_information_acc_at_chance",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "a reader given no maker-dependent information must sit at chance",
+        "observed": 0.009259259259259273,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "shuffled_acc_at_chance",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "a reader given no maker-dependent information must sit at chance",
+        "observed": -0.0069444444444444475,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "permuted_prior_no_gain_over_generic",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "the permuted self prior keeps the self prior's entropy but breaks its correspondence; with the same two artifacts it must do no better than the information-matched generic prior",
+        "observed": -0.011574074074074125,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "policy_not_style_carries_recovery",
+        "kind": "live",
+        "passed": true,
+        "detail": "keeping the policy and changing the surface must keep recovery; keeping the surface and changing the policy must lose it",
+        "observed": 0.7430555555555556,
+        "expected": 0.1
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

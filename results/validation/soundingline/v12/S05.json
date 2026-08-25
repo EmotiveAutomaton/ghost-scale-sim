@@ -1,0 +1,595 @@
+{
+  "card": "S05",
+  "trunk": "S",
+  "wave": 2,
+  "question": "How does the self-first gain vary with distance and evidence?",
+  "hypothesis": "The self-first gain is helpful near self, neutral or harmful far away, and self-directed error declines as target evidence accumulates.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "gain_surface": {
+      "1": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.6247278274301777,
+          "interval": [
+            0.49504995085668857,
+            0.7719173819988268
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": -0.10103320020431585,
+          "interval": [
+            -0.1509027275569172,
+            -0.05685464701777593
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.14901501857621954,
+          "interval": [
+            -0.22629356532481515,
+            -0.08373986015261048
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": -0.21004444537807782,
+          "interval": [
+            -0.3475657631474527,
+            -0.11027260768134417
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": -0.0009697362899640856,
+          "interval": [
+            -0.04383439491430071,
+            0.04724982467332817
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      },
+      "2": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.5259226441861551,
+          "interval": [
+            0.425006257007766,
+            0.6350944224300973
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": -0.10358541667774428,
+          "interval": [
+            -0.15339675474065034,
+            -0.061708545137076236
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.12434401631011201,
+          "interval": [
+            -0.2022380538289717,
+            -0.06093060281113823
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": -0.1557488943571716,
+          "interval": [
+            -0.2815384231519743,
+            -0.0683038538304969
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": 0.0755187755195031,
+          "interval": [
+            0.03178162433280436,
+            0.11908578088388584
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      },
+      "4": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.3756518137765723,
+          "interval": [
+            0.31223862057861484,
+            0.4499643685852273
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": -0.10067166535367723,
+          "interval": [
+            -0.13978243884065353,
+            -0.0659765026582521
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.0983944736856203,
+          "interval": [
+            -0.16877521421199054,
+            -0.04403198918946229
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": -0.08901675412649807,
+          "interval": [
+            -0.18603036511015023,
+            -0.014500555417853634
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": 0.11832133656506764,
+          "interval": [
+            0.0800797854491839,
+            0.15686867726729514
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      },
+      "8": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.219816267708874,
+          "interval": [
+            0.1776932230250072,
+            0.2677540436186185
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": -0.08376014603952443,
+          "interval": [
+            -0.11368735245492252,
+            -0.053705210250989247
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.050763350645979276,
+          "interval": [
+            -0.1027704365371031,
+            -0.010892147201624248
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": -0.022754775455282823,
+          "interval": [
+            -0.09672177715539194,
+            0.03145147561925316
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": 0.07596652307976712,
+          "interval": [
+            0.05566819512466323,
+            0.09827232887403906
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      },
+      "12": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.1416729268185501,
+          "interval": [
+            0.11257145619827007,
+            0.1746539409785252
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": -0.055527357873961805,
+          "interval": [
+            -0.07657389363773938,
+            -0.027520099259575072
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.029688917157477304,
+          "interval": [
+            -0.07066506928943214,
+            0.00020772148226445587
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": 0.011363680231331953,
+          "interval": [
+            -0.029813056153486048,
+            0.03770697853239125
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": 0.0413717908970451,
+          "interval": [
+            0.025787472129595004,
+            0.060791564325607256
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      },
+      "20": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.06954809218307038,
+          "interval": [
+            0.044646614742417115,
+            0.09923875414211926
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": -0.03978566108225569,
+          "interval": [
+            -0.06059319688456233,
+            -0.015456471650738038
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.014911470001579566,
+          "interval": [
+            -0.04523915392012612,
+            0.005899059403710396
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": 0.011472812648022851,
+          "interval": [
+            -0.012694569306305597,
+            0.02966855261180971
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": 0.014544876110504978,
+          "interval": [
+            0.0040856485746976565,
+            0.026038401673888132
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      },
+      "50": {
+        "0": {
+          "distance_edge": [
+            -6.884401353978121e-17,
+            0.0293526702863584
+          ],
+          "mean": 0.010481924309142831,
+          "interval": [
+            0.0018225815805287778,
+            0.020405483735300958
+          ],
+          "n_units": 12,
+          "n_rows": 860
+        },
+        "1": {
+          "distance_edge": [
+            0.0293526702863584,
+            0.08634754591098552
+          ],
+          "mean": 1.4125795019126733e-05,
+          "interval": [
+            -0.0067079240712828465,
+            0.00653491182700794
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "2": {
+          "distance_edge": [
+            0.08634754591098552,
+            0.14137168025917873
+          ],
+          "mean": -0.0007105339819671239,
+          "interval": [
+            -0.011372856648023216,
+            0.006846765855577528
+          ],
+          "n_units": 11,
+          "n_rows": 870
+        },
+        "3": {
+          "distance_edge": [
+            0.14137168025917873,
+            0.21617571710751862
+          ],
+          "mean": -0.00020153627559007075,
+          "interval": [
+            -0.005421769739265475,
+            0.004138652995138561
+          ],
+          "n_units": 11,
+          "n_rows": 860
+        },
+        "4": {
+          "distance_edge": [
+            0.21617571710751862,
+            0.41006290130527234
+          ],
+          "mean": 0.001413058010300313,
+          "interval": [
+            -0.00018795898063761517,
+            0.004641327276594785
+          ],
+          "n_units": 7,
+          "n_rows": 870
+        }
+      }
+    },
+    "self_directed_error_by_n": {
+      "1": 0.24669411098995558,
+      "2": 0.2021832308505195,
+      "4": 0.14789874014793125,
+      "8": 0.09506805538147464,
+      "12": 0.06824097403625504,
+      "20": 0.04108954366055024,
+      "50": 0.010716098976695187
+    },
+    "ece_at_50": {
+      "self_first": 0.005400561976535495,
+      "generic": 0.0049770914241833875
+    },
+    "asymptotic_l1_by_route": {
+      "self_first": 0.02127513937045098,
+      "population": 0.020631130416909785,
+      "generic": 0.021883838322233368,
+      "permuted": 0.021327856619960586,
+      "random_local": 0.021320485806166044,
+      "oracle": 0.0008911722609177547
+    },
+    "spearman_self_error_vs_n": -1.0
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "closeness",
+  "what_must_hold_outside_the_simulation": "target evidence accumulates artifact by artifact from one maker",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 111.762,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "self_directed_error_falls_with_evidence",
+        "kind": "live",
+        "passed": true,
+        "detail": "Spearman of self-directed error against evidence dose must be <= -0.5: evidence corrects projection",
+        "observed": 1.0,
+        "expected": 0.5
+      },
+      {
+        "name": "asymptotes_converge",
+        "kind": "positive",
+        "passed": true,
+        "detail": "at fifty artifacts the prior no longer matters; routes converge",
+        "observed": -0.0006086989517823868,
+        "expected": 0.0,
+        "tolerance": 0.05
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_s.py",
+    "sha256": "b47f67adc09800ecfefd67cbabef3475f026bf5efcea851dbef53f1c49ae46c7",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "self_directed_error_falls_with_evidence",
+        "kind": "live",
+        "passed": true,
+        "detail": "Spearman of self-directed error against evidence dose must be <= -0.5: evidence corrects projection",
+        "observed": 1.0,
+        "expected": 0.5
+      },
+      {
+        "name": "asymptotes_converge",
+        "kind": "positive",
+        "passed": true,
+        "detail": "at fifty artifacts the prior no longer matters; routes converge",
+        "observed": -0.0006086989517823868,
+        "expected": 0.0,
+        "tolerance": 0.05
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

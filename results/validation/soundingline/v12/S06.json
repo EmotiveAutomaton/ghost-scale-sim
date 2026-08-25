@@ -1,0 +1,137 @@
+{
+  "card": "S06",
+  "trunk": "S",
+  "wave": 2,
+  "question": "Does diagnostic conflict correct projection?",
+  "hypothesis": "Evidence compatible with the reader's own profile anchors the self-first reader; maker-specific counterevidence corrects it with a measurable slope, and the final posterior does not depend on the order.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "truth_posterior_compatible_first": [
+      0.19966592883887396,
+      0.27886897043266334,
+      0.3504596675489201,
+      0.412189863020645,
+      0.46753974120097697,
+      0.5102293917206387,
+      0.5502278982774926,
+      0.5906269133880929,
+      0.6277927934485442,
+      0.665724016057453,
+      0.6940943509610448,
+      0.7212698386900164
+    ],
+    "truth_posterior_conflict_first": [
+      0.220156515734614,
+      0.3199091602715226,
+      0.3987465266394721,
+      0.4599812796232658,
+      0.5111146347591131,
+      0.5577415648654218,
+      0.5952585079596964,
+      0.636978741126227,
+      0.6644111074567773,
+      0.6929867335522953,
+      0.7114896395788525,
+      0.7212698386900169
+    ],
+    "anchoring_at_4": 0.04779141660262082,
+    "correction_half_life_artifacts": 3.9407407407407407,
+    "residual_self_directed_bias": 0.06381702740821445,
+    "order_effect_on_final": 6.358749832400582e-15,
+    "criterion_C_S06": {
+      "passed": true
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "order effect",
+  "what_must_hold_outside_the_simulation": "counterevidence is recognised as bearing on the same hypothesis the prior favoured",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 43.253,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "final_posterior_is_order_independent",
+        "kind": "identity",
+        "passed": true,
+        "detail": "exact inference with the same evidence must end in the same place; an order effect on the final would be a harness error",
+        "observed": 6.358749832400582e-15,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "conflict_produces_correction",
+        "kind": "live",
+        "passed": true,
+        "detail": "the posterior on the truth must rise across the conflicting evidence",
+        "observed": 0.5216039098511425,
+        "expected": 0.1
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_s.py",
+    "sha256": "b47f67adc09800ecfefd67cbabef3475f026bf5efcea851dbef53f1c49ae46c7",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "final_posterior_is_order_independent",
+        "kind": "identity",
+        "passed": true,
+        "detail": "exact inference with the same evidence must end in the same place; an order effect on the final would be a harness error",
+        "observed": 6.358749832400582e-15,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "conflict_produces_correction",
+        "kind": "live",
+        "passed": true,
+        "detail": "the posterior on the truth must rise across the conflicting evidence",
+        "observed": 0.5216039098511425,
+        "expected": 0.1
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

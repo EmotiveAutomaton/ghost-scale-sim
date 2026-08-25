@@ -1,0 +1,132 @@
+{
+  "card": "D01",
+  "trunk": "D",
+  "wave": 1,
+  "question": "Can matched multi-agent artifacts be produced under six ecologies?",
+  "hypothesis": "Artifacts can be produced under six control ecologies matched on part quality, counts and surface style, so that a cheap surface classifier cannot tell the ecologies apart.",
+  "claim_ceiling": "METHOD",
+  "lane": "discovery",
+  "construction_realization": {},
+  "results": {
+    "quality_by_ecology": {
+      "director": 0.9946581980659656,
+      "shared_brief": 0.9958575409201387,
+      "editor": 0.9966527385647915,
+      "ratifier": 0.9955491930975121,
+      "distributed": 0.9962851113005218,
+      "independent": 0.995252073319264
+    },
+    "max_style_js": 0.0003062203363063153,
+    "surface_classifier_accuracy": 0.09722222222222222
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "cheap feature",
+  "what_must_hold_outside_the_simulation": "nothing; a construction check",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 0.952,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "surface_style_matched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control exactly; any deviation is the harness, not the manipulation",
+        "observed": 0.0003062203363063153,
+        "expected": 0.0,
+        "tolerance": 0.02
+      },
+      {
+        "name": "quality_matched",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 0.0019945404988259696,
+        "expected": 0.0,
+        "tolerance": 0.15
+      },
+      {
+        "name": "cheap_classifier_near_chance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 0.09722222222222222,
+        "expected": 0.16666666666666666,
+        "tolerance": 0.15
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_d.py",
+    "sha256": "aa3705f6f90efe620e1c05fabbf9e53265810476b256975ca4ec027af1c641ee",
+    "git_commit": "903751c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "surface_style_matched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control exactly; any deviation is the harness, not the manipulation",
+        "observed": 0.0003062203363063153,
+        "expected": 0.0,
+        "tolerance": 0.02
+      },
+      {
+        "name": "quality_matched",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 0.0019945404988259696,
+        "expected": 0.0,
+        "tolerance": 0.15
+      },
+      {
+        "name": "cheap_classifier_near_chance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 0.09722222222222222,
+        "expected": 0.16666666666666666,
+        "tolerance": 0.15
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
