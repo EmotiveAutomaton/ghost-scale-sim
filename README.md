@@ -63,6 +63,9 @@ Across those generations it implements:
 - a reader-side intent gate on a learner's absorption, tested against disguised and adversarial
   content, in V10;
 - repeated-artifact inference over a persistent maker profile (w) in V11;
+- a measured self-model as the reader's first prior, opportunity records beside artifacts,
+  surface-matched reading regimes, the posterior-to-preference bridge, and production under
+  many hands, in V12;
 - exact and approximate inference paths, construction invariants, source hashes, and committed
   verdicts.
 
@@ -71,25 +74,32 @@ the result, not an exception to it.
 
 ## The latest result, and where the model stops
 
-In V11's bounded model family, repeated artifacts make a persistent maker profile increasingly
-identifiable: profile identification accuracy rises from **0.53 at one artifact to 0.98 at
-fifty**, monotonically. Removing the shared profile family, the assumption that reader and maker
-draw from a common, bounded hypothesis space, raises the residual error of the recovered profile
-(L1 distance between the posterior-mean profile and the truth) from **0.009 to 0.249**. The
-matching test of the reader-expertise assumption **failed as pre-specified** (the effect was
-invisible at this observation length) and is reported as failing in the
-[V11 results](docs/versions/v11-the-maker/RESULTS.md).
+In V12, a reader that starts from a measured model of itself reads makers like itself far better
+than a prior with the same information, and pays for it everywhere else: **+0.60 nats** on the
+maker's profile after one artifact for the fifth of makers nearest the reader's own profile,
+**−0.09 to −0.20** for the middle fifths, no difference for the farthest, and on average worse
+than a plain population prior. A prior with the same entropy and permuted correspondence loses
+the whole gain, so what the self prior carries is correspondence, not confidence. The projection
+this implies decays with evidence (the mass wrongly placed on the reader's own profile falls from
+0.25 to 0.01 across fifty artifacts) and corrects with a four-artifact half-life. Values were
+read from what a maker chose against what it could have chosen and at what cost; a reader that
+ignores the costs learns nothing beyond the population average. The full account, including the
+cards that failed their criteria and the one closed as an instrument failure, is in the
+[V12 results](docs/versions/v12-the-other-model/RESULTS.md).
 
-V11 therefore supplies a **candidate estimator for information that could furnish preferred
-outcomes**. It does **not** yet insert the inferred profile into an active-inference preference
-vector (the C matrix), demonstrate that the four abstract goal channels represent prosocial or
-human values, or test downstream effects on policy. The unbuilt bridge is:
+V12 also built the bridge V11 left unbuilt. The posterior over a maker's profile is transformed
+into the reader's own preferred outcomes and tested on policy under correct, wrong, uncertain and
+shuffled posteriors: the uptake weight moves the policy and the posterior's accuracy decides
+whether the movement helps, so reconstruction, trust and uptake are separate levers.
 
 ```
 q(w | a_1..n)   →   C   →   policy selection
 ```
 
-Only the left-hand inference is presently implemented.
+All three arrows are now implemented in a constructed world. What the model still does not do:
+give the four goal channels any human, prosocial or embodied semantics; test the bridge on
+anything but constructed posteriors; or say whether a person has the record of themselves that a
+measured self-model requires.
 
 ## Relationship to developmental active inference
 
@@ -103,14 +113,15 @@ infer another agent's persistent profile from the traces it produces.
 
 | Developmental active inference | Ghost Scale Simulation | Unbuilt bridge |
 |---|---|---|
-| C: preferred outcomes that affect policy selection | Posterior over a maker profile, q(w) | Transform a calibrated posterior into preferred outcomes and test behavioral consequences |
+| C: preferred outcomes that affect policy selection | Posterior over a maker profile, q(w), and its transform into preferred outcomes and policy (V12, U01–U08) | Outcome semantics and behavioral consequences outside a constructed world |
 | Transfer between developmental stages within one agent | Inference across artifacts produced by another maker | Between-agent developmental transfer |
 | Meaningful or prosocial preferences | Four bounded, abstract goal channels | Empirically grounded outcome semantics |
 | Embodied learning and action | Symbolic artifact-feature simulation | Sensorimotor traces, morphology, and embodied policy |
 | Transparent association parameters | Explicit profiles, likelihoods, posteriors, and gates | Identifiability and calibration in real agents |
 
 This is a research connection, not an equivalence claim. Ghost Scale Simulation currently models
-a possible input to preference construction, not a complete preference-learning architecture, and
+a possible input to preference construction and one constructed bridge from it to policy, not a
+complete preference-learning architecture, and
 it is a symbolic computational social-inference model, not an embodied one.
 
 ## What this repository shows, and what it does not
@@ -170,7 +181,7 @@ experiment or model generation in the repository. Per-version runners are listed
 |---|---|---|
 | **Trust changes the response to underdetermination.** False provenance can support confident invention when an artifact poorly constrains intent; an honest provenance signal redirects that confidence toward calibrated uncertainty (E2, E4, E17). | Provenance belongs inside the inference problem, not only in interface metadata. | Demonstrated within specified synthetic architectures; not a measured human effect, and the *confident* half reproduces in 100% of randomly parameterised models of this shape. |
 | **A mark works through shared convention.** Partial labeling protects learning only for a reader whose model includes the labeling convention (31% coverage suffices in-model); an uninformed reader needs 74% and never builds a reliable picture below it (E16, E47). | Common knowledge may be more important than the visual mark itself. | The tested Ghost Scale label mechanism did not establish a general intervention (E39, E54); the coverage figures are model-internal lower bounds. |
-| **Persistent profiles become more identifiable across artifacts.** V11 recovers increasing information about a bounded maker profile from repeated traces, and prices the assumptions that make recovery possible (S-15). | Artifact sequences may support between-agent preference inference. | The profile is abstract and is not yet mapped into a preference vector, prosocial semantics, or action. |
+| **Persistent profiles become more identifiable across artifacts.** V11 recovers increasing information about a bounded maker profile from repeated traces, and prices the assumptions that make recovery possible (S-15). | Artifact sequences may support between-agent preference inference. | The profile is abstract; V12 maps it into a preference vector and policy in a constructed world, where the mapping's accuracy and its weight are separate levers. Prosocial semantics and action outside the simulation remain unmapped. |
 
 See [`FINDINGS.md`](FINDINGS.md) for the complete experiment and methods ledger, including failed
 predictions, withheld experiments, solver disagreements, architecture effects, and deviations from
@@ -763,6 +774,24 @@ instrument smears a three-locus structure into the field's consensus mid peak in
 while a residual instrument separates the two, with its operating limits measured and attached.
 All of it is in [the maker](docs/versions/v11-the-maker/RESULTS.md).
 
+**The twelfth gave the reader itself.** The sibling's theory says a reader's first model of any
+maker is its own generative organization, and that it estimates a difference from a measured
+self-model rather than starting from nothing. Version 12 built the measured self-model, a
+similarity ruler, priors matched on information, opportunity records beside artifacts, reading
+regimes matched on every surface statistic, the bridge from a maker posterior to the reader's own
+preferences, and artifacts made by many hands, and ran sixty-two pre-registered cards against
+them. **Starting from oneself wins near oneself and loses everywhere else**: +0.60 nats on the
+nearest fifth of makers, −0.09 to −0.20 on the middle fifths, worse than a population prior on
+average; the gain is correspondence, not confidence, and it corrects with a four-artifact
+half-life. **Values are legible only against what was on offer**; the count reader learns
+nothing. **Assuming cooperation costs ten nats against a concealer and buys one against a bard.**
+**Supply gains are symmetric for an exact reader**, so every "purpose first, then method" result
+in this record is a claim about readers, not about information. **Upstream control survives a
+full rewrite where the local hand falls to chance.** And the part closest to the essay, actively
+choosing what to look at, bought almost nothing, because the artifacts already carried what a
+probe would ask for; that card closed as an instrument failure and says so. All of it is in
+[the other model](docs/versions/v12-the-other-model/RESULTS.md).
+
 ## How much of this is the theory?
 
 **The most important number in this repository is not a result. It is a rate.**
@@ -841,6 +870,7 @@ edited after; results were written after and never edited either. Full material 
 | **9** | Minimal Models | six structural ablations | which commitment is each finding made of? | **all die without the maker-model** | N41–N44 |
 | **10** | Reader As Defence | an intent-gate on a learner's absorption | is reading intent a *defence*? | yes, where surface filtering does nothing | N45–N51 |
 | **11** | The Maker | a persistent value profile, a drive that can be absent, two emitters | can a maker's *values* be recovered across works? | converges; the shared family is worth 0.24 L1; the expertise half **failed as locked** | — |
+| **12** | The Other Model | a measured self-model, information-matched priors, opportunity records, matched regimes, the q(w)→C→policy bridge, many hands | is the reader's own organization its first model of a maker, and what does that buy? | **wins near itself, loses elsewhere**; values read from opportunities, not counts; supply gains symmetric; upstream control survives rewriting; active probing bought nothing (Q02 closed) | — |
 
 **Three audit passes** sit alongside, in [docs/audits/](docs/audits/): validation (five of nine
 checks came back against the work), diagnostics (four limits on what the instruments can answer),
