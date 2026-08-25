@@ -1,0 +1,433 @@
+{
+  "card": "B02",
+  "trunk": "B",
+  "wave": 1,
+  "question": "Does the cooperative assumption help on bards and cost on concealers?",
+  "hypothesis": "The cooperative (bard) assumption gains on bards and costs on concealers relative to a neutral reader; the plain reader, which ignores the cue, marks the easier-likelihood rival.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "confirmation",
+  "construction_realization": {},
+  "results": {
+    "cells": {
+      "bard|bard|n=1": {
+        "mean": -0.9974961729161469,
+        "interval": [
+          -1.2208881988279188,
+          -0.7706706353231499
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|bard|n=4": {
+        "mean": -0.30135346169625116,
+        "interval": [
+          -0.5000724832583416,
+          -0.14039353557845025
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|bard|n=12": {
+        "mean": -0.05347823529461797,
+        "interval": [
+          -0.0982492118104449,
+          -0.011077853628131105
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|neutral|n=1": {
+        "mean": -1.4959963499163242,
+        "interval": [
+          -1.6174653270269457,
+          -1.3585069424831249
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|neutral|n=4": {
+        "mean": -1.1457228289561854,
+        "interval": [
+          -1.3444867692458633,
+          -0.9528118614307751
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|neutral|n=12": {
+        "mean": -0.6526391245985042,
+        "interval": [
+          -0.80063069911803,
+          -0.5061216398204472
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|concealer|n=1": {
+        "mean": -3.1792151332811565,
+        "interval": [
+          -4.63153391374721,
+          -2.1122545071465697
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|concealer|n=4": {
+        "mean": -7.419977291739857,
+        "interval": [
+          -10.901133803958324,
+          -4.036571571925187
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|concealer|n=12": {
+        "mean": -13.33965523298101,
+        "interval": [
+          -18.474636068366266,
+          -9.0258756837913
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|plain|n=1": {
+        "mean": -1.4959963499163242,
+        "interval": [
+          -1.6032658361134549,
+          -1.3631932775818367
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|plain|n=4": {
+        "mean": -1.1457228289561854,
+        "interval": [
+          -1.3347056723223885,
+          -0.927837653487818
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "bard|plain|n=12": {
+        "mean": -0.6526391245985046,
+        "interval": [
+          -0.7924755821457392,
+          -0.5053947433841302
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|bard|n=1": {
+        "mean": -2.802894395692212,
+        "interval": [
+          -4.318012770099855,
+          -1.9489513452176184
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|bard|n=4": {
+        "mean": -3.7966901236622266,
+        "interval": [
+          -5.5487758868877695,
+          -2.5639011091308355
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|bard|n=12": {
+        "mean": -5.629204491036882,
+        "interval": [
+          -8.111696923008616,
+          -3.4382271955237913
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|neutral|n=1": {
+        "mean": -1.5887651917796053,
+        "interval": [
+          -1.7320149999143406,
+          -1.4188734652456978
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|neutral|n=4": {
+        "mean": -1.1533682261398652,
+        "interval": [
+          -1.377113935984242,
+          -0.8887197359664668
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|neutral|n=12": {
+        "mean": -0.6415848542355849,
+        "interval": [
+          -0.8096202041642203,
+          -0.44624319283864106
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|concealer|n=1": {
+        "mean": -2.554779110815275,
+        "interval": [
+          -3.361996424756504,
+          -1.973120141527366
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|concealer|n=4": {
+        "mean": -3.403822072113489,
+        "interval": [
+          -4.680690008807696,
+          -2.277122550082657
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|concealer|n=12": {
+        "mean": -5.033068804862404,
+        "interval": [
+          -6.883864197969458,
+          -3.222694700533996
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|plain|n=1": {
+        "mean": -1.5887651917796053,
+        "interval": [
+          -1.7392713000151765,
+          -1.3981374033642666
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|plain|n=4": {
+        "mean": -1.153368226139865,
+        "interval": [
+          -1.4145169519615766,
+          -0.9096181472869144
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "neutral|plain|n=12": {
+        "mean": -0.6415848542355855,
+        "interval": [
+          -0.8315648931477008,
+          -0.46032167483108516
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|bard|n=1": {
+        "mean": -2.9338557634695275,
+        "interval": [
+          -3.9912270725731265,
+          -2.11792033203589
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|bard|n=4": {
+        "mean": -7.207863496999114,
+        "interval": [
+          -10.917427790631223,
+          -4.013265835785795
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|bard|n=12": {
+        "mean": -13.069395417772633,
+        "interval": [
+          -17.509653591789696,
+          -8.070707137501968
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|neutral|n=1": {
+        "mean": -1.5717356546150767,
+        "interval": [
+          -1.7299029450189325,
+          -1.4043369652541349
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|neutral|n=4": {
+        "mean": -1.1367062493124795,
+        "interval": [
+          -1.404361236208601,
+          -0.8707022562606039
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|neutral|n=12": {
+        "mean": -0.631858768507387,
+        "interval": [
+          -0.8443905479542074,
+          -0.4288048781020297
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|concealer|n=1": {
+        "mean": -1.0942672058078007,
+        "interval": [
+          -1.338188435389258,
+          -0.861623546482086
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|concealer|n=4": {
+        "mean": -0.3575966627620927,
+        "interval": [
+          -0.5866301968179075,
+          -0.17442196932270781
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|concealer|n=12": {
+        "mean": -0.11052206113517404,
+        "interval": [
+          -0.3036704553852246,
+          -0.012140653185587557
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|plain|n=1": {
+        "mean": -1.5717356546150767,
+        "interval": [
+          -1.7256701538752264,
+          -1.4167815071889256
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|plain|n=4": {
+        "mean": -1.1367062493124795,
+        "interval": [
+          -1.3886840366561854,
+          -0.8982231563338016
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      },
+      "concealer|plain|n=12": {
+        "mean": -0.6318587685073864,
+        "interval": [
+          -0.8621151622708845,
+          -0.42087397953553685
+        ],
+        "n_units": 12,
+        "n_rows": 240
+      }
+    },
+    "criterion_C_B02": {
+      "cooperative_gain_on_bards": 0.8443693672599342,
+      "cooperative_cost_on_concealers": -6.071157247686635,
+      "passed": true
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "an easier likelihood",
+  "what_must_hold_outside_the_simulation": "readers hold an assumption about the maker's regime at all",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 78.979,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "matched_assumption_is_best_on_its_own_regime",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a reader whose assumption matches the regime must score at least as well as mismatched readers at twelve artifacts",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "assumption_moves_the_score",
+        "kind": "live",
+        "passed": true,
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "observed": 6.915526614946569,
+        "expected": 0.02
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_b.py",
+    "sha256": "b427f4e65b33ce627d7bb1bb0e8ce79da628f1768c320713baef5ed1079ddea9",
+    "git_commit": "77f8866",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "matched_assumption_is_best_on_its_own_regime",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a reader whose assumption matches the regime must score at least as well as mismatched readers at twelve artifacts",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "assumption_moves_the_score",
+        "kind": "live",
+        "passed": true,
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "observed": 6.915526614946569,
+        "expected": 0.02
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -87,9 +87,10 @@ expected-information spread across commissions is 0.05 nats, commissioning a goa
 profile information an artifact carries by 0.001 nats against a free look, and choosing which
 two of six episodes to inspect captures 0.02 of the 0.40 nats that perfect selection would. The
 card that asked whether commissions probe better than free looks closed as an instrument
-failure after its one repair. Active choice mattered in one place: challenges chosen for
-information about the regime read the regime 0.16 nats better than uncertainty sampling. Against
-a concealer planting evidence, modelling the planting was worth 3.4 nats and choosing probes 0.3.
+failure after its one repair. Active choice appeared to matter in one place, challenges chosen
+for information about the regime, and that margin (0.16 nats over uncertainty sampling) did not
+survive the confirmation lineage. Against a concealer planting evidence, modelling the planting
+was worth 3.4 nats and choosing probes 0.3.
 
 **The self-first gain survives the attacks it should and dies of the ones it should.** It is
 bit-identical under shuffled source labels and a changed surface convention, survives a false
@@ -115,7 +116,7 @@ near gain intact.
 | Self-first improves hidden-continuation prediction | **not supported** | −0.007 nats at first evidence, within 0.01 of zero at every evidence dose (S07) |
 | Policy and process similarity carry independent predictive value for the self-first gain | **not supported** | partial R² 0.004 and 0.002 (S10) |
 | Layered intent is readable from short artifacts | **lost at the floor** | chance at 4 steps × 12 blocks; recoverable at 32 × 60 |
-| Choosing what to look at is what makes a maker-reader good | **lost, in this construction** | probes differ by 0.05 nats; commissions inert (Q02 closed); selection captures 0.02 of 0.40 available (Q03); the exception is the regime (B04, +0.16 over uncertainty sampling) |
+| Choosing what to look at is what makes a maker-reader good | **lost, in this construction** | probes differ by 0.05 nats; commissions inert (Q02 closed); selection captures 0.02 of 0.40 available (Q03); the apparent exception (B04, +0.16 over uncertainty sampling on the regime) did not replicate on the confirmation lineage |
 | The self-first gain is a solver or likelihood artifact | **lost** | a third survives the PyMDP solver, two thirds a histogram reader; the identity attacks are bit-identical |
 | The self-first gain is a labelling artifact | **survived as a warning** | half-wrong labels and equifinal twins dissolve it to the same average, as they must; the far bin rises to 0.17 |
 
@@ -134,9 +135,9 @@ near gain intact.
   artifact; only the own-payoff half stands.
 - **Layered intent at the floor.** The program can say the ruler works and that the floor is
   below where it works; it cannot say where between 4 and 32 steps real artifacts sit.
-- **The confirmation lineage.** Untouched. Wave 5 runs the promoted cards there
-  (`runners/run_v12_confirmation.py --auto`); until it does, every mechanism result above is a
-  discovery-lane result.
+- **Cards that were not promoted.** The confirmation lineage was run only on the twenty-two
+  promoted cards (see *Frozen confirmation cards*); the failed criteria (S07, R06, R08), the
+  closed card (Q02) and the descriptive T results have one lineage behind them, not two.
 
 ## 4. Questions for the curator
 
@@ -438,6 +439,24 @@ and the dirty flag under `produced_by`. Manifest: `results/v12/QUEUE_MANIFEST.js
 ## Frozen confirmation cards
 
 Promotion is mechanical: a card is promoted when its discovery verdict landed, every criterion it
-carries passed, and its ceiling is method or constructed mechanism. The promoted set is listed in
-`results/v12/CONFIRMATION.json` once the confirmation pass has run; the pass writes its verdicts
-under `results/validation/soundingline/v12/confirmation/` and never touches the discovery record.
+carries passed, and its ceiling is method or constructed mechanism. Twenty-two cards were promoted
+and run on the untouched lineage (worlds 100–111, 20.9 minutes wall; verdicts under
+`results/validation/soundingline/v12/confirmation/`, ledger `results/v12/CONFIRMATION.json`).
+Twenty-one held their criteria; one did not.
+
+- **Held.** S04 (nearest-fifth gain 0.54 against 0.60 in discovery; middle fifths −0.07 to
+  −0.12; farthest −0.03; the population prior again beats the self-first average, −1.54 against
+  −1.64), S06 (anchoring 0.03, half-life 3.5 artifacts, residual bias 0.08, order effect 0.000),
+  S09 (risk 0.53 against 0.68), Q01, Q03 (+0.008 [−0.009, 0.025]: the null holds), Q04, B02
+  (+0.84 on bards, −6.1 on concealers), B03 (6.6 artifacts, 88% within twelve, identity-keyed
+  reader 15.8), B06 (0.70 against 0.62), U02 (0.54 against 0.24), U03, U05, U07, R02 (−0.84
+  against −1.00 for partialling and −1.32 for the floor readers), R03, R04, R05 (0.11 near tie
+  against 0.99 strong), R07 (0.82 / 0.44 / 0.44 / 0.33), D02, D06 (0.083 [0.027, 0.142]), F03
+  (floor 0.53, readable cells 0.99).
+- **Did not hold.** B04. On the untouched lineage the regime-aware challenge policy scores −0.93
+  against −0.84 for uncertainty sampling and −0.88 for random challenges; the discovery-lane
+  margin of 0.16 nats was noise at eighteen episodes per world. B04 moves to STALLED, and the
+  active-reading conclusion stands without its exception.
+
+Cards that were not promoted (S07, R06, R08, Q02, the descriptive T cards) were not run on the
+confirmation lineage; their discovery-lane readings are the record.

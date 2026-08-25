@@ -1,0 +1,134 @@
+{
+  "card": "R04",
+  "trunk": "R",
+  "wave": 2,
+  "question": "Does the recovered profile predict structurally equivalent choices in a second domain?",
+  "hypothesis": "A profile recovered from one domain's records predicts structurally equivalent choices in a second domain with a different payoff generator, cost scale and habit, better than an identity-only baseline that carries the habit alone.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "lane": "confirmation",
+  "construction_realization": {},
+  "results": {
+    "domain_two_log_score": {
+      "profile": {
+        "mean": -1.1805641334270234,
+        "interval": [
+          -1.243154495174875,
+          -1.1166210918744353
+        ],
+        "n_units": 12,
+        "n_rows": 2880
+      },
+      "identity_only": {
+        "mean": -2.0535077457807143,
+        "interval": [
+          -2.1446417772105746,
+          -1.983929751218018
+        ],
+        "n_units": 12,
+        "n_rows": 2880
+      },
+      "oracle": {
+        "mean": -0.5896033874426467,
+        "interval": [
+          -0.63017214711375,
+          -0.5460701018403581
+        ],
+        "n_units": 12,
+        "n_rows": 2880
+      }
+    },
+    "criterion_C_R04": {
+      "passed": true
+    }
+  },
+  "exact": {},
+  "pymdp": {},
+  "baseline": {},
+  "cell_matrix": {},
+  "independent_unit": "world",
+  "effective_n": {},
+  "coverage": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "habit",
+  "what_must_hold_outside_the_simulation": "the second domain is structurally equivalent in its goal channels",
+  "deviations": [],
+  "repairs": [],
+  "runtime_seconds": 3.199,
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "oracle_is_the_ceiling",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "transfer_moves_the_score",
+        "kind": "live",
+        "passed": true,
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "observed": 0.8729436123536909,
+        "expected": 0.02
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v12/cards/trunk_r.py",
+    "sha256": "f525fbedee4b86a5ad5b75d3ea109d9b355b9ab4f0f1dfda1ef1d58191762058",
+    "git_commit": "77f8866",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 2,
+    "n_ran": 2,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "oracle_is_the_ceiling",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "transfer_moves_the_score",
+        "kind": "live",
+        "passed": true,
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "observed": 0.8729436123536909,
+        "expected": 0.02
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

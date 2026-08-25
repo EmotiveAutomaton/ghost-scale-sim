@@ -387,8 +387,8 @@ matched on surface, a bridge from a maker posterior to the reader's own preferen
 production under many hands. Sixty-two cards, pre-registered and hash-locked, all resolved, one
 closed as an instrument failure; the curator packet is
 [docs/versions/v12-the-other-model/RESULTS.md](../versions/v12-the-other-model/RESULTS.md) and
-every card is generated into its `RESULTS_PACKET.md`. Discovery lane; the confirmation lineage
-is recorded in `results/v12/CONFIRMATION.json`.
+every card is generated into its `RESULTS_PACKET.md`. Twenty-two promoted cards were re-run on
+the untouched confirmation lineage: twenty-one held, B04 did not (`results/v12/CONFIRMATION.json`).
 
 | # | hypothesis | status | notables |
 |---|---|---|---|
@@ -397,7 +397,7 @@ is recorded in `results/v12/CONFIRMATION.json`.
 | S07 | The self route predicts a maker's hidden next choice | **REJECTED (run)** | −0.007 nats at first evidence; within 0.01 of zero at every dose |
 | S09 | The self-first reader abstains better | **SUPPORTED (run)** | risk 0.53 against 0.69 at 60% coverage on near makers |
 | S03 | Expertise prices profile recovery off ceiling (T-11's debt) | **SUPPORTED (run)** | 99 off-ceiling cells: goal gap 0.09 [0.07, 0.13], profile gap 0.28 nats. V11's C2 was a ceiling |
-| Q01–Q06 | Active probe choice makes a maker-reader better | **REJECTED at this construction (run); Q02 INSTRUMENT FAILED** | probes differ by 0.05 nats of expected information; commissions inert as probes (0.001 nats against a free look); episode selection captures 0.02 of the 0.40 nats available; the PyMDP agent does choose the informative probe (89%). The one live case: challenges chosen for information about the regime, +0.16 over uncertainty sampling (B04). Against planted evidence, modelling the planting is worth 3.4 nats and choosing probes 0.3 (Q06) |
+| Q01–Q06 | Active probe choice makes a maker-reader better | **REJECTED at this construction (run); Q02 INSTRUMENT FAILED** | probes differ by 0.05 nats of expected information; commissions inert as probes (0.001 nats against a free look); episode selection captures 0.02 of the 0.40 nats available; the PyMDP agent does choose the informative probe (89%). The one apparent exception, challenges chosen for information about the regime (+0.16 over uncertainty sampling in discovery), did not replicate on the confirmation lineage (−0.09). Against planted evidence, modelling the planting is worth 3.4 nats and choosing probes 0.3 (Q06) |
 | B02/B03/B06 | Regime is readable, and the cooperative assumption is a bet | **SUPPORTED (run)** | regimes matched on every surface statistic to machine precision (B01); cooperation +0.8 on bards, −10 on concealers; a switched regime recovered in five artifacts (identity-keyed reader: fifteen); an accurate model of a concealer raises own payoff 0.73 against 0.64, cooperation not required |
 | B05 | Partial concealment has type-specific signatures | **BOUNDARY (run)** | mimicry unreadable to the neutral reader (−0.55) and transparent to the aware one (−0.02); deflection and omission make the aware reader confidently wrong 37% and 27% of the time |
 | U02/U03/U04 | Reconstruction accuracy and uptake weight are one lever | **REJECTED (run)** | weight moves the policy, accuracy decides whether it helps; wrong-and-confident moves the wrong way 56% against at most 23%; reliability drives movement (+0.62), competence does not (+0.04) |
