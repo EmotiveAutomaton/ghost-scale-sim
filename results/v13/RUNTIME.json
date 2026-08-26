@@ -168,6 +168,19 @@
       "throughput_units_per_s": 0.0,
       "state": "LANDED",
       "finished": "2026-08-26T05:25:12"
+    },
+    "discovery:I13": {
+      "wall_s": 1.9,
+      "parent_cpu_s": 0.11,
+      "children_cpu_s": 1.08,
+      "peak_child_rss": 156614656,
+      "workers": 2,
+      "units": 1,
+      "units_computed": 1,
+      "mean_unit_wall_s": 1.461,
+      "throughput_units_per_s": 0.526734793161427,
+      "state": "LANDED",
+      "finished": "2026-08-26T05:34:04"
     }
   }
 }

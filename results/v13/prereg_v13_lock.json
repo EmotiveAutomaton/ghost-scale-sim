@@ -1,0 +1,31 @@
+{
+  "program": "v13",
+  "kind": "scientific",
+  "locked": true,
+  "written": "2026-08-26T05:32:36",
+  "internal_prespecification_not_external_preregistration": true,
+  "structural_sha256": "21edb15dfba407b1dee7ce285e6c4c7d6c580535aa394482c27e858f91af054f",
+  "workload_sha256": "c79047ed45de740876efe7c0dd427bc7151a485f1163b047dbcc89995b8ea9fb",
+  "structural": {
+    "module_sha256": "629a990285b1c3ea6f29b112f622d9adba808080d2f06bea3bb40bfb2a29e73a",
+    "cards_sha256": "9abb4ab806e6b39b63cd1515dc40909bc4b735caa672cf1393e2480a3457001a",
+    "criteria_sha256": "90fa33a7ef1d731dcc5f76ff801d2d3b5e3ffe66e7e5fd5183e168309c831489",
+    "generators": {
+      "world.py": "d600f9411aff3658acf4fa8decbf640a487c847b20bcd68c927f34a802a4543e",
+      "priors.py": "364ae526edf65d7727d8a4f32a5f70f2120721944bc67f869bc506c27790f108",
+      "exact.py": "7e2aedff68576e9ebbab9ae1bcddf71c5ff5c3343a5aa95fbab34fca3aaa452c",
+      "attention.py": "1b16c6155246c29efd4a580f31da4d3d2aa22760ed429bc799283abfbd6dc228",
+      "costs.py": "3f1db3f963ee909aef8a69bbd5f684df65baafa1a987c62c9d9fb503fa448818",
+      "goals_trust.py": "688c480f904b1f35e0a96adf6740643653e7dd01b07b098870d5c19e785cb9ac",
+      "hierarchy.py": "7c3e85bcf8ee5d8ef9999e846b35062867be02a9693efab31238bcc2d7c908d3",
+      "projection.py": "cfc69997db8a39dda6c6a23e3bfa880ebf2d5567e122d97919c37ae0709bb51c",
+      "pymdp_reader.py": "c67853eaf489c3d9119d9478544e69afe9527a6ca3c084ed39a20850387d9762",
+      "schemas.py": "a75acba431b7243517401ea7b4a15760241660992616caebd0be5a8a5870cf98",
+      "common.py": "bdf72e49474f0bd716d28f379db4eafb181d7de1ffdaa353e2ebc0d912b42947"
+    },
+    "cells_template_sha256": "91ba7ba87f872900d19c420894437095866300b4d01e8dafd4d3bd9d19d7757f"
+  },
+  "tier": "T2",
+  "cells_sha256": "80a798d4b3b17e04e85f7e83421d7d07c0086e4634d0400349e64e8a2b0ee1d7",
+  "amended_after_data": []
+}

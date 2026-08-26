@@ -1,0 +1,26 @@
+{
+  "written": "2026-08-26T05:32:36",
+  "workers": 12,
+  "overhead": 1.15,
+  "by_tier": {
+    "T0": 2.8150496112123835,
+    "T1": 8.640953338857987,
+    "T2": 53.06509551553602,
+    "T3": 239.15336173247582
+  },
+  "selected": {
+    "tier": "T2",
+    "hours": 94.36782107549494,
+    "expansions": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "rule": "largest_tier_under_envelope_expanded"
+  },
+  "envelope_hours": [
+    72.0,
+    96.0
+  ]
+}

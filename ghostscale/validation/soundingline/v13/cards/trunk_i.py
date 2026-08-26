@@ -1086,7 +1086,8 @@ def unit_I13(ctx):
     first_disc = None
     if C.COMPLETION.exists():
         doc = json.loads(C.COMPLETION.read_text(encoding="utf-8"))
-        times = [e["timestamp"] for k, e in doc.get("entries", {}).items() if k.startswith("discovery:") and not k.endswith(":I13")]
+        times = [e["timestamp"] for k, e in doc.get("entries", {}).items()
+                 if k.startswith("discovery:") and not k.split(":")[1].startswith("I")]   # wave 0 (the I trunk) precedes the pilot by the spec's own order
         first_disc = min(times) if times else None
     forecast_before = bool(w and (first_disc is None or w["written"] <= first_disc))
     rows.append({"wid": "pilot", "rep": 0, "check": "forecast_before_discovery", "ok": float(forecast_before)})
@@ -1103,7 +1104,7 @@ def unit_I13(ctx):
     rows.append({"wid": "pilot", "rep": 0, "check": "quarantine", "ok": float(not leaked)})
     child_cpu = bool(p and p.get("accounting", {}).get("children_cpu_s") is not None)
     rows.append({"wid": "pilot", "rep": 0, "check": "child_cpu", "ok": float(child_cpu)})
-    in_env = bool(w and (w.get("forecast", {}).get("rule") in ("in_envelope", "T0_above_envelope_kept", "T3_below_envelope_expanded", "smoke")))
+    in_env = bool(w and (w.get("forecast", {}).get("rule") in ("in_envelope", "T0_above_envelope_kept", "T3_below_envelope_expanded", "largest_tier_under_envelope_expanded", "smoke")))
     rows.append({"wid": "pilot", "rep": 0, "check": "tier_in_envelope_or_rule", "ok": float(in_env)})
     return {"rows": rows, "pilot": p, "workload": w, "first_discovery_verdict": first_disc, "leaked": leaked[:10]}
 

@@ -1,0 +1,35 @@
+{
+  "program": "v13",
+  "kind": "workload",
+  "written": "2026-08-26T05:32:36",
+  "tier": "T2",
+  "tier_config": {
+    "discovery_worlds": 512,
+    "transfer_worlds": 96,
+    "confirmation_worlds": 64,
+    "repeats": 5,
+    "makers": 160,
+    "teams": 64,
+    "events": 96,
+    "pilot_worlds": 4
+  },
+  "expansions_instantiated": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+  ],
+  "forecast": {
+    "hours": 94.36782107549494,
+    "rule": "largest_tier_under_envelope_expanded",
+    "by_tier": {
+      "T0": 2.8150496112123835,
+      "T1": 8.640953338857987,
+      "T2": 53.06509551553602,
+      "T3": 239.15336173247582
+    }
+  },
+  "pilot_summary_sha256": "ef4d4ea6cb4051292ced162f39e1a32878862d82588fcae821416c8f350df3c2",
+  "pilot_is_non_scientific": true,
+  "cells_sha256": "80a798d4b3b17e04e85f7e83421d7d07c0086e4634d0400349e64e8a2b0ee1d7"
+}

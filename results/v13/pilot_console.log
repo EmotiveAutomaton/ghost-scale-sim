@@ -1,0 +1,30 @@
+pilot I10 @ T0: 1.997125 s/unit (0 errors)
+pilot C04 @ T0: 5.984999999999999 s/unit (0 errors)
+pilot C16 @ T0: 4.91175 s/unit (0 errors)
+pilot A14 @ T0: 41.510999999999996 s/unit (0 errors)
+pilot O03 @ T0: 0.5110000000000001 s/unit (0 errors)
+pilot O14 @ T0: 1.090875 s/unit (0 errors)
+pilot P07 @ T0: 0.68625 s/unit (0 errors)
+pilot G08 @ T0: 0.00825 s/unit (0 errors)
+pilot G16 @ T0: 4.243 s/unit (0 errors)
+pilot H03 @ T0: 0.079125 s/unit (0 errors)
+pilot H16 @ T0: 0.164375 s/unit (0 errors)
+pilot Q12 @ T0: 1.4248750000000001 s/unit (0 errors)
+pilot I10 @ T3: 0.571625 s/unit (0 errors)
+pilot C04 @ T3: 65.61475000000002 s/unit (0 errors)
+pilot C16 @ T3: 49.562375 s/unit (0 errors)
+pilot A14 @ T3: 193.125875 s/unit (0 errors)
+pilot O03 @ T3: 2.026875 s/unit (0 errors)
+pilot O14 @ T3: 4.234125 s/unit (0 errors)
+pilot P07 @ T3: 2.6430000000000002 s/unit (0 errors)
+pilot G08 @ T3: 0.025625000000000002 s/unit (0 errors)
+pilot G16 @ T3: 17.16 s/unit (0 errors)
+pilot H03 @ T3: 0.8500000000000001 s/unit (0 errors)
+pilot H16 @ T3: 0.797375 s/unit (0 errors)
+pilot Q12 @ T3: 5.793125 s/unit (0 errors)
+tier T2 selected: forecast 94.4 h under rule largest_tier_under_envelope_expanded; expansions ['E1', 'E2', 'E3', 'E4']
+
+=== I13 [discovery] (wave 0, trunk I): Does the runtime pilot measure real work?
+    -> INSTRUMENT_FAILED in 0.2s wall, 0.0s child CPU
+
+coverage: 14/132 mandatory resolved; states {'LANDED': 13, 'INSTRUMENT_FAILED': 1, 'BUILT': 138}

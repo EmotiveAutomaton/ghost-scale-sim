@@ -1,0 +1,2978 @@
+{
+  "tier": "T2",
+  "tier_config": {
+    "discovery_worlds": 512,
+    "transfer_worlds": 96,
+    "confirmation_worlds": 64,
+    "repeats": 5,
+    "makers": 160,
+    "teams": 64,
+    "events": 96,
+    "pilot_worlds": 4
+  },
+  "written": "2026-08-26T05:32:36",
+  "cards": {
+    "I01": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "anchor": [
+            "S04",
+            "S06",
+            "R02",
+            "R05",
+            "B02",
+            "D02",
+            "D05",
+            "F03"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I02": {
+      "discovery": {
+        "levels": 2,
+        "units": 1,
+        "cells": 2,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "comparator": [
+            "generic_v12",
+            "distance_matched"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "I03": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "equal_local",
+            "generic_local",
+            "random_local",
+            "permuted_self"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I04": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "factor": [
+            "common",
+            "group",
+            "expertise",
+            "individual",
+            "state",
+            "surface"
+          ],
+          "mode": [
+            "single",
+            "crossed"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I05": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "analogue": [
+            "selection",
+            "precision"
+          ],
+          "world": [
+            "informative",
+            "no_information"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I06": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "dimension": [
+            "time",
+            "execution",
+            "cognitive",
+            "epistemic",
+            "opportunity",
+            "social",
+            "risk",
+            "imposed"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I07": {
+      "discovery": {
+        "levels": 7,
+        "units": 2560,
+        "cells": 17920,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "goal": [
+            "accurate",
+            "comprehension_support",
+            "persuasion",
+            "self_presentation",
+            "concealment",
+            "misleading",
+            "neutral"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I08": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "changed": [
+            "goal",
+            "source",
+            "content",
+            "uptake_input"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I09": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "team": [
+            "central",
+            "shared_brief"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I10": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "coupling": [
+            "independent",
+            "weak",
+            "strong"
+          ],
+          "horizon": [
+            1,
+            2
+          ],
+          "gamma": [
+            4,
+            16
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I11": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "null": [
+            "shuffled_maker",
+            "shuffled_reader",
+            "false_similarity",
+            "false_source",
+            "label_permutation",
+            "uniform_emission"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "I12": {
+      "discovery": {
+        "levels": 4,
+        "units": 1,
+        "cells": 4,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "check": [
+            "clone_identity",
+            "order_identity",
+            "lineage_disjoint",
+            "ledger"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "I13": {
+      "discovery": {
+        "levels": 4,
+        "units": 1,
+        "cells": 4,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "check": [
+            "forecast_before_discovery",
+            "quarantine",
+            "child_cpu",
+            "tier_in_envelope_or_rule"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "I14": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "relation": [
+            "goal_relabel",
+            "feature_relabel",
+            "actor_relabel",
+            "cost_units",
+            "option_order",
+            "graph_encoding"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C01": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "domain": [
+            0,
+            1
+          ],
+          "baseline": [
+            "frequency",
+            "population"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C02": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "level": [
+            "common",
+            "group",
+            "expertise",
+            "individual",
+            "state",
+            "surface"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C03": {
+      "discovery": {
+        "levels": 10,
+        "units": 2560,
+        "cells": 25600,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "within_common",
+            "all_family"
+          ],
+          "dose": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C04": {
+      "discovery": {
+        "levels": 60,
+        "units": 2560,
+        "cells": 153600,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "self",
+            "equal_local",
+            "generic_local"
+          ],
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ],
+          "dose": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C05": {
+      "discovery": {
+        "levels": 20,
+        "units": 2560,
+        "cells": 51200,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader_type": [
+            "near",
+            "typical",
+            "atypical",
+            "anti"
+          ],
+          "dose": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C06": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "typicality_bin": [
+            "low",
+            "mid",
+            "high"
+          ],
+          "route": [
+            "self",
+            "optimal_mix"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C07": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "true_match": [
+            0,
+            1
+          ],
+          "claimed_match": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C08": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader_kind": [
+            "practitioner",
+            "familiar",
+            "novice"
+          ],
+          "target": [
+            "profile",
+            "method"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C09": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "history": [
+            0,
+            2,
+            8
+          ],
+          "control": [
+            "real",
+            "relabelled"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C10": {
+      "discovery": {
+        "levels": 24,
+        "units": 2560,
+        "cells": 61440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "axis": [
+            "observation",
+            "transition",
+            "profile",
+            "policy",
+            "cost_model",
+            "surface"
+          ],
+          "target": [
+            "goal",
+            "profile",
+            "method",
+            "cost_weights"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C11": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "nuisance_match": [
+            0,
+            1
+          ],
+          "relevant_conflict": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C12": {
+      "discovery": {
+        "levels": 15,
+        "units": 2560,
+        "cells": 38400,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "raw_self",
+            "difference_from_self",
+            "all_family"
+          ],
+          "dose": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C13": {
+      "discovery": {
+        "levels": 16,
+        "units": 2560,
+        "cells": 40960,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "focus": [
+            "common",
+            "surface",
+            "diagnostic",
+            "uniform"
+          ],
+          "causal_world": [
+            "common",
+            "group",
+            "individual",
+            "nuisance"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C14": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ],
+          "dose": [
+            1,
+            4,
+            12
+          ]
+        },
+        "units_required": 2560
+      },
+      "transfer": {
+        "levels": 12,
+        "units": 480,
+        "cells": 5760,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ],
+          "dose": [
+            1,
+            4,
+            12
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "C15": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "correlation": [
+            "independent",
+            "correlated"
+          ],
+          "method": [
+            "vote",
+            "bayes",
+            "single"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "C16": {
+      "transfer": {
+        "levels": 12,
+        "units": 480,
+        "cells": 5760,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "self",
+            "equal_local",
+            "within_common"
+          ],
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "A01": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "analogue": [
+            "selection",
+            "precision"
+          ],
+          "budget": [
+            1,
+            2,
+            4
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A02": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "random",
+            "salience",
+            "oracle",
+            "learned"
+          ],
+          "budget": [
+            1,
+            2
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A03": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "weighting": [
+            "uniform",
+            "learned",
+            "oracle",
+            "wrong"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A04": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "causal_world": [
+            "common",
+            "group",
+            "individual",
+            "nuisance"
+          ],
+          "focus": [
+            "common",
+            "uniform",
+            "oracle"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A05": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "match": [
+            "matched",
+            "orthogonal",
+            "opposite",
+            "inferred"
+          ],
+          "controls": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A06": {
+      "discovery": {
+        "levels": 10,
+        "units": 2560,
+        "cells": 25600,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "entry": [
+            "purpose",
+            "technique",
+            "mechanics",
+            "anomaly",
+            "random"
+          ],
+          "expertise": [
+            "novice",
+            "expert"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A07": {
+      "discovery": {
+        "levels": 5,
+        "units": 2560,
+        "cells": 12800,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "anomaly": [
+            "mistake",
+            "unfamiliar",
+            "forced",
+            "intentional",
+            "none"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A08": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "menu_relevant": [
+            0,
+            1
+          ],
+          "attention": [
+            "outcome_only",
+            "menu"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A09": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "history": [
+            "true",
+            "false",
+            "ambiguous",
+            "irrelevant"
+          ],
+          "evidence": [
+            "strong",
+            "weak"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A10": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "adaptive",
+            "static_local",
+            "static_broad"
+          ],
+          "conflict_at": [
+            2,
+            6
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A11": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "monitoring": [
+            "narrow",
+            "broad"
+          ],
+          "change": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A12": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "salience",
+            "learned",
+            "oracle"
+          ],
+          "adversarial": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A13": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "null": [
+            "no_information",
+            "duplication",
+            "permutation",
+            "high_precision"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "A14": {
+      "transfer": {
+        "levels": 36,
+        "units": 480,
+        "cells": 17280,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "uniform",
+            "random",
+            "salience",
+            "oracle",
+            "wrong",
+            "learned",
+            "adaptive",
+            "narrow",
+            "broad"
+          ],
+          "ecology": [
+            "common",
+            "group",
+            "individual",
+            "nuisance"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "O01": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "anchor": [
+            "R02",
+            "R05"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O02": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "factored",
+            "total_cost"
+          ],
+          "varied_dim": [
+            "time",
+            "execution",
+            "cognitive",
+            "epistemic",
+            "social",
+            "risk"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O03": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "composition": [
+            "quality",
+            "dominance",
+            "similarity",
+            "constraint"
+          ],
+          "reader": [
+            "full_menu",
+            "size_only"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O04": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "alternative": [
+            "near_tie",
+            "dominated",
+            "attractive",
+            "costly_chosen"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O05": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "dimension": [
+            "time",
+            "execution",
+            "cognitive",
+            "epistemic",
+            "social",
+            "risk"
+          ],
+          "domain_pair": [
+            "same",
+            "cross"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O06": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "motivation": [
+            "low",
+            "high"
+          ],
+          "competence": [
+            "low",
+            "high"
+          ],
+          "reader": [
+            "joint",
+            "effort_only"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O07": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "condition": [
+            "voluntary",
+            "imposed",
+            "no_alternative",
+            "free"
+          ],
+          "reader": [
+            "record",
+            "cost_blind"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O08": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "motivation": [
+            "0.6",
+            "1.0",
+            "1.6"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O09": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "state": [
+            "knew",
+            "did_not_care",
+            "too_costly",
+            "explored"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O10": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "timing": [
+            "anticipated",
+            "sunk",
+            "discovered_late"
+          ],
+          "reader": [
+            "decision_time",
+            "hindsight"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O11": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "cost": [
+            "social",
+            "risk"
+          ],
+          "reward": [
+            "low",
+            "high"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O12": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "set_size": [
+            2,
+            4,
+            6,
+            8
+          ],
+          "reader": [
+            "mimic",
+            "exact"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O13": {
+      "discovery": {
+        "levels": 5,
+        "units": 2560,
+        "cells": 12800,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "condition": [
+            "separate",
+            "joint",
+            "rank",
+            "recall",
+            "explicit"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O14": {
+      "discovery": {
+        "levels": 28,
+        "units": 2560,
+        "cells": 71680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "linear",
+            "logarithmic",
+            "saturating",
+            "threshold",
+            "rank_based",
+            "resource_rational",
+            "learned_monotone"
+          ],
+          "ecology": [
+            "craft",
+            "bureaucratic",
+            "hazardous",
+            "collegial"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O15": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "mimic",
+            "exact",
+            "misspecified",
+            "hybrid"
+          ],
+          "menu": [
+            "complete",
+            "missing"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O16": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "menu": [
+            "complete",
+            "missing",
+            "false",
+            "uncertain"
+          ],
+          "reader": [
+            "naive",
+            "calibrated"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "O17": {
+      "discovery": {
+        "levels": 15,
+        "units": 2560,
+        "cells": 38400,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "changed_costs",
+            "new_domain",
+            "new_goal",
+            "new_commission",
+            "new_role"
+          ],
+          "baseline": [
+            "identity",
+            "frequency",
+            "habit"
+          ]
+        },
+        "units_required": 2560
+      },
+      "transfer": {
+        "levels": 15,
+        "units": 480,
+        "cells": 7200,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "changed_costs",
+            "new_domain",
+            "new_goal",
+            "new_commission",
+            "new_role"
+          ],
+          "baseline": [
+            "identity",
+            "frequency",
+            "habit"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "O18": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "claimed_effort": [
+            "low",
+            "high"
+          ],
+          "quality": [
+            "low",
+            "high"
+          ],
+          "reader": [
+            "expert",
+            "novice"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P01": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "self",
+            "equal_local",
+            "generic_local"
+          ],
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P02": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "evidence": [
+            "behaviour",
+            "process_record",
+            "biography",
+            "group_label",
+            "stated_preference",
+            "source_history"
+          ],
+          "true": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P03": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "actual": [
+            0,
+            1
+          ],
+          "perceived": [
+            0,
+            1
+          ],
+          "reliability": [
+            "low",
+            "high"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P04": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "feedback": [
+            "accurate",
+            "noisy",
+            "delayed",
+            "absent"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P05": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "transfer": [
+            "same_target_new_domain",
+            "new_target_same_group",
+            "new_target"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P06": {
+      "discovery": {
+        "levels": 5,
+        "units": 2560,
+        "cells": 12800,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "fast",
+            "deliberative",
+            "compute_matched",
+            "accuracy_rewarded",
+            "confidence_rewarded"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P07": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "strength": [
+            "weak",
+            "strong"
+          ],
+          "history": [
+            2,
+            8
+          ],
+          "reliability": [
+            "low",
+            "high"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P08": {
+      "discovery": {
+        "levels": 12,
+        "units": 2560,
+        "cells": 30720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "scenario": [
+            "outlier",
+            "adversarial",
+            "regime_change",
+            "stable"
+          ],
+          "reader": [
+            "robust",
+            "reset",
+            "anchor"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P09": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "self",
+            "equal_local",
+            "group_exemplar",
+            "learned_transform"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P10": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "exchange": [
+            "posteriors",
+            "reasons",
+            "none"
+          ],
+          "n_readers": [
+            2,
+            4
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P11": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "correlation": [
+            "misconception",
+            "false_context",
+            "source_bias",
+            "none"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P12": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "correspondence": [
+            "partial",
+            "none"
+          ],
+          "dose": [
+            2,
+            8,
+            16
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "P13": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "corrected",
+            "uncorrected_self",
+            "reset"
+          ],
+          "target": [
+            "passive",
+            "active"
+          ]
+        },
+        "units_required": 2560
+      },
+      "transfer": {
+        "levels": 6,
+        "units": 480,
+        "cells": 2880,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "corrected",
+            "uncorrected_self",
+            "reset"
+          ],
+          "target": [
+            "passive",
+            "active"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "P14": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "phase": [
+            "before",
+            "after"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G01": {
+      "discovery": {
+        "levels": 21,
+        "units": 2560,
+        "cells": 53760,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "goal": [
+            "accurate",
+            "comprehension_support",
+            "persuasion",
+            "self_presentation",
+            "concealment",
+            "misleading",
+            "neutral"
+          ],
+          "dose": [
+            2,
+            6,
+            12
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G02": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "pair": [
+            "compatible",
+            "conflicting"
+          ],
+          "reader": [
+            "joint",
+            "independent"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G03": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "multi_goal",
+            "three_class"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G04": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "source": [
+            "helpful_incompetent",
+            "neutral_reliable",
+            "adversarial_truthful",
+            "helpful_outdated"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G05": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "evidence": [
+            "strong",
+            "weak"
+          ],
+          "history": [
+            "strong",
+            "weak"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G06": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "alignment": [
+            "aligned",
+            "divergent"
+          ],
+          "truth": [
+            "true",
+            "false"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G07": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "default": [
+            "low",
+            "mid",
+            "high"
+          ],
+          "reliability": [
+            "low",
+            "high"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G08": {
+      "discovery": {
+        "levels": 15,
+        "units": 2560,
+        "cells": 38400,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "bayes",
+            "leaky",
+            "asymmetric",
+            "threshold",
+            "change_point"
+          ],
+          "history": [
+            "stable",
+            "one_change",
+            "many_changes"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G09": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "revelation": [
+            "true",
+            "false"
+          ],
+          "relevant": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G10": {
+      "discovery": {
+        "levels": 5,
+        "units": 2560,
+        "cells": 12800,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "repair": [
+            "apology",
+            "costly_action",
+            "repeated_reliability",
+            "third_party",
+            "none"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G11": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "conflict": [
+            "proximal",
+            "standing",
+            "competitive",
+            "benign"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G12": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "transfer": [
+            "same_domain",
+            "new_domain",
+            "shared_label"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G13": {
+      "discovery": {
+        "levels": 16,
+        "units": 2560,
+        "cells": 40960,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "note": [
+            "true",
+            "false",
+            "ambiguous",
+            "irrelevant"
+          ],
+          "evidence": [
+            "weak",
+            "strong"
+          ],
+          "order": [
+            "note_first",
+            "evidence_first"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G14": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "challenge",
+            "static",
+            "free_look",
+            "random"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G15": {
+      "discovery": {
+        "levels": 16,
+        "units": 2560,
+        "cells": 40960,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "accuracy": [
+            "accurate",
+            "wrong"
+          ],
+          "reliability": [
+            "low",
+            "high"
+          ],
+          "relevance": [
+            "low",
+            "high"
+          ],
+          "alignment": [
+            "low",
+            "high"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "G16": {
+      "transfer": {
+        "levels": 4,
+        "units": 480,
+        "cells": 1920,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "fresh": [
+            "identity",
+            "domain",
+            "base_rate",
+            "reversal"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "H01": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "query": [
+            "project_priority",
+            "local_priority",
+            "inheritance"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H02": {
+      "discovery": {
+        "levels": 9,
+        "units": 2560,
+        "cells": 23040,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "role_relative",
+            "project_only",
+            "actor_only"
+          ],
+          "goal_kind": [
+            "assigned",
+            "private",
+            "conflicting"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H03": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "artifact_only",
+            "coherence",
+            "interaction"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H04": {
+      "discovery": {
+        "levels": 14,
+        "units": 2560,
+        "cells": 35840,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "team": [
+            "central",
+            "shared_brief",
+            "editor_led",
+            "ratifier",
+            "rotating",
+            "institutional",
+            "distributed"
+          ],
+          "reader": [
+            "graph",
+            "coherence"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H05": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "role_breadth": [
+            "narrow",
+            "broad"
+          ],
+          "evidence": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H06": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "route": [
+            "suppress",
+            "amplify"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H07": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "style": [
+            "overactive",
+            "underactive"
+          ],
+          "director": [
+            "A",
+            "B"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H08": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "assignment": [
+            "original",
+            "swapped"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H09": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "private": [
+            "compatible",
+            "neutral",
+            "conflicting"
+          ],
+          "evidence": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H10": {
+      "discovery": {
+        "levels": 5,
+        "units": 2560,
+        "cells": 12800,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "handling": [
+            "corrected",
+            "accepted",
+            "exploited",
+            "concealed",
+            "missed"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H11": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "level": [
+            "project",
+            "role",
+            "local",
+            "ratification"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H12": {
+      "discovery": {
+        "levels": 18,
+        "units": 2560,
+        "cells": 46080,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "rewrite": [
+            "none",
+            "local",
+            "global",
+            "template",
+            "editor_sanding",
+            "mixed"
+          ],
+          "trace": [
+            "goal_structure",
+            "interaction",
+            "style"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H13": {
+      "discovery": {
+        "levels": 2,
+        "units": 2560,
+        "cells": 5120,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "history": [
+            "central",
+            "distributed"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H14": {
+      "discovery": {
+        "levels": 7,
+        "units": 2560,
+        "cells": 17920,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "record": [
+            "artifact",
+            "timings",
+            "proposals",
+            "alternatives",
+            "accept_veto",
+            "role_map",
+            "full_log"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "H15": {
+      "discovery": {
+        "levels": 5,
+        "units": 2560,
+        "cells": 12800,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "graph",
+            "role_frequency",
+            "coherence",
+            "actor_identity",
+            "token_share"
+          ]
+        },
+        "units_required": 2560
+      },
+      "transfer": {
+        "levels": 5,
+        "units": 480,
+        "cells": 2400,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "graph",
+            "role_frequency",
+            "coherence",
+            "actor_identity",
+            "token_share"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "H16": {
+      "transfer": {
+        "levels": 4,
+        "units": 480,
+        "cells": 1920,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "scale": [
+            "small",
+            "large"
+          ],
+          "domain": [
+            "native",
+            "new"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "Q01": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "prior": [
+            "uniform",
+            "peaked"
+          ],
+          "horizon": [
+            1,
+            2
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q02": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "exact",
+            "pymdp",
+            "random",
+            "free_look"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q03": {
+      "discovery": {
+        "levels": 8,
+        "units": 2560,
+        "cells": 20480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "field": [
+            "size",
+            "composition",
+            "costs",
+            "control"
+          ],
+          "price": [
+            "low",
+            "high"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q04": {
+      "discovery": {
+        "levels": 9,
+        "units": 2560,
+        "cells": 23040,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "confused_pair": [
+            "motivation_competence",
+            "motivation_constraint",
+            "knowledge_risk"
+          ],
+          "policy": [
+            "eig",
+            "uncertainty",
+            "random"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q05": {
+      "discovery": {
+        "levels": 4,
+        "units": 2560,
+        "cells": 10240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "expertise": [
+            "novice",
+            "expert"
+          ],
+          "policy": [
+            "adaptive",
+            "purpose_first"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q06": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "maker_attention": [
+            "goal",
+            "mechanics",
+            "surface"
+          ],
+          "policy": [
+            "eig",
+            "uncertainty"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q07": {
+      "discovery": {
+        "levels": 6,
+        "units": 2560,
+        "cells": 15360,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "goal_aware",
+            "passive",
+            "random"
+          ],
+          "anticipates": [
+            0,
+            1
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q08": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "probe_set": [
+            "commission",
+            "channel",
+            "query"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q09": {
+      "discovery": {
+        "levels": 9,
+        "units": 2560,
+        "cells": 23040,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "cost": [
+            "low",
+            "mid",
+            "high"
+          ],
+          "policy": [
+            "exact",
+            "pymdp",
+            "fixed"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q10": {
+      "discovery": {
+        "levels": 3,
+        "units": 2560,
+        "cells": 7680,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "salience",
+            "robust",
+            "challenge"
+          ]
+        },
+        "units_required": 2560
+      }
+    },
+    "Q11": {
+      "discovery": {
+        "levels": 24,
+        "units": 2560,
+        "cells": 61440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "prior": [
+            "self",
+            "equal_local",
+            "within_common",
+            "all_family",
+            "corrected",
+            "anti_similar"
+          ],
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ]
+        },
+        "units_required": 2560
+      },
+      "transfer": {
+        "levels": 24,
+        "units": 480,
+        "cells": 11520,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "prior": [
+            "self",
+            "equal_local",
+            "within_common",
+            "all_family",
+            "corrected",
+            "anti_similar"
+          ],
+          "sim_bin": [
+            "near",
+            "mid",
+            "far",
+            "anti"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "Q12": {
+      "transfer": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "coupling": [
+            "independent",
+            "weak",
+            "strong"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "L01": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L02": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L03": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L04": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L05": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L06": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L07": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L08": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L09": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L10": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L11": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "L12": {
+      "discovery": {
+        "levels": 1,
+        "units": 1,
+        "cells": 1,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "item": [
+            "deliverable"
+          ]
+        },
+        "units_required": 1
+      }
+    },
+    "X01": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X02": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X03": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X04": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X05": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X06": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X07": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X08": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X09": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X10": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X11": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X12": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X13": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X14": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X15": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X16": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X17": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X18": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X19": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    },
+    "X20": {
+      "attack": {
+        "levels": 3,
+        "units": 480,
+        "cells": 1440,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "candidate",
+            "positive",
+            "null"
+          ]
+        },
+        "units_required": 480
+      }
+    }
+  }
+}

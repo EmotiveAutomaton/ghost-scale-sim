@@ -216,6 +216,24 @@
       "verdict_path": "results/validation/soundingline/v13/I12.json",
       "verdict_sha256": "2e88ed0321201da0e283c238b340312c8ec09934d03f85619e19abb88853b59e"
     },
+    "discovery:I13": {
+      "card": "I13",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "9d6fe38946853128db04804c9c1135a9dc3ea5845c352a1d47b2d0cef022f5ee",
+      "state": "LANDED",
+      "timestamp": "2026-08-26T05:34:04",
+      "verdict_path": "results/validation/soundingline/v13/I13.json",
+      "verdict_sha256": "18b650f8091aa7955f20e2230dc6ddc685b7e8825046362d8ea2db881374d032"
+    },
     "discovery:I14": {
       "card": "I14",
       "expected_cell_receipt": {
@@ -236,5 +254,5 @@
     }
   },
   "program": "v13",
-  "updated": "2026-08-26T05:25:12"
+  "updated": "2026-08-26T05:34:04"
 }
