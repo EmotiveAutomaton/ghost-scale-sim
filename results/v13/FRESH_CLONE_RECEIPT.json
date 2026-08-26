@@ -1,6 +1,6 @@
 {
-  "written": "2026-08-26T05:45:54",
-  "head": "0fc1ceed7497eb89f8597c43f3cc7ded5ff64472",
+  "written": "2026-08-26T05:46:19",
+  "head": "b0eab307bedbeb09bba665676c6536241a4507a2",
   "git_dirty": false,
   "install": "shared pinned interpreter (no install)",
   "checks": {
@@ -10,9 +10,9 @@
       "tail": "8e3fa80547039978e08738a3cf5e6cbbd868256d57c0ec5a9cc\",\n  \"maker_w\": \"5e0c24da8030520a15fe242511641423387eb4ccd51f6150b4faea55d425b48e\",\n  \"posterior\": \"c13c31f9176a12a47ca1b71c97a71d3f4e21916577955825cb7f0b57096d09c7\",\n  \"seed_world\": 1816359,\n  \"self_w_hat\": \"e3aff5509f8fc4764788e09488b5f6d38974a9b5bd24aaafa25a09d4415a4bdc\",\n  \"spoken\": \"4288430f106e0ad0dac56708d735d45d64f9d68fc4337990943fd27b1ae4e9c1\",\n  \"team_final_goals\": \"2477923109afbbc1708c0973b490bfd49fe341d465c76f6139e5e62d5eb97b2b\"\n }\n}"
     },
     "validator": {
-      "returncode": 1,
-      "head": "Traceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\results\\v13\\fresh_clone_work\\clone_054550\\runners\\validate_v13_program.py\", line 119, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\results\\v13\\fresh_clone_work\\clone_054550\\runners\\validate_v13_program.py\", line 98, in main\n    from ghostscale.prereg_v13 import lock_status\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\results\\v13\\fresh_clone_work\\clone_054550\\ghostscale\\prereg_v13.py\", line 218\n    STRUCTURAL_PATH.write_text(json.dumps(lock, indent=2), encoding=\"utf-8\", newline=\"\n                                                                                     ^\nSyntaxError: unterminated string literal (detected at line 218)\n",
-      "tail": "e_v13_program.py\", line 98, in main\n    from ghostscale.prereg_v13 import lock_status\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\results\\v13\\fresh_clone_work\\clone_054550\\ghostscale\\prereg_v13.py\", line 218\n    STRUCTURAL_PATH.write_text(json.dumps(lock, indent=2), encoding=\"utf-8\", newline=\"\n                                                                                     ^\nSyntaxError: unterminated string literal (detected at line 218)\n"
+      "returncode": 0,
+      "head": "{\n  \"coverage\": {\n    \"cards_total\": 152,\n    \"mandatory_total\": 132,\n    \"mandatory_resolved\": 14,\n    \"by_state\": {\n      \"LANDED\": 14,\n      \"BUILT\": 138\n    },\n    \"by_trunk\": {\n      \"I\": {\n        \"total\": 14,\n        \"resolved\": 14\n      },\n      \"C\": {\n        \"total\": 16,\n        \"resolved\": 0\n      },\n      \"A\": {\n        \"total\": 14,\n        \"resolved\": 0\n      },\n      \"O\": {\n        \"total\": 18,\n        \"resolved\": 0\n      },\n      \"P\": {\n        \"total\": 14,\n        \"resolved\": 0\n      },\n      \"G\": {\n        \"total\": 16,\n        \"resolved\": 0\n      },\n      \"H\": {\n        \"total\": 16,\n        \"resolved\": 0\n      },\n      \"Q\": {\n        \"total\": 12,\n        \"resolved\": 0\n      },\n      \"L\": {\n        \"total\": 12,\n        \"resolved\": 0\n      },\n      \"X\": {\n        \"total\": 20,\n        \"resolved\": 0\n      }\n    },\n    \"unresolved_mandatory\": [\n      \"C01\",\n      \"C02\",\n      \"C03\",\n      \"C04\",\n      \"C05\",\n      \"C06\",\n      \"C07\",\n      \"C08\",\n      \"C09\",\n      \"C10\",\n      \"C11\",\n      \"C12\",\n      \"C13\",\n      \"C14\",\n      \"C15\",\n      \"C16\",\n      \"A01\",\n      \"A02\",\n      \"A03\",\n      \"A04\",\n      \"A05\",\n      \"A06\",\n      \"A07\",\n      \"A08\",\n      \"A09\",\n      ",
+      "tail": " BUILT\",\n    \"H14: BUILT\",\n    \"H15: BUILT\",\n    \"H16: BUILT\",\n    \"Q01: BUILT\",\n    \"Q02: BUILT\",\n    \"Q03: BUILT\",\n    \"Q04: BUILT\",\n    \"Q05: BUILT\",\n    \"Q06: BUILT\",\n    \"Q07: BUILT\",\n    \"Q08: BUILT\",\n    \"Q09: BUILT\",\n    \"Q10: BUILT\",\n    \"Q11: BUILT\",\n    \"Q12: BUILT\",\n    \"L01: BUILT\",\n    \"L02: BUILT\",\n    \"L03: BUILT\",\n    \"L04: BUILT\",\n    \"L05: BUILT\",\n    \"L06: BUILT\",\n    \"L07: BUILT\",\n    \"L08: BUILT\",\n    \"L09: BUILT\",\n    \"L10: BUILT\",\n    \"L11: BUILT\",\n    \"L12: BUILT\"\n  ]\n}\n"
     },
     "gates_test": {
       "returncode": 0,
@@ -22,5 +22,5 @@
   },
   "scientific_fields_match_local": true,
   "note": "a dirty local tree makes field comparison meaningless for uncommitted generator changes",
-  "ok": false
+  "ok": true
 }
