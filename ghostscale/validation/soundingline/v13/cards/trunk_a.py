@@ -108,8 +108,10 @@ def _cue_world_arts(world, m, r, n, diagnostic="goal_consequences"):
     fam = world.family(m.family)
     for a in arts:
         a["features"] = r.integers(0, fam.nf, size=len(a["features"]))                   # surface: irrelevant
-        a["convention_obs"] = r.integers(0, fam.nf, size=len(a["convention_obs"])).tolist()   # irrelevant
-        a["structure_obs"] = r.integers(0, len(fam.blocks) + 1, size=len(a["structure_obs"])).tolist()
+        if "convention_obs" in a:                    # non-draw families emit no rich channels; absent is already irrelevant
+            a["convention_obs"] = r.integers(0, fam.nf, size=len(a["convention_obs"])).tolist()
+        if "structure_obs" in a:
+            a["structure_obs"] = r.integers(0, len(fam.blocks) + 1, size=len(a["structure_obs"])).tolist()
         if diagnostic != "goal_consequences":
             a["payoff_obs"] = int(r.integers(fam.ng))
         if diagnostic != "process_records":
@@ -769,7 +771,8 @@ def unit_A13(ctx):
                     q_ref = prior
                     t = int(r.integers(model.K))
                 else:
-                    scr = [dict(a, convention_obs=r.integers(0, fam.nf, size=len(a["convention_obs"])).tolist()) for a in arts]
+                    scr = [dict(a, convention_obs=r.integers(0, fam.nf, size=len(a["convention_obs"])).tolist())
+                           if "convention_obs" in a else dict(a) for a in arts]
                     q = model.posterior(prior, scr, ("group_convention",), {"group_convention": 3.0})
                     q_ref = prior
                     t = ti
