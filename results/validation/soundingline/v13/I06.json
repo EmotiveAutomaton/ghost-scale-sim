@@ -1,321 +1,321 @@
 {
-  "card": "I06",
-  "trunk": "I",
-  "wave": 0,
-  "lane": "discovery",
-  "record": {
-    "question": "Are cost dimensions independently realized?",
-    "what_happened": "Weighting each cost dimension alone shifted the choice distribution by time 0.154, execution 0.150, cognitive 0.155, epistemic 0.151, social 0.149, risk 0.145, imposed 0.465 (Jensen-Shannon); a classifier reading only total paid cost named the weighted dimension 17% of the time against 12% chance.",
-    "what_changed_in_the_project_world": "Costs are a vector in this world, not a scalar wearing eight names.",
-    "what_remains_a_rival": "dimensions that only move the total",
-    "claim_ceiling": "METHOD"
-  },
-  "hypothesis": "Each cost dimension changes the maker's choices when its weight alone changes, and the paid total does not reveal which dimension was weighted.",
-  "claim_ceiling": "METHOD",
-  "construction_realization": {},
-  "results": {
-    "criterion_I06": {
-      "passed": true,
-      "live": {
-        "time": 0.15393182375223788,
-        "execution": 0.1497668921172527,
-        "cognitive": 0.15546718249351144,
-        "epistemic": 0.15088981503894605,
-        "opportunity": 0.1448834306396124,
-        "social": 0.14914028687255124,
-        "risk": 0.144958993195154,
-        "imposed": 0.4653524837708722
-      },
-      "leak": 0.16666666666666666
-    },
-    "choice_shift_js_by_dimension": {
-      "time": 0.15393182375223788,
-      "execution": 0.1497668921172527,
-      "cognitive": 0.15546718249351144,
-      "epistemic": 0.15088981503894605,
-      "opportunity": 0.1448834306396124,
-      "social": 0.14914028687255124,
-      "risk": 0.144958993195154,
-      "imposed": 0.4653524837708722
-    },
-    "leak_classifier_accuracy": 0.16666666666666666
-  },
-  "conditional_matrix": {},
-  "exact": {},
-  "pymdp": {},
   "baselines": {},
+  "card": "I06",
   "cells": {
-    "time": {
-      "units": 192,
-      "rows": 192,
-      "min_rows_in_a_unit": 1
-    },
-    "execution": {
-      "units": 192,
-      "rows": 192,
-      "min_rows_in_a_unit": 1
-    },
     "cognitive": {
-      "units": 192,
+      "min_rows_in_a_unit": 1,
       "rows": 192,
-      "min_rows_in_a_unit": 1
+      "units": 192
     },
     "epistemic": {
-      "units": 192,
+      "min_rows_in_a_unit": 1,
       "rows": 192,
-      "min_rows_in_a_unit": 1
+      "units": 192
     },
-    "opportunity": {
-      "units": 192,
+    "execution": {
+      "min_rows_in_a_unit": 1,
       "rows": 192,
-      "min_rows_in_a_unit": 1
-    },
-    "social": {
-      "units": 192,
-      "rows": 192,
-      "min_rows_in_a_unit": 1
-    },
-    "risk": {
-      "units": 192,
-      "rows": 192,
-      "min_rows_in_a_unit": 1
+      "units": 192
     },
     "imposed": {
-      "units": 192,
+      "min_rows_in_a_unit": 1,
       "rows": 192,
-      "min_rows_in_a_unit": 1
+      "units": 192
+    },
+    "opportunity": {
+      "min_rows_in_a_unit": 1,
+      "rows": 192,
+      "units": 192
+    },
+    "risk": {
+      "min_rows_in_a_unit": 1,
+      "rows": 192,
+      "units": 192
+    },
+    "social": {
+      "min_rows_in_a_unit": 1,
+      "rows": 192,
+      "units": 192
+    },
+    "time": {
+      "min_rows_in_a_unit": 1,
+      "rows": 192,
+      "units": 192
     }
   },
-  "expected_cell_receipt": {
-    "expected_levels": 8,
-    "realized_levels": 8,
-    "expected_units": 192,
-    "realized_units": 192,
-    "expected_min_rows_per_unit": 1,
-    "realized_min_rows_per_unit": 1,
-    "ok": true
-  },
-  "independent_unit": "world",
-  "effective_n": {
-    "units": 192,
-    "rows": 1536
-  },
-  "matching_residuals": {},
-  "pursuit": "PROMISING",
-  "warrant": "DESCRIPTIVE_ONLY",
-  "strongest_rival": "dimensions that only move the total",
-  "what_must_hold_outside_the_simulation": "",
-  "deviations": [],
-  "repairs": [],
-  "upstream_oracle": false,
-  "runtime": {
-    "units_wall_s": 0.05,
-    "units_cpu_s": 0.0,
-    "workers": 12,
-    "reduce_accounting": {
-      "pid": 180272,
-      "process_time": 1.421875,
-      "user": 0.703125,
-      "system": 0.71875,
-      "children_user": 0.0,
-      "children_system": 0.0,
-      "rss": 162492416,
-      "peak_rss": 162643968
-    }
-  },
-  "runtime_seconds": null,
-  "tier": "T0",
-  "units": {
-    "n": 192,
-    "kind": "world"
-  },
-  "state": "LANDED",
+  "claim_ceiling": "METHOD",
   "closure_reason": "",
-  "gates_summary": {
-    "all_passed": true,
-    "n_gates": 9,
-    "n_ran": 8,
-    "n_skipped": 1,
-    "n_failed": 0,
-    "failed_names": [],
-    "documented_failures": [],
-    "unexpected_passes": [],
-    "gates": [
-      {
-        "name": "time_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.15393182375223788,
-        "expected": 0.01
-      },
-      {
-        "name": "execution_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.1497668921172527,
-        "expected": 0.01
-      },
-      {
-        "name": "cognitive_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.15546718249351144,
-        "expected": 0.01
-      },
-      {
-        "name": "epistemic_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.15088981503894605,
-        "expected": 0.01
-      },
-      {
-        "name": "opportunity_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "not run",
-        "skipped": "opportunity cost is derived from the other dimensions (the value of the best forgone route), not a planted weight"
-      },
-      {
-        "name": "social_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.14914028687255124,
-        "expected": 0.01
-      },
-      {
-        "name": "risk_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.144958993195154,
-        "expected": 0.01
-      },
-      {
-        "name": "imposed_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
-        "observed": 0.4653524837708722,
-        "expected": 0.01
-      },
-      {
-        "name": "total_cost_reader_flat_under_matched_totals",
-        "kind": "positive",
-        "passed": true,
-        "detail": "with every option's total matched, a total-cost likelihood is identical under every dimension hypothesis: the label cannot leak through the total",
-        "observed": 0.16666666666666666,
-        "expected": 0.16666666666666666,
-        "tolerance": 1e-09
-      }
-    ],
-    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  "conditional_matrix": {},
+  "construction_realization": {},
+  "deviations": [],
+  "effective_n": {
+    "rows": 1536,
+    "units": 192
   },
   "environment": {
-    "python": "3.13.2",
-    "numpy": "2.1.3",
-    "scipy": "1.15.3",
-    "pymdp": "1.0.2 (pinned)",
-    "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
-    "omp_threads": "1",
     "cuda_visible_devices": "",
-    "jax_platforms": "cpu"
+    "jax_platforms": "cpu",
+    "numpy": "2.1.3",
+    "omp_threads": "1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pymdp": "1.0.2 (pinned)",
+    "python": "3.13.2",
+    "scipy": "1.15.3"
   },
-  "produced_by": {
-    "module": "ghostscale/validation/soundingline/v13/cards/trunk_i.py",
-    "sha256": "0e15e5d2882d786e0fa9980b62c24d22d44377b5d5526fc295305da850462483",
-    "git_commit": "6656c1c",
-    "git_dirty": true
+  "exact": {},
+  "expected_cell_receipt": {
+    "expected_levels": 8,
+    "expected_min_rows_per_unit": 1,
+    "expected_units": 192,
+    "ok": true,
+    "realized_levels": 8,
+    "realized_min_rows_per_unit": 1,
+    "realized_units": 192
   },
   "gates": {
     "all_passed": true,
-    "n_gates": 9,
-    "n_ran": 8,
-    "n_skipped": 1,
-    "n_failed": 0,
-    "failed_names": [],
     "documented_failures": [],
-    "unexpected_passes": [],
+    "failed_names": [],
     "gates": [
       {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
         "name": "time_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
         "observed": 0.15393182375223788,
-        "expected": 0.01
+        "passed": true
       },
       {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
         "name": "execution_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
         "observed": 0.1497668921172527,
-        "expected": 0.01
+        "passed": true
       },
       {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
         "name": "cognitive_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
         "observed": 0.15546718249351144,
-        "expected": 0.01
+        "passed": true
       },
       {
-        "name": "epistemic_moves_choices",
-        "kind": "live",
-        "passed": true,
         "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "epistemic_moves_choices",
         "observed": 0.15088981503894605,
-        "expected": 0.01
+        "passed": true
       },
       {
-        "name": "opportunity_moves_choices",
-        "kind": "live",
-        "passed": true,
         "detail": "not run",
+        "kind": "live",
+        "name": "opportunity_moves_choices",
+        "passed": true,
         "skipped": "opportunity cost is derived from the other dimensions (the value of the best forgone route), not a planted weight"
       },
       {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
         "name": "social_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
         "observed": 0.14914028687255124,
-        "expected": 0.01
+        "passed": true
       },
       {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
         "name": "risk_moves_choices",
-        "kind": "live",
-        "passed": true,
-        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
         "observed": 0.144958993195154,
-        "expected": 0.01
+        "passed": true
       },
       {
-        "name": "imposed_moves_choices",
-        "kind": "live",
-        "passed": true,
         "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "imposed_moves_choices",
         "observed": 0.4653524837708722,
-        "expected": 0.01
+        "passed": true
       },
       {
-        "name": "total_cost_reader_flat_under_matched_totals",
-        "kind": "positive",
-        "passed": true,
         "detail": "with every option's total matched, a total-cost likelihood is identical under every dimension hypothesis: the label cannot leak through the total",
-        "observed": 0.16666666666666666,
         "expected": 0.16666666666666666,
+        "kind": "positive",
+        "name": "total_cost_reader_flat_under_matched_totals",
+        "observed": 0.16666666666666666,
+        "passed": true,
         "tolerance": 1e-09
       }
     ],
-    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
-  }
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 0,
+    "n_gates": 9,
+    "n_ran": 8,
+    "n_skipped": 1,
+    "unexpected_passes": []
+  },
+  "gates_summary": {
+    "all_passed": true,
+    "documented_failures": [],
+    "failed_names": [],
+    "gates": [
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "time_moves_choices",
+        "observed": 0.15393182375223788,
+        "passed": true
+      },
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "execution_moves_choices",
+        "observed": 0.1497668921172527,
+        "passed": true
+      },
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "cognitive_moves_choices",
+        "observed": 0.15546718249351144,
+        "passed": true
+      },
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "epistemic_moves_choices",
+        "observed": 0.15088981503894605,
+        "passed": true
+      },
+      {
+        "detail": "not run",
+        "kind": "live",
+        "name": "opportunity_moves_choices",
+        "passed": true,
+        "skipped": "opportunity cost is derived from the other dimensions (the value of the best forgone route), not a planted weight"
+      },
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "social_moves_choices",
+        "observed": 0.14914028687255124,
+        "passed": true
+      },
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "risk_moves_choices",
+        "observed": 0.144958993195154,
+        "passed": true
+      },
+      {
+        "detail": "a manipulation at full strength changes the output; if it does not, the manipulation is not reaching the measurement (S-2)",
+        "expected": 0.01,
+        "kind": "live",
+        "name": "imposed_moves_choices",
+        "observed": 0.4653524837708722,
+        "passed": true
+      },
+      {
+        "detail": "with every option's total matched, a total-cost likelihood is identical under every dimension hypothesis: the label cannot leak through the total",
+        "expected": 0.16666666666666666,
+        "kind": "positive",
+        "name": "total_cost_reader_flat_under_matched_totals",
+        "observed": 0.16666666666666666,
+        "passed": true,
+        "tolerance": 1e-09
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 0,
+    "n_gates": 9,
+    "n_ran": 8,
+    "n_skipped": 1,
+    "unexpected_passes": []
+  },
+  "hypothesis": "Each cost dimension changes the maker's choices when its weight alone changes, and the paid total does not reveal which dimension was weighted.",
+  "independent_unit": "world",
+  "lane": "discovery",
+  "matching_residuals": {},
+  "produced_by": {
+    "git_commit": "6656c1c",
+    "git_dirty": true,
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_i.py",
+    "sha256": "0e15e5d2882d786e0fa9980b62c24d22d44377b5d5526fc295305da850462483"
+  },
+  "pursuit": "PROMISING",
+  "pymdp": {},
+  "record": {
+    "claim_ceiling": "METHOD",
+    "question": "Are cost dimensions independently realized?",
+    "what_changed_in_the_project_world": "Costs are a vector in this world, not a scalar wearing eight names.",
+    "what_happened": "Weighting each cost dimension alone shifted the choice distribution by time 0.154, execution 0.150, cognitive 0.155, epistemic 0.151, social 0.149, risk 0.145, imposed 0.465 (Jensen-Shannon); a classifier reading only total paid cost named the weighted dimension 17% of the time against 12% chance.",
+    "what_remains_a_rival": "dimensions that only move the total"
+  },
+  "repairs": [],
+  "results": {
+    "choice_shift_js_by_dimension": {
+      "cognitive": 0.15546718249351144,
+      "epistemic": 0.15088981503894605,
+      "execution": 0.1497668921172527,
+      "imposed": 0.4653524837708722,
+      "opportunity": 0.1448834306396124,
+      "risk": 0.144958993195154,
+      "social": 0.14914028687255124,
+      "time": 0.15393182375223788
+    },
+    "criterion_I06": {
+      "leak": 0.16666666666666666,
+      "live": {
+        "cognitive": 0.15546718249351144,
+        "epistemic": 0.15088981503894605,
+        "execution": 0.1497668921172527,
+        "imposed": 0.4653524837708722,
+        "opportunity": 0.1448834306396124,
+        "risk": 0.144958993195154,
+        "social": 0.14914028687255124,
+        "time": 0.15393182375223788
+      },
+      "passed": true
+    },
+    "leak_classifier_accuracy": 0.16666666666666666
+  },
+  "runtime": {
+    "reduce_accounting": {
+      "children_system": 0.0,
+      "children_user": 0.0,
+      "peak_rss": 162643968,
+      "pid": 180272,
+      "process_time": 1.421875,
+      "rss": 162492416,
+      "system": 0.71875,
+      "user": 0.703125
+    },
+    "units_cpu_s": 0.0,
+    "units_wall_s": 0.05,
+    "workers": 12
+  },
+  "runtime_seconds": 0.05,
+  "state": "LANDED",
+  "strongest_rival": "dimensions that only move the total",
+  "tier": "T0",
+  "trunk": "I",
+  "units": {
+    "kind": "world",
+    "n": 192
+  },
+  "upstream_oracle": false,
+  "warrant": "DESCRIPTIVE_ONLY",
+  "wave": 0,
+  "what_must_hold_outside_the_simulation": ""
 }

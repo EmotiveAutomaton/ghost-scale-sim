@@ -298,6 +298,9 @@ def finish(card, v: dict, gr: G.GateReport, module_file: str, state: str, ctx: d
         v["state"] = state = "RESOURCE_BLOCKED"
         v["closure_reason"] = "expected-cell receipt not met: " + C.dumps(v["expected_cell_receipt"])
     v["runtime"]["units_wall_s"] = ctx.get("units_wall_s")
+    if v.get("runtime_seconds") is None:
+        ws = ctx.get("units_wall_s") or 0.0
+        v["runtime_seconds"] = round(float(ws if isinstance(ws, (int, float)) else sum(ws)), 3)
     v["runtime"]["units_cpu_s"] = ctx.get("units_cpu_s")
     v["runtime"]["workers"] = ctx.get("workers")
     out_dir = ctx.get("out_dir")

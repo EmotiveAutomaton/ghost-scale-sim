@@ -1,499 +1,499 @@
 {
+  "baselines": {},
   "card": "I01",
-  "trunk": "I",
-  "wave": 0,
-  "lane": "discovery",
-  "record": {
-    "question": "Do the V12 anchors reproduce without modifying V12?",
-    "what_happened": "Eight V12 anchors were rebuilt with V12's own seeds; the largest deviation from any committed field was 0.00e+00.",
-    "what_changed_in_the_project_world": "V12's record is reproducible from its primitives; every V13 correction of its reading stands beside an intact original.",
-    "what_remains_a_rival": "provenance drift",
-    "claim_ceiling": "METHOD"
+  "cells": {
+    "B02": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "D02": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "D05": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "F03": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "R02": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "R05": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "S04": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    },
+    "S06": {
+      "min_rows_in_a_unit": 1,
+      "rows": 1,
+      "units": 1
+    }
+  },
+  "claim_ceiling": "METHOD",
+  "closure_reason": "",
+  "conditional_matrix": {},
+  "construction_realization": {},
+  "deviations": [],
+  "effective_n": {
+    "rows": 8,
+    "units": 8
+  },
+  "environment": {
+    "cpu_count": 24,
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu",
+    "numpy": "2.1.3",
+    "omp_threads": "1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pymdp": "1.0.2 (pinned)",
+    "python": "3.13.2",
+    "scipy": "1.15.3"
+  },
+  "exact": {},
+  "expected_cell_receipt": {
+    "expected_levels": 8,
+    "expected_min_rows_per_unit": 1,
+    "expected_units": 1,
+    "ok": true,
+    "realized_levels": 8,
+    "realized_min_rows_per_unit": 1,
+    "realized_units": 1
+  },
+  "gates": {
+    "all_passed": true,
+    "documented_failures": [],
+    "failed_names": [],
+    "gates": [
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "S04_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "S06_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "R02_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "R05_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "B02_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "D02_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "D05_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "F03_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "a task whose answer is known by construction returns that answer",
+        "expected": 8.0,
+        "kind": "positive",
+        "name": "all_anchors_attempted",
+        "observed": 8.0,
+        "passed": true,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 0,
+    "n_gates": 9,
+    "n_ran": 9,
+    "n_skipped": 0,
+    "unexpected_passes": []
+  },
+  "gates_summary": {
+    "all_passed": true,
+    "documented_failures": [],
+    "failed_names": [],
+    "gates": [
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "S04_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "S06_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "R02_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "R05_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "B02_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "D02_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "D05_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "every committed field of the anchor equals its reconstruction",
+        "expected": 0.0,
+        "kind": "identity",
+        "name": "F03_reproduces",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 1e-09
+      },
+      {
+        "detail": "a task whose answer is known by construction returns that answer",
+        "expected": 8.0,
+        "kind": "positive",
+        "name": "all_anchors_attempted",
+        "observed": 8.0,
+        "passed": true,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 0,
+    "n_gates": 9,
+    "n_ran": 9,
+    "n_skipped": 0,
+    "unexpected_passes": []
   },
   "hypothesis": "V12's headline numbers are rebuilt from V12's own world, primitives and seeds by loops written again here; if the record can be rebuilt, later corrections of its reading are corrections, not edits.",
-  "claim_ceiling": "METHOD",
-  "construction_realization": {},
+  "independent_unit": "anchor",
+  "lane": "discovery",
+  "matching_residuals": {},
+  "produced_by": {
+    "git_commit": "6656c1c",
+    "git_dirty": true,
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_i.py",
+    "sha256": "0e15e5d2882d786e0fa9980b62c24d22d44377b5d5526fc295305da850462483"
+  },
+  "pursuit": "PROMISING",
+  "pymdp": {},
+  "record": {
+    "claim_ceiling": "METHOD",
+    "question": "Do the V12 anchors reproduce without modifying V12?",
+    "what_changed_in_the_project_world": "V12's record is reproducible from its primitives; every V13 correction of its reading stands beside an intact original.",
+    "what_happened": "Eight V12 anchors were rebuilt with V12's own seeds; the largest deviation from any committed field was 0.00e+00.",
+    "what_remains_a_rival": "provenance drift"
+  },
+  "repairs": [],
   "results": {
     "criterion_I01": {
-      "passed": true,
+      "anchors": 8.0,
       "max_abs_deviation": 0.0,
-      "anchors": 8.0
+      "passed": true
     },
     "deviation_by_anchor": {
-      "S04": 0.0,
-      "S06": 0.0,
-      "R02": 0.0,
-      "R05": 0.0,
       "B02": 0.0,
       "D02": 0.0,
       "D05": 0.0,
-      "F03": 0.0
+      "F03": 0.0,
+      "R02": 0.0,
+      "R05": 0.0,
+      "S04": 0.0,
+      "S06": 0.0
     },
     "fields": {
-      "S04": {
-        "0": {
-          "reconstructed": 0.5997528919839225,
-          "committed": 0.5997528919839225
-        },
-        "1": {
-          "reconstructed": -0.08828958123647553,
-          "committed": -0.08828958123647553
-        },
-        "2": {
-          "reconstructed": -0.15097275684509065,
-          "committed": -0.15097275684509065
-        },
-        "3": {
-          "reconstructed": -0.20249435916451142,
-          "committed": -0.20249435916451142
-        },
-        "4": {
-          "reconstructed": -0.002303919693227582,
-          "committed": -0.002303919693227582
-        }
-      },
-      "S06": {
-        "correction_half_life_artifacts": {
-          "reconstructed": 3.9407407407407407,
-          "committed": 3.9407407407407407
-        },
-        "residual_self_directed_bias": {
-          "reconstructed": 0.06381702740821445,
-          "committed": 0.06381702740821445
-        }
-      },
-      "R02": {
-        "constrained_minus_partialling": {
-          "reconstructed": 0.164747538141505,
-          "committed": 0.164747538141505
-        }
-      },
-      "R05": {
-        "record_reader.near_tie": {
-          "reconstructed": 0.12285988021941702,
-          "committed": 0.12285988021941702
-        },
-        "record_reader.strong": {
-          "reconstructed": 0.9742255327926657,
-          "committed": 0.9742255327926657
-        },
-        "count_reader.near_tie": {
-          "reconstructed": 0.16118113200665607,
-          "committed": 0.16118113200665607
-        },
-        "count_reader.strong": {
-          "reconstructed": 0.42849733314616917,
-          "committed": 0.42849733314616917
-        }
-      },
       "B02": {
-        "cooperative_gain_on_bards": {
-          "reconstructed": 0.7875438914923423,
-          "committed": 0.7875438914923423
-        },
         "cooperative_cost_on_concealers": {
-          "reconstructed": -9.915431902783617,
-          "committed": -9.915431902783617
+          "committed": -9.915431902783617,
+          "reconstructed": -9.915431902783617
+        },
+        "cooperative_gain_on_bards": {
+          "committed": 0.7875438914923423,
+          "reconstructed": 0.7875438914923423
         }
       },
       "D02": {
-        "director_goal": {
-          "reconstructed": 1.0,
-          "committed": 1.0
-        },
-        "director_goal_surface": {
-          "reconstructed": 1.0,
-          "committed": 1.0
-        },
         "brief": {
-          "reconstructed": 1.0,
-          "committed": 1.0
+          "committed": 1.0,
+          "reconstructed": 1.0
         },
         "brief_surface": {
-          "reconstructed": 1.0,
-          "committed": 1.0
+          "committed": 1.0,
+          "reconstructed": 1.0
         },
-        "secondary_goal": {
-          "reconstructed": 0.25,
-          "committed": 0.25
+        "director_goal": {
+          "committed": 1.0,
+          "reconstructed": 1.0
         },
-        "secondary_goal_surface": {
-          "reconstructed": 0.25,
-          "committed": 0.25
+        "director_goal_surface": {
+          "committed": 1.0,
+          "reconstructed": 1.0
         },
         "local": {
-          "reconstructed": 0.25,
-          "committed": 0.25
+          "committed": 0.25,
+          "reconstructed": 0.25
         },
         "local_surface": {
-          "reconstructed": 0.178125,
-          "committed": 0.178125
+          "committed": 0.178125,
+          "reconstructed": 0.178125
         },
         "ratification": {
-          "reconstructed": 0.25,
-          "committed": 0.25
+          "committed": 0.25,
+          "reconstructed": 0.25
         },
         "ratification_surface": {
-          "reconstructed": 0.25,
-          "committed": 0.25
+          "committed": 0.25,
+          "reconstructed": 0.25
+        },
+        "secondary_goal": {
+          "committed": 0.25,
+          "reconstructed": 0.25
+        },
+        "secondary_goal_surface": {
+          "committed": 0.25,
+          "reconstructed": 0.25
         }
       },
       "D05": {
         "0.0.director": {
-          "reconstructed": 0.9416666666666667,
-          "committed": 0.9416666666666667
+          "committed": 0.9416666666666667,
+          "reconstructed": 0.9416666666666667
         },
         "0.0.local": {
-          "reconstructed": 0.4847222222222222,
-          "committed": 0.4847222222222222
+          "committed": 0.4847222222222222,
+          "reconstructed": 0.4847222222222222
         },
         "0.25.director": {
-          "reconstructed": 0.95,
-          "committed": 0.95
+          "committed": 0.95,
+          "reconstructed": 0.95
         },
         "0.25.local": {
-          "reconstructed": 0.4166666666666667,
-          "committed": 0.4166666666666667
+          "committed": 0.4166666666666667,
+          "reconstructed": 0.4166666666666667
         },
         "0.5.director": {
-          "reconstructed": 0.9333333333333333,
-          "committed": 0.9333333333333333
+          "committed": 0.9333333333333333,
+          "reconstructed": 0.9333333333333333
         },
         "0.5.local": {
-          "reconstructed": 0.3590277777777778,
-          "committed": 0.3590277777777778
+          "committed": 0.3590277777777778,
+          "reconstructed": 0.3590277777777778
         },
         "0.75.director": {
-          "reconstructed": 0.9222222222222223,
-          "committed": 0.9222222222222223
+          "committed": 0.9222222222222223,
+          "reconstructed": 0.9222222222222223
         },
         "0.75.local": {
-          "reconstructed": 0.29305555555555557,
-          "committed": 0.29305555555555557
+          "committed": 0.29305555555555557,
+          "reconstructed": 0.29305555555555557
         },
         "1.0.director": {
-          "reconstructed": 0.9194444444444444,
-          "committed": 0.9194444444444444
+          "committed": 0.9194444444444444,
+          "reconstructed": 0.9194444444444444
         },
         "1.0.local": {
-          "reconstructed": 0.25972222222222224,
-          "committed": 0.25972222222222224
+          "committed": 0.25972222222222224,
+          "reconstructed": 0.25972222222222224
         }
       },
       "F03": {
-        "dependency@steps4x12": {
-          "reconstructed": 0.5144444444444444,
-          "committed": 0.5144444444444444
+        "dependency@steps128x60": {
+          "committed": 1.0,
+          "reconstructed": 1.0
         },
         "dependency@steps32x12": {
-          "reconstructed": 0.7129166666666666,
-          "committed": 0.7129166666666666
+          "committed": 0.7129166666666666,
+          "reconstructed": 0.7129166666666666
         },
         "dependency@steps32x60": {
-          "reconstructed": 0.9629398148148148,
-          "committed": 0.9629398148148148
+          "committed": 0.9629398148148148,
+          "reconstructed": 0.9629398148148148
         },
-        "dependency@steps128x60": {
-          "reconstructed": 1.0,
-          "committed": 1.0
+        "dependency@steps4x12": {
+          "committed": 0.5144444444444444,
+          "reconstructed": 0.5144444444444444
+        }
+      },
+      "R02": {
+        "constrained_minus_partialling": {
+          "committed": 0.164747538141505,
+          "reconstructed": 0.164747538141505
+        }
+      },
+      "R05": {
+        "count_reader.near_tie": {
+          "committed": 0.16118113200665607,
+          "reconstructed": 0.16118113200665607
+        },
+        "count_reader.strong": {
+          "committed": 0.42849733314616917,
+          "reconstructed": 0.42849733314616917
+        },
+        "record_reader.near_tie": {
+          "committed": 0.12285988021941702,
+          "reconstructed": 0.12285988021941702
+        },
+        "record_reader.strong": {
+          "committed": 0.9742255327926657,
+          "reconstructed": 0.9742255327926657
+        }
+      },
+      "S04": {
+        "0": {
+          "committed": 0.5997528919839225,
+          "reconstructed": 0.5997528919839225
+        },
+        "1": {
+          "committed": -0.08828958123647553,
+          "reconstructed": -0.08828958123647553
+        },
+        "2": {
+          "committed": -0.15097275684509065,
+          "reconstructed": -0.15097275684509065
+        },
+        "3": {
+          "committed": -0.20249435916451142,
+          "reconstructed": -0.20249435916451142
+        },
+        "4": {
+          "committed": -0.002303919693227582,
+          "reconstructed": -0.002303919693227582
+        }
+      },
+      "S06": {
+        "correction_half_life_artifacts": {
+          "committed": 3.9407407407407407,
+          "reconstructed": 3.9407407407407407
+        },
+        "residual_self_directed_bias": {
+          "committed": 0.06381702740821445,
+          "reconstructed": 0.06381702740821445
         }
       }
     }
   },
-  "conditional_matrix": {},
-  "exact": {},
-  "pymdp": {},
-  "baselines": {},
-  "cells": {
-    "S04": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "S06": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "R02": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "R05": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "B02": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "D02": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "D05": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    },
-    "F03": {
-      "units": 1,
-      "rows": 1,
-      "min_rows_in_a_unit": 1
-    }
-  },
-  "expected_cell_receipt": {
-    "expected_levels": 8,
-    "realized_levels": 8,
-    "expected_units": 1,
-    "realized_units": 1,
-    "expected_min_rows_per_unit": 1,
-    "realized_min_rows_per_unit": 1,
-    "ok": true
-  },
-  "independent_unit": "anchor",
-  "effective_n": {
-    "units": 8,
-    "rows": 8
-  },
-  "matching_residuals": {},
-  "pursuit": "PROMISING",
-  "warrant": "DESCRIPTIVE_ONLY",
-  "strongest_rival": "provenance drift",
-  "what_must_hold_outside_the_simulation": "",
-  "deviations": [],
-  "repairs": [],
-  "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": 0.05,
-    "units_cpu_s": 0.0,
-    "workers": 12,
     "reduce_accounting": {
+      "children_system": 0.0,
+      "children_user": 0.0,
+      "peak_rss": 160432128,
       "pid": 180272,
       "process_time": 1.0625,
-      "user": 0.546875,
-      "system": 0.515625,
-      "children_user": 0.0,
-      "children_system": 0.0,
       "rss": 159477760,
-      "peak_rss": 160432128
-    }
+      "system": 0.515625,
+      "user": 0.546875
+    },
+    "units_cpu_s": 0.0,
+    "units_wall_s": 0.05,
+    "workers": 12
   },
-  "runtime_seconds": null,
-  "tier": "T0",
-  "units": {
-    "n": 8,
-    "kind": "list"
-  },
+  "runtime_seconds": 0.05,
   "state": "LANDED",
-  "closure_reason": "",
-  "gates_summary": {
-    "all_passed": true,
-    "n_gates": 9,
-    "n_ran": 9,
-    "n_skipped": 0,
-    "n_failed": 0,
-    "failed_names": [],
-    "documented_failures": [],
-    "unexpected_passes": [],
-    "gates": [
-      {
-        "name": "S04_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "S06_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "R02_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "R05_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "B02_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "D02_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "D05_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "F03_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "all_anchors_attempted",
-        "kind": "positive",
-        "passed": true,
-        "detail": "a task whose answer is known by construction returns that answer",
-        "observed": 8.0,
-        "expected": 8.0,
-        "tolerance": 0.0
-      }
-    ],
-    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  "strongest_rival": "provenance drift",
+  "tier": "T0",
+  "trunk": "I",
+  "units": {
+    "kind": "list",
+    "n": 8
   },
-  "environment": {
-    "python": "3.13.2",
-    "numpy": "2.1.3",
-    "scipy": "1.15.3",
-    "pymdp": "1.0.2 (pinned)",
-    "platform": "Windows-11-10.0.26200-SP0",
-    "cpu_count": 24,
-    "omp_threads": "1",
-    "cuda_visible_devices": "",
-    "jax_platforms": "cpu"
-  },
-  "produced_by": {
-    "module": "ghostscale/validation/soundingline/v13/cards/trunk_i.py",
-    "sha256": "0e15e5d2882d786e0fa9980b62c24d22d44377b5d5526fc295305da850462483",
-    "git_commit": "6656c1c",
-    "git_dirty": true
-  },
-  "gates": {
-    "all_passed": true,
-    "n_gates": 9,
-    "n_ran": 9,
-    "n_skipped": 0,
-    "n_failed": 0,
-    "failed_names": [],
-    "documented_failures": [],
-    "unexpected_passes": [],
-    "gates": [
-      {
-        "name": "S04_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "S06_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "R02_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "R05_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "B02_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "D02_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "D05_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "F03_reproduces",
-        "kind": "identity",
-        "passed": true,
-        "detail": "every committed field of the anchor equals its reconstruction",
-        "observed": 0.0,
-        "expected": 0.0,
-        "tolerance": 1e-09
-      },
-      {
-        "name": "all_anchors_attempted",
-        "kind": "positive",
-        "passed": true,
-        "detail": "a task whose answer is known by construction returns that answer",
-        "observed": 8.0,
-        "expected": 8.0,
-        "tolerance": 0.0
-      }
-    ],
-    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
-  }
+  "upstream_oracle": false,
+  "warrant": "DESCRIPTIVE_ONLY",
+  "wave": 0,
+  "what_must_hold_outside_the_simulation": ""
 }

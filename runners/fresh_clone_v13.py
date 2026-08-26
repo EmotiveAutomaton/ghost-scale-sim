@@ -41,9 +41,9 @@ def main() -> int:
     if dest.exists():
         shutil.rmtree(dest, ignore_errors=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
-    r = sh(["git", "clone", "--quiet", str(REPO), str(dest)])
-    if r.returncode != 0:
-        print(r.stderr)
+    r = sh(["git", "-c", "core.longpaths=true", "clone", "--quiet", str(REPO), str(dest)])
+    if r.returncode != 0 or not (dest / "runners" / "validate_v13_program.py").exists():
+        print(r.stderr or "clone checkout incomplete (deep legacy paths exceed the platform limit without core.longpaths)")
         return 1
     py = sys.executable
     install = "shared pinned interpreter (no install)"
@@ -64,7 +64,7 @@ def main() -> int:
                       ("validator", [py, str(dest / "runners" / "validate_v13_program.py"), "--interim"]),
                       ("gates_test", [py, "-m", "pytest", "-q", str(dest / "tests" / "test_v13_gates.py")]),):
         rr = sh(cmd, cwd=dest, env=env, timeout=3600)
-        checks[name] = {"returncode": rr.returncode, "tail": (rr.stdout + rr.stderr)[-500:]}
+        checks[name] = {"returncode": rr.returncode, "head": (rr.stdout + rr.stderr)[:1200], "tail": (rr.stdout + rr.stderr)[-500:]}
     # compare determinism output with the local tree
     local = sh([sys.executable, "-m", "ghostscale.validation.soundingline.v13.determinism", "--order", "forward"], cwd=REPO)
     clone_det = checks["determinism"]

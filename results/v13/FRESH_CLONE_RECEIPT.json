@@ -1,20 +1,23 @@
 {
-  "written": "2026-08-26T05:34:23",
-  "head": "49be393a3964559080ca815dbef799b9d60fbafa",
-  "git_dirty": false,
+  "written": "2026-08-26T05:40:49",
+  "head": "5a9ecd3d5ee77713b428bb3f7da241e3e76ba4c8",
+  "git_dirty": true,
   "install": "shared pinned interpreter (no install)",
   "checks": {
     "determinism": {
       "returncode": 0,
+      "head": "{\n \"confirmation:1000\": {\n  \"artifacts\": \"331b0ddfea55990eff8f9a2df40b0cd949f46e183d5743b78b2bf9bd5d129eb7\",\n  \"choices\": \"b798811ded1a6e1457bdf7780aa7540b512efa4f454954726eeab6e238e32bdc\",\n  \"family_sig\": \"801372c6b34bd0e967ea9adb1d5d69908390540d1d3df366bd92e3beb66ad565\",\n  \"maker_w\": \"255618eabfe17e6ae2d0f6e0c0814e7fa1bace204882d18b8802433e91d4d0ed\",\n  \"posterior\": \"17a6e67ef844b27d619bf40ffd0d417380312a817f6df0b9ed4d9fe538dd6db6\",\n  \"seed_world\": 1853046,\n  \"self_w_hat\": \"d027ff919b070ab6900929aab41487a5c39fc4cc69fdd4bbfb233aba350b56f5\",\n  \"spoken\": \"b11a05f98c97b39d887564dd9b8a8bb57fec68a8e81a75db50db80209109f355\",\n  \"team_final_goals\": \"49b1efaa63b1715b8e63ba6b7d079e307e4217f7c4e556a7a6657f0ad1727938\"\n },\n \"discovery:0\": {\n  \"artifacts\": \"573bb97a4eaa10c2e9a8d9ede5485e4bbac4b0246261c7f86e6aab803edc861b\",\n  \"choices\": \"42daca47fbeb05a27da58d63bd124105f47064e1e14fbc5a018a4ee18b32bdef\",\n  \"family_sig\": \"3a8177089aa2d3692c0b67c8d0b6b7aa612db2d73f92497b7eb781d208c5e14a\",\n  \"maker_w\": \"4f4c313959ade29fda1f6c1f4b32e9ecac87c5df66f3df819e0795b55b1f29f7\",\n  \"posterior\": \"e5d5f53bb584a586666297ab7312b24d485016bd5e287abb1df7a7e056793708\",\n  \"seed_world\": 1887375,\n  \"self_w_hat\": \"98e2586e",
       "tail": "8e3fa80547039978e08738a3cf5e6cbbd868256d57c0ec5a9cc\",\n  \"maker_w\": \"5e0c24da8030520a15fe242511641423387eb4ccd51f6150b4faea55d425b48e\",\n  \"posterior\": \"c13c31f9176a12a47ca1b71c97a71d3f4e21916577955825cb7f0b57096d09c7\",\n  \"seed_world\": 1816359,\n  \"self_w_hat\": \"e3aff5509f8fc4764788e09488b5f6d38974a9b5bd24aaafa25a09d4415a4bdc\",\n  \"spoken\": \"4288430f106e0ad0dac56708d735d45d64f9d68fc4337990943fd27b1ae4e9c1\",\n  \"team_final_goals\": \"2477923109afbbc1708c0973b490bfd49fe341d465c76f6139e5e62d5eb97b2b\"\n }\n}"
     },
     "validator": {
       "returncode": 1,
+      "head": "{\n  \"coverage\": {\n    \"cards_total\": 152,\n    \"mandatory_total\": 132,\n    \"mandatory_resolved\": 14,\n    \"by_state\": {\n      \"LANDED\": 14,\n      \"BUILT\": 138\n    },\n    \"by_trunk\": {\n      \"I\": {\n        \"total\": 14,\n        \"resolved\": 14\n      },\n      \"C\": {\n        \"total\": 16,\n        \"resolved\": 0\n      },\n      \"A\": {\n        \"total\": 14,\n        \"resolved\": 0\n      },\n      \"O\": {\n        \"total\": 18,\n        \"resolved\": 0\n      },\n      \"P\": {\n        \"total\": 14,\n        \"resolved\": 0\n      },\n      \"G\": {\n        \"total\": 16,\n        \"resolved\": 0\n      },\n      \"H\": {\n        \"total\": 16,\n        \"resolved\": 0\n      },\n      \"Q\": {\n        \"total\": 12,\n        \"resolved\": 0\n      },\n      \"L\": {\n        \"total\": 12,\n        \"resolved\": 0\n      },\n      \"X\": {\n        \"total\": 20,\n        \"resolved\": 0\n      }\n    },\n    \"unresolved_mandatory\": [\n      \"C01\",\n      \"C02\",\n      \"C03\",\n      \"C04\",\n      \"C05\",\n      \"C06\",\n      \"C07\",\n      \"C08\",\n      \"C09\",\n      \"C10\",\n      \"C11\",\n      \"C12\",\n      \"C13\",\n      \"C14\",\n      \"C15\",\n      \"C16\",\n      \"A01\",\n      \"A02\",\n      \"A03\",\n      \"A04\",\n      \"A05\",\n      \"A06\",\n      \"A07\",\n      \"A08\",\n      \"A09\",\n      ",
       "tail": " BUILT\",\n    \"H14: BUILT\",\n    \"H15: BUILT\",\n    \"H16: BUILT\",\n    \"Q01: BUILT\",\n    \"Q02: BUILT\",\n    \"Q03: BUILT\",\n    \"Q04: BUILT\",\n    \"Q05: BUILT\",\n    \"Q06: BUILT\",\n    \"Q07: BUILT\",\n    \"Q08: BUILT\",\n    \"Q09: BUILT\",\n    \"Q10: BUILT\",\n    \"Q11: BUILT\",\n    \"Q12: BUILT\",\n    \"L01: BUILT\",\n    \"L02: BUILT\",\n    \"L03: BUILT\",\n    \"L04: BUILT\",\n    \"L05: BUILT\",\n    \"L06: BUILT\",\n    \"L07: BUILT\",\n    \"L08: BUILT\",\n    \"L09: BUILT\",\n    \"L10: BUILT\",\n    \"L11: BUILT\",\n    \"L12: BUILT\"\n  ]\n}\n"
     },
     "gates_test": {
-      "returncode": 1,
-      "tail": "smatch', 'discovery:I05: hash mismatch', 'discovery:I06: hash mismatch', ...]\nE       assert not ['discovery:I01: hash mismatch', 'discovery:I02: hash mismatch', 'discovery:I03: hash mismatch', 'discovery:I04: hash mismatch', 'discovery:I05: hash mismatch', 'discovery:I06: hash mismatch', ...]\n\ntests\\test_v13_gates.py:87: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_v13_gates.py::test_completion_ledger_hashes_match - Asserti...\n"
+      "returncode": 0,
+      "head": "..............................                                           [100%]\n",
+      "tail": "..............................                                           [100%]\n"
     }
   },
   "scientific_fields_match_local": true,
