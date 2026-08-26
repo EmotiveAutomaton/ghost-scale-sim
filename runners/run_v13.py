@@ -229,7 +229,10 @@ def run_lane(doc: dict, lane: str, cards: list, workers: int, pool, tier_name: s
 # Stages.
 # --------------------------------------------------------------------------- #
 def stage_prepare(doc: dict) -> dict:
-    from ghostscale.prereg_v13 import write_structural_lock
+    from ghostscale.prereg_v13 import lock_status, write_structural_lock
+    if lock_status().get("locked"):
+        print("prepare skipped: the scientific lock is in place; the program is frozen")
+        return doc
     M.write_cells_template()
     lock = write_structural_lock()
     # regenerate every card DEFINITION from the code (a stale manifest froze definitions at the

@@ -215,6 +215,13 @@ def write_structural_lock() -> dict:
     lock = {"program": "v13", "kind": "structural", "locked": True, "written": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "internal_prespecification_not_external_preregistration": True, **structural_payload(),
             "criteria": CRITERIA, "closures": CLOSURES, "flights": FLIGHTS, "attack_relevance": ATTACK_RELEVANCE}
+    if STRUCTURAL_PATH.exists():
+        try:
+            old = json.loads(STRUCTURAL_PATH.read_text(encoding="utf-8"))
+            if {k: v for k, v in old.items() if k != "written"} == {k: v for k, v in lock.items() if k != "written"}:
+                return old                                   # identical payload keeps identical bytes: a re-stamp must not break the scientific lock's hash
+        except (json.JSONDecodeError, OSError):
+            pass
     STRUCTURAL_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="\n")
     return lock
 
