@@ -215,8 +215,7 @@ def write_structural_lock() -> dict:
     lock = {"program": "v13", "kind": "structural", "locked": True, "written": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "internal_prespecification_not_external_preregistration": True, **structural_payload(),
             "criteria": CRITERIA, "closures": CLOSURES, "flights": FLIGHTS, "attack_relevance": ATTACK_RELEVANCE}
-    STRUCTURAL_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="
-")
+    STRUCTURAL_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="\n")
     return lock
 
 
@@ -226,8 +225,7 @@ def write_workload_lock(tier_name: str, tier: dict, expansions: list, forecast: 
             "tier_config": tier, "expansions_instantiated": expansions, "forecast": forecast,
             "pilot_summary_sha256": _hj(pilot_summary), "pilot_is_non_scientific": True,
             "cells_sha256": _h(CELLS.read_bytes()) if CELLS.exists() else None}
-    WORKLOAD_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="
-")
+    WORKLOAD_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="\n")
     return lock
 
 
@@ -239,8 +237,7 @@ def write_scientific_lock() -> dict:
             "structural_sha256": _h(STRUCTURAL_PATH.read_bytes()), "workload_sha256": _h(WORKLOAD_PATH.read_bytes()),
             "structural": {k: st[k] for k in ("module_sha256", "cards_sha256", "criteria_sha256", "generators", "cells_template_sha256")},
             "tier": wl["tier"], "cells_sha256": wl.get("cells_sha256"), "amended_after_data": []}
-    PREREG_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="
-")
+    PREREG_PATH.write_text(json.dumps(lock, indent=2), encoding="utf-8", newline="\n")
     return lock
 
 
