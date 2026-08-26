@@ -459,10 +459,10 @@ def write_verdict(card_id: str, verdict: dict, gr: G.GateReport, module_file: st
     PROVENANCE.stamp(verdict, module_file, gr)
     d = out_dir if out_dir is not None else verdict_dir(lane)
     out = d / f"{card_id}.json"
-    out.write_text(dumps(verdict), encoding="utf-8")
+    out.write_text(dumps(verdict), encoding="utf-8", newline="\n")     # committed files are LF; a CRLF working copy breaks the ledger hash across clones
     marker = d / f"{card_id}.produced"
     marker.write_text(json.dumps({"card": card_id, "sha256": file_sha(out),
-                                  "written": time.strftime("%Y-%m-%dT%H:%M:%S")}), encoding="utf-8")
+                                  "written": time.strftime("%Y-%m-%dT%H:%M:%S")}), encoding="utf-8", newline="\n")
     if ledger and lane in ("discovery", "transfer", "attack", "confirmation"):
         record_completion(card_id, lane, out, verdict)
     return out
@@ -480,7 +480,7 @@ def record_completion(card_id: str, lane: str, out: Path, verdict: dict) -> None
                                            verdict.get("expected_cell_receipt", {}), verdict.get("state", ""),
                                            time.strftime("%Y-%m-%dT%H:%M:%S"))
     doc["updated"] = time.strftime("%Y-%m-%dT%H:%M:%S")
-    COMPLETION.write_text(json.dumps(doc, indent=2, sort_keys=True), encoding="utf-8")
+    COMPLETION.write_text(json.dumps(doc, indent=2, sort_keys=True), encoding="utf-8", newline="\n")
 
 
 def load_verdict(card_id: str, lane: str = "discovery") -> dict | None:

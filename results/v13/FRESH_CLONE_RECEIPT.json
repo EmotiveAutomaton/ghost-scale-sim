@@ -1,0 +1,23 @@
+{
+  "written": "2026-08-26T05:34:23",
+  "head": "49be393a3964559080ca815dbef799b9d60fbafa",
+  "git_dirty": false,
+  "install": "shared pinned interpreter (no install)",
+  "checks": {
+    "determinism": {
+      "returncode": 0,
+      "tail": "8e3fa80547039978e08738a3cf5e6cbbd868256d57c0ec5a9cc\",\n  \"maker_w\": \"5e0c24da8030520a15fe242511641423387eb4ccd51f6150b4faea55d425b48e\",\n  \"posterior\": \"c13c31f9176a12a47ca1b71c97a71d3f4e21916577955825cb7f0b57096d09c7\",\n  \"seed_world\": 1816359,\n  \"self_w_hat\": \"e3aff5509f8fc4764788e09488b5f6d38974a9b5bd24aaafa25a09d4415a4bdc\",\n  \"spoken\": \"4288430f106e0ad0dac56708d735d45d64f9d68fc4337990943fd27b1ae4e9c1\",\n  \"team_final_goals\": \"2477923109afbbc1708c0973b490bfd49fe341d465c76f6139e5e62d5eb97b2b\"\n }\n}"
+    },
+    "validator": {
+      "returncode": 1,
+      "tail": " BUILT\",\n    \"H14: BUILT\",\n    \"H15: BUILT\",\n    \"H16: BUILT\",\n    \"Q01: BUILT\",\n    \"Q02: BUILT\",\n    \"Q03: BUILT\",\n    \"Q04: BUILT\",\n    \"Q05: BUILT\",\n    \"Q06: BUILT\",\n    \"Q07: BUILT\",\n    \"Q08: BUILT\",\n    \"Q09: BUILT\",\n    \"Q10: BUILT\",\n    \"Q11: BUILT\",\n    \"Q12: BUILT\",\n    \"L01: BUILT\",\n    \"L02: BUILT\",\n    \"L03: BUILT\",\n    \"L04: BUILT\",\n    \"L05: BUILT\",\n    \"L06: BUILT\",\n    \"L07: BUILT\",\n    \"L08: BUILT\",\n    \"L09: BUILT\",\n    \"L10: BUILT\",\n    \"L11: BUILT\",\n    \"L12: BUILT\"\n  ]\n}\n"
+    },
+    "gates_test": {
+      "returncode": 1,
+      "tail": "smatch', 'discovery:I05: hash mismatch', 'discovery:I06: hash mismatch', ...]\nE       assert not ['discovery:I01: hash mismatch', 'discovery:I02: hash mismatch', 'discovery:I03: hash mismatch', 'discovery:I04: hash mismatch', 'discovery:I05: hash mismatch', 'discovery:I06: hash mismatch', ...]\n\ntests\\test_v13_gates.py:87: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_v13_gates.py::test_completion_ledger_hashes_match - Asserti...\n"
+    }
+  },
+  "scientific_fields_match_local": true,
+  "note": "a dirty local tree makes field comparison meaningless for uncommitted generator changes",
+  "ok": false
+}
