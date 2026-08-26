@@ -37,9 +37,9 @@ def main() -> int:
     args = ap.parse_args()
     head = sh(["git", "rev-parse", "HEAD"], cwd=REPO).stdout.strip()
     dirty = bool(sh(["git", "status", "--porcelain"], cwd=REPO).stdout.strip())
-    dest = WORK / "clone"
-    if dest.exists():
-        shutil.rmtree(dest, ignore_errors=True)
+    dest = WORK / f"clone_{time.strftime('%H%M%S')}"          # unique per run: Windows can hold the previous clone's handles past process exit
+    for old in WORK.glob("clone*") if WORK.exists() else []:
+        shutil.rmtree(old, ignore_errors=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
     r = sh(["git", "-c", "core.longpaths=true", "clone", "--quiet", str(REPO), str(dest)])
     if r.returncode != 0 or not (dest / "runners" / "validate_v13_program.py").exists():
