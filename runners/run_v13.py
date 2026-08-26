@@ -220,6 +220,12 @@ def run_lane(doc: dict, lane: str, cards: list, workers: int, pool, tier_name: s
             if lane == "discovery":
                 M.update_card(doc, cid, status="BUILT")
             print(f"    !! ERROR {exc!r}", flush=True)
+            from concurrent.futures.process import BrokenProcessPool
+            if isinstance(exc, BrokenProcessPool):
+                # a broken pool errors every later card in seconds, converting the remaining
+                # program into a fast sweep of ERRORs; die loudly instead - the checkpoints and
+                # ledger make a relaunch resume where this stopped, with a fresh pool
+                raise SystemExit("worker pool broken; relaunch --stage all to resume") from exc
         if lane == "discovery":
             M.save_manifest(doc)
             M.write_coverage(doc)

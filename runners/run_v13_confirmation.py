@@ -84,6 +84,10 @@ def run(doc: dict, workers: int, pool, only=None) -> None:
         except Exception as exc:                                             # noqa: BLE001
             ledger["cards"][cid] = {"state": "ERROR", "error": repr(exc), "wall_s": round(time.perf_counter() - t0, 1)}
             print(f"  [{cid}] !! ERROR {exc!r}", flush=True)
+            from concurrent.futures.process import BrokenProcessPool
+            if isinstance(exc, BrokenProcessPool):
+                LEDGER.write_text(json.dumps(ledger, indent=2), encoding="utf-8", newline="\n")
+                raise SystemExit("worker pool broken; relaunch to resume the confirmation pass") from exc
         LEDGER.write_text(json.dumps(ledger, indent=2), encoding="utf-8")
     held = [c for c, x in ledger["cards"].items() if x.get("criteria_passed_confirmation") is True]
     print(f"\nconfirmed (criteria held on the untouched lineage): {held}")
