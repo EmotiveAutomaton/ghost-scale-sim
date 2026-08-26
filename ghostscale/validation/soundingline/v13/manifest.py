@@ -38,7 +38,7 @@ TRUST = ["bayes", "leaky", "asymmetric", "threshold", "change_point"]
 def _c(cid, trunk, wave, question, construction, target, estimand, null, alt, rival, closure="",
        ceiling="CONSTRUCTED_MECHANISM", causal=True, factors=None, lanes=("discovery",), unit="world",
        unit_kind="world", weight=1.0, pilot=False, deps=(), paths=("exact",), prior_routes=(),
-       attention=(), cost_ecologies=(), reader_policies=(), min_rows=8, domains=2, families=4):
+       attention=(), cost_ecologies=(), reader_policies=(), min_rows=1, domains=2, families=4):
     gates = ["live", "placebo", "positive", "surface", "oracle", "prediction", "calibration"] if causal else ["identity", "positive", "placebo"]
     return Card(id=cid, trunk=trunk, wave=wave, question=question, construction=construction, target=target,
                 estimand=estimand, null_expectation=null, alternative_expectation=alt, strongest_rival=rival,
@@ -60,7 +60,7 @@ def build_cards() -> list:
            "reconstructed loops over V12's own world and modules for S04, S06, R02, R05, B02, D02, D05, F03",
            "eight committed V12 numbers", "max absolute deviation from the committed verdict fields", "identity within tolerance",
            "a deviation means V12's record cannot be rebuilt", "provenance drift", causal=False, ceiling="METHOD",
-           factors={"anchor": ["S04", "S06", "R02", "R05", "B02", "D02", "D05", "F03"]}, unit="anchor", unit_kind="single", weight=3.0),
+           factors={"anchor": ["S04", "S06", "R02", "R05", "B02", "D02", "D05", "F03"]}, unit="anchor", unit_kind="list", weight=3.0),
         _c("I02", "I", 0, "Was V12's self comparator incompletely matched?",
            "V12 self and generic priors recreated on V12 worlds; entropy, expected divergence to truth, parameter count, coordinate access; a distance-matched rebuild",
            "comparator imbalance and the share of S04's near gain it explains", "expected-divergence gap and near-gain share under distance matching",

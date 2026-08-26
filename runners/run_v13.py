@@ -232,6 +232,15 @@ def stage_prepare(doc: dict) -> dict:
     from ghostscale.prereg_v13 import write_structural_lock
     M.write_cells_template()
     lock = write_structural_lock()
+    # regenerate every card DEFINITION from the code (a stale manifest froze definitions at the
+    # first prepare); statuses and verdict pointers are working state and are carried over
+    fresh = {c.id: c.to_dict() for c in M.build_cards()}
+    for i, d in enumerate(doc["cards"]):
+        nd = dict(fresh[d["id"]])
+        for k in ("status", "state", "resolved", "verdict_path"):
+            if k in d:
+                nd[k] = d[k]
+        doc["cards"][i] = nd
     for d in doc["cards"]:
         if d["status"] == "PLANNED":
             d["status"] = "BUILT"

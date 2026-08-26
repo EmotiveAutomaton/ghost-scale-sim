@@ -290,8 +290,9 @@ def realized_cells(rows: list, factors: dict, unit: str = "wid") -> dict:
     counts = {}
     for r in rows:
         cell = tuple(str(r.get(k, "?")) for k in keys)
-        counts.setdefault(cell, {}).setdefault(str(r.get(unit, 0)), 0)
-        counts[cell][str(r.get(unit, 0))] += int(r.get("n", 1))
+        uk = f"{r.get(unit, 0)}|{r.get('rep', 0)}"          # a unit is a (world, repeat) pair; keying by world alone collapses repeats
+        counts.setdefault(cell, {}).setdefault(uk, 0)
+        counts[cell][uk] += int(r.get("n", 1))
     return {"|".join(c): {"units": len(u), "rows": int(sum(u.values())), "min_rows_in_a_unit": int(min(u.values()))}
             for c, u in counts.items()}
 

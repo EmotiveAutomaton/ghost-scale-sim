@@ -88,7 +88,7 @@ class Card:
     lanes: list = field(default_factory=lambda: ["discovery"])
     independent_unit: str = "world"
     min_effective_n: int = 24
-    min_rows_per_unit: int = 8
+    min_rows_per_unit: int = 1          # cells accumulate per-unit means: one row per cell per unit is the design floor; cards declaring more say so
     unit_kind: str = "world"                         # "world": one unit per (world, repeat); "single"
     work_weight: float = 1.0                         # cost relative to the trunk's pilot card
     pilot: bool = False

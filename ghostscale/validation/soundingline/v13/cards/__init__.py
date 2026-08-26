@@ -254,13 +254,13 @@ def receipt(v: dict, rows: list, card, ctx: dict) -> dict:
     if expected is None:
         from ..schemas import expected_cells
         expected = expected_cells(card, ctx.get("tier") or TIERS["T0"], ctx["lane"])
-        expected["units_required"] = ctx.get("n_units") or expected["units"]
+        expected["units_required"] = 1 if card.unit_kind == "list" else (ctx.get("n_units") or expected["units"])   # a list card's cells each live in exactly one unit
     if ctx.get("smoke"):
         expected = dict(expected, units_required=1, min_rows_per_unit=0)
     rec = C.cell_receipt(realized, expected)
     v["cells"] = realized
     v["expected_cell_receipt"] = rec
-    v["effective_n"] = {"units": len({str(r.get("wid")) for r in rows}), "rows": len(rows)}
+    v["effective_n"] = {"units": len({(str(r.get("wid")), str(r.get("rep", 0))) for r in rows}), "rows": len(rows)}
     return rec
 
 

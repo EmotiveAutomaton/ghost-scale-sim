@@ -1,14 +1,15 @@
 {
   "cards_total": 152,
   "mandatory_total": 132,
-  "mandatory_resolved": 0,
+  "mandatory_resolved": 13,
   "by_state": {
-    "BUILT": 152
+    "LANDED": 13,
+    "BUILT": 139
   },
   "by_trunk": {
     "I": {
       "total": 14,
-      "resolved": 0
+      "resolved": 13
     },
     "C": {
       "total": 16,
@@ -48,20 +49,7 @@
     }
   },
   "unresolved_mandatory": [
-    "I01",
-    "I02",
-    "I03",
-    "I04",
-    "I05",
-    "I06",
-    "I07",
-    "I08",
-    "I09",
-    "I10",
-    "I11",
-    "I12",
     "I13",
-    "I14",
     "C01",
     "C02",
     "C03",
@@ -181,5 +169,5 @@
     "L11",
     "L12"
   ],
-  "written": "2026-08-26T05:05:52"
+  "written": "2026-08-26T05:25:12"
 }
