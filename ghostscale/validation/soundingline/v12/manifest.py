@@ -249,7 +249,7 @@ def build_cards() -> list:
 def write_manifest(cards: list | None = None, note: str = "") -> dict:
     cards = cards if cards is not None else build_cards()
     doc = {"program": "V12 — The Other Model", "written": time.strftime("%Y-%m-%dT%H:%M:%S"),
-           "spec": "V12_SPEC.md", "allowed_states": list(STATES), "resolved_states": list(RESOLVED),
+           "spec": "docs/versions/v12-the-other-model/V12_SPEC.md", "allowed_states": list(STATES), "resolved_states": list(RESOLVED),
            "lineages": {"discovery": DISCOVERY_IDS, "confirmation": CONFIRMATION_IDS},
            "amendments": [], "note": note,
            "cards": [c.to_dict() for c in cards]}

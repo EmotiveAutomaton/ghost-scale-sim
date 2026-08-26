@@ -57,7 +57,9 @@ Numbered in run order, named for what each was actually about.
 | **11** | [The Maker](versions/v11-the-maker/) | can a maker's *values* be recovered across works? | converges; the shared family costs 0.24 L1 to remove; the expertise half of the criterion **failed as locked** |
 | **12** | [The Other Model](versions/v12-the-other-model/) | is the reader's own organization its first model of a maker, and what does that buy? | wins near itself, loses elsewhere; values read from opportunities, not counts; supply gains symmetric for an exact reader; one card **closed as an instrument failure** |
 
-Each directory holds `SPEC.md` and `RESULTS.md`. Versions 2, 3 and 8 also carry a `PLAN.md` or a
+Each directory holds `SPEC.md` and `RESULTS.md`. From version 12 on, the curator's top-level handoff
+(`V12_SPEC.md`, written before the code and never edited) sits at the repository root while the version
+runs and is filed beside its `SPEC.md` when the version closes. Versions 2, 3 and 8 also carry a `PLAN.md` or a
 `DECISIONS.md`: working documents kept because they contain reasoning that did *not* survive into
 the spec, which is often worth more than the reasoning that did.
 

@@ -1,7 +1,7 @@
 # V12 — The Other Model. Implementation translation of the top-level spec
 
 **Written before any V12 result was seen, 2026-08-24.** The scientific program is
-[`V12_SPEC.md`](../../../V12_SPEC.md) at the repository root and is not narrowed here. This page
+[`V12_SPEC.md`](V12_SPEC.md) beside this page (filed from the repository root when V12 closed) and is not narrowed here. This page
 records only how that program maps onto code, the constructions chosen where the spec left a
 choice, and the floors each card runs at. Deviations after data go to `RESULTS.md` with the
 original beside the replacement.
