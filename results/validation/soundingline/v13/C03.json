@@ -1,0 +1,360 @@
+{
+  "baselines": {},
+  "card": "C03",
+  "cells": {
+    "all_family|1": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "all_family|16": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "all_family|2": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "all_family|4": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "all_family|8": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "within_common|1": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "within_common|16": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "within_common|2": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "within_common|4": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    },
+    "within_common|8": {
+      "min_rows_in_a_unit": 1068,
+      "rows": 2734080,
+      "units": 2560
+    }
+  },
+  "claim_ceiling": "INSTRUMENT_FAILURE",
+  "closure_reason": "instrument failed: positive:within_common_above_floor",
+  "conditional_matrix": {},
+  "construction_realization": {},
+  "deviations": [],
+  "effective_n": {
+    "rows": 25600,
+    "units": 2560
+  },
+  "environment": {
+    "cpu_count": 24,
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu",
+    "numpy": "2.1.3",
+    "omp_threads": "1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pymdp": "1.0.2 (pinned)",
+    "python": "3.13.2",
+    "scipy": "1.15.3"
+  },
+  "exact": {},
+  "expected_cell_receipt": {
+    "expected_levels": 10,
+    "expected_min_rows_per_unit": 1,
+    "expected_units": 2560,
+    "ok": true,
+    "realized_levels": 10,
+    "realized_min_rows_per_unit": 1068,
+    "realized_units": 2560
+  },
+  "gates": {
+    "all_passed": false,
+    "documented_failures": [],
+    "failed_names": [
+      "positive:within_common_above_floor"
+    ],
+    "gates": [
+      {
+        "detail": "the intervention changes the intended latent or policy",
+        "expected": 0.1,
+        "kind": "live",
+        "name": "live:evidence_moves_the_posterior",
+        "observed": 0.5971774675227293,
+        "passed": true
+      },
+      {
+        "detail": "an irrelevant matched intervention does not change the target",
+        "expected": 0.0,
+        "kind": "placebo",
+        "name": "placebo:priors_converge_at_sixteen",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 0.15
+      },
+      {
+        "detail": "a known readable manipulation is recovered",
+        "expected": 1.0,
+        "kind": "positive",
+        "name": "positive:within_common_above_floor",
+        "observed": 0.27711625117041205,
+        "passed": false,
+        "tolerance": 0.6
+      },
+      {
+        "detail": "both routes share the likelihood and the compute by construction",
+        "expected": 0.0,
+        "kind": "positive",
+        "name": "surface:same_likelihood_same_compute",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 0.0
+      },
+      {
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "expected": 0.5,
+        "kind": "live",
+        "name": "oracle:identifiable_with_evidence",
+        "observed": 1.793105536483619,
+        "passed": true
+      },
+      {
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "expected": 0.0,
+        "kind": "live",
+        "name": "prediction:first_artifact_gain",
+        "observed": -5.915407053080912e-17,
+        "passed": true
+      },
+      {
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "expected": 0.011893176445167353,
+        "kind": "positive",
+        "name": "calibration:confidence_tracks_accuracy",
+        "observed": 0.01189683398262048,
+        "passed": true,
+        "tolerance": 3.6585374531278016e-06
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 1,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "unexpected_passes": []
+  },
+  "gates_summary": {
+    "all_passed": false,
+    "documented_failures": [],
+    "failed_names": [
+      "positive:within_common_above_floor"
+    ],
+    "gates": [
+      {
+        "detail": "the intervention changes the intended latent or policy",
+        "expected": 0.1,
+        "kind": "live",
+        "name": "live:evidence_moves_the_posterior",
+        "observed": 0.5971774675227293,
+        "passed": true
+      },
+      {
+        "detail": "an irrelevant matched intervention does not change the target",
+        "expected": 0.0,
+        "kind": "placebo",
+        "name": "placebo:priors_converge_at_sixteen",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 0.15
+      },
+      {
+        "detail": "a known readable manipulation is recovered",
+        "expected": 1.0,
+        "kind": "positive",
+        "name": "positive:within_common_above_floor",
+        "observed": 0.27711625117041205,
+        "passed": false,
+        "tolerance": 0.6
+      },
+      {
+        "detail": "both routes share the likelihood and the compute by construction",
+        "expected": 0.0,
+        "kind": "positive",
+        "name": "surface:same_likelihood_same_compute",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 0.0
+      },
+      {
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "expected": 0.5,
+        "kind": "live",
+        "name": "oracle:identifiable_with_evidence",
+        "observed": 1.793105536483619,
+        "passed": true
+      },
+      {
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "expected": 0.0,
+        "kind": "live",
+        "name": "prediction:first_artifact_gain",
+        "observed": -5.915407053080912e-17,
+        "passed": true
+      },
+      {
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "expected": 0.011893176445167353,
+        "kind": "positive",
+        "name": "calibration:confidence_tracks_accuracy",
+        "observed": 0.01189683398262048,
+        "passed": true,
+        "tolerance": 3.6585374531278016e-06
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 1,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "unexpected_passes": []
+  },
+  "hypothesis": "A prior restricted to the maker's common substrate saves evidence over a broad all-family prior at the same likelihood and compute; the saving is the value of common structure.",
+  "independent_unit": "world",
+  "lane": "discovery",
+  "matching_residuals": {},
+  "produced_by": {
+    "git_commit": "999c8f6",
+    "git_dirty": true,
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_c.py",
+    "sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55"
+  },
+  "pursuit": "STALLED",
+  "pymdp": {},
+  "record": {
+    "claim_ceiling": "INSTRUMENT_FAILURE",
+    "question": "What does a common-substrate prior buy over a broad population?",
+    "what_changed_in_the_project_world": "Common structure buys evidence in this construction; the question of trunk C is what self adds on top of it.",
+    "what_happened": "Knowing the maker's common substrate was worth -0.00 nats on its profile after one artifact against a prior spread over every family; the broad prior needed 1 artifacts to reach what the substrate prior had at one.",
+    "what_remains_a_rival": "a family label"
+  },
+  "repairs": [],
+  "results": {
+    "criterion_C03": {
+      "evidence_savings_artifacts": 1.0,
+      "gain_at_1": -5.915407053080912e-17,
+      "passed": false
+    },
+    "dose_at_which_all_family_matches": 1,
+    "gain_by_dose": {
+      "1": {
+        "excludes_zero": true,
+        "interval": [
+          -8.18789480661053e-17,
+          -3.642919299551295e-17
+        ],
+        "mean": -5.915407053080912e-17,
+        "n_rows": 2560,
+        "n_units": 512
+      },
+      "16": {
+        "excludes_zero": true,
+        "interval": [
+          6.966974740174602e-17,
+          1.1086400894533277e-16
+        ],
+        "mean": 9.063930161978817e-17,
+        "n_rows": 2560,
+        "n_units": 512
+      },
+      "2": {
+        "excludes_zero": true,
+        "interval": [
+          2.7712207528729496e-18,
+          4.636265329982514e-17
+        ],
+        "mean": 2.463307335887066e-17,
+        "n_rows": 2560,
+        "n_units": 512
+      },
+      "4": {
+        "excludes_zero": true,
+        "interval": [
+          2.0502263081700888e-17,
+          5.854691731421724e-17
+        ],
+        "mean": 3.920475055707584e-17,
+        "n_rows": 2560,
+        "n_units": 512
+      },
+      "8": {
+        "excludes_zero": true,
+        "interval": [
+          8.250995373049186e-17,
+          1.266120455006847e-16
+        ],
+        "mean": 1.0408340855860843e-16,
+        "n_rows": 2560,
+        "n_units": 512
+      }
+    },
+    "mean_log_score_by_route_and_dose": {
+      "all_family": {
+        "1": -2.4929513851530465,
+        "16": -1.8957739176303172,
+        "2": -2.278545138280317,
+        "4": -2.039830524581255,
+        "8": -1.8666443187108797
+      },
+      "within_common": {
+        "1": -2.4929513851530465,
+        "16": -1.8957739176303172,
+        "2": -2.278545138280317,
+        "4": -2.039830524581255,
+        "8": -1.8666443187108797
+      }
+    }
+  },
+  "runtime": {
+    "reduce_accounting": {
+      "children_system": 0.0,
+      "children_user": 0.0,
+      "peak_rss": 76988416,
+      "pid": 96836,
+      "process_time": 121.515625,
+      "rss": 52789248,
+      "system": 26.96875,
+      "user": 94.546875
+    },
+    "units_cpu_s": 86767.94,
+    "units_wall_s": 7563.0,
+    "workers": 12
+  },
+  "runtime_seconds": 7563.0,
+  "state": "INSTRUMENT_FAILED",
+  "strongest_rival": "a family label",
+  "tier": "T2",
+  "trunk": "C",
+  "units": {
+    "kind": "world",
+    "n": 2560
+  },
+  "upstream_oracle": false,
+  "warrant": "INSTRUMENT_FAILED",
+  "wave": 1,
+  "what_must_hold_outside_the_simulation": ""
+}

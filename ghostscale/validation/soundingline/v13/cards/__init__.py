@@ -276,8 +276,12 @@ def finish(card, v: dict, gr: G.GateReport, module_file: str, state: str, ctx: d
            pursuit: str | None = None, warrant: str | None = None) -> dict:
     assert state in RESOLVED, state
     v["state"] = state
-    v["closure_reason"] = closure_reason
     v["gates_summary"] = gr.to_dict()
+    if not closure_reason and state != "LANDED":
+        # every closure states its rule (validator requirement); an instrument failure's rule is the gates that failed
+        failed = v["gates_summary"].get("failed_names") or []
+        closure_reason = f"{state.lower().replace('_', ' ')}: " + (", ".join(failed) if failed else "no gate named")
+    v["closure_reason"] = closure_reason
     if pursuit:
         v["pursuit"] = pursuit
     if warrant:

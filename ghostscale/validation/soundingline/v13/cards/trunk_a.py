@@ -307,10 +307,10 @@ def unit_A05(ctx):
                             w[ATT_CH[att]] = 0.1
                         else:
                             # infer the maker's attention from concentration: sharp goal draws, sharp method choices, or a consistent cue
-                            goals = [a["goal"] for a in arts]
+                            goals = [a["goal"] for a in arts if a["goal"] >= 0]      # poe families draw no per-artifact goal (-1)
                             methods = [a["method"] for a in arts if a.get("method") is not None]
                             slots = [a["slot"] for a in arts]
-                            conc = {"goal": float(np.max(np.bincount(goals, minlength=world.family(rd.family).ng)) / len(goals)),
+                            conc = {"goal": float(np.max(np.bincount(goals, minlength=world.family(rd.family).ng)) / len(goals)) if goals else 0.0,
                                     "mechanics": float(np.max(np.bincount(methods, minlength=2)) / max(len(methods), 1)),
                                     "surface": float(np.max(np.bincount(slots)) / len(slots))}
                             w[ATT_CH[max(conc, key=conc.get)]] = 3.0

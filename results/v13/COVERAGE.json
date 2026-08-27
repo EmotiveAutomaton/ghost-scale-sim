@@ -1,10 +1,13 @@
 {
   "cards_total": 152,
   "mandatory_total": 132,
-  "mandatory_resolved": 14,
+  "mandatory_resolved": 48,
   "by_state": {
-    "LANDED": 14,
-    "BUILT": 138
+    "LANDED": 41,
+    "INSTRUMENT_FAILED": 6,
+    "RESOURCE_BLOCKED": 1,
+    "RUNNING": 1,
+    "BUILT": 103
   },
   "by_trunk": {
     "I": {
@@ -13,31 +16,31 @@
     },
     "C": {
       "total": 16,
-      "resolved": 0
+      "resolved": 8
     },
     "A": {
       "total": 14,
-      "resolved": 0
+      "resolved": 8
     },
     "O": {
       "total": 18,
-      "resolved": 0
+      "resolved": 4
     },
     "P": {
       "total": 14,
-      "resolved": 0
+      "resolved": 3
     },
     "G": {
       "total": 16,
-      "resolved": 0
+      "resolved": 5
     },
     "H": {
       "total": 16,
-      "resolved": 0
+      "resolved": 4
     },
     "Q": {
       "total": 12,
-      "resolved": 0
+      "resolved": 2
     },
     "L": {
       "total": 12,
@@ -49,14 +52,6 @@
     }
   },
   "unresolved_mandatory": [
-    "C01",
-    "C02",
-    "C03",
-    "C04",
-    "C05",
-    "C06",
-    "C07",
-    "C08",
     "C09",
     "C10",
     "C11",
@@ -65,24 +60,12 @@
     "C14",
     "C15",
     "C16",
-    "A01",
     "A02",
     "A03",
-    "A04",
     "A05",
-    "A06",
-    "A07",
-    "A08",
-    "A09",
-    "A10",
-    "A11",
     "A12",
     "A13",
     "A14",
-    "O01",
-    "O02",
-    "O03",
-    "O04",
     "O05",
     "O06",
     "O07",
@@ -97,9 +80,6 @@
     "O16",
     "O17",
     "O18",
-    "P01",
-    "P02",
-    "P03",
     "P04",
     "P05",
     "P06",
@@ -111,11 +91,6 @@
     "P12",
     "P13",
     "P14",
-    "G01",
-    "G02",
-    "G03",
-    "G04",
-    "G05",
     "G06",
     "G07",
     "G08",
@@ -127,10 +102,6 @@
     "G14",
     "G15",
     "G16",
-    "H01",
-    "H02",
-    "H03",
-    "H04",
     "H05",
     "H06",
     "H07",
@@ -143,8 +114,6 @@
     "H14",
     "H15",
     "H16",
-    "Q01",
-    "Q02",
     "Q03",
     "Q04",
     "Q05",
@@ -168,5 +137,5 @@
     "L11",
     "L12"
   ],
-  "written": "2026-08-26T05:47:35"
+  "written": "2026-08-27T05:30:53"
 }

@@ -206,6 +206,8 @@ def unit_P04(ctx):
     sz = sizes(ctx)
     for i in range(max(4, sz["readers"] // 2)):
         fid = i % world.n_families
+        if world.family(fid).link != "draw":
+            continue                                     # next-goal prediction is undefined where artifacts carry no goal (poe: -1)
         rd = make_maker(world, f"rd{i}", r, family=fid, k=0.05)
         model = X.reader_model(world, rd, families=[fid])
         sm = P.measure_self(world, rd, model, C.rng_for(ctx["lane"], "P04", ctx["wid"], ctx["rep"], rd.id))

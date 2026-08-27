@@ -1,0 +1,319 @@
+{
+  "card": "A04",
+  "trunk": "A",
+  "wave": 1,
+  "lane": "discovery",
+  "record": {
+    "question": "Does common-structure focus help locate common goals?",
+    "what_happened": "Focusing on common structure improved goal location by +0.05 nats where common axes carried the goal and at most -0.10 in the worlds where another channel did.",
+    "what_changed_in_the_project_world": "Common-structure focus is a conditional tool, not a default.",
+    "what_remains_a_rival": "maker-diagnostic oracle",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Focus on common structure helps locate the goal only in worlds where common axes carry it; elsewhere it does nothing or hurts, and a maker-diagnostic oracle focus is the ceiling.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_A04": {
+      "passed": true,
+      "common_world_gain": 0.047674794166558065,
+      "max_other_world_gain": -0.09671027378914943
+    },
+    "hidden_goal_by_world_and_focus": {
+      "common": {
+        "common": -1.4217462644137266,
+        "uniform": -1.4694210585802847,
+        "oracle": -1.4217462644137266
+      },
+      "group": {
+        "common": -1.7235258790095351,
+        "uniform": -1.6268156052203857,
+        "oracle": -1.579871260946899
+      },
+      "individual": {
+        "common": -1.6793242781359627,
+        "uniform": -1.4927466753961809,
+        "oracle": -1.4108843426931967
+      },
+      "nuisance": {
+        "common": -1.7255617159670809,
+        "uniform": -1.6262117257863031,
+        "oracle": -1.5787777383147357
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "common|common": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "common|uniform": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "common|oracle": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "group|common": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "group|uniform": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "group|oracle": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "individual|common": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "individual|uniform": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "individual|oracle": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "nuisance|common": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "nuisance|uniform": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    },
+    "nuisance|oracle": {
+      "units": 2560,
+      "rows": 261120,
+      "min_rows_in_a_unit": 102
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 12,
+    "realized_levels": 12,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 102,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 30720
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "maker-diagnostic oracle",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 6617.8,
+    "units_cpu_s": 48957.58,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 96836,
+      "process_time": 61.375,
+      "user": 49.71875,
+      "system": 11.65625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 55947264,
+      "peak_rss": 76988416
+    }
+  },
+  "runtime_seconds": 6617.8,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:focus_moves_goal_location_where_causal",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.047674794166558065,
+        "expected": 0.02
+      },
+      {
+        "name": "placebo:no_focus_gains_over_the_prior_in_the_nuisance_world",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "one-sided: a focus that hurts on scrambled channels is not a gain",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "positive:oracle_is_the_ceiling",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:common_focus_gains_only_where_common_is_causal",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the nuisance world is judged by the placebo gate; this one covers the two worlds where another channel carries the goal",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "oracle:right_channel_at_least_matches_uniform",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.047674794166558065,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:common_world_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.047674794166558065,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:no_confidence_from_focus_in_nuisance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "tempering a channel up mechanically sharpens the posterior, so a modest confidence rise on scrambled channels is expected and reported",
+        "observed": 0.6804172183923598,
+        "expected": 0.5876853307610703,
+        "tolerance": 0.09273188863128948
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_a.py",
+    "sha256": "4958b401a04b500d110f94fa89ea4f2af1be0b4ff75672522a28da85e0b740f6",
+    "git_commit": "93b85dd",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:focus_moves_goal_location_where_causal",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.047674794166558065,
+        "expected": 0.02
+      },
+      {
+        "name": "placebo:no_focus_gains_over_the_prior_in_the_nuisance_world",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "one-sided: a focus that hurts on scrambled channels is not a gain",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "positive:oracle_is_the_ceiling",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:common_focus_gains_only_where_common_is_causal",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the nuisance world is judged by the placebo gate; this one covers the two worlds where another channel carries the goal",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "oracle:right_channel_at_least_matches_uniform",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.047674794166558065,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:common_world_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.047674794166558065,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:no_confidence_from_focus_in_nuisance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "tempering a channel up mechanically sharpens the posterior, so a modest confidence rise on scrambled channels is expected and reported",
+        "observed": 0.6804172183923598,
+        "expected": 0.5876853307610703,
+        "tolerance": 0.09273188863128948
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
