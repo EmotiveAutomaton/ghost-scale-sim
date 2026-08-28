@@ -31,7 +31,7 @@ PY = REPO / ".venv" / "Scripts" / "python.exe"
 
 POLL_S = 300
 STALE_S = 1800
-MAX_RELAUNCHES = 3
+MAX_RELAUNCHES = 6      # progress-gated: each relaunch must follow ledger growth, so the cap only bounds a slow-recurring death
 
 
 def log(msg: str) -> None:
