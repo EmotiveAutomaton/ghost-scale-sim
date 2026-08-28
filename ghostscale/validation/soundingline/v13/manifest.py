@@ -12,6 +12,7 @@ import json
 import time
 
 from . import v13_dir
+from .atomicio import write_json_atomic   # atomicity only; call sites keep each file's existing byte format
 from .schemas import Card, EXPANSIONS, RESOLVED, STATES, TIERS, card_from_dict, expected_cells
 
 MANIFEST = v13_dir() / "QUEUE_MANIFEST.json"
@@ -650,7 +651,7 @@ def write_manifest(cards: list | None = None, note: str = "") -> dict:
            "tiers": TIERS, "expansions": EXPANSIONS, "lineages": lineages(), "selected_tier": None,
            "mandatory": MANDATORY_IDS, "attacks": ATTACK_IDS, "pilot_cards": PILOT_IDS, "note": note,
            "cards": [c.to_dict() for c in cards]}
-    MANIFEST.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    write_json_atomic(MANIFEST, doc, newline=None)
     return doc
 
 
@@ -659,7 +660,8 @@ def write_cells_template(cards: list | None = None) -> dict:
     doc = {"written": time.strftime("%Y-%m-%dT%H:%M:%S"), "by_tier": {}}
     for tname, t in TIERS.items():
         doc["by_tier"][tname] = {c.id: {lane: expected_cells(c, t, lane) for lane in c.lanes} for c in cards}
-    CELLS_TEMPLATE.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    # EXPECTED_CELLS_TEMPLATE.json is hashed by the structural lock (cells_template_sha256)
+    write_json_atomic(CELLS_TEMPLATE, doc, newline=None)
     return doc
 
 
@@ -672,7 +674,8 @@ def instantiate_cells(tier_name: str, tier: dict, cards: list | None = None) -> 
             e = expected_cells(c, tier, lane)
             e["units_required"] = e["units"]
             doc["cards"][c.id][lane] = e
-    CELLS.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    # EXPECTED_CELLS.json is hashed by the workload lock (cells_sha256)
+    write_json_atomic(CELLS, doc, newline=None)
     return doc
 
 
@@ -688,7 +691,8 @@ def load_manifest() -> dict:
 
 def save_manifest(doc: dict) -> None:
     doc["updated"] = time.strftime("%Y-%m-%dT%H:%M:%S")
-    MANIFEST.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    # ~350 KB rewritten after every card: a torn write loses the whole queue state.
+    write_json_atomic(MANIFEST, doc, newline=None)
 
 
 def get_card(doc: dict, cid: str) -> Card:
@@ -725,7 +729,7 @@ def coverage(doc: dict) -> dict:
 
 def write_coverage(doc: dict) -> dict:
     cov = coverage(doc)
-    COVERAGE.write_text(json.dumps(cov, indent=2), encoding="utf-8")
+    write_json_atomic(COVERAGE, cov, newline=None)
     return cov
 
 
@@ -733,4 +737,4 @@ def add_amendment(card: str, original: dict, replacement: dict, reason: str) -> 
     doc = json.loads(AMENDMENTS.read_text(encoding="utf-8")) if AMENDMENTS.exists() else {"amendments": []}
     doc["amendments"].append({"card": card, "original": original, "replacement": replacement, "reason": reason,
                               "when": time.strftime("%Y-%m-%dT%H:%M:%S")})
-    AMENDMENTS.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    write_json_atomic(AMENDMENTS, doc)          # new file: LF, per .gitattributes

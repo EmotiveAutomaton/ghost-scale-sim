@@ -42,6 +42,7 @@ sys.path.insert(0, str(REPO))
 import ghostscale.validation.soundingline.v13 as V                          # noqa: E402
 from ghostscale.validation.soundingline.v13 import common as C              # noqa: E402
 from ghostscale.validation.soundingline.v13 import manifest as M            # noqa: E402
+from ghostscale.validation.soundingline.v13.atomicio import write_json_atomic  # noqa: E402
 from ghostscale.validation.soundingline.v13.runtime import init_worker, run_unit  # noqa: E402
 from ghostscale.validation.soundingline.v13.schemas import ENVELOPE_HOURS, EXPANSIONS, RESOLVED, TIERS, TIER_ORDER, card_from_dict  # noqa: E402
 
@@ -61,7 +62,9 @@ def status(**kw) -> None:
     doc.update(kw)
     doc["heartbeat"] = time.strftime("%Y-%m-%dT%H:%M:%S")
     doc["pid"] = os.getpid()
-    STATUS.write_text(json.dumps(doc, indent=2, default=str), encoding="utf-8")
+    # the watchdog reads this to decide whether to relaunch; a torn read must not look like a
+    # dead run. newline=None keeps the previous bytes: atomicity only, no format change.
+    write_json_atomic(STATUS, doc, newline=None)
 
 
 def default_workers() -> int:
@@ -176,7 +179,7 @@ def run_card(doc: dict, card, lane: str, tier_name: str, tier: dict, workers: in
 def record_runtime(cid: str, lane: str, acct: dict, state: str) -> None:
     rt = json.loads(M.RUNTIME.read_text(encoding="utf-8")) if M.RUNTIME.exists() else {"cards": {}}
     rt["cards"][f"{lane}:{cid}"] = {**acct, "state": state, "finished": time.strftime("%Y-%m-%dT%H:%M:%S")}
-    M.RUNTIME.write_text(json.dumps(rt, indent=2), encoding="utf-8")
+    write_json_atomic(M.RUNTIME, rt, newline=None)
 
 
 def prerequisites_failed(doc: dict, card) -> bool:
@@ -466,7 +469,13 @@ def main() -> None:
                 run_lane(doc, "attack", [d for d in doc["cards"] if d["trunk"] == "X"], workers, pool, tname, tier, only=args.only)
             elif st == "confirmation":
                 import runners.run_v13_confirmation as RC
-                RC.run(doc, workers, pool, only=args.only)
+                try:
+                    RC.run(doc, workers, pool, only=args.only)
+                except RC.FreezeViolation as exc:
+                    # a refused confirmation is a decision for a person, not a reason to abandon
+                    # the bridge and report stages; --stage all continues and says so loudly
+                    print(f"\n!! confirmation REFUSED and skipped: {exc}\n", flush=True)
+                    status(confirmation_refused=str(exc))
             elif st == "bridge":
                 stage_bridge(doc, workers, pool)
             elif st == "report":

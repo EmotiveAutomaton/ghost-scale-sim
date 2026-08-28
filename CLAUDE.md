@@ -200,10 +200,53 @@ near-miss material is the specific poison: in the controlled study, unrelated Wi
 
 ## Environment
 
-- venv at `.venv`, Windows: `./.venv/Scripts/python.exe`. Python 3.13.
+- venv at `.venv`, Windows: `./.venv/Scripts/python.exe`. Python 3.13. **System `python` is not
+  this interpreter and lacks the dependencies.**
 - `make gates` runs the standing controls and metamorphic relations, ~40 s. `make test` runs
   everything. `python runners/run_soundingline.py --only T1` runs one module.
 - `pip install -e ".[methods,dev]"` for the measurement layer and the property-based tests.
+
+### V13 is a long-running queue. Check before you touch anything.
+
+The per-module runs above are minutes. **V13 is not**: 152 cards on a tier-calibrated,
+checkpointed, multi-day queue, driven by `runners/run_v13.py --stage all` under
+`runners/watchdog_v13.py`, which relaunches a dead run up to six times, gated on ledger growth.
+
+**Read state from the records, never from prose — this file included.** Nothing below is a
+count; the counts live in files that are rewritten as the program runs:
+
+| | |
+|---|---|
+| `results/v13/RUNNER_STATUS.json` | current stage, card, pid, heartbeat. **Check the pid is alive and the heartbeat is fresh**; its embedded `coverage` block is a snapshot and goes stale |
+| `results/v13/COVERAGE.json` | cards resolved by state and trunk, with `written` |
+| `results/v13/COMPLETION.json` | the completion ledger: verdict path, hash, receipt per card |
+| `results/v13/QUEUE_MANIFEST.json` | per-card status, tier, lineages |
+| `docs/versions/v13-common-ground/HEALING_PLAN.md` | known repairs and pending curator decisions |
+
+- **A run may be live right now.** Before editing any imported module, check for a live runner.
+  Workers are Windows `spawn` processes: they re-import from disk, so an edit lands in workers
+  created *after* it while the parent keeps the code it already imported. That mixes two versions
+  inside one card's results. Work in a worktree and deploy at a boundary.
+- **Do not** reset the ledger, delete checkpoints, or clear a lock to make an edit easier.
+- **Some files are hash-locked and editing them halts the program.** `ghostscale/prereg_v13.py`
+  hashes *itself*; `common.py`, `schemas.py`, `world.py`, `priors.py`, `exact.py`, `attention.py`,
+  `costs.py`, `goals_trust.py`, `hierarchy.py`, `projection.py` and `pymdp_reader.py` under
+  `validation/soundingline/v13/` are hashed as generators. Any byte change flips
+  `lock_status()["locked"]` false and `--stage discovery` exits refusing to run. Changing one is a
+  lock amendment — a curator decision — not a routine fix. `manifest.py`, `runtime.py`,
+  `atomicio.py`, `runners/` and `tests/` are outside the lock.
+- **Inspect any entry point named smoke or validation before invoking it**; several execute real
+  experiments. `GS_V13_SMOKE=1` is refused by the scientific stages on purpose.
+- **Reviewed is not confirmed.** A discovery verdict whose criteria passed is a *candidate*.
+  Confirmation re-runs a frozen packet on an untouched lineage.
+- **Widening the confirmation packet is an amendment, and it is recorded, never silent.**
+  `runners/run_v13_confirmation.py` freezes the promoted set before the first confirmation world
+  and verifies it — discovery hashes, card and criterion identity, both lock hashes — on every
+  later entry. Adding a card (which is what `HEALING_PLAN.md`'s confirmation step does, and the
+  curator kept that plan on 2026-08-28) writes an amendment preserving the original packet beside
+  the replacement, in `results/v13/CONFIRMATION.json` and `results/v13/AMENDMENTS.json`. Added
+  cards get an untouched lineage for free: `rng_for` seeds on the card id. `--no-amend` refuses to
+  widen instead. **Never widen the packet by editing the ledger by hand.**
 - **The sibling project** is Sounding Line, at `../../SoundingLine/sounding-line`. It reads real
   text and cannot construct ground truth. When a question is about **real text, corpora, or a
   language model's behaviour**, it belongs there and not here. When it is about a **mechanism, an
@@ -212,8 +255,12 @@ near-miss material is the specific poison: in the controlled study, unrelated Wi
 ## What was deliberately NOT carried over from the sibling's file
 
 - **The continuous-queue loop** ("report queue state, always have something running, build a
-  four-hour queue"). That fits a repository with a `TODO.md` and long GPU jobs. This one has neither;
-  its runs are minutes, and inventing a queue culture would be ceremony.
+  four-hour queue"). Their version is a *culture* — keep the GPU fed, always have something
+  running. That is still not carried over. **What is no longer true is the reason originally given
+  here** ("this one has no queue; its runs are minutes"): V13 is a manifest-driven, multi-day card
+  program with its own ledger and watchdog, described under Environment. The distinction that
+  survives is that V13's queue is a *pre-registered program that ends*, not a loop to keep full —
+  the correct response to an idle machine here is to report state, not to invent work.
 - **Their `FINDINGS.md` two-tier system**, their file locks (`SOUNDING_LINE_SPEC.md`, `prereg/*.py`,
   `locks.py`), and `bounded_v5`/`family_v2`. This repository has its own equivalents — closed
   versions, pre-registration cards, the gates — and two overlapping conventions would be worse than
