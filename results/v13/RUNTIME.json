@@ -196,16 +196,30 @@
       "finished": "2026-08-26T06:34:39"
     },
     "discovery:A02": {
-      "error": "RuntimeError('A02 unit w1 r0 failed: KeyError(\\'convention_obs\\')\\nTraceback (most recent call last):\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\runtime.py\", line 37, in run_unit\\n    unit = fn(ctx)\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\cards\\\\trunk_a.py\", line 128, in unit_A02\\n    items_tr = [(_cue_world_arts(world, m, r, 3), model.truth_index(m)) for m in tr]\\n                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\cards\\\\trunk_a.py\", line 111, in _cue_world_arts\\n    a[\"convention_obs\"] = r.integers(0, fam.nf, size=len(a[\"convention_obs\"])).tolist()   # irrelevant\\n                                                         ~^^^^^^^^^^^^^^^^^^\\nKeyError: \\'convention_obs\\'\\n')",
-      "traceback": "Traceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\runners\\run_v13.py\", line 210, in run_lane\n    out = run_card(doc, card, lane, tier_name, tier, workers, pool, cfg=cfg, upstream_oracle=oracle)\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\runners\\run_v13.py\", line 154, in run_card\n    raise RuntimeError(f\"{card.id} unit w{wid} r{rep} failed: {out['error']}\")\nRuntimeError: A02 unit w1 r0 failed: KeyError('convention_obs')\nTraceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\runtime.py\", line 37, in run_unit\n    unit = fn(ctx)\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\cards\\trunk_a.py\", line 128, in unit_A02\n    items_tr = [(_cue_world_arts(world, m, r, 3), model.truth_index(m)) for m in tr]\n                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\cards\\trunk_a.py\", line 111, in _cue_world_arts\n    a[\"convention_obs\"] = r.integers(0, fam.nf, size=len(a[\"convention_obs\"])).tolist()   # irrelevant\n                                                         ~^^^^^^^^^^^^^^^^^^\nKeyError: 'convention_obs'\n\n",
-      "state": "ERROR",
-      "finished": "2026-08-26T06:34:46"
+      "wall_s": 6967.76,
+      "parent_cpu_s": 22.36,
+      "children_cpu_s": 80706.44,
+      "peak_child_rss": 44896256,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 32.487992578125,
+      "throughput_units_per_s": 0.3674066273134961,
+      "state": "INSTRUMENT_FAILED",
+      "finished": "2026-08-28T00:22:02"
     },
     "discovery:A03": {
-      "error": "RuntimeError('A03 unit w0 r0 failed: KeyError(\\'convention_obs\\')\\nTraceback (most recent call last):\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\runtime.py\", line 37, in run_unit\\n    unit = fn(ctx)\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\cards\\\\trunk_a.py\", line 182, in unit_A03\\n    items_tr = [(_cue_world_arts(world, m, r, 3), model.truth_index(m)) for m in tr]\\n                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\cards\\\\trunk_a.py\", line 111, in _cue_world_arts\\n    a[\"convention_obs\"] = r.integers(0, fam.nf, size=len(a[\"convention_obs\"])).tolist()   # irrelevant\\n                                                         ~^^^^^^^^^^^^^^^^^^\\nKeyError: \\'convention_obs\\'\\n')",
-      "traceback": "Traceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\runners\\run_v13.py\", line 210, in run_lane\n    out = run_card(doc, card, lane, tier_name, tier, workers, pool, cfg=cfg, upstream_oracle=oracle)\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\runners\\run_v13.py\", line 154, in run_card\n    raise RuntimeError(f\"{card.id} unit w{wid} r{rep} failed: {out['error']}\")\nRuntimeError: A03 unit w0 r0 failed: KeyError('convention_obs')\nTraceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\runtime.py\", line 37, in run_unit\n    unit = fn(ctx)\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\cards\\trunk_a.py\", line 182, in unit_A03\n    items_tr = [(_cue_world_arts(world, m, r, 3), model.truth_index(m)) for m in tr]\n                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\cards\\trunk_a.py\", line 111, in _cue_world_arts\n    a[\"convention_obs\"] = r.integers(0, fam.nf, size=len(a[\"convention_obs\"])).tolist()   # irrelevant\n                                                         ~^^^^^^^^^^^^^^^^^^\nKeyError: 'convention_obs'\n\n",
-      "state": "ERROR",
-      "finished": "2026-08-26T07:08:29"
+      "wall_s": 7903.43,
+      "parent_cpu_s": 11.31,
+      "children_cpu_s": 92606.67,
+      "peak_child_rss": 45002752,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 36.922899609374994,
+      "throughput_units_per_s": 0.32390991724266416,
+      "state": "LANDED",
+      "finished": "2026-08-28T02:33:45"
     },
     "discovery:A04": {
       "wall_s": 6643.22,
@@ -520,10 +534,17 @@
       "finished": "2026-08-26T22:56:42"
     },
     "discovery:A05": {
-      "error": "RuntimeError('A05 unit w1 r2 failed: ValueError(\"\\'list\\' argument must have no negative elements\")\\nTraceback (most recent call last):\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\runtime.py\", line 37, in run_unit\\n    unit = fn(ctx)\\n  File \"E:\\\\EmotiveAutomaton\\\\Projects\\\\AI and Intentionality\\\\Ghost Scale Simulation\\\\ghost-scale-sim\\\\ghostscale\\\\validation\\\\soundingline\\\\v13\\\\cards\\\\trunk_a.py\", line 311, in unit_A05\\n    methods = [a[\"method\"] for a in arts if a.get(\"method\") is not None]\\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: \\'list\\' argument must have no negative elements\\n')",
-      "traceback": "Traceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\runners\\run_v13.py\", line 210, in run_lane\n    out = run_card(doc, card, lane, tier_name, tier, workers, pool, cfg=cfg, upstream_oracle=oracle)\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\runners\\run_v13.py\", line 154, in run_card\n    raise RuntimeError(f\"{card.id} unit w{wid} r{rep} failed: {out['error']}\")\nRuntimeError: A05 unit w1 r2 failed: ValueError(\"'list' argument must have no negative elements\")\nTraceback (most recent call last):\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\runtime.py\", line 37, in run_unit\n    unit = fn(ctx)\n  File \"E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\ghostscale\\validation\\soundingline\\v13\\cards\\trunk_a.py\", line 311, in unit_A05\n    methods = [a[\"method\"] for a in arts if a.get(\"method\") is not None]\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: 'list' argument must have no negative elements\n\n",
-      "state": "ERROR",
-      "finished": "2026-08-26T22:56:44"
+      "wall_s": 1493.45,
+      "parent_cpu_s": 22.45,
+      "children_cpu_s": 17292.55,
+      "peak_child_rss": 45002752,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 6.881291796875002,
+      "throughput_units_per_s": 1.7141530748043645,
+      "state": "LANDED",
+      "finished": "2026-08-28T02:58:39"
     },
     "discovery:A06": {
       "wall_s": 1876.01,
@@ -1316,6 +1337,110 @@
       "throughput_units_per_s": 31.764795467569055,
       "state": "LANDED",
       "finished": "2026-08-27T16:51:53"
+    },
+    "discovery:Q09": {
+      "wall_s": 10445.59,
+      "parent_cpu_s": 0.31,
+      "children_cpu_s": 122136.55,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 48.836162890625,
+      "throughput_units_per_s": 0.24507940778626153,
+      "state": "LANDED",
+      "finished": "2026-08-27T19:45:59"
+    },
+    "discovery:Q10": {
+      "wall_s": 343.24,
+      "parent_cpu_s": 7.67,
+      "children_cpu_s": 3827.27,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 1.561091796875,
+      "throughput_units_per_s": 7.458401734499114,
+      "state": "LANDED",
+      "finished": "2026-08-27T19:51:42"
+    },
+    "discovery:C14": {
+      "wall_s": 5061.44,
+      "parent_cpu_s": 39.59,
+      "children_cpu_s": 57609.11,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 23.4912953125,
+      "throughput_units_per_s": 0.5057853074965406,
+      "state": "LANDED",
+      "finished": "2026-08-27T21:16:04"
+    },
+    "discovery:C15": {
+      "wall_s": 1932.33,
+      "parent_cpu_s": 15.39,
+      "children_cpu_s": 21944.17,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 8.96684453125,
+      "throughput_units_per_s": 1.3248273028200737,
+      "state": "LANDED",
+      "finished": "2026-08-27T21:48:16"
+    },
+    "discovery:G15": {
+      "wall_s": 5.14,
+      "parent_cpu_s": 0.64,
+      "children_cpu_s": 0.19,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 8.164062500000001e-05,
+      "throughput_units_per_s": 497.96316531715826,
+      "state": "LANDED",
+      "finished": "2026-08-27T21:48:21"
+    },
+    "discovery:H15": {
+      "wall_s": 192.91,
+      "parent_cpu_s": 13.33,
+      "children_cpu_s": 2016.28,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 0.83791875,
+      "throughput_units_per_s": 13.270407370086799,
+      "state": "LANDED",
+      "finished": "2026-08-27T21:51:34"
+    },
+    "discovery:O17": {
+      "wall_s": 208.11,
+      "parent_cpu_s": 35.69,
+      "children_cpu_s": 1945.67,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 0.804509765625,
+      "throughput_units_per_s": 12.301173448668774,
+      "state": "LANDED",
+      "finished": "2026-08-27T21:55:02"
+    },
+    "discovery:O18": {
+      "wall_s": 794.4,
+      "parent_cpu_s": 0.2,
+      "children_cpu_s": 9169.08,
+      "peak_child_rss": 171139072,
+      "workers": 12,
+      "units": 2560,
+      "units_computed": 2560,
+      "mean_unit_wall_s": 3.71548828125,
+      "throughput_units_per_s": 3.22257599703455,
+      "state": "LANDED",
+      "finished": "2026-08-27T22:08:17"
     }
   }
 }

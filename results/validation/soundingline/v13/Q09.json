@@ -1,0 +1,410 @@
+{
+  "card": "Q09",
+  "trunk": "Q",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "When should the reader stop?",
+    "what_happened": "At the middle probe price the exact stopping rule lost 0.08 nats to the frontier, PyMDP 0.07, a fixed budget 0.18; the exact rule stopped early 22% of the time and late 38%.",
+    "what_changed_in_the_project_world": "Stopping is a priced decision with a computable frontier; the bounded reader's distance from it is reported by cost.",
+    "what_remains_a_rival": "premature stopping",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "When each probe has a price, the exact stopping rule sits near the frontier of value against cost; PyMDP and a fixed budget are placed on that frontier and their premature and unnecessary probes counted.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_Q09": {
+      "passed": true,
+      "grid": {
+        "low": {
+          "exact": {
+            "regret": 0.030072321584454866,
+            "premature": 0.06539362980769231,
+            "unnecessary": 0.20141225961538461,
+            "stopped_at": 4.8646544471153845
+          },
+          "pymdp": {
+            "regret": 0.0190166038021033,
+            "premature": 0.0,
+            "unnecessary": 0.21515625000000002,
+            "stopped_at": 5.0
+          },
+          "fixed": {
+            "regret": 0.2928853952117275,
+            "premature": 0.9314062499999999,
+            "unnecessary": 0.018359375,
+            "stopped_at": 3.0
+          }
+        },
+        "mid": {
+          "exact": {
+            "regret": 0.07582100471492495,
+            "premature": 0.21906550480769232,
+            "unnecessary": 0.3785126201923077,
+            "stopped_at": 4.372596153846154
+          },
+          "pymdp": {
+            "regret": 0.06509661910142919,
+            "premature": 0.0,
+            "unnecessary": 0.49328125000000006,
+            "stopped_at": 5.0
+          },
+          "fixed": {
+            "regret": 0.17896541051105347,
+            "premature": 0.7397656249999999,
+            "unnecessary": 0.12257812500000001,
+            "stopped_at": 3.0
+          }
+        },
+        "high": {
+          "exact": {
+            "regret": 0.15979296558605482,
+            "premature": 0.16254206730769233,
+            "unnecessary": 0.6202674278846153,
+            "stopped_at": 2.0192938701923078
+          },
+          "pymdp": {
+            "regret": 0.5556070603162594,
+            "premature": 0.0,
+            "unnecessary": 0.98890625,
+            "stopped_at": 5.0
+          },
+          "fixed": {
+            "regret": 0.2694758517258835,
+            "premature": 0.045937500000000006,
+            "unnecessary": 0.86,
+            "stopped_at": 3.0
+          }
+        }
+      }
+    },
+    "grid": {
+      "low": {
+        "exact": {
+          "regret": 0.030072321584454866,
+          "premature": 0.06539362980769231,
+          "unnecessary": 0.20141225961538461,
+          "stopped_at": 4.8646544471153845
+        },
+        "pymdp": {
+          "regret": 0.0190166038021033,
+          "premature": 0.0,
+          "unnecessary": 0.21515625000000002,
+          "stopped_at": 5.0
+        },
+        "fixed": {
+          "regret": 0.2928853952117275,
+          "premature": 0.9314062499999999,
+          "unnecessary": 0.018359375,
+          "stopped_at": 3.0
+        }
+      },
+      "mid": {
+        "exact": {
+          "regret": 0.07582100471492495,
+          "premature": 0.21906550480769232,
+          "unnecessary": 0.3785126201923077,
+          "stopped_at": 4.372596153846154
+        },
+        "pymdp": {
+          "regret": 0.06509661910142919,
+          "premature": 0.0,
+          "unnecessary": 0.49328125000000006,
+          "stopped_at": 5.0
+        },
+        "fixed": {
+          "regret": 0.17896541051105347,
+          "premature": 0.7397656249999999,
+          "unnecessary": 0.12257812500000001,
+          "stopped_at": 3.0
+        }
+      },
+      "high": {
+        "exact": {
+          "regret": 0.15979296558605482,
+          "premature": 0.16254206730769233,
+          "unnecessary": 0.6202674278846153,
+          "stopped_at": 2.0192938701923078
+        },
+        "pymdp": {
+          "regret": 0.5556070603162594,
+          "premature": 0.0,
+          "unnecessary": 0.98890625,
+          "stopped_at": 5.0
+        },
+        "fixed": {
+          "regret": 0.2694758517258835,
+          "premature": 0.045937500000000006,
+          "unnecessary": 0.86,
+          "stopped_at": 3.0
+        }
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {
+    "regret_by_cost": {
+      "low": 0.0190166038021033,
+      "mid": 0.06509661910142919,
+      "high": 0.5556070603162594
+    }
+  },
+  "baselines": {},
+  "cells": {
+    "low|exact": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "low|pymdp": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "low|fixed": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "mid|exact": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "mid|pymdp": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "mid|fixed": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "high|exact": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "high|pymdp": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    },
+    "high|fixed": {
+      "units": 2560,
+      "rows": 332800,
+      "min_rows_in_a_unit": 130
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 9,
+    "realized_levels": 9,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 130,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 23040
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "premature stopping",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 10445.05,
+    "units_cpu_s": 122136.55,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 96836,
+      "process_time": 1382.03125,
+      "user": 1057.96875,
+      "system": 324.0625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 77729792,
+      "peak_rss": 389197824
+    }
+  },
+  "runtime_seconds": 10445.05,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:cost_moves_the_stopping_time",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 2.8453605769230768,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_streams_all_policies",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:exact_stopping_no_worse_than_fixed",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:frontier_computed_from_the_same_stream",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:frontier_reachable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9241789952850751,
+        "expected": 0.3
+      },
+      {
+        "name": "prediction:exact_minus_fixed_regret",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.10314440579612852,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:pymdp_regret_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.06509661910142919,
+        "expected": 0.07582100471492495,
+        "tolerance": 0.010724386613495757
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_q.py",
+    "sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+    "git_commit": "863649f",
+    "git_dirty": false
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:cost_moves_the_stopping_time",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 2.8453605769230768,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_streams_all_policies",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:exact_stopping_no_worse_than_fixed",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:frontier_computed_from_the_same_stream",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:frontier_reachable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9241789952850751,
+        "expected": 0.3
+      },
+      {
+        "name": "prediction:exact_minus_fixed_regret",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.10314440579612852,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:pymdp_regret_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.06509661910142919,
+        "expected": 0.07582100471492495,
+        "tolerance": 0.010724386613495757
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

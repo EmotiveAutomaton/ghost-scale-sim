@@ -1,13 +1,13 @@
 {
   "cards_total": 152,
   "mandatory_total": 132,
-  "mandatory_resolved": 99,
+  "mandatory_resolved": 110,
   "by_state": {
-    "LANDED": 91,
-    "INSTRUMENT_FAILED": 7,
+    "LANDED": 101,
+    "INSTRUMENT_FAILED": 8,
     "RESOURCE_BLOCKED": 1,
-    "BUILT": 52,
-    "RUNNING": 1
+    "BUILT": 40,
+    "RUNNING": 2
   },
   "by_trunk": {
     "I": {
@@ -16,15 +16,15 @@
     },
     "C": {
       "total": 16,
-      "resolved": 13
+      "resolved": 15
     },
     "A": {
       "total": 14,
-      "resolved": 8
+      "resolved": 11
     },
     "O": {
       "total": 18,
-      "resolved": 16
+      "resolved": 18
     },
     "P": {
       "total": 14,
@@ -32,15 +32,15 @@
     },
     "G": {
       "total": 16,
-      "resolved": 14
+      "resolved": 15
     },
     "H": {
       "total": 16,
-      "resolved": 14
+      "resolved": 15
     },
     "Q": {
       "total": 12,
-      "resolved": 8
+      "resolved": 10
     },
     "L": {
       "total": 12,
@@ -52,25 +52,14 @@
     }
   },
   "unresolved_mandatory": [
-    "C14",
-    "C15",
     "C16",
-    "A02",
-    "A03",
-    "A05",
     "A12",
     "A13",
     "A14",
-    "O17",
-    "O18",
     "P13",
     "P14",
-    "G15",
     "G16",
-    "H15",
     "H16",
-    "Q09",
-    "Q10",
     "Q11",
     "Q12",
     "L01",
@@ -86,5 +75,5 @@
     "L11",
     "L12"
   ],
-  "written": "2026-08-27T17:52:10"
+  "written": "2026-08-28T03:37:16"
 }

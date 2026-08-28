@@ -1,0 +1,364 @@
+{
+  "card": "O17",
+  "trunk": "O",
+  "wave": 3,
+  "lane": "discovery",
+  "record": {
+    "question": "Do recovered tradeoffs predict future and counterfactual choices?",
+    "what_happened": "Over frequency the recovered tradeoff gained changed_costs +1.09, new_domain +0.84, new_goal +0.81, new_commission +0.72, new_role -0.28 nats on prospective choices.",
+    "what_changed_in_the_project_world": "The tradeoff is a model of the maker, not a fit to its history, where the gains are positive; where they are not, it is not.",
+    "what_remains_a_rival": "retrospective fit",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A recovered tradeoff predicts choices under changed costs, in a new domain, under a new goal, a new commission and a new role, above identity, frequency and habit baselines; only prospective gains are promoted.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_O17": {
+      "passed": false,
+      "grid": {
+        "changed_costs": {
+          "identity": 0.9966709712023819,
+          "frequency": 1.086642031929794,
+          "habit": 1.4283591313209132
+        },
+        "new_domain": {
+          "identity": 0.7520186011049133,
+          "frequency": 0.8413966190554347,
+          "habit": 1.1813883917099217
+        },
+        "new_goal": {
+          "identity": 0.723079624465122,
+          "frequency": 0.8115643577560109,
+          "habit": 1.1536402715415577
+        },
+        "new_commission": {
+          "identity": 0.633969339761099,
+          "frequency": 0.7218951375314621,
+          "habit": 1.0615401769731005
+        },
+        "new_role": {
+          "identity": -0.36743286125254127,
+          "frequency": -0.2794408683864561,
+          "habit": 0.0604166870485177
+        }
+      }
+    },
+    "gain_by_target_and_baseline": {
+      "changed_costs": {
+        "identity": 0.9966709712023819,
+        "frequency": 1.086642031929794,
+        "habit": 1.4283591313209132
+      },
+      "new_domain": {
+        "identity": 0.7520186011049133,
+        "frequency": 0.8413966190554347,
+        "habit": 1.1813883917099217
+      },
+      "new_goal": {
+        "identity": 0.723079624465122,
+        "frequency": 0.8115643577560109,
+        "habit": 1.1536402715415577
+      },
+      "new_commission": {
+        "identity": 0.633969339761099,
+        "frequency": 0.7218951375314621,
+        "habit": 1.0615401769731005
+      },
+      "new_role": {
+        "identity": -0.36743286125254127,
+        "frequency": -0.2794408683864561,
+        "habit": 0.0604166870485177
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "changed_costs|identity": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "changed_costs|frequency": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "changed_costs|habit": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_domain|identity": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_domain|frequency": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_domain|habit": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_goal|identity": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_goal|frequency": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_goal|habit": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_commission|identity": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_commission|frequency": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_commission|habit": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_role|identity": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_role|frequency": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    },
+    "new_role|habit": {
+      "units": 2560,
+      "rows": 102400,
+      "min_rows_in_a_unit": 40
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 15,
+    "realized_levels": 15,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 40,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 38400
+  },
+  "matching_residuals": {},
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "retrospective fit",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 171.94,
+    "units_cpu_s": 1945.67,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 96836,
+      "process_time": 1533.046875,
+      "user": 1178.859375,
+      "system": 354.1875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 259162112,
+      "peak_rss": 389197824
+    }
+  },
+  "runtime_seconds": 171.94,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:profile_predicts_something_prospective",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 1.086642031929794,
+        "expected": 0.02
+      },
+      {
+        "name": "placebo:targets_generated_after_inference",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:beats_uniform_under_changed_costs",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:no_retrospective_fit_reported_as_prospective",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:prospective_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9966709712023819,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:mean_gain_over_frequency",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.6364114555772491,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:never_far_below_habit",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.0604166870485177,
+        "expected": -0.5,
+        "tolerance": 0.5604166880485176
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_o.py",
+    "sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+    "git_commit": "863649f",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:profile_predicts_something_prospective",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 1.086642031929794,
+        "expected": 0.02
+      },
+      {
+        "name": "placebo:targets_generated_after_inference",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:beats_uniform_under_changed_costs",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:no_retrospective_fit_reported_as_prospective",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:prospective_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9966709712023819,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:mean_gain_over_frequency",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.6364114555772491,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:never_far_below_habit",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.0604166870485177,
+        "expected": -0.5,
+        "tolerance": 0.5604166880485176
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
