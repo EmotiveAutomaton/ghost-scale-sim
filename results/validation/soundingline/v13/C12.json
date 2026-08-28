@@ -1,0 +1,461 @@
+{
+  "baselines": {},
+  "card": "C12",
+  "cells": {
+    "all_family|1": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "all_family|16": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "all_family|2": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "all_family|4": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "all_family|8": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "difference_from_self|1": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "difference_from_self|16": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "difference_from_self|2": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "difference_from_self|4": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "difference_from_self|8": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "raw_self|1": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "raw_self|16": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "raw_self|2": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "raw_self|4": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    },
+    "raw_self|8": {
+      "min_rows_in_a_unit": 160,
+      "rows": 409600,
+      "units": 2560
+    }
+  },
+  "claim_ceiling": "INSTRUMENT_FAILURE",
+  "closure_reason": "instrument failed: placebo:priors_wash_out_with_evidence",
+  "conditional_matrix": {},
+  "construction_realization": {},
+  "deviations": [],
+  "effective_n": {
+    "rows": 38400,
+    "units": 2560
+  },
+  "environment": {
+    "cpu_count": 24,
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu",
+    "numpy": "2.1.3",
+    "omp_threads": "1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pymdp": "1.0.2 (pinned)",
+    "python": "3.13.2",
+    "scipy": "1.15.3"
+  },
+  "exact": {},
+  "expected_cell_receipt": {
+    "expected_levels": 15,
+    "expected_min_rows_per_unit": 1,
+    "expected_units": 2560,
+    "ok": true,
+    "realized_levels": 15,
+    "realized_min_rows_per_unit": 160,
+    "realized_units": 2560
+  },
+  "gates": {
+    "all_passed": false,
+    "documented_failures": [],
+    "failed_names": [
+      "placebo:priors_wash_out_with_evidence"
+    ],
+    "gates": [
+      {
+        "detail": "the intervention changes the intended latent or policy",
+        "expected": 0.05,
+        "kind": "live",
+        "name": "live:transform_moves_the_score",
+        "observed": 1.0563749486094274,
+        "passed": true
+      },
+      {
+        "detail": "an irrelevant matched intervention does not change the target",
+        "expected": 0.0,
+        "kind": "placebo",
+        "name": "placebo:priors_wash_out_with_evidence",
+        "observed": 1.1350623586448483,
+        "passed": false,
+        "tolerance": 1.0
+      },
+      {
+        "detail": "a known readable manipulation is recovered",
+        "expected": 1.0,
+        "kind": "positive",
+        "name": "positive:transform_learned_from_training_makers",
+        "observed": 0.9873046875,
+        "passed": true,
+        "tolerance": 0.5
+      },
+      {
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "expected": 0.0,
+        "kind": "positive",
+        "name": "surface:raw_self_does_not_gain_over_the_group_prior",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 0.1
+      },
+      {
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "expected": -1.0,
+        "kind": "live",
+        "name": "oracle:difference_model_first_artifact_reported",
+        "observed": -0.2314371888682485,
+        "passed": true
+      },
+      {
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "expected": 0.0,
+        "kind": "live",
+        "name": "prediction:held_out_transformed_makers",
+        "observed": -0.8913332957481943,
+        "passed": true
+      },
+      {
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "expected": 0.46087862041099326,
+        "kind": "positive",
+        "name": "calibration:raw_self_not_more_confident_while_wrong",
+        "observed": 0.3507413218493394,
+        "passed": true,
+        "tolerance": 0.11013729956165383
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 1,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "unexpected_passes": []
+  },
+  "gates_summary": {
+    "all_passed": false,
+    "documented_failures": [],
+    "failed_names": [
+      "placebo:priors_wash_out_with_evidence"
+    ],
+    "gates": [
+      {
+        "detail": "the intervention changes the intended latent or policy",
+        "expected": 0.05,
+        "kind": "live",
+        "name": "live:transform_moves_the_score",
+        "observed": 1.0563749486094274,
+        "passed": true
+      },
+      {
+        "detail": "an irrelevant matched intervention does not change the target",
+        "expected": 0.0,
+        "kind": "placebo",
+        "name": "placebo:priors_wash_out_with_evidence",
+        "observed": 1.1350623586448483,
+        "passed": false,
+        "tolerance": 1.0
+      },
+      {
+        "detail": "a known readable manipulation is recovered",
+        "expected": 1.0,
+        "kind": "positive",
+        "name": "positive:transform_learned_from_training_makers",
+        "observed": 0.9873046875,
+        "passed": true,
+        "tolerance": 0.5
+      },
+      {
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "expected": 0.0,
+        "kind": "positive",
+        "name": "surface:raw_self_does_not_gain_over_the_group_prior",
+        "observed": 0.0,
+        "passed": true,
+        "tolerance": 0.1
+      },
+      {
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "expected": -1.0,
+        "kind": "live",
+        "name": "oracle:difference_model_first_artifact_reported",
+        "observed": -0.2314371888682485,
+        "passed": true
+      },
+      {
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "expected": 0.0,
+        "kind": "live",
+        "name": "prediction:held_out_transformed_makers",
+        "observed": -0.8913332957481943,
+        "passed": true
+      },
+      {
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "expected": 0.46087862041099326,
+        "kind": "positive",
+        "name": "calibration:raw_self_not_more_confident_while_wrong",
+        "observed": 0.3507413218493394,
+        "passed": true,
+        "tolerance": 0.11013729956165383
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded.",
+    "n_failed": 1,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "unexpected_passes": []
+  },
+  "hypothesis": "When makers are systematic transforms of the reader, raw self-projection is wrong but a learned difference-from-self model beats a broad population prior while keeping self and other apart.",
+  "independent_unit": "world",
+  "lane": "discovery",
+  "matching_residuals": {},
+  "produced_by": {
+    "git_commit": "ee3a023",
+    "git_dirty": true,
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_c.py",
+    "sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55"
+  },
+  "pursuit": "STALLED",
+  "pymdp": {},
+  "record": {
+    "claim_ceiling": "INSTRUMENT_FAILURE",
+    "question": "Can anti-similarity be learned as a useful transform?",
+    "what_changed_in_the_project_world": "Anti-similarity is usable when it is systematic: the reader keeps its own model and learns the map.",
+    "what_happened": "Raw self-projection scored -1.29 nats against the broad prior on makers who were rotations of the reader; the difference-from-self model, having learned the rotation from four training makers (99% correctly), scored -0.23 at one artifact and -0.89 at sixteen.",
+    "what_remains_a_rival": "broad population"
+  },
+  "repairs": [],
+  "results": {
+    "by_model_and_dose": {
+      "all_family": {
+        "1": {
+          "interval": [
+            -1.6160882748040213,
+            -1.5827238052822226
+          ],
+          "mean": -1.5996400242052504,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "16": {
+          "interval": [
+            -0.6637644934098617,
+            -0.593241641033837
+          ],
+          "mean": -0.6304835299566387,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "2": {
+          "interval": [
+            -1.4060969099059677,
+            -1.3667417888841202
+          ],
+          "mean": -1.3859232440427331,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "4": {
+          "interval": [
+            -1.1221651157691093,
+            -1.0768166997849185
+          ],
+          "mean": -1.1007557270740087,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "8": {
+          "interval": [
+            -0.8575016087359839,
+            -0.805925492514468
+          ],
+          "mean": -0.8307661625908036,
+          "n_rows": 2560,
+          "n_units": 512
+        }
+      },
+      "difference_from_self": {
+        "1": {
+          "interval": [
+            -1.8602813725282037,
+            -1.8052646821359426
+          ],
+          "mean": -1.831077213073499,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "16": {
+          "interval": [
+            -1.5825847359207512,
+            -1.4694821114598617
+          ],
+          "mean": -1.521816825704833,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "2": {
+          "interval": [
+            -1.7492106385312722,
+            -1.6904596707063193
+          ],
+          "mean": -1.7199652545470954,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "4": {
+          "interval": [
+            -1.6095404256589598,
+            -1.5407075973971485
+          ],
+          "mean": -1.574137602276855,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "8": {
+          "interval": [
+            -1.5124678815244585,
+            -1.4360818935393438
+          ],
+          "mean": -1.4744898567241882,
+          "n_rows": 2560,
+          "n_units": 512
+        }
+      },
+      "raw_self": {
+        "1": {
+          "interval": [
+            -2.9170253932621177,
+            -2.860065838534367
+          ],
+          "mean": -2.8874521616829263,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "16": {
+          "interval": [
+            -1.827101500642154,
+            -1.6996336075584801
+          ],
+          "mean": -1.765545888601487,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "2": {
+          "interval": [
+            -2.62753804347466,
+            -2.562596409377812
+          ],
+          "mean": -2.593931057829186,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "4": {
+          "interval": [
+            -2.248681990640636,
+            -2.1793329890590383
+          ],
+          "mean": -2.2148261047091773,
+          "n_rows": 2560,
+          "n_units": 512
+        },
+        "8": {
+          "interval": [
+            -1.9393529875502153,
+            -1.849666665253778
+          ],
+          "mean": -1.8944817528898112,
+          "n_rows": 2560,
+          "n_units": 512
+        }
+      }
+    },
+    "criterion_C12": {
+      "gain_at_1": -0.2314371888682485,
+      "gain_at_16": -0.8913332957481943,
+      "passed": false,
+      "raw_self_gain_at_1": -1.2878121374776759,
+      "transform_learned": 0.9873046875
+    }
+  },
+  "runtime": {
+    "reduce_accounting": {
+      "children_system": 0.0,
+      "children_user": 0.0,
+      "peak_rss": 389197824,
+      "pid": 96836,
+      "process_time": 833.34375,
+      "rss": 196427776,
+      "system": 157.46875,
+      "user": 675.875
+    },
+    "units_cpu_s": 12796.1,
+    "units_wall_s": 1076.69,
+    "workers": 12
+  },
+  "runtime_seconds": 1076.69,
+  "state": "INSTRUMENT_FAILED",
+  "strongest_rival": "broad population",
+  "tier": "T2",
+  "trunk": "C",
+  "units": {
+    "kind": "world",
+    "n": 2560
+  },
+  "upstream_oracle": false,
+  "warrant": "INSTRUMENT_FAILED",
+  "wave": 2,
+  "what_must_hold_outside_the_simulation": ""
+}

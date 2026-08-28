@@ -380,7 +380,7 @@ def unit_P07(ctx):
         comp = make_maker(world, f"c{i}", r, family=fid, group=rd.group, w=rd.w, k=0.2)
         conf_m = make_maker(world, f"x{i}", r, family=fid, group=(rd.group + 1) % len(fam.groups), w=C.normalize(1.0 - rd.w + 0.05), k=0.2)
         ti = model.truth_index(conf_m)
-        for hist in (2, 5):
+        for hist in (2, 8):                              # the definition declares histories 2 and 8
             h_arts = stream(world, comp, 0, r, hist, n_steps=8)
             for strength in ("weak", "strong"):
                 c_art = stream(world, conf_m, 0, r, 1 if strength == "weak" else 3, n_steps=6 if strength == "weak" else 16)
@@ -402,11 +402,11 @@ def reduce_P07(card, units, ctx):
     rows = [r for u in units for r in u["rows"]]
     surf = {}
     for s in ("weak", "strong"):
-        for h in (2, 5):
+        for h in (2, 8):
             for rel in ("low", "high"):
                 surf[f"{s}|h{h}|{rel}"] = {k: mean_of(rows, k, lambda r, s=s, h=h, rel=rel: r["strength"] == s and r["history"] == h and r["reliability"] == rel) for k in ("bayes", "bounded")}
     a = surf["strong|h2|high"]["bayes"]
-    b = surf["weak|h5|low"]["bayes"]
+    b = surf["weak|h8|low"]["bayes"]
     passed = bool(a - b >= 1.0)
     graded = len({round(x["bayes"], 0) for x in surf.values()}) >= 3
     gr = G.GateReport()
@@ -416,7 +416,7 @@ def reduce_P07(card, units, ctx):
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_evidence_type"},
             oracle={"observed": a, "min": 0.5, "name": "strong_reliable_conflict_moves_the_truth_up"},
             prediction={"gain": float(graded), "min": 1.0, "name": "surface_is_graded_not_binary"},
-            calibration={"observed": surf["weak|h5|low"]["bounded"], "reference": surf["weak|h5|low"]["bayes"], "direction": "down", "tol": 0.0, "name": "bounded_reader_more_conservative"})
+            calibration={"observed": surf["weak|h8|low"]["bounded"], "reference": surf["weak|h8|low"]["bayes"], "direction": "down", "tol": 0.0, "name": "bounded_reader_more_conservative"})
     criterion(v, "P07", passed, strong_short_reliable=a, weak_long_unreliable=b, graded=graded)
     v["results"].update({"surface": surf})
     receipt(v, rows, card, ctx)

@@ -1,0 +1,377 @@
+{
+  "card": "H12",
+  "trunk": "H",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "Which interaction traces survive rewriting and flattening?",
+    "what_happened": "Under a global rewrite the project goal was still recovered 98% of the time, subordinate style 25%, and the interaction record 100%.",
+    "what_changed_in_the_project_world": "What survives a rewrite is what the rewrite was made to preserve: the goal it rewrote toward, and the records it never touched.",
+    "what_remains_a_rival": "a blanket director-survives",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Under local, global, template and editorial rewriting, style dies first, goal structure survives longest, and interaction records survive untouched; survival is reported by trace class, never as a blanket claim.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_H12": {
+      "passed": true,
+      "grid": {
+        "goal_structure": {
+          "none": 0.9865699404761905,
+          "local": 0.9866257440476189,
+          "global": 0.9837146577380953,
+          "template": 0.9876674107142858,
+          "editor_sanding": 0.42122395833333337,
+          "mixed": 0.9856491815476192
+        },
+        "interaction": {
+          "none": 1.0,
+          "local": 1.0,
+          "global": 1.0,
+          "template": 1.0,
+          "editor_sanding": 1.0,
+          "mixed": 1.0
+        },
+        "style": {
+          "none": 0.45242474268353183,
+          "local": 0.44409257192460316,
+          "global": 0.2497783358134921,
+          "template": 0.24991280691964288,
+          "editor_sanding": 0.3013679625496032,
+          "mixed": 0.3512776692708333
+        }
+      }
+    },
+    "survival_by_trace_and_rewrite": {
+      "goal_structure": {
+        "none": 0.9865699404761905,
+        "local": 0.9866257440476189,
+        "global": 0.9837146577380953,
+        "template": 0.9876674107142858,
+        "editor_sanding": 0.42122395833333337,
+        "mixed": 0.9856491815476192
+      },
+      "interaction": {
+        "none": 1.0,
+        "local": 1.0,
+        "global": 1.0,
+        "template": 1.0,
+        "editor_sanding": 1.0,
+        "mixed": 1.0
+      },
+      "style": {
+        "none": 0.45242474268353183,
+        "local": 0.44409257192460316,
+        "global": 0.2497783358134921,
+        "template": 0.24991280691964288,
+        "editor_sanding": 0.3013679625496032,
+        "mixed": 0.3512776692708333
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "none|goal_structure": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "none|interaction": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "none|style": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "local|goal_structure": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "local|interaction": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "local|style": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "global|goal_structure": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "global|interaction": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "global|style": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "template|goal_structure": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "template|interaction": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "template|style": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "editor_sanding|goal_structure": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "editor_sanding|interaction": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "editor_sanding|style": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "mixed|goal_structure": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "mixed|interaction": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    },
+    "mixed|style": {
+      "units": 2560,
+      "rows": 107520,
+      "min_rows_in_a_unit": 42
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 18,
+    "realized_levels": 18,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 42,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 46080
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a blanket director-survives",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 353.3,
+    "units_cpu_s": 4197.45,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 96836,
+      "process_time": 999.46875,
+      "user": 786.984375,
+      "system": 212.484375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 198299648,
+      "peak_rss": 389197824
+    }
+  },
+  "runtime_seconds": 353.3,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:rewriting_erases_style",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.20264640687003974,
+        "expected": 0.05
+      },
+      {
+        "name": "placebo:records_untouched_by_rewriting",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.3
+      },
+      {
+        "name": "positive:goal_structure_readable_when_clean",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.9865699404761905,
+        "expected": 1.0,
+        "tolerance": 0.3
+      },
+      {
+        "name": "surface:same_project_goals",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:goal_survives_global_rewrite",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9837146577380953,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:structure_outlives_style",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.7339363219246032,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:template_rewrite_kills_style",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.24991280691964288,
+        "expected": 0.4,
+        "tolerance": 0.15008719408035714
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_h.py",
+    "sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+    "git_commit": "ee3a023",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:rewriting_erases_style",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.20264640687003974,
+        "expected": 0.05
+      },
+      {
+        "name": "placebo:records_untouched_by_rewriting",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.3
+      },
+      {
+        "name": "positive:goal_structure_readable_when_clean",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.9865699404761905,
+        "expected": 1.0,
+        "tolerance": 0.3
+      },
+      {
+        "name": "surface:same_project_goals",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:goal_survives_global_rewrite",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9837146577380953,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:structure_outlives_style",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.7339363219246032,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:template_rewrite_kills_style",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.24991280691964288,
+        "expected": 0.4,
+        "tolerance": 0.15008719408035714
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "card": "P08",
+  "trunk": "P",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "When does correction become overcorrection?",
+    "what_happened": "On an outlier the change-point reader beat the better of reset and anchor by -0.10 nats; on a true regime change by -0.22.",
+    "what_changed_in_the_project_world": "Overcorrection and undercorrection are one dial, and a change-point hypothesis sets it from the evidence.",
+    "what_remains_a_rival": "reset",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A reader that carries a change-point hypothesis separates a noisy outlier from a true regime change better than a reader that resets on surprise or one that never moves far from its prior.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_P08": {
+      "passed": false,
+      "outlier_gain": -0.10257082947219898,
+      "regime_change_gain": -0.2236809488958631,
+      "grid": {
+        "outlier": {
+          "robust": -2.305276596533588,
+          "reset": -2.3419824735350807,
+          "anchor": -2.202705767061389
+        },
+        "adversarial": {
+          "robust": -1.82936755573903,
+          "reset": -1.8855286349506577,
+          "anchor": -1.9450910908844279
+        },
+        "regime_change": {
+          "robust": -2.9919696233556463,
+          "reset": -3.090350918327105,
+          "anchor": -2.768288674459783
+        },
+        "stable": {
+          "robust": -1.8495096310100863,
+          "reset": -1.9076142737624473,
+          "anchor": -1.9572680374443947
+        }
+      }
+    },
+    "log_score_by_scenario_and_reader": {
+      "outlier": {
+        "robust": -2.305276596533588,
+        "reset": -2.3419824735350807,
+        "anchor": -2.202705767061389
+      },
+      "adversarial": {
+        "robust": -1.82936755573903,
+        "reset": -1.8855286349506577,
+        "anchor": -1.9450910908844279
+      },
+      "regime_change": {
+        "robust": -2.9919696233556463,
+        "reset": -3.090350918327105,
+        "anchor": -2.768288674459783
+      },
+      "stable": {
+        "robust": -1.8495096310100863,
+        "reset": -1.9076142737624473,
+        "anchor": -1.9572680374443947
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "outlier|robust": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "outlier|reset": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "outlier|anchor": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "adversarial|robust": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "adversarial|reset": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "adversarial|anchor": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "regime_change|robust": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "regime_change|reset": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "regime_change|anchor": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "stable|robust": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "stable|reset": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    },
+    "stable|anchor": {
+      "units": 2560,
+      "rows": 153600,
+      "min_rows_in_a_unit": 60
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 12,
+    "realized_levels": 12,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 60,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 30720
+  },
+  "matching_residuals": {},
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "reset",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 1989.62,
+    "units_cpu_s": 23477.03,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 96836,
+      "process_time": 1260.9375,
+      "user": 979.953125,
+      "system": 280.984375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 199073792,
+      "peak_rss": 389197824
+    }
+  },
+  "runtime_seconds": 1989.62,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "closure_reason": "",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:scenarios_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.918779043449697,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:stable_maker_read_alike_reported",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.058104642752361046,
+        "expected": 0.0,
+        "tolerance": 1.5
+      },
+      {
+        "name": "positive:robust_near_the_straight_reader_when_stable",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_streams",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:identifiable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 1.6162262717896403,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:robust_advantage",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": -0.2236809488958631,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:reset_overconfidence_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.1770017584998237,
+        "expected": 0.17879433311497372,
+        "tolerance": 0.0017925756151500332
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_p.py",
+    "sha256": "3b4b506943038db8c8600b5ecc8f5debdc56eda58e9d8e2743f46c53b1d62cf9",
+    "git_commit": "ee3a023",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:scenarios_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.918779043449697,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:stable_maker_read_alike_reported",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.058104642752361046,
+        "expected": 0.0,
+        "tolerance": 1.5
+      },
+      {
+        "name": "positive:robust_near_the_straight_reader_when_stable",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_streams",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:identifiable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 1.6162262717896403,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:robust_advantage",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": -0.2236809488958631,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:reset_overconfidence_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.1770017584998237,
+        "expected": 0.17879433311497372,
+        "tolerance": 0.0017925756151500332
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
