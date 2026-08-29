@@ -1,5 +1,1643 @@
 {
   "entries": {
+    "attack:X01": {
+      "card": "X01",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:52:15",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X01.json",
+      "verdict_sha256": "e458e72c2bafd6881b0efa8bfd1ae354fc61dd92ec573e3304a315edf210d2f7"
+    },
+    "attack:X02": {
+      "card": "X02",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:54:17",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X02.json",
+      "verdict_sha256": "dae19720a445d682a44919cc042eb7a65d11bb9df553095bfefee0404429df18"
+    },
+    "attack:X03": {
+      "card": "X03",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:57:54",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X03.json",
+      "verdict_sha256": "fbc799370dd9d1038650ae466bcb2e5675ebcbeb8eee0d9dfcb1c84ab1ef47c1"
+    },
+    "attack:X04": {
+      "card": "X04",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:59:09",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X04.json",
+      "verdict_sha256": "451cfbed92ca6d7d47a0973cb75ae76ff6b6fcc9f657b7986df1f6c59ead311d"
+    },
+    "attack:X05": {
+      "card": "X05",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:00:23",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X05.json",
+      "verdict_sha256": "25ed258fb1657cc0c24baaad8f7ac15abc8fafd30036eea1b12aa1df4ba85a32"
+    },
+    "attack:X06": {
+      "card": "X06",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:01:37",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X06.json",
+      "verdict_sha256": "54e19165950e5afca01df4673964cc271afa5d5d0890f38dd10c19978ab362d8"
+    },
+    "attack:X07": {
+      "card": "X07",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:01:56",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X07.json",
+      "verdict_sha256": "41816e669e15f8499335ca418ab6e321226677af756590d22f4ef7572b64d421"
+    },
+    "attack:X08": {
+      "card": "X08",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:04:08",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X08.json",
+      "verdict_sha256": "b923d7fe6ef9261872e8c60a0335fa6814a881c96ad3f215f0f6de37a067e311"
+    },
+    "attack:X09": {
+      "card": "X09",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:04:36",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X09.json",
+      "verdict_sha256": "b4b9300fe192d601d150161033b1b9cb831da279098658d55bd602455bbb0825"
+    },
+    "attack:X10": {
+      "card": "X10",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:05:05",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X10.json",
+      "verdict_sha256": "ff41ef405c367f07a31ee8f4aa99e685402d3757b05d2a163c8105f132c3e749"
+    },
+    "attack:X11": {
+      "card": "X11",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:05:33",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X11.json",
+      "verdict_sha256": "c646020bd5ee9127669b97dd02bd9116fd5e34702dcdf4e2f7a642b8ace483a3"
+    },
+    "attack:X12": {
+      "card": "X12",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:06:23",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X12.json",
+      "verdict_sha256": "604f2e2fd0e8eaa102401684da5078255916b1e409ce1f2f7204cae71dbcfeb8"
+    },
+    "attack:X13": {
+      "card": "X13",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:06:45",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X13.json",
+      "verdict_sha256": "164f1699b23aaaccd394c791ef6de3a005f400a7958f77be3244750b8e429b94"
+    },
+    "attack:X14": {
+      "card": "X14",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:08:12",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X14.json",
+      "verdict_sha256": "dfb80e4d9c960b7dcd15fe0b3abd59abfac6ee2c2a1fa343eb81451f684ac9d4"
+    },
+    "attack:X15": {
+      "card": "X15",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:10:37",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X15.json",
+      "verdict_sha256": "ffd2bcf46bb93709c3ef026d51200c979bddfc2451a74ecc6880b190f9f0e5a3"
+    },
+    "attack:X16": {
+      "card": "X16",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:14:51",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X16.json",
+      "verdict_sha256": "8ad536d8019281e35d6213c6edbdd0daa73b5e7e7d3ca17a3ddd239a5d331f9c"
+    },
+    "attack:X17": {
+      "card": "X17",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:18:57",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X17.json",
+      "verdict_sha256": "a0173bb4c2960221c083776ddf792fb08aafcfabf9e800c945aaf844c6e8142e"
+    },
+    "attack:X18": {
+      "card": "X18",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:23:07",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X18.json",
+      "verdict_sha256": "7c5f25ee8ef6b1a333c992e366f8a21168266b76823017675f89eba943ea044f"
+    },
+    "attack:X19": {
+      "card": "X19",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:27:16",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X19.json",
+      "verdict_sha256": "3c8a06e7f00ff19e21dde1fcd70767c28ff22f8d3df573864fca973dddc8a394"
+    },
+    "attack:X20": {
+      "card": "X20",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "attack",
+      "source_sha256": "486d58f026b44e2588c039612bbdf63dfd3915d493927a4cb991e82ae703802f",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:31:27",
+      "verdict_path": "results/validation/soundingline/v13/attacks/X20.json",
+      "verdict_sha256": "57f2f2729b83df316851c9a5ac336f35dcdcc71839091cf07391996a625371eb"
+    },
+    "confirmation:A01": {
+      "card": "A01",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 160,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T15:30:36",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A01.json",
+      "verdict_sha256": "389430fd2039a76790a7b478d47ff26c349a4eddbdc7c5083d9ccde1b20630d2"
+    },
+    "confirmation:A03": {
+      "card": "A03",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 160,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T15:48:37",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A03.json",
+      "verdict_sha256": "8e029de311ace8e2d9077b408202b63db257f38d66ed085a56a272e93239ab61"
+    },
+    "confirmation:A04": {
+      "card": "A04",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 12,
+        "realized_min_rows_per_unit": 120,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T15:58:06",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A04.json",
+      "verdict_sha256": "71b8c67c982908965105430e11296f68c6ec5ff03a7b72164b6be8af0bc09438"
+    },
+    "confirmation:A05": {
+      "card": "A05",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 180,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:01:35",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A05.json",
+      "verdict_sha256": "5161ce3e80a4eb19e3cae4d740a93192a07be242cd234064a46a34d18ba794be"
+    },
+    "confirmation:A07": {
+      "card": "A07",
+      "expected_cell_receipt": {
+        "expected_levels": 5,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 5,
+        "realized_min_rows_per_unit": 80,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:06:17",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A07.json",
+      "verdict_sha256": "28953f16807da7b6c786c603416930c3115ee1083a7f207dbc7fbb2417241f2f"
+    },
+    "confirmation:A09": {
+      "card": "A09",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "INSTRUMENT_FAILED",
+      "timestamp": "2026-08-28T16:06:35",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A09.json",
+      "verdict_sha256": "7d248955c2a75595604c044b41af59a59604236ecfbb899a933dcc435221dbec"
+    },
+    "confirmation:A11": {
+      "card": "A11",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 80,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:07:42",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A11.json",
+      "verdict_sha256": "4681e2a7a86be0dcdc40f0130d4d002b4ded0dcd086b50096c6befd479892090"
+    },
+    "confirmation:A12": {
+      "card": "A12",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 160,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:22:41",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/A12.json",
+      "verdict_sha256": "218355625dc246ef84bd987a143b9ec2856892671ee8ae4b39b656254ec6b20c"
+    },
+    "confirmation:C01": {
+      "card": "C01",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:33:46",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/C01.json",
+      "verdict_sha256": "de9d646c3e39b481aae6ef9f541bb622575ca47b11ba8c616697e9bd9c6c2750"
+    },
+    "confirmation:C04": {
+      "card": "C04",
+      "expected_cell_receipt": {
+        "expected_levels": 60,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 140,
+        "realized_min_rows_per_unit": 120,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T13:54:15",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/C04.json",
+      "verdict_sha256": "08b76ef57d75d196527ed7743f6b1157942a3604dcb811508d4a4eeec6127d91"
+    },
+    "confirmation:C07": {
+      "card": "C07",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 334,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T14:06:58",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/C07.json",
+      "verdict_sha256": "6040f019458ce9cccae4eca235b2d2f745158bd5d0033b8a9d69ea6572cc81c4"
+    },
+    "confirmation:C09": {
+      "card": "C09",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 1600,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T14:44:31",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/C09.json",
+      "verdict_sha256": "2285f3432eddabafd32d2eb664dfd80838a2c8774930ef779c5d0a3784c478c9"
+    },
+    "confirmation:C13": {
+      "card": "C13",
+      "expected_cell_receipt": {
+        "expected_levels": 16,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 16,
+        "realized_min_rows_per_unit": 240,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T15:08:43",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/C13.json",
+      "verdict_sha256": "2adf8f2d2773155d35d5d21a28a82ec224258aa890b122f2da53df45aff99191"
+    },
+    "confirmation:C14": {
+      "card": "C14",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 12,
+        "realized_min_rows_per_unit": 480,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T15:23:16",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/C14.json",
+      "verdict_sha256": "c89afcc4b0acfff4bbce335da7c1849cf9bc1c1c5704f3161c4bd50aaa823a6a"
+    },
+    "confirmation:G01": {
+      "card": "G01",
+      "expected_cell_receipt": {
+        "expected_levels": 21,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 21,
+        "realized_min_rows_per_unit": 5,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:11:42",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G01.json",
+      "verdict_sha256": "03d5a6410cf473da8230047edb8a5fbae8e1ede870c5b25d4ed434597e0c53c0"
+    },
+    "confirmation:G02": {
+      "card": "G02",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:12:11",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G02.json",
+      "verdict_sha256": "0876a94139f9460d42defd6206b4def52ad0a6739cc5ce580f9336b012e7ecc1"
+    },
+    "confirmation:G03": {
+      "card": "G03",
+      "expected_cell_receipt": {
+        "expected_levels": 2,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 2,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:12:15",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G03.json",
+      "verdict_sha256": "2db90b9a5309dbe20fdeefd4bf10b2be60cc662e4b5bd290e4ac4c65ac5a8f01"
+    },
+    "confirmation:G04": {
+      "card": "G04",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 13,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:12:30",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G04.json",
+      "verdict_sha256": "cac8f2f7f8bcb5a1628430cbb09e05c33c314c9a7793759c55099a1e4b0d7c7c"
+    },
+    "confirmation:G05": {
+      "card": "G05",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:12:47",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G05.json",
+      "verdict_sha256": "166c4ae7a35fe508efaf14c31ee9de6d0fe58d78b0bf13ce8c8abc064e457b31"
+    },
+    "confirmation:G06": {
+      "card": "G06",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:13:02",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G06.json",
+      "verdict_sha256": "a729ee16a43eff8a3c238544b488083b857215872512a7a5374b042d50fffe2e"
+    },
+    "confirmation:G07": {
+      "card": "G07",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 6,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:13:02",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G07.json",
+      "verdict_sha256": "5f52abdba8ed9de7f77e30ea4143385be2ceff0f674cc97f76e0641333f5d0a8"
+    },
+    "confirmation:G08": {
+      "card": "G08",
+      "expected_cell_receipt": {
+        "expected_levels": 15,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 15,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:13:07",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G08.json",
+      "verdict_sha256": "a07d85e64d738b92e2e42ca6f2417b1599d1b1b29891a9d630f5d02d6c993cea"
+    },
+    "confirmation:G09": {
+      "card": "G09",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:13:39",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G09.json",
+      "verdict_sha256": "b50975359183b3bcaeaedcf5b8ef688ef896faceaed54198b1255ddf5f7f5760"
+    },
+    "confirmation:G10": {
+      "card": "G10",
+      "expected_cell_receipt": {
+        "expected_levels": 5,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 5,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:13:40",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G10.json",
+      "verdict_sha256": "fcb0610b8a12a45cd2d8c1d1948120245fb0359d55e1634e6cb7740c46efcb5f"
+    },
+    "confirmation:G11": {
+      "card": "G11",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:13:44",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G11.json",
+      "verdict_sha256": "7eb4c9c24ef9ef5c5e691bee8c4a17843ac0c56f9e5c2d5acfd48a348be1f23a"
+    },
+    "confirmation:G12": {
+      "card": "G12",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:14:00",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G12.json",
+      "verdict_sha256": "cfa3f9a0ad32fa0a0d4b3af3db9c1379df7077ec90fad2530328941111a8e32f"
+    },
+    "confirmation:G13": {
+      "card": "G13",
+      "expected_cell_receipt": {
+        "expected_levels": 16,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 16,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:14:01",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G13.json",
+      "verdict_sha256": "a7fb1d644c050b45571bfa29f6a9d165f9d8f3a71bf50af8236373de9a0497cc"
+    },
+    "confirmation:G14": {
+      "card": "G14",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:15:23",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G14.json",
+      "verdict_sha256": "48aec954a7fec3131b077a0cb678ab497724ecbf8dc91a70e5c4e85bbcbbef7f"
+    },
+    "confirmation:G15": {
+      "card": "G15",
+      "expected_cell_receipt": {
+        "expected_levels": 16,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 16,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:15:24",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/G15.json",
+      "verdict_sha256": "6504184b4c71d3d0c0cd8a9a6cdc9173e0343d8b169198d015f6a28f707b7846"
+    },
+    "confirmation:H01": {
+      "card": "H01",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 21,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:15:30",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H01.json",
+      "verdict_sha256": "420d6e4f57d0d9317bc0447642d91016aff5e6c6c8e12471b3520e98869afeb4"
+    },
+    "confirmation:H02": {
+      "card": "H02",
+      "expected_cell_receipt": {
+        "expected_levels": 9,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 9,
+        "realized_min_rows_per_unit": 21,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:15:47",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H02.json",
+      "verdict_sha256": "71865c9f89a964c21405fcde5e18a447dcb1a70068c7e52921a368796a71def6"
+    },
+    "confirmation:H03": {
+      "card": "H03",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:16:04",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H03.json",
+      "verdict_sha256": "e906c20a728251cd42b5bb411d3a3daffb59dece472a879137995e2974521267"
+    },
+    "confirmation:H04": {
+      "card": "H04",
+      "expected_cell_receipt": {
+        "expected_levels": 14,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 14,
+        "realized_min_rows_per_unit": 9,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:16:26",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H04.json",
+      "verdict_sha256": "979f018506354b2721598f941bd0b61e74ec006bb54e416aff100eda3a78b70f"
+    },
+    "confirmation:H05": {
+      "card": "H05",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 504,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:16:37",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H05.json",
+      "verdict_sha256": "21f969bb3a52119bda68705039bf8e8c4178e3a75cbe954fd74a88d59b45e6d9"
+    },
+    "confirmation:H07": {
+      "card": "H07",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 10,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:16:45",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H07.json",
+      "verdict_sha256": "8c67958e0d7ef55b0b03554ef1059cc32b474253d072d37ae8c6ab9c8234852a"
+    },
+    "confirmation:H08": {
+      "card": "H08",
+      "expected_cell_receipt": {
+        "expected_levels": 2,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 2,
+        "realized_min_rows_per_unit": 21,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:16:49",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H08.json",
+      "verdict_sha256": "31fb0390f9fc6b6943025110a2938f8ad8be601be4f8e16ede8291c6e16d9a42"
+    },
+    "confirmation:H09": {
+      "card": "H09",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 84,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:17:12",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H09.json",
+      "verdict_sha256": "f8c08d8d2b6cbb435a75da5f6978b47f477265e495e3b94aeb939546ad55d300"
+    },
+    "confirmation:H10": {
+      "card": "H10",
+      "expected_cell_receipt": {
+        "expected_levels": 5,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 5,
+        "realized_min_rows_per_unit": 69,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:17:37",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H10.json",
+      "verdict_sha256": "ffcf5375d46c5f53154214a09f4363ccb1e15bb6a74896b06395796a7183b991"
+    },
+    "confirmation:H11": {
+      "card": "H11",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 21,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:18:05",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H11.json",
+      "verdict_sha256": "36e752cf096bc661617067059b04f5404e79e4b7e585ce8811edf16bab12a5eb"
+    },
+    "confirmation:H12": {
+      "card": "H12",
+      "expected_cell_receipt": {
+        "expected_levels": 18,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 18,
+        "realized_min_rows_per_unit": 42,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:18:51",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H12.json",
+      "verdict_sha256": "fe663b2a39f5460ecf90d69d6192442e916efb873afc14d2320975f1403cee5c"
+    },
+    "confirmation:H14": {
+      "card": "H14",
+      "expected_cell_receipt": {
+        "expected_levels": 7,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 7,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:19:24",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/H14.json",
+      "verdict_sha256": "d05cbbdc4be6caaf2c014b10551786a0a887ee3c4421fefaf83112cd5e49b677"
+    },
+    "confirmation:O02": {
+      "card": "O02",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 12,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:27:26",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O02.json",
+      "verdict_sha256": "5c2ca40b99678fb4d039355e740d47807c3dde6d9193c8c64306c1754420d634"
+    },
+    "confirmation:O05": {
+      "card": "O05",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 12,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:32:35",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O05.json",
+      "verdict_sha256": "caf45ff28202f7b3eebd0d5db27d121159ccd9b8a981c32e8042cbb1a3d12760"
+    },
+    "confirmation:O06": {
+      "card": "O06",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:33:32",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O06.json",
+      "verdict_sha256": "c76d8235acd38df767a8568e910e3acc4f021f5899f9d42353262e5026e5bfe8"
+    },
+    "confirmation:O07": {
+      "card": "O07",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:34:09",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O07.json",
+      "verdict_sha256": "f1c8f7510d23cddc0ed1929dc3601ab3ff068d0c4578d0a183a2b02ede44763f"
+    },
+    "confirmation:O08": {
+      "card": "O08",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:35:03",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O08.json",
+      "verdict_sha256": "7f67ee6bd7f25438880748a254f6008aa0188e5826bb6b313e345daddfa9bacb"
+    },
+    "confirmation:O09": {
+      "card": "O09",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:35:24",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O09.json",
+      "verdict_sha256": "1262d842ce23ee563640180442ee14ddbbf77e1644f4ce02ed8f962d0197fa92"
+    },
+    "confirmation:O11": {
+      "card": "O11",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "INSTRUMENT_FAILED",
+      "timestamp": "2026-08-28T16:39:07",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O11.json",
+      "verdict_sha256": "e0c104f1abee86bdd931a8e30ee2734ab8e2e1142d91ab5389466da48a4bab93"
+    },
+    "confirmation:O12": {
+      "card": "O12",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:40:02",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O12.json",
+      "verdict_sha256": "3aa8aba1a3f583481e462fdfb4e285273c8724d7e86f245da42f9ca7e6d455ed"
+    },
+    "confirmation:O13": {
+      "card": "O13",
+      "expected_cell_receipt": {
+        "expected_levels": 5,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 5,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:41:03",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O13.json",
+      "verdict_sha256": "a73c648951c7d902e5f401681d8f53029cb9fdc2e232063c66d7df8dfcc7315a"
+    },
+    "confirmation:O14": {
+      "card": "O14",
+      "expected_cell_receipt": {
+        "expected_levels": 28,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 28,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:43:09",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O14.json",
+      "verdict_sha256": "622ef03ef5eefc13b37e506f9506fcbb8ef5e8b37dbbf9c2ab10a0bc87ba7c1f"
+    },
+    "confirmation:O15": {
+      "card": "O15",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:44:07",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O15.json",
+      "verdict_sha256": "9aa2677874596ba86c6e643a27f32d7e253ddce665b2b0daa34247f65db0797c"
+    },
+    "confirmation:O18": {
+      "card": "O18",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:45:44",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/O18.json",
+      "verdict_sha256": "0b9f65b8ba81a169db0dddd4c6c911ac2b528effe2c12521fed798982a5efa57"
+    },
+    "confirmation:P02": {
+      "card": "P02",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 12,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:46:52",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P02.json",
+      "verdict_sha256": "dd3f82087ab0f64f7181c3a72d697390532bcb968e90c461ea4ba0f882c8f1cc"
+    },
+    "confirmation:P03": {
+      "card": "P03",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:47:54",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P03.json",
+      "verdict_sha256": "1c6ca57f5533685950c304beade737dadcf8767bf696dcb7e62cd3908f16ece8"
+    },
+    "confirmation:P05": {
+      "card": "P05",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:48:39",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P05.json",
+      "verdict_sha256": "c2b190b36b685a39f5bbc00bc0ccd21f125dac232e2e32dd9ef6c6e2d0b64e27"
+    },
+    "confirmation:P06": {
+      "card": "P06",
+      "expected_cell_receipt": {
+        "expected_levels": 5,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 5,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:50:27",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P06.json",
+      "verdict_sha256": "3c0681ada8855970b324ed0f8e1c3748e6d0326a8114b6b55c43ab3b71608b40"
+    },
+    "confirmation:P07": {
+      "card": "P07",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:51:56",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P07.json",
+      "verdict_sha256": "8672548e1124bee9319af286b14905e63f2bc1dcb1ae19ad72efb09eb8416493"
+    },
+    "confirmation:P09": {
+      "card": "P09",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 1440,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:57:55",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P09.json",
+      "verdict_sha256": "9a7822ac4e19a12c3751b4fce4c8fa4020ff6fe8457950031ed6bc48ddedcd8a"
+    },
+    "confirmation:P10": {
+      "card": "P10",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 80,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T16:58:53",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P10.json",
+      "verdict_sha256": "0605b531a3cde8d256d96db20fbd2458ff26f09ccc53070684fc204482afead5"
+    },
+    "confirmation:P11": {
+      "card": "P11",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 480,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:02:44",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P11.json",
+      "verdict_sha256": "d0c35440ccd4785a5b990bd149f6dd2b8827678e4142dc43c758c1a2b16988ec"
+    },
+    "confirmation:P12": {
+      "card": "P12",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:03:47",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P12.json",
+      "verdict_sha256": "7e00295903e428bab11b42541d4a4e9d0549a94564bc160fdc721ac66680d00d"
+    },
+    "confirmation:P13": {
+      "card": "P13",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:11:11",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P13.json",
+      "verdict_sha256": "7707591495b425832158041212387d8643b96be5556e99d8e4504048abde0fc3"
+    },
+    "confirmation:P14": {
+      "card": "P14",
+      "expected_cell_receipt": {
+        "expected_levels": 2,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 2,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:11:25",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/P14.json",
+      "verdict_sha256": "601dbb2fb5a4e1dbaad0cbf6c753f1ee50aed5562066cd59faab3b14e5c7d31a"
+    },
+    "confirmation:Q03": {
+      "card": "Q03",
+      "expected_cell_receipt": {
+        "expected_levels": 8,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 8,
+        "realized_min_rows_per_unit": 26,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:19:30",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q03.json",
+      "verdict_sha256": "b47e5e6e15fca1d46bbb2c6c051ae76b07f884d324ba5716be7ca6cbdc4b2639"
+    },
+    "confirmation:Q06": {
+      "card": "Q06",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 30,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:20:07",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q06.json",
+      "verdict_sha256": "548ef2a81fba16a190adb2859c4a48c970ea68572555ea4556395b62d70a54e5"
+    },
+    "confirmation:Q07": {
+      "card": "Q07",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:20:53",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q07.json",
+      "verdict_sha256": "1078e593e2f82795629a855faff86996fbd123f66767e3bbb2e766355dc24445"
+    },
+    "confirmation:Q08": {
+      "card": "Q08",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 4,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:21:02",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q08.json",
+      "verdict_sha256": "96299076eeda553775e943e2563fb2529c5c8ea6d5448cd4af2ce30f7d1f2b89"
+    },
+    "confirmation:Q09": {
+      "card": "Q09",
+      "expected_cell_receipt": {
+        "expected_levels": 9,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 9,
+        "realized_min_rows_per_unit": 104,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:39:39",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q09.json",
+      "verdict_sha256": "fdfc4aa39a8a562951583cb8d541a98e237b557d6f211b77530adef0c1681562"
+    },
+    "confirmation:Q10": {
+      "card": "Q10",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 80,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:40:14",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q10.json",
+      "verdict_sha256": "1c44856f9866a52a7857eb9972b5650510b5590635ff28ffecc58d39bee35534"
+    },
+    "confirmation:Q11": {
+      "card": "Q11",
+      "expected_cell_receipt": {
+        "expected_levels": 24,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 320,
+        "ok": true,
+        "realized_levels": 24,
+        "realized_min_rows_per_unit": 45,
+        "realized_units": 320
+      },
+      "lane": "confirmation",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:02",
+      "verdict_path": "results/validation/soundingline/v13/confirmation/Q11.json",
+      "verdict_sha256": "b66f1d9f4886c3dfcc9c626813084699a1e7e91a0f62ed0189bf984eb9bc81c2"
+    },
     "discovery:A01": {
       "card": "A01",
       "expected_cell_receipt": {
@@ -197,6 +1835,42 @@
       "timestamp": "2026-08-27T01:16:36",
       "verdict_path": "results/validation/soundingline/v13/A11.json",
       "verdict_sha256": "73875e4f2aeaa7dcb7031f7ba13a8875cec72a1e74ff9992e6f59777c3c7883d"
+    },
+    "discovery:A12": {
+      "card": "A12",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 2560,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 160,
+        "realized_units": 2560
+      },
+      "lane": "discovery",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T04:43:15",
+      "verdict_path": "results/validation/soundingline/v13/A12.json",
+      "verdict_sha256": "7736df16d79a89d0ab060b9cdf1611a27f4b5384756de944d7a2cf208d91df46"
+    },
+    "discovery:A13": {
+      "card": "A13",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 2560,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 160,
+        "realized_units": 2560
+      },
+      "lane": "discovery",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T07:16:53",
+      "verdict_path": "results/validation/soundingline/v13/A13.json",
+      "verdict_sha256": "21a6e1b9151e1900a7aced898193ad9aaef4612c6ab7fec68ceda0eee8f1e39f"
     },
     "discovery:C01": {
       "card": "C01",
@@ -1260,6 +2934,222 @@
       "verdict_path": "results/validation/soundingline/v13/I14.json",
       "verdict_sha256": "de1f49a03a28b8b8c72901ec0a1bf1bf23b3b01909ec10aa61efb23d595ff357"
     },
+    "discovery:L01": {
+      "card": "L01",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:03",
+      "verdict_path": "results/validation/soundingline/v13/L01.json",
+      "verdict_sha256": "45afa7c517794b91e4392af9fcc894f5ede3a3c68862e78bbaf54351d89db797"
+    },
+    "discovery:L02": {
+      "card": "L02",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:03",
+      "verdict_path": "results/validation/soundingline/v13/L02.json",
+      "verdict_sha256": "d4f8eb77f763cc9bd417d459ac898f589e3d1b0f2035e5120669de1026aedd2e"
+    },
+    "discovery:L03": {
+      "card": "L03",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:03",
+      "verdict_path": "results/validation/soundingline/v13/L03.json",
+      "verdict_sha256": "8c1e83c77505cf7ffc72942d0cc30ec5e849ed386d6ca1dd67180974f3069a98"
+    },
+    "discovery:L04": {
+      "card": "L04",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "INSTRUMENT_FAILED",
+      "timestamp": "2026-08-28T17:57:03",
+      "verdict_path": "results/validation/soundingline/v13/L04.json",
+      "verdict_sha256": "1e93f398a282e113d1bed49061aee8fbd98f8bc910055634c6c3d50be13dfa6f"
+    },
+    "discovery:L05": {
+      "card": "L05",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:04",
+      "verdict_path": "results/validation/soundingline/v13/L05.json",
+      "verdict_sha256": "fbcedb60a945919bb6e3d73c4c62ccf52f1c308ae858db6fc29e89252327dbb0"
+    },
+    "discovery:L06": {
+      "card": "L06",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:04",
+      "verdict_path": "results/validation/soundingline/v13/L06.json",
+      "verdict_sha256": "cf1cdee804f150fecbc0331d6bddd37fc8fbc39d054af67c437dd4836926dc6e"
+    },
+    "discovery:L07": {
+      "card": "L07",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:04",
+      "verdict_path": "results/validation/soundingline/v13/L07.json",
+      "verdict_sha256": "e32f601cef4f5a466d793952dbbfef91c58e606db819573cbf88d8016485d861"
+    },
+    "discovery:L08": {
+      "card": "L08",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:04",
+      "verdict_path": "results/validation/soundingline/v13/L08.json",
+      "verdict_sha256": "12cdd26070f8973e8e035df45f3c7c39efeb8b06ae70bcab94bdf61f63ec3a53"
+    },
+    "discovery:L09": {
+      "card": "L09",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:04",
+      "verdict_path": "results/validation/soundingline/v13/L09.json",
+      "verdict_sha256": "83f2b144db8c7a89a99389e2040737f6be436da167d4925bc7aab7190fddb31a"
+    },
+    "discovery:L10": {
+      "card": "L10",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:05",
+      "verdict_path": "results/validation/soundingline/v13/L10.json",
+      "verdict_sha256": "b17088c079b2c80d37d6e373953d58dee4157878b6b74c7e14b22eff10c8776e"
+    },
+    "discovery:L11": {
+      "card": "L11",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T17:57:05",
+      "verdict_path": "results/validation/soundingline/v13/L11.json",
+      "verdict_sha256": "1a048210cd90690270f9529cfe6e656944b0f42f11f5473415b474300ce79a5c"
+    },
+    "discovery:L12": {
+      "card": "L12",
+      "expected_cell_receipt": {
+        "expected_levels": 1,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 1,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+      "state": "INSTRUMENT_FAILED",
+      "timestamp": "2026-08-28T17:57:05",
+      "verdict_path": "results/validation/soundingline/v13/L12.json",
+      "verdict_sha256": "0035b914956affd744223929b5db4f4800d4e341ef8122d2f845a1a57cff8dd7"
+    },
     "discovery:O01": {
       "card": "O01",
       "expected_cell_receipt": {
@@ -1800,6 +3690,42 @@
       "verdict_path": "results/validation/soundingline/v13/P12.json",
       "verdict_sha256": "07468e79fa1b177a6f846b1c82affa1d1106dd9b7536fce5728f012307079910"
     },
+    "discovery:P13": {
+      "card": "P13",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 2560,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 2560
+      },
+      "lane": "discovery",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T07:54:00",
+      "verdict_path": "results/validation/soundingline/v13/P13.json",
+      "verdict_sha256": "068a65bc445c66263429b7273e012457cf35e08e2c0e8e924ddabc078e73f76c"
+    },
+    "discovery:P14": {
+      "card": "P14",
+      "expected_cell_receipt": {
+        "expected_levels": 2,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 2560,
+        "ok": true,
+        "realized_levels": 2,
+        "realized_min_rows_per_unit": 51,
+        "realized_units": 2560
+      },
+      "lane": "discovery",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T07:55:34",
+      "verdict_path": "results/validation/soundingline/v13/P14.json",
+      "verdict_sha256": "c22edbe9d10e24c43702d1af1841e8c6536d7f141cd497aed56f4b465fe9aae1"
+    },
     "discovery:Q01": {
       "card": "Q01",
       "expected_cell_receipt": {
@@ -1979,8 +3905,206 @@
       "timestamp": "2026-08-27T19:51:42",
       "verdict_path": "results/validation/soundingline/v13/Q10.json",
       "verdict_sha256": "4236127d9f4be7802e9a39da8e85d670d80fb8e409a8eb5573fbe1b91d4573f5"
+    },
+    "discovery:Q11": {
+      "card": "Q11",
+      "expected_cell_receipt": {
+        "expected_levels": 24,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 2560,
+        "ok": true,
+        "realized_levels": 24,
+        "realized_min_rows_per_unit": 38,
+        "realized_units": 2560
+      },
+      "lane": "discovery",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T09:53:20",
+      "verdict_path": "results/validation/soundingline/v13/Q11.json",
+      "verdict_sha256": "dab435dc37b0b93878010dc12901b8124919d5af313675d9d1338ee4c168900c"
+    },
+    "transfer:A14": {
+      "card": "A14",
+      "expected_cell_receipt": {
+        "expected_levels": 36,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 36,
+        "realized_min_rows_per_unit": 120,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T11:31:00",
+      "verdict_path": "results/validation/soundingline/v13/transfer/A14.json",
+      "verdict_sha256": "fc2357ba4f18a02b7889976e0b8c1e8b4c64162a8169f2478bbcfba13d935e8a"
+    },
+    "transfer:C14": {
+      "card": "C14",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 12,
+        "realized_min_rows_per_unit": 480,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T11:45:46",
+      "verdict_path": "results/validation/soundingline/v13/transfer/C14.json",
+      "verdict_sha256": "c0924b4768021a961367a414c28dac5d11a2bd5b62f41b897c8da2bd960327db"
+    },
+    "transfer:C16": {
+      "card": "C16",
+      "expected_cell_receipt": {
+        "expected_levels": 12,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 16,
+        "realized_min_rows_per_unit": 120,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:02:04",
+      "verdict_path": "results/validation/soundingline/v13/transfer/C16.json",
+      "verdict_sha256": "1c1c5128e46a169458bfb25cfbe8372d348d76c8d9ff222aa2122dfa84c3a00b"
+    },
+    "transfer:G16": {
+      "card": "G16",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 20,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:12:47",
+      "verdict_path": "results/validation/soundingline/v13/transfer/G16.json",
+      "verdict_sha256": "d13726592643b6634138d8077bebdf6de8328776ba1dfd18d719ffde1475f8a3"
+    },
+    "transfer:H15": {
+      "card": "H15",
+      "expected_cell_receipt": {
+        "expected_levels": 5,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 5,
+        "realized_min_rows_per_unit": 61,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:13:19",
+      "verdict_path": "results/validation/soundingline/v13/transfer/H15.json",
+      "verdict_sha256": "dd6f0be770b974e0012da78bba02e9ed75103bcf0a917cf17142f09485858434"
+    },
+    "transfer:H16": {
+      "card": "H16",
+      "expected_cell_receipt": {
+        "expected_levels": 4,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 4,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:13:46",
+      "verdict_path": "results/validation/soundingline/v13/transfer/H16.json",
+      "verdict_sha256": "b3dade0b734631291bfec829d99d3a700c78517fe66fd21eed41aa3eed531884"
+    },
+    "transfer:O17": {
+      "card": "O17",
+      "expected_cell_receipt": {
+        "expected_levels": 15,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 15,
+        "realized_min_rows_per_unit": 40,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "3e6f4ea14312211a9c79e2166f8213313a276bde239813624b4fcf84f7b824b6",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:14:22",
+      "verdict_path": "results/validation/soundingline/v13/transfer/O17.json",
+      "verdict_sha256": "6940e833e2b170c34f11f8c550f16366fdb0127cbfd62d52e466c51b18fc5f0d"
+    },
+    "transfer:P13": {
+      "card": "P13",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 60,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:24:07",
+      "verdict_path": "results/validation/soundingline/v13/transfer/P13.json",
+      "verdict_sha256": "7d3ea8c5e2e047bfe4371cc7c9ece15408ed29a4cd1ed2d91690cfcfc3d5dd57"
+    },
+    "transfer:Q11": {
+      "card": "Q11",
+      "expected_cell_receipt": {
+        "expected_levels": 24,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 24,
+        "realized_min_rows_per_unit": 43,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "LANDED",
+      "timestamp": "2026-08-28T12:43:16",
+      "verdict_path": "results/validation/soundingline/v13/transfer/Q11.json",
+      "verdict_sha256": "55a00c70cde78b96ff780b646cc90dbeafe360e2b6518c8389de3ce39d24e216"
+    },
+    "transfer:Q12": {
+      "card": "Q12",
+      "expected_cell_receipt": {
+        "expected_levels": 3,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 480,
+        "ok": true,
+        "realized_levels": 3,
+        "realized_min_rows_per_unit": 100,
+        "realized_units": 480
+      },
+      "lane": "transfer",
+      "source_sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+      "state": "INSTRUMENT_FAILED",
+      "timestamp": "2026-08-28T12:48:03",
+      "verdict_path": "results/validation/soundingline/v13/transfer/Q12.json",
+      "verdict_sha256": "db30aaf975367718d155ffec204e11b5c0efe2d58c342f3ac09a9795e3250235"
     }
   },
   "program": "v13",
-  "updated": "2026-08-28T02:58:38"
+  "updated": "2026-08-28T17:57:05"
 }

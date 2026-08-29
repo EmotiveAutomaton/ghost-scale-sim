@@ -1,0 +1,307 @@
+{
+  "card": "G11",
+  "trunk": "G",
+  "wave": 2,
+  "lane": "confirmation",
+  "record": {
+    "question": "Does large goal divergence appropriately close the uptake gate?",
+    "what_happened": "Across proximal, standing, competitive and benign conflicts the belief channel stayed at 0.80 while preference movement went from 0.64 to 0.00.",
+    "what_changed_in_the_project_world": "Believing a source and adopting its aims are gated separately.",
+    "what_remains_a_rival": "one gate",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Large goal divergence closes the gates for imitation and preference movement while leaving belief about factual content open: whether to believe a reliable source and whether to become like it are different decisions.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_G11": {
+      "passed": true,
+      "by_conflict": {
+        "proximal": {
+          "belief": 0.8043175132099876,
+          "imitation": 0.26999999999999996,
+          "preference": 0.7238857618889888,
+          "refusal": 0.06999999999999999
+        },
+        "standing": {
+          "belief": 0.8043175132099876,
+          "imitation": 0.9000000000000001,
+          "preference": 0.08043175132099877,
+          "refusal": 0.06999999999999999
+        },
+        "competitive": {
+          "belief": 0.8043175132099876,
+          "imitation": 0.9000000000000001,
+          "preference": 0.0,
+          "refusal": 0.06999999999999999
+        },
+        "benign": {
+          "belief": 0.8043175132099876,
+          "imitation": 0.9000000000000001,
+          "preference": 0.6434540105679901,
+          "refusal": 0.06999999999999999
+        }
+      }
+    },
+    "channels_by_conflict": {
+      "proximal": {
+        "belief": 0.8043175132099876,
+        "imitation": 0.26999999999999996,
+        "preference": 0.7238857618889888,
+        "refusal": 0.06999999999999999
+      },
+      "standing": {
+        "belief": 0.8043175132099876,
+        "imitation": 0.9000000000000001,
+        "preference": 0.08043175132099877,
+        "refusal": 0.06999999999999999
+      },
+      "competitive": {
+        "belief": 0.8043175132099876,
+        "imitation": 0.9000000000000001,
+        "preference": 0.0,
+        "refusal": 0.06999999999999999
+      },
+      "benign": {
+        "belief": 0.8043175132099876,
+        "imitation": 0.9000000000000001,
+        "preference": 0.6434540105679901,
+        "refusal": 0.06999999999999999
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "proximal": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "standing": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "competitive": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "benign": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 20,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 320,
+    "rows": 1280
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "one gate",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 3.78,
+    "units_cpu_s": 42.82,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 292.0625,
+      "user": 222.8125,
+      "system": 69.25,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 75358208,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 3.78,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:divergence_closes_preference_movement",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.6434540105679901,
+        "expected": 0.3
+      },
+      {
+        "name": "placebo:belief_update_unchanged_across_conflicts",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:benign_difference_leaves_the_gate_open",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.6434540105679901,
+        "expected": 1.0,
+        "tolerance": 0.5
+      },
+      {
+        "name": "surface:same_source",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:reliable_source_believed",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.8043175132099876,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:imitation_by_conflict_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": -0.6300000000000001,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:competitive_task_closes_preference",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.0,
+        "expected": 0.05,
+        "tolerance": 0.050000001
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_g.py",
+    "sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:divergence_closes_preference_movement",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.6434540105679901,
+        "expected": 0.3
+      },
+      {
+        "name": "placebo:belief_update_unchanged_across_conflicts",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:benign_difference_leaves_the_gate_open",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.6434540105679901,
+        "expected": 1.0,
+        "tolerance": 0.5
+      },
+      {
+        "name": "surface:same_source",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:reliable_source_believed",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.8043175132099876,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:imitation_by_conflict_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": -0.6300000000000001,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:competitive_task_closes_preference",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.0,
+        "expected": 0.05,
+        "tolerance": 0.050000001
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "card": "Q11",
+  "trunk": "Q",
+  "wave": 3,
+  "lane": "discovery",
+  "record": {
+    "question": "Does a nested local prior improve active selection?",
+    "what_happened": "Per probe, the self prior gained +0.00 nats more than an equally local non-self prior for near makers and +0.00 for far ones; the corrected prior gained -0.26 per probe far from the reader.",
+    "what_changed_in_the_project_world": "Active reading inherits the prior's conditional shape; the surface is the result.",
+    "what_remains_a_rival": "a pooled self headline",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A local prior changes what an active reader asks and what it gains per probe, conditionally on similarity; no pooled self headline is drawn.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_Q11": {
+      "passed": true,
+      "near": 0.0006928329606368661,
+      "far": 0.0006815131844821465,
+      "surface": {
+        "self": {
+          "near": -0.0868124484428571,
+          "mid": -0.13041713980793423,
+          "far": -0.22606430575706557,
+          "anti": 0.058469153695001455
+        },
+        "equal_local": {
+          "near": -0.08750528140349396,
+          "mid": -0.13279995463892616,
+          "far": -0.22674581894154772,
+          "anti": 0.1709307380585309
+        },
+        "within_common": {
+          "near": -0.22060114233555778,
+          "mid": -0.27032208035318844,
+          "far": -0.3616140368537889,
+          "anti": 0.04864122277797377
+        },
+        "all_family": {
+          "near": -0.22505168622934207,
+          "mid": -0.2741965547585222,
+          "far": -0.36978404283184735,
+          "anti": 0.050637995693634696
+        },
+        "corrected": {
+          "near": -0.07278556336912108,
+          "mid": -0.15344663063185934,
+          "far": -0.25618478271544687,
+          "anti": 0.09677941743904053
+        },
+        "anti_similar": {
+          "near": -0.08047812586687234,
+          "mid": -0.13171919535249033,
+          "far": -0.22857865269296113,
+          "anti": 0.2373360222889846
+        }
+      }
+    },
+    "information_per_probe_by_prior_and_bin": {
+      "self": {
+        "near": -0.0868124484428571,
+        "mid": -0.13041713980793423,
+        "far": -0.22606430575706557,
+        "anti": 0.058469153695001455
+      },
+      "equal_local": {
+        "near": -0.08750528140349396,
+        "mid": -0.13279995463892616,
+        "far": -0.22674581894154772,
+        "anti": 0.1709307380585309
+      },
+      "within_common": {
+        "near": -0.22060114233555778,
+        "mid": -0.27032208035318844,
+        "far": -0.3616140368537889,
+        "anti": 0.04864122277797377
+      },
+      "all_family": {
+        "near": -0.22505168622934207,
+        "mid": -0.2741965547585222,
+        "far": -0.36978404283184735,
+        "anti": 0.050637995693634696
+      },
+      "corrected": {
+        "near": -0.07278556336912108,
+        "mid": -0.15344663063185934,
+        "far": -0.25618478271544687,
+        "anti": 0.09677941743904053
+      },
+      "anti_similar": {
+        "near": -0.08047812586687234,
+        "mid": -0.13171919535249033,
+        "far": -0.22857865269296113,
+        "anti": 0.2373360222889846
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "self|far": {
+      "units": 2560,
+      "rows": 175755,
+      "min_rows_in_a_unit": 38
+    },
+    "equal_local|far": {
+      "units": 2560,
+      "rows": 175755,
+      "min_rows_in_a_unit": 38
+    },
+    "within_common|far": {
+      "units": 2560,
+      "rows": 175755,
+      "min_rows_in_a_unit": 38
+    },
+    "all_family|far": {
+      "units": 2560,
+      "rows": 175755,
+      "min_rows_in_a_unit": 38
+    },
+    "corrected|far": {
+      "units": 2560,
+      "rows": 175755,
+      "min_rows_in_a_unit": 38
+    },
+    "anti_similar|far": {
+      "units": 2560,
+      "rows": 175755,
+      "min_rows_in_a_unit": 38
+    },
+    "self|mid": {
+      "units": 2560,
+      "rows": 171269,
+      "min_rows_in_a_unit": 39
+    },
+    "equal_local|mid": {
+      "units": 2560,
+      "rows": 171269,
+      "min_rows_in_a_unit": 39
+    },
+    "within_common|mid": {
+      "units": 2560,
+      "rows": 171269,
+      "min_rows_in_a_unit": 39
+    },
+    "all_family|mid": {
+      "units": 2560,
+      "rows": 171269,
+      "min_rows_in_a_unit": 39
+    },
+    "corrected|mid": {
+      "units": 2560,
+      "rows": 171269,
+      "min_rows_in_a_unit": 39
+    },
+    "anti_similar|mid": {
+      "units": 2560,
+      "rows": 171269,
+      "min_rows_in_a_unit": 39
+    },
+    "self|near": {
+      "units": 2560,
+      "rows": 175216,
+      "min_rows_in_a_unit": 40
+    },
+    "equal_local|near": {
+      "units": 2560,
+      "rows": 175216,
+      "min_rows_in_a_unit": 40
+    },
+    "within_common|near": {
+      "units": 2560,
+      "rows": 175216,
+      "min_rows_in_a_unit": 40
+    },
+    "all_family|near": {
+      "units": 2560,
+      "rows": 175216,
+      "min_rows_in_a_unit": 40
+    },
+    "corrected|near": {
+      "units": 2560,
+      "rows": 175216,
+      "min_rows_in_a_unit": 40
+    },
+    "anti_similar|near": {
+      "units": 2560,
+      "rows": 175216,
+      "min_rows_in_a_unit": 40
+    },
+    "self|anti": {
+      "units": 2560,
+      "rows": 174080,
+      "min_rows_in_a_unit": 68
+    },
+    "equal_local|anti": {
+      "units": 2560,
+      "rows": 174080,
+      "min_rows_in_a_unit": 68
+    },
+    "within_common|anti": {
+      "units": 2560,
+      "rows": 174080,
+      "min_rows_in_a_unit": 68
+    },
+    "all_family|anti": {
+      "units": 2560,
+      "rows": 174080,
+      "min_rows_in_a_unit": 68
+    },
+    "corrected|anti": {
+      "units": 2560,
+      "rows": 174080,
+      "min_rows_in_a_unit": 68
+    },
+    "anti_similar|anti": {
+      "units": 2560,
+      "rows": 174080,
+      "min_rows_in_a_unit": 68
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 24,
+    "realized_levels": 24,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 38,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 61440
+  },
+  "matching_residuals": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a pooled self headline",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 7011.12,
+    "units_cpu_s": 76632.57,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 96.484375,
+      "user": 79.265625,
+      "system": 17.21875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 92983296,
+      "peak_rss": 179212288
+    }
+  },
+  "runtime_seconds": 7011.12,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:similarity_bins_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.13925185731420847,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_budget_all_priors",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:corrected_prior_no_worse_far",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_probes_available",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:identifiable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.08227792266586365,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:near_self_minus_equal_local",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.0006928329606368661,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:anti_similar_prior_not_more_confident",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.3417046906008466,
+        "expected": 0.3484565184305197,
+        "tolerance": 0.006751828829673152
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_q.py",
+    "sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:similarity_bins_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.13925185731420847,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_budget_all_priors",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:corrected_prior_no_worse_far",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_probes_available",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:identifiable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.08227792266586365,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:near_self_minus_equal_local",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.0006928329606368661,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:anti_similar_prior_not_more_confident",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.3417046906008466,
+        "expected": 0.3484565184305197,
+        "tolerance": 0.006751828829673152
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

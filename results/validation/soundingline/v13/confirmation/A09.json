@@ -1,0 +1,339 @@
+{
+  "card": "A09",
+  "trunk": "A",
+  "wave": 2,
+  "lane": "confirmation",
+  "record": {
+    "question": "Can source attention improve trust calibration without overwriting artifact evidence?",
+    "what_happened": "With strong artifact evidence and a source whose history and assertions ran against the truth, the factored reader kept 83% of its mass on the truth against 73% for a single-trust-number reader; the content posterior never moved with the history.",
+    "what_changed_in_the_project_world": "Source attention calibrates trust without overwriting what the artifact itself shows.",
+    "what_remains_a_rival": "a scalar trust",
+    "claim_ceiling": "INSTRUMENT_FAILURE"
+  },
+  "hypothesis": "Source history updates the reliability posterior and artifact evidence updates the content posterior; a false assertion from a distrusted source cannot overturn strong contradicting artifact evidence by default.",
+  "claim_ceiling": "INSTRUMENT_FAILURE",
+  "construction_realization": {},
+  "results": {
+    "criterion_A09": {
+      "passed": true,
+      "factored_on_truth_strong_evidence_false_history": 0.8295815048438738,
+      "scalar_on_truth_same_cell": 0.7328206912312948
+    },
+    "grid": {
+      "true": {
+        "strong": {
+          "content": 0.9847637977347151,
+          "factored": 0.9397661605363087,
+          "scalar": 0.7328206912312948,
+          "q_source": 0.9000000000000001
+        },
+        "weak": {
+          "content": 0.7653607536764706,
+          "factored": 0.9395683168263037,
+          "scalar": 0.5902226562499999,
+          "q_source": 0.9000000000000001
+        }
+      },
+      "false": {
+        "strong": {
+          "content": 0.9847637977347151,
+          "factored": 0.8295815048438738,
+          "scalar": 0.7328206912312948,
+          "q_source": 0.1
+        },
+        "weak": {
+          "content": 0.7653607536764706,
+          "factored": 0.8310553246289952,
+          "scalar": 0.5902226562499999,
+          "q_source": 0.1
+        }
+      },
+      "ambiguous": {
+        "strong": {
+          "content": 0.9847637977347151,
+          "factored": 0.6366688522373516,
+          "scalar": 0.7328206912312948,
+          "q_source": 0.5
+        },
+        "weak": {
+          "content": 0.7653607536764706,
+          "factored": 0.6355522745865902,
+          "scalar": 0.5902226562499999,
+          "q_source": 0.5
+        }
+      },
+      "irrelevant": {
+        "strong": {
+          "content": 0.9847637977347151,
+          "factored": 0.6366688522373516,
+          "scalar": 0.7328206912312948,
+          "q_source": 0.5
+        },
+        "weak": {
+          "content": 0.7653607536764706,
+          "factored": 0.6355522745865902,
+          "scalar": 0.5902226562499999,
+          "q_source": 0.5
+        }
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "true|strong": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "true|weak": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "false|strong": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "false|weak": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "ambiguous|strong": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "ambiguous|weak": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "irrelevant|strong": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    },
+    "irrelevant|weak": {
+      "units": 320,
+      "rows": 6400,
+      "min_rows_in_a_unit": 20
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 8,
+    "realized_levels": 8,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 20,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 320,
+    "rows": 2560
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "INSTRUMENT_FAILED",
+  "strongest_rival": "a scalar trust",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 18.03,
+    "units_cpu_s": 203.57,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 224.96875,
+      "user": 176.4375,
+      "system": 48.53125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 66813952,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 18.03,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "INSTRUMENT_FAILED",
+  "gates_summary": {
+    "all_passed": false,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 1,
+    "failed_names": [
+      "calibration:weak_evidence_yields_less_certainty"
+    ],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:history_moves_the_source_posterior",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.8000000000000002,
+        "expected": 0.3
+      },
+      {
+        "name": "placebo:history_leaves_content_posterior_untouched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:reliable_source_strong_evidence_read_correctly",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.9397661605363087,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "surface:same_artifacts_across_histories",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:content_alone_identifies_with_strong_evidence",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.4847637977347151,
+        "expected": 0.2
+      },
+      {
+        "name": "prediction:factored_minus_scalar_under_false_history",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.09676081361257904,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:weak_evidence_yields_less_certainty",
+        "kind": "positive",
+        "passed": false,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.8310553246289952,
+        "expected": 0.8295815048438738,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "instrument failed: calibration:weak_evidence_yields_less_certainty",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_a.py",
+    "sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": false,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 1,
+    "failed_names": [
+      "calibration:weak_evidence_yields_less_certainty"
+    ],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:history_moves_the_source_posterior",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.8000000000000002,
+        "expected": 0.3
+      },
+      {
+        "name": "placebo:history_leaves_content_posterior_untouched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:reliable_source_strong_evidence_read_correctly",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.9397661605363087,
+        "expected": 1.0,
+        "tolerance": 0.2
+      },
+      {
+        "name": "surface:same_artifacts_across_histories",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:content_alone_identifies_with_strong_evidence",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.4847637977347151,
+        "expected": 0.2
+      },
+      {
+        "name": "prediction:factored_minus_scalar_under_false_history",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.09676081361257904,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:weak_evidence_yields_less_certainty",
+        "kind": "positive",
+        "passed": false,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.8310553246289952,
+        "expected": 0.8295815048438738,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

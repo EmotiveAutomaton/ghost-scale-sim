@@ -1,0 +1,82 @@
+{
+  "id": "L10",
+  "title": "Artifact-only versus record-dominant variables",
+  "licensing_cards": [
+    "H13",
+    "H14",
+    "P14",
+    "O16",
+    "H03",
+    "H09"
+  ],
+  "table": {
+    "recoverable_from_artifact": [
+      "the maker's goal and profile at sufficient evidence (C trunk)",
+      "goal structure under rewriting (H12)",
+      "communicative goal when claim truths are known (G01)"
+    ],
+    "conditionally_recoverable": [
+      "expertise, when the reader shares the execution model (C08)",
+      "a private secondary goal, when proposals are recorded (H09)",
+      "the cost vector, when menus are recorded (O02)"
+    ],
+    "underdetermined_or_records_dominant": [
+      "director versus shared brief (H03, H14): records only",
+      "identical artifacts from different histories (H13, P14): abstain",
+      "hidden or false menus (O16): calibrated uncertainty, never a menu claim"
+    ]
+  },
+  "transfer_gap": "the boundary between recoverable and record-dominant is set by V13's constructions; in text the artifact side shrinks (surface entanglement) and the record side depends on what was logged.",
+  "sounding_line_target": "the claim ceiling attached to each target before a probe is run",
+  "records_required": "the minimal record sets named by H14 for record-dominant targets",
+  "cheap_baseline": "treat every target as artifact-recoverable",
+  "positive_gate": "on a planted corpus, artifact-only readers sit at floor on the record-dominant targets and above it on the recoverable ones",
+  "failure_meaning": "a record-dominant target reported from an artifact is a leak until shown otherwise",
+  "human_evidence_boundary": "the table classifies constructed targets; it does not claim what can be known about people from their work",
+  "recommendation": "defer",
+  "licensing_states": {
+    "H13": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "BOUNDARY",
+      "what_happened": "On artifacts that were literally the same, a classifier named the history 50% of the time against 50% chance, and the artifact-only reader's topology posterior stayed flat."
+    },
+    "H14": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Discrimination by record level: artifact 50%, timings 50%, proposals 50%, alternatives 50%, accept_veto 50%, role_map 47%, full_log 100%; the first level reaching 75% was full_log."
+    },
+    "P14": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "On identical artifacts the reader's top regime mass was 0.50 (abstention); after the separating artifacts it was 0.97 where the alternative method was distinguishable (30720/130560 of pairs), 0.77 in the borderline band, and 0.55 where methods coincide."
+    },
+    "O16": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Under missing and false alternatives the naive reader's calibration error was 0.17 against 0.16 for the reader that treated the menu as a claim."
+    },
+    "H03": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Director versus shared brief: artifact-only 50%, coherence 50%, interaction records 100% against 50% chance."
+    },
+    "H09": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "With proposal records the private goal was recovered 97% of the time; without them the reader's top mass was 0.23, an abstention."
+    }
+  },
+  "written": "2026-08-28T17:57:04"
+}

@@ -1,0 +1,118 @@
+{
+  "id": "L01",
+  "title": "A cost-aware decision record",
+  "licensing_cards": [
+    "O02",
+    "O04",
+    "O07",
+    "O10",
+    "O16",
+    "I06"
+  ],
+  "audit": {
+    "sounding_line_event_fields": [
+      "event_id",
+      "order",
+      "actor_id",
+      "operation",
+      "target",
+      "parent_event_ids",
+      "primary_goal_id",
+      "secondary_goal_candidates",
+      "constraint_ids",
+      "alternatives",
+      "perceptual_access",
+      "noticed",
+      "visible_in_final",
+      "ground_truth_source",
+      "payload"
+    ],
+    "already_present": [
+      "alternatives (shown or available)",
+      "constraint_ids",
+      "primary_goal_id",
+      "secondary_goal_candidates"
+    ],
+    "absent": [
+      "a cost vector per alternative",
+      "believed alternatives",
+      "actor control flags",
+      "cost timing",
+      "competence",
+      "counterfactual consequences"
+    ]
+  },
+  "proposed_recorded_fields": [
+    "cost_vector (time, execution, cognitive, epistemic, social, risk, imposed) per alternative",
+    "alternatives_available (the full menu, not the shown subset)",
+    "alternatives_believed_available (the actor's own view, when recorded)",
+    "actor_control (voluntary | imposed | no_alternative)",
+    "cost_timing (anticipated | sunk | discovered_late)",
+    "competence_at_decision (a recorded skill level or proxy)",
+    "counterfactual_consequence per alternative (where a record or simulation supplies it)"
+  ],
+  "proposed_inferred_fields": [
+    "opportunity_cost (value of the best forgone route; derived from the recorded vector)",
+    "menu_completeness (a probability, treated as evidence, never as truth)",
+    "goal_strength (identified only with competence, knowledge, constraint and risk held or modelled)"
+  ],
+  "validation_rules": [
+    "an imposed decision contributes no preference evidence (O07)",
+    "sunk and late-discovered cost are excluded from the decision-time vector (O10)",
+    "a menu shown to the reader is a claim about the menu; completeness is a probability (O16)",
+    "dimensions are recorded separately; the total is derived, never the primitive (O02, I06)"
+  ],
+  "transfer_gap": "V13 costs are planted vectors with known causes; a text corpus records at most what a maker reported paying, with no counterfactuals and no competence measure. The record fields are the transferable object; the identification of causes is not.",
+  "sounding_line_target": "the process-record schema (ProcessEvent.alternatives, constraint_ids, payload) extended with the fields above",
+  "records_required": "per-decision menus with per-alternative costs; actor-control and timing flags; a competence proxy",
+  "cheap_baseline": "a scalar effort field and a count of alternatives",
+  "positive_gate": "a planted-cost corpus (constructed cases) in which the vector reader recovers the planted tradeoff and the scalar reader does not",
+  "failure_meaning": "if text records cannot carry per-alternative costs, the cost-aware reader has no input and the O results stay simulation-bound",
+  "human_evidence_boundary": "the fields record what a maker reported or what a construction planted; they do not establish that people compute costs this way, and no field may be read as a motive without the rival causes held",
+  "recommendation": "kill",
+  "licensing_states": {
+    "O02": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "With the scalar total held fixed, the factored reader named the weighted dimension 79% of the time and predicted held-out choices +0.66 nats better than the total-cost reader."
+    },
+    "O04": {
+      "state": "INSTRUMENT_FAILED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "INSTRUMENT_FAILURE",
+      "what_happened": "One choice moved the posterior by near_tie 0.10, dominated 0.01, attractive 0.09, costly_chosen 0.15 nats; the shift tracked the counterfactual utility at rank correlation -0.36."
+    },
+    "O07": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Imposed work gave the record reader 0.000 nats of preference evidence and the flag-blind reader 1.02; voluntary choices gave 0.85."
+    },
+    "O10": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "A reader scoring anticipated cost put the same mass on the truth whether the expenditure was chosen, sunk or discovered late (spread 0.000); a hindsight reader lost 0.01 of that mass when the cost was not the maker's decision."
+    },
+    "O16": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Under missing and false alternatives the naive reader's calibration error was 0.17 against 0.16 for the reader that treated the menu as a claim."
+    },
+    "I06": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "METHOD",
+      "what_happened": "Weighting each cost dimension alone shifted the choice distribution by time 0.154, execution 0.150, cognitive 0.155, epistemic 0.151, social 0.149, risk 0.145, imposed 0.465 (Jensen-Shannon); a classifier reading only total paid cost named the weighted dimension 17% of the time against 12% chance."
+    }
+  },
+  "written": "2026-08-28T17:57:03"
+}

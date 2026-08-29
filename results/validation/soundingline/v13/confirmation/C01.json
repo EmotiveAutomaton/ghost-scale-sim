@@ -1,0 +1,310 @@
+{
+  "card": "C01",
+  "trunk": "C",
+  "wave": 1,
+  "lane": "confirmation",
+  "record": {
+    "question": "Can each reader measure its own production model?",
+    "what_happened": "Readers predicted the rest of their own held-out artifacts +0.58 nats per feature better than pooled frequency in their native convention and +0.58 in the second; their own method choices were predicted +0.02 nats better than method frequency; the planted profile label was recovered 89% of the time.",
+    "what_changed_in_the_project_world": "The measured self-model is a usable object in every family: the first prior of trunk C rests on it.",
+    "what_remains_a_rival": "pooled frequency",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A reader can measure its own production model from its own artifacts well enough to predict its held-out continuations and method choices above frequency and family-population baselines.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_C01": {
+      "passed": true,
+      "gain_domain0": 0.5823269033367129,
+      "gain_domain1": 0.5785379502916135
+    },
+    "gains": {
+      "gain_domain0_vs_frequency": {
+        "mean": 0.5823269033367129,
+        "interval": [
+          0.5559735462452378,
+          0.6093901904887166
+        ],
+        "n_units": 64,
+        "n_rows": 320
+      },
+      "gain_domain0_vs_population": {
+        "mean": 0.019000703535993566,
+        "interval": [
+          0.017440546145631123,
+          0.020488181012482395
+        ],
+        "n_units": 64,
+        "n_rows": 320
+      },
+      "gain_domain1_vs_frequency": {
+        "mean": 0.5785379502916135,
+        "interval": [
+          0.5549247226531533,
+          0.6032960974130782
+        ],
+        "n_units": 64,
+        "n_rows": 320
+      },
+      "gain_domain1_vs_population": {
+        "mean": 0.018943021217941787,
+        "interval": [
+          0.017604853458228455,
+          0.020289387195647143
+        ],
+        "n_units": 64,
+        "n_rows": 320
+      }
+    },
+    "transition_gain": {
+      "mean": 0.023030035499330435,
+      "interval": [
+        0.02109722074582023,
+        0.02491906422079051
+      ],
+      "n_units": 64,
+      "n_rows": 640
+    },
+    "diagnostics": {
+      "label": 0.8884374999999999,
+      "placebo": 1.1355657723777026e-14,
+      "oracle_gain": 0.6413978829534469
+    },
+    "label_ece": 0.07727912336338946
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "0|frequency": {
+      "units": 320,
+      "rows": 12800,
+      "min_rows_in_a_unit": 40
+    },
+    "0|population": {
+      "units": 320,
+      "rows": 12800,
+      "min_rows_in_a_unit": 40
+    },
+    "1|frequency": {
+      "units": 320,
+      "rows": 12800,
+      "min_rows_in_a_unit": 40
+    },
+    "1|population": {
+      "units": 320,
+      "rows": 12800,
+      "min_rows_in_a_unit": 40
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 40,
+    "ok": true
+  },
+  "independent_unit": "reader",
+  "effective_n": {
+    "units": 320,
+    "rows": 1280
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "pooled frequency",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 136.71,
+    "units_cpu_s": 1582.64,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 175.171875,
+      "user": 133.265625,
+      "system": 41.90625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 173150208,
+      "peak_rss": 180183040
+    }
+  },
+  "runtime_seconds": 136.71,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:self_model_beats_frequency",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.5823269033367129,
+        "expected": 0.05
+      },
+      {
+        "name": "placebo:artifact_order_irrelevant",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 1.1355657723777026e-14,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:planted_label_recovered",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.8884374999999999,
+        "expected": 1.0,
+        "tolerance": 0.35
+      },
+      {
+        "name": "surface:gain_not_a_domain_surface_effect",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.003788953045099408,
+        "expected": 0.0,
+        "tolerance": 0.15
+      },
+      {
+        "name": "oracle:true_profile_predicts_continuation",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.6413978829534469,
+        "expected": 0.03
+      },
+      {
+        "name": "prediction:held_out_transitions",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.023030035499330435,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:label_confidence_ece",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.07727912336338946,
+        "expected": 0.25,
+        "tolerance": 0.17272087763661054
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_c.py",
+    "sha256": "d00e0d4d189d37e99fba0bb1579ee45dac89a7259541d6fd23157de3d0cb3a55",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:self_model_beats_frequency",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.5823269033367129,
+        "expected": 0.05
+      },
+      {
+        "name": "placebo:artifact_order_irrelevant",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 1.1355657723777026e-14,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:planted_label_recovered",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.8884374999999999,
+        "expected": 1.0,
+        "tolerance": 0.35
+      },
+      {
+        "name": "surface:gain_not_a_domain_surface_effect",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.003788953045099408,
+        "expected": 0.0,
+        "tolerance": 0.15
+      },
+      {
+        "name": "oracle:true_profile_predicts_continuation",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.6413978829534469,
+        "expected": 0.03
+      },
+      {
+        "name": "prediction:held_out_transitions",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.023030035499330435,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:label_confidence_ece",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.07727912336338946,
+        "expected": 0.25,
+        "tolerance": 0.17272087763661054
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

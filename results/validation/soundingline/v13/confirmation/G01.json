@@ -1,0 +1,370 @@
+{
+  "card": "G01",
+  "trunk": "G",
+  "wave": 1,
+  "lane": "confirmation",
+  "record": {
+    "question": "Can communicative stance be represented as an ordinary maker goal?",
+    "what_happened": "With twelve artifacts and their claims' truths, the reader named the maker's stance 85% of the time against 14% chance; a surface classifier on the artifacts named it 16%.",
+    "what_changed_in_the_project_world": "Stance is readable as a goal through correspondence; it is not a source type stamped on the artifact.",
+    "what_remains_a_rival": "a source-type label",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A maker's communicative stance is an ordinary goal: a reader that learns which claims were true recovers it from the correspondence between assertion, evidence and truth, with no source-type label and no surface cue.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_G01": {
+      "passed": true,
+      "accuracy_by_dose": {
+        "2": 0.7041964285714286,
+        "6": 0.8150892857142856,
+        "12": 0.8508928571428571
+      },
+      "surface": 0.15784226190476192,
+      "by_goal": {
+        "accurate": 0.9574999999999999,
+        "comprehension_support": 0.0,
+        "persuasion": 0.99875,
+        "self_presentation": 1.0,
+        "concealment": 1.0,
+        "misleading": 1.0,
+        "neutral": 1.0
+      }
+    },
+    "accuracy_by_dose": {
+      "2": 0.7041964285714286,
+      "6": 0.8150892857142856,
+      "12": 0.8508928571428571
+    },
+    "accuracy_by_goal_at_12": {
+      "accurate": 0.9574999999999999,
+      "comprehension_support": 0.0,
+      "persuasion": 0.99875,
+      "self_presentation": 1.0,
+      "concealment": 1.0,
+      "misleading": 1.0,
+      "neutral": 1.0
+    },
+    "surface_classifier": 0.15784226190476192
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "accurate|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "accurate|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "accurate|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "comprehension_support|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "comprehension_support|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "comprehension_support|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "persuasion|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "persuasion|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "persuasion|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "self_presentation|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "self_presentation|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "self_presentation|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "concealment|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "concealment|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "concealment|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "misleading|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "misleading|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "misleading|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "neutral|2": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "neutral|6": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    },
+    "neutral|12": {
+      "units": 320,
+      "rows": 1600,
+      "min_rows_in_a_unit": 5
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 21,
+    "realized_levels": 21,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 5,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 320,
+    "rows": 6720
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a source-type label",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 16.33,
+    "units_cpu_s": 185.45,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 278.4375,
+      "user": 214.609375,
+      "system": 63.828125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 74715136,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 16.33,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:evidence_sharpens_the_stance",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.1466964285714285,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:no_source_label_in_the_reader",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:misleading_recognised",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.4
+      },
+      {
+        "name": "surface:artifact_surface_at_chance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.15784226190476192,
+        "expected": 0.14285714285714285,
+        "tolerance": 0.1
+      },
+      {
+        "name": "oracle:stance_readable_with_truths",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.8508928571428571,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:log_score_above_uniform",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": -0.46466836255606925,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:stance_confidence_calibrated",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.14025722026807222,
+        "expected": 0.25,
+        "tolerance": 0.10974278073192778
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_g.py",
+    "sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:evidence_sharpens_the_stance",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.1466964285714285,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:no_source_label_in_the_reader",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:misleading_recognised",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.4
+      },
+      {
+        "name": "surface:artifact_surface_at_chance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.15784226190476192,
+        "expected": 0.14285714285714285,
+        "tolerance": 0.1
+      },
+      {
+        "name": "oracle:stance_readable_with_truths",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.8508928571428571,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:log_score_above_uniform",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": -0.46466836255606925,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:stance_confidence_calibrated",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.14025722026807222,
+        "expected": 0.25,
+        "tolerance": 0.10974278073192778
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

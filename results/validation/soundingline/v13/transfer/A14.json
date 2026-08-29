@@ -1,0 +1,495 @@
+{
+  "card": "A14",
+  "trunk": "A",
+  "wave": 3,
+  "lane": "transfer",
+  "record": {
+    "question": "Which attention policy best predicts and abstains across ecologies?",
+    "what_happened": "On fresh worlds the best non-oracle policy was common: learned, group: narrow, individual: learned, nuisance: learned.",
+    "what_changed_in_the_project_world": "One policy for all ecologies is not supported; the surface is the result.",
+    "what_remains_a_rival": "one-policy universality",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "No single attention policy wins everywhere: the policy-by-ecology surface, with calibration and abstention, is the result, on worlds never used to fit anything.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_A14": {
+      "passed": true,
+      "winners": {
+        "common": "learned",
+        "group": "narrow",
+        "individual": "learned",
+        "nuisance": "learned"
+      },
+      "universal_policy": 0.0
+    },
+    "policy_by_ecology": {
+      "uniform": {
+        "common": -4.270047008152784,
+        "group": -3.3267954277467426,
+        "individual": -4.309503298077533,
+        "nuisance": -4.534311291171904
+      },
+      "random": {
+        "common": -4.2068057418141365,
+        "group": -3.52093889189541,
+        "individual": -4.249815081559096,
+        "nuisance": -4.470329060433884
+      },
+      "salience": {
+        "common": -4.136773361816264,
+        "group": -2.8623117935723257,
+        "individual": -4.17184023246645,
+        "nuisance": -4.368784249079304
+      },
+      "oracle": {
+        "common": -4.334709965738097,
+        "group": -3.567474872176437,
+        "individual": -4.381184615398782,
+        "nuisance": -4.662642297234587
+      },
+      "wrong": {
+        "common": -4.475059836244989,
+        "group": -3.758739944677673,
+        "individual": -4.497186321659114,
+        "nuisance": -4.635281934534685
+      },
+      "learned": {
+        "common": -2.859867620204192,
+        "group": -2.2776844091403774,
+        "individual": -2.898690924420698,
+        "nuisance": -3.4223164772476653
+      },
+      "adaptive": {
+        "common": -4.432508799043071,
+        "group": -3.492559113952395,
+        "individual": -4.336567879907674,
+        "nuisance": -4.57824364398704
+      },
+      "narrow": {
+        "common": -3.1711585240567883,
+        "group": -2.1784557633977477,
+        "individual": -3.0827403929206856,
+        "nuisance": -4.355063792967578
+      },
+      "broad": {
+        "common": -4.147278333158878,
+        "group": -2.9746874506629526,
+        "individual": -4.16704381595775,
+        "nuisance": -4.54411163678779
+      }
+    },
+    "ece_by_policy": {
+      "uniform": 0.48720517412335484,
+      "random": 0.4257070426628997,
+      "salience": 0.34215102605860026,
+      "oracle": 0.5929064623174425,
+      "wrong": 0.5963671692364847,
+      "learned": 0.08046793717696067,
+      "adaptive": 0.5246431809149582,
+      "narrow": 0.1797794607684234,
+      "broad": 0.46718365145211793
+    },
+    "winners": {
+      "common": "learned",
+      "group": "narrow",
+      "individual": "learned",
+      "nuisance": "learned"
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "uniform|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "random|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "salience|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "oracle|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "wrong|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "learned|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "adaptive|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "narrow|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "broad|common": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "uniform|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "random|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "salience|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "oracle|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "wrong|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "learned|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "adaptive|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "narrow|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "broad|group": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "uniform|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "random|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "salience|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "oracle|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "wrong|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "learned|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "adaptive|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "narrow|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "broad|individual": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "uniform|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "random|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "salience|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "oracle|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "wrong|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "learned|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "adaptive|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "narrow|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    },
+    "broad|nuisance": {
+      "units": 480,
+      "rows": 57600,
+      "min_rows_in_a_unit": 120
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 36,
+    "realized_levels": 36,
+    "expected_units": 480,
+    "realized_units": 480,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 120,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 480,
+    "rows": 17280
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "one-policy universality",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 5846.71,
+    "units_cpu_s": 67024.66,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 111.484375,
+      "user": 93.234375,
+      "system": 18.25,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 69988352,
+      "peak_rss": 179212288
+    }
+  },
+  "runtime_seconds": 5846.71,
+  "tier": "T2",
+  "units": {
+    "n": 480,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:ecology_moves_policies",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 2.1766080295698305,
+        "expected": 0.02
+      },
+      {
+        "name": "placebo:nuisance_world_reported",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "with every channel scrambled both policies sit at the clipped floor; their gap is reported, not judged",
+        "observed": 0.06398223073802001,
+        "expected": 0.0,
+        "tolerance": 1.0
+      },
+      {
+        "name": "positive:learned_precision_transfers_to_fresh_worlds",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the frozen learned weights must not lose to uniform on worlds never used to fit them. Hard single-channel oracle tempering is NOT the ceiling here - balanced learned weights beat it in every ecology - and that fact is part of the reported surface, not a gate",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:policies_frozen_before_fresh_worlds",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:identifiable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": -0.6458305116241605,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:learned_transfer_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 1.4101793879485922,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:learned_no_worse_calibrated",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.08046793717696067,
+        "expected": 0.48720517412335484,
+        "tolerance": 0.4067372379463942
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_a.py",
+    "sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:ecology_moves_policies",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 2.1766080295698305,
+        "expected": 0.02
+      },
+      {
+        "name": "placebo:nuisance_world_reported",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "with every channel scrambled both policies sit at the clipped floor; their gap is reported, not judged",
+        "observed": 0.06398223073802001,
+        "expected": 0.0,
+        "tolerance": 1.0
+      },
+      {
+        "name": "positive:learned_precision_transfers_to_fresh_worlds",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the frozen learned weights must not lose to uniform on worlds never used to fit them. Hard single-channel oracle tempering is NOT the ceiling here - balanced learned weights beat it in every ecology - and that fact is part of the reported surface, not a gate",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:policies_frozen_before_fresh_worlds",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:identifiable",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": -0.6458305116241605,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:learned_transfer_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 1.4101793879485922,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:learned_no_worse_calibrated",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.08046793717696067,
+        "expected": 0.48720517412335484,
+        "tolerance": 0.4067372379463942
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

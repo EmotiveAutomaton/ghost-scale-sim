@@ -1,0 +1,50 @@
+{
+  "id": "L05",
+  "title": "Testing purpose-first",
+  "licensing_cards": [
+    "A06",
+    "Q05"
+  ],
+  "comparison": [
+    "goal-first",
+    "mechanics-first",
+    "anomaly-first",
+    "context-first",
+    "adaptive (EIG-chosen first cue)",
+    "compute-matched (the same number of cue reads)"
+  ],
+  "readers": [
+    "novice (no execution model)",
+    "expert (an execution model of the writer's craft)"
+  ],
+  "measures": [
+    "early proper score after the first cue",
+    "final score after every cue (convergence expected)",
+    "cost per cue"
+  ],
+  "transfer_gap": "V13 entry points are cue families with declared costs; text entry points are prompts or span orders, whose costs must be declared before the test.",
+  "sounding_line_target": "the order in which a probe is given the artifact's purpose, technique, mechanics, anomalies and context",
+  "records_required": "artifacts with separable purpose, mechanics and anomaly spans; expert and novice reader models",
+  "cheap_baseline": "fixed purpose-first",
+  "positive_gate": "final posteriors converge across entries on a planted corpus; the early advantage of purpose-first exists for novices",
+  "failure_meaning": "if purpose-first wins finally as well as early, the artifact is not separable by entry and the arrow claim is untestable there",
+  "human_evidence_boundary": "an entry-point result describes readers with declared cue costs; it does not say how people begin",
+  "recommendation": "kill",
+  "licensing_states": {
+    "A06": {
+      "state": "INSTRUMENT_FAILED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "INSTRUMENT_FAILURE",
+      "what_happened": "The best first cue for novices was random and for experts random; after every cue the posteriors agreed to within 0.00 nats regardless of entry."
+    },
+    "Q05": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Adaptive readers opened with purpose 1% of the time as novices and 1% as experts, with mechanics first 0% of the time for experts; final posteriors converged."
+    }
+  },
+  "written": "2026-08-28T17:57:03"
+}

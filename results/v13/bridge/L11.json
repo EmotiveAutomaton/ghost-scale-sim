@@ -1,0 +1,60 @@
+{
+  "id": "L11",
+  "title": "What standardized author-purpose questions can validate",
+  "licensing_cards": [
+    "G01",
+    "A06",
+    "H13",
+    "P14"
+  ],
+  "targets": {
+    "normative_rhetorical_purpose": "what a competent reader is expected to say the text is for; validated against reader agreement, not against the author",
+    "reader_interpretation": "what a given reader took the text to be for; a reading-profile measurement",
+    "private_process": "what the author actually did and wanted; recoverable only where records exist (L10) and never from a standardized answer"
+  },
+  "blueprint": [
+    "a corpus with expert-adjudicated normative purpose labels",
+    "reader-model answers scored against those labels",
+    "a separate constructed corpus with planted private process to show the two targets come apart"
+  ],
+  "claim_ceiling": "useful as a measure of reader competence on normative purpose; not creator-history ground truth",
+  "transfer_gap": "V13 has ground truth for private process by construction; a standardized question has ground truth only for the normative target.",
+  "sounding_line_target": "the author-purpose question set and its scoring",
+  "records_required": "adjudicated normative labels; for private process, records, or nothing",
+  "cheap_baseline": "agreement with the majority reader",
+  "positive_gate": "on the constructed corpus, normative-purpose accuracy and private-process accuracy dissociate",
+  "failure_meaning": "if they do not dissociate in construction, the question measures one thing and the distinction is idle",
+  "human_evidence_boundary": "a standardized question validates reader competence on a normative target; it cannot certify what any author privately intended",
+  "recommendation": "kill",
+  "licensing_states": {
+    "G01": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "With twelve artifacts and their claims' truths, the reader named the maker's stance 85% of the time against 14% chance; a surface classifier on the artifacts named it 16%."
+    },
+    "A06": {
+      "state": "INSTRUMENT_FAILED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "INSTRUMENT_FAILURE",
+      "what_happened": "The best first cue for novices was random and for experts random; after every cue the posteriors agreed to within 0.00 nats regardless of entry."
+    },
+    "H13": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "BOUNDARY",
+      "what_happened": "On artifacts that were literally the same, a classifier named the history 50% of the time against 50% chance, and the artifact-only reader's topology posterior stayed flat."
+    },
+    "P14": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "On identical artifacts the reader's top regime mass was 0.50 (abstention); after the separating artifacts it was 0.97 where the alternative method was distinguishable (30720/130560 of pairs), 0.77 in the borderline band, and 0.55 where methods coincide."
+    }
+  },
+  "written": "2026-08-28T17:57:05"
+}

@@ -1,0 +1,264 @@
+{
+  "card": "L06",
+  "trunk": "L",
+  "wave": 5,
+  "lane": "discovery",
+  "record": {
+    "question": "How should unexplained activity be partitioned?",
+    "what_happened": "Partitioning unexplained activity: pursue. Licensed by A07, H10, O07, P14; the transfer gap is V13 anomalies carry planted origin and handling; text anomalies carry neither unless the record does. The abstention rule transfers; the recovery rates do not..",
+    "what_changed_in_the_project_world": "A text-side design is exported with its gap, its records, its baseline and its failure meaning attached; nothing here is human evidence.",
+    "what_remains_a_rival": "if the reader names an origin without handling evidence, it is inventing a route",
+    "claim_ceiling": "METHOD"
+  },
+  "hypothesis": "Unexplained activity is partitioned into bounded alternatives with abstention and held-out response.",
+  "claim_ceiling": "METHOD",
+  "construction_realization": {},
+  "results": {
+    "criterion_L06": {
+      "passed": true,
+      "recommendation": "pursue",
+      "licensing": {
+        "A07": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "Weighting the anomaly channel gained +0.31 nats on the maker's regime when mistakes were handled in regime-specific ways, -3.48 for forced defects with no handling, and +0.00 when nothing went wrong."
+        },
+        "H10": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "A model of how the controller handled each mistake predicted whether a revision followed +0.57 nats better than the revision frequency; corrected was revised 100%, accepted was revised 0%, exploited was revised 0%, concealed was revised 100%, missed was revised 0%."
+        },
+        "O07": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "Imposed work gave the record reader 0.000 nats of preference evidence and the flag-blind reader 1.02; voluntary choices gave 0.85."
+        },
+        "P14": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "On identical artifacts the reader's top regime mass was 0.50 (abstention); after the separating artifacts it was 0.97 where the alternative method was distinguishable (30720/130560 of pairs), 0.77 in the borderline band, and 0.55 where methods coincide."
+        }
+      }
+    },
+    "deliverable": {
+      "id": "L06",
+      "title": "Partitioning unexplained activity",
+      "licensing_cards": [
+        "A07",
+        "H10",
+        "O07",
+        "P14"
+      ],
+      "alternatives": [
+        "unknown goal (the activity serves a goal the reader lacks a hypothesis for)",
+        "unknown method or constraint (a goal the reader knows, reached by a route or under a constraint it cannot model)",
+        "mistake or accident (a deviation the maker did not choose)"
+      ],
+      "rules": [
+        "abstain until a handling or a later event separates the alternatives (P14)",
+        "handling evidence separates mistakes from choices (A07, H10)",
+        "constraint records separate imposed activity from preference (O07)"
+      ],
+      "transfer_gap": "V13 anomalies carry planted origin and handling; text anomalies carry neither unless the record does. The abstention rule transfers; the recovery rates do not.",
+      "sounding_line_target": "the anomaly axes of the process record (origin, handling, awareness) and the reader-model consequence field",
+      "records_required": "handling events after anomalies; constraint records; held-out responses",
+      "cheap_baseline": "label every unexplained span a mistake",
+      "positive_gate": "a constructed corpus with planted origins in which the reader abstains on unhandled anomalies and separates handled ones",
+      "failure_meaning": "if the reader names an origin without handling evidence, it is inventing a route",
+      "human_evidence_boundary": "the partition is a reader's bounded hypothesis set; it does not say what a person did or meant",
+      "recommendation": "pursue",
+      "licensing_states": {
+        "A07": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "Weighting the anomaly channel gained +0.31 nats on the maker's regime when mistakes were handled in regime-specific ways, -3.48 for forced defects with no handling, and +0.00 when nothing went wrong."
+        },
+        "H10": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "A model of how the controller handled each mistake predicted whether a revision followed +0.57 nats better than the revision frequency; corrected was revised 100%, accepted was revised 0%, exploited was revised 0%, concealed was revised 100%, missed was revised 0%."
+        },
+        "O07": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "Imposed work gave the record reader 0.000 nats of preference evidence and the flag-blind reader 1.02; voluntary choices gave 0.85."
+        },
+        "P14": {
+          "state": "LANDED",
+          "criterion": true,
+          "confirmed": true,
+          "ceiling": "CONSTRUCTED_MECHANISM",
+          "what_happened": "On identical artifacts the reader's top regime mass was 0.50 (abstention); after the separating artifacts it was 0.97 where the alternative method was distinguishable (30720/130560 of pairs), 0.77 in the borderline band, and 0.55 where methods coincide."
+        }
+      },
+      "written": "2026-08-28T17:57:04"
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "deliverable": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 1,
+    "realized_levels": 1,
+    "expected_units": 1,
+    "realized_units": 1,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 1,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 1,
+    "rows": 1
+  },
+  "matching_residuals": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "an unlicensed export",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 0.02,
+    "units_cpu_s": 0.0,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 326.453125,
+      "user": 244.875,
+      "system": 81.578125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 74809344,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 0.02,
+  "tier": "T2",
+  "units": {
+    "n": 1,
+    "kind": "single"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "every_required_field_present",
+        "kind": "identity",
+        "passed": true,
+        "detail": "all fields present",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "licensing_cards_resolved_or_marked",
+        "kind": "identity",
+        "passed": true,
+        "detail": "an analytic identity the harness has to satisfy",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "no_human_claim_in_the_boundary",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_l.py",
+    "sha256": "a521f8a3095ccf6b0d961eaa0d03a330d12f883c645d0a517e8fa00666a4567b",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 3,
+    "n_ran": 3,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "every_required_field_present",
+        "kind": "identity",
+        "passed": true,
+        "detail": "all fields present",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "licensing_cards_resolved_or_marked",
+        "kind": "identity",
+        "passed": true,
+        "detail": "an analytic identity the harness has to satisfy",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "no_human_claim_in_the_boundary",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns that answer",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "card": "Q10",
+  "trunk": "Q",
+  "wave": 2,
+  "lane": "confirmation",
+  "record": {
+    "question": "Can exploration recover after a misleading high-salience cue?",
+    "what_happened": "Against a planted decoy the salience-driven reader scored -25.59 on the maker's profile, the robust reader -3.29, and the challenging reader -2.47.",
+    "what_changed_in_the_project_world": "A decoy is beaten by refusing to let conspicuousness set the weights, or by asking a question the concealer must answer.",
+    "what_remains_a_rival": "naive salience",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A concealer who plants a conspicuous decoy cue hijacks a salience-driven reader; a reader that weighs every channel or challenges with a known-truth commission recovers.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_Q10": {
+      "passed": true,
+      "by_policy": {
+        "salience": -25.59034816653054,
+        "robust": -3.2948447819376434,
+        "challenge": -2.4686775088595097
+      },
+      "gain": 23.12167065767103
+    },
+    "profile_log_score_by_policy": {
+      "salience": -25.59034816653054,
+      "robust": -3.2948447819376434,
+      "challenge": -2.4686775088595097
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "salience": {
+      "units": 320,
+      "rows": 25600,
+      "min_rows_in_a_unit": 80
+    },
+    "robust": {
+      "units": 320,
+      "rows": 25600,
+      "min_rows_in_a_unit": 80
+    },
+    "challenge": {
+      "units": 320,
+      "rows": 25600,
+      "min_rows_in_a_unit": 80
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 3,
+    "realized_levels": 3,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 80,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 320,
+    "rows": 960
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "naive salience",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 33.26,
+    "units_cpu_s": 384.53,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 318.671875,
+      "user": 237.875,
+      "system": 80.796875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 156585984,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 33.26,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:policy_moves_the_score",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 23.12167065767103,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_decoy_all_policies",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:robust_no_worse_than_salience",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_artifacts",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:profile_identifiable_by_challenge",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": -0.3892359671796739,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:recovery_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 23.12167065767103,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:salience_overconfidence_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.5108402616600145,
+        "expected": 0.3299726122157972,
+        "tolerance": 0.1808676504442173
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_q.py",
+    "sha256": "b635c50f97e3e26b1ee0d5aa2cc28fe4321df970639528e252ffabfcaccaee1d",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:policy_moves_the_score",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 23.12167065767103,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_decoy_all_policies",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:robust_no_worse_than_salience",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_artifacts",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:profile_identifiable_by_challenge",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": -0.3892359671796739,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:recovery_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 23.12167065767103,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:salience_overconfidence_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.5108402616600145,
+        "expected": 0.3299726122157972,
+        "tolerance": 0.1808676504442173
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

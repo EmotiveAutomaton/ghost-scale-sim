@@ -1,0 +1,366 @@
+{
+  "card": "H04",
+  "trunk": "H",
+  "wave": 1,
+  "lane": "confirmation",
+  "record": {
+    "question": "Can centralized, rotating, and distributed leadership be distinguished?",
+    "what_happened": "Predicting the next control event, the graph reader beat the coherence reader by +0.23 nats averaged over seven team kinds.",
+    "what_changed_in_the_project_world": "Leadership kind is a property of the control sequence; coherence of the product does not carry it.",
+    "what_remains_a_rival": "coherence",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Central, rotating, editor-led, ratifier, institutional and distributed teams differ in who controls what next; a reader of the event graph predicts the next control event where a coherence reader cannot.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_H04": {
+      "passed": true,
+      "gain": 0.22752305977725934,
+      "grid": {
+        "central": {
+          "graph": -0.5555646185899556,
+          "coherence": -0.707870851475249
+        },
+        "shared_brief": {
+          "graph": -0.5555646185899556,
+          "coherence": -0.707870851475249
+        },
+        "editor_led": {
+          "graph": -0.5452311906637541,
+          "coherence": -0.7226393135674579
+        },
+        "ratifier": {
+          "graph": -2.1254519097856206,
+          "coherence": -2.5257286443082556
+        },
+        "rotating": {
+          "graph": -0.5557323555036036,
+          "coherence": -0.7154302628669817
+        },
+        "institutional": {
+          "graph": -0.5576621720950911,
+          "coherence": -0.7157598520761173
+        },
+        "distributed": {
+          "graph": -0.5608943197056494,
+          "coherence": -0.9534628276051347
+        }
+      }
+    },
+    "grid": {
+      "central": {
+        "graph": -0.5555646185899556,
+        "coherence": -0.707870851475249
+      },
+      "shared_brief": {
+        "graph": -0.5555646185899556,
+        "coherence": -0.707870851475249
+      },
+      "editor_led": {
+        "graph": -0.5452311906637541,
+        "coherence": -0.7226393135674579
+      },
+      "ratifier": {
+        "graph": -2.1254519097856206,
+        "coherence": -2.5257286443082556
+      },
+      "rotating": {
+        "graph": -0.5557323555036036,
+        "coherence": -0.7154302628669817
+      },
+      "institutional": {
+        "graph": -0.5576621720950911,
+        "coherence": -0.7157598520761173
+      },
+      "distributed": {
+        "graph": -0.5608943197056494,
+        "coherence": -0.9534628276051347
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "central|graph": {
+      "units": 320,
+      "rows": 3192,
+      "min_rows_in_a_unit": 9
+    },
+    "central|coherence": {
+      "units": 320,
+      "rows": 3192,
+      "min_rows_in_a_unit": 9
+    },
+    "shared_brief|graph": {
+      "units": 320,
+      "rows": 3192,
+      "min_rows_in_a_unit": 9
+    },
+    "shared_brief|coherence": {
+      "units": 320,
+      "rows": 3192,
+      "min_rows_in_a_unit": 9
+    },
+    "editor_led|graph": {
+      "units": 320,
+      "rows": 3200,
+      "min_rows_in_a_unit": 10
+    },
+    "editor_led|coherence": {
+      "units": 320,
+      "rows": 3200,
+      "min_rows_in_a_unit": 10
+    },
+    "ratifier|graph": {
+      "units": 320,
+      "rows": 3200,
+      "min_rows_in_a_unit": 10
+    },
+    "ratifier|coherence": {
+      "units": 320,
+      "rows": 3200,
+      "min_rows_in_a_unit": 10
+    },
+    "rotating|graph": {
+      "units": 320,
+      "rows": 3197,
+      "min_rows_in_a_unit": 9
+    },
+    "rotating|coherence": {
+      "units": 320,
+      "rows": 3197,
+      "min_rows_in_a_unit": 9
+    },
+    "institutional|graph": {
+      "units": 320,
+      "rows": 3194,
+      "min_rows_in_a_unit": 9
+    },
+    "institutional|coherence": {
+      "units": 320,
+      "rows": 3194,
+      "min_rows_in_a_unit": 9
+    },
+    "distributed|graph": {
+      "units": 320,
+      "rows": 3198,
+      "min_rows_in_a_unit": 9
+    },
+    "distributed|coherence": {
+      "units": 320,
+      "rows": 3198,
+      "min_rows_in_a_unit": 9
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 14,
+    "realized_levels": 14,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 9,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 320,
+    "rows": 4480
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "coherence",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 22.29,
+    "units_cpu_s": 258.83,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 302.625,
+      "user": 229.78125,
+      "system": 72.84375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 156360704,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 22.29,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:teams_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 1.5802207191218665,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:history_cut_before_the_target",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:graph_no_worse_than_coherence_where_structure_differs",
+        "kind": "positive",
+        "passed": true,
+        "detail": "judged on the teams whose correction structure actually differs from their rivals; the central team is a twin of the shared brief by construction, so both models tie there and the comparison carries no information",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_histories",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:graph_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.22752305977725934,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:next_control_event",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.22752305977725934,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:coherence_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": -1.0069660861963492,
+        "expected": -1.6094379124341003,
+        "tolerance": 0.6024718272377511
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_h.py",
+    "sha256": "ed598cacf1b68027abe05fef2824c86d42505232db8e18f63c8570f53b12dea7",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:teams_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 1.5802207191218665,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:history_cut_before_the_target",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:graph_no_worse_than_coherence_where_structure_differs",
+        "kind": "positive",
+        "passed": true,
+        "detail": "judged on the teams whose correction structure actually differs from their rivals; the central team is a twin of the shared brief by construction, so both models tie there and the comparison carries no information",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_histories",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:graph_gain",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.22752305977725934,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:next_control_event",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.22752305977725934,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:coherence_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": -1.0069660861963492,
+        "expected": -1.6094379124341003,
+        "tolerance": 0.6024718272377511
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -1,13 +1,12 @@
 {
   "cards_total": 152,
   "mandatory_total": 132,
-  "mandatory_resolved": 110,
+  "mandatory_resolved": 127,
   "by_state": {
-    "LANDED": 101,
-    "INSTRUMENT_FAILED": 8,
+    "LANDED": 116,
+    "INSTRUMENT_FAILED": 10,
     "RESOURCE_BLOCKED": 1,
-    "BUILT": 40,
-    "RUNNING": 2
+    "BUILT": 25
   },
   "by_trunk": {
     "I": {
@@ -20,7 +19,7 @@
     },
     "A": {
       "total": 14,
-      "resolved": 11
+      "resolved": 13
     },
     "O": {
       "total": 18,
@@ -28,7 +27,7 @@
     },
     "P": {
       "total": 14,
-      "resolved": 12
+      "resolved": 14
     },
     "G": {
       "total": 16,
@@ -40,11 +39,11 @@
     },
     "Q": {
       "total": 12,
-      "resolved": 10
+      "resolved": 11
     },
     "L": {
       "total": 12,
-      "resolved": 0
+      "resolved": 12
     },
     "X": {
       "total": 20,
@@ -53,27 +52,10 @@
   },
   "unresolved_mandatory": [
     "C16",
-    "A12",
-    "A13",
     "A14",
-    "P13",
-    "P14",
     "G16",
     "H16",
-    "Q11",
-    "Q12",
-    "L01",
-    "L02",
-    "L03",
-    "L04",
-    "L05",
-    "L06",
-    "L07",
-    "L08",
-    "L09",
-    "L10",
-    "L11",
-    "L12"
+    "Q12"
   ],
-  "written": "2026-08-28T03:37:16"
+  "written": "2026-08-28T19:15:02"
 }

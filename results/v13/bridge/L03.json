@@ -1,0 +1,84 @@
+{
+  "id": "L03",
+  "title": "Testable attention manipulations for a text reader",
+  "licensing_cards": [
+    "A01",
+    "A02",
+    "A03",
+    "A10",
+    "A12",
+    "A13",
+    "I05"
+  ],
+  "protocols": {
+    "same_information_salience": "present the same passages with one cue family made conspicuous; the reader's proper score may not change if attention only allocates (A13)",
+    "cue_selection_under_budget": "restrict the reader to k passages or cue families; compare learned, salience and random selection on held-out prediction (A02)",
+    "precision_weighting": "the same passages, different declared weights on cue families; learned weights beat uniform, wrong weights produce confident error (A03)",
+    "dynamic_reallocation": "a compatible prefix followed by a diagnostic conflict; an adaptive reader that shifts weight on surprise is compared with static readers (A10)"
+  },
+  "nulls": [
+    "no-information passages (scrambled cue families) where no policy may gain",
+    "duplicated cues that must not add confidence",
+    "adversarial salience where a conspicuous weak cue is planted (A12)"
+  ],
+  "transfer_gap": "V13 channels are disjoint by construction; text cue families overlap, so a precision reader on text can double count. The identity and no-information nulls are the transferable rulers; the gains are not.",
+  "sounding_line_target": "the reading-profile machinery: which spans a probe is given, and with what declared weights",
+  "records_required": "cue-family annotations on spans; held-out continuations or responses to score",
+  "cheap_baseline": "uniform weights over everything the probe is shown",
+  "positive_gate": "the identity test (all weights one reproduces the plain reading) and a no-information corpus where every policy scores at chance",
+  "failure_meaning": "a text reader that gains in the no-information null is reading the manipulation, not the text; the protocol is then invalid, not the theory",
+  "human_evidence_boundary": "these are operational readers; they do not measure human attention",
+  "recommendation": "kill",
+  "licensing_states": {
+    "A01": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "METHOD",
+      "what_happened": "At neutral settings both analogues reproduced the plain posterior to 0.0e+00; under budgets of one, two and four cue families their log scores differed by 0.20 nats on average."
+    },
+    "A02": {
+      "state": "INSTRUMENT_FAILED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "INSTRUMENT_FAILURE",
+      "what_happened": "With one cue family to inspect, learned selection bought +5.26 nats per unit cost more than random inspection and the oracle +5.33; salience-driven inspection scored -6.55 relative to learned."
+    },
+    "A03": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "On identical evidence, learned weights scored +14.10 nats over uniform and wrong weights -2.89; the wrong weighting was confidently wrong 26% of the time against 9%."
+    },
+    "A10": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "After the maker turned out to be the reader's opposite, the adaptive reader kept 0.03 of its mass on the reader's own profile against 0.04 for the fixed local reader and 0.04 for the broad one; it reallocated in 81% of streams."
+    },
+    "A12": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Under adversarial salience the salience-driven reader lost 1.22 nats and scored 6.51 below a reader using learned cue reliability."
+    },
+    "A13": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "METHOD",
+      "what_happened": "No policy gained more than -13.141 nats in a null world; counting the surface twice raised confidence by +0.20 with an accuracy change of +0.00, the planted failure."
+    },
+    "I05": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "METHOD",
+      "what_happened": "Neutral attention reproduced the plain posterior to 0.0e+00; the largest gain any policy found in a no-information world was -11.294 nats, against +0.78 where channels carried information."
+    }
+  },
+  "written": "2026-08-28T17:57:03"
+}

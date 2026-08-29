@@ -1,0 +1,293 @@
+{
+  "card": "P09",
+  "trunk": "P",
+  "wave": 2,
+  "lane": "confirmation",
+  "record": {
+    "question": "If equal-local non-self ties self, what remains distinctive?",
+    "what_happened": "Log score and declared acquisition cost by route: self -3.85 at 24 artifacts, equal_local -3.85 at 24 artifacts, group_exemplar -21.06 at 4 artifacts, learned_transform -3.95 at 32 artifacts.",
+    "what_changed_in_the_project_world": "Where self and an equally local prior tie, the claim that survives is about cheap locality: self is the local prior a reader already owns.",
+    "what_remains_a_rival": "an informational tie",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "If an equally local non-self prior ties self, what remains distinctive about self is its acquisition cost: prediction and construction cost are reported side by side for each route.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_P09": {
+      "passed": true,
+      "tie": 1.0,
+      "by_route": {
+        "self": {
+          "ls": -3.850155234072468,
+          "cost": 24
+        },
+        "equal_local": {
+          "ls": -3.852959155394965,
+          "cost": 24
+        },
+        "group_exemplar": {
+          "ls": -21.058886338054986,
+          "cost": 4
+        },
+        "learned_transform": {
+          "ls": -3.954418296644575,
+          "cost": 32
+        }
+      }
+    },
+    "by_route": {
+      "self": {
+        "ls": -3.850155234072468,
+        "cost": 24
+      },
+      "equal_local": {
+        "ls": -3.852959155394965,
+        "cost": 24
+      },
+      "group_exemplar": {
+        "ls": -21.058886338054986,
+        "cost": 4
+      },
+      "learned_transform": {
+        "ls": -3.954418296644575,
+        "cost": 32
+      }
+    },
+    "informational_tie": true
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "self": {
+      "units": 320,
+      "rows": 460800,
+      "min_rows_in_a_unit": 1440
+    },
+    "equal_local": {
+      "units": 320,
+      "rows": 460800,
+      "min_rows_in_a_unit": 1440
+    },
+    "group_exemplar": {
+      "units": 320,
+      "rows": 460800,
+      "min_rows_in_a_unit": 1440
+    },
+    "learned_transform": {
+      "units": 320,
+      "rows": 460800,
+      "min_rows_in_a_unit": 1440
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 320,
+    "realized_units": 320,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 1440,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 320,
+    "rows": 1280
+  },
+  "matching_residuals": {},
+  "pursuit": "OPENED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "an informational tie",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 357.17,
+    "units_cpu_s": 4068.41,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 268.296875,
+      "user": 207.84375,
+      "system": 60.453125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 152825856,
+      "peak_rss": 201650176
+    }
+  },
+  "runtime_seconds": 357.17,
+  "tier": "T2",
+  "units": {
+    "n": 320,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:routes_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 17.20873110398252,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:self_and_equal_local_cost_the_same_artifacts",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:group_exemplar_is_cheaper",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_likelihood",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:above_uniform",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": -0.3844193312727415,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:self_minus_equal_local",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.0028039213224970716,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:tie_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 1.0,
+        "expected": 0.0,
+        "tolerance": 1.000000001
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_p.py",
+    "sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:routes_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 17.20873110398252,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:self_and_equal_local_cost_the_same_artifacts",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:group_exemplar_is_cheaper",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_likelihood",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:above_uniform",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": -0.3844193312727415,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:self_minus_equal_local",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 0.0028039213224970716,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:tie_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 1.0,
+        "expected": 0.0,
+        "tolerance": 1.000000001
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

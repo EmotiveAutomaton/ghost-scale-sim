@@ -1,0 +1,68 @@
+{
+  "id": "L07",
+  "title": "A ruler for controller-subordinate interaction",
+  "licensing_cards": [
+    "H06",
+    "H07",
+    "H10",
+    "H15",
+    "H03"
+  ],
+  "protocol": {
+    "crossed_roles": "the same subordinates under different controllers and domains; attribution must follow the correction relation (H07)",
+    "hidden_intervention": "hide the next correction; a graph model must beat role frequency, coherence, identity and token share (H15)",
+    "signatures": "suppression versus amplification from proposal-to-realization change (H06)",
+    "mistakes": "handling sequences predict downstream revisions (H10)"
+  },
+  "rivals": [
+    "coherence of the product",
+    "actor style",
+    "token share"
+  ],
+  "transfer_gap": "V13 records who corrected whom; a text or log corpus needs correction events with actors. Without them the ruler has no input and only the artifact-floor result (H03) transfers.",
+  "sounding_line_target": "collaboration logs and revision histories with actor-attributed operations (the contribution network's per-actor relations)",
+  "records_required": "proposal, correction and realization events with actor ids; a hidden next intervention to predict",
+  "cheap_baseline": "coherence of the final artifact",
+  "positive_gate": "a constructed log corpus with paired central and shared-brief teams where the artifact classifier is at floor and the interaction reader is not",
+  "failure_meaning": "if coherence separates the teams, the corpus leaked the director into the artifact",
+  "human_evidence_boundary": "the ruler reads records of operations; it does not attribute authorship or intent to people",
+  "recommendation": "defer",
+  "licensing_states": {
+    "H06": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Suppression and amplification routes were classified 100% and 75% of the time and the next intervention was predicted at a log score of -0.48 against -0.69 for a coin flip."
+    },
+    "H07": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Across two directors and two domains, the correction route followed the subordinate's style in at least 84% of teams in every cell."
+    },
+    "H10": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "A model of how the controller handled each mistake predicted whether a revision followed +0.57 nats better than the revision frequency; corrected was revised 100%, accepted was revised 0%, exploited was revised 0%, concealed was revised 100%, missed was revised 0%."
+    },
+    "H15": {
+      "state": "LANDED",
+      "criterion": false,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "The graph model predicted the hidden next intervention at a log score of -1.08 against -0.98 for the best baseline."
+    },
+    "H03": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Director versus shared brief: artifact-only 50%, coherence 50%, interaction records 100% against 50% chance."
+    }
+  },
+  "written": "2026-08-28T17:57:04"
+}

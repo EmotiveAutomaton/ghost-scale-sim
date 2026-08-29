@@ -1,0 +1,299 @@
+{
+  "card": "G16",
+  "trunk": "G",
+  "wave": 3,
+  "lane": "transfer",
+  "record": {
+    "question": "Does the frozen trust architecture predict fresh sources and reversals?",
+    "what_happened": "On fresh sources the reader's claim-truth accuracy was identity 84%, domain 83%, base_rate 83%, reversal 54%, and it recovered 6 claims after a reversal.",
+    "what_changed_in_the_project_world": "The trust architecture transfers where it was designed to and the table says where it does not.",
+    "what_remains_a_rival": "overfitting",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "The frozen factored trust reader predicts fresh sources' claims, stays calibrated under new domains and base rates, and recovers after a reliability reversal; its failure regions are named.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_G16": {
+      "passed": true,
+      "by_fresh": {
+        "identity": {
+          "acc": 0.8350138888888889,
+          "ece": 0.07456461840958958,
+          "recovery": 8.0
+        },
+        "domain": {
+          "acc": 0.8312152777777778,
+          "ece": 0.07615788850344041,
+          "recovery": 8.0
+        },
+        "base_rate": {
+          "acc": 0.8346319444444444,
+          "ece": 0.07481451569651007,
+          "recovery": 8.0
+        },
+        "reversal": {
+          "acc": 0.5425069444444444,
+          "ece": 0.31427964981112616,
+          "recovery": 5.7143749999999995
+        }
+      }
+    },
+    "by_fresh": {
+      "identity": {
+        "acc": 0.8350138888888889,
+        "ece": 0.07456461840958958,
+        "recovery": 8.0
+      },
+      "domain": {
+        "acc": 0.8312152777777778,
+        "ece": 0.07615788850344041,
+        "recovery": 8.0
+      },
+      "base_rate": {
+        "acc": 0.8346319444444444,
+        "ece": 0.07481451569651007,
+        "recovery": 8.0
+      },
+      "reversal": {
+        "acc": 0.5425069444444444,
+        "ece": 0.31427964981112616,
+        "recovery": 5.7143749999999995
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "identity": {
+      "units": 480,
+      "rows": 9600,
+      "min_rows_in_a_unit": 20
+    },
+    "domain": {
+      "units": 480,
+      "rows": 9600,
+      "min_rows_in_a_unit": 20
+    },
+    "base_rate": {
+      "units": 480,
+      "rows": 9600,
+      "min_rows_in_a_unit": 20
+    },
+    "reversal": {
+      "units": 480,
+      "rows": 9600,
+      "min_rows_in_a_unit": 20
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 480,
+    "realized_units": 480,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 20,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 480,
+    "rows": 1920
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "overfitting",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 643.51,
+    "units_cpu_s": 7511.91,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 123.734375,
+      "user": 102.671875,
+      "system": 21.0625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 92831744,
+      "peak_rss": 179212288
+    }
+  },
+  "runtime_seconds": 643.51,
+  "tier": "T2",
+  "units": {
+    "n": 480,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:fresh_sources_predicted_above_chance",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.33501388888888894,
+        "expected": 0.1
+      },
+      {
+        "name": "placebo:reader_frozen_before_fresh_sources",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:fresh_identity_read",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.8350138888888889,
+        "expected": 1.0,
+        "tolerance": 0.4
+      },
+      {
+        "name": "surface:no_label_reuse",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:new_domain_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.3312152777777778,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:recovery_after_reversal",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 2.2856250000000005,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:calibrated_under_new_base_rate",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.07481451569651007,
+        "expected": 0.25,
+        "tolerance": 0.17518548530348993
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_g.py",
+    "sha256": "34279193869a9d31bcc7a2021b13dc87728b9017ed7f3b820793ac596f261315",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:fresh_sources_predicted_above_chance",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.33501388888888894,
+        "expected": 0.1
+      },
+      {
+        "name": "placebo:reader_frozen_before_fresh_sources",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:fresh_identity_read",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.8350138888888889,
+        "expected": 1.0,
+        "tolerance": 0.4
+      },
+      {
+        "name": "surface:no_label_reuse",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:new_domain_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.3312152777777778,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:recovery_after_reversal",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 2.2856250000000005,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:calibrated_under_new_base_rate",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.07481451569651007,
+        "expected": 0.25,
+        "tolerance": 0.17518548530348993
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "L02",
+  "title": "Communicative goals in the reader",
+  "licensing_cards": [
+    "G01",
+    "G04",
+    "G05",
+    "G06",
+    "G13",
+    "G15",
+    "I07",
+    "I08"
+  ],
+  "interface": {
+    "q_goal": "posterior over accurate, comprehension_support, persuasion, self_presentation, concealment, misleading, neutral",
+    "q_source": "reliability by source and domain, updated only from revealed outcomes",
+    "q_content": "support from the artifact alone",
+    "q_process": "the maker's process posterior",
+    "uptake": "prediction_use, process_imitation, belief_update, preference_movement, refusal as separate outputs"
+  },
+  "declared_edges": {
+    "goal": [
+      "q_goal",
+      "q_source",
+      "uptake"
+    ],
+    "source history": [
+      "q_source",
+      "q_goal",
+      "uptake"
+    ],
+    "content": [
+      "q_content",
+      "q_goal",
+      "uptake"
+    ],
+    "relevance and alignment": [
+      "uptake"
+    ]
+  },
+  "strongest_failures": [
+    "a stance readable only through an unmatched surface feature (I07 guards it)",
+    "trust collapsed into one scalar (G04, G05)",
+    "a false note taken as truth (G13)"
+  ],
+  "transfer_gap": "V13 goals shape which evidence a source emits about claims whose truth the reader later learns; in text the truth of claims is rarely revealed, so q_goal will lean on q_source and content far more than in the simulation.",
+  "sounding_line_target": "the probe schema's reader posterior, extended from an audience distribution to a goal distribution with separate reliability and content fields",
+  "records_required": "claims with eventually revealed truth values, or at least a verifiable subset; source histories by domain",
+  "cheap_baseline": "a helpfulness or valence score",
+  "positive_gate": "a constructed corpus where sources with planted goals are surface-matched and the goal is recovered only when truths are revealed",
+  "failure_meaning": "if goal recovery in text needs an unmatched surface cue, the reader is reading polish, and the export is withdrawn",
+  "human_evidence_boundary": "the interface represents goals a constructed source held; it does not establish what a human writer intended, and no output may be labelled as a person's honesty",
+  "recommendation": "pursue",
+  "licensing_states": {
+    "G01": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "With twelve artifacts and their claims' truths, the reader named the maker's stance 85% of the time against 14% chance; a surface classifier on the artifacts named it 16%."
+    },
+    "G04": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Reliability posterior against the planted rate: helpful_incompetent 0.93 vs 1.00, neutral_reliable 0.93 vs 1.00, adversarial_truthful 0.93 vs 1.00, helpful_outdated 0.59 vs 0.60."
+    },
+    "G05": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Strong artifact evidence moved the content posterior +0.19 more than weak, whatever the history; a revealed history moved the reliability posterior +0.34 more than none, whatever the evidence."
+    },
+    "G06": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Belief update moved +0.80 with the source's truthfulness and 0.0e+00 with its alignment; preference movement moved +0.64 with alignment."
+    },
+    "G13": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "A false note left 2% of the mass on the wrong side against strong contradicting evidence and 34% against weak; a reader that took the note as truth was wrong 100% of the time."
+    },
+    "G15": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "METHOD",
+      "what_happened": "Every channel responded to its declared factors by at least 0.33 and to any other factor by at most 0.00."
+    },
+    "I07": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "METHOD",
+      "what_happened": "A classifier on each artifact's token histogram, entropy, length and polish named the goal 18% of the time against 14% chance; a reader who learned the claims' truths named it 85% of the time. Across a source's artifacts, evidence one-sidedness identified goals 12% of the time."
+    },
+    "I08": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "METHOD",
+      "what_happened": "Changing what a source asserts left the content posterior unmoved to 0.0e+00; changing the evidence tokens left the source posterior unmoved to 0.0e+00; changing relevance and alignment moved only the uptake channels."
+    }
+  },
+  "written": "2026-08-28T17:57:03"
+}

@@ -1,0 +1,282 @@
+{
+  "card": "A13",
+  "trunk": "A",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "Does attention create apparent information in null worlds?",
+    "what_happened": "No policy gained more than -13.141 nats in a null world; counting the surface twice raised confidence by +0.20 with an accuracy change of +0.00, the planted failure.",
+    "what_changed_in_the_project_world": "Attention here cannot manufacture information; double counting manufactures only confidence, and the card says so.",
+    "what_remains_a_rival": "confidence",
+    "claim_ceiling": "METHOD"
+  },
+  "hypothesis": "In worlds where the channels carry nothing, are duplicated, or are relabelled, no attention policy gains a proper score; confidence that rises without accuracy is a failure.",
+  "claim_ceiling": "METHOD",
+  "construction_realization": {},
+  "results": {
+    "criterion_A13": {
+      "passed": false,
+      "no_information": -13.14090549409534,
+      "duplication": -0.6813474462012713,
+      "permutation": -15.881595224365764,
+      "high_precision": -14.056797067809248,
+      "duplication_inflation": 0.19836208570592542
+    },
+    "by_null": {
+      "no_information": {
+        "gain": -13.14090549409534,
+        "inflation": 0.4515922388435558,
+        "acc_change": 0.005769042968750001
+      },
+      "duplication": {
+        "gain": -0.6813474462012713,
+        "inflation": 0.19836208570592542,
+        "acc_change": 0.0
+      },
+      "permutation": {
+        "gain": -15.881595224365764,
+        "inflation": 0.4548383047361632,
+        "acc_change": 0.0005664062499999999
+      },
+      "high_precision": {
+        "gain": -14.056797067809248,
+        "inflation": 0.08427286906275286,
+        "acc_change": 0.00054931640625
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "no_information": {
+      "units": 2560,
+      "rows": 409600,
+      "min_rows_in_a_unit": 160
+    },
+    "duplication": {
+      "units": 2560,
+      "rows": 409600,
+      "min_rows_in_a_unit": 160
+    },
+    "permutation": {
+      "units": 2560,
+      "rows": 409600,
+      "min_rows_in_a_unit": 160
+    },
+    "high_precision": {
+      "units": 2560,
+      "rows": 409600,
+      "min_rows_in_a_unit": 160
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 160,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 10240
+  },
+  "matching_residuals": {},
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "confidence",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 2602.25,
+    "units_cpu_s": 29873.86,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 54824,
+      "process_time": 10.8125,
+      "user": 8.328125,
+      "system": 2.484375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 48279552,
+      "peak_rss": 51335168
+    }
+  },
+  "runtime_seconds": 2602.25,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:duplication_inflates_confidence_as_expected",
+        "kind": "live",
+        "passed": true,
+        "detail": "counting the surface twice must raise confidence without raising accuracy; this is the planted failure the card exists to document",
+        "observed": 0.19836208570592542,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:no_gain_in_any_null",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.02
+      },
+      {
+        "name": "positive:duplication_adds_no_accuracy",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "surface:high_precision_on_noise_inflation_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the confidence a reader manufactures by over-weighting a noise channel; a documented hazard, not a control",
+        "observed": 0.08427286906275286,
+        "expected": 0.0,
+        "tolerance": 1.0
+      },
+      {
+        "name": "oracle:not_applicable_null_card",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.0,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:null_gain_bounded",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 13.14090549409534,
+        "expected": -0.02
+      },
+      {
+        "name": "calibration:no_information_no_accuracy",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a no-information read must not change accuracy; the confidence it manufactures is the hazard this card exists to measure and is judged by the pre-registered criterion, not silenced by a gate",
+        "observed": 0.005769042968750001,
+        "expected": 0.05,
+        "tolerance": 0.04423095803125
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_a.py",
+    "sha256": "7dfdc3a8154156d7063d9a90e670b4406e8f8919cb51fd9fd8d6b78b51cc9c69",
+    "git_commit": "06d22e6",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:duplication_inflates_confidence_as_expected",
+        "kind": "live",
+        "passed": true,
+        "detail": "counting the surface twice must raise confidence without raising accuracy; this is the planted failure the card exists to document",
+        "observed": 0.19836208570592542,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:no_gain_in_any_null",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.02
+      },
+      {
+        "name": "positive:duplication_adds_no_accuracy",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "surface:high_precision_on_noise_inflation_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "the confidence a reader manufactures by over-weighting a noise channel; a documented hazard, not a control",
+        "observed": 0.08427286906275286,
+        "expected": 0.0,
+        "tolerance": 1.0
+      },
+      {
+        "name": "oracle:not_applicable_null_card",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.0,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:null_gain_bounded",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 13.14090549409534,
+        "expected": -0.02
+      },
+      {
+        "name": "calibration:no_information_no_accuracy",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a no-information read must not change accuracy; the confidence it manufactures is the hazard this card exists to measure and is judged by the pre-registered criterion, not silenced by a gate",
+        "observed": 0.005769042968750001,
+        "expected": 0.05,
+        "tolerance": 0.04423095803125
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

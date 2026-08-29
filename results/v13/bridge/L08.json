@@ -1,0 +1,71 @@
+{
+  "id": "L08",
+  "title": "Resolution required for topology inference",
+  "licensing_cards": [
+    "H14",
+    "H03",
+    "H13",
+    "Q08"
+  ],
+  "ladder": {
+    "v12_F03": {
+      "dependency@steps4x12": 0.5144444444444444,
+      "dependency@steps32x12": 0.7129166666666666,
+      "dependency@steps32x60": 0.9629398148148148,
+      "dependency@steps128x60": 1.0
+    },
+    "v13_H14": {
+      "artifact": 0.5,
+      "timings": 0.5,
+      "proposals": 0.5,
+      "alternatives": 0.5,
+      "accept_veto": 0.5,
+      "role_map": 0.46908482142857133,
+      "full_log": 1.0
+    }
+  },
+  "minimum": {
+    "layered_vs_flat (V12 F03)": "at floor at 4 steps x 12 blocks; moderate at 32 x 12; strong at 32 x 60; near-perfect at 128 x 60",
+    "director_vs_brief (V13 H03, H14)": "artifact-only at floor at every resolution; separable only with correction records; the first sufficient record level is reported by H14",
+    "probes (Q08)": "a probe set below the divergence floor invalidates any active-selection claim"
+  },
+  "transfer_gap": "V12 blocks and V13 events are segmented by construction; text segmentation adds error the ladder does not include.",
+  "sounding_line_target": "the admissibility check before any topology score is reported",
+  "records_required": "segmentable blocks or events at the stated counts",
+  "cheap_baseline": "report topology at any resolution",
+  "positive_gate": "the ruler reaches its validated accuracy at the stated resolution on a planted corpus",
+  "failure_meaning": "a topology score below the admissible resolution is a number without a ruler",
+  "human_evidence_boundary": "resolution requirements are properties of these rulers on constructed data; they do not transfer to human evidence without remeasurement",
+  "recommendation": "pursue",
+  "licensing_states": {
+    "H14": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Discrimination by record level: artifact 50%, timings 50%, proposals 50%, alternatives 50%, accept_veto 50%, role_map 47%, full_log 100%; the first level reaching 75% was full_log."
+    },
+    "H03": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Director versus shared brief: artifact-only 50%, coherence 50%, interaction records 100% against 50% chance."
+    },
+    "H13": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "BOUNDARY",
+      "what_happened": "On artifacts that were literally the same, a classifier named the history 50% of the time against 50% chance, and the artifact-only reader's topology posterior stayed flat."
+    },
+    "Q08": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "METHOD",
+      "what_happened": "Minimum discriminativeness by probe set: commission 0.007, channel 0.074, query 0.010; commissions differed pairwise by 0.288."
+    }
+  },
+  "written": "2026-08-28T17:57:04"
+}

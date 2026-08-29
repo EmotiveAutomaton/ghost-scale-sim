@@ -1,0 +1,107 @@
+{
+  "id": "L09",
+  "title": "The trust gate a model reader should expose",
+  "licensing_cards": [
+    "G04",
+    "G05",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G12",
+    "G13",
+    "G16",
+    "A09"
+  ],
+  "outputs": [
+    "q_source by source and domain",
+    "q_content per claim",
+    "q_goal per source",
+    "uptake channels",
+    "conflict flag or abstention when a note contradicts strong evidence"
+  ],
+  "tests": [
+    "false context at several evidence strengths and orders (G13)",
+    "reversal of a source's reliability (G16)",
+    "repair after failure by evidence versus wording (G10)",
+    "source-domain transfer against a shared label (G12)",
+    "trust-default frontier (G07)"
+  ],
+  "transfer_gap": "V13 reveals claim truths on schedule; in text, verification is sparse and delayed, which stretches every recovery time and weakens q_goal.",
+  "sounding_line_target": "the probe schema's constrained output, extended with the separate posteriors above",
+  "records_required": "claims with revealed truths, source histories by domain, notes with their own provenance",
+  "cheap_baseline": "one trust scalar per source",
+  "positive_gate": "a constructed corpus where the factored reader keeps strong contradicting evidence against a false note and the scalar reader does not",
+  "failure_meaning": "if the factored reader never beats the scalar on fresh sources, keep the scalar and say so",
+  "human_evidence_boundary": "the gate is a reader architecture; it does not measure anyone's trust",
+  "recommendation": "defer",
+  "licensing_states": {
+    "G04": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Reliability posterior against the planted rate: helpful_incompetent 0.93 vs 1.00, neutral_reliable 0.93 vs 1.00, adversarial_truthful 0.93 vs 1.00, helpful_outdated 0.59 vs 0.60."
+    },
+    "G05": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Strong artifact evidence moved the content posterior +0.19 more than weak, whatever the history; a revealed history moved the reliability posterior +0.34 more than none, whatever the evidence."
+    },
+    "G07": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "A high-trust default reached a reliable source's rate within 2 claims against 16 for a low default, and accepted 4.4 false assertions from an unreliable source against 0.2."
+    },
+    "G08": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "The best-predicting trust rule was stable: bayes, one_change: change_point, many_changes: change_point."
+    },
+    "G09": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Learning from a later event that the source misleads raised the accuracy of its earlier ambiguous claims by +1.00; the same event from another source changed them by +0.00; a false revelation by +0.00."
+    },
+    "G10": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Trust recovered by apology +0.00, costly_action +0.13, repeated_reliability +0.17, third_party +0.10, none +0.00 after three revealed false assertions."
+    },
+    "G12": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "Carrying a source's learned reliability improved truth reading by +0.39 in its own domain, -1.80 in a domain where it misleads, and -1.80 for a namesake."
+    },
+    "G13": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "A false note left 2% of the mass on the wrong side against strong contradicting evidence and 34% against weak; a reader that took the note as truth was wrong 100% of the time."
+    },
+    "G16": {
+      "state": "UNRUN"
+    },
+    "A09": {
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": true,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "With strong artifact evidence and a source whose history and assertions ran against the truth, the factored reader kept 83% of its mass on the truth against 73% for a single-trust-number reader; the content posterior never moved with the history."
+    }
+  },
+  "written": "2026-08-28T17:57:04"
+}
