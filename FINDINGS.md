@@ -243,6 +243,61 @@ by its own first run and re-run on the structured likelihood with the first verd
 (D-V12-1); the T battery moved off the CREATOR ceiling; F03 gained a readability ladder; the X
 survival rule was tightened after seeing the unattacked far bin.*
 
+*Corrected by V13 (I02): V12's generic prior sat measurably closer to the truth than the self
+prior it was compared with; matched on that distance as well, the S04 near gain is +0.37 nats,
+not +0.72 — 49% of the reported gain was the imbalance. The S04 row above keeps V12's number as
+V12 measured it; the V13 row below carries the corrected comparison.*
+
+### Version 13, common ground: what self buys beyond an equally local prior, and what else a bounded reader can use
+
+*The version that built five objects V12 lacked: a nested similarity basin, an explicit
+attention policy, a multidimensional cost-and-opportunity model, communicative goals as ordinary
+maker goals, and a role-relative production graph with an exact shared-brief rival. 132
+mandatory cards and a 20-attack matrix, pre-registered and hash-locked (`prereg_v13.py`), run as a
+tier-calibrated, checkpointed queue (55 wall-clock hours, 630 CPU-hours); 123 landed, nine
+closed as instrument failures at full scale; 71 promoted cards re-run on an untouched
+confirmation lineage, 69 held, two withheld at confirmation. Every card is generated into
+[docs/versions/v13-common-ground/RESULTS_PACKET.md](docs/versions/v13-common-ground/RESULTS_PACKET.md);
+the curator packet is [RESULTS.md](docs/versions/v13-common-ground/RESULTS.md); the hypothesis
+ledger is [docs/theory/READING_INTENT.md](docs/theory/READING_INTENT.md) §12; the Sounding Line
+ledger is [BRIDGE_PACKET.md](docs/versions/v13-common-ground/BRIDGE_PACKET.md).*
+
+| # | The question | Where it stands |
+|---|---|---|
+| I01–I14 | Are the new worlds live, matched, reproducible and honestly timed? | **Yes, all fourteen.** Eight V12 anchors rebuilt to the digit; the equally local prior matched on entropy to machine precision and on distance within 0.06 nats; every factor moves its own channel and leaks at most 0.002 into a protected one; PyMDP matches exact inference to 1.5e-16 where the factors are independent; forward and reverse orders and two clones agree on every hashed field |
+| C04, C14, C16 | What does self buy beyond a prior matched on entropy *and* on distance to the truth? | **+0.26 nats on the nearest makers, −0.16 on the farthest, +1.21 on anti-similar ones; confirmed; identical on fresh families.** Pooled +0.31; under fair rematching (X04) the pooled gain narrows to +0.12; under false similarity (X06) it vanishes, as it should. On the hidden next goal +0.04 near, −0.03 far |
+| C03, C05 | What does a common-substrate prior buy over a broad population? | **Withheld.** Both instruments failed their own controls at 512 worlds (a positive floor; the routes-converge placebo). No reading taken; the closure rule's one repair has not been made |
+| C07, C09, C12 | What do group, history and a learned anti-similarity transform add? | **A true convention match +1.34 nats, a claimed-only match −24.5; 97% of an eight-artifact history gain is the target's own** (a same-label twin's history +0.01). The transform card is withheld (placebo failed) |
+| C06, C08, C10, C11, C13, C15 | Typicality, expertise, similarity axes, nuisance match, common focus, reader plurality | **Typicality: ρ = +0.19, below the 0.3 bar; the best fixed mixture puts 13% on self.** Expertise +0.04 on methods (below bar). Nuisance match moved nothing (a clean null). Common focus +0.04 only where common axes carried the goal. **Pooling four readers lost −1.15 nats to the best single reader, −1.91 when correlated, and was overconfident by +0.33** |
+| A01, A03, A12, X08 | Can finite attention buy information without creating it? | **Learned precision +14.1 nats over uniform; wrong precision −2.9, confidently wrong 26% against 9%.** Neutral weights reproduce the plain posterior to 0.0. Under adversarial salience the salience reader lost 1.2 nats and sat 6.5 below learned; the margin survived the hijack attack (+15.4 → +14.7) |
+| A10, A13, A02, A06 | Is the allocation safe? | **No.** Reallocation under surprise: 0.03 against 0.04 for a fixed reader (no gain). **Counting the surface twice raised confidence +0.20 at zero accuracy** (the planted failure). The cue-selection and purpose-first-entry instruments failed their positive controls |
+| A04, A05, A07, A08, A09, A11, A14 | The rest of attention | Common focus helps only where common axes carry the goal (+0.05 / −0.10); matching the maker's attention buys +0.03 beyond its label; anomaly weighting +0.31 only where handling differs, −3.48 for forced defects; menu attention ≈0; a false history leaves 83% on the truth (73% scalar); narrow monitoring's error 0.95 against 0.84 after a cue falls silent; the best policy is ecology-specific |
+| O02, O06, O07, O08, O09, O11 | Can costs identify their causes? | **Yes, given the right cost model.** Weighted dimension named 79%, +0.66 nats on held-out choices; motivation–competence 67% against 25%; imposed work 0.000 nats to the record reader against 1.02 flag-blind; goal strength monotone in the planted one (ρ +0.93); epistemic state 57% against 25%; social/risk tradeoffs 79% (the confirmation's positive control failed: withheld there) |
+| O17, O16, O10, O01, O03 | Do recovered tradeoffs predict, and stay calibrated? | **Four of five prospective targets +0.7 to +1.1 nats; a new role −0.28 (criterion failed).** Calibration under missing or false menus did not improve (0.17 against 0.16). Sunk, wasted and late-discovered costs carried identical evidence (spread 0.000). The V12 opportunity anchors' constrained-inversion margin did not reach its bar here (+0.01) |
+| O12–O15, O18 | Salience, weighting families, the idealized reader, effort claims | The neglect mimic's size sensitivity 0.22 against the exact reader's 0.45, raised to 0.45 by salience manipulations that leave the choices unchanged; the weighting family is linear and its neighbours within 0.01 nats; **the exact reader beat the neglect heuristic by +0.01 nats** — no super-empathy; a high-effort claim moved the novice +0.20, the expert 0.00, motivation 0.00 |
+| X09, X10, X11 | Attacks on cost inference | Hidden and false choice sets: grew (+0.50 → +1.20). **Misspecified cost function: reversed (+0.49 → −0.40).** Competence–cost reversal: survived |
+| P01 | Does the V12 correction curve reproduce under a matched local control? | **Withheld.** Half-life 5.9 artifacts and residual 0.01 are inside the bars, but near makers needed *more* correction than far ones and calibration failed — the instrument's own controls |
+| P02, P03, P05, P06, P07, P12, P13, P14 | How is a local prior corrected? | Behaviour +0.05, biography +0.07, group label +0.05, false context ≈0; self weight 0.46 with a true match, 0.14 with a reliable-looking false note, 0.02 without; a correction learned on one maker transfers to that maker in a new domain (+0.91) and harms a group-mate (−4.07) and a stranger (−5.91); confidence-rewarded readers keep more self (0.04 against 0.03); strong reliable conflict after a short history +0.96, weak unreliable after a long one −3.51; partial correspondence +1.31 over the stereotype at sixteen; corrected posteriors +0.17 on the hidden goal; abstention 0.50 before separation, 0.97 after where methods differ, 0.55 where they coincide |
+| P04, P08, P10, P11 | Feedback, robustness, plurality | Outcome feedback did not lower calibration error (0.23 everywhere); the change-point reader lost to reset and anchor; posterior exchange +0.53 nats with calibration error 0.30 → 0.48; correlated pools overconfident by +0.48 to +0.82 |
+| G01–G06, G09–G15 | Can goal, reliability, content and uptake stay separate? | **Yes.** Stance 85% against 14% chance with a surface classifier at 16%; joint inference +10.1 nats where stance is domain-specific; reliability within 0.07 of planted; content and source posteriors move on their own levers (+0.19, +0.34); belief follows truth (+0.80) not alignment (0.00), preference follows alignment (+0.64); a false note leaves 2% against strong evidence and 34% against weak (naive reader wrong 100%); reinterpretation +1.00 where relevant, 0 otherwise; apology 0, costly action +0.13, repeated reliability +0.17; a namesake transfers −1.80; challenge +0.62; every channel answers only its own factors |
+| G07, G08, G16, X07, X15 | Defaults, dynamics, transfer, attacks | A high-trust default reaches a reliable source's rate in 2 claims against 16 and accepts 4.4 false assertions against 0.2; the best trust rule depends on the history; fresh sources 84%, reversal 54% with six claims to recover. **False biography and context cut the vigilance gain +0.71 → +0.14; a regime switch +0.35 → +0.10** |
+| H03, H13, H14, H16, X13, X03, X12 | Can records tell a director from an exact shared brief? | **Only the full interaction log: 100%, everything else 50%.** Coherence 50%; identical artifacts abstained on; every partial record level at chance; 100% on fresh team scales and domains; survives the exact topology match; dies under a shuffled policy (follows the policy, not the labels) and under equifinal history (abstains) |
+| H02, H04, H05, H07–H12 | The rest of hierarchy | Role-relative model +0.31 (+1.59 under conflicting private goals); graph reader +0.23 over coherence on next control; role priors cannot replace target evidence (−2.70 → −0.35); attribution follows style in ≥84% of teams in every crossed cell, follows new roles 100%; private goals 97% with proposals, abstained without; handling model +0.57; project goal 98% after a global rewrite, style 25% |
+| H06, H15 | Interaction routes and the next intervention | Suppression 100%, amplification 75% (at, not above, the bar). **Predicting the next intervention failed: −1.08 against −0.98 for the best baseline** |
+| Q03, Q06, Q07, Q09, Q10, Q11 | Does exact selection beat passive reading? | **Where a probe changes what can be seen, yes.** Highest-value field bought 78%; attention-informed inspection +0.09; goal-aware challenge +0.54 (an anticipating adversary takes 8.7 of it back); stopping regret 0.08 at the middle price; robust reading −3.5 against −25.8 for salience under a decoy; the self prior buys nothing per probe |
+| Q01, Q02, Q04, Q05, Q12 | Does PyMDP add useful action selection? | **No, at this construction.** Agreement with the exact probe 61% (bar 80%) and 70% on fresh families (bar 70%, withheld); commissions inert as probes (+0.02 against +0.43 for a free look), as in V12; the cause-disambiguation probe hits the right pair 100% and gains 0.00; purpose-first entry 1%. The trunk's closure rule for the present PyMDP reader is triggered |
+| L01–L12 | Which rulers deserve text-side implementation? | **Pursue three, defer three, kill six**, mechanically from the licensing cards: pursue communicative goals, anomaly partitioning, and the topology-resolution admissibility check; defer the interaction ruler, the trust gate and the record-dominance table until the records exist; kill cost records, attention manipulations, nested similarity, purpose-first and author-purpose questions |
+| X01–X20 | Which results survive cheap features, false context, equifinality and misspecification? | Every flight survives identity-cue removal, label change, a random valid family, solver substitution, relabelling, fresh vocabulary and an adaptive adversary. Named narrowings: fair rematching (nested, +0.38 → +0.12), false biography (vigilance, +0.71 → +0.14), regime switch (+0.35 → +0.10). Named deaths: misspecified cost (reversed), shuffled policy and equifinal history (the hand follows the policy and abstains) |
+
+*Deviations recorded ([RESULTS.md](docs/versions/v13-common-ground/RESULTS.md), Deviations after
+data, D-V13-1 to D-V13-7): product-of-experts families crashed or silently mis-scored six cards
+whose instruments assumed draw-link families, fixed by guards and retried; P07's instrument ran
+history lengths (2, 5) against the definition's (2, 8) and was re-run with its confirmation
+superseded on record; C06's fixed bins became per-unit tertiles; the bridge cards' licensing gate
+and the runner learned that transfer-only cards resolve in their own lane; every closure now
+names its failed gates; another session made the confirmation freeze binding mid-run. Nine
+instrument failures are kept as refusals to report, not nulls.*
+
 ### Not answerable in simulation
 
 | # | The question | Where it stands |
@@ -287,12 +342,21 @@ at one. **The conclusion survives; the stated justification should be updated.**
 6. **The headline effect's size depends on which content model you believe**, and the largest
    numbers come from the description the project itself replaced on theoretical grounds.
 7. **Which self-first claim the theory wants.** V12 found the self-first reader wins near itself,
-   loses in the middle distances, and is worse than a population prior on average. As a mechanism
-   to detect in readers that is a signature; as advice it is false. The essay's "intensely
-   empathizing with the creators" has to say which it means.
-8. **A construction where probes matter.** Active reading bought almost nothing in V12 because
-   the artifacts already carry what a probe would ask for. The question stands; the world to ask
-   it in has not been built.
+   loses in the middle distances, and is worse than a population prior on average; V13 halved
+   the near gain by matching the rival on distance as well (+0.37, and +0.26 against the equally
+   local prior) and confirmed the shape. As a mechanism to detect in readers that is a signature;
+   as advice it is false. The essay's "intensely empathizing with the creators" has to say which
+   it means. **What lies under the self — the common substrate — is unread**: both V13 cards
+   are withheld on their own controls.
+8. **A construction where probes matter.** V13 built three: inferring a maker's attention and
+   reading the channel it left dull (+0.09 nats), a goal-aware challenge (+0.54), and a stopping
+   rule (regret 0.08). Exact selection earns its keep there; commissions stay inert (+0.02
+   against a free look), and the present PyMDP reader agrees with exact selection below its bars
+   and is closed by its own rule. The open question is now the PyMDP reader, not the world.
+9. **Two safety boundaries with no repair.** A precision reader handed the same surface twice
+   gains +0.20 confidence at zero accuracy; a cost reader under a misspecified cost model
+   reverses its advantage. Neither has a reader-side fix in this record, and the first is the
+   reason attention is not exported to text.
 
 *The crash/peak co-location claim has been retired rather than revised: it does not survive exact
 inference. It has been removed from the README, and the committed prediction card now carries it

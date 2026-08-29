@@ -66,6 +66,10 @@ Across those generations it implements:
 - a measured self-model as the reader's first prior, opportunity records beside artifacts,
   surface-matched reading regimes, the posterior-to-preference bridge, and production under
   many hands, in V12;
+- a non-self prior matched on entropy and on distance to the truth, a nested similarity basin, a
+  finite attention policy, a six-cause cost model, communicative goals with separate reliability
+  and content, a role-relative production graph with an exact shared-brief twin, and a
+  twenty-attack matrix, in V13;
 - exact and approximate inference paths, construction invariants, source hashes, and committed
   verdicts.
 
@@ -73,6 +77,22 @@ Several attractive claims failed these controls and remain recorded as failures.
 the result, not an exception to it.
 
 ## The latest result, and where the model stops
+
+In V13, the self-first reader's advantage survives a rival that is exactly as local as the self
+— matched on entropy *and* on expected distance to the truth — and it is smaller than V12
+reported: **+0.26 nats** on the makers nearest the reader after one artifact, **−0.16** on the
+farthest, confirmed on an untouched lineage and identical on fresh families; V12's generic rival
+had sat closer to the truth than the self prior, and matching that away removes half of V12's
+near gain (+0.72 becomes +0.37). What the reader is told costs it most: a claimed group that
+only matches by name is worth **−24.5 nats**, a namesake's reputation −1.8. Learned attention
+precision is worth +14 nats and survives adversarial salience, but counting the same surface
+twice inflates confidence at zero accuracy; a factored cost reader identifies planted cost causes
+(79%) and reverses under a wrong cost model; a director and an exact shared-brief twin are told
+apart only by the full interaction log (100% against 50% for every artifact-level reader).
+Pooling readers made them worse and overconfident. Nine of 132 cards are withheld as instrument
+failures, including both that would have read what a common substrate buys. The full account,
+including every withheld reading, is in the
+[V13 results](docs/versions/v13-common-ground/RESULTS.md).
 
 In V12, a reader that starts from a measured model of itself reads makers like itself far better
 than a prior with the same information, and pays for it everywhere else: **+0.60 nats** on the
