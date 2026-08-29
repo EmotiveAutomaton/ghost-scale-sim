@@ -206,7 +206,8 @@ def run_lane(doc: dict, lane: str, cards: list, workers: int, pool, tier_name: s
         card.upstream_oracle = oracle
         print(f"\n=== {cid} [{lane}] (wave {d['wave']}, trunk {d['trunk']}): {d['question']}", flush=True)
         status(card=cid, lane=lane, stage=lane)
-        if lane == "discovery":
+        owns_status = lane == "discovery" or (lane == "transfer" and "discovery" not in d["lanes"])   # transfer-only cards resolve in their lane
+        if owns_status:
             M.update_card(doc, cid, status="RUNNING")
             M.save_manifest(doc)
         try:
@@ -214,13 +215,13 @@ def run_lane(doc: dict, lane: str, cards: list, workers: int, pool, tier_name: s
             v, acct = out["verdict"], out["accounting"]
             state = v["state"]
             record_runtime(cid, lane, acct, state)
-            if lane == "discovery":
+            if owns_status:
                 M.update_card(doc, cid, status=state, closure_reason=v.get("closure_reason", ""), pursuit=v.get("pursuit", "OPENED"),
                               warrant=v.get("warrant", "DESCRIPTIVE_ONLY"), actual=acct, upstream_oracle=oracle, repairs_used=int(len(v.get("repairs", []))))
             print(f"    -> {state} in {acct['wall_s']:.1f}s wall, {acct['children_cpu_s']:.1f}s child CPU", flush=True)
         except Exception as exc:                                             # noqa: BLE001
             record_runtime(cid, lane, {"error": repr(exc), "traceback": traceback.format_exc()[-3000:]}, "ERROR")
-            if lane == "discovery":
+            if owns_status:
                 M.update_card(doc, cid, status="BUILT")
             print(f"    !! ERROR {exc!r}", flush=True)
             from concurrent.futures.process import BrokenProcessPool
@@ -229,7 +230,7 @@ def run_lane(doc: dict, lane: str, cards: list, workers: int, pool, tier_name: s
                 # program into a fast sweep of ERRORs; die loudly instead - the checkpoints and
                 # ledger make a relaunch resume where this stopped, with a fresh pool
                 raise SystemExit("worker pool broken; relaunch --stage all to resume") from exc
-        if lane == "discovery":
+        if owns_status:
             M.save_manifest(doc)
             M.write_coverage(doc)
 

@@ -3,9 +3,8 @@
   "mandatory_total": 132,
   "mandatory_resolved": 127,
   "by_state": {
-    "LANDED": 116,
-    "INSTRUMENT_FAILED": 10,
-    "RESOURCE_BLOCKED": 1,
+    "LANDED": 118,
+    "INSTRUMENT_FAILED": 9,
     "BUILT": 25
   },
   "by_trunk": {
@@ -19,7 +18,7 @@
     },
     "A": {
       "total": 14,
-      "resolved": 13
+      "resolved": 14
     },
     "O": {
       "total": 18,
@@ -27,23 +26,23 @@
     },
     "P": {
       "total": 14,
-      "resolved": 14
+      "resolved": 12
     },
     "G": {
       "total": 16,
-      "resolved": 15
+      "resolved": 16
     },
     "H": {
       "total": 16,
-      "resolved": 15
+      "resolved": 16
     },
     "Q": {
       "total": 12,
-      "resolved": 11
+      "resolved": 12
     },
     "L": {
       "total": 12,
-      "resolved": 12
+      "resolved": 10
     },
     "X": {
       "total": 20,
@@ -51,11 +50,11 @@
     }
   },
   "unresolved_mandatory": [
-    "C16",
-    "A14",
-    "G16",
-    "H16",
-    "Q12"
+    "C06",
+    "P04",
+    "P07",
+    "L04",
+    "L12"
   ],
-  "written": "2026-08-28T19:15:02"
+  "written": "2026-08-28T19:27:11"
 }

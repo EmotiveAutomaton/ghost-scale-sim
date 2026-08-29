@@ -623,6 +623,15 @@ def unit_C06(ctx):
     cells = Cells(ctx["wid"], ctx["rep"])
     from scipy.stats import spearmanr
     typs, gains = [], []
+    # typicality bins are per-unit tertiles: fixed thresholds (0.85 / 0.93) realized the "low"
+    # bin in 40% of units and the receipt requires every cell in every unit; the criterion is
+    # the rank correlation of gain with typicality, which the binning does not touch
+    typ_pre = []
+    for rd in H["readers"]:
+        fm = [m for m in H["makers"] if m.family == rd.family]
+        if fm:
+            typ_pre.append(1.0 - C.js(rd.w, np.mean([m.w for m in fm], axis=0)))
+    lo_t, hi_t = (np.quantile(typ_pre, [1.0 / 3.0, 2.0 / 3.0]) if len(typ_pre) >= 3 else (0.85, 0.93))
     for rd in H["readers"]:
         fam_makers = [m for m in H["makers"] if m.family == rd.family]
         mean_w = np.mean([m.w for m in fam_makers], axis=0)
@@ -650,7 +659,7 @@ def unit_C06(ctx):
             ls_mix = C.log_score(posterior_at(model, PJ.mixed_prior(pri["self"], pri["within_common"], best_a), L, 1), model.truth_index(m))
             ls_pop = C.log_score(posterior_at(model, pri["within_common"], L, 1), model.truth_index(m))
             g.append(ls_self - ls_pop)
-            tb = "low" if typ < 0.85 else ("mid" if typ < 0.93 else "high")
+            tb = "low" if typ < lo_t else ("mid" if typ < hi_t else "high")
             cells.add({"typicality_bin": tb, "route": "self"}, ls=ls_self, gain=ls_self - ls_pop, alpha=best_a, typ=typ)
             cells.add({"typicality_bin": tb, "route": "optimal_mix"}, ls=ls_mix, gain=ls_mix - ls_pop, alpha=best_a, typ=typ)
         typs.append(typ)

@@ -199,6 +199,37 @@ def amend_packet(doc: dict, packet: dict, add: list, reason: str) -> tuple:
     return new_packet, record
 
 
+def supersede(ledger: dict, ids: list, reason: str) -> dict:
+    """Remove cards from the frozen packet because their discovery verdicts are being replaced
+    by an instrument correction (HEALING_PLAN.md). The inverse of ``amend_packet`` and equally
+    recorded: the original packet is preserved verbatim, the removed cards' confirmation entries
+    move to ``ledger["superseded"]`` and into the record, and the packet's hash for each removed
+    card is dropped so a later ordinary amendment re-adds it with the NEW discovery hash. A card
+    that is not in the packet is refused: there is nothing to supersede.
+    """
+    packet = ledger.get("frozen")
+    if not packet:
+        raise FreezeViolation("no frozen packet to supersede from")
+    missing = [c for c in ids if c not in packet["promoted"]]
+    if missing:
+        raise FreezeViolation(f"cards {missing} are not in the frozen confirmation packet {packet['promoted']}")
+    original = json.loads(json.dumps(packet))
+    new_packet = json.loads(json.dumps(packet))
+    new_packet["promoted"] = [c for c in packet["promoted"] if c not in ids]
+    for field in ("discovery_hashes", "card_identity"):
+        new_packet[field] = {k: v for k, v in (packet.get(field) or {}).items() if k not in ids}
+    new_packet["amended_from"] = C.obj_sha(original)
+    new_packet["amendment_count"] = int(packet.get("amendment_count", 0)) + 1
+    removed_conf = {c: ledger.get("cards", {}).pop(c) for c in ids if c in ledger.get("cards", {})}
+    record = {"when": time.strftime("%Y-%m-%dT%H:%M:%S"), "reason": reason, "removed": list(ids),
+              "superseded_confirmations": removed_conf, "original_packet": original,
+              "replacement_identity": C.obj_sha(new_packet)}
+    ledger["frozen"] = new_packet
+    ledger.setdefault("amendments", []).append(record)
+    ledger.setdefault("superseded", {}).update({c: removed_conf.get(c) for c in ids})
+    return record
+
+
 def resolve_ids(packet: dict, only) -> list:
     """The cards this invocation may run: the frozen packet, or an explicit subset of it.
 
@@ -311,9 +342,35 @@ def main() -> None:
     ap.add_argument("--no-amend", action="store_true",
                     help="refuse to widen the frozen packet instead of recording an amendment")
     ap.add_argument("--amend-reason", default="HEALING_PLAN.md confirmation step: cards promoted by the healing pass")
+    ap.add_argument("--supersede", nargs="*", default=None,
+                    help="remove these cards from the frozen packet (recorded amendment) because their discovery "
+                         "verdicts are being replaced; runs no worker, writes only the ledger and the amendment record")
+    ap.add_argument("--supersede-reason", default="HEALING_PLAN.md: discovery verdict superseded by an instrument correction")
     args = ap.parse_args()
     if os.environ.get("GS_V13_SMOKE"):
         sys.exit("refusing to run the confirmation pass under GS_V13_SMOKE")
+    if args.supersede is not None:
+        if not args.supersede:
+            sys.exit("--supersede needs card ids")
+        ledger = json.loads(LEDGER.read_text(encoding="utf-8")) if LEDGER.exists() else None
+        if not ledger or not ledger.get("frozen"):
+            sys.exit("no frozen packet to supersede from")
+        try:
+            record = supersede(ledger, args.supersede, args.supersede_reason)
+        except FreezeViolation as exc:
+            sys.exit(f"supersede refused: {exc}")
+        write_json_atomic(LEDGER, ledger)                    # the record lands before anything moves
+        M.add_amendment("confirmation_packet", record["original_packet"], ledger["frozen"], args.supersede_reason)
+        stamp = record["when"].replace(":", "")
+        for cid in args.supersede:                           # the superseded verdict stays on disk beside the record
+            p = V.verdict_dir("confirmation") / f"{cid}.json"
+            if p.exists():
+                dest = V.verdict_dir("confirmation") / "superseded" / f"{cid}.{stamp}.json"
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                p.rename(dest)
+        print(f"!! confirmation packet AMENDED: superseded {args.supersede} (amendment {ledger['frozen']['amendment_count']}; "
+              f"original preserved); packet now {ledger['frozen']['promoted']}", flush=True)
+        return
     workers = args.workers or max(1, min(12, (os.cpu_count() or 2) // 2))
     C.lower_priority()
     C.hide_accelerators()

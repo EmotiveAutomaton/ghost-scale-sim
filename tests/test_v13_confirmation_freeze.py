@@ -396,3 +396,38 @@ def test_manifest_writers_are_byte_neutral():
                M.instantiate_cells, M.write_coverage):
         src = inspect.getsource(fn)
         assert "newline=None" in src, f"{fn.__name__} must preserve the file's existing byte format"
+
+
+# --------------------------------------------------------------------------- #
+# Supersession: a corrected discovery verdict leaves the packet through a record, then re-enters
+# through an ordinary amendment carrying its new hash.
+# --------------------------------------------------------------------------- #
+def test_supersede_removes_the_card_and_records_it(frozen):
+    doc, packet, disc = frozen
+    ledger = {"cards": {"C04": {"state": "LANDED"}, "O02": {"state": "LANDED"}}, "frozen": packet}
+    record = RC.supersede(ledger, ["C04"], "instrument corrected; discovery verdict superseded")
+    assert ledger["frozen"]["promoted"] == ["O02"]
+    assert "C04" not in ledger["frozen"]["discovery_hashes"] and "C04" not in ledger["frozen"]["card_identity"]
+    assert "C04" not in ledger["cards"] and ledger["superseded"]["C04"] == {"state": "LANDED"}
+    assert record["removed"] == ["C04"] and record["original_packet"]["promoted"] == ["C04", "O02"]
+    assert ledger["amendments"][-1] is record and ledger["frozen"]["amendment_count"] == 1
+
+
+def test_superseded_card_re_enters_with_its_new_hash(frozen):
+    doc, packet, disc = frozen
+    ledger = {"cards": {}, "frozen": packet}
+    RC.supersede(ledger, ["C04"], "corrected")
+    (disc / "C04.json").write_text(json.dumps({"card": "C04", "state": "LANDED", "v": 2}), encoding="utf-8")
+    assert RC.verify_packet(doc, ledger["frozen"]) == []          # the drifted card is no longer verified: it left the packet
+    new_packet, rec = RC.amend_packet(doc, ledger["frozen"], ["C04"], "healing")
+    assert rec["added"] == ["C04"]
+    assert new_packet["discovery_hashes"]["C04"] == RC.C.file_sha(disc / "C04.json")
+    assert new_packet["discovery_hashes"]["O02"] == packet["discovery_hashes"]["O02"]
+
+
+def test_supersede_refuses_a_card_outside_the_packet(frozen):
+    doc, packet, disc = frozen
+    ledger = {"cards": {}, "frozen": packet}
+    with pytest.raises(RC.FreezeViolation):
+        RC.supersede(ledger, ["G01"], "not in the packet")
+    assert ledger["frozen"] == packet and "amendments" not in ledger

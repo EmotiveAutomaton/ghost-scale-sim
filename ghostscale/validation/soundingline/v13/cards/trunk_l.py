@@ -41,7 +41,7 @@ def _load(cid, lane="discovery"):
 
 
 def _state(cid):
-    v = _load(cid)
+    v = _load(cid) or _load(cid, "transfer")          # transfer-only cards (A14, C16, G16, H16, Q12) resolve in their own lane
     if v is None:
         return "UNRUN", None
     passed = None
