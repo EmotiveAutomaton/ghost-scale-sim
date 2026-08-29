@@ -1,0 +1,100 @@
+{
+  "written": "2026-08-29T11:05:52",
+  "grid": {
+    "plans": 4,
+    "goals": 4,
+    "preferences": 6,
+    "states": 96
+  },
+  "actions": 6,
+  "features": 10,
+  "steps": 6,
+  "routes": [
+    "action",
+    "semantic",
+    "context",
+    "forensic"
+  ],
+  "route_cost": {
+    "action": 1.0,
+    "semantic": 0.5,
+    "context": 0.7,
+    "forensic": 3.0
+  },
+  "process_equivalence": {
+    "3,0": "0,0",
+    "0,0": "3,0"
+  },
+  "source_factorial": {
+    "belief": [
+      "threat",
+      "benefit",
+      "neutral"
+    ],
+    "support": [
+      "supports",
+      "contradicts",
+      "none"
+    ],
+    "appraisal": [
+      "alarm",
+      "calm",
+      "admire"
+    ],
+    "policy": [
+      "full",
+      "cherry_pick",
+      "fabricate"
+    ],
+    "correct": [
+      "corrects",
+      "doubles_down"
+    ],
+    "private": [
+      "consistent",
+      "inconsistent"
+    ]
+  },
+  "regions": {
+    "honest_warning": {
+      "belief": "threat",
+      "support": "supports",
+      "appraisal": "alarm",
+      "policy": "full",
+      "correct": "corrects",
+      "private": "consistent"
+    },
+    "sincere_fanatic": {
+      "belief": "threat",
+      "support": "contradicts",
+      "appraisal": "alarm",
+      "policy": "cherry_pick",
+      "correct": "doubles_down",
+      "private": "consistent"
+    },
+    "strategic_propagandist": {
+      "belief": "neutral",
+      "support": "contradicts",
+      "appraisal": "alarm",
+      "policy": "fabricate",
+      "correct": "doubles_down",
+      "private": "inconsistent"
+    },
+    "neutral_report": {
+      "belief": "neutral",
+      "support": "none",
+      "appraisal": "calm",
+      "policy": "full",
+      "correct": "corrects",
+      "private": "consistent"
+    }
+  },
+  "foraging_kinds": [
+    "novel_explained",
+    "familiar_unresolved",
+    "complex_compressible",
+    "simple_unresolved",
+    "unlearnable_noise",
+    "structured_learnable"
+  ]
+}

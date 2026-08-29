@@ -1,0 +1,35 @@
+{
+  "frozen": {
+    "schema": 1,
+    "promoted": [
+      "C04",
+      "O02"
+    ],
+    "when": "2026-08-29T12:04:27",
+    "discovery_hashes": {
+      "C04": "35f06f690854ba40f1ae24ab75bd8cb17242934e13f7caef31a4956e1c60f02c",
+      "O02": "77514cc938cad67525fdb2243ad82c530709fce4ce008b1d90f67b89bb1561ef"
+    },
+    "card_identity": {
+      "C04": "3969cbc29c3eafa527b372b4f0615edb72a5f8dc4c30a48d2dd8b508e52a5916",
+      "O02": "47aa6f2b637d306a882493fd029ed6dfaae0edf673572a37b32ec8d28d306d6b"
+    },
+    "structural_lock_sha256": "struct-aaa",
+    "scientific_lock_sha256": "sci-bbb",
+    "selection": {
+      "promoted": [
+        "C04",
+        "O02"
+      ],
+      "eligible": [
+        "C04",
+        "O02"
+      ],
+      "by_flight": {},
+      "cap": 4,
+      "rule": "test"
+    },
+    "frozen_at_hour": 0.0
+  },
+  "when": "2026-08-29T12:04:27"
+}

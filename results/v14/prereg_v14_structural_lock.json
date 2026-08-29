@@ -1,0 +1,428 @@
+{
+  "program": "v14",
+  "kind": "structural",
+  "locked": true,
+  "written": "2026-08-29T11:05:52",
+  "internal_prespecification_not_external_preregistration": true,
+  "module_sha256": "c44d7ed79e96960b0844906916ceec3016c1eadc04d77065c57d857af4bf44f0",
+  "cards_sha256": "5f938dc5d97475305cdafedd1138ab12e1fac370a76c2c6e16c5461cbce07b3d",
+  "criteria_sha256": "d988c2b4ce6e914dcef0687ed1676c980e02b95ab860a7fb00231200e24a650e",
+  "closures_sha256": "0aea790827c2ade1fd09759545c8e18d6e28d48cd41c364396278c47a1637503",
+  "flights_sha256": "09e8146fd4caa06937c528839146c4b78356bae3ef9d7487564ac59dd0bf5853",
+  "attack_relevance_sha256": "ea8387651c89e633750f7e74c545eda1c5babd39a6e65cb59086d42d9bcd4fa3",
+  "repairs_sha256": "73cff923be4a1a2175f56854f2695d9ad27b18b57a3304f0899563c9c5226b46",
+  "generators": {
+    "world.py": "15a7c9eb9ddc56e25336ded33cfb94d65fdbf66ae551e58defac166d03ba7b0b",
+    "joint.py": "d978bf48e74c0220be87c58cea64ba802053c08a3688d69c25311a41bd631f80",
+    "routes.py": "6aa9b607053010c113f5c4a8bfe01288d700553371ff8578b39f731a097bb34e",
+    "history_skill.py": "5cd65ed6dd185a093e1fa86f0944bce571babb6066ee028116198856e60a8227",
+    "communication.py": "98f8a943fa73f94afc860c5ac5d56acd7c3f84f9d2eafca3c5305f13a591868a",
+    "hierarchy.py": "7cb602bd9e77a15768f0d1f6d8192bde565bd47dba2da558bab73e790a70b308",
+    "foraging.py": "1726efa9654b88e15a9458b3677ec2fbbce4638d058e244fe96dafe2b8eccaf4",
+    "schemas.py": "4afa59bb2e48088295eae32b31510b3556a93ba539a6a7f2d34b3e0b240b003e",
+    "common.py": "13efec74f5270fd115d1c7527518fc8d7f88b322dbb269177a9c23f27fac9b0a"
+  },
+  "cells_template_sha256": "0789588d05b8fb805263114e0c0746dcc83169e2847391f64f4708514398bf8f",
+  "source_lineages_sha256": "1ed0a7a73b4532d268a2d215e1bf063265e101ef9d0d99b3906cbbaa039f2e7d",
+  "construction_identities_sha256": "b14fd8497599b69c8992bbc45916f1e5e2e85f83158e78495b41800034b6ea9a",
+  "report_interface_sha256": "accdb3b100b8992992ebf6d1cfdd6208b3e5db04251487f3d1c20bfd3ae5e834",
+  "n_cards": 76,
+  "criteria": {
+    "I01": {
+      "anchor_tolerance": 1e-09,
+      "rule": "every V13 anchor field V14 cites equals the committed V13 verdict field within tolerance; a mismatch blocks inheritance only"
+    },
+    "I02": {
+      "rule": "the manifest enumerates exactly 64 mandatory cards and 12 attacks with factors, lanes and floors; the recursive validator passes"
+    },
+    "I03": {
+      "identity_tol": 1e-09,
+      "rule": "the joint enumerator normalizes, matches brute-force enumeration in a tiny exhaustive world, and is invariant to label and order relabelling"
+    },
+    "I04": {
+      "min_divergence": 0.05,
+      "min_information": 0.05,
+      "max_null_route": 0.02,
+      "rule": "routes are pairwise divergent and each carries information about some latent; a shuffled route carries none"
+    },
+    "I05": {
+      "max_leak": 0.02,
+      "rule": "surface collisions hash equal, equifinal histories produce identical non-forensic likelihoods, factors are orthogonal, lineages disjoint"
+    },
+    "I06": {
+      "floor_share": 0.5,
+      "rule": "REPAIR of V13 C03: within-common beats all-family at the first artifact by at least half the construction-derived expected gain; the floor is computed from the construction, not lowered; failure closes the common-substrate card"
+    },
+    "I07": {
+      "min_gain": 0.05,
+      "convergence_tol": 0.05,
+      "rule": "REPAIR of V13 C05: self beats within-common for near readers by the bar and not for anti-similar readers; routes converge within tolerance at the construction-derived sufficient dose"
+    },
+    "I08": {
+      "max_half_life": 8,
+      "max_residual": 0.1,
+      "rate_margin": 0.05,
+      "max_ece": 0.15,
+      "rule": "REPAIR of V13 P01: half-life and residual within bars per route; near makers' correction RATE at least far makers' minus the margin; calibration at the prospective endpoint within the bar"
+    },
+    "J01": {
+      "min_class_mass": 0.8,
+      "max_single_equivalent": 0.7,
+      "rule": "with goal and preference supplied, process class mass above the bar; on process-equivalent histories no single state exceeds the split bar"
+    },
+    "J02": {
+      "min_gain": 0.05,
+      "rule": "with process and preference supplied, the hidden next action within the episode is predicted above the prior by the bar"
+    },
+    "J03": {
+      "min_gain": 0.05,
+      "rule": "with process and goal supplied across episodes, the next episode's first action is predicted above the prior by the bar after the local goal changed"
+    },
+    "J04": {
+      "min_gain": 0.02,
+      "max_ece_penalty": 0.05,
+      "rule": "joint beats independent on held-out next-action log score by the bar at matched evidence and compute, with calibration no worse than the penalty; the cross-latent ablation is the independent estimator"
+    },
+    "J05": {
+      "min_margin": 0.02,
+      "rule": "order x regime interaction reported before any pooled number; a universally best order is claimed only if it wins in every access regime by the margin"
+    },
+    "J06": {
+      "max_dose": 8,
+      "rule": "each latent first improves prospective prediction over its baseline by the maximum dose; the dose trajectory is reported"
+    },
+    "J07": {
+      "min_revision": 0.1,
+      "max_false_revision": 0.1,
+      "rule": "diagnostic contradiction revises every affected latent by the bar (Jensen-Shannon); a consistent continuation revises by at most the false-revision bar"
+    },
+    "J08": {
+      "max_single_equifinal": 0.6,
+      "min_class_equifinal": 0.8,
+      "min_single_resolved": 0.8,
+      "rule": "under exact equifinality the joint reader spreads mass within the class; after resolving evidence it contracts"
+    },
+    "J09": {
+      "min_detect": 0.7,
+      "max_confusion": 0.3,
+      "rule": "a changed episode goal and a changed standing preference are each detected above the bar with cross-confusion below the bar, judged on held-out future choices"
+    },
+    "J10": {
+      "min_gain": 0.02,
+      "rule": "the frozen joint estimator keeps its advantage over independent on fresh vocabularies; domain-bound effects named"
+    },
+    "R01": {
+      "min_information": 0.05,
+      "rule": "the route with the most target information per latent is reported per access regime; exact conditional information agrees with the prediction ruler on the dominant route"
+    },
+    "R02": {
+      "min_gain": 0.02,
+      "rule": "learned route weighting beats equal, random and fixed weighting on held-out prediction by the bar with no target label at test"
+    },
+    "R03": {
+      "max_ease_effect": 0.02,
+      "min_bias": 0.2,
+      "rule": "with accuracy equal, planted ease moves the ease-driven reader's route weight by the bias bar and its score, while the learned reader's score moves by at most the ease bar"
+    },
+    "R04": {
+      "max_ease_effect": 0.02,
+      "rule": "with ease equal, the learned reader follows accuracy: its score under the accurate-but-hard route is within the bar of the accurate-and-easy case"
+    },
+    "R05": {
+      "min_gain": 0.05,
+      "max_false_positive": 0.15,
+      "rule": "expanding the latent set to a strategic source gains the bar in strategic worlds and flags at most the bar of consistent worlds"
+    },
+    "R06": {
+      "margin": 0.01,
+      "rule": "the exact information-per-cost purchase rule realizes at least the best of random, always-buy and never-buy minus the margin"
+    },
+    "R07": {
+      "max_dup_rise": 0.02,
+      "min_naive_rise": 0.05,
+      "rule": "shared-cause fusion raises confidence by at most the bar under duplicated evidence where naive fusion rises by at least the naive bar; calibration reported"
+    },
+    "R08": {
+      "margin": 0.02,
+      "rule": "under a domain shift with changed reliabilities, reset or partial transfer is within the margin of the best; full transfer's loss reported"
+    },
+    "E01": {
+      "min_move": 0.05,
+      "max_leak": 0.02,
+      "rule": "competence moves process accuracy and history moves early relevance by the bar; each leaks into the other's measure by at most the bar"
+    },
+    "E02": {
+      "min_initial_bias": 0.05,
+      "min_correction_share": 0.5,
+      "rule": "with competence matched, a stale route history biases initial route weights by the bar and target evidence closes at least half the score gap"
+    },
+    "E03": {
+      "min_gain": 0.05,
+      "rule": "with history matched, higher competence improves process reconstruction by the bar"
+    },
+    "E04": {
+      "max_residual_share": 0.5,
+      "rule": "a learned attention bias decays to at most half after eight episodes past its reward reversal; its current-utility cost is reported"
+    },
+    "E05": {
+      "min_bias_reduction": 0.5,
+      "max_skill_loss": 0.02,
+      "rule": "correction removes at least half the stale-history bias while process accuracy falls by at most the bar"
+    },
+    "E06": {
+      "min_early_gain": 0.05,
+      "rule": "competence improves early relevance detection at the first dose by the bar and the gap shrinks with dose; no generic intelligence interpretation"
+    },
+    "E07": {
+      "rule": "cross-domain conditional matrix reported for history and competence; whichever transfers more narrowly is named"
+    },
+    "E08": {
+      "min_signature": 0.7,
+      "max_skill_gap": 0.05,
+      "rule": "at equal competence, acquisition paths leave held-out signatures classified above the bar while process accuracy differs by at most the gap; prospective only"
+    },
+    "E09": {
+      "margin": 0.02,
+      "rule": "likelihood intersection is within the margin of the best member and at least the naive average; the average's overconfidence is reported"
+    },
+    "E10": {
+      "min_gain": 0.02,
+      "rule": "the object that best predicts the maker's next novel choice beats the last-choice baseline by the bar; the tournament is reported"
+    },
+    "A01": {
+      "min_own": 0.1,
+      "max_leak": 0.02,
+      "rule": "each owner moves its own posterior by the bar and any other's by at most the leak"
+    },
+    "A02": {
+      "min_gain": 0.05,
+      "rule": "the reader's own induced response is a useful prior for intended effect when the reader is similar to the audience and not otherwise; the projection cost is reported"
+    },
+    "A03": {
+      "min_intended": 0.6,
+      "min_uncertainty": 0.5,
+      "rule": "intended effect recovered above the bar while the maker-appraisal posterior keeps at least the bar of entropy"
+    },
+    "A04": {
+      "min_owner": 0.6,
+      "rule": "under owner swap the maker's appraisal and its private action are recovered above the bar"
+    },
+    "A05": {
+      "min_separated": 0.6,
+      "max_artifact_only": 0.4,
+      "rule": "the four derived regions separate above the bar with counterfactual evidence and at most the artifact-only bar without it"
+    },
+    "A06": {
+      "max_artifact_only": 0.6,
+      "min_with_probes": 0.8,
+      "max_abstain_mass": 0.6,
+      "rule": "fanatic and propagandist are at chance from the artifact, separated by belief, private action and correction probes, and abstained on when no discriminator is observed"
+    },
+    "A07": {
+      "min_interaction": 0.05,
+      "rule": "an audience-aware reader gains by the bar only when the maker models the audience"
+    },
+    "A08": {
+      "min_discrimination": 0.6,
+      "min_true_uptake": 0.5,
+      "rule": "influence awareness improves true/false discrimination above the bar while retaining true uptake above the bar; blanket suppression is the rival"
+    },
+    "A09": {
+      "max_habituated_share": 0.5,
+      "rule": "acute response at eight exposures is at most half of the first while cumulative uptake rises"
+    },
+    "A10": {
+      "min_gate_effect": 0.2,
+      "max_side_effect": 0.02,
+      "rule": "factored trust gates policy uptake by the bar while content belief and inferred goal move by at most the side-effect bar"
+    },
+    "H01": {
+      "min_boundary": 0.7,
+      "min_gain": 0.05,
+      "max_spurious": 0.3,
+      "rule": "subtask boundaries recovered above the bar and next subtask predicted above baseline in hierarchical worlds; spurious boundaries in flat worlds below the bar"
+    },
+    "H02": {
+      "max_shared": 0.65,
+      "min_distinct": 0.8,
+      "rule": "identical local actions under different higher goals keep top-goal mass at most the bar; distinct windows reach the distinct bar"
+    },
+    "H03": {
+      "max_observational": 0.6,
+      "min_intervened": 0.8,
+      "rule": "policy-equivalent rewards are not distinguished observationally and are after the resolving intervention"
+    },
+    "H04": {
+      "min_gain": 0.05,
+      "rule": "across changed incentives the preference model wins for preference-driven makers and the habit model for habitual ones, each by the bar"
+    },
+    "H05": {
+      "min_gain": 0.05,
+      "rule": "after a history reversal the current preference predicts the hidden future choice better than the residue by the bar"
+    },
+    "H06": {
+      "max_ece": 0.15,
+      "min_compression": 0.05,
+      "rule": "a higher coordinating level compresses multi-episode evidence by the bar with calibrated level uncertainty; no terminal horizon required"
+    },
+    "H07": {
+      "min_interaction": 0.9,
+      "max_coherence": 0.6,
+      "min_next": 0.6,
+      "rule": "with full records the interaction reader separates central control from the exact shared-brief twin above the bar, coherence stays below the bar, and the hidden next intervention is predicted above the bar"
+    },
+    "H08": {
+      "margin": 0.02,
+      "rule": "the selected hierarchy level predicts the next changed-context action at least as well as flat value and last goal plus the margin"
+    },
+    "F01": {
+      "min_move": 0.1,
+      "max_corr": 0.3,
+      "rule": "each foraging factor varied alone moves its own measure by the bar; pairwise correlations across items stay below the bar"
+    },
+    "F02": {
+      "min_share": 0.6,
+      "rule": "learning-progress and gain-per-cost policies prefer the familiar unresolved structure after the first look by the bar; novelty prefers the explained novelty"
+    },
+    "F03": {
+      "min_share": 0.6,
+      "rule": "the compressible complex item is preferred over the simpler unresolved one by the bar"
+    },
+    "F04": {
+      "max_noise_share": 0.2,
+      "min_gain_margin": 0.1,
+      "rule": "unlearnable noise draws at most the bar of a learning-progress policy's picks and its realized gain exceeds the surprise policy's by the margin"
+    },
+    "F05": {
+      "min_gain": 0.05,
+      "rule": "expected learning progress realizes more held-out gain than raw current error in a nonstationary curriculum by the bar"
+    },
+    "F06": {
+      "margin": 0.02,
+      "rule": "information gain per cost realizes at least each rival's held-out gain per cost minus the margin"
+    },
+    "F07": {
+      "min_pursuit": 0.4,
+      "max_warrant": 0.5,
+      "rule": "queries go to the hoped-for hypothesis above the bar while its posterior stays below the warrant bar"
+    },
+    "F08": {
+      "max_regret": 0.1,
+      "min_abstain": 0.8,
+      "rule": "the selector transfers with regret at most the bar and abstains on null probes at least the bar of the time"
+    },
+    "B01": {
+      "rule": "one row per candidate ruler: access, construction gate, cheap rival, endpoint, shape, ceiling; a failed instrument licenses nothing"
+    },
+    "B02": {
+      "rule": "final pursuit and warrant ledger, runtime audit and recommendation; no automatic V15"
+    },
+    "X": {
+      "survival": "sign kept and at least half the magnitude retained",
+      "rule": "an attacked effect survives, narrows or dies; dying under a causal-variable-preserving attack makes the result a shortcut; applicability is explicit, never a silent not-applicable"
+    }
+  },
+  "closures": {
+    "I": "an identity or lineage failure stops dependent claims; a repaired V13 instrument that fails its named gate again closes its mechanism with no second repair",
+    "J": "close the joint advantage if no matched estimator beats independent marginals on any prospective target; retain equivalence-class uncertainty as a boundary",
+    "R": "close reliable routing if learned reliability never beats equal weighting or aliases with ease; retain the divergence and no-information rulers",
+    "E": "close the dissociation if competence and history cannot be manipulated independently or leave no distinct prospective signature",
+    "A": "close the factorization if an owner cannot be varied alone; close the fanatic/propagandist boundary if no counterfactual discriminator exists; retain abstention",
+    "H": "retain equivalence classes wherever alternatives are policy-equivalent; never force a unique hierarchy; the records-dominant boundary stands",
+    "F": "close a curiosity ruler that unlearnable noise can win; retain learning progress only where it realizes held-out gain",
+    "B": "an unlicensed ruler is not exported"
+  },
+  "flights": {
+    "joint_reconstruction_advantage": [
+      "J04 joint beats matched estimators",
+      "J02 J03 prospective",
+      "J08 equifinality preserved",
+      "J10 transfer",
+      "X03 X04 X11 relevant"
+    ],
+    "reliable_routing": [
+      "R02 learned beats ease",
+      "R03 R04 ease/accuracy crossing",
+      "R07 duplicates",
+      "R08 domain shift",
+      "X02 X04 X05 relevant"
+    ],
+    "competence_history_dissociation": [
+      "E01 independence",
+      "E02 E03 signatures",
+      "E04 E05 correction",
+      "E08 prospective",
+      "X06 relevant"
+    ],
+    "affect_source_factorization": [
+      "A01 owners",
+      "A05 A06 fanatic/propagandist boundary",
+      "A08 A10 uptake",
+      "X07 X08 relevant"
+    ],
+    "learning_progress_foraging": [
+      "F04 noise trap",
+      "F05 F06 progress and gain per cost",
+      "F08 transfer",
+      "X10 relevant"
+    ]
+  },
+  "attack_relevance": {
+    "joint_reconstruction_advantage": [
+      "X01",
+      "X03",
+      "X04",
+      "X05",
+      "X11",
+      "X12"
+    ],
+    "reliable_routing": [
+      "X01",
+      "X02",
+      "X04",
+      "X05",
+      "X11",
+      "X12"
+    ],
+    "competence_history_dissociation": [
+      "X01",
+      "X05",
+      "X06",
+      "X11",
+      "X12"
+    ],
+    "affect_source_factorization": [
+      "X01",
+      "X07",
+      "X08",
+      "X11",
+      "X12"
+    ],
+    "learning_progress_foraging": [
+      "X01",
+      "X10",
+      "X11",
+      "X12"
+    ]
+  },
+  "repairs": {
+    "I06": {
+      "v13_card": "C03",
+      "failed_gate": "positive:within_common_above_floor",
+      "preserves": "within-common versus all-family prior, the dose axis and the target",
+      "repair": "the positive floor becomes the exact expected gain of the true within-common prior over the all-family prior at one artifact, computed from the construction; the gate passes at half that floor"
+    },
+    "I07": {
+      "v13_card": "C05",
+      "failed_gate": "placebo:routes_converge_at_sixteen",
+      "preserves": "reader-type interaction and the convergence placebo",
+      "repair": "the convergence dose is derived from the construction (the dose at which both routes' posteriors fall under 0.3 nats of entropy on the planted world) instead of a fixed sixteen"
+    },
+    "I08": {
+      "v13_card": "P01",
+      "failed_gate": "positive:near_makers_need_no_more_correction_than_far; calibration:final_confidence_calibrated",
+      "preserves": "similarity bins, routes, the prospective endpoint and the failed calibration record",
+      "repair": "the positive gate compares correction RATE per bin (share of the initial error removed per artifact) rather than residual; calibration is scored at the prospective endpoint with a unit-level ECE"
+    }
+  }
+}

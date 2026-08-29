@@ -1,0 +1,5113 @@
+{
+  "written": "2026-08-29T11:05:52",
+  "by_tier": {
+    "T0": {
+      "I01": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "anchor": [
+              "C04",
+              "A03",
+              "G01",
+              "H03",
+              "C15",
+              "X10"
+            ]
+          }
+        }
+      },
+      "I02": {
+        "discovery": {
+          "levels": 5,
+          "units": 1,
+          "cells": 5,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "cards_64",
+              "attacks_12",
+              "factors",
+              "lanes",
+              "floors"
+            ]
+          }
+        }
+      },
+      "I03": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "normalization",
+              "brute_force",
+              "label_invariance",
+              "order_invariance"
+            ]
+          }
+        }
+      },
+      "I04": {
+        "discovery": {
+          "levels": 12,
+          "units": 64,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "I05": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "surface_collision",
+              "equifinal_history",
+              "factor_orthogonality",
+              "lineage"
+            ]
+          }
+        }
+      },
+      "I06": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "within_common",
+              "all_family"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "I07": {
+        "discovery": {
+          "levels": 12,
+          "units": 64,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_type": [
+              "near",
+              "typical",
+              "atypical",
+              "anti"
+            ],
+            "dose": [
+              1,
+              4,
+              16
+            ]
+          }
+        }
+      },
+      "I08": {
+        "discovery": {
+          "levels": 12,
+          "units": 64,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "self",
+              "equal_local",
+              "generic_local"
+            ],
+            "sim_bin": [
+              "near",
+              "mid",
+              "far",
+              "anti"
+            ]
+          }
+        }
+      },
+      "J01": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "distinct",
+              "equivalent"
+            ],
+            "dose": [
+              1,
+              4
+            ]
+          }
+        }
+      },
+      "J02": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J03": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes": [
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "J04": {
+        "discovery": {
+          "levels": 10,
+          "units": 64,
+          "cells": 640,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J05": {
+        "discovery": {
+          "levels": 9,
+          "units": 64,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "order": [
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process"
+            ],
+            "regime": [
+              "full",
+              "no_forensic",
+              "artifact_only"
+            ]
+          }
+        }
+      },
+      "J06": {
+        "discovery": {
+          "levels": 12,
+          "units": 64,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ],
+            "dose": [
+              1,
+              2,
+              4,
+              6
+            ]
+          }
+        }
+      },
+      "J07": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "contradiction",
+              "continuation"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "J08": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "equifinal",
+              "resolved"
+            ]
+          }
+        }
+      },
+      "J09": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "change": [
+              "goal",
+              "preference",
+              "none"
+            ]
+          }
+        }
+      },
+      "J10": {
+        "transfer": {
+          "levels": 4,
+          "units": 32,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "R01": {
+        "discovery": {
+          "levels": 12,
+          "units": 64,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "R02": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "weights": [
+              "learned",
+              "equal",
+              "random",
+              "fixed_action"
+            ]
+          }
+        }
+      },
+      "R03": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "easy_wrong",
+              "easy_right"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R04": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "accurate_hard",
+              "accurate_easy"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R05": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "world": [
+              "consistent",
+              "strategic"
+            ],
+            "reader": [
+              "fixed",
+              "expanded"
+            ]
+          }
+        }
+      },
+      "R06": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "exact",
+              "random",
+              "always",
+              "never"
+            ]
+          }
+        }
+      },
+      "R07": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "independent",
+              "duplicate",
+              "paraphrase"
+            ],
+            "fusion": [
+              "naive",
+              "shared_cause"
+            ]
+          }
+        }
+      },
+      "R08": {
+        "transfer": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "transfer": [
+              "reset",
+              "partial",
+              "full"
+            ]
+          }
+        }
+      },
+      "E01": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "history": [
+              "none",
+              "strong"
+            ]
+          }
+        }
+      },
+      "E02": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "none",
+              "strong"
+            ],
+            "phase": [
+              "initial",
+              "corrected"
+            ]
+          }
+        }
+      },
+      "E03": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "mid",
+              "high"
+            ]
+          }
+        }
+      },
+      "E04": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes_after": [
+              0,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "E05": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_history": [
+              "none",
+              "stale"
+            ],
+            "phase": [
+              "before",
+              "after"
+            ]
+          }
+        }
+      },
+      "E06": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "E07": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        },
+        "transfer": {
+          "levels": 4,
+          "units": 32,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        }
+      },
+      "E08": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "path": [
+              "A",
+              "B"
+            ]
+          }
+        }
+      },
+      "E09": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "method": [
+              "average",
+              "likelihood_product",
+              "feasible_set",
+              "best_member"
+            ]
+          }
+        }
+      },
+      "E10": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "competence",
+              "history",
+              "preference"
+            ]
+          }
+        }
+      },
+      "A01": {
+        "discovery": {
+          "levels": 7,
+          "units": 64,
+          "cells": 448,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner": [
+              "reader_response",
+              "maker_appraisal",
+              "intended_effect",
+              "content",
+              "goal",
+              "reliability",
+              "uptake"
+            ]
+          }
+        }
+      },
+      "A02": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "similarity": [
+              "similar",
+              "dissimilar"
+            ],
+            "reader": [
+              "projecting",
+              "neutral"
+            ]
+          }
+        }
+      },
+      "A03": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker_appraisal": [
+              "known",
+              "uncertain"
+            ]
+          }
+        }
+      },
+      "A04": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner_swap": [
+              "same",
+              "swapped"
+            ]
+          }
+        }
+      },
+      "A05": {
+        "discovery": {
+          "levels": 8,
+          "units": 64,
+          "cells": 512,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "region": [
+              "honest_warning",
+              "sincere_fanatic",
+              "strategic_propagandist",
+              "neutral_report"
+            ],
+            "evidence": [
+              "artifact_only",
+              "counterfactual"
+            ]
+          }
+        }
+      },
+      "A06": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "artifact_only",
+              "plus_correction",
+              "plus_private",
+              "both"
+            ]
+          }
+        }
+      },
+      "A07": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker": [
+              "plain",
+              "audience_modelling"
+            ],
+            "reader": [
+              "plain",
+              "audience_aware"
+            ]
+          }
+        }
+      },
+      "A08": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader": [
+              "aware",
+              "unaware",
+              "suppress"
+            ],
+            "truth": [
+              "true",
+              "false"
+            ]
+          }
+        }
+      },
+      "A09": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "exposure": [
+              1,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "A10": {
+        "discovery": {
+          "levels": 6,
+          "units": 64,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "gate": [
+              "factored",
+              "scalar",
+              "suppress"
+            ],
+            "reliability": [
+              "reliable",
+              "unreliable"
+            ]
+          }
+        }
+      },
+      "H01": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "structure": [
+              "hierarchical",
+              "flat"
+            ]
+          }
+        }
+      },
+      "H02": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "window": [
+              "shared",
+              "distinct"
+            ]
+          }
+        }
+      },
+      "H03": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "observational",
+              "intervened"
+            ]
+          }
+        }
+      },
+      "H04": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "incentive": [
+              "original",
+              "changed"
+            ],
+            "model": [
+              "preference",
+              "habit"
+            ]
+          }
+        }
+      },
+      "H05": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "before_reversal",
+              "after_reversal"
+            ]
+          }
+        }
+      },
+      "H06": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "level": [
+              "action",
+              "subgoal",
+              "top"
+            ]
+          }
+        }
+      },
+      "H07": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "team": [
+              "central",
+              "shared_brief"
+            ],
+            "reader": [
+              "interaction",
+              "coherence"
+            ]
+          }
+        }
+      },
+      "H08": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "model": [
+              "top",
+              "subgoal",
+              "flat_value",
+              "last_goal"
+            ]
+          }
+        }
+      },
+      "F01": {
+        "discovery": {
+          "levels": 7,
+          "units": 64,
+          "cells": 448,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "factor": [
+              "novelty",
+              "complexity",
+              "error",
+              "reducibility",
+              "progress",
+              "relevance",
+              "cost"
+            ]
+          }
+        }
+      },
+      "F02": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "novelty",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F03": {
+        "discovery": {
+          "levels": 3,
+          "units": 64,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "complexity",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F04": {
+        "discovery": {
+          "levels": 4,
+          "units": 64,
+          "cells": 256,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress",
+              "eig_per_cost",
+              "random"
+            ]
+          }
+        }
+      },
+      "F05": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress"
+            ]
+          }
+        }
+      },
+      "F06": {
+        "discovery": {
+          "levels": 5,
+          "units": 64,
+          "cells": 320,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "eig_per_cost",
+              "novelty",
+              "surprise",
+              "always_forensic",
+              "random"
+            ]
+          }
+        }
+      },
+      "F07": {
+        "discovery": {
+          "levels": 2,
+          "units": 64,
+          "cells": 128,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "hypothesis": [
+              "attractive_weak",
+              "dull_diagnostic"
+            ]
+          }
+        }
+      },
+      "F08": {
+        "transfer": {
+          "levels": 2,
+          "units": 32,
+          "cells": 64,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "probe": [
+              "discriminative",
+              "null"
+            ]
+          }
+        }
+      },
+      "B01": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "B02": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "X01": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X02": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X03": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X04": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X05": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X06": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X07": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X08": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X09": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X10": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X11": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X12": {
+        "attack": {
+          "levels": 3,
+          "units": 32,
+          "cells": 96,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "T1": {
+      "I01": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "anchor": [
+              "C04",
+              "A03",
+              "G01",
+              "H03",
+              "C15",
+              "X10"
+            ]
+          }
+        }
+      },
+      "I02": {
+        "discovery": {
+          "levels": 5,
+          "units": 1,
+          "cells": 5,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "cards_64",
+              "attacks_12",
+              "factors",
+              "lanes",
+              "floors"
+            ]
+          }
+        }
+      },
+      "I03": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "normalization",
+              "brute_force",
+              "label_invariance",
+              "order_invariance"
+            ]
+          }
+        }
+      },
+      "I04": {
+        "discovery": {
+          "levels": 12,
+          "units": 192,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "I05": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "surface_collision",
+              "equifinal_history",
+              "factor_orthogonality",
+              "lineage"
+            ]
+          }
+        }
+      },
+      "I06": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "within_common",
+              "all_family"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "I07": {
+        "discovery": {
+          "levels": 12,
+          "units": 192,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_type": [
+              "near",
+              "typical",
+              "atypical",
+              "anti"
+            ],
+            "dose": [
+              1,
+              4,
+              16
+            ]
+          }
+        }
+      },
+      "I08": {
+        "discovery": {
+          "levels": 12,
+          "units": 192,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "self",
+              "equal_local",
+              "generic_local"
+            ],
+            "sim_bin": [
+              "near",
+              "mid",
+              "far",
+              "anti"
+            ]
+          }
+        }
+      },
+      "J01": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "distinct",
+              "equivalent"
+            ],
+            "dose": [
+              1,
+              4
+            ]
+          }
+        }
+      },
+      "J02": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J03": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes": [
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "J04": {
+        "discovery": {
+          "levels": 10,
+          "units": 192,
+          "cells": 1920,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J05": {
+        "discovery": {
+          "levels": 9,
+          "units": 192,
+          "cells": 1728,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "order": [
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process"
+            ],
+            "regime": [
+              "full",
+              "no_forensic",
+              "artifact_only"
+            ]
+          }
+        }
+      },
+      "J06": {
+        "discovery": {
+          "levels": 12,
+          "units": 192,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ],
+            "dose": [
+              1,
+              2,
+              4,
+              6
+            ]
+          }
+        }
+      },
+      "J07": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "contradiction",
+              "continuation"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "J08": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "equifinal",
+              "resolved"
+            ]
+          }
+        }
+      },
+      "J09": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "change": [
+              "goal",
+              "preference",
+              "none"
+            ]
+          }
+        }
+      },
+      "J10": {
+        "transfer": {
+          "levels": 4,
+          "units": 96,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "R01": {
+        "discovery": {
+          "levels": 12,
+          "units": 192,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "R02": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "weights": [
+              "learned",
+              "equal",
+              "random",
+              "fixed_action"
+            ]
+          }
+        }
+      },
+      "R03": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "easy_wrong",
+              "easy_right"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R04": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "accurate_hard",
+              "accurate_easy"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R05": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "world": [
+              "consistent",
+              "strategic"
+            ],
+            "reader": [
+              "fixed",
+              "expanded"
+            ]
+          }
+        }
+      },
+      "R06": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "exact",
+              "random",
+              "always",
+              "never"
+            ]
+          }
+        }
+      },
+      "R07": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "independent",
+              "duplicate",
+              "paraphrase"
+            ],
+            "fusion": [
+              "naive",
+              "shared_cause"
+            ]
+          }
+        }
+      },
+      "R08": {
+        "transfer": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "transfer": [
+              "reset",
+              "partial",
+              "full"
+            ]
+          }
+        }
+      },
+      "E01": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "history": [
+              "none",
+              "strong"
+            ]
+          }
+        }
+      },
+      "E02": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "none",
+              "strong"
+            ],
+            "phase": [
+              "initial",
+              "corrected"
+            ]
+          }
+        }
+      },
+      "E03": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "mid",
+              "high"
+            ]
+          }
+        }
+      },
+      "E04": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes_after": [
+              0,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "E05": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_history": [
+              "none",
+              "stale"
+            ],
+            "phase": [
+              "before",
+              "after"
+            ]
+          }
+        }
+      },
+      "E06": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "E07": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        },
+        "transfer": {
+          "levels": 4,
+          "units": 96,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        }
+      },
+      "E08": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "path": [
+              "A",
+              "B"
+            ]
+          }
+        }
+      },
+      "E09": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "method": [
+              "average",
+              "likelihood_product",
+              "feasible_set",
+              "best_member"
+            ]
+          }
+        }
+      },
+      "E10": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "competence",
+              "history",
+              "preference"
+            ]
+          }
+        }
+      },
+      "A01": {
+        "discovery": {
+          "levels": 7,
+          "units": 192,
+          "cells": 1344,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner": [
+              "reader_response",
+              "maker_appraisal",
+              "intended_effect",
+              "content",
+              "goal",
+              "reliability",
+              "uptake"
+            ]
+          }
+        }
+      },
+      "A02": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "similarity": [
+              "similar",
+              "dissimilar"
+            ],
+            "reader": [
+              "projecting",
+              "neutral"
+            ]
+          }
+        }
+      },
+      "A03": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker_appraisal": [
+              "known",
+              "uncertain"
+            ]
+          }
+        }
+      },
+      "A04": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner_swap": [
+              "same",
+              "swapped"
+            ]
+          }
+        }
+      },
+      "A05": {
+        "discovery": {
+          "levels": 8,
+          "units": 192,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "region": [
+              "honest_warning",
+              "sincere_fanatic",
+              "strategic_propagandist",
+              "neutral_report"
+            ],
+            "evidence": [
+              "artifact_only",
+              "counterfactual"
+            ]
+          }
+        }
+      },
+      "A06": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "artifact_only",
+              "plus_correction",
+              "plus_private",
+              "both"
+            ]
+          }
+        }
+      },
+      "A07": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker": [
+              "plain",
+              "audience_modelling"
+            ],
+            "reader": [
+              "plain",
+              "audience_aware"
+            ]
+          }
+        }
+      },
+      "A08": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader": [
+              "aware",
+              "unaware",
+              "suppress"
+            ],
+            "truth": [
+              "true",
+              "false"
+            ]
+          }
+        }
+      },
+      "A09": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "exposure": [
+              1,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "A10": {
+        "discovery": {
+          "levels": 6,
+          "units": 192,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "gate": [
+              "factored",
+              "scalar",
+              "suppress"
+            ],
+            "reliability": [
+              "reliable",
+              "unreliable"
+            ]
+          }
+        }
+      },
+      "H01": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "structure": [
+              "hierarchical",
+              "flat"
+            ]
+          }
+        }
+      },
+      "H02": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "window": [
+              "shared",
+              "distinct"
+            ]
+          }
+        }
+      },
+      "H03": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "observational",
+              "intervened"
+            ]
+          }
+        }
+      },
+      "H04": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "incentive": [
+              "original",
+              "changed"
+            ],
+            "model": [
+              "preference",
+              "habit"
+            ]
+          }
+        }
+      },
+      "H05": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "before_reversal",
+              "after_reversal"
+            ]
+          }
+        }
+      },
+      "H06": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "level": [
+              "action",
+              "subgoal",
+              "top"
+            ]
+          }
+        }
+      },
+      "H07": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "team": [
+              "central",
+              "shared_brief"
+            ],
+            "reader": [
+              "interaction",
+              "coherence"
+            ]
+          }
+        }
+      },
+      "H08": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "model": [
+              "top",
+              "subgoal",
+              "flat_value",
+              "last_goal"
+            ]
+          }
+        }
+      },
+      "F01": {
+        "discovery": {
+          "levels": 7,
+          "units": 192,
+          "cells": 1344,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "factor": [
+              "novelty",
+              "complexity",
+              "error",
+              "reducibility",
+              "progress",
+              "relevance",
+              "cost"
+            ]
+          }
+        }
+      },
+      "F02": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "novelty",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F03": {
+        "discovery": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "complexity",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F04": {
+        "discovery": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress",
+              "eig_per_cost",
+              "random"
+            ]
+          }
+        }
+      },
+      "F05": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress"
+            ]
+          }
+        }
+      },
+      "F06": {
+        "discovery": {
+          "levels": 5,
+          "units": 192,
+          "cells": 960,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "eig_per_cost",
+              "novelty",
+              "surprise",
+              "always_forensic",
+              "random"
+            ]
+          }
+        }
+      },
+      "F07": {
+        "discovery": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "hypothesis": [
+              "attractive_weak",
+              "dull_diagnostic"
+            ]
+          }
+        }
+      },
+      "F08": {
+        "transfer": {
+          "levels": 2,
+          "units": 96,
+          "cells": 192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "probe": [
+              "discriminative",
+              "null"
+            ]
+          }
+        }
+      },
+      "B01": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "B02": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "X01": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X02": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X03": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X04": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X05": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X06": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X07": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X08": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X09": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X10": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X11": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X12": {
+        "attack": {
+          "levels": 3,
+          "units": 96,
+          "cells": 288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "T2": {
+      "I01": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "anchor": [
+              "C04",
+              "A03",
+              "G01",
+              "H03",
+              "C15",
+              "X10"
+            ]
+          }
+        }
+      },
+      "I02": {
+        "discovery": {
+          "levels": 5,
+          "units": 1,
+          "cells": 5,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "cards_64",
+              "attacks_12",
+              "factors",
+              "lanes",
+              "floors"
+            ]
+          }
+        }
+      },
+      "I03": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "normalization",
+              "brute_force",
+              "label_invariance",
+              "order_invariance"
+            ]
+          }
+        }
+      },
+      "I04": {
+        "discovery": {
+          "levels": 12,
+          "units": 384,
+          "cells": 4608,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "I05": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "surface_collision",
+              "equifinal_history",
+              "factor_orthogonality",
+              "lineage"
+            ]
+          }
+        }
+      },
+      "I06": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "within_common",
+              "all_family"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "I07": {
+        "discovery": {
+          "levels": 12,
+          "units": 384,
+          "cells": 4608,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_type": [
+              "near",
+              "typical",
+              "atypical",
+              "anti"
+            ],
+            "dose": [
+              1,
+              4,
+              16
+            ]
+          }
+        }
+      },
+      "I08": {
+        "discovery": {
+          "levels": 12,
+          "units": 384,
+          "cells": 4608,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "self",
+              "equal_local",
+              "generic_local"
+            ],
+            "sim_bin": [
+              "near",
+              "mid",
+              "far",
+              "anti"
+            ]
+          }
+        }
+      },
+      "J01": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "distinct",
+              "equivalent"
+            ],
+            "dose": [
+              1,
+              4
+            ]
+          }
+        }
+      },
+      "J02": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J03": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes": [
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "J04": {
+        "discovery": {
+          "levels": 10,
+          "units": 384,
+          "cells": 3840,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J05": {
+        "discovery": {
+          "levels": 9,
+          "units": 384,
+          "cells": 3456,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "order": [
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process"
+            ],
+            "regime": [
+              "full",
+              "no_forensic",
+              "artifact_only"
+            ]
+          }
+        }
+      },
+      "J06": {
+        "discovery": {
+          "levels": 12,
+          "units": 384,
+          "cells": 4608,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ],
+            "dose": [
+              1,
+              2,
+              4,
+              6
+            ]
+          }
+        }
+      },
+      "J07": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "contradiction",
+              "continuation"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "J08": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "equifinal",
+              "resolved"
+            ]
+          }
+        }
+      },
+      "J09": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "change": [
+              "goal",
+              "preference",
+              "none"
+            ]
+          }
+        }
+      },
+      "J10": {
+        "transfer": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "R01": {
+        "discovery": {
+          "levels": 12,
+          "units": 384,
+          "cells": 4608,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "R02": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "weights": [
+              "learned",
+              "equal",
+              "random",
+              "fixed_action"
+            ]
+          }
+        }
+      },
+      "R03": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "easy_wrong",
+              "easy_right"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R04": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "accurate_hard",
+              "accurate_easy"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R05": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "world": [
+              "consistent",
+              "strategic"
+            ],
+            "reader": [
+              "fixed",
+              "expanded"
+            ]
+          }
+        }
+      },
+      "R06": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "exact",
+              "random",
+              "always",
+              "never"
+            ]
+          }
+        }
+      },
+      "R07": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "independent",
+              "duplicate",
+              "paraphrase"
+            ],
+            "fusion": [
+              "naive",
+              "shared_cause"
+            ]
+          }
+        }
+      },
+      "R08": {
+        "transfer": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "transfer": [
+              "reset",
+              "partial",
+              "full"
+            ]
+          }
+        }
+      },
+      "E01": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "history": [
+              "none",
+              "strong"
+            ]
+          }
+        }
+      },
+      "E02": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "none",
+              "strong"
+            ],
+            "phase": [
+              "initial",
+              "corrected"
+            ]
+          }
+        }
+      },
+      "E03": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "mid",
+              "high"
+            ]
+          }
+        }
+      },
+      "E04": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes_after": [
+              0,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "E05": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_history": [
+              "none",
+              "stale"
+            ],
+            "phase": [
+              "before",
+              "after"
+            ]
+          }
+        }
+      },
+      "E06": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "E07": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        },
+        "transfer": {
+          "levels": 4,
+          "units": 192,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        }
+      },
+      "E08": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "path": [
+              "A",
+              "B"
+            ]
+          }
+        }
+      },
+      "E09": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "method": [
+              "average",
+              "likelihood_product",
+              "feasible_set",
+              "best_member"
+            ]
+          }
+        }
+      },
+      "E10": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "competence",
+              "history",
+              "preference"
+            ]
+          }
+        }
+      },
+      "A01": {
+        "discovery": {
+          "levels": 7,
+          "units": 384,
+          "cells": 2688,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner": [
+              "reader_response",
+              "maker_appraisal",
+              "intended_effect",
+              "content",
+              "goal",
+              "reliability",
+              "uptake"
+            ]
+          }
+        }
+      },
+      "A02": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "similarity": [
+              "similar",
+              "dissimilar"
+            ],
+            "reader": [
+              "projecting",
+              "neutral"
+            ]
+          }
+        }
+      },
+      "A03": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker_appraisal": [
+              "known",
+              "uncertain"
+            ]
+          }
+        }
+      },
+      "A04": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner_swap": [
+              "same",
+              "swapped"
+            ]
+          }
+        }
+      },
+      "A05": {
+        "discovery": {
+          "levels": 8,
+          "units": 384,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "region": [
+              "honest_warning",
+              "sincere_fanatic",
+              "strategic_propagandist",
+              "neutral_report"
+            ],
+            "evidence": [
+              "artifact_only",
+              "counterfactual"
+            ]
+          }
+        }
+      },
+      "A06": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "artifact_only",
+              "plus_correction",
+              "plus_private",
+              "both"
+            ]
+          }
+        }
+      },
+      "A07": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker": [
+              "plain",
+              "audience_modelling"
+            ],
+            "reader": [
+              "plain",
+              "audience_aware"
+            ]
+          }
+        }
+      },
+      "A08": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader": [
+              "aware",
+              "unaware",
+              "suppress"
+            ],
+            "truth": [
+              "true",
+              "false"
+            ]
+          }
+        }
+      },
+      "A09": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "exposure": [
+              1,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "A10": {
+        "discovery": {
+          "levels": 6,
+          "units": 384,
+          "cells": 2304,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "gate": [
+              "factored",
+              "scalar",
+              "suppress"
+            ],
+            "reliability": [
+              "reliable",
+              "unreliable"
+            ]
+          }
+        }
+      },
+      "H01": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "structure": [
+              "hierarchical",
+              "flat"
+            ]
+          }
+        }
+      },
+      "H02": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "window": [
+              "shared",
+              "distinct"
+            ]
+          }
+        }
+      },
+      "H03": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "observational",
+              "intervened"
+            ]
+          }
+        }
+      },
+      "H04": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "incentive": [
+              "original",
+              "changed"
+            ],
+            "model": [
+              "preference",
+              "habit"
+            ]
+          }
+        }
+      },
+      "H05": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "before_reversal",
+              "after_reversal"
+            ]
+          }
+        }
+      },
+      "H06": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "level": [
+              "action",
+              "subgoal",
+              "top"
+            ]
+          }
+        }
+      },
+      "H07": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "team": [
+              "central",
+              "shared_brief"
+            ],
+            "reader": [
+              "interaction",
+              "coherence"
+            ]
+          }
+        }
+      },
+      "H08": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "model": [
+              "top",
+              "subgoal",
+              "flat_value",
+              "last_goal"
+            ]
+          }
+        }
+      },
+      "F01": {
+        "discovery": {
+          "levels": 7,
+          "units": 384,
+          "cells": 2688,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "factor": [
+              "novelty",
+              "complexity",
+              "error",
+              "reducibility",
+              "progress",
+              "relevance",
+              "cost"
+            ]
+          }
+        }
+      },
+      "F02": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "novelty",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F03": {
+        "discovery": {
+          "levels": 3,
+          "units": 384,
+          "cells": 1152,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "complexity",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F04": {
+        "discovery": {
+          "levels": 4,
+          "units": 384,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress",
+              "eig_per_cost",
+              "random"
+            ]
+          }
+        }
+      },
+      "F05": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress"
+            ]
+          }
+        }
+      },
+      "F06": {
+        "discovery": {
+          "levels": 5,
+          "units": 384,
+          "cells": 1920,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "eig_per_cost",
+              "novelty",
+              "surprise",
+              "always_forensic",
+              "random"
+            ]
+          }
+        }
+      },
+      "F07": {
+        "discovery": {
+          "levels": 2,
+          "units": 384,
+          "cells": 768,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "hypothesis": [
+              "attractive_weak",
+              "dull_diagnostic"
+            ]
+          }
+        }
+      },
+      "F08": {
+        "transfer": {
+          "levels": 2,
+          "units": 192,
+          "cells": 384,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "probe": [
+              "discriminative",
+              "null"
+            ]
+          }
+        }
+      },
+      "B01": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "B02": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "X01": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X02": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X03": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X04": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X05": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X06": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X07": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X08": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X09": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X10": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X11": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X12": {
+        "attack": {
+          "levels": 3,
+          "units": 192,
+          "cells": 576,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "T3": {
+      "I01": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "anchor": [
+              "C04",
+              "A03",
+              "G01",
+              "H03",
+              "C15",
+              "X10"
+            ]
+          }
+        }
+      },
+      "I02": {
+        "discovery": {
+          "levels": 5,
+          "units": 1,
+          "cells": 5,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "cards_64",
+              "attacks_12",
+              "factors",
+              "lanes",
+              "floors"
+            ]
+          }
+        }
+      },
+      "I03": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "normalization",
+              "brute_force",
+              "label_invariance",
+              "order_invariance"
+            ]
+          }
+        }
+      },
+      "I04": {
+        "discovery": {
+          "levels": 12,
+          "units": 1024,
+          "cells": 12288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "I05": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "check": [
+              "surface_collision",
+              "equifinal_history",
+              "factor_orthogonality",
+              "lineage"
+            ]
+          }
+        }
+      },
+      "I06": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "within_common",
+              "all_family"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "I07": {
+        "discovery": {
+          "levels": 12,
+          "units": 1024,
+          "cells": 12288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_type": [
+              "near",
+              "typical",
+              "atypical",
+              "anti"
+            ],
+            "dose": [
+              1,
+              4,
+              16
+            ]
+          }
+        }
+      },
+      "I08": {
+        "discovery": {
+          "levels": 12,
+          "units": 1024,
+          "cells": 12288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "self",
+              "equal_local",
+              "generic_local"
+            ],
+            "sim_bin": [
+              "near",
+              "mid",
+              "far",
+              "anti"
+            ]
+          }
+        }
+      },
+      "J01": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "distinct",
+              "equivalent"
+            ],
+            "dose": [
+              1,
+              4
+            ]
+          }
+        }
+      },
+      "J02": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J03": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes": [
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "J04": {
+        "discovery": {
+          "levels": 10,
+          "units": 1024,
+          "cells": 10240,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "J05": {
+        "discovery": {
+          "levels": 9,
+          "units": 1024,
+          "cells": 9216,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "order": [
+              "goal_process_preference",
+              "process_goal_preference",
+              "preference_goal_process"
+            ],
+            "regime": [
+              "full",
+              "no_forensic",
+              "artifact_only"
+            ]
+          }
+        }
+      },
+      "J06": {
+        "discovery": {
+          "levels": 12,
+          "units": 1024,
+          "cells": 12288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ],
+            "dose": [
+              1,
+              2,
+              4,
+              6
+            ]
+          }
+        }
+      },
+      "J07": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "contradiction",
+              "continuation"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "J08": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "equifinal",
+              "resolved"
+            ]
+          }
+        }
+      },
+      "J09": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "change": [
+              "goal",
+              "preference",
+              "none"
+            ]
+          }
+        }
+      },
+      "J10": {
+        "transfer": {
+          "levels": 4,
+          "units": 512,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "estimator": [
+              "independent",
+              "joint"
+            ],
+            "dose": [
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "R01": {
+        "discovery": {
+          "levels": 12,
+          "units": 1024,
+          "cells": 12288,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "route": [
+              "action",
+              "semantic",
+              "context",
+              "forensic"
+            ],
+            "latent": [
+              "process",
+              "goal",
+              "preference"
+            ]
+          }
+        }
+      },
+      "R02": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "weights": [
+              "learned",
+              "equal",
+              "random",
+              "fixed_action"
+            ]
+          }
+        }
+      },
+      "R03": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "easy_wrong",
+              "easy_right"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R04": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "condition": [
+              "accurate_hard",
+              "accurate_easy"
+            ],
+            "reader": [
+              "ease_driven",
+              "learned"
+            ]
+          }
+        }
+      },
+      "R05": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "world": [
+              "consistent",
+              "strategic"
+            ],
+            "reader": [
+              "fixed",
+              "expanded"
+            ]
+          }
+        }
+      },
+      "R06": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "exact",
+              "random",
+              "always",
+              "never"
+            ]
+          }
+        }
+      },
+      "R07": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "independent",
+              "duplicate",
+              "paraphrase"
+            ],
+            "fusion": [
+              "naive",
+              "shared_cause"
+            ]
+          }
+        }
+      },
+      "R08": {
+        "transfer": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "transfer": [
+              "reset",
+              "partial",
+              "full"
+            ]
+          }
+        }
+      },
+      "E01": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "history": [
+              "none",
+              "strong"
+            ]
+          }
+        }
+      },
+      "E02": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "history": [
+              "none",
+              "strong"
+            ],
+            "phase": [
+              "initial",
+              "corrected"
+            ]
+          }
+        }
+      },
+      "E03": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "mid",
+              "high"
+            ]
+          }
+        }
+      },
+      "E04": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "episodes_after": [
+              0,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "E05": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader_history": [
+              "none",
+              "stale"
+            ],
+            "phase": [
+              "before",
+              "after"
+            ]
+          }
+        }
+      },
+      "E06": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "competence": [
+              "low",
+              "high"
+            ],
+            "dose": [
+              1,
+              2,
+              4
+            ]
+          }
+        }
+      },
+      "E07": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        },
+        "transfer": {
+          "levels": 4,
+          "units": 512,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "history",
+              "competence"
+            ],
+            "domain": [
+              "same",
+              "cross"
+            ]
+          }
+        }
+      },
+      "E08": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "path": [
+              "A",
+              "B"
+            ]
+          }
+        }
+      },
+      "E09": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "method": [
+              "average",
+              "likelihood_product",
+              "feasible_set",
+              "best_member"
+            ]
+          }
+        }
+      },
+      "E10": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "object": [
+              "competence",
+              "history",
+              "preference"
+            ]
+          }
+        }
+      },
+      "A01": {
+        "discovery": {
+          "levels": 7,
+          "units": 1024,
+          "cells": 7168,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner": [
+              "reader_response",
+              "maker_appraisal",
+              "intended_effect",
+              "content",
+              "goal",
+              "reliability",
+              "uptake"
+            ]
+          }
+        }
+      },
+      "A02": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "similarity": [
+              "similar",
+              "dissimilar"
+            ],
+            "reader": [
+              "projecting",
+              "neutral"
+            ]
+          }
+        }
+      },
+      "A03": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker_appraisal": [
+              "known",
+              "uncertain"
+            ]
+          }
+        }
+      },
+      "A04": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "owner_swap": [
+              "same",
+              "swapped"
+            ]
+          }
+        }
+      },
+      "A05": {
+        "discovery": {
+          "levels": 8,
+          "units": 1024,
+          "cells": 8192,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "region": [
+              "honest_warning",
+              "sincere_fanatic",
+              "strategic_propagandist",
+              "neutral_report"
+            ],
+            "evidence": [
+              "artifact_only",
+              "counterfactual"
+            ]
+          }
+        }
+      },
+      "A06": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "evidence": [
+              "artifact_only",
+              "plus_correction",
+              "plus_private",
+              "both"
+            ]
+          }
+        }
+      },
+      "A07": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "maker": [
+              "plain",
+              "audience_modelling"
+            ],
+            "reader": [
+              "plain",
+              "audience_aware"
+            ]
+          }
+        }
+      },
+      "A08": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "reader": [
+              "aware",
+              "unaware",
+              "suppress"
+            ],
+            "truth": [
+              "true",
+              "false"
+            ]
+          }
+        }
+      },
+      "A09": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "exposure": [
+              1,
+              2,
+              4,
+              8
+            ]
+          }
+        }
+      },
+      "A10": {
+        "discovery": {
+          "levels": 6,
+          "units": 1024,
+          "cells": 6144,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "gate": [
+              "factored",
+              "scalar",
+              "suppress"
+            ],
+            "reliability": [
+              "reliable",
+              "unreliable"
+            ]
+          }
+        }
+      },
+      "H01": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "structure": [
+              "hierarchical",
+              "flat"
+            ]
+          }
+        }
+      },
+      "H02": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "window": [
+              "shared",
+              "distinct"
+            ]
+          }
+        }
+      },
+      "H03": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "observational",
+              "intervened"
+            ]
+          }
+        }
+      },
+      "H04": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "incentive": [
+              "original",
+              "changed"
+            ],
+            "model": [
+              "preference",
+              "habit"
+            ]
+          }
+        }
+      },
+      "H05": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "phase": [
+              "before_reversal",
+              "after_reversal"
+            ]
+          }
+        }
+      },
+      "H06": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "level": [
+              "action",
+              "subgoal",
+              "top"
+            ]
+          }
+        }
+      },
+      "H07": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "team": [
+              "central",
+              "shared_brief"
+            ],
+            "reader": [
+              "interaction",
+              "coherence"
+            ]
+          }
+        }
+      },
+      "H08": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "model": [
+              "top",
+              "subgoal",
+              "flat_value",
+              "last_goal"
+            ]
+          }
+        }
+      },
+      "F01": {
+        "discovery": {
+          "levels": 7,
+          "units": 1024,
+          "cells": 7168,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "factor": [
+              "novelty",
+              "complexity",
+              "error",
+              "reducibility",
+              "progress",
+              "relevance",
+              "cost"
+            ]
+          }
+        }
+      },
+      "F02": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "novelty",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F03": {
+        "discovery": {
+          "levels": 3,
+          "units": 1024,
+          "cells": 3072,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "complexity",
+              "learning_progress",
+              "eig_per_cost"
+            ]
+          }
+        }
+      },
+      "F04": {
+        "discovery": {
+          "levels": 4,
+          "units": 1024,
+          "cells": 4096,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress",
+              "eig_per_cost",
+              "random"
+            ]
+          }
+        }
+      },
+      "F05": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "surprise",
+              "learning_progress"
+            ]
+          }
+        }
+      },
+      "F06": {
+        "discovery": {
+          "levels": 5,
+          "units": 1024,
+          "cells": 5120,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "policy": [
+              "eig_per_cost",
+              "novelty",
+              "surprise",
+              "always_forensic",
+              "random"
+            ]
+          }
+        }
+      },
+      "F07": {
+        "discovery": {
+          "levels": 2,
+          "units": 1024,
+          "cells": 2048,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "hypothesis": [
+              "attractive_weak",
+              "dull_diagnostic"
+            ]
+          }
+        }
+      },
+      "F08": {
+        "transfer": {
+          "levels": 2,
+          "units": 512,
+          "cells": 1024,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "probe": [
+              "discriminative",
+              "null"
+            ]
+          }
+        }
+      },
+      "B01": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "B02": {
+        "discovery": {
+          "levels": 1,
+          "units": 1,
+          "cells": 1,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "item": [
+              "deliverable"
+            ]
+          }
+        }
+      },
+      "X01": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X02": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X03": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X04": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X05": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X06": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X07": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X08": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X09": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X10": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X11": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      },
+      "X12": {
+        "attack": {
+          "levels": 3,
+          "units": 512,
+          "cells": 1536,
+          "min_rows_per_unit": 1,
+          "factors": {
+            "target": [
+              "candidate",
+              "positive",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

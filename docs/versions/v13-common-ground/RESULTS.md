@@ -8,7 +8,7 @@ receipt was green.** Every number below is read from a verdict under
 [`BRIDGE_PACKET.md`](BRIDGE_PACKET.md). The program, its criteria and its workload were locked
 before any result was seen (`results/v13/prereg_v13_lock.json`, `WORKLOAD_LOCK.json`); the
 changes made after data are listed under *Deviations after data* and nowhere else. Spec:
-[`V13_SPEC.md`](../../../V13_SPEC.md); implementation translation: [`SPEC.md`](SPEC.md).
+[`V13_SPEC.md`](V13_SPEC.md); implementation translation: [`SPEC.md`](SPEC.md).
 
 The record: 132 mandatory cards and the 20-attack matrix, all resolved. 123 landed, 9 closed as
 instrument failures, none void, none resource-blocked. 71 promoted cards were re-run on the

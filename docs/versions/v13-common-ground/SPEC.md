@@ -1,7 +1,7 @@
 # V13 — Common Ground. Implementation translation of the top-level spec
 
 **Written during the build, before any scientific result was read, 2026-08-25.** The scientific
-program is [`V13_SPEC.md`](../../../V13_SPEC.md) at the repository root (the curator's immutable
+program is [`V13_SPEC.md`](V13_SPEC.md) at the repository root (the curator's immutable
 handoff; it files beside this page when the version closes) and is not narrowed here. This page
 records the viability assessment the curator asked for, how the program maps onto code, the
 constructions chosen where the spec left a choice, and the freezes. Deviations after data go to
