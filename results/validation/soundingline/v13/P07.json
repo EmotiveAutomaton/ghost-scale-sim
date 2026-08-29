@@ -1,0 +1,312 @@
+{
+  "card": "P07",
+  "trunk": "P",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "Can a single decisive conflict override accumulated compatible evidence appropriately?",
+    "what_happened": "A strong reliable conflict after a short compatible history moved 0.96 of the mass onto the truth; a weak unreliable one after a long history moved -3.51.",
+    "what_changed_in_the_project_world": "Override is graded on all three axes; a bounded reader that discounts conflict by history length is more conservative still.",
+    "what_remains_a_rival": "a binary rule",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Whether one decisive conflict overrides accumulated compatible evidence is graded in conflict strength, history length and source reliability; no binary rule describes the surface.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_P07": {
+      "passed": true,
+      "strong_short_reliable": 0.9564766497243354,
+      "weak_long_unreliable": -3.5073123982538106,
+      "graded": 1.0
+    },
+    "surface": {
+      "weak|h2|low": {
+        "bayes": -0.6234702438181505,
+        "bounded": -0.6597408939075093
+      },
+      "weak|h2|high": {
+        "bayes": -0.39767123688211237,
+        "bounded": -0.44903460613561136
+      },
+      "weak|h8|low": {
+        "bayes": -3.5073123982538106,
+        "bounded": -3.6276992299810487
+      },
+      "weak|h8|high": {
+        "bayes": -3.1717965780112154,
+        "bounded": -3.424310914714604
+      },
+      "strong|h2|low": {
+        "bayes": 0.3106188826122448,
+        "bounded": 0.1698466921493483
+      },
+      "strong|h2|high": {
+        "bayes": 0.9564766497243354,
+        "bounded": 0.8474511253250709
+      },
+      "strong|h8|low": {
+        "bayes": -2.2876174903191675,
+        "bounded": -2.897431051144614
+      },
+      "strong|h8|high": {
+        "bayes": -0.9725827678698881,
+        "bounded": -1.9079350283265648
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "weak|2|low": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "weak|2|high": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "strong|2|low": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "strong|2|high": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "weak|8|low": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "weak|8|high": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "strong|8|low": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    },
+    "strong|8|high": {
+      "units": 2560,
+      "rows": 51200,
+      "min_rows_in_a_unit": 20
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 8,
+    "realized_levels": 8,
+    "expected_units": 2560,
+    "realized_units": 2560,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 20,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2560,
+    "rows": 20480
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a binary rule",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 631.12,
+    "units_cpu_s": 7272.14,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 165084,
+      "process_time": 31.109375,
+      "user": 18.0,
+      "system": 13.109375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 66236416,
+      "peak_rss": 66236416
+    }
+  },
+  "runtime_seconds": 631.12,
+  "tier": "T2",
+  "units": {
+    "n": 2560,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:conflict_conditions_move_the_override",
+        "kind": "live",
+        "passed": true,
+        "detail": "movement is the log-odds the conflict moved onto the truth, in nats over the prior",
+        "observed": 4.463789047978146,
+        "expected": 0.5
+      },
+      {
+        "name": "placebo:same_prior_all_cells",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:stronger_conflict_overrides_more",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_evidence_type",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:strong_reliable_conflict_moves_the_truth_up",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9564766497243354,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:surface_is_graded_not_binary",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 1.0,
+        "expected": 1.0
+      },
+      {
+        "name": "calibration:bounded_reader_more_conservative",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": -3.6276992299810487,
+        "expected": -3.5073123982538106,
+        "tolerance": 0.12038683272723807
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v13/cards/trunk_p.py",
+    "sha256": "c0fddd02cbcf4d0b937155eb2b1fb6005b0f6b9172c8e7455a83b5bb255e9aec",
+    "git_commit": "7b055a1",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:conflict_conditions_move_the_override",
+        "kind": "live",
+        "passed": true,
+        "detail": "movement is the log-odds the conflict moved onto the truth, in nats over the prior",
+        "observed": 4.463789047978146,
+        "expected": 0.5
+      },
+      {
+        "name": "placebo:same_prior_all_cells",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:stronger_conflict_overrides_more",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_evidence_type",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap source, length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:strong_reliable_conflict_moves_the_truth_up",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9564766497243354,
+        "expected": 0.5
+      },
+      {
+        "name": "prediction:surface_is_graded_not_binary",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, continuation, probe or response",
+        "observed": 1.0,
+        "expected": 1.0
+      },
+      {
+        "name": "calibration:bounded_reader_more_conservative",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": -3.6276992299810487,
+        "expected": -3.5073123982538106,
+        "tolerance": 0.12038683272723807
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

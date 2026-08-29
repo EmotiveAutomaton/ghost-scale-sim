@@ -73,7 +73,11 @@
       "what_happened": "On the maker's hidden next goal the self prior beat the equally local non-self prior by +0.04 nats for near makers and -0.03 for far makers; pooled, the difference was -0.00."
     },
     "C16": {
-      "state": "UNRUN"
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "On fresh families the self-minus-equal-local gain was +0.26 nats near and -0.16 far, against 0.26 and -0.16 in discovery."
     },
     "P01": {
       "state": "INSTRUMENT_FAILED",
@@ -97,5 +101,5 @@
       "what_happened": "For every reader the equally local non-self prior matched the self prior's entropy to machine precision and its expected distance to the truth within 0.061 nats; the generic local prior within 0.003."
     }
   },
-  "written": "2026-08-28T17:57:03"
+  "written": "2026-08-28T21:20:02"
 }

@@ -326,7 +326,11 @@
       "what_happened": "On the maker's hidden next goal the self prior beat the equally local non-self prior by +0.04 nats for near makers and -0.03 for far makers; pooled, the difference was -0.00."
     },
     "C16": {
-      "state": "UNRUN"
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "On fresh families the self-minus-equal-local gain was +0.26 nats near and -0.16 far, against 0.26 and -0.16 in discovery."
     },
     "P01": {
       "state": "INSTRUMENT_FAILED",
@@ -469,7 +473,11 @@
       "what_happened": "Carrying a source's learned reliability improved truth reading by +0.39 in its own domain, -1.80 in a domain where it misleads, and -1.80 for a namesake."
     },
     "G16": {
-      "state": "UNRUN"
+      "state": "LANDED",
+      "criterion": true,
+      "confirmed": null,
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "what_happened": "On fresh sources the reader's claim-truth accuracy was identity 84%, domain 83%, base_rate 83%, reversal 54%, and it recovered 6 claims after a reversal."
     },
     "A09": {
       "state": "LANDED",
@@ -486,5 +494,5 @@
       "what_happened": "With proposal records the private goal was recovered 97% of the time; without them the reader's top mass was 0.23, an abstention."
     }
   },
-  "written": "2026-08-28T17:57:05"
+  "written": "2026-08-28T21:20:02"
 }

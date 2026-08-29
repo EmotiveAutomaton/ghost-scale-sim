@@ -92,7 +92,7 @@ Each item names the Ghost card that licenses it, the exact transfer gap, the Sou
 
 ## L04 — Nested similarity interactions for Sounding Line: **kill**
 
-- licensed by: C03 (INSTRUMENT_FAILED, criterion failed), C04 (LANDED, criterion held), C05 (INSTRUMENT_FAILED, criterion failed), C07 (LANDED, criterion held), C08 (LANDED, criterion failed), C14 (LANDED, criterion held), C16 (UNRUN), P01 (INSTRUMENT_FAILED, criterion held), P03 (LANDED, criterion held), I03 (LANDED, criterion held)
+- licensed by: C03 (INSTRUMENT_FAILED, criterion failed), C04 (LANDED, criterion held), C05 (INSTRUMENT_FAILED, criterion failed), C07 (LANDED, criterion held), C08 (LANDED, criterion failed), C14 (LANDED, criterion held), C16 (LANDED, criterion held), P01 (INSTRUMENT_FAILED, criterion held), P03 (LANDED, criterion held), I03 (LANDED, criterion held)
 - transfer gap: V13 similarity levels are planted and measurable; in text, family, convention and expertise similarity must be estimated, and the matched-prior construction (I03) has no text analogue yet.
 - target: reader-model families and their priors over writer models; the ordering of reader models by similarity to the writer
 - records: writer models with known family, convention and competence; reader models likewise; held-out continuations

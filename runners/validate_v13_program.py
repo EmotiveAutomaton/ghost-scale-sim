@@ -55,11 +55,11 @@ def main() -> int:
         if d["status"] not in STATES or d["status"] == "DONE":
             problems.append(f"{cid}: forbidden state {d['status']}")
         if d["status"] in ("SCIENTIFIC_CLOSED", "INSTRUMENT_FAILED", "RESOURCE_BLOCKED", "VOID") and not d.get("closure_reason"):
-            v = C.load_verdict(cid, "discovery")
+            v = C.load_verdict(cid, "discovery" if "discovery" in d.get("lanes", ["discovery"]) else "transfer")
             if not (v and v.get("closure_reason")):
                 problems.append(f"{cid}: closure without a stated rule")
         if d["status"] in RESOLVED and d["trunk"] != "X":
-            lane = "discovery"
+            lane = "discovery" if "discovery" in d.get("lanes", ["discovery"]) else "transfer"   # transfer-only cards resolve in their own lane
             key = f"{lane}:{cid}"
             p = V.verdict_dir(lane) / f"{cid}.json"
             if not p.exists():
