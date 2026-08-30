@@ -1,16 +1,16 @@
 {
   "cards_total": 76,
   "mandatory_total": 64,
-  "mandatory_resolved": 5,
+  "mandatory_resolved": 6,
   "by_state": {
-    "BUILT": 70,
-    "LANDED": 5,
-    "RUNNING": 1
+    "LANDED": 6,
+    "RUNNING": 1,
+    "BUILT": 69
   },
   "by_trunk": {
     "I": {
       "total": 8,
-      "resolved": 5
+      "resolved": 6
     },
     "J": {
       "total": 10,
@@ -46,7 +46,6 @@
     }
   },
   "unresolved_mandatory": [
-    "I01",
     "I07",
     "I08",
     "J01",
@@ -106,5 +105,5 @@
     "B01",
     "B02"
   ],
-  "written": "2026-08-30T07:07:16"
+  "written": "2026-08-30T07:09:32"
 }

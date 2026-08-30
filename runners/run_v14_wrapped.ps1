@@ -2,7 +2,8 @@
 # death must leave a trace). Relaunch is the watchdog's job; this script runs the program once.
 #   powershell -File runners\run_v14_wrapped.ps1 -Workers 12
 param([int]$Workers = 12, [string]$Stage = "all")
-$repo = Split-Path -Parent $PSScriptRoot
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+$repo = Split-Path -Parent $here
 $logDir = Join-Path $repo "results\v14\logs"
 New-Item -ItemType Directory -Force $logDir | Out-Null
 $stamp = Get-Date -Format "MMdd_HHmmss"

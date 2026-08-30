@@ -1,5 +1,23 @@
 {
   "entries": {
+    "discovery:I01": {
+      "card": "I01",
+      "expected_cell_receipt": {
+        "expected_levels": 6,
+        "expected_min_rows_per_unit": 1,
+        "expected_units": 1,
+        "ok": true,
+        "realized_levels": 6,
+        "realized_min_rows_per_unit": 1,
+        "realized_units": 1
+      },
+      "lane": "discovery",
+      "source_sha256": "8dcc4b8d921f1bad23d7e2f42d940446658a51fdab90e8ae57ea24f00a4f1b36",
+      "state": "LANDED",
+      "timestamp": "2026-08-30T07:09:32",
+      "verdict_path": "results/validation/soundingline/v14/I01.json",
+      "verdict_sha256": "640eaa38480bd5eb38244977453d857e16457298d383af8b36d376f937475304"
+    },
     "discovery:I02": {
       "card": "I02",
       "expected_cell_receipt": {
@@ -92,5 +110,5 @@
     }
   },
   "program": "v14",
-  "updated": "2026-08-30T07:07:16"
+  "updated": "2026-08-30T07:09:32"
 }

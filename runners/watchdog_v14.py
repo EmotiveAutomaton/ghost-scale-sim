@@ -29,9 +29,13 @@ LOG = REPO / "results" / "v14" / "logs" / "watchdog.log"
 HALT = REPO / "results" / "v14" / "WATCHDOG_HALTED.json"
 PY = REPO / ".venv" / "Scripts" / "python.exe"
 
-POLL_S = 300
+POLL_S = 120
 STALE_S = 1800
-MAX_RELAUNCHES = 6      # progress-gated: each relaunch must follow ledger growth, so the cap only bounds a slow-recurring death
+MAX_RELAUNCHES = 60     # progress-gated: each relaunch must follow progress (a ledger entry OR a new unit checkpoint), so the
+                        # cap only bounds a death that recurs without any progress at all. The host kills the runner's tree
+                        # roughly every 30 minutes (six times so far, no fault, no traceback); a card longer than that
+                        # spans several relaunches and its checkpoints are the progress.
+CHECKPOINTS = REPO / "results" / "v14" / "checkpoints"
 
 
 def log(msg: str) -> None:
@@ -57,10 +61,16 @@ def pid_alive(pid) -> bool:
 
 
 def ledger_entries() -> int:
+    """Progress: completion-ledger entries plus unit checkpoints on disk."""
     try:
-        return len(json.loads(COMPLETION.read_text(encoding="utf-8")).get("entries", {}))
+        n = len(json.loads(COMPLETION.read_text(encoding="utf-8")).get("entries", {}))
     except Exception:                                        # noqa: BLE001
-        return -1
+        n = 0
+    try:
+        n += sum(1 for _ in CHECKPOINTS.rglob("*.json"))
+    except Exception:                                        # noqa: BLE001
+        pass
+    return n
 
 
 def relaunch() -> int:
@@ -105,7 +115,7 @@ def main() -> None:
         relaunches += 1
         entries_at_last_relaunch = now_entries
         log(f"{reason}; relaunched as pid {pid2} (relaunch {relaunches}/{MAX_RELAUNCHES}, entries {now_entries})")
-        time.sleep(120)
+        time.sleep(60)
 
 
 if __name__ == "__main__":

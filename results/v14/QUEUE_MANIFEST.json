@@ -1285,8 +1285,8 @@
       "hashes": {},
       "estimated_wall_s": 0.0,
       "actual": {
-        "wall_s": 0.28,
-        "reduce_s": 0.23,
+        "wall_s": 0.34,
+        "reduce_s": 0.28,
         "parent_cpu_s": 0.05,
         "children_cpu_s": 0.0,
         "peak_child_rss": 0,
@@ -1295,9 +1295,9 @@
         "units_computed": 0,
         "mean_unit_wall_s": null,
         "throughput_units_per_s": 0.0,
-        "elapsed_hours_at_finish": 2.611
+        "elapsed_hours_at_finish": 0.038
       },
-      "status": "BUILT",
+      "status": "LANDED",
       "pursuit": "PROMISING",
       "warrant": "DESCRIPTIVE_ONLY",
       "closure_reason": "",
@@ -6287,7 +6287,7 @@
       "upstream_oracle": false
     }
   ],
-  "updated": "2026-08-30T07:07:16",
+  "updated": "2026-08-30T07:41:01",
   "workload": {
     "tier": "T3",
     "expansions_instantiated": [
