@@ -1,0 +1,30 @@
+{
+  "written": "2026-08-29T12:10:24",
+  "workers": 12,
+  "overhead": 1.15,
+  "by_tier": {
+    "T0": 0.04097141203703708,
+    "T1": 0.13983903049465324,
+    "T2": 0.30615904292386326,
+    "T3": 0.9732988998167439
+  },
+  "selected": {
+    "tier": "T3",
+    "hours": 1.9433416751253831,
+    "expansions": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "rule": "largest_tier_under_envelope_expanded"
+  },
+  "envelope_hours": [
+    20.0,
+    21.0
+  ],
+  "window_hours": 24.0,
+  "per_card_end_to_end": true
+}

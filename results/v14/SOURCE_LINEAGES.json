@@ -1,5 +1,5 @@
 {
-  "written": "2026-08-29T11:05:52",
+  "written": "2026-08-29T12:10:13",
   "seed_rule": "SEED_OFFSET_V14 + crc32('v14|' + name) % 1e6; never hash()",
   "world_seed": "world|<lane>|<wid>",
   "unit_seed": "<lane>|<card>|w<wid>|r<rep>|<tag>",

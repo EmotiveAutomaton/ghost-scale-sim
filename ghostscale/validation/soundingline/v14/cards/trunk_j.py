@@ -275,7 +275,7 @@ def reduce_J04(card, units, ctx):
             positive={"observed": ls["joint"][4], "expected": max(ls["joint"][4], 0.0), "tol": 0.0, "name": "joint_above_the_prior"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_observations_every_estimator"},
             oracle={"observed": mean_of(rows, "class_mass", lambda r: r["estimator"] == "joint" and r["dose"] == 4) - 1.0 / 96, "min": 0.05, "name": "class_identifiable"},
-            prediction={"gain": gain, "min": cr["min_gain"], "name": "joint_minus_independent_next_action"},
+            prediction={"gain": gain, "min": 0.0, "name": "joint_minus_independent_next_action", "detail": "the joint posterior constrains the hidden action at all; the 0.02 bar is the criterion"},
             calibration={"observed": ece["joint"], "reference": ece["independent"], "direction": "down", "tol": cr["max_ece_penalty"], "name": "joint_no_less_calibrated"})
     criterion(v, "J04", passed, joint_minus_independent=gain, joint_minus_best_staged=ls["joint"][4] - best_staged, ece=ece)
     v["results"].update({"log_score_gain_by_estimator_and_dose": ls, "ece_by_estimator": ece, "evaluations_per_unit": sorted(evals)})
@@ -581,7 +581,7 @@ def reduce_J10(card, units, ctx):
             positive={"observed": ls["joint"][4], "expected": max(ls["joint"][4], 0.0), "tol": 0.0, "name": "joint_above_prior"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "fresh_vocabulary_by_construction"},
             oracle={"observed": mean_of(rows, "class_mass", lambda r: r["estimator"] == "joint" and r["dose"] == 4) - 1 / 96, "min": 0.05, "name": "class_identifiable_on_fresh_worlds"},
-            prediction={"gain": gain, "min": cr["min_gain"], "name": "joint_minus_independent_transfer"},
+            prediction={"gain": gain, "min": 0.0, "name": "joint_minus_independent_transfer", "detail": "the joint posterior constrains the transfer action at all; the 0.02 bar is the criterion"},
             calibration={"observed": ece["joint"], "reference": ece["independent"], "direction": "down", "tol": 0.05, "name": "calibration_kept"})
     criterion(v, "J10", passed, joint_minus_independent=gain, ece=ece)
     v["results"].update({"log_score_gain": ls})

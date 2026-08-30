@@ -1,0 +1,91 @@
+{
+  "amendments": [
+    {
+      "card": "I01",
+      "original": {
+        "lane": "discovery",
+        "verdict_path": "results/validation/soundingline/v14/I01.json",
+        "verdict_sha256": "45811f883befaf252c1071cf5b96be3847c80044aacc4fbb9e15ba5ee813f1d7",
+        "ledger_entry": {
+          "card": "I01",
+          "expected_cell_receipt": {
+            "expected_levels": 6,
+            "expected_min_rows_per_unit": 1,
+            "expected_units": 2048,
+            "ok": false,
+            "realized_levels": 6,
+            "realized_min_rows_per_unit": 1,
+            "realized_units": 1
+          },
+          "lane": "discovery",
+          "source_sha256": "8dcc4b8d921f1bad23d7e2f42d940446658a51fdab90e8ae57ea24f00a4f1b36",
+          "state": "RESOURCE_BLOCKED",
+          "timestamp": "2026-08-29T12:10:24",
+          "verdict_path": "results/validation/soundingline/v14/I01.json",
+          "verdict_sha256": "45811f883befaf252c1071cf5b96be3847c80044aacc4fbb9e15ba5ee813f1d7"
+        },
+        "manifest_status": "RESOURCE_BLOCKED",
+        "state": "RESOURCE_BLOCKED",
+        "failed_gates": [],
+        "superseded_to": "results/validation/soundingline/v14/superseded/I01.20260829T144454.json"
+      },
+      "replacement": {
+        "lane": "discovery",
+        "action": "re-run after instrument repair",
+        "stamp": "20260829T144454"
+      },
+      "reason": "Instrument repair: a list card's receipt required the tier's world count (2048) for six items; I01 resolved RESOURCE_BLOCKED at 0.2 s without running its anchors. Receipt now requires the unit count for non-world cards.",
+      "when": "2026-08-29T14:44:54"
+    },
+    {
+      "card": "I01",
+      "original": {
+        "lane": "discovery",
+        "verdict_path": "results/validation/soundingline/v14/I01.json",
+        "verdict_sha256": "6e9aa75c2f8f9bf212fa9c2ac6205a81c3e7bd6577a693ecefa74da7bfe9fec1",
+        "ledger_entry": {
+          "card": "I01",
+          "expected_cell_receipt": {
+            "expected_levels": 6,
+            "expected_min_rows_per_unit": 1,
+            "expected_units": 6,
+            "ok": false,
+            "realized_levels": 6,
+            "realized_min_rows_per_unit": 1,
+            "realized_units": 1
+          },
+          "lane": "discovery",
+          "source_sha256": "8dcc4b8d921f1bad23d7e2f42d940446658a51fdab90e8ae57ea24f00a4f1b36",
+          "state": "RESOURCE_BLOCKED",
+          "timestamp": "2026-08-29T14:46:54",
+          "verdict_path": "results/validation/soundingline/v14/I01.json",
+          "verdict_sha256": "6e9aa75c2f8f9bf212fa9c2ac6205a81c3e7bd6577a693ecefa74da7bfe9fec1"
+        },
+        "manifest_status": "RESOURCE_BLOCKED",
+        "state": "RESOURCE_BLOCKED",
+        "failed_gates": [],
+        "superseded_to": "results/validation/soundingline/v14/superseded/I01.20260830T070716.json"
+      },
+      "replacement": {
+        "lane": "discovery",
+        "action": "re-run after instrument repair",
+        "stamp": "20260830T070716"
+      },
+      "reason": "Instrument repair (second pass): the list-card receipt must follow the sparsest-cell rule (each item lives in one unit); the first repair required six units and I01 blocked again without running its anchors.",
+      "when": "2026-08-30T07:07:16"
+    },
+    {
+      "card": "WINDOW",
+      "original": {
+        "deadline_record": "DEADLINE_VOIDED_1.json",
+        "opened": "2026-08-29T12:10:13",
+        "deadline": "2026-08-30T12:10:13"
+      },
+      "replacement": {
+        "action": "reopen the 24-hour window from the checkpoints; locks unchanged"
+      },
+      "reason": "The runner process tree was terminated by the host four times (12:32, 13:02, 15:12, 15:24 on 2026-08-29) with no fault, no traceback and ample memory; the program ran for under three of the window's first nineteen hours. The window was lost to infrastructure, not to the program. It is preserved here; a new window opens with the same locks, tier, forecast and checkpoints.",
+      "when": "2026-08-30T07:07:16"
+    }
+  ]
+}

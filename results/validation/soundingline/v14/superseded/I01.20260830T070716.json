@@ -1,0 +1,327 @@
+{
+  "card": "I01",
+  "trunk": "I",
+  "wave": 0,
+  "lane": "discovery",
+  "record": {
+    "question": "Do the V13 numeric anchors used by V14 reproduce from committed inputs?",
+    "what_happened": "All 6 imported V13 verdicts hashed to their ledger entries (yes); the largest gap between a cited number and its file was 0.0043.",
+    "what_changed_in_the_project_world": "V14 inherits V13's numbers only where the committed files carry them.",
+    "what_remains_a_rival": "provenance drift",
+    "claim_ceiling": "METHOD"
+  },
+  "hypothesis": "The six V13 verdicts V14's design rests on are the committed ones, byte for byte, and the numbers V14 cites from them are in the files.",
+  "claim_ceiling": "METHOD",
+  "construction_realization": {},
+  "results": {
+    "criterion_I01": {
+      "passed": true,
+      "max_deviation": 0.004334899996196517,
+      "hashes_ok": 1.0
+    },
+    "anchors": {
+      "C04": {
+        "sha256": "83148131f26e2d40fe2a86ec6d1c5c9e115c94600a0d044597a173c0cf830507",
+        "ledger": "83148131f26e2d40fe2a86ec6d1c5c9e115c94600a0d044597a173c0cf830507",
+        "deviations": {
+          "results.criterion_C04.near_gain": 0.00362413775921544,
+          "results.criterion_C04.far_gain": 0.0009499882199439647
+        },
+        "state": "LANDED"
+      },
+      "A03": {
+        "sha256": "0a7522d7f21c9d75e09cd94c9d9e465b2a67ace277314a01d1d790e4e6df0fee",
+        "ledger": "0a7522d7f21c9d75e09cd94c9d9e465b2a67ace277314a01d1d790e4e6df0fee",
+        "deviations": {
+          "results.by_weighting.learned.mean": 0.0015879892015573382,
+          "results.by_weighting.uniform.mean": 0.00047789066855585816
+        },
+        "state": "LANDED"
+      },
+      "G01": {
+        "sha256": "aba74f6a540bce8e9ed510385a9b1804336ae1d8084955220512a078cb4aab48",
+        "ledger": "aba74f6a540bce8e9ed510385a9b1804336ae1d8084955220512a078cb4aab48",
+        "deviations": {
+          "results.accuracy_by_dose.12": 0.001573660714285774
+        },
+        "state": "LANDED"
+      },
+      "H03": {
+        "sha256": "2da3894dca2e85494de2216be9a5b9af24ae18091e11d3f249e2000cc4a2e5be",
+        "ledger": "2da3894dca2e85494de2216be9a5b9af24ae18091e11d3f249e2000cc4a2e5be",
+        "deviations": {
+          "results.accuracy_by_reader.interaction": 0.0,
+          "results.accuracy_by_reader.coherence": 0.0
+        },
+        "state": "LANDED"
+      },
+      "C15": {
+        "sha256": "48116823b909673727d3315cbe9b48c89aca0062316cfb105361dff3efb69ce3",
+        "ledger": "48116823b909673727d3315cbe9b48c89aca0062316cfb105361dff3efb69ce3",
+        "deviations": {
+          "results.criterion_C15.independent_gain": 0.004334899996196517,
+          "results.criterion_C15.correlated_gain": 0.003096658279905684
+        },
+        "state": "LANDED"
+      },
+      "X10": {
+        "sha256": "ff41ef405c367f07a31ee8f4aa99e685402d3757b05d2a163c8105f132c3e749",
+        "ledger": "ff41ef405c367f07a31ee8f4aa99e685402d3757b05d2a163c8105f132c3e749",
+        "deviations": {
+          "results.criterion_X10.table.cost_aware_maker_inference.attacked": 0.002709069263614694,
+          "results.criterion_X10.table.cost_aware_maker_inference.unattacked": 0.0013363168858531171
+        },
+        "state": "LANDED"
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "C04": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "A03": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "G01": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "H03": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "C15": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "X10": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 6,
+    "realized_levels": 6,
+    "expected_units": 6,
+    "realized_units": 1,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 1,
+    "ok": false
+  },
+  "independent_unit": "anchor",
+  "effective_n": {
+    "units": 6,
+    "rows": 6
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "provenance drift",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 0.04,
+    "units_cpu_s": 0.0,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 46244,
+      "process_time": 0.203125,
+      "user": 0.203125,
+      "system": 0.0,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 43094016,
+      "peak_rss": 44052480
+    }
+  },
+  "runtime_seconds": 0.04,
+  "tier": "T3",
+  "units": {
+    "n": 6,
+    "kind": "list"
+  },
+  "state": "RESOURCE_BLOCKED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 8,
+    "n_ran": 3,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "v13_verdicts_hash_to_their_ledger",
+        "kind": "identity",
+        "passed": true,
+        "detail": "every imported V13 verdict's sha256 equals its V13 completion-ledger entry",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_v13_file_written",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "the card reads only; V13 stays closed",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:cited_numbers_in_the_files",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.004334899996196517,
+        "expected": 0.0,
+        "tolerance": 0.005
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "oracle",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "expected-cell receipt not met: {\n  \"expected_levels\": 6,\n  \"realized_levels\": 6,\n  \"expected_units\": 6,\n  \"realized_units\": 1,\n  \"expected_min_rows_per_unit\": 1,\n  \"realized_min_rows_per_unit\": 1,\n  \"ok\": false\n}",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_i.py",
+    "sha256": "8dcc4b8d921f1bad23d7e2f42d940446658a51fdab90e8ae57ea24f00a4f1b36",
+    "git_commit": "82ba700",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 8,
+    "n_ran": 3,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "v13_verdicts_hash_to_their_ledger",
+        "kind": "identity",
+        "passed": true,
+        "detail": "every imported V13 verdict's sha256 equals its V13 completion-ledger entry",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_v13_file_written",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "the card reads only; V13 stays closed",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:cited_numbers_in_the_files",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.004334899996196517,
+        "expected": 0.0,
+        "tolerance": 0.005
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "oracle",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

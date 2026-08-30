@@ -1,0 +1,37 @@
+{
+  "program": "v14",
+  "kind": "workload",
+  "written": "2026-08-29T12:10:24",
+  "tier": "T3",
+  "tier_config": {
+    "discovery_worlds": 512,
+    "transfer_worlds": 256,
+    "confirmation_worlds": 256,
+    "repeats": 4,
+    "makers": 96,
+    "pilot_worlds": 4
+  },
+  "expansions_instantiated": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "forecast": {
+    "hours": 1.9433416751253831,
+    "rule": "largest_tier_under_envelope_expanded",
+    "by_tier": {
+      "T0": 0.04097141203703708,
+      "T1": 0.13983903049465324,
+      "T2": 0.30615904292386326,
+      "T3": 0.9732988998167439
+    }
+  },
+  "pilot_summary_sha256": "14ec35ad06d311710d55d3f9b6c49f0317fe2f5e77352acedb195f37833f9dc0",
+  "pilot_is_non_scientific": true,
+  "cells_sha256": "4e5ccf23e91202ece24d50936bba7dd2772dd6eeb2bfac90097e0132dde36b0a",
+  "route_information_sha256": "dc7e0cbf3c46381a6c157d1cfde7879c1f5c808a349ca513016a761fa1e76cf8",
+  "attack_matrix_sha256": "c70312827f884a69faa62b9a94dc0eb4f089229e6aa620609328ed3a59af7585"
+}

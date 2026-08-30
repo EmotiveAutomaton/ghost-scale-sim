@@ -1,0 +1,283 @@
+{
+  "card": "I02",
+  "trunk": "I",
+  "wave": 0,
+  "lane": "discovery",
+  "record": {
+    "question": "Does the manifest enumerate all 64 cards, factors, attacks, lanes, and independent-unit floors?",
+    "what_happened": "The manifest enumerates 64 mandatory cards and 12 attacks with factors, lanes and floors on every card.",
+    "what_changed_in_the_project_world": "The program is literal in its record.",
+    "what_remains_a_rival": "a silent not-applicable",
+    "claim_ceiling": "METHOD"
+  },
+  "hypothesis": "The machine-readable manifest holds exactly the program the spec names: 64 mandatory cards, 12 attacks, every factor, lane and floor.",
+  "claim_ceiling": "METHOD",
+  "construction_realization": {},
+  "results": {
+    "criterion_I02": {
+      "passed": true,
+      "cards_64": 1.0,
+      "attacks_12": 1.0,
+      "factors": 1.0,
+      "lanes": 1.0,
+      "floors": 1.0
+    },
+    "mandatory": 64,
+    "attacks": 12,
+    "by_trunk": {
+      "I": 8,
+      "J": 10,
+      "R": 8,
+      "E": 10,
+      "A": 10,
+      "H": 8,
+      "F": 8,
+      "B": 2,
+      "X": 12
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "cards_64": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "attacks_12": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "factors": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "lanes": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    },
+    "floors": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 5,
+    "realized_levels": 5,
+    "expected_units": 1,
+    "realized_units": 1,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 1,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 1,
+    "rows": 5
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a silent not-applicable",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 0.02,
+    "units_cpu_s": 0.0,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 185540,
+      "process_time": 0.96875,
+      "user": 0.203125,
+      "system": 0.765625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 48349184,
+      "peak_rss": 48525312
+    }
+  },
+  "runtime_seconds": 0.02,
+  "tier": "T3",
+  "units": {
+    "n": 1,
+    "kind": "single"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 8,
+    "n_ran": 3,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "manifest_counts",
+        "kind": "identity",
+        "passed": true,
+        "detail": "every enumeration check holds",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_silent_not_applicable",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "every attack card declares applicability per target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:recursive_validator_passes",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "oracle",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_i.py",
+    "sha256": "8dcc4b8d921f1bad23d7e2f42d940446658a51fdab90e8ae57ea24f00a4f1b36",
+    "git_commit": "82ba700",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 8,
+    "n_ran": 3,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "manifest_counts",
+        "kind": "identity",
+        "passed": true,
+        "detail": "every enumeration check holds",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_silent_not_applicable",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "every attack card declares applicability per target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:recursive_validator_passes",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "oracle",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

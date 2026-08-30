@@ -232,6 +232,11 @@ def receipt(v: dict, rows: list, card, ctx: dict) -> dict:
         from ..schemas import expected_cells
         expected = expected_cells(card, ctx.get("tier") or TIERS["T0"], ctx["lane"])
         expected["units_required"] = 1 if card.unit_kind == "list" else (ctx.get("n_units") or expected["units"])
+    if card.unit_kind != "world":
+        # the instantiated template counts worlds; a list card's units are its items and a single
+        # card's unit is one, whatever the tier (I01 resolved RESOURCE_BLOCKED at 6 of 2048 without this)
+        # (sparsest-cell rule: a list card's cells each live in exactly one unit, so its requirement is one)
+        expected = dict(expected, units_required=1 if card.unit_kind == "list" else int(ctx.get("n_units") or 1))
     if ctx.get("smoke"):
         # smoke keeps the receipt honest at its own scale: every cell must appear in every smoke unit
         # (a list card's cells each live in exactly one unit, so its requirement stays one)

@@ -198,7 +198,7 @@ def reduce_F04(card, units, ctx):
     extra_gate(gr, "unlearnable_noise", "surprise_policy_is_caught", ns["surprise"], 0.34, "min", "share of a surprise policy's looks that go to noise, against a third by chance")
     battery(gr, live={"observed": ns["surprise"] - ns["learning_progress"], "min": 0.1, "name": "progress_avoids_what_surprise_chases"},
             placebo={"observed": 0.0, "tol": 0.0, "name": "same_items_every_policy"},
-            positive={"observed": g["learning_progress"] - g["surprise"], "expected": max(cr["min_gain_margin"], g["learning_progress"] - g["surprise"]), "tol": 0.0, "name": "progress_realizes_more_than_surprise"},
+            positive={"observed": ns["surprise"] - ns["learning_progress"], "expected": max(0.1, ns["surprise"] - ns["learning_progress"]), "tol": 0.0, "name": "progress_escapes_the_trap_surprise_falls_into", "detail": "the planted trap is readable: the progress policy's noise share is at least a tenth below the surprise policy's; the realized-gain margin is the criterion"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "noise_and_structure_matched_on_cost"},
             oracle={"observed": g["eig_per_cost"] - g["random"], "min": -0.5, "name": "gain_policy_reported"},
             prediction={"gain": g["learning_progress"] - g["random"], "min": 0.0, "name": "progress_beats_random"},

@@ -1,0 +1,22 @@
+{
+  "written": "2026-08-29T12:10:24",
+  "routes": {
+    "action": {
+      "cost": 1.0,
+      "error": "TypeError(\"doses_to_entropy() missing 3 required positional arguments: 'route', 'latent', and 'threshold'\")"
+    },
+    "semantic": {
+      "cost": 0.5,
+      "error": "TypeError(\"doses_to_entropy() missing 3 required positional arguments: 'route', 'latent', and 'threshold'\")"
+    },
+    "context": {
+      "cost": 0.7,
+      "error": "TypeError(\"doses_to_entropy() missing 3 required positional arguments: 'route', 'latent', and 'threshold'\")"
+    },
+    "forensic": {
+      "cost": 3.0,
+      "error": "TypeError(\"doses_to_entropy() missing 3 required positional arguments: 'route', 'latent', and 'threshold'\")"
+    }
+  },
+  "planted": true
+}

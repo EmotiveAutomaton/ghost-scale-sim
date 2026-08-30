@@ -1,0 +1,255 @@
+{
+  "written": "2026-08-29T12:10:24",
+  "cards": [
+    "I03",
+    "J04",
+    "J10",
+    "R02",
+    "E01",
+    "A05",
+    "H06",
+    "H07",
+    "F04",
+    "F08"
+  ],
+  "measured": {
+    "I03": {
+      "T0": {
+        "unit_wall_s": 0.617375,
+        "reduce_s": 0.21,
+        "peak_rss": 39477248,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 1.2,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.941875,
+        "reduce_s": 0.11,
+        "peak_rss": 40439808,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 1.1,
+        "lane": "discovery"
+      }
+    },
+    "J04": {
+      "T0": {
+        "unit_wall_s": 0.07087500000000001,
+        "reduce_s": 0.11,
+        "peak_rss": 39710720,
+        "n_units": 8,
+        "state": "INSTRUMENT_FAILED",
+        "errors": [],
+        "elapsed_s": 0.8,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.339,
+        "reduce_s": 0.14,
+        "peak_rss": 40484864,
+        "n_units": 8,
+        "state": "INSTRUMENT_FAILED",
+        "errors": [],
+        "elapsed_s": 0.5,
+        "lane": "discovery"
+      }
+    },
+    "J10": {
+      "T0": {
+        "unit_wall_s": 0.04825,
+        "reduce_s": 0.1,
+        "peak_rss": 39727104,
+        "n_units": 8,
+        "state": "INSTRUMENT_FAILED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "transfer"
+      },
+      "T3": {
+        "unit_wall_s": 0.237,
+        "reduce_s": 0.12,
+        "peak_rss": 40488960,
+        "n_units": 8,
+        "state": "INSTRUMENT_FAILED",
+        "errors": [],
+        "elapsed_s": 0.4,
+        "lane": "transfer"
+      }
+    },
+    "R02": {
+      "T0": {
+        "unit_wall_s": 1.084125,
+        "reduce_s": 0.18,
+        "peak_rss": 39964672,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 1.3,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 1.586,
+        "reduce_s": 0.14,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 1.8,
+        "lane": "discovery"
+      }
+    },
+    "E01": {
+      "T0": {
+        "unit_wall_s": 0.102375,
+        "reduce_s": 0.11,
+        "peak_rss": 40120320,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.3,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.295625,
+        "reduce_s": 0.1,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.4,
+        "lane": "discovery"
+      }
+    },
+    "A05": {
+      "T0": {
+        "unit_wall_s": 0.160875,
+        "reduce_s": 0.11,
+        "peak_rss": 40243200,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.3,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.49550000000000005,
+        "reduce_s": 0.11,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.7,
+        "lane": "discovery"
+      }
+    },
+    "H06": {
+      "T0": {
+        "unit_wall_s": 0.010499999999999999,
+        "reduce_s": 0.12,
+        "peak_rss": 40333312,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.027875000000000004,
+        "reduce_s": 0.1,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "discovery"
+      }
+    },
+    "H07": {
+      "T0": {
+        "unit_wall_s": 0.002,
+        "reduce_s": 0.18,
+        "peak_rss": 40337408,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.005,
+        "reduce_s": 0.1,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "discovery"
+      }
+    },
+    "F04": {
+      "T0": {
+        "unit_wall_s": 0.0325,
+        "reduce_s": 0.11,
+        "peak_rss": 40431616,
+        "n_units": 8,
+        "state": "INSTRUMENT_FAILED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "discovery"
+      },
+      "T3": {
+        "unit_wall_s": 0.037375000000000005,
+        "reduce_s": 0.24,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "INSTRUMENT_FAILED",
+        "errors": [],
+        "elapsed_s": 0.3,
+        "lane": "discovery"
+      }
+    },
+    "F08": {
+      "T0": {
+        "unit_wall_s": 0.0305,
+        "reduce_s": 0.11,
+        "peak_rss": 40439808,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "transfer"
+      },
+      "T3": {
+        "unit_wall_s": 0.029249999999999998,
+        "reduce_s": 0.11,
+        "peak_rss": 40607744,
+        "n_units": 8,
+        "state": "LANDED",
+        "errors": [],
+        "elapsed_s": 0.2,
+        "lane": "transfer"
+      }
+    }
+  },
+  "accounting": {
+    "parent_cpu_s": 0.875,
+    "peak_rss": 40607744,
+    "workers": 12
+  },
+  "quarantine": "E:\\EmotiveAutomaton\\Projects\\AI and Intentionality\\Ghost Scale Simulation\\ghost-scale-sim\\results\\v14\\pilot_quarantine\\verdicts",
+  "non_scientific": true,
+  "window": {
+    "opened": "2026-08-29T12:10:13",
+    "opened_epoch": 1788030613.626829,
+    "window_hours": 24.0,
+    "freeze_hour": 20.0,
+    "freeze_epoch": 1788102613.626829,
+    "deadline_epoch": 1788117013.626829,
+    "deadline": "2026-08-30T12:10:13",
+    "immutable": true,
+    "window_closed_cards": []
+  }
+}

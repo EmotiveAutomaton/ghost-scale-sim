@@ -1,0 +1,29 @@
+{
+  "program": "v14",
+  "kind": "scientific",
+  "locked": true,
+  "written": "2026-08-29T12:10:24",
+  "internal_prespecification_not_external_preregistration": true,
+  "structural_sha256": "9be19b5cdaab94508e83bf31f8b916cdc48a847c19ae3c5ec436054a75263688",
+  "workload_sha256": "11f48f1f4178f72c185cf481ff8f6e497ed43de3a04aade2fa5f98bd37574876",
+  "structural": {
+    "module_sha256": "ab031ec2495b94a1d3ce5125781cf83fcdba6eb959e28e0bb57eafa004ddeca2",
+    "cards_sha256": "5f938dc5d97475305cdafedd1138ab12e1fac370a76c2c6e16c5461cbce07b3d",
+    "criteria_sha256": "54f4af6be7f275a2cd80b67902af16153f4d5ebd580698c33dd694d6dbf474e0",
+    "generators": {
+      "world.py": "15a7c9eb9ddc56e25336ded33cfb94d65fdbf66ae551e58defac166d03ba7b0b",
+      "joint.py": "169bf327634eb75dfce744b9c44ad17620851eb9522b6d801da3c9715b30cdfc",
+      "routes.py": "855131675cd1e4478f0e4a6ca27bb2bfff366c6d618214816053f0f74363a208",
+      "history_skill.py": "ff7c32eb52e14149c7d88ec7ec4e44fc66bc25b8b87172921f730d1ca0e0d533",
+      "communication.py": "54a93cd1825d9efd3701bd4cc6d98a37a9d27be4308930babd1b8159abdcb4b3",
+      "hierarchy.py": "cbf44ba650e8b4b00047127e869f08ed4277a778c3562f3e80c4e4957f46a701",
+      "foraging.py": "20eb9ddd59d404bec99a7d476ef194bf0e5e1eb820ec369ac09228a0f3584a15",
+      "schemas.py": "4afa59bb2e48088295eae32b31510b3556a93ba539a6a7f2d34b3e0b240b003e",
+      "common.py": "13efec74f5270fd115d1c7527518fc8d7f88b322dbb269177a9c23f27fac9b0a"
+    },
+    "cells_template_sha256": "42ea44be73e82263511c9d9ac7f9e7ca0a7898f69dad66d22752436a68eb4a90"
+  },
+  "tier": "T3",
+  "cells_sha256": "4e5ccf23e91202ece24d50936bba7dd2772dd6eeb2bfac90097e0132dde36b0a",
+  "amended_after_data": []
+}

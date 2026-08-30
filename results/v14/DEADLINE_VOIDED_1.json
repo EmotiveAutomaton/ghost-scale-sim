@@ -1,0 +1,17 @@
+{
+  "opened": "2026-08-29T12:10:13",
+  "opened_epoch": 1788030613.626829,
+  "window_hours": 24.0,
+  "freeze_hour": 20.0,
+  "freeze_epoch": 1788102613.626829,
+  "deadline_epoch": 1788117013.626829,
+  "deadline": "2026-08-30T12:10:13",
+  "immutable": true,
+  "window_closed_cards": [],
+  "voided": {
+    "at": "2026-08-30T07:07:16",
+    "reason": "The runner process tree was terminated by the host four times (12:32, 13:02, 15:12, 15:24 on 2026-08-29) with no fault, no traceback and ample memory; the program ran for under three of the window's first nineteen hours. The window was lost to infrastructure, not to the program. It is preserved here; a new window opens with the same locks, tier, forecast and checkpoints.",
+    "resolved_at_void": 6,
+    "ordered_by": "curator, 2026-08-30 (audio): finish every test, miss no result"
+  }
+}

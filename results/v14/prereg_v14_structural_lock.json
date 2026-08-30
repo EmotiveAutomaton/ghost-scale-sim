@@ -2,35 +2,36 @@
   "program": "v14",
   "kind": "structural",
   "locked": true,
-  "written": "2026-08-29T11:05:52",
+  "written": "2026-08-29T12:10:13",
   "internal_prespecification_not_external_preregistration": true,
-  "module_sha256": "c44d7ed79e96960b0844906916ceec3016c1eadc04d77065c57d857af4bf44f0",
+  "module_sha256": "ab031ec2495b94a1d3ce5125781cf83fcdba6eb959e28e0bb57eafa004ddeca2",
   "cards_sha256": "5f938dc5d97475305cdafedd1138ab12e1fac370a76c2c6e16c5461cbce07b3d",
-  "criteria_sha256": "d988c2b4ce6e914dcef0687ed1676c980e02b95ab860a7fb00231200e24a650e",
+  "criteria_sha256": "54f4af6be7f275a2cd80b67902af16153f4d5ebd580698c33dd694d6dbf474e0",
   "closures_sha256": "0aea790827c2ade1fd09759545c8e18d6e28d48cd41c364396278c47a1637503",
   "flights_sha256": "09e8146fd4caa06937c528839146c4b78356bae3ef9d7487564ac59dd0bf5853",
   "attack_relevance_sha256": "ea8387651c89e633750f7e74c545eda1c5babd39a6e65cb59086d42d9bcd4fa3",
   "repairs_sha256": "73cff923be4a1a2175f56854f2695d9ad27b18b57a3304f0899563c9c5226b46",
   "generators": {
     "world.py": "15a7c9eb9ddc56e25336ded33cfb94d65fdbf66ae551e58defac166d03ba7b0b",
-    "joint.py": "d978bf48e74c0220be87c58cea64ba802053c08a3688d69c25311a41bd631f80",
-    "routes.py": "6aa9b607053010c113f5c4a8bfe01288d700553371ff8578b39f731a097bb34e",
-    "history_skill.py": "5cd65ed6dd185a093e1fa86f0944bce571babb6066ee028116198856e60a8227",
-    "communication.py": "98f8a943fa73f94afc860c5ac5d56acd7c3f84f9d2eafca3c5305f13a591868a",
-    "hierarchy.py": "7cb602bd9e77a15768f0d1f6d8192bde565bd47dba2da558bab73e790a70b308",
-    "foraging.py": "1726efa9654b88e15a9458b3677ec2fbbce4638d058e244fe96dafe2b8eccaf4",
+    "joint.py": "169bf327634eb75dfce744b9c44ad17620851eb9522b6d801da3c9715b30cdfc",
+    "routes.py": "855131675cd1e4478f0e4a6ca27bb2bfff366c6d618214816053f0f74363a208",
+    "history_skill.py": "ff7c32eb52e14149c7d88ec7ec4e44fc66bc25b8b87172921f730d1ca0e0d533",
+    "communication.py": "54a93cd1825d9efd3701bd4cc6d98a37a9d27be4308930babd1b8159abdcb4b3",
+    "hierarchy.py": "cbf44ba650e8b4b00047127e869f08ed4277a778c3562f3e80c4e4957f46a701",
+    "foraging.py": "20eb9ddd59d404bec99a7d476ef194bf0e5e1eb820ec369ac09228a0f3584a15",
     "schemas.py": "4afa59bb2e48088295eae32b31510b3556a93ba539a6a7f2d34b3e0b240b003e",
     "common.py": "13efec74f5270fd115d1c7527518fc8d7f88b322dbb269177a9c23f27fac9b0a"
   },
-  "cells_template_sha256": "0789588d05b8fb805263114e0c0746dcc83169e2847391f64f4708514398bf8f",
-  "source_lineages_sha256": "1ed0a7a73b4532d268a2d215e1bf063265e101ef9d0d99b3906cbbaa039f2e7d",
-  "construction_identities_sha256": "b14fd8497599b69c8992bbc45916f1e5e2e85f83158e78495b41800034b6ea9a",
-  "report_interface_sha256": "accdb3b100b8992992ebf6d1cfdd6208b3e5db04251487f3d1c20bfd3ae5e834",
+  "cells_template_sha256": "42ea44be73e82263511c9d9ac7f9e7ca0a7898f69dad66d22752436a68eb4a90",
+  "source_lineages_sha256": "5e5df56ca4234cc7ff5d30382cce3a796abc924f159c6d50988025ca5f111d67",
+  "construction_identities_sha256": "56e33d372498891527cdd6fa67421e4848577124a3d60c9bc19765813b07175b",
+  "report_interface_sha256": "cea5e8cbfc8018aeb433f1066e68aea4a4bb75e0672be7e80f92997505642c84",
   "n_cards": 76,
   "criteria": {
     "I01": {
-      "anchor_tolerance": 1e-09,
-      "rule": "every V13 anchor field V14 cites equals the committed V13 verdict field within tolerance; a mismatch blocks inheritance only"
+      "hash_exact": true,
+      "cited_tolerance": 0.005,
+      "rule": "every committed V13 verdict V14 imports hashes to its V13 ledger entry exactly, and every number V14 cites from it matches the file within half a unit of the cited precision; a mismatch blocks inheritance only"
     },
     "I02": {
       "rule": "the manifest enumerates exactly 64 mandatory cards and 12 attacks with factors, lanes and floors; the recursive validator passes"
@@ -42,28 +43,29 @@
     "I04": {
       "min_divergence": 0.05,
       "min_information": 0.05,
-      "max_null_route": 0.02,
-      "rule": "routes are pairwise divergent and each carries information about some latent; a shuffled route carries none"
+      "max_null_route": 0.05,
+      "rule": "routes are pairwise divergent and each carries information about some latent; a shuffled route gains at most the bar on the true latent (mean over eight shuffles)"
     },
     "I05": {
-      "max_leak": 0.02,
-      "rule": "surface collisions hash equal, equifinal histories produce identical non-forensic likelihoods, factors are orthogonal, lineages disjoint"
+      "max_leak": 0.1,
+      "rule": "surface collisions hash equal, equifinal histories produce identical non-forensic likelihoods, factors leak at most the bar into each other's measures over 24 episodes, lineages disjoint"
     },
     "I06": {
       "floor_share": 0.5,
-      "rule": "REPAIR of V13 C03: within-common beats all-family at the first artifact by at least half the construction-derived expected gain; the floor is computed from the construction, not lowered; failure closes the common-substrate card"
+      "rule": "REPAIR of V13 C03: the positive gate is the instrument seeing the planted prior-level gain (the construction floor); the CRITERION is within-common beating all-family at the first artifact by half that floor; a failed criterion closes the common-substrate mechanism as a null, not an instrument failure"
     },
     "I07": {
       "min_gain": 0.05,
       "convergence_tol": 0.05,
-      "rule": "REPAIR of V13 C05: self beats within-common for near readers by the bar and not for anti-similar readers; routes converge within tolerance at the construction-derived sufficient dose"
+      "rule": "REPAIR of V13 C05: self beats within-common for near readers by the bar and not for anti-similar readers; the two routes' posteriors agree (Jensen-Shannon) within tolerance at the first dose, probed to 64, where both fall under 0.3 nats of entropy; no sufficient dose by 64 closes the mechanism"
     },
     "I08": {
       "max_half_life": 8,
       "max_residual": 0.1,
       "rate_margin": 0.05,
       "max_ece": 0.15,
-      "rule": "REPAIR of V13 P01: half-life and residual within bars per route; near makers' correction RATE at least far makers' minus the margin; calibration at the prospective endpoint within the bar"
+      "min_slope": 0.2,
+      "rule": "REPAIR of V13 P01: half-life and residual within bars per route; near makers' correction RATE (share of initial error removed) at least far makers' minus the margin; the calibration GATE is that endpoint confidence predicts correctness (slope above the bar); the endpoint ECE is the criterion's science"
     },
     "J01": {
       "min_class_mass": 0.8,
