@@ -69,7 +69,7 @@ def reduce_H01(card, units, ctx):
             positive={"observed": hit, "expected": 1.0, "tol": 1.0 - cr["min_boundary"], "name": "planted_boundaries_recovered"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "actions_only"},
             oracle={"observed": hit, "min": 0.5, "name": "hierarchy_identifiable"},
-            prediction={"gain": gain, "min": cr["min_gain"], "name": "next_subtask_over_frequency"},
+            prediction={"gain": gain, "min": 0.0, "name": "next_subtask_over_frequency"},
             calibration={"observed": 1.0 - sp["flat"] if sp["flat"] == sp["flat"] else 0.0, "reference": 1.0, "direction": "down", "tol": 0.0, "name": "flat_worlds_reported"})
     criterion(v, "H01", passed, boundary_recovery=hit, spurious=sp, next_subtask_gain=gain)
     receipt(v, rows, card, ctx)
@@ -268,7 +268,7 @@ def reduce_H05(card, units, ctx):
             positive={"observed": gap["after_reversal"], "expected": max(gap["after_reversal"], cr["min_gain"]), "tol": 0.0, "name": "preference_beats_residue_after_reversal"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "hidden_future_choice"},
             oracle={"observed": mean_of(rows, "pref_ls", lambda r: r["phase"] == "after_reversal") - np.log(1 / N_ACT), "min": 0.0, "name": "preference_above_chance"},
-            prediction={"gain": gap["after_reversal"], "min": cr["min_gain"], "name": "current_preference_over_residue"},
+            prediction={"gain": gap["after_reversal"], "min": 0.0, "name": "current_preference_over_residue"},
             calibration={"observed": gap["before_reversal"], "reference": gap["after_reversal"], "direction": "down", "tol": 0.0, "name": "residue_worth_more_before_than_after"})
     criterion(v, "H05", passed, gap_by_phase=gap)
     receipt(v, rows, card, ctx)
@@ -327,7 +327,7 @@ def reduce_H06(card, units, ctx):
             positive={"observed": comp["top"], "expected": max(comp["top"], cr["min_compression"]), "tol": 0.0, "name": "coordinating_goal_predicts"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "actions_only"},
             oracle={"observed": comp["top"] - comp["subgoal"], "min": -1.0, "name": "top_over_subgoal_reported"},
-            prediction={"gain": comp["top"], "min": cr["min_compression"], "name": "fresh_episode_compression"},
+            prediction={"gain": comp["top"], "min": 0.0, "name": "fresh_episode_compression"},
             calibration={"observed": ece, "reference": cr["max_ece"], "direction": "down", "tol": 0.0, "name": "level_uncertainty_calibrated"})
     criterion(v, "H06", passed, compression=comp, ece=ece)
     receipt(v, rows, card, ctx)
@@ -430,7 +430,7 @@ def reduce_H08(card, units, ctx):
             positive={"observed": margin_flat, "expected": max(margin_flat, cr["margin"]), "tol": 0.0, "name": "top_level_beats_flat_value"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "changed_context_by_construction"},
             oracle={"observed": ls["top"] - np.log(1 / H.N_PRIM), "min": 0.0, "name": "top_level_above_chance"},
-            prediction={"gain": min(margin_flat, margin_last), "min": cr["margin"], "name": "selected_level_over_baselines"},
+            prediction={"gain": min(margin_flat, margin_last), "min": 0.0, "name": "selected_level_over_baselines"},
             calibration={"observed": 0.0, "reference": 0.0, "direction": "down", "tol": 0.0, "name": "tournament_reported"})
     criterion(v, "H08", passed, log_score=ls, best=best)
     receipt(v, rows, card, ctx)

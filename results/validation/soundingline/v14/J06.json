@@ -1,0 +1,321 @@
+{
+  "card": "J06",
+  "trunk": "J",
+  "wave": 1,
+  "lane": "discovery",
+  "record": {
+    "question": "At what evidence dose does each latent first improve prospective prediction?",
+    "what_happened": "The goal first constrained prediction at dose 1.1 on average, the process at 1.5 and the preference at 1.5; by six episodes their posteriors held 0.84, 0.87 and 0.81 on the truth.",
+    "what_changed_in_the_project_world": "The episode goal is the fastest latent to read and the standing preference the slowest, in this construction.",
+    "what_remains_a_rival": "premature confidence",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Each latent has a dose at which it first constrains prediction; the trajectory, not a single number, is the finding.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_J06": {
+      "passed": true,
+      "first_improving_dose": {
+        "process": 1.5133056640625,
+        "goal": 1.1001247829861112,
+        "preference": 1.4709337022569442
+      },
+      "trajectory": {
+        "process": {
+          "1": 0.5132002726190441,
+          "2": 0.6546486922158787,
+          "4": 0.8013954869692672,
+          "6": 0.8720110814657474
+        },
+        "goal": {
+          "1": 0.8080215653555844,
+          "2": 0.8212487185427962,
+          "4": 0.8316697429154196,
+          "6": 0.8357734705459782
+        },
+        "preference": {
+          "1": 0.37071030464939214,
+          "2": 0.5644812538581356,
+          "4": 0.731658623892504,
+          "6": 0.8082050576366289
+        }
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "process|1": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "process|2": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "process|4": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "process|6": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "goal|1": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "goal|2": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "goal|4": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "goal|6": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "preference|1": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "preference|2": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "preference|4": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "preference|6": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 12,
+    "realized_levels": 12,
+    "expected_units": 2048,
+    "realized_units": 2048,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 36,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2048,
+    "rows": 24576
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "premature confidence",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 82.27,
+    "units_cpu_s": 973.41,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 100060,
+      "process_time": 96.625,
+      "user": 67.5,
+      "system": 29.125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 58142720,
+      "peak_rss": 1214533632
+    }
+  },
+  "runtime_seconds": 82.27,
+  "tier": "T3",
+  "units": {
+    "n": 2048,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:every_latent_moves_with_dose",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.027751905190393722,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:trajectory_saved_after_every_episode",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:each_latent_improves_by_six",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.9243977864583333,
+        "expected": 1.0,
+        "tolerance": 0.5
+      },
+      {
+        "name": "surface:no_surface_input",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:some_latent_identified_by_six",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.8720110814657474,
+        "expected": 0.3
+      },
+      {
+        "name": "prediction:truth_above_chance_by_six",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": 0.6415383909699622,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:entropy_falls_with_dose",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.7918291677932405,
+        "expected": 2.3787062456920087,
+        "tolerance": 1.5868770788987683
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_j.py",
+    "sha256": "e6d759b490fe6144a6ed0ae896d70d84c9fe67665b92241efcdb16158bcd4838",
+    "git_commit": "4a4e24d",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:every_latent_moves_with_dose",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.027751905190393722,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:trajectory_saved_after_every_episode",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:each_latent_improves_by_six",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.9243977864583333,
+        "expected": 1.0,
+        "tolerance": 0.5
+      },
+      {
+        "name": "surface:no_surface_input",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:some_latent_identified_by_six",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.8720110814657474,
+        "expected": 0.3
+      },
+      {
+        "name": "prediction:truth_above_chance_by_six",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": 0.6415383909699622,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:entropy_falls_with_dose",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.7918291677932405,
+        "expected": 2.3787062456920087,
+        "tolerance": 1.5868770788987683
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

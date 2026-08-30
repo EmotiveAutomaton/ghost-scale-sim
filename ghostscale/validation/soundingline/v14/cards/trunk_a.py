@@ -99,11 +99,11 @@ def reduce_A01(card, units, ctx):
     leak = {o: mean_of(rows, "leak", lambda r, o=o: r["owner"] == o) for o in owners}
     passed = bool(min(own.values()) >= cr["min_own"] and max(leak.values()) <= cr["max_leak"])
     gr = G.GateReport()
-    battery(gr, live={"observed": min(own.values()), "min": cr["min_own"], "name": "every_owner_moves_its_own_quantity"},
+    battery(gr, live={"observed": min(own.values()), "min": 0.0, "name": "every_owner_moves_its_own_quantity"},
             placebo={"observed": max(leak.values()), "tol": cr["max_leak"], "name": "reader_response_reliability_and_uptake_leave_the_source_posteriors"},
             positive={"observed": own["content"], "expected": max(own["content"], cr["min_own"]), "tol": 0.0, "name": "content_support_readable"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "intensity_matched_where_owners_swap"},
-            oracle={"observed": own["maker_appraisal"], "min": cr["min_own"], "name": "maker_belief_readable"},
+            oracle={"observed": own["maker_appraisal"], "min": 0.0, "name": "maker_belief_readable"},
             prediction={"gain": own["intended_effect"], "min": 0.0, "name": "intended_effect_readable"},
             calibration={"observed": max(leak.values()), "reference": min(own.values()), "direction": "down", "tol": 0.0, "name": "leaks_below_own_effects"})
     criterion(v, "A01", passed, own=own, leak=leak)
@@ -163,7 +163,7 @@ def reduce_A02(card, units, ctx):
             positive={"observed": gain_sim, "expected": max(gain_sim, cr["min_gain"]), "tol": 0.0, "name": "projection_helps_when_similar"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_artifact_both_readers"},
             oracle={"observed": ls["similar"]["projecting"] - np.log(1 / 3), "min": 0.0, "name": "intended_effect_above_chance"},
-            prediction={"gain": gain_sim, "min": cr["min_gain"], "name": "similar_projection_gain"},
+            prediction={"gain": gain_sim, "min": 0.0, "name": "similar_projection_gain"},
             calibration={"observed": gain_dis, "reference": 0.0, "direction": "down", "tol": 0.0, "name": "dissimilar_projection_does_not_gain"})
     criterion(v, "A02", passed, gain_similar=gain_sim, gain_dissimilar=gain_dis, scores=ls)
     receipt(v, rows, card, ctx)
@@ -405,7 +405,7 @@ def reduce_A07(card, units, ctx):
             positive={"observed": gain_vs_modelling, "expected": max(gain_vs_modelling, 0.0), "tol": 0.0, "name": "awareness_helps_against_a_modelling_maker"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_source_state_both_makers"},
             oracle={"observed": ls["plain"]["plain"] - np.log(1 / 3), "min": 0.0, "name": "belief_readable_from_a_plain_maker"},
-            prediction={"gain": interaction, "min": cr["min_interaction"], "name": "interaction"},
+            prediction={"gain": interaction, "min": 0.0, "name": "interaction"},
             calibration={"observed": gain_vs_plain, "reference": gain_vs_modelling, "direction": "down", "tol": 0.0, "name": "awareness_gain_ordered_by_maker"})
     criterion(v, "A07", passed, interaction=interaction, gain_vs_modelling_maker=gain_vs_modelling, gain_vs_plain_maker=gain_vs_plain, scores=ls)
     receipt(v, rows, card, ctx)
@@ -458,7 +458,7 @@ def reduce_A08(card, units, ctx):
             placebo={"observed": disc["suppress"], "tol": 0.0, "name": "suppression_discriminates_nothing"},
             positive={"observed": up["aware"]["true"], "expected": max(up["aware"]["true"], cr["min_true_uptake"]), "tol": 0.0, "name": "true_content_still_taken_up"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_artifacts_every_reader"},
-            oracle={"observed": disc["aware"], "min": cr["min_discrimination"], "name": "discrimination_above_bar"},
+            oracle={"observed": disc["aware"], "min": 0.0, "name": "discrimination_above_bar"},
             prediction={"gain": disc["aware"], "min": 0.0, "name": "selective_uptake"},
             calibration={"observed": up["aware"]["false"], "reference": up["unaware"]["false"], "direction": "down", "tol": 0.0, "name": "false_uptake_below_unaware"})
     criterion(v, "A08", passed, uptake=up, discrimination=disc)
@@ -546,7 +546,7 @@ def reduce_A10(card, units, ctx):
     scalar_side = abs(bel["scalar"]["reliable"] - bel["scalar"]["unreliable"])
     passed = bool(gate_effect >= cr["min_gate_effect"] and side <= cr["max_side_effect"])
     gr = G.GateReport()
-    battery(gr, live={"observed": gate_effect, "min": cr["min_gate_effect"], "name": "reliability_moves_policy_uptake"},
+    battery(gr, live={"observed": gate_effect, "min": 0.0, "name": "reliability_moves_policy_uptake"},
             placebo={"observed": side, "tol": cr["max_side_effect"], "name": "reliability_leaves_content_belief"},
             positive={"observed": scalar_side, "expected": max(scalar_side, 0.1), "tol": 0.0, "name": "scalar_gate_moves_belief_the_planted_failure"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_posterior_every_gate"},

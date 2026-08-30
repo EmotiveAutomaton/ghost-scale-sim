@@ -165,7 +165,7 @@ def reduce_J02(card, units, ctx):
             positive={"observed": pg[4], "expected": 1.0, "tol": 0.6, "name": "goal_recovered_by_four_steps"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "no_surface_input", "detail": "only action and context routes enter"},
             oracle={"observed": pg[4] - 0.25, "min": 0.1, "name": "identifiable_with_process_and_preference"},
-            prediction={"gain": g[2], "min": cr["min_gain"], "name": "hidden_next_action"},
+            prediction={"gain": g[2], "min": 0.0, "name": "hidden_next_action"},
             calibration={"observed": abs(conf - acc), "reference": 0.15, "direction": "down", "tol": 0.0, "name": "goal_confidence_tracks_accuracy"})
     criterion(v, "J02", passed, gain_by_steps=g, p_goal_by_steps=pg)
     receipt(v, rows, card, ctx)
@@ -214,7 +214,7 @@ def reduce_J03(card, units, ctx):
             positive={"observed": pp[8], "expected": 1.0, "tol": 0.6, "name": "preference_recovered_by_eight"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "no_surface_input"},
             oracle={"observed": pp[8] - 1.0 / 6, "min": 0.1, "name": "identifiable_with_process_and_goal"},
-            prediction={"gain": g[4], "min": cr["min_gain"], "name": "next_episode_first_action"},
+            prediction={"gain": g[4], "min": 0.0, "name": "next_episode_first_action"},
             calibration={"observed": abs(conf - acc), "reference": 0.15, "direction": "down", "tol": 0.0, "name": "preference_confidence_tracks_accuracy"})
     criterion(v, "J03", passed, gain_by_episodes=g, p_pref_by_episodes=pp)
     receipt(v, rows, card, ctx)
@@ -483,7 +483,7 @@ def reduce_J08(card, units, ctx):
             placebo={"observed": abs(mean_of(rows, "class_mass", lambda r: r["phase"] == "resolved") - class_eq), "tol": 0.2, "name": "class_mass_kept_through_resolution"},
             positive={"observed": single_res, "expected": 1.0, "tol": 1.0 - cr["min_single_resolved"], "name": "true_member_after_resolution"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "identical_non_forensic_evidence_by_construction"},
-            oracle={"observed": class_eq, "min": cr["min_class_equifinal"], "name": "class_identified"},
+            oracle={"observed": class_eq, "min": 0.0, "name": "class_identified"},
             prediction={"gain": mean_of(rows, "correct", lambda r: r["phase"] == "resolved") - 0.5, "min": 0.2, "name": "member_named_after_resolution"},
             calibration={"observed": single_eq, "reference": cr["max_single_equifinal"], "direction": "down", "tol": 0.0, "name": "no_confident_uniqueness_when_equifinal"})
     criterion(v, "J08", passed, single_equifinal=single_eq, class_equifinal=class_eq, single_resolved=single_res)

@@ -221,9 +221,9 @@ def reduce_I04(card, units, ctx):
     null = abs(mean_of(rows, "null_gain"))
     gr = G.GateReport()
     extra_gate(gr, "divergence", "routes_pairwise_divergent", div, cr["min_divergence"], "min", "mean pairwise Jensen-Shannon of route-only posteriors")
-    battery(gr, positive={"observed": min(best.values()), "expected": max(cr["min_information"], min(best.values())), "tol": 0.0, "name": "every_route_informative_about_some_latent"},
+    battery(gr, positive={"observed": min(best.values()), "expected": max(0.0, min(best.values())), "tol": 0.0, "name": "every_route_informative_about_some_latent"},
             placebo={"observed": null, "tol": cr["max_null_route"], "name": "shuffled_route_carries_nothing", "detail": "mean log-gain on the true goal over eight shuffles of the semantic tokens"},
-            live={"observed": div, "min": cr["min_divergence"], "name": "routes_disagree"})
+            live={"observed": div, "min": 0.0, "name": "routes_disagree"})
     passed = bool(div >= cr["min_divergence"] and min(best.values()) >= cr["min_information"] and null <= cr["max_null_route"])
     criterion(v, "I04", passed, divergence=div, min_best_information=min(best.values()), null_gain=null)
     v["results"].update({"information": info, "route_information_json": "results/v14/ROUTE_INFORMATION.json"})

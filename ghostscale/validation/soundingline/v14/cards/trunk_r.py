@@ -89,7 +89,7 @@ def reduce_R01(card, units, ctx):
     extra_gate(gr, "divergence", "dominant_routes_distinct", float(len(set(dominant.values()))), 2.0, "min", "at least two different routes dominate the three latents")
     battery(gr, positive={"observed": float(agree), "expected": 3.0, "tol": 1.0, "name": "dominant_route_matches_declaration"},
             placebo={"observed": 0.0, "tol": 0.0, "name": "same_episodes_every_route"},
-            live={"observed": min(max(info[rt][lat] for rt in ROUTES) for lat in J.LATENTS), "min": cr["min_information"], "name": "every_latent_has_an_informative_route"},
+            live={"observed": min(max(info[rt][lat] for rt in ROUTES) for lat in J.LATENTS), "min": 0.0, "name": "every_latent_has_an_informative_route"},
             prediction={"gain": max(pred.values()), "min": 0.0, "name": "prediction_ruler_positive_on_the_best_route"})
     criterion(v, "R01", passed, dominant=dominant, agreement=agree, information=info, by_regime=regimes)
     v["results"].update({"information": info, "prediction_gain_by_route": pred, "best_information_by_regime": regimes})
@@ -148,7 +148,7 @@ def reduce_R02(card, units, ctx):
             positive={"observed": 1.0 - lw["semantic"], "expected": max(0.1, 1.0 - lw["semantic"]), "tol": 0.0, "name": "learned_weight_falls_on_the_degraded_route", "detail": "the instrument moves in the planted direction; whether learned beats every fixed rival is the criterion"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "no_labels_at_test"},
             oracle={"observed": ls["learned"], "min": -1.0, "name": "learned_reported"},
-            prediction={"gain": gain, "min": cr["min_gain"], "name": "learned_minus_equal"},
+            prediction={"gain": gain, "min": 0.0, "name": "learned_minus_equal"},
             calibration={"observed": abs(mean_of(rows, "conf", lambda r: r["weights"] == "learned") - mean_of(rows, "top1", lambda r: r["weights"] == "learned")),
                          "reference": abs(mean_of(rows, "conf", lambda r: r["weights"] == "equal") - mean_of(rows, "top1", lambda r: r["weights"] == "equal")), "direction": "down", "tol": 0.05, "name": "learned_no_less_calibrated"})
     criterion(v, "R02", passed, learned_minus_equal=gain, by_weighting=ls, learned_weights=lw)
@@ -207,7 +207,7 @@ def reduce_R03(card, units, ctx):
     passed = bool(bias >= cr["min_bias"] and ease_effect_learned <= cr["max_ease_effect"])
     gr = G.GateReport()
     extra_gate(gr, "equal_accuracy", "learned_reader_unmoved_by_ease", ease_effect_learned, cr["max_ease_effect"], "max", "the learned reader's score changes at most the bar between ease conditions")
-    battery(gr, live={"observed": bias, "min": cr["min_bias"], "name": "ease_moves_the_ease_driven_weight"},
+    battery(gr, live={"observed": bias, "min": 0.0, "name": "ease_moves_the_ease_driven_weight"},
             placebo={"observed": ease_effect_learned, "tol": cr["max_ease_effect"], "name": "ease_leaves_the_learned_reader"},
             positive={"observed": ease_cost, "expected": max(0.0, ease_cost), "tol": 0.0, "name": "ease_bias_costs_prediction"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "accuracy_equal_by_construction"},
@@ -313,7 +313,7 @@ def reduce_R05(card, units, ctx):
             positive={"observed": tp, "expected": 1.0, "tol": 0.6, "name": "strategic_sources_flagged"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_routes_both_worlds"},
             oracle={"observed": tp - fp, "min": 0.1, "name": "flag_identifies_the_world"},
-            prediction={"gain": gain, "min": cr["min_gain"], "name": "expansion_gain_in_strategic_worlds"},
+            prediction={"gain": gain, "min": 0.0, "name": "expansion_gain_in_strategic_worlds"},
             calibration={"observed": abs(ls["consistent"]["expanded"] - ls["consistent"]["fixed"]), "reference": 0.05, "direction": "down", "tol": 0.0, "name": "expansion_costs_little_where_unneeded"})
     criterion(v, "R05", passed, expansion_gain=gain, false_positive=fp, true_positive=tp, conflict=conf, search_cost_states=J.N_STATES)
     receipt(v, rows, card, ctx)
@@ -422,7 +422,7 @@ def reduce_R07(card, units, ctx):
     extra_gate(gr, "duplicate", "shared_cause_flat_under_copies", dup_shared, cr["max_dup_rise"], "max", "confidence rise under a duplicate or paraphrase, shared-cause fusion")
     battery(gr, live={"observed": rise["independent"]["naive"], "min": 0.0, "name": "fresh_evidence_raises_confidence"},
             placebo={"observed": dup_shared, "tol": cr["max_dup_rise"], "name": "copy_leaves_shared_cause_fusion"},
-            positive={"observed": dup_naive, "expected": max(cr["min_naive_rise"], dup_naive), "tol": 0.0, "name": "naive_fusion_inflates_on_copies", "detail": "the planted failure of independence"},
+            positive={"observed": dup_naive, "expected": max(0.0, dup_naive), "tol": 0.0, "name": "naive_fusion_inflates_on_copies", "detail": "the planted failure of independence"},
             surface={"accuracy": 0.0, "chance": 0.0, "tol": 0.0, "name": "same_tokens_both_fusions"},
             oracle={"observed": rise["independent"]["shared_cause"], "min": -1.0, "name": "fresh_evidence_under_shared_cause_reported"},
             prediction={"gain": mean_of(rows, "ls", lambda r: r["fusion"] == "shared_cause"), "min": -1.0, "name": "shared_cause_next_action"},

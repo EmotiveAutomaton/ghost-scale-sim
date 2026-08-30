@@ -97,6 +97,45 @@
       },
       "reason": "cause of the seven process deaths identified; launcher changed to module form",
       "when": "2026-08-30T07:51:56"
+    },
+    {
+      "card": "R02",
+      "original": {
+        "lane": "discovery",
+        "verdict_path": "results/validation/soundingline/v14/R02.json",
+        "verdict_sha256": "b8b084092c9420914016ce22c2fcb26e5bf52de28a7b86be5460b1b459a268c7",
+        "ledger_entry": {
+          "card": "R02",
+          "expected_cell_receipt": {
+            "expected_levels": 4,
+            "expected_min_rows_per_unit": 1,
+            "expected_units": 2048,
+            "ok": true,
+            "realized_levels": 4,
+            "realized_min_rows_per_unit": 1,
+            "realized_units": 2048
+          },
+          "lane": "discovery",
+          "source_sha256": "e668400046ed7abea78b1a8f49042a4e12d0a49576240edef2373aae95480114",
+          "state": "INSTRUMENT_FAILED",
+          "timestamp": "2026-08-30T11:47:38",
+          "verdict_path": "results/validation/soundingline/v14/R02.json",
+          "verdict_sha256": "b8b084092c9420914016ce22c2fcb26e5bf52de28a7b86be5460b1b459a268c7"
+        },
+        "manifest_status": "INSTRUMENT_FAILED",
+        "state": "INSTRUMENT_FAILED",
+        "failed_gates": [
+          "prediction:learned_minus_equal"
+        ],
+        "superseded_to": "results/validation/soundingline/v14/superseded/R02.20260830T114902.json"
+      },
+      "replacement": {
+        "lane": "discovery",
+        "action": "re-run after instrument repair",
+        "stamp": "20260830T114902"
+      },
+      "reason": "Instrument repair: the prediction gate carried the criterion's 0.02 bar; learned-over-equal was +0.009 (positive) and the card resolved INSTRUMENT_FAILED instead of landing with its criterion judged. Gate now tests existence; the bar stays with the criterion (26 such gate lines separated across the card modules).",
+      "when": "2026-08-30T11:49:02"
     }
   ]
 }
