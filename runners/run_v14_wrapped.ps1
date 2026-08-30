@@ -8,11 +8,11 @@ $logDir = Join-Path $repo "results\v14\logs"
 New-Item -ItemType Directory -Force $logDir | Out-Null
 $stamp = Get-Date -Format "MMdd_HHmmss"
 $log = Join-Path $logDir "run_${Stage}_wrapped_$stamp.log"
-$wrap = Join-Path $logDir "wrapper.log"
+$wrap = Join-Path $logDir "wrapper_$stamp.log"
 $env:PYTHONFAULTHANDLER = "1"
 $env:OMP_NUM_THREADS = "1"
 Add-Content $wrap "$(Get-Date -Format s) START stage=$Stage workers=$Workers log=$log ppid=$PID"
-$p = Start-Process -FilePath (Join-Path $repo ".venv\Scripts\python.exe") -ArgumentList @("-X", "faulthandler", "runners\run_v14.py", "--stage", $Stage, "--workers", "$Workers") `
+$p = Start-Process -FilePath (Join-Path $repo ".venv\Scripts\python.exe") -ArgumentList @("-X", "faulthandler", "-m", "runners.run_v14", "--stage", $Stage, "--workers", "$Workers") `
     -WorkingDirectory $repo -WindowStyle Hidden -RedirectStandardOutput $log -RedirectStandardError "$log.err" -PassThru
 Add-Content $wrap "$(Get-Date -Format s) launched pid=$($p.Id)"
 $p.WaitForExit()

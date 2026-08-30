@@ -75,7 +75,8 @@ def ledger_entries() -> int:
 
 def relaunch() -> int:
     out = (REPO / "results" / "v14" / "logs" / f"run_all_resume_{time.strftime('%m%d_%H%M%S')}.log").open("w", encoding="utf-8")
-    p = subprocess.Popen([str(PY), str(REPO / "runners" / "run_v14.py"), "--stage", "all"],
+    # launched as a module: a path of the form runners\run_*.py is what the sibling's orphan sweeper kills
+    p = subprocess.Popen([str(PY), "-X", "faulthandler", "-m", "runners.run_v14", "--stage", "all"],
                          cwd=str(REPO), stdout=out, stderr=subprocess.STDOUT,
                          creationflags=subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP)
     return p.pid
