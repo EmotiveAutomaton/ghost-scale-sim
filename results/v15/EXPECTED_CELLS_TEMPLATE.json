@@ -1,0 +1,2521 @@
+{
+  "program": "v15",
+  "written": "2026-08-31T09:25:57",
+  "template": {
+    "I01": {
+      "discovery": {
+        "levels": 6,
+        "units": 1,
+        "cells": 6,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "anchor": [
+            "J04",
+            "R02",
+            "E01",
+            "A06",
+            "F08",
+            "B01"
+          ]
+        }
+      }
+    },
+    "I02": {
+      "discovery": {
+        "levels": 5,
+        "units": 1,
+        "cells": 5,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "check": [
+            "cards",
+            "attacks",
+            "factors",
+            "lanes",
+            "cells"
+          ]
+        }
+      }
+    },
+    "I03": {
+      "discovery": {
+        "levels": 3,
+        "units": 1,
+        "cells": 3,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "fixture_distance": [
+            "DIRECT_READOUT",
+            "PLANTED_SIGNATURE",
+            "INFERRED_THROUGH_BEHAVIOUR"
+          ]
+        }
+      }
+    },
+    "I04": {
+      "discovery": {
+        "levels": 2,
+        "units": 1,
+        "cells": 2,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "check": [
+            "state_agreement",
+            "original_preserved"
+          ]
+        }
+      }
+    },
+    "I05": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "label_only",
+            "joint_exact",
+            "surface"
+          ],
+          "labels": [
+            "true",
+            "shuffled"
+          ]
+        }
+      }
+    },
+    "I06": {
+      "discovery": {
+        "levels": 9,
+        "units": 1,
+        "cells": 9,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition",
+            "communication"
+          ],
+          "check": [
+            "code_path",
+            "emission",
+            "metamorphic"
+          ]
+        }
+      }
+    },
+    "I07": {
+      "discovery": {
+        "levels": 9,
+        "units": 48,
+        "cells": 432,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition",
+            "communication"
+          ],
+          "check": [
+            "brute_force",
+            "relabel",
+            "reorder"
+          ]
+        }
+      }
+    },
+    "I08": {
+      "discovery": {
+        "levels": 4,
+        "units": 1,
+        "cells": 4,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "fixture": [
+            "v14_sized",
+            "empty_queue",
+            "fast_machine",
+            "healthy"
+          ]
+        }
+      }
+    },
+    "C01": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "dose": [
+            "2",
+            "8"
+          ],
+          "architecture": [
+            "independent",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "C02": {
+      "discovery": {
+        "levels": 10,
+        "units": 48,
+        "cells": 480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "kappa": [
+            "0.0",
+            "0.25",
+            "0.5",
+            "0.75",
+            "1.0"
+          ],
+          "architecture": [
+            "independent",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "C03": {
+      "discovery": {
+        "levels": 12,
+        "units": 48,
+        "cells": 576,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "kappa": [
+            "0.0",
+            "0.5",
+            "1.0"
+          ],
+          "overlap": [
+            "0.0",
+            "0.33",
+            "0.66",
+            "1.0"
+          ]
+        }
+      }
+    },
+    "C04": {
+      "discovery": {
+        "levels": 15,
+        "units": 48,
+        "cells": 720,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "kappa": [
+            "0.0",
+            "0.5",
+            "1.0"
+          ],
+          "dose": [
+            "1",
+            "2",
+            "4",
+            "8",
+            "16"
+          ]
+        }
+      }
+    },
+    "C05": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "dependence": [
+            "independent",
+            "redundant",
+            "synergistic"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "C06": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "missing": [
+            "none",
+            "route"
+          ],
+          "kappa": [
+            "0.0",
+            "0.5",
+            "1.0"
+          ]
+        }
+      }
+    },
+    "C07": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "missing": [
+            "none",
+            "context"
+          ],
+          "architecture": [
+            "independent",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "C08": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "missing": [
+            "none",
+            "opportunity"
+          ],
+          "kappa": [
+            "0.0",
+            "0.5"
+          ]
+        }
+      }
+    },
+    "C09": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "temperature": [
+            "0.25",
+            "0.6",
+            "1.0",
+            "2.0"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "C10": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "equifinality": [
+            "none",
+            "exact",
+            "approximate"
+          ],
+          "architecture": [
+            "staged",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "C11": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "equifinality": [
+            "exact",
+            "approximate"
+          ],
+          "record": [
+            "optimal_only",
+            "varied"
+          ]
+        }
+      }
+    },
+    "C12": {
+      "discovery": {
+        "levels": 10,
+        "units": 48,
+        "cells": 480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "similarity": [
+            "-1.0",
+            "-0.5",
+            "0.0",
+            "0.5",
+            "1.0"
+          ],
+          "typicality": [
+            "0.0",
+            "1.0"
+          ]
+        }
+      }
+    },
+    "C13": {
+      "discovery": {
+        "levels": 9,
+        "units": 48,
+        "cells": 432,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "similarity": [
+            "-1.0",
+            "0.0",
+            "1.0"
+          ],
+          "dose": [
+            "1",
+            "4",
+            "16"
+          ]
+        }
+      }
+    },
+    "C14": {
+      "discovery": {
+        "levels": 9,
+        "units": 48,
+        "cells": 432,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition",
+            "communication"
+          ],
+          "kappa": [
+            "0.0",
+            "0.5",
+            "1.0"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 9,
+        "units": 24,
+        "cells": 216,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition",
+            "communication"
+          ],
+          "kappa": [
+            "0.0",
+            "0.5",
+            "1.0"
+          ]
+        }
+      }
+    },
+    "M01": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "architecture": [
+            "factor_graph",
+            "particle"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "M02": {
+      "discovery": {
+        "levels": 16,
+        "units": 48,
+        "cells": 768,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "architecture": [
+            "surface",
+            "label_only",
+            "independent",
+            "independent_routed",
+            "staged",
+            "joint_exact",
+            "factor_graph",
+            "particle"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "M03": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model_space": [
+            "correct",
+            "missing_latent"
+          ],
+          "architecture": [
+            "joint_exact",
+            "expand",
+            "oracle_model_space"
+          ]
+        }
+      }
+    },
+    "M04": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "condition": [
+            "missing_latent",
+            "noise_only"
+          ],
+          "selector": [
+            "residual",
+            "expected_value"
+          ]
+        }
+      }
+    },
+    "M05": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "history": [
+            "relevant",
+            "irrelevant"
+          ],
+          "added_steps": [
+            "0",
+            "2",
+            "4"
+          ]
+        }
+      }
+    },
+    "M06": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "architecture": [
+            "particle",
+            "staged",
+            "joint_exact"
+          ],
+          "seeded": [
+            "true",
+            "wrong"
+          ]
+        }
+      }
+    },
+    "M07": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "regime": [
+            "in_domain",
+            "intervened"
+          ],
+          "architecture": [
+            "direct_predictor",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "M08": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "architecture": [
+            "surface",
+            "label_only",
+            "joint_exact",
+            "oracle_state"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "M09": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "equifinality": [
+            "exact",
+            "approximate"
+          ],
+          "architecture": [
+            "expand",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "M10": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "library": [
+            "complete",
+            "omitted",
+            "distractors"
+          ],
+          "selector": [
+            "residual",
+            "expected_value"
+          ]
+        }
+      }
+    },
+    "M11": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "selector": [
+            "residual",
+            "expected_value"
+          ],
+          "condition": [
+            "missing_latent",
+            "noise_only"
+          ]
+        }
+      }
+    },
+    "M12": {
+      "discovery": {
+        "levels": 12,
+        "units": 48,
+        "cells": 576,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition",
+            "communication"
+          ],
+          "architecture": [
+            "independent",
+            "joint_exact",
+            "particle",
+            "direct_predictor"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 12,
+        "units": 24,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition",
+            "communication"
+          ],
+          "architecture": [
+            "independent",
+            "joint_exact",
+            "particle",
+            "direct_predictor"
+          ]
+        }
+      }
+    },
+    "E01": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E02": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E03": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "attention_only",
+            "learning_record"
+          ],
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E04": {
+      "discovery": {
+        "levels": 2,
+        "units": 48,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attention": [
+            "low",
+            "high"
+          ],
+          "feedback": [
+            "fixed"
+          ],
+          "constraint": [
+            "fixed"
+          ]
+        }
+      }
+    },
+    "E05": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "training": [
+            "chosen",
+            "forced"
+          ],
+          "context": [
+            "same",
+            "changed"
+          ]
+        }
+      }
+    },
+    "E06": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "model": [
+            "attention_only",
+            "learning_record"
+          ],
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E07": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E08": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "predictor": [
+            "skill_only",
+            "path"
+          ],
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E09": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "evidence": [
+            "targeted",
+            "scattered"
+          ],
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E10": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "equivalent": [
+            "yes",
+            "no"
+          ],
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "E11": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "record": [
+            "dated",
+            "bag"
+          ],
+          "change": [
+            "none",
+            "midway"
+          ]
+        }
+      }
+    },
+    "E12": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 4,
+        "units": 24,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "mixture": [
+            "practice_heavy",
+            "instruction_heavy",
+            "feedback_heavy",
+            "constrained"
+          ]
+        }
+      }
+    },
+    "G01": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "control": [
+            "single_switching",
+            "simultaneous",
+            "habitual",
+            "hierarchical"
+          ]
+        }
+      }
+    },
+    "G02": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "control": [
+            "single_switching",
+            "simultaneous",
+            "habitual",
+            "hierarchical"
+          ]
+        }
+      }
+    },
+    "G03": {
+      "discovery": {
+        "levels": 12,
+        "units": 48,
+        "cells": 576,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "control": [
+            "single_switching",
+            "simultaneous",
+            "habitual",
+            "hierarchical"
+          ],
+          "interrupt": [
+            "none",
+            "early",
+            "late"
+          ]
+        }
+      }
+    },
+    "G04": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "control": [
+            "single_switching",
+            "simultaneous",
+            "habitual",
+            "hierarchical"
+          ]
+        }
+      }
+    },
+    "G05": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "control": [
+            "habitual",
+            "simultaneous"
+          ],
+          "intervention": [
+            "none",
+            "devalue"
+          ]
+        }
+      }
+    },
+    "G06": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "mode": [
+            "work",
+            "review"
+          ],
+          "control": [
+            "single_switching",
+            "habitual"
+          ]
+        }
+      }
+    },
+    "G07": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "deviation": [
+            "mistake",
+            "exploration",
+            "hidden_aesthetic",
+            "habit_out_of_context"
+          ]
+        }
+      }
+    },
+    "G08": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "commitment": [
+            "1",
+            "3",
+            "5"
+          ]
+        }
+      }
+    },
+    "G09": {
+      "discovery": {
+        "levels": 2,
+        "units": 48,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "quality_only",
+            "with_rule"
+          ]
+        }
+      }
+    },
+    "G10": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition"
+          ],
+          "control": [
+            "single_switching",
+            "simultaneous",
+            "habitual",
+            "hierarchical"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 8,
+        "units": 24,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "family": [
+            "chain",
+            "composition"
+          ],
+          "control": [
+            "single_switching",
+            "simultaneous",
+            "habitual",
+            "hierarchical"
+          ]
+        }
+      }
+    },
+    "V01": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "context": [
+            "same",
+            "changed"
+          ],
+          "architecture": [
+            "independent",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "V02": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "rival": [
+            "changed_preference",
+            "changed_goal"
+          ],
+          "episodes": [
+            "1",
+            "4"
+          ]
+        }
+      }
+    },
+    "V03": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "rival": [
+            "changed_preference",
+            "stale_residue"
+          ],
+          "probe": [
+            "none",
+            "devalue",
+            "relearn"
+          ]
+        }
+      }
+    },
+    "V04": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "rival": [
+            "changed_preference",
+            "concealment"
+          ],
+          "visibility": [
+            "public",
+            "private"
+          ]
+        }
+      }
+    },
+    "V05": {
+      "discovery": {
+        "levels": 5,
+        "units": 48,
+        "cells": 240,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "owner": [
+            "preference",
+            "competence",
+            "constraint",
+            "signalling",
+            "cost_function"
+          ]
+        }
+      }
+    },
+    "V06": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "cost_only",
+            "opportunity_aware"
+          ],
+          "availability": [
+            "full",
+            "partial"
+          ]
+        }
+      }
+    },
+    "V07": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "record": [
+            "dated",
+            "bag"
+          ],
+          "change": [
+            "none",
+            "midway"
+          ]
+        }
+      }
+    },
+    "V08": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "record": [
+            "optimal_only",
+            "varied_competence",
+            "with_errors"
+          ]
+        }
+      }
+    },
+    "V09": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "record": [
+            "optimal_only",
+            "varied_competence",
+            "with_errors"
+          ]
+        }
+      }
+    },
+    "V10": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "endpoint": [
+            "next_edit",
+            "stop_or_continue",
+            "changed_context_choice"
+          ],
+          "reader": [
+            "label_only",
+            "joint_exact"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 6,
+        "units": 24,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "endpoint": [
+            "next_edit",
+            "stop_or_continue",
+            "changed_context_choice"
+          ],
+          "reader": [
+            "label_only",
+            "joint_exact"
+          ]
+        }
+      }
+    },
+    "S01": {
+      "discovery": {
+        "levels": 2,
+        "units": 48,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "profile": [
+            "0",
+            "1"
+          ],
+          "evidence": [
+            "artifact_only"
+          ]
+        }
+      }
+    },
+    "S02": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "motive": [
+            "sincere",
+            "strategic"
+          ],
+          "channel": [
+            "assertion",
+            "evidence",
+            "correction",
+            "private"
+          ]
+        }
+      }
+    },
+    "S03": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "probe": [
+            "audience_persuaded",
+            "private_cost",
+            "correction",
+            "evidence_choice"
+          ]
+        }
+      }
+    },
+    "S04": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "noise": [
+            "0.0",
+            "0.3",
+            "0.6"
+          ],
+          "probe": [
+            "private_cost",
+            "correction"
+          ]
+        }
+      }
+    },
+    "S05": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "motive": [
+            "sincere",
+            "strategic"
+          ],
+          "belief": [
+            "aligned",
+            "opposed"
+          ]
+        }
+      }
+    },
+    "S06": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "strategy": [
+            "plain",
+            "steering"
+          ],
+          "model_match": [
+            "1.0",
+            "0.5",
+            "0.0"
+          ]
+        }
+      }
+    },
+    "S07": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "selection": [
+            "sample_all",
+            "cherry_pick",
+            "balanced",
+            "escalate"
+          ]
+        }
+      }
+    },
+    "S08": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "gate": [
+            "factored",
+            "scalar"
+          ],
+          "owner": [
+            "source_motive",
+            "content_truth",
+            "reliability_history",
+            "induced_response"
+          ]
+        }
+      }
+    },
+    "S09": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "gate": [
+            "factored",
+            "scalar"
+          ],
+          "content": [
+            "true",
+            "false"
+          ],
+          "source": [
+            "sincere",
+            "strategic"
+          ]
+        }
+      }
+    },
+    "S10": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "strategy": [
+            "seen",
+            "unseen"
+          ],
+          "audience": [
+            "seen",
+            "fresh"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 4,
+        "units": 24,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "strategy": [
+            "seen",
+            "unseen"
+          ],
+          "audience": [
+            "seen",
+            "fresh"
+          ]
+        }
+      }
+    },
+    "R01": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "dispersion": [
+            "0.05",
+            "0.2",
+            "0.35"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "R02": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "sparsity": [
+            "0.0",
+            "0.5",
+            "0.8"
+          ],
+          "weighter": [
+            "equal",
+            "learned"
+          ]
+        }
+      }
+    },
+    "R03": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "duplicated": [
+            "no",
+            "yes"
+          ],
+          "fuser": [
+            "naive",
+            "shared_cause"
+          ]
+        }
+      }
+    },
+    "R04": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "shift": [
+            "0.0",
+            "0.5",
+            "1.0"
+          ],
+          "weighter": [
+            "learned",
+            "robust"
+          ]
+        }
+      }
+    },
+    "R05": {
+      "discovery": {
+        "levels": 12,
+        "units": 48,
+        "cells": 576,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "shift": [
+            "0.0",
+            "0.25",
+            "0.5",
+            "1.0"
+          ],
+          "policy": [
+            "retain",
+            "partial",
+            "reset"
+          ]
+        }
+      }
+    },
+    "R06": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "weighter": [
+            "learned",
+            "ease_driven"
+          ],
+          "sparsity": [
+            "0.0",
+            "0.8"
+          ]
+        }
+      }
+    },
+    "R07": {
+      "discovery": {
+        "levels": 10,
+        "units": 48,
+        "cells": 480,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "never",
+            "always",
+            "fixed",
+            "eig",
+            "robust_eig"
+          ],
+          "cost": [
+            "0.02",
+            "0.10"
+          ]
+        }
+      }
+    },
+    "R08": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "budget": [
+            "full",
+            "finite"
+          ],
+          "weighter": [
+            "equal",
+            "learned"
+          ]
+        }
+      }
+    },
+    "F01": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "random",
+            "surprise",
+            "progress"
+          ],
+          "ecology": [
+            "mixed"
+          ]
+        }
+      }
+    },
+    "F02": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "progress",
+            "changepoint"
+          ],
+          "ecology": [
+            "silent_change",
+            "mixed"
+          ]
+        }
+      }
+    },
+    "F03": {
+      "discovery": {
+        "levels": 9,
+        "units": 48,
+        "cells": 432,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "surprise",
+            "progress",
+            "gain_per_cost"
+          ],
+          "ecology": [
+            "noise",
+            "silent_change",
+            "mixed"
+          ]
+        }
+      }
+    },
+    "F04": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "eig",
+            "robust_eig"
+          ],
+          "ambiguity": [
+            "none",
+            "wide"
+          ]
+        }
+      }
+    },
+    "F05": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "target": [
+            "value",
+            "structure"
+          ],
+          "ecology": [
+            "learnable",
+            "mixed"
+          ]
+        }
+      }
+    },
+    "F06": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "selector": [
+            "residual",
+            "expected_value"
+          ],
+          "item": [
+            "learnable",
+            "misspecified"
+          ]
+        }
+      }
+    },
+    "F07": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "ecology": [
+            "learnable",
+            "noise",
+            "mixed"
+          ]
+        }
+      }
+    },
+    "F08": {
+      "discovery": {
+        "levels": 2,
+        "units": 48,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "hoped": [
+            "yes",
+            "no"
+          ],
+          "ecology": [
+            "mixed"
+          ]
+        }
+      }
+    },
+    "F09": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "ecology": [
+            "noise",
+            "expensive",
+            "resolved"
+          ],
+          "policy": [
+            "gain_per_cost",
+            "surprise"
+          ]
+        }
+      }
+    },
+    "F10": {
+      "discovery": {
+        "levels": 28,
+        "units": 48,
+        "cells": 1344,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "random",
+            "surprise",
+            "progress",
+            "changepoint",
+            "eig",
+            "robust_eig",
+            "gain_per_cost"
+          ],
+          "ecology": [
+            "learnable",
+            "noise",
+            "silent_change",
+            "mixed"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 28,
+        "units": 24,
+        "cells": 672,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "policy": [
+            "random",
+            "surprise",
+            "progress",
+            "changepoint",
+            "eig",
+            "robust_eig",
+            "gain_per_cost"
+          ],
+          "ecology": [
+            "learnable",
+            "noise",
+            "silent_change",
+            "mixed"
+          ]
+        }
+      }
+    },
+    "H01": {
+      "discovery": {
+        "levels": 2,
+        "units": 48,
+        "cells": 96,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "equivalence": [
+            "exact",
+            "approximate"
+          ]
+        }
+      }
+    },
+    "H02": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "epsilon": [
+            "0.0",
+            "0.15",
+            "0.35"
+          ]
+        }
+      }
+    },
+    "H03": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "topology": [
+            "central",
+            "distributed",
+            "editor_ratifier",
+            "independent"
+          ],
+          "evidence": [
+            "artifact"
+          ]
+        }
+      }
+    },
+    "H04": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "intervention": [
+            "swap_role",
+            "change_brief",
+            "remove_editor"
+          ]
+        }
+      }
+    },
+    "H05": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "topology": [
+            "central",
+            "distributed",
+            "editor_ratifier",
+            "independent"
+          ]
+        }
+      }
+    },
+    "H06": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "topology": [
+            "central",
+            "distributed",
+            "editor_ratifier",
+            "independent"
+          ]
+        }
+      }
+    },
+    "H07": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "topology": [
+            "central",
+            "distributed",
+            "editor_ratifier",
+            "independent"
+          ],
+          "evidence": [
+            "artifact",
+            "process"
+          ]
+        }
+      }
+    },
+    "H08": {
+      "discovery": {
+        "levels": 8,
+        "units": 48,
+        "cells": 384,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "topology": [
+            "central",
+            "distributed",
+            "editor_ratifier",
+            "independent"
+          ],
+          "team": [
+            "seen",
+            "fresh"
+          ]
+        }
+      },
+      "transfer": {
+        "levels": 8,
+        "units": 24,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "topology": [
+            "central",
+            "distributed",
+            "editor_ratifier",
+            "independent"
+          ],
+          "team": [
+            "seen",
+            "fresh"
+          ]
+        }
+      }
+    },
+    "P01": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "reader": [
+            "label_only",
+            "oracle_state"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "P02": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "endpoint": [
+            "next_edit",
+            "stop_or_continue"
+          ],
+          "reader": [
+            "label_only",
+            "oracle_state"
+          ]
+        }
+      }
+    },
+    "P03": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "context": [
+            "same",
+            "changed"
+          ],
+          "reader": [
+            "label_only",
+            "oracle_state"
+          ]
+        }
+      }
+    },
+    "P04": {
+      "discovery": {
+        "levels": 6,
+        "units": 48,
+        "cells": 288,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "component": [
+            "process",
+            "goal",
+            "tendency"
+          ],
+          "dose": [
+            "2",
+            "8"
+          ]
+        }
+      }
+    },
+    "P05": {
+      "discovery": {
+        "levels": 4,
+        "units": 48,
+        "cells": 192,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "ablated": [
+            "none",
+            "process",
+            "goal",
+            "tendency"
+          ]
+        }
+      }
+    },
+    "P06": {
+      "discovery": {
+        "levels": 3,
+        "units": 48,
+        "cells": 144,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "kind": [
+            "exploration",
+            "mistake",
+            "habit_out_of_context"
+          ]
+        }
+      }
+    },
+    "P07": {
+      "discovery": {
+        "levels": 4,
+        "units": 1,
+        "cells": 4,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "disposition": [
+            "license",
+            "partial",
+            "defer",
+            "kill"
+          ]
+        }
+      }
+    },
+    "P08": {
+      "discovery": {
+        "levels": 3,
+        "units": 1,
+        "cells": 3,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "check": [
+            "hashes",
+            "baseline",
+            "leak_audit"
+          ]
+        }
+      }
+    },
+    "B01": {
+      "discovery": {
+        "levels": 4,
+        "units": 1,
+        "cells": 4,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "stage": [
+            "discovery",
+            "transfer",
+            "attack",
+            "confirmation"
+          ]
+        }
+      }
+    },
+    "B02": {
+      "discovery": {
+        "levels": 5,
+        "units": 1,
+        "cells": 5,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "branch": [
+            "ghost_v16",
+            "sounding_transfer",
+            "model_study",
+            "human_study",
+            "pause"
+          ]
+        }
+      }
+    },
+    "X01": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X02": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X03": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X04": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X05": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X06": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X07": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X08": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X09": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X10": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X11": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X12": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X13": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X14": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X15": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X16": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X17": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X18": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X19": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X20": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X21": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X22": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X23": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    },
+    "X24": {
+      "attack": {
+        "levels": 2,
+        "units": 24,
+        "cells": 48,
+        "min_rows_per_unit": 1,
+        "factors": {
+          "attacked": [
+            "no",
+            "yes"
+          ]
+        }
+      }
+    }
+  }
+}

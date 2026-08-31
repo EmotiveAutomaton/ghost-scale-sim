@@ -40,7 +40,8 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from . import common as C
-from .ontology import (Episode, Latent, overlap_index, pairwise_coupling,
+from .ontology import (fit_uniform_marginals,
+                       Episode, Latent, overlap_index, pairwise_coupling,
                        realized_route_information, target_coupling_nats)
 
 FAMILY = "communication"
@@ -103,20 +104,6 @@ class CommunicationWorld:
 # --------------------------------------------------------------------------- #
 # Construction.
 # --------------------------------------------------------------------------- #
-def _ipf_uniform(tab: np.ndarray, iters: int = 200) -> np.ndarray:
-    t = np.asarray(tab, float).copy()
-    t = np.maximum(t, t.max() * 1e-12)      # relative floor: an absolute one flattens a
-                                            # tempered table into a uniform one
-    for _ in range(iters):
-        for ax in range(t.ndim):
-            other = tuple(a for a in range(t.ndim) if a != ax)
-            sh = [1] * t.ndim
-            sh[ax] = t.shape[ax]
-            t = t * ((t.sum() / t.shape[ax])
-                     / np.maximum(t.sum(axis=other), 1e-300)).reshape(sh)
-    return t / t.sum()
-
-
 def _prior(n_p: int, n_g: int, n_v: int, kappa: float, rng) -> tuple:
     """Tempered Dirichlet: draw a rough joint, sharpen it until its coupling hits the target, and
     fit it back onto uniform marginals. A third construction reaching the same declared semantics.
@@ -130,7 +117,7 @@ def _prior(n_p: int, n_g: int, n_v: int, kappa: float, rng) -> tuple:
 
     def build(t: float) -> np.ndarray:
         # temper in log space and renormalize before fitting: raw ** t underflows
-        return _ipf_uniform(C.softmax((t * lograw).ravel()).reshape(raw.shape))
+        return fit_uniform_marginals(C.softmax((t * lograw).ravel()).reshape(raw.shape))
 
     def mean_pw(w) -> float:
         pc = pairwise_coupling(w)

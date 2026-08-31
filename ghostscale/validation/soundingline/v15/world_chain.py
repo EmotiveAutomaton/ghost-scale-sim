@@ -11,16 +11,20 @@ to families 2 and 3 (C14).
 
 How coupling is built, and why the null at zero is exact rather than approximate
 -------------------------------------------------------------------------------
-The latent prior is a log-linear model over the triple::
+The latent prior is a mixture of a uniform table and a *permutation-chain* table -- tendency picks
+a goal, goal picks a process -- with the mixture weight solved by bisection so that the realized
+pairwise mutual information hits ``ontology.target_coupling_nats(kappa)``, and the result fitted
+back onto uniform one-dimensional marginals. Two properties matter and both were paid for:
 
-    log p(process, goal, tendency) = beta * (A[p,g] + B[g,v] + C[p,v]) - log Z
-
-with ``A``, ``B``, ``C`` fixed sign patterns drawn per world and ``beta`` found by bisection so
-that the realized pairwise mutual information hits ``ontology.target_coupling_nats(kappa)``. At
-``kappa = 0`` beta is exactly zero, the prior is exactly a product, the per-route likelihood is
-exactly a product, and therefore the exact joint posterior *equals* the product of the independent
-marginals to floating point. That is the anchor: V14's regime is the corner of this atlas, and its
-+0.011 nats has to reappear there as approximately nothing.
+* at ``kappa = 0`` the mixture weight is exactly zero, the prior is exactly a product, and the
+  exact joint posterior equals the product of the independent marginals to floating point. That is
+  the anchor: V14's regime is the corner of this atlas, and its +0.011 nats has to reappear there
+  as approximately nothing.
+* every marginal stays uniform at every coupling level, so the coupling knob adds dependence and
+  *only* dependence. A log-linear tilt was tried first and is wrong for this job: mutual
+  information is not monotone in the tilt strength, so past some point the prior collapses toward a
+  point mass and the coupling falls back to zero -- a bisection walks the wrong way and returns
+  degenerate worlds, which is what the first implementation did.
 
 Overlap is the second knob and is separate from coupling. At ``overlap = 0`` each route's emission
 depends on exactly one component; as it rises each route mixes in the other two, so a reader that
@@ -37,8 +41,9 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from . import common as C
-from .ontology import (COMPONENTS, Episode, Latent, overlap_index, pairwise_coupling,
-                       realized_route_information, target_coupling_nats)
+from .ontology import (COMPONENTS, Episode, Latent, fit_uniform_marginals,
+                       overlap_index, pairwise_coupling, realized_route_information,
+                       target_coupling_nats)
 
 FAMILY = "chain"
 ROUTES = ("action", "semantic", "context", "forensic")
@@ -73,29 +78,6 @@ class ChainWorld:
 # --------------------------------------------------------------------------- #
 # Construction.
 # --------------------------------------------------------------------------- #
-def _ipf_uniform(tab: np.ndarray, iters: int = 200) -> np.ndarray:
-    """Iterative proportional fitting onto uniform one-dimensional marginals.
-
-    This is what makes the coupling knob clean: after fitting, every latent component's *marginal*
-    prior is exactly uniform at every coupling level, so the independent reader's marginal prior
-    is always exactly correct and the only thing coupling adds is the dependence. Without it a
-    "joint beats independent" result would be partly a marginal-prior artifact.
-    """
-    t = np.asarray(tab, float).copy()
-    t = np.maximum(t, 1e-9)
-    shape = t.shape
-    for _ in range(iters):
-        for ax in range(t.ndim):
-            other = tuple(a for a in range(t.ndim) if a != ax)
-            m = t.sum(axis=other)
-            want = t.sum() / shape[ax]
-            scale = want / np.maximum(m, 1e-300)
-            sh = [1] * t.ndim
-            sh[ax] = shape[ax]
-            t = t * scale.reshape(sh)
-    return t / t.sum()
-
-
 def _coupled_prior(n_p: int, n_g: int, n_v: int, kappa: float, rng) -> tuple:
     """A prior whose pairwise coupling rises with ``kappa`` while every marginal stays uniform.
 
@@ -125,7 +107,7 @@ def _coupled_prior(n_p: int, n_g: int, n_v: int, kappa: float, rng) -> tuple:
         g = int(tau[v % n])
         p = int(sig[v % n])
         structured[p, g, v] += 1.0
-    structured = _ipf_uniform(structured)
+    structured = fit_uniform_marginals(structured)
 
     def mix(lam: float) -> np.ndarray:
         return (1.0 - lam) * uniform + lam * structured

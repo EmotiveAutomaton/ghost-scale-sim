@@ -32,7 +32,8 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from . import common as C
-from .ontology import (COMPONENTS, Episode, Latent, overlap_index, pairwise_coupling,
+from .ontology import (fit_uniform_marginals,
+                       COMPONENTS, Episode, Latent, overlap_index, pairwise_coupling,
                        realized_route_information, target_coupling_nats)
 
 FAMILY = "composition"
@@ -74,20 +75,6 @@ class CompositionWorld:
 # --------------------------------------------------------------------------- #
 # Construction. The coupling is built by conditional tilting, not by mixing.
 # --------------------------------------------------------------------------- #
-def _ipf_uniform(tab: np.ndarray, iters: int = 200) -> np.ndarray:
-    """Fit a table onto uniform one-dimensional marginals, leaving its dependence alone."""
-    t = np.maximum(np.asarray(tab, float).copy(), 1e-9)
-    for _ in range(iters):
-        for ax in range(t.ndim):
-            other = tuple(a for a in range(t.ndim) if a != ax)
-            m = t.sum(axis=other)
-            sh = [1] * t.ndim
-            sh[ax] = t.shape[ax]
-            t = t * ((t.sum() / t.shape[ax]) / np.maximum(m, 1e-300)).reshape(sh)
-    return t / t.sum()
-
-
-
 def _prior(n_p: int, n_g: int, n_v: int, kappa: float, rng) -> tuple:
     """Coupling by *conditional concentration*: the tendency narrows which goals are live, and the
     goal narrows which strategies are live.
@@ -119,7 +106,7 @@ def _prior(n_p: int, n_g: int, n_v: int, kappa: float, rng) -> tuple:
         # concentrates the goal and process marginals as the tilt rises, so "coupling" would move
         # the marginals here and not in the chain family -- and a cross-family agreement (C14)
         # would be comparing two different knobs.
-        return _ipf_uniform(out)
+        return fit_uniform_marginals(out)
 
     def mean_pw(w) -> float:
         pc = pairwise_coupling(w)

@@ -175,6 +175,28 @@ class ContextRealized:
 # --------------------------------------------------------------------------- #
 # Coupling semantics. Every family must hit these targets with its own code.
 # --------------------------------------------------------------------------- #
+def fit_uniform_marginals(tab: np.ndarray, iters: int = 200) -> np.ndarray:
+    """Iterative proportional fitting onto uniform one-dimensional marginals.
+
+    Declared shared ontology, not a generative mechanism. Every family needs its latent prior
+    to keep uniform marginals so that "coupling" means dependence and only dependence -- if a
+    coupling knob also moved the marginals, a joint-beats-independent result would be partly a
+    marginal-prior artifact. Each family builds its *dependence* with its own code; they share
+    only this normalization, and card I06 audits that nothing else is shared.
+    """
+    t = np.asarray(tab, float).copy()
+    t = np.maximum(t, t.max() * 1e-12)      # relative floor: an absolute one flattens a
+                                            # tempered table into a uniform one
+    for _ in range(int(iters)):
+        for ax in range(t.ndim):
+            other = tuple(a for a in range(t.ndim) if a != ax)
+            sh = [1] * t.ndim
+            sh[ax] = t.shape[ax]
+            t = t * ((t.sum() / t.shape[ax])
+                     / np.maximum(t.sum(axis=other), 1e-300)).reshape(sh)
+    return t / t.sum()
+
+
 def target_coupling_nats(kappa: float, n_a: int, n_b: int) -> float:
     """What ``kappa`` *means*: the mutual information, in nats, that a family's latent prior must
     realize between any two latent components, as a fraction of the smaller component's entropy.

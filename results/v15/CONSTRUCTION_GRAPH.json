@@ -1,0 +1,1608 @@
+{
+  "program": "v15",
+  "written": "2026-08-31T09:25:57",
+  "nodes": {
+    "I01": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "I02": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "I03": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "I04": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "I05": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "I06": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "I07": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "I08": {
+      "trunk": "I",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "C01": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C02": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C03": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C04": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C05": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C06": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C07": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C08": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C09": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C10": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C11": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "C12": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C13": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "C14": {
+      "trunk": "C",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M01": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M02": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M03": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M04": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M05": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "M06": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M07": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action",
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M08": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M09": {
+      "trunk": "M",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M10": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M11": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "M12": {
+      "trunk": "M",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "E01": {
+      "trunk": "E",
+      "claim_class": "CONSTRUCTION_IDENTITY",
+      "endpoints": [
+        "transfer_breadth"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E02": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "held_out_history"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E03": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "hidden_error_location"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E04": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "hidden_error_location"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E05": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "E06": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "held_out_history"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E07": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "transfer_breadth"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E08": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "relearning_curve"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E09": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "hidden_error_location"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E10": {
+      "trunk": "E",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "held_out_history"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "E11": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_episode_first_choice"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "E12": {
+      "trunk": "E",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "held_out_history"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G01": {
+      "trunk": "G",
+      "claim_class": "CONSTRUCTION_IDENTITY",
+      "endpoints": [
+        "collision_residual"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G02": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_edit"
+      ],
+      "families": [
+        "composition",
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G03": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "switch_time"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G04": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "cross_goal_dependency"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G05": {
+      "trunk": "G",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "deviation_continuation"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G06": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_edit",
+        "stop_or_continue"
+      ],
+      "families": [
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "G07": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "deviation_continuation"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G08": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "method_change"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G09": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "stop_or_continue"
+      ],
+      "families": [
+        "composition",
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "G10": {
+      "trunk": "G",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_edit"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "V01": {
+      "trunk": "V",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "V02": {
+      "trunk": "V",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "next_episode_first_choice"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "V03": {
+      "trunk": "V",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "relearning_curve"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "V04": {
+      "trunk": "V",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "V05": {
+      "trunk": "V",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "cost_owner"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "V06": {
+      "trunk": "V",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "cost_owner"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "V07": {
+      "trunk": "V",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "change_point"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "V08": {
+      "trunk": "V",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "feasible_set"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "V09": {
+      "trunk": "V",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "feasible_set"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "V10": {
+      "trunk": "V",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_edit",
+        "stop_or_continue",
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition"
+      ],
+      "depends_on": []
+    },
+    "S01": {
+      "trunk": "S",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "source_motive"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S02": {
+      "trunk": "S",
+      "claim_class": "CONSTRUCTION_IDENTITY",
+      "endpoints": [
+        "collision_residual"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S03": {
+      "trunk": "S",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_evidence_selection"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S04": {
+      "trunk": "S",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "source_motive"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S05": {
+      "trunk": "S",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "source_motive"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S06": {
+      "trunk": "S",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_evidence_selection"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S07": {
+      "trunk": "S",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_evidence_selection"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S08": {
+      "trunk": "S",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "source_motive"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S09": {
+      "trunk": "S",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "source_motive"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "S10": {
+      "trunk": "S",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_evidence_selection"
+      ],
+      "families": [
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "R01": {
+      "trunk": "R",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R02": {
+      "trunk": "R",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R03": {
+      "trunk": "R",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R04": {
+      "trunk": "R",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R05": {
+      "trunk": "R",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R06": {
+      "trunk": "R",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R07": {
+      "trunk": "R",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "R08": {
+      "trunk": "R",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "route_weighting"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F01": {
+      "trunk": "F",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F02": {
+      "trunk": "F",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F03": {
+      "trunk": "F",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F04": {
+      "trunk": "F",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F05": {
+      "trunk": "F",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "expansion_decision"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F06": {
+      "trunk": "F",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F07": {
+      "trunk": "F",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "held_out_gain"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F08": {
+      "trunk": "F",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "held_out_gain"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F09": {
+      "trunk": "F",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "F10": {
+      "trunk": "F",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "realized_gain_per_cost"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H01": {
+      "trunk": "H",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H02": {
+      "trunk": "H",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H03": {
+      "trunk": "H",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H04": {
+      "trunk": "H",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_intervention_issuer"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H05": {
+      "trunk": "H",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H06": {
+      "trunk": "H",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H07": {
+      "trunk": "H",
+      "claim_class": "BOUNDARY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "H08": {
+      "trunk": "H",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "team_topology"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "P01": {
+      "trunk": "P",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "P02": {
+      "trunk": "P",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_edit",
+        "stop_or_continue"
+      ],
+      "families": [
+        "composition",
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "P03": {
+      "trunk": "P",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "changed_context_choice"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "P04": {
+      "trunk": "P",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "P05": {
+      "trunk": "P",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "P06": {
+      "trunk": "P",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "endpoints": [
+        "deviation_continuation"
+      ],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "P07": {
+      "trunk": "P",
+      "claim_class": "BRIDGE_CANDIDATE",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "P08": {
+      "trunk": "P",
+      "claim_class": "BRIDGE_CANDIDATE",
+      "endpoints": [],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "B01": {
+      "trunk": "B",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "B02": {
+      "trunk": "B",
+      "claim_class": "METHOD",
+      "endpoints": [],
+      "families": [
+        "chain"
+      ],
+      "depends_on": []
+    },
+    "X01": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X02": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X03": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X04": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X05": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X06": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X07": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X08": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X09": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X10": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X11": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X12": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X13": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X14": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X15": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X16": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X17": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X18": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X19": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X20": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X21": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X22": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X23": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    },
+    "X24": {
+      "trunk": "X",
+      "claim_class": "METHOD",
+      "endpoints": [
+        "next_action"
+      ],
+      "families": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "depends_on": []
+    }
+  }
+}

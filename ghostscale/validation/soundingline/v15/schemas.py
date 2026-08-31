@@ -52,9 +52,19 @@ GATE_KINDS_CAUSAL = ("live", "placebo", "positive", "no_label_leak", "surface", 
                      "calibration")
 
 #: Spec §4.1. Prospective endpoints. Retrospective latent accuracy is never primary.
-ENDPOINTS = ("next_action", "next_edit", "stop_or_continue", "next_episode_first_choice",
-             "changed_context_choice", "next_evidence_selection", "next_intervention_issuer",
-             "realized_gain_per_cost")
+ENDPOINTS = (
+    # the eight the spec enumerates
+    "next_action", "next_edit", "stop_or_continue", "next_episode_first_choice",
+    "changed_context_choice", "next_evidence_selection", "next_intervention_issuer",
+    "realized_gain_per_cost",
+    # hidden events the spec's card table names in prose: each is a quantity withheld
+    # during inference and scored afterwards, not a retrospective latent label
+    "held_out_history", "hidden_error_location", "relearning_curve", "transfer_breadth",
+    "switch_time", "cross_goal_dependency", "deviation_continuation", "method_change",
+    "cost_owner", "feasible_set", "change_point", "source_motive", "selection_policy",
+    "team_topology", "collision_residual", "abstention_rate", "expansion_decision",
+    "route_weighting", "held_out_gain",
+)
 
 #: Spec §8.3 / §12. Publication-relevance ledger fields (spec §1.3).
 PUBLICATION_FIELDS = ("established_component", "project_specific_delta", "evidence_grade",

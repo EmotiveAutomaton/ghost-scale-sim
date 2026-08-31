@@ -1,0 +1,23 @@
+{
+  "program": "v15",
+  "written": "2026-08-31T09:25:57",
+  "architectures": [
+    "surface",
+    "label_only",
+    "independent",
+    "independent_routed",
+    "staged",
+    "joint_exact",
+    "factor_graph",
+    "particle",
+    "expand",
+    "direct_predictor",
+    "oracle_model_space",
+    "oracle_state"
+  ],
+  "non_promotable": [
+    "oracle_state"
+  ],
+  "matching_rule": "every architecture comparison reports information-matched (same raw observations) and budget-matched (likelihood evaluations within a declared relative tolerance) results; an untouched budget counter is refused at reduce time",
+  "tolerance": 0.25
+}
