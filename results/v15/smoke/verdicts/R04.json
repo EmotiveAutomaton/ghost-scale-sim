@@ -1,0 +1,338 @@
+{
+  "card": "R04",
+  "trunk": "R",
+  "wave": 2,
+  "lane": "smoke",
+  "record": {
+    "question": "Does robust or minimax weighting beat empirical reliability under domain shift?",
+    "what_happened": "robust weighting beats empirical weighting by -0.0767 nats overall",
+    "what_changed_in_the_project_world": "route weighting is worth what it buys on a hidden value, conditionally",
+    "what_remains_a_rival": "a shift that also changes the task",
+    "claim_class": "BOUNDARY"
+  },
+  "hypothesis": "robust weighting pays after a domain shift and costs in domain",
+  "claim_class": "BOUNDARY",
+  "criterion_status": "FAILED",
+  "sesoi": {
+    "value": 0.015,
+    "basis": "5% of the oracle-minus-surface span"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_R04": {
+      "name": "R04",
+      "observed": -0.07667505271147769,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": false,
+      "basis": "5% of the oracle-minus-surface span",
+      "interval": [
+        -0.11082611970021845,
+        -0.04640496619996514
+      ],
+      "detail": "robust beats learned by at least the bar"
+    },
+    "paired": {
+      "mean": -0.07667505271147769,
+      "interval": [
+        -0.11082611970021845,
+        -0.04640496619996514
+      ],
+      "n_units": 2,
+      "n_rows": 24,
+      "excludes_zero": true
+    },
+    "by_weighter": {
+      "learned": -0.8656155987882834,
+      "robust": -0.9422906514997611
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {},
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "R04",
+    "channels": [
+      {
+        "channel": "route_reports_about_a_hidden_value",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": true,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {
+    "established_component": "reliability-weighted cue combination",
+    "project_specific_delta": "a dispersion x dose boundary and an honest ease trap",
+    "evidence_grade": "boundary",
+    "strongest_missing_rival": "equal weighting",
+    "independent_generator_count": 1,
+    "external_validation_needed": "real cues with measurable reliability",
+    "paper_shape": "methods_note",
+    "maturity": "seed",
+    "unfilled": []
+  },
+  "cells": {
+    "0|learned": {
+      "units": 2,
+      "rows": 8,
+      "min_rows_in_a_unit": 4
+    },
+    "0|robust": {
+      "units": 2,
+      "rows": 8,
+      "min_rows_in_a_unit": 4
+    },
+    "0.5|learned": {
+      "units": 2,
+      "rows": 8,
+      "min_rows_in_a_unit": 4
+    },
+    "0.5|robust": {
+      "units": 2,
+      "rows": 8,
+      "min_rows_in_a_unit": 4
+    },
+    "1|learned": {
+      "units": 2,
+      "rows": 8,
+      "min_rows_in_a_unit": 4
+    },
+    "1|robust": {
+      "units": 2,
+      "rows": 8,
+      "min_rows_in_a_unit": 4
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 6,
+    "realized_levels": 6,
+    "expected_units": 2,
+    "realized_units": 2,
+    "expected_min_rows_per_unit": 0,
+    "realized_min_rows_per_unit": 4,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2,
+    "rows": 48
+  },
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a shift that also changes the task",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": null,
+    "units_cpu_s": null,
+    "workers": null,
+    "reduce_accounting": {
+      "pid": 185660,
+      "process_time": 1.140625,
+      "user": 0.96875,
+      "system": 0.171875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 43155456,
+      "peak_rss": 43331584
+    }
+  },
+  "runtime_seconds": 0.0,
+  "tier": "T0",
+  "units": {
+    "n": 2,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "R04",
+      "observed": -0.07667505271147769,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": false,
+      "basis": "5% of the oracle-minus-surface span",
+      "interval": [
+        -0.11082611970021845,
+        -0.04640496619996514
+      ],
+      "detail": "robust beats learned by at least the bar"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:robust_and_learned_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.07667505271147769,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:both_weighters_saw_the_same_reports",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:scores_are_finite",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_target_label_at_test",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_hidden_value_was_scored",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.07667505271147769,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:interval_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.06442115350025332,
+        "expected": 10.0,
+        "tolerance": 9.935578847499746
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": null,
+    "jax_platforms": null
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_r.py",
+    "sha256": "12f7d2607481ae02565d897223524a5f967a7c4018a29312e1c113d09549f924",
+    "git_commit": "3a98673",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:robust_and_learned_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.07667505271147769,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:both_weighters_saw_the_same_reports",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:scores_are_finite",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_target_label_at_test",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_hidden_value_was_scored",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.07667505271147769,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:interval_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.06442115350025332,
+        "expected": 10.0,
+        "tolerance": 9.935578847499746
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
