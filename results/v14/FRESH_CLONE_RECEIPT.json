@@ -1,6 +1,6 @@
 {
-  "written": "2026-08-31T03:11:21",
-  "head": "678452e88e8bf879da2edfc64a2bf5a6f730d304",
+  "written": "2026-08-31T03:17:41",
+  "head": "7f0310c18a54183f782d13442167d3619799f175",
   "git_dirty": true,
   "install": "shared pinned interpreter (no install)",
   "checks": {
@@ -10,9 +10,9 @@
       "tail": "11dd0068f951e0283c8717768a1fd04617454987c2e6f0fdb9\",\n  \"plan_tables\": \"b008233ae5eabdd06aefad60f1ca93fad28a3a40d5a5e4dbed2523358b4e853c\",\n  \"policies\": \"6669518e90f8b969817f4bd95cff30f88029117d0f1e69cc61c77fc0810ae772\",\n  \"posterior\": \"f49d8fbc95bfa5021cbefa279a64e97501481d72c3d3f0122c83f4f49a1cb867\",\n  \"seed_world\": 2133855,\n  \"source_posterior\": \"048725d17f9753228b0b31b01a8473e109b84aa4a8440e1ed609e331f04e06c8\",\n  \"vocab\": \"ceb12c29d26c2b7a70dd1d4c639c042a7ee272c4958c847ac7e915d7caacaf1f\"\n }\n}"
     },
     "validator": {
-      "returncode": 1,
-      "head": "{\n  \"coverage\": {\n    \"cards_total\": 76,\n    \"mandatory_total\": 64,\n    \"mandatory_resolved\": 64,\n    \"by_state\": {\n      \"LANDED\": 76\n    },\n    \"by_trunk\": {\n      \"I\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"J\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"R\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"E\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"A\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"H\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"F\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"B\": {\n        \"total\": 2,\n        \"resolved\": 2\n      },\n      \"X\": {\n        \"total\": 12,\n        \"resolved\": 12\n      }\n    },\n    \"unresolved_mandatory\": [],\n    \"written\": \"2026-08-31T03:11:19\"\n  },\n  \"problems\": [\n    \"J07 [discovery]: record uses forbidden vocabulary ['diagnos']\",\n    \"X01: attack applied to ['affect_source_factorization', 'competence_history_dissociation', 'joint_reconstruction_advantage', 'learning_progress_foraging', 'reliable_routing'] but the matrix declares []\",\n    \"X02: attack applied to ['affect_source_factorization', 'competence_history_dis",
-      "tail": "ntage', 'learning_progress_foraging', 'reliable_routing'] but the matrix declares []\",\n    \"X12: attack applied to ['affect_source_factorization', 'competence_history_dissociation', 'joint_reconstruction_advantage', 'learning_progress_foraging', 'reliable_routing'] but the matrix declares []\"\n  ],\n  \"lock\": {\n    \"structural_locked\": true,\n    \"internal_prespecification_not_external_preregistration\": true,\n    \"locked\": true,\n    \"stage\": \"scientific\",\n    \"tier\": \"T3\"\n  },\n  \"unresolved\": []\n}\n"
+      "returncode": 0,
+      "head": "{\n  \"coverage\": {\n    \"cards_total\": 76,\n    \"mandatory_total\": 64,\n    \"mandatory_resolved\": 64,\n    \"by_state\": {\n      \"LANDED\": 76\n    },\n    \"by_trunk\": {\n      \"I\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"J\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"R\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"E\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"A\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"H\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"F\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"B\": {\n        \"total\": 2,\n        \"resolved\": 2\n      },\n      \"X\": {\n        \"total\": 12,\n        \"resolved\": 12\n      }\n    },\n    \"unresolved_mandatory\": [],\n    \"written\": \"2026-08-31T03:17:40\"\n  },\n  \"problems\": [],\n  \"lock\": {\n    \"structural_locked\": true,\n    \"internal_prespecification_not_external_preregistration\": true,\n    \"locked\": true,\n    \"stage\": \"scientific\",\n    \"tier\": \"T3\"\n  },\n  \"unresolved\": []\n}\n",
+      "tail": "    },\n      \"F\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"B\": {\n        \"total\": 2,\n        \"resolved\": 2\n      },\n      \"X\": {\n        \"total\": 12,\n        \"resolved\": 12\n      }\n    },\n    \"unresolved_mandatory\": [],\n    \"written\": \"2026-08-31T03:17:40\"\n  },\n  \"problems\": [],\n  \"lock\": {\n    \"structural_locked\": true,\n    \"internal_prespecification_not_external_preregistration\": true,\n    \"locked\": true,\n    \"stage\": \"scientific\",\n    \"tier\": \"T3\"\n  },\n  \"unresolved\": []\n}\n"
     },
     "gates_test": {
       "returncode": 0,
@@ -22,5 +22,5 @@
   },
   "scientific_fields_match_local": true,
   "note": "a dirty local tree makes field comparison meaningless for uncommitted generator changes",
-  "ok": false
+  "ok": true
 }

@@ -78,6 +78,23 @@ the result, not an exception to it.
 
 ## The latest result, and where the model stops
 
+In V14, the maker's intent stops being one object: the reader recovers a plan, an episode goal
+and a standing preference from four evidence routes that never share a token, and the value turns
+out to live in the factoring, not in the jointness. The exact joint posterior beats independent
+per-latent readers by only **+0.011 nats** against a pre-registered bar of 0.02 (the same on
+fresh families), and learned route reliability beats equal weighting by +0.009 — two honest
+nulls — while *not being fooled by ease* is worth a tenth of a nat, two makers of identical
+skill are told apart by how they practiced **99%** of the time from held-out transitions, a
+sincere fanatic and a strategic propagandist whose artifacts are identical by construction sit at
+exact chance until one off-audience action separates them at **90%**, and a reader's pursuit
+(83% of its queries) stays separate from its warrant (a posterior held at 0.21). Learning
+progress escapes the noise trap but buys no extra gain and loses by 4 nats when the world's laws
+change silently; gain-per-cost with abstention is the piece that exports. The three V13 repairs
+ran clean and found nothing — the common-substrate and self-prior claims they were built to
+revive stay closed. All 64 cards and 12 attacks landed; twelve criteria failed as recorded
+nulls; all four frozen confirmation candidates held. The full account is in the
+[V14 results](docs/versions/v14-routed-reader/RESULTS.md).
+
 In V13, the self-first reader's advantage survives a rival that is exactly as local as the self
 — matched on entropy *and* on expected distance to the truth — and it is smaller than V12
 reported: **+0.26 nats** on the makers nearest the reader after one artifact, **−0.16** on the
