@@ -1,0 +1,423 @@
+{
+  "card": "M03",
+  "trunk": "M",
+  "wave": 1,
+  "lane": "smoke",
+  "record": {
+    "question": "Which architecture survives a missing latent variable?",
+    "what_happened": "misspecification costs the fixed joint reader more than the expanding one",
+    "what_changed_in_the_project_world": "the architecture comparison carries a compute receipt or it is not reported",
+    "what_remains_a_rival": "the oracle model space being compared as a rival",
+    "claim_class": "METHOD"
+  },
+  "hypothesis": "an expanding reader loses least when a latent variable is missing from its model space",
+  "claim_class": "METHOD",
+  "criterion_status": "FAILED",
+  "sesoi": {
+    "value": 0.015,
+    "basis": "5% of the oracle-minus-surface span"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_M03": {
+      "name": "M03",
+      "observed": -0.013796890485895608,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": false,
+      "basis": "5% of the oracle-minus-surface span",
+      "interval": [
+        -0.041316765996113294,
+        0.010688482144206266
+      ],
+      "detail": "expand beats joint_exact by at least the bar on the hidden event"
+    },
+    "criterion_M03_degradation": {
+      "name": "M03_degradation",
+      "observed": 0.027593780971790993,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": true,
+      "basis": "5% of the oracle-minus-surface span",
+      "interval": null,
+      "detail": "the fixed reader loses this much more than the expanding one when a latent is missing"
+    },
+    "by_architecture": {
+      "expand": -1.3513095932669472,
+      "joint_exact": -1.3375127027810516,
+      "oracle_model_space": -1.323715812295156,
+      "oracle_state": -1.2319342485068416,
+      "surface": -1.7509254002687549
+    },
+    "paired": {
+      "mean": -0.01379689048589551,
+      "interval": [
+        -0.041316765996113294,
+        0.010688482144206266
+      ],
+      "n_units": 2,
+      "n_rows": 84,
+      "excludes_zero": false
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {
+    "median_likelihood_evaluations": 432.22222222222223,
+    "relative_spread": {
+      "joint_exact": 0.433033419023136,
+      "expand": 0.0,
+      "surface": 0.9976863753213367
+    },
+    "tolerance": 0.25,
+    "compute_matched": false,
+    "untouched_budgets": [],
+    "all_budgets": {
+      "joint_exact": {
+        "likelihood_evaluations": 619.3888888888888,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.020399305555555556
+      },
+      "expand": {
+        "likelihood_evaluations": 432.22222222222223,
+        "proposals": 3.0,
+        "observations": 0.0,
+        "cpu_s": 0.008246527777777778
+      },
+      "oracle_model_space": {
+        "likelihood_evaluations": 422.5555555555555,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.006076388888888889
+      },
+      "surface": {
+        "likelihood_evaluations": 1.0,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.0
+      },
+      "oracle_state": {
+        "likelihood_evaluations": 1.0,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.0
+      }
+    }
+  },
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "M03",
+    "channels": [
+      {
+        "channel": "hidden_event_from_policy",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": false,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {
+    "established_component": "inverse-planning architecture comparisons",
+    "project_specific_delta": "information- and compute-matched, with an explicit ceiling",
+    "evidence_grade": "method",
+    "strongest_missing_rival": "a tuned heuristic predictor",
+    "independent_generator_count": 3,
+    "external_validation_needed": "a real record with a hidden next event",
+    "paper_shape": "methods_note",
+    "maturity": "seed",
+    "unfilled": []
+  },
+  "cells": {
+    "correct|joint_exact": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "correct|expand": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "correct|oracle_model_space": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "correct|surface": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "correct|oracle_state": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "missing_latent|joint_exact": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "missing_latent|expand": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "missing_latent|oracle_model_space": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "missing_latent|surface": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    },
+    "missing_latent|oracle_state": {
+      "units": 2,
+      "rows": 72,
+      "min_rows_in_a_unit": 36
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 6,
+    "realized_levels": 10,
+    "expected_units": 2,
+    "realized_units": 2,
+    "expected_min_rows_per_unit": 0,
+    "realized_min_rows_per_unit": 36,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2,
+    "rows": 420
+  },
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "the oracle model space being compared as a rival",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": null,
+    "units_cpu_s": null,
+    "workers": null,
+    "reduce_accounting": {
+      "pid": 42320,
+      "process_time": 17.890625,
+      "user": 17.359375,
+      "system": 0.53125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 45260800,
+      "peak_rss": 45346816
+    }
+  },
+  "runtime_seconds": 0.0,
+  "tier": "T0",
+  "units": {
+    "n": 2,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "M03",
+      "observed": -0.013796890485895608,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": false,
+      "basis": "5% of the oracle-minus-surface span",
+      "interval": [
+        -0.041316765996113294,
+        0.010688482144206266
+      ],
+      "detail": "expand beats joint_exact by at least the bar on the hidden event"
+    },
+    {
+      "name": "M03_degradation",
+      "observed": 0.027593780971790993,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": true,
+      "basis": "5% of the oracle-minus-surface span",
+      "interval": null,
+      "detail": "the fixed reader loses this much more than the expanding one when a latent is missing"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:expand_and_joint_exact_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.013796890485895608,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_observations_to_every_reader",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:oracle_ceiling_above_surface_floor",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_non_oracle_reader_saw_the_latent",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:architecture_moves_the_hidden_event",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.01379689048589551,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:interval_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.05200524814031956,
+        "expected": 10.0,
+        "tolerance": 9.94799475285968
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": null,
+    "jax_platforms": null
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_m.py",
+    "sha256": "623d470dfc0891353dbf8a83249ec14daeae80c95ae1b106d5d9f9c203369f8d",
+    "git_commit": "980fde5",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:expand_and_joint_exact_differ",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.013796890485895608,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_observations_to_every_reader",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:oracle_ceiling_above_surface_floor",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_non_oracle_reader_saw_the_latent",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:architecture_moves_the_hidden_event",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.01379689048589551,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:interval_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.05200524814031956,
+        "expected": 10.0,
+        "tolerance": 9.94799475285968
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

@@ -105,11 +105,14 @@ def rng(ctx: dict, tag: str = "") -> np.random.Generator:
 
 
 def families_of(ctx: dict) -> list:
+    """Every family the card declares, in smoke as well as at scale.
+
+    Truncating the family list under smoke was tried and is wrong: a card that declares ``family``
+    as a factor then realizes fewer cells than it declared and the receipt blocks it, so the smoke
+    pass reports RESOURCE_BLOCKED for a card that is perfectly healthy.
+    """
     c = ctx["card"]
-    fams = list(getattr(c, "families", ["chain"]) or ["chain"])
-    if smoke_mode() or ctx.get("smoke"):
-        return fams[:2] if len(fams) > 1 else fams
-    return fams
+    return list(getattr(c, "families", ["chain"]) or ["chain"])
 
 
 # --------------------------------------------------------------------------- #
