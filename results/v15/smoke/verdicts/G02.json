@@ -135,21 +135,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 0.5563650000840425,
+    "units_cpu_s": 0.922,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 177476,
-      "process_time": 1.15625,
-      "user": 0.875,
-      "system": 0.28125,
+      "pid": 60892,
+      "process_time": 1.4375,
+      "user": 0.65625,
+      "system": 0.78125,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 42659840,
-      "peak_rss": 42659840
+      "rss": 49401856,
+      "peak_rss": 49545216
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 0.556,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -251,13 +251,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_g.py",
     "sha256": "bfc0f0b7cc2e28ee19e9fcc5db1465dd57e16a53737f6204f217f4cf0ea2758f",
-    "git_commit": "718489c",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {

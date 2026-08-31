@@ -21,29 +21,29 @@
   "results": {
     "criterion_M12": {
       "name": "M12",
-      "observed": -0.03433854385076218,
+      "observed": -0.034338543850597425,
       "bar": 0.015,
       "direction": "greater",
       "held": false,
       "basis": "5% of the oracle-minus-surface span",
       "interval": [
-        -0.1083185758837129,
+        -0.10831857588313601,
         0.03202187852704613
       ],
       "detail": "joint_exact beats independent by at least the bar on the hidden event"
     },
     "by_architecture": {
       "direct_predictor": -1.601777259555834,
-      "independent": -1.1711186115587622,
-      "joint_exact": -1.2054571554095244,
+      "independent": -1.171118611558747,
+      "joint_exact": -1.2054571554093445,
       "oracle_state": -1.1871464680575,
       "particle": -1.2319018832804876,
       "surface": -1.3501634466751735
     },
     "paired": {
-      "mean": -0.03433854385076182,
+      "mean": -0.034338543850597286,
       "interval": [
-        -0.1083185758837129,
+        -0.10831857588313601,
         0.03202187852704613
       ],
       "n_units": 2,
@@ -70,19 +70,19 @@
         "likelihood_evaluations": 431.8333333333333,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.017361111111111112
+        "cpu_s": 0.016493055555555556
       },
       "joint_exact": {
         "likelihood_evaluations": 422.77777777777777,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.006944444444444444
+        "cpu_s": 0.003472222222222222
       },
       "particle": {
         "likelihood_evaluations": 4810.0,
         "proposals": 626.6666666666666,
         "observations": 0.0,
-        "cpu_s": 0.016493055555555556
+        "cpu_s": 0.017361111111111112
       },
       "direct_predictor": {
         "likelihood_evaluations": 1.0,
@@ -252,21 +252,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 2.263497299980372,
+    "units_cpu_s": 4.391,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 42320,
-      "process_time": 66.984375,
-      "user": 66.1875,
-      "system": 0.796875,
+      "pid": 60892,
+      "process_time": 1.140625,
+      "user": 0.578125,
+      "system": 0.5625,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 45334528,
-      "peak_rss": 45580288
+      "rss": 49319936,
+      "peak_rss": 49545216
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 2.263,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -275,13 +275,13 @@
   "criteria": [
     {
       "name": "M12",
-      "observed": -0.03433854385076218,
+      "observed": -0.034338543850597425,
       "bar": 0.015,
       "direction": "greater",
       "held": false,
       "basis": "5% of the oracle-minus-surface span",
       "interval": [
-        -0.1083185758837129,
+        -0.10831857588313601,
         0.03202187852704613
       ],
       "detail": "joint_exact beats independent by at least the bar on the hidden event"
@@ -303,7 +303,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.03433854385076218,
+        "observed": 0.034338543850597425,
         "expected": 0.0
       },
       {
@@ -345,7 +345,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.03433854385076182,
+        "observed": 0.034338543850597286,
         "expected": 0.0
       },
       {
@@ -353,9 +353,9 @@
         "kind": "positive",
         "passed": true,
         "detail": "uncertainty or abstention moves in the correct direction",
-        "observed": 0.14034045441075904,
+        "observed": 0.14034045441018214,
         "expected": 10.0,
-        "tolerance": 9.85965954658924
+        "tolerance": 9.859659546589818
       }
     ],
     "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
@@ -368,13 +368,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_m.py",
-    "sha256": "623d470dfc0891353dbf8a83249ec14daeae80c95ae1b106d5d9f9c203369f8d",
-    "git_commit": "980fde5",
+    "sha256": "51ff1c8e794709ace0d4b4d8debba9cdd0d941d38eca84b1d763e783d7b5459c",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -392,7 +392,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.03433854385076218,
+        "observed": 0.034338543850597425,
         "expected": 0.0
       },
       {
@@ -434,7 +434,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.03433854385076182,
+        "observed": 0.034338543850597286,
         "expected": 0.0
       },
       {
@@ -442,9 +442,9 @@
         "kind": "positive",
         "passed": true,
         "detail": "uncertainty or abstention moves in the correct direction",
-        "observed": 0.14034045441075904,
+        "observed": 0.14034045441018214,
         "expected": 10.0,
-        "tolerance": 9.85965954658924
+        "tolerance": 9.859659546589818
       }
     ],
     "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."

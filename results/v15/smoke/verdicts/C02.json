@@ -27,16 +27,16 @@
       "held": true,
       "basis": "5% of the oracle-minus-surface span",
       "interval": [
-        -0.013235372844145221,
-        0.09297369265338958
+        -0.013237144102507604,
+        0.09296130485002137
       ],
       "detail": "the joint reader's advantage over independent marginals clears the bar at some level of kappa"
     },
     "advantage": {
-      "mean": 0.03351795155067404,
+      "mean": 0.03351409595406024,
       "interval": [
-        -0.013235372844145221,
-        0.09297369265338958
+        -0.013237144102507604,
+        0.09296130485002137
       ],
       "n_units": 2,
       "n_rows": 210,
@@ -45,15 +45,15 @@
     "span_oracle_minus_surface": 0.41062307856751357,
     "by_architecture": {
       "surface": -1.5997860516830904,
-      "independent": -1.2615955274234656,
+      "independent": -1.2615954524841955,
       "staged": -1.2562368459489648,
-      "joint_exact": -1.2280775758727918,
+      "joint_exact": -1.228081356530135,
       "oracle_state": -1.1891629731155768
     },
     "by_family": {
-      "communication": 0.22287580900006648,
-      "composition": -0.13169725363936863,
-      "chain": 0.07770095884083554
+      "chain": 0.07770095884083554,
+      "composition": -0.13169597611684875,
+      "communication": 0.2228758089923403
     }
   },
   "conditional_matrix": {},
@@ -72,15 +72,15 @@
       },
       {
         "x": "0.5",
-        "mean": 0.08131199793831353
+        "mean": 0.0813119979383367
       },
       {
         "x": "0.75",
-        "mean": 0.042598847984700865
+        "mean": 0.042601079802778545
       },
       {
         "x": "1",
-        "mean": 0.0522099484744283
+        "mean": 0.052209845847650226
       }
     ],
     "onset": "0",
@@ -103,25 +103,25 @@
         "likelihood_evaluations": 1.0,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0
+        "cpu_s": 0.0001736111111111111
       },
       "independent": {
         "likelihood_evaluations": 388.61111111111114,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.017361111111111112
+        "cpu_s": 0.015104166666666667
       },
       "staged": {
         "likelihood_evaluations": 342.3333333333333,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0020833333333333333
+        "cpu_s": 0.002430555555555555
       },
       "joint_exact": {
         "likelihood_evaluations": 379.28888888888895,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.003993055555555554
+        "cpu_s": 0.003645833333333333
       },
       "oracle_state": {
         "likelihood_evaluations": 1.0,
@@ -314,21 +314,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 8.641382800182328,
+    "units_cpu_s": 15.5,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 69168,
-      "process_time": 13.15625,
-      "user": 12.4375,
-      "system": 0.71875,
+      "pid": 60892,
+      "process_time": 0.46875,
+      "user": 0.171875,
+      "system": 0.296875,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 45576192,
-      "peak_rss": 45576192
+      "rss": 47501312,
+      "peak_rss": 47501312
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 8.641,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -343,8 +343,8 @@
       "held": true,
       "basis": "5% of the oracle-minus-surface span",
       "interval": [
-        -0.013235372844145221,
-        0.09297369265338958
+        -0.013237144102507604,
+        0.09296130485002137
       ],
       "detail": "the joint reader's advantage over independent marginals clears the bar at some level of kappa"
     }
@@ -407,7 +407,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.03351795155067404,
+        "observed": 0.03351409595406024,
         "expected": 0.0
       },
       {
@@ -415,9 +415,9 @@
         "kind": "positive",
         "passed": true,
         "detail": "uncertainty or abstention moves in the correct direction",
-        "observed": 0.1062090654975348,
+        "observed": 0.10619844895252897,
         "expected": 10.0,
-        "tolerance": 9.893790935502466
+        "tolerance": 9.89380155204747
       }
     ],
     "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
@@ -430,13 +430,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_c.py",
-    "sha256": "23525aff985fac568719377dec1bcabed5f943d492017ae98ee58ee418fa713b",
-    "git_commit": "980fde5",
+    "sha256": "1981e240a949f4e81bdbfa73119372746e8f9de82c2e5534beb1c938946ed2ed",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -496,7 +496,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.03351795155067404,
+        "observed": 0.03351409595406024,
         "expected": 0.0
       },
       {
@@ -504,9 +504,9 @@
         "kind": "positive",
         "passed": true,
         "detail": "uncertainty or abstention moves in the correct direction",
-        "observed": 0.1062090654975348,
+        "observed": 0.10619844895252897,
         "expected": 10.0,
-        "tolerance": 9.893790935502466
+        "tolerance": 9.89380155204747
       }
     ],
     "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."

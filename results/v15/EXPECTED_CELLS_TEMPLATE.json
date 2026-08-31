@@ -1,6 +1,6 @@
 {
   "program": "v15",
-  "written": "2026-08-31T09:25:57",
+  "written": "2026-08-31T10:16:50",
   "template": {
     "I01": {
       "discovery": {
@@ -775,9 +775,9 @@
     },
     "E06": {
       "discovery": {
-        "levels": 8,
+        "levels": 4,
         "units": 48,
-        "cells": 384,
+        "cells": 192,
         "min_rows_per_unit": 1,
         "factors": {
           "model": [
@@ -785,10 +785,8 @@
             "learning_record"
           ],
           "mixture": [
-            "practice_heavy",
             "instruction_heavy",
-            "feedback_heavy",
-            "constrained"
+            "feedback_heavy"
           ]
         }
       }
@@ -851,20 +849,18 @@
     },
     "E10": {
       "discovery": {
-        "levels": 8,
+        "levels": 4,
         "units": 48,
-        "cells": 384,
+        "cells": 192,
         "min_rows_per_unit": 1,
         "factors": {
           "equivalent": [
             "yes",
             "no"
           ],
-          "mixture": [
-            "practice_heavy",
-            "instruction_heavy",
-            "feedback_heavy",
-            "constrained"
+          "arm": [
+            "a",
+            "b"
           ]
         }
       }

@@ -45,7 +45,7 @@
   "budgets": {},
   "families": {
     "chain": 0.47187291755972194,
-    "composition": 0.5578961221535457
+    "composition": 0.5578961221548551
   },
   "equivalence": {},
   "trajectories": {},
@@ -134,21 +134,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 2.423665000125766,
+    "units_cpu_s": 3.9530000000000003,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 177476,
-      "process_time": 12.609375,
-      "user": 12.046875,
-      "system": 0.5625,
+      "pid": 60892,
+      "process_time": 1.578125,
+      "user": 0.734375,
+      "system": 0.84375,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 45068288,
-      "peak_rss": 45068288
+      "rss": 49438720,
+      "peak_rss": 49618944
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 2.424,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -192,7 +192,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.5578961221535457,
+        "observed": 0.5578961221548551,
         "expected": 0.0
       },
       {
@@ -255,13 +255,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_g.py",
     "sha256": "bfc0f0b7cc2e28ee19e9fcc5db1465dd57e16a53737f6204f217f4cf0ea2758f",
-    "git_commit": "718489c",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -279,7 +279,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.5578961221535457,
+        "observed": 0.5578961221548551,
         "expected": 0.0
       },
       {

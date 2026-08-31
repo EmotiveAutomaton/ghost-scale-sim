@@ -51,9 +51,9 @@
       "oracle_state": -1.1879744685725544
     },
     "by_family": {
-      "communication": 0.0022798124019408755,
+      "chain": -0.004642005697764323,
       "composition": -0.0002835750513893731,
-      "chain": -0.004642005697764323
+      "communication": 0.0022798124019408755
     }
   },
   "conditional_matrix": {},
@@ -97,25 +97,25 @@
         "likelihood_evaluations": 437.75,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.007378472222222223
+        "cpu_s": 0.012152777777777776
       },
       "staged": {
         "likelihood_evaluations": 406.3333333333333,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0
+        "cpu_s": 0.001736111111111111
       },
       "joint_exact": {
         "likelihood_evaluations": 437.5555555555556,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.003906250000000001
+        "cpu_s": 0.005208333333333333
       },
       "oracle_state": {
         "likelihood_evaluations": 1.0,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0008680555555555555
+        "cpu_s": 0.00043402777777777775
       }
     }
   },
@@ -227,21 +227,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 1.4684878000989556,
+    "units_cpu_s": 2.8289999999999997,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 69168,
-      "process_time": 2.015625,
-      "user": 1.890625,
-      "system": 0.125,
+      "pid": 60892,
+      "process_time": 0.453125,
+      "user": 0.15625,
+      "system": 0.296875,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 44355584,
-      "peak_rss": 44355584
+      "rss": 46960640,
+      "peak_rss": 46960640
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 1.468,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -343,13 +343,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_c.py",
-    "sha256": "23525aff985fac568719377dec1bcabed5f943d492017ae98ee58ee418fa713b",
-    "git_commit": "980fde5",
+    "sha256": "1981e240a949f4e81bdbfa73119372746e8f9de82c2e5534beb1c938946ed2ed",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {

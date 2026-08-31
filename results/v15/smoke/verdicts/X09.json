@@ -21,7 +21,7 @@
   "results": {
     "criterion_X09": {
       "name": "X09",
-      "observed": 0.03521638419815498,
+      "observed": 0.03521638419815809,
       "bar": 0.015,
       "direction": "greater",
       "held": true,
@@ -31,7 +31,7 @@
     },
     "criterion_X09_loss": {
       "name": "X09_loss",
-      "observed": -0.01629120989892252,
+      "observed": -0.016291209898881664,
       "bar": 10.0,
       "direction": "less",
       "held": true,
@@ -40,9 +40,9 @@
       "detail": "and the attack's cost is reported whether or not the result survives"
     },
     "estimand": {
-      "unattacked": 0.01892517429923246,
-      "attacked": 0.03521638419815498,
-      "loss": -0.01629120989892252,
+      "unattacked": 0.018925174299276426,
+      "attacked": 0.03521638419815809,
+      "loss": -0.016291209898881664,
       "pair": [
         "joint_exact",
         "independent"
@@ -51,12 +51,12 @@
     },
     "by_architecture": {
       "independent": {
-        "no": -1.1153840939682265,
+        "no": -1.1153840939682282,
         "yes": -1.4711909884229022
       },
       "joint_exact": {
-        "no": -1.096458919668994,
-        "yes": -1.4359746042247472
+        "no": -1.0964589196689518,
+        "yes": -1.435974604224744
       },
       "oracle_state": {
         "no": -0.9924207896091295,
@@ -129,21 +129,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 2.410115099977702,
+    "units_cpu_s": 4.656000000000001,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 107456,
-      "process_time": 30.78125,
-      "user": 27.8125,
-      "system": 2.96875,
+      "pid": 60892,
+      "process_time": 3.03125,
+      "user": 1.34375,
+      "system": 1.6875,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 44486656,
-      "peak_rss": 44662784
+      "rss": 50831360,
+      "peak_rss": 51011584
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 2.41,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -152,7 +152,7 @@
   "criteria": [
     {
       "name": "X09",
-      "observed": 0.03521638419815498,
+      "observed": 0.03521638419815809,
       "bar": 0.015,
       "direction": "greater",
       "held": true,
@@ -162,7 +162,7 @@
     },
     {
       "name": "X09_loss",
-      "observed": -0.01629120989892252,
+      "observed": -0.016291209898881664,
       "bar": 10.0,
       "direction": "less",
       "held": true,
@@ -187,7 +187,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.01629120989892252,
+        "observed": 0.016291209898881664,
         "expected": 0.0
       },
       {
@@ -229,7 +229,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.03521638419815498,
+        "observed": 0.03521638419815809,
         "expected": 0.0
       },
       {
@@ -250,13 +250,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_x.py",
-    "sha256": "903b62b157b8fdcfdb4a031effe0a2008a72f311f527e047aceea5b451647a58",
-    "git_commit": "3a98673",
+    "sha256": "97c6f1c4bcb9759e9589b36a24057a53602fa2e4534709451448f252fe28b0f6",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -274,7 +274,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.01629120989892252,
+        "observed": 0.016291209898881664,
         "expected": 0.0
       },
       {
@@ -316,7 +316,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.03521638419815498,
+        "observed": 0.03521638419815809,
         "expected": 0.0
       },
       {

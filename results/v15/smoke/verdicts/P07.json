@@ -5,7 +5,7 @@
   "lane": "smoke",
   "record": {
     "question": "Which rulers are licensed, partial, deferred or killed for Sounding Line Stage 6?",
-    "what_happened": "2 licensed, 2 partial, 2 deferred, 2 killed",
+    "what_happened": "1 licensed, 1 partial, 1 deferred, 1 killed",
     "what_changed_in_the_project_world": "what leaves the simulator is decided by the record, not by enthusiasm",
     "what_remains_a_rival": "exporting a construction identity",
     "claim_class": "BRIDGE_CANDIDATE"
@@ -21,7 +21,7 @@
   "results": {
     "criterion_P07": {
       "name": "P07",
-      "observed": 4.0,
+      "observed": 2.0,
       "bar": 0.0,
       "direction": "greater",
       "held": true,
@@ -30,10 +30,10 @@
       "detail": "at least one ruler is licensed or partially licensed; zero is a legitimate outcome and is recorded as one"
     },
     "counts": {
-      "license": 2,
-      "partial": 2,
-      "defer": 2,
-      "kill": 2
+      "license": 1,
+      "partial": 1,
+      "defer": 1,
+      "kill": 1
     },
     "table": []
   },
@@ -66,39 +66,39 @@
   "publication": {},
   "cells": {
     "license": {
-      "units": 2,
-      "rows": 2,
+      "units": 1,
+      "rows": 1,
       "min_rows_in_a_unit": 1
     },
     "partial": {
-      "units": 2,
-      "rows": 2,
+      "units": 1,
+      "rows": 1,
       "min_rows_in_a_unit": 1
     },
     "defer": {
-      "units": 2,
-      "rows": 2,
+      "units": 1,
+      "rows": 1,
       "min_rows_in_a_unit": 1
     },
     "kill": {
-      "units": 2,
-      "rows": 2,
+      "units": 1,
+      "rows": 1,
       "min_rows_in_a_unit": 1
     }
   },
   "expected_cell_receipt": {
     "expected_levels": 4,
     "realized_levels": 4,
-    "expected_units": 2,
-    "realized_units": 2,
+    "expected_units": 1,
+    "realized_units": 1,
     "expected_min_rows_per_unit": 0,
     "realized_min_rows_per_unit": 1,
     "ok": true
   },
   "independent_unit": "world",
   "effective_n": {
-    "units": 2,
-    "rows": 8
+    "units": 1,
+    "rows": 4
   },
   "pursuit": "PROMISING",
   "warrant": "DESCRIPTIVE_ONLY",
@@ -108,30 +108,30 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 0.0011921001132577658,
+    "units_cpu_s": 0.0,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 58148,
-      "process_time": 13.671875,
-      "user": 13.109375,
-      "system": 0.5625,
+      "pid": 60892,
+      "process_time": 2.8125,
+      "user": 1.3125,
+      "system": 1.5,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 44453888,
-      "peak_rss": 44634112
+      "rss": 50765824,
+      "peak_rss": 50958336
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 0.001,
   "tier": "T0",
   "units": {
-    "n": 2,
+    "n": 1,
     "kind": "single"
   },
   "criteria": [
     {
       "name": "P07",
-      "observed": 4.0,
+      "observed": 2.0,
       "bar": 0.0,
       "direction": "greater",
       "held": true,
@@ -215,13 +215,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_p.py",
     "sha256": "846385c3d4f6ccef358993e9d946efbf08aacf2b7479ab2d6c8c6c32c171ea71",
-    "git_commit": "3a98673",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {

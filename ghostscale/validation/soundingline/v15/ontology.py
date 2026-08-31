@@ -175,7 +175,7 @@ class ContextRealized:
 # --------------------------------------------------------------------------- #
 # Coupling semantics. Every family must hit these targets with its own code.
 # --------------------------------------------------------------------------- #
-def fit_uniform_marginals(tab: np.ndarray, iters: int = 200) -> np.ndarray:
+def fit_uniform_marginals(tab: np.ndarray, iters: int = 600) -> np.ndarray:
     """Iterative proportional fitting onto uniform one-dimensional marginals.
 
     Declared shared ontology, not a generative mechanism. Every family needs its latent prior
@@ -187,6 +187,9 @@ def fit_uniform_marginals(tab: np.ndarray, iters: int = 200) -> np.ndarray:
     t = np.asarray(tab, float).copy()
     t = np.maximum(t, t.max() * 1e-12)      # relative floor: an absolute one flattens a
                                             # tempered table into a uniform one
+    # 200 sweeps left the composition family's marginals 4.8e-5 off uniform at maximum coupling --
+    # scientifically small, but the whole point of this fit is that the coupling knob adds
+    # dependence and NOTHING else, and a drifting marginal is exactly the confound it prevents.
     for _ in range(int(iters)):
         for ax in range(t.ndim):
             other = tuple(a for a in range(t.ndim) if a != ax)

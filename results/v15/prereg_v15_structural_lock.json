@@ -1,0 +1,239 @@
+{
+  "program": "v15",
+  "kind": "structural",
+  "locked": true,
+  "written": "2026-08-31T10:16:50",
+  "internal_prespecification_not_external_preregistration": true,
+  "module_sha256": "8e7e92c09b16036310f3efd53edfcecf2e92589c124197547c9aafaeec5681d6",
+  "cards_sha256": "031bfe4dcf88e5ca9751035878d310933a961d5859439e4e985db7d63f58c898",
+  "sesoi_sha256": "667b1b929a14741f78e71ffb5d44afb54c14ef0323cf183e7df69a03ab74b175",
+  "spans_sha256": "05dee4de7ea51f19e649f8d11d27d77f57d1ad434108227c16bfccfdca0c3d99",
+  "flights_sha256": "3581e7e02c3fdb5a4592bfa9e08c07f44c0310eb85121fc2b9e4363207999a31",
+  "attack_relevance_sha256": "13594c1e91da3b177884e86aa85da8a926d190ef0b921875ad445efe7267d7c4",
+  "instrument_choices_sha256": "fa3c19da20ab0784eb75007358ad9a782c6df455439b365e46eaa43b2c4682ce",
+  "generators": {
+    "ontology.py": "3cd6cbb84a1214c704e196c9991cbab4e425499a66104bf440fe6f6583bab6df",
+    "world_chain.py": "f64fca9dd9a45a1a8ba6fbe1e1125fa4ba1e33c845efb534c99fa0e414921235",
+    "world_composition.py": "93576335ee362c8cb7a657f3c57f8aeba9a56ee534dff3483c19df3533cc6f73",
+    "world_communication.py": "db444dbd29847320681c5bd0ef9378d120abe2f36e65d870db19d414f4b1c224",
+    "exact.py": "89ecb15a0b65e8f9b95145cb887c4ace9588a76963ac8606731ca1e1bdb21e1b",
+    "particles.py": "3aefe9bd6fe411e2fc96303919910d6c5c3300dacda31fda901c71666a8fc4cc",
+    "expansion.py": "590363b95f6bde3c8909c4d799c3d7c238985953456e42aee1c741be4fc6889c",
+    "architectures.py": "8354d602734aa66486974c879c3e116d34a7da512a7bb86176f772521820c2df",
+    "learning_history.py": "229e58b40984fb36b655f0bbffbd10e045481443f0f1234fcfd2f20f627e2cf5",
+    "foreground.py": "b028c8f8ab9be007d72f962dba6c869021bbf2e042a9647f49276eb67d4365e9",
+    "persistent.py": "1149d96bd2bee729476b6b9138214081a305f9390fff484d0509f2d8f463d7fd",
+    "strategic_source.py": "aad3c345658db2d70317149b134747f83488a7ca0de2af367205335f2e553461",
+    "routes.py": "8016f3a4be98f0eeb2bbd3e1c8f6e638d33ea931b69bf206652749667a238027",
+    "foraging.py": "69acbed865febe0db0cb2724197c469e37b483249096ffffd488d65879fd5845",
+    "hierarchy.py": "0b321b7333ce3de62256b230b9a2c1bb8b7fd55c5eff08e161db7a136a626e98",
+    "causal_distance.py": "2e7e9c0bf12da9ecd1f7011eaf8bfab81a4db773ce993bc2a53ba0f6cdd842db",
+    "coverage.py": "6a11e212381468045b0248705481d9955c93e1eb9f1d9ea393eb9248b3c6cc30",
+    "schemas.py": "747cbb685aaf67c67ef5f9c2021ac3537d93d89461041914a28c28b6cfe2ffcc",
+    "common.py": "9a426dfc167a9c84e63b1b5ccafc8ac5b219dddf7e51209cdbac795abb4ddc2c"
+  },
+  "files": {
+    "EXPECTED_CELLS_TEMPLATE.json": "660a69432682f3df48317ac846f60ef4ab4f0e8bffb2838a77a4792ca22f232f",
+    "CONSTRUCTION_GRAPH.json": "7f82d72a6f1b18c00993726a5abb2c9db4cd98541592fc7920cba30344a48778",
+    "GENERATOR_FAMILIES.json": "cfa837e8da994978677a2b781f43517be4941087bd12549856fe9c94a4522ed5",
+    "ARCHITECTURE_BUDGETS.json": "60df8927363ea6a7abe89139b96b1fcd8766232dd2ffead07c8f3bf35dcb668e",
+    "SOURCE_LINEAGES.json": "99bb4d7224111be75d381314f1a90835419365243b5a73acb08d9752e5dd4a2f",
+    "report_v15.py": "40617fa6cc8905815d6861ca57082208fe73922fbbf43dc1125f1c9c7f2a14fc"
+  },
+  "n_cards": 136,
+  "spans": {
+    "oracle_minus_surface_reference": 0.3,
+    "oracle_minus_surface_scarce": 0.54,
+    "measured_when": "before the structural lock, on the reference atlas settings",
+    "how": "mean held-out log score of oracle_state minus surface on the hidden next action, 14 worlds x 16 makers per cell"
+  },
+  "sesoi": {
+    "architecture_advantage": {
+      "value": 0.015,
+      "basis": "5% of the 0.30-nat oracle-minus-surface span at reference settings",
+      "applies_to": "every card whose estimand is a paired log-score difference in nats",
+      "note": "V14's 0.02-nat bar is NOT reused. It was derived from a different construction whose span this program does not share (spec 8.2)."
+    },
+    "accuracy_above_chance": {
+      "value": "0.08-0.20, stated per card",
+      "basis": "a fraction above the construction's own chance floor, which differs by card"
+    },
+    "class_coverage": {
+      "value": 0.85,
+      "basis": "mass a reader must keep on a true equivalence class"
+    },
+    "abstention_rate": {
+      "value": 0.7,
+      "basis": "rate required in a null ecology"
+    },
+    "identity": {
+      "value": 1e-09,
+      "basis": "floating-point identity for exactness cards"
+    }
+  },
+  "instrument_choices": {
+    "coupling_construction": "a marginal-preserving mixture with the weight solved to a target mutual information. A log-linear tilt was tried first and is wrong: mutual information is not monotone in the tilt, so a bisection returns degenerate worlds.",
+    "coupling_axis": "the phase-diagram axis is REALIZED coupling measured from the world's own prior, not the nominal knob, because the three families reach different ceilings.",
+    "overlap_measurement": "measured against a uniform reference prior, so that the coupling knob cannot leak into the overlap receipt.",
+    "independent_rival": "marginals of the factorized-prior posterior. The evidence is used once. Assigning home routes per component while leaving the shared action channel in each one triples the policy evidence and puts the exact posterior behind an approximation.",
+    "pid_definition": "Williams-Beer I_min, exact, two sources only",
+    "shapley_definition": "exact Shapley over all 2^k subsets, three components",
+    "practice_outcome_visibility": "0.40. At zero, self-directed practice cannot improve past its own first guesses and cannot be skill-matched to an instructed history, which is E01's precondition.",
+    "foraging_selection_sharpness": "2.5. Proportional selection on raw value collapses every controller onto the random floor; greedy selection makes the reported avoidance an artifact of the tie-break.",
+    "changepoint_discount": "0.30 of the accumulated counts survive a detected change",
+    "source_surface_profiles": "sincere and strategic share one surface profile, mixed and contrarian the other. The artifact therefore recovers the collision class and is at chance inside it, and the belief prior is a property of the profile so the private channel cannot leak the motive.",
+    "collision_fixtures_by_rejection": "G01's surface collision is built by drawing worlds until the residual clears the tolerance, because switching's action marginal is a mixture of softmaxes and simultaneous control's is a softmax of a blend -- different families, so no parameter search closes the gap in an arbitrary world."
+  },
+  "flights": {
+    "coupling_access_atlas": [
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C09",
+      "C14"
+    ],
+    "architecture_tournament": [
+      "M02",
+      "M03",
+      "M06",
+      "M07",
+      "M08",
+      "M12"
+    ],
+    "endogenous_expertise": [
+      "E02",
+      "E03",
+      "E07",
+      "E08",
+      "E12"
+    ],
+    "foreground_control": [
+      "G02",
+      "G04",
+      "G07",
+      "G09",
+      "G10"
+    ],
+    "persistent_value": [
+      "V01",
+      "V04",
+      "V06",
+      "V10"
+    ],
+    "strategic_sources": [
+      "S03",
+      "S06",
+      "S07",
+      "S09",
+      "S10"
+    ],
+    "robust_routing": [
+      "R01",
+      "R03",
+      "R06",
+      "R07"
+    ],
+    "change_aware_foraging": [
+      "F02",
+      "F03",
+      "F06",
+      "F09",
+      "F10"
+    ],
+    "hierarchy_topology": [
+      "H04",
+      "H06",
+      "H07",
+      "H08"
+    ],
+    "prospective_synthesis": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05"
+    ]
+  },
+  "flight_primary_card": {
+    "coupling_access_atlas": "C04",
+    "architecture_tournament": "M02",
+    "endogenous_expertise": "E03",
+    "foreground_control": "G04",
+    "persistent_value": "V01",
+    "strategic_sources": "S03",
+    "robust_routing": "R01",
+    "change_aware_foraging": "F09",
+    "hierarchy_topology": "H07",
+    "prospective_synthesis": "P01"
+  },
+  "attack_relevance": {
+    "coupling_access_atlas": [
+      "X01",
+      "X02",
+      "X03",
+      "X04",
+      "X08",
+      "X09",
+      "X10",
+      "X11",
+      "X21"
+    ],
+    "architecture_tournament": [
+      "X01",
+      "X05",
+      "X06",
+      "X07",
+      "X10",
+      "X22"
+    ],
+    "endogenous_expertise": [
+      "X12",
+      "X13",
+      "X01"
+    ],
+    "foreground_control": [
+      "X15",
+      "X09",
+      "X01"
+    ],
+    "persistent_value": [
+      "X14",
+      "X08",
+      "X11"
+    ],
+    "strategic_sources": [
+      "X16",
+      "X17",
+      "X18",
+      "X04"
+    ],
+    "robust_routing": [
+      "X02",
+      "X03",
+      "X04",
+      "X05"
+    ],
+    "change_aware_foraging": [
+      "X19",
+      "X20"
+    ],
+    "hierarchy_topology": [
+      "X01",
+      "X10"
+    ],
+    "prospective_synthesis": [
+      "X01",
+      "X06",
+      "X08",
+      "X21"
+    ]
+  },
+  "universal_attacks": [
+    "X21",
+    "X23",
+    "X24"
+  ],
+  "confirmation_cap": 6,
+  "freeze_rule": "at the freeze hour, freeze at most CONFIRMATION_CAP candidates, at most one per flight, preferring the flight's primary card, taking flights in the order declared in FLIGHTS"
+}

@@ -21,7 +21,7 @@
   "results": {
     "criterion_G06": {
       "name": "G06",
-      "observed": 0.05435305112102662,
+      "observed": 0.054353051121199814,
       "bar": 0.1,
       "direction": "greater",
       "held": false,
@@ -30,8 +30,8 @@
       "detail": "switching the foreground goal to review buys this much more readable signal"
     },
     "advantage_over_surface": {
-      "work": 0.39199128554401796,
-      "review": 0.4463443366650446
+      "work": 0.39199128554418783,
+      "review": 0.44634433666538764
     }
   },
   "conditional_matrix": {},
@@ -105,21 +105,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 4.099497799994424,
+    "units_cpu_s": 8.0,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 177476,
-      "process_time": 8.359375,
-      "user": 7.84375,
-      "system": 0.515625,
+      "pid": 60892,
+      "process_time": 1.515625,
+      "user": 0.6875,
+      "system": 0.828125,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 44052480,
-      "peak_rss": 44052480
+      "rss": 49438720,
+      "peak_rss": 49614848
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 4.099,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -128,7 +128,7 @@
   "criteria": [
     {
       "name": "G06",
-      "observed": 0.05435305112102662,
+      "observed": 0.054353051121199814,
       "bar": 0.1,
       "direction": "greater",
       "held": false,
@@ -153,7 +153,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.05435305112102662,
+        "observed": 0.054353051121199814,
         "expected": 0.0
       },
       {
@@ -195,7 +195,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.4463443366650446,
+        "observed": 0.44634433666538764,
         "expected": 0.0
       },
       {
@@ -216,13 +216,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_g.py",
     "sha256": "bfc0f0b7cc2e28ee19e9fcc5db1465dd57e16a53737f6204f217f4cf0ea2758f",
-    "git_commit": "718489c",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -240,7 +240,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
-        "observed": 0.05435305112102662,
+        "observed": 0.054353051121199814,
         "expected": 0.0
       },
       {
@@ -282,7 +282,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.4463443366650446,
+        "observed": 0.44634433666538764,
         "expected": 0.0
       },
       {

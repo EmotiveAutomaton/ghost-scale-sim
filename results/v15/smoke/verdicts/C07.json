@@ -95,13 +95,13 @@
         "likelihood_evaluations": 366.5,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0021701388888888886
+        "cpu_s": 0.001736111111111111
       },
       "staged": {
         "likelihood_evaluations": 321.0,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0026041666666666665
+        "cpu_s": 0.0013020833333333333
       },
       "joint_exact": {
         "likelihood_evaluations": 365.6111111111111,
@@ -225,21 +225,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 0.2983068998437375,
+    "units_cpu_s": 0.532,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 69168,
-      "process_time": 82.5625,
-      "user": 77.734375,
-      "system": 4.828125,
+      "pid": 60892,
+      "process_time": 0.65625,
+      "user": 0.296875,
+      "system": 0.359375,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 47104000,
-      "peak_rss": 47284224
+      "rss": 49098752,
+      "peak_rss": 49311744
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 0.298,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -341,13 +341,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_c.py",
-    "sha256": "23525aff985fac568719377dec1bcabed5f943d492017ae98ee58ee418fa713b",
-    "git_commit": "980fde5",
+    "sha256": "1981e240a949f4e81bdbfa73119372746e8f9de82c2e5534beb1c938946ed2ed",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {

@@ -21,7 +21,7 @@
   "results": {
     "criterion_X22": {
       "name": "X22",
-      "observed": 0.024656161410692157,
+      "observed": 0.024656161410698596,
       "bar": 0.015,
       "direction": "greater",
       "held": true,
@@ -50,8 +50,8 @@
       "detail": "starving the filter costs it measurably, so the attack reached the thing it was aimed at"
     },
     "estimand": {
-      "unattacked": 0.024656161410692157,
-      "attacked": 0.024656161410692157,
+      "unattacked": 0.024656161410698596,
+      "attacked": 0.024656161410698596,
       "loss": 0.0,
       "pair": [
         "joint_exact",
@@ -61,16 +61,16 @@
     },
     "by_architecture": {
       "independent": {
-        "no": -1.178648703592649,
-        "yes": -1.178648703592649
+        "no": -1.1786487035926507,
+        "yes": -1.1786487035926507
       },
       "joint_exact": {
-        "no": -1.1539925421819568,
-        "yes": -1.1539925421819568
+        "no": -1.1539925421819521,
+        "yes": -1.1539925421819521
       },
       "oracle_model_space": {
-        "no": -1.1539925421819568,
-        "yes": -1.1539925421819568
+        "no": -1.1539925421819521,
+        "yes": -1.1539925421819521
       },
       "oracle_state": {
         "no": -1.065402887533758,
@@ -147,21 +147,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 1.4199008999858052,
+    "units_cpu_s": 2.734,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 107456,
-      "process_time": 56.15625,
-      "user": 50.703125,
-      "system": 5.453125,
+      "pid": 60892,
+      "process_time": 3.28125,
+      "user": 1.390625,
+      "system": 1.890625,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 44388352,
-      "peak_rss": 44670976
+      "rss": 50847744,
+      "peak_rss": 51027968
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 1.42,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -170,7 +170,7 @@
   "criteria": [
     {
       "name": "X22",
-      "observed": 0.024656161410692157,
+      "observed": 0.024656161410698596,
       "bar": 0.015,
       "direction": "greater",
       "held": true,
@@ -257,7 +257,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.024656161410692157,
+        "observed": 0.024656161410698596,
         "expected": 0.0
       },
       {
@@ -278,13 +278,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_x.py",
-    "sha256": "903b62b157b8fdcfdb4a031effe0a2008a72f311f527e047aceea5b451647a58",
-    "git_commit": "3a98673",
+    "sha256": "97c6f1c4bcb9759e9589b36a24057a53602fa2e4534709451448f252fe28b0f6",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -344,7 +344,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.024656161410692157,
+        "observed": 0.024656161410698596,
         "expected": 0.0
       },
       {

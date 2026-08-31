@@ -1,7 +1,7 @@
 {
   "program": "v15",
-  "note": "",
-  "written": "2026-08-31T09:25:57",
+  "note": "V15 \u2014 The Boundary Map",
+  "written": "2026-08-31T10:16:50",
   "n_cards": 112,
   "n_attacks": 24,
   "trunks": [
@@ -2863,10 +2863,8 @@
           "learning_record"
         ],
         "mixture": [
-          "practice_heavy",
           "instruction_heavy",
-          "feedback_heavy",
-          "constrained"
+          "feedback_heavy"
         ]
       },
       "crossings": [],
@@ -3134,11 +3132,9 @@
           "yes",
           "no"
         ],
-        "mixture": [
-          "practice_heavy",
-          "instruction_heavy",
-          "feedback_heavy",
-          "constrained"
+        "arm": [
+          "a",
+          "b"
         ]
       },
       "crossings": [],

@@ -31,7 +31,7 @@
     },
     "criterion_M01_score": {
       "name": "M01_score",
-      "observed": 0.021748273254662775,
+      "observed": 0.021748273254620365,
       "bar": 0.1,
       "direction": "less",
       "held": true,
@@ -44,8 +44,8 @@
       "particle": 690.1224904079465
     },
     "score_gap_from_exact": {
-      "factor_graph": -0.021748273254662775,
-      "particle": 0.006937504798004479
+      "factor_graph": -0.021748273254620365,
+      "particle": 0.006937504798007144
     },
     "impoverishment": {
       "unique_fraction": 0.04137731481481481
@@ -68,19 +68,19 @@
         "likelihood_evaluations": 440.6111111111111,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.00954861111111111
+        "cpu_s": 0.013454861111111112
       },
       "factor_graph": {
         "likelihood_evaluations": 244.11111111111111,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.004340277777777777
+        "cpu_s": 0.0078125
       },
       "particle": {
         "likelihood_evaluations": 6008.944444444444,
         "proposals": 633.3333333333334,
         "observations": 0.0,
-        "cpu_s": 0.012152777777777778
+        "cpu_s": 0.019965277777777776
       }
     }
   },
@@ -162,21 +162,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": null,
-    "units_cpu_s": null,
-    "workers": null,
+    "units_wall_s": 5.839820699999109,
+    "units_cpu_s": 11.328,
+    "workers": 8,
     "reduce_accounting": {
-      "pid": 41020,
-      "process_time": 7.6875,
-      "user": 7.546875,
-      "system": 0.15625,
+      "pid": 60892,
+      "process_time": 0.84375,
+      "user": 0.421875,
+      "system": 0.421875,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 44142592,
-      "peak_rss": 44142592
+      "rss": 49364992,
+      "peak_rss": 49475584
     }
   },
-  "runtime_seconds": 0.0,
+  "runtime_seconds": 5.84,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -195,7 +195,7 @@
     },
     {
       "name": "M01_score",
-      "observed": 0.021748273254662775,
+      "observed": 0.021748273254620365,
       "bar": 0.1,
       "direction": "less",
       "held": true,
@@ -262,7 +262,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.021748273254662775,
+        "observed": 0.021748273254620365,
         "expected": 0.0
       },
       {
@@ -283,13 +283,13 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "cpu_count": 24,
     "omp_threads": "1",
-    "cuda_visible_devices": null,
-    "jax_platforms": null
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
   },
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_m.py",
     "sha256": "51ff1c8e794709ace0d4b4d8debba9cdd0d941d38eca84b1d763e783d7b5459c",
-    "git_commit": "980fde5",
+    "git_commit": "ea8f3ed",
     "git_dirty": true
   },
   "gates": {
@@ -349,7 +349,7 @@
         "kind": "live",
         "passed": true,
         "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
-        "observed": 0.021748273254662775,
+        "observed": 0.021748273254620365,
         "expected": 0.0
       },
       {
