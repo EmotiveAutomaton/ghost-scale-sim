@@ -1,7 +1,7 @@
 # V14 — The Routed Reader. Implementation translation and build plan
 
 **Written 2026-08-29, before any code, as the viability assessment and plan the curator asked
-for.** The scientific program is [`V14_SPEC.md`](../../../V14_SPEC.md) at the repository root
+for.** The scientific program is [`V14_SPEC.md`](V14_SPEC.md) at the repository root
 (the curator's immutable handoff) and is not narrowed here. This page records whether it can be
 built as written, what V13 already supplies, what is new, the judgment calls the spec leaves
 open, the build order, and the pre-mortem. It becomes the implementation translation as the

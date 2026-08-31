@@ -480,6 +480,45 @@ is visible, and the PyMDP reader that was to do the selecting is closed on its o
 version's largest correction is to the record itself: half of V12's headline near gain was a
 matching imbalance, and the corrected number is the one this file now carries.
 
+## §13. The routed reader: what jointness, reliability, practice, communicated affect and curiosity each actually bought
+
+> Can one reader recover a maker's plan, episode goal and standing preference from four evidence
+> routes that never share a token, and be honest about which latent each route can reach?
+
+**What it says.** V14 stops treating "the maker's intent" as one object. It splits it into three
+latents with different timescales, gives each latent its own best route by construction, and asks
+five separable questions: whether joint inference pays, whether route use follows reliability or
+ease, whether competence and practice history are distinct readable objects, whether communicated
+affect factors into owners, and whether learning progress governs looking. The answers came back
+asymmetric, and the asymmetry is the finding. The curator packet is
+[docs/versions/v14-routed-reader/RESULTS.md](../versions/v14-routed-reader/RESULTS.md); every card
+is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger is its `BRIDGE_PACKET.md`.
+
+| # | hypothesis | status | notables |
+|---|---|---|---|
+| J04/J10/J02/J03 | Joint inference over the three latents beats independent marginals | **REJECTED at the registered bar (run); the latents separately SUPPORTED; confirmed** | +0.011 nats over marginals (bar 0.02), +0.002 over the best plug-in order, +0.011 on fresh families; by 2–4 episodes the marginals' product ≈ the joint; 0.51 on the true goal by four steps, 0.85 on the true preference by eight episodes |
+| J01/J08/J09 | Equivalence classes are reported honestly and resolved only by diagnostic evidence | **SUPPORTED (run)** | 0.91–0.95 class mass with ≤0.53 on any member; one forensic look → 0.99; goal/preference change detection 0.95/0.81, confusion 0.002 |
+| R02/R03/R04/R06 | Route weighting follows learned reliability, not ease | **SPLIT (run): the ease trap is real and avoided (confirmed); the reliability gain is REJECTED at the bar** | ease pulls 0.93 of weight onto a cheap empty route (−0.107 nats); learned reader moves 0.000 under ease; learned-over-equal +0.009 in family, −0.017 out; EIG-driven forensic purchase loses to the best fixed policy |
+| E01/E08/E04/E05/E07 | Competence and practice history are independent, readable, correctable objects | **SUPPORTED (run); confirmed** | 0.33 vs 1.55 own-effects with ≤0.001 leak; equal-skill practice paths named 99% held-out; decay on the planted law to 6%; correction removes 56% of bias at no skill cost; 100% transfer both factors |
+| A01–A10 | Communicated affect factors into separate owners, and strategy is a counterfactual | **SUPPORTED (run); confirmed** | matched artifacts at exact chance with abstention; off-audience action 90%; owners ≥0.28 with ≤0.012 leak; aware-vs-steering +11.7 nats; true uptake 0.69 with false at 0.02; habituation 0.58→0.02 as belief rises 0.33→0.89 |
+| H01–H08 | Hierarchy is readable and reward equivalence is respected | **SUPPORTED (run)** | boundaries 83%; equivalent rewards at 0.50 from behaviour, 93% after the breaking intervention; top goal +0.76/action; director vs shared-brief twin 98% from records only |
+| F04/F05/F06/F08 | Learning progress governs foraging better than surprise | **REJECTED (run) for progress; gain-per-cost SUPPORTED** | progress avoids the noise trap (4% vs 41%) but gains no more (+0.23 vs +0.19); under silent law changes surprise wins by 4.13 nats; gain-per-cost ≥ best rival, 0.08 regret fresh, 100% abstention on null ecologies |
+| I06/I07/I08 | The V13 repairs revive C03/C05/P01 | **REJECTED (run), all three** | common substrate −0.000 nats (bar 0.69); self prior loses to the common population (−0.69/−0.77); near/far correction asymmetry absent (41% vs 44%) |
+| X01–X12 | The five flights are artifacts of cues, labels, families, matched skill, reversal or duplication | **REJECTED for those attacks (run)** | no shortcut flagged anywhere; the two thin margins narrow under surface ablation and hidden reversal, the three strong results do not move |
+
+**What these add up to.** In this construction, the intelligence of the reader is not in
+jointness — by the time evidence is worth having, independent readers of the right latents are
+nearly as good as the exact joint, and learned reliability weighting adds a rounding error while
+merely *not being fooled by ease* is worth a tenth of a nat. What actually pays is factoring:
+knowing that plan, goal and preference are different objects with different routes (each
+recoverable to 0.5–0.85), that skill and practice are different objects (99% separable at zero
+skill gap), that a source's assertion, content, sought effect and record are different objects
+(chance from the matched artifact, 90% from the counterfactual probe), and that pursuit and
+warrant are different objects (83% of queries on a hypothesis held at 0.21). The V13 self-prior
+lineage ends here: its three repairs ran clean and found nothing. And the version's one
+methodological export for curiosity is negative in an instructive way — progress-as-settling
+fails exactly when the world changes silently, which is the case that matters.
+
 ## The maintenance rule
 
 **A result lands here in the same pass that lands it in [FINDINGS.md](../../FINDINGS.md).**

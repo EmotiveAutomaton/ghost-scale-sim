@@ -1,0 +1,26 @@
+{
+  "written": "2026-08-31T03:11:21",
+  "head": "678452e88e8bf879da2edfc64a2bf5a6f730d304",
+  "git_dirty": true,
+  "install": "shared pinned interpreter (no install)",
+  "checks": {
+    "determinism": {
+      "returncode": 0,
+      "head": "{\n \"confirmation:1000\": {\n  \"artifacts\": \"f3e02d38498a68028127fe1a503b3990c4687c8742d8da89f59f917d2ebef6de\",\n  \"episodes\": \"cd0ee74841ebe56ade24e2441f0d2b116c105efa16849787d95e0a8be21a4d41\",\n  \"items\": \"35ef138ff58563ae621cbdc0151ae295cd5eb2f0bf1ff972229f8d4a4e497edc\",\n  \"makers\": \"2f616b0166ce554b01a33efe5ab5007dbe4bf5f61028fe11c9bfb698e0b7e246\",\n  \"plan_tables\": \"207b7b39c53e4e10911d40c1405d0eb076cbedb8394348955377a0e7fe028639\",\n  \"policies\": \"ba1d3fd24e4100dbf8b0bfba8cc054f5a10765a515c463d568025759ef224c07\",\n  \"posterior\": \"27836bbe7b991b07a41339e6c7eacf628cada633b2f1c4536e5b059b03f411d4\",\n  \"seed_world\": 1825854,\n  \"source_posterior\": \"bb383846a4f20031524012932722cbabe8d9c660f5173d1668b8e6eb30340925\",\n  \"vocab\": \"3cd854c355428c77e66660bba38935048ee21d190406f9e3ec1f49e1bb6b6ceb\"\n },\n \"discovery:0\": {\n  \"artifacts\": \"ee1ac5ca358332307b098571ab94241ad1f4ede4e1112b971ad4dc4e2c57f980\",\n  \"episodes\": \"fb105fbf72be8a759e2c721a3b48b6a895dbba5ebabb9a169b9cf1ff50ae7928\",\n  \"items\": \"4a1dc3daf110850a32cd2ede5881982e55dbdb605f7cac9b6d4da757086c3f59\",\n  \"makers\": \"02c6380189d3aed409c566c5c96a64a6cd429a75b06452ede0cadae66799e2a6\",\n  \"plan_tables\": \"0199e373bae31c6322979d76334940be39ed62496a0",
+      "tail": "11dd0068f951e0283c8717768a1fd04617454987c2e6f0fdb9\",\n  \"plan_tables\": \"b008233ae5eabdd06aefad60f1ca93fad28a3a40d5a5e4dbed2523358b4e853c\",\n  \"policies\": \"6669518e90f8b969817f4bd95cff30f88029117d0f1e69cc61c77fc0810ae772\",\n  \"posterior\": \"f49d8fbc95bfa5021cbefa279a64e97501481d72c3d3f0122c83f4f49a1cb867\",\n  \"seed_world\": 2133855,\n  \"source_posterior\": \"048725d17f9753228b0b31b01a8473e109b84aa4a8440e1ed609e331f04e06c8\",\n  \"vocab\": \"ceb12c29d26c2b7a70dd1d4c639c042a7ee272c4958c847ac7e915d7caacaf1f\"\n }\n}"
+    },
+    "validator": {
+      "returncode": 1,
+      "head": "{\n  \"coverage\": {\n    \"cards_total\": 76,\n    \"mandatory_total\": 64,\n    \"mandatory_resolved\": 64,\n    \"by_state\": {\n      \"LANDED\": 76\n    },\n    \"by_trunk\": {\n      \"I\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"J\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"R\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"E\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"A\": {\n        \"total\": 10,\n        \"resolved\": 10\n      },\n      \"H\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"F\": {\n        \"total\": 8,\n        \"resolved\": 8\n      },\n      \"B\": {\n        \"total\": 2,\n        \"resolved\": 2\n      },\n      \"X\": {\n        \"total\": 12,\n        \"resolved\": 12\n      }\n    },\n    \"unresolved_mandatory\": [],\n    \"written\": \"2026-08-31T03:11:19\"\n  },\n  \"problems\": [\n    \"J07 [discovery]: record uses forbidden vocabulary ['diagnos']\",\n    \"X01: attack applied to ['affect_source_factorization', 'competence_history_dissociation', 'joint_reconstruction_advantage', 'learning_progress_foraging', 'reliable_routing'] but the matrix declares []\",\n    \"X02: attack applied to ['affect_source_factorization', 'competence_history_dis",
+      "tail": "ntage', 'learning_progress_foraging', 'reliable_routing'] but the matrix declares []\",\n    \"X12: attack applied to ['affect_source_factorization', 'competence_history_dissociation', 'joint_reconstruction_advantage', 'learning_progress_foraging', 'reliable_routing'] but the matrix declares []\"\n  ],\n  \"lock\": {\n    \"structural_locked\": true,\n    \"internal_prespecification_not_external_preregistration\": true,\n    \"locked\": true,\n    \"stage\": \"scientific\",\n    \"tier\": \"T3\"\n  },\n  \"unresolved\": []\n}\n"
+    },
+    "gates_test": {
+      "returncode": 0,
+      "head": "........................................................................ [ 42%]\n........................................................................ [ 84%]\n..........................                                               [100%]\n",
+      "tail": "........................................................................ [ 42%]\n........................................................................ [ 84%]\n..........................                                               [100%]\n"
+    }
+  },
+  "scientific_fields_match_local": true,
+  "note": "a dirty local tree makes field comparison meaningless for uncommitted generator changes",
+  "ok": false
+}

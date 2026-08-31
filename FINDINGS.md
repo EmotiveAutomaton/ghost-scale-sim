@@ -298,6 +298,47 @@ and the runner learned that transfer-only cards resolve in their own lane; every
 names its failed gates; another session made the confirmation freeze binding mid-run. Nine
 instrument failures are kept as refusals to report, not nulls.*
 
+### Version 14, the routed reader: three latents, four routes, and the honest price of jointness
+
+*The version that split "what the maker is doing" into plan, episode goal and standing
+preference, and gave the reader four disjoint evidence routes (realized actions, goal semantics,
+preference-driven context choices, a costly forensic record) over an exactly enumerable 96-state
+grid — plus a factored model of communicated affect with matched-artifact source regions, a
+reward-equivalent hierarchy, and a learning-progress forager. 64 mandatory cards and a 12-attack
+matrix, pre-registered and hash-locked (`prereg_v14.py`), run inside a one-window contract
+(freeze of at most four confirmation candidates at hour 20, stop at hour 24, one packet after
+the deadline; the first window was voided on record when the sibling project's orphan sweeper
+killed the runner's tree seven times — also the cause of V13's four silent deaths). 6.76
+wall-clock hours of card runs at tier T3 with every expansion; all 64 landed, none withheld;
+eleven discovery criteria and one transfer criterion failed as recorded nulls; the four frozen
+candidates (J02, R03, E01, A06) all held at confirmation. Two healing passes are on record as
+amendments: a receipt rule for list cards, and the separation of gate bars from criterion bars
+on 26 gate lines after the six-world smoke passed cards whose gates then failed at scale.
+Curator packet: [docs/versions/v14-routed-reader/RESULTS.md](docs/versions/v14-routed-reader/RESULTS.md);
+per-card appendix [RESULTS_PACKET.md](docs/versions/v14-routed-reader/RESULTS_PACKET.md);
+hypothesis ledger [READING_INTENT.md](docs/theory/READING_INTENT.md) §13; Sounding Line ledger
+[BRIDGE_PACKET.md](docs/versions/v14-routed-reader/BRIDGE_PACKET.md).*
+
+| # | The question | Where it stands |
+|---|---|---|
+| I01–I05 | Are the worlds live, exact, orthogonal, disjoint? | **Yes, all five.** Six V13 anchors reproduce within 0.0043; the grid posterior matches a 4000-draw brute force within 0.003 and is invariant to relabelling and reorder; the four routes disagree by 0.42 (Jensen–Shannon) and the weakest still carries 0.50 nats; collisions hash equal, the equifinal pair is exact off-forensic and 3.15 nats apart on it; competence and history each move only their own measure (leak ≤ 0.084) |
+| I06, I07, I08 | Do the three V13 repairs rescue C03, C05 and P01? | **No, all three are recorded nulls.** The common-substrate prior is worth −0.000 nats after one artifact (bar 0.69); the self prior *loses* to the common-population prior for typical (−0.69) and anti-similar (−0.77) readers; the near/far correction asymmetry does not reproduce (41% vs 44% error removed). V13's withheld cards stay closed, now with their repairs on the record |
+| J01–J10 | Does joint inference over plan, goal and preference beat cheaper estimators? | **Each latent is separately recoverable and the equivalence class is honest (0.91–0.95 class mass, ≤0.53 on a member, resolved to 0.99 by one forensic look; confirmed via J02) — but jointness itself is an honest null: +0.011 nats over independent marginals (bar 0.02), +0.002 over the best plug-in order, the same +0.011 on fresh families.** No commitment order wins everywhere; goal/preference changes detected at 0.95/0.81 with 0.002 confusion |
+| R01–R08 | Is route use governed by reliability rather than ease? | **The ease trap is real and the learned reader steps over it (confirmed): ease pulls 0.93 of an ease-driven reader's weight onto a cheap uninformative route at a cost of +0.107 nats, while the learned reader moves 0.000 under every ease manipulation.** But learned-over-equal is a null: +0.009 in family (bar 0.02), −0.017 out of family; active forensic purchase loses to the best fixed policy (+0.146 vs +0.164); duplicates inflate a naive fuser +0.07 and a shared-cause fuser 0.000 |
+| E01–E10 | Are demonstrated competence and practice history separate, readable objects? | **Yes — the version's cleanest mechanism (confirmed).** Competence→execution 0.33 with 0.001 leak; history→early relevance 1.55 with 0.000 leak; equal-skill makers named by their practice path 99% from held-out transitions at a 0.000 skill gap; the residue decays on the planted law to 6% by eight episodes; correction removes 56% of a stale bias at no skill cost; both factors transfer 100%. Nulls: competence does not gate one-episode relevance detection (E06); on the next novel choice, preference beats both (+0.35) |
+| A01–A10 | Can communicated affect be factored into owner, content, intent, and response? | **Yes, strongly (confirmed).** Matched artifacts put fanatic–propagandist separation at exact chance with abstention; the off-audience action gives 90%, both probes 85% over a 25% floor on four regions; owners move ≥0.28 with ≤0.012 leak; self-projection is a similarity bet (+0.13 / −0.51); an audience-aware reader wins +11.7 nats against a steering maker; awareness keeps true uptake 0.69 while cutting false to 0.02; habituation 0.58→0.02 while belief rises 0.33→0.89; the factored gate moves uptake 0.30 with belief side-effect 0.000 |
+| H01–H08 | Is hierarchy readable, and reward equivalence respected? | **Yes.** Planted boundaries 83%, next subtask +1.03 nats; equivalent rewards indistinguishable from behaviour (0.50) and resolved to 93% by the equivalence-breaking intervention; a coordinating top goal +0.76 per action over frequency with calibration error 0.039; central control vs its exact shared-brief twin 98% from full records, 50% from coherence |
+| F01–F08 | Does learning progress govern foraging better than novelty or surprise? | **Mostly no (recorded nulls), one exportable piece.** Progress escapes the noise trap (4% vs 41% of looks) but realizes no extra gain (+0.23 vs +0.19, bar 0.1); under a shifting curriculum raw surprise beats it by 4.13 nats — settling-uncertainty progress fails to re-engage on silent change. **Gain-per-cost holds: at least its best rival per cost, 0.08 regret on fresh ecologies, 100% abstention when nothing can teach.** Pursuit ≠ warrant: 83% of queries on the attractive hypothesis, posterior stays 0.21 |
+| X01–X12 | Do the flights survive surface, label, family, matched-skill, reversal and duplication attacks? | **Every attack card landed; no shortcut flagged.** Affect separation 0.906 unmoved by every relevant attack; competence–history 0.33 robust; foraging gain narrows but survives; the joint and routing margins narrow under surface ablation and hidden reversal — consistent with thin real effects |
+| B01, B02 | What does this license for Sounding Line Stage 5? | **License: competence–history signatures, counterfactual source probes, equivalence-class reporting. Partial: the joint posterior and route weights (their primary bars failed). Defer: the learning-progress selector.** 4 promoted, 58 context, none closed |
+
+*Deviations recorded (RESULTS.md §5–6): the first window voided for infrastructure with cause and
+fix on record; I01 superseded twice for a receipt rule; R02 superseded once when a prediction
+gate carried the criterion's bar, then the same separation applied to 26 gate lines before the
+J–F trunks ran. Criteria were never edited. The confirmation cap (four, flights in declared
+order) left the foraging flight without a confirmation slot; that is a property of the
+pre-registered rule, noted, not adjusted after the fact.*
+
 ### Not answerable in simulation
 
 | # | The question | Where it stands |

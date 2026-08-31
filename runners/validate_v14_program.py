@@ -30,20 +30,24 @@ from ghostscale.validation.soundingline.v14.schemas import RESOLVED, STATES, VER
 
 MANDATORY = set(M.MANDATORY_IDS)
 # words that would turn a constructed-world result into a claim about people; the record must not use them
-FORBIDDEN_VOCABULARY = ("patient", "clinical", "clinician", "diagnos", "therap", "human subject", "participant", "embodied", "brain",
-                        "neural", "the person", "people ", "children", "adults", "real people", "in humans")
+FORBIDDEN_VOCABULARY = ("patient", "clinical", "clinician", "diagnosis", "diagnosed", "therap", "human subject", "participant", "embodied", "brain",
+                        "neural", "the person", "people ", "children", "adults", "real people", "in humans")   # "diagnostic" (of evidence) is house vocabulary and stays legal
 
 
 def attack_flights_named(v: dict) -> set:
-    """The flights an attack verdict reports on: keys of any dict-valued result that are flight names."""
+    """The flights an attack verdict actually applied to (marked relevant); a flight recorded with
+    relevant=False is the required not-silent refusal, not an application."""
     from ghostscale.prereg_v14 import FLIGHTS
     named = set()
     for k, x in (v or {}).get("results", {}).items():
         if isinstance(x, dict):
-            named.update(f for f in x if f in FLIGHTS)
             for kk, xx in x.items():
+                if kk in FLIGHTS and isinstance(xx, dict) and xx.get("relevant") is True:
+                    named.add(kk)
                 if isinstance(xx, dict):
-                    named.update(f for f in xx if f in FLIGHTS)
+                    for k3, x3 in xx.items():
+                        if k3 in FLIGHTS and isinstance(x3, dict) and x3.get("relevant") is True:
+                            named.add(k3)
     return named
 
 
@@ -119,7 +123,7 @@ def main() -> int:
             xv = C.load_verdict(cid, "attack")
             if xv is not None:
                 named = attack_flights_named(xv)
-                declared = set(ATTACK_RELEVANCE.get(cid, []))
+                declared = {fl for fl, xs in ATTACK_RELEVANCE.items() if cid in xs}    # the matrix is keyed by flight
                 if named and named != declared:
                     problems.append(f"{cid}: attack applied to {sorted(named)} but the matrix declares {sorted(declared)}")
         # forbidden vocabulary in the plain-language record
