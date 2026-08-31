@@ -1,0 +1,278 @@
+{
+  "card": "E05",
+  "trunk": "E",
+  "wave": 1,
+  "lane": "discovery",
+  "record": {
+    "question": "Can target evidence correct stale attention history without erasing genuine skill?",
+    "what_happened": "Correction removed 56% of the stale route bias while process accuracy went from 0.93 to 0.95.",
+    "what_changed_in_the_project_world": "Fixing where a reader looks does not cost it what it knows.",
+    "what_remains_a_rival": "reset",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Target evidence corrects a stale attention history without erasing genuine skill: the route bias falls while process accuracy stays.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_E05": {
+      "passed": true,
+      "bias_reduction": 0.5609900270519219,
+      "skill_loss": -0.02136230468750011,
+      "bias": {
+        "none": {
+          "before": 0.13668534833581297,
+          "after": 0.08642928578623514
+        },
+        "stale": {
+          "before": 0.36498451258989006,
+          "after": 0.1602318409985551
+        }
+      },
+      "process_accuracy": {
+        "none": {
+          "before": 0.9924180772569444,
+          "after": 0.9913058810763888
+        },
+        "stale": {
+          "before": 0.9314507378472221,
+          "after": 0.9528130425347222
+        }
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "none|before": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "none|after": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "stale|before": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "stale|after": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 2048,
+    "realized_units": 2048,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 36,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2048,
+    "rows": 8192
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "reset",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 517.27,
+    "units_cpu_s": 6151.45,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 146428,
+      "process_time": 54.53125,
+      "user": 20.21875,
+      "system": 34.3125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 27762688,
+      "peak_rss": 56971264
+    }
+  },
+  "runtime_seconds": 517.27,
+  "tier": "T3",
+  "units": {
+    "n": 2048,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:correction_removes_bias",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.5609900270519219,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:no_history_no_change_in_skill",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0011121961805555802,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "positive:skill_retained",
+        "kind": "positive",
+        "passed": true,
+        "detail": "one-sided: accuracy may rise; it may fall by at most the bar",
+        "observed": 0.09136230468750012,
+        "expected": 0.09136230468750012,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:likelihood_untouched",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:process_above_chance",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.7413058810763888,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:corrected_reader_next_action",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": 0.16953074062362478,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:bias_after_below_before",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.1602318409985551,
+        "expected": 0.36498451258989006,
+        "tolerance": 0.20475267259133498
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_e.py",
+    "sha256": "7773f4c3210f9330fb0a6dc7d88cca2b6d70db63508fb6ea4b3ee54875b5b288",
+    "git_commit": "416f87c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:correction_removes_bias",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.5609900270519219,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:no_history_no_change_in_skill",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0011121961805555802,
+        "expected": 0.0,
+        "tolerance": 0.1
+      },
+      {
+        "name": "positive:skill_retained",
+        "kind": "positive",
+        "passed": true,
+        "detail": "one-sided: accuracy may rise; it may fall by at most the bar",
+        "observed": 0.09136230468750012,
+        "expected": 0.09136230468750012,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:likelihood_untouched",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:process_above_chance",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.7413058810763888,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:corrected_reader_next_action",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": 0.16953074062362478,
+        "expected": -1.0
+      },
+      {
+        "name": "calibration:bias_after_below_before",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.1602318409985551,
+        "expected": 0.36498451258989006,
+        "tolerance": 0.20475267259133498
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

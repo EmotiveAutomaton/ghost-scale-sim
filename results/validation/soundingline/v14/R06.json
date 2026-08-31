@@ -1,0 +1,275 @@
+{
+  "card": "R06",
+  "trunk": "R",
+  "wave": 1,
+  "lane": "discovery",
+  "record": {
+    "question": "When is costly forensic access worth purchasing?",
+    "what_happened": "The exact rule bought forensic access 69% of the time and realized +0.146 nats net of cost against +0.164 for the best fixed policy; always buying realized +0.189 gross.",
+    "what_changed_in_the_project_world": "Forensic access has a price the reader can reason about, and reasoning about it is not worse than any rule of thumb.",
+    "what_remains_a_rival": "always buying",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "Costly forensic access is worth buying when its expected information per cost clears a bar, and a reader that buys by that rule realizes at least what any fixed policy does.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_R06": {
+      "passed": false,
+      "net_gain_by_policy": {
+        "exact": 0.14578126350933085,
+        "random": 0.14561175653617497,
+        "always": 0.1286887704925669,
+        "never": 0.1638668471423007
+      },
+      "gain_by_policy": {
+        "exact": 0.18728028694683085,
+        "random": 0.1755808320570083,
+        "always": 0.1886887704925669,
+        "never": 0.1638668471423007
+      },
+      "spent_by_policy": {
+        "exact": 2.074951171875,
+        "random": 1.4984537760416665,
+        "always": 3.0,
+        "never": 0.0
+      },
+      "exact_buy_rate": 0.691650390625
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "exact": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "random": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "always": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "never": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 2048,
+    "realized_units": 2048,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 36,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2048,
+    "rows": 8192
+  },
+  "matching_residuals": {},
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "always buying",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 70.4,
+    "units_cpu_s": 826.73,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 146428,
+      "process_time": 25.953125,
+      "user": 9.40625,
+      "system": 16.546875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 41988096,
+      "peak_rss": 56971264
+    }
+  },
+  "runtime_seconds": 70.4,
+  "tier": "T3",
+  "units": {
+    "n": 2048,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:forensic_access_moves_prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.0248219233502662,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_episodes_every_policy",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:forensic_resolves_process",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.14606420492024955,
+        "expected": 0.14606420492024955,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:cost_declared_not_felt",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:always_buy_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.1886887704925669,
+        "expected": -1.0
+      },
+      {
+        "name": "prediction:exact_rule_at_least_best_fixed_policy",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": -0.01808558363296986,
+        "expected": -0.01
+      },
+      {
+        "name": "calibration:exact_rule_buys_selectively",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.691650390625,
+        "expected": 1.0,
+        "tolerance": 0.308349610375
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_r.py",
+    "sha256": "bf8adb6124e04b85a8b97c22038fa6a2d09ad80a96040026a4b38d56ff538e2d",
+    "git_commit": "416f87c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:forensic_access_moves_prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.0248219233502662,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:same_episodes_every_policy",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:forensic_resolves_process",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.14606420492024955,
+        "expected": 0.14606420492024955,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:cost_declared_not_felt",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:always_buy_reported",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.1886887704925669,
+        "expected": -1.0
+      },
+      {
+        "name": "prediction:exact_rule_at_least_best_fixed_policy",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": -0.01808558363296986,
+        "expected": -0.01
+      },
+      {
+        "name": "calibration:exact_rule_buys_selectively",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.691650390625,
+        "expected": 1.0,
+        "tolerance": 0.308349610375
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

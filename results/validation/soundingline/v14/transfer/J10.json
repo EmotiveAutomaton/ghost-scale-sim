@@ -1,0 +1,271 @@
+{
+  "card": "J10",
+  "trunk": "J",
+  "wave": 3,
+  "lane": "transfer",
+  "record": {
+    "question": "Does the joint advantage transfer to fresh world factorization and action vocabulary?",
+    "what_happened": "On fresh families and vocabularies, joint inference scored +0.011 nats over independent marginals at four episodes.",
+    "what_changed_in_the_project_world": "The joint advantage is a property of the coupling between latents, not of the discovery families.",
+    "what_remains_a_rival": "overfitting",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "The frozen joint estimator keeps its advantage over independent marginals on fresh families with fresh action vocabularies.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_J10": {
+      "passed": false,
+      "joint_minus_independent": 0.010928980061792076,
+      "ece": {
+        "independent": 0.1634146922378686,
+        "joint": 0.16327038654489
+      }
+    },
+    "log_score_gain": {
+      "independent": {
+        "2": 0.062260635019405215,
+        "4": 0.08384290940819282
+      },
+      "joint": {
+        "2": 0.07381480532544173,
+        "4": 0.0947718894699849
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "independent|2": {
+      "units": 1024,
+      "rows": 36864,
+      "min_rows_in_a_unit": 36
+    },
+    "joint|2": {
+      "units": 1024,
+      "rows": 36864,
+      "min_rows_in_a_unit": 36
+    },
+    "independent|4": {
+      "units": 1024,
+      "rows": 36864,
+      "min_rows_in_a_unit": 36
+    },
+    "joint|4": {
+      "units": 1024,
+      "rows": 36864,
+      "min_rows_in_a_unit": 36
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 1024,
+    "realized_units": 1024,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 36,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 1024,
+    "rows": 4096
+  },
+  "matching_residuals": {},
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "overfitting",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 30.63,
+    "units_cpu_s": 362.43,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 146428,
+      "process_time": 185.703125,
+      "user": 67.53125,
+      "system": 118.171875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 42598400,
+      "peak_rss": 56971264
+    }
+  },
+  "runtime_seconds": 30.63,
+  "tier": "T3",
+  "units": {
+    "n": 1024,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:evidence_improves_the_joint_on_fresh_worlds",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.02095708414454317,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:compute_matched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:joint_above_prior",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.0947718894699849,
+        "expected": 0.0947718894699849,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:fresh_vocabulary_by_construction",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:class_identifiable_on_fresh_worlds",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.5083599212255766,
+        "expected": 0.05
+      },
+      {
+        "name": "prediction:joint_minus_independent_transfer",
+        "kind": "live",
+        "passed": true,
+        "detail": "the joint posterior constrains the transfer action at all; the 0.02 bar is the criterion",
+        "observed": 0.010928980061792076,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:calibration_kept",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.16327038654489,
+        "expected": 0.1634146922378686,
+        "tolerance": 0.00014430669297857464
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_j.py",
+    "sha256": "c1551be973e563239a5fd93a81f62aa9cbb92b4fd1fbe2a68b08228444e41b91",
+    "git_commit": "416f87c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:evidence_improves_the_joint_on_fresh_worlds",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 0.02095708414454317,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:compute_matched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:joint_above_prior",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 0.0947718894699849,
+        "expected": 0.0947718894699849,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:fresh_vocabulary_by_construction",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:class_identifiable_on_fresh_worlds",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.5083599212255766,
+        "expected": 0.05
+      },
+      {
+        "name": "prediction:joint_minus_independent_transfer",
+        "kind": "live",
+        "passed": true,
+        "detail": "the joint posterior constrains the transfer action at all; the 0.02 bar is the criterion",
+        "observed": 0.010928980061792076,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:calibration_kept",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.16327038654489,
+        "expected": 0.1634146922378686,
+        "tolerance": 0.00014430669297857464
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

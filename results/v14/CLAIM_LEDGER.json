@@ -35,6 +35,414 @@
       "sentence": "REPAIR of V13 C03: a prior restricted to the maker's common substrate beats a broad all-family prior at the first artifact by a margin the construction itself fixes.",
       "state": "LANDED",
       "when": "2026-08-29T15:03:16"
+    },
+    "I07": {
+      "ceiling": "METHOD",
+      "sentence": "REPAIR of V13 C05: one personal sample beats the common-substrate population prior for typical readers and not for anti-similar ones, and the two routes converge at the dose the construction makes sufficient.",
+      "state": "LANDED",
+      "when": "2026-08-30T08:57:17"
+    },
+    "I08": {
+      "ceiling": "METHOD",
+      "sentence": "REPAIR of V13 P01: the correction of a local prior by target evidence has a half-life, a residual and a rate, the same for self and an equally local non-self prior when the two are matched; calibration is scored at the prospective endpoint.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:27:51"
+    },
+    "J01": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With the episode goal and the standing preference supplied, the process plan is identifiable up to its equivalence class, and the reader keeps its uncertainty inside that class.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:29:27"
+    },
+    "J02": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With process and preference supplied, the episode goal is identified from the actions seen so far well enough to predict the next action within the episode.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:30:23"
+    },
+    "J03": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With the plan and each episode's goal supplied, the standing preference is identified across episodes well enough to predict the next episode's first action after the goal changes.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:31:44"
+    },
+    "J04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Recurrent joint inference over process, goal and preference predicts a new action better than independent marginals and plug-in staged pipelines that consumed the same evidence and compute.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:33:09"
+    },
+    "J05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "No staging order is best in every access regime; which latent to commit first depends on which routes are available and how competent the reader is.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:36:48"
+    },
+    "J06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Each latent has a dose at which it first constrains prediction; the trajectory, not a single number, is the finding.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:38:10"
+    },
+    "J07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A diagnostic contradiction revises every latent it bears on, not only a surface label; a consistent continuation revises almost nothing.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:39:27"
+    },
+    "J08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Under exact process equifinality the joint reader keeps its mass spread across the class, and one resolving observation contracts it onto the true member.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:39:49"
+    },
+    "J09": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A changed episode goal and a changed standing preference leave different traces: the first moves the goal posterior across episodes, the second breaks the shared-preference hypothesis.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:42:18"
+    },
+    "R01": {
+      "ceiling": "METHOD",
+      "sentence": "Each latent has a route that carries most of its information, and that route is the one the construction declared: action for process, semantic for the goal, context for the preference.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:42:52"
+    },
+    "R02": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A reader that learns which routes predicted well on training makers weighs them better on new makers than equal, random or fixed weighting, without any target label at test.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:54:25"
+    },
+    "R03": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With accuracy held equal, planted ease drags an ease-driven reader onto the uninformative route and costs it prediction; the learned reader is unmoved.",
+      "state": "LANDED",
+      "when": "2026-08-30T11:59:42"
+    },
+    "R04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With ease held equal in what it can buy, the learned reader follows accuracy: it scores the same whether the accurate route is cheap or dear.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:04:53"
+    },
+    "R05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "When routes conflict, adding a strategic-source hypothesis to the latent set improves prediction where a source really is strategic and flags few consistent worlds.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:06:02"
+    },
+    "R06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Costly forensic access is worth buying when its expected information per cost clears a bar, and a reader that buys by that rule realizes at least what any fixed policy does.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:07:13"
+    },
+    "R07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A duplicated or paraphrased piece of evidence is one piece of evidence: fusion that tracks the shared cause does not grow more confident on the copy, and naive fusion does.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:08:55"
+    },
+    "E01": {
+      "ceiling": "METHOD",
+      "sentence": "Competence and attention history are separate generators: competence moves how faithfully intended actions are realized, history moves which features appear early, and neither moves the other's measure.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:10:16"
+    },
+    "E02": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With competence matched, a reader's stale route history biases which routes it weighs first, and feedback on targets closes most of the gap without touching its likelihood.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:15:04"
+    },
+    "E03": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With history matched, a reader whose execution model is sharper reconstructs the process better and predicts the next action better.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:16:03"
+    },
+    "E04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A reward-linked attention bias persists after its reward reverses and decays geometrically rather than resetting.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:19:09"
+    },
+    "E05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Target evidence corrects a stale attention history without erasing genuine skill: the route bias falls while process accuracy stays.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:27:46"
+    },
+    "E06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Competence improves how early a maker's relevance tilt can be detected from its tokens, and the gap closes with dose; nothing here is generic intelligence.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:27:59"
+    },
+    "E08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Two makers of equal competence who practiced different transitions leave different early-transition signatures in fresh work.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:30:08"
+    },
+    "E09": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Diverse calibrated readers shrink the compatible maker set by intersecting their likelihoods, not by averaging their posteriors.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:31:19"
+    },
+    "E10": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Of competence, attention history and standing preference, one predicts a maker's next novel choice best, and the tournament says which.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:31:58"
+    },
+    "E07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "History and competence can transfer to a fresh domain with different breadth; the conditional matrix says which is narrower here.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:33:32"
+    },
+    "A01": {
+      "ceiling": "METHOD",
+      "sentence": "Reader response, maker appraisal, intended audience effect, content support, communicative goal, source reliability and uptake are separate owners: each moves its own quantity and none is written into another.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:38:31"
+    },
+    "A02": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "The reader's own induced response is a useful prior for the intended audience effect only when the reader responds like the audience the source modelled; otherwise projecting it costs.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:40:58"
+    },
+    "A03": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "The intended audience effect can be recovered from intensity and evidence selection while the maker's own appraisal stays uncertain when its assertion is withheld.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:42:43"
+    },
+    "A04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "The maker's own appraisal is recovered from its assertion and private action even when the effect it intends on its audience points elsewhere.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:44:35"
+    },
+    "A05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Honest warning, sincere fanatic, strategic propagandist and neutral report are regions of one factorial, separated by counterfactual evidence (correction, private action) and not by the artifact alone.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:46:38"
+    },
+    "A06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A sincere fanatic and a strategic propagandist with the same artifact and the same intended effect are told apart only by what they do when contradicted and when unobserved; absent those, the reader abstains.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:47:45"
+    },
+    "A07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A reader that models the maker as modelling it gains only when the maker really selects evidence to steer it.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:51:58"
+    },
+    "A08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Influence awareness improves discrimination between true and false content while keeping uptake of the true; blanket suppression loses both.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:55:30"
+    },
+    "A09": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "The reader's acute response to a repeated source habituates while its belief about the content keeps accumulating.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:58:50"
+    },
+    "A10": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Factored trust gates what the reader adopts as policy after it has reconstructed the source, without moving what it believes about the content or what it inferred the source wanted.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:59:42"
+    },
+    "H01": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Repeated transition structure recovers subtask boundaries and predicts the next subtask where a hierarchy exists, and finds few boundaries where none does.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:59:50"
+    },
+    "H02": {
+      "ceiling": "BOUNDARY",
+      "sentence": "When two higher goals share their opening actions, the reader keeps them ambiguous until the actions diverge.",
+      "state": "LANDED",
+      "when": "2026-08-30T12:59:54"
+    },
+    "H03": {
+      "ceiling": "BOUNDARY",
+      "sentence": "A reward and its policy-equivalent transformation cannot be told apart from behaviour, and can be after an intervention that breaks the equivalence.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:00:04"
+    },
+    "H04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Across changed incentives a standing preference and a practiced habit predict different choices: the preference model wins for preference-driven makers and the habit model for habitual ones.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:00:17"
+    },
+    "H05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "After a history reversal, a maker's hidden future choice is predicted better by its current preference than by the residue of its old attention.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:15"
+    },
+    "H06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Multi-episode evidence supports a coordinating goal above the subgoals, which compresses prediction of fresh episodes, with calibrated uncertainty about the level and no terminal horizon assumed.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:21"
+    },
+    "H07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "With full interaction records, role-relative control is recovered against an exact shared-brief twin; coherence stays at chance; the hidden next intervention follows.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:25"
+    },
+    "H08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "When the context changes, the level that carries over is the coordinating goal, and it predicts the next actions better than flat value or the last subgoal.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:33"
+    },
+    "F01": {
+      "ceiling": "METHOD",
+      "sentence": "Novelty, complexity, error, reducibility, learning progress, relevance and cost are separate properties of items that can be varied alone.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:36"
+    },
+    "F02": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "After one look, a novel item that was immediately explained holds nothing more to learn; policies that track progress or gain move to the familiar item that is still unresolved, and novelty does not.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:40"
+    },
+    "F03": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "A complex item with a fixed law behind it is preferred over a simpler item that stays unresolved, because it is the one whose error can fall.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:44"
+    },
+    "F04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Unlearnable noise stays surprising forever and must lose to structure whose error falls: a policy that follows raw surprise is caught by the trap, a policy that follows progress is not.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:51"
+    },
+    "F05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "When the items' laws change under the learner, expected learning progress realizes more held-out gain than raw current error.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:54"
+    },
+    "F06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Expected information gain per cost realizes at least as much held-out gain per cost as novelty, surprise, always buying the dearest look, or random choice.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:01:59"
+    },
+    "F07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Pursuit and warrant are separate ledgers: a reader can keep spending queries on a hoped-for explanation while its posterior on that explanation stays low.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:02:02"
+    },
+    "J10": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "The frozen joint estimator keeps its advantage over independent marginals on fresh families with fresh action vocabularies.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:02:32"
+    },
+    "R08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Under a domain shift that changes which routes are reliable, carrying old reliabilities over in full loses to resetting or partially transferring them.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:06:35"
+    },
+    "F08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "The gain-per-cost selector transfers to fresh foraging ecologies with small regret against the best fixed policy and declines to act when no probe can teach it anything.",
+      "state": "LANDED",
+      "when": "2026-08-30T13:07:27"
+    },
+    "X01": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X01 (surface): Does the effect survive the alteration of cheap features with the latent preserved?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:17:25"
+    },
+    "X02": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X02 (route ease): Does routing follow accuracy when ease is inverted?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:24:36"
+    },
+    "X03": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X03 (equifinal history): Does the effect hold with equivalence-class uncertainty on identical artifacts?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:26:15"
+    },
+    "X04": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X04 (duplicate evidence): Does confidence stay honest when one cause is paraphrased?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:34:08"
+    },
+    "X05": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X05 (wrong generative model): Does the effect survive a maker whose competence the reader misjudges?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:43:06"
+    },
+    "X06": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X06 (attention/skill swap): Do the own effects of competence and history survive being swapped?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:45:12"
+    },
+    "X07": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X07 (affect owner swap): Does the fanatic/propagandist boundary survive an owner swap?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:47:22"
+    },
+    "X08": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X08 (fanatic/propagandist collision): Does the boundary hold on matched artifact and intended effect, from probes only?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:49:35"
+    },
+    "X09": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X09 (hierarchy equivalence): Does an exact equivalence defeat unjustified unique attribution?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:50:41"
+    },
+    "X10": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X10 (hope and salience): Does progress beat surprise when noise is made salient and structure dull?",
+      "state": "LANDED",
+      "when": "2026-08-30T13:51:57"
+    },
+    "X11": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X11 (aggregation): Do pooled effects hide a planned sign reversal across reader competence?",
+      "state": "LANDED",
+      "when": "2026-08-30T14:07:07"
+    },
+    "X12": {
+      "ceiling": "CONSTRUCTED_MECHANISM",
+      "sentence": "Attack X12 (solver/lineage): Is the effect stable under evidence order and the fresh lane?",
+      "state": "LANDED",
+      "when": "2026-08-30T14:17:25"
     }
   }
 }

@@ -1,0 +1,269 @@
+{
+  "card": "A07",
+  "trunk": "A",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "Does an inverse-inverse reader help only when the maker actually models the audience?",
+    "what_happened": "Against a maker that selects evidence to steer its audience, an audience-aware reader read the maker's belief +11.746 nats better; against a plain maker +0.011.",
+    "what_changed_in_the_project_world": "Modelling the modeller pays exactly when there is a modeller.",
+    "what_remains_a_rival": "always assuming manipulation",
+    "claim_ceiling": "CONSTRUCTED_MECHANISM"
+  },
+  "hypothesis": "A reader that models the maker as modelling it gains only when the maker really selects evidence to steer it.",
+  "claim_ceiling": "CONSTRUCTED_MECHANISM",
+  "construction_realization": {},
+  "results": {
+    "criterion_A07": {
+      "passed": true,
+      "interaction": 11.735303079016672,
+      "gain_vs_modelling_maker": 11.746331399960724,
+      "gain_vs_plain_maker": 0.011028320944052039,
+      "scores": {
+        "plain": {
+          "plain": -0.17017919983382362,
+          "audience_aware": -0.15915087888977159
+        },
+        "audience_modelling": {
+          "plain": -12.999223437203026,
+          "audience_aware": -1.2528920372423027
+        }
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "plain|plain": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "plain|audience_aware": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "audience_modelling|plain": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    },
+    "audience_modelling|audience_aware": {
+      "units": 2048,
+      "rows": 73728,
+      "min_rows_in_a_unit": 36
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 2048,
+    "realized_units": 2048,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 36,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 2048,
+    "rows": 8192
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "always assuming manipulation",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 252.74,
+    "units_cpu_s": 3002.72,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 146428,
+      "process_time": 110.015625,
+      "user": 39.390625,
+      "system": 70.625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 43237376,
+      "peak_rss": 56971264
+    }
+  },
+  "runtime_seconds": 252.74,
+  "tier": "T3",
+  "units": {
+    "n": 2048,
+    "kind": "world"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:maker_mechanism_moves_the_value_of_awareness",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 11.735303079016672,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:awareness_buys_nothing_against_a_plain_maker",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.011028320944052039,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "positive:awareness_helps_against_a_modelling_maker",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 11.746331399960724,
+        "expected": 11.746331399960724,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_source_state_both_makers",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:belief_readable_from_a_plain_maker",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9284330888342862,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:interaction",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": 11.735303079016672,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:awareness_gain_ordered_by_maker",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.011028320944052039,
+        "expected": 11.746331399960724,
+        "tolerance": 11.735303080016672
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_a.py",
+    "sha256": "6f3419f36394bb0d3e57c6159694463d25f647c6c5d82f861b2f4ccec9cf6e39",
+    "git_commit": "416f87c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 7,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:maker_mechanism_moves_the_value_of_awareness",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention changes the intended latent or policy",
+        "observed": 11.735303079016672,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:awareness_buys_nothing_against_a_plain_maker",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.011028320944052039,
+        "expected": 0.0,
+        "tolerance": 0.05
+      },
+      {
+        "name": "positive:awareness_helps_against_a_modelling_maker",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 11.746331399960724,
+        "expected": 11.746331399960724,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:same_source_state_both_makers",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count, label or entropy cues cannot solve the card",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "oracle:belief_readable_from_a_plain_maker",
+        "kind": "live",
+        "passed": true,
+        "detail": "the target is identifiable when the correct variables are supplied",
+        "observed": 0.9284330888342862,
+        "expected": 0.0
+      },
+      {
+        "name": "prediction:interaction",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object constrains a held-out choice, action or response",
+        "observed": 11.735303079016672,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:awareness_gain_ordered_by_maker",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention responds in the correct direction",
+        "observed": 0.011028320944052039,
+        "expected": 11.746331399960724,
+        "tolerance": 11.735303080016672
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}
