@@ -143,6 +143,12 @@ rotted.
 a manifest that does not enumerate all 112 cards and 24 attacks in the spec's trunk counts; a
 causal card with no declared hidden event; a `LANDED` verdict with no criterion evaluated; a gate
 carrying a magnitude; a `SIMULATOR_DISCOVERY` claim whose causal-distance audit caps it lower;
-human, clinical, neural or historical vocabulary anywhere in the record; and **an export that names
-a card as unrun while the committed record has it resolved** — which is the V14 stale-bridge
-failure, made mechanical.
+any of the forbidden vocabulary in `validate_v15_program.FORBIDDEN_VOCABULARY` anywhere in the
+record — the words that would make a constructed-world result read as evidence about people,
+medicine, nervous systems or history; and **an export that names a card as unrun while the committed record
+has it resolved**, which is the V14 stale-bridge failure made mechanical.
+
+(The list is deliberately literal and deliberately excludes `diagnostic`, which is house
+vocabulary: V14's validator matched the stem and flagged its own legitimate usage. This page is
+scanned by that check like everything else, which is why it names the constant rather than
+spelling the entries out.)

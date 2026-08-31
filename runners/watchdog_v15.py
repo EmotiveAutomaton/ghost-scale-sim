@@ -132,6 +132,12 @@ def main() -> int:
     relaunches, last, stalled = 0, progress(), 0
     note(started=time.strftime("%Y-%m-%dT%H:%M:%S"), progress=last, relaunches=0)
     print(f"{time.strftime('%Y-%m-%dT%H:%M:%S')} watchdog started; progress {last}")
+    # Start the runner immediately if none is alive, rather than idling a whole poll first. The
+    # watchdog checks for a live runner before launching, so it never starts a second one.
+    if not alive(runner_pid()):
+        print(f"{time.strftime('%H:%M:%S')} no live runner; launching (module form)")
+        launch(a.stage)
+        time.sleep(20)
     while True:
         if RC.window_closed() and RC.phase() == "report":
             note(stopped="window closed", relaunches=relaunches)

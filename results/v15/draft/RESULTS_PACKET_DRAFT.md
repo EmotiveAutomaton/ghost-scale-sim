@@ -1,6 +1,6 @@
 # V15 — The Boundary Map. Curator packet
 
-*Generated 2026-08-31 10:16 from the committed record, after the 168-hour window closed. Every number traces to a verdict under `results/validation/soundingline/v15/`. Everything here is a property of a constructed world and its stated reader. Nothing describes a person.*
+*Generated 2026-08-31 10:36 from the committed record, after the 168-hour window closed. Every number traces to a verdict under `results/validation/soundingline/v15/`. Everything here is a property of a constructed world and its stated reader. Nothing describes a person.*
 
 ## Pass A
 
@@ -82,3 +82,4 @@ licensed 0, partial 0, deferred 0, killed 0.
 
 ### Hashes
 
+- `prereg_v15_structural_lock.json`: `914d7d03520060f7`
