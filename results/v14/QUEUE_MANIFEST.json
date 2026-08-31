@@ -6159,9 +6159,21 @@
       "completion_key": "<lane>:B01",
       "hashes": {},
       "estimated_wall_s": 0.0,
-      "actual": {},
-      "status": "BUILT",
-      "pursuit": "OPENED",
+      "actual": {
+        "wall_s": 0.22,
+        "reduce_s": 0.12,
+        "parent_cpu_s": 0.03,
+        "children_cpu_s": 0.02,
+        "peak_child_rss": 39665664,
+        "workers": 12,
+        "units": 1,
+        "units_computed": 1,
+        "mean_unit_wall_s": 0.087,
+        "throughput_units_per_s": 4.606999876782464,
+        "elapsed_hours_at_finish": 20.052
+      },
+      "status": "LANDED",
+      "pursuit": "PROMISING",
       "warrant": "DESCRIPTIVE_ONLY",
       "closure_reason": "",
       "repairs_used": 0,
@@ -6218,9 +6230,21 @@
       "completion_key": "<lane>:B02",
       "hashes": {},
       "estimated_wall_s": 0.0,
-      "actual": {},
-      "status": "BUILT",
-      "pursuit": "OPENED",
+      "actual": {
+        "wall_s": 0.29,
+        "reduce_s": 0.11,
+        "parent_cpu_s": 0.0,
+        "children_cpu_s": 0.05,
+        "peak_child_rss": 39329792,
+        "workers": 12,
+        "units": 1,
+        "units_computed": 1,
+        "mean_unit_wall_s": 0.171,
+        "throughput_units_per_s": 3.466820963517955,
+        "elapsed_hours_at_finish": 20.052
+      },
+      "status": "LANDED",
+      "pursuit": "PROMISING",
       "warrant": "DESCRIPTIVE_ONLY",
       "closure_reason": "",
       "repairs_used": 0,
@@ -7104,7 +7128,7 @@
       "upstream_oracle": false
     }
   ],
-  "updated": "2026-08-30T14:17:25",
+  "updated": "2026-08-31T03:10:25",
   "workload": {
     "tier": "T3",
     "expansions_instantiated": [

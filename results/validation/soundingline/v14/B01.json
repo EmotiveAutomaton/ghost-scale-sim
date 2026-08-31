@@ -1,0 +1,498 @@
+{
+  "card": "B01",
+  "trunk": "B",
+  "wave": 5,
+  "lane": "discovery",
+  "record": {
+    "question": "Which validated rulers license an implementation in Sounding Line Stage 5?",
+    "what_happened": "Licensed: competence_history_signatures, counterfactual_source_probes, equivalence_class_reporting; partial: joint_reader_posterior, route_reliability_weights; deferred: learning_progress_selector; killed: none.",
+    "what_changed_in_the_project_world": "What Sounding Line may implement is exactly what landed, and no more.",
+    "what_remains_a_rival": "an unlicensed export",
+    "claim_ceiling": "METHOD"
+  },
+  "hypothesis": "Only rulers every one of whose licensing cards landed with its criterion held are licensed for Sounding Line Stage 5; a failed instrument licenses nothing.",
+  "claim_ceiling": "METHOD",
+  "construction_realization": {},
+  "results": {
+    "criterion_B01": {
+      "passed": true,
+      "recommendations": {
+        "joint_reader_posterior": "license_partial",
+        "route_reliability_weights": "license_partial",
+        "competence_history_signatures": "license",
+        "counterfactual_source_probes": "license",
+        "learning_progress_selector": "defer",
+        "equivalence_class_reporting": "license"
+      }
+    },
+    "bridge_ledger": {
+      "joint_reader_posterior": {
+        "licensing": [
+          "J04",
+          "J02",
+          "J03",
+          "J08"
+        ],
+        "access": "action, semantic and context observations per episode; a held-out next action",
+        "gate": "a constructed corpus in which the joint estimator beats independent marginals on a hidden next action at matched evidence",
+        "rival": "independent marginals per latent",
+        "endpoint": "next-action log score",
+        "shape": "joint > staged > independent, with class-level uncertainty under equifinality",
+        "ceiling": "CONSTRUCTED_MECHANISM",
+        "states": {
+          "J04": {
+            "state": "LANDED",
+            "criterion": false,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "J02": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": true,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "J03": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "J08": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          }
+        },
+        "recommendation": "license_partial"
+      },
+      "route_reliability_weights": {
+        "licensing": [
+          "R02",
+          "R03",
+          "R04",
+          "R07"
+        ],
+        "access": "per-route feedback on training items without target labels at test",
+        "gate": "a planted corpus where one route is degraded and learned weights beat equal weights; ease crossed against accuracy",
+        "rival": "equal weighting",
+        "endpoint": "held-out prediction with learned tempering",
+        "shape": "learned weights track accuracy, not ease; duplicates fused by cause",
+        "ceiling": "CONSTRUCTED_MECHANISM",
+        "states": {
+          "R02": {
+            "state": "LANDED",
+            "criterion": false,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "R03": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": true,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "R04": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "R07": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          }
+        },
+        "recommendation": "license_partial"
+      },
+      "competence_history_signatures": {
+        "licensing": [
+          "E01",
+          "E03",
+          "E05",
+          "E08"
+        ],
+        "access": "execution-accuracy and early-token records of a maker across episodes",
+        "gate": "planted competence and planted history recovered independently on a constructed corpus",
+        "rival": "one scalar skill",
+        "endpoint": "prospective next-choice and signature classification",
+        "shape": "two dissociable signatures with different correction dynamics",
+        "ceiling": "CONSTRUCTED_MECHANISM",
+        "states": {
+          "E01": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": true,
+            "ceiling": "METHOD"
+          },
+          "E03": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "E05": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "E08": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          }
+        },
+        "recommendation": "license"
+      },
+      "counterfactual_source_probes": {
+        "licensing": [
+          "A05",
+          "A06",
+          "A08",
+          "A10"
+        ],
+        "access": "a correction event and an off-audience action per source, beside the artifact",
+        "gate": "a constructed corpus where fanatic and propagandist collide on the artifact and separate on probes",
+        "rival": "a template classifier",
+        "endpoint": "pairwise accuracy with and without probes; abstention mass",
+        "shape": "chance from the artifact, separation from probes, factored uptake",
+        "ceiling": "CONSTRUCTED_MECHANISM",
+        "states": {
+          "A05": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "A06": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": true,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "A08": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "A10": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          }
+        },
+        "recommendation": "license"
+      },
+      "learning_progress_selector": {
+        "licensing": [
+          "F04",
+          "F05",
+          "F06",
+          "F08"
+        ],
+        "access": "the learner's own recent surprise per item and a cost per look",
+        "gate": "the unlearnable-noise trap on a constructed item set",
+        "rival": "raw surprise",
+        "endpoint": "realized held-out gain per cost",
+        "shape": "progress avoids noise, gain per cost beats fixed policies, abstention on null probes",
+        "ceiling": "CONSTRUCTED_MECHANISM",
+        "states": {
+          "F04": {
+            "state": "LANDED",
+            "criterion": false,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "F05": {
+            "state": "LANDED",
+            "criterion": false,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "F06": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "F08": {
+            "state": "UNRUN"
+          }
+        },
+        "recommendation": "defer"
+      },
+      "equivalence_class_reporting": {
+        "licensing": [
+          "J01",
+          "J08",
+          "H02",
+          "H03"
+        ],
+        "access": "a declared hypothesis grid with its equivalences",
+        "gate": "planted equifinal and reward-equivalent pairs keep their class mass",
+        "rival": "forced unique attribution",
+        "endpoint": "class mass and single-member mass",
+        "shape": "spread within the class, contraction on resolving evidence",
+        "ceiling": "BOUNDARY",
+        "states": {
+          "J01": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "J08": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "CONSTRUCTED_MECHANISM"
+          },
+          "H02": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "BOUNDARY"
+          },
+          "H03": {
+            "state": "LANDED",
+            "criterion": true,
+            "confirmed": null,
+            "ceiling": "BOUNDARY"
+          }
+        },
+        "recommendation": "license"
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "exact": {},
+  "pymdp": {},
+  "baselines": {},
+  "cells": {
+    "deliverable": {
+      "units": 1,
+      "rows": 1,
+      "min_rows_in_a_unit": 1
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 1,
+    "realized_levels": 1,
+    "expected_units": 1,
+    "realized_units": 1,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 1,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 1,
+    "rows": 1
+  },
+  "matching_residuals": {},
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "an unlicensed export",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 0.1,
+    "units_cpu_s": 0.02,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 146428,
+      "process_time": 230.90625,
+      "user": 83.96875,
+      "system": 146.9375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 35557376,
+      "peak_rss": 56971264
+    }
+  },
+  "runtime_seconds": 0.1,
+  "tier": "T3",
+  "units": {
+    "n": 1,
+    "kind": "single"
+  },
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 8,
+    "n_ran": 3,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "every_candidate_has_a_recommendation",
+        "kind": "identity",
+        "passed": true,
+        "detail": "an analytic identity the harness has to satisfy",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_failed_instrument_licenses",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:recommendations_mechanical",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "oracle",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "evaluations": null,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "pymdp": "1.0.2 (pinned)",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v14/cards/trunk_b.py",
+    "sha256": "c1bdf0e73d4698b1a225bca34ddabbdb55c15b86500e797e734e62c3df0df910",
+    "git_commit": "291a27c",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 8,
+    "n_ran": 3,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "every_candidate_has_a_recommendation",
+        "kind": "identity",
+        "passed": true,
+        "detail": "an analytic identity the harness has to satisfy",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_failed_instrument_licenses",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "an irrelevant matched intervention does not change the target",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:recommendations_mechanical",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a known readable manipulation is recovered",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "oracle",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

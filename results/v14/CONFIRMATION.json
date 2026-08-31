@@ -1,4 +1,46 @@
 {
+  "cards": {
+    "J02": {
+      "state": "LANDED",
+      "wall_s": 16.75,
+      "children_cpu_s": 193.06,
+      "criteria_passed_discovery": true,
+      "criteria_passed_confirmation": true,
+      "finished": "2026-08-31T03:07:33",
+      "closure_reason": "",
+      "packet_identity": "9a787919e6c0b2f70b7a2e5e730fd31c015fd907952985009343c3303a419b1c"
+    },
+    "R03": {
+      "state": "LANDED",
+      "wall_s": 125.77,
+      "children_cpu_s": 1491.23,
+      "criteria_passed_discovery": true,
+      "criteria_passed_confirmation": true,
+      "finished": "2026-08-31T03:09:39",
+      "closure_reason": "",
+      "packet_identity": "9a787919e6c0b2f70b7a2e5e730fd31c015fd907952985009343c3303a419b1c"
+    },
+    "E01": {
+      "state": "LANDED",
+      "wall_s": 23.82,
+      "children_cpu_s": 279.9,
+      "criteria_passed_discovery": true,
+      "criteria_passed_confirmation": true,
+      "finished": "2026-08-31T03:10:03",
+      "closure_reason": "",
+      "packet_identity": "9a787919e6c0b2f70b7a2e5e730fd31c015fd907952985009343c3303a419b1c"
+    },
+    "A06": {
+      "state": "LANDED",
+      "wall_s": 21.06,
+      "children_cpu_s": 248.22,
+      "criteria_passed_discovery": true,
+      "criteria_passed_confirmation": true,
+      "finished": "2026-08-31T03:10:24",
+      "closure_reason": "",
+      "packet_identity": "9a787919e6c0b2f70b7a2e5e730fd31c015fd907952985009343c3303a419b1c"
+    }
+  },
   "frozen": {
     "schema": 1,
     "promoted": [
@@ -82,6 +124,5 @@
       "rule": "one per flight, primary card preferred, flights in declared order, capped"
     },
     "frozen_at_hour": 20.0
-  },
-  "when": "2026-08-31T03:07:17"
+  }
 }
