@@ -109,18 +109,18 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": 0.03478990006260574,
+    "units_wall_s": 0.03510669991374016,
     "units_cpu_s": 0.062,
-    "workers": 8,
+    "workers": 12,
     "reduce_accounting": {
-      "pid": 60892,
-      "process_time": 1.28125,
-      "user": 0.609375,
+      "pid": 15648,
+      "process_time": 1.109375,
+      "user": 0.4375,
       "system": 0.671875,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 49344512,
-      "peak_rss": 49545216
+      "rss": 48672768,
+      "peak_rss": 48848896
     }
   },
   "runtime_seconds": 0.035,
@@ -229,7 +229,7 @@
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_e.py",
     "sha256": "a9f37f3e0b1f948880e1e707256be0b1e25d43408305df127dc0ec89804d2e18",
-    "git_commit": "ea8f3ed",
+    "git_commit": "d8aadda",
     "git_dirty": true
   },
   "gates": {

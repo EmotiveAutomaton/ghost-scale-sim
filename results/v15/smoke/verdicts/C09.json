@@ -105,19 +105,19 @@
         "likelihood_evaluations": 446.0208333333333,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.014865451388888888
+        "cpu_s": 0.01432291666666667
       },
       "staged": {
         "likelihood_evaluations": 406.3333333333333,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.0015190972222222222
+        "cpu_s": 0.0014105902777777778
       },
       "joint_exact": {
         "likelihood_evaluations": 440.3680555555555,
         "proposals": 0.0,
         "observations": 0.0,
-        "cpu_s": 0.005316840277777777
+        "cpu_s": 0.005642361111111112
       },
       "oracle_state": {
         "likelihood_evaluations": 1.0,
@@ -245,21 +245,21 @@
   "repairs": [],
   "upstream_oracle": false,
   "runtime": {
-    "units_wall_s": 16.096712700091302,
-    "units_cpu_s": 30.765,
-    "workers": 8,
+    "units_wall_s": 15.481583599932492,
+    "units_cpu_s": 30.328,
+    "workers": 12,
     "reduce_accounting": {
-      "pid": 60892,
-      "process_time": 0.703125,
-      "user": 0.3125,
-      "system": 0.390625,
+      "pid": 15648,
+      "process_time": 0.71875,
+      "user": 0.265625,
+      "system": 0.453125,
       "children_user": 0.0,
       "children_system": 0.0,
-      "rss": 49291264,
-      "peak_rss": 49455104
+      "rss": 47849472,
+      "peak_rss": 48017408
     }
   },
-  "runtime_seconds": 16.097,
+  "runtime_seconds": 15.482,
   "tier": "T0",
   "units": {
     "n": 2,
@@ -367,7 +367,7 @@
   "produced_by": {
     "module": "ghostscale/validation/soundingline/v15/cards/trunk_c.py",
     "sha256": "1981e240a949f4e81bdbfa73119372746e8f9de82c2e5534beb1c938946ed2ed",
-    "git_commit": "ea8f3ed",
+    "git_commit": "d8aadda",
     "git_dirty": true
   },
   "gates": {
