@@ -83,14 +83,23 @@ MATURITY = ("context_only", "seed", "hardened_seed", "submission_ready")
 # hypotheses, criteria, factors and estimator membership above it are structural.
 # --------------------------------------------------------------------------- #
 TIERS = {
+    # ``coverage_worlds`` and ``coverage_makers`` size one cell of the balanced stream. They
+    # scale with the tier so that a bigger tier buys a bigger sample per cell rather than the
+    # same sample computed more times. They are also sized so that a week of executed blocks
+    # stays INSIDE the 20,736 distinct secondary settings: past that point the Sobol sequence
+    # revisits design points, and replication at fresh seeds adds power rather than coverage.
     "T0": {"discovery_worlds": 24, "transfer_worlds": 12, "confirmation_worlds": 24,
-           "repeats": 2, "makers": 24, "steps": 8, "episodes": 4},
+           "repeats": 2, "makers": 24, "steps": 8, "episodes": 4,
+           "coverage_worlds": 4, "coverage_makers": 12},
     "T1": {"discovery_worlds": 48, "transfer_worlds": 24, "confirmation_worlds": 48,
-           "repeats": 2, "makers": 32, "steps": 10, "episodes": 5},
+           "repeats": 2, "makers": 32, "steps": 10, "episodes": 5,
+           "coverage_worlds": 6, "coverage_makers": 20},
     "T2": {"discovery_worlds": 96, "transfer_worlds": 48, "confirmation_worlds": 64,
-           "repeats": 3, "makers": 48, "steps": 12, "episodes": 6},
+           "repeats": 3, "makers": 48, "steps": 12, "episodes": 6,
+           "coverage_worlds": 16, "coverage_makers": 48},
     "T3": {"discovery_worlds": 160, "transfer_worlds": 80, "confirmation_worlds": 96,
-           "repeats": 3, "makers": 64, "steps": 12, "episodes": 6},
+           "repeats": 3, "makers": 64, "steps": 12, "episodes": 6,
+           "coverage_worlds": 24, "coverage_makers": 64},
 }
 TIER_ORDER = ("T0", "T1", "T2", "T3")
 

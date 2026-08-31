@@ -206,7 +206,52 @@ near-miss material is the specific poison: in the controlled study, unrelated Wi
   everything. `python runners/run_soundingline.py --only T1` runs one module.
 - `pip install -e ".[methods,dev]"` for the measurement layer and the property-based tests.
 
+### V15 is the live program. It runs for 168 hours. Check before you touch anything.
+
+V13 and V14 are **closed**. V15 — The Boundary Map — is a 112-card, 24-attack program on one
+continuous seven-day window, driven by `python -m runners.run_v15 --stage all` under
+`runners/watchdog_v15.py`.
+
+**Launch is always module form.** `python -m runners.run_v15`, never `python runners/run_v15.py`.
+The sibling project's `tools/orphan_sweep.ps1` runs at every gear-script startup and taskkills any
+python whose command line matches `runners[\/]run_`. That killed V14's runner seven times, cost
+that program its first 24-hour window, and retro-explains four of V13's "unexplained" silent
+deaths. Attack X24 reads `runners/run_v15_wrapped.ps1` and checks the module form is still there.
+
+**Read state from the records, never from prose — this file included.**
+
+| | |
+|---|---|
+| `results/v15/RUNNER_STATUS.json` | stage, card, pid, heartbeat. **Check the pid is alive and the heartbeat is fresh** |
+| `results/v15/DEADLINE.json` | the one immutable UTC deadline. Restarts inherit it; nothing shortens it |
+| `results/v15/WORKER_OCCUPANCY.json` | the §9.4 receipt, including `RUNTIME_FAILED` and its reasons |
+| `results/v15/COVERAGE.json` | cards resolved by state and trunk |
+| `results/v15/COMPLETION.json` | verdict path, hash and receipt per card |
+| `results/v15/QUEUE_MANIFEST.json` | per-card status, criterion status, lanes |
+| `results/v15/coverage/blocks.jsonl` | the executed prefix of the balanced coverage stream (gitignored) |
+
+- **No packet before the deadline.** Spec §9.1 forbids result prose, HTML, Markdown summaries,
+  bridge packets and curator-facing charts until hour 168. `runners/report_v15.py` refuses;
+  `--draft` writes to a scratch directory only. A checkpoint, a dashboard or a bridge file is
+  exactly how an early packet gets created without anyone deciding to create one.
+- **`LANDED` is not a held criterion.** Every verdict carries `state` and `criterion_status` as
+  separate columns, and the reporting code will not print one without the other.
+- **A gate bar is never a criterion bar.** `cards.battery` has no parameter through which a
+  magnitude could reach a gate, and `tests/test_v15_gates.py` fails the suite if one does. V14 lost
+  three small *real* effects to that conflation and had to repair it mid-window.
+- **Hash-locked generators.** The nineteen files in `prereg_v15.GENERATOR_FILES` are hashed; any
+  byte change breaks the lock and `--stage science` refuses to run. `manifest.py`, `runtime.py`,
+  `atomicio.py`, `runners/` and `tests/` are outside the lock.
+- **A run may be live right now.** Workers are Windows `spawn` processes and re-import from disk,
+  so an edit lands in workers created *after* it while the parent keeps what it imported. Work in a
+  worktree and deploy at a boundary.
+- **`RUNTIME_FAILED` has no softened form.** If the queue empties or workers wait for the deadline,
+  the flag is set and stays set. Spec §9.4 permits reporting the results and does not permit
+  claiming the seven-day contract; there is deliberately no "short run but complete".
+
 ### V13 is a long-running queue. Check before you touch anything.
+
+*(V13 is closed. This section is kept because its rules about spawn workers, hash locks and confirmation amendments still describe how the machinery works.)*
 
 The per-module runs above are minutes. **V13 is not**: 152 cards on a tier-calibrated,
 checkpointed, multi-day queue, driven by `runners/run_v13.py --stage all` under

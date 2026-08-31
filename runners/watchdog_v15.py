@@ -54,10 +54,13 @@ def progress() -> int:
             n += len(list(verdict_dir(lane).glob("*.json")))
         except OSError:
             pass
-    try:
-        n += len(list(COVERAGE_DIR.glob("block_*.json")))
-    except OSError:
-        pass
+    blocks = COVERAGE_DIR / "blocks.jsonl"
+    if blocks.exists():
+        try:
+            with blocks.open("r", encoding="utf-8", errors="ignore") as f:
+                n += sum(1 for _ in f)
+        except OSError:
+            pass
     return n
 
 

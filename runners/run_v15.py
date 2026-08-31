@@ -52,6 +52,7 @@ CHECKPOINTS = v15_dir() / "CHECKPOINTS.jsonl"
 PILOT = v15_dir() / "PILOT.json"
 COMPLETION = v15_dir() / "COMPLETION.json"
 COVERAGE_DIR = v15_dir("coverage")
+BLOCKS = COVERAGE_DIR / "blocks.jsonl"
 SMOKE_DIR = v15_dir("smoke")
 PILOT_DIR = v15_dir("pilot_quarantine")
 
@@ -260,16 +261,26 @@ def stage_pilot(args) -> dict:
             print(f"  pilot {card.id} ({card.trunk}): {r['wall_s']:.1f}s  state={r['state']}")
     finally:
         pool.close()
-    # a per-work-weight rate, and a coverage-cell rate
+    # per-trunk WALL times, measured with the pool running. The forecast must not divide these by
+    # the worker count again -- doing so reported a core upper forecast of 0.3 hours.
+    per_trunk = {v["trunk"]: {"wall_s": v["wall_s"], "work_weight": v["work_weight"]}
+                 for v in per_card.values()}
     rates = [v["wall_s"] / max(v["work_weight"], 0.1) for v in per_card.values() if v["wall_s"] > 0]
     median_rate = float(sorted(rates)[len(rates) // 2]) if rates else 60.0
-    t0 = time.perf_counter()
+    # A coverage cell is timed at EVERY tier. Extrapolating a T0 cell to T3 by the unit ratio
+    # underestimated it by half, which would have sized the locked sequence wrongly.
     cell = CV.block(0)["cells"][0]
-    CV.execute_cell(cell, tier)
-    cell_s = time.perf_counter() - t0
+    cell_seconds = {}
+    for tn in ("T0", "T1", "T2", "T3"):
+        t0 = time.perf_counter()
+        CV.execute_cell(cell, TIERS[tn])
+        cell_seconds[tn] = time.perf_counter() - t0
+        print(f"  pilot coverage cell at {tn}: {cell_seconds[tn]:.1f}s")
+    cell_s = cell_seconds[tier_name]
     doc = {"program": "v15", "tier": tier_name, "workers": safe_workers(args.workers),
-           "per_card": per_card, "median_seconds_per_work_unit": median_rate,
-           "coverage_cell_seconds": cell_s,
+           "per_card": per_card, "per_trunk": per_trunk,
+           "median_seconds_per_work_unit": median_rate,
+           "coverage_cell_seconds": cell_s, "coverage_cell_seconds_by_tier": cell_seconds,
            "seeds_excluded_from_science": True,
            "lane": "pilot",
            "note": "discarded: pilot verdicts live in results/v15/pilot_quarantine and are "
@@ -282,37 +293,53 @@ def stage_pilot(args) -> dict:
 
 
 def forecast(tier_name: str, workers: int, pilot: dict) -> dict:
-    """Conservative upper and lower forecasts for the core and for the locked coverage."""
+    """Conservative upper and lower forecasts for the core and for the locked coverage.
+
+    The pilot's per-card times are WALL times measured with the pool already running, so they are
+    not divided by the worker count again. An earlier version did, and reported a core upper
+    forecast of 0.3 hours, which is not a conservative estimate of anything.
+    """
     cards = M.build_cards()
-    rate = float(pilot["median_seconds_per_work_unit"])
-    cell_s = float(pilot["coverage_cell_seconds"])
     tier = TIERS[tier_name]
     pilot_tier = TIERS[pilot["tier"]]
-    # the pilot ran at its own tier; scale by the unit count the chosen tier implies
     scale = (int(tier["discovery_worlds"]) * int(tier["repeats"])) / \
             max(int(pilot_tier["discovery_worlds"]) * int(pilot_tier["repeats"]), 1)
-    core_units = sum(c.work_weight * (len(c.lanes)) for c in cards)
-    # cards run their units across the pool, so wall time is the serialized work divided by the
-    # worker count -- with a floor, because the single-unit cards cannot use the pool at all
-    core_seconds = core_units * rate * scale
-    core_h = core_seconds / 3600.0 / max(workers, 1) + core_seconds / 3600.0 * 0.15
-    upper = core_h * 1.6                                   # conservative: 60% headroom
+    per_trunk = pilot.get("per_trunk") or {}
+    fallback = float(pilot["median_seconds_per_work_unit"])
+    core_seconds = 0.0
+    for c in cards:
+        t = per_trunk.get(c.trunk)
+        if t and t["wall_s"] > 0:
+            base = t["wall_s"] * (c.work_weight / max(t["work_weight"], 0.1))
+        else:
+            base = fallback * c.work_weight
+        core_seconds += base * scale * max(len(c.lanes), 1)
+    core_h = core_seconds / 3600.0
+    upper = core_h * 1.6                                   # conservative: 60 per cent headroom
     lower = core_h / RC.FAST_MACHINE_FACTOR
-    # the coverage stream: enough blocks that a machine three times faster cannot empty it
+    # the coverage cell is timed at every tier by the pilot; extrapolating a T0 cell to T3
+    # underestimated it by half
+    by_tier = pilot.get("coverage_cell_seconds_by_tier") or {}
+    cell_s = float(by_tier.get(tier_name, pilot["coverage_cell_seconds"]))
+    per_block_h = (CV.BLOCK_CELLS * cell_s) / 3600.0 / max(workers, 1)
     need_lower_h = RC.CORE_PLUS_COVERAGE_LOWER_FORECAST_MIN_H - lower + 24.0
-    per_block_h = (CV.BLOCK_CELLS * cell_s * scale) / 3600.0 / max(workers, 1)
     n_blocks = int(max(64, (need_lower_h * RC.FAST_MACHINE_FACTOR) / max(per_block_h, 1e-6)))
     coverage_lower_h = n_blocks * per_block_h / RC.FAST_MACHINE_FACTOR
-    return {"tier": tier_name, "workers": workers, "seconds_per_work_unit": rate,
-            "coverage_cell_seconds": cell_s, "tier_scale": scale,
-            "core_work_units": core_units, "core_median_h": core_h,
+    expected = (RC.FREEZE_HOUR - core_h) / max(per_block_h, 1e-9)
+    return {"tier": tier_name, "workers": workers,
+            "seconds_per_work_unit": fallback, "coverage_cell_seconds": cell_s,
+            "tier_scale": scale, "core_seconds": core_seconds, "core_median_h": core_h,
             "core_upper_h": upper, "core_lower_h": lower,
             "coverage_blocks": n_blocks, "coverage_hours_per_block": per_block_h,
+            "coverage_blocks_expected_in_window": expected,
+            "distinct_secondary_settings": CV.DISTINCT_SECONDARY_SETTINGS,
+            "expected_stays_inside_distinct_settings":
+                bool(expected <= CV.DISTINCT_SECONDARY_SETTINGS),
             "coverage_lower_h": coverage_lower_h,
             "confirmation_worker_h": 30.0,
-            "note": ("upper adds 60 per cent headroom to the median; lower divides by the "
-                     "fast-machine factor, so condition 2 asks whether the queue survives a "
-                     "machine three times faster than the pilot")}
+            "note": ("core times are pilot WALL times with the pool running, scaled by the unit "
+                     "count the tier implies and not divided by the worker count again; upper "
+                     "adds 60 per cent headroom, lower divides by the fast-machine factor")}
 
 
 def stage_guard(args) -> dict:
@@ -385,7 +412,13 @@ def _queue(lane: str) -> list:
 
 
 def _coverage_progress() -> int:
-    return len(list(COVERAGE_DIR.glob("block_*.json")))
+    if not BLOCKS.exists():
+        return 0
+    try:
+        with BLOCKS.open("r", encoding="utf-8", errors="ignore") as f:
+            return sum(1 for _ in f)
+    except OSError:
+        return 0
 
 
 def run_coverage_block(pool: Pool, index: int, tier: dict, occ: RC.Occupancy) -> dict:
@@ -396,8 +429,13 @@ def run_coverage_block(pool: Pool, index: int, tier: dict, occ: RC.Occupancy) ->
     ok = [r["unit"] for r in res if r["ok"]]
     doc = {"block": index, "secondary": b["secondary"], "n_cells": len(b["cells"]),
            "n_ok": len(ok), "digest": CV.block_digest(index),
+           "replication": bool(index >= CV.DISTINCT_SECONDARY_SETTINGS),
            "wall_s": round(time.perf_counter() - t0, 2), "cells": ok}
-    write_json_atomic(COVERAGE_DIR / f"block_{index:06d}.json", doc)
+    # One append-only file, not one file per block. At the sizes the opening guard requires, a
+    # file per block is tens of thousands of files and the count is a function of how fast the
+    # machine turned out to be.
+    with BLOCKS.open("a", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps(doc, default=str) + "\n")
     occ.coverage_blocks_executed += 1
     occ.coverage_cells_executed += len(ok)
     checkpoint("coverage_block", block=index, n_ok=len(ok), wall_s=doc["wall_s"])

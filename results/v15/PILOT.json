@@ -1,0 +1,137 @@
+{
+  "program": "v15",
+  "tier": "T0",
+  "workers": 12,
+  "per_card": {
+    "I01": {
+      "wall_s": 0.3548145000822842,
+      "trunk": "I",
+      "work_weight": 0.2
+    },
+    "C01": {
+      "wall_s": 8.546893700025976,
+      "trunk": "C",
+      "work_weight": 1.0
+    },
+    "M01": {
+      "wall_s": 32.96838660002686,
+      "trunk": "M",
+      "work_weight": 1.4
+    },
+    "E01": {
+      "wall_s": 1.6401652998756617,
+      "trunk": "E",
+      "work_weight": 1.2
+    },
+    "G01": {
+      "wall_s": 1.9300577999092638,
+      "trunk": "G",
+      "work_weight": 1.0
+    },
+    "V01": {
+      "wall_s": 8.862080299993977,
+      "trunk": "V",
+      "work_weight": 1.4
+    },
+    "S01": {
+      "wall_s": 0.2757182999048382,
+      "trunk": "S",
+      "work_weight": 1.0
+    },
+    "R01": {
+      "wall_s": 1.030543299857527,
+      "trunk": "R",
+      "work_weight": 1.2
+    },
+    "F01": {
+      "wall_s": 0.6473113999236375,
+      "trunk": "F",
+      "work_weight": 1.0
+    },
+    "H01": {
+      "wall_s": 0.10116149997338653,
+      "trunk": "H",
+      "work_weight": 0.8
+    },
+    "P01": {
+      "wall_s": 15.019408500054851,
+      "trunk": "P",
+      "work_weight": 1.4
+    },
+    "B01": {
+      "wall_s": 0.08314190013334155,
+      "trunk": "B",
+      "work_weight": 0.3
+    },
+    "X01": {
+      "wall_s": 10.72565390006639,
+      "trunk": "X",
+      "work_weight": 1.0
+    }
+  },
+  "per_trunk": {
+    "I": {
+      "wall_s": 0.3548145000822842,
+      "work_weight": 0.2
+    },
+    "C": {
+      "wall_s": 8.546893700025976,
+      "work_weight": 1.0
+    },
+    "M": {
+      "wall_s": 32.96838660002686,
+      "work_weight": 1.4
+    },
+    "E": {
+      "wall_s": 1.6401652998756617,
+      "work_weight": 1.2
+    },
+    "G": {
+      "wall_s": 1.9300577999092638,
+      "work_weight": 1.0
+    },
+    "V": {
+      "wall_s": 8.862080299993977,
+      "work_weight": 1.4
+    },
+    "S": {
+      "wall_s": 0.2757182999048382,
+      "work_weight": 1.0
+    },
+    "R": {
+      "wall_s": 1.030543299857527,
+      "work_weight": 1.2
+    },
+    "F": {
+      "wall_s": 0.6473113999236375,
+      "work_weight": 1.0
+    },
+    "H": {
+      "wall_s": 0.10116149997338653,
+      "work_weight": 0.8
+    },
+    "P": {
+      "wall_s": 15.019408500054851,
+      "work_weight": 1.4
+    },
+    "B": {
+      "wall_s": 0.08314190013334155,
+      "work_weight": 0.3
+    },
+    "X": {
+      "wall_s": 10.72565390006639,
+      "work_weight": 1.0
+    }
+  },
+  "median_seconds_per_work_unit": 1.774072500411421,
+  "coverage_cell_seconds": 0.8077899999916553,
+  "coverage_cell_seconds_by_tier": {
+    "T0": 0.8077899999916553,
+    "T1": 2.040982000064105,
+    "T2": 13.116371700074524,
+    "T3": 26.15280960011296
+  },
+  "seeds_excluded_from_science": true,
+  "lane": "pilot",
+  "note": "discarded: pilot verdicts live in results/v15/pilot_quarantine and are never read by any scientific stage"
+}

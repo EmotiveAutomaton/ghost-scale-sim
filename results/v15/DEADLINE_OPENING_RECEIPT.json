@@ -1,0 +1,46 @@
+{
+  "program": "v15",
+  "written": "2026-08-31T17:34:32Z",
+  "may_open": true,
+  "conditions": {
+    "1_core_upper_fits": true,
+    "2_core_plus_coverage_survives_fast_machine": true,
+    "3_confirmation_and_integrity_reserved": true,
+    "4_cells_and_order_hashed": true,
+    "5_recovery_and_report_guard_tested": true,
+    "6_bad_queue_fixtures_rejected": true
+  },
+  "failed": [],
+  "core_upper_h": 5.4619329265895,
+  "core_lower_h": 1.137902693039479,
+  "coverage_lower_h": 274.86179117340936,
+  "core_plus_coverage_lower_h": 275.99969386644887,
+  "fast_machine_factor": 3.0,
+  "thresholds": {
+    "core_upper_max_h": 150.0,
+    "core_plus_coverage_lower_min_h": 252.0,
+    "confirmation_worker_h_min": 24.0
+  },
+  "reason": "",
+  "forecast": {
+    "tier": "T3",
+    "workers": 12,
+    "seconds_per_work_unit": 1.774072500411421,
+    "coverage_cell_seconds": 26.15280960011296,
+    "tier_scale": 10.0,
+    "core_seconds": 12289.349084826374,
+    "core_median_h": 3.4137080791184373,
+    "core_upper_h": 5.4619329265895,
+    "core_lower_h": 1.137902693039479,
+    "coverage_blocks": 18161,
+    "coverage_hours_per_block": 0.04540418333352944,
+    "coverage_blocks_expected_in_window": 3228.47546544533,
+    "distinct_secondary_settings": 20736,
+    "expected_stays_inside_distinct_settings": true,
+    "coverage_lower_h": 274.86179117340936,
+    "confirmation_worker_h": 30.0,
+    "note": "core times are pilot WALL times with the pool running, scaled by the unit count the tier implies and not divided by the worker count again; upper adds 60 per cent headroom, lower divides by the fast-machine factor"
+  },
+  "tier": "T3",
+  "workers": 12
+}

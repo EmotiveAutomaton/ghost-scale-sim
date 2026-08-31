@@ -50,7 +50,14 @@ SECONDARY = {
     "model_space": ("correct", "missing_latent", "extra_latent", "wrong_family"),
     "temperature": (0.25, 0.6, 1.0, 2.0),
     "competence": (0.55, 0.75, 0.95),
+    "latent_cardinality": (3, 4, 5),
+    "steps": (8, 12, 16),
 }
+#: Distinct secondary settings. Past this many blocks the scrambled Sobol sequence revisits a
+#: design point. The worlds are still fresh -- new seeds, new independent units, more power --
+#: but the design point is not new coverage, and calling replication coverage is how a queue
+#: gets padded. The locked definition states this number so nobody has to infer it.
+DISTINCT_SECONDARY_SETTINGS = 4 * 3 * 4 * 4 * 4 * 3 * 3 * 3
 #: Architectures scored in every coverage cell. Deliberately short: the stream buys breadth of
 #: *conditions*, and the deep architecture tournament is the mandatory core's job.
 COVERAGE_ARCHITECTURES = ("surface", "independent", "staged", "joint_exact", "particle",
@@ -136,6 +143,11 @@ def sequence_definition(n_blocks: int, chain_sample: int = 64) -> dict:
         "chain_hash_first_n": hash_chain(min(int(n_blocks), int(chain_sample))),
         "block_0_digest": block_digest(0),
         "block_sample": [block(i)["secondary"] for i in range(min(4, int(n_blocks)))],
+        "distinct_secondary_settings": DISTINCT_SECONDARY_SETTINGS,
+        "replication_begins_after_blocks": DISTINCT_SECONDARY_SETTINGS,
+        "after_that": ("the design point repeats with fresh seeds; that is replication at new "
+                       "independent units, which adds power and not coverage, and it is "
+                       "counted separately in the runtime receipt"),
         "materialized": False,
         "why_not_materialized": ("at the sizes the opening guard requires this list is hundreds of "
                                  "megabytes; the definition plus a hash chain regenerates and "
@@ -166,10 +178,12 @@ def family_module(name: str):
 
 
 def knobs_for(cell: dict) -> Knobs:
+    n = int(cell.get("latent_cardinality", 4))
     return Knobs(kappa=float(cell["kappa"]), overlap=float(cell["overlap"]),
                  dose=int(cell["dose"]), dependence=cell["dependence"],
                  missing=cell["missing"], temperature=float(cell["temperature"]),
-                 competence=float(cell["competence"]), model_space=cell["model_space"])
+                 competence=float(cell["competence"]), model_space=cell["model_space"],
+                 n_process=n, n_goal=n, n_tendency=n)
 
 
 def execute_cell(cell: dict, tier: dict, smoke: bool = False) -> dict:
@@ -183,8 +197,8 @@ def execute_cell(cell: dict, tier: dict, smoke: bool = False) -> dict:
     knobs = knobs_for(cell)
     endpoint = ENDPOINT_BY_FAMILY[cell["family"]]
     n_worlds = 2 if smoke else int(tier.get("coverage_worlds", 4))
-    n_makers = 3 if smoke else int(tier.get("coverage_makers", 10))
-    steps = 8 if smoke else int(tier.get("steps", 12))
+    n_makers = 3 if smoke else int(tier.get("coverage_makers", 12))
+    steps = 8 if smoke else int(cell.get("steps", tier.get("steps", 12)))
 
     rows = []
     world = None
