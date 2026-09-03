@@ -1,0 +1,70 @@
+{
+  "program": "v15",
+  "amendments": [
+    {
+      "card": "X23",
+      "reason": "instrument repair 2026-09-02: X23/X24 rows hardcoded rep=0 so the expected-cell receipt counted 80 units where 240 ran (criteria were HELD); H03 placebo gate observed the card's own criterion statistic with tol=2*sesoi (gate/criterion conflation, third form) and is replaced by a shuffled-label placebo with a 3-sigma sampling tolerance. No criterion, estimator or factor changed. [lane=attack]",
+      "when": "2026-09-02T12:00:22",
+      "original": {
+        "state": "RESOURCE_BLOCKED",
+        "criterion_status": "HELD",
+        "claim_class": "METHOD",
+        "failed_gates": [],
+        "verdict_sha256": "97c6f1c4bcb9759e9589b36a24057a53602fa2e4534709451448f252fe28b0f6",
+        "preserved_at": "results/validation/soundingline/v15/attacks/amended/X23.20260902T120021.json"
+      },
+      "replacement": {
+        "state": "LANDED",
+        "criterion_status": "HELD",
+        "claim_class": "METHOD",
+        "failed_gates": [],
+        "verdict_sha256": "f74fbcbb14c00ecbf2829425f97cbbc85d8fd935f6a398aed4c4c5aabfd58d2f",
+        "preserved_at": null
+      }
+    },
+    {
+      "card": "X24",
+      "reason": "instrument repair 2026-09-02: X23/X24 rows hardcoded rep=0 so the expected-cell receipt counted 80 units where 240 ran (criteria were HELD); H03 placebo gate observed the card's own criterion statistic with tol=2*sesoi (gate/criterion conflation, third form) and is replaced by a shuffled-label placebo with a 3-sigma sampling tolerance. No criterion, estimator or factor changed. [lane=attack]",
+      "when": "2026-09-02T12:00:23",
+      "original": {
+        "state": "RESOURCE_BLOCKED",
+        "criterion_status": "HELD",
+        "claim_class": "METHOD",
+        "failed_gates": [],
+        "verdict_sha256": "97c6f1c4bcb9759e9589b36a24057a53602fa2e4534709451448f252fe28b0f6",
+        "preserved_at": "results/validation/soundingline/v15/attacks/amended/X24.20260902T120021.json"
+      },
+      "replacement": {
+        "state": "LANDED",
+        "criterion_status": "HELD",
+        "claim_class": "METHOD",
+        "failed_gates": [],
+        "verdict_sha256": "f74fbcbb14c00ecbf2829425f97cbbc85d8fd935f6a398aed4c4c5aabfd58d2f",
+        "preserved_at": null
+      }
+    },
+    {
+      "card": "H03",
+      "reason": "instrument repair 2026-09-02: X23/X24 rows hardcoded rep=0 so the expected-cell receipt counted 80 units where 240 ran (criteria were HELD); H03 placebo gate observed the card's own criterion statistic with tol=2*sesoi (gate/criterion conflation, third form) and is replaced by a shuffled-label placebo with a 3-sigma sampling tolerance. No criterion, estimator or factor changed. [lane=discovery]",
+      "when": "2026-09-02T12:06:19",
+      "original": {
+        "state": "INSTRUMENT_FAILED",
+        "criterion_status": "FAILED",
+        "claim_class": "INSTRUMENT_FAILURE",
+        "failed_gates": [
+          "placebo:the_artifact_is_near_chance"
+        ],
+        "verdict_sha256": "f36cd2cb2b7a6fc4286540cfecc9e3be6ad95b700996bbc4889af250e5b4049e",
+        "preserved_at": "results/validation/soundingline/v15/amended/H03.20260902T120021.json"
+      },
+      "replacement": {
+        "state": "LANDED",
+        "criterion_status": "FAILED",
+        "claim_class": "BOUNDARY",
+        "failed_gates": [],
+        "verdict_sha256": "5a96994d81e97d9c57996eaf3fe7403ab40640b9dd99ad2ce27ad4712abc6db7",
+        "preserved_at": null
+      }
+    }
+  ]
+}

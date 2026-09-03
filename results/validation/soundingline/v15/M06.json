@@ -1,0 +1,624 @@
+{
+  "card": "M06",
+  "trunk": "M",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "Can particle hypothesis revision recover after an early wrong commitment?",
+    "what_happened": "seeded wrong, the particle reader recovers 0.00 of the mass on the true latent against the staged reader's 0.71",
+    "what_changed_in_the_project_world": "hypothesis revision is a measured capability rather than an architectural promise",
+    "what_remains_a_rival": "a jitter rate that hands back the answer",
+    "claim_class": "METHOD"
+  },
+  "hypothesis": "a particle reader recovers from an early wrong commitment where a staged reader cannot",
+  "claim_class": "METHOD",
+  "criterion_status": "FAILED",
+  "sesoi": {
+    "value": 0.5,
+    "basis": "true-state mass a recovered reader must reach"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_M06": {
+      "name": "M06",
+      "observed": 0.0,
+      "bar": 0.5,
+      "direction": "greater",
+      "held": false,
+      "basis": "true-state mass a recovered reader must reach",
+      "interval": null,
+      "detail": "after being seeded on a wrong hypothesis, the particle reader recovers this much mass on the true latent"
+    },
+    "true_mass_after_wrong_seed": {
+      "particle": 0.0,
+      "staged": 0.7074327256944445,
+      "joint_exact": 0.6572297166626208
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {},
+  "families": {},
+  "equivalence": {},
+  "trajectories": {
+    "recovery": [
+      {
+        "family": "chain",
+        "seeded": "true",
+        "recovery_step": 1,
+        "final_true_mass": 0.9624999999999998,
+        "trace": [
+          0.9586336604291226,
+          0.9393960560428491,
+          0.9240092503454391,
+          0.5416666666666661,
+          0.8815364494978344,
+          0.9553585565557251,
+          0.8384415050638355,
+          0.9624999999999998
+        ],
+        "seeded_wrong": [
+          1,
+          3,
+          1
+        ],
+        "truth": [
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "wrong",
+        "recovery_step": null,
+        "final_true_mass": 0.0,
+        "trace": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seeded_wrong": [
+          3,
+          1,
+          1
+        ],
+        "truth": [
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "true",
+        "recovery_step": 1,
+        "final_true_mass": 0.909136046727307,
+        "trace": [
+          0.9198015536580854,
+          0.9080710269636144,
+          0.943269222646441,
+          0.9267988567628417,
+          0.9555893965632034,
+          0.9445624873274489,
+          0.8276033296438472,
+          0.909136046727307
+        ],
+        "seeded_wrong": [
+          0,
+          0,
+          2
+        ],
+        "truth": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "wrong",
+        "recovery_step": null,
+        "final_true_mass": 0.0,
+        "trace": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seeded_wrong": [
+          2,
+          2,
+          2
+        ],
+        "truth": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "true",
+        "recovery_step": 1,
+        "final_true_mass": 0.9324654993341863,
+        "trace": [
+          0.8584386174147558,
+          0.9406840710380812,
+          0.942862614903749,
+          0.946313604881241,
+          0.9665489644590148,
+          0.9593729114768925,
+          0.9343926462897372,
+          0.9324654993341863
+        ],
+        "seeded_wrong": [
+          2,
+          2,
+          3
+        ],
+        "truth": [
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "wrong",
+        "recovery_step": null,
+        "final_true_mass": 0.0,
+        "trace": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seeded_wrong": [
+          0,
+          0,
+          3
+        ],
+        "truth": [
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "true",
+        "recovery_step": 1,
+        "final_true_mass": 0.9573777056742517,
+        "trace": [
+          0.9281855137051958,
+          0.926546618097099,
+          0.7624999999999997,
+          0.923497288896773,
+          0.7434720727445757,
+          0.946749366715876,
+          0.9568882829225208,
+          0.9573777056742517
+        ],
+        "seeded_wrong": [
+          0,
+          3,
+          1
+        ],
+        "truth": [
+          0,
+          3,
+          1
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "wrong",
+        "recovery_step": null,
+        "final_true_mass": 0.0,
+        "trace": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seeded_wrong": [
+          2,
+          1,
+          1
+        ],
+        "truth": [
+          0,
+          3,
+          1
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "true",
+        "recovery_step": 1,
+        "final_true_mass": 0.8584952986435521,
+        "trace": [
+          0.7923160215861109,
+          0.5416666666666663,
+          0.6234076696242068,
+          0.841720036719217,
+          0.8424730290042278,
+          0.7750785048574722,
+          0.741666666666666,
+          0.8584952986435521
+        ],
+        "seeded_wrong": [
+          0,
+          0,
+          2
+        ],
+        "truth": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "wrong",
+        "recovery_step": null,
+        "final_true_mass": 0.0,
+        "trace": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seeded_wrong": [
+          2,
+          2,
+          2
+        ],
+        "truth": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "true",
+        "recovery_step": 1,
+        "final_true_mass": 0.899600973006844,
+        "trace": [
+          0.9412318851043872,
+          0.9023400805713704,
+          0.8123758270750351,
+          0.9147214435249675,
+          0.9398665863217531,
+          0.9569765525583669,
+          0.7945391747013798,
+          0.899600973006844
+        ],
+        "seeded_wrong": [
+          3,
+          1,
+          0
+        ],
+        "truth": [
+          3,
+          1,
+          0
+        ]
+      },
+      {
+        "family": "chain",
+        "seeded": "wrong",
+        "recovery_step": null,
+        "final_true_mass": 0.0,
+        "trace": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seeded_wrong": [
+          1,
+          3,
+          0
+        ],
+        "truth": [
+          3,
+          1,
+          0
+        ]
+      }
+    ]
+  },
+  "causal_distance": {
+    "card": "M06",
+    "channels": [
+      {
+        "channel": "hidden_event_from_policy",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": false,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {},
+  "cells": {
+    "particle|true": {
+      "units": 480,
+      "rows": 92160,
+      "min_rows_in_a_unit": 192
+    },
+    "staged|true": {
+      "units": 480,
+      "rows": 92160,
+      "min_rows_in_a_unit": 192
+    },
+    "joint_exact|true": {
+      "units": 480,
+      "rows": 92160,
+      "min_rows_in_a_unit": 192
+    },
+    "particle|wrong": {
+      "units": 480,
+      "rows": 92160,
+      "min_rows_in_a_unit": 192
+    },
+    "staged|wrong": {
+      "units": 480,
+      "rows": 92160,
+      "min_rows_in_a_unit": 192
+    },
+    "joint_exact|wrong": {
+      "units": 480,
+      "rows": 92160,
+      "min_rows_in_a_unit": 192
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 6,
+    "realized_levels": 6,
+    "expected_units": 480,
+    "realized_units": 480,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 192,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 480,
+    "rows": 552960
+  },
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a jitter rate that hands back the answer",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 872.7095830000471,
+    "units_cpu_s": 10168.744999999999,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 92828,
+      "process_time": 165.953125,
+      "user": 141.296875,
+      "system": 24.65625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 435331072,
+      "peak_rss": 4912418816
+    }
+  },
+  "runtime_seconds": 872.71,
+  "tier": "T3",
+  "units": {
+    "n": 480,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "M06",
+      "observed": 0.0,
+      "bar": 0.5,
+      "direction": "greater",
+      "held": false,
+      "basis": "true-state mass a recovered reader must reach",
+      "interval": null,
+      "detail": "after being seeded on a wrong hypothesis, the particle reader recovers this much mass on the true latent"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 5,
+    "n_skipped": 2,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:seeding_wrong_moves_the_mass",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.7449355276146868,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_exact_reader_ignores_the_seed",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:recovery_is_possible",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 0.0,
+        "expected": 1.0,
+        "tolerance": 1.0
+      },
+      {
+        "name": "no_label_leak:no_filter_was_told_the_truth",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:recovery_shows_in_the_true_mass",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.7074327256944445,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_m.py",
+    "sha256": "51ff1c8e794709ace0d4b4d8debba9cdd0d941d38eca84b1d763e783d7b5459c",
+    "git_commit": "ce4c06b",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 5,
+    "n_skipped": 2,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:seeding_wrong_moves_the_mass",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.7449355276146868,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_exact_reader_ignores_the_seed",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "positive:recovery_is_possible",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 0.0,
+        "expected": 1.0,
+        "tolerance": 1.0
+      },
+      {
+        "name": "no_label_leak:no_filter_was_told_the_truth",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:recovery_shows_in_the_true_mass",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.7074327256944445,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

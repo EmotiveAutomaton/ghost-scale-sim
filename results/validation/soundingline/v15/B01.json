@@ -1,0 +1,2117 @@
+{
+  "card": "B01",
+  "trunk": "B",
+  "wave": 6,
+  "lane": "discovery",
+  "record": {
+    "question": "Which results survived discovery, generator transfer, attacks and untouched confirmation?",
+    "what_happened": "51 of 110 cards survived every stage they ran; 44 carry at least one failed criterion, kept in the ledger",
+    "what_changed_in_the_project_world": "the record says what held and what did not, in the same table",
+    "what_remains_a_rival": "a failed criterion quietly dropped",
+    "claim_class": "METHOD"
+  },
+  "hypothesis": "which results survived discovery, transfer, attack and confirmation",
+  "claim_class": "METHOD",
+  "criterion_status": "HELD",
+  "sesoi": {
+    "value": 0.0,
+    "basis": "a ledger, not a magnitude"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_B01": {
+      "name": "B01",
+      "observed": 51.0,
+      "bar": 0.0,
+      "direction": "greater",
+      "held": true,
+      "basis": "a ledger, not a magnitude",
+      "interval": null,
+      "detail": "a stated set of results survived every stage; zero is a legitimate outcome and is recorded as one"
+    },
+    "n_cards": 110,
+    "n_survived": 51,
+    "survived": [
+      "C02",
+      "C03",
+      "C04",
+      "C06",
+      "C07",
+      "C09",
+      "C10",
+      "C12",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E10",
+      "E12",
+      "F01",
+      "F03",
+      "F07",
+      "F09",
+      "G03",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "H05",
+      "H07",
+      "H08",
+      "I05",
+      "M02",
+      "M05",
+      "M07",
+      "M10",
+      "M12",
+      "P01",
+      "P02",
+      "P04",
+      "P06",
+      "R01",
+      "R02",
+      "R03",
+      "R05",
+      "R06",
+      "S05",
+      "S07",
+      "S10",
+      "V02",
+      "V04",
+      "V05",
+      "V06"
+    ],
+    "with_failed_criteria": {
+      "C01": [
+        "C01"
+      ],
+      "C05": [
+        "C05"
+      ],
+      "C08": [
+        "C08"
+      ],
+      "C11": [
+        "C11"
+      ],
+      "C13": [
+        "C13"
+      ],
+      "C14": [
+        "C14"
+      ],
+      "E09": [
+        "E09_skill_cost"
+      ],
+      "E11": [
+        "E11"
+      ],
+      "F02": [
+        "F02"
+      ],
+      "F04": [
+        "F04"
+      ],
+      "F05": [
+        "F05"
+      ],
+      "F06": [
+        "F06"
+      ],
+      "F08": [
+        "F08"
+      ],
+      "F10": [
+        "F10"
+      ],
+      "G02": [
+        "G02"
+      ],
+      "G04": [
+        "G04"
+      ],
+      "G05": [
+        "G05"
+      ],
+      "G06": [
+        "G06"
+      ],
+      "H03": [
+        "H03"
+      ],
+      "H04": [
+        "H04"
+      ],
+      "H06": [
+        "H06"
+      ],
+      "M01": [
+        "M01",
+        "M01_score"
+      ],
+      "M03": [
+        "M03"
+      ],
+      "M04": [
+        "M04"
+      ],
+      "M06": [
+        "M06"
+      ],
+      "M08": [
+        "M08"
+      ],
+      "M09": [
+        "M09"
+      ],
+      "M11": [
+        "M11"
+      ],
+      "P03": [
+        "P03"
+      ],
+      "P05": [
+        "P05"
+      ],
+      "R04": [
+        "R04"
+      ],
+      "R07": [
+        "R07"
+      ],
+      "R08": [
+        "R08"
+      ],
+      "S03": [
+        "S03"
+      ],
+      "S04": [
+        "S04",
+        "S04_degradation"
+      ],
+      "S06": [
+        "S06"
+      ],
+      "S08": [
+        "S08_contrast"
+      ],
+      "S09": [
+        "S09"
+      ],
+      "V01": [
+        "V01"
+      ],
+      "V03": [
+        "V03_probe_value"
+      ],
+      "V07": [
+        "V07"
+      ],
+      "V08": [
+        "V08"
+      ],
+      "V09": [
+        "V09"
+      ],
+      "V10": [
+        "V10"
+      ]
+    },
+    "table": [
+      {
+        "card": "C01",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "C01"
+        ],
+        "survived": false
+      },
+      {
+        "card": "C02",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C03",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C04",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C05",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "C05"
+        ],
+        "survived": false
+      },
+      {
+        "card": "C06",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C07",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C08",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "C08"
+        ],
+        "survived": false
+      },
+      {
+        "card": "C09",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C10",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C11",
+        "trunk": "C",
+        "claim_class": "INSTRUMENT_FAILURE",
+        "discovery_state": "INSTRUMENT_FAILED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "C11"
+        ],
+        "survived": false
+      },
+      {
+        "card": "C12",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "C13",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "C13"
+        ],
+        "survived": false
+      },
+      {
+        "card": "C14",
+        "trunk": "C",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "C14"
+        ],
+        "survived": false
+      },
+      {
+        "card": "E01",
+        "trunk": "E",
+        "claim_class": "CONSTRUCTION_IDENTITY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "E02",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E03",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E04",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E05",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E06",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E07",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E08",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E09",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "E09_skill_cost"
+        ],
+        "survived": false
+      },
+      {
+        "card": "E10",
+        "trunk": "E",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "E11",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "E11"
+        ],
+        "survived": false
+      },
+      {
+        "card": "E12",
+        "trunk": "E",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "F01",
+        "trunk": "F",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "F02",
+        "trunk": "F",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "F02"
+        ],
+        "survived": false
+      },
+      {
+        "card": "F03",
+        "trunk": "F",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "F04",
+        "trunk": "F",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "F04"
+        ],
+        "survived": false
+      },
+      {
+        "card": "F05",
+        "trunk": "F",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "F05"
+        ],
+        "survived": false
+      },
+      {
+        "card": "F06",
+        "trunk": "F",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "F06"
+        ],
+        "survived": false
+      },
+      {
+        "card": "F07",
+        "trunk": "F",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "F08",
+        "trunk": "F",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "F08"
+        ],
+        "survived": false
+      },
+      {
+        "card": "F09",
+        "trunk": "F",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "F10",
+        "trunk": "F",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "F10"
+        ],
+        "survived": false
+      },
+      {
+        "card": "G01",
+        "trunk": "G",
+        "claim_class": "CONSTRUCTION_IDENTITY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "G02",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "G02"
+        ],
+        "survived": false
+      },
+      {
+        "card": "G03",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "G04",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "G04"
+        ],
+        "survived": false
+      },
+      {
+        "card": "G05",
+        "trunk": "G",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "G05"
+        ],
+        "survived": false
+      },
+      {
+        "card": "G06",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "G06"
+        ],
+        "survived": false
+      },
+      {
+        "card": "G07",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "G08",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "G09",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "G10",
+        "trunk": "G",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "H01",
+        "trunk": "H",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "H02",
+        "trunk": "H",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "H03",
+        "trunk": "H",
+        "claim_class": "INSTRUMENT_FAILURE",
+        "discovery_state": "INSTRUMENT_FAILED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "DIRECT_READOUT",
+        "promotable": false,
+        "failed_criteria": [
+          "H03"
+        ],
+        "survived": false
+      },
+      {
+        "card": "H04",
+        "trunk": "H",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "H04"
+        ],
+        "survived": false
+      },
+      {
+        "card": "H05",
+        "trunk": "H",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "H06",
+        "trunk": "H",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "H06"
+        ],
+        "survived": false
+      },
+      {
+        "card": "H07",
+        "trunk": "H",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "H08",
+        "trunk": "H",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "I01",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "I02",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "I03",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "I04",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "I05",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "I06",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "I07",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "I08",
+        "trunk": "I",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "M01",
+        "trunk": "M",
+        "claim_class": "INSTRUMENT_FAILURE",
+        "discovery_state": "INSTRUMENT_FAILED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M01",
+          "M01_score"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M02",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "M03",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M03"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M04",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M04"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M05",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "M06",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M06"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M07",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "M08",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M08"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M09",
+        "trunk": "M",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M09"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M10",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "M11",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "M11"
+        ],
+        "survived": false
+      },
+      {
+        "card": "M12",
+        "trunk": "M",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "P01",
+        "trunk": "P",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "P02",
+        "trunk": "P",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "P03",
+        "trunk": "P",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "P03"
+        ],
+        "survived": false
+      },
+      {
+        "card": "P04",
+        "trunk": "P",
+        "claim_class": "METHOD",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "P05",
+        "trunk": "P",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "P05"
+        ],
+        "survived": false
+      },
+      {
+        "card": "P06",
+        "trunk": "P",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "P07",
+        "trunk": "P",
+        "claim_class": "BRIDGE_CANDIDATE",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "P08",
+        "trunk": "P",
+        "claim_class": "BRIDGE_CANDIDATE",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "R01",
+        "trunk": "R",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "R02",
+        "trunk": "R",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "R03",
+        "trunk": "R",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "R04",
+        "trunk": "R",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "R04"
+        ],
+        "survived": false
+      },
+      {
+        "card": "R05",
+        "trunk": "R",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "R06",
+        "trunk": "R",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "R07",
+        "trunk": "R",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "R07"
+        ],
+        "survived": false
+      },
+      {
+        "card": "R08",
+        "trunk": "R",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "R08"
+        ],
+        "survived": false
+      },
+      {
+        "card": "S01",
+        "trunk": "S",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "DIRECT_READOUT",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "S02",
+        "trunk": "S",
+        "claim_class": "CONSTRUCTION_IDENTITY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [],
+        "survived": false
+      },
+      {
+        "card": "S03",
+        "trunk": "S",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "S03"
+        ],
+        "survived": false
+      },
+      {
+        "card": "S04",
+        "trunk": "S",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "S04",
+          "S04_degradation"
+        ],
+        "survived": false
+      },
+      {
+        "card": "S05",
+        "trunk": "S",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "S06",
+        "trunk": "S",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "S06"
+        ],
+        "survived": false
+      },
+      {
+        "card": "S07",
+        "trunk": "S",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "S08",
+        "trunk": "S",
+        "claim_class": "CONSTRUCTION_IDENTITY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [
+          "S08_contrast"
+        ],
+        "survived": false
+      },
+      {
+        "card": "S09",
+        "trunk": "S",
+        "claim_class": "CONSTRUCTION_IDENTITY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "PLANTED_SIGNATURE",
+        "promotable": false,
+        "failed_criteria": [
+          "S09"
+        ],
+        "survived": false
+      },
+      {
+        "card": "S10",
+        "trunk": "S",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "V01",
+        "trunk": "V",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "V01"
+        ],
+        "survived": false
+      },
+      {
+        "card": "V02",
+        "trunk": "V",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "V03",
+        "trunk": "V",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "V03_probe_value"
+        ],
+        "survived": false
+      },
+      {
+        "card": "V04",
+        "trunk": "V",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "V05",
+        "trunk": "V",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "V06",
+        "trunk": "V",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "HELD",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [],
+        "survived": true
+      },
+      {
+        "card": "V07",
+        "trunk": "V",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "V07"
+        ],
+        "survived": false
+      },
+      {
+        "card": "V08",
+        "trunk": "V",
+        "claim_class": "BOUNDARY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "V08"
+        ],
+        "survived": false
+      },
+      {
+        "card": "V09",
+        "trunk": "V",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "V09"
+        ],
+        "survived": false
+      },
+      {
+        "card": "V10",
+        "trunk": "V",
+        "claim_class": "SIMULATOR_DISCOVERY",
+        "discovery_state": "LANDED",
+        "discovery_criterion": "FAILED",
+        "transfer_criterion": null,
+        "attack_criterion": null,
+        "confirmation_criterion": null,
+        "causal_distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable": true,
+        "failed_criteria": [
+          "V10"
+        ],
+        "survived": false
+      }
+    ],
+    "by_claim_class": {
+      "BOUNDARY": 33,
+      "INSTRUMENT_FAILURE": 3,
+      "CONSTRUCTION_IDENTITY": 5,
+      "SIMULATOR_DISCOVERY": 46,
+      "METHOD": 21,
+      "BRIDGE_CANDIDATE": 2
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {},
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "B01",
+    "channels": [
+      {
+        "channel": "committed_record",
+        "distance": "PLANTED_SIGNATURE",
+        "promotable_as_discovery": false,
+        "properties": {
+          "generated_from_hidden": false,
+          "matching_likelihood": false,
+          "fixed_class_marker": true,
+          "mediated_by_policy": false
+        }
+      }
+    ],
+    "limiting_distance": "PLANTED_SIGNATURE",
+    "promotable_as_discovery": false,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {},
+  "cells": {
+    "discovery": {
+      "units": 1,
+      "rows": 110,
+      "min_rows_in_a_unit": 110
+    },
+    "transfer": {
+      "units": 1,
+      "rows": 110,
+      "min_rows_in_a_unit": 110
+    },
+    "attack": {
+      "units": 1,
+      "rows": 110,
+      "min_rows_in_a_unit": 110
+    },
+    "confirmation": {
+      "units": 1,
+      "rows": 110,
+      "min_rows_in_a_unit": 110
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 1,
+    "realized_units": 1,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 110,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 1,
+    "rows": 440
+  },
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a failed criterion quietly dropped",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 0.0266954000107944,
+    "units_cpu_s": 0.031,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 92828,
+      "process_time": 265.3125,
+      "user": 210.609375,
+      "system": 54.703125,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 387903488,
+      "peak_rss": 4912418816
+    }
+  },
+  "runtime_seconds": 0.027,
+  "tier": "T3",
+  "units": {
+    "n": 1,
+    "kind": "single"
+  },
+  "criteria": [
+    {
+      "name": "B01",
+      "observed": 51.0,
+      "bar": 0.0,
+      "direction": "greater",
+      "held": true,
+      "basis": "a ledger, not a magnitude",
+      "interval": null,
+      "detail": "a stated set of results survived every stage; zero is a legitimate outcome and is recorded as one"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 2,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_failed_criterion_was_dropped",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:every_card_has_both_a_state_and_a_criterion_status",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_b.py",
+    "sha256": "fb3153c8130597dda8918b6b2fe55a51e9030f151841979e3df121f4838134ac",
+    "git_commit": "ce4c06b",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 2,
+    "n_skipped": 5,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "placebo:no_failed_criterion_was_dropped",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:every_card_has_both_a_state_and_a_criterion_status",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction",
+        "kind": "live",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

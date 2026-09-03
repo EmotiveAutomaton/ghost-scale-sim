@@ -588,11 +588,11 @@ def unit_X23(ctx):
     same_id = ids["discovery"][0]
     s_disc = C.seed(f"world|discovery|{same_id}")
     s_conf = C.seed(f"world|confirmation|{same_id}")
-    rows = [{"wid": ctx["wid"], "rep": 0, "attacked": "no", "check": "ranges_disjoint",
+    rows = [{"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "no", "check": "ranges_disjoint",
              "ok": float(disjoint), "n": 1},
-            {"wid": ctx["wid"], "rep": 0, "attacked": "yes", "check": "cross_lane_id_refused",
+            {"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes", "check": "cross_lane_id_refused",
              "ok": float(refused), "n": 1},
-            {"wid": ctx["wid"], "rep": 0, "attacked": "yes", "check": "seeds_differ_by_lane",
+            {"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes", "check": "seeds_differ_by_lane",
              "ok": float(s_disc != s_conf), "n": 1}]
     return {"rows": rows, "flight": "lineage", "ids": {k: [v_[0], v_[-1]] for k, v_ in ids.items()}}
 
@@ -632,7 +632,7 @@ def unit_X24(ctx):
     # fast machine: the guard must refuse a queue that a fast machine would empty
     g_fast = RC.opening_guard(core_upper_h=40, core_lower_h=12, coverage_lower_h=90,
                               confirmation_worker_h=30, hashed=True, recovery_tests=True)
-    rows.append({"wid": ctx["wid"], "rep": 0, "attacked": "yes", "check": "fast_machine_refused",
+    rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes", "check": "fast_machine_refused",
                  "ok": float(not g_fast["may_open"]), "n": 1})
     # restart: the deadline is inherited, not reset
     w1 = RC.window()
@@ -640,7 +640,7 @@ def unit_X24(ctx):
     if w1:
         w2 = RC.open_window()                       # a restart must not move the deadline
         inherited = (w2["deadline"] == w1["deadline"])
-    rows.append({"wid": ctx["wid"], "rep": 0, "attacked": "yes", "check": "deadline_inherited",
+    rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes", "check": "deadline_inherited",
                  "ok": float(inherited), "n": 1})
     # orphan kill: the runner must be launched as a MODULE. The sibling project's orphan sweeper
     # kills any python whose command line matches a runners/run_ script path, which killed the V14
@@ -650,20 +650,20 @@ def unit_X24(ctx):
     ps1 = REPO / "runners" / "run_v15_wrapped.ps1"
     launch_ok = bool(ps1.exists() and "-m" in ps1.read_text(encoding="utf-8")
                      and "runners.run_v15" in ps1.read_text(encoding="utf-8"))
-    rows.append({"wid": ctx["wid"], "rep": 0, "attacked": "yes", "check": "module_form_launch",
+    rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes", "check": "module_form_launch",
                  "ok": float(launch_ok), "n": 1})
     # stale checkpoint: a checkpoint whose source hash differs is refused
     stale = C.load_ckpt("smoke", "X24", 0, 0, "not-the-right-hash")
-    rows.append({"wid": ctx["wid"], "rep": 0, "attacked": "yes", "check": "stale_checkpoint_refused",
+    rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes", "check": "stale_checkpoint_refused",
                  "ok": float(stale is None), "n": 1})
     # runtime failure is expressible and cannot be softened
     occ = RC.Occupancy()
     occ.note_queue_empty()
     failed, reasons = occ.runtime_failed()
-    rows.append({"wid": ctx["wid"], "rep": 0, "attacked": "yes",
+    rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "yes",
                  "check": "runtime_failure_is_expressible",
                  "ok": float(failed and bool(reasons)), "n": 1})
-    rows.append({"wid": ctx["wid"], "rep": 0, "attacked": "no", "check": "healthy_guard_admits",
+    rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "attacked": "no", "check": "healthy_guard_admits",
                  "ok": float(RC.opening_guard(core_upper_h=90, core_lower_h=30,
                                               coverage_lower_h=400, confirmation_worker_h=30,
                                               hashed=True, recovery_tests=True)["may_open"]),

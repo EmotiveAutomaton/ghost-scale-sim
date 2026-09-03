@@ -1,0 +1,16 @@
+{
+  "science_worker_hours": 639.384965839386,
+  "capacity_worker_hours": 639.384965839386,
+  "governor_throttled_worker_hours": 0.0,
+  "occupancy_ratio": 1.0,
+  "occupancy_target": 0.8,
+  "gaps_over_five_minutes": [],
+  "queue_empty_events": 0,
+  "waited_for_deadline_hours": 0.0,
+  "coverage_blocks_executed": 144,
+  "coverage_cells_executed": 10800,
+  "cards_executed": 135,
+  "RUNTIME_FAILED": false,
+  "runtime_failed_reasons": [],
+  "note": "spec 9.4: results may still be reported after a runtime failure, but V15 is not complete and cannot claim the seven-day contract"
+}

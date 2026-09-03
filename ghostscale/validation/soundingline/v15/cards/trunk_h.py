@@ -137,6 +137,7 @@ def _topology_rows(ctx, tag, evidences=("artifact", "process"), n_roles=HI.N_ROL
             klass = ("distributed", "independent") if topo in ("distributed", "independent") \
                 else (topo,)
             rows.append({"wid": ctx["wid"], "rep": ctx["rep"], "topology": topo, "evidence": ev,
+                         "named": named,
                          "correct": float(named == topo),
                          "class_mass": float(sum(post[k] for k in klass)),
                          "max_mass": float(max(post.values())),
@@ -158,9 +159,29 @@ def reduce_H03(units, ctx):
     gr = G.GateReport()
     acc = mean_of(rows, "correct")
     chance = 1.0 / len(HI.TOPOLOGIES)
+    # Amended 2026-09-02. The original placebo gate observed ``abs(acc - chance)`` -- the card's
+    # own criterion statistic -- with a tolerance of twice the criterion bar, so a boundary answer
+    # 0.006 over the doubled bar was filed as a broken instrument: the V14 gate/criterion
+    # conflation in a third form (a magnitude reaching a placebo gate through ``tol``). A placebo
+    # is a manipulation at zero strength: the reader's named topologies scored against
+    # *shuffled* truth labels must sit at chance, whatever the artifact carries.
+    # The known answer is chance *within its own sampling error*: a dozen smoke rows put a
+    # binomial SD of 0.12 on the shuffled accuracy, thousands of science rows put 0.005. The
+    # tolerance is three of those SDs with a 0.05 floor, averaged over eight seeded permutations.
+    # It is a sampling bound on a planted answer, not a magnitude; the criterion bar lives below.
+    named = [r.get("named") for r in rows]
+    truth = np.array([r["topology"] for r in rows], dtype=object)
+    prng = np.random.default_rng(C.seed("H03|placebo|shuffled_labels"))
+    if rows and all(n is not None for n in named):
+        named_a = np.array(named, dtype=object)
+        shuffled_acc = float(np.mean([np.mean(named_a == truth[prng.permutation(len(rows))])
+                                      for _ in range(8)]))
+    else:
+        shuffled_acc = float("nan")
+    placebo_tol = max(0.05, 3.0 * float(np.sqrt(chance * (1.0 - chance) / max(len(rows), 1))))
     battery(gr, live={"name": "the_artifact_carries_something", "observed": abs(acc - chance)},
-            placebo={"name": "the_artifact_is_near_chance", "observed": abs(acc - chance),
-                     "tol": float(card.sesoi) * 2},
+            placebo={"name": "shuffled_labels_score_at_chance",
+                     "observed": abs(shuffled_acc - chance), "tol": placebo_tol},
             positive={"name": "the_posterior_is_a_distribution",
                       "observed": mean_of(rows, "max_mass"), "expected": 0.5, "tol": 0.5},
             no_label_leak={"name": "no_reader_saw_the_topology", "movement": 0.0, "tol": 0.0},

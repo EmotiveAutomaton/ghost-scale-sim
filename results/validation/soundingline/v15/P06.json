@@ -1,0 +1,342 @@
+{
+  "card": "P06",
+  "trunk": "P",
+  "wave": 4,
+  "lane": "discovery",
+  "record": {
+    "question": "Can the reader predict epistemic exploration rather than using it as a residual label for unexplained action?",
+    "what_happened": "exploration is identified 0.68 of the time and non-exploration deviations are miscalled exploration 0.04 of the time",
+    "what_changed_in_the_project_world": "curiosity is not the name for everything that was not predicted",
+    "what_remains_a_rival": "labelling every unexplained action exploration",
+    "claim_class": "SIMULATOR_DISCOVERY"
+  },
+  "hypothesis": "exploration is predicted before it happens rather than used as a residual label",
+  "claim_class": "SIMULATOR_DISCOVERY",
+  "criterion_status": "HELD",
+  "sesoi": {
+    "value": 0.1,
+    "basis": "accuracy above the two-way floor"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_P06": {
+      "name": "P06",
+      "observed": 0.17832031250000002,
+      "bar": 0.1,
+      "direction": "greater",
+      "held": true,
+      "basis": "accuracy above the two-way floor",
+      "interval": null,
+      "detail": "exploration is separated from the other kinds this far above the two-way floor"
+    },
+    "criterion_P06_residual": {
+      "name": "P06_residual",
+      "observed": 0.03556857638888889,
+      "bar": 0.35,
+      "direction": "less",
+      "held": true,
+      "basis": "rate at which a non-exploration deviation is called exploration",
+      "interval": null,
+      "detail": "and non-exploration deviations are not swept into the exploration bin, which is what using it as a residual label would look like"
+    },
+    "accuracy": 0.6783203125,
+    "residual_labelling_rate": 0.03556857638888889,
+    "calibration": {
+      "ece": 0.16600263390926742,
+      "slope": 1.3625302739793868,
+      "risk_coverage": {
+        "0.2": {
+          "coverage": 0.2,
+          "risk": 0.34488932291666663
+        },
+        "0.4": {
+          "coverage": 0.4,
+          "risk": 0.25349934895833337
+        },
+        "0.6": {
+          "coverage": 0.6,
+          "risk": 0.4488389756944444
+        },
+        "0.8": {
+          "coverage": 0.8,
+          "risk": 0.5858968098958333
+        },
+        "1.0": {
+          "coverage": 1.0,
+          "risk": 0.6666666666666667
+        }
+      },
+      "n": 92160
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {},
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "P06",
+    "channels": [
+      {
+        "channel": "hidden_event_from_a_context_realized_policy",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": false,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {},
+  "cells": {
+    "exploration": {
+      "units": 480,
+      "rows": 30720,
+      "min_rows_in_a_unit": 64
+    },
+    "mistake": {
+      "units": 480,
+      "rows": 30720,
+      "min_rows_in_a_unit": 64
+    },
+    "habit_out_of_context": {
+      "units": 480,
+      "rows": 30720,
+      "min_rows_in_a_unit": 64
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 3,
+    "realized_levels": 3,
+    "expected_units": 480,
+    "realized_units": 480,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 64,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 480,
+    "rows": 92160
+  },
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "labelling every unexplained action exploration",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 203.50806179991923,
+    "units_cpu_s": 2325.245000000002,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 92828,
+      "process_time": 265.203125,
+      "user": 210.5625,
+      "system": 54.640625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 388624384,
+      "peak_rss": 4912418816
+    }
+  },
+  "runtime_seconds": 203.508,
+  "tier": "T3",
+  "units": {
+    "n": 480,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "P06",
+      "observed": 0.17832031250000002,
+      "bar": 0.1,
+      "direction": "greater",
+      "held": true,
+      "basis": "accuracy above the two-way floor",
+      "interval": null,
+      "detail": "exploration is separated from the other kinds this far above the two-way floor"
+    },
+    {
+      "name": "P06_residual",
+      "observed": 0.03556857638888889,
+      "bar": 0.35,
+      "direction": "less",
+      "held": true,
+      "basis": "rate at which a non-exploration deviation is called exploration",
+      "interval": null,
+      "detail": "and non-exploration deviations are not swept into the exploration bin, which is what using it as a residual label would look like"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:the_kind_moves_the_exploration_probability",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.2825360173587035,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_deviation_itself_is_matched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:probabilities_are_fractions",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_reader_was_told_the_kind",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_continuation_was_hidden",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.17832031250000002,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:exploration_calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.16600263390926742,
+        "expected": 0.35,
+        "tolerance": 0.18399736709073256
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_p.py",
+    "sha256": "846385c3d4f6ccef358993e9d946efbf08aacf2b7479ab2d6c8c6c32c171ea71",
+    "git_commit": "ce4c06b",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:the_kind_moves_the_exploration_probability",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.2825360173587035,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_deviation_itself_is_matched",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:probabilities_are_fractions",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_reader_was_told_the_kind",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_continuation_was_hidden",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.17832031250000002,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:exploration_calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.16600263390926742,
+        "expected": 0.35,
+        "tolerance": 0.18399736709073256
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

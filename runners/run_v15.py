@@ -30,6 +30,7 @@ import json
 import multiprocessing as mp
 import os
 import sys
+import threading
 import time
 import traceback
 from pathlib import Path
@@ -87,6 +88,40 @@ def checkpoint(kind: str, **kw) -> None:
                       default=str)
     with CHECKPOINTS.open("a", encoding="utf-8", newline="\n") as f:
         f.write(line + "\n")
+
+
+def start_heartbeat(interval_s: float = 300.0) -> threading.Event:
+    """A background heartbeat, because one card can outlast the watchdog's patience.
+
+    While a long card runs, ``pool.map`` blocks the parent: no checkpoint line, no verdict file
+    and no coverage block moves, so the watchdog's progress counter freezes even though twelve
+    workers are busy. At hour 0.26 of this window the watchdog killed a healthy runner 48
+    minutes into C02 for exactly that, and every relaunch after it re-ran preflight and refused.
+    The heartbeat appends a machine-readable ``kind=heartbeat`` checkpoint line (which the
+    watchdog counts as progress) and refreshes RUNNER_STATUS's timestamp without overwriting
+    the per-card fields. No narrative, spec §9.1."""
+    stop = threading.Event()
+
+    def _touch_status() -> None:
+        try:
+            doc = json.loads(STATUS.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            doc = {"program": "v15", "pid": os.getpid()}
+        doc["heartbeat"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+        doc["elapsed_hours"] = round(RC.elapsed_hours(), 4)
+        doc["phase"] = RC.phase()
+        write_json_atomic(STATUS, doc)
+
+    def _beat() -> None:
+        while not stop.wait(interval_s):
+            try:
+                _touch_status()
+                checkpoint("heartbeat")
+            except Exception:                                      # noqa: BLE001, S110
+                pass
+
+    threading.Thread(target=_beat, daemon=True, name="v15-heartbeat").start()
+    return stop
 
 
 class Pool:
@@ -538,7 +573,76 @@ def stage_report(args) -> dict:
     return REP.run(force=bool(args.force))
 
 
+def reconcile_manifest() -> int:
+    """Restore per-card manifest statuses from the verdict record after a manifest regeneration.
+
+    A relaunch that re-ran ``stage_prepare`` rewrote QUEUE_MANIFEST.json and reset every status
+    to PLANNED, while the landed verdict files -- the actual record -- survived. The verdicts are
+    authoritative; the manifest's status fields are derived. Without this, COVERAGE.json
+    under-reports every card resolved before the relaunch, forever."""
+    doc = M.load_manifest()
+    changed = 0
+    for lane in ("discovery", "transfer", "attack"):
+        for cid, d in doc["cards"].items():
+            if lane not in (d.get("lanes") or []):
+                continue
+            v = C.load_verdict(cid, lane)
+            if v and v.get("state") in RESOLVED and d.get("status") not in RESOLVED:
+                d["status"] = v["state"]
+                d["criterion_status"] = v.get("criterion_status", "UNEVALUATED")
+                changed += 1
+    if changed:
+        M.save_manifest(doc)
+        M.write_coverage(doc)
+        checkpoint("manifest_reconciled", cards=changed)
+        print(f"manifest reconciled from verdicts: {changed} card(s) restored to resolved")
+    return changed
+
+
+def stage_resume(args) -> dict:
+    """A relaunch inside an open window. Never re-runs prepare, smoke, pilot or the guard.
+
+    Two reasons, both learned at hour 0.26 of this window:
+
+    1. ``stage_prepare`` regenerates the lock-input files, and every generated file embeds a
+       ``written`` timestamp, so regeneration always changes their bytes, always rewrites the
+       structural lock, and always breaks the scientific lock -- after which ``--stage science``
+       refuses to run.
+    2. The smoke pass is not hermetic once real discovery verdicts exist: P07 walks the committed
+       record even under GS_V15_SMOKE, sees a record that realizes three of its four disposition
+       levels, reports RESOURCE_BLOCKED, and the relaunch refuses to open a window that is
+       already open. Forty-two relaunches did exactly that, back to back.
+
+    The deadline is inherited (RC.open_window never rewrites an existing DEADLINE.json), the
+    resolved cards are skipped through their verdict files, and the science stage's own lock
+    check still guards the record."""
+    os.environ.pop("GS_V15_SMOKE", None)
+    w = RC.window()
+    print(f"resuming open window: opened {w['opened']} deadline {w['deadline']} "
+          f"elapsed {RC.elapsed_hours():.2f}h phase {RC.phase()}")
+    checkpoint("resume", phase=RC.phase())
+    out = {"resumed": True}
+    reconcile_manifest()
+    start_heartbeat()
+    if not RC.frozen():
+        out["science"] = stage_science(args)
+        if out["science"].get("refused"):
+            return out
+    out["confirmation"] = stage_confirmation(args)
+    while RC.elapsed_hours() < RC.INTEGRITY_END_HOUR - 2.0:
+        status(stage="waiting_for_integrity_window")
+        time.sleep(60)
+    out["integrity"] = stage_integrity(args)
+    while not RC.window_closed():
+        status(stage="waiting_for_deadline")
+        time.sleep(120)
+    out["report"] = stage_report(args)
+    return out
+
+
 def stage_all(args) -> dict:
+    if RC.window() and not RC.window_closed():
+        return stage_resume(args)
     out = {"prepare": stage_prepare(args)}
     s = stage_smoke(args)
     out["smoke"] = {"landed": sum(1 for r in s["rows"] if r["state"] == "LANDED"),
@@ -553,6 +657,7 @@ def stage_all(args) -> dict:
     out["open"] = {"opened": o["opened"]}
     if not o["opened"]:
         return out
+    start_heartbeat()
     out["science"] = stage_science(args)
     # wait for the freeze if the science finished early -- but only after the coverage stream is
     # exhausted, which is itself recorded as a runtime failure
@@ -571,7 +676,7 @@ def stage_all(args) -> dict:
 STAGES = {"prepare": stage_prepare, "smoke": stage_smoke, "pilot": stage_pilot,
           "guard": stage_guard, "open": stage_open, "science": stage_science,
           "confirmation": stage_confirmation, "integrity": stage_integrity,
-          "report": stage_report, "all": stage_all}
+          "report": stage_report, "all": stage_all, "resume": stage_resume}
 
 
 def main() -> int:

@@ -1,0 +1,196 @@
+{
+  "program": "v15",
+  "kind": "workload",
+  "written": "2026-08-31T10:43:05",
+  "tier": "T3",
+  "tier_config": {
+    "discovery_worlds": 160,
+    "transfer_worlds": 80,
+    "confirmation_worlds": 96,
+    "repeats": 3,
+    "makers": 64,
+    "steps": 12,
+    "episodes": 6,
+    "coverage_worlds": 24,
+    "coverage_makers": 64
+  },
+  "forecast": {
+    "tier": "T3",
+    "workers": 12,
+    "seconds_per_work_unit": 1.4760539995040745,
+    "coverage_cell_seconds": 24.40242960001342,
+    "tier_scale": 10.0,
+    "core_seconds": 12048.869905374158,
+    "core_median_h": 3.3469083070483774,
+    "core_upper_h": 5.355053291277404,
+    "core_lower_h": 1.1156361023494592,
+    "coverage_blocks": 19465,
+    "coverage_hours_per_block": 0.04236532916668997,
+    "coverage_blocks_expected_in_window": 3461.6299360246358,
+    "distinct_secondary_settings": 20736,
+    "expected_stays_inside_distinct_settings": true,
+    "coverage_lower_h": 274.8803774098734,
+    "confirmation_worker_h": 30.0,
+    "note": "core times are pilot WALL times with the pool running, scaled by the unit count the tier implies and not divided by the worker count again; upper adds 60 per cent headroom, lower divides by the fast-machine factor"
+  },
+  "pilot_summary_sha256": "af7b088f7f38e624429b7c2a63919257c69cc93713d058d48a0f1248b2c23af2",
+  "pilot_is_non_scientific": true,
+  "pilot_seeds_excluded_from_science": true,
+  "cells_sha256": "64044d79d90ac4f0fed85cde0c35d1c4113f3acaa2506a292f4c74b73a402e7b",
+  "coverage_definition": {
+    "program": "v15",
+    "kind": "balanced_coverage_sequence",
+    "primary_axes": {
+      "family": [
+        "chain",
+        "composition",
+        "communication"
+      ],
+      "kappa": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "dose": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ]
+    },
+    "secondary_axes": {
+      "overlap": [
+        0.0,
+        0.33,
+        0.66,
+        1.0
+      ],
+      "dependence": [
+        "independent",
+        "redundant",
+        "synergistic"
+      ],
+      "missing": [
+        "none",
+        "route",
+        "context",
+        "opportunity"
+      ],
+      "model_space": [
+        "correct",
+        "missing_latent",
+        "extra_latent",
+        "wrong_family"
+      ],
+      "temperature": [
+        0.25,
+        0.6,
+        1.0,
+        2.0
+      ],
+      "competence": [
+        0.55,
+        0.75,
+        0.95
+      ],
+      "latent_cardinality": [
+        3,
+        4,
+        5
+      ],
+      "steps": [
+        8,
+        12,
+        16
+      ]
+    },
+    "architectures": [
+      "surface",
+      "independent",
+      "staged",
+      "joint_exact",
+      "particle",
+      "oracle_state"
+    ],
+    "sobol_seed": 20260831,
+    "scrambled": true,
+    "cells_per_block": 75,
+    "n_blocks": 19465,
+    "total_cells": 1459875,
+    "atomic_unit": "block",
+    "truncation_rule": "finish the current block at the freeze hour; a whole number of blocks is a balanced design over family x coupling x dose",
+    "chain_first_n": 64,
+    "chain_hash_first_n": "8a18220f9d23b6dd884322517f3584fdd8e31f9beae00ff105bceb22402b96a9",
+    "block_0_digest": "7f17b3e975936270a1046bd0bba69578287d254067082b08a37c0623dd2db7e3",
+    "block_sample": [
+      {
+        "overlap": 1.0,
+        "dependence": "redundant",
+        "missing": "opportunity",
+        "model_space": "missing_latent",
+        "temperature": 2.0,
+        "competence": 0.55,
+        "latent_cardinality": 5,
+        "steps": 8
+      },
+      {
+        "overlap": 0.0,
+        "dependence": "redundant",
+        "missing": "none",
+        "model_space": "extra_latent",
+        "temperature": 0.6,
+        "competence": 0.95,
+        "latent_cardinality": 3,
+        "steps": 16
+      },
+      {
+        "overlap": 0.33,
+        "dependence": "independent",
+        "missing": "context",
+        "model_space": "correct",
+        "temperature": 0.25,
+        "competence": 0.75,
+        "latent_cardinality": 4,
+        "steps": 12
+      },
+      {
+        "overlap": 0.66,
+        "dependence": "synergistic",
+        "missing": "route",
+        "model_space": "wrong_family",
+        "temperature": 1.0,
+        "competence": 0.55,
+        "latent_cardinality": 4,
+        "steps": 12
+      }
+    ],
+    "distinct_secondary_settings": 20736,
+    "replication_begins_after_blocks": 20736,
+    "after_that": "the design point repeats with fresh seeds; that is replication at new independent units, which adds power and not coverage, and it is counted separately in the runtime receipt",
+    "materialized": false,
+    "why_not_materialized": "at the sizes the opening guard requires this list is hundreds of megabytes; the definition plus a hash chain regenerates and verifies any block without storing it"
+  },
+  "coverage_sha256": "2bffebfe56d6b5307e59ce2c18b42a1876343e6f297f1c13c9362fb4b7048223",
+  "resource_governor": {
+    "safe_workers": 12,
+    "reserve_for_sibling": 2,
+    "priority": "below_normal",
+    "blas_threads": 1,
+    "accelerators": "hidden"
+  },
+  "what_the_pilot_was_allowed_to_choose": [
+    "batch size",
+    "replicate floor",
+    "coverage sequence length",
+    "safe worker count"
+  ],
+  "what_the_pilot_could_not_touch": [
+    "hypotheses",
+    "criteria",
+    "factors",
+    "estimator membership"
+  ]
+}

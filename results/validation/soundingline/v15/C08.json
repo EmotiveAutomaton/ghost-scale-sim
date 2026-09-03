@@ -1,0 +1,405 @@
+{
+  "card": "C08",
+  "trunk": "C",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "When the opportunity set is hidden, which latents become an equivalence class?",
+    "what_happened": "the joint advantage under a hidden opportunity set is +0.0462 nats",
+    "what_changed_in_the_project_world": "the atlas gains a conditional surface where V14 had a single number",
+    "what_remains_a_rival": "collapsing the class into one member",
+    "claim_class": "BOUNDARY"
+  },
+  "hypothesis": "hiding the opportunity set turns some latents into an equivalence class",
+  "claim_class": "BOUNDARY",
+  "criterion_status": "FAILED",
+  "sesoi": {
+    "value": 0.85,
+    "basis": "class coverage a reader must retain"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_C08": {
+      "name": "C08",
+      "observed": 0.0461865957303887,
+      "bar": 0.85,
+      "direction": "greater",
+      "held": false,
+      "basis": "class coverage a reader must retain",
+      "interval": [
+        0.04772166731801766,
+        0.05438769155263487
+      ],
+      "detail": "the joint reader's advantage over independent marginals clears the bar at some level of missing"
+    },
+    "advantage": {
+      "mean": 0.050933066537518036,
+      "interval": [
+        0.04772166731801766,
+        0.05438769155263487
+      ],
+      "n_units": 160,
+      "n_rows": 187200,
+      "excludes_zero": true
+    },
+    "span_oracle_minus_surface": 0.5116072429540582,
+    "by_architecture": {
+      "surface": -1.1159938324333214,
+      "independent": -0.7470107504737106,
+      "staged": -0.7222546123457486,
+      "joint_exact": -0.6960776839361924,
+      "oracle_state": -0.6043865894792632
+    },
+    "by_family": {
+      "chain": 0.0461865957303887
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {
+    "axis": "missing",
+    "value": "advantage",
+    "bar": 0.85,
+    "curve": [
+      {
+        "x": "none",
+        "mean": 0.0461865957303887
+      },
+      {
+        "x": "opportunity",
+        "mean": 0.0461865957303887
+      }
+    ],
+    "onset": null,
+    "max": 0.0461865957303887,
+    "monotone": true
+  },
+  "budgets": {
+    "median_likelihood_evaluations": 347.13802083333337,
+    "relative_spread": {
+      "surface": 0.9971193014305969,
+      "independent": 0.08639845162451877,
+      "staged": 0.07529575922161134,
+      "joint_exact": 0.07529575922161118
+    },
+    "tolerance": 0.25,
+    "compute_matched": false,
+    "untouched_budgets": [],
+    "all_budgets": {
+      "surface": {
+        "likelihood_evaluations": 1.0,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.0
+      },
+      "independent": {
+        "likelihood_evaluations": 377.1302083333333,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.0018310546875
+      },
+      "staged": {
+        "likelihood_evaluations": 321.0,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.0012613932291666667
+      },
+      "joint_exact": {
+        "likelihood_evaluations": 373.2760416666667,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.001708984375
+      },
+      "oracle_state": {
+        "likelihood_evaluations": 1.0,
+        "proposals": 0.0,
+        "observations": 0.0,
+        "cpu_s": 0.0
+      }
+    }
+  },
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "C08",
+    "channels": [
+      {
+        "channel": "next_action_from_policy",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": false,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {
+    "established_component": "Bayesian inverse planning with factorized rivals",
+    "project_specific_delta": "a measured phase surface rather than one comparison",
+    "evidence_grade": "boundary",
+    "strongest_missing_rival": "a stronger cheap heuristic",
+    "independent_generator_count": 1,
+    "external_validation_needed": "a real record with a known coupling structure",
+    "paper_shape": "simulation_study",
+    "maturity": "seed",
+    "unfilled": []
+  },
+  "cells": {
+    "none|0": {
+      "units": 480,
+      "rows": 307200,
+      "min_rows_in_a_unit": 640
+    },
+    "opportunity|0": {
+      "units": 480,
+      "rows": 307200,
+      "min_rows_in_a_unit": 640
+    },
+    "none|0.5": {
+      "units": 480,
+      "rows": 307200,
+      "min_rows_in_a_unit": 640
+    },
+    "opportunity|0.5": {
+      "units": 480,
+      "rows": 307200,
+      "min_rows_in_a_unit": 640
+    },
+    "none|1": {
+      "units": 480,
+      "rows": 307200,
+      "min_rows_in_a_unit": 640
+    },
+    "opportunity|1": {
+      "units": 480,
+      "rows": 307200,
+      "min_rows_in_a_unit": 640
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 6,
+    "expected_units": 480,
+    "realized_units": 480,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 640,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 480,
+    "rows": 936000
+  },
+  "pursuit": "STALLED",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "collapsing the class into one member",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 105.5451911999844,
+    "units_cpu_s": 1210.73,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 92828,
+      "process_time": 103.890625,
+      "user": 86.484375,
+      "system": 17.40625,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 655462400,
+      "peak_rss": 4912418816
+    }
+  },
+  "runtime_seconds": 105.545,
+  "tier": "T3",
+  "units": {
+    "n": 480,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "C08",
+      "observed": 0.0461865957303887,
+      "bar": 0.85,
+      "direction": "greater",
+      "held": false,
+      "basis": "class coverage a reader must retain",
+      "interval": [
+        0.04772166731801766,
+        0.05438769155263487
+      ],
+      "detail": "the joint reader's advantage over independent marginals clears the bar at some level of missing"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:missing_moves_the_advantage",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.0,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "positive:oracle_beats_surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_reader_saw_the_latent",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:cheap_cues_at_chance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count or frequency cues cannot solve the card",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "prediction:joint_moves_the_hidden_event",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.050933066537518036,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:advantage_interval_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.006666024234617207,
+        "expected": 10.0,
+        "tolerance": 9.993333976765383
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_c.py",
+    "sha256": "1981e240a949f4e81bdbfa73119372746e8f9de82c2e5534beb1c938946ed2ed",
+    "git_commit": "ce4c06b",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 6,
+    "n_skipped": 1,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:missing_moves_the_advantage",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.0,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "positive:oracle_beats_surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_reader_saw_the_latent",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface:cheap_cues_at_chance",
+        "kind": "positive",
+        "passed": true,
+        "detail": "cheap length, count or frequency cues cannot solve the card",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "prediction:joint_moves_the_hidden_event",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.050933066537518036,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration:advantage_interval_reported",
+        "kind": "positive",
+        "passed": true,
+        "detail": "uncertainty or abstention moves in the correct direction",
+        "observed": 0.006666024234617207,
+        "expected": 10.0,
+        "tolerance": 9.993333976765383
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

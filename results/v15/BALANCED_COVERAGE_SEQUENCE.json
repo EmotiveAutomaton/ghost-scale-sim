@@ -1,0 +1,136 @@
+{
+  "program": "v15",
+  "kind": "balanced_coverage_sequence",
+  "primary_axes": {
+    "family": [
+      "chain",
+      "composition",
+      "communication"
+    ],
+    "kappa": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "dose": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  "secondary_axes": {
+    "overlap": [
+      0.0,
+      0.33,
+      0.66,
+      1.0
+    ],
+    "dependence": [
+      "independent",
+      "redundant",
+      "synergistic"
+    ],
+    "missing": [
+      "none",
+      "route",
+      "context",
+      "opportunity"
+    ],
+    "model_space": [
+      "correct",
+      "missing_latent",
+      "extra_latent",
+      "wrong_family"
+    ],
+    "temperature": [
+      0.25,
+      0.6,
+      1.0,
+      2.0
+    ],
+    "competence": [
+      0.55,
+      0.75,
+      0.95
+    ],
+    "latent_cardinality": [
+      3,
+      4,
+      5
+    ],
+    "steps": [
+      8,
+      12,
+      16
+    ]
+  },
+  "architectures": [
+    "surface",
+    "independent",
+    "staged",
+    "joint_exact",
+    "particle",
+    "oracle_state"
+  ],
+  "sobol_seed": 20260831,
+  "scrambled": true,
+  "cells_per_block": 75,
+  "n_blocks": 19465,
+  "total_cells": 1459875,
+  "atomic_unit": "block",
+  "truncation_rule": "finish the current block at the freeze hour; a whole number of blocks is a balanced design over family x coupling x dose",
+  "chain_first_n": 64,
+  "chain_hash_first_n": "8a18220f9d23b6dd884322517f3584fdd8e31f9beae00ff105bceb22402b96a9",
+  "block_0_digest": "7f17b3e975936270a1046bd0bba69578287d254067082b08a37c0623dd2db7e3",
+  "block_sample": [
+    {
+      "overlap": 1.0,
+      "dependence": "redundant",
+      "missing": "opportunity",
+      "model_space": "missing_latent",
+      "temperature": 2.0,
+      "competence": 0.55,
+      "latent_cardinality": 5,
+      "steps": 8
+    },
+    {
+      "overlap": 0.0,
+      "dependence": "redundant",
+      "missing": "none",
+      "model_space": "extra_latent",
+      "temperature": 0.6,
+      "competence": 0.95,
+      "latent_cardinality": 3,
+      "steps": 16
+    },
+    {
+      "overlap": 0.33,
+      "dependence": "independent",
+      "missing": "context",
+      "model_space": "correct",
+      "temperature": 0.25,
+      "competence": 0.75,
+      "latent_cardinality": 4,
+      "steps": 12
+    },
+    {
+      "overlap": 0.66,
+      "dependence": "synergistic",
+      "missing": "route",
+      "model_space": "wrong_family",
+      "temperature": 1.0,
+      "competence": 0.55,
+      "latent_cardinality": 4,
+      "steps": 12
+    }
+  ],
+  "distinct_secondary_settings": 20736,
+  "replication_begins_after_blocks": 20736,
+  "after_that": "the design point repeats with fresh seeds; that is replication at new independent units, which adds power and not coverage, and it is counted separately in the runtime receipt",
+  "materialized": false,
+  "why_not_materialized": "at the sizes the opening guard requires this list is hundreds of megabytes; the definition plus a hash chain regenerates and verifies any block without storing it"
+}

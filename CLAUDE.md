@@ -230,6 +230,32 @@ deaths. Attack X24 reads `runners/run_v15_wrapped.ps1` and checks the module for
 | `results/v15/QUEUE_MANIFEST.json` | per-card status, criterion status, lanes |
 | `results/v15/coverage/blocks.jsonl` | the executed prefix of the balanced coverage stream (gitignored) |
 
+- **A relaunch resumes; it never re-prepares.** `--stage all` with an open window takes
+  `stage_resume`: straight to science, skipping prepare/smoke/pilot/open. Two reasons, both paid
+  for on day one (44 refuse-and-exit relaunches, 3.7 window-hours lost): `stage_prepare`
+  regenerates the lock-input files, every generated file embeds a `written` timestamp, so
+  regeneration always breaks the scientific lock; and the smoke pass is not hermetic once real
+  discovery verdicts exist — P07 walks the committed record even under `GS_V15_SMOKE` and blocks
+  on a partial record. If the lock is ever broken by a stray prepare: the lock inputs' HEAD blobs
+  match the scientific lock's recorded hashes, so `git checkout --` of the six hashed files
+  restores it byte-exact.
+- **The runner heartbeats through long cards.** One T3 card can run for an hour with no new
+  checkpoint, verdict, or coverage line, and the watchdog killed a healthy runner 48 minutes into
+  C02 for exactly that. The runner now appends `kind=heartbeat` checkpoint lines every 5 minutes
+  and the watchdog (on disk; a restarted one) also counts process-tree CPU and the RUNNER_STATUS
+  heartbeat as progress. Do not "clean up" the heartbeat lines; they are what keeps a live
+  watchdog's stall counter moving.
+- **Instrument repairs re-run through `runners/run_v15_amendment.py`**, never by hand. It uses
+  the science stage's own `run_card`, tier, lane and seeds, preserves the original verdict under
+  `<lane dir>/amended/`, and records the swap in `results/v15/AMENDMENTS.json`. It can express a
+  gate or receipt repair; it cannot express a criterion, estimator or factor change (lock
+  amendment, curator). First used 2026-09-02 for X23, X24 (receipt miscounted units) and H03
+  (placebo gate carried the criterion statistic).
+- **Never run `python -m runners.run_v15 --stage smoke` (or any stage) beside a live runner.**
+  `main()` writes `RUNNER_STATUS.json` with its own pid; the watchdog reads that pid, sees it
+  exit, and launches a *second* runner over the live one. Scratch smokes go through `run_card`
+  from a file-based script (Windows `spawn` cannot re-import a stdin script as `__main__`; the
+  pool respawns workers forever).
 - **No packet before the deadline.** Spec §9.1 forbids result prose, HTML, Markdown summaries,
   bridge packets and curator-facing charts until hour 168. `runners/report_v15.py` refuses;
   `--draft` writes to a scratch directory only. A checkpoint, a dashboard or a bridge file is

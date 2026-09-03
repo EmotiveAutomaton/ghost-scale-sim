@@ -1,0 +1,298 @@
+{
+  "card": "S05",
+  "trunk": "S",
+  "wave": 2,
+  "lane": "discovery",
+  "record": {
+    "question": "Can a fanatic strategically teach and a propagandist privately believe, defeating simple region labels?",
+    "what_happened": "a source whose private belief opposes its motive is named 0.586 of the time against 0.671 for an aligned one",
+    "what_changed_in_the_project_world": "a fanatic may strategically teach and a propagandist may privately believe",
+    "what_remains_a_rival": "a label that already encodes the crossing",
+    "claim_class": "BOUNDARY"
+  },
+  "hypothesis": "crossing motive against private belief defeats a simple region label",
+  "claim_class": "BOUNDARY",
+  "criterion_status": "HELD",
+  "sesoi": {
+    "value": 0.1,
+    "basis": "calibration error a crossed reader may carry"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_S05": {
+      "name": "S05",
+      "observed": 0.009085055885813875,
+      "bar": 0.1,
+      "direction": "less",
+      "held": true,
+      "basis": "calibration error a crossed reader may carry",
+      "interval": null,
+      "detail": "the posterior stays calibrated on the collision class when belief and motive are crossed"
+    },
+    "accuracy_by_belief": {
+      "aligned": 0.6709635416666667,
+      "opposed": 0.5862141927083333
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {},
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "S05",
+    "channels": [
+      {
+        "channel": "artifact_and_purchased_probe",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": true,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {},
+  "cells": {
+    "strategic|aligned": {
+      "units": 480,
+      "rows": 57450,
+      "min_rows_in_a_unit": 85
+    },
+    "sincere|aligned": {
+      "units": 480,
+      "rows": 19350,
+      "min_rows_in_a_unit": 10
+    },
+    "sincere|opposed": {
+      "units": 480,
+      "rows": 19505,
+      "min_rows_in_a_unit": 15
+    },
+    "strategic|opposed": {
+      "units": 480,
+      "rows": 57295,
+      "min_rows_in_a_unit": 75
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 4,
+    "realized_levels": 4,
+    "expected_units": 480,
+    "realized_units": 480,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 10,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 480,
+    "rows": 153600
+  },
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "a label that already encodes the crossing",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 142.67410099995323,
+    "units_cpu_s": 1630.938,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 92828,
+      "process_time": 224.8125,
+      "user": 183.640625,
+      "system": 41.171875,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 385269760,
+      "peak_rss": 4912418816
+    }
+  },
+  "runtime_seconds": 142.674,
+  "tier": "T3",
+  "units": {
+    "n": 480,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "S05",
+      "observed": 0.009085055885813875,
+      "bar": 0.1,
+      "direction": "less",
+      "held": true,
+      "basis": "calibration error a crossed reader may carry",
+      "interval": null,
+      "detail": "the posterior stays calibrated on the collision class when belief and motive are crossed"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 5,
+    "n_skipped": 2,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:crossing_belief_moves_the_accuracy",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.08474934895833341,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_class_is_still_recovered",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.009085055885813875,
+        "expected": 0.0,
+        "tolerance": 0.35
+      },
+      {
+        "name": "positive:accuracies_are_fractions",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_reader_was_told_the_belief",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_motive_was_hidden",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.17096354166666672,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_s.py",
+    "sha256": "c04d4d2d51caedd87c3ebaf28c0bd6823cfe3797399a3984cc4b5ef271c0e4cc",
+    "git_commit": "ce4c06b",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 5,
+    "n_skipped": 2,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:crossing_belief_moves_the_accuracy",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.08474934895833341,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_class_is_still_recovered",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.009085055885813875,
+        "expected": 0.0,
+        "tolerance": 0.35
+      },
+      {
+        "name": "positive:accuracies_are_fractions",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:no_reader_was_told_the_belief",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_motive_was_hidden",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.17096354166666672,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

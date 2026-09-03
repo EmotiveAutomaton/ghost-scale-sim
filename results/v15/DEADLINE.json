@@ -1,0 +1,12 @@
+{
+  "program": "v15",
+  "opened": "2026-08-31T17:43:05Z",
+  "deadline": "2026-09-07T17:43:05Z",
+  "window_hours": 168.0,
+  "freeze_hour": 150.0,
+  "confirmation_end_hour": 166.0,
+  "integrity_end_hour": 168.0,
+  "immutable": true,
+  "note": "V15 168-hour window",
+  "rule": "restarts inherit this deadline; no restart shortens or extends it, and no packet may be emitted before it"
+}

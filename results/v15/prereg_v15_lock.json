@@ -1,0 +1,46 @@
+{
+  "program": "v15",
+  "kind": "scientific",
+  "locked": true,
+  "written": "2026-08-31T10:43:05",
+  "internal_prespecification_not_external_preregistration": true,
+  "structural_sha256": "676761406ba7e4f980afb4d4e1e8d75e85d39404e7844342073592393b5c3082",
+  "workload_sha256": "6abc00c17e66136b337fd7b06afff6c8133daf253c461c14be9b6f8ed15d9948",
+  "structural": {
+    "module_sha256": "8e7e92c09b16036310f3efd53edfcecf2e92589c124197547c9aafaeec5681d6",
+    "cards_sha256": "031bfe4dcf88e5ca9751035878d310933a961d5859439e4e985db7d63f58c898",
+    "sesoi_sha256": "667b1b929a14741f78e71ffb5d44afb54c14ef0323cf183e7df69a03ab74b175",
+    "generators": {
+      "ontology.py": "3cd6cbb84a1214c704e196c9991cbab4e425499a66104bf440fe6f6583bab6df",
+      "world_chain.py": "f64fca9dd9a45a1a8ba6fbe1e1125fa4ba1e33c845efb534c99fa0e414921235",
+      "world_composition.py": "93576335ee362c8cb7a657f3c57f8aeba9a56ee534dff3483c19df3533cc6f73",
+      "world_communication.py": "db444dbd29847320681c5bd0ef9378d120abe2f36e65d870db19d414f4b1c224",
+      "exact.py": "89ecb15a0b65e8f9b95145cb887c4ace9588a76963ac8606731ca1e1bdb21e1b",
+      "particles.py": "3aefe9bd6fe411e2fc96303919910d6c5c3300dacda31fda901c71666a8fc4cc",
+      "expansion.py": "590363b95f6bde3c8909c4d799c3d7c238985953456e42aee1c741be4fc6889c",
+      "architectures.py": "8354d602734aa66486974c879c3e116d34a7da512a7bb86176f772521820c2df",
+      "learning_history.py": "229e58b40984fb36b655f0bbffbd10e045481443f0f1234fcfd2f20f627e2cf5",
+      "foreground.py": "b028c8f8ab9be007d72f962dba6c869021bbf2e042a9647f49276eb67d4365e9",
+      "persistent.py": "1149d96bd2bee729476b6b9138214081a305f9390fff484d0509f2d8f463d7fd",
+      "strategic_source.py": "aad3c345658db2d70317149b134747f83488a7ca0de2af367205335f2e553461",
+      "routes.py": "8016f3a4be98f0eeb2bbd3e1c8f6e638d33ea931b69bf206652749667a238027",
+      "foraging.py": "69acbed865febe0db0cb2724197c469e37b483249096ffffd488d65879fd5845",
+      "hierarchy.py": "0b321b7333ce3de62256b230b9a2c1bb8b7fd55c5eff08e161db7a136a626e98",
+      "causal_distance.py": "2e7e9c0bf12da9ecd1f7011eaf8bfab81a4db773ce993bc2a53ba0f6cdd842db",
+      "coverage.py": "ef18bef1e5a484642a6e315af77acc1cf54f0afb29842ef9c19e73d8f91627bb",
+      "schemas.py": "3aa887cf98547b2071cff6f7676c620dc4bfcfac91b4abeea41c2dfb9cb8f58f",
+      "common.py": "9a426dfc167a9c84e63b1b5ccafc8ac5b219dddf7e51209cdbac795abb4ddc2c"
+    },
+    "files": {
+      "EXPECTED_CELLS_TEMPLATE.json": "6bbaa0305282713dac6efa8cbd8abc1006afac04e63b83ce5e8e7c65d07307ca",
+      "CONSTRUCTION_GRAPH.json": "e5d5c473f771fda1cce53571e443a64e1a86461bbfb9d9c7bd5bae9f2d8be185",
+      "GENERATOR_FAMILIES.json": "a3cbe048f8a21d19349921afd2792a0aaed30138ae3f7705d126fb9269487595",
+      "ARCHITECTURE_BUDGETS.json": "0137dbbc841a99f032e46ac2aaf73b85ccaaa5abf4e9f784c962ff15fe587f19",
+      "SOURCE_LINEAGES.json": "7616ed36f6f658483d6a27296b33e1989e47e9452615fda37371a90a2cb931fc",
+      "report_v15.py": "40617fa6cc8905815d6861ca57082208fe73922fbbf43dc1125f1c9c7f2a14fc"
+    }
+  },
+  "tier": "T3",
+  "coverage_sha256": "2bffebfe56d6b5307e59ce2c18b42a1876343e6f297f1c13c9362fb4b7048223",
+  "amended_after_data": []
+}

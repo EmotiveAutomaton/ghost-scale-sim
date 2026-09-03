@@ -1,0 +1,340 @@
+{
+  "card": "X07",
+  "trunk": "X",
+  "wave": 7,
+  "lane": "attack",
+  "record": {
+    "question": "Does the targeted result survive: Irrelevant extra latent and distractor hypotheses.",
+    "what_happened": "under the attack the targeted advantage is +0.0271 nats against +0.0271 unattacked, a loss of +0.0000",
+    "what_changed_in_the_project_world": "an attack that costs nothing was not an attack",
+    "what_remains_a_rival": "an attack that changes the task rather than the reading",
+    "claim_class": "METHOD"
+  },
+  "hypothesis": "the targeted result survives: Irrelevant extra latent and distractor hypotheses.",
+  "claim_class": "METHOD",
+  "criterion_status": "HELD",
+  "sesoi": {
+    "value": 0.015,
+    "basis": "5% of the oracle-minus-surface span, or the flight's own bar"
+  },
+  "construction_realization": {},
+  "results": {
+    "criterion_X07": {
+      "name": "X07",
+      "observed": 0.027116601023243758,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": true,
+      "basis": "5% of the oracle-minus-surface span, or the flight's own bar",
+      "interval": null,
+      "detail": "under the attack the targeted advantage still clears the flight's own bar"
+    },
+    "criterion_X07_loss": {
+      "name": "X07_loss",
+      "observed": 0.0,
+      "bar": 10.0,
+      "direction": "less",
+      "held": true,
+      "basis": "how much the attack removed, in the flight's own units",
+      "interval": null,
+      "detail": "and the attack's cost is reported whether or not the result survives"
+    },
+    "estimand": {
+      "unattacked": 0.027116601023243758,
+      "attacked": 0.027116601023243758,
+      "loss": 0.0,
+      "pair": [
+        "joint_exact",
+        "independent"
+      ],
+      "value": "log_score"
+    },
+    "by_architecture": {
+      "independent": {
+        "no": -1.206888233307191,
+        "yes": -1.206888233307191
+      },
+      "joint_exact": {
+        "no": -1.1797716322839473,
+        "yes": -1.1797716322839473
+      },
+      "oracle_model_space": {
+        "no": -1.1797716322839473,
+        "yes": -1.1797716322839473
+      },
+      "oracle_state": {
+        "no": -1.1221915121365629,
+        "yes": -1.1221915121365629
+      },
+      "particle": {
+        "no": -1.185933147528879,
+        "yes": -1.185933147528879
+      },
+      "surface": {
+        "no": -1.4791510633633762,
+        "yes": -1.4791510633633762
+      }
+    }
+  },
+  "conditional_matrix": {},
+  "phase": {},
+  "budgets": {},
+  "families": {},
+  "equivalence": {},
+  "trajectories": {},
+  "causal_distance": {
+    "card": "X07",
+    "channels": [
+      {
+        "channel": "attacked_estimand",
+        "distance": "INFERRED_THROUGH_BEHAVIOUR",
+        "promotable_as_discovery": true,
+        "properties": {
+          "generated_from_hidden": false,
+          "matching_likelihood": false,
+          "fixed_class_marker": false,
+          "mediated_by_policy": true
+        }
+      }
+    ],
+    "limiting_distance": "INFERRED_THROUGH_BEHAVIOUR",
+    "promotable_as_discovery": true,
+    "empirical": {},
+    "note": "a card whose limiting distance is not INFERRED_THROUGH_BEHAVIOUR may still land and may still be useful; it is capped at CONSTRUCTION_IDENTITY and cannot be promoted as a simulator discovery"
+  },
+  "publication": {},
+  "cells": {
+    "no": {
+      "units": 240,
+      "rows": 276480,
+      "min_rows_in_a_unit": 1152
+    },
+    "yes": {
+      "units": 240,
+      "rows": 276480,
+      "min_rows_in_a_unit": 1152
+    }
+  },
+  "expected_cell_receipt": {
+    "expected_levels": 2,
+    "realized_levels": 2,
+    "expected_units": 240,
+    "realized_units": 240,
+    "expected_min_rows_per_unit": 1,
+    "realized_min_rows_per_unit": 1152,
+    "ok": true
+  },
+  "independent_unit": "world",
+  "effective_n": {
+    "units": 240,
+    "rows": 552960
+  },
+  "pursuit": "PROMISING",
+  "warrant": "DESCRIPTIVE_ONLY",
+  "strongest_rival": "an attack that changes the task rather than the reading",
+  "what_must_hold_outside_the_simulation": "",
+  "deviations": [],
+  "repairs": [],
+  "upstream_oracle": false,
+  "runtime": {
+    "units_wall_s": 468.337480999995,
+    "units_cpu_s": 5312.896000000002,
+    "workers": 12,
+    "reduce_accounting": {
+      "pid": 92828,
+      "process_time": 283.921875,
+      "user": 225.078125,
+      "system": 58.84375,
+      "children_user": 0.0,
+      "children_system": 0.0,
+      "rss": 377389056,
+      "peak_rss": 4912418816
+    }
+  },
+  "runtime_seconds": 468.337,
+  "tier": "T3",
+  "units": {
+    "n": 240,
+    "kind": "world"
+  },
+  "criteria": [
+    {
+      "name": "X07",
+      "observed": 0.027116601023243758,
+      "bar": 0.015,
+      "direction": "greater",
+      "held": true,
+      "basis": "5% of the oracle-minus-surface span, or the flight's own bar",
+      "interval": null,
+      "detail": "under the attack the targeted advantage still clears the flight's own bar"
+    },
+    {
+      "name": "X07_loss",
+      "observed": 0.0,
+      "bar": 10.0,
+      "direction": "less",
+      "held": true,
+      "basis": "how much the attack removed, in the flight's own units",
+      "interval": null,
+      "detail": "and the attack's cost is reported whether or not the result survives"
+    }
+  ],
+  "state": "LANDED",
+  "gates_summary": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 5,
+    "n_skipped": 2,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:the_attack_reaches_the_measurement",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.0,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_unattacked_arm_is_the_control",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:both_arms_produced_an_estimand",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:the_attack_did_not_change_the_endpoint",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_hidden_event_is_the_same_one",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.027116601023243758,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  },
+  "closure_reason": "",
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 24,
+    "omp_threads": "1",
+    "cuda_visible_devices": "",
+    "jax_platforms": "cpu"
+  },
+  "produced_by": {
+    "module": "ghostscale/validation/soundingline/v15/cards/trunk_x.py",
+    "sha256": "97c6f1c4bcb9759e9589b36a24057a53602fa2e4534709451448f252fe28b0f6",
+    "git_commit": "ce4c06b",
+    "git_dirty": true
+  },
+  "gates": {
+    "all_passed": true,
+    "n_gates": 7,
+    "n_ran": 5,
+    "n_skipped": 2,
+    "n_failed": 0,
+    "failed_names": [],
+    "documented_failures": [],
+    "unexpected_passes": [],
+    "gates": [
+      {
+        "name": "live:the_attack_reaches_the_measurement",
+        "kind": "live",
+        "passed": true,
+        "detail": "the intervention moves the intended quantity at all; how far it must move is the card's criterion, not this gate",
+        "observed": 0.0,
+        "expected": 0.0
+      },
+      {
+        "name": "placebo:the_unattacked_arm_is_the_control",
+        "kind": "placebo",
+        "passed": true,
+        "detail": "a manipulation at zero strength reproduces the control",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "positive:both_arms_produced_an_estimand",
+        "kind": "positive",
+        "passed": true,
+        "detail": "a task whose answer is known by construction returns it",
+        "observed": 1.0,
+        "expected": 1.0,
+        "tolerance": 1e-09
+      },
+      {
+        "name": "no_label_leak:the_attack_did_not_change_the_endpoint",
+        "kind": "no_oracle",
+        "passed": true,
+        "detail": "permuting a label the reader must not see does not move the score",
+        "observed": 0.0,
+        "expected": 0.0,
+        "tolerance": 0.0
+      },
+      {
+        "name": "surface",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      },
+      {
+        "name": "prediction:the_hidden_event_is_the_same_one",
+        "kind": "live",
+        "passed": true,
+        "detail": "the inferred object moves a genuinely hidden event at all; the required magnitude is the criterion",
+        "observed": 0.027116601023243758,
+        "expected": 0.0
+      },
+      {
+        "name": "calibration",
+        "kind": "positive",
+        "passed": true,
+        "detail": "not run",
+        "skipped": "not applicable to this card"
+      }
+    ],
+    "how_to_read": "a gate RECORDS here and does not raise, so an exploratory sweep is never killed mid-run. tests/test_gates.py walks every committed verdict and fails the suite on anything in failed_names or unexpected_passes, which puts the hard stop where a result would become public. THREE categories, and they are not the same thing: failed_names is a control that broke; documented_failures is a gate marked expected_to_fail, which records a KNOWN defect so the evidence travels with the result (S-2's dead manipulation, S-3's fitted threshold); unexpected_passes is a documented defect that has started passing, which means somebody fixed it without updating the gate and is the one nobody would otherwise notice. A skipped gate counts as passing but is reported separately: it means an optional dependency was absent, never that a check succeeded."
+  }
+}

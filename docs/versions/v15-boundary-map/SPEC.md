@@ -6,7 +6,10 @@ while building it, and where each decision lives in the code. The single curator
 [RESULTS_PACKET.md](RESULTS_PACKET.md) and it does not exist until the window closes.*
 
 The handoff specification is [V15_SPEC.md](../../../V15_SPEC.md) at the repository root (filed
-beside this page when the version closes).
+beside this page when the version closes — it must stay at the root until then: the validator's
+forbidden-vocabulary scan covers this directory, and the spec legitimately quotes those words as
+prohibitions. An early filing on 2026-08-31 turned the validator red and was reverted on
+2026-09-02).
 
 ---
 

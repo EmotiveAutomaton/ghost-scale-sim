@@ -64,6 +64,40 @@ def progress() -> int:
     return n
 
 
+def tree_cpu(pid: int | None) -> float:
+    """CPU seconds of the runner and every descendant. A healthy runner deep inside one long card
+    moves no checkpoint line, no verdict file and no coverage block -- ``pool.map`` blocks the
+    parent -- but its workers burn CPU. Counting that CPU as progress is what stops the watchdog
+    killing a healthy runner 48 minutes into a 90-minute card, which it did at hour 0.26 of this
+    window and which cost the morning."""
+    if not pid:
+        return 0.0
+    try:
+        import psutil
+        p = psutil.Process(int(pid))
+        total = sum(t.user + t.system for t in [p.cpu_times()])
+        for ch in p.children(recursive=True):
+            try:
+                t = ch.cpu_times()
+                total += t.user + t.system
+            except Exception:                                     # noqa: BLE001, S110
+                pass
+        return float(total)
+    except Exception:                                             # noqa: BLE001
+        return 0.0
+
+
+def status_heartbeat() -> str:
+    """The runner's own heartbeat timestamp; it moves during wait loops that touch no file the
+    file-progress counter reads."""
+    if not STATUS.exists():
+        return ""
+    try:
+        return str(json.loads(STATUS.read_text(encoding="utf-8")).get("heartbeat", ""))
+    except (json.JSONDecodeError, OSError):
+        return ""
+
+
 def runner_pid() -> int | None:
     if not STATUS.exists():
         return None
@@ -130,6 +164,7 @@ def main() -> int:
     ap.add_argument("--poll", type=int, default=POLL_S)
     a = ap.parse_args()
     relaunches, last, stalled = 0, progress(), 0
+    last_cpu, last_beat, last_seen_pid = 0.0, "", None
     note(started=time.strftime("%Y-%m-%dT%H:%M:%S"), progress=last, relaunches=0)
     print(f"{time.strftime('%Y-%m-%dT%H:%M:%S')} watchdog started; progress {last}")
     # Start the runner immediately if none is alive, rather than idling a whole poll first. The
@@ -146,8 +181,17 @@ def main() -> int:
         time.sleep(a.poll)
         pid = runner_pid()
         now = progress()
-        if now > last:
-            last, stalled = now, 0
+        if pid != last_seen_pid:                # a new runner starts its CPU counter from zero
+            last_cpu, last_seen_pid = 0.0, pid
+        cpu = tree_cpu(pid)
+        beat = status_heartbeat()
+        # Progress is any of: a new checkpoint/verdict/coverage line, the runner's process tree
+        # burning CPU (a long card), or the runner's own heartbeat moving (a wait loop). A hung
+        # runner moves none of the three.
+        moved = (now > last) or (cpu > last_cpu + 5.0) or (beat != last_beat and beat)
+        last_cpu, last_beat = max(cpu, last_cpu), beat
+        if moved:
+            last, stalled = max(now, last), 0
         else:
             stalled += 1
         live = alive(pid)
