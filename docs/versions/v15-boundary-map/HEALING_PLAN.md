@@ -22,7 +22,32 @@ preserved under `amended/` beside each lane's verdicts; swap recorded in
 | M01 | the 240-particle reader collapses on T3-sized worlds (3.9% unique particles, non-normalized posterior). That is the anchor doing its job: the approximate reader fails the exact anchor at scale. Raising the particle count is an estimator change, not a bug fix, and M02, M06 and M12 have already run with the 240-particle reader | a lock amendment on the particle count (`particles.DEFAULT_N` and the `n_particles` architecture default), then re-running M01, M02, M06 and M12 on an amendment lineage. Curator decision |
 | C11 | the true preference vector is itself feasible under the card's own predicate only about half the time, even for a 0.99-competence actor (300-world pilot, 2026-09-02). The feasibility predicate disagrees with the choice generator, so the positive gate is right to fail; a gate edit would hide a real defect in `persistent.feasible_reward_set` | reconcile the predicate with `choose` in the locked `persistent.py` (lock amendment), then re-run C11. Curator decision |
 
-## Runtime repairs (2026-08-31, hour 0.26–3.95)
+## Pending curator decision: the confirmation phase is underfilled (found 2026-09-05, hour 115)
+
+Spec §9.1 gives hours 150–166 to untouched confirmation, boundary replication and confirmation
+controls, and §9.3 required 24 reserved worker-hours. As implemented, the phase runs only the
+frozen packet: the pre-registered freeze rule (cap 6, one per flight, flights in declared order)
+selects six cards whose confirmation runs are forecast at about one wall-hour on 12 workers; the
+opening guard's 24 worker-hours was a constant in the forecast, not a measurement. Boundary
+replication and confirmation controls have no implementation. The coverage stream may not
+continue past the freeze (§9.5). The four last-declared flights (routing, foraging, hierarchy,
+synthesis) are never considered by the cap.
+
+What the runner's own receipt will say: nothing. The wait loops between confirmation and the
+integrity window record no waiting (`Occupancy.note_waiting` has no caller), so
+`RUNTIME_FAILED` stays false while §9.4's "workers wait solely for the deadline" is, in
+substance, met for roughly ten hours or more.
+
+Levers that stay inside the locks, all recorded as amendments:
+
+- widen the frozen packet after the freeze with
+  `python -m runners.run_v15_confirmation --widen <cards> --reason "..."` (runs beside the
+  live runner, never touches RUNNER_STATUS, skips anything already resolved). Every card whose
+  criterion held and whose causal-distance audit leaves it promotable, across all ten flights,
+  is forecast at about 5.4 wall-hours in total; the coupling/access atlas alone about 2.6.
+- accept the phase as pre-registered and disclose the idle hours in the packet.
+
+Changing the cap or the freeze rule is a lock amendment (`prereg_v15.py` hashes itself).
 
 Recorded in `CLAUDE.md`: the relaunch loop (44 refuse-and-exit relaunches), the resume path,
 the heartbeat, the lock restore from HEAD. About 3.7 window-hours carried no science; the

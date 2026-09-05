@@ -27,7 +27,7 @@ from ghostscale.validation.soundingline.v15 import manifest as M        # noqa: 
 from ghostscale.validation.soundingline.v15 import runtime_contract as RC  # noqa: E402
 from ghostscale.validation.soundingline.v15 import v15_dir, verdict_dir  # noqa: E402
 from ghostscale.validation.soundingline.v15.atomicio import write_json_atomic  # noqa: E402
-from ghostscale.validation.soundingline.v15.schemas import TIERS        # noqa: E402
+from ghostscale.validation.soundingline.v15.schemas import RESOLVED, TIERS  # noqa: E402
 
 REGISTRY = v15_dir() / "CONFIRMATION_REGISTRY.json"
 AMENDMENTS = v15_dir() / "AMENDMENTS.json"
@@ -117,8 +117,14 @@ def amend(doc: dict, add: list, reason: str) -> dict:
     return doc
 
 
-def run(workers: int = 4, only: list | None = None, force_freeze: bool = False) -> dict:
-    from runners.run_v15 import Pool, checkpoint, run_card, status
+def run(workers: int = 4, only: list | None = None, force_freeze: bool = False,
+        external: bool = False) -> dict:
+    """``external=True`` when invoked beside the live runner (a widening after the freeze):
+    it must not write RUNNER_STATUS.json, whose pid the watchdog uses to identify the runner --
+    a second writer makes the watchdog launch a second runner over the live one."""
+    from runners.run_v15 import Pool, checkpoint, run_card
+    from runners.run_v15 import status as _status
+    status = (lambda **kw: None) if external else _status
     doc = freeze(force=force_freeze)
     ver = verify(doc)
     if not ver["ok"]:
@@ -134,6 +140,18 @@ def run(workers: int = 4, only: list | None = None, force_freeze: bool = False) 
         for entry in doc["packet"]:
             cid = entry["card"]
             if only and cid not in only:
+                continue
+            # Resumable, like the science stage: a relaunch inside the confirmation phase must
+            # not re-run a card that already resolved on the confirmation lineage. Re-running
+            # would overwrite the verdict with identical rollouts (spec 9.4 forbids repeating
+            # them) and spend the phase twice. Added 2026-09-05, before the first freeze.
+            prior = C.load_verdict(cid, "confirmation")
+            if prior and prior.get("state") in RESOLVED:
+                out.append({"card": cid, "state": prior.get("state"),
+                            "criterion_status": prior.get("criterion_status"),
+                            "flight": entry["flight"], "resumed": True})
+                print(f"  [{RC.elapsed_hours():6.2f}h] confirm {cid}: already resolved "
+                      f"({prior.get('state')} {prior.get('criterion_status', '')}), kept")
                 continue
             if RC.elapsed_hours() >= RC.CONFIRMATION_END_HOUR:
                 checkpoint("confirmation_window_closed", card=cid)
@@ -162,8 +180,27 @@ if __name__ == "__main__":
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--only", default=None)
     ap.add_argument("--show", action="store_true", help="print the packet and exit")
+    ap.add_argument("--widen", default=None,
+                    help="comma-separated cards to ADD to the frozen packet as a recorded "
+                         "amendment, then run only those, beside the live runner (never writes "
+                         "RUNNER_STATUS). Requires --reason and an existing freeze.")
+    ap.add_argument("--reason", default=None)
     a = ap.parse_args()
     if a.show:
         print(json.dumps(select_candidates(), indent=2))
+    elif a.widen:
+        if not a.reason:
+            sys.exit("--widen requires --reason (the amendment is recorded with it)")
+        if not REGISTRY.exists():
+            sys.exit("no freeze yet: the packet is frozen by the live runner at hour 150; "
+                     "widen after that")
+        add = [c.strip() for c in a.widen.split(",") if c.strip()]
+        doc = json.loads(REGISTRY.read_text(encoding="utf-8"))
+        already = {p["card"] for p in doc["packet"]}
+        add = [c for c in add if c not in already]
+        if not add:
+            sys.exit("nothing to add: every card named is already in the packet")
+        amend(doc, add, a.reason)
+        run(a.workers, only=add, external=True)
     else:
         run(a.workers, a.only.split(",") if a.only else None)
