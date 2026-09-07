@@ -1,0 +1,121 @@
+{
+  "program": "v15",
+  "checked": "2026-09-07T09:39:19",
+  "manifest": {
+    "n_mandatory": 112,
+    "n_attacks": 24,
+    "trunk_counts": {
+      "I": 8,
+      "C": 14,
+      "M": 12,
+      "E": 12,
+      "G": 10,
+      "V": 10,
+      "S": 10,
+      "R": 8,
+      "F": 10,
+      "H": 8,
+      "P": 8,
+      "B": 2
+    }
+  },
+  "verdicts": {
+    "discovery": {
+      "n": 112,
+      "states": {
+        "LANDED": 110,
+        "INSTRUMENT_FAILED": 2
+      },
+      "criterion_status": {
+        "HELD": 68,
+        "FAILED": 44
+      }
+    },
+    "transfer": {
+      "n": 8,
+      "states": {
+        "LANDED": 8
+      },
+      "criterion_status": {
+        "FAILED": 3,
+        "HELD": 5
+      }
+    },
+    "attack": {
+      "n": 24,
+      "states": {
+        "LANDED": 24
+      },
+      "criterion_status": {
+        "HELD": 15,
+        "FAILED": 9
+      }
+    },
+    "confirmation": {
+      "n": 6,
+      "states": {
+        "LANDED": 6
+      },
+      "criterion_status": {
+        "HELD": 6
+      }
+    }
+  },
+  "vocabulary": {
+    "hits": []
+  },
+  "stale_export": {
+    "checked": [
+      "HEALING_PLAN.md",
+      "SPEC.md"
+    ],
+    "stale": []
+  },
+  "runtime": {
+    "DEADLINE.json": true,
+    "WORKER_OCCUPANCY.json": true,
+    "DEADLINE_OPENING_RECEIPT.json": true,
+    "occupancy_ratio": 1.0,
+    "RUNTIME_FAILED": true,
+    "runtime_failed_reasons": [
+      "Fixed confirmation packet exhausted; scheduler waited 14.716389 hours before hour 166. Spec 9.4 continuous-work requirement failed."
+    ],
+    "note": "RUNTIME_FAILED is set; results may be reported but the seven-day contract may not be claimed"
+  },
+  "lineages": {
+    "ids": {
+      "discovery": [
+        0,
+        23
+      ],
+      "transfer": [
+        20000,
+        20011
+      ],
+      "confirmation": [
+        10000,
+        10023
+      ],
+      "coverage": [
+        40000,
+        40011
+      ]
+    },
+    "counts": {
+      "discovery": 24,
+      "transfer": 12,
+      "confirmation": 24,
+      "coverage": 12
+    },
+    "disjoint": true
+  },
+  "locks": {
+    "structural_locked": true,
+    "internal_prespecification_not_external_preregistration": true,
+    "locked": true,
+    "stage": "scientific",
+    "tier": "T3"
+  },
+  "problems": [],
+  "ok": true
+}

@@ -6,11 +6,17 @@
   "occupancy_target": 0.8,
   "gaps_over_five_minutes": [],
   "queue_empty_events": 0,
-  "waited_for_deadline_hours": 0.0,
+  "waited_for_deadline_hours": 14.716388888888888,
   "coverage_blocks_executed": 570,
   "coverage_cells_executed": 42750,
   "cards_executed": 135,
-  "RUNTIME_FAILED": false,
-  "runtime_failed_reasons": [],
-  "note": "spec 9.4: results may still be reported after a runtime failure, but V15 is not complete and cannot claim the seven-day contract"
+  "RUNTIME_FAILED": true,
+  "runtime_failed_reasons": [
+    "Fixed confirmation packet exhausted; scheduler waited 14.716389 hours before hour 166. Spec 9.4 continuous-work requirement failed."
+  ],
+  "note": "spec 9.4: results may still be reported after a runtime failure, but V15 is not complete and cannot claim the seven-day contract",
+  "occupancy_ratio_verified": false,
+  "occupancy_ratio_scope": "Original per-science-stint estimate; not verified whole-window utilization.",
+  "closure_audit": "results/v15/CLOSURE_AUDIT.json",
+  "original_receipt": "results/v15/amended/WORKER_OCCUPANCY.before-closure-audit.json"
 }

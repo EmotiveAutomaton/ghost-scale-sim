@@ -69,11 +69,26 @@ def build(pass_b: bool = True) -> str:
     A = L.append
     A("# V15 — The Boundary Map. Curator packet")
     A("")
-    A(f"*Generated {time.strftime('%Y-%m-%d %H:%M')} from the committed record, after the "
-      f"168-hour window closed. Every number traces to a verdict under "
+    timing = "after the 168-hour window closed" if RC.window_closed() else "as a pre-deadline scratch draft"
+    A(f"*Generated {time.strftime('%Y-%m-%d %H:%M')} from the saved record, {timing}. Every number traces to a verdict under "
       f"`results/validation/soundingline/v15/`. Everything here is a property of a constructed "
       f"world and its stated reader. Nothing describes a person.*")
     A("")
+    if occ.get("RUNTIME_FAILED"):
+        A("> **Runtime contract failed.** The seven-day contract is not claimed. "
+          "The saved results may be reported under spec §9.4; the elapsed deadline does not repair the idle interval.")
+        A("")
+    audit_path = v15_dir() / "CLOSURE_AUDIT.json"
+    if audit_path.exists():
+        audit = json.loads(audit_path.read_text(encoding="utf-8"))
+        complete = v15_dir() / "COMPLETION.json"
+        if audit.get("completion_ledger_sha256") != C.file_sha(complete):
+            A("> **Closure audit is stale:** the completion ledger changed after it was checked.")
+        elif not audit.get("scientific_aggregate_regeneration", {}).get("complete"):
+            A("> **Reproduction remains incomplete.** The closure audit verifies saved verdict hashes, "
+              "all executed coverage definitions, and cell-score arithmetic. It does not independently "
+              "regenerate every scientific aggregate from rollouts.")
+        A("")
     A("## Pass A")
     A("")
     A("### 1. Where the constructed project world moved")
@@ -143,7 +158,8 @@ def build(pass_b: bool = True) -> str:
     A("")
     A("### 9. Curator questions")
     A("")
-    A("- none that change the next branch; the ledger decides it.")
+    A("- C11 and M01 remain withheld as instrument failures. Any scientific repair requires a separate amendment.")
+    A("- The clean-clone receipt verifies structural definitions and hashes; it does not certify full aggregate regeneration.")
     A("")
     A("> **STOP READING HERE**")
     A("")
@@ -155,8 +171,11 @@ def build(pass_b: bool = True) -> str:
     A("### Runtime receipt")
     A("")
     A(f"- window: {win.get('opened','—')} → {win.get('deadline','—')}")
-    A(f"- occupancy: {_fmt(occ.get('occupancy_ratio'), 3)} against a "
+    A(f"- recorded occupancy estimate: {_fmt(occ.get('occupancy_ratio'), 3)} against a "
       f"{occ.get('occupancy_target', 0.8)} target")
+    if occ.get("occupancy_ratio_verified") is False:
+        A("- the occupancy estimate excludes unrecorded intervals and is not verified as whole-window utilization")
+    A(f"- reconciled waiting during the scientific window: {_fmt(occ.get('waited_for_deadline_hours'), 3)} hours")
     A(f"- science worker-hours {_fmt(occ.get('science_worker_hours'), 1)}, capacity "
       f"{_fmt(occ.get('capacity_worker_hours'), 1)}")
     A(f"- coverage blocks {occ.get('coverage_blocks_executed', 0)}, cells "

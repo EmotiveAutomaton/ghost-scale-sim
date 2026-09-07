@@ -65,6 +65,21 @@
         "verdict_sha256": "5a96994d81e97d9c57996eaf3fe7403ab40640b9dd99ad2ce27ad4712abc6db7",
         "preserved_at": null
       }
+    },
+    {
+      "card": "RUNTIME_ACCOUNTING",
+      "when": "2026-09-07T16:37:58.456144+00:00",
+      "reason": "Closure check reconciles omitted scheduler waiting after confirmation. No scientific estimator, criterion, factor, seed, deadline, or verdict changed.",
+      "original": {
+        "receipt_sha256": "10640c5cf32b22a6b0a527d5a2a6fa08b9ac9571da4bf424c4431635587ad326",
+        "preserved_at": "results/v15/amended/WORKER_OCCUPANCY.before-closure-audit.json",
+        "RUNTIME_FAILED": false
+      },
+      "replacement": {
+        "receipt_sha256": "f3a7fee87fbf966abef3e00ed3a9aff47401525785e661b751821f6becfad5bc",
+        "RUNTIME_FAILED": true,
+        "audit": "results/v15/CLOSURE_AUDIT.json"
+      }
     }
   ]
 }

@@ -252,5 +252,12 @@
     },
     "problems": [],
     "ok": true
+  },
+  "scheduled_integrity_scope": "Original scheduled check; its runtime subsection predates closure reconciliation.",
+  "closure_reconciliation": {
+    "audit": "results/v15/CLOSURE_AUDIT.json",
+    "RUNTIME_FAILED": true,
+    "full_scientific_aggregate_regeneration": false,
+    "test_receipt": "results/v15/FINAL_TEST_RECEIPT.json"
   }
 }

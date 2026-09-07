@@ -1,0 +1,26 @@
+{
+  "program": "v15",
+  "scope": "full repository suite plus closure-audit regression tests in isolated checkout",
+  "unique_tests": 1427,
+  "outcomes": {
+    "passed": 1415,
+    "skipped": 10,
+    "xfailed": 1,
+    "failed": 1
+  },
+  "failed_tests": [
+    "tests.test_v15_gates::test_committed_verdicts_have_no_failed_gates"
+  ],
+  "failure_explanation": "V15 gate test retains the documented C11 and M01 instrument failures; no gate or criterion was relaxed.",
+  "fixture_retry": "87 initial setup errors used an inaccessible temporary directory; all 87 passed with a workspace-local pytest basetemp.",
+  "source_sha256": {
+    "runners/audit_v15_closure.py": "e0c8965e3b22eb40fd51e43a756cfe887d8fe882f0b4b475d7442cfab55e1837",
+    "runners/report_v15.py": "30dcde5e362ba9d26b3152fb55179c468a21d26f5447910021e39a1a68f20f58",
+    "tests/test_v15_closure_audit.py": "4c5b8a6b727be4e1bc028fe1b7a87f8e33b9bff9bca99caaba864559d489ccc2"
+  },
+  "log_sha256": {
+    "pytest-initial.xml": "9e9f2793c1a2c610b863992b7a753dbed1c8f3fdd027c4352b85276db4d703cb",
+    "pytest-retry.xml": "e2855d6731ad27f563215524845a36817a9725efe54731d68f0467fa151bed41",
+    "pytest-closure.xml": "7d27148d19c6108aa2bae656813adc8814f3ba6d595a2aa68fee6d2222c6bd22"
+  }
+}

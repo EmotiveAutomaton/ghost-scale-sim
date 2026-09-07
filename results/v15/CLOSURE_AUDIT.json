@@ -1,0 +1,55 @@
+{
+  "program": "v15",
+  "checked_utc": "2026-09-07T16:33:52.292865+00:00",
+  "record_integrity_ok": true,
+  "record_problems": [],
+  "completion_entries_checked": 150,
+  "lane_counts": {
+    "attack": 24,
+    "confirmation": 6,
+    "discovery": 112,
+    "transfer": 8
+  },
+  "completion_ledger_sha256": "1dc9927aede9acdee6730abc60df67d7919ab5b4d0c20edc08c320d7ad086d22",
+  "instrument_failures": [
+    {
+      "entry": "discovery:C11",
+      "failed_gates": [
+        "positive:the_set_contains_the_truth"
+      ]
+    },
+    {
+      "entry": "discovery:M01",
+      "failed_gates": [
+        "positive:every_posterior_is_a_normalized_distribution"
+      ]
+    }
+  ],
+  "coverage": {
+    "blocks_verified": 570,
+    "cells_verified": 42750,
+    "full_executed_definition_chain": "e21cfa9fae214948a1b5078b9bf88ea50dc70fe83dcdecf028b90f24ea1dbdbd",
+    "raw_stream_sha256": "3817e9538b281c337e94783aa40e33f648f5239cb0a6fba055ccdac619aff536",
+    "score_arithmetic_checked": true,
+    "rollouts_regenerated": false
+  },
+  "runtime_reconciliation": {
+    "reconciled": true,
+    "from_utc": "2026-09-07T01:00:06+00:00",
+    "to_utc": "2026-09-07T15:43:05+00:00",
+    "waiting_hours": 14.716388888888888,
+    "RUNTIME_FAILED": true,
+    "basis": "last confirmation checkpoint to hour 166; fixed packet exhausted, then scheduler wait loop",
+    "limitation": "does not reconstruct earlier downtime or measured worker utilization"
+  },
+  "original_occupancy_claim": {
+    "RUNTIME_FAILED": false,
+    "waited_for_deadline_hours": 0.0,
+    "occupancy_ratio": 1.0
+  },
+  "scientific_aggregate_regeneration": {
+    "complete": false,
+    "reason": "full per-card unit outputs were not retained by the scientific runner; verdict hashes and cell arithmetic are not independent regeneration"
+  },
+  "scope": "saved-record integrity and runtime reconciliation; no new scientific runs"
+}

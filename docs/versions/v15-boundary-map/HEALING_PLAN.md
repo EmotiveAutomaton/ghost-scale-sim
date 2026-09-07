@@ -22,7 +22,13 @@ preserved under `amended/` beside each lane's verdicts; swap recorded in
 | M01 | the 240-particle reader collapses on T3-sized worlds (3.9% unique particles, non-normalized posterior). That is the anchor doing its job: the approximate reader fails the exact anchor at scale. Raising the particle count is an estimator change, not a bug fix, and M02, M06 and M12 have already run with the 240-particle reader | a lock amendment on the particle count (`particles.DEFAULT_N` and the `n_particles` architecture default), then re-running M01, M02, M06 and M12 on an amendment lineage. Curator decision |
 | C11 | the true preference vector is itself feasible under the card's own predicate only about half the time, even for a 0.99-competence actor (300-world pilot, 2026-09-02). The feasibility predicate disagrees with the choice generator, so the positive gate is right to fail; a gate edit would hide a real defect in `persistent.feasible_reward_set` | reconcile the predicate with `choose` in the locked `persistent.py` (lock amendment), then re-run C11. Curator decision |
 
-## Pending curator decision: the confirmation phase is underfilled (found 2026-09-05, hour 115)
+## Confirmation underfill (found 2026-09-05, hour 115; observed at closure)
+
+The options below describe the decision available before confirmation ended. The fixed packet
+finished on 2026-09-07 at 01:00:06 UTC, then the scheduler waited until hour 166 at 15:43:05 UTC:
+14 hours, 42 minutes, 59 seconds with no queued scientific work. The closure accounting amendment
+sets `RUNTIME_FAILED=true`; the original receipt is preserved under `results/v15/amended/`.
+The deadline is unchanged. A later repair cannot retrospectively satisfy continuous occupancy.
 
 Spec §9.1 gives hours 150–166 to untouched confirmation, boundary replication and confirmation
 controls, and §9.3 required 24 reserved worker-hours. As implemented, the phase runs only the
@@ -62,3 +68,23 @@ claimed at closure is a curator decision.
   the watchdog will start a second runner. Scratch smokes go through `run_card` from a file.
 - `tests/test_v15_gates.py` cannot see a magnitude that reaches a placebo or positive gate through
   `tol`. A third check is worth adding after closure, not during the window.
+
+## Closure verification (2026-09-07)
+
+`runners/audit_v15_closure.py` checks all 150 completion entries against their saved verdict hashes,
+all 570 executed balance blocks (42,750 cells), their full definition chain, and cell-score
+arithmetic. The machine-readable receipt is `results/v15/CLOSURE_AUDIT.json`. This checks the
+saved record; it does not regenerate scientific rollouts or per-card aggregates. The scientific
+runner did not retain the complete unit outputs needed for aggregate-only reconstruction.
+
+The full repository suite, with the additional closure checks, resolves 1,427 tests: 1,415 pass,
+10 skip, one is an expected failure, and one fails because C11 and M01 still have broken controls.
+The initial 87 temporary-directory setup errors all passed when retried with a workspace-local
+temporary directory. `results/v15/FINAL_TEST_RECEIPT.json` records the combined outcomes and
+tested source hashes. No gate or criterion was weakened to make the suite green.
+
+The final report now carries the runtime failure prominently, labels the original occupancy
+ratio as unverified, and discloses the aggregate-regeneration limit. The initial scheduled
+integrity receipt remains a historical structural check, not certification that all V15
+completion requirements were met. C11 and M01 remain withheld; scientific repairs require a
+separate amendment.
