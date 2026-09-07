@@ -1,0 +1,274 @@
+{
+  "program": "v15",
+  "frozen_at": "2026-09-06T23:56:38Z",
+  "frozen_at_elapsed_hours": 150.226,
+  "packet": [
+    {
+      "flight": "coupling_access_atlas",
+      "card": "C04"
+    },
+    {
+      "flight": "architecture_tournament",
+      "card": "M02"
+    },
+    {
+      "flight": "endogenous_expertise",
+      "card": "E03"
+    },
+    {
+      "flight": "foreground_control",
+      "card": "G07"
+    },
+    {
+      "flight": "persistent_value",
+      "card": "V04"
+    },
+    {
+      "flight": "strategic_sources",
+      "card": "S07"
+    }
+  ],
+  "considered": [
+    {
+      "flight": "coupling_access_atlas",
+      "card": "C02",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "coupling_access_atlas",
+      "card": "C03",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "coupling_access_atlas",
+      "card": "C04",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "architecture_tournament",
+      "card": "M02",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "endogenous_expertise",
+      "card": "E02",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "endogenous_expertise",
+      "card": "E03",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "foreground_control",
+      "card": "G02",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "foreground_control",
+      "card": "G04",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "foreground_control",
+      "card": "G07",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "foreground_control",
+      "card": "G09",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "foreground_control",
+      "card": "G10",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "persistent_value",
+      "card": "V01",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "persistent_value",
+      "card": "V04",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "persistent_value",
+      "card": "V06",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "persistent_value",
+      "card": "V10",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "strategic_sources",
+      "card": "S03",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "strategic_sources",
+      "card": "S06",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "strategic_sources",
+      "card": "S07",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    },
+    {
+      "flight": "strategic_sources",
+      "card": "S09",
+      "eligible": false,
+      "state": "LANDED",
+      "criterion_status": "FAILED",
+      "causal_distance": "PLANTED_SIGNATURE"
+    },
+    {
+      "flight": "strategic_sources",
+      "card": "S10",
+      "eligible": true,
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "causal_distance": "INFERRED_THROUGH_BEHAVIOUR"
+    }
+  ],
+  "cap": 6,
+  "rule": "at the freeze hour, freeze at most CONFIRMATION_CAP candidates, at most one per flight, preferring the flight's primary card, taking flights in the order declared in FLIGHTS",
+  "structural_locked": true,
+  "scientific_locked": true,
+  "discovery_hashes": {
+    "C04": "8e970474ba5081f57f2417c8d2eb04b57393754aaf4ab8021b81f702be5cd0a1",
+    "M02": "788b0ff87a4f950cdeae2f882c72b0ea5c2e20f86b1dca7a55dc0863d87c8888",
+    "E03": "53888d62cfade39b306553e78f2a39bf8299130e9f3f7339e8e5cdb4878bbf7d",
+    "G07": "b60ec7e1b8a8a9c7004e67ef6528f0e5263b9c697794ee640b6b75260ef78bef",
+    "V04": "db7caa71aa9c128f6f9c425937c3f65b011069215b5a86f86d1610a5b2e8896b",
+    "S07": "55bca9c298c746e1f7a960e9da4ba3f134f9ee4defb333c7e1f1c36dc24c0e86"
+  },
+  "amendments": [],
+  "results": [
+    {
+      "card": "C04",
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "claim_class": "BOUNDARY",
+      "errors": [],
+      "wall_s": 2762.9154626999516,
+      "cpu_s": 32206.656999999996,
+      "n_units": 288,
+      "flight": "coupling_access_atlas"
+    },
+    {
+      "card": "M02",
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "claim_class": "METHOD",
+      "errors": [],
+      "wall_s": 744.827806300018,
+      "cpu_s": 8624.174000000003,
+      "n_units": 288,
+      "flight": "architecture_tournament"
+    },
+    {
+      "card": "E03",
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "errors": [],
+      "wall_s": 64.04228739999235,
+      "cpu_s": 734.9079999999997,
+      "n_units": 288,
+      "flight": "endogenous_expertise"
+    },
+    {
+      "card": "G07",
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "errors": [],
+      "wall_s": 191.84721829998307,
+      "cpu_s": 2224.389,
+      "n_units": 288,
+      "flight": "foreground_control"
+    },
+    {
+      "card": "V04",
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "errors": [],
+      "wall_s": 38.01257529994473,
+      "cpu_s": 437.30799999999994,
+      "n_units": 288,
+      "flight": "persistent_value"
+    },
+    {
+      "card": "S07",
+      "state": "LANDED",
+      "criterion_status": "HELD",
+      "claim_class": "SIMULATOR_DISCOVERY",
+      "errors": [],
+      "wall_s": 6.020782800158486,
+      "cpu_s": 63.036000000000186,
+      "n_units": 288,
+      "flight": "strategic_sources"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "fresh_clone": {
+    "program": "v15",
+    "head": "36927fae0356c0080276380f2f0ad560b658aa40",
+    "when": "2026-09-07T08:43:14",
+    "clone": "<machine-local scratch checkout>",
+    "clone_result": {
+      "n_mandatory": 112,
+      "n_attacks": 24,
+      "cards_sha256": "031bfe4dcf88e5ca9751035878d310933a961d5859439e4e985db7d63f58c898",
+      "sesoi_sha256": "667b1b929a14741f78e71ffb5d44afb54c14ef0323cf183e7df69a03ab74b175",
+      "generators": {
+        "ontology.py": "3cd6cbb84a1214c704e196c9991cbab4e425499a66104bf440fe6f6583bab6df",
+        "world_chain.py": "f64fca9dd9a45a1a8ba6fbe1e1125fa4ba1e33c845efb534c99fa0e414921235",
+        "world_composition.py": "93576335ee362c8cb7a657f3c57f8aeba9a56ee534dff3483c19df3533cc6f73",
+        "world_communication.py": "db444dbd29847320681c5bd0ef9378d120abe2f36e65d870db19d414f4b1c224",
+        "exact.py": "89ecb15a0b65e8f9b95145cb887c4ace9588a76963ac8606731ca1e1bdb21e1b",
+        "particles.py": "3aefe9bd6fe411e2fc96303919910d6c5c3300dacda31fda901c71666a8fc4cc",
+        "expansion.py": "590363b95f6bde3c8909c4d799c3d7c238985953456e42aee1c741be4fc6889c",
+        "architectures.py": "8354d602734aa66486974c879c3e116d34a7da512a7bb86176f772521820c2df",
+        "learning_history.py": "229e58b40984fb36b655f0bbffbd10e045481443f0f1234fcfd2f20f627e2cf5",
+        "foreground.py": "b028c8f8ab9be007d72f962dba6c869021bbf2e042a9647f49276eb67d4365e9",
+        "persistent.py": "1149d96bd2bee729476b6b9138214081a305f9390fff484d0509f2d8f463d7fd",
+        "strategic_source.py": "aad3c345658db2d70317149b134747f83488a7ca0de2af367205335f2e553461",
+        "routes.py": "8016f3a4be98f0eeb2bbd3e1c8f6e638d33ea931b69bf206652749667a238027",
+        "foraging.py": "69acbed865febe0db0cb2724197c469e37b483249096ffffd488d65879fd5845",
+        "hierarchy.py": "0b321b7333ce3de62256b230b9a2c1bb8b7fd55c5eff08e161db7a136a626e98",
+        "causal_distance.py": "2e7e9c0bf12da9ecd1f7011eaf8bfab81a4db773ce993bc2a53ba0f6cdd842db",
+        "coverage.py": "ef18bef1e5a484642a6e315af77acc1cf54f0afb29842ef9c19e73d8f91627bb",
+        "schemas.py": "3aa887cf98547b2071cff6f7676c620dc4bfcfac91b4abeea41c2dfb9cb8f58f",
+        "common.py": "9a426dfc167a9c84e63b1b5ccafc8ac5b219dddf7e51209cdbac795abb4ddc2c"
+      },
+      "coverage_block_0": "7f17b3e975936270a1046bd0bba69578287d254067082b08a37c0623dd2db7e3",
+      "coverage_chain_64": "8a18220f9d23b6dd884322517f3584fdd8e31f9beae00ff105bceb22402b96a9"
+    },
+    "local_result": {
+      "n_mandatory": 112,
+      "n_attacks": 24,
+      "cards_sha256": "031bfe4dcf88e5ca9751035878d310933a961d5859439e4e985db7d63f58c898",
+      "sesoi_sha256": "667b1b929a14741f78e71ffb5d44afb54c14ef0323cf183e7df69a03ab74b175",
+      "generators": {
+        "ontology.py": "3cd6cbb84a1214c704e196c9991cbab4e425499a66104bf440fe6f6583bab6df",
+        "world_chain.py": "f64fca9dd9a45a1a8ba6fbe1e1125fa4ba1e33c845efb534c99fa0e414921235",
+        "world_composition.py": "93576335ee362c8cb7a657f3c57f8aeba9a56ee534dff3483c19df3533cc6f73",
+        "world_communication.py": "db444dbd29847320681c5bd0ef9378d120abe2f36e65d870db19d414f4b1c224",
+        "exact.py": "89ecb15a0b65e8f9b95145cb887c4ace9588a76963ac8606731ca1e1bdb21e1b",
+        "particles.py": "3aefe9bd6fe411e2fc96303919910d6c5c3300dacda31fda901c71666a8fc4cc",
+        "expansion.py": "590363b95f6bde3c8909c4d799c3d7c238985953456e42aee1c741be4fc6889c",
+        "architectures.py": "8354d602734aa66486974c879c3e116d34a7da512a7bb86176f772521820c2df",
+        "learning_history.py": "229e58b40984fb36b655f0bbffbd10e045481443f0f1234fcfd2f20f627e2cf5",
+        "foreground.py": "b028c8f8ab9be007d72f962dba6c869021bbf2e042a9647f49276eb67d4365e9",
+        "persistent.py": "1149d96bd2bee729476b6b9138214081a305f9390fff484d0509f2d8f463d7fd",
+        "strategic_source.py": "aad3c345658db2d70317149b134747f83488a7ca0de2af367205335f2e553461",
+        "routes.py": "8016f3a4be98f0eeb2bbd3e1c8f6e638d33ea931b69bf206652749667a238027",
+        "foraging.py": "69acbed865febe0db0cb2724197c469e37b483249096ffffd488d65879fd5845",
+        "hierarchy.py": "0b321b7333ce3de62256b230b9a2c1bb8b7fd55c5eff08e161db7a136a626e98",
+        "causal_distance.py": "2e7e9c0bf12da9ecd1f7011eaf8bfab81a4db773ce993bc2a53ba0f6cdd842db",
+        "coverage.py": "ef18bef1e5a484642a6e315af77acc1cf54f0afb29842ef9c19e73d8f91627bb",
+        "schemas.py": "3aa887cf98547b2071cff6f7676c620dc4bfcfac91b4abeea41c2dfb9cb8f58f",
+        "common.py": "9a426dfc167a9c84e63b1b5ccafc8ac5b219dddf7e51209cdbac795abb4ddc2c"
+      },
+      "coverage_block_0": "7f17b3e975936270a1046bd0bba69578287d254067082b08a37c0623dd2db7e3",
+      "coverage_chain_64": "8a18220f9d23b6dd884322517f3584fdd8e31f9beae00ff105bceb22402b96a9"
+    },
+    "differences": {},
+    "ok": true,
+    "note": "generator hashes are computed on the bytes on disk; a CRLF working copy and an LF clone differ, which is what this receipt is for"
+  },
+  "coverage": {
+    "by_state": {
+      "LANDED": 134,
+      "INSTRUMENT_FAILED": 2
+    },
+    "by_trunk": {
+      "I": {
+        "n": 8,
+        "resolved": 8
+      },
+      "C": {
+        "n": 14,
+        "resolved": 14
+      },
+      "M": {
+        "n": 12,
+        "resolved": 12
+      },
+      "E": {
+        "n": 12,
+        "resolved": 12
+      },
+      "G": {
+        "n": 10,
+        "resolved": 10
+      },
+      "V": {
+        "n": 10,
+        "resolved": 10
+      },
+      "S": {
+        "n": 10,
+        "resolved": 10
+      },
+      "R": {
+        "n": 8,
+        "resolved": 8
+      },
+      "F": {
+        "n": 10,
+        "resolved": 10
+      },
+      "H": {
+        "n": 8,
+        "resolved": 8
+      },
+      "P": {
+        "n": 8,
+        "resolved": 8
+      },
+      "B": {
+        "n": 2,
+        "resolved": 2
+      },
+      "X": {
+        "n": 24,
+        "resolved": 24
+      }
+    },
+    "by_criterion_status": {
+      "HELD": 83,
+      "FAILED": 53
+    },
+    "n_cards": 136,
+    "n_mandatory": 112,
+    "n_attacks": 24,
+    "mandatory_resolved": 112,
+    "written": "2026-09-07T08:43:22"
+  },
+  "validator": {
+    "program": "v15",
+    "checked": "2026-09-07T08:43:22",
+    "manifest": {
+      "n_mandatory": 112,
+      "n_attacks": 24,
+      "trunk_counts": {
+        "I": 8,
+        "C": 14,
+        "M": 12,
+        "E": 12,
+        "G": 10,
+        "V": 10,
+        "S": 10,
+        "R": 8,
+        "F": 10,
+        "H": 8,
+        "P": 8,
+        "B": 2
+      }
+    },
+    "verdicts": {
+      "discovery": {
+        "n": 112,
+        "states": {
+          "LANDED": 110,
+          "INSTRUMENT_FAILED": 2
+        },
+        "criterion_status": {
+          "HELD": 68,
+          "FAILED": 44
+        }
+      },
+      "transfer": {
+        "n": 8,
+        "states": {
+          "LANDED": 8
+        },
+        "criterion_status": {
+          "FAILED": 3,
+          "HELD": 5
+        }
+      },
+      "attack": {
+        "n": 24,
+        "states": {
+          "LANDED": 24
+        },
+        "criterion_status": {
+          "HELD": 15,
+          "FAILED": 9
+        }
+      },
+      "confirmation": {
+        "n": 6,
+        "states": {
+          "LANDED": 6
+        },
+        "criterion_status": {
+          "HELD": 6
+        }
+      }
+    },
+    "vocabulary": {
+      "hits": []
+    },
+    "stale_export": {
+      "checked": [
+        "HEALING_PLAN.md",
+        "SPEC.md"
+      ],
+      "stale": []
+    },
+    "runtime": {
+      "DEADLINE.json": true,
+      "WORKER_OCCUPANCY.json": true,
+      "DEADLINE_OPENING_RECEIPT.json": true,
+      "occupancy_ratio": 1.0,
+      "RUNTIME_FAILED": false,
+      "runtime_failed_reasons": []
+    },
+    "lineages": {
+      "ids": {
+        "discovery": [
+          0,
+          23
+        ],
+        "transfer": [
+          20000,
+          20011
+        ],
+        "confirmation": [
+          10000,
+          10023
+        ],
+        "coverage": [
+          40000,
+          40011
+        ]
+      },
+      "counts": {
+        "discovery": 24,
+        "transfer": 12,
+        "confirmation": 24,
+        "coverage": 12
+      },
+      "disjoint": true
+    },
+    "locks": {
+      "structural_locked": true,
+      "internal_prespecification_not_external_preregistration": true,
+      "locked": true,
+      "stage": "scientific",
+      "tier": "T3"
+    },
+    "problems": [],
+    "ok": true
+  }
+}
