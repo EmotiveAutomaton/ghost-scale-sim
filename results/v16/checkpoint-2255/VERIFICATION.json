@@ -1,0 +1,67 @@
+{
+    "evidence_scope":  "operational verification",
+    "test_source":  "isolated implementation; copied source independently verified against packet locks",
+    "campaign_complete":  false,
+    "tests":  {
+                  "passed":  71,
+                  "elapsed_seconds":  16.276,
+                  "errors":  0,
+                  "failures":  0,
+                  "skipped":  0,
+                  "junit_sha256":  "c69bd8d6ca8d1b962cd6d5c149fa0d39ef9e3429dc54d5b98d73050e64ed86ba"
+              },
+    "recorded_at":  "2026-09-09T22:59:12.8028190Z",
+    "packet_source_checks":  [
+                                 {
+                                     "packet":  "attention-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  15
+                                 },
+                                 {
+                                     "packet":  "behavior-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "dependency-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  13
+                                 },
+                                 {
+                                     "packet":  "inquiry-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "k01-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  11
+                                 },
+                                 {
+                                     "packet":  "mechanism-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  23
+                                 },
+                                 {
+                                     "packet":  "native-fixture-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  8
+                                 },
+                                 {
+                                     "packet":  "options-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "purpose-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  15
+                                 },
+                                 {
+                                     "packet":  "reading-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  11
+                                 }
+                             ],
+    "execution_state":  "completed"
+}

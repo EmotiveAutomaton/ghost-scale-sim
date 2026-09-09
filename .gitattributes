@@ -2,3 +2,6 @@
 * text=auto eol=lf
 *.png binary
 *.ipynb text eol=lf
+
+# Preserve the accepted handoff's byte identity across checkouts.
+docs/versions/v16-acquired-craft/CODING_PACKAGE.md -text

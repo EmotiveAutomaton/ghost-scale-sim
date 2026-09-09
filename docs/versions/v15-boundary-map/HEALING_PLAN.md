@@ -1,5 +1,16 @@
 # V15 — healing plan
 
+**Closed-record repair, 2026-09-09.** The final automatic relaunch had re-prepared
+the queue at 10:43:31 on September 7, after the immutable deadline. It reset all
+136 entries to planned/unevaluated and removed saved execution metadata. The
+regenerated files are preserved under
+`results/v15/amended/post_deadline_prepare_20260907/`; eight canonical bookkeeping
+files were restored byte-for-byte from the published closure commit. Verdicts,
+scientific code, failure labels and the deadline were unchanged. The automatically
+generated report is retained as a historical artifact behind RESULTS_PACKET.md.
+This repair does not convert the failed runtime or reproduction contracts into
+successful ones.
+
 *Instrument repairs and pending curator decisions during the 168-hour window. This page carries
 no result prose (spec §9.1): it records what was repaired in the apparatus, what was not, and
 why. Card states below are record-completion states, never held criteria.*

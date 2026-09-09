@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-09-09T20:31:27.600341+00:00",
+  "source_commit": "82b4aa39d756904b2aecf5dd459eddd7962b3562",
+  "kind": "closed-run bookkeeping restoration",
+  "regenerated_at": "2026-09-07T10:43:31",
+  "files": [
+    {
+      "path": "results/v15/ARCHITECTURE_BUDGETS.json",
+      "regenerated_sha256": "9e363c2f8f24850127fe78f3c9e8773196e62a6b5ddd22a32338b3a522b2d148",
+      "restored_sha256": "0137dbbc841a99f032e46ac2aaf73b85ccaaa5abf4e9f784c962ff15fe587f19",
+      "changed_fields": [
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/CONSTRUCTION_GRAPH.json",
+      "regenerated_sha256": "777d131d07494e68a93b6e7771c1f66a255e4723c873c9df2fe07b4d6ade57c1",
+      "restored_sha256": "e5d5c473f771fda1cce53571e443a64e1a86461bbfb9d9c7bd5bae9f2d8be185",
+      "changed_fields": [
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/EXPECTED_CELLS_TEMPLATE.json",
+      "regenerated_sha256": "d23f913f370936e801d2fa69d35c1d2d4172425300b5a8ae297bb2bfd2ea4d62",
+      "restored_sha256": "6bbaa0305282713dac6efa8cbd8abc1006afac04e63b83ce5e8e7c65d07307ca",
+      "changed_fields": [
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/GENERATOR_FAMILIES.json",
+      "regenerated_sha256": "168116eb8d98dd6721d02d5e766de4b839407044e514e1935b5b46883b17830b",
+      "restored_sha256": "a3cbe048f8a21d19349921afd2792a0aaed30138ae3f7705d126fb9269487595",
+      "changed_fields": [
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/PUBLICATION_MAP_TEMPLATE.json",
+      "regenerated_sha256": "a9fcd5617f8426c6ea42380fdd787eae3706be73784aa32c46c53672ceef3b54",
+      "restored_sha256": "d60e4a38376add84c582b237a6d279fe156abe2382c649f6ae97ab7c3d92c0a6",
+      "changed_fields": [
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/QUEUE_MANIFEST.json",
+      "regenerated_sha256": "3d103ddd6583f37361c44f1861706dfaf3b1db53eb68c21bddb707feefadda5d",
+      "restored_sha256": "cd2bfab2aff8092c2c0ce56431efda6a09fb25fbb2cc68f308ab46de57ec9aaa",
+      "changed_fields": [
+        "amended",
+        "criterion_status",
+        "lane",
+        "status",
+        "updated",
+        "wall_s",
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/SOURCE_LINEAGES.json",
+      "regenerated_sha256": "bacfacb28e6af5b122b845f847c5267834d0140e5a7dc106161f15929fe96329",
+      "restored_sha256": "7616ed36f6f658483d6a27296b33e1989e47e9452615fda37371a90a2cb931fc",
+      "changed_fields": [
+        "written"
+      ]
+    },
+    {
+      "path": "results/v15/prereg_v15_structural_lock.json",
+      "regenerated_sha256": "22de8dab3846178980a00ebe6544cd21f7d19b6d554c70255469694ac11d5634",
+      "restored_sha256": "676761406ba7e4f980afb4d4e1e8d75e85d39404e7844342073592393b5c3082",
+      "changed_fields": [
+        "ARCHITECTURE_BUDGETS.json",
+        "CONSTRUCTION_GRAPH.json",
+        "EXPECTED_CELLS_TEMPLATE.json",
+        "GENERATOR_FAMILIES.json",
+        "SOURCE_LINEAGES.json",
+        "report_v15.py",
+        "written"
+      ]
+    }
+  ],
+  "scientific_verdicts_changed": false,
+  "generator_code_changed": false,
+  "deadline_changed": false,
+  "new_scientific_run": false,
+  "reason": "The post-deadline prepare reset 136 queue entries to planned/unevaluated and removed saved execution metadata.",
+  "qualification": "The historical structural lock is restored as evidence. Reporting-code qualifications added at closure retain their own later source hash; this restoration does not claim a newly valid scientific lock."
+}

@@ -19,8 +19,26 @@ authorship and contribution records retain their original attribution.
 
 ## Current qualifications to the inherited notes (2026-09-05)
 
-- V1 through V14 are closed. V15 is the active specification; its records determine
-  current execution state. Do not reopen older versions as part of environment work.
+- V1 through V15 are closed. V16 is the accepted commission; read
+  `docs/versions/v16-acquired-craft/CODING_PACKAGE.md` and `results/v16/CAMPAIGN.json`.
+  Determine execution state from V16 packet locks, status records and owned live
+  processes. Historical V15 runtime and reporting rules below apply only to V15.
+  Preserve its failed instruments, runtime failure and incomplete regeneration.
+- V16 has an immutable 120-hour elapsed ceiling including setup and closeout.
+  It may close early only when the eligible finite queue and bounded expansion
+  ladder are exhausted. No occupancy padding or inherited seven-day report embargo.
+- Require a real retained native case by hour 4 and an admitted minimum W1 spine
+  entering discovery by hour 12, or an explicit setup-blocked receipt. Allow one
+  bounded four-hour setup repair. Optional intake cannot block native execution;
+  total initial intake is capped at two active hours and closes by hour 24.
+- One V16 supervisor owns live status. Scratch gates never write it. Resume checks
+  existing locks and completed units; it never prepares again, changes clocks,
+  replaces frozen inputs or deletes failures. Workers write immutable unit records.
+- Keep job execution, instrument validity, scientific criteria, confirmation and
+  closeout states separate. Missing dependencies are explicit, never passed.
+- V16 uses the resident CPU stack with isolated optional dependencies. No environment
+  synchronization or gear changes. Preserve raw nested unit records as *_points.json
+  with archive checksums, independent reaggregation and a bounded replay bundle.
 - Gate tests cover specified failure patterns, not every way a criterion can reach
   a gate. In particular, placebo/positive tolerances need independent scrutiny.
 - A green runtime receipt alone does not establish continuous occupancy. Consult

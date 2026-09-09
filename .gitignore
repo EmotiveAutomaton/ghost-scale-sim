@@ -105,3 +105,13 @@ results/v15/coverage/
 results/v15/RUNNER_STATUS.json
 results/v15/WATCHDOG_STATUS.json
 results/v15/CHECKPOINTS.jsonl
+
+# V16 raw nested maker packets are retained locally with SHA-256 manifests.
+# Compact summaries, locks and curated replay bundles remain versioned.
+results/v16/**/units/
+results/v16/**/public/
+results/v16/**/private/
+results/v16/**/predictions/
+results/v16/RUNNER_STATUS.json
+results/v16/OWNER.lock
+results/v16/**/*.xml
