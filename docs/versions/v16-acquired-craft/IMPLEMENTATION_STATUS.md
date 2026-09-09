@@ -66,7 +66,16 @@ phases, paid inspection, actual assembly repairs and independent scoring. Its
 scope is complete own training and faithful routine-reuse memory. It compares
 self-monitoring with an equally informed direct forward-simulation rival.
 
-Maker/context branches, conditional tradeoffs, full consumer-mapped attacks, the expansion
+M01 completed recognition/process scouts on a larger sixteen-cell graphic world
+with six-step execution limits. Its exact inference covers a bounded acquired-
+routine catalog, not every program in that larger world. M02 completed actual
+production, random retention and editor selection scouts, retaining rejected
+works and scoring fresh raw and released artifacts separately. Both packets
+include observed reader CPU, resident memory and elapsed time. Per-request OS
+CPU can be zero at clock resolution; startup and complete model-building costs
+need their own accounting.
+
+Audience/collaboration branches, conditional tradeoffs, full consumer-mapped attacks, the expansion
 ladder, Sounding Line export, confirmation and closeout remain open. The seven
 CLI stage names are exposed, but transfer, confirmation and close reject entry
 until their machinery is admitted. A planned row is not an eligible job.
@@ -75,6 +84,11 @@ Raw records remain immutable and locally retained with manifests. Final curated
 replay, verified archival handoff, scientific findings, theory updates and the
 completed study account are still required. No human or real-text claim follows
 from these finite constructed worlds.
+
+The first pushed V16 checkpoint passed all 71 local V16 tests and all ten packet
+source checks. Its full Linux CI run retained one failing V15 gate test for the
+existing C11/M01 instrument failures, with no new V16 failure reported. See the
+checkpoint verification and CI receipts; the repository is not all green.
 
 ## Legacy isolation
 

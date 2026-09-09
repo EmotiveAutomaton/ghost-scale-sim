@@ -1,0 +1,11 @@
+{
+  "commit": "050e47f2d6796406e4361ad1978a82891a9269be",
+  "run_url": "https://github.com/EmotiveAutomaton/ghost-scale-sim/actions/runs/34415067518",
+  "completed_at": "2026-09-09T23:07:31Z",
+  "execution_state": "completed",
+  "conclusion": "failure",
+  "failing_tests": ["tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates"],
+  "failed_historical_instruments": ["V15 C11", "V15 M01"],
+  "new_v16_failures_reported": false,
+  "qualification": "The full fresh Linux CI suite preserves the historical gate failure. This is not an all-green repository claim."
+}
