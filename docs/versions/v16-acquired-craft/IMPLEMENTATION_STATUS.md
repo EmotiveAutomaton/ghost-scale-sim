@@ -224,6 +224,28 @@ prior scientific files, 11,760 fixture files and 3,037 archive files were checke
 these checks do not substitute for full independent aggregate regeneration,
 whole-unit replay or final archival handoff.
 
+The final expansion's first supervisor disappeared without a terminal receipt
+after retaining 121,856 condition records. Its last heartbeat was September 10
+at 11:59 UTC. The cause is unobserved. Recovery verified all 199 frozen source
+files, inventoried 99,328 files in the interrupted card, and resumed the original
+packet under one supervisor at 12:07 UTC. Completed raw manifests are checked
+before new units resume; the original allocation and campaign clock are preserved.
+The operational failure and retained partial-file inventory remain on record.
+
+The final-source control runner is now admitted separately: two tests passed,
+and its actual CLI was interrupted and resumed across all 300 known profile
+conditions without changing saved outputs or clocks. Its actual 267-condition
+scientific-source pass waits for the final expansion to complete. The runner
+binds source identities explicitly and does not register its control inputs as
+another scientific sample.
+
+The streaming raw-archive checks passed two corruption/source-mutation tests.
+A first portable chunk contains the two original native fixtures and their
+source/provenance: all 27 member files were reread and verified. This is the
+first archive chunk, not a complete campaign archive. Full archival coverage,
+the eight-lens catalogue, confirmation and final documentary closeout remain open.
+The hour-18 setup receipt was recorded before its deadline.
+
 ## Closeout verification in development
 
 A separate clean analysis process reproduced all 35 retained scout summaries
