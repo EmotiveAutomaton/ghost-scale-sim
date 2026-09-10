@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 import json
+import sys
 from pathlib import Path
 from ghostscale.validation.soundingline.v16.records import read, write, file_digest, now
 from ghostscale.validation.soundingline.v16.runtime import REPO, PACKAGE, supervisor, freeze, campaign
@@ -45,17 +46,26 @@ def pilot(root, heartbeat, units):
 
 
 def main():
+    from ghostscale.validation.soundingline.v16.active_binding import forward
+    forwarded = forward(REPO, sys.argv[1:])
+    if forwarded is not None:
+        raise SystemExit(forwarded)
     parser = argparse.ArgumentParser(__doc__)
     parser.add_argument("--stage", required=True,
                         choices=["preflight", "pilot", "discovery", "transfer",
                                  "confirmation", "close", "resume"])
     parser.add_argument("--root", type=Path, default=REPO / "results/v16")
     parser.add_argument("--fixture-units", type=int, default=2)
-    parser.add_argument("--packet", choices=["acquisition","reading","behavior","inquiry","options","purpose","attention","mechanism","dependency","recognition","selection","audience","multi-actor","tradeoffs","trajectory","preference-probe"], default="acquisition")
+    parser.add_argument("--packet", choices=["acquisition","reading","behavior","inquiry","options","purpose","attention","mechanism","dependency","recognition","selection","audience","multi-actor","tradeoffs","trajectory","preference-probe"], default=None)
     args = parser.parse_args()
     if args.fixture_units < 1:
         parser.error("fixture units must be positive")
     accepted = campaign(args.root)
+    native_fixture_resume = args.stage == "resume" and accepted["campaign_id"].startswith("fixture-") and (args.root/"packets/native-fixture-1.json").exists()
+    if args.packet is None and args.stage != "pilot" and not native_fixture_resume:
+        from ghostscale.validation.soundingline.v16.operational_entry import run
+        print(json.dumps(run(args.root, args.stage), indent=2))
+        return
     with supervisor(args.root, args.stage) as heartbeat:
         if args.stage == "preflight":
             report = {"commission": accepted["commission_sha256"], "code_root": str(REPO),

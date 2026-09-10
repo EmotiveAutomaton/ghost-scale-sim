@@ -24,7 +24,8 @@ def main():
         for path,record in receipts.get(card,[]):
             evidence.append({"receipt":str(path.relative_to(root)).replace("\\","/"),"sha256":file_digest(path),
                 "execution_state":record["execution_state"],"instrument_state":record.get("instrument_state","untested"),
-                "evidence_scope":record.get("evidence_scope","fixture" if fixture else "discovery"),"n_maker_packets":record.get("n_maker_packets",0),
+                "evidence_scope":record.get("evidence_scope","fixture" if fixture else "discovery"),"n_maker_packets":record.get("n_maker_packets",record.get("n_condition_records",0)),
+                "makers_per_condition":record.get("n_makers_per_condition"),"constructors_per_condition":record.get("constructors_per_condition"),
                 "confirmation_state":record.get("confirmation_state","untested"),
                 "reader_process":record.get("reader_process","same-process public-byte API"),
                 "pending_consumers":record.get("pending_consumers",[]),

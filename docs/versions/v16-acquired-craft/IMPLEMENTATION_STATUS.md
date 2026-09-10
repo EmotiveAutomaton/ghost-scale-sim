@@ -152,9 +152,21 @@ not measured scientific completion durations. See the
 [allocation lock](../../../results/v16/packets/constructor-expansion-1.json) and
 [forecast](../../../results/v16/expansion-setup/FORECAST.json).
 
-Further finite expansion decisions, confirmation and closeout remain open. The seven
-CLI stage names are exposed, but transfer, confirmation and close reject entry
-until their machinery is admitted. A planned row is not an eligible job.
+Further finite expansion decisions, confirmation and closeout remain open. The
+general CLI now uses a finite remaining-work queue by default. It checks actual
+admission/dependency records, preserves the active job on resume, quarantines a
+job after three worker failures with the same diagnosed cause, and counts existing
+instrument repair plans. A local binding can route the main checkout's default
+command to the active isolated implementation. Actual preflight preserved the
+live supervisor's PID, start time and completed-unit count.
+
+A real general-CLI construction fixture was interrupted and resumed: all saved
+predictions, units, source locks and clocks stayed byte-identical, and exactly
+192 fixture units completed. That fixture is separate from the scientific
+expansion. Closeout calls the completion guard and requires distinct archive,
+aggregate, scientific replay and documentary proofs. Future boundary, catalogue
+and confirmation handlers still require their own admission. A planned row is
+not an eligible job, and this operational checkpoint is not B04 completion.
 
 Raw records remain immutable and locally retained with manifests. Final curated
 replay, verified archival handoff, scientific findings, theory updates and the
