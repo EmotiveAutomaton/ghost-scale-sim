@@ -14,7 +14,9 @@ FIXTURES = {"transfer-fixture-1": "B01 standalone transfer",
             "collision-attack-fixture-1": "X03 actual consumer collision controls",
             "fairness-attack-fixture-1": "X04 native consumer information/cost profiles; B02 still pending",
             "context-attack-fixture-1": "X05 actual false-context and correction controls",
-            "misspecification-attack-fixture-1": "X06 alternative-generator and omitted-procedure controls"}
+            "misspecification-attack-fixture-1": "X06 alternative-generator and omitted-procedure controls",
+            "dependence-attack-fixture-1": "X07 source identities, nesting and rejected-work inventory; bridge consumers pending",
+            "noise-runtime-attack-fixture-1": "X08 physical noise and actual interruption controls; bridge consumers pending"}
 
 
 def fixture_integrity(root, packets):
@@ -23,9 +25,9 @@ def fixture_integrity(root, packets):
         base = root/packet
         mapping = read(base/"RAW_MANIFEST.json")["files"]
         actual = {str(path.relative_to(base)).replace("\\", "/")
-                  for directory in ("public", "private", "predictions", "units")
+                  for directory in ("public", "private", "predictions", "units", "runtime-fixture")
                   for path in (base/directory).rglob("*") if path.is_file()
-                  and path.name not in {"reader-stderr.log", "consumer-stderr.log"}}
+                  and path.suffix not in {".log", ".lock", ".tmp"}}
         if set(mapping) != actual or not mapping:
             raise ValueError("fixture raw archive has missing or unmanifested files")
         total = 0
@@ -41,6 +43,9 @@ def fixture_integrity(root, packets):
             raise ValueError("fixture has not completed validly")
         records.append({"packet": packet, "kind": FIXTURES[packet], "files": len(mapping),
                         "bytes": total, "scientific_maker_sample_size": "not applicable",
+                        "interrupted_temporary_writes": {
+                            str(path.relative_to(base)).replace("\\", "/"): file_digest(path)
+                            for path in sorted((base/"runtime-fixture").rglob("*.tmp"))},
                         "manifest_sha256": file_digest(base/"RAW_MANIFEST.json")})
     return records
 

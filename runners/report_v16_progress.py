@@ -70,7 +70,9 @@ def main():
     for attack,packet,key in [("X03","collision-attack-fixture-1","source_condition_calibrations"),
                               ("X04","fairness-attack-fixture-1","native_consumer_condition_profiles"),
                               ("X05","context-attack-fixture-1","source_condition_calibrations"),
-                              ("X06","misspecification-attack-fixture-1","source_condition_calibrations")]:
+                              ("X06","misspecification-attack-fixture-1","source_condition_calibrations"),
+                              ("X07","dependence-attack-fixture-1","native_consumer_condition_calibrations"),
+                              ("X08","noise-runtime-attack-fixture-1","native_consumer_condition_calibrations")]:
         path=root/packet/"COMPLETION.json"
         if path.exists():
             receipt=read(path)
