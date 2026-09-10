@@ -7,7 +7,10 @@ from ghostscale.validation.soundingline.v16.runtime import REPO
 from ghostscale.validation.soundingline.v16.record_integrity import source_locks, raw_integrity
 
 FIXTURES = {"transfer-fixture-1": "B01 standalone transfer",
-            "access-attack-fixture-1": "X01 access/cache fixture"}
+            "access-attack-fixture-1": "X01 access/cache fixture",
+            "transfer-fixture-2": "B01 corrected inquiry transfer",
+            "access-attack-fixture-2": "X01 corrected inquiry and transfer access/cache fixture",
+            "recoding-attack-fixture-1": "X02 macro and physical recoding fixture"}
 
 
 def fixture_integrity(root, packets):
@@ -16,7 +19,7 @@ def fixture_integrity(root, packets):
         base = root/packet
         mapping = read(base/"RAW_MANIFEST.json")["files"]
         actual = {str(path.relative_to(base)).replace("\\", "/")
-                  for directory in ("public", "private", "predictions")
+                  for directory in ("public", "private", "predictions", "units")
                   for path in (base/directory).rglob("*") if path.is_file()
                   and path.name not in {"reader-stderr.log", "consumer-stderr.log"}}
         if set(mapping) != actual or not mapping:

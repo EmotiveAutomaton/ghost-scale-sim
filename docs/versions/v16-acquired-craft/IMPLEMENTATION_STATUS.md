@@ -26,8 +26,14 @@ compiles previously untrained two-cell compositions. Its finite episodes include
 noise, delayed feedback, saturation, memory loss, stopping, and differing future
 objectives. Enactment and observation receive identical examples. Actual
 inquiry, feedback, computation and held-out execution costs are retained.
-R01-R05 admission tests passed and all five scouts completed. See the per-card
-receipts and [operational coverage](../../../results/v16/PROGRESS.json).
+The first R01-R05 scouts completed, but a later physical recoding control exposed
+rounding errors in tied action choices and zero-value abstention. Their original
+code and records remain preserved and are invalid for promotion. One bounded
+repair produced a new reader and 1,280 fresh discovery packets. All five amended
+cards passed independent physics, scalar reader-math and aggregate checks; this
+is not confirmation or a causal before/after estimate. See the
+[repair resolution](../../../results/v16/repairs/inquiry-ties-1/RESOLUTION.json)
+and [operational coverage](../../../results/v16/PROGRESS.json).
 The independent assembly world has passed checks for dependencies, revision,
 stopping, acquired fragments and exact artifact likelihoods. P04 completed a
 seven-condition scout across graphic and assembly worlds, testing actual softmax,
@@ -86,16 +92,24 @@ They separate an added coverage-versus-orientation-quality profile from the
 required-part task, execution price, considered terminal menu, bounded search,
 physical opportunity and publication. V02 uses eight dated retained revisions
 with inherited training, purpose change and execution price crossed against
-stable, changing and absent added profiles. V03's actual-probe machinery passed
-admission tests; its scout remains pending at this checkpoint.
+stable, changing and absent added profiles. V03 completed its actual-probe scout.
+Its deterministic artifact/history target boundary remains distinct from a
+general comparison of nondegenerate information targets.
 
 The campaign now has cross-checkout OS ownership, timed liveness heartbeats
 during audits, a locked acceptance/manifest identity, and a signal checkpoint
 path. Actual process tests cover competing roots, owner death and resumption.
 Heartbeats report parent CPU and elapsed time without inventing completed units.
 
-Full consumer-mapped attacks, the expansion
-ladder, Sounding Line export, confirmation and closeout remain open. The seven
+The standalone export completed 1,574 tasks across 44 cases with the corrected
+inquiry reader. Predictions were committed before the evaluator join; private
+access was denied and distribution files were reviewed. X01 was repeated for
+the amended inquiry consumers and export. X02 passed 15,652 actual reader calls
+across its 17 declared consumers. Its scope is the explicit macro interface and
+named physical recodings, not arbitrary grammar or search-order changes.
+
+X03-X08, the expansion ladder, archive comparison, confirmation and closeout
+remain open. The seven
 CLI stage names are exposed, but transfer, confirmation and close reject entry
 until their machinery is admitted. A planned row is not an eligible job.
 
@@ -114,6 +128,13 @@ checks; its full Linux CI retained the same sole V15 failure. The current
 checkpoint adds the audience, collaboration, tradeoff, probe and operational
 tests. Its actual test count and source checks are recorded in
 [verification](../../../results/v16/checkpoint-0114/VERIFICATION.json).
+
+The checkpoint after the inquiry repair passed all 129 local V16 tests and
+verified all 23 packet source identities. Raw integrity covered 21,506 retained
+scientific unit records and 9,793 fixture/export files. The two inquiry lineages
+are separate; these counts are not a pooled sample size. Full world replay and
+final archival handoff remain outstanding. See the
+[checkpoint receipt](../../../results/v16/checkpoint-0400/VERIFICATION.json).
 
 ## Legacy isolation
 

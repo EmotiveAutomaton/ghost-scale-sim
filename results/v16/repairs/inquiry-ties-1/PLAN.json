@@ -1,0 +1,60 @@
+{
+  "family": "R01-R05 inquiry",
+  "repair_id": "inquiry-ties-1",
+  "repair_budget_used": 1,
+  "repair_budget_maximum": 1,
+  "status": "implementation in progress; no new scientific units drawn",
+  "cause": "binary64 rounding differences in equal command and construction values enter strict argmax, so changing only physical output-cell names changes delayed-learning scores",
+  "original_reader": "ghostscale/validation/soundingline/v16/inquiry.py",
+  "original_reader_sha256": "7f3023abf5b6726ead754b95f65b9feb3683cdf81fa77448543abcf7eac0fa34",
+  "original_packet": "inquiry-scout-1",
+  "original_packet_hash": "a6a41d53f70310368a114efb2c823512bd3580c16fa3581ccc0f4fb0128bab5f",
+  "failed_fixture": "results/v16/recoding-setup/attempt-3.xml",
+  "failed_source_archive": "private/test_recoding_before_repair.py",
+  "observed_diagnosis": {
+    "domain1_original_delayed_value": 0.05000000000000001,
+    "domain1_recoded_delayed_value": 0.07250000000000004,
+    "equal_target_probabilities": "0.24999999999999997 versus 0.25 from summation order",
+    "future_weights": [
+      0.5,
+      0.5
+    ],
+    "scope": "controlled public-state fixture; no scout outcome means were used to select the repair"
+  },
+  "correction": "new inquiry_stable.py uses an explicit 64*ulp(1.0) tie resolution for command and program argmax; old reader file remains frozen",
+  "unchanged": [
+    "world laws",
+    "acquisition examples",
+    "query fee and logical cost formulas",
+    "estimands",
+    "scientific criteria",
+    "original raw records and summaries"
+  ],
+  "rerun_plan": {
+    "packet": "inquiry-scout-2",
+    "namespace": "v16-inquiry-discovery-2-{card}",
+    "n_per_condition": 64,
+    "constructors": 8,
+    "cards": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05"
+    ],
+    "scope": "fresh-seed amended discovery; not confirmation or causal before/after effect estimate"
+  },
+  "required_validation": [
+    "known learning/noise anchors on corrected reader",
+    "old defect retained as an intentionally failing control",
+    "recoding invariance with nonuniform future-task frequencies",
+    "independent query/program tie choices and episode scoring",
+    "new actual public-only reader requests and source-bound admission"
+  ],
+  "affected_consumers": [
+    "R01-R05 promotions require new corrected evidence and attacks",
+    "B01 inquiry cases remain transport-validated diagnostics until corrected export and consumer attack checks"
+  ],
+  "second_independent_defect": "close the affected family with explicit failed instruments; no second repair",
+  "campaign_clock_reset": false
+}
