@@ -1,0 +1,19 @@
+{
+  "evidence_scope": "operational setup",
+  "execution_state": "resolved",
+  "attempts": [
+    {
+      "attempt": 1,
+      "outcome": "failed before reading scientific data",
+      "reason": "Git child process returned status 128; stderr not yet surfaced."
+    },
+    {
+      "attempt": 2,
+      "outcome": "failed before reading scientific data",
+      "reason": "Git reported different repository owner and sandbox process identity."
+    }
+  ],
+  "resolution": "The read-only verifier supplies a safe.directory override for the explicitly named, already trusted source checkout on that one Git object-read command. No global Git configuration or hook policy changed.",
+  "scientific_sources_changed": false,
+  "scientific_data_changed": false
+}

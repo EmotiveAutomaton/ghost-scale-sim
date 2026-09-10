@@ -1,0 +1,14 @@
+{
+  "commit": "31888827a2ec0e639b8ddf6ac1f41aefd81955e9",
+  "run_id": 34425093186,
+  "url": "https://github.com/EmotiveAutomaton/ghost-scale-sim/actions/runs/34425093186",
+  "status": "completed",
+  "conclusion": "failure",
+  "completed_at": "2026-09-10T01:27:08Z",
+  "failed_tests": [
+    "tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates"
+  ],
+  "failure_detail": "Existing V15 C11 positive:the_set_contains_the_truth and M01 positive:every_posterior_is_a_normalized_distribution instruments remain failed.",
+  "new_v16_failures": [],
+  "qualification": "Full repository CI is not green. V15 failures remain qualified and unchanged; the isolated local V16 suite passed 98 tests. GitHub's fresh Linux environment was separate from the preserved local scientific environment."
+}

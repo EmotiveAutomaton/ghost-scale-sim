@@ -1,0 +1,38 @@
+{
+    "execution_state":  "completed",
+    "scope":  "V16 tested implementation and retention checkpoint",
+    "tests":  [
+                  {
+                      "file":  "TESTS.xml",
+                      "sha256":  "a09be8c4e2e456e43592f62ba20b3a9e0f04516cf2785567903e204352aff23e",
+                      "tests":  107,
+                      "failures":  0,
+                      "errors":  0,
+                      "skipped":  0,
+                      "elapsed_seconds":  55.084
+                  },
+                  {
+                      "file":  "FIXTURE_ARCHIVE_TEST.xml",
+                      "sha256":  "c412c7910ca3c0fe5ae0783572029610d4c391a7f5ed25f28c631c7791099e3f",
+                      "tests":  1,
+                      "failures":  0,
+                      "errors":  0,
+                      "skipped":  0,
+                      "elapsed_seconds":  0.069
+                  }
+              ],
+    "integrity_receipt":  "INTEGRITY.json",
+    "integrity_sha256":  "82132ed1c318636c9c01fb013e2ad43227c1a81f03f32ae22950929e62c6a22a",
+    "frozen_packet_sources":  19,
+    "source_bytes_in_main":  "valid",
+    "scientific_raw_files":  124232,
+    "scientific_unit_records":  20226,
+    "fixture_raw_files":  4782,
+    "implementation_cards_completed":  32,
+    "science_scout_cards_completed":  30,
+    "aggregate_regeneration_complete":  false,
+    "whole_unit_replay_complete":  false,
+    "final_archive_handoff_complete":  false,
+    "campaign_complete":  false,
+    "full_repository_ci":  "Existing V15 C11 and M01 instrument failures remain test-visible. No V16 failure in the previous three CI runs; this checkpoint CI is pending."
+}
