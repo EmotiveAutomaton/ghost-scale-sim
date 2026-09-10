@@ -333,6 +333,9 @@ seed identities and deterministic physical costs must match. ZIP archives carry
 member manifests and receive full member-byte verification after creation.
 Complete archival coverage, independent calculations, bounded replay coverage
 and documentary consistency are separately required before campaign closure.
+The portable replay inventory includes every file required by its frozen packet
+locks, including admission tests and provenance records. ZIP membership alone is
+insufficient: the extracted source-lock check must also succeed.
 
 Independent calculation can proceed card by card after each native completion.
 Cached calculations bind the original summary, raw manifest, completion receipt

@@ -7,7 +7,7 @@ from ghostscale.validation.soundingline.v16.runtime import REPO
 from ghostscale.validation.soundingline.v16.records import read, write, now, file_digest
 from ghostscale.validation.soundingline.v16.record_integrity import source_locks
 from ghostscale.validation.soundingline.v16.replay_plan import select_native, select_archive, lookup, item
-from ghostscale.validation.soundingline.v16.replay_coverage import phase, catalogue, allocation, collect
+from ghostscale.validation.soundingline.v16.replay_coverage import phase, catalogue, allocation, collect, checked_file
 from ghostscale.validation.soundingline.v16.raw_archive import manifest, create, identity
 from runners.reaggregate_v16_packet import inventory
 
@@ -27,6 +27,19 @@ def development(root):
     for path in sorted((root/"native-fixture-1/units").glob("*_points.json")):
         selected.append(item(root, path, "native-fixture-1", "native", None, 1))
     return selected
+
+
+def implementation_files(root, repo):
+    """Ship every source the extracted replay's frozen-lock check will require."""
+    packets = sorted(root.joinpath("packets").glob("*.json"))
+    paths = set([*repo.joinpath("ghostscale").rglob("*.py"),
+        *repo.joinpath("runners").glob("*v16*.py"), *packets,
+        repo/"pyproject.toml", repo/"uv.lock",
+        repo/"docs/versions/v16-acquired-craft/CODING_PACKAGE.md"])
+    for packet in packets:
+        for name, expected in read(packet)["identity"]["files"].items():
+            paths.add(checked_file(repo, name, expected))
+    return sorted(path.resolve() for path in paths)
 
 
 def run(root, output, archive_root, input_path):
@@ -52,10 +65,7 @@ def run(root, output, archive_root, input_path):
     scope = allocation(phases, descriptive)
     # Package imports, original scientific locks, and all executed V16 tools ship
     # beside the selected source records. No environment is synchronized here.
-    implementation = [*REPO.joinpath("ghostscale").rglob("*.py"), *REPO.joinpath("runners").glob("*v16*.py"),
-        *root.joinpath("packets").glob("*.json"), REPO/"pyproject.toml", REPO/"uv.lock",
-        REPO/"docs/versions/v16-acquired-craft/CODING_PACKAGE.md"]
-    for path in implementation:
+    for path in implementation_files(root, REPO):
         collect(files, path.resolve(), file_digest(path))
     dependencies = {path.relative_to(REPO.resolve()).as_posix(): sha for path,sha in files.items()}
     write(output/"dependency_points.json", {"files": dependencies})

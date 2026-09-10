@@ -5,16 +5,57 @@ The native end-to-end milestone completed about 15 minutes after acceptance.
 The minimum W1 acquisition spine entered discovery before elapsed hour one.
 These milestones do not complete the 42-card commission.
 
-At the September 10 20:03 UTC checkpoint, the 26-card constructor expansion
-and all 300 source-control conditions are complete. A separate process reproduced
-all 76,800 expansion records, and 52 bounded whole-case replays matched. The last
-finite 17-card expansion generated all 273,408 planned records at 19:04 UTC;
-its last card's native audit is still running. Independent recalculation and
-archival of completed cards run alongside that audit. Confirmation selection and
-execution are admitted but await completed source controls and explicit ladder
-disposition. No unfinished audit is counted as a completed scientific packet.
+At the September 10 22:45 UTC checkpoint, every experimental job in the frozen
+queue is complete. Only final closeout remains. The 26-card constructor expansion
+and its 300 source-control conditions completed; independent analysis reproduced
+all 76,800 records. The last 17-card expansion completed all 273,408 records,
+native audits and raw checksums at 21:13 UTC. Its 267 source-control conditions
+completed at 21:51 UTC, and their independent recount completed at 22:29 UTC.
+The final disposition explicitly exhausts all thirty native cards' sampling.
 
-## Executed and admitted machinery
+Three selected claims froze before fresh confirmation, which completed at
+22:02 UTC with 4,864 histories in 4,544 independent constructor packets. Native
+arithmetic, the three primaries, multiplicity, source controls and planning-law
+power have separate completed checks. The result is still awaiting the complete
+global proof chain before final promotion and campaign closure. The pre-data
+[confirmation ledger](../../../results/v16/confirmation-selection/CLAIMS.json)
+and [completed numerical index](../../../results/v16/study-products-1/README.md)
+retain the exact claims and comparison scopes. The pre-data confirmation
+[source closure](../../../results/v16/confirmation-setup/source-closure-1/RECEIPT.json)
+adds five already-tested dependencies of the final-control packet, preserving
+both original admission records. No scientific source, criterion or clock changed.
+
+The final replay packager subsequently needed a dependency-inventory correction:
+frozen locks also require admission tests and provenance files. Four targeted
+checks passed, and an archive of the actual 36-packet source inventory passed its
+215 source-file checks after extraction. Earlier full-suite results predate this
+packaging-only correction; no later full 355-test V16 run is implied. The original
+packager and admission remain preserved in the
+[correction record](../../../results/v16/closeout-setup/replay-source-closure/DIAGNOSIS.json).
+The actual final bundle subsequently passed that check: 196 bounded whole-case
+checks cover 168 distinct cases. Its final ZIP was fully extracted and all 3,046
+dependencies and 226 source files required by 38 packets verified. The three
+final figures were generated from the completed numerical index and visually
+reviewed. These completed steps do not substitute for full raw coverage.
+
+Independent boundary recalculation and the large raw archive verification remain
+active. Their successful completion must precede the global aggregate join,
+complete current raw snapshot, documentary proof, 42-card accounting and ordinary
+supervisor closure. No additional experiment or design decision is waiting.
+
+The full repository regression executed 1,781 tests: 1,768 passed, one retained
+V15 gate test failed, eleven skipped and one was an expected failure. All 354
+V16 tests in that run passed. The later packaging correction passed four targeted
+checks, including one new test, so the distinct V16 inventory is now 355; that
+does not claim a later full 355-test run. V15 C11/M01, its runtime failure and
+incomplete regeneration remain unchanged. The repository is not all green.
+
+## Earlier implementation notes and retained status history
+
+The sections below preserve the engineering checkpoints and their original
+qualifications. Statements about pending work describe those earlier checkpoints;
+the dated status above is current. Original failure and source records remain
+available through their links.
 
 The native graphic world executes place/remove programs, learns repeated
 fragments from actual trials, and preserves multiple histories yielding one
