@@ -10,7 +10,11 @@ FIXTURES = {"transfer-fixture-1": "B01 standalone transfer",
             "access-attack-fixture-1": "X01 access/cache fixture",
             "transfer-fixture-2": "B01 corrected inquiry transfer",
             "access-attack-fixture-2": "X01 corrected inquiry and transfer access/cache fixture",
-            "recoding-attack-fixture-1": "X02 macro and physical recoding fixture"}
+            "recoding-attack-fixture-1": "X02 macro and physical recoding fixture",
+            "collision-attack-fixture-1": "X03 actual consumer collision controls",
+            "fairness-attack-fixture-1": "X04 native consumer information/cost profiles; B02 still pending",
+            "context-attack-fixture-1": "X05 actual false-context and correction controls",
+            "misspecification-attack-fixture-1": "X06 alternative-generator and omitted-procedure controls"}
 
 
 def fixture_integrity(root, packets):

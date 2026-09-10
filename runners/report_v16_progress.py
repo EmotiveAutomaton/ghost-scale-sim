@@ -26,7 +26,9 @@ def main():
                 "execution_state":record["execution_state"],"instrument_state":record.get("instrument_state","untested"),
                 "evidence_scope":record.get("evidence_scope","fixture" if fixture else "discovery"),"n_maker_packets":record.get("n_maker_packets",0),
                 "confirmation_state":record.get("confirmation_state","untested"),
-                "reader_process":record.get("reader_process","same-process public-byte API")})
+                "reader_process":record.get("reader_process","same-process public-byte API"),
+                "pending_consumers":record.get("pending_consumers",[]),
+                "scope_limit":record.get("scope_limit",record.get("reading_cost_qualification"))})
         for item in evidence:
             if item["receipt"].startswith("inquiry-scout-1/") and (root/"repairs/inquiry-ties-1/PLAN.json").exists():
                 item.update(source_receipt_instrument_state=item["instrument_state"], instrument_state="failed",
@@ -37,9 +39,9 @@ def main():
                 item["repair_id"]="inquiry-ties-1"
         completed=[item for item in evidence if item["execution_state"]=="completed" and item["instrument_state"]=="valid"]
         cards.append({"card_id":card,"question":row["question_and_comparison"],"evidence":evidence,
-            "implementation_state":"completed" if completed else "pending",
+            "implementation_state":("partial" if any(item["pending_consumers"] for item in completed) else "completed") if completed else "pending",
             "scout_state":"not applicable" if fixture else "completed" if completed else "pending",
-            "fixture_state":("completed" if completed else "pending") if fixture else "not applicable",
+            "fixture_state":(("native consumers completed; remaining consumer pending" if any(item["pending_consumers"] for item in completed) else "completed") if completed else "pending") if fixture else "not applicable",
             "expansion_state":"not applicable" if fixture else "pending decision" if completed else "not eligible yet",
             "confirmation_state":"untested","closure_state":"open","warrant":"DESCRIPTIVE ONLY","pursuit":"OPENED",
             "process_boundary":("separate from original discovery" if completed and any(
@@ -65,6 +67,20 @@ def main():
                     "receipt":str(path.relative_to(root)).replace("\\","/"),"sha256":file_digest(path)}
                 if attack=="X01":
                     card["access_attack"]="X01 valid for amended inquiry or corrected standalone consumer; source-specific receipt retained"
+    for attack,packet,key in [("X03","collision-attack-fixture-1","source_condition_calibrations"),
+                              ("X04","fairness-attack-fixture-1","native_consumer_condition_profiles"),
+                              ("X05","context-attack-fixture-1","source_condition_calibrations"),
+                              ("X06","misspecification-attack-fixture-1","source_condition_calibrations")]:
+        path=root/packet/"COMPLETION.json"
+        if path.exists():
+            receipt=read(path)
+            if receipt["execution_state"]=="completed" and receipt["instrument_state"]=="valid":
+                for card in cards:
+                    if card["card_id"] in receipt[key]:
+                        card.setdefault("attack_receipts",{})[attack]={"state":"valid",
+                            "receipt":str(path.relative_to(root)).replace("\\","/"),"sha256":file_digest(path),
+                            "scope_limit":receipt.get("scope_limit",receipt.get("reading_cost_qualification")),
+                            "sampling_scope":"known controls and bounded profiles, not new independent discovery makers"}
     counts=dict(Counter(row["implementation_state"] for row in cards))
     report={"written_at":now(),"commission_sha256":read(root/"CAMPAIGN.json")["commission_sha256"],
         "cards":cards,"implementation_counts":counts,

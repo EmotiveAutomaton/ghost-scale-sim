@@ -108,7 +108,25 @@ the amended inquiry consumers and export. X02 passed 15,652 actual reader calls
 across its 17 declared consumers. Its scope is the explicit macro interface and
 named physical recodings, not arbitrary grammar or search-order changes.
 
-X03-X08, the expansion ladder, archive comparison, confirmation and closeout
+X03 completed 290 actual condition calibrations across its 27 consumers, retaining
+ambiguity until genuinely separating evidence. X04 completed 316 native condition
+profiles across all 30 scientific cards, with 9,358 measured repeated requests and
+22 fresh-process startup profiles. All-arm requests remain batch measurements.
+Its B02 consumer is still pending. The original direct-table reading cost counter
+omits repeated evidence likelihood calls; a separate invocation meter reproduces
+the original predictions exactly and supplies corrected accounting. Model support,
+logical calls, cache work and actual CPU measurements are distinct quantities.
+
+X05 completed 238 condition calibrations across 16 consumers. Uncertain false
+memory can be corrected by actual later evidence; exact trusted context can still
+mislead. Verified source correction is not automatic deception detection. X06
+completed its 11-consumer battery. Unsupported physical/catalog assumptions yield
+explicit mismatch or rejection; in-support changed purpose and omitted selection
+can give confidently wrong attribution. Those errors are exposed boundaries, not
+certificates of robustness. Failed setup controls and their resolution remain
+retained; no reader was altered to fit these attacks.
+
+X07-X08, the expansion ladder, archive comparison, confirmation and closeout
 remain open. The seven
 CLI stage names are exposed, but transfer, confirmation and close reject entry
 until their machinery is admitted. A planned row is not an eligible job.
