@@ -75,7 +75,26 @@ include observed reader CPU, resident memory and elapsed time. Per-request OS
 CPU can be zero at clock resolution; startup and complete model-building costs
 need their own accounting.
 
-Audience/collaboration branches, conditional tradeoffs, full consumer-mapped attacks, the expansion
+M03 completed its audience/rehearsal scout with paid queries, actual new
+compositions, and separate historical and future scores. M04 completed its
+producer/self-revision/other-editor/selector scout. Self-revision remains an
+explicit rival, and an observed revision does not by itself identify a second
+maker. All candidate and rejected production remains in the raw record.
+
+V01 and V02 completed conditional tradeoff scouts on executed assembly choices.
+They separate an added coverage-versus-orientation-quality profile from the
+required-part task, execution price, considered terminal menu, bounded search,
+physical opportunity and publication. V02 uses eight dated retained revisions
+with inherited training, purpose change and execution price crossed against
+stable, changing and absent added profiles. V03's actual-probe machinery passed
+admission tests; its scout remains pending at this checkpoint.
+
+The campaign now has cross-checkout OS ownership, timed liveness heartbeats
+during audits, a locked acceptance/manifest identity, and a signal checkpoint
+path. Actual process tests cover competing roots, owner death and resumption.
+Heartbeats report parent CPU and elapsed time without inventing completed units.
+
+Full consumer-mapped attacks, the expansion
 ladder, Sounding Line export, confirmation and closeout remain open. The seven
 CLI stage names are exposed, but transfer, confirmation and close reject entry
 until their machinery is admitted. A planned row is not an eligible job.
@@ -89,6 +108,12 @@ The first pushed V16 checkpoint passed all 71 local V16 tests and all ten packet
 source checks. Its full Linux CI run retained one failing V15 gate test for the
 existing C11/M01 instrument failures, with no new V16 failure reported. See the
 checkpoint verification and CI receipts; the repository is not all green.
+
+The later checkpoint through M02 passed 81 local V16 tests and twelve source
+checks; its full Linux CI retained the same sole V15 failure. The current
+checkpoint adds the audience, collaboration, tradeoff, probe and operational
+tests. Its actual test count and source checks are recorded in
+[verification](../../../results/v16/checkpoint-0114/VERIFICATION.json).
 
 ## Legacy isolation
 

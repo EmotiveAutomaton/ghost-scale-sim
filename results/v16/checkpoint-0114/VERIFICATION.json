@@ -1,0 +1,97 @@
+{
+    "evidence_scope":  "operational verification",
+    "test_source":  "isolated implementation",
+    "campaign_complete":  false,
+    "recorded_at":  "2026-09-10T01:17:01.2997703Z",
+    "tests":  {
+                  "passed":  98,
+                  "elapsed_seconds":  62.021,
+                  "errors":  0,
+                  "failures":  0,
+                  "skipped":  0,
+                  "junit_sha256":  "3e7c680dd35c256b2dd50a07500be4f1055c5873128fbf16791ddc3b6b6b1af1"
+              },
+    "packet_source_checks":  [
+                                 {
+                                     "packet":  "attention-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  15
+                                 },
+                                 {
+                                     "packet":  "audience-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  21
+                                 },
+                                 {
+                                     "packet":  "behavior-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "dependency-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  13
+                                 },
+                                 {
+                                     "packet":  "inquiry-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "k01-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  11
+                                 },
+                                 {
+                                     "packet":  "mechanism-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  23
+                                 },
+                                 {
+                                     "packet":  "multi-actor-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  20
+                                 },
+                                 {
+                                     "packet":  "native-fixture-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  8
+                                 },
+                                 {
+                                     "packet":  "options-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "purpose-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  15
+                                 },
+                                 {
+                                     "packet":  "reading-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  11
+                                 },
+                                 {
+                                     "packet":  "recognition-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  14
+                                 },
+                                 {
+                                     "packet":  "selection-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  17
+                                 },
+                                 {
+                                     "packet":  "tradeoffs-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  18
+                                 },
+                                 {
+                                     "packet":  "trajectory-scout-1",
+                                     "source_identity":  "valid",
+                                     "files_checked":  19
+                                 }
+                             ],
+    "execution_state":  "completed"
+}

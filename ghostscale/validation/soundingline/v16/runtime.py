@@ -6,14 +6,18 @@ from datetime import datetime, timezone
 import os
 import platform
 import sys
+import threading
+import time
+import signal
 from .records import read, write, file_digest, now, digest
+from .campaign_ownership import campaign_owner,acceptance
 
 REPO = Path(__file__).resolve().parents[4]
 PACKAGE = Path(__file__).resolve().parent
 
 
 @contextmanager
-def supervisor(root: Path, stage: str):
+def local_owner(root: Path):
     root.mkdir(parents=True, exist_ok=True)
     handle = (root / "OWNER.lock").open("a+b")
     if handle.tell() == 0:
@@ -30,29 +34,73 @@ def supervisor(root: Path, stage: str):
     except OSError:
         handle.close()
         raise RuntimeError("another supervisor owns this campaign")
-    state = {"schema_version": "v16.status.1", "pid": os.getpid(), "stage": stage,
-             "started_at": now(), "heartbeat": now(), "execution_state": "running"}
-    def heartbeat(**updates):
-        state.update(updates)
-        state["heartbeat"] = now()
-        write(root / "RUNNER_STATUS.json", state, immutable=False)
-    heartbeat()
     try:
-        yield heartbeat
-    except BaseException as error:
-        heartbeat(execution_state="checkpointed" if isinstance(error, KeyboardInterrupt) else "failed",
-                  error=f"{type(error).__name__}: {error}")
-        raise
+        yield
     finally:
         handle.close()
 
 
+@contextmanager
+def supervisor(root: Path, stage: str, *, heartbeat_interval=15.0):
+    if heartbeat_interval<=0:
+        raise ValueError("heartbeat interval must be positive")
+    root.mkdir(parents=True,exist_ok=True)
+    accepted=campaign(root) if (root/"CAMPAIGN.json").exists() else None
+    if accepted and stage in {"pilot","discovery","transfer","confirmation"} and remaining_seconds(root)<=0:
+        raise RuntimeError("immutable ceiling forbids new scientific dispatch")
+    with campaign_owner(root) as owner_key,local_owner(root):
+        state={"schema_version":"v16.status.2","pid":os.getpid(),"stage":stage,"started_at":now(),
+            "heartbeat":now(),"execution_state":"running","campaign_owner_key":owner_key,
+            "ownership_scope":"cross-checkout OS ownership, with the per-directory lock retained"}
+        started=time.monotonic();cpu=time.process_time()
+        serialized=threading.RLock();stop=threading.Event();failures=[]
+        def emit(updates,source):
+            with serialized:
+                state.update(updates)
+                state["heartbeat"]=now();state["heartbeat_source"]=source
+                state["supervisor_elapsed_seconds"]=time.monotonic()-started
+                state["supervisor_cpu_seconds"]=time.process_time()-cpu
+                if "completed_units" in updates:
+                    state["last_unit_report_at"]=state["heartbeat"]
+                state["unit_loop_complete"]=bool(state.get("planned_units") and state.get("completed_units")==state["planned_units"])
+                if accepted:
+                    deadline=datetime.fromisoformat(accepted["deadline"].replace("Z","+00:00"))
+                    state["ceiling_exceeded"]=(datetime.now(timezone.utc)>deadline)
+                write(root/"RUNNER_STATUS.json",state,immutable=False)
+        def heartbeat(**updates):
+            if failures:
+                raise RuntimeError("supervisor heartbeat failed") from failures[0]
+            emit(updates,"supervisor")
+        def pulse():
+            while not stop.wait(heartbeat_interval):
+                try:
+                    emit({},"liveness timer; no implied new scientific completion")
+                except BaseException as error:
+                    failures.append(error);return
+        def checkpoint_signal(signum,frame):
+            raise KeyboardInterrupt(f"checkpoint requested by signal {signum}")
+        previous=None
+        if threading.current_thread() is threading.main_thread():
+            previous=signal.signal(signal.SIGTERM,checkpoint_signal)
+        heartbeat()
+        timer=threading.Thread(target=pulse,name="v16-supervisor-heartbeat",daemon=True)
+        timer.start()
+        try:
+            yield heartbeat
+            if failures:
+                raise RuntimeError("supervisor heartbeat failed") from failures[0]
+        except BaseException as error:
+            emit({"execution_state":"checkpointed" if isinstance(error,KeyboardInterrupt) else "failed",
+                  "error":f"{type(error).__name__}: {error}"},"supervisor exception")
+            raise
+        finally:
+            stop.set();timer.join()
+            if previous is not None:
+                signal.signal(signal.SIGTERM,previous)
+
+
 def campaign(root: Path):
-    accepted = read(root / "CAMPAIGN.json")
-    spec = REPO / "docs/versions/v16-acquired-craft/CODING_PACKAGE.md"
-    if file_digest(spec) != accepted["commission_sha256"]:
-        raise ValueError("commission hash mismatch")
-    return accepted
+    return acceptance(root,REPO)
 
 
 def remaining_seconds(root: Path):

@@ -1,0 +1,26 @@
+{
+    "execution_state":  "completed",
+    "instrument_state":  "valid",
+    "evidence_scope":  "operational fixture",
+    "junit_sha256":  "53dff386432429e20e7293931c5fdfc428269d8ce26d1d222cfb6783557df3c6",
+    "passed":  9,
+    "failures":  0,
+    "errors":  0,
+    "recorded_at":  "2026-09-10T01:19:14.4981299Z",
+    "tests":  [
+                  "test_campaign_lock_rejects_a_real_second_process_at_another_root",
+                  "test_heartbeat_advances_during_long_work_without_inventing_units",
+                  "test_acceptance_lock_rejects_clock_and_manifest_changes",
+                  "test_existing_packet_clocks_anchor_acceptance_migration",
+                  "test_interrupted_packet_resumes_without_duplicates_or_changed_clocks",
+                  "test_second_supervisor_cannot_take_status_ownership",
+                  "test_scientific_admission_survives_an_extended_unlocked_entrypoint",
+                  "test_completed_acquisition_is_read_without_repreparing_or_new_units",
+                  "test_missing_scientific_control_is_never_inferred_passed"
+              ],
+    "remaining":  "finite queue, three-failure quarantine, repair bounds, transfer, confirmation and close dispatch remain pending",
+    "source_hashes":  {
+                          "ghostscale/validation/soundingline/v16/runtime.py":  "98ef2530b08321f922c7f461833146cef7a37516c2f14324dd98f8052cd01ef9",
+                          "ghostscale/validation/soundingline/v16/campaign_ownership.py":  "c2d1a57d41ef864f01e3d0ea2e6a7b8551e1fc575700776f095c1f9bbe72ad2f"
+                      }
+}

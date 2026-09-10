@@ -51,7 +51,7 @@ def main():
                                  "confirmation", "close", "resume"])
     parser.add_argument("--root", type=Path, default=REPO / "results/v16")
     parser.add_argument("--fixture-units", type=int, default=2)
-    parser.add_argument("--packet", choices=["acquisition","reading","behavior","inquiry","options","purpose","attention","mechanism","dependency","recognition","selection"], default="acquisition")
+    parser.add_argument("--packet", choices=["acquisition","reading","behavior","inquiry","options","purpose","attention","mechanism","dependency","recognition","selection","audience","multi-actor","tradeoffs","trajectory","preference-probe"], default="acquisition")
     args = parser.parse_args()
     if args.fixture_units < 1:
         parser.error("fixture units must be positive")
@@ -60,6 +60,21 @@ def main():
         if args.stage == "preflight":
             report = {"commission": accepted["commission_sha256"], "code_root": str(REPO),
                       "execution_state": "completed", "capability": "acceptance identity checked"}
+        elif args.packet == "preference-probe" and args.stage in {"discovery","resume"}:
+            from ghostscale.validation.soundingline.v16.preference_probe_runner import execute
+            report = execute(args.root, heartbeat, resume=args.stage == "resume")
+        elif args.packet == "trajectory" and args.stage in {"discovery","resume"}:
+            from ghostscale.validation.soundingline.v16.trajectory_runner import execute
+            report = execute(args.root, heartbeat, resume=args.stage == "resume")
+        elif args.packet == "tradeoffs" and args.stage in {"discovery","resume"}:
+            from ghostscale.validation.soundingline.v16.tradeoffs_runner import execute
+            report = execute(args.root, heartbeat, resume=args.stage == "resume")
+        elif args.packet == "multi-actor" and args.stage in {"discovery","resume"}:
+            from ghostscale.validation.soundingline.v16.multi_actor_runner import execute
+            report = execute(args.root, heartbeat, resume=args.stage == "resume")
+        elif args.packet == "audience" and args.stage in {"discovery","resume"}:
+            from ghostscale.validation.soundingline.v16.audience_runner import execute
+            report = execute(args.root, heartbeat, resume=args.stage == "resume")
         elif args.packet == "selection" and args.stage in {"discovery","resume"}:
             from ghostscale.validation.soundingline.v16.selection_runner import execute
             report = execute(args.root, heartbeat, resume=args.stage == "resume")
