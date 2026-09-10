@@ -1,0 +1,8 @@
+{
+  "cause": "The replay generated a new independent OS tie seed instead of reading the original retained exogenous seed. The original source retains both history and unit transport records.",
+  "correction_scope": "New replay implementation restores only the recorded independent random inputs, then regenerates worlds, predictions and scoring. Frozen scientific source remains unchanged.",
+  "execution_state": "failed",
+  "instrument_state": "replay input handling incomplete",
+  "preserved": "All 22 successful complete-unit comparisons and the first mismatching inquiry replay are retained with the exact replay source.",
+  "scientific_instrument_repair": false
+}

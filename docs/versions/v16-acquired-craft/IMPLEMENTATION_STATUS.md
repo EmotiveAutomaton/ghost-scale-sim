@@ -200,6 +200,36 @@ prior scientific files, 11,760 fixture files and 3,037 archive files were checke
 these checks do not substitute for full independent aggregate regeneration,
 whole-unit replay or final archival handoff.
 
+## Closeout verification in development
+
+A separate clean analysis process reproduced all 35 retained scout summaries
+from 21,504 condition records, with the original invalid inquiry lineage kept
+separate and qualified. It also reproduced the 26 profiling summaries from 300
+fixture records, the two native fixture outcomes, both transfer export counts
+and prediction joins, and the B02 candidate/follow-up aggregates. The checker
+validates registered conditions and contrasts against frozen designs; M03's
+additional frozen secondary contrast remains labeled secondary.
+
+A second clean process independently recounted all nine X01-X08 control packets,
+including source requests, nested production, constructor grouping, the known
+hierarchical interval and saved cost arithmetic. These are control calculations,
+not new independent maker samples or regenerated platform clocks.
+
+The bounded development replay regenerated 68 complete units across the 30
+current native cards, fixed/adaptive archive endpoints, follow-up endpoints and
+the original native fixtures. All 412 scientific dependency files matched under
+the declared timestamp, transport-alias and platform rules. Inquiry replay
+restores its retained independent random tie seed before regenerating worlds,
+predictions and scoring. The first two replay-tool attempts are preserved with
+their exact source and diagnosis; scientific sources were not changed.
+
+Nine added closeout tests passed together. These development receipts explicitly
+remain short of final campaign proofs: the live constructor expansion, any later
+boundary expansion, catalogue and confirmation outputs must be included before
+final aggregate/replay closure. Verified complete raw archival handoff and final
+documentary write-through are still pending. See
+[closeout verification](../../../results/v16/closeout-setup/VERIFICATION.json).
+
 ## Legacy isolation
 
 No V15 scientific implementation was reused or rerun. The existing interpreter
