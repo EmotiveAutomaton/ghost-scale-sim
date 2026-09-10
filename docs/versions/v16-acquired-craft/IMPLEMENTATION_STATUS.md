@@ -142,17 +142,39 @@ operational interruption fixtures. The follow-up conditions share constructor
 histories and cannot be pooled as independent worlds. The full eight-lens
 explanatory catalogue is still being assembled.
 
-The first constructor expansion is frozen and running: 26 cards, all 300 of their
-registered conditions, 256 fresh makers per condition and 32 constructor redraws.
+The first constructor expansion completed on September 10 at 09:05 UTC: 26 cards,
+all 300 registered conditions, 256 fresh makers per condition and 32 constructor redraws.
 Four cards have explicit reasons to exhaust expansion at the scout. All 35
 dispatch/restart tests passed, and all 300 one-maker profile conditions passed
 independent physical and aggregate checks. The measured profile forecasts 2.70
-hours, with an explicitly conservative 5.41-hour allowance. These are forecasts,
-not measured scientific completion durations. See the
+hours, with an explicitly conservative 5.41-hour allowance. Actual execution took
+about 2.12 hours. See the
 [allocation lock](../../../results/v16/packets/constructor-expansion-1.json) and
 [forecast](../../../results/v16/expansion-setup/FORECAST.json).
 
-Further finite expansion decisions, confirmation and closeout remain open. The
+The actual source-control pass checked all 76,800 retained unit identities and all
+300 conditions, including the reading endpoint's actual invocation meter, private
+access denial, aliases, fresh reader processes, representation changes, known
+collisions, costs, wrong-context and wrong-model controls, grouping and noise.
+Six new tests passed; a real control CLI interruption/resume preserved all retained
+evidence and clocks. A later Windows file-sharing error stopped a status write
+during the scientific-source control pass. The failed status and 205 already saved
+condition receipts were preserved; the unchanged packet resumed and completed.
+This is operational recovery, not evidence of continuous occupancy or a scientific repair.
+
+Seventeen cards retain named uncertainty and entered the last permitted discovery
+expansion. The frozen allocation keeps all 267 original conditions of those cards,
+with 1,024 fresh makers and 128 constructor redraws per condition: 273,408 condition
+records, which are not a pooled independent sample. Thirteen other cards have
+explicit exhaustion reasons. The selection includes uncertainty about harmful as
+well as beneficial differences and never uses secondary contrasts to trigger more
+sampling. No third expansion is permitted. Four new selection/restart tests passed;
+the first inquiry fixture exposed JSON tuple/list normalization in the new wrapper,
+and its failed record and pre-correction wrapper are retained. Scientific code was
+unchanged. Observed 256-maker timings forecast 7.43 hours, with a conservative
+14.86-hour allowance and a separate six-hour closeout reserve.
+
+Final source controls, catalogue, confirmation and closeout remain open. The
 general CLI now uses a finite remaining-work queue by default. It checks actual
 admission/dependency records, preserves the active job on resume, quarantines a
 job after three worker failures with the same diagnosed cause, and counts existing
@@ -164,8 +186,10 @@ A real general-CLI construction fixture was interrupted and resumed: all saved
 predictions, units, source locks and clocks stayed byte-identical, and exactly
 192 fixture units completed. That fixture is separate from the scientific
 expansion. Closeout calls the completion guard and requires distinct archive,
-aggregate, scientific replay and documentary proofs. Future boundary, catalogue
-and confirmation handlers still require their own admission. A planned row is
+aggregate, scientific replay and documentary proofs. Future catalogue
+and confirmation handlers still require their own admission. The final expansion
+has its own admitted CLI and frozen allocation; final ladder closure also requires
+its source controls. A planned row is
 not an eligible job, and this operational checkpoint is not B04 completion.
 
 Raw records remain immutable and locally retained with manifests. Final curated

@@ -125,3 +125,17 @@ results/v16/**/RUNNER_STATUS.json
 # PUBLIC_REPORT.json is the distribution-safe aggregate receipt.
 results/v16/transfer-fixture-1/COMPLETION.json
 results/v16/transfer-fixture-2/COMPLETION.json
+
+# Expanded raw inventories and request traces require the separate checked raw archive.
+results/v16/**/*_points.json
+results/v16/constructor-expansion-*/**/RAW_MANIFEST.json
+results/v16/constructor-expansion-*/**/SAMPLING.json
+results/v16/constructor-expansion-*/**/TIMING.json
+results/v16/boundary-expansion-*/**/RAW_MANIFEST.json
+results/v16/boundary-expansion-*/**/SAMPLING.json
+results/v16/boundary-expansion-*/**/TIMING.json
+results/v16/**/constructor-controls-*/**/conditions/
+results/v16/**/constructor-controls-*/**/COLD.json
+results/v16/packet-control-setup/profile-*/
+results/v16/packet-control-setup/runtime/
+results/v16/final-expansion-setup/runtime-fixtures/
