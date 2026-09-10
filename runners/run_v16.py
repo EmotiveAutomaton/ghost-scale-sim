@@ -5,7 +5,8 @@ import json
 import sys
 from pathlib import Path
 from ghostscale.validation.soundingline.v16.records import read, write, file_digest, now
-from ghostscale.validation.soundingline.v16.runtime import REPO, PACKAGE, supervisor, freeze, campaign
+from ghostscale.validation.soundingline.v16.runtime import REPO, PACKAGE, freeze, campaign
+from ghostscale.validation.soundingline.v16.runtime_status_retry import supervisor
 from ghostscale.validation.soundingline.v16.gates import run_gates
 from ghostscale.validation.soundingline.v16.vertical import run_case
 from ghostscale.validation.soundingline.v16.reaggregate import regenerate

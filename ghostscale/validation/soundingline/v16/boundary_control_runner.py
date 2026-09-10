@@ -8,9 +8,10 @@ from .reader_process import ReaderProcess
 from .consumer_frames import requests
 from .packet_controls import condition_control, ActualReader
 from .packet_control_runner import source_inventory, next_attempt
+from .completion_guard import bound_receipt
 
 PACKET = "boundary-controls-1"
-FILES = ["boundary_control_runner.py", "boundary_control_interruption.py"]
+FILES = ["boundary_control_runner.py", "boundary_control_interruption.py", "runtime_status_read.py"]
 
 
 def sources(root):
@@ -55,9 +56,9 @@ def execute(root, heartbeat, *, resume=False, fixture_source=None, fixture_name=
         admission = read(root/"boundary-control-setup/ADMISSION.json")
         if admission.get("instrument_state")!="valid" or any(admission["source_hashes"].get(path.relative_to(REPO).as_posix())!=file_digest(path) for path in files):
             raise ValueError("final controls need current actual admission")
-        runtime_path = root/"boundary-control-setup/runtime/RECEIPT.json"
-        runtime_join = {"path":runtime_path.relative_to(root).as_posix(),"sha256":file_digest(runtime_path)}
-        if read(runtime_path)["instrument_state"]!="valid" or runtime_join["sha256"]!=admission["runtime_sha256"]:
+        runtime_join = admission.get("runtime_join", {"path":"boundary-control-setup/runtime/RECEIPT.json", "sha256":admission["runtime_sha256"]})
+        runtime_receipt = bound_receipt(root, runtime_join["path"], runtime_join["sha256"])
+        if runtime_receipt["instrument_state"]!="valid" or runtime_join["sha256"]!=admission["runtime_sha256"]:
             raise ValueError("final controls lack their actual interruption proof")
         forecast = read(root/"boundary-control-setup/FORECAST.json")
         if forecast["conservative_seconds"]+forecast["closeout_reserve_seconds"]>=remaining_seconds(root):

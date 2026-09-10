@@ -264,3 +264,90 @@ python runners/run_soundingline.py --only T1 T2 T3 T4 T5
 3. Give it at least one `live` gate and one `placebo` or `positive` gate. If you cannot think of a
    known answer your module should return, that is worth an hour before writing any more of it.
 4. Add it to `GATED` in `tests/test_gates.py`.
+
+## V16: acquired craft, bounded confirmation and retained reconstruction
+
+V16 asks whether acquired procedures, earlier works and paid inquiry improve
+construction or inference about a constructed maker. Its implementation lives in
+`validation/soundingline/v16/`; the optional `methods/` layer is not required to
+reproduce its numbers. The [accepted coding package](versions/v16-acquired-craft/CODING_PACKAGE.md)
+and frozen packet records specify the native worlds, permitted reader evidence,
+paired alternatives, practical bars and adversaries. Evaluator histories remain
+separate from public observations and predictions committed before revelation.
+These tests concern constructed mechanisms and their measurement. They contain
+no human data and establish no real-text or human-behaviour result.
+
+Discovery conditions retain separate denominators. Multiple histories sharing a
+constructor are nested observations; multiple artifacts or reader alternatives
+do not create additional independent makers. The finite expansion ladder uses
+fresh namespaces while retaining the original conditions, estimands and practical
+bars. Each completed source receives its own controls, including guarded access,
+recorded prediction comparisons, cost accounting, constructor grouping and a cold
+reader process. Syntax checks and the specifically declared physical recodings
+have different scopes. Failed instruments and interrupted attempts remain in the
+record. An execution receipt alone does not establish scientific validity.
+
+Confirmation freezes at most three card packets after the final discovery
+dispositions. Selection orders validity and target realization, serious rivals,
+relevance, then practical size and cost. The supported capability primary is one
+paired fraction difference in one discovery-selected condition, with one fresh
+constructor per independent packet. Its range is externally bounded by [-1, 1].
+The one-sided lower bound is the paired mean minus
+`sqrt(2 * sample_variance * log(2/alpha) / n) + 14 * log(2/alpha) / (3 * (n-1))`,
+clipped below at -1. The variance uses n-1; zero observed variance retains the
+second penalty. This is the empirical Bernstein bound of
+[Maurer and Pontil, Theorem 4](https://www.cs.mcgill.ca/~colt2009/papers/012.pdf),
+applied to the negative paired difference. The primary tests the original
+practical bar, and its p-value inverts this bound.
+
+Capability sample planning uses an explicit moment-matched law on [-1, 0, 1],
+with discovery variance and a mean one practical increment beyond the null bar.
+Very small variances are increased only as needed to make that planning law
+possible; both the original variance and the increase are retained. Twenty
+thousand simulations at each candidate allocation must give a 99% lower bound
+on power of at least 90%. This is power under that declared law, not a uniform
+guarantee across bounded distributions or power at the null boundary. Native
+targets without a justified external range remain exploratory under this
+confirmation instrument.
+
+The optional S02 null concerns all four paired repair differences across two
+memory conditions and two complete error-monitoring rivals. Each constructor
+contributes two distinct histories and one joint event: whether any component
+exceeds the declared equality tolerance. An exact binomial upper bound on this
+event rate bounds every absolute mean difference by the tolerance plus twice
+that rate. Its sample size powers this joint event at a stated interior
+equivalence alternative. It is not borrowed from a simple mean test. Every
+packet is capped at 4,096 primary maker histories, with auxiliary comparator
+training retained and costed separately. Bonferroni planning allocates 0.05/3;
+one Holm ledger covers exactly the frozen primaries. No failed confirmation is
+replaced, and descriptive native contrasts add no confirmed claims.
+
+Closeout uses separate processes to reconstruct native physics and recalculate
+all reported contrasts from retained unit records. Confirmation arithmetic has
+an additional independent implementation: an analytic inversion of the mean
+bound, SciPy binomial/beta calculations and a separate Holm calculation. Bounded
+whole-unit replays regenerate worlds, acquisition, predictions, continuations,
+program execution and scores. Opaque transport aliases, event timestamps and
+observed OS resource samples have explicit comparison exceptions; scientific
+seed identities and deterministic physical costs must match. ZIP archives carry
+member manifests and receive full member-byte verification after creation.
+Complete archival coverage, independent calculations, bounded replay coverage
+and documentary consistency are separately required before campaign closure.
+
+Independent calculation can proceed card by card after each native completion.
+Cached calculations bind the original summary, raw manifest, completion receipt
+and analysis source; the phase finishes only after every frozen card and
+denominator is checked. This permits overlap with later discovery without using
+unfinished outcomes or creating new observations. Known-answer tests exercise
+the actual calculation command as well as missing-source, changed-source and
+incomplete-packet refusals. The final archive compares current raw bytes with
+the independent analysis input inventory before accepting complete coverage.
+
+The completed-study tables project the original condition-specific estimates,
+uncertainty, access contracts and costs without calculating replacement effects.
+Confirmed claims join by exact claim and card identities, with their original
+regime and multiplicity decision. A failed positive criterion does not establish
+equivalence. Documentary verification binds the reviewed prose and revised
+theory owners to these tables and the three scientific retention/reproduction
+proofs; its interpretation remains an explicit agent review, not an automated
+test of scientific truth.

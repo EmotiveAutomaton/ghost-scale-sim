@@ -22,6 +22,28 @@ the completed-unit count. Full raw/reader resource records remain the evidence f
 scientific costs. SIGTERM requests a checkpoint; abrupt OS termination is also
 covered by a real interruption/resume test.
 
-General finite-queue dispatch, repeated-root-cause quarantine, bounded repair,
-transfer, confirmation and closeout remain implementation obligations. These
-ownership tests do not certify those unfinished mechanisms.
+The general CLI now follows the frozen finite dependency plan in
+`results/v16/operations/QUEUE_PLAN.json`. Each invocation dispatches one admitted,
+eligible job, preserves existing scientific packets on resume, and keeps missing
+dependencies explicit. Three worker failures with the same recorded cause
+quarantine that job. Instrument repair limits are accounted separately.
+
+The final source-control and confirmation handlers have their own source-bound
+admissions and actual interruption/resume checks. Their scientific executions
+still depend on the preceding frozen jobs. A successful known fixture does not
+mean its future scientific allocation has executed.
+
+Independent calculations may start on an immutable card after its valid native
+completion, while later cards continue. They do not read an unfinished card,
+generate new independent observations, or own campaign status. Their completed
+phase receipt requires the entire original packet, unchanged source identities,
+and every registered card. Global aggregate coverage, bounded scientific replay,
+complete raw archival coverage and documentary write-through remain separate
+proofs required by the final completion guard.
+
+The final archive excludes the live job pointer because the ordinary supervisor
+advances it when closing. The frozen queue plan, recorded failures and scientific
+outputs remain required archive members. Pre-close and final administrative
+snapshots preserve the transition separately. Runtime recovery establishes its
+tested preservation and ownership properties; it does not claim uninterrupted
+occupancy or erase earlier failures.

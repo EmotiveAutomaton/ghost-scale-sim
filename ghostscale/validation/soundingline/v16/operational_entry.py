@@ -1,7 +1,8 @@
 """The seven campaign stages share a finite queue and preserve existing packets."""
 import importlib
 from .records import read, write, now, file_digest
-from .runtime import REPO, campaign, supervisor
+from .runtime import REPO, campaign
+from .runtime_status_retry import supervisor
 from .record_integrity import source_locks
 from .campaign_ownership import campaign_owner
 from .operational_queue import freeze_plan, queue_state, record_failure, dispatchable, verify_closeout
@@ -94,7 +95,9 @@ def run(root, stage):
                     write(root/"CLOSEOUT.json", result)
             else:
                 module = importlib.import_module(PREFIX+selected["handler"])
-                result = module.execute(root, heartbeat, resume=stage == "resume")
+                packet_name = getattr(module, "PACKET", None)
+                existing_packet = packet_name is None or (root/"packets"/(packet_name+".json")).exists()
+                result = module.execute(root, heartbeat, resume=stage == "resume" and existing_packet)
         except Exception as error:
             failure = record_failure(root, selected["job_id"], error,
                 root_cause=type(error).__name__+": "+str(error), family=selected["job_id"])

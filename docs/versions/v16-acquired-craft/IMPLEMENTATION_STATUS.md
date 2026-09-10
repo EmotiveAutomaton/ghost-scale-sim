@@ -5,6 +5,15 @@ The native end-to-end milestone completed about 15 minutes after acceptance.
 The minimum W1 acquisition spine entered discovery before elapsed hour one.
 These milestones do not complete the 42-card commission.
 
+At the September 10 20:03 UTC checkpoint, the 26-card constructor expansion
+and all 300 source-control conditions are complete. A separate process reproduced
+all 76,800 expansion records, and 52 bounded whole-case replays matched. The last
+finite 17-card expansion generated all 273,408 planned records at 19:04 UTC;
+its last card's native audit is still running. Independent recalculation and
+archival of completed cards run alongside that audit. Confirmation selection and
+execution are admitted but await completed source controls and explicit ladder
+disposition. No unfinished audit is counted as a completed scientific packet.
+
 ## Executed and admitted machinery
 
 The native graphic world executes place/remove programs, learns repeated
@@ -269,11 +278,11 @@ restores its retained independent random tie seed before regenerating worlds,
 predictions and scoring. The first two replay-tool attempts are preserved with
 their exact source and diagnosis; scientific sources were not changed.
 
-Nine added closeout tests passed together. These development receipts explicitly
-remain short of final campaign proofs: the live constructor expansion, any later
-boundary expansion, catalogue and confirmation outputs must be included before
-final aggregate/replay closure. Verified complete raw archival handoff and final
-documentary write-through are still pending. See
+Nine added closeout tests passed together. These initial development receipts
+excluded the then-running constructor expansion. Its completed calculations and
+replays now have separate receipts; final boundary and confirmation coverage
+remain necessary before full aggregate/replay closure. Verified complete raw
+archival handoff and final documentary write-through are still pending. See
 [closeout verification](../../../results/v16/closeout-setup/VERIFICATION.json).
 
 ## Legacy isolation
@@ -307,3 +316,79 @@ catalogue is complete; no confirmation claim or data has yet been opened.
 Three new bounded-mean confirmation tests also passed, including known-null and
 fresh power checks. Their power calculation targets an explicit planning law;
 the actual primary inference uses a finite-sample bound and fresh constructors.
+
+## Final verification setup
+
+The later closeout admission binds fifteen additional source/test files and
+thirteen passing known-answer tests. The archive checker rejects absent, changed,
+obsolete and corrupted members, incomplete upstream proofs, and inputs that
+change during final verification. It also requires the archived native inputs to
+match the raw-manifest baseline of the independently regenerated calculations.
+Existing archives retain earlier versions and failed attempts; partial archive
+coverage never becomes a complete-campaign receipt by counting ZIP files.
+
+Independent joins reconciled the 35 original scout summaries, 26 profile
+fixtures, all constructor-expansion summaries and their source controls. The
+invalid first inquiry instrument remains explicitly invalid despite reproduced
+arithmetic. Replay joins rechecked the source and replay files of 68 original
+endpoints, 52 constructor endpoints and 36 descriptive catalogue cases. Overlap
+adds checks without increasing the number of distinct scientific cases.
+
+A portable known-case bundle was created, extracted and replayed through its
+actual command; changing a source file was rejected before execution. The final
+bounded bundle will be versioned alongside its compact inventory and receipt.
+The global producers require the remaining boundary and confirmation phases;
+these successful setup checks do not claim that those phases have run. See
+[the later producer admission](../../../results/v16/closeout-setup/PRODUCER_ADMISSION_2.json).
+
+## Regression and final execution checkpoint
+
+The complete repository regression on the current source ran 1,781 checks:
+1,768 passed, twelve were skipped or expected failures, and one failed. That
+failure is the retained V15 C11/M01 gate test. All 354 V16 tests passed with no
+errors or skips, including the latest report-format source changes. The run
+preserved 12,785 fixture files and verified that all 693 bound source/configuration
+files were unchanged. See [the full regression receipt](../../../results/v16/closeout-setup/full-regression-1/RECEIPT.json).
+The preceding V16 attempt's Windows fixture-status read failure remains
+retained with its original source, raw fixture and diagnosis; the bounded shared
+status reader passed the actual interruption/resume checks before admission.
+The last pushed full repository CI has the same separate V15 C11/M01 gate failure.
+
+The final numerical-index, all-card accounting and documentary proof producers
+are admitted. Known checks retain mixed condition outcomes, failed confirmations,
+information-access limits and supplied-state benchmarks without promoting whole
+cards. They refuse missing source controls, changed records and incomplete
+scientific proofs. The archive's narrow live-pointer exclusion was tested while
+keeping the frozen plan, failure records and retained fixture cursors required.
+See [the 354-test receipt](../../../results/v16/closeout-setup/combined-regression/RECEIPT-4.json)
+and [the administrative producer admission](../../../results/v16/closeout-setup/PRODUCER_ADMISSION_4.json).
+
+Three incremental-calculation checks passed, followed by actual independent
+recalculation of all 300 known profile records across 26 cards. Its initial test
+fixture omitted acceptance-clock metadata and was corrected to use the normal
+packet-freezing function; that failed fixture remains preserved. This adds an
+orchestration capability to the unchanged independent scientific auditors. At
+18:00 UTC the actual read-only calculation worker started on already completed
+final-discovery cards while the sole scientific supervisor continued its last
+card. Its full phase receipt, actual final source controls, confirmation and all
+global closeout proofs are still pending. See
+[the overlap admission](../../../results/v16/closeout-setup/PRODUCER_ADMISSION_5.json).
+
+After the combined suite, a report-format correction moved identical cost notes
+beside the CSV rather than repeating them in every row. All four report tests
+passed, and an actual transport check recovered every field in 2,830 completed-source
+rows while keeping both summary tables below 2 MB. No measurement or access field
+was removed. Three figure layouts were rendered and visually checked using
+explicitly nonfinal, completed earlier sources; marker shapes resolve overlapping
+budget labels, and paired panels share a scale so numerical roundoff is not
+visually magnified. Final figures still require the final study projection. See
+[the table admission](../../../results/v16/closeout-setup/PRODUCER_ADMISSION_6.json)
+and [the figure admission](../../../results/v16/closeout-setup/PRODUCER_ADMISSION_7.json).
+
+The first-day setup checkpoint was recorded at 18:15 UTC, before elapsed hour 24,
+and optional external runtime intake is closed. The unchanged CPU environment
+supports the remaining admitted queue. A separate
+[catalogue wording note](../../../results/v16/case-catalogue-2/INTERPRETATION_NOTE.json)
+clarifies that six B02 case types were proposed and four passed the descriptive
+recurrence filter in each adaptive run; the frozen source and original metadata
+remain preserved.

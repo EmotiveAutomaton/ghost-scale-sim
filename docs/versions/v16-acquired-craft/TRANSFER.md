@@ -9,11 +9,23 @@ and misleading evidence after predictions are committed.
 
 ## Files and execution
 
-The transfer packet lives under `results/v16/transfer-fixture-1/`. Its public
+The current transfer packet lives under `results/v16/transfer-fixture-2/`. Its public
 manifest names only public observations, opaque case and lineage aliases, declared
 source hashes and dependencies. Raw exports are retained under the ordinary ignored
 public/private/predictions directories, with a tracked checksum manifest. Archive
 delivery is a separate closeout receipt.
+
+The original `transfer-fixture-1` is preserved with its provenance. Its inquiry
+examples came from the first instrument, subsequently invalidated by recoding
+and tied-action controls. The second packet uses the separately corrected inquiry
+source and consumer; it is the handoff to use. Re-exporting the other recorded
+cases does not add independent scientific observations.
+
+The versioned [reader bundle](../../../results/v16/transfer-handoff-1/reader.zip)
+contains exactly the reviewed public whitelist plus a checksum inventory.
+[Its instructions and receipt](../../../results/v16/transfer-handoff-1/README.md)
+describe extraction and the standalone command. Evaluator mappings and committed
+predictions remain outside this reader-facing ZIP.
 
 The reader-facing distribution is the explicit whitelist in
 `PUBLIC_DISTRIBUTION.json`. `PUBLIC_REPORT.json` is its safe aggregate receipt.
@@ -99,12 +111,20 @@ the irreducible-noise boundary, reject extra evaluator fields, deny private read
 require prediction commitment, and detect modified predictions. Actual exported
 cases must then reproduce their frozen reader outputs exactly.
 
-The executed packet contains 44 cases and 1,574 reader tasks; all matched the
-original frozen outputs exactly. X01 additionally exercised this actual standalone
-consumer across changed aliases, interleaved requests and a fresh process.
-The rest of the consumer-specific attack battery remains a separate dependency.
+The corrected packet contains 44 cases and 1,574 reader tasks; all matched the
+original frozen outputs exactly. X01 exercised this actual standalone consumer
+across changed aliases, interleaved requests and a fresh process. X02 checked all
+1,574 public tasks under the applicable representation/physical scope. The
+consumer also completed five collision calibrations, four context calibrations
+and two misspecification calibrations. These are the declared fixed-consumer
+controls, with their original positive/null witnesses and limits.
 
-Instrument admission and successful transport are separate from consumer-specific
-X01/X02/X03/X05/X06 coverage, scientific expansion and confirmation. Raw aggregate
+The 2.83 MB public ZIP was fully reread, extracted, and used to start the actual
+standalone consumer. Its loaded source hashes and a mechanically selected public
+task prediction matched the retained originals; an actual private-file read was
+denied. This packaging check supplements the complete original task comparison.
+
+Instrument admission, successful transport and consumer-specific
+X01/X02/X03/X05/X06 coverage remain distinct from scientific expansion and confirmation. Raw aggregate
 reproduction, bounded whole-unit replay, and final archive accessibility are also
 separate receipts. The B01 replay does not stand in for any of them.

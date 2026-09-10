@@ -5,6 +5,7 @@ import sys
 import time
 from .runtime import REPO
 from .records import read,write,file_digest,now
+from .runtime_status_read import read_status
 from .expansion_interruption import fixture_campaign
 
 
@@ -35,7 +36,7 @@ def control(directory, source, source_name):
             if child.poll() is None:
                 child.kill()
                 child.wait(timeout=10)
-    before=read(root/"RUNNER_STATUS.json")
+    before=read_status(root/"RUNNER_STATUS.json")
     write(directory/"INTERRUPTED_STATUS.json",before)
     saved={path.relative_to(root).as_posix():path.read_bytes() for path in root.rglob("*.json") if path.name!="RUNNER_STATUS.json"}
     with (directory/"resume.log").open("wb") as log:
