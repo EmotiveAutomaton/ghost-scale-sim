@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "saved_status_readable_after_error": true,
+    "resume_succeeded": true,
+    "all_preexisting_json_bytes_preserved": true
+  },
+  "instrument_state": "valid",
+  "failure": "PermissionError reading the saved status immediately after intentional child termination; original test XML and fixture preserved",
+  "code_changes": "none",
+  "recorded_at": "2026-09-10T07:07:49.762312+00:00",
+  "preexisting_file_hashes": {
+    "ACCEPTANCE_LOCK.json": "4c37e84439f55630dd88c5133107c4bb87ac2acd5ef788c46670bc78aefa199f",
+    "CAMPAIGN.json": "8f2ca08161b4ae6ee002e37ba3234d16b26410f34e10067995da854899eb2932",
+    "packets/archive-known-fixture-1.json": "79d70fc60b7111c1c59160715e76de1ea2136aec08a54c06725f0b764967b787",
+    "archive-known-fixture-1/units/fixed-0-0_points.json": "2c4c1021eb7db78a4290fd006a1da86e49521232ff06d86c3800571a39a05f73",
+    "archive-known-fixture-1/private/search/fixed/0/predictions/e5dbcfd69d2fc866bf6af041.json": "0c683fd87de8f6842a1a6c7f06639cb7f4bd218b027ef79d1a222331885caa36",
+    "archive-known-fixture-1/private/search/fixed/0/private/e5dbcfd69d2fc866bf6af041-archive-case.json": "47d9832f47716013a4ba49fc53fec1e05881b7b42acfdfefb47a55f4f7bfe1ce",
+    "archive-known-fixture-1/private/search/fixed/0/private/e5dbcfd69d2fc866bf6af041.json": "4fe32303403b52d806d2445755da4384651f81beef8a82b34d62b858d75e8ef2",
+    "archive-known-fixture-1/private/search/fixed/0/public/e5dbcfd69d2fc866bf6af041.json": "f6fc09eb6f7f36b3b65ee362b1ea72929829062c002e743c7b1664fda2b24e0a",
+    "archive-known-fixture-1/private/search/fixed/0/units/e5dbcfd69d2fc866bf6af041_points.json": "d73d36e02c0d616ce393b967001443946bc5d7b55245f280f9642e7841758117"
+  },
+  "completion": {
+    "aggregate_sha256": "21d7b372758b7502012f0e431a3c01af86778aee3485d0144184fa804bfd908a",
+    "archive_replicates_per_method": 2,
+    "campaign_complete": false,
+    "candidate_maker_records": 24,
+    "card_id": "B02",
+    "completed_at": "2026-09-10T07:07:49.709809+00:00",
+    "confirmation_state": "not a confirmation",
+    "consumer_attack_sha256": "08d82270ef62bfb16fad90cc88c31a44adfc84eb4fb9301d4532f5ded25ec487",
+    "evidence_scope": "fixture",
+    "execution_state": "completed",
+    "followup_maker_condition_records": 48,
+    "instrument_state": "valid",
+    "physical_budget_per_method": 1356,
+    "raw_manifest_sha256": "0714804247b2582e8f06769cdc56ecc26a67bef2d2db391b56ee9086883d76f6",
+    "source_targets": "existing selection and process interpretation; additional native archive categories indexed separately"
+  }
+}

@@ -8,7 +8,7 @@ def main():
     root=REPO/"results/v16"
     inventory=read(root/"COMMISSION_MANIFEST.json")
     receipts={}
-    for path in sorted(root.glob("**/COMPLETION.json")):
+    for path in sorted(list(root.glob("*/COMPLETION.json"))+list(root.glob("*/*/COMPLETION.json"))):
         if "setup" in str(path) or "amended" in str(path):
             continue
         if path.parent.name.startswith("transfer-fixture-"):
@@ -83,6 +83,38 @@ def main():
                             "receipt":str(path.relative_to(root)).replace("\\","/"),"sha256":file_digest(path),
                             "scope_limit":receipt.get("scope_limit",receipt.get("reading_cost_qualification")),
                             "sampling_scope":"known controls and bounded profiles, not new independent discovery makers"}
+    archive=root/"archive-search-1/CONSUMER_ATTACKS.json"
+    if archive.exists() and read(archive)["instrument_state"]=="valid":
+        joined=read(archive)
+        for card in cards:
+            if card["card_id"]=="B02":
+                card["archive_comparison_state"]="completed"
+                card["explanatory_catalogue_state"]="completed" if (root/"explanatory-catalogue/COMPLETION.json").exists() else "pending"
+                card["implementation_state"]="completed" if card["explanatory_catalogue_state"]=="completed" else "partial"
+                for attack,passed in joined["attack_checks"].items():
+                    if passed:
+                        card.setdefault("attack_receipts",{})[attack]={"state":"valid", "receipt":"archive-search-1/CONSUMER_ATTACKS.json", "sha256":file_digest(archive)}
+                card.setdefault("attack_receipts",{})["X08"]={"state":"valid", "receipt":"archive-search-1/private/runtime-control/RECEIPT.json",
+                    "sha256":file_digest(root/"archive-search-1/private/runtime-control/RECEIPT.json")}
+            if card["card_id"] in {"X04","X07","X08"}:
+                for evidence in card["evidence"]:
+                    evidence["pending_consumers"]=[name for name in evidence["pending_consumers"] if name!="B02"]
+                card["archive_consumer_join"]={"receipt":"archive-search-1/CONSUMER_ATTACKS.json", "sha256":file_digest(archive)}
+                remaining=any(item["pending_consumers"] for item in card["evidence"])
+                card["implementation_state"]="partial" if remaining else "completed"
+                card["fixture_state"]="native and archive consumers completed; confirmation consumers pending" if remaining else "completed"
+    expansion=root/"packets/constructor-expansion-1.json"
+    if expansion.exists():
+        decision=read(expansion)["identity"]["design"]
+        planned={item["card_id"] for item in decision["cards"]}
+        exhausted={item["card_id"]:item["reason"] for item in decision["closed_at_scout"]}
+        for card in cards:
+            cid=card["card_id"]
+            if cid in planned:
+                card["expansion_state"]="256 completed; final ladder decision pending" if (root/"constructor-expansion-1"/cid/"COMPLETION.json").exists() else "256 frozen and eligible"
+            elif cid in exhausted:
+                card["expansion_state"]="exhausted at scout"
+                card["expansion_disposition_reason"]=exhausted[cid]
     counts=dict(Counter(row["implementation_state"] for row in cards))
     report={"written_at":now(),"commission_sha256":read(root/"CAMPAIGN.json")["commission_sha256"],
         "cards":cards,"implementation_counts":counts,

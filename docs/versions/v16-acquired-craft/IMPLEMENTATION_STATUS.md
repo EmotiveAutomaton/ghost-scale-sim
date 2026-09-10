@@ -112,7 +112,8 @@ X03 completed 290 actual condition calibrations across its 27 consumers, retaini
 ambiguity until genuinely separating evidence. X04 completed 316 native condition
 profiles across all 30 scientific cards, with 9,358 measured repeated requests and
 22 fresh-process startup profiles. All-arm requests remain batch measurements.
-Its B02 consumer is still pending. The original direct-table reading cost counter
+Its B02 consumer has now executed its own equal-input and physical-cost checks.
+The original direct-table reading cost counter
 omits repeated evidence likelihood calls; a separate invocation meter reproduces
 the original predictions exactly and supplies corrected accounting. Model support,
 logical calls, cache work and actual CPU measurements are distinct quantities.
@@ -126,8 +127,32 @@ can give confidently wrong attribution. Those errors are exposed boundaries, not
 certificates of robustness. Failed setup controls and their resolution remain
 retained; no reader was altered to fit these attacks.
 
-X07-X08, the expansion ladder, archive comparison, confirmation and closeout
-remain open. The seven
+X07 completed source-identity and nested-sampling checks across all 26 native
+consumers, including actual rejected-work inventories. X08 completed actual
+misleading-progress/noise controls and interruption/resumption checks across all
+30 native cards. B02 subsequently executed its own source-specific access,
+collision, cost, misspecification, dependence and real runtime controls.
+The B03/B04 consumer joins remain pending; earlier pending receipts are preserved.
+
+B02 completed eight fixed and eight adaptive archive-search runs, with equal
+production-primitive budgets, first-witness freezing, and a separate 24-constructor
+follow-up in every registered archive condition. Its 192 search histories and
+288 follow-up condition records are separate from the original scouts and from
+operational interruption fixtures. The follow-up conditions share constructor
+histories and cannot be pooled as independent worlds. The full eight-lens
+explanatory catalogue is still being assembled.
+
+The first constructor expansion is frozen and running: 26 cards, all 300 of their
+registered conditions, 256 fresh makers per condition and 32 constructor redraws.
+Four cards have explicit reasons to exhaust expansion at the scout. All 35
+dispatch/restart tests passed, and all 300 one-maker profile conditions passed
+independent physical and aggregate checks. The measured profile forecasts 2.70
+hours, with an explicitly conservative 5.41-hour allowance. These are forecasts,
+not measured scientific completion durations. See the
+[allocation lock](../../../results/v16/packets/constructor-expansion-1.json) and
+[forecast](../../../results/v16/expansion-setup/FORECAST.json).
+
+Further finite expansion decisions, confirmation and closeout remain open. The seven
 CLI stage names are exposed, but transfer, confirmation and close reject entry
 until their machinery is admitted. A planned row is not an eligible job.
 
@@ -153,6 +178,15 @@ scientific unit records and 9,793 fixture/export files. The two inquiry lineages
 are separate; these counts are not a pooled sample size. Full world replay and
 final archival handoff remain outstanding. See the
 [checkpoint receipt](../../../results/v16/checkpoint-0400/VERIFICATION.json).
+
+The checkpoint through X08 passed 200 distinct local V16 tests and verified 29
+packet locks covering 172 scientific source files. Full Linux CI again retained
+only the documented V15 C11/M01 gate failure. The next integrity checkpoint adds
+the completed B02 archive and the expansion source lock, while explicitly
+excluding the still-running expansion from completed-raw checks. Its 142,216
+prior scientific files, 11,760 fixture files and 3,037 archive files were checked;
+these checks do not substitute for full independent aggregate regeneration,
+whole-unit replay or final archival handoff.
 
 ## Legacy isolation
 
