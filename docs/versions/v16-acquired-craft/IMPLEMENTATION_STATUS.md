@@ -283,3 +283,27 @@ was preserved without dependency synchronization. The final V15 relaunch had
 reset closed queue bookkeeping; those regenerated files were archived and the
 published bookkeeping restored with an explicit receipt. Its failed instruments,
 runtime contract and incomplete scientific regeneration remain qualified.
+## Catalogue and remaining queue checkpoint
+
+The bounded descriptive catalogue completed 36 selected whole-unit replays from
+2,528 candidates across all thirty native cards. Every card supplies a recorded
+failure or tie against a registered comparator. Eight of the ten predicates
+covering the eight commissioned lenses were found; accurate-but-unenactable
+history and harmful naive self-explanation were not found in this bounded search.
+These are outcome-selected examples, not new population estimates or additional
+adaptive-search discoveries. The six B02 semantic cases retain their separate
+frozen follow-up accounting.
+
+The first catalogue attempt failed on an interface mapping: the changed-generator
+card was treated as the paid-reading-query card. Its packet, source and failure
+remain intact. A separately named corrected version passed eight predicate and
+whole-replay tests before completing. The scientific generators and scores did
+not change.
+
+The remaining nine-job dependency plan is frozen in `operations/QUEUE_PLAN.json`.
+Final expansion and its source controls precede explicit ladder exhaustion,
+confirmation selection and execution, and the four final closeout proofs. The
+catalogue is complete; no confirmation claim or data has yet been opened.
+Three new bounded-mean confirmation tests also passed, including known-null and
+fresh power checks. Their power calculation targets an explicit planning law;
+the actual primary inference uses a finite-sample bound and fresh constructors.
