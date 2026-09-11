@@ -65,9 +65,9 @@ current.
 
 ## Source legend, because they are not equally strong
 
-    (run)   a committed verdict file in this repository. The strongest thing we have, and every
-            (run) row is a METHOD result about a constructed world. Whether the mechanism holds in
-            people is what a simulation cannot say, and rows resting on a real-world fact say so
+    (run)   a committed verdict in this repository. Distinguish METHOD results about validated
+            instruments from CONSTRUCTED MECHANISM results about the model's assumptions.
+            Neither is human evidence; any dependence on an external real-world fact is explicit
     (lit)   published work, from the retrospective search in EVIDENCE.md. READ if fetched and
             read; SNIPPET if not. It informed no design
     (SL)    the sibling project's result on real text, where one bears on a claim here
@@ -76,7 +76,7 @@ current.
 
 | | |
 |---|---|
-| **[READING_INTENT.md](READING_INTENT.md)** | **the hypothesis store**: ten umbrella claims, every result under the one it bears on |
+| **[READING_INTENT.md](READING_INTENT.md)** | **the hypothesis store**: thirteen umbrella claims, every result under the one it bears on |
 | [Art as an Algorithmic Virus (PDF)](Art%20as%20an%20Algorithmic%20Virus%20-%20Unifying%20the%20Generative%20Crash%20and%20AI%20Value%20Convergence%20via%20Cognitive%20Affordances-1.pdf) | the preprint. **The authority for anything mathematical** |
 | [Art_a_unifying_model.md](Art_a_unifying_model.md) | the artist-facing essay ([public home](https://abrahamhaskins.org/art)), transcribed in full, the rawest form of the intent and the source of most section quotes. **Kept deliberately as material for occasional entropy injection**: sampling the unsharpened original when drafting or curation needs variation the polished record no longer supplies. The technique earns less as the paper's claims sharpen, and the transcript stays so the move is cheap when it is still appropriate |
 | [Art_as_an_Algorithmic_Virus_preprint.md](Art_as_an_Algorithmic_Virus_preprint.md) | machine transcription of the preprint, kept greppable and diffable; equations survive the two-column extraction badly, so read those against the PDF |

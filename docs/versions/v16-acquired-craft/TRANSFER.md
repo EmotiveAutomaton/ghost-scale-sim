@@ -12,8 +12,8 @@ and misleading evidence after predictions are committed.
 The current transfer packet lives under `results/v16/transfer-fixture-2/`. Its public
 manifest names only public observations, opaque case and lineage aliases, declared
 source hashes and dependencies. Raw exports are retained under the ordinary ignored
-public/private/predictions directories, with a tracked checksum manifest. Archive
-delivery is a separate closeout receipt.
+public/private/predictions directories, with a tracked checksum manifest. The complete retained archive has its own
+[coverage proof](../../../results/v16/closeout/raw-archive-2/RECEIPT.json).
 
 The original `transfer-fixture-1` is preserved with its provenance. Its inquiry
 examples came from the first instrument, subsequently invalidated by recoding
@@ -128,3 +128,19 @@ Instrument admission, successful transport and consumer-specific
 X01/X02/X03/X05/X06 coverage remain distinct from scientific expansion and confirmation. Raw aggregate
 reproduction, bounded whole-unit replay, and final archive accessibility are also
 separate receipts. The B01 replay does not stand in for any of them.
+
+## Final V16 handoff
+
+The [completed study](RESULTS.md) binds the final numerical and validation record.
+The public reader ZIP above is the blind B01 task interface. The separate
+[scientific replay ZIP](../../../results/v16/replay-bundle-1/replay.zip) includes
+selected evaluator truth, whole-case plans and all frozen source dependencies for
+reproduction. It must not be supplied as blind reader evidence. Its 196 executed
+checks cover 168 distinct cases; actual extraction verified all 3,046 dependencies
+and 226 source files required by 38 packets. It is bounded replay, not a rerun of
+every observation in the complete archive.
+
+The next proposed interface test would compare bounded readers under matched
+information and actual computational cost after a change in production family.
+That recommendation grants no new scientific admission. No real-text or neural
+reader ran as part of V16, and no synthetic profile is a label for human values.

@@ -24,9 +24,10 @@ implementation's claims stop, is stated in the
 [repository gateway](../../README.md#what-is-implemented).** An OPEN row here is a claim nothing
 has run against; a (run) row is a mechanism the simulator has executed.
 Statuses here are **(run)**, a committed verdict in this repository, unless marked **(lit)**,
-published work from [EVIDENCE.md](../../EVIDENCE.md). Every (run) row is a **method** result
-about a constructed world; whether the mechanism transfers to people is exactly what a simulation
-cannot say, and rows that depend on a real-world fact say so.
+published work from [EVIDENCE.md](../../EVIDENCE.md). A (run) row can establish a **method result** about an instrument or a
+**constructed mechanism result** about consequences of the model's assumptions. Neither is
+human evidence. Whether a mechanism transfers to people remains unmeasured, and rows that
+depend on a real-world fact say so.
 
 ---
 
@@ -55,16 +56,16 @@ is now the best-established thing in the record.
 | E15 | The competence collapse is a cliff | **REJECTED (run)** | The author's own claim, tested knowing it could only survive or weaken. A knee: width unchanged across sixteen times the data. Sharper secondary: **belief accuracy rots before choice accuracy**, the internal picture fails while the picks stay right |
 | E33 | A reader can know a maker better than the maker knows itself | **SUPPORTED (run), scoped** | The margin grows as the self-account degrades; the reader is told how unreliable the report is. The self-blindness half splits: the mark on the work **exists and no reader in this model can read it**: readings differ in the fourth decimal |
 | E43 | Practice removes the maker's own reasons from report | **SUPPORTED (run)** | Compression is what makes a decision unavailable to its own maker, while the reader is unaffected. (lit READ: the expertise literature states this directly: automaticity costs experts the ability to account for their actions) |
+| V16 P01–P03 | Useful execution identifies original history or adds individual prediction beyond a matched direct reader | **QUALIFIED; prediction bar not met (run, constructed mechanism)** | Reconstruction executes, but can differ from the original; a selected successful alternative leaves 137 compatible routes. P02 query and P03 evidence-dose prediction bars fail; the direct same-evidence table matches. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 
-**What these add up to.** The necessity claim died and the sufficiency claim survived, and the
-project is better off for the trade: *"a maker-model is required for confident invention"* was
-false, but **no finding in ten versions survives removing it, and two behaviours, responding to a
-label, and paying attention to something unresolvable, have no baseline reproduction.** The core
-commitment now rests on ablation rather than assertion. Within one encounter the inference has an
-order (purpose first, then method: E36), a ceiling set by the reader rather than the artifact
-(E10, E48), and a failure mode where the reader's picture degrades invisibly while its choices
-still look right (E15), which is the shape of every quiet failure in the rest of this file. The reader's own organization as its first model of a maker, the self-first prior, is
-tested in §11: it wins near itself, loses elsewhere, and corrects.
+**What these add up to.** The early necessity claim about confident invention was withdrawn;
+the surviving label-response and sustained-attention findings remain scoped to their original
+ablation battery. V16 adds executable reconstruction and narrows what success means: a program
+that works need not recover the maker's original history. It also supplies same-information
+direct prediction comparators that match the maker reader. That does not retract a different
+version's ablation, but it prevents extending its necessity claim to these new targets. Purpose,
+method, usable competence and history remain separate questions. The self-first prior's local
+advantages and failures are recorded in §§11–13; none establishes a result about people.
 
 ## §2. The wall (familiar words, nobody home) is a distinct failure, and the reader keeps paying
 
@@ -173,16 +174,19 @@ that stops "depth" being "legibility" renamed. And what a reader takes from deep
 | E49 | Artfulness is density: hierarchy per unit of observable extent | **SUPPORTED (run)** | What lets a readymade be dense rather than empty. (lit READ: compression-based complexity tracks human judgement; the bimodality prediction is untested anywhere) |
 | E50 | Grabbing attention and keeping it are one decision | **REJECTED (run), two decisions** | Shock art and slop are different objects. (lit: capture-by-salience and sustained expert attention separate, and expertise moves only the second) |
 | E43 / E33 | Practice hides the maker's reasons from the maker, not from the work | **SUPPORTED (run)** | See §1, the mark exists on the object and is unreadable to any reader in this model; only measuring the object directly could tell the three sources apart |
+| V16 K01/K04 | Acquired fragments improve bounded construction | **SUPPORTED at the frozen intermediate budget; confirmed (run, constructed mechanism)** | At budget 32, personal versus pooled craft gains 50.000 percentage points in 2,816 fresh constructor packets; motifs versus generic options gain 99.964 points in 1,408. Conservative lower bounds 46.274 and 98.267 exceed the 5-point bars; one Holm family. Low/high-budget discovery boundaries remain separate. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 K02/K05/R05 | Acquired craft adds individual prediction; acquisition attention and enactment supply distinct learning benefits | **SPLIT (run, constructed mechanism)** | K02 misses its prediction bar. K05 training allocation helps in instructed conditions but its four uninstructed comparisons fail the bar. R05 enactment matches observation with equal examples. Execution, prediction and learning are different outcomes. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 K03 | Inhibiting or relearning old craft helps after a purpose change | **QUALIFIED discovery support (run, constructed mechanism)** | Six practical bars hold, ten fail and two remain unresolved across alignment and budgets. At partial alignment/budget 32, inhibition versus continuation gains 86.719 points and relearning gains 100.000. Adaptation can train the exact new purpose; it is not unseen-composition transfer. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 
-**What these add up to.** Depth earned its place the hard way: its first measure could not move
-(E30's construction), its second is contaminated (N21's estimate leg), and what survives is the
-**transfer asymmetry**: deep work transmits method overwhelmingly and purpose not at all, and a
-guard can only block what arrives late, which is purpose. Put E56, E38 and E40 side by side and
-the section's claim sharpens into the project's darkest result: **the channel that carries skill
-is the channel that carries values, it is open before any gate can close, and both optimising the
-signal of depth and tuning the reader to the machine make things worse in ways that look locally
-like improvement.** N21's failing original is retained on purpose: the reader's *estimate* of
-depth is effort-contaminated even where the *transfer* is not, and no single number states both.
+**What these add up to.** The earlier depth-to-method result remains a property of the
+specified reader, with N21's contaminated estimate and E56's architecture qualification retained.
+V16 makes acquired procedures executable and confirms a practical construction advantage in two
+specific intermediate-budget comparisons. The low/high-budget ties and failed prediction bars
+limit that advantage; equal training attempts do not imply equal total computation. Selective inhibition and relearning also help some changed-purpose regimes, but
+that adaptation may train the exact new target. Enactment does not add learning over
+observation with equal examples here. The construction results do
+not establish that useful craft carries human values or that an early gate cannot protect them;
+those broader claims still require evidence outside these constructed worlds.
 
 ## §5. A diet of unlabelled machine content damages the reader twice, separably
 
@@ -291,16 +295,22 @@ all, and where the criteria failed at their own jobs.
 | A2 | The instruments can answer what they are asked | **Four limits (run)** | Trust was unmeasurable as fitted (repair later recovered its lower half); label and work are two witnesses with a 0.54 crossover; uptake is U-shaped in accuracy (a confidently wrong reader moves as far as a correct one, the repair split it into a signed measure and the headline cell reversed sign); the disagreement figure cannot be read alone |
 | A1/A3 | The recorded answers survive recomputation | **Five of nine checks against the work (run)** | Two verdicts were artifacts of the inference shortcut; the independent rebuild reproduced the mechanism at one-fifteenth the size; the exact-solver switch (V-1) re-runs every experiment through its own unmodified code path |
 | — | Criteria did their own jobs | **Four failures, each caught by a later pass (run)** | A six-cell rank correlation deciding a headline; a permutation check that could never pass; a monotonicity criterion punishing guaranteed ties; an absolute threshold on a two-fold-varying baseline. A fifth caught before it ran. **This is the failure mode the project has most of** |
-| — | The record is forward-tested | **REJECTED: count zero** | Eighteen logged places where a design or criterion changed after seeing a result (7 found by V8, 4 added by V9, 7 by V10); the one sealed prediction was disowned and E52's held primary does not restore it. **The largest single thing the project owes** |
+| — | The early V1–V10 record is forward-tested | **REJECTED at that audit: count zero** | Eighteen logged places where a design or criterion changed after seeing a result (7 found by V8, 4 added by V9, 7 by V10); the one sealed prediction was disowned and E52's held primary does not restore it. **The largest single thing the project owes** |
 | — | The harness the corpus family ran on was sound | **REJECTED, then repaired (2026-08-08)** | A reused observer's prior was silently wiped from the second artifact onward (E6–E9, E12, E13, calibration). E6/E6b/E7/E9 regenerated at full scale: every direction held. E8 withheld regardless; E12/E13 direction-level until regenerated |
 | V12 | The exact path was exact | **REJECTED, then repaired (D-V12-1)** | The Q trunk's and B04's "exact" reader scored artifacts with a per-feature mixture likelihood, overconfident by construction; caught by the version's own first run (a card at ceiling, a regime posterior below its prior), re-run on the structured likelihood, first verdicts kept. And an identity the apparatus had not stated: supply gains for an exact reader are symmetric (T05), so directionality is never an information result |
+| V16 B03/B04 | Frozen claims reproduce on untouched constructor/history lineages | **SUPPORTED for three exact primaries (run, method)** | Claims, margins, power and namespaces froze before 4,864 fresh histories in 4,544 independent constructor packets; all three passed one Holm family without replacement. Discovery secondaries are not confirmed by association. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 B04/X01–X08 | Retention, recalculation, replay and reporting are independently established | **SUPPORTED within the separate proof scopes (run, method)** | Global independent calculation joins, full current raw coverage, 196 replay checks over 168 distinct cases and document byte/review bindings are distinct receipts. The invalid inquiry, interruptions and legacy V15 failures remain visible. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 B02 | Adaptive search finds more recurring explanatory case types at matched physical work | **DESCRIPTIVE ONLY (run, method)** | Eight runs per method: adaptive 4.00 versus fixed 3.25 types at 1,356 production primitives per run (10,848 per method total), with 120 verification primitives separately recorded per run. The 18/24 recurrence rule is a descriptive filter; shared follow-up draws are not independent confirmations. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 
-**What these add up to.** The apparatus's honest self-description in one sentence: **directions
-and orderings are trustworthy; sizes are properties of this model's dimensions; two of three
-headlines are shared with any model of this shape; the wall is the theory's own; and the whole
-record is a theory checked against itself, with zero forward tests.** Every criterion failure was
-found by a *later* pass, which is the argument for keeping the pass cadence rather than for
-trusting any single layer of it. V12 added a kind found within the version: a likelihood defect caught by its own first run.
+**What these add up to.** The early audits exposed both architectural results and instruments
+that could not answer their questions. Their zero-forward-test judgment describes that early
+record, not the later frozen fresh-lineage tests. V16 now confirms three narrow claims and
+separately checks calculation, selected-case execution, complete raw retention and documentary
+write-through. These proofs establish different properties; document checks bind the agent's
+interpretation rather than independently judging its truth. Neither selected replay nor archive
+coverage means every rollout was rerun, and no continuous-occupancy claim follows. The original
+invalid inquiry and V15's failed instruments, runtime contract and incomplete regeneration stay
+in the record. Case-search recurrence supplies inspectable examples, not population prevalence.
 
 ## §9. Service results for the sibling: validated rulers, and instruments killed before use
 
@@ -409,20 +419,19 @@ the untouched confirmation lineage: twenty-one held, B04 did not (`results/v12/C
 | D02–D07 | Upstream control reaches further and survives rewriting; artifacts can tell a director from a shared brief | **SUPPORTED (run)** | reach 1.0 director against 0.25 local; director attribution 0.92 after a full rewrite where the local hand falls to chance; structure reader 0.81 against a coherence baseline at 0.50; identical artifacts with different histories abstained on (0.97) and separated by records (1.00) and by later artifacts (0.87) |
 | F01–F05 | Layered intent is readable from the artifact | **BOUNDARY (run)** | the dependency ruler reaches AUC 1.00 at 128 steps × 60 blocks, 0.96 at 32 × 60, 0.51 at the spec floor of 4 × 12, where every ruler is at chance; a director's hand survives local flattening (1.00) and half a rewrite (0.92) |
 | X01–X12 | The self-first gain is an artifact of solver, labels, order, convention or world | **REJECTED (run) for eight attacks; dissolves under the three that remove its material** | bit-identical under shuffled labels and a changed convention; a third survives the PyMDP solver, two thirds a histogram reader; destroyed by permuting correspondence, diluted to nothing by wrong labels or equifinal twins; an adaptive maker costs the reader 0.37 nats on far makers |
+| V16 O01–O04 | Separating actual, known and considered opportunities improves inference | **QUALIFIED (run, constructed mechanism)** | O03 beats the fixed-menu reader in all three conditions; its budget-only rival leaves two held bars and one unresolved. O01/O04 retain mixed probe and belief results. Supplied-state critic performance is a resource benchmark, not learned-reader admission. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 S01–S05 | Self-model repair has an advantage over complete error monitoring | **Practical equivalence confirmed for S02; other comparisons scoped (run, constructed mechanism)** | Across 320 fresh constructors and intact/partial histories, all four helpful-minus-harmful repair differences are zero; simultaneous bound 2.543 points is inside the 5-point margin. Other self/return-to-work gains depend on evidence and baseline. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 M01–M04 | Separating source, selector, audience and role helps the corresponding target | **QUALIFIED (run, constructed mechanism)** | Source and role records help some targets; audience evidence helps audience success without historical process evidence. Same-information direct comparators match; release prediction stays unresolved. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 
-**What these add up to.** The other model is real and expensive. A reader that starts from
-itself reads makers like itself better than an information-matched prior — by half as much as
-first reported once the rival is matched on distance to the truth as well (§12) — and pays for it
-everywhere else; it corrects, it calibrates, it abstains well, and it does not predict what the
-maker will do next any better than a generic reader. Values are legible only against what was on
-offer, which is a statement about records, not about artifacts. Regime is a real latent with a
-real price for guessing it wrong. What supplying one latent buys for another is symmetric for an
-exact reader, so every "purpose first, then method" result in this record is a claim about
-readers and should be re-read as one. Upstream control is the thing that survives rewriting, and
-it is readable from the artifact where coherence is not. And active reading, the part of the
-theory closest to the essay's "continuously seeking evidence of actions", bought almost nothing
-here, because the artifacts of this construction already carry what a probe would ask for; the
-construction where probes matter has not been built.
+**What these add up to.** Starting from oneself helped nearby makers in the earlier model
+and hurt elsewhere; fair rematching narrowed that advantage (§12). V16 further separates
+opportunity, consideration, records and future targets. A critic's better solution does not
+identify inability, ignorance or intent. Self-model repair is practically equivalent to complete
+error monitoring in the two confirmed regimes; gains over memory-only readers do not establish
+self-model privilege. Source, audience, selector and role evidence answer different questions,
+and equally informed direct comparators match their latent-maker counterparts. The earlier
+absence of useful probes was a boundary of V12's construction: §§12–13 and V16 include paid
+observations, with benefits that depend on the task and comparator.
 
 ## §12. Common ground: what self buys beyond an equally local prior, and what else a bounded reader can use
 
@@ -447,7 +456,7 @@ every card is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger i
 | # | hypothesis | status | notables |
 |---|---|---|---|
 | C04/C14/C16 | Self privilege survives a truly equal local prior | **SUPPORTED (run), in the near bin only; confirmed; transferred** | +0.26 nats near, −0.16 far, +1.21 on anti-similar makers against a rival matched on entropy and distance; identical on fresh families; pooled +0.31, narrowed to +0.12 by fair rematching (X04); abolished by false similarity (X06), as it should be; +0.04 on the hidden next goal |
-| C03/C05 | A common-substrate prior improves on a broad population | **WITHHELD (run)** | both instruments failed their own controls at full scale; no reading; one repair allowed by the closure rule and not yet made |
+| C03/C05 | A common-substrate prior improves on a broad population | **Original instruments WITHHELD; V14 repairs REJECTED (run)** | Original control failures remain; the allowed repairs ran in V14 and failed their criteria (I06/I07, §13) |
 | C07/C09/G12 | Labels are paid for where they are false | **SUPPORTED (run)** | claimed group −24.5 nats when only the claim matches, +1.34 when the convention is shared; 97% of an eight-artifact history gain is the target's own; a namesake's reliability transfers as −1.80 |
 | C15/P10/P11/X14 | Reader plurality helps | **REJECTED (run)** | four pooled readers −1.15 nats below the best single reader, −1.91 when correlated, overconfident by +0.33; exchange +0.53 with calibration error 0.30 → 0.48 |
 | A01/A03/A12/X08 | Finite attention buys information without creating it | **SUPPORTED (run) for learned precision** | +14.1 nats over uniform, wrong weights −2.9 and confidently wrong 26%; identity at neutral weights; survives adversarial salience (6.5 nats above the salience reader) |
@@ -455,7 +464,7 @@ every card is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger i
 | O02/O06/O07/O08/O09 | A factored cost reader identifies cost causes | **SUPPORTED (run), given the cost model** | dimension named 79%, +0.66 on held-out choices; motivation–competence 67% against 25%; imposed work 0.000 nats; goal strength monotone (ρ +0.93) |
 | O17/O16/X10 | Cost inference predicts prospectively and stays calibrated | **SPLIT (run)** | four of five prospective targets gain (+0.7 to +1.1), a new role −0.28; no calibration gain under incomplete menus; a misspecified cost model reverses the advantage (+0.49 → −0.40) |
 | O15 | An idealized reader is "super-empathic" | **REJECTED (run)** | +0.01 nats over the planted neglect heuristic on complete menus, a tie on incomplete ones |
-| P01 | The V12 correction curve reproduces under a matched local control | **WITHHELD (run)** | half-life 5.9 and residual 0.01 inside the bars, but near makers needed more correction than far and calibration failed |
+| P01 | The V12 correction curve reproduces under a matched local control | **Original instrument WITHHELD; V14 repair REJECTED (run)** | Original near/far and calibration failures remain; the allowed V14 repair found no required correction asymmetry (I08, §13) |
 | P02/P03/P05/P07/P12/P14 | Correction follows diagnostic validity and abstains under equifinality | **SUPPORTED (run)** | behaviour +0.05 and biography +0.07 correct, false context ≈0; self weight 0.46 true match, 0.14 false note, 0.02 none; a learned correction transfers to the same maker (+0.91) and harms strangers (−5.91); strong reliable conflict +0.96, weak unreliable −3.51; abstention 0.50 before and 0.97 after separation |
 | G01–G06, G09–G15 | Goal, reliability, content and uptake stay separate | **SUPPORTED (run)** | stance 85% against 14% with the surface at 16%; belief follows truth (+0.80), preference follows alignment (+0.64); false note 2% against strong evidence; apology 0, costly action +0.13; every channel answers only its own factors |
 | G16/X07/X15 | The architecture transfers and survives false context | **SUPPORTED (run), narrowed** | fresh sources 84%, reversal 54%; false biography cuts the gain +0.71 → +0.14, a regime switch +0.35 → +0.10 |
@@ -465,20 +474,17 @@ every card is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger i
 | Q06/Q07/Q09/Q10 | Exact selection beats passive reading where a probe changes what can be seen | **SUPPORTED (run)** | attention-informed inspection +0.09; challenge +0.54 (an anticipating adversary takes 8.7 back); stopping regret 0.08; robust reading −3.5 against −25.8 under a decoy |
 | Q01/Q02/Q04/Q12 | The present PyMDP reader adds useful action selection | **REJECTED (run); closed by the trunk's rule** | agreement 61% (bar 80%) and 70% on fresh families (bar 70%); commissions inert (+0.02 against +0.43 for a free look) |
 | X01–X20 | The flights are artifacts of cues, labels, family, solver, order, vocabulary or an adaptive maker | **REJECTED (run) for those attacks; three narrowings and three deaths named** | all five survive X01, X02, X16–X20; nested narrows under fair rematching; vigilance under false biography and regime switch; cost inference dies under misspecification; the hand dies where it should (shuffled policy, equifinal history) |
+| V16 K02/P03/P04 | A latent-maker representation adds prediction beyond an equally informed direct comparator | **Practical advantage not established (run, constructed mechanism)** | Direct tables match maker predictions to numerical tolerance. P04's family mixture beats misspecified softmax in five non-softmax families, but matches the direct mixture in all seven. Graphic/assembly mechanisms are independently configured, not fitted-parameter transfer. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 
-**What these add up to.** Common ground, in this construction, is locality plus correspondence
-and not yet anything deeper. Against a rival that is exactly as local as the self, the self
-prior keeps a real advantage on makers like the reader and nothing anywhere else; what it might
-buy from a shared substrate under that locality is unread, because the two instruments built to
-read it failed their own controls. The reader is cheapest to fool through what it is told —
-a claimed group, a false biography, a namesake's reputation — and pays large, sign-correct
-prices for each, while the artifact evidence underneath is not overridden. Attention and cost
-reading both work and both have a named unsafe region that no reader-side rule in this record
-repairs: duplicated evidence and a wrong cost model. Reading many hands stays a statement about
-records. Active selection, absent from V12's worlds, earns its place once a probe can change what
-is visible, and the PyMDP reader that was to do the selecting is closed on its own terms. The
-version's largest correction is to the record itself: half of V12's headline near gain was a
-matching imbalance, and the corrected number is the one this file now carries.
+**What these add up to.** V13's near-self advantage survived its locality-matched rival,
+but its common-substrate and correction instruments failed; the allowed V14 repairs subsequently
+ran and failed their criteria (§13). They are no longer pending work. Attention, cost and role
+inference retain their named information and misspecification limits. V16 makes the matched-rival
+requirement more demanding: its same-evidence direct tables match the maker models, and a broader
+family model's gain over misspecified softmax is shared by a direct mixture. Information and
+model specification explain those comparisons without establishing an extra representation
+benefit. Testing a bounded implementation with matched information and actual computational
+cost under a changed production family is the next discriminator, not a new V16 expansion.
 
 ## §13. The routed reader: what jointness, reliability, practice, communicated affect and curiosity each actually bought
 
@@ -505,19 +511,17 @@ is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger is its `BRID
 | F04/F05/F06/F08 | Learning progress governs foraging better than surprise | **REJECTED (run) for progress; gain-per-cost SUPPORTED** | progress avoids the noise trap (4% vs 41%) but gains no more (+0.23 vs +0.19); under silent law changes surprise wins by 4.13 nats; gain-per-cost ≥ best rival, 0.08 regret fresh, 100% abstention on null ecologies |
 | I06/I07/I08 | The V13 repairs revive C03/C05/P01 | **REJECTED (run), all three** | common substrate −0.000 nats (bar 0.69); self prior loses to the common population (−0.69/−0.77); near/far correction asymmetry absent (41% vs 44%) |
 | X01–X12 | The five flights are artifacts of cues, labels, families, matched skill, reversal or duplication | **REJECTED for those attacks (run)** | no shortcut flagged anywhere; the two thin margins narrow under surface ablation and hidden reversal, the three strong results do not move |
+| V16 R01–R05 | Recognition, identification, learning and inquiry value select one best policy | **SPLIT (run, constructed mechanism)** | Recognition-guided practice beats surprise on learning but not expected information gain in R01. Rankings vary with ecology and objective. At saturation the value-of-learning utility gain is saved cost, not additional competence. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V16 V01–V03 | Longitudinal opportunity and probe records identify persistent profiles and improve prediction | **QUALIFIED; many intervals unresolved (run, constructed mechanism)** | Chronology beats weaker context/stability models in some regimes; direct chronological/all-evidence rivals match. Four of 36 all-probe versus no-probe prediction bars hold; targeted probes have no held practical advantage. The profiles are constructed, not human values. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 
-**What these add up to.** In this construction, the intelligence of the reader is not in
-jointness — by the time evidence is worth having, independent readers of the right latents are
-nearly as good as the exact joint, and learned reliability weighting adds a rounding error while
-merely *not being fooled by ease* is worth a tenth of a nat. What actually pays is factoring:
-knowing that plan, goal and preference are different objects with different routes (each
-recoverable to 0.5–0.85), that skill and practice are different objects (99% separable at zero
-skill gap), that a source's assertion, content, sought effect and record are different objects
-(chance from the matched artifact, 90% from the counterfactual probe), and that pursuit and
-warrant are different objects (83% of queries on a hypothesis held at 0.21). The V13 self-prior
-lineage ends here: its three repairs ran clean and found nothing. And the version's one
-methodological export for curiosity is negative in an instructive way — progress-as-settling
-fails exactly when the world changes silently, which is the case that matters.
+**What these add up to.** V14's factoring results distinguish plan, goal, preference,
+practice, communicated affect and evidence routes; its three V13 repairs found no rescued claim.
+V16 adds actual learning and inquiry, which further separates identifying a maker from gaining
+competence. No policy dominates every tested ecology or objective, and saving cost at saturation
+is not learning. Longitudinal records sometimes improve constructed-profile prediction, but
+many practical bars remain unresolved and matched direct readers erase a representation-specific
+claim. Neither a persistent synthetic profile nor a successful probe is a measurement of human
+values. Pursuit, warrant and the next eligible measurement therefore remain separate decisions.
 
 ## The maintenance rule
 

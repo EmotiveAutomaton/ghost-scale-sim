@@ -16,6 +16,58 @@ For what the model is and where its claims stop, read the README's
 
 ---
 
+## V16: acquired craft and executable reconstruction
+
+Can acquired procedures help a reader construct useful work, recover a maker's history and
+predict later behavior? V16 executes learned programs in graphic and assembly worlds and keeps
+construction, historical recovery, prediction, correction and learning separate.
+
+**Constructed mechanism result:** Acquired fragments improved construction at the tested intermediate budget; the advantage depended on the budget and comparator.
+
+**Constructed mechanism result:** Self-model repair was equivalent to complete error monitoring within the declared five-percentage-point margin in both tested memory regimes.
+
+**Constructed mechanism result:** The maker models did not exceed the practical prediction bar against their equally informed direct prediction comparators.
+
+**Method result:** The study separately verified its reported calculations, bounded scientific replay and complete retained raw archive.
+
+The three fresh primaries were frozen before 4,864 histories in 4,544 independent constructor
+packets. Personal versus pooled craft gained 50.000 percentage points at budget 32; learned
+motifs versus generic options gained 99.964 points at that budget. Their conservative lower
+bounds were 46.274 and 98.267 points, above the declared five-point practical bars. For repair,
+all four differences in helpful minus harmful repairs were zero across intact and partial
+memory; the simultaneous 2.543-point bound lay inside the five-point equivalence margin. All
+three passed one Holm family. These are the only confirmatory promotions.
+
+Each row groups commissioned questions by their measured result. The completed study links
+every condition, comparison, original uncertainty interval, denominator and access/cost record.
+
+| Cards and question | Result and warrant |
+|---|---|
+| K01–K05: what does acquired craft buy? | Two intermediate-budget construction benefits confirmed; low/high-budget ties limit the claim. K03 inhibition/relearning help some changed-purpose regimes, with ten failed and two unresolved bars retained. Individual prediction misses its bar; K05 training allocation depends on instruction. |
+| P01–P04: useful reconstruction, historical recovery and production families | A working alternative need not recover history. Query/evidence-dose prediction bars fail; broader production mixtures beat misspecified softmax but match direct same-evidence mixtures. |
+| O01–O04: inability, knowledge, consideration and opportunity | Mixed probe/belief results; consideration beats fixed-menu prediction, with a stronger rival leaving one regime unresolved. Critic resources do not identify maker intent. |
+| S01–S05: self-correction and return to old work | S02 equivalence to complete error monitoring confirmed. Artifacts and action evidence help specific memory/goal targets; adopted utility is not original-goal recovery. |
+| R01–R05: recognition, inquiry and learning | Recognition beats surprise on learning in R01 but not expected information gain. Rankings depend on ecology; saturation gains can be cost savings. Enactment matches observation with equal examples. |
+| M01–M04: maker, selector, audience and role | Correct evidence helps some corresponding targets; direct same-information comparators match and release prediction remains unresolved. |
+| V01–V03: profiles and trajectories | Chronology helps against weaker models in some regimes; direct comparators match and many practical bars remain unresolved. These are synthetic profiles, not human values. |
+| B01/B02: transfer and inspectable cases | Standalone public consumer reproduces 1,574 tasks from 44 cases. Bounded catalogue replays 36 selected cases. Adaptive versus fixed search finds 4.00 versus 3.25 recurring types descriptively; recurrence is not confirmation. |
+| B03/B04/X01–X08: confirmation and validity | Finite selection, independent calculations, full archive and bounded replay have separate proofs; original invalid inquiry and failed/interrupted attempts remain retained. |
+
+The final inventory covers 30 native cards, 316 conditions and 1,020 comparisons, with separate
+42-card pursuit/warrant accounting. Discovery phases, selected examples and shared histories
+are not pooled as independent observations. No human, language-model or real-text inference
+experiment was conducted. V15's C11/M01 failures, failed runtime contract and incomplete
+regeneration remain unchanged.
+
+The next discriminator is a changed production family with information and actual computation
+matched between bounded readers. This is a future recommendation, not a new campaign.
+Full results, figures, proof links and retained limits:
+[V16 completed study](docs/versions/v16-acquired-craft/RESULTS.md). The hypothesis owners were
+updated in the same pass in §§1, 4, 8 and 11–13 of the
+[theory store](docs/theory/READING_INTENT.md).
+
+---
+
 ## The shape of the whole thing, in one paragraph
 
 A reader looks at something made and tries to work out what the maker was for. This project models

@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v16-acquired-craft-response.md](v16-acquired-craft-response.md) | **Codex agent in this repository** | Accepted V16 commission: completed acquired-craft study, fresh confirmation, proof scopes and transfer limits; repository record, not an outbound message. |
 | `batch-1-request.md` | Sounding Line | S-1 … S-6. Six questions about mechanism. |
 | `batch-1-received-by-sounding-line.md` | Sounding Line | their own write-up of what came back. |
 | `batch-2-request.md` | Sounding Line | T-1 … T-4. The triangle, automaticity, countability, the uncertain reader. |

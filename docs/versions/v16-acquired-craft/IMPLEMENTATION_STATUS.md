@@ -1,5 +1,65 @@
 # V16 implementation status
 
+Status recorded at 2026-09-11T17:23:48.792240+00:00, after ordinary supervisor closure.
+The accepted clock remains 2026-09-09T18:39:54Z; its immutable ceiling remains
+2026-09-14T18:39:54Z. The native case and minimum W1 discovery spine met their
+setup milestones. The finite scientific queue and bounded expansion ladder are exhausted.
+
+V16 is scientifically and operationally closed. All nine frozen operational jobs
+are complete, including the ordinary supervisor's close stage. The
+[actual closure](../../../results/v16/CLOSEOUT.json) verifies all 42 cards and four
+distinct proofs. The [terminal runtime retention](../../../results/v16/closeout/final-runtime-1/RETENTION.json)
+preserves the completed supervisor and queue cursor. This is a completed finite
+campaign, without a claim of continuous occupancy or a new extension of its clock.
+
+The [raw archive proof](../../../results/v16/closeout/raw-archive-2/RECEIPT.json)
+verified 2,529,050 current files (27,890,231,721 bytes)
+across 201 retained chunks. Every archive member was reread,
+the independent input baseline matched, and a second complete source snapshot
+was unchanged. The archive and its final coverage administration are retained
+locally beside the active checkout; ordinary Git carries compact evidence and
+the bounded replay and reader handoff ZIPs. This does not claim a public raw
+download or an off-machine backup.
+
+The [independent aggregate proof](../../../results/v16/aggregate-final-2/RECEIPT.json)
+joins eleven analysis phases and the separately recounted forty-condition supplement.
+The original omission of O04/X06 and V03/X03, and its corrected JSON witness-recount
+failure, remain retained. Twenty-one targeted closeout checks passed; no scientific
+outcomes, criteria or confirmation samples were replaced. The [bounded replay proof](../../../results/v16/replay-bundle-1/RECEIPT.json)
+and [actual extracted-bundle check](../../../results/v16/closeout-setup/final-bundle-portability-1/RECEIPT.json)
+retain their separate scopes. The [documentary proof](../../../results/v16/closeout/documents-2/RECEIPT.json)
+binds the final study, exchange, findings and theory account. Its mechanical
+checks verify the recorded review and source bindings, not interpretive truth.
+
+Only the three exact frozen confirmation comparisons promote: personal versus
+pooled success at budget 32, motif versus generic options at budget 32, and
+helpful versus harmful repair with two complete error monitors in the two tested
+memory regimes. These are constructed-mechanism findings within the reported
+conditions. They do not promote whole cards or establish human or real-text
+claims. The [final study](RESULTS.md) and [42-card accounting](../../../results/v16/closeout/accounting-2/PROGRESS.json)
+retain discovery results, invalid instruments, nulls and unsearched boundaries.
+
+The full local regression ran 1,781 tests: 1,768 passed, one retained V15 gate
+test failed, eleven skipped and one was an expected failure. All 354 V16 tests
+in that run passed. Four later packaging checks passed, including one new test;
+this does not claim a later full 355-test local run. The
+[post-repair checkpoint CI](../../../results/v16/closeout/ci-checkpoint-3/RECEIPT.json)
+also reported only the V15 failure, with no V16 failure. Its Linux collection
+differs from the local one. V15 C11/M01, RUNTIME_FAILED and incomplete regeneration
+remain preserved. Whole-repository CI is not green.
+
+The closing copy, ordinary push and CI outcome are checked separately against
+the resulting commit. This status records actual campaign closure before that
+commit exists; it does not predeclare a successful final push or CI run.
+
+## Earlier implementation notes and retained status history
+
+The dated checkpoints below preserve their original pending-work qualifications.
+The current closure statement is at the top of this file. Original failure and
+source records remain available through their links.
+
+### Pre-closure checkpoints
+
 Current checkpoint: September 11, 15:26 UTC. V16 remains open pending the updated
 archive and documentary proofs, ordinary supervisor closure, and final Git/CI
 verification. All original experimental jobs are complete.
@@ -88,12 +148,7 @@ also reported only that V15 gate failure, with no V16 failure or error. Its Linu
 optional-dependency collection differs from the local regression; their counts
 are not combined. Final closure and its closing push remain outstanding.
 
-## Earlier implementation notes and retained status history
-
-The sections below preserve the engineering checkpoints and their original
-qualifications. Statements about pending work describe those earlier checkpoints;
-the dated status above is current. Original failure and source records remain
-available through their links.
+### Earlier engineering notes
 
 The native graphic world executes place/remove programs, learns repeated
 fragments from actual trials, and preserves multiple histories yielding one

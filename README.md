@@ -14,6 +14,22 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
+## ○ Agent-authored V16 update
+
+V16 now executes acquired procedures and separates useful reconstruction from original
+history. Two intermediate-budget construction advantages and equivalence between self-model
+repair and complete error monitoring passed fresh confirmation. The maker models did not
+exceed their matched direct comparators' practical prediction bars. These are constructed-world
+results, with scope and failures retained in the [completed study](docs/versions/v16-acquired-craft/RESULTS.md).
+
+The [42-card accounting](results/v16/closeout/accounting-2/PROGRESS.json),
+[comparison tables and figures](docs/versions/v16-acquired-craft/RESULTS.md#coverage-inspectable-cases-and-the-reader-handoff),
+[blind reader handoff](results/v16/transfer-handoff-1/reader.zip) and
+[scientific replay ZIP](results/v16/replay-bundle-1/replay.zip) have different purposes.
+The replay ZIP contains selected evaluator truth. The complete raw archive is retained
+separately; its proof is linked in the study. V15's known failures remain unchanged.
+This update is agent-authored and has not been relabeled as curator-reviewed text.
+
 > **◐ Curator text from here down to [Install and run](#install-and-run):** a person chose these
 > claims, arranged them, and checked them against the committed results files, writing alongside a
 > machine. Below that line the prose is ○ Ghost, drafted by a machine from the author's numbers.
