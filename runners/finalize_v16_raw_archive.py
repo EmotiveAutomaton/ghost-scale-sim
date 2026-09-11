@@ -43,11 +43,17 @@ def validate_output(root, output):
         raise ValueError("raw closeout requires a new retained attempt under its administrative directory")
 
 
-def run(root, archive_root, output, input_path):
+def run(root, archive_root, output, input_path, *, snapshot_workers=1):
     validate_output(root, output)
     inputs, raw_baseline = prerequisites(root, input_path)
     checks = source_locks(root, REPO)
-    required = snapshot(REPO, root)
+    def take_snapshot(pass_number):
+        if snapshot_workers == 1:
+            return snapshot(REPO, root)
+        return snapshot(REPO, root, workers=snapshot_workers,
+            report=lambda completed, total: print({"source_snapshot_pass": pass_number,
+                "completed_files": completed, "total_files": total}, flush=True))
+    required = take_snapshot(1)
     baseline_matches(required, raw_baseline["files"])
     write(output/"required_files_points.json", {"files": required,
         "scope": "All retained V16 scientific/control/setup/replay evidence and implementation, commission/method/environment inputs",
@@ -81,11 +87,11 @@ def run(root, archive_root, output, input_path):
     def progress(name, covered, expected):
         print({"archive_fully_reread": name, "current_files_covered": covered, "required_files": expected}, flush=True)
     result = coverage(archive_root, receipts, required, report=progress)
-    if not result["verified_complete_accessible"] or snapshot(REPO, root) != required:
+    if not result["verified_complete_accessible"] or take_snapshot(2) != required:
         raise ValueError("raw archive lacks current complete coverage or its source changed during verification")
     write(output/"coverage_points.json", result)
     final = {"execution_state": "completed", "instrument_state": "valid", "recorded_at": now(),
-        "process_id": os.getpid(), "source_checks": checks, "verified_complete_accessible": True,
+        "process_id": os.getpid(), "snapshot_workers": snapshot_workers, "source_checks": checks, "verified_complete_accessible": True,
         "required_files": result["required_files"], "required_bytes": result["required_bytes"], "verified_chunks": len(result["chunks"]),
         "all_archive_member_bytes_reread": True, "current_source_snapshot_unchanged": True,
         "independent_calculation_input_baseline_matched": True,
@@ -107,11 +113,12 @@ def main():
     parser.add_argument("--archive-root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--prerequisites", type=Path, required=True)
+    parser.add_argument("--snapshot-workers", type=int, choices=[1, 2, 4, 8], default=1)
     args = parser.parse_args()
     # Refusing an old/outside attempt must not add a failure into that directory.
     validate_output(args.root, args.output)
     try:
-        result = run(args.root, args.archive_root, args.output, args.prerequisites)
+        result = run(args.root, args.archive_root, args.output, args.prerequisites, snapshot_workers=args.snapshot_workers)
     except Exception as error:
         write(args.output/"FAILURE.json", {"execution_state": "failed", "instrument_state": "unresolved", "recorded_at": now(), "error": repr(error), "partial_archives_preserved": True})
         raise

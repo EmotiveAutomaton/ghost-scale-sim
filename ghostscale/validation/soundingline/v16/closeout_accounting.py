@@ -44,7 +44,7 @@ def native_state(card):
         "evidence_scope": "confirmation" if card["confirmed_claims"] else "discovery"}
 
 
-def build(root, study_relative, proof_references):
+def build(root, study_relative, proof_references, supplemental_controls=None):
     if set(proof_references) != set(PROOFS):
         raise ValueError("final accounting requires all four distinct proof references")
     def reference(name):
@@ -57,6 +57,11 @@ def build(root, study_relative, proof_references):
     for name, ref in proof_references.items():
         if checked(ref).get(PROOF_FIELDS[name]) is not True:
             raise ValueError("final accounting encountered an incomplete "+name+" proof")
+    supplements = {}
+    if supplemental_controls is not None:
+        from .commission_control_audit_v2 import verify
+        supplement = verify(root, supplemental_controls)
+        supplements = {row["card_id"]: row for row in supplement["specification"]["gaps"]}
     study_ref = reference(study_relative+"/RECEIPT.json")
     study = checked(study_ref)
     for name, expected in study["output_hashes"].items():
@@ -94,7 +99,11 @@ def build(root, study_relative, proof_references):
             ref = reference(control)
             record = checked(ref, completed=False)
             if not set(dependencies) <= set(record["required_adversaries"]):
-                raise ValueError("final source control omitted a commissioned adversary")
+                missing = set(dependencies)-set(record["required_adversaries"])
+                extra = supplements.get(cid)
+                if extra is None or extra["original_control"] != ref or set(extra["missing_adversaries"]) != missing:
+                    raise ValueError("final source control omitted a commissioned adversary")
+                evidence.append(supplemental_controls)
             evidence.append(ref)
         else:
             for attack in dependencies:
@@ -167,10 +176,10 @@ def build(root, study_relative, proof_references):
     return inputs, result
 
 
-def run(root, output, study_relative, proof_references):
+def run(root, output, study_relative, proof_references, supplemental_controls=None):
     if output.exists() or not output.resolve().is_relative_to((root/"closeout").resolve()):
         raise ValueError("final accounting requires a new administrative closeout directory")
-    inputs, result = build(root, study_relative, proof_references)
+    inputs, result = build(root, study_relative, proof_references, supplemental_controls)
     write(output/"INPUTS.json", inputs)
     write(output/"PROGRESS.json", {"recorded_at": now(), "cards": inputs["cards"],
         "expansions": inputs["expansions"], "campaign_complete": result["campaign_closed"],

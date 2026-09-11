@@ -13,7 +13,7 @@ def main():
     parser.add_argument("--inputs", type=Path, required=True)
     args = parser.parse_args()
     inputs = read(args.inputs)
-    result = run(args.root, args.output, inputs["study_projection_directory"], inputs["proofs"])
+    result = run(args.root, args.output, inputs["study_projection_directory"], inputs["proofs"], inputs.get("supplemental_controls"))
     print({"card_count": result["card_count"], "campaign_closed": result["campaign_closed"]}, flush=True)
 
 

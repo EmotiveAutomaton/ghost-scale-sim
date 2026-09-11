@@ -1,5 +1,29 @@
 # V16 implementation status
 
+Current checkpoint: September 11, 15:26 UTC. V16 remains open pending the updated
+archive and documentary proofs, ordinary supervisor closure, and final Git/CI
+verification. All original experimental jobs are complete.
+
+The first complete raw verification passed at 14:57 UTC: 2,528,982 files and
+194 archive chunks. Final accounting then correctly stopped on two omitted
+commissioned controls: O04/X06 and V03/X03. The omission and original packets are
+preserved. The [supplemental execution](../../../results/v16/commission-controls-1/COMPLETION.json)
+passed all 40 affected final conditions, with 732 actual source predictions and
+76 known-answer requests separately recounted. Its first recount's tuple/list
+serialization failure remains recorded; the separate corrected verifier compares
+canonical persisted JSON. No scientific units, criteria or confirmation claims
+were changed or redrawn.
+
+The [joined independent proof](../../../results/v16/aggregate-final-2/RECEIPT.json)
+retains all eleven original calculation phases and adds the supplemental recount.
+Twenty-one targeted checks passed across this repair, the accounting join,
+archive safety and bounded parallel file hashing. The new complete archive
+verification started at 15:24 UTC and must finish before final closure. The
+original full local regression and checkpoint CI still retain the V15 C11/M01
+failure; this checkpoint does not claim green whole-repository CI.
+
+### September 11, 03:15 UTC checkpoint (historical)
+
 Accepted 2026-09-09 at 18:39:54 UTC; immutable ceiling 2026-09-14 at 18:39:54 UTC.
 The native end-to-end milestone completed about 15 minutes after acceptance.
 The minimum W1 acquisition spine entered discovery before elapsed hour one.

@@ -1,5 +1,6 @@
 """Complete current-file coverage by verified raw ZIP members, with preserved versions."""
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 from .records import read, digest
 from .raw_archive import identity, verify
 
@@ -59,8 +60,10 @@ def coverage(archive_root, receipt_paths, required, *, verify_bytes=True, report
         "scope": "Every required current path must match a retained member's SHA-256 and byte length; archived older versions are retained without substituting for current evidence"}
 
 
-def snapshot(repo, results_root):
+def snapshot(repo, results_root, *, workers=1, report=None):
     """Raw evidence and implementation, excluding final administrative self-reference."""
+    if type(workers) is not int or not 1 <= workers <= 8:
+        raise ValueError("snapshot workers must be between one and eight")
     repo, results_root = repo.resolve(), results_root.resolve()
     if not results_root.is_relative_to(repo):
         raise ValueError("scientific result root escapes its repository")
@@ -84,9 +87,28 @@ def snapshot(repo, results_root):
     if any(not path.is_file() for path in mandatory):
         raise ValueError("required commission, method or environment record is missing")
     paths.update(mandatory)
+    ordered = sorted(paths)
     result = {}
-    for path in sorted(path for path in paths if path.is_file()):
-        if path.is_symlink() or not path.resolve().is_relative_to(repo):
-            raise ValueError("required raw evidence contains an escaping link")
-        result[path.relative_to(repo).as_posix()] = identity(path)
+    if report:
+        report(0, len(ordered))
+    # A finite batch prevents millions of queued futures and keeps exceptions visible.
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for start in range(0, len(ordered), 512):
+            batch = ordered[start:start+512]
+            entries = map(lambda path: snapshot_entry(repo, path), batch) if workers == 1 else pool.map(lambda path: snapshot_entry(repo, path), batch)
+            for entry in entries:
+                if entry is not None:
+                    result[entry[0]] = entry[1]
+            completed = start+len(batch)
+            if report and (completed == len(ordered) or start//100000 != completed//100000):
+                report(completed, len(ordered))
     return result
+
+
+def snapshot_entry(repo, path):
+    """Identical path safety and byte identity in serial and bounded parallel reads."""
+    if not path.is_file():
+        return None
+    if path.is_symlink() or not path.resolve().is_relative_to(repo):
+        raise ValueError("required raw evidence contains an escaping link")
+    return path.relative_to(repo).as_posix(), identity(path)
