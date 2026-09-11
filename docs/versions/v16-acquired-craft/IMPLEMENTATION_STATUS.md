@@ -5,16 +5,17 @@ The native end-to-end milestone completed about 15 minutes after acceptance.
 The minimum W1 acquisition spine entered discovery before elapsed hour one.
 These milestones do not complete the 42-card commission.
 
-At the September 10 22:45 UTC checkpoint, every experimental job in the frozen
+At the September 11 03:15 UTC checkpoint, every experimental job in the frozen
 queue is complete. Only final closeout remains. The 26-card constructor expansion
 and its 300 source-control conditions completed; independent analysis reproduced
 all 76,800 records. The last 17-card expansion completed all 273,408 records,
-native audits and raw checksums at 21:13 UTC. Its 267 source-control conditions
-completed at 21:51 UTC, and their independent recount completed at 22:29 UTC.
+native audits and raw checksums on September 10 at 21:13 UTC. Its 267 source-control
+conditions completed at 21:51 UTC, and their independent recount at 22:29 UTC that day.
 The final disposition explicitly exhausts all thirty native cards' sampling.
 
-Three selected claims froze before fresh confirmation, which completed at
-22:02 UTC with 4,864 histories in 4,544 independent constructor packets. Native
+Three selected claims froze before fresh confirmation, which completed on
+September 10 at 22:02 UTC with 4,864 histories in 4,544 independent constructor
+packets. Native
 arithmetic, the three primaries, multiplicity, source controls and planning-law
 power have separate completed checks. The result is still awaiting the complete
 global proof chain before final promotion and campaign closure. The pre-data
@@ -38,10 +39,18 @@ dependencies and 226 source files required by 38 packets verified. The three
 final figures were generated from the completed numerical index and visually
 reviewed. These completed steps do not substitute for full raw coverage.
 
-Independent boundary recalculation and the large raw archive verification remain
-active. Their successful completion must precede the global aggregate join,
-complete current raw snapshot, documentary proof, 42-card accounting and ordinary
-supervisor closure. No additional experiment or design decision is waiting.
+Independent boundary recalculation completed all 273,408 records on September 11
+at 00:18 UTC. The [full aggregate proof](../../../results/v16/aggregate-final-1/RECEIPT.json)
+completed at 00:51 UTC. It joins all eleven analysis phases and independently
+recounts the original controls, native fixture, transfer exports and archive search.
+The original invalid inquiry remains invalid despite reproduced arithmetic.
+
+The final raw-archive verifier started at 00:53 UTC and is hashing the complete
+current file inventory. It must match the independently calculated raw-input
+baseline, add uncovered files, reread all retained archive members, and confirm
+an unchanged second source snapshot. Its final completion receipt is not yet
+present. Documentary proof, 42-card accounting and ordinary supervisor closure
+await this verification. No additional experiment or design decision is waiting.
 
 The full repository regression executed 1,781 tests: 1,768 passed, one retained
 V15 gate test failed, eleven skipped and one was an expected failure. All 354
@@ -49,6 +58,11 @@ V16 tests in that run passed. The later packaging correction passed four targete
 checks, including one new test, so the distinct V16 inventory is now 355; that
 does not claim a later full 355-test run. V15 C11/M01, its runtime failure and
 incomplete regeneration remain unchanged. The repository is not all green.
+
+The [September 10 checkpoint's CI](../../../results/v16/closeout/ci-checkpoint-1/RECEIPT.json)
+also reported only that V15 gate failure, with no V16 failure or error. Its Linux
+optional-dependency collection differs from the local regression; their counts
+are not combined. Final closure and its closing push remain outstanding.
 
 ## Earlier implementation notes and retained status history
 
