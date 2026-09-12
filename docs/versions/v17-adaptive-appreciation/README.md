@@ -13,3 +13,5 @@ The delivery target is about five elapsed days including implementation and
 analysis. This is a planning estimate, without an occupancy minimum or report
 embargo. Admission is local to each comparison. F is optional and cannot delay
 the A–E scope's disposition and handoff.
+
+[The full setup and first broad queue](RUN_PLAN_2026-09-12.md) records the new A-E consumers, local admission and recovery limits.

@@ -6,6 +6,10 @@ starting the commissioned core. The first baseline slice has now run; this plan
 does not pretend its later prose predates that execution. The actual before-data
 designs and source hashes are retained in each packet's LOCK.json.
 
+## Later setup update
+
+The [full setup run plan](RUN_PLAN_2026-09-12.md) now records executable A-E consumers and the admitted finite queue. The initial checkpoint below is retained as its dated history; its implementation-pending entries have been superseded by that setup record. Scientific screening, selected expansion and final analysis remain separate.
+
 ## Viability and chosen implementation
 
 The existing graphic and assembly executors provide genuine operations and

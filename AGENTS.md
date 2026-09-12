@@ -27,6 +27,11 @@ independently. There is no occupancy minimum, report embargo or global readiness
 gate. Preserve V16's frozen confirmations and V15's retained failures. Historical
 timing and runner instructions below apply only to their named versions. Check
 actual owned processes and current receipts before changing imported code.
+The new finite queue uses module-form `python -m runners.run_v17_queue watch`
+with a source-bound manifest and local admission. Preserve its frozen worker
+checkout while any job is live. Consult the V17 run plan for its one-worker
+allocation, bounded recovery and next scientific review; a completed screen
+queue does not itself close the campaign.
 
 ## V16 qualifications to the inherited notes (2026-09-05, historical)
 
@@ -73,7 +78,7 @@ Read [`README.md`](README.md) down to "The complete record", then
 every claim stands — then [`docs/METHODS.md`](docs/METHODS.md), then the newest file in
 [`docs/exchange/`](docs/exchange/).
 
-**Adapted from the sibling project's `CLAUDE.md`** (Sounding Line, `../../SoundingLine/sounding-line`).
+**Adapted from the sibling project's `CLAUDE.md`** (Sounding Line, `../../../SoundingLine/sounding-line`).
 What carried over is the tone, the reporting standard, and the ruler-validation rules. What did not
 is noted at the bottom, with why — porting a rule that does not fit is worse than having none.
 
@@ -386,7 +391,7 @@ count; the counts live in files that are rewritten as the program runs:
   the replacement, in `results/v13/CONFIRMATION.json` and `results/v13/AMENDMENTS.json`. Added
   cards get an untouched lineage for free: `rng_for` seeds on the card id. `--no-amend` refuses to
   widen instead. **Never widen the packet by editing the ledger by hand.**
-- **The sibling project** is Sounding Line, at `../../SoundingLine/sounding-line`. It reads real
+- **The sibling project** is Sounding Line, at `../../../SoundingLine/sounding-line`. It reads real
   text and cannot construct ground truth. When a question is about **real text, corpora, or a
   language model's behaviour**, it belongs there and not here. When it is about a **mechanism, an
   estimator, or anything needing a planted answer**, it belongs here.
