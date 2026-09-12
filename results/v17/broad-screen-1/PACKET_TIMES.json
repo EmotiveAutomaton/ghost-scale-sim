@@ -1,0 +1,70 @@
+{
+  "entries": [
+    {
+      "gpu_used": false,
+      "new_chunks": 16,
+      "packet": "b-screen-1",
+      "process_cpu_seconds": 0.921875,
+      "wall_seconds": 1.3239628998562694,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 6,
+      "packet": "a2-pilot-1",
+      "process_cpu_seconds": 2.609375,
+      "wall_seconds": 5.5986417001113296,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 24,
+      "packet": "a2-screen-1",
+      "process_cpu_seconds": 14.1875,
+      "wall_seconds": 26.721229099668562,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 32,
+      "packet": "c-screen-1",
+      "process_cpu_seconds": 9.453125,
+      "wall_seconds": 10.408604700118303,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 20,
+      "packet": "d-screen-1",
+      "process_cpu_seconds": 6.40625,
+      "wall_seconds": 6.879935699980706,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 1,
+      "packet": "e-pilot-1",
+      "process_cpu_seconds": 0.640625,
+      "wall_seconds": 0.7057494996115565,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 32,
+      "packet": "e-screen-1",
+      "process_cpu_seconds": 19.546875,
+      "wall_seconds": 20.34974560001865,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 20,
+      "packet": "d-screen-1-amended",
+      "process_cpu_seconds": 6.875,
+      "wall_seconds": 7.426063000224531,
+      "workers": 1
+    }
+  ],
+  "schema": "v17.packet-times.1",
+  "scope": "packet process CPU and wall time; child Stitch CPU separate; not total setup or analysis CPU"
+}

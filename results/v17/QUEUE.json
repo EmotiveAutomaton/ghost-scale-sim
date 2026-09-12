@@ -1,1 +1,55 @@
-{"campaign_complete":false,"completed_packets":["a-pilot-1","a-screen-1"],"items":[{"family":"A","next":"Stitch toolchain, parameterized/hybrid arms, structural/order robustness and assembly","state":"partial"},{"family":"B","next":"independently executable recipient and inferred recipient model","state":"implementation_pending"},{"family":"C","next":"bounded reader/controller on B task","state":"implementation_pending"},{"family":"D","next":"assembly revision, feedback and stopping","state":"implementation_pending"},{"family":"E","next":"unseen-choice task and reader-only pilot","state":"implementation_pending"},{"family":"F","next":"only if core progressing comfortably","state":"optional_deferred"}],"recorded_at":"2026-09-12T18:56:56.594157+00:00","running_jobs":[],"schema":"v17.queue.1"}
+{
+  "amendments": [
+    "broad-screen-1/d-AMENDMENT.json"
+  ],
+  "campaign_complete": false,
+  "completed_packets": [
+    "a-pilot-1",
+    "a-screen-1",
+    "b-screen-1",
+    "a2-pilot-1",
+    "a2-screen-1",
+    "c-screen-1",
+    "d-screen-1",
+    "e-pilot-1",
+    "e-screen-1"
+  ],
+  "current_phase": "independent checks complete; scientific review and selected expansion next",
+  "fresh_evaluation": "reserved namespaces unused; selection and separately frozen confirmation consumer still required",
+  "items": [
+    {
+      "family": "A",
+      "next": "review abstraction/memory budget and storage surfaces",
+      "state": "initial_screen_complete"
+    },
+    {
+      "family": "B",
+      "next": "review recipient changes and costly inferred-model gains",
+      "state": "initial_screen_complete"
+    },
+    {
+      "family": "C",
+      "next": "review development-fitted computation policy and switching",
+      "state": "initial_screen_complete"
+    },
+    {
+      "family": "D",
+      "next": "use amended creation traces; review feedback and stopping",
+      "state": "initial_screen_complete"
+    },
+    {
+      "family": "E",
+      "next": "reader pilot verified; final illustrative selection and transfer analysis",
+      "state": "initial_screen_complete"
+    },
+    {
+      "family": "F",
+      "next": "only if core progressing comfortably",
+      "state": "optional_deferred"
+    }
+  ],
+  "recorded_at": "2026-09-12T21:54:32.485996+00:00",
+  "running_jobs": [],
+  "schema": "v17.queue.1",
+  "watchdog": "terminal queue exits; bounded resume supported, no automatic research refill or inactive-agent wake"
+}

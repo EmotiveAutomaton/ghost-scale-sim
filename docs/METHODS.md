@@ -279,6 +279,24 @@ inputs, outputs and replay identities; source/design locks reject changed resume
 Constructor-cluster bootstrap intervals are descriptive. Repeated histories and
 structurally equivalent constructor permutations do not enlarge independent support.
 
+The [later full setup](versions/v17-adaptive-appreciation/SETUP_CHECKPOINT_2026-09-12.md)
+adds actual typed Stitch learning, a finite Bayesian recipient, development-fitted
+computation selection, dependency-aware revision with paid feedback, and unseen
+native-maker choices under three evidence tiers. Cold acquisition and declared
+operation/storage costs remain separate from measured process CPU and elapsed
+time. The one-worker queue provides chunk resume and bounded owner-aware recovery.
+
+A separate verifier reimplements proper-score arithmetic, physical execution and
+revision regret, and independently reaggregates means and denominators. Forecast
+ties use declared support order, preserved across sorted JSON serialization.
+Bounded replay uses the packet's frozen source and compares full deterministic
+cases and rows. Neither check independently validates the generative assumptions
+or confirms a descriptive contrast. Creation-trace repairs retain old/new source
+and data, reuse the same seeds, and do not enlarge sample size. Reader exports use
+an explicit source whitelist, opaque aliases, separate evaluator truth, and an
+actual extracted-consumer boundary probe. Fresh confirmation requires its own
+frozen selection and admitted consumer; the screen engine refuses that claim.
+
 ## V16: acquired craft, bounded confirmation and retained reconstruction
 
 V16 asks whether acquired procedures, earlier works and paid inquiry improve

@@ -1,0 +1,85 @@
+{
+  "analysis": "independent arithmetic and bounded replay complete; effect interpretation and selected expansions pending",
+  "cloud_jobs": 0,
+  "elapsed_since_implementation_start_seconds": 13279.298443,
+  "gpu_used": false,
+  "implementation_started_at": "2026-09-12T18:16:41.531700+00:00",
+  "packet_execution_with_inline_generation_and_aggregation": [
+    {
+      "gpu_used": false,
+      "new_chunks": 16,
+      "packet": "b-screen-1",
+      "process_cpu_seconds": 0.921875,
+      "wall_seconds": 1.3239628998562694,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 6,
+      "packet": "a2-pilot-1",
+      "process_cpu_seconds": 2.609375,
+      "wall_seconds": 5.5986417001113296,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 24,
+      "packet": "a2-screen-1",
+      "process_cpu_seconds": 14.1875,
+      "wall_seconds": 26.721229099668562,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 32,
+      "packet": "c-screen-1",
+      "process_cpu_seconds": 9.453125,
+      "wall_seconds": 10.408604700118303,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 20,
+      "packet": "d-screen-1",
+      "process_cpu_seconds": 6.40625,
+      "wall_seconds": 6.879935699980706,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 1,
+      "packet": "e-pilot-1",
+      "process_cpu_seconds": 0.640625,
+      "wall_seconds": 0.7057494996115565,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 32,
+      "packet": "e-screen-1",
+      "process_cpu_seconds": 19.546875,
+      "wall_seconds": 20.34974560001865,
+      "workers": 1
+    },
+    {
+      "gpu_used": false,
+      "new_chunks": 20,
+      "packet": "d-screen-1-amended",
+      "process_cpu_seconds": 6.875,
+      "wall_seconds": 7.426063000224531,
+      "workers": 1
+    }
+  ],
+  "recorded_at": "2026-09-12T21:58:00.830143+00:00",
+  "recovery": "no failed full-queue job; D provenance amendment reran same seeds; development failures retained separately",
+  "schema": "v17.setup-time-account.1",
+  "scientific_worker_count": 1,
+  "scope": "setup checkpoint, not final campaign expense account",
+  "setup": "implementation and isolated Rust/LLVM/Stitch build; exact total CPU not metered",
+  "stitch_child_cpu": "per-invocation receipts in the private cache; omitted from parent packet process CPU; binary/runtime hashes retained in full-setup-1",
+  "unmetered": [
+    "coding model tokens",
+    "whole setup/build CPU",
+    "whole analysis CPU"
+  ]
+}

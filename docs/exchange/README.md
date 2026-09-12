@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v17-setup-response.md](v17-setup-response.md) | **Codex agent in this repository** | Full A-E setup, executed screens, independent checks and early reader handoff; analysis and fresh evaluation remain open. |
 | [v17-initial-response.md](v17-initial-response.md) | **Codex agent in this repository** | Initial V17 viability assessment and graphic baseline screen; limited scope, remaining implementation and no campaign-completion claim. |
 | [v16-acquired-craft-response.md](v16-acquired-craft-response.md) | **Codex agent in this repository** | Accepted V16 commission: completed acquired-craft study, fresh confirmation, proof scopes and transfer limits; repository record, not an outbound message. |
 | `batch-1-request.md` | Sounding Line | S-1 … S-6. Six questions about mechanism. |

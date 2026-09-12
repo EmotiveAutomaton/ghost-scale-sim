@@ -1,0 +1,37 @@
+{
+  "all_new_local_tests_passed": true,
+  "all_original_packets_independently_verified": true,
+  "amendment_and_verifier_tests": 52,
+  "amendment_cases_replayed": 10,
+  "amendment_new_independent_cases": 0,
+  "amendment_rows_replayed": 60,
+  "bounded_original_cases_replayed": 74,
+  "bounded_original_rows_replayed": 1504,
+  "campaign_complete": false,
+  "ci": {
+    "commit": "10bab6f352561c13c7bfc6e2f1a403aa20172ea4",
+    "conclusion": "failure",
+    "retained_v15_failed_instruments": [
+      "C11",
+      "M01"
+    ],
+    "run": 34720144266,
+    "status": "completed",
+    "v17_failures": 0
+  },
+  "cpu_workers": 1,
+  "full_queue_failed_or_blocked": [],
+  "gpu_used": false,
+  "host_inspection": "no Ghost orphan consuming compute; Sounding Line and shared services preserved",
+  "implementation_started_at": "2026-09-12T18:16:41.531700+00:00",
+  "new_cases": 1832,
+  "new_consumer_admission_tests": 64,
+  "new_original_packets": 7,
+  "new_rows": 37256,
+  "next_stage": "scientific analysis, selected expansion, frozen fresh evaluation, final handoff",
+  "planning_target_at": "2026-09-17T18:16:41.531700+00:00",
+  "reader_requests_verified": 24,
+  "recorded_at": "2026-09-12T21:54:32.485996+00:00",
+  "running_jobs": [],
+  "schema": "v17.setup-checkpoint.1"
+}

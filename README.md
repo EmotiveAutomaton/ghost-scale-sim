@@ -17,10 +17,10 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 ## ○ Agent-authored V17 implementation update
 
 V17 is underway. The [accepted coding package](docs/versions/v17-adaptive-appreciation/CODING_PACKAGE.md)
-and [initial progress report](docs/versions/v17-adaptive-appreciation/PROGRESS_2026-09-12.md)
-separate a completed graphic procedure/memory baseline from the remaining recipient,
-adaptive-reader and transfer work. The first screen is a qualified miniature;
-V17 is open and V16's closed confirmations remain unchanged.
+and [setup checkpoint](docs/versions/v17-adaptive-appreciation/SETUP_CHECKPOINT_2026-09-12.md)
+record executable A-E consumers, completed initial screens, independent checks,
+a retained trace repair and a usable early reader bundle. Scientific analysis,
+selected expansion and fresh evaluation remain open. V16 stays closed.
 
 ## ○ Agent-authored V16 update
 

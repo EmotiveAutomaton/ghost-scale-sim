@@ -79,7 +79,7 @@ def make_case(namespace,constructor_index,history_index,regime):
     truth=b.draw(probabilities,rng)
     private=dict(maker_training=[],earlier_goals=[initial_goal],current_goal=actual_goal,
         actual_constraints=world.public(),believed_constraints=world.public(),considered_options=public["candidates"],
-        realized_history=assembly.execute(world,[0,1,2])["trace"],contributor_role="self revision",
+        realized_history=assembly.execute(world,[0,1,2]+([8] if history_index%4==3 else []))["trace"],contributor_role="self revision",
         recipient_state=dict(goal=actual_goal,precision=1.2),true_values=truth_values,
         benchmark_edit=str(truth),benchmark_distribution=probabilities,
         feedback_condition="uninformative" if regime=="uninformative_feedback" else "misleading" if regime=="misleading_feedback" else "correct",

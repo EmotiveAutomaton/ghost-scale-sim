@@ -15,3 +15,5 @@ embargo. Admission is local to each comparison. F is optional and cannot delay
 the A–E scope's disposition and handoff.
 
 [The full setup and first broad queue](RUN_PLAN_2026-09-12.md) records the new A-E consumers, local admission and recovery limits.
+
+[The completed setup checkpoint](SETUP_CHECKPOINT_2026-09-12.md) records the executed screens, checks, trace amendment, pilot handoff and remaining scientific work.

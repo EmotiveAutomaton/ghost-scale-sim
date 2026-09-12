@@ -1,0 +1,19 @@
+{
+  "earlier_setup_failures": "../full-setup-1/DEVELOPMENT_FAILURES.json",
+  "failures": [
+    {
+      "cause": "Verifier used canonical JSON object order for tied probabilities instead of declared answer support",
+      "error": "forecast accuracy mismatch",
+      "regression": "test_json_key_sorting_preserves_declared_tie_break",
+      "repair": "Use input support order, matching frozen prediction construction; no scientific rows changed",
+      "stage": "first independent full-screen verification"
+    },
+    {
+      "error": "D history did not reach declared initial state for history index modulo four equal to three",
+      "receipt": "d-AMENDMENT.json",
+      "repair": "Execute omitted leaf rotation in provenance; all D cases rerun on same seeds",
+      "stage": "creation-trace inspection"
+    }
+  ],
+  "schema": "v17.verification-repairs.1"
+}

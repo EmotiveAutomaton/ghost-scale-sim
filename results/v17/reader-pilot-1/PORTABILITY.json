@@ -1,0 +1,10 @@
+{
+  "environment": "extracted archive, empty PYTHONPATH, Python 3.13.2",
+  "limitation": "guard for fixed trusted Python consumer, not a general hostile-code sandbox",
+  "passed": true,
+  "private_read_denied": true,
+  "reader_sha256": "f80c3feaf1638c9baba3c96b6ac4ae8561410873ebc9f0b761630f42e948840e",
+  "reference_predictions_matched": 24,
+  "requests": 24,
+  "schema": "v17.portability.1"
+}
