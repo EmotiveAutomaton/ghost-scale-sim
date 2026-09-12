@@ -1,0 +1,15 @@
+# V17: acquired craft, recipients and adaptive inference
+
+The [unchanged coding package](CODING_PACKAGE.md) commissions a new study of when
+procedures, concrete memories, recipient models and selective computation improve
+useful prediction. V16 remains closed.
+
+[IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) records the viability assessment,
+chosen first implementation and remaining family work. Execution receipts, rather
+than this planning page, establish what has actually run. New raw data use chunked
+JSONL, with a compact index; reader evidence and evaluator truth remain separate.
+
+The delivery target is about five elapsed days including implementation and
+analysis. This is a planning estimate, without an occupancy minimum or report
+embargo. Admission is local to each comparison. F is optional and cannot delay
+the A–E scope's disposition and handoff.

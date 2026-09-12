@@ -14,6 +14,14 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
+## ○ Agent-authored V17 implementation update
+
+V17 is underway. The [accepted coding package](docs/versions/v17-adaptive-appreciation/CODING_PACKAGE.md)
+and [initial progress report](docs/versions/v17-adaptive-appreciation/PROGRESS_2026-09-12.md)
+separate a completed graphic procedure/memory baseline from the remaining recipient,
+adaptive-reader and transfer work. The first screen is a qualified miniature;
+V17 is open and V16's closed confirmations remain unchanged.
+
 ## ○ Agent-authored V16 update
 
 V16 now executes acquired procedures and separates useful reconstruction from original

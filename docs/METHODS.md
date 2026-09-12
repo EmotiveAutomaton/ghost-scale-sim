@@ -265,6 +265,20 @@ python runners/run_soundingline.py --only T1 T2 T3 T4 T5
    known answer your module should return, that is worth an hour before writing any more of it.
 4. Add it to `GATED` in `tests/test_gates.py`.
 
+## V17: local admission and chunked comparisons
+
+V17's [first implementation](versions/v17-adaptive-appreciation/IMPLEMENTATION_PLAN.md)
+uses strict finite forecasts with proper log loss and Brier score, explicit evidence
+projections, typed executable procedures and separately counted acquisition/storage/
+online costs. A zero probability on the true event records infinite log loss; a
+missing or malformed output is not replaced with a uniform forecast or STOP.
+The initial construction slice scores terminal task success separately from those
+future prediction consumers. Thirty-one targeted checks include the literal
+command's resume and corruption paths. Small immutable JSONL chunks carry raw
+inputs, outputs and replay identities; source/design locks reject changed resumes.
+Constructor-cluster bootstrap intervals are descriptive. Repeated histories and
+structurally equivalent constructor permutations do not enlarge independent support.
+
 ## V16: acquired craft, bounded confirmation and retained reconstruction
 
 V16 asks whether acquired procedures, earlier works and paid inquiry improve

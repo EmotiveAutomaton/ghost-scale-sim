@@ -16,6 +16,22 @@ For what the model is and where its claims stop, read the README's
 
 ---
 
+## V17 initial screen: procedure and memory baselines
+
+Can a maker reuse acquired fragments or concrete episodes under a counted search budget?
+
+**Constructed mechanism result: In the first graphic-world screen, episodic adaptation helped at the intermediate budget on familiar combinations and added cost without improving solve rate on new combinations.**
+
+At budget 512, episodic adaptation minus primitive search gains 39.06 percentage
+points on familiar combinations, with a descriptive constructor-bootstrap interval
+[26.56, 51.56]. Repeated fragments gain 12.50 points, [-3.13, 28.13]. All methods
+solve new combinations at that budget, where episodic adaptation costs more.
+This is **miniature — architecture untested**: 64 history draws but 57 distinct
+private constructions per regime, clustered in 16 permutations of one motif
+structure. These are maker-assisted construction tasks, not artifact-only reading
+or confirmation. [The dated V17 report](docs/versions/v17-adaptive-appreciation/PROGRESS_2026-09-12.md)
+retains all budgets, costs, missing outputs, checks and remaining work. V17 remains open.
+
 ## V16: acquired craft and executable reconstruction
 
 Can acquired procedures help a reader construct useful work, recover a maker's history and

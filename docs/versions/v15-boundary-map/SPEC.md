@@ -5,11 +5,11 @@
 while building it, and where each decision lives in the code. The single curator packet is
 [RESULTS_PACKET.md](RESULTS_PACKET.md) and it does not exist until the window closes.*
 
-The handoff specification is [V15_SPEC.md](../../../V15_SPEC.md) at the repository root (filed
-beside this page when the version closes — it must stay at the root until then: the validator's
-forbidden-vocabulary scan covers this directory, and the spec legitimately quotes those words as
-prohibitions. An early filing on 2026-08-31 turned the validator red and was reverted on
-2026-09-02).
+The immutable handoff specification is now [V15_SPEC.md](handoff/V15_SPEC.md), filed
+byte-for-byte on 2026-09-12 after closure. Its separate handoff folder keeps the
+original prohibitions outside the validator's scan of result prose. An early
+filing directly beside this page on 2026-08-31 turned the validator red and was
+reverted on 2026-09-02; that failed attempt remains part of the record.
 
 ---
 

@@ -17,9 +17,20 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Current qualifications to the inherited notes (2026-09-05)
+## Current campaign (2026-09-12)
 
-- V1 through V15 are closed. V16 is the accepted commission; read
+V1 through V16 are closed. V17 is now commissioned; read
+`docs/versions/v17-adaptive-appreciation/CODING_PACKAGE.md` and its implementation
+plan. Use the new V17 namespace and chunked records. Its five-day implementation-
+through-analysis target is soft; local validity checks permit families to start
+independently. There is no occupancy minimum, report embargo or global readiness
+gate. Preserve V16's frozen confirmations and V15's retained failures. Historical
+timing and runner instructions below apply only to their named versions. Check
+actual owned processes and current receipts before changing imported code.
+
+## V16 qualifications to the inherited notes (2026-09-05, historical)
+
+- V1 through V15 were closed when V16 was accepted; read
   `docs/versions/v16-acquired-craft/CODING_PACKAGE.md` and `results/v16/CAMPAIGN.json`.
   Determine execution state from V16 packet locks, status records and owned live
   processes. Historical V15 runtime and reporting rules below apply only to V15.
