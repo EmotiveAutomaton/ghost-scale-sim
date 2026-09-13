@@ -19,44 +19,73 @@
     "new_execution_hours": 120,
     "plan": "continuation-1/PLAN.json",
     "source": "continuation-1/source.zip",
-    "state": "admitted"
+    "state": "running",
+    "launch": "continuation-1/LAUNCH.json",
+    "window": {
+      "ends_at": "2026-09-18T01:09:19.138188+00:00",
+      "original_implementation_start": "2026-09-12T18:16:41.531700+00:00",
+      "original_soft_target": "2026-09-17T18:16:41.531700+00:00",
+      "run_hours": 120,
+      "started_at": "2026-09-13T01:09:19.138188+00:00",
+      "timing_amendment": "User commissioned a new 120-hour continuously serviced execution allocation after setup; earlier clocks and completed work are preserved."
+    }
   },
-  "current_phase": "continuation admitted and frozen; native launch pending",
-  "fresh_evaluation": "three contrasts/controller/source frozen; reserved namespaces not drawn before launch",
+  "current_phase": "continuation running under native supervision; balanced expansion then frozen confirmation then robustness",
+  "fresh_evaluation": "Frozen reserved namespaces consumed only by the confirmation phase; consult its immutable receipt for completion.",
   "items": [
     {
       "family": "A",
-      "next": "native expansion/confirmation/robustness",
-      "state": "continuation_admitted"
+      "state": "scheduled_in_native_continuation",
+      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     },
     {
       "family": "B",
-      "next": "native expansion/confirmation/robustness",
-      "state": "continuation_admitted"
+      "state": "scheduled_in_native_continuation",
+      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     },
     {
       "family": "C",
-      "next": "native expansion/confirmation/robustness",
-      "state": "continuation_admitted"
+      "state": "scheduled_in_native_continuation",
+      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     },
     {
       "family": "D",
-      "next": "native expansion/confirmation/robustness",
-      "state": "continuation_admitted"
+      "state": "scheduled_in_native_continuation",
+      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     },
     {
       "family": "E",
-      "next": "native expansion/confirmation/robustness",
-      "state": "continuation_admitted"
+      "state": "scheduled_in_native_continuation",
+      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     },
     {
       "family": "F",
-      "next": "native expansion/confirmation/robustness",
-      "state": "continuation_admitted"
+      "state": "scheduled_in_native_continuation",
+      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     }
   ],
-  "recorded_at": "2026-09-13T01:03:34.456520+00:00",
-  "running_jobs": [],
+  "recorded_at": "2026-09-13T01:11:00.724679+00:00",
+  "running_jobs": [
+    {
+      "program": "v17-continuation-1",
+      "worker_pid": 277512,
+      "supervisor_pid": 504436,
+      "launch_state": "verified healthy",
+      "expected_outputs": [
+        "records.sqlite",
+        "BRANCH_SELECTION.json",
+        "CONFIRMATION.json",
+        "RUN_COMPLETE.json",
+        "closeout/RESULTS.md",
+        "closeout/COMPARISONS.json",
+        "closeout/ILLUSTRATIONS.json",
+        "closeout/TIME_ACCOUNT.json",
+        "closeout/transfer/reader.zip",
+        "closeout/transfer/evaluator.zip",
+        "closeout/transfer/PORTABILITY.json"
+      ]
+    }
+  ],
   "schema": "v17.queue.1",
   "watchdog": "non-LLM supervisor; bounded recovery, immutable window, agent invocation only on predefined state transitions"
 }
