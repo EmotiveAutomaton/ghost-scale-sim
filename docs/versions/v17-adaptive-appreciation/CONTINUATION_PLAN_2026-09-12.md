@@ -50,7 +50,7 @@ A native supervisor holds OS ownership locks, preserves an already-running worke
 
 **Healthy external computation ends the agent turn.** Only completion, failure/disappearance, resource intervention, or the three named scientific checkpoints may request an agent. No periodic model checks, Stop-hook continuation, recursive queue instruction or “work remains” wake is used. Agent delivery is batched, deduplicated and bounded; a supervisor restart preserves a live delivery. Native scheduling and actual model delivery are separate verification states.
 
-The local protocol check found the exact existing conversation and saved login without starting a model turn. The installed CLI's explicit-session resume interface supplies transition delivery, following [the official non-interactive interface](https://learn.chatgpt.com/docs/non-interactive-mode). Actual future model delivery is established only by its delivery ledger. Neither a configured task nor this protocol check alone proves it.
+The initial local protocol check found the existing conversation and saved login without starting a model turn. Actual checkpoint delivery later failed because the app still owned that conversation's writer lock. The [13 September health check and notification repair](HEALTH_2026-09-13.md) supersede that delivery route: a separate native notifier opens independent CLI review sessions while preserving the scientific worker and supervisor. Actual model delivery remains a separate ledger-verified state.
 
 ## Closeout and public products
 

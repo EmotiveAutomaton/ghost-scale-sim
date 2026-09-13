@@ -30,8 +30,8 @@
       "timing_amendment": "User commissioned a new 120-hour continuously serviced execution allocation after setup; earlier clocks and completed work are preserved."
     }
   },
-  "current_phase": "continuation running under native supervision; balanced expansion then frozen confirmation then robustness",
-  "fresh_evaluation": "Frozen reserved namespaces consumed only by the confirmation phase; consult its immutable receipt for completion.",
+  "current_phase": "robustness sampling; all 24 expansions and three fixed confirmation runs executed",
+  "fresh_evaluation": "All three fixed samples executed completely; final scientific interpretation and public write-through still owed.",
   "items": [
     {
       "family": "A",
@@ -64,7 +64,7 @@
       "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
     }
   ],
-  "recorded_at": "2026-09-13T01:11:00.724679+00:00",
+  "recorded_at": "2026-09-13T10:55:20.465753+00:00",
   "running_jobs": [
     {
       "program": "v17-continuation-1",
@@ -87,5 +87,21 @@
     }
   ],
   "schema": "v17.queue.1",
-  "watchdog": "non-LLM supervisor; bounded recovery, immutable window, agent invocation only on predefined state transitions"
+  "watchdog": "Original native process supervisor preserved; separate repaired notification-only service invokes an independent agent session only on new scientific transitions.",
+  "operational_check": {
+    "observed_at": "2026-09-13T10:43:30.966002+00:00",
+    "constructor_units": 111376,
+    "history_cases": 706760,
+    "prediction_rows": 10175024,
+    "failed_units": 0,
+    "apparatus_issue_rows": 0,
+    "worker_launches": 1,
+    "source_hashes_match": true,
+    "controller_hash_matches": true,
+    "completed_expansion_branches": 24,
+    "completed_confirmation_runs": 3,
+    "notification_repair": "notification-repair-1/REPAIR.json",
+    "notification_pid": 454700,
+    "health_report": "../../docs/versions/v17-adaptive-appreciation/HEALTH_2026-09-13.md"
+  }
 }
