@@ -1,0 +1,15 @@
+{
+  "schema": "v17.compatibility-check.1",
+  "tests": 39,
+  "passed": true,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "test_files": [
+    "tests/test_v17_foundation.py",
+    "tests/test_v17_queue.py"
+  ],
+  "junit_sha256": "1a4133849ce4e930e11c7bde51b3d5a356ab395ef905a05c395fac98930cb1f7",
+  "scope": "Separate existing foundation/queue compatibility checks; frozen continuation admission remains 71 tests",
+  "warning": "Pytest cache directory was unwritable; all 39 tests executed and passed."
+}

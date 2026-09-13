@@ -14,42 +14,49 @@
     "e-pilot-1",
     "e-screen-1"
   ],
-  "current_phase": "independent checks complete; scientific review and selected expansion next",
-  "fresh_evaluation": "reserved namespaces unused; selection and separately frozen confirmation consumer still required",
+  "continuation": {
+    "admission": "continuation-1/ADMISSION.json",
+    "new_execution_hours": 120,
+    "plan": "continuation-1/PLAN.json",
+    "source": "continuation-1/source.zip",
+    "state": "admitted"
+  },
+  "current_phase": "continuation admitted and frozen; native launch pending",
+  "fresh_evaluation": "three contrasts/controller/source frozen; reserved namespaces not drawn before launch",
   "items": [
     {
       "family": "A",
-      "next": "review abstraction/memory budget and storage surfaces",
-      "state": "initial_screen_complete"
+      "next": "native expansion/confirmation/robustness",
+      "state": "continuation_admitted"
     },
     {
       "family": "B",
-      "next": "review recipient changes and costly inferred-model gains",
-      "state": "initial_screen_complete"
+      "next": "native expansion/confirmation/robustness",
+      "state": "continuation_admitted"
     },
     {
       "family": "C",
-      "next": "review development-fitted computation policy and switching",
-      "state": "initial_screen_complete"
+      "next": "native expansion/confirmation/robustness",
+      "state": "continuation_admitted"
     },
     {
       "family": "D",
-      "next": "use amended creation traces; review feedback and stopping",
-      "state": "initial_screen_complete"
+      "next": "native expansion/confirmation/robustness",
+      "state": "continuation_admitted"
     },
     {
       "family": "E",
-      "next": "reader pilot verified; final illustrative selection and transfer analysis",
-      "state": "initial_screen_complete"
+      "next": "native expansion/confirmation/robustness",
+      "state": "continuation_admitted"
     },
     {
       "family": "F",
-      "next": "only if core progressing comfortably",
-      "state": "optional_deferred"
+      "next": "native expansion/confirmation/robustness",
+      "state": "continuation_admitted"
     }
   ],
-  "recorded_at": "2026-09-12T21:54:32.485996+00:00",
+  "recorded_at": "2026-09-13T01:03:34.456520+00:00",
   "running_jobs": [],
   "schema": "v17.queue.1",
-  "watchdog": "terminal queue exits; bounded resume supported, no automatic research refill or inactive-agent wake"
+  "watchdog": "non-LLM supervisor; bounded recovery, immutable window, agent invocation only on predefined state transitions"
 }

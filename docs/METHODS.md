@@ -386,3 +386,26 @@ equivalence. Documentary verification binds the reviewed prose and revised
 theory owners to these tables and the three scientific retention/reproduction
 proofs; its interpretation remains an explicit agent review, not an automated
 test of scientific truth.
+
+## V17 continuation: bounded confirmation and durable scientific progression
+
+The continuation retains raw constructor units as compressed JSON in SQLite WAL
+transactions, with immutable source/plan/controller identities and public/private
+construction hashes. Resume skips committed units and preserves failed attempts.
+Final verification independently checks raw probability scores, counted-cost
+identities and native physics before a completion receipt.
+
+At most three contrasts are frozen before reserved fresh namespaces. Their sample
+sizes use discovery between-constructor variation and a conservative simultaneous
+Hoeffding precision bound. Paired histories are averaged within constructor draws;
+Holm correction applies to the same family, including incomplete primaries as
+probability one. Descriptive branch allocation never extends a primary on its
+observed significance. Counts distinguish draws, unique constructions and
+structural support.
+
+The study tree promotes contrasting regions from a completed expansion cohort,
+then retains separate robustness namespaces. Final illustrative selection uses
+the lowest case hash within observed advantages, reversals and failures, marking
+absent types explicitly. An extracted reader consumer must reproduce its reference
+forecasts and refuse private-file access. This checks a trusted consumer boundary,
+not a hostile-code sandbox. See the V17 continuation plan for the full contract.

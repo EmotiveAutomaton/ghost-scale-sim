@@ -17,3 +17,5 @@ the A–E scope's disposition and handoff.
 [The full setup and first broad queue](RUN_PLAN_2026-09-12.md) records the new A-E consumers, local admission and recovery limits.
 
 [The completed setup checkpoint](SETUP_CHECKPOINT_2026-09-12.md) records the executed screens, checks, trace amendment, pilot handoff and remaining scientific work.
+
+The user's later explicit five-day continuation amendment, remaining scope and event-only supervision are recorded in [CONTINUATION_PLAN_2026-09-12.md](CONTINUATION_PLAN_2026-09-12.md) and [SPEC_COVERAGE.md](SPEC_COVERAGE.md). Historical setup records above retain their original clocks and state.

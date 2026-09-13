@@ -16,6 +16,22 @@ For what the model is and where its claims stop, read the README's
 
 ---
 
+## V17 broad screens and continuation selection
+
+Can recipient modeling, concrete memory and selective computation improve useful prediction?
+
+**Constructed mechanism, descriptive; miniature — architecture untested.**
+
+The screens identify several useful follow-ups: recipient inference improves predictions at substantial cost, some adaptive methods struggle with misleading evidence, and Stitch's compressed procedures often cost more search than simpler methods.
+
+The [continuation assessment](docs/versions/v17-adaptive-appreciation/CONTINUATION_PLAN_2026-09-12.md)
+links all retained score/cost surfaces, paired discovery variances and the frozen
+follow-up selection. The seven packets contain 1,832 cases and 37,256 rows,
+including discarded pilots. The D provenance amendment adds no independent
+observations. Maker assistance, oracle conditions and finite architectural
+coverage remain explicit. Fresh confirmation has a separate frozen consumer
+and its execution receipt is still required; no human-theory conclusion follows.
+
 ## V17 initial screen: procedure and memory baselines
 
 Can a maker reuse acquired fragments or concrete episodes under a counted search budget?

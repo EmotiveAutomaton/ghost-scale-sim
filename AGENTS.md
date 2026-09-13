@@ -19,19 +19,34 @@ authorship and contribution records retain their original attribution.
 
 ## Current campaign (2026-09-12)
 
-V1 through V16 are closed. V17 is now commissioned; read
-`docs/versions/v17-adaptive-appreciation/CODING_PACKAGE.md` and its implementation
-plan. Use the new V17 namespace and chunked records. Its five-day implementation-
-through-analysis target is soft; local validity checks permit families to start
-independently. There is no occupancy minimum, report embargo or global readiness
-gate. Preserve V16's frozen confirmations and V15's retained failures. Historical
-timing and runner instructions below apply only to their named versions. Check
-actual owned processes and current receipts before changing imported code.
-The new finite queue uses module-form `python -m runners.run_v17_queue watch`
-with a source-bound manifest and local admission. Preserve its frozen worker
-checkout while any job is live. Consult the V17 run plan for its one-worker
-allocation, bounded recovery and next scientific review; a completed screen
-queue does not itself close the campaign.
+V1 through V16 are closed. Read V17's unchanged coding package and
+`docs/versions/v17-adaptive-appreciation/CONTINUATION_PLAN_2026-09-12.md`.
+The original implementation-through-analysis soft target remains on record.
+The user's subsequent instruction explicitly commissions the remaining scope
+and a new 120-hour continuously serviced scientific allocation after setup.
+Its WINDOW.json is assigned once; never reset it or restart valid work.
+Preserve V16's frozen confirmations and V15's retained failures.
+
+The current continuation uses module-form `python -m runners.run_v17_continuation`
+under `python -m runners.watch_v17_continuation`, with one CPU worker, no GPU,
+source-bound admission and an immutable worker checkout. The old completed
+screen queue remains historical. Use matching extracted source for resume;
+do not edit imported files or synchronize a live environment.
+
+### Standing rule: event-only agent wakes
+
+After a long-running simulation is launched, a healthy process is a legitimate
+terminal state for the agent turn. Record its PID, immutable window and expected
+outputs, then stop. Use a non-LLM supervisor to detect completion, failure,
+disappearance or a predefined scientific checkpoint. Invoke an agent only on
+those state transitions; native monitoring may poll cheaply without model turns.
+
+Do not use periodic model checks, a Stop hook, a recursive queue rule or a
+"work remains" condition to continue merely because external computation is
+running. Do not restart valid work to refresh reports or reset monitoring clocks.
+This latest user instruction supersedes older generic timed-wake suggestions
+for this project. Preserve a live notification delivery across supervisor
+restarts; a configured wake is not proof of actual model delivery.
 
 ## V16 qualifications to the inherited notes (2026-09-05, historical)
 
