@@ -7,3 +7,7 @@ LAUNCH.json, when present, records the actual immutable execution window and nat
 See the [run plan](../../../docs/versions/v17-adaptive-appreciation/CONTINUATION_PLAN_2026-09-12.md) and [scope matrix](../../../docs/versions/v17-adaptive-appreciation/SPEC_COVERAGE.md).
 
 Launch verified 12 September 2026 at 6:09 p.m. Pacific: worker 277512, supervisor 504436. The immutable five-day sampling window ends 17 September 2026 at 6:09 p.m. Pacific, followed by independent closeout and final filing. See LAUNCH.json for exact timestamps.
+
+The [13 September event review](../pool-failure-1/README.md) preserves an empty
+pooled-acquisition failure and the resulting halt of that robustness branch.
+Other branches continue; the final scope account must retain this qualification.

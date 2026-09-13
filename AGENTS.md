@@ -48,6 +48,21 @@ This latest user instruction supersedes older generic timed-wake suggestions
 for this project. Preserve a live notification delivery across supervisor
 restarts; a configured wake is not proof of actual model delivery.
 
+### Standing rule: background services have no desktop windows
+
+Unless the user explicitly requests an interactive terminal, launch background
+services without a visible console. This includes the scheduled task's initial
+executable, not just its children. On Windows, use the environment's `pythonw.exe`
+to enter `runners/launch_background.py`, which starts the explicit scientific
+`python.exe` command with `CREATE_NO_WINDOW` and file-backed output. Keep scientific
+runners in module form. Verify the complete native launch with a harmless fixture.
+For PowerShell `Start-Process`, always specify `-WindowStyle Hidden`.
+
+Do not close an existing console until its process ownership is established;
+closing a console can terminate its services. Hide only confirmed Ghost windows
+when valid work is still attached, and change future task actions without stopping
+or restarting the active instance. Preserve the original task definition locally.
+
 ## V16 qualifications to the inherited notes (2026-09-05, historical)
 
 - V1 through V15 were closed when V16 was accepted; read

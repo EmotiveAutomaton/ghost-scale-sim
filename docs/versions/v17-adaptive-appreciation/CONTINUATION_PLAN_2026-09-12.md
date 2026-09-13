@@ -52,6 +52,8 @@ A native supervisor holds OS ownership locks, preserves an already-running worke
 
 The initial local protocol check found the existing conversation and saved login without starting a model turn. Actual checkpoint delivery later failed because the app still owned that conversation's writer lock. The [13 September health check and notification repair](HEALTH_2026-09-13.md) supersede that delivery route: a separate native notifier opens independent CLI review sessions while preserving the scientific worker and supervisor. Actual model delivery remains a separate ledger-verified state.
 
+The later [13 September failure review](POOL_FAILURE_2026-09-13.md) reproduced an empty acquisition pool under incompatible assembly dependencies. The frozen runner halted that robustness branch and retained its prior units; other branches continue. Final scope accounting must preserve this apparatus failure and the curtailed sampling denominator. The original source, clock and failed unit were not replaced.
+
 ## Closeout and public products
 
 Expected outputs: records.sqlite; frozen branch selection and confirmation receipts; closeout/RESULTS.md, COMPARISONS.json, ILLUSTRATIONS.json and TIME_ACCOUNT.json; separate reader/evaluator ZIPs and a portable-consumer proof. Full independent row verification runs before the completion event.

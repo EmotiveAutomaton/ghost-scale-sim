@@ -1,0 +1,1591 @@
+{
+  "all_failures_at_snapshot": [
+    {
+      "at": "2026-09-13T11:52:28.798332+00:00",
+      "branch": "pooled_assembly",
+      "ci": 72451,
+      "id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+      "reason": "ValueError: pooled acquisition is empty",
+      "stage": "robustness"
+    }
+  ],
+  "branch_counts_at_snapshot": [
+    {
+      "branch": "pooled_assembly",
+      "cases": 256,
+      "last_ci": 31,
+      "rows": 10240,
+      "stage": "expansion",
+      "units": 32
+    },
+    {
+      "branch": "pooled_assembly",
+      "cases": 32200,
+      "last_ci": 72435,
+      "rows": 1288000,
+      "stage": "robustness",
+      "units": 4025
+    }
+  ],
+  "closeout_requirements": [
+    "Report curtailed robustness branch and retained-prefix denominators.",
+    "Do not treat empty acquisition as a scientific loss or null.",
+    "Retain failure cache and this reproduction proof with the final archive.",
+    "Any changed donor rule requires separate source, namespace and admission; no silent replacement."
+  ],
+  "database_access": "read-only; query_only; bounded snapshot",
+  "design": {
+    "budgets": [
+      128,
+      512,
+      2048
+    ],
+    "budgets_by_world": {
+      "assembly": [
+        64,
+        128,
+        256,
+        512
+      ],
+      "graphic": [
+        256,
+        512,
+        1024,
+        2048
+      ]
+    },
+    "claim_status": "descriptive",
+    "constructors": 32,
+    "family": "AP",
+    "histories_per_constructor": 8,
+    "id": "pooled_assembly",
+    "memory_caps": [
+      32
+    ],
+    "namespace": "v17-continuation-pooled_assembly-1-robustness",
+    "regime": "assembly:new_combinations"
+  },
+  "disposition": "Retain apparatus failure and original branch halt; continue eligible branches under the frozen plan.",
+  "event": {
+    "at": "2026-09-13T11:52:28.799453+00:00",
+    "id": "f5813c3ce9ee38be8f30c8b615d591aeff29bf2c1cf67d237bdd044cb43f4f39",
+    "kind": "scientific_failure",
+    "payload": {
+      "branch": "pooled_assembly",
+      "constructor_index": 72451,
+      "failure_id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+      "reason": "ValueError: pooled acquisition is empty",
+      "stage": "robustness"
+    }
+  },
+  "failure": {
+    "at": "2026-09-13T11:52:28.798332+00:00",
+    "branch": "pooled_assembly",
+    "ci": 72451,
+    "id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+    "reason": "ValueError: pooled acquisition is empty",
+    "stage": "robustness"
+  },
+  "frozen_source_verified_unchanged": true,
+  "immutable_window": {
+    "ends_at": "2026-09-18T01:09:19.138188+00:00",
+    "original_implementation_start": "2026-09-12T18:16:41.531700+00:00",
+    "original_soft_target": "2026-09-17T18:16:41.531700+00:00",
+    "run_hours": 120,
+    "started_at": "2026-09-13T01:09:19.138188+00:00",
+    "timing_amendment": "User commissioned a new 120-hour continuously serviced execution allocation after setup; earlier clocks and completed work are preserved."
+  },
+  "isolated_branch_failure_guard_passed": true,
+  "limits": "Case generation and branch halt checked; no scientific scores recomputed, no full database or campaign verification.",
+  "plan_and_controller_bindings_verified": true,
+  "preceding_valid_case_replays": 8,
+  "preceding_valid_constructor": 72435,
+  "reproduction": [
+    {
+      "counts": {
+        "eligible": 32,
+        "illegal_action_1": 32
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "eligible": 12,
+            "illegal_action_1": 4
+          },
+          "unique_programs": [
+            [
+              0
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              7,
+              2
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 12,
+            "illegal_action_1": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6,
+              1
+            ],
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              2,
+              8
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              0,
+              4
+            ],
+            [
+              1,
+              0,
+              6
+            ],
+            [
+              1,
+              7,
+              2
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              0,
+              4
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 0,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "eligible": 20,
+        "illegal_action_1": 44
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0
+            ],
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              1,
+              7,
+              0
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              7
+            ],
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              1,
+              7,
+              2
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              4
+            ],
+            [
+              1,
+              0,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 8
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              7
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 1,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "eligible": 24,
+        "illegal_action_1": 36,
+        "illegal_action_3": 4
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "illegal_action_1": 12,
+            "illegal_action_3": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              2,
+              8
+            ],
+            [
+              1,
+              4,
+              1
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 8
+          },
+          "unique_programs": [
+            [],
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              7,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "eligible": 12,
+            "illegal_action_1": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 2,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "eligible": 36,
+        "illegal_action_1": 28
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              0,
+              6
+            ],
+            [
+              1,
+              0,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 8
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "eligible": 12,
+            "illegal_action_1": 4
+          },
+          "unique_programs": [
+            [
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              2,
+              8
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "eligible": 12,
+            "illegal_action_1": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              6,
+              1
+            ],
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 3,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "illegal_action_1": 56,
+        "illegal_action_3": 8
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "illegal_action_1": 12,
+            "illegal_action_3": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              1
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "illegal_action_1": 12,
+            "illegal_action_3": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              0,
+              7
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              1,
+              7,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "illegal_action_1": 16
+          },
+          "unique_programs": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              8
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              7,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "illegal_action_1": 16
+          },
+          "unique_programs": [
+            [
+              1,
+              0,
+              4
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              7,
+              0
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 4,
+      "outcome": "reproduced_empty_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "eligible": 20,
+        "illegal_action_1": 40,
+        "illegal_action_6": 4
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "illegal_action_1": 12,
+            "illegal_action_6": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              7,
+              2
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              6,
+              1
+            ],
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              1,
+              7,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 8
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 8
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              7
+            ],
+            [
+              0,
+              6,
+              6
+            ],
+            [
+              1,
+              0,
+              7
+            ],
+            [
+              1,
+              7,
+              7
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 5,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "eligible": 8,
+        "illegal_action_1": 52,
+        "illegal_action_6": 4
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1
+            ],
+            [
+              1,
+              0,
+              6
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "illegal_action_1": 12,
+            "illegal_action_6": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              6
+            ],
+            [
+              1,
+              0,
+              4
+            ],
+            [
+              1,
+              2,
+              8
+            ],
+            [
+              1,
+              7,
+              4
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "illegal_action_1": 16
+          },
+          "unique_programs": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 6,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "counts": {
+        "eligible": 32,
+        "illegal_action_1": 28,
+        "illegal_action_3": 4
+      },
+      "donors": [
+        {
+          "donor": 0,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 4,
+            "illegal_action_3": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              7
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              2,
+              8
+            ]
+          ],
+          "world": {
+            "defaults": [
+              1,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 1,
+          "outcomes": {
+            "eligible": 4,
+            "illegal_action_1": 12
+          },
+          "unique_programs": [
+            [
+              0,
+              1,
+              7
+            ],
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              1,
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              1,
+              1
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 2,
+          "outcomes": {
+            "eligible": 8,
+            "illegal_action_1": 8
+          },
+          "unique_programs": [
+            [
+              0
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "donor": 3,
+          "outcomes": {
+            "eligible": 12,
+            "illegal_action_1": 4
+          },
+          "unique_programs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6,
+              1
+            ],
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              7,
+              2
+            ]
+          ],
+          "world": {
+            "defaults": [
+              0,
+              0,
+              0
+            ],
+            "parents": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "history_index": 7,
+      "outcome": "valid_pool",
+      "receiver_target": [
+        0,
+        1,
+        0
+      ],
+      "receiver_world": {
+        "defaults": [
+          0,
+          1,
+          1
+        ],
+        "parents": [
+          -1,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "retained_failed_or_later_branch_units": 0,
+  "review_script_sha256": "dd7646e76760c5081d843a31342911146d90f51e0222edf8789c91c13b82cd67",
+  "reviewed_at": "2026-09-13T12:00:56.260359+00:00",
+  "schema": "v17.bounded-fault-review.1",
+  "scientific_runner_launched": false,
+  "scientific_source_edited": false,
+  "source_archive_sha256": "8f5b31addda877cf31cfd13501be00ad8a8954a428d6ce18d24a360d9fdb893e",
+  "source_member_count": 37
+}
