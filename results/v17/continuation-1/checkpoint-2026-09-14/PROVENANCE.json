@@ -1,0 +1,116 @@
+{
+  "schema": "v17.checkpoint-publication.1",
+  "captured_at": "2026-09-14T17:58:20.666628+00:00",
+  "campaign_complete": false,
+  "verification": "Retained snapshot payload hashes, source binding, public plan identity, controller binding and file/database agreement; full independent scientific reaggregation remains for closeout.",
+  "snapshots": {
+    "INITIAL_EXPANSIONS": {
+      "database_payload_sha256": "a6b28fe4605c36ec64d4b7ef5b8df8c9039304ff628c7c7b0e058571ad625e35",
+      "file_sha256": "d05dc2cce17b6c7b2f0b556d76036d9da3c7f6cac9dc156c88422ad18ca3ff12"
+    },
+    "BRANCH_SELECTION": {
+      "database_payload_sha256": "55de943d7612c3e8bffc1f81a266eb0c1c029286fe83709d2f31a173dd92c501",
+      "file_sha256": "c688874d68e53b0df15ac0f17ef937fd8b30959cf4c0c1a5d2749f0c72471386"
+    },
+    "CONFIRMATION": {
+      "database_payload_sha256": "c3b2360b76712e5f50ff9baf62d44871a2e1ac7afad468aaf49b9f8eb01d40a6",
+      "file_sha256": "82fc416dadc8b3e681b7a1927cfc53045c1e4672449c2ff8f914ea524a65e362"
+    },
+    "ROBUSTNESS_32768": {
+      "database_payload_sha256": "388979b8e4aa473fff1bd8b52acd6fcd5d5569d0e229d01152791742a7a31fb4",
+      "file_sha256": "b2aeaaf54e86778eab508898f8eaef3f288450074e05855726d8553d4516bb76"
+    }
+  },
+  "source_files_verified": 37,
+  "events": [
+    {
+      "id": "e5104d752ec8bbe9268886f81648f96367380a6a46cf63ab730e584d67c3018c",
+      "kind": "expansion_selection_frozen",
+      "payload": {
+        "apparatus_issue_rows": 0,
+        "cases": 6144,
+        "constructor_units": 768,
+        "failed_units": 0,
+        "rows": 89600,
+        "selection_sha256": "55de943d7612c3e8bffc1f81a266eb0c1c029286fe83709d2f31a173dd92c501",
+        "unit_wall_seconds": 412.8760027978569,
+        "worker_cpu_seconds": 220.9375
+      },
+      "at": "2026-09-13T01:16:25.366352+00:00"
+    },
+    {
+      "id": "33a2844b47f7b343f8ec0538511eb37e02deb4bc0ab219a12663f99f83df7343",
+      "kind": "confirmation_complete",
+      "payload": {
+        "apparatus_issue_rows": 0,
+        "cases": 190392,
+        "confirmation_sha256": "c3b2360b76712e5f50ff9baf62d44871a2e1ac7afad468aaf49b9f8eb01d40a6",
+        "constructor_units": 46830,
+        "failed_units": 0,
+        "rows": 2587184,
+        "unit_wall_seconds": 3043.2758255661465,
+        "worker_cpu_seconds": 2458.875
+      },
+      "at": "2026-09-13T02:05:50.629691+00:00"
+    },
+    {
+      "id": "5c5034f316494e11e144fdca291d29d5791418f106ba814d78ada82ded9d158c",
+      "kind": "robustness_32768_constructor_units",
+      "payload": {
+        "apparatus_issue_rows": 0,
+        "cases": 190400,
+        "constructor_units": 46831,
+        "failed_units": 0,
+        "rows": 2587344,
+        "unit_wall_seconds": 3044.2923695659265,
+        "window": {
+          "ends_at": "2026-09-18T01:09:19.138188+00:00",
+          "original_implementation_start": "2026-09-12T18:16:41.531700+00:00",
+          "original_soft_target": "2026-09-17T18:16:41.531700+00:00",
+          "run_hours": 120,
+          "started_at": "2026-09-13T01:09:19.138188+00:00",
+          "timing_amendment": "User commissioned a new 120-hour continuously serviced execution allocation after setup; earlier clocks and completed work are preserved."
+        },
+        "worker_cpu_seconds": 2459.140625
+      },
+      "at": "2026-09-13T02:05:51.673109+00:00"
+    },
+    {
+      "id": "f5813c3ce9ee38be8f30c8b615d591aeff29bf2c1cf67d237bdd044cb43f4f39",
+      "kind": "scientific_failure",
+      "payload": {
+        "branch": "pooled_assembly",
+        "constructor_index": 72451,
+        "failure_id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+        "reason": "ValueError: pooled acquisition is empty",
+        "stage": "robustness"
+      },
+      "at": "2026-09-13T11:52:28.799453+00:00"
+    }
+  ],
+  "failures": [
+    {
+      "id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+      "stage": "robustness",
+      "branch": "pooled_assembly",
+      "ci": 72451,
+      "at": "2026-09-13T11:52:28.798332+00:00",
+      "reason": "ValueError: pooled acquisition is empty"
+    }
+  ],
+  "execution_totals_at_snapshot": {
+    "singleton": 1,
+    "units": 371320,
+    "cases": 2786312,
+    "rows": 37731536,
+    "cpu": 70274.984375,
+    "wall": 140795.84234651923,
+    "issues": 0
+  },
+  "qualifications": [
+    "Pooled-assembly robustness halted after the retained empty-pool apparatus failure; other branches continue.",
+    "ROBUSTNESS_32768 originally triggered on campaign-wide constructors, not robustness-only constructors.",
+    "Confirmation claim_status fields are frozen engine outputs; final interpretation and independent full-row review are not supplied by this filing.",
+    "Live raw database and dependency archives remain local for separate closeout archival review."
+  ]
+}

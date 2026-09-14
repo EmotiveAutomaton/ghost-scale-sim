@@ -11,3 +11,7 @@ Launch verified 12 September 2026 at 6:09 p.m. Pacific: worker 277512, superviso
 The [13 September event review](../pool-failure-1/README.md) preserves an empty
 pooled-acquisition failure and the resulting halt of that robustness branch.
 Other branches continue; the final scope account must retain this qualification.
+
+[The 14 September checkpoint filing](checkpoint-2026-09-14/README.md) preserves
+completed expansion, branch-selection and confirmation engine outputs with their
+snapshot provenance. Final independent review and campaign closeout remain pending.
