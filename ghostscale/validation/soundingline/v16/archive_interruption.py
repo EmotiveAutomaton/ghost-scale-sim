@@ -3,9 +3,9 @@ import os
 import subprocess
 import sys
 import time
-import uuid
 from .records import read, write, file_digest, now
 from .runtime import REPO
+from .expansion_interruption import fixture_campaign
 
 
 def control(directory, source_identity):
@@ -21,9 +21,7 @@ def control(directory, source_identity):
     root = directory/"campaign"
     if root.exists():
         raise ValueError("incomplete archive interruption attempt retained")
-    campaign = read(REPO/"results/v16/CAMPAIGN.json")
-    campaign["campaign_id"] = "fixture-"+uuid.uuid4().hex
-    write(root/"CAMPAIGN.json", campaign)
+    fixture_campaign(root)
     clock_bytes = (root/"CAMPAIGN.json").read_bytes()
     command = [sys.executable, "-B", "-m", "runners.run_v16_archive", "--fixture", "--root", str(root)]
     env = dict(os.environ, PYTHONPATH=str(REPO), OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1")

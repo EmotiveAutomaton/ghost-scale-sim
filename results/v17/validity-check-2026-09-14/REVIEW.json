@@ -1,0 +1,688 @@
+{
+  "schema": "v17.bounded-validity-audit.1",
+  "observed_at": "2026-09-15T00:16:50.269976+00:00",
+  "passed": true,
+  "source_members_verified": 37,
+  "source_archive_sha256": "8f5b31addda877cf31cfd13501be00ad8a8954a428d6ce18d24a360d9fdb893e",
+  "unit_selection": "First and last retained unit per expansion/confirmation branch; latest retained unit per robustness branch, including the halted branch.",
+  "sample_units": 78,
+  "sample_cases": 600,
+  "sample_rows": 8680,
+  "checks": [
+    {
+      "stage": "expansion",
+      "branch": "a_graphic",
+      "constructor_index": 0,
+      "unit_sha256": "9730c1437cef9fd09825e6ca3a0058b5b97d870c370982153dfea19ae6ff6d81",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_graphic",
+      "constructor_index": 31,
+      "unit_sha256": "3d6991ddc9b3a26ba91b0923a3eaf933bc21ef31be14f8a60e138afe7d76b76f",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_assembly",
+      "constructor_index": 0,
+      "unit_sha256": "23ecca62764e4d5028111ecf8de4bdd67e74bcbf7da34ce52a42d1b8329a198a",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_assembly",
+      "constructor_index": 31,
+      "unit_sha256": "90d5244b8377a0875ee1cb4bcfbd231bc5ba02e9ae4246ec5715b3b5ec01d249",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_novel",
+      "constructor_index": 0,
+      "unit_sha256": "2a1ab855b5fbcece21935cc604114048babafa5bd0e09ebbcbb93397cd34d82b",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_novel",
+      "constructor_index": 31,
+      "unit_sha256": "10c83fcbca518763981a2e9c4e44a2f6124b7e952d43151e3b2beb0842a7971f",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_exception",
+      "constructor_index": 0,
+      "unit_sha256": "4245be87b0c160e5e6a26c99083faa0a94b33033de8cd4fa11a2953737dbd6cf",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "a_exception",
+      "constructor_index": 31,
+      "unit_sha256": "1d68d1e74fdd1d73cf53a3378492a12ca742b090309917f194c9f575b85c7624",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "expansion",
+      "branch": "pooled_graphic",
+      "constructor_index": 0,
+      "unit_sha256": "b9b82ee63f95ff5f7a94caebe4693a2f38958cff0e5f4026747ca7e49b697e1c",
+      "cases": 8,
+      "rows": 320
+    },
+    {
+      "stage": "expansion",
+      "branch": "pooled_graphic",
+      "constructor_index": 31,
+      "unit_sha256": "4c6ec9fbe3761c17dca05897ac11a9f16416172e7b16d8cb6383261efe04df57",
+      "cases": 8,
+      "rows": 320
+    },
+    {
+      "stage": "expansion",
+      "branch": "pooled_assembly",
+      "constructor_index": 0,
+      "unit_sha256": "1022a02abb0d85e8af785f9441c019ce208f233376f30e9e9e0ae8c7d5c6140e",
+      "cases": 8,
+      "rows": 320
+    },
+    {
+      "stage": "expansion",
+      "branch": "pooled_assembly",
+      "constructor_index": 31,
+      "unit_sha256": "05b96da14a22589bc588af02d220d475635bc0176a4af866c07e68a4aa9b061e",
+      "cases": 8,
+      "rows": 320
+    },
+    {
+      "stage": "expansion",
+      "branch": "b_changed",
+      "constructor_index": 0,
+      "unit_sha256": "55183edf71a3d0bcb500863acfae9953f6c100c59fb91840a1c8c95868e2cc0d",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "b_changed",
+      "constructor_index": 31,
+      "unit_sha256": "f8015a0be48ad27ad680a8359ffdc295206a5826231c5e0bc5e1e786352603e3",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "b_wrong",
+      "constructor_index": 0,
+      "unit_sha256": "afe278b551256fbb335acaf73d1bcca124faade8dbf72cccc8e03e13230e7e95",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "b_wrong",
+      "constructor_index": 31,
+      "unit_sha256": "59724ad6171e6fbf418afdfce121c7c476629e4b4c3c2dc6d2a734f7df29a59f",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "ba_correct",
+      "constructor_index": 0,
+      "unit_sha256": "579964592026ce76b5fa6ee8af67bc849a491bf5673239231881aeb7b4c1b722",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "ba_correct",
+      "constructor_index": 31,
+      "unit_sha256": "2c1013fd11e18d9390f620fc475cbcbf5149fdb33e190ccd8aea5d93d46cd010",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "ba_wrong",
+      "constructor_index": 0,
+      "unit_sha256": "6a39372b990a57222a2fd9fff70b475397edcf430df636d21108654a76d43a86",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "ba_wrong",
+      "constructor_index": 31,
+      "unit_sha256": "8d95abb685083669f388bf283c80a83502f6f68d51263eb916fb6a6fed46a836",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "ba_changed",
+      "constructor_index": 0,
+      "unit_sha256": "1566dc4258acd47d2976b881e935a7090bfa388c24b22fd492d650872c244704",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "ba_changed",
+      "constructor_index": 31,
+      "unit_sha256": "392963607053a48867fcda2cff0c06625ebb6c5d143fffa7eab18f4a08d22a53",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_accidental",
+      "constructor_index": 0,
+      "unit_sha256": "fb6ffb502ef10560db4a0a03088a1c2af1fa8d3a42f0f50d2411c2e11f6db691",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_accidental",
+      "constructor_index": 31,
+      "unit_sha256": "24708758196ff91707714b558c35c76d2ce41b8058568780bb386a011d09ec9e",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_misleading",
+      "constructor_index": 0,
+      "unit_sha256": "cf0de97db3c40778b2d316ad1c1b891d73bfe94e278795c8984ac287c025d430",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_misleading",
+      "constructor_index": 31,
+      "unit_sha256": "235e5f19be42280c84a1877746939aae9d62d30c479b6b5eca24928892fbd2f0",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_false",
+      "constructor_index": 0,
+      "unit_sha256": "9b51c7d3777c2693e75efec95afe36c147d6956e1ba08956315df7c1347931d4",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_false",
+      "constructor_index": 31,
+      "unit_sha256": "ad6bf6a5a06e599d571f118b3f09b075bcfdf56f375821ac6e9e0264e0dcfaa8",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_noisy",
+      "constructor_index": 0,
+      "unit_sha256": "c6932651fd2dfa64e551d2b3d4eb091739224a60b7692b2030e2cf16c9d4e2c7",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "c_noisy",
+      "constructor_index": 31,
+      "unit_sha256": "19d9cfc6c0da4fefa93fa7ae121b5ff86ed5e3c23396c17139b303fcdf93c4e2",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "expansion",
+      "branch": "d_stale",
+      "constructor_index": 0,
+      "unit_sha256": "014bb7b4585d23a0fc788af63cf1ecdc8e1fe835f9aa7550559fb4a3b866ad21",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "d_stale",
+      "constructor_index": 31,
+      "unit_sha256": "44258934b7c7f20b77454a3ed7857edabfc6cd1fca1eb54034ca671991b143ff",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "d_misleading",
+      "constructor_index": 0,
+      "unit_sha256": "3b6383beacb507fc6cb6b41907d48a40a44ec9a5586ba56109555ec1c62e9900",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "d_misleading",
+      "constructor_index": 31,
+      "unit_sha256": "7a04261557f2f305e9b838c8fa2f842643bd18b8713b1bf98783568ac91ef592",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "d_stable",
+      "constructor_index": 0,
+      "unit_sha256": "e2f9af2dad5cef0c3d6f25004b43b5417e8da7bbc94f1e99a38279e636b200d9",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "d_stable",
+      "constructor_index": 31,
+      "unit_sha256": "8ea813081b22fba51f5a546b274b57bc3d80413775d9f87a7402cc5e51df7bf6",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_a",
+      "constructor_index": 0,
+      "unit_sha256": "75c7d22ff3b7bcb27f54da5faf1e92d5f9e714d3a89104f6c7c1c94dc232066c",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_a",
+      "constructor_index": 31,
+      "unit_sha256": "506a005493bf1c38fe59a1aa46e6fade6697044dc40d8ae0bb64f0b30c6345f0",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_b",
+      "constructor_index": 0,
+      "unit_sha256": "3ff8d3f5decc9cc1dfa7350e5c3d869c401838f49ef81abf418d2a7f2f7fda29",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_b",
+      "constructor_index": 31,
+      "unit_sha256": "b963e8f3868c889ee2c259999430e1e706de9693f3ca924efe0d63b8bbfd876a",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_c",
+      "constructor_index": 0,
+      "unit_sha256": "50ee66c85239a6c19f93a2b26fe269acbf2344913ef4c2d3c27448529dc12107",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_c",
+      "constructor_index": 31,
+      "unit_sha256": "bbdb9e9530e1b4c63faa8ce32e524c14e6ebeac4a3ee530991341c3b3dbe3aec",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_d",
+      "constructor_index": 0,
+      "unit_sha256": "c37fa73bd06cbe7468d6c3e78b3691462c53da055cba80accffcf52dd1759cb6",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "e_d",
+      "constructor_index": 31,
+      "unit_sha256": "db129e5e4e91f3ff40deb3783397cfe42e8048f1b73054509c707123d5e4817b",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "expansion",
+      "branch": "f_expert",
+      "constructor_index": 0,
+      "unit_sha256": "af37bc16f4f3883c98ed70671be5fe8aa74d1038ebcb317a59715e9fa7360971",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "f_expert",
+      "constructor_index": 31,
+      "unit_sha256": "5db6cd78ce7b88eafb7fad7882909adaa204f206d40987efa1a4f9cf71037e0d",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "f_unfamiliar",
+      "constructor_index": 0,
+      "unit_sha256": "63854ddbe54cc6b726c7099c2203c73aa9b0c6268516966aa9b613706ec37e43",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "expansion",
+      "branch": "f_unfamiliar",
+      "constructor_index": 31,
+      "unit_sha256": "b170637147f564c5890ec0c37e0a60f125a242506bdfadc09b3e1f93f741e50a",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "confirmation",
+      "branch": "recipient_shift",
+      "constructor_index": 0,
+      "unit_sha256": "1a5b06f4089786f26ee7992128ccd29346fc34858f977e847f8aab3b8d3fb183",
+      "cases": 4,
+      "rows": 32
+    },
+    {
+      "stage": "confirmation",
+      "branch": "recipient_shift",
+      "constructor_index": 20471,
+      "unit_sha256": "97b8f59f4d0e66e78438359d3612011f0c1dd300071dae44072450b8eb669cd1",
+      "cases": 4,
+      "rows": 32
+    },
+    {
+      "stage": "confirmation",
+      "branch": "accidental_reversal",
+      "constructor_index": 0,
+      "unit_sha256": "59a07a3671734247751e5f80e85cf158ab4f040845e0ac7b6cf9c08dffe903fb",
+      "cases": 4,
+      "rows": 84
+    },
+    {
+      "stage": "confirmation",
+      "branch": "accidental_reversal",
+      "constructor_index": 20471,
+      "unit_sha256": "8f7989ca20aa661ddacea1b6cbd90e18fef72158edb7234847a4c11b65b75c2b",
+      "cases": 4,
+      "rows": 84
+    },
+    {
+      "stage": "confirmation",
+      "branch": "stale_feedback",
+      "constructor_index": 0,
+      "unit_sha256": "a7b27250462856723099c1946d9c0a5ac9608ea161110f74a03db39ca3db38db",
+      "cases": 4,
+      "rows": 24
+    },
+    {
+      "stage": "confirmation",
+      "branch": "stale_feedback",
+      "constructor_index": 5117,
+      "unit_sha256": "5930dfdd16b9c9a401e5ddaf2da64d946a009eac7d40c69f7d827d15cc2c9133",
+      "cases": 4,
+      "rows": 24
+    },
+    {
+      "stage": "robustness",
+      "branch": "a_graphic",
+      "constructor_index": 402888,
+      "unit_sha256": "ee01c1c29332e9796150b4d59d7558fa9d4f53ac49d6bf9156ce5d5954c62d30",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "robustness",
+      "branch": "a_assembly",
+      "constructor_index": 402817,
+      "unit_sha256": "2bca5730f6e8aea988931a39bade3a04fb72574d367e8c92538085c9a8f0d901",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "robustness",
+      "branch": "a_novel",
+      "constructor_index": 402818,
+      "unit_sha256": "434ba2c3ef1759c4313507a37684775f966cb8321ac22d54ca88191f2f71cc36",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "robustness",
+      "branch": "a_exception",
+      "constructor_index": 402873,
+      "unit_sha256": "7e4cb5b2a8a14855272fc88db5f6a688d29c4acaa8d6144ea2b178f3ce80a61f",
+      "cases": 8,
+      "rows": 160
+    },
+    {
+      "stage": "robustness",
+      "branch": "pooled_graphic",
+      "constructor_index": 402874,
+      "unit_sha256": "998f32b69e9a09f456647909bb80de3d41ab9cf322b70a521d087e4277d374f3",
+      "cases": 8,
+      "rows": 320
+    },
+    {
+      "stage": "robustness",
+      "branch": "pooled_assembly",
+      "constructor_index": 72435,
+      "unit_sha256": "5d958149541c93016262188d4fa32b86274f944416a2c539d60d2a367de3b8f7",
+      "cases": 8,
+      "rows": 320
+    },
+    {
+      "stage": "robustness",
+      "branch": "b_changed",
+      "constructor_index": 402876,
+      "unit_sha256": "b02ad95e0f6b8a59590b3c50355f0a430fee438cf1bf41ea9e6efd70265429de",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "robustness",
+      "branch": "b_wrong",
+      "constructor_index": 402877,
+      "unit_sha256": "e2644fe649061004c3ee811f42848e790b18cb8db3bb33046ad67f0a7a69518b",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "robustness",
+      "branch": "ba_correct",
+      "constructor_index": 402824,
+      "unit_sha256": "d92445ac34bc83c2d6b4dabd9b88617f89a1b59ebe3c650fe716ca6dc88453c7",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "robustness",
+      "branch": "ba_wrong",
+      "constructor_index": 402878,
+      "unit_sha256": "4fac62bbf42647c159646d65f44f3a5cdbcfffa199daba370c1f05b2763da786",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "robustness",
+      "branch": "ba_changed",
+      "constructor_index": 402879,
+      "unit_sha256": "f089330938cb61e23e8471690c7891497ca6aeeb351ee516ceb7dad89140fd0c",
+      "cases": 8,
+      "rows": 64
+    },
+    {
+      "stage": "robustness",
+      "branch": "c_accidental",
+      "constructor_index": 402827,
+      "unit_sha256": "545611938341c5414cc84a3d40b446c442f0d79496a7ae4691ee958a1a9893e1",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "robustness",
+      "branch": "c_misleading",
+      "constructor_index": 402880,
+      "unit_sha256": "a3050a96060f44851931c425c34a9d22e1cafce0d7b767a052129fe6fdb97da8",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "robustness",
+      "branch": "c_false",
+      "constructor_index": 402881,
+      "unit_sha256": "345b7bcd77b2cca308892425e339796370fc2cb3a37d5e7cddb4eb98917b59a9",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "robustness",
+      "branch": "c_noisy",
+      "constructor_index": 402830,
+      "unit_sha256": "a9b55c867a3878ed0f8fa146ef8b111606f01c70d960a6efdc06c13ff72514f5",
+      "cases": 8,
+      "rows": 168
+    },
+    {
+      "stage": "robustness",
+      "branch": "d_stale",
+      "constructor_index": 402882,
+      "unit_sha256": "34cbbb26cc81f252b57bbfdb6c9d7904d755e6c0c5b77d024c0bf2bc3bbd0544",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "robustness",
+      "branch": "d_misleading",
+      "constructor_index": 402883,
+      "unit_sha256": "aae26b40b1d79783385d368a9f01be5a5c7492f09cb36be5a7684c60c6a2727a",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "robustness",
+      "branch": "d_stable",
+      "constructor_index": 402833,
+      "unit_sha256": "cd83fddba80964d266a7ea3b5446bdd34d45538e2da12de4a291a7d5bd1551fd",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "robustness",
+      "branch": "e_a",
+      "constructor_index": 402834,
+      "unit_sha256": "f2065968691526bdad6c3b65ab58acedee705084102e48be5618b2c29ac2ab9e",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "robustness",
+      "branch": "e_b",
+      "constructor_index": 402884,
+      "unit_sha256": "134361ca4a0959e3d80ed21763dfcd640d43f9a041dd99f90d9fc2c35c7238d2",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "robustness",
+      "branch": "e_c",
+      "constructor_index": 402885,
+      "unit_sha256": "5c791237858976cc3e1d675ff67749349415fd8774194d76c0436658f3677c41",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "robustness",
+      "branch": "e_d",
+      "constructor_index": 402837,
+      "unit_sha256": "9c33ed806fef3b560bd3467d81ceafd3da2d8dac9c5a42458730ca3e9559fc86",
+      "cases": 8,
+      "rows": 72
+    },
+    {
+      "stage": "robustness",
+      "branch": "f_expert",
+      "constructor_index": 402886,
+      "unit_sha256": "3cadc584904a32c53705a318d51bed2873608c2b94b115eb0987ccbfe93044df",
+      "cases": 8,
+      "rows": 48
+    },
+    {
+      "stage": "robustness",
+      "branch": "f_unfamiliar",
+      "constructor_index": 402887,
+      "unit_sha256": "0212ecb1d39fecbbf4e1545ee7f1e0908ee840c8aa69d45b8d7b198d4da90e32",
+      "cases": 8,
+      "rows": 48
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "INITIAL_EXPANSIONS",
+      "payload_sha256": "a6b28fe4605c36ec64d4b7ef5b8df8c9039304ff628c7c7b0e058571ad625e35"
+    },
+    {
+      "name": "BRANCH_SELECTION",
+      "payload_sha256": "55de943d7612c3e8bffc1f81a266eb0c1c029286fe83709d2f31a173dd92c501"
+    },
+    {
+      "name": "CONFIRMATION",
+      "payload_sha256": "c3b2360b76712e5f50ff9baf62d44871a2e1ac7afad468aaf49b9f8eb01d40a6"
+    },
+    {
+      "name": "ROBUSTNESS_32768",
+      "payload_sha256": "388979b8e4aa473fff1bd8b52acd6fcd5d5569d0e229d01152791742a7a31fb4"
+    }
+  ],
+  "failures": [
+    {
+      "id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+      "stage": "robustness",
+      "branch": "pooled_assembly",
+      "ci": 72451,
+      "at": "2026-09-13T11:52:28.798332+00:00",
+      "reason": "ValueError: pooled acquisition is empty"
+    }
+  ],
+  "execution_totals_at_snapshot": {
+    "singleton": 1,
+    "units": 431361,
+    "cases": 3266640,
+    "rows": 44074528,
+    "cpu": 82302.84375,
+    "wall": 162471.48907058686,
+    "issues": 0
+  },
+  "immutable_window": {
+    "ends_at": "2026-09-18T01:09:19.138188+00:00",
+    "original_implementation_start": "2026-09-12T18:16:41.531700+00:00",
+    "original_soft_target": "2026-09-17T18:16:41.531700+00:00",
+    "run_hours": 120,
+    "started_at": "2026-09-13T01:09:19.138188+00:00",
+    "timing_amendment": "User commissioned a new 120-hour continuously serviced execution allocation after setup; earlier clocks and completed work are preserved."
+  },
+  "live_source_unchanged": true,
+  "live_database_access": "read-only; query_only; bounded transaction; indexed unit lookups",
+  "scientific_stage_launched": false,
+  "scope": "Rechecked stored unit and snapshot hashes, independent projection/physics/probability/proper-score/cost rules, stored unit summaries and sampled paired confirmation values.",
+  "limitations": "Deterministic spot check, not a random severity estimate or complete independent reaggregation; no final scientific claim. Retained branch failure remains unresolved.",
+  "audit_script_sha256": "25caf71183ba79be6afcfa00135cb314dfb30f5d711511ad0928d45a7e96121d"
+}

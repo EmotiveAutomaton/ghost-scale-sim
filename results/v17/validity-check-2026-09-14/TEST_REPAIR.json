@@ -1,0 +1,50 @@
+{
+  "schema": "v16.fixture-clock-repair.1",
+  "recorded_at": "2026-09-15T00:18:01.949079+00:00",
+  "ci_before": {
+    "run_id": 34906948011,
+    "commit": "2621d7fbe0676af1d41c66544b46392082a2ab8a",
+    "new_fixture_failures": [
+      "tests/test_v16_archive.py::test_actual_archive_interrupt_resume_preserves_all_saved_work",
+      "tests/test_v16_noise_runtime.py::test_actual_interruption_control_preserves_clock_units_and_scope",
+      "tests/test_v16_restart.py::test_interrupted_packet_resumes_without_duplicates_or_changed_clocks"
+    ],
+    "retained_scientific_failures": [
+      "V15 C11 positive truth inclusion",
+      "V15 M01 positive posterior normalization"
+    ]
+  },
+  "cause": "Three independently identified fixtures inherited the real V16 deadline, which expired on 14 September. Dispatch correctly refused; fixtures failed before saving work.",
+  "repair": "Use the existing fresh operational fixture clock helper; preserve real campaign clocks, immutable-dispatch guard and actual interruption/resume checks.",
+  "tests": {
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 19.539,
+    "junit_sha256": "bfb26f0ee48a6c3b2e628fe8e1f3d708600afd2e374f3d12b952f034d250bb52",
+    "files": [
+      "tests/test_v16_restart.py",
+      "tests/test_v16_archive.py",
+      "tests/test_v16_noise_runtime.py",
+      "tests/test_v16_campaign_ownership.py"
+    ]
+  },
+  "source_files": {
+    "ghostscale/validation/soundingline/v16/archive_interruption.py": {
+      "tested_working_bytes_sha256": "7d8bda1fa332c99874c8bfc1b403de2f32f02ad556f9a410250a8cfe82ffc80e",
+      "git_lf_bytes_sha256": "7d8bda1fa332c99874c8bfc1b403de2f32f02ad556f9a410250a8cfe82ffc80e"
+    },
+    "ghostscale/validation/soundingline/v16/runtime_interruption.py": {
+      "tested_working_bytes_sha256": "f9ccea3d2562c62ac930c3f292e14e2502e61d8b458cf56225cb70c0988e1daf",
+      "git_lf_bytes_sha256": "f9ccea3d2562c62ac930c3f292e14e2502e61d8b458cf56225cb70c0988e1daf"
+    },
+    "tests/test_v16_restart.py": {
+      "tested_working_bytes_sha256": "0b905ca57dd8a0304623292a4d044f719d78202e9586f46fa5b71bd923ff6615",
+      "git_lf_bytes_sha256": "0b905ca57dd8a0304623292a4d044f719d78202e9586f46fa5b71bd923ff6615"
+    }
+  },
+  "real_v16_campaign_unchanged": true,
+  "real_v16_campaign_git_sha256": "27857c5bbf8023f48075a2e07b49b7d2f2892639d908118841bf962c7b9e4cef",
+  "scope": "Operational fixtures only. Original frozen V17 source and live processes were not changed. Historical V15 failures remain. Whole-repository CI after this repair is a separate result."
+}

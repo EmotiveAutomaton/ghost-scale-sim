@@ -6,19 +6,16 @@ import shutil
 import subprocess
 import sys
 import time
-import uuid
 
 from ghostscale.validation.soundingline.v16.runtime import REPO, supervisor
 from ghostscale.validation.soundingline.v16.reaggregate import regenerate
+from ghostscale.validation.soundingline.v16.expansion_interruption import fixture_campaign
 
 
 def test_interrupted_packet_resumes_without_duplicates_or_changed_clocks(tmp_path):
     root = tmp_path / "campaign"
     root.mkdir()
-    shutil.copyfile(REPO / "results/v16/CAMPAIGN.json", root / "CAMPAIGN.json")
-    fixture_campaign=json.loads((root/"CAMPAIGN.json").read_bytes())
-    fixture_campaign["campaign_id"]="fixture-"+uuid.uuid4().hex
-    (root/"CAMPAIGN.json").write_text(json.dumps(fixture_campaign))
+    fixture_campaign(root)
     accepted_bytes = (root / "CAMPAIGN.json").read_bytes()
     command = [sys.executable, "-B", "-m", "runners.run_v16",
                "--root", str(root), "--fixture-units", "64"]
@@ -26,7 +23,8 @@ def test_interrupted_packet_resumes_without_duplicates_or_changed_clocks(tmp_pat
                        OMP_NUM_THREADS="1")
     with (tmp_path / "interrupted.log").open("wb") as output:
         child = subprocess.Popen(command + ["--stage", "pilot"], cwd=REPO,
-                                 env=environment, stdout=output, stderr=output)
+                                 env=environment, stdout=output, stderr=output,
+                                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
         try:
             deadline = time.monotonic() + 20
             while time.monotonic() < deadline:
@@ -55,7 +53,8 @@ def test_interrupted_packet_resumes_without_duplicates_or_changed_clocks(tmp_pat
     with supervisor(other,"after-owned-process-death"):
         assert json.loads((other/"RUNNER_STATUS.json").read_bytes())["pid"]==os.getpid()
     resumed = subprocess.run(command + ["--stage", "resume"], cwd=REPO, env=environment,
-                             capture_output=True, text=True, timeout=40)
+                             capture_output=True, text=True, timeout=40,
+                             creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
     assert resumed.returncode == 0, resumed.stdout + resumed.stderr
     assert (root / "CAMPAIGN.json").read_bytes() == accepted_bytes
     assert (root / "packets/native-fixture-1.json").read_bytes() == packet_bytes

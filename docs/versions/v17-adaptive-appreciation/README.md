@@ -28,3 +28,7 @@ The original worker continues other branches under the unchanged window.
 
 [The background-window repair and restored-file inspection](WINDOW_REPAIR_2026-09-13.md)
 records consoleless future launches, native verification and unchanged active source.
+
+[The 14 September bounded validity review](../../../results/v17/validity-check-2026-09-14/README.md)
+records checked stored cases, the separate expired-fixture repair and remaining
+scientific qualifications while the original queue continues.
