@@ -33,6 +33,15 @@ and keep its `ARMED` file absent while this operator is active. Preserve an alre
 live event review; do not create a second owner. The native event watcher never
 owns or restarts scientific workers.
 
+### Result-batch publication cadence
+
+Owner instruction, 2026-09-18: commit and push after each new nameable batch of
+results has completed its required verification and documentary write-through.
+Do not wait for campaign completion. Identify the batch and its evidence in the
+commit, review outgoing material for private data, and use the existing repository's
+ordinary push. This standing authorization applies to subsequent result batches;
+it does not authorize force pushes or relabel an active campaign as complete.
+
 V18's selective-acquisition study completed its finite core and sole budget extension:
 64 constructor configurations, four histories each, 21,504 transfer executions.
 Independent reconstruction and complete extracted-source replay passed. See
