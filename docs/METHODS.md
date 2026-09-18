@@ -496,3 +496,10 @@ The direct structural compiler makes another model assumption testable: current
 assembly labels expose topological order. A charged reset-and-rebuild plan can
 use that public order without identifying the precise dependency graph. Its paired
 comparison is admitted before any final representation contrast is selected.
+
+The attachment-mask rival reuses completed G2 observations and probes, binding each
+new row to its original case, raw block and forecast row. Its cold table keys retain
+attachment and stopping state but discard orientation, using the declared action
+semantics without the evaluator graph. Independent reconstruction uses set-based
+keys, recalculates scores and counted work, and verifies exact pairing. A one-block
+cache saves file decoding only; no scientific table fitting is amortized or free.

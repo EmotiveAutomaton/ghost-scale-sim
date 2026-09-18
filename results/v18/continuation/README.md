@@ -15,14 +15,14 @@ descriptive, not confirmed. `g4-history/SUPPORT_CORRECTION.json` records 16 phys
 contexts among 18 sampling clusters, retaining all 72 original blind cases unchanged.
 The first raw benchmark/report revisions remain local and are not overwritten.
 
-The new parent/child CPU ledger includes failed attempts. Ongoing dependency
-transfer and the existing Stitch rival have frozen inputs and source revisions;
-they are not included in completed-row counts before verification.
+The new parent/child CPU ledger includes failed attempts. The completed
+transfer, Stitch and direct comparisons are bound in `SECOND_WAVE.json`, bringing
+verified rows to 2,556,168 and bounded replay rows to 36,158.
 
-`VALIDATION.json` records 41 passing integration checks without skips.
+`VALIDATION.json` records 46 passing integration checks plus five focused cache checks without skips.
 `TARGET_VERIFICATION.json` binds the independent target and detour checks.
 `g4-history/SUPPORT_SCORE_CHECK.json` verifies that all 486 reported mean fields
 are exactly unchanged by the corrected support grouping. `TIME_ACCOUNT.json`
 is an interim parent/child account with its unmeasured setup limits explicit.
-`structural-direct/PLAN.json` is admitted next work on reused inputs, with no
-scientific result yet. Frozen plans are preserved unchanged.
+`structural-direct/COMPARISONS.json` records the completed direct rival.
+The native and transferred attachment-mask plans are admitted on reused evidence. Frozen plans are preserved unchanged.

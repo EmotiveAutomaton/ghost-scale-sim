@@ -192,6 +192,9 @@ def run(root,archive,*,stop_after_blocks=None):
                     elif plan['branch']=='structural-direct':
                         from . import direct
                         rows=direct.evaluate(case,case['budgets']);diagnostics=None
+                    elif plan['branch']=='g2-mask':
+                        from . import g2_mask
+                        rows=g2_mask.evaluate(case,root.parent);diagnostics=None
                     else:
                         raise ValueError('unimplemented branch cannot be admitted')
                     units.append(dict(case=case,rows=rows,diagnostics=diagnostics))

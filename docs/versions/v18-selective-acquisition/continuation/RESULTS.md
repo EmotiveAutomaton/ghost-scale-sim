@@ -1,8 +1,9 @@
-# V18.1 interim results: first branch wave
+# V18.1 interim results: transfer and stronger rivals
 
-The continuation is active. Five core branches now execute; larger query transfer
-and the existing Stitch rival are running sequentially. No final confirmation
-contrast has been frozen and this is not campaign closure.
+The continuation is active. Five core branches now execute; larger query transfer,
+the existing Stitch rival and the structural direct comparator are now verified.
+No final confirmation contrast has been frozen and this is not campaign closure.
+These purpose-built comparisons remain **miniature — architecture untested**.
 
 Does the focus advantage survive an equally informed common planner? At a total-work cap of 128 operations, every common-search cell in the balanced four-cell comparison reaches 100% success, including primitive-only search, all eight fixed action orders and paid goal ordering. Focus still changes acquisition and work: on compatible targets with the canonical order, one unchecked fragment averages 79.33 operations after broad study and 64.21 after focused study; primitives use 79. This constructed mechanism result locates the large original success difference in memory/search constraints. It does not show that acquisition allocation is irrelevant.
 
@@ -13,6 +14,12 @@ Which observation repairs missing dependency knowledge? Across the 384 sampled n
 Do learned fragments outperform simpler stored episodes as dependencies grow? In the seven-part screen at 128 storage tokens and 8,192 online operations, stored episodes succeed on 93.20% of tasks, primitives on 90.82%, learned fragments on 89.42%, and fragments with exception episodes on 88.54%, averaged over the twelve balanced topology/task-condition strata. Episodes are the strongest native representation rival here. All graphic methods reach 100%, with primitives using the least work. These are descriptive constructed assembly/graphic results, not fresh confirmation or evidence about human intentions.
 
 Can available evidence distinguish different histories that reach the same endpoint? In the frozen 72-case known-family benchmark, endpoint evidence leaves all four strategies equally probable. Two indexed process observations identify the true strategy in the positive and misleading-context conditions, while the deliberately uninformative process remains ambiguous. The direct template predictor matches inverse reconstruction and the exact finite-history ceiling. The 18 sampling clusters contain 16 distinct physical contexts; duplicate draw IDs are not independent structure. This is a constructed information limit, not an advantage for a particular inference algorithm or recovery of beliefs, values or an unsupplied goal.
+
+Do useful observations transfer to larger dependency structures? In the seven-part comparison at 32,768 operations, two fixed support queries raise task success from 78.78% to 95.07% and reduce mean squared legality-prediction error from 0.04678 to 0.00403. Uniform queries reach 86.59% success; the more expensive decision-based rule falls to 62.80%. This is a descriptive constructed-mechanism result: informative evidence helps, but choosing it can consume the computation needed to act.
+
+Does learned compression improve construction over simpler rivals? At 128 storage tokens and 8,192 operations, the grounded Stitch reader completes every three-part and graphic task, as do primitives. On three-part tasks Stitch averages 115.37 online operations versus 166.32 for primitive state search; on graphic tasks it uses 275.01 versus 246. Its cold learning and storage remain additional costs. These are descriptive constructed-mechanism results on the supported three-part and graphic families; the adapter supplies no five- or seven-part result.
+
+Do these tasks require learning the dependency graph? The direct planner solves every one of its 72,960 paired comparisons using public structural information. For seven-part dependency-transfer tasks it uses 155 operations without another observation; for seven-part representation tasks it uses 79. Public topological part numbering and shared attachment defaults permit a safe reset and rebuild. This constructed-mechanism result shows that success on these tasks does not establish a need to infer the graph, although predicting arbitrary action legality remains a separate learning problem.
 
 ## Execution and verification
 
@@ -29,6 +36,9 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g0-common-original | 184,320 | 64 |
 | g0-common-balanced | 836,352 | 72 |
 | g4-history | 648 | 16 |
+| g2-transfer | 746,496 | 2,304 |
+| g3-stitch | 15,360 | 640 reused |
+| structural-direct | 72,960 | 5,288 reused |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -38,7 +48,7 @@ selection (all 72 cases for G4). These are bounded decision replays, not a claim
 that every larger search was rerun. Exact original enumeration and all 28 original
 V18 rates were separately reproduced. Proof implementations are preserved by hash.
 
-The integrated suite passes 41 checks without failures or skips, including the
+The first-wave integrated suite passed 41 checks without failures or skips, including the
 existing Stitch binary. Independent target verification additionally checks all
 192 distinct native G1 targets: 48 are unreachable and 48 require a detour. The
 larger G3 target witnesses and G2 query-menu target realizations also pass. These
@@ -61,6 +71,14 @@ documents the serialized evidence, actors, queries and scored questions. Its bli
 consumer read only the reader file and completed all 216 requests. [Eight selected
 illustrations](ILLUSTRATIONS.md) use separate IDs and physical contexts.
 
+Second-wave verification adds 834,816 rows and 3,170 bounded decision replays.
+Together, 2,556,168 retained rows reconstruct and 36,158 selected decision rows
+regenerate from extracted frozen sources. Transfer contains 1,286 law configurations
+and 20 unlabeled topologies within the assembly family; those are not architectures.
+Stitch child CPU is included in worker receipts.
+The current integration suite passes 46 checks, with five additional focused checks
+after the block-cache addition. No failures or skips remain in that admission.
+
 ## Current frontier
 
 The G2 transfer expands to 2,304 distinct five/seven-part law/context units, four
@@ -71,23 +89,35 @@ adapter reuses the exact native3/graphic16 inputs of the representation study,
 with all stored grounded arguments charged and every compiler child's CPU recorded.
 No larger unsupported codec is admitted.
 
-A stronger direct compiler is also admitted for 72,960 paired comparisons on
+The stronger direct compiler completed 72,960 paired comparisons on
 25,408 reused frozen input cases. The current assembly class publicly numbers
 parts in topological order and shares attachment defaults. That information lets
 a reader remove parts in reverse order and rebuild in forward order without
 identifying the exact dependency graph. The compiler charges construction,
 checking and execution work. This is an explicit structural rival to state search
-and learned memory; its scientific run is pending. It must be evaluated before
-selecting any final learned-representation contrast. Predicting arbitrary action
-outcomes still asks a separate dependency-learning question.
+and learned memory; its scientific run and independent verification are complete.
+Its complete success precludes attributing these tasks to a need for learned memory.
+Predicting arbitrary action outcomes still asks a separate dependency-learning question.
 
 The [time account](../../../../results/v18/continuation/TIME_ACCOUNT.json) records
 parent and child worker receipts, including the retained failed attempt. It is an
 interim snapshot; active costs continue to grow, and earlier uninstrumented setup
 and verification are disclosed rather than presented as measured worker CPU.
 
-The next decision is whether those stronger comparisons identify a useful fresh
-structural contrast. At most two primary contrasts may be frozen after discovery,
+The next admitted comparison strengthens surface forecasting by indexing attachment
+masks and stopping state while ignoring orientation. It reuses every retained native
+and transferred observation at the highest existing task budget: 110,592 forecast
+rows, no new structural units, no original tasks restarted. Cold fitting and forecast
+work remain separate from task construction. Both native truth-included/excluded
+conditions remain, while larger transfer includes truth. Fixed context cues are
+available but unused by this table; decision selection retains its model-controller
+cost and label. The current table has no scientific result before completion.
+
+The next structural action question requires a separately admitted label-permuted
+DAG condition removing public topological order, with an equally informed direct
+rival. Relabeling is a context intervention, not another architecture. No final
+contrast is frozen while that boundary is unresolved. At most two primary contrasts
+may be frozen after discovery,
 with a practical margin, untouched structural sampling and a variance-based sample
 allocation. Saturated four-cell and graphic cells should be retired, not enlarged
 through repeated equivalent seeds. Larger searches remain bounded by the original
