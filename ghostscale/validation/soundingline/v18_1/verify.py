@@ -146,6 +146,7 @@ def branch_report(root,output):
       'g1-native':('stratum','information','representation','gate','budget'),
       'g2-native':('selection','donor','truth_excluded','method','query_policy','requested_queries','budget'),
       'g2-transfer':('n','family','selection','donor','truth_excluded','method','query_policy','requested_queries','budget'),
+      'g2-permuted':('n','family','selection','donor','truth_excluded','method','query_policy','requested_queries','budget'),
       'g3-representation':('n','family','condition','method','storage_cap','budget'),
       'g3-stitch':('n','family','condition','method','storage_cap','budget'),
       'g0-common':('stratum','allocation','capacity','representation','checking','planner','action_order_stratum','budget'),
@@ -176,7 +177,7 @@ def branch_report(root,output):
             evidence={}
             for row in unit['rows']:
                 data={**case,**row};key=tuple(data[k] for k in dimensions);count+=1
-                if branch in ('g1-native','g2-native','g2-transfer','g3-representation','g3-stitch','structural-direct'):
+                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g3-representation','g3-stitch','structural-direct'):
                     assert row['costs']['total_online']<=row['budget']
                     assert sum(v for k,v in row['costs'].items() if k not in ('total_online','envelope','unit'))==row['costs']['total_online']
                     if row['program'] is None:
@@ -188,7 +189,7 @@ def branch_report(root,output):
                         assert row['success']==(actual['legal'] and actual['stopped'] and actual['state']==p['target'])
                         assert row['costs']['actual_execution']==actual['primitive_cost']
                     if branch in ('g3-representation','g3-stitch'):assert row['acquisition']['storage_tokens']<=row['storage_cap']
-                if branch in ('g2-native','g2-transfer'):
+                if branch in ('g2-native','g2-transfer','g2-permuted') and row['method']!='structural-direct':
                     predicted_truth=[]
                     for q in row['forecast_probes']:
                         actual=physical(json.dumps(truth,sort_keys=True),json.dumps(q['initial']),tuple(q['program']),p['max_steps'])

@@ -47,8 +47,14 @@ def validate_world(world):
         parents, defaults = world['parents'], world['defaults']
         if len(parents) not in (3, 5, 7) or len(parents) != len(defaults):
             raise ValueError('invalid assembly size')
-        if any(type(p) is not int or p not in range(-1, i) for i, p in enumerate(parents)):
-            raise ValueError('dependencies must precede children')
+        n=len(parents)
+        if any(type(p) is not int or p not in range(-1,n) or p==i for i,p in enumerate(parents)):
+            raise ValueError('invalid dependency label')
+        for start in range(n):
+            seen=set();part=start
+            while part>=0:
+                if part in seen:raise ValueError('cyclic dependency graph')
+                seen.add(part);part=parents[part]
         if any(type(v) is not int or v not in (0, 1) for v in defaults):
             raise ValueError('invalid defaults')
     else:

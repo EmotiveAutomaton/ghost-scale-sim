@@ -503,3 +503,11 @@ attachment and stopping state but discard orientation, using the declared action
 semantics without the evaluator graph. Independent reconstruction uses set-based
 keys, recalculates scores and counted work, and verifies exact pairing. A one-block
 cache saves file decoding only; no scientific table fitting is amortized or free.
+
+The opaque-label intervention deterministically permutes retained five- and seven-part
+G2 worlds, states, actions, observations and queries. It preserves the physical DAG,
+evidence and public candidate menu while removing the numeric topological-order cue.
+The equally informed direct compiler derives a safe order from the union of those
+public candidates, charges the checks and selections, and refuses a cyclic union.
+Relabelings of retained structures are context interventions, not new architectures
+or untouched confirmation support.

@@ -205,8 +205,9 @@ def predictions(models,observations,probes,method,true_world=None):
 
 def parent_marginals(hypotheses):
     if not hypotheses:return []
+    n=len(hypotheses[0]['parents'])
     return [{str(p):sum(m['parents'][i]==p for m in hypotheses)/len(hypotheses)
-             for p in range(-1,i)} for i in range(len(hypotheses[0]['parents']))]
+             for p in range(-1,n) if p!=i} for i in range(n)]
 
 
 def evaluate(case,budgets=(512,2048,8192),query_counts=(0,1,2)):

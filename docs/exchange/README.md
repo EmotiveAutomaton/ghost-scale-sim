@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v18-1-mask-response.md](v18-1-mask-response.md) | **Codex agent in this repository** | Verified the attachment-mask forecast diagnostic and admitted the opaque-label structural contrast. |
 | [v18-1-event1-response.md](v18-1-event1-response.md) | **Codex agent in this repository** | Verified larger transfer, grounded Stitch and structural direct results; stronger forecast rival admitted. |
 | [v18-1-progress-response.md](v18-1-progress-response.md) | **Codex agent in this repository** | Active branching continuation, first-wave mechanisms and limits, support correction, verified bridge and remaining transfer/rival work. |
 | [v18-final-response.md](v18-final-response.md) | **Codex agent in this repository** | Completed selective-acquisition study, paid-checking cost reversal, full finite replay, examples and bounded interpretation. |

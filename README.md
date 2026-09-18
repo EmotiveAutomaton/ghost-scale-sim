@@ -18,8 +18,9 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 The five core branches now execute, and their first-wave results have independent
 physical checks and bounded extracted-source replay. The program remains active:
-larger dependency transfer, grounded Stitch and the direct structural rival are
-verified; the stronger attachment-mask forecast comparison is running sequentially. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
+larger dependency transfer, grounded Stitch, the direct structural rival and the
+attachment-mask forecast diagnostic are verified. An opaque-label structural
+intervention is admitted next; no final contrast is frozen. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
 [scope ledger](results/v18/continuation/BRANCH_LEDGER.json), and separate
 [history-reading bridge](docs/versions/v18-selective-acquisition/continuation/BRIDGE.md).
 These constructed-world comparisons do not establish human belief or value learning.

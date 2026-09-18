@@ -27,7 +27,7 @@ def main():
     records=importlib.import_module('ghostscale.validation.soundingline.v16.records')
     runtime=importlib.import_module('ghostscale.validation.soundingline.v18_1.runtime')
     assert Path(runtime.__file__).resolve().is_relative_to(destination)
-    branch=plan['branch'];module=importlib.import_module('ghostscale.validation.soundingline.v18_1.'+{'g2-mask':'g2_mask','g3-stitch':'g3_stitch','structural-direct':'direct'}.get(branch,branch.split('-')[0]))
+    branch=plan['branch'];module=importlib.import_module('ghostscale.validation.soundingline.v18_1.'+{'g2-mask':'g2_mask','g2-permuted':'permuted','g3-stitch':'g3_stitch','structural-direct':'direct'}.get(branch,branch.split('-')[0]))
     selected={};raw_bindings={}
     for name in completed['blocks']:
         block,receipt=runtime.load_block(args.root,name);raw_bindings[name]=receipt['raw_sha256']
@@ -36,6 +36,7 @@ def main():
             if branch=='g1-native':key=tuple(case[k] for k in ('stratum','information','representation'))
             elif branch in ('g2-native','g2-transfer'):key=tuple(case.get(k) for k in ('n','family','selection','donor','truth_excluded'))
             elif branch=='g2-mask':key=tuple(case[k] for k in ('origin_run','n','family','selection','donor','truth_excluded'))
+            elif branch=='g2-permuted':key=tuple(case[k] for k in ('n','family','selection','donor'))
             elif branch in ('g3-representation','g3-stitch'):key=tuple(case[k] for k in ('n','family','condition'))
             elif branch=='g4-history':key=(case['case_id'],)
             elif branch=='structural-direct':key=tuple(case[k] for k in ('origin_branch','n','family','condition','stratum'))
@@ -57,6 +58,7 @@ def main():
         elif branch=='g4-history':rows=module.evaluate(case)
         elif branch=='structural-direct':rows=module.evaluate(case,case['budgets'])
         elif branch=='g2-mask':rows=module.evaluate(case,args.root.parent)
+        elif branch=='g2-permuted':rows=module.evaluate(case,design['budgets'],design['query_counts'])
         else:raise ValueError('unknown branch')
         assert records.digest(rows)==records.digest(unit['rows']);count+=len(rows)
     records.write(args.output/'REPLAY.json',dict(passed=True,cases=len(selected),rows=count,branch=branch,

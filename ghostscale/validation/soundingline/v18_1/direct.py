@@ -1,14 +1,35 @@
 """Cheap structural compiler: a stronger direct rival to generic state search.
 
-Assembly part labels already form a public topological order. Resetting in reverse
-order and attaching in forward order is safe for every law in that class, without
-identifying the actual dependency graph. This assumption is explicit, not an oracle.
+The compiler uses the public candidate-law class to find an order safe under every
+candidate. It does not identify which candidate is true. In the original condition
+this recovers the already public label order; in the relabeled condition it pays to
+construct the union dependency order explicitly.
 """
 import json
 from ..v16.records import canonical
-from .common import Work,Exhausted,step,identity,score_submission
+from .common import Work,Exhausted,step,identity,score_submission,validate_world
 
 SCHEMA='v18.1.structural-direct.1'
+
+
+def shared_order(models,work):
+    n=len(models[0]['parents']);children={i:set() for i in range(n)};incoming=[0]*n
+    edges=set()
+    for model in models:
+        validate_world(model)
+        if len(model['parents'])!=n:raise ValueError('mixed assembly sizes')
+        for child,parent in enumerate(model['parents']):
+            work.charge('checking')
+            if parent>=0:edges.add((parent,child))
+    for parent,child in edges:
+        children[parent].add(child);incoming[child]+=1
+    ready=sorted(i for i,value in enumerate(incoming) if value==0);order=[]
+    while ready:
+        work.charge('selection');part=ready.pop(0);order.append(part)
+        for child in sorted(children[part]):
+            work.charge('checking');incoming[child]-=1
+            if incoming[child]==0:ready.append(child);ready.sort()
+    return order if len(order)==n else None
 
 
 def predict(payload,budget):
@@ -25,16 +46,16 @@ def predict(payload,budget):
             if n not in (3,5,7):raise ValueError('unsupported assembly size')
             for model in models:
                 if set(model)!={'kind','parents','defaults','forbidden'}:raise ValueError('private field in model')
-                for part,parent in enumerate(model['parents']):
-                    work.charge('checking')
-                    if model['kind']!='assembly' or parent not in range(-1,part):raise ValueError('public topological label class required')
+                if model['kind']!='assembly':raise ValueError('mixed model kinds')
                 if model['defaults']!=world['defaults'] or model['forbidden']:raise ValueError('unshared defaults or unsupported restrictions')
-            if any(v not in (0,1) for v in p['initial']+p['target']):
+            order=shared_order(models,work)
+            if order is None:reason='candidate-law union has no shared dependency order'
+            elif any(v not in (0,1) for v in p['initial']+p['target']):
                 reason='compiler requires fully attached initial and target states'
             else:
-                for part in reversed(range(n)):
+                for part in reversed(order):
                     work.charge('proposal_generation');program.append(n+part)
-                for part in range(n):
+                for part in order:
                     work.charge('checking');work.charge('proposal_generation');program.append(part)
                     if world['defaults'][part]!=p['target'][part]:
                         work.charge('proposal_generation');program.append(2*n+part)
@@ -57,7 +78,7 @@ def predict(payload,budget):
         elif reason is None:reason='constructive route exceeds allowed action depth'
     except Exhausted:reason='online work exhausted'
     return dict(program=selected,costs=work.receipt(),unsupported_reason=reason,storage_tokens=0,
-        knowledge='public topological part numbering/shared defaults or independent graphic operators; no learned dependency identification')
+        knowledge='shared order compiled from the public candidate-law union and defaults; no true-law identification')
 
 
 def evaluate(case,budgets):

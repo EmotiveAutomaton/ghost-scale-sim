@@ -1,7 +1,8 @@
 # V18.1 interim results: transfer and stronger rivals
 
 The continuation is active. Five core branches now execute; larger query transfer,
-the existing Stitch rival and the structural direct comparator are now verified.
+the existing Stitch rival, the structural direct comparator and the attachment-mask
+forecast diagnostic are now verified. The opaque-label intervention is admitted next.
 No final confirmation contrast has been frozen and this is not campaign closure.
 These purpose-built comparisons remain **miniature — architecture untested**.
 
@@ -21,6 +22,8 @@ Does learned compression improve construction over simpler rivals? At 128 storag
 
 Do these tasks require learning the dependency graph? The direct planner solves every one of its 72,960 paired comparisons using public structural information. For seven-part dependency-transfer tasks it uses 155 operations without another observation; for seven-part representation tasks it uses 79. Public topological part numbering and shared attachment defaults permit a safe reset and rebuild. This constructed-mechanism result shows that success on these tasks does not establish a need to infer the graph, although predicting arbitrary action legality remains a separate learning problem.
 
+Can a model-free legality table replace explicit dependency learning, or at least fail more safely when the law family is wrong? In the seven-part transfer comparison with two fixed support observations, the orientation-invariant attachment table has mean squared probability error 0.22172 versus 0.00403 for the dependency learner, while using 408.45 forecast operations versus 146.44 and covering only 11.31% of held-out action probes. Fixed support queries do not improve the table because they reveal parent relations rather than action transitions; two uniformly selected observations improve it only to 0.21442. When the native candidate-law family deliberately excludes truth, the table’s error is 0.18743 versus 0.25 for the misspecified dependency learner. This is a descriptive constructed-method result: the coarser key is sufficient to express legality but sparse lookup evidence does not generalize, while a wrong structured family can fail worse. The same tasks remain solvable by an equally informed direct compiler, so forecast recovery and task execution are separate. Miniature — architecture untested.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -39,6 +42,8 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-transfer | 746,496 | 2,304 |
 | g3-stitch | 15,360 | 640 reused |
 | structural-direct | 72,960 | 5,288 reused |
+| g2-mask-native | 27,648 | 384 reused |
+| g2-mask-transfer | 82,944 | 2,304 reused |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -72,7 +77,8 @@ consumer read only the reader file and completed all 216 requests. [Eight select
 illustrations](ILLUSTRATIONS.md) use separate IDs and physical contexts.
 
 Second-wave verification adds 834,816 rows and 3,170 bounded decision replays.
-Together, 2,556,168 retained rows reconstruct and 36,158 selected decision rows
+The attachment-mask batch adds 110,592 reused-evidence forecast rows and 432
+bounded decision replays. Together, 2,666,760 retained rows reconstruct and 36,590 selected decision rows
 regenerate from extracted frozen sources. Transfer contains 1,286 law configurations
 and 20 unlabeled topologies within the assembly family; those are not architectures.
 Stitch child CPU is included in worker receipts.
@@ -104,18 +110,18 @@ parent and child worker receipts, including the retained failed attempt. It is a
 interim snapshot; active costs continue to grow, and earlier uninstrumented setup
 and verification are disclosed rather than presented as measured worker CPU.
 
-The next admitted comparison strengthens surface forecasting by indexing attachment
-masks and stopping state while ignoring orientation. It reuses every retained native
-and transferred observation at the highest existing task budget: 110,592 forecast
-rows, no new structural units, no original tasks restarted. Cold fitting and forecast
-work remain separate from task construction. Both native truth-included/excluded
-conditions remain, while larger transfer includes truth. Fixed context cues are
-available but unused by this table; decision selection retains its model-controller
-cost and label. The current table has no scientific result before completion.
+The attachment-mask diagnostic reuses every retained native and transferred
+observation at the highest existing task budget: 110,592 forecast rows, no new
+structural units and no original tasks restarted. Cold fitting and forecast work
+remain separate from task construction. Complete independent reconstruction and
+bounded extracted-source replay pass. The sparse table does not replace correct
+dependency learning, although it is less wrong than a deliberately misspecified
+candidate family.
 
-The next structural action question requires a separately admitted label-permuted
-DAG condition removing public topological order, with an equally informed direct
-rival. Relabeling is a context intervention, not another architecture. No final
+The next structural action question is the admitted label-permuted DAG condition
+removing public topological order, with an equally informed direct rival. The plan
+contains 2,304 retained structural contexts, four histories each and 175,104 planned
+rows. Relabeling is a context intervention, not another architecture. No final
 contrast is frozen while that boundary is unresolved. At most two primary contrasts
 may be frozen after discovery,
 with a practical margin, untouched structural sampling and a variance-based sample
