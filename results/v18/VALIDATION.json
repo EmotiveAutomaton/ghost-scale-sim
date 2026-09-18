@@ -1,0 +1,135 @@
+{
+  "schema": "v18.validation.1",
+  "targeted": {
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "receipt": "ADMISSION.json",
+    "scope": "V18 risks and consoleless native launcher; before scientific freeze"
+  },
+  "repository_regression": {
+    "execution_state": "completed",
+    "all_passed": false,
+    "tests": 1916,
+    "passed": 1903,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 11,
+    "expected_failures": 1,
+    "wall_seconds": 579.573,
+    "started_at": "2026-09-18T08:05:34.640596-07:00",
+    "command": "scientific interpreter -B -m pytest -q --junitxml=<local receipt>",
+    "checkout": "isolated checkout at base 0ebac23f51ceeee1fddf1baa91d7a712ea3b9b81 plus admitted V18 source",
+    "junit_sha256": "39211188f91e6eb20be5bb0533c59d77551e2ee8f86fddf207fa05d7acc1ffcd",
+    "local_original_retained": true,
+    "thread_limits": 1,
+    "optional_stitch": {
+      "exercised": true,
+      "installed_or_rebuilt": false,
+      "target": "x86_64-pc-windows-gnullvm/release/compress.exe",
+      "sha256": "4fd644e2bc8f14de10f08b31c982079879d2d3ab181264996cfd547dfd8756c0",
+      "pin_source": "V17 frozen PLAN.external_files",
+      "cache": "isolated local test cache"
+    },
+    "outcomes": {
+      "failures": [
+        {
+          "test": "tests.test_v15_gates::test_committed_verdicts_have_no_failed_gates",
+          "reason": "AssertionError: [\"C11.json: ['positive:the_set_contains_the_truth']\", \"M01.json: ['positive:every_posterior_is_a_normalized_distribution']\"]\nassert not [\"C11.json: ['positive:the_set_contains_the_truth']\", \"M01.json: ['positive:every_posterior_is_a_normalized_distribution']\"]"
+        }
+      ],
+      "skips": [
+        {
+          "test": "tests.test_gates::test_gated_modules_still_have_gates[audit_s2_mixture]",
+          "reason": "module has no manipulation of its own to gate"
+        },
+        {
+          "test": "tests.test_gates::test_gated_modules_still_have_gates[s45_inference_order]",
+          "reason": "module has no manipulation of its own to gate"
+        },
+        {
+          "test": "tests.test_gates::test_no_control_broke[audit_s2_mixture]",
+          "reason": "no gates"
+        },
+        {
+          "test": "tests.test_gates::test_no_control_broke[s45_inference_order]",
+          "reason": "no gates"
+        },
+        {
+          "test": "tests.test_gates::test_no_documented_defect_started_passing[audit_s2_mixture]",
+          "reason": "no gates"
+        },
+        {
+          "test": "tests.test_gates::test_no_documented_defect_started_passing[s45_inference_order]",
+          "reason": "no gates"
+        },
+        {
+          "test": "tests.test_gates::test_documented_failures_are_explained[audit_s2_mixture]",
+          "reason": "no gates"
+        },
+        {
+          "test": "tests.test_gates::test_documented_failures_are_explained[s45_inference_order]",
+          "reason": "no gates"
+        },
+        {
+          "test": "tests.test_nulls_v2::test_N11_gate_on_full_scale_e8_output",
+          "reason": "results/e8_*.csv hold a V2-seeding run (restore_v2_e8.py), not V3's E8 under C1; run run_all_v3.py stage 3 to produce the gated output"
+        },
+        {
+          "test": "tests.test_nulls_v3::test_N15_verified_in_the_csv",
+          "reason": "this E8 run had the encoder channel disabled (n_probes = 0)"
+        },
+        {
+          "test": "tests.test_v15_runtime::test_checkpoints_carry_no_narrative",
+          "reason": "no checkpoints yet"
+        }
+      ],
+      "expected_failures": [
+        {
+          "test": "tests.test_nulls_v3::test_N13_on_the_real_e12_output",
+          "reason": "N13 FAILS ON THE FULL-SCALE E12 RUN, and that failure is THE REPORTED V3 RESULT, not a bug to tune away — see RESULTS_V3.md. The f=0 honest-signal leak does not shrink with per-generation sample size: log|slope| ~ log N gives b = -0.017 (t = -0.28) across a 100x range, against a predicted -1. Per V3 spec §1 C2 the finite-sample diagnosis is therefore wrong, E8 was not run, and it remains unreported. Marked xfail(strict) for exactly the reason V2 marked N11 that way: the failure stays VISIBLE in the suite rather than being deleted or weakened, and if a future change ever makes the leak shrink with data this XPASSes and forces the marker off."
+        }
+      ]
+    },
+    "disposition": "No observed V18 regression. C11/M01 are retained closed V15 instrument failures; not weakened, rerun or reclassified. Skips concern historical data/structural exemptions; no V18 skip.",
+    "limits": "Resident optional packages differ from uv.lock; this is the existing isolated-interpreter environment, not proof that every optional tool installs on every platform."
+  },
+  "repairs_and_setup": [
+    {
+      "issue": "Initial worktree checkout hit four Windows long paths.",
+      "resolution": "Retained incomplete checkout; complete short-path checkout with command-local long-path support."
+    },
+    {
+      "issue": "First targeted admission failed after canonical JSON changed target-stratum enumeration order.",
+      "resolution": "Sorted enumeration before science; subsequent admission and both complete scientific replays pass; original failed rehearsal retained."
+    },
+    {
+      "issue": "Actual failed acquisitions can expose later transfer endpoints.",
+      "resolution": "Pre-run operator clarification retained all trials, counted accidental exposures, and restricted the unseen claim to untrained goals; original specification preserved."
+    },
+    {
+      "issue": "Regression preflight initially compared the installed gnullvm Stitch binary with an older GNU build receipt.",
+      "resolution": "Aborted before executing the binary; verified the matching frozen V17 plan pin and then ran regression."
+    },
+    {
+      "issue": "Parent package working copy had CRLF while frozen source and committed blob used LF.",
+      "resolution": "Retained original bytes locally and restored only line endings to the exact committed bytes; no scientific content change.",
+      "file": "ghostscale/validation/__init__.py",
+      "sha256": "980e6f4dcba1abe457504cd421816fe2b66a1f168567a53430f31e4f6db51222"
+    },
+    {
+      "issue": "Git LF normalization changed the staged bytes of the public CSV and two documentary receipts.",
+      "resolution": "Normalized publication copies before final binding; local originals and replay archive preserved, parsed values unchanged.",
+      "files": [
+        "results/v18/cells_summary.csv",
+        "results/v18/PORTABILITY.json",
+        "results/v18/TIME_ACCOUNT.json"
+      ]
+    }
+  ],
+  "all_frozen_sources_match_main_and_test_checkout": true,
+  "frozen_source_files": 24,
+  "scientific_rows_changed_by_postrun_repairs": 0,
+  "closed_campaigns_restarted": false,
+  "live_environment_synchronized": false
+}

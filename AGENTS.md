@@ -19,6 +19,17 @@ authorship and contribution records retain their original attribution.
 
 ## Current campaign (2026-09-18)
 
+V18's selective-acquisition study completed its finite core and sole budget extension:
+64 constructor configurations, four histories each, 21,504 transfer executions.
+Independent reconstruction and complete extracted-source replay passed. See
+`docs/versions/v18-selective-acquisition/RESULTS.md` and `results/v18/README.md` for
+the final proof/disposition records. The pre-run endpoint clarification retains
+accidental failed exposures: goals are untrained, endpoints not always unseen.
+Do not restart this finite study to occupy its unused planning window or confuse
+discarded engineering rehearsals with science. V18's results are descriptive,
+miniature — architecture untested. Local native ownership and retained setup records
+are under the outer workspace's `.local/v18-selective-acquisition/`.
+
 V1 through V17 are closed. V17's final report is
 `docs/versions/v17-adaptive-appreciation/RESULTS.md`; its documentary disposition
 and proof bindings are in `results/v17/closeout-1/CLOSEOUT.json`. All commissioned

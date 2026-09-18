@@ -1,0 +1,30 @@
+{
+  "schema": "v18.time-account.1",
+  "planning_origin": "2026-09-18T14:00:00Z",
+  "origin_precision": "Conservative hour boundary before first timestamped startup observation; exact first read was not timed.",
+  "first_work_observed_at": "2026-09-18T14:29:18.6536656Z",
+  "admission_cutoff": "2026-09-20T12:00:00Z",
+  "delivery_deadline": "2026-09-20T14:00:00Z",
+  "scientific_started_at": "2026-09-18T15:02:45.993851+00:00",
+  "scientific_finished_at": "2026-09-18T15:03:11.700624+00:00",
+  "scientific_worker_invocations": 2,
+  "scientific_active_wall_seconds": 13.971587200000158,
+  "scientific_worker_cpu_seconds": 6.28125,
+  "scientific_child_compute_cpu_seconds": 0,
+  "scientific_span_wall_seconds": 25.706773,
+  "initial_verification_and_full_replay_wall_seconds": 5.064290599999822,
+  "initial_verification_and_full_replay_cpu_seconds": 4.859375,
+  "extracted_replay_wall_seconds": 5.816217400000369,
+  "extracted_replay_child_worker_cpu_seconds": 5.140625,
+  "gpu_used": false,
+  "worker_cap": 1,
+  "scientific_dependencies": "standard library",
+  "interruption": "planned checkpoint after the first complete block; resume retained its exact bytes; no failed scientific unit",
+  "limits": [
+    "worker times include serialization/bookkeeping; launcher and supervisor overhead is separate and not fully timed",
+    "preparation includes reading, implementation, development checks and a user-decision gap; no fabricated active-time breakdown",
+    "no scientific children; native venv process wrapper and supervisor overhead do not count as model computations",
+    "wider repository regression time is separately recorded in VALIDATION.json",
+    "two-day planning duration is a ceiling, not an occupancy requirement"
+  ]
+}

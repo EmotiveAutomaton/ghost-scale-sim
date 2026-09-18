@@ -14,6 +14,22 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
+## ○ Agent-authored V18 result
+
+Can focused study preserve useful craft, and when does checking before use protect it?
+
+In the four-cell miniature, focused acquisition improves construction when the later
+goal retains the focal routine. With changed requirements, paid checking prevents
+many search failures but consumes resources: at the smaller budget it still loses
+to primitive-only search. The core and permitted extension completed all 21,504
+target executions; independent reconstruction and full replay passed. These are
+descriptive constructed mechanism results, **miniature — architecture untested**.
+
+The [completed study](docs/versions/v18-selective-acquisition/RESULTS.md) and
+[tables, worked cases and complete replay record](results/v18/README.md) retain
+the costs, accidental endpoint exposures and limits. No belief/value learning or
+human selective-trust result is claimed.
+
 ## ○ Agent-authored V17 closeout
 
 Can procedures, concrete memories, recipient models and selective computation improve useful prediction?

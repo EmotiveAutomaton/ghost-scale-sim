@@ -265,6 +265,31 @@ python runners/run_soundingline.py --only T1 T2 T3 T4 T5
    known answer your module should return, that is worth an hour before writing any more of it.
 4. Add it to `GATED` in `tests/test_gates.py`.
 
+## V18: allocation crossed with paid checking
+
+The [V18 commission](versions/v18-selective-acquisition/CODING_PACKAGE.md) reuses the
+unchanged V16 repeated-fragment learner, four-cell executor, exact local inhibition
+and cost-bounded search through a thin serialized adapter. Offered cues, processed
+records, later own targets and evaluator truth have separate interfaces. Shared
+offers retain identical realized actions. Failed feedback cannot contribute an
+eligible repetition, but failed observed endpoints remain in the population under
+the [pre-run clarification](versions/v18-selective-acquisition/PRERUN_CLARIFICATION.md).
+
+Checking consumes the primary search envelope; a separately labeled extra-cost
+diagnostic restores full search. Final execution, acquisition, information queries,
+learning and storage retain separate costs. Primitive search is the paired removal
+diagnostic. Descriptive contrasts average targets then histories within constructor;
+2,000-draw paired constructor bootstraps do not imply confirmation or equivalence.
+The budget extension reuses acquisitions and is admitted by runtime alone.
+
+Immutable eight-constructor blocks bind the source, seed list and stored traces.
+Targeted known answers cover no-information access, real allocation, positive physics,
+failed/empty learning, ties, paid checks, native ownership, corruption and literal
+resume. An independent verifier reimplements execution and exhaustive search before
+reaggregating every cell and contrast. The whole small study, including acquisition,
+is replayed and retained in an executable archive. These are computation/provenance
+checks within one architecture; the result remains **miniature — architecture untested**.
+
 ## V17: local admission and chunked comparisons
 
 V17's [first implementation](versions/v17-adaptive-appreciation/IMPLEMENTATION_PLAN.md)

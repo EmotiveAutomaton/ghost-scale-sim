@@ -16,6 +16,37 @@ For what the model is and where its claims stop, read the README's
 
 ---
 
+## V18: selective acquisition and paid checking
+
+Can focused study preserve useful craft, and when does checking an acquired routine protect later construction from interference?
+
+**Constructed mechanism result:** Focused study improved construction when the later goal retained the focal routine. Under changed requirements, checking prevented many search failures, but its cost left it behind primitive-only search at the smaller budget.
+
+At budget 32, compatible-target success is 59.38% after broad acquisition and
+99.22% after focused acquisition, a 39.84-point gain with a descriptive constructor
+interval of 33.59–46.48 points. Checking adds no compatible-target success. For
+changed targets, unchecked search succeeds on none; checked search achieves 66.02%,
+versus primitive-only search's 83.59%. Giving checked search its full original search
+budget restores 83.59%, exposing the cost of its two primitive checks. At budget 128
+all changed targets succeed, and checking cuts mean repeated primitive work from
+61.29 to 29.30; primitives alone cost 27.30. The success interaction is zero in the
+observed sample, not a formal equivalence result.
+
+The complete study retains 64 configurations, 256 histories and 21,504 target
+executions over two budgets, but only one four-cell architecture and 22 label/order
+configurations. The extension reuses acquisitions. Failed observations can accidentally
+reach later endpoints; they remain in the data under the pre-run clarification and
+do not enter successful repetition learning. Goals are untrained, endpoints not
+necessarily unseen. The capacity-one learner, fixed ordering and exact local check
+bound these **descriptive miniature results — architecture untested**. Safe search
+failure is not an enacted wrong belief or value uptake.
+
+**Method result:** all scientific rows passed independent execution/cost reconstruction,
+reaggregation and full deterministic replay; complete small-study traces and frozen
+source are retained in the replay ZIP. [Completed study](docs/versions/v18-selective-acquisition/RESULTS.md),
+[complete tables, examples and proofs](results/v18/README.md). These checks establish
+computation in this model, not human mechanisms. Historical failures remain unchanged.
+
 ## V17 continuation: useful prediction, costs and reversals
 
 Can reusable procedures, concrete memories, recipient models and selective computation improve useful prediction?

@@ -2,7 +2,10 @@
 
 Everything in `docs/` and what it is for.
 
-Latest closed study: [V17 adaptive appreciation](versions/v17-adaptive-appreciation/RESULTS.md),
+Latest finite study: [V18 selective acquisition](versions/v18-selective-acquisition/RESULTS.md),
+with complete core/extension execution, independent reconstruction and full replay.
+The [V18 result inventory](../results/v18/README.md) separates execution, verification
+and documentary closure. Prior closed study: [V17 adaptive appreciation](versions/v17-adaptive-appreciation/RESULTS.md),
 with three confirmed comparisons, one retained apparatus failure, and final reader/verification products.
 Its original coding package remains filed unchanged in the campaign directory.
 [V16](versions/v16-acquired-craft/RESULTS.md) is complete. The closed V15 handoff

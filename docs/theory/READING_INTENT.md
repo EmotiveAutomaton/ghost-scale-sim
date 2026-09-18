@@ -183,6 +183,7 @@ that stops "depth" being "legibility" renamed. And what a reader takes from deep
 | V16 K02/K05/R05 | Acquired craft adds individual prediction; acquisition attention and enactment supply distinct learning benefits | **SPLIT (run, constructed mechanism)** | K02 misses its prediction bar. K05 training allocation helps in instructed conditions but its four uninstructed comparisons fail the bar. R05 enactment matches observation with equal examples. Execution, prediction and learning are different outcomes. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 K03 | Inhibiting or relearning old craft helps after a purpose change | **QUALIFIED discovery support (run, constructed mechanism)** | Six practical bars hold, ten fail and two remain unresolved across alignment and budgets. At partial alignment/budget 32, inhibition versus continuation gains 86.719 points and relearning gains 100.000. Adaptation can train the exact new purpose; it is not unseen-composition transfer. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V17 A final | Memory and compressed procedures improve construction conditionally | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Episodes beat primitives on familiar combinations at budget 512 (88.34% vs 57.29%), but lose under changed graphic constraints (89.79% vs 94.04%). Actual Stitch learning often yields worse search. Pooled assembly is curtailed by apparatus failure. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
+| V18 | Focused acquisition preserves useful routines and paid checking protects later construction | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | At budget 32, focus raises compatible-target success from 59.38% to 99.22%; checking adds no success there. Changed-target checking raises success from 0% to 66.02%, below primitives at 83.59%; extra search restores that baseline. At budget 128 all changed targets succeed, with checking reducing work. One-slot learning and exact supplied-goal checking do not establish selective trust or value adoption. [V18 completed study](../versions/v18-selective-acquisition/RESULTS.md) |
 
 **What these add up to.** The earlier depth-to-method result remains a property of the
 specified reader, with N21's contaminated estimate and E56's architecture qualification retained.
@@ -200,7 +201,7 @@ observation with equal examples here. The construction results do
 not establish that useful craft carries human values or that an early gate cannot protect them;
 those broader claims still require evidence outside these constructed worlds.
 
-The completed V17 construction surfaces make the boundary sharper: concrete memory can help, and compression alone does not guarantee task benefit. The three confirmed recipient, empirical-prediction and feedback contrasts do not confer confirmation on construction or pooling.
+The completed V17 construction surfaces make the boundary sharper: concrete memory can help, and compression alone does not guarantee task benefit. The three confirmed recipient, empirical-prediction and feedback contrasts do not confer confirmation on construction or pooling. V18 separates acquisition allocation from checking before use: focus helps when its complete routine remains useful; checking rejects an unwanted cell but consumes search resources. Its observed success interaction is zero, without a formal equivalence claim. This four-cell, one-slot learner does not settle whether a richer technique carries aims or values through an early guard.
 
 ## §5. A diet of unlabelled machine content damages the reader twice, separably
 
@@ -251,6 +252,7 @@ objective. Reconstructing the maker is a defence that reads no label.
 | E57 / E57b | Detection substitutes for reading | **REJECTED (run)** | See §2, under adaptation, false accusation peaks at 65% of careful human work, and a stale detector keeps accusing after it stops discriminating. The defence that survives an arms race is the one that reads structure the attacker must *keep* to succeed |
 | H10.4 | Values ride in on process even through a shut gate | **WITHHELD (run)** | The version's most attractive idea. Its test arm damaged a learner on a corpus with no contamination in it, a broken update, not a mechanism. In the human-reader arm the effect is real and under its own pre-registered bar (0.193 vs 0.2). **Not refuted, not established, and the thing most worth building properly** |
 | N45 / N50 | The gate's clean-corpus cost, and drift with nothing to detect | **Reported as failing (run)** | Two of the three failing nulls in the suite belong to this section and stay visible |
+| V18 boundary | Suppressing an acquired routine establishes protection from unwanted belief or value uptake | **NOT TESTED; procedural result only (run, constructed mechanism)** | Checking prunes a whole two-action routine using an exact own-target test. Failures are safe search timeouts; no belief/value update exists. Failed acquisition can expose a later endpoint, so the transfer goal is untrained rather than always unseen. [V18 completed study](../versions/v18-selective-acquisition/RESULTS.md) |
 
 **What these add up to.** The constructive result, and the record's largest self-correction lands
 here rather than in §7 where it started: **the Ghost Scale failed twice as a label makers apply
@@ -259,7 +261,10 @@ purpose to. It needs no adoption, no honesty from anyone, and no detector, which
 the arms-race rows say a durable defence requires. The gap between E56 (method passes any guard,
 100% architectural) and H10.4 (values-on-method, withheld) is the section's live question: the
 defence blocks the *purpose* channel, and whether the part it cannot block carries the part that
-matters is precisely the withheld experiment.
+matters is precisely the withheld experiment. V18 now supplies a narrower executable
+interference comparison, with checking costs and a primitive-removal rival. Because
+it contains no belief or value learning, it neither repairs H10.4 nor turns procedural
+pruning into evidence of protection from indoctrination.
 
 ## §7. The Ghost Scale as a label: where the proposal itself now stands
 
@@ -317,6 +322,7 @@ all, and where the criteria failed at their own jobs.
 | V16 B02 | Adaptive search finds more recurring explanatory case types at matched physical work | **DESCRIPTIVE ONLY (run, method)** | Eight runs per method: adaptive 4.00 versus fixed 3.25 types at 1,356 production primitives per run (10,848 per method total), with 120 verification primitives separately recorded per run. The 18/24 recurrence rule is a descriptive filter; shared follow-up draws are not independent confirmations. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V17 confirmation | Three fixed fresh contrasts retain their practical gains | **SUPPORTED within constructed families (run, method)** | 46,062 constructor draws / 184,248 histories; all three Hoeffding/Holm decisions pass without result-driven extension. Finite support remains: revision has 96 distinct constructions, and other branches one to three structural families. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 | V17 closeout | Arithmetic, retention, selected replay and reader delivery are verified | **SUPPORTED within separate proof scopes (run, method)** | Full-row checks and independent raw reaggregation pass; 102-unit replay, complete local archive reread and extracted reader execution pass. Full raw data remain local. Retained pooled-assembly failure and robustness subtype restrictions remain explicit. [Proofs](../../results/v17/closeout-1/README.md) |
+| V18 verification | The finite study's complete stored traces support its scores and costs | **SUPPORTED within this finite calculation (run, method)** | All 21,504 target executions pass independent physics/search/cost reconstruction and complete replay. The small complete trace/source archive is retained; 64 configurations reduce to 22 label/order configurations and one architecture. Descriptive uncertainty is clustered by constructor; no confirmatory claim. [Proofs](../../results/v18/README.md) |
 
 **What these add up to.** The early audits exposed both architectural results and instruments
 that could not answer their questions. Their zero-forward-test judgment describes that early
@@ -328,7 +334,7 @@ coverage means every rollout was rerun, and no continuous-occupancy claim follow
 invalid inquiry and V15's failed instruments, runtime contract and incomplete regeneration stay
 in the record. Case-search recurrence supplies inspectable examples, not population prevalence.
 
-V17 adds fresh narrow confirmations and independently reconstructed arithmetic. Its retained failure, finite support and restricted robustness mixtures constrain the science even where calculation and replay agree. The archive is local retention; none of these proofs establishes architecture-wide or human validity.
+V17 adds fresh narrow confirmations and independently reconstructed arithmetic. Its retained failure, finite support and restricted robustness mixtures constrain the science even where calculation and replay agree. The archive is local retention; none of these proofs establishes architecture-wide or human validity. V18 is small enough to replay every recorded target execution, adding a complete computational check while retaining one-architecture and descriptive-sampling limits. Its pre-run endpoint clarification preserves accidental failed exposures instead of silently selecting a cleaner population.
 
 ## §9. Service results for the sibling: validated rulers, and instruments killed before use
 
