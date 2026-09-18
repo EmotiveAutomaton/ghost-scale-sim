@@ -1,0 +1,156 @@
+{
+  "all_commissioned_scope_disposed": true,
+  "campaign_complete": true,
+  "checks": {
+    "bounded_replay_passed": true,
+    "complete_local_archive_reread_passed": true,
+    "extracted_public_replay_passed": true,
+    "final_reader_execution_passed": true,
+    "final_reader_private_probe_denied": true,
+    "frozen_scientific_source_unchanged": true,
+    "independent_raw_reaggregation_passed": true,
+    "known_answer_closeout_tests_passed": 4,
+    "local_markdown_targets_checked": 259,
+    "missing_local_targets": [],
+    "original_public_products_byte_identical": true
+  },
+  "closeout_code_sha256": {
+    "runners/finalize_v17_transfer.py": "eba1d52a26e2bac202797e443314ab8e7c4e53d52aba862aee6a100ee4bae5f3",
+    "runners/package_v17_replay.py": "91132933e279fdcf20b007499e268a67ec8b878125f3cf5487792e65c568ba0d",
+    "runners/replay_v17_continuation.py": "6101a460c2d0d5a33a999a8b2c30c59f55a59b0e7c03947c5d5c0924731c296d",
+    "runners/verify_v17_closeout.py": "54e2f1ffb8f2057d0bb8cb2b41b47932f7bf4f7c03960cf3f3b1df68937d73f7",
+    "tests/test_v17_closeout_verification.py": "4abe66cd0bef1758ab106c6996f5dd61a6d28162af3bf81a27402dd0e3d102f8"
+  },
+  "commissioned_executable_scope_complete": false,
+  "counts": {
+    "apparatus_issue_rows": 0,
+    "cases": 8696080,
+    "constructor_units": 1110041,
+    "failed_units": 1,
+    "rows": 115775376,
+    "unit_wall_seconds": 412528.5110000111,
+    "worker_cpu_seconds": 223264.84375
+  },
+  "disposition": "closed_with_retained_apparatus_failure",
+  "document_sha256": {
+    "AGENTS.md": "6d284e8d04bd165a2b30a86313c2be3d2aa91d5a48fc7a30e859cd9d1410490c",
+    "FINDINGS.md": "82a90457cc5d818eb015688e2ba4cacc6ff313191dabe0154bc9725f74ab8f98",
+    "README.md": "51e6ca567fe5674e9253f9009f12e3b2b24e6699f6351eb7d0b5e17a5ef01899",
+    "WALKTHROUGH.md": "42fa66b679f9868b0978ff7612a15adb8ce1469f55aded0825a43e4e09adae1d",
+    "docs/METHODS.md": "0ad18216353e53df769639a455beefc2105aac6ef628988c826833bff0d2b8f3",
+    "docs/README.md": "6aef07eda6174ed94844a6939ffd74eedae7bc1895f486a5188847b9df61ac1f",
+    "docs/exchange/README.md": "c83f786c000555039633796c4aa442852c799336e8ca38ae62cdb9f8dd5a4aff",
+    "docs/exchange/v17-final-response.md": "f9fa05bb4884af17fb0023b1eb265b00d94716f41ab5a0b8d308d598244540ed",
+    "docs/theory/READING_INTENT.md": "3d0bc846176ff886b73a7d2a60fffc123f809de5549527b612d752935872bec0",
+    "docs/versions/v17-adaptive-appreciation/README.md": "5385df96156f29e216d84212451f06ccd41788013610bdf6069efaf60a71dc45",
+    "docs/versions/v17-adaptive-appreciation/RESULTS.md": "0eba4933d8066d8fb1c5ed7125bf5c83331ed4ea4982ec3b0ece1e3fe3b6eff0",
+    "docs/versions/v17-adaptive-appreciation/SPEC_COVERAGE.md": "4a622b289b7bab3230e60d1ab74d38476c2167afc1b9100ad20728c935650591",
+    "docs/versions/v17-adaptive-appreciation/TRANSFER.md": "d0a80dfaf83d8c69d42ff13f8bfacce26696bd9305159ef2d01a66ff1b2e4921",
+    "docs/versions/v17-adaptive-appreciation/TRANSFER_PILOT_2026-09-12.md": "ab6762d0b634aa0f87220ab36c24d5ed4defeebdebb719a4882269ba79b99f0a",
+    "results/README.md": "cc1f77a73d7a7d10550d99e3ebfe839ea609413e463b1ca8ee6fdcabd490bb98",
+    "results/v17/closeout-1/README.md": "369dd6943a1e0e85f2edb3aadd91b9ce2e3b233394a07174ec15ff89611c51d3",
+    "results/v17/continuation-1/README.md": "e7b8b403d32994bac87c0dd9214403a21514e39cf519661b1dcfd0eceb88424b"
+  },
+  "further_sampling_required": false,
+  "git_delivery": "Products are bound by their containing commit. Remote HEAD verification recorded separately after ordinary push; no self-referential commit hash embedded.",
+  "limitations": [
+    "Constructed mechanisms; miniature - architecture untested; no human or real-text conclusion.",
+    "Pooled assembly robustness curtailed by empty donor acquisition; no replacement or retrospective pass.",
+    "One to three structural families per branch; 96 distinct revision constructions; deterministic robustness schedule restricts subtype mixtures.",
+    "Full raw archive remains machine-local; public replay is bounded evaluator material, not full aggregate regeneration.",
+    "Reader illustrations are outcome-selected; three desired blind-reader types absent.",
+    "Trusted consumer guard is not hostile-code sandboxing; worker CPU excludes learner child CPU."
+  ],
+  "metadata_repair": "reader-final.zip changes only README.md and its member manifest; original pilot wording/flags retained in reader.zip and EXPORT.json, superseded by TRANSFER_FINAL.json.",
+  "operational_disposition": "Scientific and notification processes terminal; completed Ghost tasks archived locally and disabled. No Sounding Line process or task changed.",
+  "original_completion_payload_sha256": "1a5cf9021fcf68db5cc10dcbe629454dbc730249e0d3f70a5e5473e9bed07549",
+  "original_completion_sha256": "404b143908e92d2b8d1e7ac468d2b8f7aa27007d2fcda29c89744b96f1480e71",
+  "original_receipts_preserved": true,
+  "original_worker_filing_complete": false,
+  "primary_confirmations": [
+    {
+      "holm_adjusted_p": 1.1649629712102082e-13,
+      "holm_rejected": true,
+      "id": "recipient_shift",
+      "lower_bound": 0.0878785199958183,
+      "mean_gain": 0.12787824919684626,
+      "n": 20472,
+      "p_value": 1.1649629712102082e-13,
+      "variance": 0.019708368770970357
+    },
+    {
+      "holm_adjusted_p": 1.3124283480872627e-29,
+      "holm_rejected": true,
+      "id": "accidental_reversal",
+      "lower_bound": 0.1420459030467111,
+      "mean_gain": 0.18204563224773906,
+      "n": 20472,
+      "p_value": 6.562141740436313e-30,
+      "variance": 0.007090355400686603
+    },
+    {
+      "holm_adjusted_p": 1.158388612516879e-151,
+      "holm_rejected": true,
+      "id": "stale_feedback",
+      "lower_bound": 0.37910929776262975,
+      "mean_gain": 0.4191090269636577,
+      "n": 5118,
+      "p_value": 3.8612953750562635e-152,
+      "variance": 0.05596758592201569
+    }
+  ],
+  "public_artifact_sha256": {
+    "ARCHIVE.json": "5499d1cbb64abca4f4ae0f022fce05e1f7130838afaddce03b43948453328fc0",
+    "BRANCH_SELECTION.json": "c688874d68e53b0df15ac0f17ef937fd8b30959cf4c0c1a5d2749f0c72471386",
+    "CAMPAIGN_INTAKE.json": "daf91beafcc6cddc24704181c6237918c795c0528ba50592983b062e1cff652b",
+    "COMPARISONS.json": "3bdcad04259bc91339f0a4be83b915a4181f94e05743653526bff2e444930ae2",
+    "CONFIRMATION.json": "82fc416dadc8b3e681b7a1927cfc53045c1e4672449c2ff8f914ea524a65e362",
+    "EXPORT.json": "dd3849c12b2ad8c33a11a1b08cece46ad8d698673c2174432869af7162cf62b2",
+    "FINAL_TIME_ACCOUNT.json": "acbc5b8a5d43713b2a78aa70705cd272273eb5eed3b6c143ffa3111b43468466",
+    "ILLUSTRATIONS.json": "731379041152d0fd55171b8d6ed6e97ecdcf79e937de7fb63e844632dcd2357d",
+    "PORTABILITY.json": "d3025809f20e04e15618b228bc79a4e5014f9893c9e1d3939efe707f39ce7658",
+    "PORTABILITY_RECHECK.json": "f10bf92058348db9177a2b9aae42e7f5b8bbe0a28052b497cda14f1702e1946b",
+    "PRIVATE_SELECTION.json": "b8498ad204f51e601004302e7b89063851c254c45f5c5b79f3c393061d34b423",
+    "README.md": "369dd6943a1e0e85f2edb3aadd91b9ce2e3b233394a07174ec15ff89611c51d3",
+    "REAGGREGATION.json": "17fc5d8164a8a2a9d0ada70e263f43911d330eb967634e925f13a56d37e5c5fd",
+    "REPLAY.json": "55a7b25306633b74bee5a628b1c6de57ef4b2fd797133b8256848c7525191e5f",
+    "REPLAY_BUNDLE.json": "6d6c0fdb4a020b39edf40975f8adddc4da9547121937ee64c4f7117269e19b7d",
+    "RUN_COMPLETE.json": "404b143908e92d2b8d1e7ac468d2b8f7aa27007d2fcda29c89744b96f1480e71",
+    "TIME_ACCOUNT.json": "1057af305f0b1bd4661270b21c669d709aadd85233c5d979b04ab25775db53a4",
+    "TRANSFER_FINAL.json": "2553f2f70c9106d50b986227d0a9871b2cf6a9a6dbfdce6f0d9e101265fdb245",
+    "VERIFICATION.json": "cf93d835c02157bfe4593c547f47eb5fe5c9bd73e38037b39621a8a67eaa5f20",
+    "WINDOW.json": "a2a31a994bf6a04634af2a5eb3e4c9a838af4fd29635c55ae54a5af54ad7f2aa",
+    "evaluator.zip": "13806558b4fe351d1856d8aecfc8cf9b4e80c63189bbe9a490baf169480e4d44",
+    "reader-final.zip": "b21bdac2ef2464937807d52acd107b79a8077e1c98e896a9c684f5bba2d22da2",
+    "reader.zip": "984fd65d66bd306f329dea43c061203ffde21ce7232411452d32fb2613646289",
+    "replay-bundle.zip": "8ef8fc39d48d1d9ee97144c664ddd6d6b605013b874336b6a1bd23812ff98b91"
+  },
+  "public_filing_complete": true,
+  "remaining_v17_jobs": [],
+  "retained_failures": [
+    {
+      "at": "2026-09-13T11:52:28.798332+00:00",
+      "branch": "pooled_assembly",
+      "ci": 72451,
+      "id": "1e0d95c4d644f55bc7cb46771d0a372b652aada88ef40314ce3b0b61ac427bd2",
+      "reason": "ValueError: pooled acquisition is empty",
+      "stage": "robustness"
+    }
+  ],
+  "review": "Agent reviewed executed verification/replay source, proof bindings, primary arithmetic, reported cost/effect surfaces, limitations and scientific write-through. Document hashes bind that interpretation; they do not independently prove it.",
+  "schema": "v17.documentary-closeout.1",
+  "scientific_execution_complete": true,
+  "scope_disposition": "docs/versions/v17-adaptive-appreciation/SPEC_COVERAGE.md",
+  "test_bank": {
+    "conclusion": "failure",
+    "final_targeted_verification": "4 known-answer tests passed; actual final reader and extracted public replay commands passed.",
+    "last_full_ci_head": "46dad183682f092c27b15cb672abd3d6ade2ff67",
+    "only_failed_test": "tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates",
+    "retained_instruments": [
+      "V15 C11",
+      "V15 M01"
+    ],
+    "url": "https://github.com/EmotiveAutomaton/ghost-scale-sim/actions/runs/34912790123"
+  },
+  "written_at": "2026-09-18T12:53:09.610922+00:00"
+}

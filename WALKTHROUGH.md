@@ -1,5 +1,17 @@
 # The walkthrough
 
+## ○ Agent-authored V17 update, 18 September 2026
+
+Can memory, recipient inference and selective effort improve prediction? V17's three
+frozen comparisons confirmed useful gains under their constructed conditions, with
+costs and reversals; pooled assembly retains an apparatus failure. The campaign is
+closed, with the [completed study](docs/versions/v17-adaptive-appreciation/RESULTS.md)
+and [verification proofs](results/v17/closeout-1/README.md) filed. Its miniature
+architecture remains untested. V16 and V17 now have narrowly scoped fresh confirmations;
+the early-record forward-test limitation in the historical plates below describes
+those earlier versions. These plates and their curator wording are preserved.
+
+
 **Thirty-one pictures, arranged as one story.** Read in order, they say what a reader does when
 it looks at made work, what machine-made content does to that reading, why lying about origin is
 the sharpest damage, what a steady diet costs, what actually protects, and exactly how much of

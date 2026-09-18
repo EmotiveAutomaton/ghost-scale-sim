@@ -16,7 +16,37 @@ For what the model is and where its claims stop, read the README's
 
 ---
 
-## V17 broad screens and continuation selection
+## V17 continuation: useful prediction, costs and reversals
+
+Can reusable procedures, concrete memories, recipient models and selective computation improve useful prediction?
+
+Within these constructed miniatures, inferred recipient models improved predictions, a cheap empirical predictor beat a misspecified inverse model, and reliable feedback repaired stale-purpose revision. All three frozen fresh comparisons passed their practical bars. Benefits reversed under other conditions: misleading feedback harmed revision, and shared parameters harmed predictions for unfamiliar partners. One pooled-assembly branch ended in an apparatus failure.
+
+The three frozen fresh comparisons use 46,062 constructor draws and 184,248 histories.
+Inferred recipient versus retrieval gains 0.12788 Brier units after recipient change;
+empirical versus misspecified fixed inverse gains 0.18205 after twelve observations;
+reliable feedback versus equal-cost internal reconsideration gains 41.91 percentage
+points of revision success under stale purpose. Conservative simultaneous lower
+bounds are 0.08788, 0.14205 and 37.91 points, above bars of 0.02, 0.02 and five points.
+All pass one Holm family. A Brier score sums squared probability errors; lower is better.
+
+The recipient gain costs about 59 times retrieval's repeated computation. The empirical
+reversal saves computation. Feedback matches the true-goal-informed monitor, while
+misleading feedback drops success from internal reconsideration's 58.38% to 16.62%.
+Descriptive construction, adaptive, observer and partial-sharing results retain their
+costs and evidence tiers in the [completed study](docs/versions/v17-adaptive-appreciation/RESULTS.md).
+
+The continuation retains 8,696,080 histories but only one to three structural families
+per branch and 96 distinct revision constructions. Its deterministic robustness schedule
+restricts some branches to one subtype. Pooled assembly stopped after 4,025 robustness
+constructors; its valid prefix and failed constructor remain separate from the complete
+initial expansion. These are **constructed mechanism results; miniature — architecture untested**.
+Full-row checks, independent aggregate reconstruction, bounded replay, archive proof
+and reader portability have [separate scopes](results/v17/closeout-1/README.md).
+The eighteen-request reader bundle is an outcome-selected illustration, not an unbiased
+evaluation population. V17 is closed with these qualifications.
+
+## V17 broad screens and continuation selection (historical)
 
 Can recipient modeling, concrete memory and selective computation improve useful prediction?
 
@@ -29,8 +59,9 @@ links all retained score/cost surfaces, paired discovery variances and the froze
 follow-up selection. The seven packets contain 1,832 cases and 37,256 rows,
 including discarded pilots. The D provenance amendment adds no independent
 observations. Maker assistance, oracle conditions and finite architectural
-coverage remain explicit. Fresh confirmation has a separate frozen consumer
-and its execution receipt is still required; no human-theory conclusion follows.
+coverage remain explicit. Fresh confirmation used a separate frozen consumer and
+was pending at this screen; the completed continuation above supplies its result.
+No human-theory conclusion follows.
 
 ## V17 initial screen: procedure and memory baselines
 
@@ -46,7 +77,7 @@ This is **miniature — architecture untested**: 64 history draws but 57 distinc
 private constructions per regime, clustered in 16 permutations of one motif
 structure. These are maker-assisted construction tasks, not artifact-only reading
 or confirmation. [The dated V17 report](docs/versions/v17-adaptive-appreciation/PROGRESS_2026-09-12.md)
-retains all budgets, costs, missing outputs, checks and remaining work. V17 remains open.
+retains all budgets, costs, missing outputs, checks and then-remaining work. The completed continuation above supersedes that open status.
 
 ## V16: acquired craft and executable reconstruction
 

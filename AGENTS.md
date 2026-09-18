@@ -17,9 +17,18 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Current campaign (2026-09-12)
+## Current campaign (2026-09-18)
 
-V1 through V16 are closed. Read V17's unchanged coding package and
+V1 through V17 are closed. V17's final report is
+`docs/versions/v17-adaptive-appreciation/RESULTS.md`; its documentary disposition
+and proof bindings are in `results/v17/closeout-1/CLOSEOUT.json`. All commissioned
+families have a disposition, with a retained pooled-assembly apparatus failure:
+the original executable-scope-complete flag remains false. No V17 sampling or
+filing remains queued. Preserve the raw archive, frozen source and original flags.
+The final handoff is `reader-final.zip`; the original reader archive's pilot
+description is retained as superseded metadata. V15's C11/M01 failures remain.
+
+The following launch record is historical. Read V17's unchanged coding package and
 `docs/versions/v17-adaptive-appreciation/CONTINUATION_PLAN_2026-09-12.md`.
 The original implementation-through-analysis soft target remains on record.
 The user's subsequent instruction explicitly commissions the remaining scope
@@ -27,7 +36,7 @@ and a new 120-hour continuously serviced scientific allocation after setup.
 Its WINDOW.json is assigned once; never reset it or restart valid work.
 Preserve V16's frozen confirmations and V15's retained failures.
 
-The current continuation uses module-form `python -m runners.run_v17_continuation`
+The completed continuation used module-form `python -m runners.run_v17_continuation`
 under `python -m runners.watch_v17_continuation`, with one CPU worker, no GPU,
 source-bound admission and an immutable worker checkout. The old completed
 screen queue remains historical. Use matching extracted source for resume;

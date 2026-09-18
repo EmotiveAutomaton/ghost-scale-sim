@@ -1,0 +1,121 @@
+{
+  "all_member_bytes_verified": true,
+  "archive_bytes": 35092019732,
+  "archive_location": "machine-local closeout-review-1/attempt-2/scientific-raw.zip",
+  "archive_sha256": "4bf4e7ef32e3739a6c6b6f1384fadb66a2db4c92ebb9a55eb9485939fe4f6f02",
+  "dependency_scope": "All successful-unit dependency receipts are embedded in records.sqlite; failed-unit cache retained separately inside this archive.",
+  "limitations": "Complete retained continuation science only; prior screens have separate archives. Machine-local archive, not public data availability or off-device backup.",
+  "members": {
+    "ADMISSION.json": {
+      "bytes": 4737,
+      "sha256": "ed591d8061986ec7229e41fffa3a765140856ff3c4f358f71895a635ad6ca599"
+    },
+    "BRANCH_SELECTION.json": {
+      "bytes": 2625,
+      "sha256": "c688874d68e53b0df15ac0f17ef937fd8b30959cf4c0c1a5d2749f0c72471386"
+    },
+    "CONFIRMATION.json": {
+      "bytes": 1893,
+      "sha256": "82fc416dadc8b3e681b7a1927cfc53045c1e4672449c2ff8f914ea524a65e362"
+    },
+    "CONTROLLER.json": {
+      "bytes": 1055154,
+      "sha256": "e03b3ef4e632f7c333bd0bbdb7cd373e9f98db6237d2962954c03e53c25daac1"
+    },
+    "PLAN.json": {
+      "bytes": 15802,
+      "sha256": "d3fbb9abad4a87db421355e534a15c65dee1db499695d7782b24184cff29d4bb"
+    },
+    "RUN_COMPLETE.json": {
+      "bytes": 1590,
+      "sha256": "404b143908e92d2b8d1e7ac468d2b8f7aa27007d2fcda29c89744b96f1480e71"
+    },
+    "SOURCE_SNAPSHOT.json": {
+      "bytes": 5211,
+      "sha256": "74cc07a70ec7235197449930c7174ffcaae0600575afb0aafd5d15e9b03aa00d"
+    },
+    "STATUS.json": {
+      "bytes": 500,
+      "sha256": "68700a31d2f90044a54c852e448326aa2cf9d82a86d1f5ea38e48db81b60454e"
+    },
+    "TEST_REPORT.json": {
+      "bytes": 7211,
+      "sha256": "4fa0cc538a8b82dd17ef197f3eac7ea317b53ef5f285a72a754b2543bed3ac61"
+    },
+    "WINDOW.json": {
+      "bytes": 395,
+      "sha256": "a2a31a994bf6a04634af2a5eb3e4c9a838af4fd29635c55ae54a5af54ad7f2aa"
+    },
+    "closeout/COMPARISONS.json": {
+      "bytes": 524683,
+      "sha256": "3bdcad04259bc91339f0a4be83b915a4181f94e05743653526bff2e444930ae2"
+    },
+    "closeout/ILLUSTRATIONS.json": {
+      "bytes": 511261,
+      "sha256": "731379041152d0fd55171b8d6ed6e97ecdcf79e937de7fb63e844632dcd2357d"
+    },
+    "closeout/RESULTS.md": {
+      "bytes": 2116,
+      "sha256": "f3a0fa195e395b444b152fcf937bb35c933094e2b54d661836d27659af2d7043"
+    },
+    "closeout/TIME_ACCOUNT.json": {
+      "bytes": 923,
+      "sha256": "1057af305f0b1bd4661270b21c669d709aadd85233c5d979b04ab25775db53a4"
+    },
+    "closeout/VERIFICATION.json": {
+      "bytes": 69,
+      "sha256": "cf93d835c02157bfe4593c547f47eb5fe5c9bd73e38037b39621a8a67eaa5f20"
+    },
+    "closeout/reader-selection/COMPLETION.json": {
+      "bytes": 572,
+      "sha256": "e646ed6dcc684bac7ba2ecb6dee303269054deb73c148c52e9a04c32b45a9d96"
+    },
+    "closeout/reader-selection/INDEX.json": {
+      "bytes": 132,
+      "sha256": "c656fd0eff5609075123d0ae7a127e0efdf43c908db7ee82dd8bacf722f6d93a"
+    },
+    "closeout/reader-selection/LOCK.json": {
+      "bytes": 4534,
+      "sha256": "02d27c35d3ff71ee153a9f81c00e7b92f78d3f8c22aa432f07084b81570178c3"
+    },
+    "closeout/reader-selection/selected_points.jsonl": {
+      "bytes": 198570,
+      "sha256": "eb6e4562ef25d08d733084ecbf0fd9658dceba8c58e9dddaf0f1419694715714"
+    },
+    "closeout/transfer/EXPORT.json": {
+      "bytes": 425,
+      "sha256": "dd3849c12b2ad8c33a11a1b08cece46ad8d698673c2174432869af7162cf62b2"
+    },
+    "closeout/transfer/PORTABILITY.json": {
+      "bytes": 377,
+      "sha256": "d3025809f20e04e15618b228bc79a4e5014f9893c9e1d3939efe707f39ce7658"
+    },
+    "closeout/transfer/PRIVATE_SELECTION.json": {
+      "bytes": 614,
+      "sha256": "b8498ad204f51e601004302e7b89063851c254c45f5c5b79f3c393061d34b423"
+    },
+    "closeout/transfer/evaluator.zip": {
+      "bytes": 5773,
+      "sha256": "13806558b4fe351d1856d8aecfc8cf9b4e80c63189bbe9a490baf169480e4d44"
+    },
+    "closeout/transfer/reader.zip": {
+      "bytes": 32810,
+      "sha256": "984fd65d66bd306f329dea43c061203ffde21ce7232411452d32fb2613646289"
+    },
+    "failed-unit-cache.zip": {
+      "bytes": 40510,
+      "sha256": "869b84956ef1e042fe8cc0b57ab051cde101623b1b94851ce10a30bc2a6a2377"
+    },
+    "records.sqlite": {
+      "bytes": 35089481728,
+      "sha256": "973c5d290a8686a5c23041229ec0b84ee3e7c1b0193dd5b5d93de77c10df6a99"
+    },
+    "source.zip": {
+      "bytes": 112197,
+      "sha256": "8f5b31addda877cf31cfd13501be00ad8a8954a428d6ce18d24a360d9fdb893e"
+    }
+  },
+  "original_source_bytes_rechecked": true,
+  "passed": true,
+  "schema": "v17.complete-raw-archive.1"
+}

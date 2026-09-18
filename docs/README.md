@@ -2,8 +2,9 @@
 
 Everything in `docs/` and what it is for.
 
-Current work: [V17 adaptive appreciation](versions/v17-adaptive-appreciation/README.md),
-with its original coding package filed in the campaign directory at intake.
+Latest closed study: [V17 adaptive appreciation](versions/v17-adaptive-appreciation/RESULTS.md),
+with three confirmed comparisons, one retained apparatus failure, and final reader/verification products.
+Its original coding package remains filed unchanged in the campaign directory.
 [V16](versions/v16-acquired-craft/RESULTS.md) is complete. The closed V15 handoff
 has been filed in [its handoff folder](versions/v15-boundary-map/handoff/README.md).
 

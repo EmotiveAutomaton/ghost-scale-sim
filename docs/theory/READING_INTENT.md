@@ -57,6 +57,7 @@ is now the best-established thing in the record.
 | E33 | A reader can know a maker better than the maker knows itself | **SUPPORTED (run), scoped** | The margin grows as the self-account degrades; the reader is told how unreliable the report is. The self-blindness half splits: the mark on the work **exists and no reader in this model can read it**: readings differ in the fourth decimal |
 | E43 | Practice removes the maker's own reasons from report | **SUPPORTED (run)** | Compression is what makes a decision unavailable to its own maker, while the reader is unaffected. (lit READ: the expertise literature states this directly: automaticity costs experts the ability to account for their actions) |
 | V16 P01–P03 | Useful execution identifies original history or adds individual prediction beyond a matched direct reader | **QUALIFIED; prediction bar not met (run, constructed mechanism)** | Reconstruction executes, but can differ from the original; a selected successful alternative leaves 137 compatible routes. P02 query and P03 evidence-dose prediction bars fail; the direct same-evidence table matches. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V17 E | Finite maker models improve withheld-choice forecasts under declared evidence tiers | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Four native families benefit differently from collections and process evidence; construction collections add cost without changing forecasts here. Useful prediction is neither historical uniqueness nor necessity versus all equally informed bounded direct readers. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 
 **What these add up to.** The early necessity claim about confident invention was withdrawn;
 the surviving label-response and sustained-attention findings remain scoped to their original
@@ -66,6 +67,8 @@ direct prediction comparators that match the maker reader. That does not retract
 version's ablation, but it prevents extending its necessity claim to these new targets. Purpose,
 method, usable competence and history remain separate questions. The self-first prior's local
 advantages and failures are recorded in §§11–13; none establishes a result about people.
+
+V17 adds useful finite-maker forecasts under declared evidence tiers while preserving V16's history/representation distinction. More evidence can help, but no universal latent-representation advantage follows.
 
 ## §2. The wall (familiar words, nobody home) is a distinct failure, and the reader keeps paying
 
@@ -174,17 +177,18 @@ that stops "depth" being "legibility" renamed. And what a reader takes from deep
 | E49 | Artfulness is density: hierarchy per unit of observable extent | **SUPPORTED (run)** | What lets a readymade be dense rather than empty. (lit READ: compression-based complexity tracks human judgement; the bimodality prediction is untested anywhere) |
 | E50 | Grabbing attention and keeping it are one decision | **REJECTED (run), two decisions** | Shock art and slop are different objects. (lit: capture-by-salience and sustained expert attention separate, and expertise moves only the second) |
 | E43 / E33 | Practice hides the maker's reasons from the maker, not from the work | **SUPPORTED (run)** | See §1, the mark exists on the object and is unreadable to any reader in this model; only measuring the object directly could tell the three sources apart |
-| V17 broad | Recipient models, concrete memory and adaptive computation improve useful prediction | **QUALIFIED descriptive screens (run, constructed mechanism; miniature — architecture untested)** | The screens identify several useful follow-ups: recipient inference improves predictions at substantial cost, some adaptive methods struggle with misleading evidence, and Stitch's compressed procedures often cost more search than simpler methods. Seven original packets, 1,832 cases / 37,256 rows including pilots; D trace amendment adds no observations. Assistance and finite-family limits retained; three fresh comparisons separately frozen, not yet confirmed. [Continuation assessment](../versions/v17-adaptive-appreciation/CONTINUATION_PLAN_2026-09-12.md) |
+| V17 broad | Recipient models, concrete memory and adaptive computation improve useful prediction | **QUALIFIED historical screens (run, constructed mechanism; miniature — architecture untested)** | Seven original packets, 1,832 cases / 37,256 rows including pilots; D trace amendment adds no observations. Followed by three exact fresh confirmations in the completed continuation; other surfaces remain descriptive. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 | V17 A initial | Procedure or episodic memory improves bounded construction | **QUALIFIED descriptive screen (run, constructed mechanism; miniature — architecture untested)** | Episodic adaptation minus primitive search gains 39.06 points [26.56, 51.56] on familiar combinations at budget 512; on new combinations all solve and memory costs more. 57 distinct private constructions per regime, within 16 permutations of one motif structure. Maker training and goal supplied; no artifact-only or confirmation claim. [Initial V17 report](../versions/v17-adaptive-appreciation/PROGRESS_2026-09-12.md) |
 | V16 K01/K04 | Acquired fragments improve bounded construction | **SUPPORTED at the frozen intermediate budget; confirmed (run, constructed mechanism)** | At budget 32, personal versus pooled craft gains 50.000 percentage points in 2,816 fresh constructor packets; motifs versus generic options gain 99.964 points in 1,408. Conservative lower bounds 46.274 and 98.267 exceed the 5-point bars; one Holm family. Low/high-budget discovery boundaries remain separate. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 K02/K05/R05 | Acquired craft adds individual prediction; acquisition attention and enactment supply distinct learning benefits | **SPLIT (run, constructed mechanism)** | K02 misses its prediction bar. K05 training allocation helps in instructed conditions but its four uninstructed comparisons fail the bar. R05 enactment matches observation with equal examples. Execution, prediction and learning are different outcomes. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 K03 | Inhibiting or relearning old craft helps after a purpose change | **QUALIFIED discovery support (run, constructed mechanism)** | Six practical bars hold, ten fail and two remain unresolved across alignment and budgets. At partial alignment/budget 32, inhibition versus continuation gains 86.719 points and relearning gains 100.000. Adaptation can train the exact new purpose; it is not unseen-composition transfer. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V17 A final | Memory and compressed procedures improve construction conditionally | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Episodes beat primitives on familiar combinations at budget 512 (88.34% vs 57.29%), but lose under changed graphic constraints (89.79% vs 94.04%). Actual Stitch learning often yields worse search. Pooled assembly is curtailed by apparatus failure. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 
 **What these add up to.** The earlier depth-to-method result remains a property of the
 specified reader, with N21's contaminated estimate and E56's architecture qualification retained.
 V17's broader screens make recipient-model cost and misleading evidence explicit
 boundaries for follow-up; compressed procedures do not guarantee task benefit.
-These are descriptive miniature results, with fresh confirmation still separate.
+The construction surfaces remain descriptive; the completed continuation confirms only its three separately frozen primaries.
 V17's first narrow screen makes episodic memory a serious construction rival and
 also records its cost reversal on new combinations. That miniature does not
 establish structural generalization or observer inference. V16 makes acquired
@@ -195,6 +199,8 @@ that adaptation may train the exact new target. Enactment does not add learning 
 observation with equal examples here. The construction results do
 not establish that useful craft carries human values or that an early gate cannot protect them;
 those broader claims still require evidence outside these constructed worlds.
+
+The completed V17 construction surfaces make the boundary sharper: concrete memory can help, and compression alone does not guarantee task benefit. The three confirmed recipient, empirical-prediction and feedback contrasts do not confer confirmation on construction or pooling.
 
 ## §5. A diet of unlabelled machine content damages the reader twice, separably
 
@@ -309,6 +315,8 @@ all, and where the criteria failed at their own jobs.
 | V16 B03/B04 | Frozen claims reproduce on untouched constructor/history lineages | **SUPPORTED for three exact primaries (run, method)** | Claims, margins, power and namespaces froze before 4,864 fresh histories in 4,544 independent constructor packets; all three passed one Holm family without replacement. Discovery secondaries are not confirmed by association. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 B04/X01–X08 | Retention, recalculation, replay and reporting are independently established | **SUPPORTED within the separate proof scopes (run, method)** | Global independent calculation joins, full current raw coverage, 196 replay checks over 168 distinct cases and document byte/review bindings are distinct receipts. The invalid inquiry, interruptions and legacy V15 failures remain visible. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 B02 | Adaptive search finds more recurring explanatory case types at matched physical work | **DESCRIPTIVE ONLY (run, method)** | Eight runs per method: adaptive 4.00 versus fixed 3.25 types at 1,356 production primitives per run (10,848 per method total), with 120 verification primitives separately recorded per run. The 18/24 recurrence rule is a descriptive filter; shared follow-up draws are not independent confirmations. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V17 confirmation | Three fixed fresh contrasts retain their practical gains | **SUPPORTED within constructed families (run, method)** | 46,062 constructor draws / 184,248 histories; all three Hoeffding/Holm decisions pass without result-driven extension. Finite support remains: revision has 96 distinct constructions, and other branches one to three structural families. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
+| V17 closeout | Arithmetic, retention, selected replay and reader delivery are verified | **SUPPORTED within separate proof scopes (run, method)** | Full-row checks and independent raw reaggregation pass; 102-unit replay, complete local archive reread and extracted reader execution pass. Full raw data remain local. Retained pooled-assembly failure and robustness subtype restrictions remain explicit. [Proofs](../../results/v17/closeout-1/README.md) |
 
 **What these add up to.** The early audits exposed both architectural results and instruments
 that could not answer their questions. Their zero-forward-test judgment describes that early
@@ -319,6 +327,8 @@ interpretation rather than independently judging its truth. Neither selected rep
 coverage means every rollout was rerun, and no continuous-occupancy claim follows. The original
 invalid inquiry and V15's failed instruments, runtime contract and incomplete regeneration stay
 in the record. Case-search recurrence supplies inspectable examples, not population prevalence.
+
+V17 adds fresh narrow confirmations and independently reconstructed arithmetic. Its retained failure, finite support and restricted robustness mixtures constrain the science even where calculation and replay agree. The archive is local retention; none of these proofs establishes architecture-wide or human validity.
 
 ## §9. Service results for the sibling: validated rulers, and instruments killed before use
 
@@ -430,6 +440,8 @@ the untouched confirmation lineage: twenty-one held, B04 did not (`results/v12/C
 | V16 O01–O04 | Separating actual, known and considered opportunities improves inference | **QUALIFIED (run, constructed mechanism)** | O03 beats the fixed-menu reader in all three conditions; its budget-only rival leaves two held bars and one unresolved. O01/O04 retain mixed probe and belief results. Supplied-state critic performance is a resource benchmark, not learned-reader admission. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 S01–S05 | Self-model repair has an advantage over complete error monitoring | **Practical equivalence confirmed for S02; other comparisons scoped (run, constructed mechanism)** | Across 320 fresh constructors and intact/partial histories, all four helpful-minus-harmful repair differences are zero; simultaneous bound 2.543 points is inside the 5-point margin. Other self/return-to-work gains depend on evidence and baseline. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 M01–M04 | Separating source, selector, audience and role helps the corresponding target | **QUALIFIED (run, constructed mechanism)** | Source and role records help some targets; audience evidence helps audience success without historical process evidence. Same-information direct comparators match; release prediction stays unresolved. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V17 D | Reliable feedback helps revision under stale purpose | **SUPPORTED for the frozen contrast (run, constructed mechanism; miniature — architecture untested)** | Feedback gains 41.91 points over equal-cost internal reconsideration, but matches the true-goal-informed monitor. Misleading feedback reverses descriptively (16.62% vs 58.38% success). [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
+| V17 F | Partial sharing reduces interference from unfamiliar partners | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Unfamiliar-partner Brier: shared 1.1698, separate 0.2280, partial 0.2582; partial sharing mitigates interference without beating separation. Personal execution is measured separately. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 
 **What these add up to.** Starting from oneself helped nearby makers in the earlier model
 and hurt elsewhere; fair rematching narrowed that advantage (§12). V16 further separates
@@ -440,6 +452,8 @@ self-model privilege. Source, audience, selector and role evidence answer differ
 and equally informed direct comparators match their latent-maker counterparts. The earlier
 absence of useful probes was a boundary of V12's construction: §§12–13 and V16 include paid
 observations, with benefits that depend on the task and comparator.
+
+V17 confirms the value of informative outside feedback against its matched-cost internal rival, without establishing a self-narrative advantage over the informed monitor. Partial sharing makes prediction interference measurable while keeping personal execution separate. V16's formal equivalence result keeps its original scope.
 
 ## §12. Common ground: what self buys beyond an equally local prior, and what else a bounded reader can use
 
@@ -483,6 +497,7 @@ every card is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger i
 | Q01/Q02/Q04/Q12 | The present PyMDP reader adds useful action selection | **REJECTED (run); closed by the trunk's rule** | agreement 61% (bar 80%) and 70% on fresh families (bar 70%); commissions inert (+0.02 against +0.43 for a free look) |
 | X01–X20 | The flights are artifacts of cues, labels, family, solver, order, vocabulary or an adaptive maker | **REJECTED (run) for those attacks; three narrowings and three deaths named** | all five survive X01, X02, X16–X20; nested narrows under fair rematching; vigilance under false biography and regime switch; cost inference dies under misspecification; the hand dies where it should (shuffled policy, equifinal history) |
 | V16 K02/P03/P04 | A latent-maker representation adds prediction beyond an equally informed direct comparator | **Practical advantage not established (run, constructed mechanism)** | Direct tables match maker predictions to numerical tolerance. P04's family mixture beats misspecified softmax in five non-softmax families, but matches the direct mixture in all seven. Graphic/assembly mechanisms are independently configured, not fitted-parameter transfer. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V17 B/C | Recipient inference helps after recipient change; cheap empirical prediction can beat a misspecified inverse model | **SUPPORTED for two frozen contrasts (run, constructed mechanism; miniature — architecture untested)** | Gains 0.12788 and 0.18205 Brier units; both pass in the three-comparison Holm family. Recipient inference costs about 59 times retrieval online; empirical prediction saves computation. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 
 **What these add up to.** V13's near-self advantage survived its locality-matched rival,
 but its common-substrate and correction instruments failed; the allowed V14 repairs subsequently
@@ -493,6 +508,8 @@ family model's gain over misspecified softmax is shared by a direct mixture. Inf
 model specification explain those comparisons without establishing an extra representation
 benefit. Testing a bounded implementation with matched information and actual computational
 cost under a changed production family is the next discriminator, not a new V16 expansion.
+
+V17 shows that information and model fit can earn practical gains at very different costs. Its recipient and misspecification confirmations do not establish a universal benefit of a special representation or replace a fully matched bounded direct comparison.
 
 ## §13. The routed reader: what jointness, reliability, practice, communicated affect and curiosity each actually bought
 
@@ -521,6 +538,7 @@ is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger is its `BRID
 | X01–X12 | The five flights are artifacts of cues, labels, families, matched skill, reversal or duplication | **REJECTED for those attacks (run)** | no shortcut flagged anywhere; the two thin margins narrow under surface ablation and hidden reversal, the three strong results do not move |
 | V16 R01–R05 | Recognition, identification, learning and inquiry value select one best policy | **SPLIT (run, constructed mechanism)** | Recognition-guided practice beats surprise on learning but not expected information gain in R01. Rankings vary with ecology and objective. At saturation the value-of-learning utility gain is saved cost, not additional competence. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V16 V01–V03 | Longitudinal opportunity and probe records identify persistent profiles and improve prediction | **QUALIFIED; many intervals unresolved (run, constructed mechanism)** | Chronology beats weaker context/stability models in some regimes; direct chronological/all-evidence rivals match. Four of 36 all-probe versus no-probe prediction bars hold; targeted probes have no held practical advantage. The profiles are constructed, not human values. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
+| V17 C | Adaptive inference does not dominate across noise and misleading cues | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Confidence refinement beats fixed inverse under noise (Brier 0.0232 vs 0.1705), but loses under a misleading old cue (1.0271 vs 0.1660). Controller development remains charged. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 
 **What these add up to.** V14's factoring results distinguish plan, goal, preference,
 practice, communicated affect and evidence routes; its three V13 repairs found no rescued claim.
@@ -530,6 +548,8 @@ is not learning. Longitudinal records sometimes improve constructed-profile pred
 many practical bars remain unresolved and matched direct readers erase a representation-specific
 claim. Neither a persistent synthetic profile nor a successful probe is a measurement of human
 values. Pursuit, warrant and the next eligible measurement therefore remain separate decisions.
+
+V17 reinforces the separation of accuracy, calibration, learning and cost: a confidence rule succeeds in one noise construction and fails after cue reversal. Cheap repeated controller use does not erase its cold development cost.
 
 ## The maintenance rule
 

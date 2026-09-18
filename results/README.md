@@ -1,5 +1,7 @@
 # What is in here
 
+Latest campaign: [V17 final products](v17/closeout-1/README.md). Closed with a retained pooled-assembly apparatus failure; verification proofs, comparisons and separate reader/evaluator material are filed. Complete raw retention is machine-local, with a public archive proof.
+
 Committed summary CSVs and JSON verdict files: everything a number in the README or a chart in
 `figures/` depends on. Raw per-reader CSVs are **not** committed, because `e4_raw.csv` alone is
 16 MB. Regenerate the V1-family raws with `python run_all.py` (E1-E6); later versions have their own runners under `runners/`.

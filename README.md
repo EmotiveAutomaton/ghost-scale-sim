@@ -14,16 +14,22 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
-## ○ Agent-authored V17 implementation update
+## ○ Agent-authored V17 closeout
 
-V17's initial screens and independent checks are complete. The
-[continuation plan](docs/versions/v17-adaptive-appreciation/CONTINUATION_PLAN_2026-09-12.md)
-and [scope matrix](docs/versions/v17-adaptive-appreciation/SPEC_COVERAGE.md) record
-the remaining implementations, targeted experiment tree and three frozen fresh
-comparisons. A new five-day execution allocation is authorized, with native
-supervision and agent wakes only on state transitions. Execution and final
-delivery remain distinct; consult the [current queue](results/v17/QUEUE.json)
-and [launch record](results/v17/continuation-1/README.md). V16 stays closed.
+Can procedures, concrete memories, recipient models and selective computation improve useful prediction?
+
+V17 is closed with three confirmed constructed-world comparisons and one retained
+pooled-assembly apparatus failure. Recipient inference, cheap empirical prediction
+under model misspecification, and reliable feedback each helped in their frozen
+comparison; costs and reversals limit their scope. These are miniature results,
+with architecture untested and no human-theory conclusion.
+
+The [completed study](docs/versions/v17-adaptive-appreciation/RESULTS.md),
+[scope disposition](docs/versions/v17-adaptive-appreciation/SPEC_COVERAGE.md),
+[verification and archive proofs](results/v17/closeout-1/README.md), and
+[final reader handoff](docs/versions/v17-adaptive-appreciation/TRANSFER.md)
+complete the record. The [queue](results/v17/QUEUE.json) has no remaining V17 jobs.
+The failed branch remains failed; V15 and V16 records are unchanged.
 
 ## ○ Agent-authored V16 update
 

@@ -2,7 +2,8 @@
   "amendments": [
     "broad-screen-1/d-AMENDMENT.json"
   ],
-  "campaign_complete": false,
+  "campaign_complete": true,
+  "commissioned_executable_scope_complete": false,
   "completed_packets": [
     "a-pilot-1",
     "a-screen-1",
@@ -16,11 +17,12 @@
   ],
   "continuation": {
     "admission": "continuation-1/ADMISSION.json",
+    "completion": "closeout-1/RUN_COMPLETE.json",
+    "launch": "continuation-1/LAUNCH.json",
     "new_execution_hours": 120,
     "plan": "continuation-1/PLAN.json",
     "source": "continuation-1/source.zip",
-    "state": "running",
-    "launch": "continuation-1/LAUNCH.json",
+    "state": "closed_with_retained_apparatus_failure",
     "window": {
       "ends_at": "2026-09-18T01:09:19.138188+00:00",
       "original_implementation_start": "2026-09-12T18:16:41.531700+00:00",
@@ -30,78 +32,60 @@
       "timing_amendment": "User commissioned a new 120-hour continuously serviced execution allocation after setup; earlier clocks and completed work are preserved."
     }
   },
-  "current_phase": "robustness sampling; all 24 expansions and three fixed confirmation runs executed",
-  "fresh_evaluation": "All three fixed samples executed completely; final scientific interpretation and public write-through still owed.",
+  "current_phase": "closed with retained apparatus failure",
+  "final_closeout": "closeout-1/CLOSEOUT.json",
+  "fresh_evaluation": "All three fixed samples independently verified and confirmed; final analysis and public products filed.",
+  "historical_operational_check": {
+    "apparatus_issue_rows": 0,
+    "completed_confirmation_runs": 3,
+    "completed_expansion_branches": 24,
+    "constructor_units": 111376,
+    "controller_hash_matches": true,
+    "failed_units": 0,
+    "health_report": "../../docs/versions/v17-adaptive-appreciation/HEALTH_2026-09-13.md",
+    "history_cases": 706760,
+    "notification_pid": 454700,
+    "notification_repair": "notification-repair-1/REPAIR.json",
+    "observed_at": "2026-09-13T10:43:30.966002+00:00",
+    "prediction_rows": 10175024,
+    "source_hashes_match": true,
+    "worker_launches": 1
+  },
   "items": [
     {
       "family": "A",
-      "state": "scheduled_in_native_continuation",
-      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
+      "next": null,
+      "state": "closed_with_retained_apparatus_failure"
     },
     {
       "family": "B",
-      "state": "scheduled_in_native_continuation",
-      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
+      "next": null,
+      "state": "closed_executed_and_reported"
     },
     {
       "family": "C",
-      "state": "scheduled_in_native_continuation",
-      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
+      "next": null,
+      "state": "closed_executed_and_reported"
     },
     {
       "family": "D",
-      "state": "scheduled_in_native_continuation",
-      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
+      "next": null,
+      "state": "closed_executed_and_reported"
     },
     {
       "family": "E",
-      "state": "scheduled_in_native_continuation",
-      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
+      "next": null,
+      "state": "closed_executed_and_reported"
     },
     {
       "family": "F",
-      "state": "scheduled_in_native_continuation",
-      "next": "balanced expansion, fixed primaries where selected, robustness and closeout"
+      "next": null,
+      "state": "closed_executed_and_reported"
     }
   ],
-  "recorded_at": "2026-09-13T10:55:20.465753+00:00",
-  "running_jobs": [
-    {
-      "program": "v17-continuation-1",
-      "worker_pid": 277512,
-      "supervisor_pid": 504436,
-      "launch_state": "verified healthy",
-      "expected_outputs": [
-        "records.sqlite",
-        "BRANCH_SELECTION.json",
-        "CONFIRMATION.json",
-        "RUN_COMPLETE.json",
-        "closeout/RESULTS.md",
-        "closeout/COMPARISONS.json",
-        "closeout/ILLUSTRATIONS.json",
-        "closeout/TIME_ACCOUNT.json",
-        "closeout/transfer/reader.zip",
-        "closeout/transfer/evaluator.zip",
-        "closeout/transfer/PORTABILITY.json"
-      ]
-    }
-  ],
+  "recorded_at": "2026-09-18T12:37:20.837693+00:00",
+  "remaining_jobs": [],
+  "running_jobs": [],
   "schema": "v17.queue.1",
-  "watchdog": "Original native process supervisor preserved; separate repaired notification-only service invokes an independent agent session only on new scientific transitions.",
-  "operational_check": {
-    "observed_at": "2026-09-13T10:43:30.966002+00:00",
-    "constructor_units": 111376,
-    "history_cases": 706760,
-    "prediction_rows": 10175024,
-    "failed_units": 0,
-    "apparatus_issue_rows": 0,
-    "worker_launches": 1,
-    "source_hashes_match": true,
-    "controller_hash_matches": true,
-    "completed_expansion_branches": 24,
-    "completed_confirmation_runs": 3,
-    "notification_repair": "notification-repair-1/REPAIR.json",
-    "notification_pid": 454700,
-    "health_report": "../../docs/versions/v17-adaptive-appreciation/HEALTH_2026-09-13.md"
-  }
+  "watchdog": "V17 scientific and notification services are terminal; no further V17 agent wake or sampling is required."
 }

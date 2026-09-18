@@ -409,3 +409,37 @@ the lowest case hash within observed advantages, reversals and failures, marking
 absent types explicitly. An extracted reader consumer must reproduce its reference
 forecasts and refuse private-file access. This checks a trusted consumer boundary,
 not a hostile-code sandbox. See the V17 continuation plan for the full contract.
+
+## V17 final reconstruction, archival proof and replay
+
+The final independent verifier, `runners/verify_v17_closeout.py`, imports no scientific
+scorer. It reconstructs raw unit statistics, denominators, unique-construction counts,
+means, between-constructor variances, descriptive intervals and costs. It separately
+recomputes constructor-paired Hoeffding bounds and Holm decisions. Four known-answer
+checks cover missing-output denominators, corruption rejection, pairing/direction,
+fixed bounds and family correction. All 1,110,041 units and 735 method/target surfaces
+passed. This uses stored row scores, independently checked by the original full-row
+proper-score/physics verifier; these are distinct proofs.
+
+The verifier checks admitted source bytes, metadata, checkpoint/event digests and
+embedded dependency payloads. It creates a complete local scientific ZIP, rereads
+every member and compares the original source bytes again. Its first attempt omitted
+the source archive's embedded manifest from the allowed inventory and refused it;
+the corrected inventory validates that manifest and all admitted members. Both attempts
+remain on record. An archive is local retention, not public raw-data availability or
+an off-device backup.
+
+`runners/replay_v17_continuation.py` uses extracted frozen source and the admitted
+native learner to regenerate the first and last committed unit of all 51 phase/branch
+surfaces. All 102 units / 792 cases / 11,480 rows matched exactly, with new learner
+caches and repeated controller training. It is bounded deterministic replay, not
+independent reimplementation or full regeneration. The public bounded replay archive
+contains evaluator truth and must not be supplied as blind reader evidence.
+
+Final outcome-selected reader requests are distinct from the early pilot selection.
+The original exporter reused its pilot wording; `runners/finalize_v17_transfer.py`
+creates a documentation-only successor archive, validates member hashes and actually
+executes its extracted consumer. All eighteen forecasts match exactly and its private
+read probe is denied. Original archives and receipts remain unchanged. This guard
+protects a fixed trusted consumer, not arbitrary hostile code. The completed
+[study and proof inventory](../results/v17/closeout-1/README.md) records all limits.
