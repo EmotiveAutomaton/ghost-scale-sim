@@ -1,5 +1,9 @@
 # V18: selective acquisition and unwanted carryover
 
+Original V18 is closed. Its separately commissioned [V18.1 continuation](continuation/README.md)
+has its own unchanged specification, clock, [interim results](continuation/RESULTS.md)
+and [reader bridge](continuation/BRIDGE.md). The original design below remains historical.
+
 Accepted bounded commission: [CODING_PACKAGE.md](CODING_PACKAGE.md), copied without
 alteration from the 18 September handoff. V17 remains closed.
 

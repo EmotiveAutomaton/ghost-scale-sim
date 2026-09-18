@@ -2,6 +2,13 @@
 
 Everything in `docs/` and what it is for.
 
+Active continuation: [V18.1 acquisition, dependencies and recoverable process](versions/v18-selective-acquisition/continuation/README.md).
+Its [unchanged specification](versions/v18-selective-acquisition/continuation/CODING_PACKAGE.md),
+[interim results](versions/v18-selective-acquisition/continuation/RESULTS.md), and
+[blind history-reading bridge](versions/v18-selective-acquisition/continuation/BRIDGE.md)
+are filed together inside the V18 directory. Completed checks and running experiments
+remain distinct; this continuation is not closed.
+
 Latest finite study: [V18 selective acquisition](versions/v18-selective-acquisition/RESULTS.md),
 with complete core/extension execution, independent reconstruction and full replay.
 The [V18 result inventory](../results/v18/README.md) separates execution, verification

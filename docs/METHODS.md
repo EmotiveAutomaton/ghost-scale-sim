@@ -468,3 +468,31 @@ executes its extracted consumer. All eighteen forecasts match exactly and its pr
 read probe is denied. Original archives and receipts remain unchanged. This guard
 protects a fixed trusted consumer, not arbitrary hostile code. The completed
 [study and proof inventory](../results/v17/closeout-1/README.md) records all limits.
+
+
+## V18.1 physical verification and support accounting
+
+The new continuation adapters keep known/supplied physical models separate from
+evaluator truth and charge checking, search, ordering, retrieval and final execution
+within the main online envelope. Original V18 enumeration retains its separately
+named primitive-budget convention. Training/learning, storage and worker/child CPU
+are separate quantities. Native3 legal-state/action enumeration validates the new
+assembly adapter; independent dictionary/set physics checks larger programs.
+
+Full raw reconstruction verifies reported outcomes and matched evidence. Bounded,
+outcome-independent case selections are then replayed from fresh extracted source
+to check reader decisions and work counts. These proof scopes are distinct. Every
+proof implementation is retained by hash. Law/context identity comes from physical
+fields, not constructor or draw IDs: the first G4 export's 18 draw clusters were found
+to contain 16 physical contexts, corrected without changing its 72 blind cases or scores.
+No duplicate draw is promoted into independent structural evidence. See the
+[interim record](versions/v18-selective-acquisition/continuation/RESULTS.md).
+
+An independent breadth-first checker verifies native target reachability and
+whether a route without temporary worsening exists. Larger targets are checked
+against privately retained constructive paths or legal query-menu demonstrations.
+These target checks are separate from replaying whichever program a reader chose.
+The direct structural compiler makes another model assumption testable: current
+assembly labels expose topological order. A charged reset-and-rebuild plan can
+use that public order without identifying the precise dependency graph. Its paired
+comparison is admitted before any final representation contrast is selected.

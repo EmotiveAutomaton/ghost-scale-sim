@@ -18,6 +18,25 @@ For what the model is and where its claims stop, read the README's
 
 ## V18: selective acquisition and paid checking
 
+V18.1 is now a separate active continuation. Its original-case diagnostic reproduces
+all 28 V18 success rates. With two stored routines and paid checking, compatible-target
+success at budget 32 is 98.046875% broad and 100% focused, reducing the focus gap to
+1.953125 points; unchecked success is unchanged. **Exposed constructed mechanism
+diagnostic, miniature — architecture untested.** This reproduces the handoff's
+already exposed capacity result, not fresh confirmation. The continuation remains active.
+
+Can a safety check reject a necessary construction step? In the 48 native required-detour contexts with the correct law and a total-work cap of 2,048 operations, local mismatch checking achieves 0% success. Ungated primitive search achieves 100%; checking an intact demonstrated routine by its endpoint also achieves 100%, but endpoint checking of learned fragments reaches 66.67%. Four-step lookahead restores 100% for fragments at substantially greater work. This is a constructed mechanism result: the local rule rejects useful temporary worsening, while an equally informed cheap planner remains a strong rival.
+
+Which observation repairs missing dependency knowledge? Across the 384 sampled native acquisition contexts, when truth is in the candidate family and the total-work cap is 8,192 operations, the dependency learner already completes every task without another observation. Two fixed support queries improve its mean squared probability error on held-out action legality from 0.04193 to zero and recover every dependency. Decision-based queries leave error at 0.02294, uniform queries at 0.02216; the fixed rule is the stronger simple rival here. This is a constructed dependency-learning result, not evidence of value uptake or historical mind reading. Prediction improvement and task completion are distinct outcomes.
+
+Does the focus advantage survive an equally informed common planner? At a total-work cap of 128 operations, every common-search cell in the balanced four-cell comparison reaches 100% success, including primitive-only search, all eight fixed action orders and paid goal ordering. Focus still changes acquisition and work: on compatible targets with the canonical order, one unchecked fragment averages 79.33 operations after broad study and 64.21 after focused study; primitives use 79. This constructed mechanism result locates the large original success difference in memory/search constraints. It does not show that acquisition allocation is irrelevant.
+
+Do learned fragments outperform simpler stored episodes as dependencies grow? In the seven-part screen at 128 storage tokens and 8,192 online operations, stored episodes succeed on 93.20% of tasks, primitives on 90.82%, learned fragments on 89.42%, and fragments with exception episodes on 88.54%, averaged over the twelve balanced topology/task-condition strata. Episodes are the strongest native representation rival here. All graphic methods reach 100%, with primitives using the least work. These are descriptive constructed assembly/graphic results, not fresh confirmation or evidence about human intentions.
+
+Can available evidence distinguish different histories that reach the same endpoint? In the frozen 72-case known-family benchmark, endpoint evidence leaves all four strategies equally probable. Two indexed process observations identify the true strategy in the positive and misleading-context conditions, while the deliberately uninformative process remains ambiguous. The direct template predictor matches inverse reconstruction and the exact finite-history ceiling. The 18 sampling clusters contain 16 distinct physical contexts; duplicate draw IDs are not independent structure. This is a constructed information limit, not an advantage for a particular inference algorithm or recovery of beliefs, values or an unsupplied goal.
+
+[V18.1 progress](docs/versions/v18-selective-acquisition/continuation/PROGRESS.md).
+
 Can focused study preserve useful craft, and when does checking an acquired routine protect later construction from interference?
 
 **Constructed mechanism result:** Focused study improved construction when the later goal retained the focal routine. Under changed requirements, checking prevented many search failures, but its cost left it behind primitive-only search at the smaller budget.

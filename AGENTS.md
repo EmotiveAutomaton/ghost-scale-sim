@@ -19,6 +19,20 @@ authorship and contribution records retain their original attribution.
 
 ## Current campaign (2026-09-18)
 
+V18.1 is the active, separately commissioned continuation. Read
+`docs/versions/v18-selective-acquisition/continuation/CODING_PACKAGE.md` and its
+README before acting. All five branches G0–G4 are commissioned; completing a first
+batch does not close the program. Its new immutable clock, pinned branch sources,
+raw blocks and native ownership are under outer `.local/v18-1/`. Public branch
+dispositions are in `results/v18/continuation/BRANCH_LEDGER.json`. Preserve original
+V18 below. Use source-frozen revisions, one scientific worker and event-only wakes;
+do not edit an imported live checkout or reset campaign clocks. On this workstation,
+read outer `.local/v18-1/HANDOFF.md` for the current operating handoff. Before an
+active editing turn, inspect outer `.local/v18-1/notifications-2/DELIVERY.json` if present
+and keep its `ARMED` file absent while this operator is active. Preserve an already
+live event review; do not create a second owner. The native event watcher never
+owns or restarts scientific workers.
+
 V18's selective-acquisition study completed its finite core and sole budget extension:
 64 constructor configurations, four histories each, 21,504 transfer executions.
 Independent reconstruction and complete extracted-source replay passed. See
