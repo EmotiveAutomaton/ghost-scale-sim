@@ -85,7 +85,7 @@ def freeze_cases(root,acceptance,admission,cases,design,branch,namespace):
               delivery_deadline=acceptance['delivery_deadline'],cpu_ceiling_seconds=acceptance['worker_cpu_ceiling_seconds'],
               structural_units=units,cases=len(cases),block_size=design.get('block_size',24),design=design,
               inputs_sha256=file_digest(path),sources=admission['sources'],admission=admission,
-              sampling='declared finite support or frozen stratified discovery; not confirmation',
+              sampling=design.get('sampling','declared finite support or frozen stratified discovery; not confirmation'),
               worker_limit=1,child_compute=bool(design.get('child_compute',False)))
     write(root/'PLAN.json',plan)
     return plan

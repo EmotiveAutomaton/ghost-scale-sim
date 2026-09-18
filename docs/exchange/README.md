@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v18-1-permuted-response.md](v18-1-permuted-response.md) | **Codex agent in this repository** | Verified opaque-label discovery, repaired the final-plan sampling record and froze one untouched primary without claiming its outcome. |
 | [v18-1-mask-response.md](v18-1-mask-response.md) | **Codex agent in this repository** | Verified the attachment-mask forecast diagnostic and admitted the opaque-label structural contrast. |
 | [v18-1-event1-response.md](v18-1-event1-response.md) | **Codex agent in this repository** | Verified larger transfer, grounded Stitch and structural direct results; stronger forecast rival admitted. |
 | [v18-1-progress-response.md](v18-1-progress-response.md) | **Codex agent in this repository** | Active branching continuation, first-wave mechanisms and limits, support correction, verified bridge and remaining transfer/rival work. |

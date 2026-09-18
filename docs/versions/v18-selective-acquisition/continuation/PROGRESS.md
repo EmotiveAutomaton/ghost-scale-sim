@@ -4,13 +4,18 @@ Larger query transfer, grounded Stitch and the structural direct rival are now
 verified and written through the scientific record. See [current results](RESULTS.md)
 and the [branch ledger](../../../../results/v18/continuation/BRANCH_LEDGER.json).
 
-The direct rival solves every paired task with public structural information. The
-attachment-mask legality forecaster is now complete and verified on retained
-evidence: it does not replace correct dependency learning, but it fails more safely
-than a deliberately misspecified structured family. No final contrast is frozen.
-The next admitted G2 condition permutes part labels to remove public topological
-order while preserving the same evidence and candidate laws for all rivals.
+The direct rival solves every numbered-label paired task with public structural
+information. The attachment-mask forecaster does not replace correct dependency
+learning, although it fails more safely than a deliberately misspecified structured
+family. Opaque-label discovery is also complete and verified: two fixed support
+observations still help seven-part tasks, but less than under numbered labels, while
+the equally informed direct compiler remains perfect at 14.8% higher work.
 
-The completed mask queue and four-hour checkpoint are handled in this review.
+One final primary is frozen and active on 1,152 untouched seven-part contexts. It
+tests whether two fixed support observations improve context-paired task success by
+more than five percentage points. The 0.025 one-sided bound reserves familywise 0.05
+for at most two primaries. No outcome is filed yet; the campaign remains active.
+
+The completed opaque-label queue event is handled in this review.
 Event-only delivery continues at completion, failure, disappearance and the unchanged
 4/12/24/36-hour checkpoints; healthy computation does not trigger model polling.

@@ -31,6 +31,20 @@ def test_generic_frozen_case_resume_and_costs(tmp_path):
     with pytest.raises(ValueError,match='cases mismatch'):runtime.run(root,None)
 
 
+def test_frozen_case_plan_can_name_precommitted_untouched_sampling(tmp_path):
+    context=next(c for c in g1.contexts() if c['stratum']=='required-detour')
+    case=g1.make_case(context,0,'correct','complete')
+    acceptance=dict(started_at=datetime.now(timezone.utc).isoformat(),
+        report_start=(datetime.now(timezone.utc)+timedelta(hours=1)).isoformat(),
+        delivery_deadline=(datetime.now(timezone.utc)+timedelta(hours=2)).isoformat(),
+        worker_cpu_ceiling_seconds=144000,new_law_context_unit_ceiling=200000)
+    admission=dict(passed=True,sources={p:file_digest(runtime.REPO/p) for p in runtime.source_files()},scope='engineering fixture')
+    sampling='frozen untouched structural sampling; primary direction, margin, allocation and analysis precommitted'
+    plan=runtime.freeze_cases(tmp_path/'run',acceptance,admission,[case],
+        {'budgets':[128],'block_size':1,'sampling':sampling},'g1-native','test-confirmation')
+    assert plan['sampling']==sampling
+
+
 def test_g2_methods_receive_identical_paid_evidence_and_fixed_forecasts():
     case=g2.make_cases('v18.1-g2-development',histories=1)[0]
     rows=g2.evaluate(case,budgets=(512,),query_counts=(1,))

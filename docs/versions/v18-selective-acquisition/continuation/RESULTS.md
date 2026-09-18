@@ -1,9 +1,9 @@
 # V18.1 interim results: transfer and stronger rivals
 
 The continuation is active. Five core branches now execute; larger query transfer,
-the existing Stitch rival, the structural direct comparator and the attachment-mask
-forecast diagnostic are now verified. The opaque-label intervention is admitted next.
-No final confirmation contrast has been frozen and this is not campaign closure.
+the existing Stitch rival, the structural direct comparator, the attachment-mask
+forecast diagnostic and opaque-label discovery are verified. One untouched final
+contrast is frozen and active; it has no filed outcome and this is not campaign closure.
 These purpose-built comparisons remain **miniature — architecture untested**.
 
 Does the focus advantage survive an equally informed common planner? At a total-work cap of 128 operations, every common-search cell in the balanced four-cell comparison reaches 100% success, including primitive-only search, all eight fixed action orders and paid goal ordering. Focus still changes acquisition and work: on compatible targets with the canonical order, one unchecked fragment averages 79.33 operations after broad study and 64.21 after focused study; primitives use 79. This constructed mechanism result locates the large original success difference in memory/search constraints. It does not show that acquisition allocation is irrelevant.
@@ -23,6 +23,8 @@ Does learned compression improve construction over simpler rivals? At 128 storag
 Do these tasks require learning the dependency graph? The direct planner solves every one of its 72,960 paired comparisons using public structural information. For seven-part dependency-transfer tasks it uses 155 operations without another observation; for seven-part representation tasks it uses 79. Public topological part numbering and shared attachment defaults permit a safe reset and rebuild. This constructed-mechanism result shows that success on these tasks does not establish a need to infer the graph, although predicting arbitrary action legality remains a separate learning problem.
 
 Can a model-free legality table replace explicit dependency learning, or at least fail more safely when the law family is wrong? In the seven-part transfer comparison with two fixed support observations, the orientation-invariant attachment table has mean squared probability error 0.22172 versus 0.00403 for the dependency learner, while using 408.45 forecast operations versus 146.44 and covering only 11.31% of held-out action probes. Fixed support queries do not improve the table because they reveal parent relations rather than action transitions; two uniformly selected observations improve it only to 0.21442. When the native candidate-law family deliberately excludes truth, the table’s error is 0.18743 versus 0.25 for the misspecified dependency learner. This is a descriptive constructed-method result: the coarser key is sufficient to express legality but sparse lookup evidence does not generalize, while a wrong structured family can fail worse. The same tasks remain solvable by an equally informed direct compiler, so forecast recovery and task execution are separate. Miniature — architecture untested.
+
+Does useful support evidence survive when part labels stop revealing dependency order? Yes, descriptively, but the effect weakens and it still does not make learned structure necessary for acting. In seven-part tasks at 32,768 operations, two fixed support observations raise task success from 78.49% to 92.69%—a 14.19-point gain—and reduce mean squared held-out legality probability error from 0.04678 to 0.00580. With numbered parts the same comparison was 78.78% to 95.07%. The equally informed direct compiler still solves 100%; deriving a safe order from the public candidate-law union costs 177.97 operations instead of 155, a 14.8% increase. This is a descriptive constructed-mechanism result over deterministic relabelings of retained structures, miniature—architecture untested. It does not establish human learning or a need for dependency inference.
 
 ## Execution and verification
 
@@ -44,6 +46,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | structural-direct | 72,960 | 5,288 reused |
 | g2-mask-native | 27,648 | 384 reused |
 | g2-mask-transfer | 82,944 | 2,304 reused |
+| g2-permuted | 175,104 | 2,304 relabeled reused contexts |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -78,12 +81,14 @@ illustrations](ILLUSTRATIONS.md) use separate IDs and physical contexts.
 
 Second-wave verification adds 834,816 rows and 3,170 bounded decision replays.
 The attachment-mask batch adds 110,592 reused-evidence forecast rows and 432
-bounded decision replays. Together, 2,666,760 retained rows reconstruct and 36,590 selected decision rows
-regenerate from extracted frozen sources. Transfer contains 1,286 law configurations
-and 20 unlabeled topologies within the assembly family; those are not architectures.
-Stitch child CPU is included in worker receipts.
-The current integration suite passes 46 checks, with five additional focused checks
-after the block-cache addition. No failures or skips remain in that admission.
+bounded decision replays. Opaque-label discovery adds 175,104 rows and 684
+bounded decision replays. Together, 2,841,864 retained rows reconstruct and 37,274
+selected decision rows regenerate from extracted frozen sources. The opaque-label
+batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
+the assembly family; deterministic relabeling does not make these new architectures
+or untouched structural support. Stitch child CPU is included in worker receipts.
+The current isolated suite passes 49 checks without failures or skips, including the
+pinned Stitch binary and the final-plan sampling contract.
 
 ## Current frontier
 
@@ -118,14 +123,31 @@ bounded extracted-source replay pass. The sparse table does not replace correct
 dependency learning, although it is less wrong than a deliberately misspecified
 candidate family.
 
-The next structural action question is the admitted label-permuted DAG condition
-removing public topological order, with an equally informed direct rival. The plan
-contains 2,304 retained structural contexts, four histories each and 175,104 planned
-rows. Relabeling is a context intervention, not another architecture. No final
-contrast is frozen while that boundary is unresolved. At most two primary contrasts
-may be frozen after discovery,
-with a practical margin, untouched structural sampling and a variance-based sample
-allocation. Saturated four-cell and graphic cells should be retired, not enlarged
-through repeated equivalent seeds. Larger searches remain bounded by the original
-new campaign clock, 40 worker CPU hours including children and 200,000 new context
-units. Report preparation starts 20 September 13:00 UTC; delivery is 15:00 UTC.
+Opaque-label discovery removes public topological numbering while giving every
+method the same candidate laws. Fixed observations still help seven-part tasks, but
+less than under numbered labels; the direct compiler remains perfect and pays 14.8%
+more work to derive a safe union order. The five-part fixed-observation gain is only
+0.37 points. Forecast recovery and task execution therefore remain distinct.
+
+One final primary contrast is frozen before untouched execution: two fixed support
+observations versus no added observation on 1,152 fresh seven-part contexts, with
+four histories nested in each. The primary effect is the context-paired task-success
+difference; its practical margin is five percentage points. A one-sided empirical
+Bernstein lower bound uses 0.025 error probability, reserving familywise 0.05 for at
+most two final primaries. The held-out forecast error and direct compiler are
+secondary boundaries and cannot replace the primary. There is no result-dependent
+extension, replacement or new seed; an incomplete packet remains incomplete.
+
+The freeze apparatus initially hardcoded discovery sampling language and could not
+truthfully record untouched sampling. That was a real record-layer failure, not a
+scientific result. The runtime now copies the declared sampling contract, a regression
+test requires it, and the repaired isolated suite passed before the packet was frozen.
+The independently inspected first block also passed physics, evidence, cost, privacy
+and all-candidate direct-route checks. The active run has no reported outcome yet.
+
+At most one further primary may be frozen. Saturated four-cell and graphic cells
+remain retired. All commissioned G0–G4 branches remain active or retain a completed
+disposition; useful work after this final contrast is not precluded. The original
+campaign clock, 40 worker CPU hours including children and 200,000 new context units
+remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is
+15:00 UTC.
