@@ -2,8 +2,9 @@
 
 The continuation is active. Five core branches now execute; larger query transfer,
 the existing Stitch rival, the structural direct comparator, the attachment-mask
-forecast diagnostic and opaque-label discovery are verified. One untouched final
-contrast is frozen and active; it has no filed outcome and this is not campaign closure.
+forecast diagnostic and opaque-label discovery are verified. The first untouched
+final primary completed and held; useful commissioned work remains, so this is not
+campaign closure.
 These purpose-built comparisons remain **miniature — architecture untested**.
 
 Does the focus advantage survive an equally informed common planner? At a total-work cap of 128 operations, every common-search cell in the balanced four-cell comparison reaches 100% success, including primitive-only search, all eight fixed action orders and paid goal ordering. Focus still changes acquisition and work: on compatible targets with the canonical order, one unchecked fragment averages 79.33 operations after broad study and 64.21 after focused study; primitives use 79. This constructed mechanism result locates the large original success difference in memory/search constraints. It does not show that acquisition allocation is irrelevant.
@@ -26,6 +27,8 @@ Can a model-free legality table replace explicit dependency learning, or at leas
 
 Does useful support evidence survive when part labels stop revealing dependency order? Yes, descriptively, but the effect weakens and it still does not make learned structure necessary for acting. In seven-part tasks at 32,768 operations, two fixed support observations raise task success from 78.49% to 92.69%—a 14.19-point gain—and reduce mean squared held-out legality probability error from 0.04678 to 0.00580. With numbered parts the same comparison was 78.78% to 95.07%. The equally informed direct compiler still solves 100%; deriving a safe order from the public candidate-law union costs 177.97 operations instead of 155, a 14.8% increase. This is a descriptive constructed-mechanism result over deterministic relabelings of retained structures, miniature—architecture untested. It does not establish human learning or a need for dependency inference.
 
+Does useful support evidence produce a practically meaningful task benefit when dependency order is hidden and structures are new? Yes in this frozen constructed comparison. Across 1,152 untouched seven-part contexts with four histories nested in each, two fixed support observations raise task success from 79.93% to 93.08%, a 13.15-point context-paired gain. The precommitted one-sided empirical-Bernstein lower bound—an uncertainty-adjusted minimum for a bounded paired mean—is 8.82 points at error probability 0.025, exceeding the five-point practical margin. Held-out legality probability error falls from 0.04602 to 0.00611, but the equally informed direct compiler still succeeds on 100% of tasks at 177.94 online operations. The result confirms a fresh constructed observation benefit; it does not show that learned dependency structure is necessary for action, and it remains miniature—architecture untested with no human-learning claim.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -47,6 +50,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-mask-native | 27,648 | 384 reused |
 | g2-mask-transfer | 82,944 | 2,304 reused |
 | g2-permuted | 175,104 | 2,304 relabeled reused contexts |
+| g2-permuted-final | 87,552 | 1,152 untouched contexts |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -82,7 +86,8 @@ illustrations](ILLUSTRATIONS.md) use separate IDs and physical contexts.
 Second-wave verification adds 834,816 rows and 3,170 bounded decision replays.
 The attachment-mask batch adds 110,592 reused-evidence forecast rows and 432
 bounded decision replays. Opaque-label discovery adds 175,104 rows and 684
-bounded decision replays. Together, 2,841,864 retained rows reconstruct and 37,274
+bounded decision replays. The first frozen primary adds 87,552 rows and 342 replays.
+Together, 2,929,416 retained rows reconstruct and 37,616
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
@@ -129,23 +134,25 @@ less than under numbered labels; the direct compiler remains perfect and pays 14
 more work to derive a safe union order. The five-part fixed-observation gain is only
 0.37 points. Forecast recovery and task execution therefore remain distinct.
 
-One final primary contrast is frozen before untouched execution: two fixed support
+The first final primary was frozen before untouched execution: two fixed support
 observations versus no added observation on 1,152 fresh seven-part contexts, with
-four histories nested in each. The primary effect is the context-paired task-success
-difference; its practical margin is five percentage points. A one-sided empirical
-Bernstein lower bound uses 0.025 error probability, reserving familywise 0.05 for at
-most two final primaries. The held-out forecast error and direct compiler are
-secondary boundaries and cannot replace the primary. There is no result-dependent
-extension, replacement or new seed; an incomplete packet remains incomplete.
+four histories nested in each. Its 13.15-point context-paired success gain has a
+precommitted one-sided empirical-Bernstein lower bound of 8.82 points at 0.025 error
+probability, exceeding the five-point practical margin. The held-out forecast error
+and perfect direct compiler remain secondary boundaries and did not replace the
+primary. No result-dependent extension, replacement or new seed occurred.
 
 The freeze apparatus initially hardcoded discovery sampling language and could not
 truthfully record untouched sampling. That was a real record-layer failure, not a
 scientific result. The runtime now copies the declared sampling contract, a regression
 test requires it, and the repaired isolated suite passed before the packet was frozen.
 The independently inspected first block also passed physics, evidence, cost, privacy
-and all-candidate direct-route checks. The active run has no reported outcome yet.
+and all-candidate direct-route checks. Complete reconstruction and bounded extracted-
+source replay then passed before the frozen analysis was applied.
 
-At most one further primary may be frozen. Saturated four-cell and graphic cells
+At most one further primary may be frozen. Before considering it, the next discovery
+contrast tests a public candidate-law family whose union has no single safe dependency
+order, retaining equally informed primitive and direct rivals. Saturated four-cell and graphic cells
 remain retired. All commissioned G0–G4 branches remain active or retain a completed
 disposition; useful work after this final contrast is not precluded. The original
 campaign clock, 40 worker CPU hours including children and 200,000 new context units

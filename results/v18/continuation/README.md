@@ -21,8 +21,10 @@ verified rows to 2,556,168 and bounded replay rows to 36,158. `MASK_BATCH.json`
 binds another 110,592 reused-evidence forecast rows and 432 replay rows, bringing
 the active-campaign totals to 2,666,760 and 36,590 respectively. `PERMUTED_BATCH.json`
 binds 175,104 opaque-label discovery rows and 684 replay rows, bringing the totals
-to 2,841,864 and 37,274. Relabeled retained contexts are not new architecture or
-untouched structural support.
+to 2,841,864 and 37,274. `FINAL_PRIMARY_BATCH.json` binds 87,552 rows on 1,152
+untouched contexts and 342 replay rows, bringing the active totals to 2,929,416 and
+37,616. The first frozen primary held; the campaign remains active. Relabeled retained
+contexts are not new architecture, while the final packet excludes discovery units.
 
 `VALIDATION.json` records 49 passing isolated checks without skips, including the
 existing pinned Stitch binary and the untouched-sampling contract for the first
@@ -35,5 +37,9 @@ is an interim parent/child account with its unmeasured setup limits explicit.
 `structural-direct/COMPARISONS.json` records the completed direct rival.
 The native and transferred attachment-mask plans, comparisons, reconstruction and
 bounded replay are complete. `g2-permuted/` now contains the completed comparisons,
-full reconstruction and bounded replay. `g2-permuted-final/` binds one frozen active
-primary on 1,152 untouched seven-part contexts; it contains no final outcome yet.
+full reconstruction and bounded replay. `g2-permuted-final/` binds one frozen
+primary on 1,152 untouched seven-part contexts, its held disposition, complete
+reconstruction and bounded replay. `ACCOUNTING_REPAIR.final-primary.json` retains
+the established conservative unit-identifier convention after the filing refresh
+briefly deduplicated reused branch identifiers; science and CPU totals did not change.
+At most one further primary may be frozen.

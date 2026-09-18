@@ -511,3 +511,18 @@ The equally informed direct compiler derives a safe order from the union of thos
 public candidates, charges the checks and selections, and refuses a cyclic union.
 Relabelings of retained structures are context interventions, not new architectures
 or untouched confirmation support.
+
+The first final packet fixes 64 previously unused seven-part contexts in each of 18
+topology, presentation and donor strata, with four histories nested in each context.
+Its primary is the within-context success-fraction difference between two fixed support
+observations and none. Direction, a five-point practical margin, error probability
+0.025 and the one-sided empirical-Bernstein formula were frozen before generation.
+Complete reconstruction precedes scoring; a separate fresh-source replay checks one
+outcome-independently selected case per stratum. Forecast error and direct compilation
+are secondary boundaries and cannot replace the primary.
+
+Campaign unit accounting retains the previously filed conservative identifier count
+when a later refresh would deduplicate identifiers shared by reused branch plans. The
+final-primary filing caught and corrected such a decrease before commit. Scientific
+outputs and CPU sums were unchanged; support claims continue to distinguish reused
+identifiers, deterministic relabelings and untouched structural contexts.
