@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 D: Bounded explanation revision (19 September 2026)
+
+When does revising an explanation improve prediction? When the supplied decision rule was wrong, selecting a replacement after eight observations reduced future logarithmic loss from 3.582 to 0.623; selecting at the initial cue instead gave 2.948. But when the original family was correct, late revision worsened loss from 0.613 to 0.692. These descriptive constructed-method results show a benefit from evidence-informed revision and a cost from unnecessary or premature commitment. Averaging over the candidate families was a strong rival; no unique benefit of committing to one explanation, general open-world repair, or human mechanism is established.
+
+[Evidence and limitations](docs/exchange/v18-3-D-response.md).
+
 ## V18.3 C: Corroboration and source dependence (19 September 2026)
 
 When do repeated reports become misleading corroboration? With two underlying sources, six reports per source and a shared error, treating all reports as independent produced logarithmic loss 3.509 and assigned over 95% probability to the wrong answer in 21.88% of networks. A reader allowing uncertain source groups and shared error reduced loss to 0.643 and had no such initial false-confidence cases; after two noisy independent corrections, its rate was 3.13%. This is descriptive evidence about constructed provenance mechanisms and finite inference methods. Dependence modeling helps in this construction; it does not make uncertain provenance or correction infallible.
