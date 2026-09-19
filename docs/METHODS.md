@@ -554,6 +554,19 @@ query, is retained. Selector, action and combined receipts are all recorded. Thi
 descriptive decomposition of the existing result, not equal-total-work evidence, a new
 primary or a result-dependent extension of F2.
 
+The fresh cyclic target screen fixes two independent reciprocal target-relevant cycles
+in each public four-law candidate family before outcomes. Its low-cost selector may use
+only the changed public target parts and candidate parent relations: it greedily chooses
+a parent query that maximally partitions the remaining public candidates, with stable
+public tie-breaking. One query must leave two laws and two must isolate one. The historical
+late-label fixed pair is retained as a designed placebo that cannot separate any of the
+four laws. Dependency learning, an equally informed conditioned-direct compiler and
+primitive candidate-set search receive the same observations and separate acquisition
+from action work. The packet samples 192 fresh seven-part contexts across fork, chain
+and grouped topologies, nests four histories within each, reconstructs all rows from the
+frozen source and performs outcome-independent extracted-source replay. This is a
+descriptive screen, not a third final contrast; it does not test action/routine evidence.
+
 Campaign unit accounting retains the previously filed conservative identifier count
 when a later refresh would deduplicate identifiers shared by reused branch plans. The
 final-primary filing caught and corrected such a decrease before commit. Scientific

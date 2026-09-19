@@ -5,6 +5,7 @@ the existing Stitch rival, the structural direct comparator, the attachment-mask
 forecast diagnostic and opaque-label discovery are verified. Both untouched final
 primaries completed and held; useful commissioned work remains, so this is not
 campaign closure. Fresh cyclic-candidate-union discovery is also verified.
+The fresh two-target query screen is verified as descriptive evidence.
 These purpose-built comparisons remain **miniature — architecture untested**.
 
 Does the focus advantage survive an equally informed common planner? At a total-work cap of 128 operations, every common-search cell in the balanced four-cell comparison reaches 100% success, including primitive-only search, all eight fixed action orders and paid goal ordering. Focus still changes acquisition and work: on compatible targets with the canonical order, one unchecked fragment averages 79.33 operations after broad study and 64.21 after focused study; primitives use 79. This constructed mechanism result locates the large original success difference in memory/search constraints. It does not show that acquisition allocation is irrelevant.
@@ -35,6 +36,8 @@ Does a fixed diagnostic outperform a decision-selected query when choosing the q
 
 Was the decision-selected query losing because choosing it consumed the action budget, or because the query itself was weak? Both, with evidence quality the larger remaining boundary in this exposed diagnostic. Reusing the 384 already scored F2 contexts, moving selection into a separate recorded envelope raises dependency-learner success from 22.66% to 33.59% and reduces held-out legality probability error from 0.08428 to 0.05696. The known-law ceiling rises from 59.64% to 100%, establishing a real budget-cost effect. But the cached decision query isolates the true law in only 30.73% of contexts and leaves dependency success 66.41 points below the fixed diagnostic's 100%; conditioned-direct reaches 32.03% and primitive candidate-set search 30.73%. The selector originally completes online in 67.97% of contexts and requires 23,155.28 operations on average, with a maximum of 78,824 when allowed to finish. This is a descriptive constructed query-selection result on exposed contexts—no new support or primary—miniature—architecture untested, with no human-learning claim.
 
+Can a cheap query rule tied only to changed public target parts repair a harder two-dependency task? Yes descriptively in this constructed screen. Across 192 fresh seven-part contexts with four nested histories, two target-aware parent queries isolate the true law and give both dependency learning and the equally informed direct compiler 100% task success. One target-aware query always leaves two laws and both methods at 0%; the historical two-query fixed sequence is a designed placebo that leaves all four laws and 0%; the decision selector succeeds in 33.33% because it exhausts the 32,768-operation envelope in fork and grouped contexts. Target-aware acquisition costs 43 operations, but primitive robust search still succeeds in only 52.60%, separating evidence sufficiency from planning work. This is descriptive constructed-mechanism evidence, miniature—architecture untested; it is not a third primary, does not establish dependency-representation necessity, and does not establish transfer to action/routine evidence or human learning.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -60,6 +63,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-cyclic | 34,560 | 96 fresh contexts; 16 unlabeled topologies |
 | g2-cyclic-final | 23,040 | 384 untouched contexts |
 | g2-cyclic-cost | 6,144 | 384 exposed F2 contexts reused; no new support |
+| g2-cyclic-target | 18,432 | 192 fresh two-target contexts; descriptive screen |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -98,13 +102,16 @@ bounded decision replays. Opaque-label discovery adds 175,104 rows and 684
 bounded decision replays. The first frozen primary adds 87,552 rows and 342 replays.
 Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
 adds 23,040 rows and 90 replays. The selector cost diagnostic adds 6,144 rows and 24
-replays on exposed contexts. Together, 2,993,160 retained rows reconstruct and 38,270
+replays on exposed contexts. The fresh two-target screen adds 18,432 rows and 72
+replays. Together, 3,011,592 retained rows reconstruct and 38,342
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
 or untouched structural support. Stitch child CPU is included in worker receipts.
-The current isolated suite passes 50 checks without failures or skips, including the
-pinned Stitch binary, final-plan sampling contract and cyclic-union construction gates.
+The two-target packet's isolated admission suite passes 52 checks without failures or
+skips, including the pinned Stitch binary, final-plan sampling contract and cyclic-union
+construction gates. The earlier 50- and 51-check records remain retained with their
+respective batches.
 
 ## Current frontier
 
@@ -173,9 +180,12 @@ separates them: putting selector work outside action raises dependency success b
 points and restores known-law action to 100%, but the chosen query isolates truth only
 30.73% of the time and leaves a 66.41-point dependency deficit against the fixed query.
 The failed 65,536 selector calibration and first-block checker schema failure remain
-retained. No third final primary is permitted. The next descriptive allocation is a
-low-cost target-aware selector on fresh multi-part cyclic targets. Saturated four-cell
-and graphic cells remain retired. All commissioned G0–G4 branches remain active or retain
+retained. No third final primary is permitted. The fresh target-aware screen then showed
+that two cheap public-target parent queries isolate truth and restore dependency and
+conditioned-direct action, while primitive robust search succeeds in only 52.60% of
+contexts. The next descriptive allocation asks whether target-relevant executed-action
+evidence transfers that repair without a direct parent cue, under a two-observation cap.
+Saturated four-cell and graphic cells remain retired. All commissioned G0–G4 branches remain active or retain
 a completed disposition; useful work after the two final contrasts is not precluded. The original
 campaign clock, 40 worker CPU hours including children and 200,000 new context units
 remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is

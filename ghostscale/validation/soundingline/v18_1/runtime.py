@@ -205,6 +205,10 @@ def run(root,archive,*,stop_after_blocks=None):
                         from . import cyclic_union
                         rows=cyclic_union.evaluate_cached_decision(
                             case,plan['design']['online_budget'],plan['design']['selector_budget']);diagnostics=None
+                    elif plan['branch']=='g2-cyclic-target':
+                        from . import cyclic_union
+                        rows=cyclic_union.evaluate_target_aware(
+                            case,plan['design']['budget'],plan['design']['query_counts']);diagnostics=None
                     else:
                         raise ValueError('unimplemented branch cannot be admitted')
                     units.append(dict(case=case,rows=rows,diagnostics=diagnostics))

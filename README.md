@@ -26,6 +26,9 @@ fresh cyclic-candidate contexts, one fixed diagnostic beat the costly decision s
 by 77.34 points, with a 65.67-point lower bound above the 20-point margin. The
 follow-up cost diagnostic finds both causes: removing selector work raises the decision
 arm only to 33.59%, while its chosen observation isolates truth in 30.73% of contexts.
+On fresh seven-part two-target contexts, two low-cost target-aware parent queries
+isolate truth and restore dependency and direct action to 100%; one query remains
+insufficient, and primitive robust search still reaches only 52.60% inside its work cap.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
 The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),

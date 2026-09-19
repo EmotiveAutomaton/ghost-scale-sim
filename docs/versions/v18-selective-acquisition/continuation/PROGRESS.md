@@ -24,10 +24,13 @@ Does a fixed diagnostic outperform a decision-selected query when choosing the q
 
 Was the decision-selected query losing because choosing it consumed the action budget, or because the query itself was weak? Both, with evidence quality the larger remaining boundary in this exposed diagnostic. Reusing the 384 already scored F2 contexts, moving selection into a separate recorded envelope raises dependency-learner success from 22.66% to 33.59% and reduces held-out legality probability error from 0.08428 to 0.05696. The known-law ceiling rises from 59.64% to 100%, establishing a real budget-cost effect. But the cached decision query isolates the true law in only 30.73% of contexts and leaves dependency success 66.41 points below the fixed diagnostic's 100%; conditioned-direct reaches 32.03% and primitive candidate-set search 30.73%. The selector originally completes online in 67.97% of contexts and requires 23,155.28 operations on average, with a maximum of 78,824 when allowed to finish. This is a descriptive constructed query-selection result on exposed contexts—no new support or primary—miniature—architecture untested, with no human-learning claim.
 
+Can a cheap query rule tied only to changed public target parts repair a harder two-dependency task? Yes descriptively in this constructed screen. Across 192 fresh seven-part contexts with four nested histories, two target-aware parent queries isolate the true law and give both dependency learning and the equally informed direct compiler 100% task success. One target-aware query always leaves two laws and both methods at 0%; the historical two-query fixed sequence is a designed placebo that leaves all four laws and 0%; the decision selector succeeds in 33.33% because it exhausts the 32,768-operation envelope in fork and grouped contexts. Target-aware acquisition costs 43 operations, but primitive robust search still succeeds in only 52.60%, separating evidence sufficiency from planning work. This is descriptive constructed-mechanism evidence, miniature—architecture untested; it is not a third primary, does not establish dependency-representation necessity, and does not establish transfer to action/routine evidence or human learning.
+
 Both permitted final contrasts are now frozen and complete; no third primary may be
-created. The next bounded descriptive allocation is a low-cost target-aware selector on
-fresh multi-part cyclic targets, where a single preselected parent query is not guaranteed
-to isolate truth. It does not reopen either completed primary.
+created. The next bounded descriptive allocation tests target-relevant executed-action
+evidence on fresh cyclic contexts, retaining the two-observation cap. It asks whether
+the cheap selector benefit transfers when the reader is not directly told parent links;
+it does not reopen either completed primary.
 The campaign remains active.
 Event-only delivery continues at completion, failure, disappearance and the unchanged
 4/12/24/36-hour checkpoints; healthy computation does not trigger model polling.

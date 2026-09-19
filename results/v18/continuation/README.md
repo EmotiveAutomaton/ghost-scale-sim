@@ -37,6 +37,11 @@ and 24 replay rows, bringing the active totals to 2,993,160 and 38,270. Separati
 selector work raises dependency success from 22.66% to 33.59% and restores known-law
 action to 100%, but the selected query isolates truth in only 30.73% of contexts. This
 batch adds no independent structural support and does not revise either frozen primary.
+`CYCLIC_TARGET_BATCH.json` binds 18,432 rows on 192 fresh two-target contexts and 72
+replay rows, bringing the active totals to 3,011,592 and 38,342. Two public-target
+parent queries isolate truth and give dependency and conditioned-direct action 100%
+success; one query and the historical fixed placebo give 0%. Primitive candidate-set
+search reaches 52.60%. This is descriptive evidence, not a third final primary.
 
 `VALIDATION.json` records 50 passing isolated checks without skips, including the
 existing pinned Stitch binary, the untouched-sampling contract and the cyclic-union
@@ -61,3 +66,6 @@ reconstruction, extracted-source replay and held disposition.
 `g2-cyclic-cost/` retains the exposed post-primary diagnostic, failed 65,536 selector
 calibration, repaired checker failure, full reconstruction and extracted-source replay.
 Its admission records 51 passing isolated checks without skips.
+`g2-cyclic-target/` retains the failed first admission caused only by an unconfigured
+pinned Stitch path, the unchanged 52-check passing admission, frozen plan, complete
+reconstruction, diagnostic aggregation and extracted-source replay.

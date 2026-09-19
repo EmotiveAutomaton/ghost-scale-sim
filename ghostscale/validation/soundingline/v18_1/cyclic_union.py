@@ -7,6 +7,7 @@ safe under both directions until evidence separates them.
 """
 from collections import deque
 from copy import deepcopy
+from itertools import combinations
 import random
 
 from ..v16.records import canonical,digest,seed_for
@@ -39,6 +40,120 @@ def _reciprocal_alternative(truth):
     alternative['parents'][parent]=child
     validate_world(alternative)
     return alternative
+
+
+def _reverse_edge(world,parent,child):
+    """Reverse one declared edge while detaching the old parent relation."""
+    if world['parents'][child]!=parent:raise ValueError('declared reciprocal edge absent')
+    alternative=deepcopy(world)
+    alternative['parents'][child]=-1
+    alternative['parents'][parent]=child
+    validate_world(alternative)
+    return alternative
+
+
+def _two_reversible_edges(parents):
+    """Find two vertex-disjoint edges whose four reversal combinations stay acyclic."""
+    edges=[(parent,child) for child,parent in enumerate(parents) if parent>=0]
+    world=dict(kind='assembly',parents=list(parents),defaults=[0]*len(parents),forbidden=[])
+    for first,second in combinations(edges,2):
+        if len(set(first+second))<4:continue
+        try:
+            one=_reverse_edge(world,*first)
+            two=_reverse_edge(world,*second)
+            both=_reverse_edge(one,*second)
+        except ValueError:
+            continue
+        if len({tuple(candidate['parents']) for candidate in (world,one,two,both)})==4:
+            return first,second
+    return None
+
+
+def _multi_target_models(truth):
+    pairs=((1,3),(2,4))
+    first=_reverse_edge(truth,*pairs[0])
+    second=_reverse_edge(truth,*pairs[1])
+    both=_reverse_edge(first,*pairs[1])
+    models=sorted((deepcopy(truth),first,second,both),key=canonical)
+    if len({canonical(model) for model in models})!=4:raise ValueError('multi-target candidates collapsed')
+    return models
+
+
+def _menu_with_depth(defaults,target,models,max_steps):
+    n=len(defaults);initial=list(defaults)
+    items=[dict(kind='action',initial=[-1]*n,program=[i]) for i in range(n)]
+    items += [dict(kind='action',initial=initial,program=[2*n+i]) for i in range(n)]
+    items += [dict(kind='routine',initial=initial,program=[3*n])]
+    programs=[]
+    for model in models:
+        program=g2.model_plan(model,initial,target,max_steps)
+        if program is None:raise ValueError('candidate target is not reachable inside the declared depth')
+        if tuple(program) not in programs:programs.append(tuple(program))
+    programs=sorted(programs)
+    items += [dict(kind='routine',initial=initial,program=list(program)) for program in programs]
+    items += [dict(kind='context',part=i) for i in range(1,n)]
+    return items
+
+
+def make_multi_target_cases(namespace,*,per_stratum=64,histories=4,
+                            families=('fork','chain','groups')):
+    """Fresh seven-part contexts with two independent target-relevant cycles.
+
+    Target parts occupy labels 1 and 2; their reciprocal counterparts occupy 3
+    and 4.  Labels 5 and 6 are deliberately invariant across the four public
+    candidates, so the historical late-label fixed sequence is a real placebo.
+    """
+    cases=[];n=7;target_parts=(1,2);reciprocal_pairs=((1,3),(2,4));max_steps=4*n+2
+    for family in families:
+        seen=set();draw=0
+        while len(seen)<per_stratum:
+            rng=random.Random(seed_for(namespace,n,family,draw,'world'));draw+=1
+            base_parents=topology(n,family,rng);edges=_two_reversible_edges(base_parents)
+            if edges is None:
+                if draw>per_stratum*1000:raise ValueError('insufficient reversible multi-target support')
+                continue
+            (parent_a,child_a),(parent_b,child_b)=edges
+            remaining=[part for part in range(n) if part not in (parent_a,parent_b,child_a,child_b)]
+            filler=[0,5,6];rng.shuffle(filler)
+            permutation=[None]*n
+            for old,new in zip(remaining,filler):permutation[old]=new
+            permutation[parent_a]=1;permutation[parent_b]=2
+            permutation[child_a]=3;permutation[child_b]=4
+            defaults=[rng.randrange(2) for _ in range(n)]
+            truth=permuted.relabel_world(
+                dict(kind='assembly',parents=base_parents,defaults=defaults,forbidden=[]),permutation)
+            validate_world(truth)
+            if truth['parents'][3]!=1 or truth['parents'][4]!=2:raise AssertionError('edge relabel failed')
+            models=_multi_target_models(truth)
+            if len({model['parents'][5] for model in models})!=1 or len({model['parents'][6] for model in models})!=1:
+                raise AssertionError('fixed placebo labels changed')
+            target=list(truth['defaults'])
+            for part in target_parts:target[part]=1-target[part]
+            unit=digest([namespace,truth,target,models])
+            if unit in seen:continue
+            seen.add(unit)
+            queries=_menu_with_depth(truth['defaults'],target,models,max_steps)
+            neutral=dict(kind='routine',initial=list(truth['defaults']),program=[3*n])
+            outcome=g2.observed(truth,neutral)
+            for model in models:assert g2.observed(model,neutral)==outcome
+            for history in range(histories):
+                observations=[dict(query=deepcopy(neutral),outcome=deepcopy(outcome),
+                                   source_context='uninformative-stop-demonstration') for _ in range(3)]
+                public=dict(schema=g2.SCHEMA,models=deepcopy(models),observations=observations,
+                    menu=deepcopy(queries),initial=list(truth['defaults']),target=target,
+                    max_steps=max_steps,query_seed=seed_for(namespace,unit,history,'query'),
+                    action_order=list(range(3*n+1)))
+                cases.append(dict(case_id=digest([namespace,unit,history]),structural_unit=unit,
+                    history=history,selection='neutral-stop',donor='none',truth_excluded=False,
+                    n=n,family=family,topology_signature=topology_signature(truth['parents']),
+                    label_order='opaque-two-target-cyclic-union',label_permutation=permutation,
+                    reciprocal_pairs=[list(pair) for pair in reciprocal_pairs],target_parts=list(target_parts),
+                    public=public,private=dict(true_world=deepcopy(truth),donor_world=None,
+                                               donor_source_success=None),
+                    coverage=dict(demonstrations=3,distinct_queries=1,target_part_actions=0,
+                                  failed_demonstrations=0,candidate_laws=len(models),
+                                  independent_reciprocal_cycles=2)))
+    return cases
 
 
 def _candidate_models(namespace,n,family,draw,truth):
@@ -110,7 +225,9 @@ def acquire(public,truth,policy,count,budget):
     used=[];exhausted=False
     try:
         for _ in range(count):
-            chosen=g2.select_query(payload,observations,used,policy,work)
+            chosen=(select_target_aware(payload,observations,used,work)
+                    if policy=='target-aware' else
+                    g2.select_query(payload,observations,used,policy,work))
             if chosen is None:break
             query=deepcopy(public['menu'][chosen]);outcome=g2.observed(truth,query)
             work.charge('checking',max(1,outcome['primitive_cost']))
@@ -119,6 +236,27 @@ def acquire(public,truth,policy,count,budget):
     except Exhausted:
         exhausted=True
     return observations,used,exhausted,work
+
+
+def select_target_aware(payload,observations,used,work):
+    """Choose the most separating direct-parent query among changed target parts."""
+    public=g2.contract(payload);hypotheses=g2.compatible(public['models'],observations,work)
+    if not hypotheses:return None
+    changed={part for part,(before,after) in enumerate(zip(public['initial'],public['target']))
+             if before!=after}
+    available=[index for index,query in enumerate(public['menu'])
+               if index not in used and query['kind']=='context' and query['part'] in changed]
+    if not available:return None
+    best=None
+    for index in available:
+        work.charge('selection');groups={}
+        for model in hypotheses:
+            answer=canonical(g2.observed(model,public['menu'][index],work))
+            groups[answer]=groups.get(answer,0)+1
+        sizes=sorted(groups.values(),reverse=True)
+        score=(max(sizes),sum(size*size for size in sizes),index)
+        if best is None or score<best[0]:best=(score,index)
+    return best[1]
 
 
 def _conditioned_direct(public,observations,acquisition):
@@ -277,4 +415,38 @@ def evaluate_cached_decision(case,online_budget=32768,selector_budget=32768):
             query_compatible_laws=len(compatible),query_isolates_truth=compatible==[truth],
             comparison_role='exposed descriptive diagnostic: selected evidence cached before action',
             selector_contract='decision query computed from public candidates and recorded separately; no selector work is hidden')
+    return rows
+
+
+def evaluate_target_aware(case,budget=32768,query_counts=(1,2)):
+    """Screen a cheap target-aware query rule against fixed and decision selection."""
+    public=case['public'];truth=case['private']['true_world'];rows=[]
+    for policy in ('fixed','decision','target-aware'):
+        for count in query_counts:
+            observations,used,query_exhausted,acquisition=acquire(
+                public,truth,policy,count,budget)
+            compatible=g2.compatible(public['models'],observations)
+            current=[]
+            for method in ('dependencies','known-law'):
+                current.append(dict(method=method,**_structured_cached_action(
+                    public,truth,observations,acquisition,method)))
+            for method,runner in (('conditioned-direct',_conditioned_direct),
+                                  ('candidate-set-primitive',_belief_search)):
+                result=runner(public,observations,acquisition)
+                current.append(dict(method=method,**score_submission(
+                    truth,public['initial'],public['target'],result,public['max_steps'])))
+            acquisition_costs=acquisition.receipt()
+            for row in current:
+                row.update(query_policy=policy,requested_queries=count,
+                    acquired_queries=len(used),query_indices=list(used),query_exhausted=query_exhausted,
+                    observation_record=deepcopy(observations),budget=budget,
+                    acquisition_costs=deepcopy(acquisition_costs),
+                    acquisition_operations=acquisition_costs['total_online'],
+                    query_compatible_laws=len(compatible),query_isolates_truth=compatible==[truth],
+                    target_changed_parts=[part for part,(before,after) in enumerate(
+                        zip(public['initial'],public['target'])) if before!=after],
+                    comparison_role='descriptive target-aware multi-part cyclic query screen',
+                    selector_contract=('target-aware uses only changed public target parts and candidate parent outcomes; '
+                                       'fixed and decision retain their existing public contracts'))
+                rows.append(row)
     return rows

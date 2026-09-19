@@ -100,3 +100,30 @@ def test_cached_decision_separates_selector_work_without_changing_its_evidence()
     assert all(row['combined_operations']==row['selector_operations']+row['costs']['total_online'] for row in cached)
     known=next(row for row in cached if row['method']=='known-law')
     assert known['success'] and known['combined_operations']==full['known-law','decision']['costs']['total_online']
+
+
+def test_target_aware_queries_resolve_two_public_target_cycles_cheaply():
+    case=cyclic_union.make_multi_target_cases(
+        'development-cyclic-target',per_stratum=1,histories=1,families=('chain',))[0]
+    public=case['public'];truth=case['private']['true_world']
+    assert case['target_parts']==[1,2] and len(public['models'])==4
+    fixed,_,fixed_exhausted,fixed_work=cyclic_union.acquire(public,truth,'fixed',2,32768)
+    one,one_indices,one_exhausted,one_work=cyclic_union.acquire(
+        public,truth,'target-aware',1,32768)
+    two,two_indices,two_exhausted,two_work=cyclic_union.acquire(
+        public,truth,'target-aware',2,32768)
+    assert not fixed_exhausted and not one_exhausted and not two_exhausted
+    assert len(g2.compatible(public['models'],fixed))==4
+    assert len(g2.compatible(public['models'],one))==2
+    assert g2.compatible(public['models'],two)==[truth]
+    assert {public['menu'][index]['part'] for index in two_indices}=={1,2}
+    assert one_indices[0] in two_indices and two_work.spent<256<fixed_work.cap
+    assert one_work.spent<two_work.spent
+    rows=cyclic_union.evaluate_target_aware(case,32768,(1,2))
+    selected={(row['method'],row['query_policy'],row['requested_queries']):row for row in rows}
+    assert len(rows)==24
+    assert selected['dependencies','target-aware',2]['success']
+    assert selected['conditioned-direct','target-aware',2]['success']
+    assert selected['known-law','target-aware',2]['success']
+    assert not selected['dependencies','target-aware',1]['query_isolates_truth']
+    assert not selected['dependencies','fixed',2]['query_isolates_truth']
