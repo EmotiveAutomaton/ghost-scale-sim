@@ -606,3 +606,12 @@ when a later refresh would deduplicate identifiers shared by reused branch plans
 final-primary filing caught and corrected such a decrease before commit. Scientific
 outputs and CPU sums were unchanged; support claims continue to distinguish reused
 identifiers, deterministic relabelings and untouched structural contexts.
+
+## V18.2 finite maker-state validation
+
+The new sibling namespace reuses V16 execution and acquired fragments. A separate
+set-based executor and direct probability enumeration check the policy and posterior.
+Reader packets reject private fields; future truth changes cannot alter features.
+Learned split/flat predictors pass a known-answer training control and numerical
+gradient check. Held-out artifacts score discovery; they do not select epochs or axes.
+See the [design](versions/v18-selective-acquisition/maker-state/README.md).

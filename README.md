@@ -14,6 +14,10 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
+## V18.2 maker-state continuation
+
+The [new commissioned study](docs/versions/v18-selective-acquisition/maker-state/README.md) is running. Its first verified block improves predictive probabilities from maker history while leaving modal accuracy unchanged. [Results and limits](docs/versions/v18-selective-acquisition/maker-state/RESULTS.md); [blind synthetic fixtures](results/v18/maker-state/bridge-1/README.md).
+
 ## ○ Agent-authored V18.1 continuation
 
 [Mid-run analysis packet — 19 September](docs/versions/v18-selective-acquisition/continuation/MID_RUN_REPORT_2026-09-19.md): all 20 admitted comparison packets, both frozen primaries, validation and open questions.

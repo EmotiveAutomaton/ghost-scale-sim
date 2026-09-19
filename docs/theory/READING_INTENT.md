@@ -58,6 +58,7 @@ is now the best-established thing in the record.
 | E43 | Practice removes the maker's own reasons from report | **SUPPORTED (run)** | Compression is what makes a decision unavailable to its own maker, while the reader is unaffected. (lit READ: the expertise literature states this directly: automaticity costs experts the ability to account for their actions) |
 | V16 P01–P03 | Useful execution identifies original history or adds individual prediction beyond a matched direct reader | **QUALIFIED; prediction bar not met (run, constructed mechanism)** | Reconstruction executes, but can differ from the original; a selected successful alternative leaves 137 compatible routes. P02 query and P03 evidence-dose prediction bars fail; the direct same-evidence table matches. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V17 E | Finite maker models improve withheld-choice forecasts under declared evidence tiers | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Four native families benefit differently from collections and process evidence; construction collections add cost without changing forecasts here. Useful prediction is neither historical uniqueness nor necessity versus all equally informed bounded direct readers. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
+| V18.2 G0 | Earlier maker history improves next-artifact prediction | **QUALIFIED discovery (run, constructed mechanism; miniature ? architecture untested)** | On 128 held-out histories, process-history log loss 0.925 versus direct 0.988; modal accuracy unchanged at 78.52%. Exact posterior and replay checks pass. [Study](../versions/v18-selective-acquisition/maker-state/RESULTS.md) |
 
 **What these add up to.** The early necessity claim about confident invention was withdrawn;
 the surviving label-response and sustained-attention findings remain scoped to their original
@@ -68,7 +69,7 @@ version's ablation, but it prevents extending its necessity claim to these new t
 method, usable competence and history remain separate questions. The self-first prior's local
 advantages and failures are recorded in §§11–13; none establishes a result about people.
 
-V17 adds useful finite-maker forecasts under declared evidence tiers while preserving V16's history/representation distinction. More evidence can help, but no universal latent-representation advantage follows.
+V17 adds useful finite-maker forecasts under declared evidence tiers while preserving V16's history/representation distinction. More evidence can help, but no universal latent-representation advantage follows. V18.2?s first block improves probability estimates from history while leaving the chosen prediction unchanged; it does not establish necessity of an explicit maker representation.
 
 ## §2. The wall (familiar words, nobody home) is a distinct failure, and the reader keeps paying
 
