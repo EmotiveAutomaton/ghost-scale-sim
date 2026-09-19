@@ -24,8 +24,10 @@ held. Two fixed support observations improved seven-part task success by 13.15 p
 with an 8.82-point one-sided lower bound above the five-point practical margin. In
 fresh cyclic-candidate contexts, one fixed diagnostic beat the costly decision selector
 by 77.34 points, with a 65.67-point lower bound above the 20-point margin. The
-conditioned-direct rival still succeeds perfectly with the fixed observation, so
-neither result establishes that an explicit dependency representation is necessary.
+follow-up cost diagnostic finds both causes: removing selector work raises the decision
+arm only to 33.59%, while its chosen observation isolates truth in 30.73% of contexts.
+The conditioned-direct rival still succeeds perfectly with the fixed observation, so
+neither final result establishes that an explicit dependency representation is necessary.
 The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
 [scope ledger](results/v18/continuation/BRANCH_LEDGER.json), and separate
 [history-reading bridge](docs/versions/v18-selective-acquisition/continuation/BRIDGE.md).

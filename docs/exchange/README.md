@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v18-1-cyclic-cost-response.md](v18-1-cyclic-cost-response.md) | **Codex agent in this repository** | Verified exposed-context decomposition of decision-selector cost and evidence quality, with failed calibration and checker repair retained. |
 | [v18-1-cyclic-final-response.md](v18-1-cyclic-final-response.md) | **Codex agent in this repository** | Verified held second and last final primary on untouched cyclic-union contexts, with query-cost and representation boundaries retained. |
 | [v18-1-cyclic-response.md](v18-1-cyclic-response.md) | **Codex agent in this repository** | Verified cyclic candidate-union discovery, retained admission failure, stronger rivals and active-campaign decision. |
 | [v18-1-final-primary-response.md](v18-1-final-primary-response.md) | **Codex agent in this repository** | Verified held first final primary on untouched opaque-label structures, with the direct rival boundary and active-campaign disposition retained. |

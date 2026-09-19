@@ -3,7 +3,7 @@ from copy import deepcopy
 import pytest
 
 from ghostscale.validation.soundingline.v16.records import canonical
-from ghostscale.validation.soundingline.v18_1 import common,cyclic_union,direct,g2,permuted
+from ghostscale.validation.soundingline.v18_1 import common,cyclic_union,direct,g2,g3,permuted
 from ghostscale.validation.soundingline.v18_1.verify import independent_assembly
 
 
@@ -83,3 +83,20 @@ def test_cyclic_union_requires_evidence_and_keeps_action_rivals_equal():
                      if row['query_policy']==policy and row['requested_queries']==count}
             assert len(records)==1
     assert all(row['costs']['total_online']<=row['budget'] for row in rows)
+
+
+def test_cached_decision_separates_selector_work_without_changing_its_evidence():
+    case=cyclic_union.make_cases('development-cyclic-cost',per_stratum=1,histories=1,
+                                 sizes=(5,),families=('chain',))[0]
+    full=cyclic_union.evaluate(case,budgets=(32768,),query_counts=(1,))
+    full={(row['method'],row['query_policy']):row for row in full}
+    cached=cyclic_union.evaluate_cached_decision(case,32768,32768)
+    assert {row['method'] for row in cached}=={
+        'dependencies','known-law','conditioned-direct','candidate-set-primitive'}
+    assert all(row['query_indices']==full[row['method'],'decision']['query_indices'] for row in cached)
+    assert all(canonical(row['observation_record'])==canonical(full[row['method'],'decision']['observation_record'])
+               for row in cached)
+    assert all(row['selector_operations']>0 and row['costs']['total_online']<=32768 for row in cached)
+    assert all(row['combined_operations']==row['selector_operations']+row['costs']['total_online'] for row in cached)
+    known=next(row for row in cached if row['method']=='known-law')
+    assert known['success'] and known['combined_operations']==full['known-law','decision']['costs']['total_online']

@@ -32,6 +32,11 @@ binds the second and last frozen primary: another 23,040 checked rows on 384 unt
 contexts and 90 replay rows, bringing the active totals to 2,987,016 and 38,246. The
 fixed diagnostic beat the current costly decision selector by the precommitted practical
 margin; the campaign remains active and no third final primary is permitted.
+`CYCLIC_COST_BATCH.json` binds 6,144 descriptive rows on the same exposed F2 contexts
+and 24 replay rows, bringing the active totals to 2,993,160 and 38,270. Separating
+selector work raises dependency success from 22.66% to 33.59% and restores known-law
+action to 100%, but the selected query isolates truth in only 30.73% of contexts. This
+batch adds no independent structural support and does not revise either frozen primary.
 
 `VALIDATION.json` records 50 passing isolated checks without skips, including the
 existing pinned Stitch binary, the untouched-sampling contract and the cyclic-union
@@ -53,3 +58,6 @@ briefly deduplicated reused branch identifiers; science and CPU totals did not c
 check, complete reconstruction and extracted-source replay. `g2-cyclic-final/` retains
 the second final contrast, the verifier-only first-block failure and repair, complete
 reconstruction, extracted-source replay and held disposition.
+`g2-cyclic-cost/` retains the exposed post-primary diagnostic, failed 65,536 selector
+calibration, repaired checker failure, full reconstruction and extracted-source replay.
+Its admission records 51 passing isolated checks without skips.

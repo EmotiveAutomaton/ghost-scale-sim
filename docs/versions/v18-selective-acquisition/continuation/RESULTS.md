@@ -33,6 +33,8 @@ Does useful evidence become necessary for action when public candidate laws have
 
 Does a fixed diagnostic outperform a decision-selected query when choosing the query consumes the same online budget used to act? Yes in the second frozen constructed comparison. Across 384 untouched five- and seven-part cyclic-union contexts with four histories nested in each, one fixed parent observation gives the dependency learner 100% task success, versus 22.66% for one decision-selected observation: a 77.34-point context-paired gain. The precommitted one-sided empirical-Bernstein lower bound—an uncertainty-adjusted minimum for a bounded paired mean—is 65.67 points at error probability 0.025, exceeding the 20-point practical margin. The decision rule also uses 20,925.25 online operations versus 5,051.99 for the fixed rule, while its held-out legality probability error is 0.08428 versus zero. The result confirms a practical advantage for this fixed diagnostic over this costly decision selector; it does not establish that fixed queries are generally superior, and the conditioned-direct method also reaches 100% with the fixed observation. This is a constructed query-selection result, miniature—architecture untested, with no human-learning claim.
 
+Was the decision-selected query losing because choosing it consumed the action budget, or because the query itself was weak? Both, with evidence quality the larger remaining boundary in this exposed diagnostic. Reusing the 384 already scored F2 contexts, moving selection into a separate recorded envelope raises dependency-learner success from 22.66% to 33.59% and reduces held-out legality probability error from 0.08428 to 0.05696. The known-law ceiling rises from 59.64% to 100%, establishing a real budget-cost effect. But the cached decision query isolates the true law in only 30.73% of contexts and leaves dependency success 66.41 points below the fixed diagnostic's 100%; conditioned-direct reaches 32.03% and primitive candidate-set search 30.73%. The selector originally completes online in 67.97% of contexts and requires 23,155.28 operations on average, with a maximum of 78,824 when allowed to finish. This is a descriptive constructed query-selection result on exposed contexts—no new support or primary—miniature—architecture untested, with no human-learning claim.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -57,6 +59,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-permuted-final | 87,552 | 1,152 untouched contexts |
 | g2-cyclic | 34,560 | 96 fresh contexts; 16 unlabeled topologies |
 | g2-cyclic-final | 23,040 | 384 untouched contexts |
+| g2-cyclic-cost | 6,144 | 384 exposed F2 contexts reused; no new support |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -94,7 +97,8 @@ The attachment-mask batch adds 110,592 reused-evidence forecast rows and 432
 bounded decision replays. Opaque-label discovery adds 175,104 rows and 684
 bounded decision replays. The first frozen primary adds 87,552 rows and 342 replays.
 Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
-adds 23,040 rows and 90 replays. Together, 2,987,016 retained rows reconstruct and 38,246
+adds 23,040 rows and 90 replays. The selector cost diagnostic adds 6,144 rows and 24
+replays on exposed contexts. Together, 2,993,160 retained rows reconstruct and 38,270
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
@@ -164,8 +168,13 @@ result-dependent extension, replacement or new seed occurred. The conditioned-di
 rival also reaches 100% with the fixed observation, so explicit representation necessity
 remains rejected. Even the known-law action arm falls to 59.64% after decision selection,
 showing that selector work can consume the action envelope; its incomplete forecast
-repair shows that query content also matters. A bounded descriptive diagnostic may
-separate those contributions, but no third final primary is permitted. Saturated four-cell
+repair shows that query content also matters. The verified exposed-context diagnostic
+separates them: putting selector work outside action raises dependency success by 10.94
+points and restores known-law action to 100%, but the chosen query isolates truth only
+30.73% of the time and leaves a 66.41-point dependency deficit against the fixed query.
+The failed 65,536 selector calibration and first-block checker schema failure remain
+retained. No third final primary is permitted. The next descriptive allocation is a
+low-cost target-aware selector on fresh multi-part cyclic targets. Saturated four-cell
 and graphic cells remain retired. All commissioned G0–G4 branches remain active or retain
 a completed disposition; useful work after the two final contrasts is not precluded. The original
 campaign clock, 40 worker CPU hours including children and 200,000 new context units

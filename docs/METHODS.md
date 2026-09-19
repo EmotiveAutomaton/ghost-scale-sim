@@ -544,6 +544,16 @@ checker changed no science. Complete reconstruction and extracted-source replay 
 before the frozen analysis is applied. Secondary action methods and cost comparisons
 cannot replace the primary, and no third final contrast is permitted.
 
+The post-primary cyclic cost diagnostic reuses all 384 exposed F2 contexts and adds no
+independent support. It executes the unchanged decision selector under a separately
+recorded 131,072-operation preparation envelope, then gives the selected observation
+to each unchanged action method under the original 32,768-operation envelope. The
+observation's execution/checking cost remains online; only query-selection computation
+is separated. A failed 65,536 selector calibration, which left seven contexts without a
+query, is retained. Selector, action and combined receipts are all recorded. This is a
+descriptive decomposition of the existing result, not equal-total-work evidence, a new
+primary or a result-dependent extension of F2.
+
 Campaign unit accounting retains the previously filed conservative identifier count
 when a later refresh would deduplicate identifiers shared by reused branch plans. The
 final-primary filing caught and corrected such a decrease before commit. Scientific

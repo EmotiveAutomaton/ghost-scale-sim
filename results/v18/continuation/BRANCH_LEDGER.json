@@ -1,5 +1,5 @@
 {
-    "bounded_replayed_rows": 38246,
+    "bounded_replayed_rows": 38270,
     "branches": [
         {
             "branch": "G0",
@@ -17,10 +17,10 @@
         },
         {
             "branch": "G2",
-            "execution": "native, larger transfer, direct, attachment-mask, opaque-label, cyclic discovery and both untouched final primaries complete and verified",
-            "instrument": "complete F2 reconstruction and bounded extracted-source replay pass; frozen paired analysis applied to all 384 untouched contexts; verifier-only first-block failure retained",
-            "pursuit": "separate decision-query selection quality from its charged online cost with a bounded descriptive cyclic diagnostic; no third final primary is permitted",
-            "warrant": "the fixed diagnostic has a confirmed practical advantage over the current costly decision selector; conditioned-direct success still rejects explicit dependency-representation necessity"
+            "execution": "native, larger transfer, direct, attachment-mask, opaque-label, cyclic discovery, two untouched primaries and exposed selector-cost diagnostic complete and verified",
+            "instrument": "complete cyclic-cost reconstruction and extracted-source replay pass; failed 65536 selector calibration and verifier-schema failure retained",
+            "pursuit": "test a low-cost target-aware selector on a bounded fresh multi-part cyclic target condition; descriptive only, with no third primary",
+            "warrant": "separate selector work recovers some decision-query loss and the known-law ceiling, but weak selected evidence leaves most of the dependency gap"
         },
         {
             "branch": "G3",
@@ -40,18 +40,6 @@
     "campaign_state": "active; all five branches commissioned",
     "delivery_deadline": "2026-09-20T15:00:00Z",
     "final_contrasts_frozen": 2,
-    "final_primary": {
-        "alpha": 0.025,
-        "contexts": 1152,
-        "histories_per_context": 4,
-        "id": "F1-opaque-fixed-observation",
-        "mean_success_difference": 0.13151041666666666,
-        "one_sided_lower_bound": 0.08821821012124419,
-        "plan_sha256": "866abe03807adc29900f7453e6f026808dd1a5293a5fc50c28261ba4e99686a0",
-        "practical_margin": 0.05,
-        "record": "g2-permuted-final/FINAL_PRIMARY.json",
-        "status": "held"
-    },
     "final_primaries": [
         {
             "alpha": 0.025,
@@ -78,6 +66,18 @@
             "status": "held"
         }
     ],
+    "final_primary": {
+        "alpha": 0.025,
+        "contexts": 1152,
+        "histories_per_context": 4,
+        "id": "F1-opaque-fixed-observation",
+        "mean_success_difference": 0.13151041666666666,
+        "one_sided_lower_bound": 0.08821821012124419,
+        "plan_sha256": "866abe03807adc29900f7453e6f026808dd1a5293a5fc50c28261ba4e99686a0",
+        "practical_margin": 0.05,
+        "record": "g2-permuted-final/FINAL_PRIMARY.json",
+        "status": "held"
+    },
     "first_wave_rows": 1721352,
     "known_limits": [
         "All initial comparisons are descriptive.",
@@ -89,11 +89,12 @@
         "Opaque relabeling is a deterministic intervention on retained discovery structures, not new architecture or untouched support.",
         "The held first final primary confirms a constructed observation benefit, not a need for learned structure; the direct compiler remains perfect.",
         "Cyclic-union discovery uses 96 fresh contexts but only 16 unlabeled topologies in one constructed assembly architecture; four histories are nested.",
-        "F2 confirms the fixed diagnostic over this decision selector, not fixed queries in general; the selector spends substantial online work and sometimes chooses incomplete evidence."
+        "F2 confirms the fixed diagnostic over this decision selector, not fixed queries in general; the selector spends substantial online work and sometimes chooses incomplete evidence.",
+        "The exposed cost diagnostic moves selector work outside action and lets it complete; it reuses F2 contexts, adds no support and cannot revise either frozen primary."
     ],
     "report_start": "2026-09-20T13:00:00Z",
     "schema": "v18.1.branch-ledger.1",
     "started_at": "2026-09-18T16:17:22.1043739Z",
-    "updated_at": "2026-09-19T00:55:38.176208+00:00",
-    "verified_rows": 2987016
+    "updated_at": "2026-09-19T01:26:56.881224+00:00",
+    "verified_rows": 2993160
 }

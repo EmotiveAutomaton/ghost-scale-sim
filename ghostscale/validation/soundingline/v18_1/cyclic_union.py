@@ -188,3 +188,93 @@ def evaluate(case,budgets=(32768,),query_counts=(0,1,2)):
                         observation_record=observations,comparison_role='equally informed action rival',
                         budget=budget,**row))
     return rows
+
+
+def _structured_cached_action(public,truth,observations,acquisition,method):
+    """Run the unchanged structured action method after separately paid selection."""
+    work=Work(acquisition.cap,dict(acquisition.counts));program=None;posterior=[]
+    model_status='not_inferred'
+    try:
+        posterior=[truth] if method=='known-law' else g2.compatible(public['models'],observations,work)
+        model_status='inconsistent' if not posterior else 'compatible_set'
+        if posterior:
+            proposals=[]
+            for model in posterior:
+                proposal=g2.model_plan(model,public['initial'],public['target'],public['max_steps'],work)
+                if proposal is not None and proposal not in proposals:proposals.append(proposal)
+            for proposal in sorted(proposals,key=lambda p:(len(p),p)):
+                work.charge('selection')
+                outcomes=[g2.observed(model,dict(kind='routine',initial=public['initial'],program=proposal),work)
+                          for model in posterior]
+                if all(o['legal'] and o['stopped'] and o['state']==public['target'] for o in outcomes):
+                    work.charge('actual_execution',len(proposal));program=proposal;break
+    except Exhausted:
+        pass
+    result=dict(program=program,costs=work.receipt())
+    row=score_submission(truth,public['initial'],public['target'],result,public['max_steps'])
+    n=len(public['initial'])
+    probe_states=[[1-v for v in public['initial']],
+                  [1-v if i<2 else v for i,v in enumerate(public['initial'])]]
+    probes=[dict(kind='action',initial=state,program=[action])
+            for state in probe_states for action in range(3*n+1)]
+    seen_actions={(tuple(t['before']),t['action']) for observation in observations
+                  if observation['query']['kind']!='context' for t in observation['outcome']['trace']}
+    assert all((tuple(query['initial']),query['program'][0]) not in seen_actions for query in probes)
+    truths=[g2.observed(truth,query)['legal'] for query in probes]
+    probabilities,forecast_work,compatible_count=g2.predictions(
+        public['models'],observations,probes,method,truth)
+    squared=sum((probability-int(actual))**2 for probability,actual in zip(probabilities,truths))/len(probes)
+    actual_posterior=posterior if method=='dependencies' and model_status!='not_inferred' else []
+    return dict(model_status=model_status,forecast_compatible_laws=compatible_count,
+        task_compatible_laws=len(actual_posterior),inference_completed=method=='dependencies' and model_status!='not_inferred',
+        truth_in_compatible_set=truth in actual_posterior,
+        dependency_recovered=bool(actual_posterior) and all(model['parents']==truth['parents'] for model in actual_posterior),
+        abstained_on_inconsistency=method=='dependencies' and model_status=='inconsistent' and program is None,
+        forecast_brier=squared,forecast_probe_count=len(probes),forecast_operations=forecast_work,
+        forecast_probabilities=probabilities,forecast_truths=truths,forecast_probes=probes,
+        known_law_ceiling=method=='known-law',**row)
+
+
+def evaluate_cached_decision(case,online_budget=32768,selector_budget=32768):
+    """Separate decision-query content from its charged online selection work.
+
+    The selector is executed and fully recorded under its own envelope.  Its chosen
+    observation is then supplied to each unchanged action method, which gets a fresh
+    online envelope but still pays the observation's execution/checking cost.  This
+    exposed-context diagnostic is not an equal-total-work primary comparison.
+    """
+    public=case['public'];truth=case['private']['true_world'];payload=canonical(public)
+    observations=deepcopy(public['observations']);selector=Work(selector_budget)
+    chosen=None;selector_exhausted=False
+    try:
+        chosen=g2.select_query(payload,observations,[],'decision',selector)
+    except Exhausted:
+        selector_exhausted=True
+    acquisition=Work(online_budget);used=[]
+    if chosen is not None:
+        query=deepcopy(public['menu'][chosen]);outcome=g2.observed(truth,query)
+        acquisition.charge('checking',max(1,outcome['primitive_cost']))
+        observations.append(dict(query=query,outcome=outcome,source_context='paid-observation'))
+        used.append(chosen)
+    compatible=g2.compatible(public['models'],observations)
+    rows=[]
+    for method in ('dependencies','known-law'):
+        rows.append(dict(method=method,**_structured_cached_action(
+            public,truth,observations,acquisition,method)))
+    for method,runner in (('conditioned-direct',_conditioned_direct),
+                          ('candidate-set-primitive',_belief_search)):
+        result=runner(public,observations,acquisition)
+        rows.append(dict(method=method,**score_submission(
+            truth,public['initial'],public['target'],result,public['max_steps'])))
+    selector_costs=selector.receipt()
+    for row in rows:
+        row.update(query_policy='decision-cached',requested_queries=1,
+            acquired_queries=len(used),query_indices=used,query_exhausted=selector_exhausted,
+            observation_record=deepcopy(observations),budget=online_budget,
+            selector_budget=selector_budget,selector_costs=deepcopy(selector_costs),
+            selector_operations=selector_costs['total_online'],
+            combined_operations=selector_costs['total_online']+row['costs']['total_online'],
+            query_compatible_laws=len(compatible),query_isolates_truth=compatible==[truth],
+            comparison_role='exposed descriptive diagnostic: selected evidence cached before action',
+            selector_contract='decision query computed from public candidates and recorded separately; no selector work is hidden')
+    return rows
