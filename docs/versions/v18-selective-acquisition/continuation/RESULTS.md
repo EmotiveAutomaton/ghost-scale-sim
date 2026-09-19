@@ -46,6 +46,8 @@ Does the complete-menu action result survive when no-oracle query-state planning
 
 When truth is absent from a supplied candidate family, can action evidence expose the mismatch before a learner acts? Yes, but only after the evidence rules out every supplied law and only for methods with an explicit empty-support response. Across 192 fresh seven-part contexts, one action observation leaves one wrong candidate, so dependency learning, conditioned-direct action, primitive candidate-set search and stored episodes all achieve 0% task success without detecting misspecification. A second observation empties the candidate set in every context: the three candidate-aware action methods detect the mismatch and abstain safely in 100%, while the episode reader remains silent and the labeled forced-candidate control attempts an invalid action in 100%. The known-law ceiling succeeds in 100%; two observations cost 459.31 acquisition operations on average. This is descriptive constructed-method evidence under deterministic, engineered truth exclusion—miniature, architecture untested—not open-world or human anomaly detection and not a third primary.
 
+Does explicit misspecification detection survive when the path to each diagnostic action state must be found, executed and charged? Only for chains in this constructed screen. Across the same 192 exposed truth-excluded contexts, one physically prepared probe never empties the supplied family. With two requested probes, all 64 chain contexts reach two observations and empty support: dependency learning, conditioned-direct action and primitive candidate-set search detect and abstain safely in 100%, while the forced-candidate control attempts an invalid action in 100%. Forks retain one wrong law in every context; the exhaustion rate is 39.06% before a second probe and even completed pairs never empty support, so detection remains 0%. Grouped topologies exhaust in 100% after one probe and also retain one law. Mean acquisition is 28,357 operations for chains, 22,679.84 for forks and the full 32,768 for groups; no actual setup fails. Known-law task success after two requested probes is 100%, 32.81% and 0% respectively, showing that the shared budget can erase even the ceiling. This is descriptive constructed-method evidence on reused exposed contexts—miniature, architecture untested—not open-world or human detection and not a third primary.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -76,6 +78,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-cyclic-action-menu | 18,432 | 192 fresh complete-menu contexts; descriptive screen |
 | g2-cyclic-physical | 6,144 | 192 exposed complete-menu contexts reused; charged setup diagnostic |
 | g2-cyclic-misspecified | 9,216 | 192 fresh truth-excluded candidate-family contexts; descriptive screen |
+| g2-cyclic-misspecified-physical | 9,216 | same 192 exposed truth-excluded contexts reused; charged setup diagnostic |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -115,12 +118,12 @@ bounded decision replays. The first frozen primary adds 87,552 rows and 342 repl
 Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
 adds 23,040 rows and 90 replays. The selector cost diagnostic adds 6,144 rows and 24
 replays on exposed contexts. The fresh two-target screen adds 18,432 rows and 72
-replays. The action-evidence screen adds 18,432 rows and 72 replays. The complete-menu transfer adds 18,432 rows and 72 replays. The charged physical diagnostic adds 6,144 rows and 24 replays on the same exposed contexts. The candidate-family misspecification screen adds 9,216 rows and 36 replays on 192 fresh contexts. Together, 3,063,816 retained rows reconstruct and 38,546
+replays. The action-evidence screen adds 18,432 rows and 72 replays. The complete-menu transfer adds 18,432 rows and 72 replays. The charged physical diagnostic adds 6,144 rows and 24 replays on the same exposed contexts. The candidate-family misspecification screen adds 9,216 rows and 36 replays on 192 fresh contexts. The physical truth-exclusion intersection adds 9,216 rows and 36 replays on those same exposed contexts. Together, 3,073,032 retained rows reconstruct and 38,582
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
 or untouched structural support. Stitch child CPU is included in worker receipts.
-The current admission suite runs 63 isolated checks without failures or
+The current admission suite runs 66 isolated checks without failures or
 skips, including the pinned Stitch binary, final-plan sampling contract and cyclic-union
 construction gates. The earlier 50- and 51-check records remain retained with their
 respective batches.
@@ -213,4 +216,13 @@ empty support and abstain safely after two observations; the episode reader does
 label the mismatch and forced selection is invalid. The result is descriptive and
 does not revise either primary. The campaign remains active while the named branch
 tree is audited for a distinct unresolved structural or evidence condition. See
+[current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).
+
+QUEUE-15 completed all 9,216 charged physical truth-exclusion rows on the same
+192 exposed contexts. Its 66-check admission, complete candidate-relative setup and
+actual setup-outcome reconstruction, task-physics checks, and 36-row extracted-source
+replay passed. Detection is topology-dependent: two requested probes empty support in
+chains, retain one wrong law in forks, and exhaust after one probe in grouped contexts.
+The result adds no support or primary. The campaign remains active while the remaining
+structural frontier is audited. See
 [current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).

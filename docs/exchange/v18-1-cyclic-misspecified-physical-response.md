@@ -1,23 +1,18 @@
-# V18.1 active progress
-
-All five commissioned branches have executed, both permitted final contrasts are
-frozen and held, and the campaign remains active. The current verified total is
-3,073,032 retained rows with 38,582 bounded extracted-source replay rows. See the
-[interim results](RESULTS.md) and the
-[branch ledger](../../../../results/v18/continuation/BRANCH_LEDGER.json).
+# V18.1 physical candidate-family misspecification
 
 Does explicit misspecification detection survive when the path to each diagnostic action state must be found, executed and charged? Only for chains in this constructed screen. Across the same 192 exposed truth-excluded contexts, one physically prepared probe never empties the supplied family. With two requested probes, all 64 chain contexts reach two observations and empty support: dependency learning, conditioned-direct action and primitive candidate-set search detect and abstain safely in 100%, while the forced-candidate control attempts an invalid action in 100%. Forks retain one wrong law in every context; the exhaustion rate is 39.06% before a second probe and even completed pairs never empty support, so detection remains 0%. Grouped topologies exhaust in 100% after one probe and also retain one law. Mean acquisition is 28,357 operations for chains, 22,679.84 for forks and the full 32,768 for groups; no actual setup fails. Known-law task success after two requested probes is 100%, 32.81% and 0% respectively, showing that the shared budget can erase even the ceiling. This is descriptive constructed-method evidence on reused exposed contexts—miniature, architecture untested—not open-world or human detection and not a third primary.
 
-The exact QUEUE-15 completion event, all 96 raw blocks, frozen reused inputs and frozen
-source bytes agree. Every candidate-relative setup, actual setup outcome, candidate
-filter and submitted program was independently checked; a fresh extracted source
-regenerated 36 outcome-independent rows. Recorded worker-plus-child CPU is
-9,720.234375 seconds, with earlier
-uninstrumented setup and replay-child limits retained. No completed science was
-restarted.
+Full independent reconstruction passed all 9,216 rows. Every retained setup was
+executed independently under every then-compatible supplied law and evaluator truth;
+every actual setup outcome, candidate filter and submitted task program was checked.
+A fresh extraction of the pinned source regenerated 36 outcome-independent rows. The
+exact native completion event and complete-file hash agree. Recorded worker-plus-child
+CPU is 9,720.234375 seconds, with earlier uninstrumented setup and replay-child limits
+retained.
 
-Both final primaries remain unchanged and no third primary may be created. The active
-operator is auditing whether any commissioned structural condition remains that can
-make wrong-family physical setup itself diverge. Any next allocation must add that
-discriminator rather than repeat a saturated cell and cannot revise the two held
-primaries. No scientific worker is running during that decision.
+The first-block checker’s unconditional known-law ceiling assertion failed because
+four fork rows spent the shared envelope before planning; the repaired checker retains
+that result rather than treating it as an instrument failure. A later filing pass stopped
+on an aggregate filename mismatch before ledger updates and resumed idempotently after
+the same bytes were generated under the declared name. Neither failure changed raw
+science. Both final primaries remain held and unchanged; the campaign remains active.

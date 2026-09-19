@@ -589,6 +589,18 @@ ceiling. Independent reconstruction checks truth exclusion, every candidate filt
 every observation outcome and every submitted program. Query-state preparation remains
 apparatus-provided, so empty-support detection here is not open-world anomaly detection.
 
+The physical candidate-family misspecification diagnostic reuses that truth-excluded
+packet byte-for-byte after its outcomes were exposed. For every attempted action query,
+the selector searches only the surviving supplied laws for a setup path with a shared
+terminal state. It then executes that path under evaluator truth and records the actual
+setup outcome as public evidence; the intended action query executes only if its state
+was reached. Candidate filtering, setup search, candidate simulation, physical outcomes,
+the intended query and downstream action share one 32,768-operation envelope. The
+verifier separately executes every retained setup under every then-compatible supplied
+law and under truth. No actual setup failed in this packet; the measured boundary is
+topology-dependent evidence and work exhaustion. The diagnostic adds no structural
+support or primary, and fresh-object provisioning/reset remains outside the count.
+
 Campaign unit accounting retains the previously filed conservative identifier count
 when a later refresh would deduplicate identifiers shared by reused branch plans. The
 final-primary filing caught and corrected such a decrease before commit. Scientific

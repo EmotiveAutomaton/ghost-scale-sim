@@ -1,1 +1,19 @@
-{"at":"2026-09-19T12:04:12.059331+00:00","blocks_completed":1,"blocks_planned":96,"campaign_state":"active","contexts":192,"final_contrasts_frozen":2,"first_block_independent_check_passed":true,"new_structural_contexts":0,"plan_sha256":"cabc9bda4023206909b3bcc7fdc9bd120fca2869ac07dd330f97eae1939876f2","retained_first_block_checker_failure":"machine-local FIRST_BLOCK_CHECK_FAILURE.cyclic-misspecified-physical.json","rows_planned":9216,"rows_verified":96,"schema":"v18.1.branch-status.1","source_admission_passed":true,"state":"first_block_verified_ready_to_resume"}
+{
+  "at": "2026-09-19T12:21:00.743889+00:00",
+  "blocks_completed": 96,
+  "blocks_planned": 96,
+  "campaign_state": "active",
+  "completed_at": "2026-09-19T12:11:50.811289+00:00",
+  "contexts": 192,
+  "final_contrasts_frozen": 2,
+  "first_block_independent_check_passed": true,
+  "instrument_state": "full independent candidate-relative setup, actual setup-outcome, truth-exclusion, candidate-filter and task-physics reconstruction plus 36-row extracted-source replay passed",
+  "new_structural_contexts": 0,
+  "plan_sha256": "cabc9bda4023206909b3bcc7fdc9bd120fca2869ac07dd330f97eae1939876f2",
+  "retained_first_block_checker_failure": "machine-local FIRST_BLOCK_CHECK_FAILURE.cyclic-misspecified-physical.json",
+  "rows_planned": 9216,
+  "rows_verified": 9216,
+  "schema": "v18.1.branch-status.1",
+  "source_admission_passed": true,
+  "state": "completed_and_verified"
+}

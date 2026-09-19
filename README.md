@@ -38,7 +38,10 @@ isolation intact but reduces dependency and equal-query-cost known-law action to
 primitive search to 33.33%; the cheaper conditioned-direct method remains 100%. In a fresh
 truth-excluded screen, two action observations empty the supplied family in every context:
 three candidate-aware action methods abstain safely, while forced selection attempts an invalid
-action every time. The current isolated validity suite passes 63 checks, and both primary bounds reproduce.
+action every time. When robust query-state preparation is also charged on those exposed contexts,
+two requested probes empty support only in chains; forks retain one wrong law and grouped
+topologies exhaust after one probe. The current isolated validity suite passes 66 checks, and both
+primary bounds reproduce.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
 The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),

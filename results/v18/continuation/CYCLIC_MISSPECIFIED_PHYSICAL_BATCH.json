@@ -1,0 +1,104 @@
+{
+  "additional_bounded_replay_rows": 36,
+  "at": "2026-09-19T12:21:00.743889+00:00",
+  "blocks": 96,
+  "branch": "g2-cyclic-misspecified-physical",
+  "campaign_state": "active; next commissioned frontier decision pending",
+  "cases": 768,
+  "comparisons_sha256": "08792270d7519c14b8921628c5c62b004db44693fa3f38383a694b88278b020b",
+  "complete_sha256": "300ef352f43a3fdfc0346a9e4bc594c94771468fd6263045a3a060b7e7f89ee7",
+  "conservative_unit_identifiers": 12458,
+  "contexts": 192,
+  "diagnostic_sha256": "4c9da20ee810b63e34eb06ee8ea14eec3ba3f1511a0a2dc078fbe9c8d7b3f968",
+  "event_id": "23fe8d84951f6ab224856a3296a90e2751117699086dbb9334a8e1c4de4617fc",
+  "final_contrasts_frozen": 2,
+  "final_contrasts_remaining_maximum": 0,
+  "histories_per_context": 4,
+  "new_structural_contexts": 0,
+  "one_query_detection_all_topologies": {
+    "chain": 0,
+    "fork": 0,
+    "groups": 0
+  },
+  "plan_sha256": "cabc9bda4023206909b3bcc7fdc9bd120fca2869ac07dd330f97eae1939876f2",
+  "queue": "QUEUE-15",
+  "queue_event_sha256": "b251a668887891e4a68f6a222e9c2745fe6c0d1a3ca0cefd8e1be62660027a41",
+  "replay_sha256": "882ca1fc83eacc2c7f762f5f5c064b319211ea9222c9f013b41700f1826873a2",
+  "rows": 9216,
+  "schema": "v18.1.cyclic-misspecified-physical-batch.1",
+  "scope": "exposed descriptive charged physical candidate-family misspecification diagnostic on reused deterministic contexts; miniature architecture untested; no third primary",
+  "selection_sha256": "ff40dfca2b78e2ee65c9fc754e242fd6a71963f5ce87aedce5faee5138c207eb",
+  "source_archive_sha256": "b8fff4fb38601de84e36fe97b40b3e24cf313fd78f31357738a1e5b611cb2512",
+  "total_bounded_replay_rows": 38582,
+  "total_verified_rows": 3073032,
+  "two_requested_query_topologies": {
+    "chain": {
+      "candidate_aware_detection": {
+        "candidate-set-primitive": 1,
+        "conditioned-direct": 1,
+        "dependencies": 1
+      },
+      "candidate_aware_safe_abstention": {
+        "candidate-set-primitive": 1,
+        "conditioned-direct": 1,
+        "dependencies": 1
+      },
+      "forced_candidate_invalid_action": 1,
+      "forced_candidate_unsafe_action": 1,
+      "known_law_success": 1,
+      "mean_acquired_queries": 2,
+      "mean_acquisition_operations": 28357,
+      "mean_candidate_compatible_laws": 0,
+      "mean_physical_setup_failures": 0,
+      "mean_physical_setup_operations": 0,
+      "mean_query_exhausted": 0,
+      "requested_queries": 2
+    },
+    "fork": {
+      "candidate_aware_detection": {
+        "candidate-set-primitive": 0,
+        "conditioned-direct": 0,
+        "dependencies": 0
+      },
+      "candidate_aware_safe_abstention": {
+        "candidate-set-primitive": 0,
+        "conditioned-direct": 0,
+        "dependencies": 0
+      },
+      "forced_candidate_invalid_action": 0.609375,
+      "forced_candidate_unsafe_action": 0,
+      "known_law_success": 0.328125,
+      "mean_acquired_queries": 1.609375,
+      "mean_acquisition_operations": 22679.84375,
+      "mean_candidate_compatible_laws": 1,
+      "mean_physical_setup_failures": 0,
+      "mean_physical_setup_operations": 1.28125,
+      "mean_query_exhausted": 0.390625,
+      "requested_queries": 2
+    },
+    "groups": {
+      "candidate_aware_detection": {
+        "candidate-set-primitive": 0,
+        "conditioned-direct": 0,
+        "dependencies": 0
+      },
+      "candidate_aware_safe_abstention": {
+        "candidate-set-primitive": 0,
+        "conditioned-direct": 0,
+        "dependencies": 0
+      },
+      "forced_candidate_invalid_action": 0,
+      "forced_candidate_unsafe_action": 0,
+      "known_law_success": 0,
+      "mean_acquired_queries": 1,
+      "mean_acquisition_operations": 32768,
+      "mean_candidate_compatible_laws": 1,
+      "mean_physical_setup_failures": 0,
+      "mean_physical_setup_operations": 0.671875,
+      "mean_query_exhausted": 1,
+      "requested_queries": 2
+    }
+  },
+  "verification_sha256": "a7b489610829c16361cfb9de7d08df8db2ec8c8d6d296468ccb8969b6e226bab",
+  "worker_cpu_seconds_including_preparation": 97.078125
+}
