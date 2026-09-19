@@ -1,8 +1,10 @@
 # V18.3 executable follow-on protocols
 
-Frozen before the E/G/H discovery outcomes and third-rule severity outcomes.
-The overall [commission and validity contract](README.md) remains controlling.
-These are descriptive discovery studies; the earlier A-D results are already exposed.
+Each packet freezes the applicable protocol revision before its execution. Initial
+E/G/H budgets and third-rule severity budgets were frozen before their discovery
+outcomes. Later additions and scoring repairs are labeled below. The overall
+[commission and validity contract](README.md) remains controlling. These are
+descriptive discovery studies; the earlier A-D results were already exposed.
 
 ## E: learned memory and predictive summaries
 
@@ -181,6 +183,35 @@ its counterfactual work and actual practice/planning/execution costs are retaine
 Known correct/wrong recommendations must succeed/fail respectively. The checker
 must succeed regardless of source beliefs. Reused C cases add no independent data.
 No claim of provenance necessity, human uptake or value adoption follows.
+
+### Historical-role accuracy repair
+
+Before publication, the purpose diagnostic exposed unstable componentwise argmax
+accuracy: exact and intervention-summary distributions with matching proper loss
+received different accuracy because numerical noise resolved exact ties. Preserve
+the original packet and rescore its unchanged predictions under a new identity.
+Use uniform expected credit among role maxima within absolute tolerance 1e-10.
+Whole-state accuracy is the product of those per-role credits, representing
+independent uniform tie resolution; it is not joint-posterior MAP accuracy.
+Known uniform and perfectly identified controls, plus a 1e-13 perturbation control,
+precede corrected scoring. Proper losses, inputs, fitted readers and forecasts must
+remain unchanged. This is a scoring repair on reused data, not new training or a
+replication. Proper loss remains the primary comparison.
+
+The same numerical audit applies uniform expected top-choice credit within 1e-10
+to calibration and snaps confidence values within 1e-10 of fixed bin boundaries.
+This prevents equivalent forecasts from acquiring different diagnostics through
+roundoff. Native source uptake resolves near-half recommendation probabilities
+using one shared seeded tie coin per source lineage and stage, independent of
+truth and shared across methods and descendant counts. Original diagnostic
+outputs remain retained; probabilities and proper losses do not change.
+
+Compression receives a post-hoc sensitivity range over every enumerated code
+within 1e-10 of the old-task optimum. Report the smallest and largest new-task loss
+within that set; do not replace the originally selected code using future results.
+The global finite certificate is numerical to the stated tolerance, not a proof
+of a unique exact symbolic optimum. Uniform old-question predictions provide a
+known control with 127 tied two-symbol codes and new-loss range zero to log(2).
 
 ## Repairs, reproducibility and runtime
 

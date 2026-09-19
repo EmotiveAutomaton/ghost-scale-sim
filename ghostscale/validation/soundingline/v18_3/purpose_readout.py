@@ -38,3 +38,14 @@ def fit(x,y,dev,dev_y,alphas=(.1,1.,10.),temperatures=(.25,.5,1.,2.)):
 
 
 def predict(model,x):return probabilities(((x-model['center'])/model['scale'])@model['coefficients']+model['intercept'],float(model['temperature']))
+
+
+def accuracies(truth,p,tolerance=1e-10):
+    """Expected credit under uniform, independent resolution of numerical ties."""
+    credits=[]
+    for columns in SLICES:
+        actual=truth[:,columns].argmax(1);values=p[:,columns]
+        tied=values>=values.max(1,keepdims=True)-tolerance
+        credits.append(tied[np.arange(len(values)),actual]/tied.sum(1))
+    credits=np.stack(credits,axis=1)
+    return credits.mean(1),credits.prod(1)

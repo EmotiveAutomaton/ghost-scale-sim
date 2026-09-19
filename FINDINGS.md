@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 E: Learned memory and a changed reader purpose (19 September 2026)
+
+Learned recurrent memory improved prediction on familiar kinds of questions but did not transfer reliably to a new question family. On familiar questions, the split reader had logarithmic loss 1.037, the flat reader 1.117 and the direct full-history reader 1.496. On new questions those rankings reversed: 2.399, 2.214 and 1.749 respectively; the exact nominal-family reference had loss 0.656. These are descriptive constructed-method results. Compact maintained state is useful for storage, but this experiment does not establish a representation that is best across purposes or a uniquely necessary role split.
+
+[Evidence and limits](docs/exchange/v18-3-E-response.md).
+
 ## V18.3 F: Architecture boundaries and a held-out decision law (19 September 2026)
 
 The purpose and change-of-state findings survive some changes of mechanics, but their boundaries matter. Under a new lexicographic decision law, action-focused inquiry succeeded in 93.75% of uniform-access tasks versus 70.63% for uncertainty-focused inquiry at the same three attempts. Selective state updating still improved goal-change loss, 0.532 versus static 2.976, and still hurt stationary prediction, 0.403 versus 0.296. In the original sixteen-cell design, the pooled action advantage under hidden access concealed four cells with a negative mean difference. These are descriptive results across declared constructions, not universal architectural claims.

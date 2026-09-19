@@ -76,13 +76,12 @@ def score(root,pulse=lambda **kw:None):
             with np.load(path,allow_pickle=False) as z:predictions[name]=z['probabilities'].copy()
         for name,p in predictions.items():
             losses,brier,tv=proper_scores(truth,p);losses-=np.log(4)
-            expected=np.stack([truth[:,columns].argmax(1) for columns in R.SLICES],axis=1)
-            actual=np.stack([p[:,columns].argmax(1) for columns in R.SLICES],axis=1)
+            role_accuracy,whole_state_accuracy=R.accuracies(truth,p)
             method,seed=name.rsplit('-seed',1) if '-seed' in name else (name,None)
             for i,(cell,lineage) in enumerate(ids):
                 rows.append(dict(condition=condition,method=method,seed=None if seed is None else int(seed),cell=int(cell),lineage=int(lineage),
                     expected_loss=W.loss_record(float(losses[i])),brier=float(brier[i]),total_variation=float(tv[i]),
-                    role_accuracy=float(np.mean(actual[i]==expected[i])),whole_state_accuracy=float(np.all(actual[i]==expected[i]))))
+                    role_accuracy=float(role_accuracy[i]),whole_state_accuracy=float(whole_state_accuracy[i])))
         pulse(phase='purpose-scoring',condition=condition)
     clusters=[];cells={}
     for condition in evaluator['truth']:
@@ -96,5 +95,6 @@ def score(root,pulse=lambda **kw:None):
             cells[condition+'|'+method]={m:stats([r[m] for r in selected],('purpose',condition,method,m)) for m in ('expected_loss','brier','total_variation','role_accuracy','whole_state_accuracy')}
     path=root/'neural_points.json.gz';path.write_bytes(gzip.compress(canonical(dict(rows=rows,clusters=clusters)),mtime=0))
     write(root/'SUMMARY.json',dict(family='E-purpose',cells=cells,raw_sha256=file_digest(path),fits=complete['fits'],checks=dict(independent_role_labels=references),
+        accuracy_ties=dict(absolute_tolerance=1e-10,role_rule='uniform credit among numerical maxima',whole_state_rule='expected accuracy of independent per-role tie resolutions; not joint-posterior MAP'),
         independent_unit='same parent E coefficient-draw lineages; new questions, fit seeds and architecture cells do not add independence',
         scope='additional equally supervised linear historical-role readouts from frozen memory; no encoder retraining or causal-identification claim'))
