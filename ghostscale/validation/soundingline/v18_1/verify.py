@@ -152,6 +152,7 @@ def branch_report(root,output):
       'g2-cyclic-target':('n','family','method','query_policy','requested_queries','budget'),
       'g2-cyclic-action':('n','family','method','query_policy','requested_queries','budget'),
       'g2-cyclic-physical':('n','family','method','query_policy','requested_queries','budget'),
+      'g2-cyclic-misspecified':('n','family','method','query_policy','requested_queries','budget'),
       'g3-representation':('n','family','condition','method','storage_cap','budget'),
       'g3-stitch':('n','family','condition','method','storage_cap','budget'),
       'g0-common':('stratum','allocation','capacity','representation','checking','planner','action_order_stratum','budget'),
@@ -182,7 +183,7 @@ def branch_report(root,output):
             evidence={}
             for row in unit['rows']:
                 data={**case,**row};key=tuple(data[k] for k in dimensions);count+=1
-                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g3-representation','g3-stitch','structural-direct'):
+                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified','g3-representation','g3-stitch','structural-direct'):
                     assert row['costs']['total_online']<=row['budget']
                     assert sum(v for k,v in row['costs'].items() if k not in ('total_online','envelope','unit'))==row['costs']['total_online']
                     if row['program'] is None:
@@ -194,11 +195,11 @@ def branch_report(root,output):
                         assert row['success']==(actual['legal'] and actual['stopped'] and actual['state']==p['target'])
                         assert row['costs']['actual_execution']==actual['primitive_cost']
                     if branch in ('g3-representation','g3-stitch'):assert row['acquisition']['storage_tokens']<=row['storage_cap']
-                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical') and 'observation_record' in row:
+                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified') and 'observation_record' in row:
                     ek=(row['query_policy'],row['requested_queries'],row['budget'])
                     if ek in evidence:assert evidence[ek]==digest(row['observation_record'])
                     evidence[ek]=digest(row['observation_record'])
-                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical') and 'forecast_probes' in row:
+                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified') and 'forecast_probes' in row:
                     predicted_truth=[]
                     for q in row['forecast_probes']:
                         actual=physical(json.dumps(truth,sort_keys=True),json.dumps(q['initial']),tuple(q['program']),p['max_steps'])
@@ -274,6 +275,33 @@ def branch_report(root,output):
                             final.append(model)
                     assert len(final)==row['query_compatible_laws']
                     assert row['query_isolates_truth']==(final==[truth])
+                if branch=='g2-cyclic-misspecified':
+                    assert case['truth_excluded'] and truth not in p['models']
+                    assert row['query_policy']=='misspecification-action'
+                    assert row['requested_queries'] in (1,2)
+                    assert row['acquisition_costs']['total_online']==row['acquisition_operations']
+                    assert row['acquisition_operations']<=row['costs']['total_online']<=row['budget']
+                    assert row['target_changed_parts']==[1,2]
+                    assert row['truth_in_candidate_family'] is False and row['candidate_family_supplied']
+                    assert row['comparison_role'].startswith('descriptive candidate-family misspecification')
+                    paid=row['observation_record'][len(p['observations']):]
+                    assert all(o['query']['kind']=='action' for o in paid)
+                    assert row['target_action_parts']==[
+                        o['query']['program'][0]%len(p['initial']) for o in paid]
+                    compatible=[]
+                    for model in p['models']:
+                        if all(independent_assembly(model,o['query']['initial'],o['query']['program'],
+                                p['max_steps'])==o['outcome'] for o in row['observation_record']):
+                            compatible.append(model)
+                    inconsistent=not compatible
+                    assert len(compatible)==row['candidate_compatible_laws']
+                    assert row['evidence_inconsistent_with_candidate_family']==inconsistent
+                    if row['candidate_aware'] and inconsistent:
+                        assert row['misspecification_detected'] and row['abstained_on_inconsistency']
+                        assert row['program'] is None and not row['unsafe_action_attempted_after_inconsistency']
+                    if row['method']=='forced-candidate-direct' and inconsistent and row['program'] is not None:
+                        assert row['unsafe_action_attempted_after_inconsistency']
+                    assert row['method_receives_evaluator_truth']==(row['method']=='known-law')
                 if branch=='g0-common':
                     request=row['request'];target=request['target']
                     if row['planner']=='state':assert row['costs']['total_online']<=row['budget']

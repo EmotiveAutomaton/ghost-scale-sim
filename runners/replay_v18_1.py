@@ -27,7 +27,7 @@ def main():
     records=importlib.import_module('ghostscale.validation.soundingline.v16.records')
     runtime=importlib.import_module('ghostscale.validation.soundingline.v18_1.runtime')
     assert Path(runtime.__file__).resolve().is_relative_to(destination)
-    branch=plan['branch'];module=importlib.import_module('ghostscale.validation.soundingline.v18_1.'+{'g2-mask':'g2_mask','g2-permuted':'permuted','g2-cyclic':'cyclic_union','g2-cyclic-cost':'cyclic_union','g2-cyclic-target':'cyclic_union','g2-cyclic-action':'cyclic_union','g2-cyclic-physical':'cyclic_union','g3-stitch':'g3_stitch','structural-direct':'direct'}.get(branch,branch.split('-')[0]))
+    branch=plan['branch'];module=importlib.import_module('ghostscale.validation.soundingline.v18_1.'+{'g2-mask':'g2_mask','g2-permuted':'permuted','g2-cyclic':'cyclic_union','g2-cyclic-cost':'cyclic_union','g2-cyclic-target':'cyclic_union','g2-cyclic-action':'cyclic_union','g2-cyclic-physical':'cyclic_union','g2-cyclic-misspecified':'cyclic_union','g3-stitch':'g3_stitch','structural-direct':'direct'}.get(branch,branch.split('-')[0]))
     selected={};raw_bindings={}
     for name in completed['blocks']:
         block,receipt=runtime.load_block(args.root,name);raw_bindings[name]=receipt['raw_sha256']
@@ -37,7 +37,7 @@ def main():
             elif branch in ('g2-native','g2-transfer'):key=tuple(case.get(k) for k in ('n','family','selection','donor','truth_excluded'))
             elif branch=='g2-mask':key=tuple(case[k] for k in ('origin_run','n','family','selection','donor','truth_excluded'))
             elif branch=='g2-permuted':key=tuple(case[k] for k in ('n','family','selection','donor'))
-            elif branch in ('g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical'):key=tuple(case[k] for k in ('n','family'))
+            elif branch in ('g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified'):key=tuple(case[k] for k in ('n','family'))
             elif branch in ('g3-representation','g3-stitch'):key=tuple(case[k] for k in ('n','family','condition'))
             elif branch=='g4-history':key=(case['case_id'],)
             elif branch=='structural-direct':key=tuple(case[k] for k in ('origin_branch','n','family','condition','stratum'))
@@ -65,6 +65,7 @@ def main():
         elif branch=='g2-cyclic-target':rows=module.evaluate_target_aware(case,design['budget'],design['query_counts'])
         elif branch=='g2-cyclic-action':rows=module.evaluate_target_action(case,design['budget'],design['query_counts'])
         elif branch=='g2-cyclic-physical':rows=module.evaluate_physical_action(case,design['budget'],design['query_counts'])
+        elif branch=='g2-cyclic-misspecified':rows=module.evaluate_misspecified(case,design['budget'],design['query_counts'])
         else:raise ValueError('unknown branch')
         assert records.digest(rows)==records.digest(unit['rows']);count+=len(rows)
     records.write(args.output/'REPLAY.json',dict(passed=True,cases=len(selected),rows=count,branch=branch,

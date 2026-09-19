@@ -227,6 +227,33 @@ def make_multi_target_cases(namespace,*,per_stratum=64,histories=4,
     return cases
 
 
+def make_misspecified_cases(namespace,*,per_stratum=64,histories=4,
+                            families=('fork','chain','groups'),exclude_signatures=()):
+    """Fresh cyclic contexts whose supplied three-law family excludes truth.
+
+    The underlying four-law construction is made before truth is removed so the
+    physical context can be checked against earlier support by its unchanged
+    signature.  The public menu is then rebuilt from the three supplied laws
+    alone; neither its contents nor its order can encode the excluded law.
+    """
+    cases=make_multi_target_cases(namespace,per_stratum=per_stratum,histories=histories,
+        families=families,action_probes=False,exclude_signatures=exclude_signatures)
+    for case in cases:
+        public=case['public'];truth=case['private']['true_world']
+        models=[deepcopy(model) for model in public['models'] if canonical(model)!=canonical(truth)]
+        if len(models)!=3 or any(canonical(model)==canonical(truth) for model in models):
+            raise AssertionError('misspecified family must contain three non-truth laws')
+        public['models']=sorted(models,key=canonical)
+        public['menu']=complete_action_menu(public['models'])
+        case['truth_excluded']=True
+        case['candidate_family_signature']=digest(public['models'])
+        case['label_order']='opaque-two-target-cyclic-union-truth-excluded'
+        case['coverage']['candidate_laws']=len(public['models'])
+        case['coverage']['truth_excluded']=True
+        case['coverage']['target_action_probes']=0
+    return cases
+
+
 def _candidate_models(namespace,n,family,draw,truth):
     models=[deepcopy(truth),_reciprocal_alternative(truth)]
     seen={tuple(model['parents']) for model in models}
@@ -298,6 +325,8 @@ def acquire(public,truth,policy,count,budget):
         for _ in range(count):
             chosen=(select_target_aware(payload,observations,used,work)
                     if policy=='target-aware' else
+                    select_misspecification_action(payload,observations,used,work)
+                    if policy=='misspecification-action' else
                     select_target_action(payload,observations,used,work)
                     if policy=='target-action' else
                     g2.select_query(payload,observations,used,policy,work))
@@ -348,6 +377,39 @@ def select_target_action(payload,observations,used,work):
     for index in available:
         work.charge('selection');groups={}
         for model in hypotheses:
+            answer=canonical(g2.observed(model,public['menu'][index],work))
+            groups[answer]=groups.get(answer,0)+1
+        sizes=sorted(groups.values(),reverse=True)
+        score=(max(sizes),sum(size*size for size in sizes),index)
+        if best is None or score<best[0]:best=(score,index)
+    return best[1]
+
+
+def select_misspecification_action(payload,observations,used,work):
+    """Choose independent target-part falsification probes without evaluator truth.
+
+    Candidate partition quality is evaluated against the complete supplied
+    family, not only its current survivors.  After one target part is queried,
+    the other changed target part is preferred.  This prevents an arbitrary
+    singleton survivor from turning every second query into an undirected tie.
+    """
+    public=g2.contract(payload);hypotheses=g2.compatible(public['models'],observations,work)
+    if not hypotheses:return None
+    n=len(public['initial'])
+    changed={part for part,(before,after) in enumerate(zip(public['initial'],public['target']))
+             if before!=after}
+    used_parts={public['menu'][index]['program'][0]%n for index in used
+                if public['menu'][index]['kind']=='action' and len(public['menu'][index]['program'])==1}
+    preferred=changed-used_parts or changed
+    available=[index for index,query in enumerate(public['menu'])
+               if index not in used and query['kind']=='action' and
+               len(query['program'])==1 and query['program'][0]%n in preferred and
+               _common_valid_state(public['models'],query['initial'])]
+    if not available:return None
+    best=None
+    for index in available:
+        work.charge('selection');groups={}
+        for model in public['models']:
             answer=canonical(g2.observed(model,public['menu'][index],work))
             groups[answer]=groups.get(answer,0)+1
         sizes=sorted(groups.values(),reverse=True)
@@ -724,5 +786,85 @@ def evaluate_physical_action(case,budget=32768,query_counts=(1,2)):
                 reset_contract=('each query receives a fresh object at the public task initial state; '
                                 'provisioning that object is outside the count'),
                 candidate_family_supplied=True,setup_uses_evaluator_truth=False)
+            rows.append(row)
+    return rows
+
+
+def _episode_action(public,observations,acquisition):
+    work=Work(acquisition.cap,dict(acquisition.counts));program=None
+    try:program=g2.episode_plan(public,observations,work)
+    except Exhausted:pass
+    return dict(program=program,costs=work.receipt(),storage_tokens=0,
+                knowledge='surface transition episodes only; supplied candidate laws are not consulted')
+
+
+def _forced_candidate_direct(public,acquisition):
+    """Negative control that ignores contradictory evidence and forces one law."""
+    work=Work(acquisition.cap,dict(acquisition.counts));program=None;reason=None
+    try:
+        program,reason=direct.compile_models(
+            [public['models'][0]],public['initial'],public['target'],public['max_steps'],work)
+    except Exhausted:
+        reason='online work exhausted'
+    return dict(program=program,costs=work.receipt(),unsupported_reason=reason,
+                compatible_laws=1,storage_tokens=0,
+                knowledge='negative control: force the first canonically ordered supplied law after contradiction')
+
+
+def evaluate_misspecified(case,budget=32768,query_counts=(1,2)):
+    """Measure detection, abstention and unsafe forcing when truth is excluded."""
+    public=case['public'];truth=case['private']['true_world'];rows=[]
+    if truth in public['models'] or not case['truth_excluded']:
+        raise ValueError('misspecification condition requires truth outside the supplied family')
+    candidate_aware={'dependencies','conditioned-direct','candidate-set-primitive'}
+    for count in query_counts:
+        observations,used,query_exhausted,acquisition=acquire(
+            public,truth,'misspecification-action',count,budget)
+        compatible=g2.compatible(public['models'],observations)
+        inconsistent=not compatible
+        current=[]
+        for method in ('dependencies','known-law'):
+            current.append(dict(method=method,**_structured_cached_action(
+                public,truth,observations,acquisition,method)))
+        for method,runner in (('conditioned-direct',_conditioned_direct),
+                              ('candidate-set-primitive',_belief_search),
+                              ('episodes',_episode_action)):
+            result=runner(public,observations,acquisition)
+            current.append(dict(method=method,**score_submission(
+                truth,public['initial'],public['target'],result,public['max_steps'])))
+        forced=_forced_candidate_direct(public,acquisition)
+        current.append(dict(method='forced-candidate-direct',**score_submission(
+            truth,public['initial'],public['target'],forced,public['max_steps'])))
+        acquisition_costs=acquisition.receipt()
+        paid=observations[len(public['observations']):]
+        for row in current:
+            method=row['method'];program=row['program']
+            if method=='dependencies':declared=row['model_status']=='inconsistent'
+            elif method in ('conditioned-direct','candidate-set-primitive'):
+                declared=inconsistent and row.get('compatible_laws')==0
+            else:declared=False
+            row.update(query_policy='misspecification-action',requested_queries=count,
+                acquired_queries=len(used),query_indices=list(used),query_exhausted=query_exhausted,
+                observation_record=deepcopy(observations),budget=budget,
+                acquisition_costs=deepcopy(acquisition_costs),
+                acquisition_operations=acquisition_costs['total_online'],
+                candidate_compatible_laws=len(compatible),
+                evidence_inconsistent_with_candidate_family=inconsistent,
+                misspecification_detected=declared,
+                abstained=program is None,
+                abstained_on_inconsistency=declared and program is None,
+                unsafe_action_attempted_after_inconsistency=(
+                    inconsistent and program is not None and method!='known-law'),
+                candidate_aware=method in candidate_aware,
+                method_receives_evaluator_truth=method=='known-law',
+                truth_in_candidate_family=False,candidate_family_supplied=True,
+                target_changed_parts=[part for part,(before,after) in enumerate(
+                    zip(public['initial'],public['target'])) if before!=after],
+                target_action_parts=[observation['query']['program'][0]%len(public['initial'])
+                                     for observation in paid],
+                comparison_role=('descriptive candidate-family misspecification detection/abstention screen; '
+                                 'forced-candidate-direct is a labeled unsafe negative control'),
+                selector_contract=('two outcome-independent target-part action probes are chosen from the '
+                                   'supplied family and public target; evaluator truth is used only to return outcomes'))
             rows.append(row)
     return rows

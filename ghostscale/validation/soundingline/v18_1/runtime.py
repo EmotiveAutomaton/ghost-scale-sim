@@ -217,6 +217,10 @@ def run(root,archive,*,stop_after_blocks=None):
                         from . import cyclic_union
                         rows=cyclic_union.evaluate_physical_action(
                             case,plan['design']['budget'],plan['design']['query_counts']);diagnostics=None
+                    elif plan['branch']=='g2-cyclic-misspecified':
+                        from . import cyclic_union
+                        rows=cyclic_union.evaluate_misspecified(
+                            case,plan['design']['budget'],plan['design']['query_counts']);diagnostics=None
                     else:
                         raise ValueError('unimplemented branch cannot be admitted')
                     units.append(dict(case=case,rows=rows,diagnostics=diagnostics))

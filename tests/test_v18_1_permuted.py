@@ -270,3 +270,54 @@ def test_physical_action_acquisition_exhaustion_never_yields_free_setup_or_evide
     assert exhausted and work.spent<=8
     assert observations==public['observations']
     assert indices==setups==reachable==[]
+
+
+def test_misspecified_action_evidence_detects_excluded_truth_and_abstains():
+    case=cyclic_union.make_misspecified_cases('development-cyclic-misspecified',
+        per_stratum=1,histories=1,families=('chain',))[0]
+    public=case['public'];truth=case['private']['true_world'];n=len(public['initial'])
+    assert case['truth_excluded'] and truth not in public['models'] and len(public['models'])==3
+    assert public['menu']==cyclic_union.complete_action_menu(public['models'])
+    one,one_indices,one_exhausted,_=cyclic_union.acquire(
+        public,truth,'misspecification-action',1,32768)
+    two,two_indices,two_exhausted,_=cyclic_union.acquire(
+        public,truth,'misspecification-action',2,32768)
+    assert not one_exhausted and not two_exhausted
+    assert len(g2.compatible(public['models'],one))==1
+    assert g2.compatible(public['models'],two)==[]
+    assert one_indices==two_indices[:1]
+    assert len(two_indices)==2
+    assert len({public['menu'][index]['program'][0]%n for index in two_indices})==2
+    assert all(public['menu'][index]['kind']=='action' for index in two_indices)
+
+    rows=cyclic_union.evaluate_misspecified(case,32768,(1,2))
+    assert len(rows)==12
+    selected={(row['method'],row['requested_queries']):row for row in rows}
+    methods={'dependencies','known-law','conditioned-direct','candidate-set-primitive',
+             'episodes','forced-candidate-direct'}
+    assert {row['method'] for row in rows}==methods
+    for method in ('dependencies','conditioned-direct','candidate-set-primitive'):
+        row=selected[method,2]
+        assert row['candidate_aware'] and row['misspecification_detected']
+        assert row['abstained_on_inconsistency'] and row['program'] is None
+        assert not row['unsafe_action_attempted_after_inconsistency']
+    forced=selected['forced-candidate-direct',2]
+    assert forced['program'] is not None and forced['unsafe_action_attempted_after_inconsistency']
+    assert selected['known-law',2]['success'] and selected['known-law',2]['method_receives_evaluator_truth']
+    assert all(row['costs']['total_online']<=row['budget'] for row in rows)
+
+
+def test_misspecification_selector_never_uses_evaluator_truth():
+    case=cyclic_union.make_misspecified_cases('development-misspecification-no-oracle',
+        per_stratum=1,histories=1,families=('groups',))[0]
+    public=case['public'];truth=case['private']['true_world']
+    observations,indices,exhausted,_=cyclic_union.acquire(
+        public,truth,'misspecification-action',2,32768)
+    assert not exhausted and not g2.compatible(public['models'],observations)
+    alternatives=[]
+    for alternative in public['models']:
+        _,chosen,failed,_=cyclic_union.acquire(
+            public,alternative,'misspecification-action',2,32768)
+        alternatives.append(chosen[0])
+        assert not failed
+    assert len(set(alternatives+[indices[0]]))==1
