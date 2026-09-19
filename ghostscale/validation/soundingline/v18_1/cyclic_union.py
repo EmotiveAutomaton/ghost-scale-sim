@@ -79,7 +79,43 @@ def _multi_target_models(truth):
     return models
 
 
-def _menu_with_depth(defaults,target,models,max_steps):
+def _common_valid_state(models,state):
+    """Whether an assembly state respects every public candidate dependency."""
+    return all(all(value<0 or parent<0 or state[parent]>=0
+                   for value,parent in zip(state,model['parents'])) for model in models)
+
+
+def _target_action_probes(defaults,target,models):
+    """Construct public one-step probes that split each changed target relation.
+
+    Probe states use only the shared defaults and must be physically valid under
+    every candidate law.  The observation is an executed action outcome, never a
+    direct report of a parent label.
+    """
+    n=len(defaults);changed=[part for part,(before,after) in enumerate(zip(defaults,target))
+                            if before!=after];probes=[]
+    for part in changed:
+        best=None
+        for mask in range(1<<n):
+            state=[defaults[index] if mask&(1<<index) else -1 for index in range(n)]
+            if not _common_valid_state(models,state):continue
+            for action in (part,n+part,2*n+part):
+                query=dict(kind='action',initial=state,program=[action])
+                groups={}
+                for model in models:
+                    answer=canonical(g2.observed(model,query))
+                    groups[answer]=groups.get(answer,0)+1
+                if sorted(groups.values())!=[2,2]:continue
+                score=(sum(value>=0 for value in state),action//n,tuple(state),action)
+                if best is None or score<best[0]:best=(score,query)
+        if best is None:raise ValueError('no common-state target action separates candidates')
+        probes.append(best[1])
+    if len({canonical(probe) for probe in probes})!=len(changed):
+        raise ValueError('target action probes collapsed')
+    return probes
+
+
+def _menu_with_depth(defaults,target,models,max_steps,*,action_probes=False):
     n=len(defaults);initial=list(defaults)
     items=[dict(kind='action',initial=[-1]*n,program=[i]) for i in range(n)]
     items += [dict(kind='action',initial=initial,program=[2*n+i]) for i in range(n)]
@@ -91,12 +127,17 @@ def _menu_with_depth(defaults,target,models,max_steps):
         if tuple(program) not in programs:programs.append(tuple(program))
     programs=sorted(programs)
     items += [dict(kind='routine',initial=initial,program=list(program)) for program in programs]
+    if action_probes:
+        existing={canonical(item) for item in items}
+        items += [probe for probe in _target_action_probes(defaults,target,models)
+                  if canonical(probe) not in existing]
     items += [dict(kind='context',part=i) for i in range(1,n)]
     return items
 
 
 def make_multi_target_cases(namespace,*,per_stratum=64,histories=4,
-                            families=('fork','chain','groups')):
+                            families=('fork','chain','groups'),action_probes=False,
+                            exclude_signatures=()):
     """Fresh seven-part contexts with two independent target-relevant cycles.
 
     Target parts occupy labels 1 and 2; their reciprocal counterparts occupy 3
@@ -104,6 +145,7 @@ def make_multi_target_cases(namespace,*,per_stratum=64,histories=4,
     candidates, so the historical late-label fixed sequence is a real placebo.
     """
     cases=[];n=7;target_parts=(1,2);reciprocal_pairs=((1,3),(2,4));max_steps=4*n+2
+    excluded=set(exclude_signatures)
     for family in families:
         seen=set();draw=0
         while len(seen)<per_stratum:
@@ -129,10 +171,15 @@ def make_multi_target_cases(namespace,*,per_stratum=64,histories=4,
                 raise AssertionError('fixed placebo labels changed')
             target=list(truth['defaults'])
             for part in target_parts:target[part]=1-target[part]
-            unit=digest([namespace,truth,target,models])
-            if unit in seen:continue
-            seen.add(unit)
-            queries=_menu_with_depth(truth['defaults'],target,models,max_steps)
+            physical_signature=digest([truth,target,models])
+            if physical_signature in seen or physical_signature in excluded:continue
+            try:
+                queries=_menu_with_depth(
+                    truth['defaults'],target,models,max_steps,action_probes=action_probes)
+            except ValueError:
+                if action_probes:continue
+                raise
+            seen.add(physical_signature);unit=digest([namespace,physical_signature])
             neutral=dict(kind='routine',initial=list(truth['defaults']),program=[3*n])
             outcome=g2.observed(truth,neutral)
             for model in models:assert g2.observed(model,neutral)==outcome
@@ -146,13 +193,15 @@ def make_multi_target_cases(namespace,*,per_stratum=64,histories=4,
                 cases.append(dict(case_id=digest([namespace,unit,history]),structural_unit=unit,
                     history=history,selection='neutral-stop',donor='none',truth_excluded=False,
                     n=n,family=family,topology_signature=topology_signature(truth['parents']),
+                    physical_signature=physical_signature,
                     label_order='opaque-two-target-cyclic-union',label_permutation=permutation,
                     reciprocal_pairs=[list(pair) for pair in reciprocal_pairs],target_parts=list(target_parts),
                     public=public,private=dict(true_world=deepcopy(truth),donor_world=None,
                                                donor_source_success=None),
                     coverage=dict(demonstrations=3,distinct_queries=1,target_part_actions=0,
                                   failed_demonstrations=0,candidate_laws=len(models),
-                                  independent_reciprocal_cycles=2)))
+                                  independent_reciprocal_cycles=2,
+                                  target_action_probes=2 if action_probes else 0)))
     return cases
 
 
@@ -227,6 +276,8 @@ def acquire(public,truth,policy,count,budget):
         for _ in range(count):
             chosen=(select_target_aware(payload,observations,used,work)
                     if policy=='target-aware' else
+                    select_target_action(payload,observations,used,work)
+                    if policy=='target-action' else
                     g2.select_query(payload,observations,used,policy,work))
             if chosen is None:break
             query=deepcopy(public['menu'][chosen]);outcome=g2.observed(truth,query)
@@ -246,6 +297,30 @@ def select_target_aware(payload,observations,used,work):
              if before!=after}
     available=[index for index,query in enumerate(public['menu'])
                if index not in used and query['kind']=='context' and query['part'] in changed]
+    if not available:return None
+    best=None
+    for index in available:
+        work.charge('selection');groups={}
+        for model in hypotheses:
+            answer=canonical(g2.observed(model,public['menu'][index],work))
+            groups[answer]=groups.get(answer,0)+1
+        sizes=sorted(groups.values(),reverse=True)
+        score=(max(sizes),sum(size*size for size in sizes),index)
+        if best is None or score<best[0]:best=(score,index)
+    return best[1]
+
+
+def select_target_action(payload,observations,used,work):
+    """Choose a separating executed action on a changed public target part."""
+    public=g2.contract(payload);hypotheses=g2.compatible(public['models'],observations,work)
+    if not hypotheses:return None
+    n=len(public['initial'])
+    changed={part for part,(before,after) in enumerate(zip(public['initial'],public['target']))
+             if before!=after}
+    available=[index for index,query in enumerate(public['menu'])
+               if index not in used and query['kind']=='action' and
+               len(query['program'])==1 and query['program'][0]%n in changed and
+               _common_valid_state(public['models'],query['initial'])]
     if not available:return None
     best=None
     for index in available:
@@ -448,5 +523,44 @@ def evaluate_target_aware(case,budget=32768,query_counts=(1,2)):
                     comparison_role='descriptive target-aware multi-part cyclic query screen',
                     selector_contract=('target-aware uses only changed public target parts and candidate parent outcomes; '
                                        'fixed and decision retain their existing public contracts'))
+                rows.append(row)
+    return rows
+
+
+def evaluate_target_action(case,budget=32768,query_counts=(1,2)):
+    """Compare target-action evidence with parent-query and fixed controls."""
+    public=case['public'];truth=case['private']['true_world'];rows=[]
+    for policy in ('fixed','target-aware','target-action'):
+        for count in query_counts:
+            observations,used,query_exhausted,acquisition=acquire(
+                public,truth,policy,count,budget)
+            compatible=g2.compatible(public['models'],observations)
+            current=[]
+            for method in ('dependencies','known-law'):
+                current.append(dict(method=method,**_structured_cached_action(
+                    public,truth,observations,acquisition,method)))
+            for method,runner in (('conditioned-direct',_conditioned_direct),
+                                  ('candidate-set-primitive',_belief_search)):
+                result=runner(public,observations,acquisition)
+                current.append(dict(method=method,**score_submission(
+                    truth,public['initial'],public['target'],result,public['max_steps'])))
+            acquisition_costs=acquisition.receipt()
+            paid=observations[len(public['observations']):]
+            target_action_parts=[observation['query']['program'][0]%len(public['initial'])
+                                 for observation in paid if observation['query']['kind']=='action']
+            for row in current:
+                row.update(query_policy=policy,requested_queries=count,
+                    acquired_queries=len(used),query_indices=list(used),query_exhausted=query_exhausted,
+                    observation_record=deepcopy(observations),budget=budget,
+                    acquisition_costs=deepcopy(acquisition_costs),
+                    acquisition_operations=acquisition_costs['total_online'],
+                    query_compatible_laws=len(compatible),query_isolates_truth=compatible==[truth],
+                    target_changed_parts=[part for part,(before,after) in enumerate(
+                        zip(public['initial'],public['target'])) if before!=after],
+                    target_action_parts=target_action_parts,
+                    direct_parent_cues_used=any(o['query']['kind']=='context' for o in paid),
+                    comparison_role='descriptive target-relevant executed-action evidence screen',
+                    selector_contract=('target-action uses only one-step executed actions on changed public target parts '
+                                       'from states valid under every public candidate; target-aware is the direct-parent positive control'))
                 rows.append(row)
     return rows

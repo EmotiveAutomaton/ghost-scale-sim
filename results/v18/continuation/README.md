@@ -43,7 +43,7 @@ parent queries isolate truth and give dependency and conditioned-direct action 1
 success; one query and the historical fixed placebo give 0%. Primitive candidate-set
 search reaches 52.60%. This is descriptive evidence, not a third final primary.
 
-`VALIDATION.json` records 50 passing isolated checks without skips, including the
+`VALIDATION.json` records 57 passing isolated checks without skips, including the
 existing pinned Stitch binary, the untouched-sampling contract and the cyclic-union
 construction gates. The earlier final-primary, opaque-discovery and mask-wave validations remain
 preserved separately.
@@ -69,3 +69,5 @@ Its admission records 51 passing isolated checks without skips.
 `g2-cyclic-target/` retains the failed first admission caused only by an unconfigured
 pinned Stitch path, the unchanged 52-check passing admission, frozen plan, complete
 reconstruction, diagnostic aggregation and extracted-source replay.
+
+`CYCLIC_ACTION_BATCH.json` binds 18,432 further rows on 192 fresh contexts and 72 bounded replays: current totals are 3,030,024 and 38,414. `g2-cyclic-action/` retains full comparisons and the earlier failed isolated admission. `VALIDITY_PASS.20260919.json` records 57 passing current checks, exact primary reaggregation and the repaired native notification handover; it does not claim uninterrupted service.

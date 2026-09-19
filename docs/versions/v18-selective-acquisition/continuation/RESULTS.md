@@ -38,6 +38,8 @@ Was the decision-selected query losing because choosing it consumed the action b
 
 Can a cheap query rule tied only to changed public target parts repair a harder two-dependency task? Yes descriptively in this constructed screen. Across 192 fresh seven-part contexts with four nested histories, two target-aware parent queries isolate the true law and give both dependency learning and the equally informed direct compiler 100% task success. One target-aware query always leaves two laws and both methods at 0%; the historical two-query fixed sequence is a designed placebo that leaves all four laws and 0%; the decision selector succeeds in 33.33% because it exhausts the 32,768-operation envelope in fork and grouped contexts. Target-aware acquisition costs 43 operations, but primitive robust search still succeeds in only 52.60%, separating evidence sufficiency from planning work. This is descriptive constructed-mechanism evidence, miniature—architecture untested; it is not a third primary, does not establish dependency-representation necessity, and does not establish transfer to action/routine evidence or human learning.
 
+Across 192 fresh seven-part contexts, two target-relevant executed-action observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success. One observation leaves two compatible laws and 0% success; primitive candidate-set search reaches 45.31% with two observations. Acquisition averages 64.33 counted operations, conditional on a supplied candidate family and prepared query menu; menu construction and physical setup are outside that online count. This is descriptive constructed-mechanism evidence, miniature—architecture untested, not a third primary or evidence of human learning.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -64,6 +66,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-cyclic-final | 23,040 | 384 untouched contexts |
 | g2-cyclic-cost | 6,144 | 384 exposed F2 contexts reused; no new support |
 | g2-cyclic-target | 18,432 | 192 fresh two-target contexts; descriptive screen |
+| g2-cyclic-action | 18,432 | 192 fresh action-evidence contexts; descriptive screen |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -103,12 +106,12 @@ bounded decision replays. The first frozen primary adds 87,552 rows and 342 repl
 Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
 adds 23,040 rows and 90 replays. The selector cost diagnostic adds 6,144 rows and 24
 replays on exposed contexts. The fresh two-target screen adds 18,432 rows and 72
-replays. Together, 3,011,592 retained rows reconstruct and 38,342
+replays. The action-evidence screen adds 18,432 rows and 72 replays. Together, 3,030,024 retained rows reconstruct and 38,414
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
 or untouched structural support. Stitch child CPU is included in worker receipts.
-The two-target packet's isolated admission suite passes 52 checks without failures or
+The current validity pass runs 57 isolated checks without failures or
 skips, including the pinned Stitch binary, final-plan sampling contract and cyclic-union
 construction gates. The earlier 50- and 51-check records remain retained with their
 respective batches.
@@ -183,10 +186,11 @@ The failed 65,536 selector calibration and first-block checker schema failure re
 retained. No third final primary is permitted. The fresh target-aware screen then showed
 that two cheap public-target parent queries isolate truth and restore dependency and
 conditioned-direct action, while primitive robust search succeeds in only 52.60% of
-contexts. The next descriptive allocation asks whether target-relevant executed-action
-evidence transfers that repair without a direct parent cue, under a two-observation cap.
+contexts. Two executed-action observations now transfer that repair without a direct parent cue. The next descriptive allocation removes the prepared diagnostic-menu advantage using a complete public single-action menu, preserving the two-observation cap and equal-evidence rivals.
 Saturated four-cell and graphic cells remain retired. All commissioned G0–G4 branches remain active or retain
 a completed disposition; useful work after the two final contrasts is not precluded. The original
 campaign clock, 40 worker CPU hours including children and 200,000 new context units
 remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is
 15:00 UTC.
+
+The 19 September validity pass independently rebound frozen inputs, raw cases and source hashes for both primaries and the action screen, recomputed both primary lower bounds unchanged, and checked 33 existing public proof bindings. A notification handover PID mismatch left the completed queue idle; its repaired native startup is verified. The service gap and the earlier isolated-fixture admission failure remain recorded. No completed science was restarted.

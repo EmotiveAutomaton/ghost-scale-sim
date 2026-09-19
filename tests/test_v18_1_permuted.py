@@ -127,3 +127,69 @@ def test_target_aware_queries_resolve_two_public_target_cycles_cheaply():
     assert selected['known-law','target-aware',2]['success']
     assert not selected['dependencies','target-aware',1]['query_isolates_truth']
     assert not selected['dependencies','fixed',2]['query_isolates_truth']
+
+
+def test_target_action_evidence_resolves_cycles_without_parent_cues():
+    case=cyclic_union.make_multi_target_cases(
+        'development-cyclic-action',per_stratum=1,histories=1,
+        families=('chain',),action_probes=True)[0]
+    public=case['public'];truth=case['private']['true_world'];n=len(public['initial'])
+    fixed,_,fixed_exhausted,_=cyclic_union.acquire(public,truth,'fixed',2,32768)
+    parent,parent_indices,parent_exhausted,_=cyclic_union.acquire(
+        public,truth,'target-aware',2,32768)
+    one,one_indices,one_exhausted,one_work=cyclic_union.acquire(
+        public,truth,'target-action',1,32768)
+    two,two_indices,two_exhausted,two_work=cyclic_union.acquire(
+        public,truth,'target-action',2,32768)
+    assert not any((fixed_exhausted,parent_exhausted,one_exhausted,two_exhausted))
+    assert len(g2.compatible(public['models'],fixed))==4
+    assert g2.compatible(public['models'],parent)==[truth]
+    assert len(g2.compatible(public['models'],one))==2
+    assert g2.compatible(public['models'],two)==[truth]
+    assert one_indices[0] in two_indices and one_work.spent<two_work.spent<512
+    for index in two_indices:
+        query=public['menu'][index]
+        assert query['kind']=='action' and len(query['program'])==1
+        assert query['program'][0]%n in case['target_parts']
+        assert cyclic_union._common_valid_state(public['models'],query['initial'])
+    assert all(o['query']['kind']!='context' for o in two[len(public['observations']):])
+    rows=cyclic_union.evaluate_target_action(case,32768,(1,2))
+    selected={(row['method'],row['query_policy'],row['requested_queries']):row for row in rows}
+    assert len(rows)==24
+    assert selected['dependencies','target-action',2]['success']
+    assert selected['conditioned-direct','target-action',2]['success']
+    assert not selected['dependencies','target-action',2]['direct_parent_cues_used']
+    assert selected['dependencies','target-action',2]['target_action_parts']==[1,2]
+
+
+def test_target_action_selector_uses_public_evidence_under_every_candidate_truth():
+    from copy import deepcopy
+    from ghostscale.validation.soundingline.v18_1.verify import independent_assembly
+    case=cyclic_union.make_multi_target_cases('development-action-counterfactual',
+        per_stratum=1,histories=1,families=('groups',),action_probes=True)[0]
+    public=case['public'];first=[]
+    for truth in public['models']:
+        observations,indices,exhausted,work=cyclic_union.acquire(public,truth,'target-action',2,32768)
+        first.append(indices[0])
+        assert not exhausted and g2.compatible(public['models'],observations)==[truth]
+        for observation in observations[len(public['observations']):]:
+            query=observation['query'];state=query['initial'];outcome=observation['outcome']
+            for model in public['models']:
+                assert all(value==-1 or parent==-1 or state[parent]!=-1
+                           for value,parent in zip(state,model['parents']))
+            actual=independent_assembly(truth,state,query['program'],public['max_steps'])
+            assert actual['legal']==outcome['legal'] and actual['state']==outcome['state']
+        reordered=deepcopy(public);reordered['models'].reverse()
+        repeated,selected,_,_=cyclic_union.acquire(reordered,truth,'target-action',2,32768)
+        assert selected==indices and repeated==observations
+    assert len(set(first))==1
+
+
+def test_target_action_acquisition_exhaustion_never_yields_free_observation():
+    case=cyclic_union.make_multi_target_cases('development-action-budget',
+        per_stratum=1,histories=1,families=('chain',),action_probes=True)[0]
+    public=case['public'];truth=case['private']['true_world']
+    for budget in (0,1,8):
+        observations,indices,exhausted,work=cyclic_union.acquire(public,truth,'target-action',2,budget)
+        assert exhausted and work.spent<=budget
+        assert observations==public['observations'] and indices==[]

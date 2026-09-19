@@ -28,6 +28,19 @@ def alive(pid):
 def identity(value):return hashlib.sha256(json.dumps(value,sort_keys=True).encode()).hexdigest()
 
 
+def startup_ready(status,launcher_pid,instance_id,queue,started_epoch):
+    """Bind a fresh heartbeat to this launch, including Windows venv shims."""
+    try:
+        heartbeat=datetime.fromisoformat(status['heartbeat']).timestamp()
+        pid=status['pid']
+        return bool(instance_id and status.get('instance_id')==instance_id
+            and status.get('queue')==queue and heartbeat>=started_epoch
+            and (pid==launcher_pid or status.get('launcher_pid')==launcher_pid)
+            and status.get('active_review_pid') is None and alive(pid))
+    except (KeyError,TypeError,ValueError):
+        return False
+
+
 class Delivery:
     def __init__(self,root,config):
         self.root=Path(root);self.root.mkdir(parents=True,exist_ok=True);self.config=config
@@ -119,11 +132,13 @@ def observed(campaign,queue,at=None):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True)
     parser.add_argument('--queue',required=True);parser.add_argument('--state',type=Path,required=True);parser.add_argument('--config',type=Path,required=True)
+    parser.add_argument('--instance-id',default=None)
     args=parser.parse_args();delivery=Delivery(args.state,json.loads(args.config.read_text()))
     with local_owner(args.state):
         while True:
             events=observed(args.campaign,args.queue);delivery.tick(events)
             replace_json(args.state/'STATUS.json',dict(pid=os.getpid(),heartbeat=stamp(),pending=len(delivery.pending(events)),
+                launcher_pid=os.getppid(),instance_id=args.instance_id,queue=args.queue,
                 active_review_pid=delivery.child.pid if delivery.child else None,armed=(args.state/'ARMED').exists()))
             if (args.state/'STOP').exists() and delivery.child is None:return
             time.sleep(10)

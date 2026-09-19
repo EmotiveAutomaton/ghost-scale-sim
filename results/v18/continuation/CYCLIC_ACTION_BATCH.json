@@ -1,0 +1,33 @@
+{
+  "additional_bounded_replay_rows": 72,
+  "at": "2026-09-19T09:39:15.065258+00:00",
+  "blocks": 96,
+  "branch": "g2-cyclic-action",
+  "campaign_state": "active",
+  "cases": 768,
+  "comparisons_sha256": "8db2dc868db145b20f9e4b67cbba9aed7d51ca7fc4467e68b0012df4832a024d",
+  "complete_sha256": "fd49a4b7b80b21efd6d5354acfde8b84663f7d0bbab995a8ea345f069dcd610e",
+  "conservative_unit_identifiers": 11498,
+  "contexts": 192,
+  "diagnostic_sha256": "a0a85a4b205384005c6b7d290bd8ef7b0c48aeb93b051aa333f0e29bc0480c15",
+  "final_contrasts_frozen": 2,
+  "final_contrasts_remaining_maximum": 0,
+  "histories_per_context": 4,
+  "plan_sha256": "d4c6037965b002db03b0c0020d5aa08b9c640ab566c1235145dc2acb86e1892d",
+  "replay_sha256": "14947944a244215f57003eb4f99de3eaa8ee06b07db2153a3133c52c2c02acdb",
+  "rows": 18432,
+  "schema": "v18.1.cyclic-action-batch.1",
+  "scope": "descriptive action-evidence screen; no third primary",
+  "selection_sha256": "ef7e4981636d11293c05ac9322f2c79fa3d10cfc728c391c414bc6f071d3eb83",
+  "source_archive_sha256": "ce218e2a8258cc3568ad622479c1e76317f8229ce24bf00763f71925c2d9e6d4",
+  "total_bounded_replay_rows": 38414,
+  "total_verified_rows": 3030024,
+  "verification_sha256": "483ac09842ea3c7405b258d2eb5c4c73b73ddf19f077a09ef7a51f84ea89e31c",
+  "verification_timing": {
+    "cpu_seconds": 10.453125,
+    "passed": true,
+    "rows": 18432,
+    "wall_seconds": 10.636449399986304
+  },
+  "worker_cpu_seconds_including_both_preparations": 437.125
+}

@@ -29,6 +29,9 @@ arm only to 33.59%, while its chosen observation isolates truth in 30.73% of con
 On fresh seven-part two-target contexts, two low-cost target-aware parent queries
 isolate truth and restore dependency and direct action to 100%; one query remains
 insufficient, and primitive robust search still reaches only 52.60% inside its work cap.
+Two executed-action observations also restore dependency/direct success on 192 fresh
+contexts, conditional on the prepared public menu; primitive search reaches 45.31%.
+The current isolated validity suite passes 57 checks, and both primary bounds reproduce.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
 The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),

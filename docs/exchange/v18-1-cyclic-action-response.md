@@ -1,0 +1,7 @@
+# V18.1 action-evidence batch and validity review
+
+Across 192 fresh seven-part contexts, two target-relevant executed-action observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success. One observation leaves two compatible laws and 0% success; primitive candidate-set search reaches 45.31% with two observations. Acquisition averages 64.33 counted operations, conditional on a supplied candidate family and prepared query menu; menu construction and physical setup are outside that online count. This is descriptive constructed-mechanism evidence, miniature—architecture untested, not a third primary or evidence of human learning.
+
+All 18,432 rows pass independent physics/evidence/cost reconstruction; 72 rows match extracted-source replay. The current isolated suite passes 57 tests without skips, including native Stitch and the real event-watcher startup/stop. Both primary means and bounds reproduce exactly from raw contexts; their frozen claims are unchanged.
+
+The notification handover mistook the Windows launcher PID for its interpreter child and left completion review disarmed. Fresh instance-bound native ownership now passes. The resulting idle interval is retained; no completed science was restarted. The next descriptive question removes the prepared query-menu advantage. Campaign clocks, compute limits and the maximum of two primaries remain unchanged.
