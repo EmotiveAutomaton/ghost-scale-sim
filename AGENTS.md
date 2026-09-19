@@ -19,6 +19,20 @@ authorship and contribution records retain their original attribution.
 
 ## Current campaign (2026-09-19)
 
+V18.3 is commissioned: implement and run all eight families in
+`docs/versions/v18-selective-acquisition/research-extension/README.md`, derived
+from the retained review extension proposal. Code lives in
+`ghostscale/validation/soundingline/v18_3/`; new results use
+`results/v18/research-extension/`; local ownership and immutable acceptance use
+outer `.local/v18-3/`. Read that HANDOFF before acting. Preserve the existing
+20 September 13:00 UTC report start, 15:00 UTC delivery, and cumulative 18 CPU-hour
+ceiling with V18.2's recorded 407.515625 seconds carried forward. One low-priority
+worker and one numerical thread; the installed Sounding Line PyTorch interpreter
+may run an isolated Ghost-owned CPU child, with the parent waiting and all child
+work charged. No GPU, environment synchronization, or Sounding Line changes.
+V18.3 supersedes the prior restart halt only for this commissioned Ghost work.
+Do not edit a source snapshot used by a live worker. Completed V18.2 stays closed.
+
 V18.2's finite commissioned queue is complete. Read
 `docs/versions/v18-selective-acquisition/maker-state/CODING_PACKAGE.md` and its
 README and FINAL_REPORT.md. Its code, results and immutable local window are separate from V18.1:
