@@ -512,6 +512,16 @@ public candidates, charges the checks and selections, and refuses a cyclic union
 Relabelings of retained structures are context interventions, not new architectures
 or untouched confirmation support.
 
+The cyclic-union discovery replaces the shared safe public order with twelve individually
+acyclic candidate laws whose public union contains a reciprocal dependency. Neutral evidence
+retains the full menu; one fixed parent observation isolates the true law. Explicit dependency,
+conditioned-direct and primitive candidate-set action methods receive the same observations.
+The primitive rival's admission gate honestly exhausted the inherited 32,768-operation envelope
+on a seven-part positive control, so that failure was retained and a declared 65,536-operation
+boundary was added before science. Complete reconstruction independently checks candidate cycles,
+program physics, forecasts, evidence identity and work. The extracted-source replay selects one
+case per size/topology stratum without outcomes.
+
 The first final packet fixes 64 previously unused seven-part contexts in each of 18
 topology, presentation and donor strata, with four histories nested in each context.
 Its primary is the within-context success-fraction difference between two fixed support

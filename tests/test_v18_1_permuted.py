@@ -3,7 +3,7 @@ from copy import deepcopy
 import pytest
 
 from ghostscale.validation.soundingline.v16.records import canonical
-from ghostscale.validation.soundingline.v18_1 import common,direct,g2,permuted
+from ghostscale.validation.soundingline.v18_1 import common,cyclic_union,direct,g2,permuted
 from ghostscale.validation.soundingline.v18_1.verify import independent_assembly
 
 
@@ -55,3 +55,31 @@ def test_direct_refuses_candidate_union_cycle():
     request=dict(schema=direct.SCHEMA,models=models,initial=[0,0,0],target=[1,0,0],max_steps=8)
     result=direct.predict(canonical(request),512)
     assert result['program'] is None and 'no shared dependency order' in result['unsupported_reason']
+
+
+def test_cyclic_union_requires_evidence_and_keeps_action_rivals_equal():
+    cases=cyclic_union.make_cases('development-cyclic-union',per_stratum=1,histories=1,
+                                  sizes=(5,),families=('chain',))
+    assert len(cases)==1
+    case=cases[0];public=case['public'];truth=case['private']['true_world']
+    assert truth in public['models'] and len(public['models'])==12
+    assert len(g2.compatible(public['models'],public['observations']))==12
+    assert direct.shared_order(public['models'],common.Work(10000)) is None
+    assert all(model['parents'][case['target_part']]!=truth['parents'][case['target_part']]
+               for model in public['models'] if model!=truth)
+    assert 'true_world' not in public and 'label_permutation' not in public
+
+    rows=cyclic_union.evaluate(case,budgets=(32768,),query_counts=(0,1))
+    assert len(rows)==30
+    by_key={(row['method'],row['query_policy'],row['requested_queries']):row for row in rows}
+    assert by_key['known-law','fixed',0]['success']
+    for method in ('dependencies','conditioned-direct','candidate-set-primitive'):
+        assert not by_key[method,'fixed',0]['success']
+        assert by_key[method,'fixed',1]['success']
+        assert by_key[method,'fixed',1]['acquired_queries']==1
+    for policy in ('uniform','fixed','decision'):
+        for count in (0,1):
+            records={canonical(row['observation_record']) for row in rows
+                     if row['query_policy']==policy and row['requested_queries']==count}
+            assert len(records)==1
+    assert all(row['costs']['total_online']<=row['budget'] for row in rows)

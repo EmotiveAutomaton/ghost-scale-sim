@@ -18,6 +18,10 @@ error probability 0.025, above the five-point practical margin. The direct compi
 still solves every task, so observation benefit and learned-structure necessity remain
 separate. At most one further primary may be frozen; the campaign remains active.
 
-The completed frozen-primary queue event is handled in this review.
+Does useful evidence become necessary for action when public candidate laws have no common safe order? Yes for all three tested non-oracle action methods in this constructed discovery, but dependency representation is still not necessary. Without another observation, explicit dependency learning, an evidence-conditioned direct compiler and primitive candidate-set search fail in every five- and seven-part context. One fixed parent observation makes both dependency learning and direct compilation succeed in every context at 32,768 operations; the direct compiler uses 116.67 operations for five parts and 140.67 for seven, versus 1,216.52 and 7,276.52. Primitive candidate-set search reaches 100% on five parts and 93.75% on seven at that boundary, then 100% at 65,536. The stored-episode reader remains at zero because the parent observation does not repair its transition representation. The fixed diagnostic also beats the current costly decision-based query rule. This is a descriptive constructed-mechanism result, miniature—architecture untested; it shows that evidence can be necessary under ambiguity for the tested action methods, not that explicit graph learning or human learning is necessary.
+
+The completed cyclic-discovery queue event is handled in this review. The next bounded
+decision is whether its fixed-diagnostic versus costly decision-query contrast warrants
+the sole remaining final contrast on untouched structural samples.
 Event-only delivery continues at completion, failure, disappearance and the unchanged
 4/12/24/36-hour checkpoints; healthy computation does not trigger model polling.

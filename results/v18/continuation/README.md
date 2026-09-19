@@ -25,10 +25,13 @@ to 2,841,864 and 37,274. `FINAL_PRIMARY_BATCH.json` binds 87,552 rows on 1,152
 untouched contexts and 342 replay rows, bringing the active totals to 2,929,416 and
 37,616. The first frozen primary held; the campaign remains active. Relabeled retained
 contexts are not new architecture, while the final packet excludes discovery units.
+`CYCLIC_BATCH.json` binds 34,560 fresh cyclic-candidate-union discovery rows and 540
+replay rows, bringing the active totals to 2,963,976 and 38,156. Its 96 contexts contain
+16 unlabeled topologies in one constructed architecture; no second final contrast is frozen.
 
-`VALIDATION.json` records 49 passing isolated checks without skips, including the
-existing pinned Stitch binary and the untouched-sampling contract for the first
-frozen final contrast. The earlier opaque-discovery and mask-wave validations remain
+`VALIDATION.json` records 50 passing isolated checks without skips, including the
+existing pinned Stitch binary, the untouched-sampling contract and the cyclic-union
+construction gates. The earlier final-primary, opaque-discovery and mask-wave validations remain
 preserved separately.
 `TARGET_VERIFICATION.json` binds the independent target and detour checks.
 `g4-history/SUPPORT_SCORE_CHECK.json` verifies that all 486 reported mean fields
@@ -42,4 +45,6 @@ primary on 1,152 untouched seven-part contexts, its held disposition, complete
 reconstruction and bounded replay. `ACCOUNTING_REPAIR.final-primary.json` retains
 the established conservative unit-identifier convention after the filing refresh
 briefly deduplicated reused branch identifiers; science and CPU totals did not change.
-At most one further primary may be frozen.
+`g2-cyclic/` retains the positive-gate work exhaustion, admitted repair, first-block
+check, complete reconstruction and extracted-source replay. At most one further primary
+may be frozen.

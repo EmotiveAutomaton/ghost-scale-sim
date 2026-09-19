@@ -198,6 +198,9 @@ def run(root,archive,*,stop_after_blocks=None):
                     elif plan['branch']=='g2-permuted':
                         from . import permuted
                         rows=permuted.evaluate(case,plan['design']['budgets'],plan['design']['query_counts']);diagnostics=None
+                    elif plan['branch']=='g2-cyclic':
+                        from . import cyclic_union
+                        rows=cyclic_union.evaluate(case,plan['design']['budgets'],plan['design']['query_counts']);diagnostics=None
                     else:
                         raise ValueError('unimplemented branch cannot be admitted')
                     units.append(dict(case=case,rows=rows,diagnostics=diagnostics))
