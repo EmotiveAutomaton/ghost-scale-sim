@@ -214,3 +214,59 @@ def test_complete_action_menu_is_exhaustive_and_never_inspects_outcomes(monkeypa
     observations,_,exhausted,work=cyclic_union.acquire(public,case['private']['true_world'],'target-action',2,32768)
     assert not exhausted and work.spent<32768
     assert g2.compatible(models,observations)==[case['private']['true_world']]
+
+
+def test_physical_action_selector_builds_queries_without_truth_or_oracle_setup():
+    case=cyclic_union.make_multi_target_cases('development-physical-action',
+        per_stratum=1,histories=1,families=('groups',))[0]
+    public=case['public'];public['menu']=cyclic_union.complete_action_menu(public['models'])
+    first=[]
+    for truth in public['models']:
+        observations,indices,setups,reachable,exhausted,work=cyclic_union.acquire_physical(
+            public,truth,2,32768)
+        first.append(indices[0])
+        assert not exhausted and len(indices)==len(setups)==len(reachable)==2
+        assert g2.compatible(public['models'],observations)==[truth]
+        prior=deepcopy(public['observations'])
+        for index,setup,observation in zip(indices,setups,observations[len(prior):]):
+            hypotheses=g2.compatible(public['models'],prior)
+            terminal=[]
+            for model in hypotheses:
+                result=independent_assembly(model,public['initial'],setup,public['max_steps'])
+                assert result['legal'] and not result['stopped']
+                terminal.append(result['state'])
+            assert len({tuple(state) for state in terminal})==1
+            assert terminal[0]==public['menu'][index]['initial']==observation['query']['initial']
+            prior.append(observation)
+        assert work.counts['checking']>=sum(map(len,setups))+len(setups)
+    assert len(set(first))==1
+
+
+def test_physical_action_evaluation_charges_setup_and_keeps_one_query_unresolved():
+    case=cyclic_union.make_multi_target_cases('development-physical-evaluation',
+        per_stratum=1,histories=1,families=('fork',))[0]
+    case['public']['menu']=cyclic_union.complete_action_menu(case['public']['models'])
+    rows=cyclic_union.evaluate_physical_action(case,32768,(1,2))
+    selected={(row['method'],row['requested_queries']):row for row in rows}
+    assert len(rows)==8
+    assert selected['dependencies',1]['query_compatible_laws']==2
+    assert not selected['dependencies',1]['success']
+    assert selected['dependencies',2]['query_isolates_truth']
+    assert selected['conditioned-direct',2]['success']
+    if not selected['dependencies',2]['success']:
+        assert selected['dependencies',2]['costs']['total_online']==32768
+    row=selected['dependencies',2]
+    assert row['query_policy']=='target-action-physical'
+    assert row['physical_setup_operations']==sum(map(len,row['physical_setup_paths']))
+    assert row['candidate_family_supplied'] and not row['setup_uses_evaluator_truth']
+
+
+def test_physical_action_acquisition_exhaustion_never_yields_free_setup_or_evidence():
+    case=cyclic_union.make_multi_target_cases('development-physical-budget',
+        per_stratum=1,histories=1,families=('chain',))[0]
+    public=case['public'];public['menu']=cyclic_union.complete_action_menu(public['models'])
+    observations,indices,setups,reachable,exhausted,work=cyclic_union.acquire_physical(
+        public,case['private']['true_world'],2,8)
+    assert exhausted and work.spent<=8
+    assert observations==public['observations']
+    assert indices==setups==reachable==[]

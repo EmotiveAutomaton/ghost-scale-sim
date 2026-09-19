@@ -151,6 +151,7 @@ def branch_report(root,output):
       'g2-cyclic-cost':('n','family','method','query_policy','budget','selector_budget'),
       'g2-cyclic-target':('n','family','method','query_policy','requested_queries','budget'),
       'g2-cyclic-action':('n','family','method','query_policy','requested_queries','budget'),
+      'g2-cyclic-physical':('n','family','method','query_policy','requested_queries','budget'),
       'g3-representation':('n','family','condition','method','storage_cap','budget'),
       'g3-stitch':('n','family','condition','method','storage_cap','budget'),
       'g0-common':('stratum','allocation','capacity','representation','checking','planner','action_order_stratum','budget'),
@@ -181,7 +182,7 @@ def branch_report(root,output):
             evidence={}
             for row in unit['rows']:
                 data={**case,**row};key=tuple(data[k] for k in dimensions);count+=1
-                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g3-representation','g3-stitch','structural-direct'):
+                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g3-representation','g3-stitch','structural-direct'):
                     assert row['costs']['total_online']<=row['budget']
                     assert sum(v for k,v in row['costs'].items() if k not in ('total_online','envelope','unit'))==row['costs']['total_online']
                     if row['program'] is None:
@@ -193,11 +194,11 @@ def branch_report(root,output):
                         assert row['success']==(actual['legal'] and actual['stopped'] and actual['state']==p['target'])
                         assert row['costs']['actual_execution']==actual['primitive_cost']
                     if branch in ('g3-representation','g3-stitch'):assert row['acquisition']['storage_tokens']<=row['storage_cap']
-                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action') and 'observation_record' in row:
+                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical') and 'observation_record' in row:
                     ek=(row['query_policy'],row['requested_queries'],row['budget'])
                     if ek in evidence:assert evidence[ek]==digest(row['observation_record'])
                     evidence[ek]=digest(row['observation_record'])
-                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action') and 'forecast_probes' in row:
+                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical') and 'forecast_probes' in row:
                     predicted_truth=[]
                     for q in row['forecast_probes']:
                         actual=physical(json.dumps(truth,sort_keys=True),json.dumps(q['initial']),tuple(q['program']),p['max_steps'])
@@ -236,6 +237,43 @@ def branch_report(root,output):
                         assert all(o['query']['kind']=='action' for o in paid)
                         assert row['target_action_parts']==[o['query']['program'][0]%len(p['initial']) for o in paid]
                         assert set(row['target_action_parts'])<=set(row['target_changed_parts'])
+                if branch=='g2-cyclic-physical':
+                    assert row['query_policy']=='target-action-physical'
+                    assert row['requested_queries'] in (1,2)
+                    assert row['acquisition_costs']['total_online']==row['acquisition_operations']
+                    assert row['acquisition_operations']<=row['costs']['total_online']<=row['budget']
+                    assert row['physical_setup_operations']==sum(map(len,row['physical_setup_paths']))
+                    assert not row['setup_uses_evaluator_truth'] and row['candidate_family_supplied']
+                    paid=row['observation_record'][len(p['observations']):]
+                    assert len(paid)==len(row['physical_setup_paths'])==row['acquired_queries']
+                    prior=list(p['observations'])
+                    for observation,setup in zip(paid,row['physical_setup_paths']):
+                        compatible=[]
+                        for model in p['models']:
+                            agrees=True
+                            for seen in prior:
+                                q=seen['query'];expected=(dict(parent=model['parents'][q['part']],primitive_cost=0)
+                                    if q['kind']=='context' else independent_assembly(
+                                        model,q['initial'],q['program'],p['max_steps']))
+                                if expected!=seen['outcome']:
+                                    agrees=False;break
+                            if agrees:compatible.append(model)
+                        terminals=[]
+                        for model in compatible:
+                            prepared=independent_assembly(model,p['initial'],setup,p['max_steps'])
+                            assert prepared['legal'] and not prepared['stopped']
+                            terminals.append(prepared['state'])
+                        assert terminals and all(state==observation['query']['initial'] for state in terminals)
+                        prior.append(observation)
+                    final=[]
+                    for model in p['models']:
+                        if all((dict(parent=model['parents'][o['query']['part']],primitive_cost=0)
+                                if o['query']['kind']=='context' else independent_assembly(
+                                    model,o['query']['initial'],o['query']['program'],p['max_steps']))==o['outcome']
+                               for o in row['observation_record']):
+                            final.append(model)
+                    assert len(final)==row['query_compatible_laws']
+                    assert row['query_isolates_truth']==(final==[truth])
                 if branch=='g0-common':
                     request=row['request'];target=request['target']
                     if row['planner']=='state':assert row['costs']['total_online']<=row['budget']

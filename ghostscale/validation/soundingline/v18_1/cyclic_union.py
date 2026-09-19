@@ -356,6 +356,103 @@ def select_target_action(payload,observations,used,work):
     return best[1]
 
 
+def robust_setup_paths(public,hypotheses,work):
+    """Shortest no-oracle setup paths from the task start to shared states.
+
+    A path is retained only when every currently compatible candidate law accepts
+    every action and reaches the same next state.  STOP is excluded: preparation
+    must leave a live object on which the selected one-step query can execute.
+    Search and candidate simulation are charged to the query-selection envelope.
+    """
+    if not hypotheses:return {}
+    start=tuple(public['initial']);n=len(start)
+    paths={start:[]};queue=deque([start])
+    while queue:
+        work.charge('selection')
+        state=queue.popleft();path=paths[state]
+        if len(path)>=public['max_steps']:continue
+        for action in range(3*n):
+            work.charge('proposal_generation')
+            after=[];legal=True
+            for model in hypotheses:
+                work.charge('hypothetical_execution')
+                next_state,stopped,ok=step(model,state,False,action)
+                if not ok or stopped:
+                    legal=False;break
+                after.append(tuple(next_state))
+            if not legal or len(set(after))!=1:continue
+            next_state=after[0]
+            if next_state not in paths:
+                paths[next_state]=path+[action];queue.append(next_state)
+    return paths
+
+
+def select_physical_target_action(public,observations,used,work):
+    """Choose an informative target action whose starting state can be built.
+
+    Information partition is primary, then the shortest shared physical setup,
+    then the frozen public menu order.  The selector receives candidate laws and
+    prior public evidence, never evaluator truth.
+    """
+    hypotheses=g2.compatible(public['models'],observations,work)
+    if not hypotheses:return None
+    n=len(public['initial'])
+    changed={part for part,(before,after) in enumerate(zip(public['initial'],public['target']))
+             if before!=after}
+    paths=robust_setup_paths(public,hypotheses,work)
+    best=None
+    for index,query in enumerate(public['menu']):
+        if (index in used or query['kind']!='action' or len(query['program'])!=1 or
+                query['program'][0]%n not in changed):
+            continue
+        setup=paths.get(tuple(query['initial']))
+        if setup is None:continue
+        work.charge('selection');groups={}
+        for model in hypotheses:
+            answer=canonical(g2.observed(model,query,work))
+            groups[answer]=groups.get(answer,0)+1
+        sizes=sorted(groups.values(),reverse=True)
+        score=(max(sizes),sum(size*size for size in sizes),len(setup),index)
+        if best is None or score<best[0]:best=(score,index,setup,len(paths))
+    return None if best is None else dict(index=best[1],setup=best[2],reachable_states=best[3],
+                                          compatible_laws=len(hypotheses))
+
+
+def acquire_physical(public,truth,count,budget):
+    """Acquire action evidence with no-oracle query-state preparation charged.
+
+    Each query starts from a fresh object in the declared public task state.  The
+    shared setup path, its physical execution and the one-step observation all use
+    the same online envelope.  Supplying/resetting that fresh initial object and
+    the candidate-law family remain apparatus assumptions.
+    """
+    work=Work(budget);observations=deepcopy(public['observations'])
+    used=[];setups=[];reachable=[];exhausted=False
+    try:
+        for _ in range(count):
+            selected=select_physical_target_action(public,observations,used,work)
+            if selected is None:break
+            query=deepcopy(public['menu'][selected['index']])
+            state=tuple(public['initial'])
+            for action in selected['setup']:
+                work.charge('checking')
+                state,stopped,legal=step(truth,state,False,action)
+                if not legal or stopped:raise AssertionError('selected physical setup is not true-law legal')
+            if list(state)!=query['initial']:
+                raise AssertionError('selected physical setup misses the query state')
+            # Setup is deliberately uninformative: every compatible law accepts
+            # the same actions and reaches the same state.  Only the query outcome
+            # enters the evidence record.
+            outcome=g2.observed(truth,query,work)
+            observations.append(dict(query=query,outcome=outcome,
+                source_context='paid-physical-action-observation'))
+            used.append(selected['index']);setups.append(list(selected['setup']))
+            reachable.append(selected['reachable_states'])
+    except Exhausted:
+        exhausted=True
+    return observations,used,setups,reachable,exhausted,work
+
+
 def _conditioned_direct(public,observations,acquisition):
     work=Work(acquisition.cap,dict(acquisition.counts));program=None;reason=None;posterior=[]
     try:
@@ -585,4 +682,47 @@ def evaluate_target_action(case,budget=32768,query_counts=(1,2)):
                     selector_contract=('target-action uses only one-step executed actions on changed public target parts '
                                        'from states valid under every public candidate; target-aware is the direct-parent positive control'))
                 rows.append(row)
+    return rows
+
+
+def evaluate_physical_action(case,budget=32768,query_counts=(1,2)):
+    """Run the complete-menu action screen with charged physical preparation."""
+    public=case['public'];truth=case['private']['true_world'];rows=[]
+    for count in query_counts:
+        observations,used,setups,reachable,query_exhausted,acquisition=acquire_physical(
+            public,truth,count,budget)
+        compatible=g2.compatible(public['models'],observations)
+        current=[]
+        for method in ('dependencies','known-law'):
+            current.append(dict(method=method,**_structured_cached_action(
+                public,truth,observations,acquisition,method)))
+        for method,runner in (('conditioned-direct',_conditioned_direct),
+                              ('candidate-set-primitive',_belief_search)):
+            result=runner(public,observations,acquisition)
+            current.append(dict(method=method,**score_submission(
+                truth,public['initial'],public['target'],result,public['max_steps'])))
+        acquisition_costs=acquisition.receipt()
+        paid=observations[len(public['observations']):]
+        for row in current:
+            row.update(query_policy='target-action-physical',requested_queries=count,
+                acquired_queries=len(used),query_indices=list(used),query_exhausted=query_exhausted,
+                observation_record=deepcopy(observations),budget=budget,
+                acquisition_costs=deepcopy(acquisition_costs),
+                acquisition_operations=acquisition_costs['total_online'],
+                physical_setup_paths=deepcopy(setups),
+                physical_setup_operations=sum(map(len,setups)),
+                reachable_setup_states=list(reachable),
+                query_compatible_laws=len(compatible),query_isolates_truth=compatible==[truth],
+                target_changed_parts=[part for part,(before,after) in enumerate(
+                    zip(public['initial'],public['target'])) if before!=after],
+                target_action_parts=[observation['query']['program'][0]%len(public['initial'])
+                                     for observation in paid],
+                comparison_role='descriptive charged physical query-preparation diagnostic',
+                selector_contract=('query-state setup must use one action sequence legal under every '
+                                   'currently compatible public candidate law; selection, candidate '
+                                   'simulation, setup execution and observed action share the online envelope'),
+                reset_contract=('each query receives a fresh object at the public task initial state; '
+                                'provisioning that object is outside the count'),
+                candidate_family_supplied=True,setup_uses_evaluator_truth=False)
+            rows.append(row)
     return rows
