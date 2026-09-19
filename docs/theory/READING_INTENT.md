@@ -63,6 +63,7 @@ is now the best-established thing in the record.
 | V18.2 completed | History helps predict a maker when current state is hidden | **QUALIFIED discovery (run, constructed mechanism; miniature — architecture untested)** | Hidden-state board accuracy 71.88% versus direct 34.38%; new assembly family 60.94% versus 37.70%. Split learned state does not reliably beat flat/direct prediction. Equally informed direct computation remains a necessary rival. [Final report](../versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md) |
 | V18.3 B | Preserve slow maker roles while updating fast roles | **QUALIFIED descriptive discovery (run, constructed mechanism)** | Goal-change loss 1.152 versus static 3.299; stationary 1.023 versus 0.904 and skill-change 1.058 versus 0.942 reverse the advantage. Native uptake is shared, not an inference benefit. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
 | V18.3 D | Evidence-informed family revision improves maker prediction | **QUALIFIED descriptive discovery (run, constructed method)** | Wrong-rule loss 3.582 fixed versus 0.623 late revision, but correct-family loss worsens 0.613 to 0.692. Candidate mixture is a strong rival; no general open-world repair claim. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
+| V18.3 D source | Discounting copied evidence improves family revision | **SPLIT descriptive follow-on (run, constructed method)** | Independent-source arms exactly equal; copied-source late revision improves in-family 1.098 to 0.987 but worsens missing-rule 0.694 to 0.754. 7,680 fresh assigned evaluations, correct root identities supplied. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
 
 **What these add up to.** The early necessity claim about confident invention was withdrawn;
 the surviving label-response and sustained-attention findings remain scoped to their original
@@ -78,6 +79,8 @@ V17 adds useful finite-maker forecasts under declared evidence tiers while prese
 V18.3 makes persistence conditional: retaining slower roles helps after goal or belief changes, but the same assumption costs prediction under stationarity, skill change or unmodeled opportunities. Shared learning executions do not turn these predictive differences into an uptake advantage.
 
 V18.3 also separates maintaining state from choosing the explanatory family. Prefix evidence can repair a wrong candidate family, but premature or unnecessary commitment is costly, and candidate averaging can match or improve on single-family revision. Predictive success with truth outside the menu does not identify the hidden law.
+
+The source follow-on activates a previously inactive contrast: copying changes revision through evidential weight. Correct deduplication changes finite-sample predictions without guaranteeing that every method ranking improves; choosing and averaging candidate laws remain distinct decisions.
 
 ## §2. The wall (familiar words, nobody home) is a distinct failure, and the reader keeps paying
 
@@ -151,6 +154,7 @@ it started.
 | E42 | Attention implies openness | **REJECTED (run)** | A stable regime exists: high engagement, accurate reading, closed gate, nothing integrated |
 | E5 | Trust in provenance is decisiveness renamed | **REJECTED (run)** | Only trust produces the human–machine gap; decisiveness moves the level and never the gap |
 | V18.3 C | Repeated reports can be treated as independent corroboration | **REJECTED in the copied-source stress test; dependence remedy QUALIFIED (run, constructed mechanism and method)** | With two roots and six reports each under shared error, naive loss 3.509 and false confidence 21.88%; uncertain-graph/shared-error loss 0.643 and initial false confidence 0%. No infallible provenance claim. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
+| V18.3 C uptake | Better dependence inference improves acquired action | **QUALIFIED descriptive diagnostic (run, constructed policy)** | Initial cautious/naive success both 53.13%; after noisy correction 90.63% versus 68.75%. Public-law checker 100% with charged extra work. Explicit allocation policy, reused cases, no provenance necessity. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
 
 **What these add up to.** The exploit survived three audits by becoming more precise: it is now a
 claim about **labels trusted above a stated crossover**, on a **signed** measure, quoted as a
@@ -164,6 +168,8 @@ paper proposed has since been measured directly and holds, the one place the mec
 the effect, has outside support.)
 
 V18.3 adds a different, explicit provenance failure: repeated descendants amplify a common error when treated as independent. A finite dependence model reduces that failure, while noisy independent corrections and incorrect metadata preserve uncertainty about remedy reliability. This does not resolve the earlier theoretical fork about labels and attention.
+
+Source-sensitive beliefs can change which routine receives practice under the declared allocation policy. The benefit emerges after corrections here, while a stronger task checker bypasses source inference. Belief quality, chosen practice and successful action remain separate measured steps.
 
 ## §4. Depth is compressed practice, not effort; method, not purpose, is what transmits
 

@@ -50,8 +50,8 @@ def calibration(root,pulse):
         for method in sorted({r['method'] for r in rows}):
             selected=[r for r in rows if r['condition']==condition and r['method']==method]
             summary[condition+'|'+method]={metric:stats([float(np.mean([r[metric] for r in selected if r['lineage']==i])) for i in sorted({r['lineage'] for r in selected})],('reliability',condition,method,metric)) for metric in ('expected_absolute_calibration_gap','overconfidence')}
-    return dict(fixed_instrument_coverage=coverage_summary,neural_reliability=summary,
-        scope='fixed two-query prior-predictive coverage; E per-seed, per-lineage ten-bin expected top-choice reliability, then fit/cell aggregation; not adaptive coverage or empirical label accuracy'),dict(coverage=coverage,reliability=rows)
+    return dict(fixed_instrument_coverage=coverage_summary,neural_reliability=summary,numerical_ties_and_bin_boundaries=1e-10,
+        scope='fixed two-query prior-predictive coverage; E per-seed, per-lineage ten-bin expected top-choice reliability with uniform numerical ties, then fit/cell aggregation; not adaptive coverage or empirical label accuracy'),dict(coverage=coverage,reliability=rows)
 
 
 def neural_factorial(roots):
@@ -154,6 +154,20 @@ def source_uptake(campaign):
     return dict(cells=summary,assigned_cases=len(points),scope='post-hoc reuse of C source cases; explicit recommendation-to-practice policy and stronger public-law task checker; no new independent data'),points
 
 
+def compression_ties(campaign,pulse):
+    from ghostscale.validation.soundingline.v18_3.numerical_audit import tied_codebooks
+    rows=[]
+    for name in ('H-core','F-H'):
+        for u in units(campaign/name):
+            for k in (1,2,4,8):
+                result=tied_codebooks(np.array(u['history_probabilities']),np.array(u['old_predictions']),np.array(u['new_predictions']),k,query_entropy=np.log(3))
+                selected=next(r for r in u['rows'] if r['method']=='exhaustive-flat' and r['cardinality']==k)
+                if selected['old_loss']>result['old_minimum']+1e-10:raise ValueError('old code outside numerical optimum')
+                rows.append(dict(packet=name,lineage=u['index'],cell=u['cell'],selected_new_loss=selected['new_loss'],**result))
+            if u['index']%8==0:pulse()
+    return dict(rows=rows,scope='all numerically tied old-task optima; no reselection on future outcomes and no new independent data')
+
+
 def run(campaign,output):
     with local_owner(campaign/'scientific-worker-owner'):
         acceptance=read(campaign/'ACCEPTANCE.json');attempt=campaign/'attempts'/('review-'+uuid.uuid4().hex+'.json')
@@ -165,14 +179,16 @@ def run(campaign,output):
             if state=='running' and (old+time.process_time()>=acceptance['cumulative_cpu_ceiling_seconds'] or datetime.now(timezone.utc)>=datetime.fromisoformat(acceptance['report_start'])):raise TimeoutError('review computation cutoff')
         try:
             pulse();output.mkdir(parents=True,exist_ok=True)
-            roots=[campaign/name for name in ('E-discovery-r1','E-purpose-discovery','G-discovery-r1')]
+            roots=[campaign/name for name in ('E-discovery-r1','E-purpose-scoring-r1','G-discovery-r1')]
+            if not (roots[1]/'INDEPENDENT_REPLAY.json').exists():raise ValueError('Purpose accuracy tie repair and replay are required before review')
+            if read(roots[1]/'SUMMARY.json').get('accuracy_ties',{}).get('absolute_tolerance')!=1e-10:raise ValueError('unrepaired purpose accuracy refused')
             for root in roots:
                 proof=read(root/'INDEPENDENT_REPLAY.json')
                 if not proof['passed'] or proof['summary_sha256']!=file_digest(root/'SUMMARY.json'):raise ValueError('neural review requires verified completed packet')
             plan=dict(source_sha256=file_digest(__file__),calibration_sha256=file_digest(C.__file__),factorial_sha256=file_digest(Path(__file__).with_name('analyze_v18_3.py')),
                 packets={root.name:file_digest(root/'COMPLETE.json') for root in roots},calibration_design='16 cells x 20 draws x matched/hidden-access/wrong-rule, fixed queries 1 and 3; ten-bin E forecasts',example_selection='first retained-roster cases satisfying fixed explanatory predicates; post-outcome illustrations')
             from ghostscale.validation.soundingline.v18_3.runtime import source_files,REPO
-            additional=[campaign/n for n in ('A-uniform-r1','B-goal','D-outside-menu','H-core')]+list(campaign.glob('C-*'))
+            additional=[campaign/n for n in ('A-uniform-r1','B-goal','D-outside-menu','H-core','F-H')]+list(campaign.glob('C-*'))
             plan['packets'].update({p.name:file_digest(p/'COMPLETE.json') for p in additional if (p/'COMPLETE.json').exists()})
             plan['sources']={name:file_digest(REPO/name) for name in source_files()}
             with zipfile.ZipFile(output/'SOURCE.zip','x',zipfile.ZIP_DEFLATED) as archive:
@@ -182,7 +198,8 @@ def run(campaign,output):
             summary,points=calibration(roots[0],pulse);raw=output/'CALIBRATION_points.json.gz';raw.write_bytes(gzip.compress(canonical(points),mtime=0));summary['raw_sha256']=file_digest(raw);write(output/'CALIBRATION.json',summary)
             pulse();summary,points=neural_factorial(roots);raw=output/'NEURAL_FACTORIAL_points.json.gz';raw.write_bytes(gzip.compress(canonical(points),mtime=0));summary['raw_sha256']=file_digest(raw);write(output/'NEURAL_FACTORIAL.json',summary)
             pulse();write(output/'EXAMPLES.json',examples(campaign));write(output/'EXACT_COSTS.json',exact_costs(roots[0]))
-            summary,points=source_uptake(campaign);raw=output/'SOURCE_UPTAKE_points.json.gz';raw.write_bytes(gzip.compress(canonical(points),mtime=0));summary['raw_sha256']=file_digest(raw);write(output/'SOURCE_UPTAKE.json',summary);pulse('complete')
+            summary,points=source_uptake(campaign);raw=output/'SOURCE_UPTAKE_points.json.gz';raw.write_bytes(gzip.compress(canonical(points),mtime=0));summary['raw_sha256']=file_digest(raw);write(output/'SOURCE_UPTAKE.json',summary)
+            write(output/'COMPRESSION_TIES.json',compression_ties(campaign,pulse));pulse('complete')
         except BaseException:pulse('failed');raise
 
 

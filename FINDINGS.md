@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 source follow-ons (19 September 2026)
+
+Source dependence changes the consequences of accepting a report, but it does not make source inference sufficient or necessary for action. In the two-root, six-copy shared-error cases, cautious and naive recommendation policies both initially succeeded in 53.13% of native tasks. After two noisy independent corrections, cautious success rose to 90.63% versus naive 68.75%; a stronger public-law checker reached 100% by testing both routines. In the separate revision experiment, removing copied evidence improved some comparisons and worsened others. These are descriptive constructed-policy and method results, with correct source identities supplied to the revision diagnostic.
+
+[Evidence and limits](docs/exchange/v18-3-source-followons-response.md).
+
 ## V18.3 G: Intervention-trained internal representations (19 September 2026)
 
 Training internal swaps against known interventions made the learned memories more useful for counterfactual prediction. The split reader trained on interventions had logarithmic loss 1.023, compared with 1.810 for behavior-only training, 1.873 for shuffled intervention targets and 1.680 for the direct pair reader. A flat recurrent reader with the same intervention supervision also improved, to 1.063. These are constructed-method results: the supplied intervention mapping became operationally useful, but the experiment does not establish uniquely necessary internal roles.

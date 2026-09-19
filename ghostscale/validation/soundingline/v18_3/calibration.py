@@ -16,11 +16,15 @@ def credible_coverage(reader_joint,true_joint,level=.95):
         expected_set_size=float(np.sum(mask.sum(0)*true_joint.sum(0))),outcomes=reader_joint.shape[1],states=reader_joint.shape[0])
 
 
-def reliability(p,truth,bins=10):
+def reliability(p,truth,bins=10,tolerance=1e-10):
     p=np.asarray(p,float);truth=np.asarray(truth,float)
     if p.shape!=truth.shape or np.any(p<0) or np.any(truth<0) or not np.allclose(p.sum(1),1,atol=1e-6) or not np.allclose(truth.sum(1),1,atol=1e-6):raise ValueError('bad calibration forecast')
-    chosen=p.argmax(1);confidence=p[np.arange(len(p)),chosen];correct=truth[np.arange(len(p)),chosen]
-    assignments=np.minimum((confidence*bins).astype(int),bins-1);rows=[];gap=0.
+    tied=p>=p.max(1,keepdims=True)-tolerance;weights=tied/tied.sum(1,keepdims=True)
+    confidence=np.sum(p*weights,axis=1);correct=np.sum(truth*weights,axis=1)
+    # Equivalent forecasts must not cross a bin solely through roundoff.
+    scaled=confidence*bins;nearest=np.rint(scaled)
+    scaled=np.where(abs(scaled-nearest)<=tolerance*bins,nearest,scaled)
+    assignments=np.minimum(scaled.astype(int),bins-1);rows=[];gap=0.
     for i in range(bins):
         mask=assignments==i;n=int(mask.sum())
         if not n:continue
@@ -28,7 +32,8 @@ def reliability(p,truth,bins=10):
         gap+=n/len(p)*abs(predicted-expected)
         rows.append(dict(bin=i,count=n,predicted_confidence=predicted,expected_accuracy=expected))
     return dict(expected_absolute_calibration_gap=float(gap),overconfidence=float((confidence-correct).mean()),bins=rows,
-        scope='fixed ten-bin top-choice confidence against generator expected correctness; not sampled-label accuracy')
+        numerical_tie_tolerance=tolerance,bin_boundary_tolerance=tolerance,
+        scope='fixed ten-bin top-choice confidence against generator expected correctness; uniform numerical ties and snapped numerical bin boundaries; not sampled-label accuracy')
 
 
 def native_coverage(world,condition):
