@@ -13,9 +13,12 @@ def variants(w):
             dict(w,endogenous=not w['endogenous']),dict(w,noise=.15)]
 
 
-def fit(w,history,power=1.):
+def fit(w,history,power=1.,deduplicate=False):
     weights=np.ones(len(W.STATES))/len(W.STATES);score=0.
+    seen=set()
     for obs in history:
+        if deduplicate and obs['source'] in seen:continue
+        seen.add(obs['source'])
         lik=W.likelihood(w,obs)**power
         evidence=float(weights@lik)
         if evidence<=0:return None,-math.inf
@@ -23,7 +26,7 @@ def fit(w,history,power=1.):
     return weights,score
 
 
-def unit(index,cell=0,kind='missing-rule',order='late',split='test'):
+def unit(index,cell=0,kind='missing-rule',order='late',split='test',source_reader=None):
     r=W.rng('revision',split,index,kind)
     supplied=W.make_world(cell,index);truth=dict(supplied)
     if kind=='near-family':truth['noise']=.10
@@ -33,22 +36,27 @@ def unit(index,cell=0,kind='missing-rule',order='late',split='test'):
     elif kind=='outside-menu':truth.update(rule='lexicographic',coupled=not truth['coupled'],noise=.06)
     state=int(r.integers(len(W.STATES)))
     records=[W.observe(truth,state,W.QUERIES[t%len(W.QUERIES)],r,f'prefix-{t}') for t in range(12)]
+    if source_reader is not None:
+        if source_reader not in ('source-aware','naive'):raise ValueError('unknown source reader')
+        if supplied['shared']:records=[dict(records[(t//3)*3]) for t in range(12)]
+    deduplicate=source_reader=='source-aware'
+    effective_records=list({obs['source']:obs for obs in records}.values()) if deduplicate else records
     # A supplied context cue endorses a predeclared candidate, possibly false.
     endorsed=index%5
     cut=0 if order=='early' else 8
     candidate_worlds=variants(supplied)
     if supplied['rule']=='satisficing':candidate_worlds[1]['rule']='softmax'
-    fits=[fit(w,records) for w in candidate_worlds]
+    fits=[fit(w,records,deduplicate=deduplicate) for w in candidate_worlds]
     # Cue is a fallible prior, not a truth label. Early/late sequential Bayes
     # must commute for the fixed model; bounded prefix selection need not.
     priors=np.ones(5);priors[endorsed]=4.;priors/=priors.sum()
     # Bounded revision happens once, when the context cue arrives. Later
     # observations reweight states but cannot silently reopen that decision.
-    prefit=[fit(w,records[:cut])[1] for w in candidate_worlds]
+    prefit=[fit(w,records[:cut],deduplicate=deduplicate)[1] for w in candidate_worlds]
     selected=int(np.argmax(np.array(prefit)+np.log(priors)))
     scores=np.array([x[1] for x in fits])+np.log(priors)
     mix=np.exp(scores-scores.max());mix/=mix.sum()
-    fixed,log_evidence=fits[0];cautious,_=fit(supplied,records,.5)
+    fixed,log_evidence=fits[0];cautious,_=fit(supplied,records,.5,deduplicate)
     future=[W.observe(truth,state,W.FUTURES[j%4],r,f'future-{j}') for j in range(8)]
     rows=[]
     for method in ('fixed','cautious','empirical','revision','mixture','abstain','cue-only'):
@@ -62,7 +70,7 @@ def unit(index,cell=0,kind='missing-rule',order='late',split='test'):
             elif method=='mixture':p=sum(m*(fit_[0]@W.artifact_matrix(w,c)) for m,fit_,w in zip(mix,fits,candidate_worlds))
             else:
                 p=np.ones(16)*.5
-                for h in records:
+                for h in effective_records:
                     distance=sum(h['context'][k]!=c[k] for k in ('goal','signal','budget'))
                     p[h['artifact']]+=math.exp(-distance)
                 p/=p.sum()
@@ -74,6 +82,7 @@ def unit(index,cell=0,kind='missing-rule',order='late',split='test'):
         rows.append(dict(method=method,forecasts=output,selected=selected if method=='revision' else None,
                          candidate_evaluations=5*len(records)*len(W.STATES) if method in ('revision','mixture') else len(records)*len(W.STATES)))
     return dict(family='D',index=index,cell=cell,kind=kind,order=order,
+                **({'source_reader':source_reader,'independent_roots':len({o['source'] for o in records})} if source_reader else {}),
                 public=json.loads(W.packet(supplied,records)),cue=dict(endorsed=endorsed,received_after=cut),
                 evaluator=dict(truth_world=truth,state=state,future=future),
                 revision=dict(prefix_length=cut,selected=selected,log_evidence=[s for _,s in fits],mixture=mix.tolist()),rows=rows)

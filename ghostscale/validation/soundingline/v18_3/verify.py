@@ -116,7 +116,7 @@ def metrics(unit):
     """Unit averages precede group intervals; no probe or fit-seed pseudoreplication."""
     results=[]
     for row in unit['rows']:
-        tags={k:unit[k] for k in ('family','cell','rule','mode','control','condition','roots','copies','kind','order') if k in unit}
+        tags={k:unit[k] for k in ('family','cell','rule','mode','control','condition','roots','copies','kind','order','source_reader','independent_roots') if k in unit}
         tags['method']=row['method']
         if unit['family']=='A':
             tags['purpose']=row['purpose'];s=row['scores'];c=row['costs']

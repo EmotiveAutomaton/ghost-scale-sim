@@ -2,7 +2,7 @@
 import json
 import numpy as np
 import pytest
-import torch
+torch=pytest.importorskip('torch',reason='optional shared CPU PyTorch runtime required')
 from ghostscale.validation.soundingline.v18_3 import torch_worker as T
 
 

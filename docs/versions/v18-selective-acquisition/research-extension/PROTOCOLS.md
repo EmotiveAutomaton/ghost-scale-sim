@@ -156,6 +156,32 @@ coefficient draws remain the clusters. These are distribution-based diagnostics,
 not sampled-label accuracy or proof of family identification. The bin count and
 interpretation are fixed before reading the calibration effect estimates.
 
+## Bounded completion of source-related comparisons
+
+The core D experiment did not activate source dependence. Preserve it unchanged
+and add a separate discovery packet set with twenty fresh coefficient draws
+(indices 4000–4019), all six truth-family conditions, both cue orders and all
+sixteen factor cells. Independent cells retain twelve roots; shared cells repeat
+four roots three times. Compare source-aware deduplication with naive repeated
+likelihood multiplication, using identical evidence and future targets. All
+original revision/fixed/mixture/cautious/empirical/cue/abstention methods remain.
+This makes 7,680 assigned evaluations. Independent-source arms must coincide,
+and duplicating a root must leave a source-aware posterior unchanged. Source
+metadata is correct here; C separately supplies unknown and mistaken provenance.
+
+C's belief results also receive a separately declared, post-hoc native acquisition
+diagnostic on the same retained cases. Each report recommends one of two supplied
+legal two-action routines; a three-cell task requires one of them at code budget
+two after four practice repetitions. The binary truth specifies the useful
+routine. Each existing posterior chooses its maximum-probability recommendation
+before and after correction. This is an explicit bounded allocation policy, not
+evidence that source belief automatically controls learning. The public task and
+action law also allow a stronger task checker to choose by testing both routines;
+its counterfactual work and actual practice/planning/execution costs are retained.
+Known correct/wrong recommendations must succeed/fail respectively. The checker
+must succeed regardless of source beliefs. Reused C cases add no independent data.
+No claim of provenance necessity, human uptake or value adoption follows.
+
 ## Repairs, reproducibility and runtime
 
 The first E discovery attempt failed during atomic status replacement under Windows
