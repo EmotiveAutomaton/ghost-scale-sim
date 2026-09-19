@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 F: Architecture boundaries and a held-out decision law (19 September 2026)
+
+The purpose and change-of-state findings survive some changes of mechanics, but their boundaries matter. Under a new lexicographic decision law, action-focused inquiry succeeded in 93.75% of uniform-access tasks versus 70.63% for uncertainty-focused inquiry at the same three attempts. Selective state updating still improved goal-change loss, 0.532 versus static 2.976, and still hurt stationary prediction, 0.403 versus 0.296. In the original sixteen-cell design, the pooled action advantage under hidden access concealed four cells with a negative mean difference. These are descriptive results across declared constructions, not universal architectural claims.
+
+[Evidence and limits](docs/exchange/v18-3-F-response.md).
+
 ## V18.3 H: Finite compression and changed questions (19 September 2026)
 
 A memory optimized for one question need not preserve the best answers to another. With two memory symbols, the exact old-question optimum had logarithmic loss 1.18834 versus 1.18900 for the best observation-bit code, but new-question loss was worse: 1.13447 versus 1.12202. At four symbols the new-question disadvantage was 0.01559. These are descriptive constructed-method results from exhaustive finite codebooks, not evidence that a role-organized neural memory is uniquely necessary.
