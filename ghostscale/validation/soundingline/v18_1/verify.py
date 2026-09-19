@@ -153,6 +153,7 @@ def branch_report(root,output):
       'g2-cyclic-action':('n','family','method','query_policy','requested_queries','budget'),
       'g2-cyclic-physical':('n','family','method','query_policy','requested_queries','budget'),
       'g2-cyclic-misspecified':('n','family','method','query_policy','requested_queries','budget'),
+      'g2-cyclic-misspecified-physical':('n','family','method','query_policy','requested_queries','budget'),
       'g3-representation':('n','family','condition','method','storage_cap','budget'),
       'g3-stitch':('n','family','condition','method','storage_cap','budget'),
       'g0-common':('stratum','allocation','capacity','representation','checking','planner','action_order_stratum','budget'),
@@ -183,7 +184,7 @@ def branch_report(root,output):
             evidence={}
             for row in unit['rows']:
                 data={**case,**row};key=tuple(data[k] for k in dimensions);count+=1
-                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified','g3-representation','g3-stitch','structural-direct'):
+                if branch in ('g1-native','g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified','g2-cyclic-misspecified-physical','g3-representation','g3-stitch','structural-direct'):
                     assert row['costs']['total_online']<=row['budget']
                     assert sum(v for k,v in row['costs'].items() if k not in ('total_online','envelope','unit'))==row['costs']['total_online']
                     if row['program'] is None:
@@ -195,11 +196,11 @@ def branch_report(root,output):
                         assert row['success']==(actual['legal'] and actual['stopped'] and actual['state']==p['target'])
                         assert row['costs']['actual_execution']==actual['primitive_cost']
                     if branch in ('g3-representation','g3-stitch'):assert row['acquisition']['storage_tokens']<=row['storage_cap']
-                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified') and 'observation_record' in row:
+                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified','g2-cyclic-misspecified-physical') and 'observation_record' in row:
                     ek=(row['query_policy'],row['requested_queries'],row['budget'])
                     if ek in evidence:assert evidence[ek]==digest(row['observation_record'])
                     evidence[ek]=digest(row['observation_record'])
-                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified') and 'forecast_probes' in row:
+                if branch in ('g2-native','g2-transfer','g2-permuted','g2-cyclic','g2-cyclic-cost','g2-cyclic-target','g2-cyclic-action','g2-cyclic-physical','g2-cyclic-misspecified','g2-cyclic-misspecified-physical') and 'forecast_probes' in row:
                     predicted_truth=[]
                     for q in row['forecast_probes']:
                         actual=physical(json.dumps(truth,sort_keys=True),json.dumps(q['initial']),tuple(q['program']),p['max_steps'])
@@ -299,6 +300,94 @@ def branch_report(root,output):
                     if row['candidate_aware'] and inconsistent:
                         assert row['misspecification_detected'] and row['abstained_on_inconsistency']
                         assert row['program'] is None and not row['unsafe_action_attempted_after_inconsistency']
+                    if row['method']=='forced-candidate-direct' and inconsistent and row['program'] is not None:
+                        assert row['unsafe_action_attempted_after_inconsistency']
+                    assert row['method_receives_evaluator_truth']==(row['method']=='known-law')
+                if branch=='g2-cyclic-misspecified-physical':
+                    assert case['truth_excluded'] and truth not in p['models']
+                    assert row['query_policy']=='misspecification-action-physical'
+                    assert row['requested_queries'] in (1,2)
+                    assert row['acquisition_costs']['total_online']==row['acquisition_operations']
+                    assert row['acquisition_operations']<=row['costs']['total_online']<=row['budget']
+                    assert row['target_changed_parts']==[1,2]
+                    assert row['truth_in_candidate_family'] is False and row['candidate_family_supplied']
+                    assert not row['setup_uses_evaluator_truth']
+                    assert row['comparison_role'].startswith(
+                        'exposed descriptive charged physical candidate-family misspecification')
+                    assert (len(row['query_indices'])==len(row['physical_setup_paths'])==
+                            len(row['physical_setup_records'])==row['physical_query_attempts'])
+                    assert row['physical_setup_operations']==sum(map(len,row['physical_setup_paths']))
+                    assert row['physical_setup_failures']==sum(
+                        not record['reached_query_state'] for record in row['physical_setup_records'])
+                    assert row['acquired_queries']==sum(
+                        record['query_executed'] for record in row['physical_setup_records'])
+                    assert row['target_action_parts']==[
+                        p['menu'][index]['program'][0]%len(p['initial'])
+                        for index in row['query_indices']]
+                    paid=row['observation_record'][len(p['observations']):]
+                    prior=list(p['observations']);cursor=0
+                    for attempt,(index,setup,record) in enumerate(zip(
+                            row['query_indices'],row['physical_setup_paths'],
+                            row['physical_setup_records'])):
+                        query=p['menu'][index]
+                        assert query['kind']=='action' and len(query['program'])==1
+                        compatible=[]
+                        for model in p['models']:
+                            agrees=True
+                            for seen in prior:
+                                q=seen['query'];expected=(
+                                    dict(parent=model['parents'][q['part']],primitive_cost=0)
+                                    if q['kind']=='context' else independent_assembly(
+                                        model,q['initial'],q['program'],p['max_steps']))
+                                if expected!=seen['outcome']:
+                                    agrees=False;break
+                            if agrees:compatible.append(model)
+                        assert compatible
+                        terminals=[]
+                        for model in compatible:
+                            prepared=independent_assembly(
+                                model,p['initial'],setup,p['max_steps'])
+                            assert prepared['legal'] and not prepared['stopped']
+                            terminals.append(prepared['state'])
+                        assert terminals and all(state==query['initial'] for state in terminals)
+                        actual_setup=independent_assembly(
+                            truth,p['initial'],setup,p['max_steps'])
+                        reached=(actual_setup['legal'] and not actual_setup['stopped'] and
+                                 actual_setup['state']==query['initial'])
+                        assert record['reached_query_state']==reached
+                        if setup:
+                            expected_setup=dict(query=dict(kind='routine',initial=p['initial'],program=setup),
+                                outcome=actual_setup,source_context='paid-physical-setup-outcome')
+                            assert record['setup_observation']==expected_setup
+                            assert paid[cursor]==expected_setup
+                            prior.append(paid[cursor]);cursor+=1
+                        else:
+                            assert record['setup_observation'] is None
+                        assert record['query_executed']==reached
+                        if reached:
+                            expected_query=dict(query=query,outcome=independent_assembly(
+                                truth,query['initial'],query['program'],p['max_steps']),
+                                source_context='paid-physical-action-observation')
+                            assert paid[cursor]==expected_query
+                            prior.append(paid[cursor]);cursor+=1
+                        else:
+                            assert attempt==len(row['physical_setup_records'])-1
+                    assert cursor==len(paid) and prior==row['observation_record']
+                    compatible=[]
+                    for model in p['models']:
+                        if all((dict(parent=model['parents'][o['query']['part']],primitive_cost=0)
+                                if o['query']['kind']=='context' else independent_assembly(
+                                    model,o['query']['initial'],o['query']['program'],p['max_steps']))==o['outcome']
+                               for o in row['observation_record']):
+                            compatible.append(model)
+                    inconsistent=not compatible
+                    assert len(compatible)==row['candidate_compatible_laws']
+                    assert row['evidence_inconsistent_with_candidate_family']==inconsistent
+                    if row['candidate_aware'] and inconsistent:
+                        assert row['misspecification_detected'] and row['abstained_on_inconsistency']
+                        assert row['program'] is None and not row['unsafe_action_attempted_after_inconsistency']
+                    if row['candidate_aware'] and not inconsistent:
+                        assert not row['misspecification_detected'] and not row['abstained_on_inconsistency']
                     if row['method']=='forced-candidate-direct' and inconsistent and row['program'] is not None:
                         assert row['unsafe_action_attempted_after_inconsistency']
                     assert row['method_receives_evaluator_truth']==(row['method']=='known-law')

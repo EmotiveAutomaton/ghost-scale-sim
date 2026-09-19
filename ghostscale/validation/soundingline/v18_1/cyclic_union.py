@@ -515,6 +515,80 @@ def acquire_physical(public,truth,count,budget):
     return observations,used,setups,reachable,exhausted,work
 
 
+def select_physical_misspecification_action(public,observations,used,work):
+    """Choose a falsification probe that also has a shared physical setup.
+
+    Setup feasibility is evaluated against the currently retained supplied laws,
+    while information partitioning retains the complete supplied family.  The
+    evaluator truth is never consulted by selection or setup search.
+    """
+    hypotheses=g2.compatible(public['models'],observations,work)
+    if not hypotheses:return None
+    n=len(public['initial'])
+    changed={part for part,(before,after) in enumerate(zip(public['initial'],public['target']))
+             if before!=after}
+    used_parts={public['menu'][index]['program'][0]%n for index in used}
+    preferred=changed-used_parts or changed
+    paths=robust_setup_paths(public,hypotheses,work)
+    best=None
+    for index,query in enumerate(public['menu']):
+        if (index in used or query['kind']!='action' or len(query['program'])!=1 or
+                query['program'][0]%n not in preferred):
+            continue
+        setup=paths.get(tuple(query['initial']))
+        if setup is None:continue
+        work.charge('selection');groups={}
+        for model in public['models']:
+            answer=canonical(g2.observed(model,query,work))
+            groups[answer]=groups.get(answer,0)+1
+        sizes=sorted(groups.values(),reverse=True)
+        score=(max(sizes),sum(size*size for size in sizes),len(setup),index)
+        if best is None or score<best[0]:best=(score,index,setup,len(paths))
+    return None if best is None else dict(index=best[1],setup=best[2],reachable_states=best[3],
+                                          compatible_laws=len(hypotheses))
+
+
+def acquire_physical_misspecified(public,truth,count,budget):
+    """Acquire falsification evidence while physically preparing query states.
+
+    A setup that the wrong supplied family predicts as shared may fail or diverge
+    under evaluator truth.  That public physical outcome is retained as evidence;
+    the intended one-step query executes only if its state was actually reached.
+    """
+    work=Work(budget);observations=deepcopy(public['observations'])
+    used=[];setups=[];setup_records=[];reachable=[];exhausted=False
+    try:
+        for _ in range(count):
+            selected=select_physical_misspecification_action(
+                public,observations,used,work)
+            if selected is None:break
+            query=deepcopy(public['menu'][selected['index']])
+            setup_query=dict(kind='routine',initial=deepcopy(public['initial']),
+                             program=list(selected['setup']))
+            setup_outcome=g2.observed(truth,setup_query,work)
+            reached=(setup_outcome['legal'] and not setup_outcome['stopped'] and
+                     setup_outcome['state']==query['initial'])
+            setup_observation=None
+            if selected['setup']:
+                setup_observation=dict(query=setup_query,outcome=setup_outcome,
+                    source_context='paid-physical-setup-outcome')
+                observations.append(setup_observation)
+            query_executed=False
+            if reached:
+                outcome=g2.observed(truth,query,work)
+                observations.append(dict(query=query,outcome=outcome,
+                    source_context='paid-physical-action-observation'))
+                query_executed=True
+            used.append(selected['index']);setups.append(list(selected['setup']))
+            reachable.append(selected['reachable_states'])
+            setup_records.append(dict(setup_observation=setup_observation,
+                reached_query_state=reached,query_executed=query_executed))
+            if not reached:break
+    except Exhausted:
+        exhausted=True
+    return observations,used,setups,setup_records,reachable,exhausted,work
+
+
 def _conditioned_direct(public,observations,acquisition):
     work=Work(acquisition.cap,dict(acquisition.counts));program=None;reason=None;posterior=[]
     try:
@@ -866,5 +940,69 @@ def evaluate_misspecified(case,budget=32768,query_counts=(1,2)):
                                  'forced-candidate-direct is a labeled unsafe negative control'),
                 selector_contract=('two outcome-independent target-part action probes are chosen from the '
                                    'supplied family and public target; evaluator truth is used only to return outcomes'))
+            rows.append(row)
+    return rows
+
+
+def evaluate_physical_misspecified(case,budget=32768,query_counts=(1,2)):
+    """Measure misspecification detection with charged physical preparation."""
+    public=case['public'];truth=case['private']['true_world'];rows=[]
+    if truth in public['models'] or not case['truth_excluded']:
+        raise ValueError('misspecification condition requires truth outside the supplied family')
+    candidate_aware={'dependencies','conditioned-direct','candidate-set-primitive'}
+    for count in query_counts:
+        observations,used,setups,setup_records,reachable,query_exhausted,acquisition=(
+            acquire_physical_misspecified(public,truth,count,budget))
+        compatible=g2.compatible(public['models'],observations)
+        inconsistent=not compatible
+        current=[]
+        for method in ('dependencies','known-law'):
+            current.append(dict(method=method,**_structured_cached_action(
+                public,truth,observations,acquisition,method)))
+        for method,runner in (('conditioned-direct',_conditioned_direct),
+                              ('candidate-set-primitive',_belief_search),
+                              ('episodes',_episode_action)):
+            result=runner(public,observations,acquisition)
+            current.append(dict(method=method,**score_submission(
+                truth,public['initial'],public['target'],result,public['max_steps'])))
+        forced=_forced_candidate_direct(public,acquisition)
+        current.append(dict(method='forced-candidate-direct',**score_submission(
+            truth,public['initial'],public['target'],forced,public['max_steps'])))
+        acquisition_costs=acquisition.receipt()
+        for row in current:
+            method=row['method'];program=row['program']
+            if method=='dependencies':declared=row['model_status']=='inconsistent'
+            elif method in ('conditioned-direct','candidate-set-primitive'):
+                declared=inconsistent and row.get('compatible_laws')==0
+            else:declared=False
+            row.update(query_policy='misspecification-action-physical',requested_queries=count,
+                acquired_queries=sum(record['query_executed'] for record in setup_records),
+                physical_query_attempts=len(used),query_indices=list(used),
+                query_exhausted=query_exhausted,observation_record=deepcopy(observations),
+                budget=budget,acquisition_costs=deepcopy(acquisition_costs),
+                acquisition_operations=acquisition_costs['total_online'],
+                physical_setup_paths=deepcopy(setups),physical_setup_records=deepcopy(setup_records),
+                physical_setup_operations=sum(map(len,setups)),reachable_setup_states=list(reachable),
+                physical_setup_failures=sum(not record['reached_query_state'] for record in setup_records),
+                candidate_compatible_laws=len(compatible),
+                evidence_inconsistent_with_candidate_family=inconsistent,
+                misspecification_detected=declared,abstained=program is None,
+                abstained_on_inconsistency=declared and program is None,
+                unsafe_action_attempted_after_inconsistency=(
+                    inconsistent and program is not None and method!='known-law'),
+                candidate_aware=method in candidate_aware,
+                method_receives_evaluator_truth=method=='known-law',
+                truth_in_candidate_family=False,candidate_family_supplied=True,
+                target_changed_parts=[part for part,(before,after) in enumerate(
+                    zip(public['initial'],public['target'])) if before!=after],
+                target_action_parts=[public['menu'][index]['program'][0]%len(public['initial'])
+                                     for index in used],
+                setup_uses_evaluator_truth=False,
+                comparison_role=('exposed descriptive charged physical candidate-family '
+                                 'misspecification diagnostic; forced-candidate-direct is unsafe control'),
+                selector_contract=('physical setup and falsification-query selection use the supplied '
+                                   'family, public target and prior public outcomes, never evaluator truth'),
+                reset_contract=('each attempted query receives a fresh object at the public task initial '
+                                'state; provisioning that object is outside the count'))
             rows.append(row)
     return rows

@@ -321,3 +321,53 @@ def test_misspecification_selector_never_uses_evaluator_truth():
         alternatives.append(chosen[0])
         assert not failed
     assert len(set(alternatives+[indices[0]]))==1
+
+
+def test_physical_misspecification_retains_setup_outcomes_as_evidence():
+    case=cyclic_union.make_misspecified_cases('development-physical-misspecification',
+        per_stratum=1,histories=1,families=('chain',))[0]
+    public=case['public'];truth=case['private']['true_world']
+    observations,indices,setups,records,reachable,exhausted,work=(
+        cyclic_union.acquire_physical_misspecified(public,truth,2,32768))
+    assert not exhausted and indices and len(indices)==len(setups)==len(records)==len(reachable)
+    assert work.spent<=32768
+    assert not g2.compatible(public['models'],observations)
+    assert all(not record['query_executed'] or record['reached_query_state'] for record in records)
+    for setup,record in zip(setups,records):
+        if record['setup_observation'] is not None:
+            assert record['setup_observation']['query']['program']==setup
+
+
+def test_physical_misspecification_candidate_aware_methods_abstain():
+    case=cyclic_union.make_misspecified_cases('development-physical-misspecification-evaluation',
+        per_stratum=1,histories=1,families=('chain',))[0]
+    rows=cyclic_union.evaluate_physical_misspecified(case,32768,(1,2))
+    selected={(row['method'],row['requested_queries']):row for row in rows}
+    assert len(rows)==12
+    for method in ('dependencies','conditioned-direct','candidate-set-primitive'):
+        row=selected[method,2]
+        assert row['misspecification_detected'] and row['abstained_on_inconsistency']
+        assert not row['unsafe_action_attempted_after_inconsistency']
+    forced=selected['forced-candidate-direct',2]
+    assert forced['unsafe_action_attempted_after_inconsistency']
+    assert selected['known-law',2]['success']
+    unresolved=cyclic_union.make_misspecified_cases(
+        'development-physical-misspecification-unresolved',per_stratum=1,histories=1,
+        families=('groups',))[0]
+    row=next(row for row in cyclic_union.evaluate_physical_misspecified(
+        unresolved,32768,(2,)) if row['method']=='dependencies')
+    assert row['query_exhausted'] and not row['misspecification_detected']
+    assert row['candidate_compatible_laws']>0
+
+
+def test_physical_misspecification_selector_never_uses_truth_for_first_attempt():
+    case=cyclic_union.make_misspecified_cases('development-physical-misspecification-no-oracle',
+        per_stratum=1,histories=1,families=('chain',))[0]
+    public=case['public'];first=[]
+    truths=[case['private']['true_world'],*public['models']]
+    for truth in truths:
+        _,indices,_,_,_,exhausted,_=cyclic_union.acquire_physical_misspecified(
+            public,truth,1,32768)
+        assert not exhausted and indices
+        first.append(indices[0])
+    assert len(set(first))==1
