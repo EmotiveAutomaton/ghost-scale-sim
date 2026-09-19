@@ -45,6 +45,26 @@ Fit seeds, repeated questions and architecture cells are averaged within each
 coefficient-draw lineage before uncertainty summaries. Learned role blocks are an
 architectural constraint; behavior-only training does not identify their semantics.
 
+### Separate frozen-memory change of purpose
+
+Before inspecting the completed E effect estimates, freeze a separate historical-
+role readout diagnostic. Reuse E's histories, coefficient draws and development-
+selected encoders without encoder updates. Equal additional training/development
+labels teach four questions: curriculum, goal, belief and tradeoff. Test labels stay
+outside the reader capsule. A linear ridge readout tries regularization 0.1/1/10
+and softmax temperature 0.25/0.5/1/2, selected only on development loss. Features are
+the frozen encoding plus public world description. Full raw history plus that
+description is a larger-storage reference with the same readout ladder. Its larger
+feature and readout counts remain explicit. Report conditional role log loss,
+role/whole-state accuracy, storage, extraction and fitting CPU separately.
+
+Only the in-support and withheld-combination histories are used; behavioral query
+variants would duplicate these cases. This diagnostic has no new independent test
+lineages and is not an encoder replication. A poor linear readout can reflect its
+restricted decoder, not necessarily information destroyed by memory. In contrast,
+an exact predictive-summary alias can establish an unavailable distinction within
+the declared model. Native enactment remains the separately measured outcome in A.
+
 ## G: actual counterfactual interventions
 
 This separate study uses all sixteen skill-positive latent combinations, including
@@ -78,6 +98,15 @@ reference and a privileged known-state ceiling remain separate. The posterior
 reference recognizes self-pairs; it does not exploit the complete test-grid roster
 as additional evidence about other makers.
 
+Before G dispatch, add an incompatible partition using every third original latent
+coordinate for a role while leaving the decoder unchanged. This mixes the original
+functional blocks. It differs from a wrong whole-slot mapping and from a compatible
+coordinate permutation with its matching decoder. The direct two-history model has
+no swap partition, so this diagnostic is explicitly unavailable for that method.
+The originally frozen, undispatched G packet remains retained as superseded; the
+additional forecast diagnostic uses a new source-bound packet identity with the
+same training, development and test budgets.
+
 ## H: certified finite compression
 
 Three binary summaries of native observations define eight possible histories.
@@ -110,6 +139,22 @@ and H compression. This is a held-out-law discovery check with 1,920 assigned
 evaluations, not a fresh confirmation of the exposed core results. Coefficient
 redraws are never called new architectures. E and G also retain all sixteen cells;
 fit seeds and repeated probes do not enlarge the architecture sample.
+
+## Calibration diagnostics
+
+The exact finite coverage check enumerates all outcomes of fixed acquisition
+queries one and three under the 24-state, three-access-profile prior. Compare 95%
+nominal state sets under a matched family, hidden state-dependent access, and the
+other decision rule, over the sixteen cells and twenty core coefficient draws.
+This is prior-predictive coverage for a declared fixed instrument, not coverage of
+the adaptive histories in A. A matched two-state control and a deliberately
+reversed likelihood validate the measure before its discovery evaluation.
+
+Retained neural forecasts receive fixed ten-bin top-choice reliability diagnostics
+against generator expected correctness. Fit seeds are analyzed before averaging;
+coefficient draws remain the clusters. These are distribution-based diagnostics,
+not sampled-label accuracy or proof of family identification. The bin count and
+interpretation are fixed before reading the calibration effect estimates.
 
 ## Repairs, reproducibility and runtime
 

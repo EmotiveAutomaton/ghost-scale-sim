@@ -22,4 +22,3 @@ def test_counterfactual_public_features_and_self_pair_exactness():
             selected=(data['ids'][:,2]==b)&(data['ids'][:,3]==b)&(data['ids'][:,5]==q)
             expected=p@W.artifact_matrix(points[0]['world'],c)[list(N.NEURAL_STATES)]
             assert np.allclose(data['exact'][selected],expected,atol=1e-12,rtol=0)
-

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 H: Finite compression and changed questions (19 September 2026)
+
+A memory optimized for one question need not preserve the best answers to another. With two memory symbols, the exact old-question optimum had logarithmic loss 1.18834 versus 1.18900 for the best observation-bit code, but new-question loss was worse: 1.13447 versus 1.12202. At four symbols the new-question disadvantage was 0.01559. These are descriptive constructed-method results from exhaustive finite codebooks, not evidence that a role-organized neural memory is uniquely necessary.
+
+[Evidence and limits](docs/exchange/v18-3-H-response.md).
+
 ## V18.3 D: Bounded explanation revision (19 September 2026)
 
 When does revising an explanation improve prediction? When the supplied decision rule was wrong, selecting a replacement after eight observations reduced future logarithmic loss from 3.582 to 0.623; selecting at the initial cue instead gave 2.948. But when the original family was correct, late revision worsened loss from 0.613 to 0.692. These descriptive constructed-method results show a benefit from evidence-informed revision and a cost from unnecessary or premature commitment. Averaging over the candidate families was a strong rival; no unique benefit of committing to one explanation, general open-world repair, or human mechanism is established.

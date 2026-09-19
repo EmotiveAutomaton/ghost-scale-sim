@@ -20,6 +20,10 @@ def test_swap_and_compatible_coordinate_partition_known_answer():
     assert torch.equal(actual[0,:4],s[0,:4]) and torch.equal(actual[0,4:],b[0,4:])
     assert torch.equal(actual[1,8:],s[1,8:]) and torch.equal(actual[1,:8],b[1,:8])
     with torch.no_grad():assert I.permutation_check(model,b,s,q,r)==0
+    mixed=torch.where(torch.arange(12)[None,:]%3==r[:,None],s,b)
+    assert not torch.equal(mixed,actual)
+    assert torch.equal(model.incompatible_partition(b,s,q,r),model.reader.decode(mixed,q))
+    with pytest.raises(ValueError):I.Model('direct-pair',8,4,12).incompatible_partition(b,s,q,r)
 
 
 def test_intervention_learning_positive_control_all_informed_rivals():

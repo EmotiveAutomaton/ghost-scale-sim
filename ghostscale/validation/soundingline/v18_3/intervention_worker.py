@@ -30,6 +30,11 @@ class Model(nn.Module):
         if self.method=='direct-pair':return self.cf(torch.cat((base,source,query,torch.nn.functional.one_hot(role,3).float()),1))
         return self.reader.decode(self.transplant(base,source,role),query)
 
+    def incompatible_partition(self,base,source,query,role):
+        if self.method=='direct-pair':raise ValueError('direct pair predictor has no internal role partition')
+        mask=torch.arange(self.width)[None,:]%3==role[:,None]
+        return self.reader.decode(torch.where(mask,source,base),query)
+
     def forward(self,bh,bl,sh,sl,q,role):
         b=self.reader.encode(bh,bl);s=self.reader.encode(sh,sl)
         return self.counterfactual(b,s,q,role),self.reader.decode(b,q)
@@ -143,20 +148,24 @@ def permutation_check(model,b,s,q,role):
 def forecast(best,data,path,pulse=lambda **kw:None,limited=lambda:False):
     saved=torch.load(best,map_location='cpu',weights_only=True);model=Model(**saved['spec']);model.load_state_dict(saved['state']);model.eval()
     start=time.process_time();outputs={k:[] for k in ('counterfactual','behavior','wrong_mapping')};error=0.
+    if model.method!='direct-pair':outputs['incompatible_partition']=[]
     with torch.no_grad():
         states=torch.cat([model.reader.encode(data['history'][i:i+128],data['length'][i:i+128]) for i in range(0,len(data['history']),128)])
         for first in range(0,len(data['base']),512):
             if limited():raise TimeoutError('intervention forecast reached resource cutoff')
             idx=torch.arange(first,min(len(data['base']),first+512));b=states[data['base'][idx]];s=states[data['source'][idx]];q=data['query'][idx];role=data['role'][idx]
             cf=model.counterfactual(b,s,q,role);normal=model.reader.decode(b,q);wrong=model.counterfactual(b,s,q,(role+1)%3)
-            for name,value in zip(outputs,(cf,normal,wrong)):outputs[name].append(torch.softmax(value,1).numpy())
+            values=[cf,normal,wrong]
+            if model.method!='direct-pair':values.append(model.incompatible_partition(b,s,q,role))
+            for name,value in zip(outputs,values):outputs[name].append(torch.softmax(value,1).numpy())
             if first==0:error=permutation_check(model,b,s,q,role)
             if first%65536==0:pulse(forecast_rows=first)
     arrays={k:np.concatenate(v) for k,v in outputs.items()}
     for p in arrays.values():
         if not np.isfinite(p).all() or not np.allclose(p.sum(1),1,atol=1e-6,rtol=0):raise ValueError('invalid interchange forecast')
     np.savez_compressed(path,**arrays)
-    return dict(file=path.name,sha256=T.sha(path),rows=len(data['base']),cpu_seconds=time.process_time()-start,coordinate_permutation_error=error)
+    return dict(file=path.name,sha256=T.sha(path),rows=len(data['base']),cpu_seconds=time.process_time()-start,coordinate_permutation_error=error,
+        incompatible_partition_available=model.method!='direct-pair')
 
 
 def run(inputs,output,config_path):

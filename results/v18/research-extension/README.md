@@ -7,7 +7,7 @@ This is a separate descriptive discovery record. Completed V18.2 remains unchang
 The first core queue contains 24 frozen packets and 9,216 assigned evaluations.
 Repeated conditions, paired architectures, observations, and future probes do not
 make that count an independent sample size. The coverage ledger records each
-packet separately. A-D run first; E-H implementation and final synthesis remain.
+packet separately. A-D and H are landed. E/F have completed their initial result audits; G and final synthesis remain active.
 There is no full-campaign completion claim.
 
 Admission used twelve passing known-answer/runtime checks in an isolated source
@@ -25,7 +25,7 @@ write-through and ordinary commits/pushes after verification.
 
 ## First landed batch
 
-A is complete and independently checked. Four current `-r1` packets replace four retained originals after a robust stopping-cost repair and added equal-attempt controls. [Finding and limits](../../../docs/versions/v18-selective-acquisition/research-extension/RESULTS.md). Each exported packet includes all raw blocks in `RAW.zip`; extract it beside `PLAN.json` to reconstruct the packet layout. `SOURCE.zip` retains the executed source, and `REPLAY_DRIVER.py` is the separately bound audit entry point. B-D have executed and passed bounded audits; their documentary landings are pending. E-H remain in progress.
+A is complete and independently checked. Four current `-r1` packets replace four retained originals after a robust stopping-cost repair and added equal-attempt controls. [Finding and limits](../../../docs/versions/v18-selective-acquisition/research-extension/RESULTS.md). Each exported packet includes all raw blocks in `RAW.zip`; extract it beside `PLAN.json` to reconstruct the packet layout. `SOURCE.zip` retains the executed source, and `REPLAY_DRIVER.py` is the separately bound audit entry point. B-D and H are also fully landed. E/F/G and final synthesis remain active.
 
 ## Follow-on admission
 

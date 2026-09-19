@@ -137,9 +137,15 @@ def run(root,campaign):
         try:
             pulse(phase='before-generation')
             if design['study']=='E':D.prepare(root/'data',**design['data'],pulse=pulse)
-            else:
+            elif design['study']=='G':
                 from .intervention_data import prepare
                 prepare(root/'data',**design['data'],pulse=pulse)
+            elif design['study']=='E-purpose':
+                from .purpose_data import prepare
+                parent=campaign/design['parent_packet']
+                if file_digest(parent/'COMPLETE.json')!=design['parent_complete_sha256']:raise ValueError('frozen behavior parent changed')
+                prepare(root/'data',parent,pulse)
+            else:raise ValueError('unimplemented neural study')
             pulse(phase='before-training')
             config=dict(design['training'],report_start=acceptance['report_start'],cpu_ceiling_seconds=acceptance['cumulative_cpu_ceiling_seconds'])
             write(root/'TRAINING.json',config)
@@ -148,7 +154,7 @@ def run(root,campaign):
             env=os.environ.copy();env['GHOST_V18_CHILD_LOCK']=str(campaign/'neural-child-owner')
             # Reserve evaluator time and include failed previous attempts in the new allowance.
             env['GHOST_V18_CHILD_CPU_LIMIT']=str(max(0,acceptance['cumulative_cpu_ceiling_seconds']-old-(time.process_time()-cpu)-60))
-            module='torch_worker' if design['study']=='E' else 'intervention_worker'
+            module={'E':'torch_worker','G':'intervention_worker','E-purpose':'purpose_worker'}[design['study']]
             child_started=time.time();clock=None;child_dir=root/'neural';child_dir.mkdir(exist_ok=True)
             with (root/'neural.log').open('ab',buffering=0) as log:
                 child=subprocess.Popen([str(python),'-B','-m',f'ghostscale.validation.soundingline.v18_3.{module}',
@@ -177,8 +183,11 @@ def run(root,campaign):
             if status.get('state')!='complete':emit('resource_cutoff');return 'resource_cutoff'
             pulse(phase='independent-scoring')
             if design['study']=='E':score_E(root,pulse)
-            else:
+            elif design['study']=='G':
                 from .intervention_data import score
+                score(root,pulse)
+            else:
+                from .purpose_data import score
                 score(root,pulse)
             files={p.relative_to(root).as_posix():file_digest(p) for p in root.rglob('*') if p.is_file()
                 and p.suffix in ('.npz','.gz','.pt','.json') and p.name not in ('STATUS.json','CURRENT.json','COMPLETE.json')}

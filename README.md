@@ -16,7 +16,7 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 ## V18.3 research extension in progress
 
-The [first verified batch](docs/versions/v18-selective-acquisition/research-extension/RESULTS.md) separates evidence useful for acting from evidence useful for prediction at equal query attempts. The repaired originals remain visible. Changing-state, provenance and revision runs have executed; learned-memory, intervention, compression and cross-architecture analysis are still being completed. [Coverage](results/v18/research-extension/COVERAGE.json).
+The [first verified batch](docs/versions/v18-selective-acquisition/research-extension/RESULTS.md) separates evidence useful for acting from evidence useful for prediction at equal query attempts. The repaired originals remain visible. Changing-state, provenance and revision results are also verified and published. Learned-memory, intervention, compression and cross-architecture studies are implemented and admitted; their discovery and synthesis remain active. [Coverage](results/v18/research-extension/COVERAGE.json).
 
 ## V18.2 maker-state continuation
 

@@ -118,18 +118,19 @@ def score(root,pulse=lambda **kw:None):
                 if not np.allclose(artifact,truth['target'][j],atol=1e-7,rtol=0):raise ValueError('counterfactual target mismatch')
                 reference_checks+=1
     def forecasts():
-        yield 'exact-public-history',(None,truth['exact'],None,None)
-        yield 'known-state-ceiling',(None,truth['target'],truth['behavior_target'],None)
+        yield 'exact-public-history',(None,truth['exact'],None,None,None)
+        yield 'known-state-ceiling',(None,truth['target'],truth['behavior_target'],None,None)
         for name,receipt in completed['predictions'].items():
             path=child/receipt['file']
             if file_digest(path)!=receipt['sha256']:raise ValueError('intervention predictions changed')
             with np.load(path,allow_pickle=False) as z:
-                yield name,(int(name.rsplit('-seed',1)[1]),z['counterfactual'].copy(),z['behavior'].copy(),z['wrong_mapping'].copy())
-    for name,(seed,cf,behavior,wrong) in forecasts():
+                yield name,(int(name.rsplit('-seed',1)[1]),z['counterfactual'].copy(),z['behavior'].copy(),z['wrong_mapping'].copy(),z['incompatible_partition'].copy() if 'incompatible_partition' in z else None)
+    for name,(seed,cf,behavior,wrong,incompatible) in forecasts():
         method=name.rsplit('-seed',1)[0] if seed is not None else name
         cf_loss,cf_brier,cf_tv=proper_scores(truth['target'],cf)
         behavior_loss=proper_scores(truth['behavior_target'],behavior)[0] if behavior is not None else None
         wrong_loss=proper_scores(truth['target'],wrong)[0] if wrong is not None else None
+        incompatible_loss=proper_scores(truth['target'],incompatible)[0] if incompatible is not None else None
         for cell in range(16):
             for draw in sorted(set(ids[:,1])):
                 for role in range(3):
@@ -138,19 +139,20 @@ def score(root,pulse=lambda **kw:None):
                         counterfactual_loss=W.loss_record(float(cf_loss[chosen].mean())),brier=float(cf_brier[chosen].mean()),
                         total_variation=float(cf_tv[chosen].mean()),
                         behavior_loss=None if behavior_loss is None else W.loss_record(float(behavior_loss[chosen].mean())),
-                        wrong_mapping_loss=None if wrong_loss is None else W.loss_record(float(wrong_loss[chosen].mean())),probes=int(chosen.sum())))
+                        wrong_mapping_loss=None if wrong_loss is None else W.loss_record(float(wrong_loss[chosen].mean())),
+                        incompatible_partition_loss=None if incompatible_loss is None else W.loss_record(float(incompatible_loss[chosen].mean())),probes=int(chosen.sum())))
         pulse(phase='scoring-counterfactual',method=name)
     clusters=[]
     for method in sorted({r['method'] for r in rows}):
         for draw in sorted(set(ids[:,1])):
             chosen=[r for r in rows if r['method']==method and r['lineage']==draw]
             result={}
-            for metric in ('counterfactual_loss','behavior_loss','wrong_mapping_loss'):
+            for metric in ('counterfactual_loss','behavior_loss','wrong_mapping_loss','incompatible_partition_loss'):
                 values=[r[metric] for r in chosen]
                 result[metric]=None if any(v is None or v['infinite'] for v in values) else float(np.mean([v['value'] for v in values]))
             for metric in ('brier','total_variation'):result[metric]=float(np.mean([r[metric] for r in chosen]))
             clusters.append(dict(method=method,lineage=int(draw),**result))
-    summary={method:{m:stats([r[m] for r in clusters if r['method']==method],('G',method,m)) for m in ('counterfactual_loss','behavior_loss','wrong_mapping_loss','brier','total_variation')} for method in sorted({r['method'] for r in rows})}
+    summary={method:{m:stats([r[m] for r in clusters if r['method']==method],('G',method,m)) for m in ('counterfactual_loss','behavior_loss','wrong_mapping_loss','incompatible_partition_loss','brier','total_variation')} for method in sorted({r['method'] for r in rows})}
     path=root/'neural_points.json.gz';path.write_bytes(gzip.compress(canonical(dict(rows=rows,clusters=clusters)),mtime=0))
     write(root/'SUMMARY.json',dict(family='G',cells=summary,raw_sha256=file_digest(path),fits=completed['fits'],
         checks=dict(independent_counterfactual_targets=reference_checks,coordinate_permutation=completed['permutation_checks']),
