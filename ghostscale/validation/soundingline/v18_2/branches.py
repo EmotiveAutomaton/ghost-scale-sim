@@ -41,8 +41,13 @@ def persistence(case,design):
             for j,probe in enumerate(c['probes']):
                 probe['context']['goal']=2 if design.get('novel_goal') and changed_goal else int(changed_goal)
                 probe['observed'],probe['choice']=m.draw(c['world'],state,probe['context'],rng)
+            if design.get('history_budget'):
+                # Same permitted retained window for every comparator; discarded
+                # history is a declared memory constraint, not free hidden state.
+                c['history']=c['history'][-design['history_budget']:]
             for r in m.evaluate(c,('direct','raw','persistent','adaptive','rebuilt','oracle'),('process-history',)):
                 r['condition']=f'goal-{int(changed_goal)}-preference-{int(changed_pref)}'
+                r['memory_budget']=design.get('history_budget',len(c['history']))
                 r['counterfactual_evaluator']=dict(state=state,history=c['history'],probes=c['probes'])
                 rows.append(r)
     return rows
@@ -131,9 +136,12 @@ def uptake(case,design):
         for weight in (0.,.25,1.):
             for apply in (False,True):
                 selected=records if attend=='all' else records[::2]
-                acquisition=learn([x['program'] for x in selected],[x['artifact'] for x in selected],capacity=2)
-                # A symmetric Beta update on observed goal feature; weight is
-                # independent of information selection and procedure application.
+                # The SAME update weight controls both repertoire and goal
+                # learning. Shared source draws keep paired arms comparable.
+                weighted=[x for x in selected if random.Random(m.seed(case['case_id'],'update',x['source'])).random()<weight]
+                acquisition=learn([x['program'] for x in weighted],[x['artifact'] for x in weighted],capacity=2)
+                # Declared Beta prior prefers the learner's own goal; no arm gets
+                # an extra goal penalty. Fractional counts retain uncertainty.
                 successes=sum(bool(x['artifact']&(1<<other[0])) for x in selected)
                 a=1+weight*successes;b=9+weight*(len(selected)-successes)
                 unwanted=a/(a+b)
@@ -147,10 +155,10 @@ def uptake(case,design):
                 rows.append(dict(tier='process-history',probe=0,method=f'{attend}-weight-{weight}-apply-{int(apply)}',
                     condition='dependency' if dependency else 'separable',instrument='valid',
                     result=dict(acquired=selected,library=list(map(list,acquisition.library)),output=output,
-                                acquisition_cost=acquisition_cost,fit_cost=acquisition.processing_cost,
+                                acquisition_cost=acquisition_cost,fit_cost=acquisition.processing_cost,weighted_sources=[x['source'] for x in weighted],
                                 beta_parameters=[a,b],total_envelope=128),
                     scores=dict(task_transfer=value,unwanted_goal_uptake=unwanted,
-                                retained_variance=a*b/((a+b)**2*(a+b+1)),
+                                retained_variance=a*b/((a+b)**2*(a+b+1)),unwanted_action_probability=unwanted,
                                 construction_cost=execution.primitive_cost,query_cost=len(selected))))
     return rows
 

@@ -58,3 +58,16 @@ def test_transform_and_feature_truth_boundary():
     assert all(np.allclose(q.sum(1),1) for q in predictions.values())
     w=m.world('test',0);ctx=m.context(2,0)
     assert np.allclose(m.policy(w,(1,1,0,0),ctx),v.reference(w,(1,1,0,0),ctx)[1])
+
+
+def test_public_alignment_preserves_exact_prediction_and_weight_zero():
+    case=m.make_case('alignment',3,probe_mode='uncertain')
+    original=m.public_packet(case,'process-history')
+    aligned,decode=n.align_public(original)
+    q=np.zeros(16);q[decode]=m.infer(aligned)['probabilities']
+    assert np.allclose(q,m.infer(original)['probabilities'],atol=1e-12)
+    rows=b.uptake(case,dict(dependency=True))
+    for r in rows:
+        if '-weight-0.0-' in r['method']:
+            assert r['result']['library']==[]
+            assert r['result']['beta_parameters']==[1.,9.]

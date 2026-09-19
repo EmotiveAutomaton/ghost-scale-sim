@@ -88,7 +88,11 @@ def run(root,campaign):
     with local_owner(campaign/'scientific-worker-owner'),local_owner(root):
         plan=read(root/'PLAN.json');acceptance=read(campaign/'ACCEPTANCE.json')
         if {p:file_digest(REPO/p) for p in plan['sources']}!=plan['sources']:raise ValueError('source mismatch')
-        if (root/'COMPLETE.json').exists():return aggregate(root)
+        if (root/'COMPLETE.json').exists():
+            complete=read(root/'COMPLETE.json')
+            if file_digest(root/'SUMMARY.json')!=complete['summary_sha256']:raise ValueError('completed summary mismatch')
+            for name in complete['blocks']:load(root,name)
+            return read(root/'SUMMARY.json')
         if os.name=='nt':
             import ctypes
             ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(),0x4000)
@@ -105,7 +109,10 @@ def run(root,campaign):
         try:
             design=plan['design'];branch=design['branch']
             # No scientific children: fits, evaluation and all verification share this worker.
-            if branch=='learned':
+            if branch=='assembly':
+                from .assembly_maker import run as assembly_run
+                assembly_run(root,design,limited,lambda **kw:emit('running',**kw))
+            elif branch=='learned':
                 from .learned import run_comparison
                 run_comparison(root,design,limited,lambda **kw:emit('running',**kw))
             elif branch=='g6':
@@ -122,7 +129,7 @@ def run(root,campaign):
                         block_cpu=time.process_time();block_wall=time.monotonic();data=[]
                         for index in range(first,min(first+8,count)):
                             case=make_case(design['namespace'],index,split,length=design.get('length',8),
-                                           change=design.get('change',False),family=design.get('family','board'))
+                                           change=design.get('change',False),family=design.get('family','board'),probe_mode=design.get('probe_mode','standard'))
                             if branch=='g0': rows=evaluate(case)
                             else:
                                 from .branches import evaluate_branch

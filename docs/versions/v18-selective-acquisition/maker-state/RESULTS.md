@@ -31,3 +31,9 @@ causal meaning of network coordinates or generalization to different physics.
 Those are separate admitted comparisons. G0's original schema lacks the later
 explicit credible-set coverage fields; they must be derived from retained
 posteriors or reported in subsequent blocks, not invented retrospectively.
+
+## First intervention wave
+
+The first intervention wave tested whether readers can update preferences while keeping the maker's information separate from their own. Preference updating helped after a policy change, and treating a reader-only correction as the maker's belief badly distorted prediction. The missing-skill family was disproved in 42 of 128 histories. These are constructed mechanism results; the first learned models failed the held-out task-structure test, and the original selective-learning block is withheld pending its corrected comparison. Miniature — architecture untested.
+
+The [full core-wave response](../../../exchange/v18-2-core-wave-response.md) contains the comparison table and the retained reporting/uptake defects. The campaign remains active.

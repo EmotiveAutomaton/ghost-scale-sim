@@ -35,7 +35,7 @@ def supervise(campaign,queue,python):
                 write(root/'DISPOSITION.json',dict(state='failed_or_cutoff',exit_code=child.returncode,
                     needs_bounded_repair=True,at=now()),immutable=False)
         write(campaign/'QUEUE-STATUS.json',dict(state='drained',pid=os.getpid(),heartbeat=now()),immutable=False)
-        write(campaign/'events'/'queue-drained.json',dict(kind='queue_drained',at=now()))
+        write(campaign/'events'/f'{queue.stem}-drained.json',dict(kind='queue_drained',queue=queue.name,at=now()))
 
 
 if __name__=='__main__':

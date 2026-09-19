@@ -136,6 +136,13 @@ def likelihood(w, states, observation):
 
 def infer(payload, method='persistent', states=STATES, transition=0.):
     p = parse(payload)
+    if method == 'raw':
+        count=np.ones(16)*.025
+        for obs in p['history']:
+            distance=sum(obs['context'][k]!=p['current'][k] for k in ('goal','signal','noticed'))
+            count[obs['artifact']]+=math.exp(-distance)
+        return dict(mismatch=False,probabilities=(count/count.sum()).tolist(),posterior=None,
+                    evaluations=3*len(p['history'])+16,log_evidence=None)
     weights = np.ones(len(states))/len(states)
     work = 0; log_evidence = 0.; mismatch = False
     history = [] if method == 'direct' else p['history']
@@ -157,18 +164,11 @@ def infer(payload, method='persistent', states=STATES, transition=0.):
         return dict(mismatch=True, probabilities=None, posterior=None, evaluations=work, log_evidence=None)
     distributions = np.array([artifacts(policy(p['world'], s, p['current'])) for s in states])
     prediction = weights @ distributions
-    if method == 'raw':
-        # Context-distance kernel conditional empirical rival; prior smoothing fixed before outcomes.
-        count = np.ones(16)*.025
-        for obs in history:
-            distance = sum(obs['context'][k] != p['current'][k] for k in ('goal','signal','noticed'))
-            count[obs['artifact']] += math.exp(-distance)
-        prediction = count/count.sum()
     return dict(mismatch=False, probabilities=prediction.tolist(), posterior=weights.tolist(),
                 evaluations=work+len(states)*len(PROGRAMS), log_evidence=log_evidence)
 
 
-def make_case(namespace, index, split='test', length=8, change=False, family='board'):
+def make_case(namespace, index, split='test', length=8, change=False, family='board',probe_mode='standard'):
     rng = random.Random(seed(namespace, split, index))
     state = STATES[rng.randrange(len(STATES))]
     w = world(split,index,family)
@@ -183,6 +183,8 @@ def make_case(namespace, index, split='test', length=8, change=False, family='bo
     probes=[]
     for j in range(4):
         c=context(j%2, j//2)
+        if probe_mode=='uncertain' or (probe_mode=='mixed' and index%2):
+            c=context([None,0,1,None][j],[None,None,None,1][j])
         obs, choice=draw(w,future_state,c,rng)
         probes.append(dict(context=c,observed=obs,choice=choice))
     return dict(case_id=f'{namespace}:{split}:{index:05d}', maker_id=f'{namespace}:{split}:maker-{index}',

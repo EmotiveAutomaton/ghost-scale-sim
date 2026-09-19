@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.2 first intervention wave (19 September 2026)
+
+The first intervention wave tested whether readers can update preferences while keeping the maker's information separate from their own. Preference updating helped after a policy change, and treating a reader-only correction as the maker's belief badly distorted prediction. The missing-skill family was disproved in 42 of 128 histories. These are constructed mechanism results; the first learned models failed the held-out task-structure test, and the original selective-learning block is withheld pending its corrected comparison. Miniature — architecture untested.
+
+[Comparison cells and limits](docs/exchange/v18-2-core-wave-response.md).
+
 ## V18.2 first maker-state block (19 September 2026)
 
 Can earlier work improve predictions of a maker's next artifact? Across 128 held-out maker histories, the exact persistent reader reduced average predictive log loss from 0.988 to 0.925 when it received eight process observations; the most-likely-artifact accuracy stayed at 78.52%, equal to the direct reader. This is a constructed mechanism result: history improved probabilities here, without improving the chosen prediction or establishing that an explicit maker representation is necessary. Miniature — architecture untested.
