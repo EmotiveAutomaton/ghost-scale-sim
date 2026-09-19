@@ -147,6 +147,7 @@ it started.
 | E46 | You can read a thing, reject it, and be unchanged | **REJECTED (run), CONTESTED (lit)** | Refuting requires partly running the argument; the careful refuter takes on more than the skimmer. Counterarguing research finds the opposite; the sleeper-effect minority agrees with us. **The model takes the less-supported side** |
 | E42 | Attention implies openness | **REJECTED (run)** | A stable regime exists: high engagement, accurate reading, closed gate, nothing integrated |
 | E5 | Trust in provenance is decisiveness renamed | **REJECTED (run)** | Only trust produces the human–machine gap; decisiveness moves the level and never the gap |
+| V18.3 C | Repeated reports can be treated as independent corroboration | **REJECTED in the copied-source stress test; dependence remedy QUALIFIED (run, constructed mechanism and method)** | With two roots and six reports each under shared error, naive loss 3.509 and false confidence 21.88%; uncertain-graph/shared-error loss 0.643 and initial false confidence 0%. No infallible provenance claim. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
 
 **What these add up to.** The exploit survived three audits by becoming more precise: it is now a
 claim about **labels trusted above a stated crossover**, on a **signed** measure, quoted as a
@@ -158,6 +159,8 @@ cannot produce that reader. **That fork decides what H6 means** (§10) and is th
 important theoretical question the record leaves open. (lit: the mind-perception mediation the
 paper proposed has since been measured directly and holds, the one place the mechanism, not just
 the effect, has outside support.)
+
+V18.3 adds a different, explicit provenance failure: repeated descendants amplify a common error when treated as independent. A finite dependence model reduces that failure, while noisy independent corrections and incorrect metadata preserve uncertainty about remedy reliability. This does not resolve the earlier theoretical fork about labels and attention.
 
 ## §4. Depth is compressed practice, not effort; method, not purpose, is what transmits
 

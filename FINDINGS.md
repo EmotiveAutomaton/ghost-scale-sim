@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 C: Corroboration and source dependence (19 September 2026)
+
+When do repeated reports become misleading corroboration? With two underlying sources, six reports per source and a shared error, treating all reports as independent produced logarithmic loss 3.509 and assigned over 95% probability to the wrong answer in 21.88% of networks. A reader allowing uncertain source groups and shared error reduced loss to 0.643 and had no such initial false-confidence cases; after two noisy independent corrections, its rate was 3.13%. This is descriptive evidence about constructed provenance mechanisms and finite inference methods. Dependence modeling helps in this construction; it does not make uncertain provenance or correction infallible.
+
+[Evidence and limitations](docs/exchange/v18-3-C-response.md).
+
 ## V18.3 B: Changing maker state (19 September 2026)
 
 What should a reader preserve when a maker changes? After an unannounced goal change, updating goal and belief while retaining the slower roles reduced future logarithmic loss from 3.299 for a static reader to 1.152; lower loss means better probabilistic prediction. The same rule lost when nothing changed, 1.023 versus 0.904, and when acquired skill changed, 1.058 versus 0.942. This is a descriptive constructed-mechanism result: selective updating helps when its timescale assumptions fit the change, and can hurt when they do not. These inference comparisons do not establish better craft uptake, because all readers shared the same separate learning routine.
