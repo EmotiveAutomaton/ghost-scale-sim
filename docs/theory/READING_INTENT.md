@@ -606,6 +606,8 @@ is generated into its `RESULTS_PACKET.md`; the Sounding Line ledger is its `BRID
 | V16 V01–V03 | Longitudinal opportunity and probe records identify persistent profiles and improve prediction | **QUALIFIED; many intervals unresolved (run, constructed mechanism)** | Chronology beats weaker context/stability models in some regimes; direct chronological/all-evidence rivals match. Four of 36 all-probe versus no-probe prediction bars hold; targeted probes have no held practical advantage. The profiles are constructed, not human values. [V16 completed study](../versions/v16-acquired-craft/RESULTS.md) |
 | V17 C | Adaptive inference does not dominate across noise and misleading cues | **QUALIFIED descriptive (run, constructed mechanism; miniature — architecture untested)** | Confidence refinement beats fixed inverse under noise (Brier 0.0232 vs 0.1705), but loses under a misleading old cue (1.0271 vs 0.1660). Controller development remains charged. [V17 completed study](../versions/v17-adaptive-appreciation/RESULTS.md) |
 
+| V18.3 A | Investigation for learning to act and for identifying a maker favor the same evidence | **SPLIT descriptive discovery (run, constructed mechanism)** | At three attempts under uniform access, action-focused success 45.31% versus uncertainty-focused 25.94%, but future loss 0.997 versus 0.638. Four original packets superseded after a stopping-cost repair; 16 finite architectures, no human claim. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
+
 **What these add up to.** V14's factoring results distinguish plan, goal, preference,
 practice, communicated affect and evidence routes; its three V13 repairs found no rescued claim.
 V16 adds actual learning and inquiry, which further separates identifying a maker from gaining
@@ -616,6 +618,8 @@ claim. Neither a persistent synthetic profile nor a successful probe is a measur
 values. Pursuit, warrant and the next eligible measurement therefore remain separate decisions.
 
 V17 reinforces the separation of accuracy, calibration, learning and cost: a confidence rule succeeds in one noise construction and fails after cue reversal. Cheap repeated controller use does not erase its cold development cost.
+
+V18.3 separates purpose even at identical attempted-query counts: demonstrations chosen for own-task learning improve execution while preserving less predictive information. Finite architecture comparisons support that distinction descriptively; cost accounting and hidden-state-dependent access limit selector rankings. This does not identify a uniquely necessary representation or a human mechanism.
 
 ## The maintenance rule
 

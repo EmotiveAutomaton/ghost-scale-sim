@@ -14,6 +14,10 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
+## V18.3 research extension in progress
+
+The [first verified batch](docs/versions/v18-selective-acquisition/research-extension/RESULTS.md) separates evidence useful for acting from evidence useful for prediction at equal query attempts. The repaired originals remain visible. Changing-state, provenance and revision runs have executed; learned-memory, intervention, compression and cross-architecture analysis are still being completed. [Coverage](results/v18/research-extension/COVERAGE.json).
+
 ## V18.2 maker-state continuation
 
 The [V18.2 finite queue](docs/versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md) is complete: 25 executed packets, explicit retained repairs, and no remaining jobs. History improves prediction when current maker state is hidden; the small learned encoders do not reliably beat the direct rival. [Results and limits](docs/versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md); [blind synthetic fixtures](results/v18/maker-state/bridge-1/README.md).

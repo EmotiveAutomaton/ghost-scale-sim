@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 A: purpose and paid investigation (19 September 2026)
+
+Does the purpose of investigation change which evidence is useful? In the uniform-access comparison, choosing demonstrations for learning to act produced 45.31% own-task success, versus 25.94% for uncertainty reduction when both made exactly three attempts. The action-focused reader predicted later behavior less accurately: expected logarithmic loss, where lower is better, was 0.997 versus 0.638. When access depended on hidden maker state, the corresponding success rates were 32.19% and 9.06%. This is descriptive evidence about constructed mechanisms: useful evidence depends on the reader's purpose, and learning to act is not interchangeable with identifying a maker. It does not establish human learning or a universal selector advantage.
+
+[Repaired current packets, costs and validity limits](docs/versions/v18-selective-acquisition/research-extension/RESULTS.md). The full V18.3 program remains active.
+
 ## V18.2 bounded study complete (19 September 2026)
 
 V18.2 tested whether a reader can maintain useful maker state across changes in goals, preferences and information. With the immediate goal or received signal hidden, history raised next-artifact accuracy from 34.38% to 71.88%; in the new assembly family it rose from 37.70% to 60.94%. The small learned encoders did not reliably beat the direct predictor, and a public-law compiler solved every construction control. These are discovery results about constructed mechanisms and methods, not human evidence. Miniature — architecture untested.

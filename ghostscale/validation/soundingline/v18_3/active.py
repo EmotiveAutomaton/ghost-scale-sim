@@ -7,7 +7,8 @@ with target. The scientific outcome is held-out behavior/native enactment.
 import numpy as np
 from . import world as W
 
-METHODS = ('task', 'information', 'fixed', 'random', 'none', 'task-naive', 'task-robust')
+METHODS = ('task', 'information', 'fixed', 'random', 'none', 'task-naive', 'task-robust',
+           'task-three-attempts', 'information-three-attempts')
 PURPOSES = ('prediction', 'historical-state', 'enactment')
 ACCESS = ('uniform', 'query-dependent', 'hidden-state')
 ATTEMPTS = 3
@@ -121,26 +122,27 @@ def unit(index, cell=0, mode='uniform', control='ordinary', split='test'):
                 if method=='fixed':q=3+step%2
                 elif method=='random':q=int(W.rng('random-selector',split,index,mode,control,step).integers(len(tables)))
                 else:
-                    objective='historical-state' if method=='information' else purpose
+                    objective='historical-state' if method.startswith('information') else purpose
                     gains=expected_gains(weights,tables,w,objective,target,float(W.enact(selected_program,target)['success']))
                     work=len(tables)*len(weights)*(len(W.PROGRAMS)+1)
-                    selector_work+=work
+                    decision_work=work
                     if method=='task-robust':
                         variants=[]
                         for a in range(3):
                             perturbed=weights.reshape(-1,3).copy()
                             perturbed[:,a]*=3;perturbed=perturbed.ravel();perturbed/=perturbed.sum()
                             variants.append(expected_gains(perturbed,tables,w,objective,target,float(W.enact(selected_program,target)['success'])))
-                        gains=np.min(variants,axis=0);selector_work+=3*work
+                        gains=np.min(variants,axis=0);decision_work+=3*work
+                    selector_work+=decision_work
                     # Decision fee and expected native observation work are explicit.
                     lengths=np.array([len(p) for p in W.PROGRAMS]+[0])
                     expected_actions=np.array([float((weights@t)@lengths) for t in tables])
                     if objective=='enactment':
                         learning=np.array([sum(W.enact(p,target)[k] for k in ('practice_actions','definition_actions','planning_evaluations')) for p in W.PROGRAMS]+[0])
                         expected_actions+=np.array([float((weights@t)@learning) for t in tables])
-                    values=gains-FEES-.002*expected_actions-work*WORK_PRICE
+                    values=gains-FEES-.002*expected_actions-decision_work*WORK_PRICE
                     q=int(np.argmax(values))
-                    if values[q]<=0:break
+                    if values[q]<=0 and not method.endswith('three-attempts'):break
                 outcome=true_outcomes[step][q]
                 weights=update(weights,tables[q],outcome,naive)
                 fees+=float(FEES[q]);primitive_work+=1 # apparatus provisioning per attempted observation
@@ -161,7 +163,8 @@ def unit(index, cell=0, mode='uniform', control='ordinary', split='test'):
                            query_fees=fees,selector_operations=selector_work,observation_actions=primitive_work,
                            reader_work=learning_work+acquisition['execution_actions'])))
     return dict(family='A',index=index,cell=cell,mode=mode,control=control,public=json_payload(w,history),
-                evaluator=dict(state=state,profile=profile,target=target,potential_outcomes=true_outcomes),rows=rows)
+                evaluator=dict(state=state,profile=profile,target=target,potential_outcomes=true_outcomes),rows=rows,
+                work_unit='selector likelihood-table entries considered; a declared logical cost proxy, not hardware instructions')
 
 
 def json_payload(w,history):

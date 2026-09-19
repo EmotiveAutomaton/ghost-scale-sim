@@ -80,6 +80,25 @@ def test_complete_active_unit_equal_evidence_and_failed_access():
     for row in unit['rows']:
         assert row['costs']['attempted_queries']>=row['costs']['responses']
         assert row['same_evidence_direct_error']<1e-12
+        if row['method'].endswith('three-attempts'):assert row['costs']['attempted_queries']==3
+
+
+def test_robust_selector_pays_for_extra_evaluation_before_stopping(monkeypatch):
+    # Known-answer utility lies between one evaluation and four evaluations.
+    def tables(*args,**kwargs):
+        t=np.zeros((len(W.STATES)*3,len(W.PROGRAMS)+1));t[:,0]=1
+        return [t.copy() for _ in W.QUERIES]
+    work=len(W.QUERIES)*len(W.STATES)*3*(len(W.PROGRAMS)+1)
+    monkeypatch.setattr(active,'bank',tables)
+    monkeypatch.setattr(active,'expected_gains',lambda *a,**k:np.full(len(W.QUERIES),2*work*active.WORK_PRICE))
+    monkeypatch.setattr(active,'FEES',np.zeros(len(W.QUERIES)))
+    monkeypatch.setattr(active,'access',lambda *a,**k:1.)
+    # Match the planted zero-action observations to the constant likelihood table.
+    monkeypatch.setattr(W,'matrix',lambda *a,**k:np.tile(np.eye(len(W.PROGRAMS))[0],(len(W.STATES),1)))
+    rows={r['method']:r for r in active.unit(0,control='uninformative',split='pilot')['rows'] if r['purpose']=='prediction'}
+    assert rows['task']['costs']['attempted_queries']==3
+    assert rows['task-robust']['costs']['attempted_queries']==0
+    assert rows['task-robust']['costs']['selector_operations']==4*work
 
 
 def test_transition_preserves_slow_roles_and_dynamics():

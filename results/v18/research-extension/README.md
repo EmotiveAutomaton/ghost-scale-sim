@@ -22,3 +22,7 @@ source archive, source-bound summary, completion bindings and independent replay
 receipt. Operating PIDs, machine paths, watcher configuration and local ownership
 remain outside the repository. New result batches receive full documentary
 write-through and ordinary commits/pushes after verification.
+
+## First landed batch
+
+A is complete and independently checked. Four current `-r1` packets replace four retained originals after a robust stopping-cost repair and added equal-attempt controls. [Finding and limits](../../../docs/versions/v18-selective-acquisition/research-extension/RESULTS.md). Each exported packet includes all raw blocks in `RAW.zip`; extract it beside `PLAN.json` to reconstruct the packet layout. `SOURCE.zip` retains the executed source, and `REPLAY_DRIVER.py` is the separately bound audit entry point. B-D have executed and passed bounded audits; their documentary landings are pending. E-H remain in progress.

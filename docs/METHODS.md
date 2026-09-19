@@ -626,3 +626,7 @@ compilers test whether construction needs the acquired library at all. All
 intervals remain descriptive and grouped by maker/world lineage; repeated fits,
 repairs and selected examples do not add independent observations. See the
 [final scope and limits](versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md).
+
+## V18.3 purpose-sensitive inquiry and source-bound validity
+
+The finite native board crosses decision rule, acquisition interference, considered opportunities and repeated sources. Three reader purposes share potential query outcomes; stopped selectors and exactly-three-attempt arms separate query choice from count. Nonresponse is an outcome, and every attempted query remains charged. Selector prices refer to declared likelihood-table entries rather than hardware instructions; observation, practice, planning, execution and whole-run CPU are separate costs. The robust stopping rule charges all of its likelihood evaluations. A known-answer cost crossover detects the original undercharge. Independent execution and probability references, strict public-packet parsing, corruption/resume tests, every retained mean, and fixed evenly spaced extracted-source replay establish scoped validity. Inference intervals average paired architecture cells and repeated probes within coefficient draw.
