@@ -531,6 +531,19 @@ Complete reconstruction precedes scoring; a separate fresh-source replay checks 
 outcome-independently selected case per stratum. Forecast error and direct compilation
 are secondary boundaries and cannot replace the primary.
 
+The second and last final packet fixes 64 untouched contexts in each of six
+five/seven-part topology strata, with four histories nested in each context. Physical
+signatures include the true world, public candidate laws, initial state and target;
+all 96 discovery signatures are excluded. Its primary is the within-context success-
+fraction difference between one fixed parent observation and one decision-selected
+observation for the dependency learner at 32,768 operations. Direction, a 20-point
+practical margin, error probability 0.025, the one-sided empirical-Bernstein formula
+and a no-extension rule were frozen before generation. The first-block verifier's
+omission of a stored action trace is retained as a verifier-only failure; the repaired
+checker changed no science. Complete reconstruction and extracted-source replay pass
+before the frozen analysis is applied. Secondary action methods and cost comparisons
+cannot replace the primary, and no third final contrast is permitted.
+
 Campaign unit accounting retains the previously filed conservative identifier count
 when a later refresh would deduplicate identifiers shared by reused branch plans. The
 final-primary filing caught and corrected such a decrease before commit. Scientific

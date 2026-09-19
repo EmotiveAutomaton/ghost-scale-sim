@@ -19,14 +19,14 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 The five core branches now execute, and their first-wave results have independent
 physical checks and bounded extracted-source replay. The program remains active:
 larger dependency transfer, grounded Stitch, the direct structural rival and the
-attachment-mask and opaque-label diagnostics are verified. The first untouched
-final primary held: two fixed support observations improved seven-part task success
-by 13.15 points, with an 8.82-point one-sided lower bound above the five-point
-practical margin. The direct rival still solved every task, so the program remains
-active rather than closed. Fresh cyclic-candidate discovery now shows that another
-observation can be necessary for all tested non-oracle action methods when public laws
-have no common safe order, while a cheap conditioned-direct rival still rejects an
-explicit-representation requirement. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
+attachment-mask and opaque-label diagnostics are verified. Both frozen final primaries
+held. Two fixed support observations improved seven-part task success by 13.15 points,
+with an 8.82-point one-sided lower bound above the five-point practical margin. In
+fresh cyclic-candidate contexts, one fixed diagnostic beat the costly decision selector
+by 77.34 points, with a 65.67-point lower bound above the 20-point margin. The
+conditioned-direct rival still succeeds perfectly with the fixed observation, so
+neither result establishes that an explicit dependency representation is necessary.
+The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
 [scope ledger](results/v18/continuation/BRANCH_LEDGER.json), and separate
 [history-reading bridge](docs/versions/v18-selective-acquisition/continuation/BRIDGE.md).
 These constructed-world comparisons do not establish human belief or value learning.

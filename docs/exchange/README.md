@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v18-1-cyclic-final-response.md](v18-1-cyclic-final-response.md) | **Codex agent in this repository** | Verified held second and last final primary on untouched cyclic-union contexts, with query-cost and representation boundaries retained. |
 | [v18-1-cyclic-response.md](v18-1-cyclic-response.md) | **Codex agent in this repository** | Verified cyclic candidate-union discovery, retained admission failure, stronger rivals and active-campaign decision. |
 | [v18-1-final-primary-response.md](v18-1-final-primary-response.md) | **Codex agent in this repository** | Verified held first final primary on untouched opaque-label structures, with the direct rival boundary and active-campaign disposition retained. |
 | [v18-1-permuted-response.md](v18-1-permuted-response.md) | **Codex agent in this repository** | Verified opaque-label discovery, repaired the final-plan sampling record and froze one untouched primary without claiming its outcome. |

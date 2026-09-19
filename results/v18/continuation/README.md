@@ -27,7 +27,11 @@ untouched contexts and 342 replay rows, bringing the active totals to 2,929,416 
 contexts are not new architecture, while the final packet excludes discovery units.
 `CYCLIC_BATCH.json` binds 34,560 fresh cyclic-candidate-union discovery rows and 540
 replay rows, bringing the active totals to 2,963,976 and 38,156. Its 96 contexts contain
-16 unlabeled topologies in one constructed architecture; no second final contrast is frozen.
+16 unlabeled topologies in one constructed architecture. `FINAL_PRIMARY_2_BATCH.json`
+binds the second and last frozen primary: another 23,040 checked rows on 384 untouched
+contexts and 90 replay rows, bringing the active totals to 2,987,016 and 38,246. The
+fixed diagnostic beat the current costly decision selector by the precommitted practical
+margin; the campaign remains active and no third final primary is permitted.
 
 `VALIDATION.json` records 50 passing isolated checks without skips, including the
 existing pinned Stitch binary, the untouched-sampling contract and the cyclic-union
@@ -46,5 +50,6 @@ reconstruction and bounded replay. `ACCOUNTING_REPAIR.final-primary.json` retain
 the established conservative unit-identifier convention after the filing refresh
 briefly deduplicated reused branch identifiers; science and CPU totals did not change.
 `g2-cyclic/` retains the positive-gate work exhaustion, admitted repair, first-block
-check, complete reconstruction and extracted-source replay. At most one further primary
-may be frozen.
+check, complete reconstruction and extracted-source replay. `g2-cyclic-final/` retains
+the second final contrast, the verifier-only first-block failure and repair, complete
+reconstruction, extracted-source replay and held disposition.

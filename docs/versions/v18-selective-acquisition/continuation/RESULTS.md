@@ -2,8 +2,8 @@
 
 The continuation is active. Five core branches now execute; larger query transfer,
 the existing Stitch rival, the structural direct comparator, the attachment-mask
-forecast diagnostic and opaque-label discovery are verified. The first untouched
-final primary completed and held; useful commissioned work remains, so this is not
+forecast diagnostic and opaque-label discovery are verified. Both untouched final
+primaries completed and held; useful commissioned work remains, so this is not
 campaign closure. Fresh cyclic-candidate-union discovery is also verified.
 These purpose-built comparisons remain **miniature — architecture untested**.
 
@@ -31,6 +31,8 @@ Does useful support evidence produce a practically meaningful task benefit when 
 
 Does useful evidence become necessary for action when public candidate laws have no common safe order? Yes for all three tested non-oracle action methods in this constructed discovery, but dependency representation is still not necessary. Without another observation, explicit dependency learning, an evidence-conditioned direct compiler and primitive candidate-set search fail in every five- and seven-part context. One fixed parent observation makes both dependency learning and direct compilation succeed in every context at 32,768 operations; the direct compiler uses 116.67 operations for five parts and 140.67 for seven, versus 1,216.52 and 7,276.52. Primitive candidate-set search reaches 100% on five parts and 93.75% on seven at that boundary, then 100% at 65,536. The stored-episode reader remains at zero because the parent observation does not repair its transition representation. The fixed diagnostic also beats the current costly decision-based query rule. This is a descriptive constructed-mechanism result, miniature—architecture untested; it shows that evidence can be necessary under ambiguity for the tested action methods, not that explicit graph learning or human learning is necessary.
 
+Does a fixed diagnostic outperform a decision-selected query when choosing the query consumes the same online budget used to act? Yes in the second frozen constructed comparison. Across 384 untouched five- and seven-part cyclic-union contexts with four histories nested in each, one fixed parent observation gives the dependency learner 100% task success, versus 22.66% for one decision-selected observation: a 77.34-point context-paired gain. The precommitted one-sided empirical-Bernstein lower bound—an uncertainty-adjusted minimum for a bounded paired mean—is 65.67 points at error probability 0.025, exceeding the 20-point practical margin. The decision rule also uses 20,925.25 online operations versus 5,051.99 for the fixed rule, while its held-out legality probability error is 0.08428 versus zero. The result confirms a practical advantage for this fixed diagnostic over this costly decision selector; it does not establish that fixed queries are generally superior, and the conditioned-direct method also reaches 100% with the fixed observation. This is a constructed query-selection result, miniature—architecture untested, with no human-learning claim.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -54,6 +56,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-permuted | 175,104 | 2,304 relabeled reused contexts |
 | g2-permuted-final | 87,552 | 1,152 untouched contexts |
 | g2-cyclic | 34,560 | 96 fresh contexts; 16 unlabeled topologies |
+| g2-cyclic-final | 23,040 | 384 untouched contexts |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -90,8 +93,8 @@ Second-wave verification adds 834,816 rows and 3,170 bounded decision replays.
 The attachment-mask batch adds 110,592 reused-evidence forecast rows and 432
 bounded decision replays. Opaque-label discovery adds 175,104 rows and 684
 bounded decision replays. The first frozen primary adds 87,552 rows and 342 replays.
-Cyclic-union discovery adds 34,560 rows and 540 replays. Together, 2,963,976 retained
-rows reconstruct and 38,156
+Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
+adds 23,040 rows and 90 replays. Together, 2,987,016 retained rows reconstruct and 38,246
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
@@ -154,14 +157,17 @@ The independently inspected first block also passed physics, evidence, cost, pri
 and all-candidate direct-route checks. Complete reconstruction and bounded extracted-
 source replay then passed before the frozen analysis was applied.
 
-At most one further primary may be frozen. The required preceding discovery now tests
-a public candidate-law family whose union has no single safe dependency order. It
-establishes an evidence-for-action boundary across explicit-dependency, conditioned-direct
-and primitive rivals, while rejecting explicit representation necessity. The remaining
-decision is whether the large fixed-diagnostic versus costly decision-query gap warrants
-the sole remaining final contrast on untouched cyclic-union contexts. Saturated four-cell and graphic cells
-remain retired. All commissioned G0–G4 branches remain active or retain a completed
-disposition; useful work after this final contrast is not precluded. The original
+The second and last final primary was frozen before its untouched contexts were
+generated. One fixed diagnostic beats the current decision selector by 77.34 points;
+the 65.67-point one-sided lower bound exceeds the 20-point practical margin. No
+result-dependent extension, replacement or new seed occurred. The conditioned-direct
+rival also reaches 100% with the fixed observation, so explicit representation necessity
+remains rejected. Even the known-law action arm falls to 59.64% after decision selection,
+showing that selector work can consume the action envelope; its incomplete forecast
+repair shows that query content also matters. A bounded descriptive diagnostic may
+separate those contributions, but no third final primary is permitted. Saturated four-cell
+and graphic cells remain retired. All commissioned G0–G4 branches remain active or retain
+a completed disposition; useful work after the two final contrasts is not precluded. The original
 campaign clock, 40 worker CPU hours including children and 200,000 new context units
 remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is
 15:00 UTC.
