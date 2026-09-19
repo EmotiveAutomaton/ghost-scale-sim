@@ -61,6 +61,7 @@ is now the best-established thing in the record.
 | V18.2 G0 | Earlier maker history improves next-artifact prediction | **QUALIFIED discovery (run, constructed mechanism; miniature — architecture untested)** | On 128 held-out histories, process-history log loss 0.925 versus direct 0.988; modal accuracy unchanged at 78.52%. Exact posterior and replay checks pass. [Study](../versions/v18-selective-acquisition/maker-state/RESULTS.md) |
 | V18.2 G1–G4 | Persistent-state updates and perspective separation help maker prediction | **QUALIFIED discovery (run, constructed mechanism; miniature — architecture untested)** | Updating preference helps after policy change; a shared-world reader fails a reader-only correction. Missing-skill support empties in 42/128 histories; expansion repairs support, not guaranteed truth. Unaligned learned states generalize poorly. [Core wave](../exchange/v18-2-core-wave-response.md) |
 | V18.2 completed | History helps predict a maker when current state is hidden | **QUALIFIED discovery (run, constructed mechanism; miniature — architecture untested)** | Hidden-state board accuracy 71.88% versus direct 34.38%; new assembly family 60.94% versus 37.70%. Split learned state does not reliably beat flat/direct prediction. Equally informed direct computation remains a necessary rival. [Final report](../versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md) |
+| V18.3 B | Preserve slow maker roles while updating fast roles | **QUALIFIED descriptive discovery (run, constructed mechanism)** | Goal-change loss 1.152 versus static 3.299; stationary 1.023 versus 0.904 and skill-change 1.058 versus 0.942 reverse the advantage. Native uptake is shared, not an inference benefit. [Study](../versions/v18-selective-acquisition/research-extension/RESULTS.md) |
 
 **What these add up to.** The early necessity claim about confident invention was withdrawn;
 the surviving label-response and sustained-attention findings remain scoped to their original
@@ -72,6 +73,8 @@ method, usable competence and history remain separate questions. The self-first 
 advantages and failures are recorded in §§11–13; none establishes a result about people.
 
 V17 adds useful finite-maker forecasts under declared evidence tiers while preserving V16's history/representation distinction. More evidence can help, but no universal latent-representation advantage follows. V18.2’s first block improves probability estimates from history while leaving the chosen prediction unchanged; it does not establish necessity of an explicit maker representation. Its first intervention wave separates preference changes, private information and missing hypotheses, while retaining learned generalization failure and a withheld selective-uptake instrument. The completed V18.2 follow-ons show an evidence benefit when current state is hidden and preserve learned generalization failures; they do not establish a necessary or uniquely psychological representation.
+
+V18.3 makes persistence conditional: retaining slower roles helps after goal or belief changes, but the same assumption costs prediction under stationarity, skill change or unmodeled opportunities. Shared learning executions do not turn these predictive differences into an uptake advantage.
 
 ## §2. The wall (familiar words, nobody home) is a distinct failure, and the reader keeps paying
 

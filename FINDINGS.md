@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 B: Changing maker state (19 September 2026)
+
+What should a reader preserve when a maker changes? After an unannounced goal change, updating goal and belief while retaining the slower roles reduced future logarithmic loss from 3.299 for a static reader to 1.152; lower loss means better probabilistic prediction. The same rule lost when nothing changed, 1.023 versus 0.904, and when acquired skill changed, 1.058 versus 0.942. This is a descriptive constructed-mechanism result: selective updating helps when its timescale assumptions fit the change, and can hurt when they do not. These inference comparisons do not establish better craft uptake, because all readers shared the same separate learning routine.
+
+[Evidence and limitations](docs/exchange/v18-3-B-response.md).
+
 ## V18.3 A: purpose and paid investigation (19 September 2026)
 
 Does the purpose of investigation change which evidence is useful? In the uniform-access comparison, choosing demonstrations for learning to act produced 45.31% own-task success, versus 25.94% for uncertainty reduction when both made exactly three attempts. The action-focused reader predicted later behavior less accurately: expected logarithmic loss, where lower is better, was 0.997 versus 0.638. When access depended on hidden maker state, the corresponding success rates were 32.19% and 9.06%. This is descriptive evidence about constructed mechanisms: useful evidence depends on the reader's purpose, and learning to act is not interchangeable with identifying a maker. It does not establish human learning or a universal selector advantage.
