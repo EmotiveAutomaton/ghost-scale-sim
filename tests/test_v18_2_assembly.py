@@ -35,3 +35,16 @@ def test_assembly_public_boundary_and_reference_contraction():
     with pytest.raises(ValueError):a.infer(m.canonical(public))
     before=a.features(payload);case['truth']=[2,2,1,1]
     assert np.array_equal(before,a.features(a.packet(case,0)))
+
+
+def test_selective_physical_dependency_and_shared_update():
+    from ghostscale.validation.soundingline.v18_2.selective_assembly import evaluate
+    unit=evaluate('selective-admission',0)
+    assert len(unit['rows'])==48
+    for row in unit['rows']:
+        if '-weight-0.0-' in row['method']:
+            assert row['library']==[] and row['beta_parameters']==[1.,9.]
+        for output in row['outputs']:
+            assert output['charged_total']<=256
+            if output['execution']['successfully_stopped']:
+                a.replay(row['world'],output['plan']['program'])

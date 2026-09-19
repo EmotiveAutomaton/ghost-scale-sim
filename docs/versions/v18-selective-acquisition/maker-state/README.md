@@ -6,6 +6,10 @@ The absolute report start is 20 September 13:00 UTC; delivery is 15:00 UTC
 (08:00 PDT). The cumulative ceiling is 18 worker CPU hours, including training
 and verification. A finite, useful queue may finish earlier.
 
+The finite queue is complete. The [final report](FINAL_REPORT.md) records all
+branches, follow-ons, repairs, limitations and six reconstructed examples. The
+[specification index](../SPECIFICATIONS.md) binds all three V18 intake sheets.
+
 The implementation wraps V16's four-cell executable board and its real repeated
 fragment learner. Thirty-six candidate states cross acquired repertoire,
 three stable tradeoffs, default local goal and prior belief. A received signal
@@ -36,10 +40,12 @@ swaps do not identify uniquely psychological coordinates. Training initially use
 64 different development makers choose the epoch. The crossed goal/signal cell
 is absent from training. Test labels never select representations.
 
-G0 is already verified; G1/G2/G3/G5/G6 and the learned/G4 comparison form the next
-source-frozen core queue. Follow-ons cover longer histories/novel goals, uncertain
+G0, G1/G2/G3/G5/G6 and the learned/G4 comparison completed their source-frozen
+core queue. Completed follow-ons cover longer histories/novel goals, uncertain
 access, charged observation execution, dependent uptake, restricted operations
-and a second training seed after the conceptual contrasts. Each ordinary block
+and a second training seed after the conceptual contrasts. A separately fitted
+assembly maker and a physical selective-uptake dependency comparison also ran.
+Each ordinary block
 starts at 128 independent histories. No positive result is required to proceed.
 
 The [results](RESULTS.md), [public proof records](../../../../results/v18/maker-state/README.md)

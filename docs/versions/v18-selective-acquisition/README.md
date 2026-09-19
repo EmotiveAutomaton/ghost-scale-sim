@@ -1,6 +1,6 @@
 # V18: selective acquisition and unwanted carryover
 
-The [V18.2 maker-state continuation](maker-state/README.md) is now commissioned and running.
+The [V18.2 maker-state continuation](maker-state/README.md) has completed its bounded queue; see its [final report](maker-state/FINAL_REPORT.md).
 
 Original V18 is closed. Its separately commissioned [V18.1 continuation](continuation/README.md)
 has its own unchanged specification, clock, [interim results](continuation/RESULTS.md)

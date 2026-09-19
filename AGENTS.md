@@ -19,19 +19,22 @@ authorship and contribution records retain their original attribution.
 
 ## Current campaign (2026-09-19)
 
-V18.2 is now commissioned. Read
+V18.2's finite commissioned queue is complete. Read
 `docs/versions/v18-selective-acquisition/maker-state/CODING_PACKAGE.md` and its
-README. Its code, results and immutable local window are separate from V18.1:
+README and FINAL_REPORT.md. Its code, results and immutable local window are separate from V18.1:
 `v18_2/`, `results/v18/maker-state/`, outer `.local/v18-2/`. Read that local
 HANDOFF before acting. One scientific worker; 18 cumulative CPU hours; report
 start 20 September 13:00 UTC and delivery 15:00 UTC. Do not reset these clocks.
-All G0–G6 discovery branches and their bounded conceptual follow-ons are commissioned.
-Keep notification ARMED absent during active operator work; preserve any live
-delivery. V18.1's completed science and both frozen primary outcomes are unchanged.
+All G0–G6 discovery branches and their bounded conceptual follow-ons have dispositions
+in `results/v18/maker-state/SPEC_COVERAGE.json` and `CLOSEOUT.json`. There are 25
+executed packets, four retained superseded originals and no pending scientific jobs.
+Do not restart valid work or pad the remaining clock. Keep notification ARMED absent
+during active operator work; preserve any live delivery. V18.1's completed science
+and both frozen primary outcomes are unchanged.
 
 ### V18.1 retained operating context
 
-V18.1 is the active, separately commissioned continuation. Read
+V18.1 is the completed predecessor continuation. Read
 `docs/versions/v18-selective-acquisition/continuation/CODING_PACKAGE.md` and its
 README before acting. All five branches G0–G4 are commissioned; completing a first
 batch does not close the program. Its new immutable clock, pinned branch sources,

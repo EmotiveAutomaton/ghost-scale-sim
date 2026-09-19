@@ -615,3 +615,14 @@ Reader packets reject private fields; future truth changes cannot alter features
 Learned split/flat predictors pass a known-answer training control and numerical
 gradient check. Held-out artifacts score discovery; they do not select epochs or axes.
 See the [design](versions/v18-selective-acquisition/maker-state/README.md).
+
+The final packet preserves source-bound original summaries and exposes corrected
+`CURRENT_SUMMARY.json` records. Nonlinear geometry bases are fitted after the
+nonlinear transform; matched-probe comparisons use identical probe sets. Paid
+observations are charged to every receiving arm, and uptake budgets reserve final
+execution as well as acquisition and search. Superseded packets remain visible.
+A separate assembly executor checks recorded legal actions, and public-law direct
+compilers test whether construction needs the acquired library at all. All
+intervals remain descriptive and grouped by maker/world lineage; repeated fits,
+repairs and selected examples do not add independent observations. See the
+[final scope and limits](versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md).

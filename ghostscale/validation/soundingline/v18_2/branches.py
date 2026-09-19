@@ -89,12 +89,12 @@ def family_revision(case,design):
         disconfirmed=fixed_result['mismatch']
         for method in ('fixed','safe-abstention','bounded-expansion','raw','wrong-context'):
             result=copy.deepcopy(fixed_result)
-            proposals=0;access=0
+            proposals=0
+            access=sum(len(h['program']) for h in case['history']) if design.get('paid_access') else 0
             if method=='raw':result=m.infer(payload,'raw')
             elif method=='bounded-expansion' and disconfirmed:
                 proposals=len(m.STATES)-len(fixed)
                 result=m.infer(payload)
-                access=sum(len(h['program']) for h in case['history']) if design.get('paid_access') else 0
             elif method=='wrong-context':
                 # Attractive report asserts no acquired skill. Two copies retain
                 # the same source id, so they supply exactly one likelihood factor.
@@ -106,6 +106,7 @@ def family_revision(case,design):
             r=row(case,'process-history',j,method,result,'paid-setup' if design.get('paid_access') else 'supplied-setup')
             r['revision']=dict(disconfirmed=disconfirmed,revised=method=='bounded-expansion' and disconfirmed,
                 proposal_cost=proposals,evaluation_cost=result['evaluations'],access_primitives=access,
+                observation_queries=len(case['history']) if design.get('paid_access') else 0,
                 latest_evidence_index=evidence_seen-1,future_probe_used_for_proposal=False,
                 context_sources=['source-A','source-A','source-A'],independent_context_sources=1,
                 abstained=method=='safe-abstention' and disconfirmed,
@@ -148,7 +149,7 @@ def uptake(case,design):
                 library=acquisition.library if apply else ()
                 # Same total envelope, attention and fit charged before search.
                 acquisition_cost=sum(len(x['program']) for x in selected)+len(selected)
-                remaining=max(0,128-acquisition_cost-acquisition.processing_cost)
+                remaining=max(0,128-acquisition_cost-acquisition.processing_cost-3)
                 output=construct(own_target,library,primitive_budget=remaining)
                 execution=execute(output['program'])
                 value=float(execution.legal and execution.artifact==own_target)
@@ -156,7 +157,8 @@ def uptake(case,design):
                     condition='dependency' if dependency else 'separable',instrument='valid',
                     result=dict(acquired=selected,library=list(map(list,acquisition.library)),output=output,
                                 acquisition_cost=acquisition_cost,fit_cost=acquisition.processing_cost,weighted_sources=[x['source'] for x in weighted],
-                                beta_parameters=[a,b],total_envelope=128),
+                                beta_parameters=[a,b],total_envelope=128,final_execution_reserve=3,
+                                charged_total=acquisition_cost+acquisition.processing_cost+output['search_primitives']+execution.primitive_cost),
                     scores=dict(task_transfer=value,unwanted_goal_uptake=unwanted,
                                 retained_variance=a*b/((a+b)**2*(a+b+1)),unwanted_action_probability=unwanted,
                                 construction_cost=execution.primitive_cost,query_cost=len(selected))))

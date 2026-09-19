@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.2 bounded study complete (19 September 2026)
+
+V18.2 tested whether a reader can maintain useful maker state across changes in goals, preferences and information. With the immediate goal or received signal hidden, history raised next-artifact accuracy from 34.38% to 71.88%; in the new assembly family it rose from 37.70% to 60.94%. The small learned encoders did not reliably beat the direct predictor, and a public-law compiler solved every construction control. These are discovery results about constructed mechanisms and methods, not human evidence. Miniature — architecture untested.
+
+[Final report, coverage and proofs](docs/versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md). Twenty-five executed packets include four retained superseded originals; no fresh confirmation was added.
+
 ## V18.2 first intervention wave (19 September 2026)
 
 The first intervention wave tested whether readers can update preferences while keeping the maker's information separate from their own. Preference updating helped after a policy change, and treating a reader-only correction as the maker's belief badly distorted prediction. The missing-skill family was disproved in 42 of 128 histories. These are constructed mechanism results; the first learned models failed the held-out task-structure test, and the original selective-learning block is withheld pending its corrected comparison. Miniature — architecture untested.

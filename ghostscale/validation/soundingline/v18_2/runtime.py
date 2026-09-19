@@ -109,7 +109,10 @@ def run(root,campaign):
         try:
             design=plan['design'];branch=design['branch']
             # No scientific children: fits, evaluation and all verification share this worker.
-            if branch=='assembly':
+            if branch=='g5-assembly':
+                from .selective_assembly import run as selective_run
+                selective_run(root,design,limited,lambda **kw:emit('running',**kw))
+            elif branch=='assembly':
                 from .assembly_maker import run as assembly_run
                 assembly_run(root,design,limited,lambda **kw:emit('running',**kw))
             elif branch=='learned':

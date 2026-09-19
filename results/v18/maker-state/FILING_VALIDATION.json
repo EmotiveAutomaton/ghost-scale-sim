@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-19T17:49:00.405432+00:00",
+  "bridge_archive_bindings": true,
+  "example_categories": 6,
+  "local_document_links": 40,
+  "measured_worker_and_audit_cpu_seconds": 407.515625,
+  "model_weight_bindings": {
+    "assembly/flat.npz": "4afac60a7f8041d87e617a3079db2d596405c91a5a8d241fe2580ac1bb68eb22",
+    "assembly/split.npz": "b88732f85f9d9c77e85b963c0d99fc3acda48accaa37768087df2c4de4e797f0",
+    "learned-aligned/flat.npz": "b1e81340b175e979a918a2b52048f34d9a5cd06095eb04ad2742084d8ee87068",
+    "learned-aligned/split.npz": "308ca5207f38185cf7d415f5cc362cb2ecdb1c17530bf93521ba247396392eff",
+    "learned-mixed/flat.npz": "72051a53dfcced62668f96bb4d7c960bda248ac4764a72802373e75ae515ce54",
+    "learned-mixed/split.npz": "28bac1bf84d60c1e92f9befa74b723ec3b6ad9c427bd2a10fa6550ec79e1fe8c",
+    "learned-perspective-seed1/flat.npz": "6e8f9f3d326baea089d8789191f814ed1536e1bab777d8a13174611c524a6f7b",
+    "learned-perspective-seed1/split.npz": "e7a0c5076c6802e22af96cf1226a7840140751792b34a972346342a9c6c27a8d",
+    "learned-perspective/flat.npz": "63961e92d505d7d9c60df9ad768839db8d9c35e7fc619408483641fc62764e03",
+    "learned-perspective/split.npz": "bd3a26a870f2c13ac9264477a11a6f73fdfeb512c69a0708a134f0ac52512dce",
+    "learned-restricted/flat.npz": "5c6a3ed805ee821e4df7a8b7257310612abcf3c22c804be2bbae5be327b8f070",
+    "learned-restricted/split.npz": "7ec02479b50a405f091d8888cbe1b0dc59452933199b6380f845f63effa8483a",
+    "learned-seed1/flat.npz": "41785c871e79310ab18a9dde6b605f352f08f63858a1a78bf317eff953cc374e",
+    "learned-seed1/split.npz": "b93ca25231cf726e9d0f811f8424e0934c1987a5a35be80029064513d0b40185",
+    "learned/flat.npz": "b1e81340b175e979a918a2b52048f34d9a5cd06095eb04ad2742084d8ee87068",
+    "learned/split.npz": "308ca5207f38185cf7d415f5cc362cb2ecdb1c17530bf93521ba247396392eff"
+  },
+  "packets": 25,
+  "passed": true,
+  "raw_block_bindings": 400,
+  "scope": "Filing integrity after scientific audits; no new science or model fits executed.",
+  "source_member_hashes": 5466,
+  "specifications_byte_exact": 3,
+  "tested_sources_unchanged": true
+}

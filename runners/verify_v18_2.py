@@ -9,6 +9,28 @@ import sys
 import time
 
 
+def assembly_execution(w,program):
+    state={};stopped=False;steps=0
+    for action in program:
+        steps+=1
+        part=action%3
+        children=any(parent==part and child in state for child,parent in enumerate(w['parents']))
+        legal=not stopped and type(action) is int and action in range(10)
+        if legal and action==9:stopped=True
+        elif legal and action<3:
+            parent=w['parents'][part]
+            legal=part not in state and (parent<0 or parent in state)
+            if legal:state[part]=w['defaults'][part]
+        elif legal and action<6:
+            legal=part in state and not children
+            if legal:del state[part]
+        elif legal:
+            legal=part in state and not children
+            if legal:state[part]=1-state[part]
+        if not legal:return dict(state=[state.get(i,-1) for i in range(3)],legal=False,successfully_stopped=False,primitive_cost=steps)
+    return dict(state=[state.get(i,-1) for i in range(3)],legal=True,successfully_stopped=stopped,primitive_cost=steps)
+
+
 def audit(root,source):
     sys.path.insert(0,str(source))
     import numpy as np
@@ -21,7 +43,56 @@ def audit(root,source):
     assert complete['summary_sha256']==file_digest(root/'SUMMARY.json')
     assert {p:file_digest(source/p) for p in plan['sources']}==plan['sources']
     checks=0;replayed=0;cases=[];cells={};dispositions={};score_rows=0;reference_checks=0
-    if branch=='g6':
+    if branch in ('assembly','g5-assembly'):
+        from ghostscale.validation.soundingline.v18_2 import assembly_maker as assembly
+        if branch=='g5-assembly':
+            from ghostscale.validation.soundingline.v18_2 import selective_assembly as selective
+        nets={}
+        if branch=='assembly':
+            for kind in ('split','flat'):
+                net=n.Network(kind)
+                with np.load(root/f'{kind}.npz') as saved:net.parameters=[saved[f'p{i}'] for i in range(len(net.parameters))]
+                nets[kind]=net
+        for block_name in complete['blocks']:
+            for unit in load(root,block_name):
+                cases.append(unit['case']['case_id'] if branch=='assembly' else unit['case_id'])
+                per={}
+                if branch=='assembly':
+                    case=unit['case']
+                    for obs in case['history']+case['probes']:
+                        result=assembly_execution(case['world'],obs['program'])
+                        encoded=sum(value<<i for i,value in enumerate(result['state'])) if min(result['state'])>=0 else 8
+                        assert result['legal'] and result['successfully_stopped'] and encoded==obs['artifact'];checks+=1
+                for row in unit['rows']:
+                    if branch=='g5-assembly':
+                        for obs in row['observations']:
+                            actual=assembly_execution(row['world'],obs['program'])
+                            assert all(actual[k]==obs['execution'][k] for k in actual);checks+=1
+                        for output in row['outputs']:
+                            actual=assembly_execution(row['world'],output['plan']['program'])
+                            assert all(actual[k]==output['execution'][k] for k in actual);checks+=1
+                            assert output['charged_total']<=256
+                    key=(row.get('condition','base')+'|'+row['method'])
+                    for metric,value in row['scores'].items():per.setdefault((key,metric),[]).append(value)
+                    score_rows+=1
+                for (key,metric),values in per.items():cells.setdefault(key,{}).setdefault(metric,[]).append(sum(values)/len(values))
+                if len(cases) in (1,64,128):
+                    if branch=='g5-assembly':
+                        assert m.canonical(selective.evaluate(design['namespace'],len(cases)-1))==m.canonical(unit)
+                        replayed+=len(unit['rows'])
+                    else:
+                        for row in unit['rows']:
+                            payload=assembly.packet(case,row['probe'])
+                            if row['method'] in nets:q=nets[row['method']].forward(assembly.features(payload)[None,:])[0][0]
+                            elif row['method']=='oracle':q=assembly.marginal(case['world'],assembly.distribution(case['world'],case['truth'],case['probes'][row['probe']]['context']))
+                            else:q=assembly.infer(payload,row['method'])
+                            assert np.allclose(q,row['probabilities'],atol=2e-7);replayed+=1
+        write(root/'AUDITED_SUMMARY.json',dict(units=len(cases),unique_lineages=len(set(cases)),score_rows=score_rows,
+              cells={key:{metric:v.interval(values) for metric,values in metrics.items()} for key,metrics in cells.items()}),immutable=False)
+        record=dict(passed=True,units=len(cases),unique_lineages=len(set(cases)),score_rows=score_rows,
+                    independent_execution_checks=checks,replayed_rows=replayed,independent_posterior_checks=0,
+                    selection='lineage positions 1,64,128; independent assembly executor covers every recorded execution')
+    elif branch=='g6':
         summary=read(root/'SUMMARY.json');lookup={}
         for cell in summary['cells']:
             se=math.sqrt((cell['heterogeneity']**2+1/cell['within'])/cell['persons'])

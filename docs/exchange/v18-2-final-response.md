@@ -1,0 +1,5 @@
+# V18.2 completed bounded study
+
+V18.2 tested whether a reader can maintain useful maker state across changes in goals, preferences and information. With the immediate goal or received signal hidden, history raised next-artifact accuracy from 34.38% to 71.88%; in the new assembly family it rose from 37.70% to 60.94%. The small learned encoders did not reliably beat the direct predictor, and a public-law compiler solved every construction control. These are discovery results about constructed mechanisms and methods, not human evidence. Miniature — architecture untested.
+
+All 25 admitted packets executed; 21 are current discovery packets and four original packets remain withheld or superseded. The [final report](../versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md) contains the mechanism table, repairs, limits and next-week recommendation. All three [V18 specifications](../versions/v18-selective-acquisition/SPECIFICATIONS.md) are filed byte-for-byte. No scientific jobs remain running or queued.

@@ -16,7 +16,7 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 ## V18.2 maker-state continuation
 
-The [new commissioned study](docs/versions/v18-selective-acquisition/maker-state/README.md) is running. Its first verified block improves predictive probabilities from maker history while leaving modal accuracy unchanged. [Results and limits](docs/versions/v18-selective-acquisition/maker-state/RESULTS.md); [blind synthetic fixtures](results/v18/maker-state/bridge-1/README.md).
+The [V18.2 finite queue](docs/versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md) is complete: 25 executed packets, explicit retained repairs, and no remaining jobs. History improves prediction when current maker state is hidden; the small learned encoders do not reliably beat the direct rival. [Results and limits](docs/versions/v18-selective-acquisition/maker-state/FINAL_REPORT.md); [blind synthetic fixtures](results/v18/maker-state/bridge-1/README.md).
 
 ## ○ Agent-authored V18.1 continuation
 
@@ -48,7 +48,7 @@ topologies exhaust after one probe. The current isolated validity suite passes 6
 primary bounds reproduce.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
-The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
+The V18.1 result set is retained; V18.2 carries the subsequent work. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
 [scope ledger](results/v18/continuation/BRANCH_LEDGER.json), and separate
 [history-reading bridge](docs/versions/v18-selective-acquisition/continuation/BRIDGE.md).
 These constructed-world comparisons do not establish human belief or value learning.

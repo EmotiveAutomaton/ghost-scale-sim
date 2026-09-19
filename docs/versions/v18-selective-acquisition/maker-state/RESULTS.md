@@ -1,5 +1,7 @@
 # V18.2 discovery results
 
+**Finite queue complete.** The [final report](FINAL_REPORT.md) supersedes the running-state descriptions below, while preserving their dated results. It includes every branch, correction and six worked examples.
+
 ## G0: first verified block
 
 Can earlier work improve predictions of a maker's next artifact? Across 128 held-out maker histories, the exact persistent reader reduced average predictive log loss from 0.988 to 0.925 when it received eight process observations; the most-likely-artifact accuracy stayed at 78.52%, equal to the direct reader. This is a constructed mechanism result: history improved probabilities here, without improving the chosen prediction or establishing that an explicit maker representation is necessary. Miniature — architecture untested.

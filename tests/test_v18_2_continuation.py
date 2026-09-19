@@ -25,6 +25,9 @@ def test_counterfactuals_and_off_model_branch():
     assert all(r['revision']['disconfirmed'] for r in revised)
     assert all(not r['result']['mismatch'] for r in revised if r['method']=='bounded-expansion')
     assert all(r['revision']['independent_context_sources']==1 for r in revised)
+    paid=b.family_revision(case,dict(paid_access=True))
+    assert len({r['revision']['access_primitives'] for r in paid})==1
+    assert paid[0]['revision']['access_primitives']>0
 
 
 def test_neural_gradient_and_learned_positive_control():
@@ -68,6 +71,24 @@ def test_public_alignment_preserves_exact_prediction_and_weight_zero():
     assert np.allclose(q,m.infer(original)['probabilities'],atol=1e-12)
     rows=b.uptake(case,dict(dependency=True))
     for r in rows:
+        assert r['result']['charged_total']<=r['result']['total_envelope']
         if '-weight-0.0-' in r['method']:
             assert r['result']['library']==[]
             assert r['result']['beta_parameters']==[1.,9.]
+
+
+def test_reader_fact_training_changes_evidence_without_changing_targets():
+    x,y,_=n.build_data('fact-admission','train',8,lambda:False,lambda **kw:None,reader_facts=True)
+    original,original_y,_=n.build_data('fact-admission','train',8,lambda:False,lambda **kw:None)
+    assert np.array_equal(y,original_y)
+    assert (x[:,n.HISTORY+7:n.HISTORY+10].sum(axis=0)>0).all()
+    assert not np.array_equal(x,original)
+
+
+def test_nonlinear_variance_rival_uses_nonlinear_covariance():
+    x=np.zeros((100,2));x[0,0]=100;x[:,1]=np.tile([-1,1],50)
+    y=np.eye(2)[np.arange(100)%2];axes=np.eye(2)
+    linear=n.projection_basis(x,y,'variance-pca',axes,rank=1)
+    nonlinear=n.projection_basis(np.tanh(x),y,'variance-pca',axes,rank=1)
+    assert abs(linear[0,0])>.99
+    assert abs(nonlinear[1,0])>.99
