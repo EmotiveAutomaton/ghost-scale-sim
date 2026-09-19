@@ -31,7 +31,7 @@ isolate truth and restore dependency and direct action to 100%; one query remain
 insufficient, and primitive robust search still reaches only 52.60% inside its work cap.
 Two executed-action observations also restore dependency/direct success on 192 fresh
 contexts, conditional on the prepared public menu; primitive search reaches 45.31%.
-The current isolated validity suite passes 57 checks, and both primary bounds reproduce.
+The current isolated validity suite passes 58 checks, and both primary bounds reproduce.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
 The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
@@ -1291,3 +1291,5 @@ the honest crosswalk above.
 Code is MIT. Prose, figures and data are CC BY 4.0. See [LICENSE](LICENSE).
 
 To cite this repository, see [CITATION.cff](CITATION.cff), or cite the preprint directly.
+
+The complete public action-menu transfer is admitted and running as QUEUE-12: 192 fresh contexts, four nested histories, 18,432 planned rows. Its 58-check isolated suite and independent first-block apparatus check passed. This is an execution update; final outcomes require reconstruction and replay. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).

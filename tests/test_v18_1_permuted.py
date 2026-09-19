@@ -193,3 +193,24 @@ def test_target_action_acquisition_exhaustion_never_yields_free_observation():
         observations,indices,exhausted,work=cyclic_union.acquire(public,truth,'target-action',2,budget)
         assert exhausted and work.spent<=budget
         assert observations==public['observations'] and indices==[]
+
+
+def test_complete_action_menu_is_exhaustive_and_never_inspects_outcomes(monkeypatch):
+    from itertools import product
+    case=cyclic_union.make_multi_target_cases('development-complete-action-menu',
+        per_stratum=1,histories=1,families=('chain',))[0]
+    public=case['public'];models=public['models'];n=len(public['initial'])
+    with monkeypatch.context() as patch:
+        def forbidden(*args,**kwargs):raise AssertionError('menu construction inspected outcomes')
+        patch.setattr(g2,'observed',forbidden)
+        menu=cyclic_union.complete_action_menu(models)
+    expected=set()
+    for present in product((False,True),repeat=n):
+        state=tuple(d if on else -1 for d,on in zip(models[0]['defaults'],present))
+        if all(all(state[i]==-1 or p==-1 or state[p]!=-1 for i,p in enumerate(m['parents'])) for m in models):
+            expected.update((state,action) for action in range(3*n))
+    assert {(tuple(q['initial']),q['program'][0]) for q in menu if q['kind']=='action'}==expected
+    public['menu']=menu
+    observations,_,exhausted,work=cyclic_union.acquire(public,case['private']['true_world'],'target-action',2,32768)
+    assert not exhausted and work.spent<32768
+    assert g2.compatible(models,observations)==[case['private']['true_world']]

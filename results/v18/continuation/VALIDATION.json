@@ -1,20 +1,21 @@
 {
-  "at": "2026-09-19T09:39:15.065258+00:00",
+  "at": "2026-09-19T09:48:00.652674+00:00",
   "baseline_passed": true,
   "baseline_tests": 53,
   "errors": 0,
   "failures": 0,
-  "junit_sha256": "7eb5e6d5154155715761e8f36a7668d951786fc7f7f22fceb7943cd10500f025",
+  "junit_sha256": "e8593235348f36774b394acdda3ea637b2cbd492ae3b2ee20bfaa38fc9c0550a",
   "passed": true,
-  "previous_validation": "VALIDATION.cyclic-discovery.json",
+  "previous_validation": "VALIDATION.action-review.json",
   "retained_invocation_error": "Initial audit command named an absent unrelated fixture; pytest collected no tests. Corrected invocation passed all 53 unchanged tests before adding four regression checks.",
   "schema": "v18.1.validation.1",
-  "scope": "isolated current-source V18.1 suite including native Stitch; four additional checks cover launcher-child identity, real watcher startup/stop, all-candidate action outcomes and exhaustion without free evidence",
+  "scope": "58 isolated current-source V18.1 checks with native Stitch; complete-menu enumeration is exhaustively checked against independent support and forbidden from consulting outcomes",
   "skipped": 0,
   "sources": {
+    "ghostscale/validation/soundingline/v18_1/cyclic_union.py": "fe3022d861b333659374a58a70f903ff109b40b31a4ffe11af94e59542605b37",
     "runners/watch_v18_1_events.py": "59a8d8982262246952610750a832737e49cbdefe687f6392763da2b12a3fe737",
     "tests/test_v18_1_events.py": "b8682c249240cc280b27e7889f49620695853be48d01f374c7c4898c30acf485",
-    "tests/test_v18_1_permuted.py": "4deed3a21c565dc8e966dad3fbfdca3a28e0763e76bae05b745e8393df00efd7"
+    "tests/test_v18_1_permuted.py": "0388a7114d6fe5c2d0024b46887a683476170426b4002d5f681bd355717821f5"
   },
-  "tests": 57
+  "tests": 58
 }

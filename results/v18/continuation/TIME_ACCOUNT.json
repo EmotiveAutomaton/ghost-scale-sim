@@ -1,6 +1,6 @@
 {
   "accounting_limit": "Includes retained failed science and recorded preparations. Earlier setup/admission pilots were not all CPU-instrumented. Verification is separate; replay interpreter-child CPU is unmeasured and not claimed zero. This is not final campaign accounting.",
-  "at": "2026-09-19T09:39:15.065258+00:00",
+  "at": "2026-09-19T09:48:00.652674+00:00",
   "attempts": [
     {
       "child_cpu_seconds": 0,
@@ -110,6 +110,25 @@
       "state": "admission_repaired",
       "wall_seconds": 1.1013087000028463,
       "worker_cpu_seconds": 0.34375
+    },
+    {
+      "child_cpu_seconds": 0,
+      "receipt": "g2-cyclic-action-menu-1/attempts/7c3238dd209f4c37bca40697fc0063ed.json",
+      "sha256": "490012eadee9305776228ebf599692cbb2aa3ef0ed2700495eb89b2ace1cb155",
+      "started_at": "2026-09-19T09:44:21.529655+00:00",
+      "state": "checkpointed",
+      "wall_seconds": 5.104098499999964,
+      "worker_cpu_seconds": 4.765625
+    },
+    {
+      "child_cpu_seconds": 0,
+      "receipt": "g2-cyclic-action-menu-1/attempts/preparation.json",
+      "scope": "all development scoring, fresh case generation, menu enumeration, gates and freeze counted",
+      "sha256": "d08f908d0c8c670962a117ba34fa64dd15a453d8411912a8e87ebf9304514048",
+      "started_at": "2026-09-19T09:44:03.849475+00:00",
+      "state": "prepared",
+      "wall_seconds": 16.996489900004235,
+      "worker_cpu_seconds": 16.125
     },
     {
       "child_cpu_seconds": 0,
@@ -419,12 +438,12 @@
     }
   ],
   "cpu_ceiling_seconds": 144000,
-  "frozen_unit_identifiers_including_exposed_reuse": 11498,
+  "frozen_unit_identifiers_including_exposed_reuse": 11690,
   "recorded_child_cpu_seconds": 16.5,
-  "recorded_combined_cpu_seconds": 8926.265625,
-  "recorded_worker_cpu_seconds": 8909.765625,
-  "remaining_from_recorded_seconds": 135073.734375,
-  "state": "interim; action-evidence batch verified; active campaign; notification-service gap retained",
-  "support_limit": "Adds 192 fresh law/target/candidate contexts; four histories nested. Failed admission reused identical cases and adds no new structural support.",
+  "recorded_combined_cpu_seconds": 8947.15625,
+  "recorded_worker_cpu_seconds": 8930.65625,
+  "remaining_from_recorded_seconds": 135052.84375,
+  "state": "interim; complete-menu transfer running; recorded preparations and finished attempts only; active worker CPU pending",
+  "support_limit": "192 new complete-menu contexts are frozen and in progress; they are not yet included in verified result totals.",
   "unit_identifier_ceiling": 200000
 }

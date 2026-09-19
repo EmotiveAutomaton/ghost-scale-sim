@@ -115,6 +115,28 @@ def _target_action_probes(defaults,target,models):
     return probes
 
 
+def complete_action_menu(models):
+    """Every one-action probe at every common-valid default/absent state.
+
+    Menu construction does not inspect a target, candidate outcome, or hidden
+    truth. Context queries remain available to the two labeled control policies.
+    Physical setup and menu enumeration are offline apparatus work, not free
+    online actions by the reader.
+    """
+    if not models:raise ValueError('public candidate family required')
+    defaults=models[0]['defaults'];n=len(defaults)
+    if any(model['defaults']!=defaults for model in models):
+        raise ValueError('shared public attachment defaults required')
+    queries=[]
+    for mask in range(1<<n):
+        state=[defaults[index] if mask&(1<<index) else -1 for index in range(n)]
+        if _common_valid_state(models,state):
+            queries.extend(dict(kind='action',initial=list(state),program=[action])
+                           for action in range(3*n))
+    queries.extend(dict(kind='context',part=part) for part in range(1,n))
+    return queries
+
+
 def _menu_with_depth(defaults,target,models,max_steps,*,action_probes=False):
     n=len(defaults);initial=list(defaults)
     items=[dict(kind='action',initial=[-1]*n,program=[i]) for i in range(n)]

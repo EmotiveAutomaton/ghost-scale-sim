@@ -111,7 +111,7 @@ selected decision rows regenerate from extracted frozen sources. The opaque-labe
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
 or untouched structural support. Stitch child CPU is included in worker receipts.
-The current validity pass runs 57 isolated checks without failures or
+The current admission suite runs 58 isolated checks without failures or
 skips, including the pinned Stitch binary, final-plan sampling contract and cyclic-union
 construction gates. The earlier 50- and 51-check records remain retained with their
 respective batches.
@@ -194,3 +194,5 @@ remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is
 15:00 UTC.
 
 The 19 September validity pass independently rebound frozen inputs, raw cases and source hashes for both primaries and the action screen, recomputed both primary lower bounds unchanged, and checked 33 existing public proof bindings. A notification handover PID mismatch left the completed queue idle; its repaired native startup is verified. The service gap and the earlier isolated-fixture admission failure remain recorded. No completed science was restarted.
+
+The complete public action-menu transfer is admitted and running as QUEUE-12: 192 fresh contexts, four nested histories, 18,432 planned rows. Its 58-check isolated suite and independent first-block apparatus check passed. This is an execution update; final outcomes require reconstruction and replay. See [current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).
