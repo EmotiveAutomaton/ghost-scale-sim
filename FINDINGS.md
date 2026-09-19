@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.3 completed review (19 September 2026)
+
+A useful maker model depends on which questions it must answer and which changes it must survive. V18.3 separates useful action from historical identification, finds benefits and costs of preserving state, and shows that intervention supervision can organize useful counterfactual computation. Its final audit also finds multiple equally good old-task compression codes with different future losses, and no measured total-compute advantage for the recurrent readers over the direct reader on the tested workload. All eight families are executed; these are descriptive constructed-world findings, with no human or unique-ontology conclusion.
+
+[Full review and boundaries](docs/versions/v18-selective-acquisition/research-extension/FINAL_REPORT.md).
+
 ## V18.3 source follow-ons (19 September 2026)
 
 Source dependence changes the consequences of accepting a report, but it does not make source inference sufficient or necessary for action. In the two-root, six-copy shared-error cases, cautious and naive recommendation policies both initially succeeded in 53.13% of native tasks. After two noisy independent corrections, cautious success rose to 90.63% versus naive 68.75%; a stronger public-law checker reached 100% by testing both routines. In the separate revision experiment, removing copied evidence improved some comparisons and worsened others. These are descriptive constructed-policy and method results, with correct source identities supplied to the revision diagnostic.

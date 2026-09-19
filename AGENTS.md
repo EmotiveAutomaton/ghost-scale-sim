@@ -17,9 +17,21 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Current campaign (2026-09-19)
+## Latest campaign: V18.3 closed (2026-09-19)
 
-V18.3 is commissioned: implement and run all eight families in
+All eight V18.3 families and required review products are complete. Read
+`docs/versions/v18-selective-acquisition/research-extension/FINAL_REPORT.md` and
+`results/v18/research-extension/CLOSEOUT.json`, `SPEC_COVERAGE.json` and
+`FINAL_VALIDITY.json`. Current finite evidence has 43 packets and 19,136 assigned
+evaluations; three current neural packets are separate. Retained superseded and
+failed work stays visible. The final scoped suite passed 45 controls; repository
+CI retains V15's C11/M01 instrument failure. No scientific jobs remain queued.
+Native closeout found no Ghost workers, disabled legacy tasks and a disarmed
+notifier. Recheck live ownership before any future work; do not restart completed
+packets or fill the unused allocation. The resource contract below is retained
+historically, with its original clocks and cumulative ceiling unchanged.
+
+V18.3 was commissioned to implement and run all eight families in
 `docs/versions/v18-selective-acquisition/research-extension/README.md`, derived
 from the retained review extension proposal. Code lives in
 `ghostscale/validation/soundingline/v18_3/`; new results use

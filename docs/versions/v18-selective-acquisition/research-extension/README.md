@@ -9,6 +9,11 @@ The [executable follow-on protocols](PROTOCOLS.md) fix the neural supervision,
 capacity and fit budgets, counterfactual comparisons, finite compression class,
 held-out law and retained pilot/runtime repairs before their discovery outcomes.
 
+The finite commission is complete. See the [final report](FINAL_REPORT.md),
+[coverage](../../../../results/v18/research-extension/COVERAGE.json), and
+[closeout](../../../../results/v18/research-extension/CLOSEOUT.json). Frozen packet
+sources preserve the design text actually admitted at each execution.
+
 ## Design and scope frozen before discovery
 
 Eight study families are required. Execution, validity, scientific outcome,

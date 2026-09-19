@@ -634,3 +634,36 @@ The finite native board crosses decision rule, acquisition interference, conside
 ## V18.3 finite compression and transfer diagnostics
 
 Exhaustive enumeration of all deterministic partitions of eight observation histories certifies the best old-question code only within that finite class. Maximum storage, code entropy and new-question loss are separate measures. A generator-informed new-question decoder measures retained information, without claiming learned transfer. Independently calculated code loss and fixed source-extracted replays validate the computation. [Protocol](versions/v18-selective-acquisition/research-extension/PROTOCOLS.md).
+
+The final numerical audit qualifies this certificate to tolerance 1e-10 and reports
+the full range of future losses among numerical old-task optima. It preserves the
+original choice rather than selecting with future outcomes. Accuracy and calibration
+use explicit numerical-tie rules; native actions use common seeded tie coins.
+Scoring repairs retain originals, unchanged probabilities and proper losses, and
+independent scalar reconstruction. [Review](versions/v18-selective-acquisition/research-extension/FINAL_REPORT.md).
+
+## V18.3 learned memory, interventions and complete cost accounting
+
+Ghost exchanges strict serialized public histories and test queries with an isolated
+CPU PyTorch process using an existing optional environment. Evaluator truth stays
+outside that input boundary. Development-only capacity and checkpoint selection,
+optimizer/RNG resume, immutable input/weight identities, known learning controls,
+and independently reconstructed means precede bounded extracted-source forecast
+replay. Replay is not full retraining. Fit seeds, role swaps and repeated probes
+are averaged within world lineage, not counted as independent evidence.
+
+Frozen historical-role probes receive equal additional supervision but retain a
+restricted decoder; failed decoding does not prove information destruction.
+Intervention-trained readers face equally informed flat and direct rivals,
+behavior-only and shuffled-target controls, wrong mappings, incompatible partitions
+and compatible coordinate permutations. These diagnose useful alignment to a
+supplied intervention law without identifying a unique ontology.
+
+Cost records separate fit search, new-history encoding, cached query decoding,
+single-observation update, model parameters, per-maker state, public world data,
+native practice and action, serialization, failed work and verification. All readers
+may cache. Fit-only amortization projections are explicitly conditional on the
+measured workload and do not equate accuracy. Process CPU and wall time are distinct;
+conservative uncertainty charges remain visible. A sampled peak-memory observation
+is not a complete campaign peak. Source-aware revision deduplicates explicit roots;
+the separate provenance-to-practice policy keeps the stronger public-law checker.

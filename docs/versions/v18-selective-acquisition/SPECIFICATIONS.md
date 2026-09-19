@@ -16,3 +16,8 @@ V18.3 was commissioned from the retained [research proposal](REVIEW_EXTENSION_PL
 not a fourth externally supplied sheet. Its [design](research-extension/README.md)
 and [executable protocols](research-extension/PROTOCOLS.md) are filed in the separate
 research-extension folder. Earlier supplied sheets and their hashes are unchanged.
+
+All eight commissioned V18.3 families and the required review products now have
+[final scope dispositions](../../../results/v18/research-extension/SPEC_COVERAGE.json).
+The retained proposal is historical intake; its original pre-commission status
+is preserved rather than rewritten. [Final report](research-extension/FINAL_REPORT.md).

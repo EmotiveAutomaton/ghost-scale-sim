@@ -1,6 +1,6 @@
 # V18: selective acquisition and unwanted carryover
 
-The commissioned [V18.3 research extension](research-extension/README.md) is active.
+The commissioned [V18.3 research extension](research-extension/FINAL_REPORT.md) is complete.
 Its [results](research-extension/RESULTS.md), [executable protocols](research-extension/PROTOCOLS.md)
 and source-frozen packets remain separate from all completed predecessors.
 
