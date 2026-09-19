@@ -10,7 +10,7 @@ import time
 import uuid
 import zipfile
 import numpy as np
-from ..v16.records import canonical,read,write,file_digest,now,digest
+from .io import canonical,read,write,file_digest,now,digest
 from ..v16.runtime import local_owner
 from . import world as W
 from .verify import check_unit,metrics
@@ -21,10 +21,12 @@ REPO=Path(__file__).resolve().parents[4]
 def source_files():
     names=['ghostscale/__init__.py','ghostscale/validation/__init__.py','ghostscale/validation/soundingline/__init__.py',
            'runners/launch_background.py','runners/run_v18_3.py','runners/watch_v18_3.py',
-           'docs/versions/v18-selective-acquisition/research-extension/README.md']
+           'docs/versions/v18-selective-acquisition/research-extension/README.md',
+           'docs/versions/v18-selective-acquisition/research-extension/PROTOCOLS.md']
     for version in ('v16','v18_3'):
         names += [p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale/validation/soundingline'/version).glob('*.py')]
     names += [p.relative_to(REPO).as_posix() for p in (REPO/'tests').glob('test_v18_3*.py')]
+    names += [p.relative_to(REPO).as_posix() for p in (REPO/'runners').glob('*v18_3*.py')]
     return sorted(set(names))
 
 
@@ -90,7 +92,7 @@ def aggregate(root,limited=lambda:False):
             for tags,values in metrics(unit):
                 key=canonical(tags).decode()
                 for metric,value in values.items():cells.setdefault(key,{}).setdefault(metric,[]).append(value)
-                baseline={'A':'fixed','B':'static','C':'independent','D':'fixed'}[unit['family']]
+                baseline={'A':'fixed','B':'static','C':'independent','D':'fixed','H':'observation-product'}[unit['family']]
                 comparable={k:v for k,v in tags.items() if k!='method'}
                 group.setdefault(canonical(comparable).decode(),{})[tags['method']]=values
             for key,arms in group.items():
@@ -120,6 +122,8 @@ def dispatch(spec):
         from .provenance import unit
     elif family=='D':
         from .revision import unit
+    elif family=='H':
+        from .compression import unit
     else:raise ValueError('unimplemented family')
     result=unit(**spec);result['request']=dict(family=family,**spec)
     return result
@@ -127,6 +131,9 @@ def dispatch(spec):
 
 def run(root,campaign,max_blocks=None):
     root=Path(root).resolve();campaign=Path(campaign).resolve()
+    if read(root/'PLAN.json')['design'].get('engine')=='neural':
+        from .neural_runtime import run as run_neural
+        return run_neural(root,campaign)
     with local_owner(campaign/'scientific-worker-owner'),local_owner(root):
         plan=read(root/'PLAN.json');acceptance=read(campaign/'ACCEPTANCE.json')
         if plan['environment']!=fingerprint():raise ValueError('runtime fingerprint changed')

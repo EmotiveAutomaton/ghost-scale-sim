@@ -11,3 +11,8 @@ versioned source-document folder after V18.2 and its unattended queue were admit
 | `GHOST_SCALE_V18_2_MAKER_STATE_2026-09-19.md` | [V18.2 coding package](maker-state/CODING_PACKAGE.md) | `1883358ae3f43fa2d48b48cd48d39e0b5fd1e154dca3c46c18381fdf5cf03be6` |
 
 No original specification was overwritten or rewritten to fit a result.
+
+V18.3 was commissioned from the retained [research proposal](REVIEW_EXTENSION_PLAN_2026-09-19.md),
+not a fourth externally supplied sheet. Its [design](research-extension/README.md)
+and [executable protocols](research-extension/PROTOCOLS.md) are filed in the separate
+research-extension folder. Earlier supplied sheets and their hashes are unchanged.

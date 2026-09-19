@@ -5,17 +5,17 @@ import os
 from pathlib import Path
 import subprocess
 import time
-from ghostscale.validation.soundingline.v16.records import read,write,file_digest,now
+from ghostscale.validation.soundingline.v18_3.io import read,write,file_digest,now
 from ghostscale.validation.soundingline.v16.runtime import local_owner
 from ghostscale.validation.soundingline.v18_3.native import ProcessClock
 
 
 def supervise(campaign,queue,python):
     with local_owner(campaign/'supervisor'):
-        plan=read(queue);acceptance=read(campaign/'ACCEPTANCE.json')
+        plan=read(queue);acceptance=read(campaign/'ACCEPTANCE.json');failures=[];cutoff=False
         if len({j['root'] for j in plan['jobs']})!=len(plan['jobs']):raise ValueError('duplicate produce namespace')
         for job in plan['jobs']:
-            if (campaign/'STOP').exists() or datetime.now(timezone.utc)>=datetime.fromisoformat(acceptance['report_start']):break
+            if (campaign/'STOP').exists() or datetime.now(timezone.utc)>=datetime.fromisoformat(acceptance['report_start']):cutoff=True;break
             root=Path(job['root']);source=Path(job['source'])
             if file_digest(root/'PLAN.json')!=job['plan_sha256']:raise ValueError('queued plan changed')
             if (root/'COMPLETE.json').exists():continue
@@ -47,9 +47,11 @@ def supervise(campaign,queue,python):
             write(campaign/'events'/f'{root.name}.json',dict(kind='batch_complete' if complete else 'batch_failed_or_cutoff',
                   job=root.name,exit_code=child.returncode,at=now(),plan_sha256=job['plan_sha256']))
             if not complete:
+                failures.append(root.name)
                 write(root/'DISPOSITION.json',dict(state='failed_or_cutoff',exit_code=child.returncode,at=now()))
-        write(campaign/'QUEUE-STATUS.json',dict(state='drained',pid=os.getpid(),heartbeat=now()),immutable=False)
-        write(campaign/'events'/f'{queue.stem}-drained.json',dict(kind='queue_drained',at=now()))
+        state='resource_cutoff' if cutoff else ('drained_with_failures' if failures else 'drained')
+        write(campaign/'QUEUE-STATUS.json',dict(state=state,pid=os.getpid(),heartbeat=now(),failed_packets=failures),immutable=False)
+        write(campaign/'events'/f'{queue.stem}-drained.json',dict(kind=state,failed_packets=failures,at=now()))
 
 
 if __name__=='__main__':

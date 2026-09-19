@@ -9,9 +9,12 @@ CONDITIONS=('stationary','goal','belief','skill','tool','opportunity','gradual',
 METHODS=('static','window4','discounted','selective-transition','all-transition','known-change')
 
 
-def unit(index,cell=0,condition='goal',length=32,split='test'):
+def unit(index,cell=0,condition='goal',length=32,split='test',rule=None):
     r=W.rng('dynamics',split,index,condition)
     w=W.make_world(cell,index);initial=int(r.integers(len(W.STATES)))
+    if rule is not None:
+        if rule!='lexicographic':raise ValueError('undeclared holdout rule')
+        w['rule']=rule
     change=int(r.integers(10,19));second=change+7
     states=[];worlds=[];history=[];targets=[]
     for t in range(length):
@@ -83,5 +86,5 @@ def unit(index,cell=0,condition='goal',length=32,split='test'):
                            definition_actions=acq.definition_cost,planning_evaluations=len(options),
                            execution_actions=len(chosen)),
                          known_change_privileged=method=='known-change'))
-    return dict(family='B',index=index,cell=cell,condition=condition,public=json.loads(W.packet(w,history)),
+    return dict(family='B',index=index,cell=cell,condition=condition,**({'rule':rule} if rule else {}),public=json.loads(W.packet(w,history)),
                 evaluator=dict(states=states,worlds=worlds,change=change,return_at=second,targets=targets),rows=rows)

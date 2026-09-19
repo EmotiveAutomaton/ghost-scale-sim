@@ -5,6 +5,10 @@ Commissioned 19 September 2026: implement and run all research proposed in the
 optional scientific elaborations. The proposal is retained unchanged as intake.
 This is a separate discovery campaign. V18.2 and earlier versions remain closed.
 
+The [executable follow-on protocols](PROTOCOLS.md) fix the neural supervision,
+capacity and fit budgets, counterfactual comparisons, finite compression class,
+held-out law and retained pilot/runtime repairs before their discovery outcomes.
+
 ## Design and scope frozen before discovery
 
 Eight study families are required. Execution, validity, scientific outcome,

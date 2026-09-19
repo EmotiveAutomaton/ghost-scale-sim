@@ -26,3 +26,7 @@ write-through and ordinary commits/pushes after verification.
 ## First landed batch
 
 A is complete and independently checked. Four current `-r1` packets replace four retained originals after a robust stopping-cost repair and added equal-attempt controls. [Finding and limits](../../../docs/versions/v18-selective-acquisition/research-extension/RESULTS.md). Each exported packet includes all raw blocks in `RAW.zip`; extract it beside `PLAN.json` to reconstruct the packet layout. `SOURCE.zip` retains the executed source, and `REPLAY_DRIVER.py` is the separately bound audit entry point. B-D have executed and passed bounded audits; their documentary landings are pending. E-H remain in progress.
+
+## Follow-on admission
+
+All E-H implementations are now admitted under [fixed executable protocols](../../../docs/versions/v18-selective-acquisition/research-extension/PROTOCOLS.md). Twenty-five Ghost controls and six shared-PyTorch CPU controls pass in isolated source copies; complete native H/E/G pilots pass. H/F/E discovery is dispatched serially, and G is frozen for dispatch after their verification/landing. The first E discovery attempt remains a retained Windows status-sharing failure; retry-safe writes and explicit failed-queue status precede its replacement. These are admission and execution statuses, not a claim that all discovery results are complete.

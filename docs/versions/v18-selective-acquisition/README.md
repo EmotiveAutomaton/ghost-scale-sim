@@ -1,5 +1,9 @@
 # V18: selective acquisition and unwanted carryover
 
+The commissioned [V18.3 research extension](research-extension/README.md) is active.
+Its [results](research-extension/RESULTS.md), [executable protocols](research-extension/PROTOCOLS.md)
+and source-frozen packets remain separate from all completed predecessors.
+
 The [V18.2 maker-state continuation](maker-state/README.md) has completed its bounded queue; see its [final report](maker-state/FINAL_REPORT.md).
 
 Original V18 is closed. Its separately commissioned [V18.1 continuation](continuation/README.md)

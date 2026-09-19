@@ -85,9 +85,12 @@ def reconstruct(initial, tables, attempts, naive=False):
     return weights
 
 
-def unit(index, cell=0, mode='uniform', control='ordinary', split='test'):
+def unit(index, cell=0, mode='uniform', control='ordinary', split='test',rule=None):
     random=W.rng('active',split,index,mode,control)
     w=W.make_world(cell,index)
+    if rule is not None:
+        if rule!='lexicographic':raise ValueError('undeclared holdout rule')
+        w['rule']=rule
     state=int(random.integers(len(W.STATES)))
     history=W.initial_history(w,state,random)
     prior=W.posterior(W.packet(w,history))
@@ -162,7 +165,7 @@ def unit(index, cell=0, mode='uniform', control='ordinary', split='test'):
                 costs=dict(attempted_queries=len(attempts),responses=sum(a['outcome']<len(W.PROGRAMS) for a in attempts),
                            query_fees=fees,selector_operations=selector_work,observation_actions=primitive_work,
                            reader_work=learning_work+acquisition['execution_actions'])))
-    return dict(family='A',index=index,cell=cell,mode=mode,control=control,public=json_payload(w,history),
+    return dict(family='A',index=index,cell=cell,mode=mode,control=control,**({'rule':rule} if rule else {}),public=json_payload(w,history),
                 evaluator=dict(state=state,profile=profile,target=target,potential_outcomes=true_outcomes),rows=rows,
                 work_unit='selector likelihood-table entries considered; a declared logical cost proxy, not hardware instructions')
 

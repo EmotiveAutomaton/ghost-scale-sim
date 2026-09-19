@@ -98,6 +98,17 @@ def check_unit(unit,reference=False):
                 distribution(f['probabilities']);distribution(f['truth']);distributions+=2
                 terms=[-q*math.log(p) for p,q in zip(f['probabilities'],f['truth']) if q>0]
                 if abs(sum(terms)-f['expected_loss']['value'])>1e-10:raise ValueError('held-future loss mismatch')
+    elif unit['family']=='H':
+        from .compression import reference_loss
+        ph=np.asarray(unit['history_probabilities']);distribution(ph);distributions+=1
+        for family in ('old','new'):
+            predictions=np.asarray(unit[family+'_predictions'])
+            for p in predictions:distribution(p);distributions+=1
+            for row in unit['rows']:
+                expected=reference_loss(row['code'],ph,predictions)-(np.log(3) if family=='new' else 0)
+                if abs(expected-row[family+'_loss'])>1e-10:
+                    raise ValueError('independent code loss mismatch')
+        if unit['partitions_enumerated']!=4140:raise ValueError('incomplete code enumeration')
     return dict(executions=executions,distributions=distributions,reference=reference)
 
 
@@ -105,7 +116,7 @@ def metrics(unit):
     """Unit averages precede group intervals; no probe or fit-seed pseudoreplication."""
     results=[]
     for row in unit['rows']:
-        tags={k:unit[k] for k in ('family','cell','mode','control','condition','roots','copies','kind','order') if k in unit}
+        tags={k:unit[k] for k in ('family','cell','rule','mode','control','condition','roots','copies','kind','order') if k in unit}
         tags['method']=row['method']
         if unit['family']=='A':
             tags['purpose']=row['purpose'];s=row['scores'];c=row['costs']
@@ -122,6 +133,9 @@ def metrics(unit):
         elif unit['family']=='C':
             values={'valid':float(row['instrument']=='valid')}
             if row['instrument']=='valid':values.update({k:float(row[k]) for k in ('initial_loss','final_loss','initial_brier','final_brier','false_confidence','corrected_false_confidence','credible_coverage')})
+        elif unit['family']=='H':
+            tags['cardinality']=row['cardinality']
+            values={k:row[k] for k in ('old_loss','new_loss','rate_nats','storage_bits')}
         else:
             values=dict(expected_loss=float(np.mean([f['expected_loss']['value'] for f in row['forecasts']])),
                 abstained=float(np.mean([f['abstained'] for f in row['forecasts']])),candidate_evaluations=row['candidate_evaluations'])
