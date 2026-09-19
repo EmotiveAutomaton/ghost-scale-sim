@@ -72,4 +72,6 @@ reconstruction, diagnostic aggregation and extracted-source replay.
 
 `CYCLIC_ACTION_BATCH.json` binds 18,432 further rows on 192 fresh contexts and 72 bounded replays: current totals are 3,030,024 and 38,414. `g2-cyclic-action/` retains full comparisons and the earlier failed isolated admission. `VALIDITY_PASS.20260919.json` records 57 passing current checks, exact primary reaggregation and the repaired native notification handover; it does not claim uninterrupted service.
 
-The complete public action-menu transfer is admitted and running as QUEUE-12: 192 fresh contexts, four nested histories, 18,432 planned rows. Its 58-check isolated suite and independent first-block apparatus check passed. This is an execution update; final outcomes require reconstruction and replay. See [current queue](CURRENT_QUEUE.json).
+QUEUE-12 is complete and verified: 192 fresh contexts, four nested histories, 18,432 checked rows and 72 bounded source replays. Two action observations retain 100% dependency/direct success; primitive search reaches 43.75%. The campaign remains active. See [current queue](CURRENT_QUEUE.json).
+
+`CYCLIC_ACTION_MENU_BATCH.json` brings totals to **3,048,456 verified rows** and **38,486 bounded replay rows**. The [mid-run analysis packet](../../../docs/versions/v18-selective-acquisition/continuation/MID_RUN_REPORT_2026-09-19.md) links every completed comparison; `MID_RUN_SNAPSHOT.json` binds its evidence inventory. Earlier batch totals above are historical cumulative milestones.

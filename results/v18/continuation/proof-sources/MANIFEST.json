@@ -39,6 +39,18 @@
     "implementation": "3d7ee7ee8d63abff3a5e2ab35397018aee056e8d5297e54e7af741166a97eb3f-replay_v18_1.py",
     "sha256": "3d7ee7ee8d63abff3a5e2ab35397018aee056e8d5297e54e7af741166a97eb3f"
   },
+  "g2-cyclic-action-menu-1-replay-1/REPLAY.json": {
+    "implementation": "3d7ee7ee8d63abff3a5e2ab35397018aee056e8d5297e54e7af741166a97eb3f-replay_v18_1.py",
+    "sha256": "3d7ee7ee8d63abff3a5e2ab35397018aee056e8d5297e54e7af741166a97eb3f"
+  },
+  "g2-cyclic-action-menu-report-1/DIAGNOSTIC.json": {
+    "implementation": "0018cb0b82dbb8c97c96cf510c6d056a5b4b0cf28d3a1851fd94577ddffb9056-analyze_cyclic_action_menu.py",
+    "sha256": "0018cb0b82dbb8c97c96cf510c6d056a5b4b0cf28d3a1851fd94577ddffb9056"
+  },
+  "g2-cyclic-action-menu-report-1/VERIFICATION.json": {
+    "implementation": "9cfcc8f430054266026fa8aae42fc4f6ddc9a8ffeedfaf1b9b9f68ef339dd2c0-verify.py",
+    "sha256": "9cfcc8f430054266026fa8aae42fc4f6ddc9a8ffeedfaf1b9b9f68ef339dd2c0"
+  },
   "g2-cyclic-action-report-1/DIAGNOSTIC.json": {
     "implementation": "813c9cff69f93ad90ff1c7e51a8d5da5aa286195db14254d2f758e8c3516efd4-analyze_cyclic_action.py",
     "sha256": "813c9cff69f93ad90ff1c7e51a8d5da5aa286195db14254d2f758e8c3516efd4"
@@ -119,6 +131,14 @@
     "implementation": "f01f61914b304cfe0fc0ed37d76996299eecd6d1d79b94ccf6c086fcf0ace163-verify.py",
     "sha256": "f01f61914b304cfe0fc0ed37d76996299eecd6d1d79b94ccf6c086fcf0ace163"
   },
+  "g2-transfer/REPLAY.json": {
+    "implementation": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc-replay_v18_1.py",
+    "sha256": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc"
+  },
+  "g2-transfer/VERIFICATION.json": {
+    "implementation": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e-verify.py",
+    "sha256": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e"
+  },
   "g3-representation-1-replay-1\\REPLAY.json": {
     "implementation": "2c10d59ea221633ac9d1cb1dc4799eece924e04893091b7830f9aea4297b6d3a-replay_v18_1.py",
     "sha256": "2c10d59ea221633ac9d1cb1dc4799eece924e04893091b7830f9aea4297b6d3a"
@@ -126,6 +146,14 @@
   "g3-representation-report-1\\VERIFICATION.json": {
     "implementation": "423ddc1f75b5e81905f260699f00d2d9195dc430572ec9eee727a2c567aa2c89-verify.py",
     "sha256": "423ddc1f75b5e81905f260699f00d2d9195dc430572ec9eee727a2c567aa2c89"
+  },
+  "g3-stitch/REPLAY.json": {
+    "implementation": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc-replay_v18_1.py",
+    "sha256": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc"
+  },
+  "g3-stitch/VERIFICATION.json": {
+    "implementation": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e-verify.py",
+    "sha256": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e"
   },
   "g4-history-1-replay-1\\REPLAY.json": {
     "implementation": "2c10d59ea221633ac9d1cb1dc4799eece924e04893091b7830f9aea4297b6d3a-replay_v18_1.py",
@@ -142,5 +170,9 @@
   "g4-history-report-3\\VERIFICATION.json": {
     "implementation": "e7accfb7a73788f4e1157b564a7ec217543716cae845dca7667233100c0c0743-verify.py",
     "sha256": "e7accfb7a73788f4e1157b564a7ec217543716cae845dca7667233100c0c0743"
+  },
+  "structural-direct/VERIFICATION.json": {
+    "implementation": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e-verify.py",
+    "sha256": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e"
   }
 }

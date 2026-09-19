@@ -57,6 +57,8 @@ Can a cheap query rule tied only to changed public target parts repair a harder 
 
 Across 192 fresh seven-part contexts, two target-relevant executed-action observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success. One observation leaves two compatible laws and 0% success; primitive candidate-set search reaches 45.31% with two observations. Acquisition averages 64.33 counted operations, conditional on a supplied candidate family and prepared query menu; menu construction and physical setup are outside that online count. This is descriptive constructed-mechanism evidence, miniature—architecture untested, not a third primary or evidence of human learning.
 
+Target-relevant action evidence still works when the menu contains every single action at every common-valid default/absent state, rather than specially selected diagnostic probes. Across 192 fresh seven-part contexts, two observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success; one observation leaves two laws and 0% success. Primitive candidate-set search reaches 43.75% with two observations. Acquisition averages 608.25 counted operations; complete action uses 720.92 for the direct compiler and 16,310.87 for dependency learning. This is descriptive constructed-mechanism evidence, miniature—architecture untested, conditional on supplied candidate laws and offline query-state preparation. It is not a third primary or a human-learning result.
+
 [V18.1 progress](docs/versions/v18-selective-acquisition/continuation/PROGRESS.md).
 
 Can focused study preserve useful craft, and when does checking an acquired routine protect later construction from interference?

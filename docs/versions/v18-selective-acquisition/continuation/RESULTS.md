@@ -40,6 +40,8 @@ Can a cheap query rule tied only to changed public target parts repair a harder 
 
 Across 192 fresh seven-part contexts, two target-relevant executed-action observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success. One observation leaves two compatible laws and 0% success; primitive candidate-set search reaches 45.31% with two observations. Acquisition averages 64.33 counted operations, conditional on a supplied candidate family and prepared query menu; menu construction and physical setup are outside that online count. This is descriptive constructed-mechanism evidence, miniature—architecture untested, not a third primary or evidence of human learning.
 
+Target-relevant action evidence still works when the menu contains every single action at every common-valid default/absent state, rather than specially selected diagnostic probes. Across 192 fresh seven-part contexts, two observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success; one observation leaves two laws and 0% success. Primitive candidate-set search reaches 43.75% with two observations. Acquisition averages 608.25 counted operations; complete action uses 720.92 for the direct compiler and 16,310.87 for dependency learning. This is descriptive constructed-mechanism evidence, miniature—architecture untested, conditional on supplied candidate laws and offline query-state preparation. It is not a third primary or a human-learning result.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -67,6 +69,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-cyclic-cost | 6,144 | 384 exposed F2 contexts reused; no new support |
 | g2-cyclic-target | 18,432 | 192 fresh two-target contexts; descriptive screen |
 | g2-cyclic-action | 18,432 | 192 fresh action-evidence contexts; descriptive screen |
+| g2-cyclic-action-menu | 18,432 | 192 fresh complete-menu contexts; descriptive screen |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -106,7 +109,7 @@ bounded decision replays. The first frozen primary adds 87,552 rows and 342 repl
 Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
 adds 23,040 rows and 90 replays. The selector cost diagnostic adds 6,144 rows and 24
 replays on exposed contexts. The fresh two-target screen adds 18,432 rows and 72
-replays. The action-evidence screen adds 18,432 rows and 72 replays. Together, 3,030,024 retained rows reconstruct and 38,414
+replays. The action-evidence screen adds 18,432 rows and 72 replays. The complete-menu transfer adds 18,432 rows and 72 replays. Together, 3,048,456 retained rows reconstruct and 38,486
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
@@ -186,7 +189,7 @@ The failed 65,536 selector calibration and first-block checker schema failure re
 retained. No third final primary is permitted. The fresh target-aware screen then showed
 that two cheap public-target parent queries isolate truth and restore dependency and
 conditioned-direct action, while primitive robust search succeeds in only 52.60% of
-contexts. Two executed-action observations now transfer that repair without a direct parent cue. The next descriptive allocation removes the prepared diagnostic-menu advantage using a complete public single-action menu, preserving the two-observation cap and equal-evidence rivals.
+contexts. Two executed-action observations now transfer that repair without a direct parent cue. The complete public single-action menu has now been tested on fresh contexts with the same two-observation cap and equal-evidence rivals; its full reconstruction and bounded replay pass.
 Saturated four-cell and graphic cells remain retired. All commissioned G0–G4 branches remain active or retain
 a completed disposition; useful work after the two final contrasts is not precluded. The original
 campaign clock, 40 worker CPU hours including children and 200,000 new context units
@@ -195,4 +198,4 @@ remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is
 
 The 19 September validity pass independently rebound frozen inputs, raw cases and source hashes for both primaries and the action screen, recomputed both primary lower bounds unchanged, and checked 33 existing public proof bindings. A notification handover PID mismatch left the completed queue idle; its repaired native startup is verified. The service gap and the earlier isolated-fixture admission failure remain recorded. No completed science was restarted.
 
-The complete public action-menu transfer is admitted and running as QUEUE-12: 192 fresh contexts, four nested histories, 18,432 planned rows. Its 58-check isolated suite and independent first-block apparatus check passed. This is an execution update; final outcomes require reconstruction and replay. See [current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).
+QUEUE-12 completed all 18,432 rows on 192 fresh contexts with four nested histories. Its 58-check admission, full independent reconstruction, exhaustive menu-support check and 72-row source replay passed. The admitted queue is now complete; the campaign remains active. See [current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).

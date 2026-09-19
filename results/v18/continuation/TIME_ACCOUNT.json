@@ -1,6 +1,6 @@
 {
   "accounting_limit": "Includes retained failed science and recorded preparations. Earlier setup/admission pilots were not all CPU-instrumented. Verification is separate; replay interpreter-child CPU is unmeasured and not claimed zero. This is not final campaign accounting.",
-  "at": "2026-09-19T09:48:00.652674+00:00",
+  "at": "2026-09-19T09:57:19.383717+00:00",
   "attempts": [
     {
       "child_cpu_seconds": 0,
@@ -119,6 +119,15 @@
       "state": "checkpointed",
       "wall_seconds": 5.104098499999964,
       "worker_cpu_seconds": 4.765625
+    },
+    {
+      "child_cpu_seconds": 0,
+      "receipt": "g2-cyclic-action-menu-1/attempts/a44d9d11ba9346dbaef72ae026b63b30.json",
+      "sha256": "a38a2689e115d6838eaa10e3cbe5b1519b98f0d502cb4488fa1023df8236ce2e",
+      "started_at": "2026-09-19T09:45:39.524649+00:00",
+      "state": "completed",
+      "wall_seconds": 400.1511560999934,
+      "worker_cpu_seconds": 382.921875
     },
     {
       "child_cpu_seconds": 0,
@@ -440,10 +449,10 @@
   "cpu_ceiling_seconds": 144000,
   "frozen_unit_identifiers_including_exposed_reuse": 11690,
   "recorded_child_cpu_seconds": 16.5,
-  "recorded_combined_cpu_seconds": 8947.15625,
-  "recorded_worker_cpu_seconds": 8930.65625,
-  "remaining_from_recorded_seconds": 135052.84375,
-  "state": "interim; complete-menu transfer running; recorded preparations and finished attempts only; active worker CPU pending",
-  "support_limit": "192 new complete-menu contexts are frozen and in progress; they are not yet included in verified result totals.",
+  "recorded_combined_cpu_seconds": 9330.078125,
+  "recorded_worker_cpu_seconds": 9313.578125,
+  "remaining_from_recorded_seconds": 134669.921875,
+  "state": "interim; every admitted scientific queue completed; current published CPU receipts final for those attempts",
+  "support_limit": "11690 is the conservative frozen unit-identifier accounting convention, including exposed reuse; it is not a count of independent architectures or wholly fresh contexts.",
   "unit_identifier_ceiling": 200000
 }

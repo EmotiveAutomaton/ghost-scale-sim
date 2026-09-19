@@ -1,0 +1,41 @@
+{
+  "at": "2026-09-19T10:02:05.634701+00:00",
+  "defect": "Five completed verification/replay receipts had no proof-index entry for their hash-bound implementation. Both implementation files were already retained in public proof-sources.",
+  "passed": true,
+  "prior_manifest_sha256": "ac19e5300b4acf309805fd35d60ef30982503d1752c8c4634ed10b6b272c1fc3",
+  "repair": "Add the five missing receipt-to-source mappings after exact file-hash verification; no source, raw data, receipt or reported result changed.",
+  "repairs": [
+    {
+      "field": "replayer_sha256",
+      "implementation": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc-replay_v18_1.py",
+      "receipt": "g2-transfer/REPLAY.json",
+      "sha256": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc"
+    },
+    {
+      "field": "verifier_sha256",
+      "implementation": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e-verify.py",
+      "receipt": "g2-transfer/VERIFICATION.json",
+      "sha256": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e"
+    },
+    {
+      "field": "replayer_sha256",
+      "implementation": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc-replay_v18_1.py",
+      "receipt": "g3-stitch/REPLAY.json",
+      "sha256": "23db83931720e503cb7ea18729282ff6fe6a36c1b6ab6ca9f978ca0acfb346bc"
+    },
+    {
+      "field": "verifier_sha256",
+      "implementation": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e-verify.py",
+      "receipt": "g3-stitch/VERIFICATION.json",
+      "sha256": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e"
+    },
+    {
+      "field": "verifier_sha256",
+      "implementation": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e-verify.py",
+      "receipt": "structural-direct/VERIFICATION.json",
+      "sha256": "c8450705cc38377727dd7183ebe696e0a0114943e75e2bec229619ff6910f55e"
+    }
+  ],
+  "schema": "v18.1.proof-index-repair.1",
+  "scientific_results_changed": false
+}

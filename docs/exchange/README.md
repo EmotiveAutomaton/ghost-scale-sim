@@ -11,6 +11,7 @@ what was asked and what was sent back.
 
 | file | who wrote it | what it is |
 |---|---|---|
+| [v18-1-mid-run-response.md](v18-1-mid-run-response.md) | **Codex agent in this repository** | Complete reportable mid-stage evidence, full-menu transfer and analysis packet. |
 | [v18-1-cyclic-action-response.md](v18-1-cyclic-action-response.md) | **Codex agent in this repository** | Verified action-evidence batch, current 57-check validity pass and notification handover repair. |
 | [v18-1-cyclic-target-response.md](v18-1-cyclic-target-response.md) | **Codex agent in this repository** | Verified fresh two-target public-query screen, designed placebo, planning boundary and next action-evidence question. |
 | [v18-1-cyclic-cost-response.md](v18-1-cyclic-cost-response.md) | **Codex agent in this repository** | Verified exposed-context decomposition of decision-selector cost and evidence quality, with failed calibration and checker repair retained. |

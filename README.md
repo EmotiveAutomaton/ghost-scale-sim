@@ -16,6 +16,8 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 ## ○ Agent-authored V18.1 continuation
 
+[Mid-run analysis packet — 19 September](docs/versions/v18-selective-acquisition/continuation/MID_RUN_REPORT_2026-09-19.md): all 20 admitted comparison packets, both frozen primaries, validation and open questions.
+
 The five core branches now execute, and their first-wave results have independent
 physical checks and bounded extracted-source replay. The program remains active:
 larger dependency transfer, grounded Stitch, the direct structural rival and the
@@ -29,8 +31,8 @@ arm only to 33.59%, while its chosen observation isolates truth in 30.73% of con
 On fresh seven-part two-target contexts, two low-cost target-aware parent queries
 isolate truth and restore dependency and direct action to 100%; one query remains
 insufficient, and primitive robust search still reaches only 52.60% inside its work cap.
-Two executed-action observations also restore dependency/direct success on 192 fresh
-contexts, conditional on the prepared public menu; primitive search reaches 45.31%.
+Two executed-action observations also restore dependency/direct success. The latest
+192-context complete-menu transfer retains 100% success for both; primitive search reaches 43.75%.
 The current isolated validity suite passes 58 checks, and both primary bounds reproduce.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
@@ -1292,4 +1294,4 @@ Code is MIT. Prose, figures and data are CC BY 4.0. See [LICENSE](LICENSE).
 
 To cite this repository, see [CITATION.cff](CITATION.cff), or cite the preprint directly.
 
-The complete public action-menu transfer is admitted and running as QUEUE-12: 192 fresh contexts, four nested histories, 18,432 planned rows. Its 58-check isolated suite and independent first-block apparatus check passed. This is an execution update; final outcomes require reconstruction and replay. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).
+QUEUE-12 is complete and verified: 192 fresh contexts, four nested histories, 18,432 checked rows and 72 bounded source replays. Two action observations retain 100% dependency/direct success; primitive search reaches 43.75%. The campaign remains active. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).
