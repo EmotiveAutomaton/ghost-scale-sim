@@ -1,6 +1,6 @@
 {
   "accounting_limit": "Includes retained failed science and recorded preparations. Earlier setup/admission pilots were not all CPU-instrumented. Verification is separate; replay interpreter-child CPU is unmeasured and not claimed zero. This is not final campaign accounting.",
-  "at": "2026-09-19T10:57:21.788265+00:00",
+  "at": "2026-09-19T11:34:51.017036+00:00",
   "attempts": [
     {
       "child_cpu_seconds": 0,
@@ -222,6 +222,38 @@
       "state": "completed",
       "wall_seconds": 269.6523335999955,
       "worker_cpu_seconds": 227.125
+    },
+    {
+      "child_cpu_seconds": 0,
+      "receipt": "g2-cyclic-misspecified-1/attempts/09b04e96c810408594ea2e2837d96ec5.json",
+      "sha256": "c10e485f6432b13f823062f85b7aa54ecb30b2cf9fcc77e053b00151f38f7cb1",
+      "started_at": "2026-09-19T11:15:11.565694+00:00",
+      "state": "checkpointed",
+      "wall_seconds": 1.1264636999985669,
+      "worker_cpu_seconds": 0.96875
+    },
+    {
+      "child_cpu_seconds": 0,
+      "receipt": "g2-cyclic-misspecified-1/attempts/8b66ca425fbe41fc89fbc51bbbad6be0.json",
+      "sha256": "381d14c086a97c6f0e71351a6521a0f745f852945975bf89f633d71da850c098",
+      "started_at": "2026-09-19T11:21:40.973003+00:00",
+      "state": "completed",
+      "wall_seconds": 108.66165199999523,
+      "worker_cpu_seconds": 94.515625
+    },
+    {
+      "at": "2026-09-19T11:14:02.422720+00:00",
+      "cases": 768,
+      "child_cpu_seconds": 0,
+      "contexts": 192,
+      "new_structural_contexts": 192,
+      "receipt": "g2-cyclic-misspecified-1/attempts/preparation.json",
+      "schema": "v18.1.preparation-attempt.1",
+      "scope": "development calibration, fresh outcome-blind case construction, source freeze and plan construction; no frozen scored row executed",
+      "sha256": "a1d5d8412ca403491c62b5b567cf28f1a7221ba4c1f327dac837235d00c94ab6",
+      "state": "prepared",
+      "wall_seconds": 18.197595999998157,
+      "worker_cpu_seconds": 17.328125
     },
     {
       "child_cpu_seconds": 0,
@@ -479,12 +511,12 @@
     }
   ],
   "cpu_ceiling_seconds": 144000,
-  "frozen_unit_identifiers_including_exposed_reuse": 11690,
+  "frozen_unit_identifiers_including_exposed_reuse": 12458,
   "recorded_child_cpu_seconds": 16.5,
-  "recorded_combined_cpu_seconds": 9510.34375,
-  "recorded_worker_cpu_seconds": 9493.84375,
-  "remaining_from_recorded_seconds": 134489.65625,
-  "state": "interim; QUEUE-13 complete and verified; campaign remains active",
+  "recorded_combined_cpu_seconds": 9623.15625,
+  "recorded_worker_cpu_seconds": 9606.65625,
+  "remaining_from_recorded_seconds": 134376.84375,
+  "state": "interim; QUEUE-14 complete and verified; campaign remains active",
   "support_limit": "11690 is the conservative frozen unit-identifier accounting convention, including exposed reuse; it is not a count of independent architectures or wholly fresh contexts.",
   "unit_identifier_ceiling": 200000
 }

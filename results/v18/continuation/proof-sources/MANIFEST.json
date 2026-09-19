@@ -75,6 +75,22 @@
     "implementation": "b09b543c604d17487b2e0eb729c0b7ba77674d66b4ef35816c8ab005da1caf2f-verify.py",
     "sha256": "b09b543c604d17487b2e0eb729c0b7ba77674d66b4ef35816c8ab005da1caf2f"
   },
+  "g2-cyclic-misspecified/DIAGNOSTIC.json": {
+    "implementation": "5c635f4241817fa1faf8b93b6dec376a4b88be7a7b58e8324682e0bcc64eacfe-analyze_cyclic_misspecified.py",
+    "sha256": "5c635f4241817fa1faf8b93b6dec376a4b88be7a7b58e8324682e0bcc64eacfe"
+  },
+  "g2-cyclic-misspecified/REPLAY.json": {
+    "implementation": "a0fa925818a988e99df20cdc17e84bdc1c3b09894799c52e85d626a67fa8efd5-replay_v18_1.py",
+    "sha256": "a0fa925818a988e99df20cdc17e84bdc1c3b09894799c52e85d626a67fa8efd5"
+  },
+  "g2-cyclic-misspecified/VERIFICATION.json": {
+    "implementation": "767308100564e137d8157a7acb8a2fa8af856f3e4d4431990b837d138dd3dbfc-verify.py",
+    "sha256": "767308100564e137d8157a7acb8a2fa8af856f3e4d4431990b837d138dd3dbfc"
+  },
+  "g2-cyclic-misspecified/VERIFICATION_LINEAGE.json": {
+    "implementation": "ec79bdc16984a9ec2e8ce9b9feb9abd793e339e49299facd19788d95d9935a45-verify_cyclic_misspecified.py",
+    "sha256": "ec79bdc16984a9ec2e8ce9b9feb9abd793e339e49299facd19788d95d9935a45"
+  },
   "g2-cyclic-physical/DIAGNOSTIC.json": {
     "implementation": "1001481dc8796cf8eb87e54ec55155862069b9095181382c96b5d1f039377239-analyze_cyclic_physical.py",
     "sha256": "1001481dc8796cf8eb87e54ec55155862069b9095181382c96b5d1f039377239"

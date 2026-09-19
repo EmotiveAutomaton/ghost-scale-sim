@@ -578,6 +578,17 @@ legality, trace and candidate filtering agree. Each query receives a freshly
 provisioned task-initial object; provisioning/reset is explicitly outside the count.
 The diagnostic adds no support or primary and cannot repair the supplied-family limit.
 
+The candidate-family misspecification screen samples fresh seven-part contexts and
+removes evaluator truth from each supplied four-law family before freezing the public
+three-law contract. The same outcome-independent two-action sequence and evidence are
+given to explicit dependency, conditioned-direct and primitive candidate-set methods;
+each must treat an empty compatible set as detected misspecification and abstain. A
+labeled forced-candidate control measures unsafe collapse, the stored-episode reader
+tests whether missing output alone supplies detection, and a known-law arm is only a
+ceiling. Independent reconstruction checks truth exclusion, every candidate filter,
+every observation outcome and every submitted program. Query-state preparation remains
+apparatus-provided, so empty-support detection here is not open-world anomaly detection.
+
 Campaign unit accounting retains the previously filed conservative identifier count
 when a later refresh would deduplicate identifiers shared by reused branch plans. The
 final-primary filing caught and corrected such a decrease before commit. Scientific

@@ -12,6 +12,7 @@ what was asked and what was sent back.
 | file | who wrote it | what it is |
 |---|---|---|
 | [v18-1-cyclic-physical-response.md](v18-1-cyclic-physical-response.md) | **Codex agent in this repository** | Verified charged physical query-preparation diagnostic, cost boundary and next misspecification frontier. |
+| [v18-1-cyclic-misspecified-response.md](v18-1-cyclic-misspecified-response.md) | **Codex agent in this repository** | Verified truth-excluded candidate-family detection/abstention screen and explicit unsafe control. |
 | [v18-1-mid-run-response.md](v18-1-mid-run-response.md) | **Codex agent in this repository** | Complete reportable mid-stage evidence, full-menu transfer and analysis packet. |
 | [v18-1-cyclic-action-response.md](v18-1-cyclic-action-response.md) | **Codex agent in this repository** | Verified action-evidence batch, current 57-check validity pass and notification handover repair. |
 | [v18-1-cyclic-target-response.md](v18-1-cyclic-target-response.md) | **Codex agent in this repository** | Verified fresh two-target public-query screen, designed placebo, planning boundary and next action-evidence question. |

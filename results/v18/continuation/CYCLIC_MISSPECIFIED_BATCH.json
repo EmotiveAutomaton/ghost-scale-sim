@@ -1,0 +1,51 @@
+{
+  "additional_bounded_replay_rows": 36,
+  "at": "2026-09-19T11:34:51.017036+00:00",
+  "blocks": 96,
+  "branch": "g2-cyclic-misspecified",
+  "campaign_state": "active; next commissioned frontier decision pending",
+  "cases": 768,
+  "comparisons_sha256": "76ac0a6db878697f3ada2bae5c7a5ac60f96302426fc82da58423c11f53865d4",
+  "complete_sha256": "ee39823f562bb3334f2e38d4eed279fce4f807ec16fcc77514f42c5104dd065e",
+  "conservative_unit_identifiers": 12458,
+  "contexts": 192,
+  "diagnostic_sha256": "764d586aca1046ce78103e77e6b4fcb5f387733925a0095c8536a5063b8b93eb",
+  "event_id": "e4eff449ef402611fde44dbaeca5633ca2970bf0e796564d3844816cef2618c4",
+  "final_contrasts_frozen": 2,
+  "final_contrasts_remaining_maximum": 0,
+  "histories_per_context": 4,
+  "known_law_success": {
+    "1": 1,
+    "2": 1
+  },
+  "new_structural_contexts": 192,
+  "one_query_mean_candidate_compatible_laws": 1,
+  "plan_sha256": "de2725b19ee0568eb9ec4082d8e54146170705a8b7c5a806a77ac800cb9973be",
+  "queue": "QUEUE-14",
+  "queue_event_sha256": "6170a743b3208f7272ff7f912b376adde8e76ac56b4b34661542a23f3b89b742",
+  "replay_sha256": "90cf6aaf9b95dbfa67207bfea30c0120193774f3de75484f34ae159c715851de",
+  "rows": 9216,
+  "schema": "v18.1.cyclic-misspecified-batch.1",
+  "scope": "descriptive candidate-family misspecification screen on fresh deterministic constructed contexts; miniature architecture untested; no third primary",
+  "selection_sha256": "7af91e79e0bc4d2659099afca7746ae475a93508527ebc4d8b8a92b45d9b4ab4",
+  "source_archive_sha256": "25ceabd9d9bc3e8cd0b1c98516435b68b531a41f0018f8b8599c0c17c9294d56",
+  "total_bounded_replay_rows": 38546,
+  "total_verified_rows": 3063816,
+  "two_query_candidate_aware_detection": {
+    "candidate-set-primitive": 1,
+    "conditioned-direct": 1,
+    "dependencies": 1
+  },
+  "two_query_candidate_aware_safe_abstention": {
+    "candidate-set-primitive": 1,
+    "conditioned-direct": 1,
+    "dependencies": 1
+  },
+  "two_query_episode_detection": 0,
+  "two_query_forced_candidate_invalid_action": 1,
+  "two_query_forced_candidate_unsafe_action": 1,
+  "two_query_mean_acquisition_operations": 459.3125,
+  "two_query_mean_candidate_compatible_laws": 0,
+  "verification_sha256": "61a61b8bf94f3d138b8b0bc6c3f33c07b1565fcddf28d1b8b3592f9b8e97486e",
+  "worker_cpu_seconds_including_preparation": 112.8125
+}

@@ -2,22 +2,21 @@
 
 All five commissioned branches have executed, both permitted final contrasts are
 frozen and held, and the campaign remains active. The current verified total is
-3,054,600 retained rows with 38,510 bounded extracted-source replay rows. See the
+3,063,816 retained rows with 38,546 bounded extracted-source replay rows. See the
 [interim results](RESULTS.md) and the
 [branch ledger](../../../../results/v18/continuation/BRANCH_LEDGER.json).
 
-Does the complete-menu action result survive when no-oracle query-state planning and physical setup share the 32,768-operation envelope? Not for dependency learning; it survives only for the cheaper conditioned-direct action method. Across the same 192 exposed seven-part contexts, two physically prepared action observations still isolate the true law in every case, but acquisition averages 8,104.33 counted operations (2.62 physical setup actions). Conditioned-direct remains 100% successful at 8,217 total operations; when required to buy the same two observations, dependency learning and the known-law arm each reach 57.81%, and primitive candidate-set search reaches 33.33%. One observation costs 1,600.32 operations, leaves exactly two laws, and only the known-law ceiling succeeds. This is a descriptive constructed-mechanism result on reused exposed contexts, miniature—architecture untested; it adds no structural support or primary, assumes the supplied four-law family and free provisioning/reset of a fresh task-initial object per query, and does not establish human learning.
+When truth is absent from a supplied candidate family, can action evidence expose the mismatch before a learner acts? Yes, but only after the evidence rules out every supplied law and only for methods with an explicit empty-support response. Across 192 fresh seven-part contexts, one action observation leaves one wrong candidate, so dependency learning, conditioned-direct action, primitive candidate-set search and stored episodes all achieve 0% task success without detecting misspecification. A second observation empties the candidate set in every context: the three candidate-aware action methods detect the mismatch and abstain safely in 100%, while the episode reader remains silent and the labeled forced-candidate control attempts an invalid action in 100%. The known-law ceiling succeeds in 100%; two observations cost 459.31 acquisition operations on average. This is descriptive constructed-method evidence under deterministic, engineered truth exclusion—miniature, architecture untested—not open-world or human anomaly detection and not a third primary.
 
-The exact QUEUE-13 completion event, all 96 raw blocks, frozen inputs and frozen
-source bytes agree. Every submitted program and every physical setup path was
-independently executed; a fresh extracted source regenerated 24 outcome-independent
-rows. Recorded worker-plus-child CPU is 9,510.34375 seconds, with earlier
+The exact QUEUE-14 completion event, all 96 raw blocks, frozen inputs and frozen
+source bytes agree. Every candidate filter, observation outcome and submitted program
+was independently checked; a fresh extracted source regenerated 36 outcome-independent
+rows. Recorded worker-plus-child CPU is 9,623.15625 seconds, with earlier
 uninstrumented setup and replay-child limits retained. No completed science was
 restarted.
 
-Both final primaries remain unchanged and no third primary may be created. The next
-distinct commissioned G2 boundary is candidate-family misspecification: the present
-action results assume that the supplied four-law family contains truth. Any next
-allocation must freeze a separate descriptive detection/abstention contract before
-outcomes, preserve equal evidence and the direct rival, and cannot revise the two
-held primaries. Healthy computation uses one scientific worker and event-only wakes.
+Both final primaries remain unchanged and no third primary may be created. The active
+operator is auditing the named G0–G4 tree for a genuinely distinct unresolved structural
+or evidence condition. Any next allocation must add a discriminator rather than repeat
+a saturated cell, preserve equal evidence and the direct rival, and cannot revise the
+two held primaries. No scientific worker is running during that decision.
