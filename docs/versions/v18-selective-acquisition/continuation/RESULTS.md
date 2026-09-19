@@ -42,6 +42,8 @@ Across 192 fresh seven-part contexts, two target-relevant executed-action observ
 
 Target-relevant action evidence still works when the menu contains every single action at every common-valid default/absent state, rather than specially selected diagnostic probes. Across 192 fresh seven-part contexts, two observations identify the true law and give dependency learning and the equally informed direct compiler 100% task success; one observation leaves two laws and 0% success. Primitive candidate-set search reaches 43.75% with two observations. Acquisition averages 608.25 counted operations; complete action uses 720.92 for the direct compiler and 16,310.87 for dependency learning. This is descriptive constructed-mechanism evidence, miniature—architecture untested, conditional on supplied candidate laws and offline query-state preparation. It is not a third primary or a human-learning result.
 
+Does the complete-menu action result survive when no-oracle query-state planning and physical setup share the 32,768-operation envelope? Not for dependency learning; it survives only for the cheaper conditioned-direct action method. Across the same 192 exposed seven-part contexts, two physically prepared action observations still isolate the true law in every case, but acquisition averages 8,104.33 counted operations (2.62 physical setup actions). Conditioned-direct remains 100% successful at 8,217 total operations; when required to buy the same two observations, dependency learning and the known-law arm each reach 57.81%, and primitive candidate-set search reaches 33.33%. One observation costs 1,600.32 operations, leaves exactly two laws, and only the known-law ceiling succeeds. This is a descriptive constructed-mechanism result on reused exposed contexts, miniature—architecture untested; it adds no structural support or primary, assumes the supplied four-law family and free provisioning/reset of a fresh task-initial object per query, and does not establish human learning.
+
 ## Execution and verification
 
 The table counts retained method/target comparisons, not independent observations.
@@ -70,6 +72,7 @@ original-case studies reuse exposed cases. None of these counts is an architectu
 | g2-cyclic-target | 18,432 | 192 fresh two-target contexts; descriptive screen |
 | g2-cyclic-action | 18,432 | 192 fresh action-evidence contexts; descriptive screen |
 | g2-cyclic-action-menu | 18,432 | 192 fresh complete-menu contexts; descriptive screen |
+| g2-cyclic-physical | 6,144 | 192 exposed complete-menu contexts reused; charged setup diagnostic |
 
 All 1,721,352 first-wave rows reconstruct from retained outputs. All submitted
 programs have independent physical checks; G2 forecasts, probability error and
@@ -109,7 +112,7 @@ bounded decision replays. The first frozen primary adds 87,552 rows and 342 repl
 Cyclic-union discovery adds 34,560 rows and 540 replays. The second frozen primary
 adds 23,040 rows and 90 replays. The selector cost diagnostic adds 6,144 rows and 24
 replays on exposed contexts. The fresh two-target screen adds 18,432 rows and 72
-replays. The action-evidence screen adds 18,432 rows and 72 replays. The complete-menu transfer adds 18,432 rows and 72 replays. Together, 3,048,456 retained rows reconstruct and 38,486
+replays. The action-evidence screen adds 18,432 rows and 72 replays. The complete-menu transfer adds 18,432 rows and 72 replays. The charged physical diagnostic adds 6,144 rows and 24 replays on the same exposed contexts. Together, 3,054,600 retained rows reconstruct and 38,510
 selected decision rows regenerate from extracted frozen sources. The opaque-label
 batch contains 2,226 concrete law configurations and 20 unlabeled topologies within
 the assembly family; deterministic relabeling does not make these new architectures
@@ -198,4 +201,4 @@ remain unchanged. Report preparation starts 20 September 13:00 UTC; delivery is
 
 The 19 September validity pass independently rebound frozen inputs, raw cases and source hashes for both primaries and the action screen, recomputed both primary lower bounds unchanged, and checked 33 existing public proof bindings. A notification handover PID mismatch left the completed queue idle; its repaired native startup is verified. The service gap and the earlier isolated-fixture admission failure remain recorded. No completed science was restarted.
 
-QUEUE-12 completed all 18,432 rows on 192 fresh contexts with four nested histories. Its 58-check admission, full independent reconstruction, exhaustive menu-support check and 72-row source replay passed. The admitted queue is now complete; the campaign remains active. See [current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).
+QUEUE-13 completed all 6,144 charged-preparation rows on the 192 exposed complete-menu contexts. Its 61-check admission, full independent reconstruction, all-candidate physical setup execution and 24-row extracted-source replay passed. The result adds no structural support and does not revise either primary. Candidate-family misspecification remains the next distinct commissioned frontier; the campaign remains active. See [current queue](../../../../results/v18/continuation/CURRENT_QUEUE.json).

@@ -33,7 +33,10 @@ isolate truth and restore dependency and direct action to 100%; one query remain
 insufficient, and primitive robust search still reaches only 52.60% inside its work cap.
 Two executed-action observations also restore dependency/direct success. The latest
 192-context complete-menu transfer retains 100% success for both; primitive search reaches 43.75%.
-The current isolated validity suite passes 58 checks, and both primary bounds reproduce.
+Charging robust query-state planning and physical setup on those exposed contexts leaves truth
+isolation intact but reduces dependency and equal-query-cost known-law action to 57.81% and
+primitive search to 33.33%; the cheaper conditioned-direct method remains 100%. The current
+isolated validity suite passes 61 checks, and both primary bounds reproduce.
 The conditioned-direct rival still succeeds perfectly with the fixed observation, so
 neither final result establishes that an explicit dependency representation is necessary.
 The commissioned program remains active rather than closed. See the [interim results](docs/versions/v18-selective-acquisition/continuation/RESULTS.md),
@@ -1294,4 +1297,4 @@ Code is MIT. Prose, figures and data are CC BY 4.0. See [LICENSE](LICENSE).
 
 To cite this repository, see [CITATION.cff](CITATION.cff), or cite the preprint directly.
 
-QUEUE-12 is complete and verified: 192 fresh contexts, four nested histories, 18,432 checked rows and 72 bounded source replays. Two action observations retain 100% dependency/direct success; primitive search reaches 43.75%. The campaign remains active. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).
+QUEUE-13 is complete and verified: 6,144 charged-preparation rows on 192 reused exposed contexts and 24 bounded source replays. Two observations still isolate truth, but only conditioned-direct remains 100% successful inside the shared work envelope. The campaign remains active; candidate-family misspecification is the next distinct frontier. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).

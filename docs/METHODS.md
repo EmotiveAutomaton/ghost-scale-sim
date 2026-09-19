@@ -567,6 +567,17 @@ and grouped topologies, nests four histories within each, reconstructs all rows 
 frozen source and performs outcome-independent extracted-source replay. This is a
 descriptive screen, not a third final contrast; it does not test action/routine evidence.
 
+The charged physical query-preparation diagnostic reuses the complete-menu packet
+byte-for-byte after its outcomes were exposed. For each action query, a public-only
+selector searches for a setup path that reaches the same query state under every
+candidate law still compatible with prior evidence. Candidate simulation, robust
+setup search, the actual setup actions, the observed action and downstream task
+execution share the 32,768-operation envelope. The verifier independently executes
+every setup under every prior-compatible law and checks that the stored query state,
+legality, trace and candidate filtering agree. Each query receives a freshly
+provisioned task-initial object; provisioning/reset is explicitly outside the count.
+The diagnostic adds no support or primary and cannot repair the supplied-family limit.
+
 Campaign unit accounting retains the previously filed conservative identifier count
 when a later refresh would deduplicate identifiers shared by reused branch plans. The
 final-primary filing caught and corrected such a decrease before commit. Scientific
