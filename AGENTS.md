@@ -17,7 +17,20 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Latest campaign: V18.4 continuing exploration (2026-09-19)
+## Latest campaign: V18.4 fixed-cutoff closeout (2026-09-20)
+
+V18.4 closed at its immutable 13:00 UTC science cutoff. Read
+[the final report](docs/versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md)
+and the closeout, coverage and validity records in results/v18/exploratory-loop,
+then outer .local/v18-4/HANDOFF.md and native state before future work.
+All 28 science packets and 28 adjacent replays are verified and published.
+The minimum elapsed checkpoint was reached; uninterrupted occupancy and full
+experimental coverage were not. Useful designs remain; no exhaustion is claimed.
+Do not restart completed science, refill this closed allocation or extend its clocks.
+Further experiments require a separately authorized allocation. Retain failures
+and source snapshots. The local final handoff records owned-service shutdown.
+
+## V18.4 continuing-exploration commission (historical, 2026-09-19)
 
 The owner explicitly commissioned a new, large, adaptive exploratory campaign after
 V18.3 finished too early. Read `docs/versions/v18-selective-acquisition/exploratory-loop/README.md`

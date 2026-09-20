@@ -1,5 +1,13 @@
 # V18.4: continuing exploratory review
 
+Status: closed at the 20 September 2026 fixed science cutoff. All 28 science
+packets and adjacent verification packets are published. Useful work continued
+past the minimum checkpoint; uninterrupted occupancy and full coverage were not
+achieved. [Final report](FINAL_REPORT.md) and
+[closeout](../../../../results/v18/exploratory-loop/CLOSEOUT.json). The commissioning
+contract below is historical and does not authorize further execution.
+
+
 The owner commissioned this extension on 19 September after V18.3 undershot the
 available runtime. The task is to derive new experiments from completed results
 and further Terra research, run useful work through at least 20 September 05:00

@@ -1,0 +1,65 @@
+{
+  "additional_bank_diagnostic_means": 75,
+  "at": "2026-09-20T13:12:30.142156+00:00",
+  "audit_scope": "Independent closeout hash/portable-archive/queue/proof binding audit; uses already completed scientific replay, no post-cutoff scientific execution.",
+  "audit_script_sha256": "8230dfe295ea2a1ed2a3430ae377b3e15bc5830c80ca6fc40e6eb121a251f058",
+  "audit_sha256": "93f6c6524d7edf6fe26abf4da578a365b4380edeef8ba284d689fda0240e66c6",
+  "checks": {
+    "all_12585_scientific_archive_members_match": true,
+    "all_28_adjacent_replays_pass": true,
+    "all_28_public_private_proofs_match": true,
+    "all_28_science_complete": true,
+    "all_plan_source_snapshot_hashes_match": true,
+    "all_previous_event_acknowledgments_match": true,
+    "all_public_export_hashes_match": true
+  },
+  "ci": [
+    {
+      "conclusion": "failure",
+      "failed_instruments": [
+        "C11",
+        "M01"
+      ],
+      "failed_test": "tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates",
+      "head": "532fb33b38e84068b8a200f4251ea8020da214f7",
+      "run_id": 35511113844
+    },
+    {
+      "conclusion": "failure",
+      "failed_instruments": [
+        "C11",
+        "M01"
+      ],
+      "failed_test": "tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates",
+      "head": "8ce55ce93200a52e022553fcf5b50efec844bf09",
+      "run_id": 35511554738
+    }
+  ],
+  "historical_failed_instruments": {
+    "C11": {
+      "failed_names": [
+        "positive:the_set_contains_the_truth"
+      ],
+      "path": "results/validation/soundingline/v15/C11.json",
+      "sha256": "540b4372defb6c1cefc1460ab9a2c6706c854067829d5c78a83d61bd1030eca2"
+    },
+    "M01": {
+      "failed_names": [
+        "positive:every_posterior_is_a_normalized_distribution"
+      ],
+      "path": "results/validation/soundingline/v15/M01.json",
+      "sha256": "43cb4cfa98ba49e84f0d5958cafe475421512ad578cb947bde04341103232060"
+    }
+  },
+  "independent_mean_count": 115713,
+  "passed_for_current_packets": true,
+  "prior_scientific_publication_head": "8ce55ce93200a52e022553fcf5b50efec844bf09",
+  "replay_scope": "112 whole finite units and 1565 neural/access forecast files with 64 fixed rows per file; retained all-mean reconstruction. No full retraining, new test draws or extra scientific replay at closeout.",
+  "retained_limitations": [
+    "R1 initial candidate alias withholds distinct-model selection/averaging interpretation; R2 tests distinct laws.",
+    "L2a raw inversions violate probability constraints; repaired scores do not validate raw probabilities.",
+    "Numerical projection fixture failure and pre-admission integration failures remain charged; not scientific nulls.",
+    "No architecture-randomization guarantee, confirmation, human result, unique latent ontology, learned world law or unrestricted recursive state closure."
+  ],
+  "source_archives_checked": 18
+}

@@ -1,7 +1,13 @@
 # V18.4 results
 
-Commissioned adaptive exploration, still active. A queue drain triggers review and
-refill; it is not campaign completion. Earlier V18.3 results remain unchanged.
+The fixed allocation closed at the 20 September 06:00 PDT science cutoff. All 28
+science packets and 28 adjacent verification packets completed and were published;
+useful experiments remain unrun. See the [final report](FINAL_REPORT.md) and
+[closeout](../../../../results/v18/exploratory-loop/CLOSEOUT.json). Earlier V18.3
+results remain unchanged. Batch sections retain publication-time wording;
+subsequent paired sections resolve their then-pending comparisons.
+
+Failure on a new question need not mean learned memory lost useful information. V18.4's old-answer banks retain useful history under a supplied-law decoder, even when direct answers worsen. Purpose alignment, change timing, source dependence, and acquisition costs also change which methods help. These are descriptive constructed-method findings, miniature — architecture untested; they establish neither general transfer nor human intent.
 
 ## P1: prospective purpose portfolios
 

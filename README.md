@@ -14,43 +14,22 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
-## V18.4 continuing exploration
+## V18.4 fixed-cutoff report
 
-The [new exploratory loop](docs/versions/v18-selective-acquisition/exploratory-loop/README.md)
-is active. Completed batches trigger analysis and further test design through at
-least 20 September 05:00 PDT, within the existing resource limits. The first
-[prospective compression result](docs/versions/v18-selective-acquisition/exploratory-loop/RESULTS.md)
-separates the benefit of declared future purposes from a generic preference for
-more memory diversity. Both change-adaptation horizons are now verified; the
-matched-prefix diagnostic shows that evidence age and switch timing change the
-skill boundary while leaving rule misspecification unrepaired. The learned-memory new-question failure survives both complementary training
-supports and full maker support. All three question-diversity comparisons repair
-now-covered compositions while worsening untouched farther queries. Verified frozen-state
-readouts do not establish a history advantage against the question/world rival;
-supplied-law bank decoding improves farther scores but requires probability repair.
-The independently sampled realized-target control also retains original-menu
-memory gains without untaught-question transfer. Its verified conditional-target
-comparison improves original-memory scores but does not repair farther transfer.
-Feasible state-mixture decoding now preserves learned-history gains beyond both
-the same-world prior and the no-history bank, with the world law still supplied.
-Paid family expansion helps missing-law prediction but often buys unnecessarily;
-its original candidate pair is predictively aliased, limiting the averaging claim.
-The distinct-law follow-on finds an averaging benefit under alternative laws,
-while its surprise trigger buys more often with correct than missing-law truth;
-prices can erase the forecasting gain in native action.
-Paid source audits have little decision value here: source-information gains do
-not ensure net utility, and the small two-step benefit depends on calibration.
-The first matched-exposure control retains original-menu memory gains but loses
-to its no-history rival on compositions and farther forms. Both paired exposure
-controls are now verified. Restoring original-question exposure still worsens farther
-prediction, including without history; matching total histories and updates
-also retains the deterioration. The larger original-menu bank retains useful
-history under a supplied-law feasible decoder. Diverse training improves those
-paired bank answers despite its worse direct farther forecasts. Conditional targets
-also yield small improvements in useful bank forecasts under that decoder, despite
-worse direct farther answers. Purpose-alignment near ties partly preserve
-identical forecasts even when the history partitions differ. This is adaptive
-constructed-world discovery.
+The [adaptive campaign](docs/versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md)
+closed at the fixed 20 September science cutoff with 28 published science packets
+and 28 adjacent verification packets. Learned memory can retain useful history
+in an old-answer bank while giving worse direct answers to new questions;
+a supplied-law decoder recovers that information. Purpose alignment, evidence age,
+source dependence and acquisition costs change which methods help. These are
+descriptive constructed-method findings, miniature — architecture untested.
+
+Useful work continued beyond 05:00 PDT. Uninterrupted scientific occupancy and
+full coverage were not achieved; concrete experiments remain open.
+[Coverage](results/v18/exploratory-loop/COVERAGE.json),
+[verification](results/v18/exploratory-loop/FINAL_VALIDITY.json) and
+[accounting](results/v18/exploratory-loop/RESOURCE_ACCOUNTING.json) retain the
+evidence, failures and limits.
 
 ## V18.3 research extension complete
 

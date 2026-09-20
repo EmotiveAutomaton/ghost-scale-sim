@@ -1,6 +1,6 @@
 # V18.4 portable evidence
 
-This active adaptive campaign has separate admitted plans, retained superseded
+This cutoff-closed adaptive campaign has separate admitted plans, retained superseded
 unexecuted plans, raw scientific bundles and completed verification receipts.
 `PLAN_LEDGER.json` records admission/supersession, not scientific completion.
 `sources/<sha256>.zip` supplies the source archive named by each plan.
@@ -20,3 +20,11 @@ Machine-local process logs, ownership and intermediate optimizer checkpoints
 remain in private operating storage. No current-world human evidence is present.
 See the [study](../../../docs/versions/v18-selective-acquisition/exploratory-loop/RESULTS.md)
 for claims, limits and next research decisions.
+
+Final [coverage](COVERAGE.json), [validity](FINAL_VALIDITY.json),
+[accounting](RESOURCE_ACCOUNTING.json) and [closeout](CLOSEOUT.json) distinguish
+28 science packets (one timing pilot), 28 adjacent replays and useful unimplemented
+designs. Fourteen finite packets contain 38,480 assigned evaluations; fourteen
+neural/access packets are separate. These are not independent-sample counts.
+All 12,585 scientific files and archive hashes passed the documentary audit.
+No scientific work ran after cutoff.

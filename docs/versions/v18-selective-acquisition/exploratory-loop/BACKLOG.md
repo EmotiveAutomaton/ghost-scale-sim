@@ -1,5 +1,15 @@
 # Review and refill backlog
 
+Current status at the 20 September cutoff: every admitted science and replay
+packet is published; no science remains queued. Historical review entries below
+retain earlier pending states. The [final report](FINAL_REPORT.md#useful-work-that-remains)
+and [coverage ledger](../../../../results/v18/exploratory-loop/COVERAGE.json) supersede
+them. Useful work is **not exhausted**: calibrated purchases, broader purposes,
+coupled/asymmetric provenance, joint interventions, matched-accuracy costs,
+selection interactions and recursive learning remain unrun. A separate allocation
+is required for work after the immutable cutoff.
+
+
 ## Post-P3 transition
 
 P3 is now verified and published: 640 retained worlds, 7,168 independent means,

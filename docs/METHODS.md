@@ -933,3 +933,12 @@ P3 publication reports all shifts and cardinalities, then conditions descriptive
 on changed partitions. Partition identity, forecast identity within a fixed
 probability tolerance, and aggregate score proximity remain separate. Selected
 illustrations do not change the full roster or the prespecified diagnostic.
+
+V18.4 closeout separates admission, execution, verification, publication and open
+coverage. Its documentary audit hashes frozen sources, binds adjacent replay to
+parent plans/summaries, checks concatenated portable archives and every manifested
+scientific member against retained files. No science is regenerated after cutoff.
+Accounting takes the maximum process/native/uncertainty charge per attempt before
+adding separately measured child CPU; envelopes and their components are not added
+twice. Elapsed-window fulfillment does not certify continuous occupancy or
+experimental exhaustion. [Final record](versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md).

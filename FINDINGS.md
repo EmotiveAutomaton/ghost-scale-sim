@@ -1,5 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 fixed-cutoff synthesis (20 September 2026)
+
+Failure on a new question need not mean learned memory lost useful information. V18.4's old-answer banks retain useful history under a supplied-law decoder, even when direct answers worsen. Purpose alignment, change timing, source dependence, and acquisition costs also change which methods help. These are descriptive constructed-method findings, miniature — architecture untested; they establish neither general transfer nor human intent.
+
+All 28 admitted packets and adjacent replays are published. The elapsed minimum
+was reached; uninterrupted occupancy and full coverage were not. Useful work remains.
+[Final report](docs/versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md).
+
 ## V18.4 P3: partition versus forecast equivalence
 
 Why do some incorrect history-purpose pairings nearly match correct alignment? With four memory symbols, shifting the supplemental targets by four history positions preserves the same future forecasts to numerical tolerance in 252 of 320 original-rule worlds and 240 of 320 alternative-rule worlds; the actual history partitions match in only 244 and 166, respectively. Near ties partly reflect equivalence for the tested future questions: different memory partitions need not change those answers. This is a descriptive constructed-method result with supplied decoding, miniature — architecture untested.
