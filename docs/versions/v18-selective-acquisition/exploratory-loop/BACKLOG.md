@@ -20,3 +20,13 @@ After every named batch, record its outcome, estimates based on measured costs,
 new explanations, selected next tests and why remaining alternatives are lower
 priority. Completion of this table is not automatic campaign closure: generate
 another reviewed round while useful uncertainty remains before the runtime target.
+
+
+## U96-derived next diagnostic
+
+The skill contrast reverses between the 32- and 96-step packets, whose trace seeds
+and change schedules differ. Before claiming a pure time effect, construct common
+96-step trajectories with fixed absolute change times and score nested prefixes,
+keeping mixture priors and all reader settings fixed. This isolates evidence age
+from horizon-specific draws. Family revision remains independently motivated by
+the omitted-rule failure. No rerun of the completed packets is needed.

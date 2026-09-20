@@ -21,8 +21,10 @@ is active. Completed batches trigger analysis and further test design through at
 least 20 September 05:00 PDT, within the existing resource limits. The first
 [prospective compression result](docs/versions/v18-selective-acquisition/exploratory-loop/RESULTS.md)
 separates the benefit of declared future purposes from a generic preference for
-more memory diversity. New learned-support and change-adaptation comparisons are
-running or queued; this is adaptive constructed-world discovery.
+more memory diversity. Both change-adaptation horizons are now verified; the
+longer comparison changes the skill boundary while leaving rule misspecification
+unrepaired. Main learned-support comparisons are running or queued; this is
+adaptive constructed-world discovery.
 
 ## V18.3 research extension complete
 

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 U96: longer change-adaptation streams (19 September 2026 PDT)
+
+Does uncertainty over changing roles remain useful in longer streams? With independent observations in the 96-step comparison, the mixture improves prediction after skill changes: logarithmic loss is 0.67629 versus 0.68863 for static inference, reversing the shorter packet's ordering. After goal changes, its loss is 0.71549 versus 1.62893 for static inference and 0.75456 for fixed fast-role updating; expected artifact matching is 79.56%, 67.11% and 79.48%, respectively. The skill benefit disappears with copied observations. A small stationary cost remains, and the mixture still does not repair an omitted decision rule. These are descriptive constructed-method results; the horizons use separate generated traces, so their difference is not a paired causal estimate of extra observation time.
+
+[Evidence and limits](docs/exchange/v18-4-U96-response.md).
+
 ## V18.4 U: uncertainty over the changing role (19 September 2026 PDT)
 
 Averaging possible kinds and rates of change reduces the cost of adaptive memory in this constructed comparison. With independent observations and no change, logarithmic prediction loss is 0.704 for the mixture, 0.770 for fixed fast-role updating and 0.695 for static inference. After a goal change, the mixture retains the adaptive benefit: 0.814 versus 1.574 for static inference, with expected artifact-match rates of 76.72% versus 65.86%. It does not solve every change: static inference remains slightly better under skill changes and an unrepresented decision-rule change. These are descriptive constructed-method results, not an acquired-learning advantage or a general solution to model revision.
