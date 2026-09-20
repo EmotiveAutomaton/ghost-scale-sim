@@ -563,3 +563,41 @@ comparisons, every selected fit and curve, target audit, raw evidence and costs.
 Conditional targets may improve old-menu fitting without transfer, help both,
 do nothing or harm. A feasible-bank decoder and full predictive-state closure
 remain different interventions. Each arm has an adjacent independent replay slot.
+
+## L2d: matched-training query allocation through a common bank decoder
+
+L4 matched-total training retains farther deterioration under diverse queries,
+including in the question/world-only rival. Test whether that deterioration also
+appears when both arms answer through the same supplied-law old-bank decoder.
+Reuse the verified 768-history original-menu and diverse/restored fits. Apply
+L2c's unchanged convex projection, fixed truncated inverse, same-world prior and
+history-posterior references to their five original-question forecast banks.
+No models are retrained, selected again or given new question targets.
+
+Each arm uses the same fixed indices 0–15, 32–47 and 64–79 from each of sixteen
+cells and both maker halves: 1,536 paired histories and twelve banks per history.
+Every world, state and history must match across parents before admission; bind
+all input files and selected forecast hashes to their completed replay proofs.
+This is a new decoder-by-training comparison on retained data, not new independent
+world replication. Keep the two science packets adjacent to their own independent
+verification packets. Report their paired arm differences rather than interpreting
+the overlapping controls as additional evidence.
+
+If diverse training's feasible decoded predictions match or improve upon the
+original-menu arm, its worse direct farther forecasts cannot be explained solely
+by poorer information accessible through this old bank and supplied law. If they
+worsen too, bank approximation or calibration remains a contributor. Neither
+outcome identifies latent roles or proves that an unsupplied law could be learned.
+Projection residuals, certificates, raw inverse violations, and no-history and
+prior comparisons qualify both readings. Direct farther tests have a different
+state allocation from these two maker halves; their published full-sample losses
+are contextual, not a within-history decoder effect. Comparisons between the two
+new arms use identical histories. No scientific ranking gates validity.
+
+Retain all L2c controls and thresholds, independent scalar probability/score/gap
+reconstruction, target noninterference, corruption rejection, all independent
+means and eight exact whole-unit replays per packet. Prior L2c fixture timings
+forecast 180–500 CPU seconds per arm; actual timing supersedes that estimate.
+Admission must preserve enough cutoff and CPU allowance for the already queued
+conditional-target pair and the new bounded diagnostics. This adds no seeds or
+duplicated original learning runs.

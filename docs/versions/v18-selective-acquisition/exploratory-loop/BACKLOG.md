@@ -1,6 +1,6 @@
 # Review and refill backlog
 
-Review 12: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
+Review 13: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
 L3/L2a and R1 are verified. R1 publication records useful paid expansion but an
 aliased initial candidate pair; R2 is admitted to test distinct laws and class-prior mass.
 S1 is now verified and published: audit-only policies stop; limited two-step
@@ -8,7 +8,9 @@ benefits depend on calibration and do not follow from graph information alone.
 L4's original-menu matched-exposure control is now verified and published. The
 diverse/restored arm is now verified and published: restoring old-question exposure
 does not prevent farther deterioration, including without history. The
-original/matched-total arm remains running.
+original/matched-total arm is now verified and published. At matched histories
+and updates, diverse training still worsens farther predictions for every learned
+reader. Total volume alone therefore cannot explain the earlier contrast.
 L2c feasible-bank decoding is implemented; controls, measured timing and
 source-bound admission are retained with REVIEW_11 and its admission receipt.
 Remaining rows require their own protocol, gates and source freeze.
@@ -20,7 +22,7 @@ Admission and measured controls are retained in [REVIEW_12](REVIEW_12.md) and
 [L2b admission](../../../../results/v18/exploratory-loop/L2b-ADMISSION.json);
 execution is a separate queue state. L2c remains the independently queued
 decoder-feasibility diagnostic; its pending effects are not used to choose this
-target contrast. Matching total exposure, supplied-law decoding, calibration,
+target contrast. Supplied-law decoding, calibration,
 intervention composition and preparation economics remain distinct openings.
 
 | ID | Next question | Discriminating outcome | Priority |
@@ -158,3 +160,27 @@ several shifts. Costs are 693.59375 CPU seconds and 703.666838 wall seconds.
 A future partition-equivalence diagnostic can distinguish shifts that retain
 useful code structure from those that change it; duplicating random shifts alone
 would be less decisive. L4 remains the immediate admitted learning comparison.
+
+## Review 13 priorities
+
+All three L4 exposure arms are verified. The matched-total contrast retains the
+farther deterioration, including without history, while taught compositions
+improve. L2d now asks whether that deterioration survives a common supplied-law
+decoder of the two matched-training old-answer banks. Its two 1,536-history
+packets use the unchanged L2c instrument, bound parent forecasts and identical
+world/history/state rosters. Equal or improved diverse-arm decoded prediction
+would retain external-decoder extrapolation as an explanation; worse decoded
+prediction would implicate errors already accessible through the old bank.
+Neither implies identified roles or learned law access. Direct farther test
+allocation differs, so its published means are not paired decoder contrasts.
+
+Eleven unchanged instrument/runtime controls pass. Queue revision 19 appends both
+science packets and their adjacent replays after the conditional-target pair,
+preserving the preceding 46 slots. The new diagnostic forecasts 360–1,000 CPU
+seconds in total; existing L2b learning forecasts 8,600–11,800. This is a bounded
+new comparison rather than repeat fit seeds or an occupancy allocation.
+See [REVIEW_13](REVIEW_13.md) for candidate outcomes and
+[admission](../../../../results/v18/exploratory-loop/L2d-ADMISSION.json) for bindings.
+Development-selection interactions, S2 asymmetric/coupled audits, I1 composition,
+C1 matched-accuracy costs and P2 partition equivalence remain useful candidates.
+No exhausted-useful-work disposition is supported.

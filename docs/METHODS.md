@@ -870,3 +870,11 @@ contrast fixes both original-question count and total training volume. Shared
 histories, initialization, updates and development access leave question allocation
 and its optimization consequences different. A no-history reversal prevents
 attributing this boundary uniquely to memory.
+
+L2d applies the unchanged feasible-bank instrument to the two matched-total L4
+training arms. Input binding requires identical selected worlds, histories and
+evaluator states, with old-question forecasts tied to verified parent weights.
+Its two-arm decoder contrast uses the same roster; full direct farther scores
+have a different state allocation and are not relabeled paired decoder effects.
+Feasibility, proper scoring and independent replay remain validity checks; the
+direction of the arm difference is a scientific outcome.
