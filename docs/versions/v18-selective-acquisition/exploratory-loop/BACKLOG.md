@@ -244,3 +244,7 @@ During review 15 the L2d original/matched-total bank also verified and published
 Useful history survives its supplied-law decoder; the diverse counterpart remains
 necessary for the training-allocation contrast. L2e conditional bank is now
 source-bound and admitted with exact roster pairing and adjacent replay.
+
+The L2d diverse counterpart verified later in review 15. All three feasible
+history banks improve, so poorer accessible bank information alone does not explain
+direct farther deterioration. The common-decoder L2e target comparison is next.

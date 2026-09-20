@@ -905,3 +905,8 @@ L2d first-arm publication separates accessible history in a verified bank contro
 from the unfinished paired training-allocation effect. Equal roster binding makes
 the future between-bank contrast paired; different direct-test allocation still
 prevents relabeling direct full-sample means as decoder intervention effects.
+
+L2d paired publication checks identical worlds, histories and evaluation states
+across every selected bank. Opposite directions in paired bank and broader direct
+test means support an access limitation without pretending their different test
+allocations provide a paired decoder-effect estimate.

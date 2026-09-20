@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L2d: paired banks
+
+Does diverse training also damage farther prediction when both training arms use the same supplied-law decoder of their old-answer banks? No: farther mean logarithmic loss, where lower is better, falls from 0.82531 to 0.80272 for flat memory and from 0.82492 to 0.79555 for split memory; direct-history banks improve too. Useful bank information therefore survives despite the earlier deterioration in direct farther answers. This supports a decoder-access explanation within the supplied law, not learned law access. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L2d-paired-response.md).
+
 ## V18.4 L2d: original-question bank control
 
 Does useful learned history remain accessible through the old-answer bank in the larger original-question training control? Yes with the supplied-law feasible decoder: farther mean logarithmic loss, where lower is better, is 0.82531 for flat memory and 0.82492 for split memory, versus 0.93778 without history and 0.93101 for the same-world prior. This first arm does not yet estimate the effect of diverse training. This is a descriptive constructed-method result, miniature — architecture untested.

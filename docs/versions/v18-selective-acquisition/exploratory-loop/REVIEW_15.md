@@ -85,3 +85,11 @@ This is a first-arm control; the diverse-bank effect remains pending. Science an
 replay charged 391.140625 CPU seconds and took 6.70 wall minutes, supporting the
 bank forecast. Useful history under this decoder does not imply learned law
 access. The new conditional-bank admission preserves all preceding 52 slots.
+
+The paired diverse bank subsequently verified during handoff preparation. All
+three history banks improve under the common supplied decoder; flat/split farther
+loss falls to 0.80272/0.79555. This rejects poorer accessible old-bank information
+as the sole explanation of the direct-answer deterioration, with different direct
+test allocation and supplied law retained as limits. Second-arm cost is 369.359375
+CPU seconds and 6.32 wall minutes. Both L2e target banks remain the next comparison;
+no new ranking or experiment is selected from partial running results.

@@ -45,8 +45,8 @@ to its no-history rival on compositions and farther forms. Both paired exposure
 controls are now verified. Restoring original-question exposure still worsens farther
 prediction, including without history; matching total histories and updates
 also retains the deterioration. The larger original-menu bank retains useful
-history under a supplied-law feasible decoder; its diverse-bank contrast remains
-pending. This is adaptive
+history under a supplied-law feasible decoder. Diverse training improves those
+paired bank answers despite its worse direct farther forecasts. This is adaptive
 constructed-world discovery.
 
 ## V18.3 research extension complete
