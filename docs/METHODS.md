@@ -774,3 +774,8 @@ Every unit's final posterior and evidence are independently reconstructed by a
 batch likelihood product. Final static-model evidence must be order invariant;
 purchase timing and prequential forecasts need not be. This is finite catalog
 access, not law invention, human revision or a learned uptake mechanism.
+
+The full-support diversity comparison completes the six-regime paired support/query
+slate. Both test halves contain trained combinations; the legacy novelty labels
+are not used to claim held-out maker support. Fixed total labels leave per-question
+exposure as an unresolved explanation, alongside decoder and optimization effects.
