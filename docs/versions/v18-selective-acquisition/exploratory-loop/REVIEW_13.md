@@ -94,3 +94,28 @@ causal inputs and calibration/evaluation separation would validate the instrumen
 This design is retained for a later review; it is not executable admission and
 does not displace the several hours already queued. Research details remain in
 the separate research notes. No useful-work exhaustion is supported.
+
+## Feasible-bank completion during this review
+
+L2c then completed science and adjacent replay: 1,536 retained histories, 18,432
+learned banks, 3,200 independently reconstructed means and eight exact whole-unit
+replays. Every projection certificate passes; maximum simplex gap is
+1.75659e-14 against the unchanged 1e-7 threshold. The already completed eleven
+bank/runtime controls apply to the unchanged scientific implementation. No
+redundant test run or fresh model fit was needed for publication.
+
+Farther logarithmic loss is 0.81764 for feasible flat-memory decoding and 0.83576
+for split-memory decoding, versus 0.93884 for the no-history bank and 0.93101 for
+the same-world prior. Both also improve the clipped inverse. This preserves useful
+learned history under valid supplied-law decoding; it does not identify roles,
+learn the supplied law or establish recursive closure. Geometric residual alone
+is smaller for the no-history bank despite its worse prediction. The exact
+history posterior remains stronger under its stipulated prior.
+
+Science plus replay charged 376.828125 CPU seconds and took 385.151485 wall
+seconds (6.42 minutes), within the previous packet estimate. Full portable
+evidence and documentary write-through form a separate published batch. L2d,
+admitted before this result, now asks whether the same access route survives
+diverse versus original question allocation at matched training volume. L2b is
+the independent training-target intervention. Applied feasible decoding of those
+future L2b banks remains a useful next candidate after their own verification.

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L2c: feasible bank decoding
+
+Do learned old-question predictions retain useful history when decoded as valid mixtures of supplied finite states? Yes in this comparison: farther mean logarithmic loss, where lower is better, is 0.81764 for flat memory and 0.83576 for split memory, versus 0.93884 for the no-history bank and 0.93101 for the same-world prior. Both memory readers improve over clipped inversion, which gives 0.91168 and 0.97634. Useful history therefore survives this feasible decoder, but the decoder is given the world law and does not identify unique maker roles. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L2c-response.md).
+
 ## V18.4 R2: distinct-law averaging and purchase costs
 
 Does averaging distinct explanations avoid premature commitment, and does surprise identify when to buy a missing law? With equal class priors and alternative-rule truth, averaging lowers sequential logarithmic loss, where lower is better, from 0.89372 to 0.79964 versus selection. The lower surprise threshold buys in only 37.50% of missing-law streams but unnecessarily in 65.00% of correct-law streams. At that threshold, expansion improves missing-law forecasts, yet its costs erase the average native-action benefit at both stated prices. This is a descriptive constructed-method result about finite catalog inference, miniature — architecture untested.

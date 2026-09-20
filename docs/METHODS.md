@@ -883,3 +883,8 @@ R2 separates transient sequential loss, final prediction, native-action probabil
 and priced action. Purchase frequency conditional on the true law diagnoses a
 trigger without making true law available to it. A raw-surprise failure does not
 by itself identify intrinsic entropy or justify entropy-centering as calibrated.
+
+L2c publication distinguishes valid probability forecasts from useful history.
+Feasible mixture decoding is compared with both the same-world prior and a learned
+question/world-only bank. Euclidean residual and simplex gap diagnose geometry
+and optimization respectively; neither serves as a predictive-success gate.

@@ -28,6 +28,8 @@ supports and full maker support. All three question-diversity comparisons repair
 now-covered compositions while worsening untouched farther queries. Verified frozen-state
 readouts do not establish a history advantage against the question/world rival;
 supplied-law bank decoding improves farther scores but requires probability repair.
+Feasible state-mixture decoding now preserves learned-history gains beyond both
+the same-world prior and the no-history bank, with the world law still supplied.
 Paid family expansion helps missing-law prediction but often buys unnecessarily;
 its original candidate pair is predictively aliased, limiting the averaging claim.
 The distinct-law follow-on finds an averaging benefit under alternative laws,

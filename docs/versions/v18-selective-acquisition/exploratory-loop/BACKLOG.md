@@ -13,8 +13,9 @@ does not prevent farther deterioration, including without history. The
 original/matched-total arm is now verified and published. At matched histories
 and updates, diverse training still worsens farther predictions for every learned
 reader. Total volume alone therefore cannot explain the earlier contrast.
-L2c feasible-bank decoding is implemented; controls, measured timing and
-source-bound admission are retained with REVIEW_11 and its admission receipt.
+L2c feasible-bank decoding is now verified and published: history readers beat
+both the no-history bank and the same-world prior under valid supplied-law
+mixtures. Controls, measured timing and source-bound admission remain retained.
 Remaining rows require their own protocol, gates and source freeze.
 
 Review 12 implements the next conditional-target comparison under an explicitly
@@ -22,9 +23,9 @@ sampled sixteen-state training prior. Its two fresh paired arms share public
 inputs, initialization, update budget and realized-state development targets.
 Admission and measured controls are retained in [REVIEW_12](REVIEW_12.md) and
 [L2b admission](../../../../results/v18/exploratory-loop/L2b-ADMISSION.json);
-execution is a separate queue state. L2c remains the independently queued
-decoder-feasibility diagnostic; its pending effects are not used to choose this
-target contrast. Supplied-law decoding, calibration,
+execution is a separate queue state. L2c was independently queued when this
+target contrast was designed; its subsequently verified effects did not select
+the target comparison. Supplied-law decoding, calibration,
 intervention composition and preparation economics remain distinct openings.
 
 | ID | Next question | Discriminating outcome | Priority |
@@ -195,3 +196,11 @@ or explicitly withhold optional-stopping guarantees. Intrinsic randomness and
 misspecification remain competing explanations, not established causes of the
 R2 purchase-rate reversal. REVIEW_13 records the corrected research proposal.
 This is useful next design work, not an already implemented packet.
+
+L2c also completed during review 13. Valid mixtures retain history advantages
+over both no-history rivals and improve the fixed clipped inverse; small bank
+residual alone does not predict usefulness. The already admitted L2d contrast
+now tests that access route across matched training allocations, while L2b tests
+training targets. A later decoder applied to L2b banks would separate changes in
+learned old-bank accuracy from changes in direct extrapolation. This remains a
+concrete follow-on, not a reason to duplicate the current fit queue.
