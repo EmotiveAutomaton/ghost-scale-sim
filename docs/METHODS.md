@@ -731,3 +731,7 @@ penalty and temperature. The farther question family remains absent from both.
 Public exports retain copied encoders and fitted readouts, and independent replay
 reconstructs predictions from them. This bounded decoder ladder cannot establish
 information destruction or that the original predictor used recovered features.
+
+The L1 full-support comparison holds total history and label counts fixed, so
+examples per individual maker combination fall relative to half-support training.
+Report both test halves as familiar combinations and retain that density caveat.
