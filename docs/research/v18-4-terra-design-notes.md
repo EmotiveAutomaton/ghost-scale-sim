@@ -279,3 +279,33 @@ weights), and random state-count balance should be reported rather than gate a
 valid IID draw. A cited distillation page could not be fetched for direct review;
 it is not a load-bearing premise. No literature result is a Ghost result, and
 neither a teacher improvement nor an architectural transfer claim is assumed.
+
+## Thirteenth bounded Terra pass: calibrated expansion triggers
+
+Before research, the local position was that raw observed surprise may confound
+intrinsic predictive randomness with misspecification. R2's purchase rates alone
+do not identify that mechanism, and subtracting predictive entropy is neither a
+calibration proof nor an optimal inquiry policy. One sequential Terra researcher
+examined this specific unresolved comparison, without implementation or auditing.
+
+The reviewer directly checked [Arnold, Henzi and Ziegel](https://arxiv.org/abs/2109.11761).
+Their paper distinguishes fixed evaluation periods from sequential calibration
+tests and develops e-value methods valid under optional stopping. This motivates
+checking the whole purchase process rather than treating a per-time tail rank as
+an ever-purchase guarantee. No e-value algorithm is implemented or claimed here.
+
+The useful proposal is to freeze a trigger on separate calibration worlds and
+compare allocation of purchases at a matched calibration-set purchase rate,
+retaining fresh evaluation worlds, past-only inputs and all actual costs.
+Expected acquisition count does not match purchase timing or refitting work;
+both must remain separately charged. Observable predictive uncertainty can be
+a calibration input without exposing true state or law to the reader.
+
+Three suggested controls need correction. Repeated overlapping four-step tests
+do not give an overall purchase probability equal to their single-time tail
+probability. A missing-law purchase increase is a scientific outcome, not a
+positive validity gate. With behaviorally inert purchases, one policy may improve
+relative utility simply by buying less; the exact control is unchanged predictions
+and net utility equal to the no-purchase score minus its recorded cost. The other
+returned sources are not load-bearing premises. R3 remains a reviewed design
+candidate; no calibrated-trigger result or admission follows from this research.

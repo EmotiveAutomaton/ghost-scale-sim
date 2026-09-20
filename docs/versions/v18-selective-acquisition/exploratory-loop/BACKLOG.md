@@ -2,7 +2,9 @@
 
 Review 13: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
 L3/L2a and R1 are verified. R1 publication records useful paid expansion but an
-aliased initial candidate pair; R2 is admitted to test distinct laws and class-prior mass.
+aliased initial candidate pair; R2 is now verified and published with distinct laws
+and class-prior mass. Averaging helps under alternative laws, while the surprise
+purchase trigger is poorly selective and prices can erase action benefits.
 S1 is now verified and published: audit-only policies stop; limited two-step
 benefits depend on calibration and do not follow from graph information alone.
 L4's original-menu matched-exposure control is now verified and published. The
@@ -184,3 +186,12 @@ See [REVIEW_13](REVIEW_13.md) for candidate outcomes and
 Development-selection interactions, S2 asymmetric/coupled audits, I1 composition,
 C1 matched-accuracy costs and P2 partition equivalence remain useful candidates.
 No exhausted-useful-work disposition is supported.
+
+R2's completed result adds a concrete R3 candidate: compare a past-only calibrated
+trigger with raw surprise at a purchase rate matched on disjoint calibration
+worlds, retaining timing and full refit costs on fresh evaluation worlds. Match
+expected access spending separately from computation; calibrate the whole sequence
+or explicitly withhold optional-stopping guarantees. Intrinsic randomness and
+misspecification remain competing explanations, not established causes of the
+R2 purchase-rate reversal. REVIEW_13 records the corrected research proposal.
+This is useful next design work, not an already implemented packet.

@@ -61,3 +61,36 @@ or useful-work exhaustion is claimed. At 12:00 UTC review remaining usefulness;
 [L2d admission](../../../../results/v18/exploratory-loop/L2d-ADMISSION.json) distinguish
 verified evidence from newly queued work. Prior admission CI failed only on V15
 C11/M01. The historical tests and failed instruments remain unchanged.
+
+## Distinct-law completion during this review
+
+R2 and its adjacent replay subsequently completed: 1,920 streams, 7,776 independent
+means and eight exact whole-stream replays, with ten isolated controls passing.
+Science plus verification charged 611.218750 CPU seconds and took 623.617782 wall
+seconds (10.39 minutes). The original 750–1,100-second science forecast was
+conservative. The result is published as its own nameable batch.
+
+Under equal class priors, averaging improves alternative-rule sequential loss
+from 0.89372 to 0.79964 versus selection. The lower-threshold purchase trigger buys
+in 65.00% of correct-rule streams and 37.50% of missing-law streams; priced native
+action can lose despite improved forecasts. Doubling supplied-class prior mass
+helps the supplied truth and harms the initial alternative. These are separate
+finite outcomes, not generic averaging or paid-inquiry guarantees.
+
+This motivates a concrete R3 candidate: calibrate a past-only trigger on disjoint
+supplied-catalog worlds, match the calibration-set purchase rate to a raw-surprise
+rival, then compare purchase allocation, timing, actual refit costs and utility
+on paired fresh worlds. Intrinsic entropy, finite state uncertainty and actual
+misspecification are competing explanations. Whole-horizon purchase calibration
+must account for repeated looks; empirical conditional ranks alone do not prove
+optional-stopping validity. Lower unnecessary purchase with maintained missing-law
+benefit, a tradeoff, a tie or harm are all useful outcomes.
+
+One sequential bounded Terra pass informed this candidate after R2 completed;
+the earlier no-new-search statement applies only to L2d. The reviewer checked a
+primary sequential-calibration source and rejected proposed scientific rankings
+as gates. Toy probability identities, exact no-information/inert-action accounting,
+causal inputs and calibration/evaluation separation would validate the instrument.
+This design is retained for a later review; it is not executable admission and
+does not displace the several hours already queued. Research details remain in
+the separate research notes. No useful-work exhaustion is supported.

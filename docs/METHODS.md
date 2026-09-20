@@ -878,3 +878,8 @@ Its two-arm decoder contrast uses the same roster; full direct farther scores
 have a different state allocation and are not relabeled paired decoder effects.
 Feasibility, proper scoring and independent replay remain validity checks; the
 direction of the arm difference is a scientific outcome.
+
+R2 separates transient sequential loss, final prediction, native-action probability
+and priced action. Purchase frequency conditional on the true law diagnoses a
+trigger without making true law available to it. A raw-surprise failure does not
+by itself identify intrinsic entropy or justify entropy-centering as calibrated.

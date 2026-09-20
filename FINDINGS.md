@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 R2: distinct-law averaging and purchase costs
+
+Does averaging distinct explanations avoid premature commitment, and does surprise identify when to buy a missing law? With equal class priors and alternative-rule truth, averaging lowers sequential logarithmic loss, where lower is better, from 0.89372 to 0.79964 versus selection. The lower surprise threshold buys in only 37.50% of missing-law streams but unnecessarily in 65.00% of correct-law streams. At that threshold, expansion improves missing-law forecasts, yet its costs erase the average native-action benefit at both stated prices. This is a descriptive constructed-method result about finite catalog inference, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-R2-response.md).
+
 ## V18.4 L4: matched total training (20 September 2026 PDT)
 
 Does diverse training still harm farther prediction when histories and update counts match? Yes: farther mean logarithmic loss, where lower is better, rises from 1.68038 to 2.70708 for direct history, 2.10836 to 3.55791 for flat memory, and 2.15324 to 3.77260 for split memory. The no-history reader also worsens, from 1.58653 to 3.08139, while taught compositions improve. Together with the matched-original-exposure comparison, this rules out either reduced original-question exposure or total training volume alone as an explanation. Query allocation, decoder extrapolation and the resulting optimization path remain unresolved. This is a descriptive constructed-method result, miniature — architecture untested.
