@@ -36,3 +36,10 @@ single-worker replay slot and the long learned-support slate. Read actual receip
 instead of treating these estimates as completion evidence. Source investigation,
 family revision, intervention composition and preparation economics remain useful
 candidate families and have not been relabeled as implemented work.
+
+The 32-step U1 result sharpens the next candidate: role/rate averaging reduces
+the stationary penalty but fails to repair a new decision law. It also improves
+opportunity-change proper scores without improving independent-observation
+artifact matching. The next reviewed expansion should separate a changed latent
+state from a changed family and price any source verification or family revision.
+These are useful unresolved distinctions; no exhausted-useful-work state applies.

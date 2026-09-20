@@ -1,0 +1,1514 @@
+[
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.8520760090221491,
+    "expected_match": 0.7659371141374587,
+    "abstention_loss": 0.2216504485834545
+  },
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.8321818028290755,
+    "expected_match": 0.7665273034220127,
+    "abstention_loss": 0.2194178997050805
+  },
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 1.8166599825936283,
+    "expected_match": 0.6064390184911052,
+    "abstention_loss": 0.3693641002359811
+  },
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.8482592138283188,
+    "expected_match": 0.7655561719153959,
+    "abstention_loss": 0.22050700915423027
+  },
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6227036105297477,
+    "expected_match": 0.8208056817957856,
+    "abstention_loss": 0.16947303846686018
+  },
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 1.7657363042021346,
+    "expected_match": 0.6295812172449394,
+    "abstention_loss": 0.3499498291955856
+  },
+  {
+    "condition": "belief",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 1.7659668686826309,
+    "expected_match": 0.6296990928737959,
+    "abstention_loss": 0.34982497126241957
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 1.0000918883589969,
+    "expected_match": 0.7174604765048395,
+    "abstention_loss": 0.26882830923464374
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 0.9685772046693781,
+    "expected_match": 0.7150911678584433,
+    "abstention_loss": 0.2610533519940452
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 1.3217476528484033,
+    "expected_match": 0.6311915978050596,
+    "abstention_loss": 0.33995016075479895
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.9966580120116307,
+    "expected_match": 0.716303748335953,
+    "abstention_loss": 0.26156436984162756
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6227036105297477,
+    "expected_match": 0.8208056817957856,
+    "abstention_loss": 0.16947303846686018
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 1.3089861385442592,
+    "expected_match": 0.6408951495781928,
+    "abstention_loss": 0.32588196382246143
+  },
+  {
+    "condition": "belief",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 1.309830526033388,
+    "expected_match": 0.6409418116315588,
+    "abstention_loss": 0.3260900573643414
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.1716985747009643,
+    "expected_match": 0.6433934684107043,
+    "abstention_loss": 0.34580243265148636
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.1317230824707893,
+    "expected_match": 0.6438244383643537,
+    "abstention_loss": 0.32781534010707625
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 1.795358137454146,
+    "expected_match": 0.47311421806164006,
+    "abstention_loss": 0.48356038153157593
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.202337541600827,
+    "expected_match": 0.6512809912718903,
+    "abstention_loss": 0.3240170693976733
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6227036105297477,
+    "expected_match": 0.8208056817957856,
+    "abstention_loss": 0.16947303846686018
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 2.1884502535695654,
+    "expected_match": 0.47307947355878793,
+    "abstention_loss": 0.4890729250732855
+  },
+  {
+    "condition": "belief",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 2.188082863605957,
+    "expected_match": 0.4730485843948804,
+    "abstention_loss": 0.48933765986530964
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.8342398431303997,
+    "expected_match": 0.7658458526861732,
+    "abstention_loss": 0.21572195417542778
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.8145800779860648,
+    "expected_match": 0.7688066312829067,
+    "abstention_loss": 0.2135912116005573
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 0.7639073639644136,
+    "expected_match": 0.7731933399984179,
+    "abstention_loss": 0.20857325356193726
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.8139822305913009,
+    "expected_match": 0.7671907944588201,
+    "abstention_loss": 0.21414659874243155
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6279770116692389,
+    "expected_match": 0.818167990722399,
+    "abstention_loss": 0.17115135907174558
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 1.575296732772716,
+    "expected_match": 0.6584946956910818,
+    "abstention_loss": 0.3133711724991789
+  },
+  {
+    "condition": "goal",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 1.5744267468944753,
+    "expected_match": 0.6586056159369806,
+    "abstention_loss": 0.3138465947107679
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 1.0326973834377247,
+    "expected_match": 0.693497183820648,
+    "abstention_loss": 0.2745967500183437
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 0.9891200313355304,
+    "expected_match": 0.7063498365216181,
+    "abstention_loss": 0.26550579767862303
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 0.9176311185930315,
+    "expected_match": 0.711281458470095,
+    "abstention_loss": 0.2586819740578755
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.0664193777411968,
+    "expected_match": 0.6929790834525464,
+    "abstention_loss": 0.27339471646590835
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6279770116692389,
+    "expected_match": 0.818167990722399,
+    "abstention_loss": 0.17115135907174558
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 1.777244201135715,
+    "expected_match": 0.5870023153481458,
+    "abstention_loss": 0.368257095569197
+  },
+  {
+    "condition": "goal",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 1.7758766247199498,
+    "expected_match": 0.586844408864935,
+    "abstention_loss": 0.3683448545946353
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.1638922943429186,
+    "expected_match": 0.5987009086892262,
+    "abstention_loss": 0.3566006506547675
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.1184847644747313,
+    "expected_match": 0.6167030411365748,
+    "abstention_loss": 0.33911351399910933
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 1.026736104980386,
+    "expected_match": 0.6200710915470353,
+    "abstention_loss": 0.3279627292485447
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.1955979945488093,
+    "expected_match": 0.6169826969921646,
+    "abstention_loss": 0.3374972109536053
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6279770116692389,
+    "expected_match": 0.818167990722399,
+    "abstention_loss": 0.17115135907174558
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 1.5533265140435994,
+    "expected_match": 0.606904411663403,
+    "abstention_loss": 0.3595900482864639
+  },
+  {
+    "condition": "goal",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 1.5525018362285883,
+    "expected_match": 0.6073791720007474,
+    "abstention_loss": 0.3595457093173401
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.985312071201558,
+    "expected_match": 0.7072615718741959,
+    "abstention_loss": 0.26526138277327127
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.9521729568274185,
+    "expected_match": 0.7114335871214085,
+    "abstention_loss": 0.2624688888135967
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 0.9128169832341215,
+    "expected_match": 0.7277984144308302,
+    "abstention_loss": 0.24684432114809524
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.9545923084616086,
+    "expected_match": 0.7181261799160766,
+    "abstention_loss": 0.25533700202160686
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6279027290705945,
+    "expected_match": 0.8186934010054454,
+    "abstention_loss": 0.17000180201354048
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 1.9593620345866356,
+    "expected_match": 0.6078525400164473,
+    "abstention_loss": 0.35671938463822866
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 1.9594950978391672,
+    "expected_match": 0.6078964605334358,
+    "abstention_loss": 0.35728399992968485
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 1.0853442343376878,
+    "expected_match": 0.657853516502505,
+    "abstention_loss": 0.30219476659870675
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 1.0390214352212874,
+    "expected_match": 0.6680155667803965,
+    "abstention_loss": 0.29612448240046474
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 0.9735061401546259,
+    "expected_match": 0.6905069903261535,
+    "abstention_loss": 0.2732954202618253
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.0835728871664865,
+    "expected_match": 0.6785556987401833,
+    "abstention_loss": 0.28567275145551996
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6279027290705945,
+    "expected_match": 0.8186934010054454,
+    "abstention_loss": 0.17000180201354048
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 1.9897353458221898,
+    "expected_match": 0.5768688154054218,
+    "abstention_loss": 0.38002428102483515
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 1.9900635647041816,
+    "expected_match": 0.5767175215514436,
+    "abstention_loss": 0.38148521906708577
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.1794471273486093,
+    "expected_match": 0.6236736987407717,
+    "abstention_loss": 0.33723094442052826
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.138920448170232,
+    "expected_match": 0.6348471936472235,
+    "abstention_loss": 0.32503396968968457
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 1.015668929720487,
+    "expected_match": 0.6463808765539382,
+    "abstention_loss": 0.3017688294422604
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.132611612417777,
+    "expected_match": 0.6406026003813468,
+    "abstention_loss": 0.3107110411185237
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6279027290705945,
+    "expected_match": 0.8186934010054454,
+    "abstention_loss": 0.17000180201354048
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 1.4378873777399306,
+    "expected_match": 0.6190926345484944,
+    "abstention_loss": 0.3420902764588618
+  },
+  {
+    "condition": "gradual",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 1.4369634606156738,
+    "expected_match": 0.6193316598084367,
+    "abstention_loss": 0.34225093086348857
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.8883787124892204,
+    "expected_match": 0.7462488390729326,
+    "abstention_loss": 0.2332122990017022
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.8816544653705255,
+    "expected_match": 0.7459968262764793,
+    "abstention_loss": 0.23301146491107336
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 1.8277003229444002,
+    "expected_match": 0.5944440587916894,
+    "abstention_loss": 0.3761300267312885
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.9351380374033791,
+    "expected_match": 0.7420481803502282,
+    "abstention_loss": 0.23615724774557353
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6257261416724254,
+    "expected_match": 0.8196184678632453,
+    "abstention_loss": 0.16954579989127164
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 2.452941273128828,
+    "expected_match": 0.5271903482966969,
+    "abstention_loss": 0.4386549111191546
+  },
+  {
+    "condition": "joint",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 2.458278385271896,
+    "expected_match": 0.5265269465240139,
+    "abstention_loss": 0.43984234340595013
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 1.0626555323011115,
+    "expected_match": 0.6615245979372477,
+    "abstention_loss": 0.30061123747828783
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 1.0289822065005696,
+    "expected_match": 0.6670207274436306,
+    "abstention_loss": 0.296783694766609
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 1.571434302337022,
+    "expected_match": 0.5485937070409943,
+    "abstention_loss": 0.4117661158511668
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.1835100026245757,
+    "expected_match": 0.634700303419033,
+    "abstention_loss": 0.32595660977288904
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6257261416724254,
+    "expected_match": 0.8196184678632453,
+    "abstention_loss": 0.16954579989127164
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 2.3532862882892456,
+    "expected_match": 0.48256030444748604,
+    "abstention_loss": 0.4668041968840439
+  },
+  {
+    "condition": "joint",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 2.3562834978165514,
+    "expected_match": 0.48254376958621054,
+    "abstention_loss": 0.4677046788760357
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.1971412315721726,
+    "expected_match": 0.5995014610235037,
+    "abstention_loss": 0.36256943834603583
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.157405464667738,
+    "expected_match": 0.6024198190398544,
+    "abstention_loss": 0.3463327825544133
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 1.677278875338211,
+    "expected_match": 0.5099184756662101,
+    "abstention_loss": 0.43778923135659725
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.2958961257467025,
+    "expected_match": 0.5681384075257867,
+    "abstention_loss": 0.390055613507632
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6257261416724254,
+    "expected_match": 0.8196184678632453,
+    "abstention_loss": 0.16954579989127164
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 1.6984004034956248,
+    "expected_match": 0.5310237542414774,
+    "abstention_loss": 0.4263507646195443
+  },
+  {
+    "condition": "joint",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 1.701022714242953,
+    "expected_match": 0.5310022815107319,
+    "abstention_loss": 0.4268292784775618
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 1.57711648931069,
+    "expected_match": 0.6370729621438587,
+    "abstention_loss": 0.32894814073204026
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 1.7865348817916307,
+    "expected_match": 0.620603726430933,
+    "abstention_loss": 0.3440821369587627
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 1.7140793690583367,
+    "expected_match": 0.6347180930585978,
+    "abstention_loss": 0.341927140446076
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.5622435903025556,
+    "expected_match": 0.6382379914423574,
+    "abstention_loss": 0.32397578932611953
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6281379750645583,
+    "expected_match": 0.8179904832028669,
+    "abstention_loss": 0.17057681988372342
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 1.7096247778989435,
+    "expected_match": 0.6399226431861813,
+    "abstention_loss": 0.3371431710330806
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 1.7125095384086741,
+    "expected_match": 0.638603564027471,
+    "abstention_loss": 0.339652711533001
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 1.669627259852524,
+    "expected_match": 0.6045859177290792,
+    "abstention_loss": 0.34274476771840273
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 1.846390901174741,
+    "expected_match": 0.6015983628782634,
+    "abstention_loss": 0.35138462335585946
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 1.745517934850196,
+    "expected_match": 0.6121496594670541,
+    "abstention_loss": 0.35731589214257065
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.6239301136781752,
+    "expected_match": 0.6173922059662211,
+    "abstention_loss": 0.34385144195746303
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6281379750645583,
+    "expected_match": 0.8179904832028669,
+    "abstention_loss": 0.17057681988372342
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 1.725771818581198,
+    "expected_match": 0.6186489683307765,
+    "abstention_loss": 0.35371444320943235
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 1.7251350463761572,
+    "expected_match": 0.6182046996924434,
+    "abstention_loss": 0.3546687725257776
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.7707053371554449,
+    "expected_match": 0.5730276085317895,
+    "abstention_loss": 0.36599973247716555
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.9229441785301622,
+    "expected_match": 0.5588569849405517,
+    "abstention_loss": 0.3783254814331549
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 1.799983129698411,
+    "expected_match": 0.5720042455488148,
+    "abstention_loss": 0.3850469393637937
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.6712251805790652,
+    "expected_match": 0.5797555372962836,
+    "abstention_loss": 0.37693358140571703
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6281379750645583,
+    "expected_match": 0.8179904832028669,
+    "abstention_loss": 0.17057681988372342
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 1.7666269312649745,
+    "expected_match": 0.5787413019059029,
+    "abstention_loss": 0.38493432046390086
+  },
+  {
+    "condition": "opportunity",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 1.7666931000394914,
+    "expected_match": 0.5772125907439236,
+    "abstention_loss": 0.3858701360092686
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.979901227367578,
+    "expected_match": 0.7180175006924608,
+    "abstention_loss": 0.26071385390366514
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.941328528366698,
+    "expected_match": 0.7235380334797211,
+    "abstention_loss": 0.2551680273104651
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 0.9189165308853477,
+    "expected_match": 0.727870044939666,
+    "abstention_loss": 0.25072279908350414
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.9279337765502688,
+    "expected_match": 0.7230656941401478,
+    "abstention_loss": 0.2548615870765346
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6265279057620572,
+    "expected_match": 0.8186428403586407,
+    "abstention_loss": 0.1706658474571825
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 1.7714924500969382,
+    "expected_match": 0.6285656533172026,
+    "abstention_loss": 0.3405469668695833
+  },
+  {
+    "condition": "return",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 1.7708872587730067,
+    "expected_match": 0.6290224369781222,
+    "abstention_loss": 0.340926994871399
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 1.133519057504262,
+    "expected_match": 0.6512271250201291,
+    "abstention_loss": 0.30966540622840644
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 1.083663545514164,
+    "expected_match": 0.6603507327247012,
+    "abstention_loss": 0.30595777255882917
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 1.0574056859612375,
+    "expected_match": 0.6629839855289412,
+    "abstention_loss": 0.30200056450132245
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.1351580893171633,
+    "expected_match": 0.6498173537414658,
+    "abstention_loss": 0.31110276849978247
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6265279057620572,
+    "expected_match": 0.8186428403586407,
+    "abstention_loss": 0.1706658474571825
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 1.720052601398498,
+    "expected_match": 0.6054882614183651,
+    "abstention_loss": 0.35564824651701293
+  },
+  {
+    "condition": "return",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 1.7189609526613596,
+    "expected_match": 0.6054437467812339,
+    "abstention_loss": 0.3558364122861132
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.2497457123352822,
+    "expected_match": 0.5408082160927845,
+    "abstention_loss": 0.4007533028643715
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.206523097876156,
+    "expected_match": 0.5637984436233464,
+    "abstention_loss": 0.3968626552454901
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 1.1683871548913554,
+    "expected_match": 0.5723323715365878,
+    "abstention_loss": 0.36587728291254895
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 1.2829036755224295,
+    "expected_match": 0.5723193148524431,
+    "abstention_loss": 0.37027832949920914
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6265279057620572,
+    "expected_match": 0.8186428403586407,
+    "abstention_loss": 0.1706658474571825
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 1.6015150520762658,
+    "expected_match": 0.573227484425489,
+    "abstention_loss": 0.36467166719539246
+  },
+  {
+    "condition": "return",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 1.6003875275874184,
+    "expected_match": 0.572920207743742,
+    "abstention_loss": 0.36484219038105814
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 2.1452606885577796,
+    "expected_match": 0.653201256308109,
+    "abstention_loss": 0.368074617996157
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 2.134904865211957,
+    "expected_match": 0.6535453252340285,
+    "abstention_loss": 0.3678915424183668
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 2.080933275428683,
+    "expected_match": 0.6548447169618485,
+    "abstention_loss": 0.3612306482077785
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 2.0737564657956895,
+    "expected_match": 0.6549437019972489,
+    "abstention_loss": 0.3602648119979677
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.295277808441164,
+    "expected_match": 0.9298387813895476,
+    "abstention_loss": 0.06663596995753467
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 2.067719455977569,
+    "expected_match": 0.6548789491293441,
+    "abstention_loss": 0.3606914629910422
+  },
+  {
+    "condition": "rule",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 2.065001117198985,
+    "expected_match": 0.6553094287591107,
+    "abstention_loss": 0.35953895314851964
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 2.24604328820441,
+    "expected_match": 0.6272751370322257,
+    "abstention_loss": 0.4039496431691009
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 2.2233253918468416,
+    "expected_match": 0.6277270626277595,
+    "abstention_loss": 0.39732645566335056
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 2.135934398047778,
+    "expected_match": 0.6292069889353769,
+    "abstention_loss": 0.3790809300539838
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 2.125533052745396,
+    "expected_match": 0.6298530181728319,
+    "abstention_loss": 0.3766692436221346
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.295277808441164,
+    "expected_match": 0.9298387813895476,
+    "abstention_loss": 0.06663596995753467
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 2.1096006529646574,
+    "expected_match": 0.6302859716663674,
+    "abstention_loss": 0.37500239439555877
+  },
+  {
+    "condition": "rule",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 2.1075849709366032,
+    "expected_match": 0.6301533736158706,
+    "abstention_loss": 0.3743679739607123
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 2.3851653734450817,
+    "expected_match": 0.5723690868597494,
+    "abstention_loss": 0.4842491233890424
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 2.3595875368073616,
+    "expected_match": 0.5705818579970594,
+    "abstention_loss": 0.46535307465661435
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 2.2251874288762075,
+    "expected_match": 0.5866984827345948,
+    "abstention_loss": 0.4194073797331832
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 2.2155681837205337,
+    "expected_match": 0.5850774906416537,
+    "abstention_loss": 0.41587014338522416
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.295277808441164,
+    "expected_match": 0.9298387813895476,
+    "abstention_loss": 0.06663596995753467
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 2.1884095192480055,
+    "expected_match": 0.585995106365143,
+    "abstention_loss": 0.41089810072938576
+  },
+  {
+    "condition": "rule",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 2.1872934127834567,
+    "expected_match": 0.5874812698283653,
+    "abstention_loss": 0.4105675462324345
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.7954276615871938,
+    "expected_match": 0.7806290067652893,
+    "abstention_loss": 0.20266833840021697
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.7960856058785427,
+    "expected_match": 0.7784578764470367,
+    "abstention_loss": 0.20509122787638248
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 0.7337545393013238,
+    "expected_match": 0.7806092341110665,
+    "abstention_loss": 0.2030558215130496
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.723885996292159,
+    "expected_match": 0.7811987272115205,
+    "abstention_loss": 0.20185837039119964
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6247354741684019,
+    "expected_match": 0.818759740881116,
+    "abstention_loss": 0.16977518137171646
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 0.7097276189704576,
+    "expected_match": 0.7838005001328339,
+    "abstention_loss": 0.19960709044583302
+  },
+  {
+    "condition": "skill",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 0.7196821484479593,
+    "expected_match": 0.7820547122109499,
+    "abstention_loss": 0.20235706723265212
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 0.9206694211976544,
+    "expected_match": 0.7558316562048654,
+    "abstention_loss": 0.2278059094791391
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 0.9044269578398134,
+    "expected_match": 0.7540815652762346,
+    "abstention_loss": 0.2263847378367648
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 0.7923032748777564,
+    "expected_match": 0.757945444404866,
+    "abstention_loss": 0.22023600337636995
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.7823796560824252,
+    "expected_match": 0.7587352443238953,
+    "abstention_loss": 0.2194380129087119
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6247354741684019,
+    "expected_match": 0.818759740881116,
+    "abstention_loss": 0.16977518137171646
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 0.7600172391318553,
+    "expected_match": 0.7610168081581113,
+    "abstention_loss": 0.21706544629909522
+  },
+  {
+    "condition": "skill",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 0.763592181080378,
+    "expected_match": 0.7606134164965894,
+    "abstention_loss": 0.21847979095549103
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.0900078928132595,
+    "expected_match": 0.7090737651768193,
+    "abstention_loss": 0.28249083533451275
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.067889946000644,
+    "expected_match": 0.7064299501356954,
+    "abstention_loss": 0.2746581107558586
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 0.8914694779650979,
+    "expected_match": 0.7149278746367683,
+    "abstention_loss": 0.2578521253960981
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.8825780397593852,
+    "expected_match": 0.7160819547498114,
+    "abstention_loss": 0.2570508235840696
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6247354741684019,
+    "expected_match": 0.818759740881116,
+    "abstention_loss": 0.16977518137171646
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 0.8483462991892027,
+    "expected_match": 0.7189144372289609,
+    "abstention_loss": 0.2566647571550997
+  },
+  {
+    "condition": "skill",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 0.8501048691649901,
+    "expected_match": 0.7179433054941702,
+    "abstention_loss": 0.2575805741684493
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "all:0.12",
+    "expected_loss": 0.7825545257837709,
+    "expected_match": 0.7837197064958189,
+    "abstention_loss": 0.2000289511401578
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "fast:0.12",
+    "expected_loss": 0.7701814314364365,
+    "expected_match": 0.7833692549887006,
+    "abstention_loss": 0.1985595181396542
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "goal:0.04",
+    "expected_loss": 0.7082834068248646,
+    "expected_match": 0.7856377384707746,
+    "abstention_loss": 0.19632725478250246
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.7038957857064585,
+    "expected_match": 0.7856842454961528,
+    "abstention_loss": 0.19606654081696753
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6254131355850765,
+    "expected_match": 0.819536694615772,
+    "abstention_loss": 0.1696956570299578
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "skill:0.04",
+    "expected_loss": 0.6974990041726138,
+    "expected_match": 0.7863465051976076,
+    "abstention_loss": 0.196122098531158
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 1,
+    "method": "static",
+    "expected_loss": 0.6949572141796396,
+    "expected_match": 0.7865016230610868,
+    "abstention_loss": 0.19574167237471257
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "all:0.12",
+    "expected_loss": 0.9125931714401261,
+    "expected_match": 0.7548280945345206,
+    "abstention_loss": 0.22747363121873782
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "fast:0.12",
+    "expected_loss": 0.8907310827262351,
+    "expected_match": 0.7554565958806636,
+    "abstention_loss": 0.22356676470034065
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "goal:0.04",
+    "expected_loss": 0.7793407084217816,
+    "expected_match": 0.7592204050559265,
+    "abstention_loss": 0.21699091133391257
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.7708931664611719,
+    "expected_match": 0.7596995479391884,
+    "abstention_loss": 0.2169039998707135
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6254131355850765,
+    "expected_match": 0.819536694615772,
+    "abstention_loss": 0.1696956570299578
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "skill:0.04",
+    "expected_loss": 0.7531357170193491,
+    "expected_match": 0.7593295517880655,
+    "abstention_loss": 0.21719585221561732
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 3,
+    "method": "static",
+    "expected_loss": 0.7508063758760566,
+    "expected_match": 0.7600451649393963,
+    "abstention_loss": 0.21643497023832708
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "all:0.12",
+    "expected_loss": 1.0845141691261166,
+    "expected_match": 0.7065056038967477,
+    "abstention_loss": 0.28184809709853004
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "fast:0.12",
+    "expected_loss": 1.0548549793895063,
+    "expected_match": 0.7029575055402411,
+    "abstention_loss": 0.27336796451940526
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "goal:0.04",
+    "expected_loss": 0.8795864032705011,
+    "expected_match": 0.713759838824339,
+    "abstention_loss": 0.256140035795442
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "hazard-role-mixture",
+    "expected_loss": 0.8713252386003604,
+    "expected_match": 0.7132755539263926,
+    "abstention_loss": 0.2556433380649357
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "known-state-ceiling",
+    "expected_loss": 0.6254131355850765,
+    "expected_match": 0.819536694615772,
+    "abstention_loss": 0.1696956570299578
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "skill:0.04",
+    "expected_loss": 0.8385200745341388,
+    "expected_match": 0.7140358238038729,
+    "abstention_loss": 0.25507682711256563
+  },
+  {
+    "condition": "stationary",
+    "copy_span": 6,
+    "method": "static",
+    "expected_loss": 0.8370743582662544,
+    "expected_match": 0.7144318645508682,
+    "abstention_loss": 0.25438855119305515
+  }
+]

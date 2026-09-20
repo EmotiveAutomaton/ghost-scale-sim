@@ -57,3 +57,53 @@ CPU hours for fitting after an estimated width adjustment; data, development and
 verification add work. This forecast will be replaced with full-packet timings.
 Pre-execution coverage and checkpoint-storage amendments retain original plans.
 Twelve new Ghost controls and one actual PyTorch exact-resume control pass.
+
+Raw condition names retain the predecessor's even-support convention: `in-support`
+means even combinations/old questions, `new-combinations` means odd/old,
+`new-queries` means even/composed questions and `both-new` means odd/composed.
+These labels do not establish novelty in the new arms. For odd-support training,
+the combination novelty reverses; full-support training covers both. Diverse
+supervision covers the composed questions. Only the separate far-query family is
+absent from every training/development question menu. Main reports must use those
+actual access relationships rather than quote the legacy names as conclusions.
+
+## U1: uncertainty over the changing role, 32-step streams
+
+Averaging possible kinds and rates of change reduces the cost of adaptive memory in this constructed comparison. With independent observations and no change, logarithmic prediction loss is 0.704 for the mixture, 0.770 for fixed fast-role updating and 0.695 for static inference. After a goal change, the mixture retains the adaptive benefit: 0.814 versus 1.574 for static inference, with expected artifact-match rates of 76.72% versus 65.86%. It does not solve every change: static inference remains slightly better under skill changes and an unrepresented decision-rule change. These are descriptive constructed-method results, not an acquired-learning advantage or a general solution to model revision.
+
+The completed packet contains 8,640 assigned stream evaluations: nine change
+conditions, three copy spans, 20 coefficient draws and 16 fixed cells. The explicit
+copy-span manipulation overrides the world's nominal sharing flag, so that cell
+factor is inactive here; duplicate settings are not independent architectures.
+All methods receive the same evidence trace. Forecasts precede the current
+observation; repeated sources add no likelihood but time still advances state.
+
+The table reports mean logarithmic prediction loss in nats for independent
+observations; lower is better. Rows name the planted change. Columns compare a
+static reader, fixed fast-role updating and the role/rate mixture.
+
+| Planted change | Static | Fixed fast-role update | Role/rate mixture |
+|---|---:|---:|---:|
+| None | 0.69496 | 0.77018 | 0.70390 |
+| Goal | 1.57443 | 0.81458 | 0.81398 |
+| Skill | 0.71968 | 0.79609 | 0.72389 |
+| Decision rule outside the supplied family | 2.06500 | 2.13490 | 2.07376 |
+
+Across all three copy spans, the mixture's mean prediction loss beats static
+inference after goal, belief, joint, gradual, returning-goal and opportunity
+changes, but loses under stationarity, skill change and decision-rule change.
+Better prediction need not change the constructed artifact: under independent
+opportunity-change streams, expected matching is 63.82% for the mixture versus
+63.86% for static inference. Every method's forecasts, native programs and
+observed/expected matches are retained, including stronger fixed-role variants,
+half-unit abstention and the separately privileged known-state forecast.
+
+Independent verification reconstructs 15,120 means and exactly replays eight
+fixed whole streams from extracted source. The two-state filter has an independently
+enumerated known answer; uniform-likelihood updates, source identity, scalar scores
+and native execution checks pass. The 96-step follow-on is running and is not
+treated as a completed result here.
+
+Next: the live boundary is a changing law or opportunity process rather than only
+a changing role. Compare uncertainty over rule families, paid family revision and
+task-relevant source audits, keeping predictive loss separate from action value.

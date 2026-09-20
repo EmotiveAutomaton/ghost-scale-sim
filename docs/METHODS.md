@@ -683,3 +683,10 @@ alias and restored the longest test histories. Long fits keep two resumable
 optimizer/RNG checkpoints plus development-selected weights; an interrupted flat
 fit reproduced uninterrupted weights exactly. Verification occupies the same
 single-worker queue and shares the inherited cumulative CPU accounting.
+
+The adaptive-state packet averages static and role-specific transition models
+under common public evidence, scoring before each new observation. Copied source
+IDs contribute no repeated likelihood while elapsed time still advances state.
+An enumerated two-state filter validates the update. Native artifact matching
+executes the chosen program, but it is not a claim about acquiring a procedure;
+proper prediction, matching and abstention costs are reported separately.
