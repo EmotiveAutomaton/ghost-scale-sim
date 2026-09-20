@@ -700,3 +700,10 @@ native ownership checks; immutable scientific snapshots were preserved. Earlier
 work in this opening wave did not have verified low priority. Its recorded CPU
 and numerical results remain actual observations; scheduler-priority claims are
 qualified rather than silently retrofitted.
+
+L1 reports actual combination/question exposure separately in each training regime;
+legacy test labels do not establish novelty after the support swap. The first main
+packet retains nine development-selected weight sets, all raw forecasts, and
+independent replay of 64 fixed rows per fit/test file. Repeated queries and fit
+seeds are averaged within coefficient-draw lineage. Question-transfer failure is
+not interpreted as proof that a hidden state lost the relevant information.

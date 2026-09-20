@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L1: combination versus question transfer (19 September 2026 PDT)
+
+Does learned memory fail on new maker combinations or on new questions? With old-question training on half the maker combinations, both recurrent readers retain their advantage on the other combinations: logarithmic prediction loss, where lower is better, is 0.88207 for flat memory and 0.84053 for split memory versus 1.35942 for direct history. On new questions about familiar combinations, the ordering reverses: 2.97557 and 3.04533 versus 1.71226. This isolates a question-transfer failure in the tested regime; it does not yet distinguish missing supervision from a deficient memory or decoder. These are descriptive constructed-method results, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L-even-old-response.md).
+
 ## V18.4 U96: longer change-adaptation streams (19 September 2026 PDT)
 
 Does uncertainty over changing roles remain useful in longer streams? With independent observations in the 96-step comparison, the mixture improves prediction after skill changes: logarithmic loss is 0.67629 versus 0.68863 for static inference, reversing the shorter packet's ordering. After goal changes, its loss is 0.71549 versus 1.62893 for static inference and 0.75456 for fixed fast-role updating; expected artifact matching is 79.56%, 67.11% and 79.48%, respectively. The skill benefit disappears with copied observations. A small stationary cost remains, and the mixture still does not repair an omitted decision rule. These are descriptive constructed-method results; the horizons use separate generated traces, so their difference is not a paired causal estimate of extra observation time.

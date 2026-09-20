@@ -1,16 +1,18 @@
 # Review and refill backlog
 
-First review: P1 and the 32-step U1 packet are verified and published. The U1
-96-step packet is running; L1's six repaired, balanced regimes are source-frozen
-and queued. Remaining rows require their own protocol, gates and source freeze.
+Review 3: P1 and both U1 horizons are verified and published. The first main L1
+even/old regime is verified: recurrence transfers across maker combinations but
+reverses on new questions. Five matched regimes remain running or queued, about
+3.5 hours at the first packet's measured rate, plus a 25% planning margin.
+Remaining rows require their own protocol, gates and source freeze.
 
 | ID | Next question | Discriminating outcome | Priority |
 |---|---|---|---|
 | P1 → P2 | Is purpose alignment doing the work rather than generic diversity? | Equal-size useful/irrelevant/misleading portfolios separate access from alignment | P1 complete; P2 next refill candidate |
-| L1 | Is missing state/query support causing recurrent transfer failure? | Matched full support or diverse questions repair the reversal | First neural ladder |
+| L1 | Is missing state/query support causing recurrent transfer failure? | Matched full support or diverse questions repair the reversal | First regime verified; five matched regimes pending |
 | L2 | Can an observable closed predictive bank be learned? | Bank objective repairs transfer with no new-question labels | After L1 pilot |
 | L3 | Is the failure in memory or its decoder? | Selective nonlinear decoder recovers what a linear decoder misses | After L1 |
-| U1 → R1 | Can a reader adapt when the law, not just a role, changes? | Role/hazard mixture retains small stationary/skill costs and does not fix rule change | U32 complete; U96 running; family comparison next |
+| U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes isolate age; family comparison addresses omitted law | U32/U96 verified; U2 implementation now, R1 still useful |
 | S1 | When is paying to verify independence better than buying evidence? | Crossovers depend on graph uncertainty and action stakes | After provenance research |
 | R1 | Does family averaging avoid the harm of premature revision? | Prequential loss and action consequences separate selection from averaging | After U1/S1 |
 | I1 | Does interchange training generalize beyond supplied interventions? | Untaught joint/ordered interventions separate mapping fit from reusable structure | After L2 |
