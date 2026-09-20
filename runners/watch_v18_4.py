@@ -16,6 +16,8 @@ def event(campaign,key,payload):
 
 
 def supervise(campaign,queue,python):
+    from ghostscale.validation.soundingline.v18_4.priority import below_normal
+    below_normal()
     with local_owner(campaign/'supervisor'):
         acceptance=read(campaign/'ACCEPTANCE.json')
         while True:
@@ -36,7 +38,7 @@ def supervise(campaign,queue,python):
                 started=time.time();clock=None
                 child=subprocess.Popen([str(python),'-B','-m','runners.run_v18_4','--root',str(root),'--campaign',str(campaign)],
                     cwd=source,stdout=log,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL,
-                    creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+                    creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)|getattr(subprocess,'BELOW_NORMAL_PRIORITY_CLASS',0))
                 while child.poll() is None:
                     status=read(root/'STATUS.json') if (root/'STATUS.json').exists() else None
                     if status and datetime.fromisoformat(status['heartbeat']).timestamp()>=started:

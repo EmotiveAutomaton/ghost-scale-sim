@@ -137,8 +137,8 @@ def run(root,campaign,max_blocks=None):
             for block in complete['blocks']:load(root,block)
             return 'complete'
         if os.name=='nt':
-            import ctypes
-            ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(),0x4000)
+            from .priority import below_normal
+            below_normal()
         start=time.monotonic();cpu=time.process_time();attempt=uuid.uuid4().hex
         previous=[read(p) for p in campaign.glob('attempts/*.json')]
         if any(x['state']=='running' for x in previous):raise ValueError('unreconciled interrupted CPU attempt')

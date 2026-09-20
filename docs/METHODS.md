@@ -690,3 +690,13 @@ IDs contribute no repeated likelihood while elapsed time still advances state.
 An enumerated two-state filter validates the update. Native artifact matching
 executes the chosen program, but it is not a claim about acquiring a procedure;
 proper prediction, matching and abstention costs are reported separately.
+
+The V18.4 native handoff check found the original Windows priority call returned
+failure while the worker remained at normal priority. The Win64 pseudo-handle
+needed an explicit pointer type. The repair checks the API return and actual
+priority, adds explicit low-priority child creation, and passed a real venv-child
+inheritance fixture. The already running worker and supervisor were lowered after
+native ownership checks; immutable scientific snapshots were preserved. Earlier
+work in this opening wave did not have verified low priority. Its recorded CPU
+and numerical results remain actual observations; scheduler-priority claims are
+qualified rather than silently retrofitted.

@@ -118,8 +118,8 @@ def run(root,campaign):
                 if file_digest(root/name)!=value:raise ValueError('completed neural packet changed')
             return 'complete'
         if os.name=='nt':
-            import ctypes
-            ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(),0x4000)
+            from .priority import below_normal
+            below_normal()
         start=time.monotonic();cpu=time.process_time();attempt=uuid.uuid4().hex;child_cpu=0.;child=None
         previous=[read(p) for p in campaign.glob('attempts/*.json')]
         if any(p['state']=='running' for p in previous):raise ValueError('unreconciled interrupted attempt')

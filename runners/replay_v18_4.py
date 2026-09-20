@@ -87,7 +87,9 @@ def main():
     args=parser.parse_args();root=args.root;source=Path(__file__).resolve().parents[1]
     if os.name=='nt':
         import ctypes
-        ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(),0x4000)
+        kernel=ctypes.WinDLL('kernel32',use_last_error=True);handle=ctypes.c_void_p(-1)
+        if not kernel.SetPriorityClass(handle,0x4000) or kernel.GetPriorityClass(handle)!=0x4000:
+            raise ctypes.WinError(ctypes.get_last_error())
     budget()
     write(args.output.parent/'REPLAY-STATUS.json',dict(pid=os.getpid(),parent_pid=os.getppid()),immutable=False)
     plan=read(root/'PLAN.json');complete=read(root/'COMPLETE.json')

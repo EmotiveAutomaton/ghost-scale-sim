@@ -235,8 +235,8 @@ def run(inputs,output,config_path):
     manifest=read(inputs);config=read(config_path);base=inputs.parent
     if torch.cuda.is_initialized():raise RuntimeError('CUDA must remain uninitialized')
     if os.name=='nt':
-        import ctypes
-        ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(),0x4000)
+        from .priority import below_normal
+        below_normal()
     fingerprint=dict(python=platform.python_version(),numpy=np.__version__,torch=torch.__version__,threads=torch.get_num_threads(),interop_threads=torch.get_num_interop_threads())
     if fingerprint!=config['environment']:raise ValueError('shared environment fingerprint changed')
     identity=dict(input_sha256=sha(inputs),config_sha256=sha(config_path),source_sha256=sha(__file__))

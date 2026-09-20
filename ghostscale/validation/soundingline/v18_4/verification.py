@@ -15,6 +15,8 @@ from ..v16.runtime import local_owner
 
 def run(root,campaign):
     from .runtime import REPO
+    from .priority import below_normal
+    below_normal()
     with local_owner(campaign/'scientific-worker-owner'),local_owner(root):
         plan=read(root/'PLAN.json');design=plan['design'];parent=campaign/design['parent']
         if any(file_digest(REPO/n)!=v for n,v in plan['sources'].items()):raise ValueError('verification source changed')
@@ -43,7 +45,8 @@ def run(root,campaign):
             env['GHOST_VERIFY_CPU_LIMIT']=str(max(0,acceptance['cumulative_cpu_ceiling_seconds']-old-(time.process_time()-cpu)-5))
             with (root/'replay.log').open('ab',buffering=0) as log:
                 child=subprocess.Popen([str(python),'-B','-m','runners.replay_v18_4','--root',str(parent),'--output',str(root/'PROOF.json')],
-                    cwd=extracted,stdout=log,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL,env=env,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+                    cwd=extracted,stdout=log,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL,env=env,
+                    creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)|getattr(subprocess,'BELOW_NORMAL_PRIORITY_CLASS',0))
                 clock=None
                 while child.poll() is None:
                     status=root/'REPLAY-STATUS.json'
