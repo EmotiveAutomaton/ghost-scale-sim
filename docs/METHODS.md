@@ -798,3 +798,5 @@ confounding; they do not remove these different estimands or create independent
 replications from windows, copy spans or alternative switch times.
 
 The frozen-state ladder recovers aligned signal, but the nonlinear question/world-only rival is stronger on taught compositions. Decoder success alone therefore cannot establish useful history; farther transfer and decoder limitations remain distinct. The next learning intervention needs an equally informed no-history rival.
+
+The frozen old-question bank contains useful target information under a supplied law: truncated inversion greatly improves farther scores. Full mathematical span coexists with ill conditioning, invalid raw probabilities and clipping; the next comparison must isolate feasible bank decoding and prior-only supplied-law performance before attributing the improvement to learned sufficient state.

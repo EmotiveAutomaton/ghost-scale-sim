@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L2a: Frozen prediction banks: useful access with unstable raw inversion
+
+Can old-question predictions answer new questions when given the finite world law? They can improve substantially under the fixed truncated bank map: untouched farther-question logarithmic losses are 0.84141 for flat memory and 0.82760 for split memory, versus their original decoders at 2.98964 and 3.06669. But the raw maps frequently violate probability constraints, and truncation trades exact span for stability. This is a descriptive constructed-method result with extra supplied-law access, miniature — architecture untested; it is neither learned law discovery nor evidence that the unrepaired map is a valid probability model.
+
+[Evidence and limits](docs/exchange/v18-4-L2a-response.md).
+
 ## V18.4 L3: Frozen-state readouts: recoverable signal without a demonstrated composition advantage
 
 Can an added decoder recover useful answers from a frozen memory that failed on new questions? The tested readouts recover aligned predictive signal, but they do not establish a memory advantage on taught compositions: at the larger label budget, the question-and-world-only nonlinear rival has lower logarithmic prediction loss than every frozen-memory readout. Untouched farther questions still resist reliable transfer. This is a descriptive constructed-method result, miniature — architecture untested; failure of this bounded decoder family does not prove information loss.
