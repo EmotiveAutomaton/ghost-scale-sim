@@ -758,3 +758,7 @@ future purposes can change. Seven cyclic shifts balance every nonself pairing
 without enumerating all permutations. A marginal-target control deliberately
 removes history information. Exact supplied-law decoding and every retained
 shift are reported; extra target content is distinct from its useful alignment.
+
+The complementary diversity comparison is a paired support swap on shared worlds.
+Its repeated direction is not an independent-world replication; all forecasts and
+fit seeds remain grouped by lineage in the verified means.

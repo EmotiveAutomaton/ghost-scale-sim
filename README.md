@@ -24,7 +24,7 @@ separates the benefit of declared future purposes from a generic preference for
 more memory diversity. Both change-adaptation horizons are now verified; the
 longer comparison changes the skill boundary while leaving rule misspecification
 unrepaired. The learned-memory new-question failure survives both complementary training
-supports and full maker support. The first question-diversity comparison repairs
+supports and full maker support. Both complementary question-diversity comparisons repair
 now-covered compositions while worsening untouched farther queries; further
 coverage and decoder comparisons remain running or queued. This is adaptive constructed-world discovery.
 

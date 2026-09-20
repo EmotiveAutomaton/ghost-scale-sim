@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L1: complementary question-diversity comparison (19 September 2026 PDT)
+
+Does the repair from teaching composed questions survive swapping the maker combinations used for training? It does: on the now-covered compositions, mean logarithmic prediction loss, where lower is better, is 0.85764 for flat memory and 0.83488 for split memory versus 0.87301 for direct history. Untouched farther-question losses are 3.61553, 3.45373 and 2.75825, again worse for every reader than with old-question training. The paired support swap strengthens the specific-supervision explanation; it does not establish systematic transfer beyond the taught menu. These are descriptive constructed-method results, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L-odd-diverse-response.md).
+
 ## V18.4 L1: first question-diversity comparison (19 September 2026 PDT)
 
 Does adding composed questions to training repair learned-memory transfer? It repairs those now-covered questions, but farther-question prediction worsens. Across the two maker-combination halves, mean logarithmic prediction loss, where lower is better, is 0.85285 for flat memory and 0.83334 for split memory versus 0.87369 for direct history on the added compositions. On the untouched farther questions, losses are 3.82158, 3.45505 and 2.66348, all worse than their matched old-question-training counterparts. Question coverage explains a repair within the trained menu; it does not establish systematic transfer beyond that menu. These are descriptive constructed-method results, miniature — architecture untested.
