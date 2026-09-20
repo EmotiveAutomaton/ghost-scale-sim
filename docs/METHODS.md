@@ -842,3 +842,11 @@ The first L4 result reports its question/world-only baseline before interpreting
 any paired exposure intervention. Original questions, selection-exposed compositions
 and untouched farther forms are separate estimands. A failure to beat the no-history
 rival on new forms is not a failure of the known-answer instrument.
+
+L2c projects retained eighty-coordinate old-answer banks onto the convex hull of
+twenty-four supplied-law state banks. Analytic constrained optimization is checked
+by independently reconstructed simplex duality gaps and scalar mixtures. The same
+public-world prior and history posterior separate law access from history use;
+their uniform prior is stipulated, not inferred from deterministic sample indices.
+Projection validity, latent identifiability and future logarithmic loss remain
+separate claims. Fit seeds average within reused history before reporting means.

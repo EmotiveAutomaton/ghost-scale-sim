@@ -106,6 +106,9 @@ def aggregate(root,limited=lambda:False):
             elif unit['family']=='S1':
                 from .source_audits import verify, DIMENSIONS, METRICS
                 dimensions=DIMENSIONS;metrics=METRICS
+            elif unit['family']=='L2c':
+                from .feasible_bank import verify, DIMENSIONS, METRICS
+                dimensions=DIMENSIONS;metrics=METRICS
             else:raise ValueError('unimplemented verifier')
             verify(unit);count+=1
             for row in unit['rows']:
@@ -138,6 +141,8 @@ def dispatch(spec):
         from .distinct_families import unit
     elif family=='S1':
         from .source_audits import unit
+    elif family=='L2c':
+        from .feasible_bank import unit
     else:raise ValueError('unimplemented V18.4 family')
     result=unit(**spec);result['request']=request;return result
 

@@ -238,3 +238,21 @@ probe is not adopted: R2 has no active probe selector. Its missing-law improveme
 suggestion is an outcome, not a gate. A split-mass duplicate fixture tests algebra;
 the separate doubled-class-mass arm tests an actual prior change. Other cited
 literature in the return is not load-bearing input or a Ghost result.
+
+## Eleventh bounded Terra pass: certifying feasible-bank projection
+
+Local position before research: convex feasibility guarantees valid mixture
+predictions, not improved held-out logarithmic loss or identified maker state.
+One bounded Terra researcher examined numerical certificates and ambiguity.
+The reviewer checked [Jaggi's primary paper page](https://proceedings.mlr.press/v28/jaggi13.html)
+for convex-hull duality-gap certificates and [SciPy's SLSQP documentation](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html)
+for analytic-gradient constrained minimization and its stopping criteria. L2c
+uses a separately reconstructed simplex gap rather than trusting solver status.
+The resident SciPy version is retained in the plan; no environment was changed.
+
+The return incorrectly bounded this bank's dimension by five: each of the five
+questions supplies sixteen artifact probabilities, giving eighty coordinates.
+Its resulting six-atom claim does not apply. L2c measures the actual affine rank
+and keeps alias fixtures without assuming scientific nonidentifiability. Other
+source suggestions and optimizer fallbacks are not adopted. The literature
+motivates numerical controls; it supplies no Ghost result or preferred loss ranking.

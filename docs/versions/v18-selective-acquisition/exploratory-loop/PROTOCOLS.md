@@ -458,3 +458,53 @@ also checked. Copy invariance, past-only triggers, delayed/full refit equivalenc
 evaluator separation, corruption rejection, independent means and whole-stream
 replay validate the apparatus. Failed controls withhold interpretation; ties,
 reversals, approximation under missing truth and ineffective expansion are results.
+
+## L2c: feasible decoding of retained learned banks
+
+L2a's useful clipped inverse leaves probability feasibility unresolved; L4's first
+control also makes a public-world-only rival necessary. Reuse the verified L4
+original-menu control's five old-question forecasts from direct, flat, split and
+question-only readers, each with three selected fits. Fixed indices 0–15, 32–47
+and 64–79 from each of sixteen cells and both maker halves yield 1,536 histories,
+balanced over eligible states and 8/16/32-step lengths. Selection is independent
+of losses. These are paired reused cases, not new independent replication.
+
+Concatenate the five sixteen-artifact distributions into an 80-coordinate bank.
+The public law supplies 24 state-specific bank vectors. Fit nonnegative weights
+summing to one by minimizing half the squared Euclidean distance between their
+mixture and the learned bank. SLSQP uses analytic gradients, a uniform start,
+1e-15 objective tolerance and at most 1,000 iterations. A least-squares solve on
+its active affine face is accepted only if feasible and no worse in residual;
+up to 2,048 exact-line-search Frank–Wolfe refinements target a 1e-9 gap.
+Independently calculate
+the simplex duality gap, weight sum and minimum; a gap above 1e-7 or infeasible
+weights withholds the projection interpretation. Solver success alone is not
+the certificate. Report residuals and measured affine ranks. Five distributions
+are not five scalar dimensions; rank deficiency and state ambiguity are measured,
+not assumed from the question count.
+
+Decode the three composition and two farther forms using the same fitted state
+mixture. Compare the fixed 1e-3 truncated supplied-law map with its retained raw
+outputs and declared floor/normalization, the uniform 24-state same-world prior,
+and the exact history posterior under that prior. The last two references retain
+the public law, unlike a context-free prior. That prior is an explicit model
+assumption, not the deterministic sample-index allocation's conditional prior.
+Neither reference is asserted Bayes-optimal for the experimental allocation.
+Test truth never enters projection, maps, prior or posterior construction.
+
+No training or new weight selection occurs. Supplied intervention-law access is
+additional knowledge; a feasible forecast need not have better logarithmic loss.
+Projection chooses a closest bank but need not identify unique weights or latent
+roles. Finite-bank ambiguity fixtures retain that limit. This does not train a
+predictive-state objective or establish recursive closure. All scored probabilities
+use a declared 1e-12 floor and normalization for finite logarithmic loss; raw
+forecasts, weights, inverse invalidity and certificates are retained separately.
+
+Known mixtures, an outside-hull boundary, uniform aliases, state-order invariance,
+native finite closure, independent scalar mixtures/certificates/proper scores,
+batch posterior reconstruction, evaluator noninterference, corruption rejection,
+all independent means and eight whole-unit extracted-source replays validate the
+apparatus. Fit seeds average within each history; queries/cells/support halves
+remain paired. Every scientific ranking is an outcome. Each packet has an adjacent
+replay slot; all retained input probabilities bind to the published parent's raw
+forecasts, selected weights, plan and completion proof.
