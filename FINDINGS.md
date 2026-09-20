@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L1: complementary support (19 September 2026 PDT)
+
+Does swapping the trained maker combinations remove the failure on new questions? It does not. With old-question training on the complementary half, logarithmic prediction loss, where lower is better, is 0.88296 for flat memory and 0.83120 for split memory versus 1.36712 for direct history on unseen combinations. On new questions about trained combinations, the losses reverse to 2.86223 and 2.99240 versus 1.67857. The failure therefore survives this support swap; missing question supervision, the learned state and its decoder remain competing explanations. These are descriptive constructed-method results, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L-odd-old-response.md).
+
 ## V18.4 L1: combination versus question transfer (19 September 2026 PDT)
 
 Does learned memory fail on new maker combinations or on new questions? With old-question training on half the maker combinations, both recurrent readers retain their advantage on the other combinations: logarithmic prediction loss, where lower is better, is 0.88207 for flat memory and 0.84053 for split memory versus 1.35942 for direct history. On new questions about familiar combinations, the ordering reverses: 2.97557 and 3.04533 versus 1.71226. This isolates a question-transfer failure in the tested regime; it does not yet distinguish missing supervision from a deficient memory or decoder. These are descriptive constructed-method results, miniature — architecture untested.

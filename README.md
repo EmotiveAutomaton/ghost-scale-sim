@@ -23,8 +23,8 @@ least 20 September 05:00 PDT, within the existing resource limits. The first
 separates the benefit of declared future purposes from a generic preference for
 more memory diversity. Both change-adaptation horizons are now verified; the
 longer comparison changes the skill boundary while leaving rule misspecification
-unrepaired. The first main learned-memory regime transfers across maker
-combinations but reverses on new questions; matched coverage comparisons remain
+unrepaired. Both complementary learned-memory training supports transfer across maker
+combinations but reverse on new questions; full-support and question-coverage comparisons remain
 running or queued. This is adaptive constructed-world discovery.
 
 ## V18.3 research extension complete

@@ -715,3 +715,7 @@ detect future-condition leakage. Absolute switches and equal post-change windows
 separate evidence age from changing pre/post-change proportions; they do not turn
 sequential prefix differences into a randomized causal estimate. Independent
 arithmetic fixtures check window boundaries, and every full trace remains retained.
+
+L1 support swaps reuse the test coefficient draws and histories. Report the
+contrast as paired, translate raw condition names into actual exposure, and do
+not count the second support regime as another independent test-world sample.
