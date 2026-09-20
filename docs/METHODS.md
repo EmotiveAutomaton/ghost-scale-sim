@@ -745,3 +745,8 @@ preserves batch arithmetic before potentially unstable inversion; scalar control
 observational-alias fixtures and immutable input checks validate the computation.
 It does not establish passive identification, recursive closure, independent
 replication or success of a new bank-training objective.
+
+The diverse L1 rotation matches total labels while reducing exposure per original
+question. Added compositions must be reported as covered; farther queries alone
+remain question-family holdouts. Use shared-history paired contrasts and retain
+the supervision-density and optimization caveats.
