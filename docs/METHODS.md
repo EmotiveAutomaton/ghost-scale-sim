@@ -895,3 +895,8 @@ forms untaught in fitting and selection. Independent scalar target audits and
 forecast replay validate the baseline without treating a target benefit as a gate.
 The changed training-state sampling forbids treating L4 score differences as a
 controlled selection or sampling effect. Native CPU receipts bound actual charges.
+
+L2b paired reporting checks shared public arrays, development/test targets and
+world/history/state rosters before interpreting target differences. Differences
+are descriptive within fixed training datasets; conditional targets share a
+population loss identity without guaranteeing finite-budget transfer.

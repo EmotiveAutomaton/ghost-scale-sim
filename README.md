@@ -29,8 +29,8 @@ now-covered compositions while worsening untouched farther queries. Verified fro
 readouts do not establish a history advantage against the question/world rival;
 supplied-law bank decoding improves farther scores but requires probability repair.
 The independently sampled realized-target control also retains original-menu
-memory gains without untaught-question transfer; its paired conditional-target
-arm remains running.
+memory gains without untaught-question transfer. Its verified conditional-target
+comparison improves original-memory scores but does not repair farther transfer.
 Feasible state-mixture decoding now preserves learned-history gains beyond both
 the same-world prior and the no-history bank, with the world law still supplied.
 Paid family expansion helps missing-law prediction but often buys unnecessarily;

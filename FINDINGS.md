@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L2b: paired target intervention
+
+Does replacing realized-state training targets with exact history-conditional targets repair prediction on untaught questions? It does not repair farther transfer: mean logarithmic loss, where lower is better, rises from 1.70223 to 1.73769 for direct history, 2.91068 to 2.93959 for flat memory and 3.02246 to 3.15191 for split memory. Original-question memory scores improve, but all three history readers still lose to the no-history rival on untaught forms. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L2b-conditional-response.md).
+
 ## V18.4 L2b: realized-target control (20 September 2026 PDT)
 
 Does learned history transfer beyond the original questions when training states are sampled independently and selection sees only those questions? No in this realized-target control: farther mean logarithmic loss, where lower is better, is 1.70223 for direct history, 2.91068 for flat memory and 3.02246 for split memory, versus 1.57940 without history. Recurrent memory still helps on the original questions. The conditional-target comparison remains pending, so this arm does not establish the effect of changing training targets. This is a descriptive constructed-method result, miniature — architecture untested.
