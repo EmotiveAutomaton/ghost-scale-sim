@@ -32,7 +32,9 @@ Paid family expansion helps missing-law prediction but often buys unnecessarily;
 its original candidate pair is predictively aliased, limiting the averaging claim.
 Paid source audits have little decision value here: source-information gains do
 not ensure net utility, and the small two-step benefit depends on calibration.
-Matched-exposure training with a no-history rival is now admitted. This is adaptive
+The first matched-exposure control retains original-menu memory gains but loses
+to its no-history rival on compositions and farther forms; paired exposure arms
+remain running or queued. This is adaptive
 constructed-world discovery.
 
 ## V18.3 research extension complete

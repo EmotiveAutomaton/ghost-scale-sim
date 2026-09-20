@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L4: original-menu exposure control (19 September 2026 PDT)
+
+Does learned history help beyond a reader given only the question and public world law? In the first matched-exposure control, recurrent memory improves original-question prediction, but the no-history reader has lower loss on compositions and untouched farther questions. Farther mean logarithmic prediction loss, where lower is better, is 1.61451 without history, 1.67326 for direct history, 2.29268 for flat memory and 2.01584 for split memory. This establishes a history-use boundary in this control; whether restored question exposure changes it awaits the paired training arms. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L4-old-exposure-response.md).
+
 ## V18.4 S1: source information and decision value
 
 Does paying to investigate copied sources improve truth decisions? Audit-only decision policies buy nothing throughout this finite comparison. Two-step planning sometimes combines audits with evidence: in one calibrated condition its net utility is 0.86359 versus 0.86342 for evidence alone, a small advantage that reverses when audit reliability is overstated. A graph-information policy buys almost two audits yet reaches only 0.75898 net utility there. This is a descriptive constructed-method result: learning source structure and improving a truth decision are different objectives, miniature — architecture untested.

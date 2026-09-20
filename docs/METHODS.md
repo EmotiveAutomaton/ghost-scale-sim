@@ -837,3 +837,8 @@ every prefix forecast and final answer independently, including the prior. A
 split-mass duplication control checks invariance for Bayesian averaging. Costs
 and fixed past-only purchase thresholds are retained; no method ranking gates
 validity. Copy repetition stays a control rather than redundant science cells.
+
+The first L4 result reports its question/world-only baseline before interpreting
+any paired exposure intervention. Original questions, selection-exposed compositions
+and untouched farther forms are separate estimands. A failure to beat the no-history
+rival on new forms is not a failure of the known-answer instrument.
