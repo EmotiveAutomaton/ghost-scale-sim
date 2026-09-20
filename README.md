@@ -34,7 +34,8 @@ Paid source audits have little decision value here: source-information gains do
 not ensure net utility, and the small two-step benefit depends on calibration.
 The first matched-exposure control retains original-menu memory gains but loses
 to its no-history rival on compositions and farther forms; paired exposure arms
-remain running or queued. This is adaptive
+remain under review. Restoring original-question exposure still worsens farther
+prediction, including without history; the matched-total control is running. This is adaptive
 constructed-world discovery.
 
 ## V18.3 research extension complete

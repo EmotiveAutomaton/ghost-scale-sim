@@ -850,3 +850,8 @@ public-world prior and history posterior separate law access from history use;
 their uniform prior is stipulated, not inferred from deterministic sample indices.
 Projection validity, latent identifiability and future logarithmic loss remain
 separate claims. Fit seeds average within reused history before reporting means.
+
+L4 restored-exposure reporting pairs the same test lineages across training arms.
+Equal original-question counts exclude dilution as a sole explanation in that
+contrast, while changed history count and optimizer updates remain explicit.
+The equally trained no-history rival tests whether deterioration requires memory.

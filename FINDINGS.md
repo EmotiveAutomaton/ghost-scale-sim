@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L4: restored exposure (20 September 2026 PDT)
+
+Does restoring original-question exposure prevent diverse training from harming farther predictions? It does not in this comparison: farther mean logarithmic loss, where lower is better, rises from 1.67326 to 2.70708 for direct history, 2.29268 to 3.55791 for flat memory, and 2.01584 to 3.77260 for split memory. The no-history reader also worsens, from 1.61451 to 3.08139, while now-trained compositions improve. Reduced original-question exposure alone therefore cannot explain the boundary; the matched-total control remains pending. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L4-restored-exposure-response.md).
+
 ## V18.4 L4: original-menu exposure control (19 September 2026 PDT)
 
 Does learned history help beyond a reader given only the question and public world law? In the first matched-exposure control, recurrent memory improves original-question prediction, but the no-history reader has lower loss on compositions and untouched farther questions. Farther mean logarithmic prediction loss, where lower is better, is 1.61451 without history, 1.67326 for direct history, 2.29268 for flat memory and 2.01584 for split memory. This establishes a history-use boundary in this control; whether restored question exposure changes it awaits the paired training arms. This is a descriptive constructed-method result, miniature — architecture untested.
