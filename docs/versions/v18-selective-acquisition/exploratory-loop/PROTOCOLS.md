@@ -201,3 +201,45 @@ Replay recomputes whole files with the original batch shape before comparing bou
 score rows and every raw probability, avoiding changes in floating arithmetic before
 unstable inversion. L2a supplies no new training objective; a later L2b bank-objective
 experiment remains separately reviewed work informed by access and conditioning.
+
+## P2: supplemental purpose alignment with matched target content
+
+P1's portfolio benefit and L1's covered-question repair both make the relationship
+between supervision and later use consequential. Test that relationship directly
+in the finite compression setting. Use fresh coefficient draws, the same eight
+binary histories, all 4,140 deterministic partitions and cardinalities 1/2/4/8.
+Assign uniform mass to the eight histories for both selection and evaluation,
+while retaining their original conditional prediction laws and natural frequencies.
+This deliberately differs from P1's natural and tilted allocation.
+
+The passive training task stays fixed. Supply its two supplemental tasks under
+nine separately evaluated portfolios: correct alignment, each of seven cyclic
+nonzero shifts of the history order, and a marginal-only control replacing each
+supplemental row by its mean. Shift both supplemental target vectors together.
+Each shift preserves their joint target multiset, each task's marginal prediction
+law, average conditional entropy and mutual information under uniform allocation.
+Across seven shifts each target vector visits every other history once. This is
+not all possible permutations and can retain structured relationships to history.
+The marginal control preserves the marginal law but removes history information.
+
+Each portfolio has three equally weighted training distributions and selects only
+by mean training logarithmic loss. Retain canonical, random-tie, entropy-tie and
+observation-product old-only rivals. No future loss chooses a code or a control.
+Evaluate the unchanged five P1 future questions using generator-informed decoders.
+Twenty fresh draws cross 16 architecture cells and the alternative lexicographic
+rule, giving 640 assigned worlds and 52 method/cardinality rows per world. These
+are paired controls within draw, not 33,280 independent observations.
+
+Report every shift, its mean and range, original-purpose and future-purpose loss,
+training loss, code entropy, selected code and original-task tie count. Correct
+alignment beating the shifts would support the particular history-purpose pairing;
+ties or reversals remain results. Supplemental inter-task relations are preserved,
+but their relations to the fixed passive task and future questions are changed.
+Training hardness and partition geometry need not match. No claim of a pure,
+task-independent relevance variable or general neural learning follows.
+
+A planted binary answer and uniform-target placebo validate selection. Independent
+scalar scores check every retained selected code; boundary cardinalities, exact
+counterbalancing, target-content/information invariants, future noninterference,
+corruption rejection, independent means and frozen whole-unit replay validate the
+apparatus. Scientific superiority of any portfolio is never a validity gate.

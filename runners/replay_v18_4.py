@@ -25,6 +25,9 @@ def finite(root):
             units.append(unit)
             dimensions=('family','cell','rule','tilt') if unit['family']=='P' else ('family','cell','condition','length','copy_span')
             metrics=('old_loss','new_loss','entropy_nats','old_optimum_ties') if unit['family']=='P' else ('expected_loss','pre_change_loss','post_change_loss','expected_match','abstention_loss')
+            if unit['family']=='P2':
+                dimensions=('family','cell','rule')
+                metrics=('old_loss','new_loss','entropy_nats','old_optimum_ties','training_loss')
             if unit['family']=='U2':
                 dimensions=('family','cell','condition','length','copy_span','change_at')
                 metrics=('expected_loss','pre_change_loss','post_change_loss','expected_match','abstention_loss',

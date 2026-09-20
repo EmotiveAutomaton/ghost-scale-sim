@@ -103,3 +103,26 @@ scientific cases need not reproduce that fixture's ranking. We reject the return
 suggestion to gate scientific success on bank improvement or omission-induced
 failure. This diagnostic supplies the intervention law; it does not identify that
 law from passive data or claim a learned predictive state representation.
+
+## Sixth bounded Terra pass: purpose alignment (20 September UTC)
+
+Local position before research: extra purpose supervision can help yet fail beyond
+the taught menu; its alignment with later use needs a matched-content control.
+One bounded research pass challenged target permutations and proposed all seven
+cyclic misalignments instead of choosing one random control. The operating agent
+checked [Lee, Yang and Hwang's primary paper page](https://proceedings.mlr.press/v48/leeb16.html),
+which treats negative transfer and task relatedness as problems for multitask
+learning. That motivates retaining mismatch as an outcome, not a guaranteed effect
+or a Ghost result. The suggested Taskonomy page could not be fetched independently
+and is not a load-bearing source for this design.
+
+The research return's unqualified entropy-preservation suggestion would be wrong
+under nonuniform history frequencies. P2 therefore states a uniform case allocation
+for every arm. Whole supplemental-vector rotations then preserve weighted target
+content, each task's average conditional entropy and mutual information exactly;
+those are mathematical invariants checked in fixtures. We keep the passive task
+fixed, so its correlations with the supplemental tasks can change. The seven
+cyclic shifts balance nonself pairings, not every possible permutation. The
+marginal-only control preserves mean targets while deliberately removing history
+information. Difficulty, code geometry and relation to future purposes remain
+scientific differences, not purportedly matched nuisance factors.

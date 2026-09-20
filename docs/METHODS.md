@@ -750,3 +750,11 @@ The diverse L1 rotation matches total labels while reducing exposure per origina
 question. Added compositions must be reported as covered; farther queries alone
 remain question-family holdouts. Use shared-history paired contrasts and retain
 the supervision-density and optimization caveats.
+
+P2 uses uniform case allocation to match the marginal and conditional target
+entropy of each supplemental purpose under whole-vector history rotations.
+The passive task remains fixed, so between-task compatibility and relation to
+future purposes can change. Seven cyclic shifts balance every nonself pairing
+without enumerating all permutations. A marginal-target control deliberately
+removes history information. Exact supplied-law decoding and every retained
+shift are reported; extra target content is distinct from its useful alignment.
