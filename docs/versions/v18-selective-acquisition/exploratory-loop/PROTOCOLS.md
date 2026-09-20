@@ -644,3 +644,36 @@ replays apply. Each admitted bank has an adjacent verification slot. The measure
 L2c science-plus-replay cost was 376.828125 CPU seconds and 6.42 wall minutes;
 retain a 180–500-second forecast per arm, allowing additional accounting reserve.
 Admit only verified-parent arms within the unchanged campaign budget and cutoff.
+
+## P3: partition and forecast equivalence behind purpose-alignment ties
+
+P2's seven cyclic misalignments sometimes nearly match aligned future loss. Test
+whether those near ties preserve the same history partition, change the partition
+while preserving its future forecasts, or change both while averaging to similar
+loss. Reuse all 640 independently verified P2 worlds and their already selected
+codes. No new draws, seeds, code selection, target permutation or learning occurs.
+This is a new structural diagnosis of retained evidence, not independent replication.
+
+Bind each payload to the parent plan, completion, replay and raw block hashes.
+Reproduce every used parent future score before interpreting a new diagnostic.
+At each of one, two, four and eight symbols, compare the aligned portfolio with
+all seven shifts and the marginal-target control. Label names do not matter:
+partition equality means exactly the same pairs of histories share a symbol.
+Report the fraction of the 28 unordered history pairs whose grouping differs.
+Reconstruct uniform-history conditional forecasts for each of five future tasks;
+retain their largest probability difference and a prespecified 1e-12 equality
+tolerance. Report both losses and their paired difference beside those diagnostics.
+
+Same partitions must give the same forecasts and loss under the common supplied
+decoder; the reverse need not hold. Identical average loss need not imply identical
+forecasts. Known binary targets, label permutations, uniform targets, equal-loss
+but different-forecast fixtures, scalar probability and proper-score checks, raw
+corruption, independent means and whole-unit replay validate those distinctions.
+No observed frequency, ordering or alignment advantage is a validity gate.
+
+Report all cardinalities, both decision laws and every shift, retaining architecture
+cells and reused worlds as paired. Summaries conditional on partition equivalence
+are descriptive mechanisms of this fixed code comparison, not randomized causal
+estimates. No universal purpose metric, learned decoder, or human result follows.
+Admission requires measured fixture/verification cost, a frozen source and its
+adjacent independent replay within the existing CPU budget and science cutoff.

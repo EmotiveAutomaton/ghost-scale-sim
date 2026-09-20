@@ -28,6 +28,10 @@ def finite(root):
             if unit['family']=='P2':
                 dimensions=('family','cell','rule')
                 metrics=('old_loss','new_loss','entropy_nats','old_optimum_ties','training_loss')
+            if unit['family']=='P3':
+                dimensions=('family','cell','rule')
+                metrics=('same_partition','pair_disagreement','same_forecasts','forecast_max_difference',
+                         'aligned_loss','comparison_loss','loss_difference')
             if unit['family']=='U2':
                 dimensions=('family','cell','condition','length','copy_span','change_at')
                 metrics=('expected_loss','pre_change_loss','post_change_loss','expected_match','abstention_loss',

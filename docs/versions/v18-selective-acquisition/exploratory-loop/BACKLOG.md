@@ -1,5 +1,20 @@
 # Review and refill backlog
 
+## Current checkpoint: review 16
+
+Both L2e target banks are verified and published. Conditional targets slightly
+improve every feasible history bank on composed and farther questions despite
+the direct farther-answer deterioration. Useful bank access, supplied-law
+privileges and different direct-test allocation remain distinct. P3 now diagnoses
+the earlier alignment near ties: identical partitions, equivalent future forecasts,
+or distinct forecasts with similar aggregate loss. All 640 retained P2 worlds
+are bound without new seeds or code selection. Eleven controls pass; measured
+four-case computation plus independent checks project 102.5 CPU seconds before
+aggregation/replay. Source-bound admission carries a 400-second reserve and its
+adjacent replay. See [REVIEW_16](REVIEW_16.md) for outcomes and remaining candidates.
+R3/S2/I1/C1, selection interactions and predictive-state learning remain useful;
+the 06:00 PDT cutoff limits admission, not scientific usefulness.
+
 ## Current checkpoint: review 15
 
 The 05:00 PDT minimum elapsed target has been reached with useful work still

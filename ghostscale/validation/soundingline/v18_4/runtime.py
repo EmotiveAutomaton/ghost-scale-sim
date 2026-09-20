@@ -91,6 +91,9 @@ def aggregate(root,limited=lambda:False):
             elif unit['family']=='P2':
                 from .purpose_alignment import verify, DIMENSIONS, METRICS
                 dimensions=DIMENSIONS;metrics=METRICS
+            elif unit['family']=='P3':
+                from .partition_access import verify, DIMENSIONS, METRICS
+                dimensions=DIMENSIONS;metrics=METRICS
             elif unit['family']=='U':
                 from .adaptation import verify
                 dimensions=('family','cell','condition','length','copy_span');metrics=('expected_loss','pre_change_loss','post_change_loss','expected_match','abstention_loss')
@@ -131,6 +134,8 @@ def dispatch(spec):
         from .compression import unit
     elif family=='P2':
         from .purpose_alignment import unit
+    elif family=='P3':
+        from .partition_access import unit
     elif family=='U':
         from .adaptation import unit
     elif family=='U2':

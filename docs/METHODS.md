@@ -921,3 +921,10 @@ L2e paired reporting reconstructs identical history/world/state rosters across
 target arms and distinguishes small fixed-fit bank improvements from the broader
 direct-answer reversal. Neither reused fits nor decoder privileges become new
 independent training replications or learned law access.
+
+P3 diagnoses retained compression codes through label-invariant partitions and
+their supplied-decoder forecasts. Parent score reproduction precedes the new
+comparison. Independent scalar membership sets, conditional averages and proper
+scores separate identical partitions, identical forecasts and identical losses;
+none of those scientific frequencies is imposed as a desired ranking. Reused
+worlds remain paired evidence, not new independent replications.
