@@ -910,3 +910,9 @@ L2d paired publication checks identical worlds, histories and evaluation states
 across every selected bank. Opposite directions in paired bank and broader direct
 test means support an access limitation without pretending their different test
 allocations provide a paired decoder-effect estimate.
+
+L2e retains the same finite-law decoder across sampled realized and conditional
+training targets. Its first-arm publication validates accessible history before
+interpreting target effects; all prior and direct-test allocation qualifications
+remain explicit. Byte-identical validated instruments do not require duplicate
+control computation solely for each exported batch.
