@@ -30,6 +30,8 @@ readouts do not establish a history advantage against the question/world rival;
 supplied-law bank decoding improves farther scores but requires probability repair.
 Paid family expansion helps missing-law prediction but often buys unnecessarily;
 its original candidate pair is predictively aliased, limiting the averaging claim.
+Paid source audits have little decision value here: source-information gains do
+not ensure net utility, and the small two-step benefit depends on calibration.
 Matched-exposure training with a no-history rival is now admitted. This is adaptive
 constructed-world discovery.
 

@@ -44,3 +44,11 @@ The existing matched-exposure trio has an 11,000–15,000 CPU-second forecast fr
 completed fits. It supplies several useful hours while the next result informs
 further bank/inquiry designs. No candidate-by-candidate exhaustion applies.
 Minimum exploration remains 12:00 UTC, science cutoff 13:00 and delivery 15:00.
+
+S1 also completed and verified during this review: 1,200 exact models, 4,320
+means and eight complete replays. It charged 357.3125 CPU seconds and 366.156719
+wall seconds. Audit-only policies stop throughout; two-step planning buys rarely,
+with a 0.000172 calibrated utility advantage in the reported slice that reverses
+under overstated audit reliability. Graph information can improve without useful
+truth decisions. Shared purchased-channel error and graph omission remain useful
+next experiments; the current initial shared-error factor does not implement them.

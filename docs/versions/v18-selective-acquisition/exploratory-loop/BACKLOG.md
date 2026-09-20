@@ -3,7 +3,8 @@
 Review 10: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
 L3/L2a and R1 are verified. R1 publication records useful paid expansion but an
 aliased initial candidate pair; R2 will test distinct laws and class-prior mass.
-S1 has completed its adjacent replay and awaits this review's write-through.
+S1 is now verified and published: audit-only policies stop; limited two-step
+benefits depend on calibration and do not follow from graph information alone.
 L4 matched-exposure training runs with further arms and replay already admitted.
 Measured timings and remaining candidates are retained in REVIEW_10.
 Remaining rows require their own protocol, gates and source freeze.

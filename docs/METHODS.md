@@ -823,3 +823,8 @@ comparison as catalog-access evidence; do not infer a selection/averaging result
 from aliased candidates. Equal-label priors reweight predictive equivalence classes.
 The post-result alias control checks repertoire and full likelihood identities;
 every stored fixed/selection/mixture forecast was also compared.
+
+S1 publication retains all graph-conditional scores beside equal-graph averages.
+An exact net-utility benefit can be tiny and disappear under miscalibration; it
+is not promoted to an audit-success gate. Graph squared-probability error sums
+four components and is distinct from truth logarithmic loss and binary utility.
