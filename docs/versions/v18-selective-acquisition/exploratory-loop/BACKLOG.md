@@ -113,3 +113,24 @@ could separately control initial posterior concentration and the arrival rate
 of unique evidence at the same elapsed time. Repeating larger horizons alone
 would not isolate those explanations; priority remains the already admitted
 decoder/bank and paid-inquiry comparisons.
+
+
+## Review 9 priorities
+
+L3 and L2a are verified and published. Added frozen-state readouts recover aligned
+signal but do not beat the nonlinear question/world rival on taught compositions.
+Supplied-law truncated bank decoding improves farther scores while almost every
+raw mapped row fails the probability checks. Neither resolves per-question data
+exposure. L4 now supplies matched-original-exposure and matched-total-label arms,
+with a no-history neural rival in each. Its forecast is 11,000--15,000 CPU seconds
+from the measured full-support fits; it is not an occupancy requirement.
+
+The next bank experiment should compare a feasible-state-mixture projection with
+frozen clipping, an exact conditional bank and a prior-only bank conditioned on
+the same public world. Test known finite closure, aliases, optimization residuals,
+permutation invariance and target noninterference before admission. Loss rankings
+remain outcomes. Conditional-bank training then separates target uncertainty from
+map instability, but its teacher must reflect the actual training-state prior.
+S1 coupled-error/graph-omission follow-ons, I1 composition and C1 matched-accuracy
+costs remain useful. REVIEW_9 retains candidate-by-candidate priorities; no useful
+work exhaustion is established.

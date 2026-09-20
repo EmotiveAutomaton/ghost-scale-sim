@@ -800,3 +800,14 @@ replications from windows, copy spans or alternative switch times.
 The frozen-state ladder recovers aligned signal, but the nonlinear question/world-only rival is stronger on taught compositions. Decoder success alone therefore cannot establish useful history; farther transfer and decoder limitations remain distinct. The next learning intervention needs an equally informed no-history rival.
 
 The frozen old-question bank contains useful target information under a supplied law: truncated inversion greatly improves farther scores. Full mathematical span coexists with ill conditioning, invalid raw probabilities and clipping; the next comparison must isolate feasible bank decoding and prior-only supplied-law performance before attributing the improvement to learned sufficient state.
+
+L4 separates equal original-question exposure from equal total labels. Its 480/768
+history counts balance every original-question/state/history-length combination.
+The larger original-menu control matches the diverse arm's histories and updates;
+the smaller control matches original-question examples. Common diverse development
+removes unequal model-selection access, while exposing compositions in every arm.
+Only farther questions remain absent from training and selection. The no-history
+neural rival keeps the direct architecture's nominal parameters but zeros every
+history feature and ignores length; query identity learning and history-change
+invariance validate that access contract. The changed sample and fitting budgets
+are explicit costs, not claimed controlled-away nuisances.

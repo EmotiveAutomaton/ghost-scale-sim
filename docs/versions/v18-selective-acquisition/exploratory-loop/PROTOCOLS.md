@@ -107,7 +107,7 @@ opportunity cells (the sharing bit is fixed false), and copy spans 1/3/6. This i
 role/rate-mixture and known-state references retain U1's settings and common trace.
 
 Report cumulative prefix prediction loss and expected native matching, plus equal
-16-step windows at post-switch ages 0–16, 16–32 and 48–64. The switch step is
+16-step windows at post-switch ages 0â€“16, 16â€“32 and 48â€“64. The switch step is
 zero-based and forecasts precede its observation. These windows distinguish
 evidence age from changing proportions of pre/post-change observations. Prefix
 contrasts are paired descriptive trajectories, not a randomized causal estimate
@@ -357,6 +357,55 @@ audit prices: 1,200 exact models. Graphs, reports, policy branches and readers
 within a model are not independent observations. Raw evidence includes parameters,
 the full report likelihood table, every terminal policy path, its posterior and
 its true joint mass. No native construction or learned-uptake result is claimed.
+
+## L4: matching original-question exposure and total labels separately
+
+All six L1 support/query regimes retain farther-question deterioration after
+specific coverage repair. L3's added decoder labels do not establish a history
+advantage against a question/world rival; L2a exposes useful bank information
+under additional law access. Neither isolates the reduced per-question sample
+density of L1's five-of-eight rotation. Test that remaining explanation with a
+fresh shared lineage and three full-maker-support training arms:
+
+| Training arm | Histories per cell | Questions per history | Labels per original question per cell | Total labels per cell |
+|---|---:|---:|---:|---:|
+| Original menu, matched exposure | 480 | 5 | 480 | 2,400 |
+| Diverse menu, restored exposure | 768 | 5 of 8 | 480 | 3,840 |
+| Original menu, matched total | 768 | 5 | 768 | 3,840 |
+
+Rows specify training allocations. Every state/history-length/original-question
+cell receives exactly 10 labels in the first two arms and 16 in the third.
+Each diverse-menu composition also receives 480 labels. Histories and coefficient
+draws are nested; query allocation never changes the history draws. This differs
+from repeating larger seeds: the first contrast holds original-question exposure
+fixed, while the second holds total histories, labels and optimizer updates fixed.
+The first contrast necessarily changes history count and total fitting work, so
+it does not isolate a pure question-diversity effect. No favorable ranking gates
+validity. The two contrasts together bound the density explanation.
+
+All arms use the same fresh diverse development set of 384 histories per cell
+and the same 96-lineage test set. Development therefore exposes the composed menu
+to selection even for original-menu training; call only the farther questions
+absent from both training and development. Neither development nor test results
+change the frozen roster. Retain every epoch curve, not just selected scores.
+Keep width 48, 64 epochs, batch 128 and three fit seeds, with direct, flat and
+split readers. Add an equally trained question/world-only rival with the direct
+reader's nominal parameter budget: its history tensor is zeroed before encoding,
+including source flags, and length is unused. Its constant state is not learned
+history. Actual counts and preparation costs are reported separately.
+
+Known-answer query learning validates that rival; arbitrary history/length changes
+must leave its answer unchanged, while query changes must be able to affect it.
+Exact exposure counts, nested histories, shared development capsules, corruption,
+resume identity and independent forecast replay test the instrument. All losses,
+including unfavorable or negligible differences, remain reportable. Retain all
+raw scientific inputs, selected weights and an adjacent independent replay packet.
+
+Measured full-support L1 costs were 2,555.91--2,653.31 CPU seconds at 512 training
+histories per cell. Linear sample scaling gives 10,256 CPU seconds for this trio
+before the extra rival/development overhead; 11,000--15,000 seconds is a broad
+forecast to be replaced with observed packet costs. Absolute campaign cutoffs
+and cumulative accounting remain binding; this is not permission to pad runtime.
 
 Perfect binary evidence and an uninformative audit supply live/placebo controls.
 Independent latent-root enumeration checks the factored initial likelihood;

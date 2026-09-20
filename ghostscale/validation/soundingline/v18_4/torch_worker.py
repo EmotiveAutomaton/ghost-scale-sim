@@ -50,13 +50,16 @@ class Reader(nn.Module):
         elif kind=='split':
             if width%3:raise ValueError('three equal declared role slots required')
             self.encoders=nn.ModuleList(nn.GRU(input_size,width//3,batch_first=True) for _ in range(3))
-        elif kind=='direct':
+        elif kind in ('direct','question-only'):
             self.encoder=nn.Sequential(nn.Flatten(),nn.Linear(max_history*input_size,direct_hidden),nn.Tanh(),nn.Linear(direct_hidden,width),nn.Tanh())
         else:raise ValueError('unknown reader')
         self.decoder=nn.Sequential(nn.Linear(width+query_size,head),nn.Tanh(),nn.Linear(head,16))
 
     def encode(self,h,length):
-        if self.kind=='direct':return self.encoder(h)
+        if self.kind in ('direct','question-only'):
+            # The no-history rival retains the same nominal architecture/budget.
+            # Every history entry, including length/source flags, is inaccessible.
+            return self.encoder(torch.zeros_like(h) if self.kind=='question-only' else h)
         encoders=self.encoders if self.kind=='split' else [self.encoder]
         return torch.cat([encoder(h)[0][torch.arange(len(h)),length-1] for encoder in encoders],dim=1)
 
@@ -69,7 +72,7 @@ def architecture(kind,input_size,query_size,width):
     reference=count(Reader('flat',input_size,query_size,width))
     if kind=='split':
         candidates=[Reader(kind,input_size,query_size,width,head=h) for h in range(32,161,4)]
-    elif kind=='direct':
+    elif kind in ('direct','question-only'):
         candidates=[Reader(kind,input_size,query_size,width,direct_hidden=h) for h in range(2,33)]
     else:return Reader(kind,input_size,query_size,width)
     return min(candidates,key=lambda m:abs(count(m)-reference))
@@ -119,6 +122,9 @@ def positive_control(kind,input_size,query_size,width):
     model=architecture(kind,input_size,query_size,width)
     h=torch.zeros(32,32,input_size);h[:,0,:16]=torch.eye(16).repeat(2,1)
     length=torch.ones(32,dtype=torch.long);q=torch.zeros(32,query_size);target=torch.eye(16).repeat(2,1)
+    if kind=='question-only':
+        if query_size<16:raise ValueError('query-only identity control needs sixteen query features')
+        q[:,:16]=target
     optimizer=torch.optim.Adam(model.parameters(),lr=.02)
     initial=float(loss(model(h,length,q),target).detach())
     for _ in range(100):
@@ -216,7 +222,7 @@ def update_costs(best,data):
             start=time.perf_counter()
             for _ in range(20):full=model.encode(prefix,length)
             full_seconds=(time.perf_counter()-start)/(20*len(h))
-            if model.kind=='direct':incremental_seconds=full_seconds;error=0.
+            if model.kind in ('direct','question-only'):incremental_seconds=full_seconds;error=0.
             else:
                 encoders=model.encoders if model.kind=='split' else [model.encoder]
                 previous=[e(prefix[:,:n-1])[1] for e in encoders]
@@ -226,7 +232,7 @@ def update_costs(best,data):
                 if error>2e-6:raise ValueError('incremental recurrent state differs')
             rows.append(dict(history_length=n,full_encoding_seconds_per_history=full_seconds,
                 update_seconds_per_history=incremental_seconds,incremental_max_error=error,
-                maintained_floats=model.width if model.kind!='direct' else int(np.prod(h.shape[1:]))))
+                maintained_floats=(0 if model.kind=='question-only' else model.width if model.kind!='direct' else int(np.prod(h.shape[1:])))))
     return dict(rows=rows,repetitions=20,batch_histories=len(h),scope='single-thread CPU microbenchmark; training and query decoding reported separately')
 
 

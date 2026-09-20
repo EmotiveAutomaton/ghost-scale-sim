@@ -141,12 +141,15 @@ def make_split(split,per_cell,parity_kind='even',query_kind='old',pulse=lambda *
                 **{name:np.asarray(values,np.float64) for name,values in summaries.items() if values}),truth
 
 
-def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False,pulse=lambda **kw:None,support='even',query_mode='old',namespace='v18.4-neural'):
+def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False,pulse=lambda **kw:None,support='even',query_mode='old',namespace='v18.4-neural',dev_query_mode=None):
     import gzip
     root=Path(root);root.mkdir(parents=True,exist_ok=True)
     public_root=root/'reader';public_root.mkdir(exist_ok=True)
     config=dict(support=support,query_mode=query_mode,train_per_cell=train_per_cell,dev_per_cell=dev_per_cell,test_per_cell=test_per_cell,pilot=pilot)
     if namespace!='v18.4-neural':config['namespace']=namespace
+    if dev_query_mode is not None:
+        if dev_query_mode not in ('old','diverse'):raise ValueError('undeclared development query mode')
+        config['dev_query_mode']=dev_query_mode
     write(root/'BUILD_PLAN.json',config)
     if (public_root/'INPUTS.json').exists():
         manifest=read(public_root/'INPUTS.json')
@@ -164,7 +167,8 @@ def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False
                 raise ValueError('retained generation shard changed')
             with np.load(data_path,allow_pickle=False) as z:data={k:z[k].copy() for k in z.files}
             return data,json.loads(gzip.decompress(points.read_bytes()))
-        data,truth=make_split(split,n,parity_kind,query_kind,pulse,pilot,support,query_mode,namespace)
+        mode=dev_query_mode if split=='dev' and dev_query_mode is not None else query_mode
+        data,truth=make_split(split,n,parity_kind,query_kind,pulse,pilot,support,mode,namespace)
         np.savez_compressed(data_path,**data);points.write_bytes(gzip.compress(W.canonical(truth),mtime=0))
         write(receipt,dict(data_sha256=file_digest(data_path),points_sha256=file_digest(points)))
         return data,truth
@@ -189,6 +193,7 @@ def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False
                 tests=input_paths,cases=cases,training_supervision='same exact simulator behavioral distributions for all models',
                 support=support,query_mode=query_mode,max_history=MAX_HISTORY,history_features=train['history'].shape[2],query_features=train['query'].shape[1],
                 train_histories=len(train['history']),dev_histories=len(dev['history']),pilot=pilot)
+    if dev_query_mode is not None:public['dev_query_mode']=dev_query_mode
     write(root/'EVALUATOR.json',dict(truth=truth_paths,scope='must never be passed to training child'))
     write(public_root/'INPUTS.json',public)
     return public

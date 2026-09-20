@@ -25,8 +25,11 @@ more memory diversity. Both change-adaptation horizons are now verified; the
 matched-prefix diagnostic shows that evidence age and switch timing change the
 skill boundary while leaving rule misspecification unrepaired. The learned-memory new-question failure survives both complementary training
 supports and full maker support. All three question-diversity comparisons repair
-now-covered compositions while worsening untouched farther queries; frozen-state
-readout and supplied-law bank diagnostics remain queued. This is adaptive constructed-world discovery.
+now-covered compositions while worsening untouched farther queries. Verified frozen-state
+readouts do not establish a history advantage against the question/world rival;
+supplied-law bank decoding improves farther scores but requires probability repair.
+Matched-exposure training with a no-history rival is now admitted. This is adaptive
+constructed-world discovery.
 
 ## V18.3 research extension complete
 

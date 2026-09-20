@@ -185,3 +185,34 @@ errors between audit and purchased evidence remain an explicit follow-on, becaus
 including them would require a persistent error state and changed likelihoods.
 The current initial-root shared error does not implement that extension. Other
 literature suggestions in the return are not load-bearing inputs or Ghost results.
+
+
+## Ninth bounded Terra pass: feasible banks and conditional targets
+
+Local position before the return: full finite span can coexist with unstable
+learned-bank decoding; clipping may improve scores without producing an attainable
+bank. Frozen-state decoder recovery does not alone establish history usefulness.
+One sequential bounded Terra researcher investigated this concrete opening.
+
+The reviewer checked [Liu et al.](https://proceedings.mlr.press/v97/liu19c.html),
+which uses Rao-Blackwellization to reduce gradient-estimator variance without
+changing bias, and [Gneiting and Raftery](https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf),
+which defines strict propriety as a unique truthful expected-score optimum.
+These motivate testing conditional-target supervision; neither proves transfer
+or optimality for this simulator's nonrandom balanced-state allocation.
+[Sharoni and Sabato](https://proceedings.mlr.press/v206/sharoni23a.html) analyzes
+limits of privileged empirical risk minimization. Its result does not identify
+Ghost's mechanism; supplied-law teacher access remains an explicit privilege.
+
+A convex combination of finite-state banks is mathematically feasible by
+construction. Euclidean projection onto their convex hull is a proposed diagnostic,
+not an adopted literature algorithm or an established log-loss improvement.
+Incomplete catalogs can bias it; nonunique state weights need not identify maker
+roles. These claims require local known-answer controls before execution.
+
+Two return details are corrected before design adoption. Current targets are
+full response distributions at realized states, not single sampled artifacts.
+The no-history reference must retain the public world law; an unconditioned prior
+would confound law access with history. A conditional teacher must use the actual
+training-state prior. L4 proceeds first on the separately unresolved exposure
+contrast; feasible-bank and conditional-target studies remain concrete next work.
