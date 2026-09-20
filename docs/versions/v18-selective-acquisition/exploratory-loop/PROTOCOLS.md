@@ -306,3 +306,66 @@ from-start equivalence, invariant final batch evidence under reordering, native
 execution and cost reconstruction validate the ruler. Independent batch posterior
 products check every unit; all means and bounded whole-unit replay accompany the
 adjacent verification packet. Desired method rankings never serve as gates.
+
+## S1: paid noisy provenance audits versus fresh evidence
+
+V18.3 showed copied-source overconfidence and conditional correction benefits;
+R1 supplies exact source labels. S1 makes investigation of the copy relation an
+explicit paid choice. This separate binary model has two truths and four graph
+partitions over six reports: one root, two contiguous roots, two alternating
+roots and six independent roots. The reader has an independent uniform prior
+over truth and graph. Every one of the 64 report strings and every subsequent
+policy outcome is enumerated exactly. No sampled report strings or duplicated
+seeds stand in for experimental coverage.
+
+Twenty fresh parameter draws vary root reliability from .65 to .9, copy fidelity
+from .9 to .99 and fresh-report reliability from .75 to .95. Initial roots share
+a flip with probability zero or .2; readers know this rate. The shared flip affects
+the initial roots only. Purchased evidence is genuinely independent conditional
+on truth; audit errors are independent conditional on graph. This is an explicit
+channel assumption, not an empirical provenance guarantee.
+
+A reader may buy at most two observations, stopping earlier. An audit reports
+whether reports zero/one or zero/five share a root. Each pair can be audited once;
+fresh evidence can be purchased twice. The two-pair menu leaves the alternating
+and fully independent graphs aliased. Actual audit accuracies are .5, .75 and .95.
+Readers either know the accuracy or assume .95 when the true value is .5 or .75.
+The latter are declared calibration stress tests. There is no redundant duplicate
+of the calibrated .95 condition. Stakes .25, 1 and 4 multiply correct binary-choice
+utility; evidence costs .1 and an audit costs .025 or .15. These are stipulated
+utility prices, not CPU or measured human costs.
+
+Nine readers compare stopping; stopping under a false all-independent assumption;
+a common fixed trace of the first audit then fresh evidence under each of those
+two initial graph models; evidence-only and audit-only two-step optimization;
+one-step truth-decision value with replanning; exact two-step truth-decision value;
+and a graph-information-per-price heuristic. The last heuristic buys the available
+observation with greatest graph-entropy reduction per price, stopping when none
+reduces graph uncertainty. It is not a net-utility optimizer. Optimal policies
+include stopping, price every branch and never receive evaluator truth or mass.
+The common trace isolates the initial dependence assumption while own-policy
+comparisons include both action selection and posterior inference.
+
+Report exact expected truth logarithmic loss, correct-choice probability, net
+utility, expected audit/evidence counts, total cost, graph squared-probability
+error and probability of assigning over .95 to the wrong truth. Retain results
+conditional on each true graph as well as the equal-graph mixture. Graph error
+is the sum of four squared probability errors, avoiding artificial finite log
+scores for the naive reader's zero graph support. Twenty coefficient draws cross
+two common-error rates, five true/assumed audit channels, three stakes and two
+audit prices: 1,200 exact models. Graphs, reports, policy branches and readers
+within a model are not independent observations. Raw evidence includes parameters,
+the full report likelihood table, every terminal policy path, its posterior and
+its true joint mass. No native construction or learned-uptake result is claimed.
+
+Perfect binary evidence and an uninformative audit supply live/placebo controls.
+Independent latent-root enumeration checks the factored initial likelihood;
+independent path products check all posterior and true masses. Full support must
+sum to one, every purchase must obey the budget, and all costs and conditional
+scores are reconstructed. Brute-force enumeration of two-step contingent policies
+checks the decision recursion. A planted joint-only information fixture checks
+the value of sequencing without imposing any scientific ranking. A correctly
+inverted audit, information-free paid trace, evaluator noninterference, corruption
+rejection, independent means and frozen whole-unit replay complete the checks.
+Shared audit/report errors, adversarial graphs outside the menu and larger
+multi-step policies remain separate useful extensions, not implemented scope.

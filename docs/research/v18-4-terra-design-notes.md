@@ -156,3 +156,32 @@ deduplication and explicit costs. The purchasable law is a predeclared catalog
 entry, not discovered truth. Price sensitivity is stipulated; a trigger based on
 surprise is not an optimal value-of-computation policy. All thresholds, candidate
 menus, nulls and reversals remain reportable. No favored ordering is a gate.
+
+## Eighth bounded Terra pass: paying for noisy provenance (20 September UTC)
+
+Local position before the return: a source audit changes dependence information;
+less graph uncertainty need not improve a truth decision. Copied evidence and
+independent correction already have conditional results, while R1 assumes exact
+source identities. One sequential Terra agent researched this specific opening.
+
+The operating reviewer fetched [Chen, Hassani and Krause](https://proceedings.mlr.press/v54/chen17b.html),
+which reports limitations of greedy uncertainty reduction with conditionally
+dependent tests, and [Heckerman, Horvitz and Middleton](https://arxiv.org/abs/1303.5720),
+which distinguishes one-test value from considering sequences of observations.
+These motivate comparing graph information, immediate truth-decision value and
+two-step value; they do not predict an audit advantage in Ghost. S1 enumerates a
+small policy tree exactly and does not implement either paper's algorithm.
+
+The return's statement that a no-copy graph has no truth pathway needs care:
+when the reader is uncertain about that graph, an audit can change its reading of
+reports even if the actual graph is independent. S1 retains conditional results
+for every actual graph without imposing a no-benefit gate on the independent case.
+Its uninformative-audit control instead tests the correct likelihood invariant.
+
+S1 adopts noisy pair audits, independent fresh evidence, miscalibration, stopping,
+explicit prices, common traces and own-policy comparisons. Independent root-state
+enumeration and a brute-force contingent-policy control test the apparatus. Shared
+errors between audit and purchased evidence remain an explicit follow-on, because
+including them would require a persistent error state and changed likelihoods.
+The current initial-root shared error does not implement that extension. Other
+literature suggestions in the return are not load-bearing inputs or Ghost results.

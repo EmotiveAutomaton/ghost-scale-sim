@@ -779,3 +779,14 @@ The full-support diversity comparison completes the six-regime paired support/qu
 slate. Both test halves contain trained combinations; the legacy novelty labels
 are not used to claim held-out maker support. Fixed total labels leave per-question
 exposure as an unresolved explanation, alongside decoder and optimization effects.
+
+S1 enumerates binary truth, four copy graphs, every six-report string and every
+terminal path of at most two paid inquiries. The reader's posterior determines
+actions; separate true joint masses evaluate them. One-step and two-step decision
+value are compared with restricted purchases, a graph-information heuristic and
+fixed common traces. Actual and assumed audit reliability are separate factors.
+Independent latent-root sums and path likelihood products validate inference;
+brute-force contingent-policy enumeration checks the bounded decision recursion.
+Purchase prices are stipulated utility costs. Proper truth loss, binary decisions,
+graph probability error and net utility remain distinct outcomes. Initial shared
+source error does not imply shared errors in the subsequently purchased channels.

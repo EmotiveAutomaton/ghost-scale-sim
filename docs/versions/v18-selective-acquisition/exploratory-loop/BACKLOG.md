@@ -1,21 +1,21 @@
 # Review and refill backlog
 
-Review 7: P1, both U1 horizons, all three old-question L1 support regimes and both
-complementary diverse-question regimes are verified and published. Covering
-compositions repairs prediction while untouched farther queries worsen for every
-reader on both maker halves. Full-support diversity runs, with U2, L3, L2a, P2
-and newly implemented R1 admitted. The first two diversity fits average 46.71
-wall minutes; remaining queue estimates are provisional in REVIEW_7.
+Review 8: P1, both U1 horizons and all six main L1 support/question regimes are
+verified and published. Covering compositions repairs prediction while untouched
+farther queries worsen for every learned reader, including full maker support.
+U2, L3, L2a, P2 and R1 have admitted science/replay slots; S1 adds exact paid
+noisy-audit comparisons. Diverse fits averaged 45.71 wall minutes; subsequent
+queue estimates remain provisional in REVIEW_8.
 Remaining rows require their own protocol, gates and source freeze.
 
 | ID | Next question | Discriminating outcome | Priority |
 |---|---|---|---|
 | P1 → P2 | Does the pairing of supplemental targets with history matter? | Correct alignment versus all seven cyclic misalignments and marginal targets, with equal content in shifted arms | P1 complete; P2 implemented and reviewed in review 6, with adjacent replay |
-| L1 | Is missing state/query support causing recurrent transfer failure? | Covered repair versus untouched farther transfer | All old-question supports and both complementary diversity regimes verified; full diversity pending |
+| L1 | Is missing state/query support causing recurrent transfer failure? | Covered repair versus untouched farther transfer | All six main regimes verified; exposure/optimization remain unresolved |
 | L2a → L2b | Do old-answer predictions support new answers through the finite law, and can a better bank objective be learned? | Supplied-law maps separate access and conditioning before new bank training | L2a implemented in review 5; L2b remains a separate next design |
 | L3 | Is the failure in memory or its decoder? | Added readouts recover prediction beyond raw-history, question-only and shuffled rivals | Implemented in review 4; admission receipt distinguishes plans from execution |
 | U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes distinguish age from horizon-seeded traces; family comparison addresses omitted law | U32/U96 verified; U2 and R1 admitted with replay |
-| S1 | When is paying to verify independence better than buying evidence? | Crossovers depend on graph uncertainty and action stakes | After provenance research |
+| S1 | When is paying to verify independence better than buying evidence? | Crossovers depend on graph uncertainty, stakes, prices, calibration and planning horizon | Implemented and reviewed in review 8 with adjacent replay |
 | R1 | Does family averaging avoid the harm of premature revision? | Sequential loss and priced native matches separate selection, averaging and paid catalog expansion | Implemented and admitted in review 7; source/order/trigger controls pass |
 | I1 | Does interchange training generalize beyond supplied interventions? | Untaught joint/ordered interventions separate mapping fit from reusable structure | After L2 |
 | C1 | When does cached organization repay its preparation? | Accuracy-matched workload crossover, or a bounded negative result | After new learned fits |
@@ -78,3 +78,19 @@ family; I1 composition and C1 matched-accuracy economics remain substantive.
 No further duplicate fit seeds or completed science are admitted. Queue drain
 still requires useful refill, a retained concrete next-design event or a full
 candidate-by-candidate exhaustion review; none is exhausted by this record.
+
+## Review 8 priorities
+
+The full-support diversity fit removes another support-specific explanation for
+the observed boundary; it does not separate per-question density from optimization
+or decoder access. The already admitted L3/L2a diagnostics should set the next
+learning objective and sample-budget intervention. S1 supplies an independent
+provenance question without waiting for those outcomes. Its exact enumeration
+costs about 267 CPU seconds before overhead, so it is not presented as a multihour
+refill. Source-bound admission includes its neighboring replay slot.
+
+S1 follow-ons remain concrete: a persistent error shared by audit and purchased
+evidence, graph misspecification, or an expanded audit menu that breaks the retained
+graph alias. Each requires a new protocol and controls informed by the first exact
+result. I1's untaught joint intervention and C1's accuracy-matched cost comparison
+remain useful. Neither full coverage nor exhausted useful work is established.

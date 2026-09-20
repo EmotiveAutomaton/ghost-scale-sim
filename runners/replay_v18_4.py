@@ -37,6 +37,9 @@ def finite(root):
                 dimensions=('family','cell','kind','order','copy_span','length')
                 metrics=('expected_loss','final_loss','expected_match','expanded','purchase_step',
                          'likelihood_evaluations','net_match_low','net_match_high')
+            if unit['family']=='S1':
+                dimensions=('family','shared','audit_true','audit_assumed','stake','audit_price')
+                metrics=('expected_loss','expected_match','net_utility','audit_count','evidence_count','cost','graph_brier','false_confidence')
             for row in unit['rows']:
                 tags={k:unit.get(k) for k in dimensions};tags['method']=row['method']
                 if 'cardinality' in row:tags['cardinality']=row['cardinality']
