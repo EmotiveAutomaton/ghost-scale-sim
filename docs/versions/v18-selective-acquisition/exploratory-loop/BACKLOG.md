@@ -1,5 +1,18 @@
 # Review and refill backlog
 
+## Current checkpoint: review 15
+
+The 05:00 PDT minimum elapsed target has been reached with useful work still
+advancing; coverage is incomplete and useful work is not exhausted. Both L2b
+target arms are verified: conditional training improves original-memory scores
+without repairing farther transfer. L2d matched-training bank pairs remain in
+the single-worker queue. Bind and admit L2e's conditional bank only after exact
+roster identity against the realized bank and the current CPU/cutoff check.
+The unchanged instrument and adjacent replay make this a bounded new decoder
+comparison, not repeat learning. See [REVIEW_15](REVIEW_15.md) for candidate
+outcomes and coverage. R3/S2/I1/C1, partition equivalence, selection interactions
+and predictive-state closure remain useful; no exhaustion disposition is made.
+
 Review 13: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
 L3/L2a and R1 are verified. R1 publication records useful paid expansion but an
 aliased initial candidate pair; R2 is now verified and published with distinct laws
