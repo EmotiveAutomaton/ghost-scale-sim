@@ -1,5 +1,18 @@
 # Review and refill backlog
 
+## Post-P3 transition
+
+P3 is now verified and published: 640 retained worlds, 7,168 independent means,
+eight whole-unit replays, and 169.828125 CPU seconds including verification.
+Different history partitions can preserve the same forecasts; the effect of a
+misaligned purpose cannot be read from partition identity alone. All shifts and
+cardinalities remain reported. The current 28 science packets are verified.
+The queue drain is handled by the concrete [R3 next design](NEXT_DESIGN_2026-09-20.md),
+retained without admission because its roughly 33-minute R2-based planning cost
+plus new controls exceeds the remaining science window. Other useful candidates
+remain; this is cutoff-limited coverage, not exhausted useful work. Final accounting,
+reporting and verified service shutdown remain pending at the fixed cutoff.
+
 ## Current checkpoint: review 16
 
 Both L2e target banks are verified and published. Conditional targets slightly

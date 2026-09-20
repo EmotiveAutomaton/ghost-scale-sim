@@ -78,3 +78,34 @@ the elapsed minimum, actual work/costs, published evidence and missing coverage.
 The prior conditional-target and conditional-bank admission CI runs fail only the
 retained V15 C11/M01 instrument verdicts. Other recent CI runs remain separately
 tracked until their final status is inspected; no green repository CI is claimed.
+
+## Verified P3 result and post-drain disposition
+
+P3 and its adjacent replay completed during handoff preparation. All 640 worlds,
+7,168 independent means and eight whole-unit replays pass. Science charged
+143.671875 CPU seconds and verification 26.156250, totaling 169.828125 CPU seconds
+and 2.91 wall minutes. The four-symbol/four-position shift preserves forecasts
+in 252 of 320 original-rule worlds and 240 of 320 alternative-rule worlds, while
+only 244 and 166 preserve the same partition. Distinct partitions can therefore
+remain equivalent for the declared future questions. Aggregate near ties still
+hide some individual forecast differences. All shifts/cardinalities and portable
+raw evidence are published with the method and interpretation limits.
+
+The finite worker's status did not emit during aggregation after all 640 units
+were retained. Native CPU and the fresh supervisor heartbeat established the
+expected phase; no worker was restarted or snapshot edited. Completed receipts
+now replace that temporary status gap. The original handoff assertion failure
+was local review bookkeeping, not a scientific instrument failure.
+
+The post-P3 queue drain receives a [concrete retained next design](NEXT_DESIGN_2026-09-20.md).
+R3 needs separate whole-process calibration and evaluation before its purchase
+comparison is interpretable. Its 4,992 planned case evaluations project roughly
+1,970 CPU seconds from R2 fixtures, before new controls and replay. This does not
+fit the remaining sub-twenty-minute window on a validated estimate. It is retained
+without admission; clocks and scope are unchanged. P3 future-purpose coverage,
+S2, I1, C1, selection and recursive-state work remain useful, not exhausted.
+The scientific roster is complete and verified; final campaign accounting,
+coverage reporting, service closeout and delivery remain pending at cutoff.
+
+All four preceding conditional/bank CI runs were subsequently inspected: each
+fails only V15 C11/M01. This review's own pushes remain tracked separately.

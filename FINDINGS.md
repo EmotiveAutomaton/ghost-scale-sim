@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 P3: partition versus forecast equivalence
+
+Why do some incorrect history-purpose pairings nearly match correct alignment? With four memory symbols, shifting the supplemental targets by four history positions preserves the same future forecasts to numerical tolerance in 252 of 320 original-rule worlds and 240 of 320 alternative-rule worlds; the actual history partitions match in only 244 and 166, respectively. Near ties partly reflect equivalence for the tested future questions: different memory partitions need not change those answers. This is a descriptive constructed-method result with supplied decoding, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-P3-partition-response.md).
+
 ## V18.4 L2e: paired target banks
 
 Do conditional training targets improve useful history that a common supplied-law decoder can recover from the old-answer bank? Yes, slightly in these paired fits: farther mean logarithmic loss, where lower is better, falls from 0.78259 to 0.77983 for flat memory and from 0.77849 to 0.77717 for split memory; direct-history banks improve too. All three remain better than both no-history references under this decoder, despite their earlier deterioration in direct farther answers. This is a descriptive constructed-method result, miniature — architecture untested.

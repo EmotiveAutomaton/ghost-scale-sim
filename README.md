@@ -48,7 +48,8 @@ also retains the deterioration. The larger original-menu bank retains useful
 history under a supplied-law feasible decoder. Diverse training improves those
 paired bank answers despite its worse direct farther forecasts. Conditional targets
 also yield small improvements in useful bank forecasts under that decoder, despite
-worse direct farther answers. This is adaptive
+worse direct farther answers. Purpose-alignment near ties partly preserve
+identical forecasts even when the history partitions differ. This is adaptive
 constructed-world discovery.
 
 ## V18.3 research extension complete

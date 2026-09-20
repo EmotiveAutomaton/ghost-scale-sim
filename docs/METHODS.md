@@ -928,3 +928,8 @@ comparison. Independent scalar membership sets, conditional averages and proper
 scores separate identical partitions, identical forecasts and identical losses;
 none of those scientific frequencies is imposed as a desired ranking. Reused
 worlds remain paired evidence, not new independent replications.
+
+P3 publication reports all shifts and cardinalities, then conditions descriptively
+on changed partitions. Partition identity, forecast identity within a fixed
+probability tolerance, and aggregate score proximity remain separate. Selected
+illustrations do not change the full roster or the prespecified diagnostic.
