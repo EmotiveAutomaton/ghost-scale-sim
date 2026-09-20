@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L2b: realized-target control (20 September 2026 PDT)
+
+Does learned history transfer beyond the original questions when training states are sampled independently and selection sees only those questions? No in this realized-target control: farther mean logarithmic loss, where lower is better, is 1.70223 for direct history, 2.91068 for flat memory and 3.02246 for split memory, versus 1.57940 without history. Recurrent memory still helps on the original questions. The conditional-target comparison remains pending, so this arm does not establish the effect of changing training targets. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L2b-realized-response.md).
+
 ## V18.4 L2c: feasible bank decoding
 
 Do learned old-question predictions retain useful history when decoded as valid mixtures of supplied finite states? Yes in this comparison: farther mean logarithmic loss, where lower is better, is 0.81764 for flat memory and 0.83576 for split memory, versus 0.93884 for the no-history bank and 0.93101 for the same-world prior. Both memory readers improve over clipped inversion, which gives 0.91168 and 0.97634. Useful history therefore survives this feasible decoder, but the decoder is given the world law and does not identify unique maker roles. This is a descriptive constructed-method result, miniature — architecture untested.

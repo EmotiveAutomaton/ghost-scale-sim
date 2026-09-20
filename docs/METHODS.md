@@ -888,3 +888,10 @@ L2c publication distinguishes valid probability forecasts from useful history.
 Feasible mixture decoding is compared with both the same-world prior and a learned
 question/world-only bank. Euclidean residual and simplex gap diagnose geometry
 and optimization respectively; neither serves as a predictive-success gate.
+
+L2b first-arm reporting separates verified baseline behavior from an unfinished
+paired target intervention. Old-only development makes both composed and farther
+forms untaught in fitting and selection. Independent scalar target audits and
+forecast replay validate the baseline without treating a target benefit as a gate.
+The changed training-state sampling forbids treating L4 score differences as a
+controlled selection or sampling effect. Native CPU receipts bound actual charges.
