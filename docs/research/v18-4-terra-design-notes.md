@@ -126,3 +126,33 @@ cyclic shifts balance nonself pairings, not every possible permutation. The
 marginal-only control preserves mean targets while deliberately removing history
 information. Difficulty, code geometry and relation to future purposes remain
 scientific differences, not purportedly matched nuisance factors.
+
+## Seventh bounded Terra pass: sequential family expansion (20 September UTC)
+
+Local position before research: selection, averaging known explanations and paid
+family expansion are distinct; perfect source labels should prevent copied
+evidence from changing posterior weight; averaging does not identify omitted laws.
+One sequential Terra agent researched the unresolved R1 comparison without
+implementation or repository auditing.
+
+The operating reviewer fetched [Yao et al.](https://arxiv.org/abs/1704.02030), whose
+stacking paper challenges ordinary Bayesian averaging when truth lies outside the
+candidate set, and [Grünwald and van Ommen](https://arxiv.org/abs/1412.3730), whose
+misspecified regression example shows that posterior concentration can mislead.
+These are reasons to retain missing-law stress tests, not predictions of Ghost's
+outcome. R1 tests ordinary finite Bayesian averaging; it does not implement
+stacking, SafeBayes or the research return's expert-tracking suggestion.
+
+The return proposed a binary two-phase stream. R1 instead preserves the existing
+native maker world and reorders identical observations under a stationary law,
+separating evidence order from a genuine change. Its broad claim that cumulative
+log evidence is order-sensitive needs qualification: the final evidence of a
+static model is invariant to record order. Sequential predictions and a causal
+purchase trigger can depend on order. A dedicated control checks the invariant.
+
+We adopt a frozen past-only surprise trigger, separate selection/averaging
+comparators, a no-purchase control, an expanded-from-start control, exact source
+deduplication and explicit costs. The purchasable law is a predeclared catalog
+entry, not discovered truth. Price sensitivity is stipulated; a trigger based on
+surprise is not an optimal value-of-computation policy. All thresholds, candidate
+menus, nulls and reversals remain reportable. No favored ordering is a gate.

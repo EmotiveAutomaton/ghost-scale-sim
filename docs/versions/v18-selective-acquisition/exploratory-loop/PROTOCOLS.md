@@ -243,3 +243,66 @@ scalar scores check every retained selected code; boundary cardinalities, exact
 counterbalancing, target-content/information invariants, future noninterference,
 corruption rejection, independent means and frozen whole-unit replay validate the
 apparatus. Scientific superiority of any portfolio is never a validity gate.
+
+## R1: sequential averaging versus paid finite-family expansion
+
+V18.3's revision can repair a wrong rule but hurt a correct family, while V18.4's
+role mixtures leave an omitted law unrepaired. Separate selecting a known law,
+averaging known laws and paying to add one predeclared catalog entry. This is
+catalog access, not invention or identification of an arbitrary unknown law.
+
+The initial library contains the supplied world and its acquisition-coupling
+alternative. Expansion adds the opposite softmax/satisficing decision rule with
+the supplied coupling. Truth is the supplied law, the acquisition alternative,
+the newly purchasable rule, or an outside-menu lexicographic law with changed
+coupling. All candidates start with the same uniform 24-state prior. Selection
+uses maximum cumulative evidence with a fixed first-index tie rule; averaging
+uses equal model priors and normalized evidence. After purchase, all three models
+receive equal prior mass and all preceding unique observations are refitted for
+the added law. Past forecasts are never rewritten.
+
+Generate 32 unique observations: sixteen from the five original contexts, then
+sixteen from the three composed/budget contexts in the public world catalog.
+Compare original contexts first, composed contexts first, and alternating order
+using exactly the same records. These contexts are candidate diagnostics, not
+guaranteed surprises. Each observation has an associated future-query forecast,
+issued before observing that record. The maker and law remain stationary; this
+isolates acquisition order rather than a real law change. Final forecasts cover
+the four future contexts using the completed history, with evaluator-only exact
+targets. They are not new observed outcomes used for fitting.
+
+Cross each order with one report or three identical reports per source. Both
+conditions contain the same 32 unique roots. Copies are retained but cause no
+likelihood update, forecast score or purchase opportunity. Conflicting content
+under the same root is rejected. This supplied-perfect-provenance control does
+not answer S1's uncertain-audit question.
+
+Nine readers compare the fixed supplied law, initial-library selection/averaging,
+paid selection/averaging under each of two surprise thresholds, and expanded-
+library selection/averaging from the start. Paid readers buy once, before a new
+unique observation, when at least eight earlier roots exist and the mean negative
+log probability of the last four observed programs exceeds 1.5 or 3 nats under
+the initial two-model mixture. Thresholds are fixed before outcomes; both must
+be reported. The trigger is heuristic, not a calibrated anomaly test or optimal
+value-of-computation policy. It receives no future targets or evaluator truth.
+
+Report sequential expected logarithmic loss, final expected loss, native modal-
+artifact match probability, purchase frequency/time and candidate-state likelihood
+evaluations. A delayed purchase pays retrospective likelihood evaluations too.
+In addition to unpriced matching, two declared cost sensitivities subtract a
+one/four-match-unit access fee and 0.00001/0.0001 match units per candidate-state
+likelihood evaluation, divided by the 32 opportunities. Expanded-from-start
+readers pay the same access fee. These are stipulated prices, not elapsed time
+or measured economic values; generation and all actual verification CPU are
+separately charged to the campaign. Native execution verifies a forecast artifact;
+there is no learned uptake advantage or paid-observation policy here.
+
+Twenty fresh coefficient draws cross eight active rule/coupling/opportunity cells
+(nominal sharing fixed false), four truth conditions, three orders and two copy
+counts: 3,840 assigned streams. Pair methods/orders/copies within world; they are
+not independent replications. Binary exact recovery, uniform evidence, independent
+scalar Bayes arithmetic, source invariance, prefix causality, no-purchase and
+from-start equivalence, invariant final batch evidence under reordering, native
+execution and cost reconstruction validate the ruler. Independent batch posterior
+products check every unit; all means and bounded whole-unit replay accompany the
+adjacent verification packet. Desired method rankings never serve as gates.

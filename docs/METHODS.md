@@ -762,3 +762,15 @@ shift are reported; extra target content is distinct from its useful alignment.
 The complementary diversity comparison is a paired support swap on shared worlds.
 Its repeated direction is not an independent-world replication; all forecasts and
 fit seeds remain grouped by lineage in the verified means.
+
+R1 separates state updates, finite-family selection, Bayesian averaging and paid
+access to a predeclared alternative law. Identical unique records are reordered
+under a stationary maker; marked copies affect neither updates nor score counts.
+A fixed trigger reads only earlier observed-program surprises. Adding a law
+refits retained history and charges that work; expanded-from-start rivals pay
+the same access fee. Sequential and final expected losses, native artifact-match
+probabilities and two stipulated cost sensitivities remain distinct outcomes.
+Every unit's final posterior and evidence are independently reconstructed by a
+batch likelihood product. Final static-model evidence must be order invariant;
+purchase timing and prequential forecasts need not be. This is finite catalog
+access, not law invention, human revision or a learned uptake mechanism.

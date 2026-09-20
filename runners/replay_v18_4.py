@@ -33,6 +33,10 @@ def finite(root):
                 metrics=('expected_loss','pre_change_loss','post_change_loss','expected_match','abstention_loss',
                          'prefix32_loss','prefix64_loss','prefix96_loss','age0_16_loss','age16_32_loss',
                          'age48_64_loss','prefix32_match','prefix64_match','prefix96_match')
+            if unit['family']=='R1':
+                dimensions=('family','cell','kind','order','copy_span','length')
+                metrics=('expected_loss','final_loss','expected_match','expanded','purchase_step',
+                         'likelihood_evaluations','net_match_low','net_match_high')
             for row in unit['rows']:
                 tags={k:unit.get(k) for k in dimensions};tags['method']=row['method']
                 if 'cardinality' in row:tags['cardinality']=row['cardinality']
