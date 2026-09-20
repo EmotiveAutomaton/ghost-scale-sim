@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 P: prospective purpose portfolios (19 September 2026)
+
+Can a memory prepare for new questions without choosing its code using their answers? In this finite comparison, training for a declared portfolio of purposes improves transfer. With four memory symbols under the core rules, mean logarithmic prediction loss on held-out questions falls from 0.92126 for the canonical old-task optimum to 0.88764 for the portfolio code, while old-task loss rises from 1.14444 to 1.14757. Merely choosing the highest-entropy old optimum is not a general repair: under the lexicographic rule it worsens future loss from 0.30243 to 0.33243, whereas the portfolio reaches 0.25098. These are descriptive constructed-method results with supplied-law decoders and additional declared training-purpose access, not evidence of task-independent or learned memory.
+
+[Evidence and limits](docs/exchange/v18-4-P-response.md).
+
 ## V18.3 completed review (19 September 2026)
 
 A useful maker model depends on which questions it must answer and which changes it must survive. V18.3 separates useful action from historical identification, finds benefits and costs of preserving state, and shows that intervention supervision can organize useful counterfactual computation. Its final audit also finds multiple equally good old-task compression codes with different future losses, and no measured total-compute advantage for the recurrent readers over the direct reader on the tested workload. All eight families are executed; these are descriptive constructed-world findings, with no human or unique-ontology conclusion.

@@ -1,0 +1,1298 @@
+[
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "observation-product",
+    "old_loss": 1.0675381013517649,
+    "new_loss": 0.39448524324751344,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "observation-product",
+    "old_loss": 1.149268056148471,
+    "new_loss": 0.4103826730080116,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "observation-product",
+    "old_loss": 1.0449112927808994,
+    "new_loss": 0.3898509787738008,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "observation-product",
+    "old_loss": 1.4401565522242157,
+    "new_loss": 0.9406977647069722,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "observation-product",
+    "old_loss": 1.4374123627252706,
+    "new_loss": 0.950286003173027,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "observation-product",
+    "old_loss": 1.32400903340764,
+    "new_loss": 0.9352490924424315,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "old-canonical",
+    "old_loss": 1.0675381013517649,
+    "new_loss": 0.39448524324751344,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "old-canonical",
+    "old_loss": 1.149268056148471,
+    "new_loss": 0.4103826730080116,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "old-canonical",
+    "old_loss": 1.0449112927808994,
+    "new_loss": 0.3898509787738008,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "old-canonical",
+    "old_loss": 1.4401565522242157,
+    "new_loss": 0.9406977647069722,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "old-canonical",
+    "old_loss": 1.4374123627252706,
+    "new_loss": 0.950286003173027,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "old-canonical",
+    "old_loss": 1.32400903340764,
+    "new_loss": 0.9352490924424315,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "old-max-entropy",
+    "old_loss": 1.0675381013517649,
+    "new_loss": 0.39448524324751344,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "old-max-entropy",
+    "old_loss": 1.149268056148471,
+    "new_loss": 0.4103826730080116,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "old-max-entropy",
+    "old_loss": 1.0449112927808994,
+    "new_loss": 0.3898509787738008,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "old-max-entropy",
+    "old_loss": 1.4401565522242157,
+    "new_loss": 0.9406977647069722,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "old-max-entropy",
+    "old_loss": 1.4374123627252706,
+    "new_loss": 0.950286003173027,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "old-max-entropy",
+    "old_loss": 1.32400903340764,
+    "new_loss": 0.9352490924424315,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "old-random-tie",
+    "old_loss": 1.0675381013517649,
+    "new_loss": 0.39448524324751344,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "old-random-tie",
+    "old_loss": 1.149268056148471,
+    "new_loss": 0.4103826730080116,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "old-random-tie",
+    "old_loss": 1.0449112927808994,
+    "new_loss": 0.3898509787738008,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "old-random-tie",
+    "old_loss": 1.4401565522242157,
+    "new_loss": 0.9406977647069722,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "old-random-tie",
+    "old_loss": 1.4374123627252706,
+    "new_loss": 0.950286003173027,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "old-random-tie",
+    "old_loss": 1.32400903340764,
+    "new_loss": 0.9352490924424315,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.0675381013517649,
+    "new_loss": 0.39448524324751344,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.149268056148471,
+    "new_loss": 0.4103826730080116,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.0449112927808994,
+    "new_loss": 0.3898509787738008,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.4401565522242157,
+    "new_loss": 0.9406977647069722,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.4374123627252706,
+    "new_loss": 0.950286003173027,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.32400903340764,
+    "new_loss": 0.9352490924424315,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "purpose-portfolio",
+    "old_loss": 1.0675381013517649,
+    "new_loss": 0.39448524324751344,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "purpose-portfolio",
+    "old_loss": 1.149268056148471,
+    "new_loss": 0.4103826730080116,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "purpose-portfolio",
+    "old_loss": 1.0449112927808994,
+    "new_loss": 0.3898509787738008,
+    "entropy_nats": 0.0
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 1,
+    "method": "purpose-portfolio",
+    "old_loss": 1.4401565522242157,
+    "new_loss": 0.9406977647069722,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 1,
+    "method": "purpose-portfolio",
+    "old_loss": 1.4374123627252706,
+    "new_loss": 0.950286003173027,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 1,
+    "method": "purpose-portfolio",
+    "old_loss": 1.32400903340764,
+    "new_loss": 0.9352490924424315,
+    "entropy_nats": 6.9388939039072276e-18
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "observation-product",
+    "old_loss": 0.6535558921898214,
+    "new_loss": 0.36707377941106,
+    "entropy_nats": 0.6316200765147507
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "observation-product",
+    "old_loss": 0.5909321878471089,
+    "new_loss": 0.3730983069108052,
+    "entropy_nats": 0.6316200765147507
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "observation-product",
+    "old_loss": 0.5127906337419037,
+    "new_loss": 0.33351362401136203,
+    "entropy_nats": 0.6316200765147507
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "observation-product",
+    "old_loss": 1.2272411932661953,
+    "new_loss": 0.923867130711628,
+    "entropy_nats": 0.49720065852570794
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "observation-product",
+    "old_loss": 1.1512275419393792,
+    "new_loss": 0.9260174228162154,
+    "entropy_nats": 0.49720065852570794
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "observation-product",
+    "old_loss": 1.068669983717171,
+    "new_loss": 0.9055776410907125,
+    "entropy_nats": 0.49720065852570794
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "old-canonical",
+    "old_loss": 0.6534492870867968,
+    "new_loss": 0.36700675603925864,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "old-canonical",
+    "old_loss": 0.5898725336827564,
+    "new_loss": 0.3724166979978359,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "old-canonical",
+    "old_loss": 0.5050096857660346,
+    "new_loss": 0.3297908744014367,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "old-canonical",
+    "old_loss": 1.2271954430498717,
+    "new_loss": 0.9277900760115607,
+    "entropy_nats": 0.4553377671429888
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "old-canonical",
+    "old_loss": 1.1506293451575744,
+    "new_loss": 0.930424372871645,
+    "entropy_nats": 0.4553377671429888
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "old-canonical",
+    "old_loss": 1.0627530836048245,
+    "new_loss": 0.9071486979109739,
+    "entropy_nats": 0.4553377671429888
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "old-max-entropy",
+    "old_loss": 0.6534492870867968,
+    "new_loss": 0.36700675603925864,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "old-max-entropy",
+    "old_loss": 0.5898725336827564,
+    "new_loss": 0.3724166979978359,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "old-max-entropy",
+    "old_loss": 0.5050096857660346,
+    "new_loss": 0.3297908744014367,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "old-max-entropy",
+    "old_loss": 1.2271954430498717,
+    "new_loss": 0.9239704159711071,
+    "entropy_nats": 0.5157789295308189
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "old-max-entropy",
+    "old_loss": 1.1506293451575744,
+    "new_loss": 0.9261013318421965,
+    "entropy_nats": 0.5157789295308189
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "old-max-entropy",
+    "old_loss": 1.0627530836048245,
+    "new_loss": 0.9043461439018756,
+    "entropy_nats": 0.5157789295308189
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "old-random-tie",
+    "old_loss": 0.6534492870867968,
+    "new_loss": 0.36700675603925864,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "old-random-tie",
+    "old_loss": 0.5898725336827564,
+    "new_loss": 0.3724166979978359,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "old-random-tie",
+    "old_loss": 0.5050096857660346,
+    "new_loss": 0.3297908744014367,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "old-random-tie",
+    "old_loss": 1.2271954430498717,
+    "new_loss": 0.9277863630713836,
+    "entropy_nats": 0.47876810853816243
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "old-random-tie",
+    "old_loss": 1.1506293451575744,
+    "new_loss": 0.9304095617160006,
+    "entropy_nats": 0.47876810853816243
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "old-random-tie",
+    "old_loss": 1.0627530836048245,
+    "new_loss": 0.9071184942948763,
+    "entropy_nats": 0.47876810853816243
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.8072957424231304,
+    "new_loss": 0.32347760384367497,
+    "entropy_nats": 0.5630635213676227
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.8018703909654226,
+    "new_loss": 0.33371423176422244,
+    "entropy_nats": 0.5630635213676227
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.6885249476940773,
+    "new_loss": 0.3123334793635777,
+    "entropy_nats": 0.5630635213676227
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.2614909054357752,
+    "new_loss": 0.9185450604163049,
+    "entropy_nats": 0.47298572176480524
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.2242837638244273,
+    "new_loss": 0.9144758662249356,
+    "entropy_nats": 0.47298572176480524
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.1373765167446577,
+    "new_loss": 0.8895501078370185,
+    "entropy_nats": 0.47298572176480524
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "purpose-portfolio",
+    "old_loss": 0.6534492870867968,
+    "new_loss": 0.36700675603925864,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "purpose-portfolio",
+    "old_loss": 0.5898725336827564,
+    "new_loss": 0.3724166979978359,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "purpose-portfolio",
+    "old_loss": 0.5050096857660346,
+    "new_loss": 0.3297908744014367,
+    "entropy_nats": 0.6297609773010906
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 2,
+    "method": "purpose-portfolio",
+    "old_loss": 1.2271954430498717,
+    "new_loss": 0.9238469201417004,
+    "entropy_nats": 0.4973468108928964
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 2,
+    "method": "purpose-portfolio",
+    "old_loss": 1.1506293451575744,
+    "new_loss": 0.92575066490757,
+    "entropy_nats": 0.4973468108928964
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 2,
+    "method": "purpose-portfolio",
+    "old_loss": 1.0627530836048245,
+    "new_loss": 0.9035297331472503,
+    "entropy_nats": 0.4973468108928964
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "observation-product",
+    "old_loss": 0.653129494615218,
+    "new_loss": 0.28061771061115987,
+    "entropy_nats": 1.0140773843372044
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "observation-product",
+    "old_loss": 0.5878407212648219,
+    "new_loss": 0.26905792178430266,
+    "entropy_nats": 1.0140773843372044
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "observation-product",
+    "old_loss": 0.4960642174030886,
+    "new_loss": 0.24578268108664522,
+    "entropy_nats": 1.0140773843372044
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "observation-product",
+    "old_loss": 1.225306343001733,
+    "new_loss": 0.9183642604264148,
+    "entropy_nats": 0.8587574585771698
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "observation-product",
+    "old_loss": 1.1478355144251156,
+    "new_loss": 0.9175779990454139,
+    "entropy_nats": 0.8587574585771698
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "observation-product",
+    "old_loss": 1.0578521849471954,
+    "new_loss": 0.8960371433113881,
+    "entropy_nats": 0.8587574585771698
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "old-canonical",
+    "old_loss": 0.6530310206746877,
+    "new_loss": 0.31391579415738013,
+    "entropy_nats": 1.062269487336703
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "old-canonical",
+    "old_loss": 0.5874411372894166,
+    "new_loss": 0.3024260254339597,
+    "entropy_nats": 1.062269487336703
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "old-canonical",
+    "old_loss": 0.4952692037692197,
+    "new_loss": 0.2645928573972687,
+    "entropy_nats": 1.062269487336703
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "old-canonical",
+    "old_loss": 1.2231027996082628,
+    "new_loss": 0.9165385436623668,
+    "entropy_nats": 0.7999402020234504
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "old-canonical",
+    "old_loss": 1.1444447025228444,
+    "new_loss": 0.9212648669542343,
+    "entropy_nats": 0.7999402020234504
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "old-canonical",
+    "old_loss": 1.051276358741419,
+    "new_loss": 0.8972853704357917,
+    "entropy_nats": 0.7999402020234504
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "old-max-entropy",
+    "old_loss": 0.6530310206746877,
+    "new_loss": 0.31983248756126115,
+    "entropy_nats": 1.2733456467291386
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "old-max-entropy",
+    "old_loss": 0.5874411372894166,
+    "new_loss": 0.33242865316296344,
+    "entropy_nats": 1.2733456467291386
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "old-max-entropy",
+    "old_loss": 0.4952692037692197,
+    "new_loss": 0.29241043242716436,
+    "entropy_nats": 1.2733456467291386
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "old-max-entropy",
+    "old_loss": 1.2231027996082628,
+    "new_loss": 0.9100313752618018,
+    "entropy_nats": 0.888140623772826
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "old-max-entropy",
+    "old_loss": 1.1444447025228444,
+    "new_loss": 0.9148804807462795,
+    "entropy_nats": 0.888140623772826
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "old-max-entropy",
+    "old_loss": 1.051276358741419,
+    "new_loss": 0.8936955689949241,
+    "entropy_nats": 0.888140623772826
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "old-random-tie",
+    "old_loss": 0.6530310206746877,
+    "new_loss": 0.311797529030484,
+    "entropy_nats": 1.163300457650256
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "old-random-tie",
+    "old_loss": 0.5874411372894166,
+    "new_loss": 0.3141869585878983,
+    "entropy_nats": 1.163300457650256
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "old-random-tie",
+    "old_loss": 0.4952692037692197,
+    "new_loss": 0.28310448616060635,
+    "entropy_nats": 1.163300457650256
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "old-random-tie",
+    "old_loss": 1.2231027996082628,
+    "new_loss": 0.9131626539522826,
+    "entropy_nats": 0.8523411220608132
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "old-random-tie",
+    "old_loss": 1.1444447025228446,
+    "new_loss": 0.9190530864681199,
+    "entropy_nats": 0.8523411220608132
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "old-random-tie",
+    "old_loss": 1.051276358741419,
+    "new_loss": 0.8971035732457053,
+    "entropy_nats": 0.8523411220608132
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.653093214034963,
+    "new_loss": 0.26546059888489226,
+    "entropy_nats": 1.1568478063689507
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.5876804955949609,
+    "new_loss": 0.2509762664573194,
+    "entropy_nats": 1.1568478063689507
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.4956260737948191,
+    "new_loss": 0.23085536469460732,
+    "entropy_nats": 1.1568478063689507
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.2250270753794716,
+    "new_loss": 0.8961712002452372,
+    "entropy_nats": 0.8674583110421886
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.1475401563964227,
+    "new_loss": 0.8878023640016259,
+    "entropy_nats": 0.8674583110421886
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.054912736184888,
+    "new_loss": 0.8691128117742867,
+    "entropy_nats": 0.8674583110421886
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "purpose-portfolio",
+    "old_loss": 0.653093214034963,
+    "new_loss": 0.26546059888489226,
+    "entropy_nats": 1.1633216001648021
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "purpose-portfolio",
+    "old_loss": 0.5876804955949609,
+    "new_loss": 0.25097626645731935,
+    "entropy_nats": 1.1633216001648021
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "purpose-portfolio",
+    "old_loss": 0.4956260737948191,
+    "new_loss": 0.23085536469460732,
+    "entropy_nats": 1.1633216001648021
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 4,
+    "method": "purpose-portfolio",
+    "old_loss": 1.2249980793263808,
+    "new_loss": 0.8961211909675688,
+    "entropy_nats": 0.8707790332225709
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 4,
+    "method": "purpose-portfolio",
+    "old_loss": 1.1475739741166997,
+    "new_loss": 0.8876364137435059,
+    "entropy_nats": 0.8707790332225709
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 4,
+    "method": "purpose-portfolio",
+    "old_loss": 1.0554477145648686,
+    "new_loss": 0.868864275275199,
+    "entropy_nats": 0.8707790332225709
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "observation-product",
+    "old_loss": 0.6530065574236357,
+    "new_loss": 0.2654308693940726,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "observation-product",
+    "old_loss": 0.5874252677709407,
+    "new_loss": 0.25088817648101486,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "observation-product",
+    "old_loss": 0.4952627276390698,
+    "new_loss": 0.2307289554664469,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "observation-product",
+    "old_loss": 1.2225203059433043,
+    "new_loss": 0.8936573556086498,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "observation-product",
+    "old_loss": 1.1430536898742507,
+    "new_loss": 0.8831727281187689,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "observation-product",
+    "old_loss": 1.049803205323819,
+    "new_loss": 0.8643818476615309,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "old-canonical",
+    "old_loss": 0.6530065574236357,
+    "new_loss": 0.2654308693940726,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "old-canonical",
+    "old_loss": 0.5874252677709407,
+    "new_loss": 0.25088817648101486,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "old-canonical",
+    "old_loss": 0.4952627276390698,
+    "new_loss": 0.2307289554664469,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "old-canonical",
+    "old_loss": 1.2225203059433043,
+    "new_loss": 0.8936573556086498,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "old-canonical",
+    "old_loss": 1.1430536898742507,
+    "new_loss": 0.8831727281187689,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "old-canonical",
+    "old_loss": 1.049803205323819,
+    "new_loss": 0.8643818476615309,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "old-max-entropy",
+    "old_loss": 0.6530065574236357,
+    "new_loss": 0.2654308693940726,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "old-max-entropy",
+    "old_loss": 0.5874252677709407,
+    "new_loss": 0.25088817648101486,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "old-max-entropy",
+    "old_loss": 0.4952627276390698,
+    "new_loss": 0.2307289554664469,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "old-max-entropy",
+    "old_loss": 1.2225203059433043,
+    "new_loss": 0.8936573556086498,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "old-max-entropy",
+    "old_loss": 1.1430536898742507,
+    "new_loss": 0.8831727281187689,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "old-max-entropy",
+    "old_loss": 1.049803205323819,
+    "new_loss": 0.8643818476615309,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "old-random-tie",
+    "old_loss": 0.6530065574236357,
+    "new_loss": 0.2654308693940726,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "old-random-tie",
+    "old_loss": 0.5874252677709407,
+    "new_loss": 0.25088817648101486,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "old-random-tie",
+    "old_loss": 0.4952627276390698,
+    "new_loss": 0.2307289554664469,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "old-random-tie",
+    "old_loss": 1.2225203059433043,
+    "new_loss": 0.8936573556086498,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "old-random-tie",
+    "old_loss": 1.1430536898742507,
+    "new_loss": 0.8831727281187689,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "old-random-tie",
+    "old_loss": 1.049803205323819,
+    "new_loss": 0.8643818476615309,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.6530065574236357,
+    "new_loss": 0.2654308693940726,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.5874252677709407,
+    "new_loss": 0.25088817648101486,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "purpose-minimax-regret",
+    "old_loss": 0.4952627276390698,
+    "new_loss": 0.2307289554664469,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.2225203059433043,
+    "new_loss": 0.8936573556086498,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.1430536898742507,
+    "new_loss": 0.8831727281187689,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "purpose-minimax-regret",
+    "old_loss": 1.049803205323819,
+    "new_loss": 0.8643818476615309,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "purpose-portfolio",
+    "old_loss": 0.6530065574236357,
+    "new_loss": 0.2654308693940726,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "purpose-portfolio",
+    "old_loss": 0.5874252677709407,
+    "new_loss": 0.25088817648101486,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": "lexicographic",
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "purpose-portfolio",
+    "old_loss": 0.4952627276390698,
+    "new_loss": 0.2307289554664469,
+    "entropy_nats": 1.7024984194733688
+  },
+  {
+    "rule": null,
+    "tilt": -1.0,
+    "cardinality": 8,
+    "method": "purpose-portfolio",
+    "old_loss": 1.2225203059433043,
+    "new_loss": 0.8936573556086498,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 0.0,
+    "cardinality": 8,
+    "method": "purpose-portfolio",
+    "old_loss": 1.1430536898742507,
+    "new_loss": 0.8831727281187689,
+    "entropy_nats": 1.1049834220034338
+  },
+  {
+    "rule": null,
+    "tilt": 1.0,
+    "cardinality": 8,
+    "method": "purpose-portfolio",
+    "old_loss": 1.049803205323819,
+    "new_loss": 0.8643818476615309,
+    "entropy_nats": 1.1049834220034338
+  }
+]

@@ -667,3 +667,19 @@ measured workload and do not equate accuracy. Process CPU and wall time are dist
 conservative uncertainty charges remain visible. A sampled peak-memory observation
 is not a complete campaign peak. Source-aware revision deduplicates explicit roots;
 the separate provenance-to-practice policy keeps the stronger public-law checker.
+
+## V18.4 prospective exploration and replay
+
+Adaptive discovery proceeds through agent-reviewed source-bound packets. Completed
+batches trigger analysis and new designs; they do not create automatic scientific
+confirmation. Compression selectors receive only declared training questions;
+held-out questions cannot resolve old-objective ties. Cardinality, code entropy,
+old-purpose loss and future-purpose loss stay separate. Complete mean reconstruction
+and fixed source-extracted whole-unit or weight-forecast replay precede publication.
+
+Neural coverage checks count question exposure within every latent combination,
+not merely over the full dataset. A pre-execution repair removed a query/state-cycle
+alias and restored the longest test histories. Long fits keep two resumable
+optimizer/RNG checkpoints plus development-selected weights; an interrupted flat
+fit reproduced uninterrupted weights exactly. Verification occupies the same
+single-worker queue and shares the inherited cumulative CPU accounting.

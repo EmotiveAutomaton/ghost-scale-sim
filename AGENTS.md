@@ -17,7 +17,30 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Latest campaign: V18.3 closed (2026-09-19)
+## Latest campaign: V18.4 continuing exploration (2026-09-19)
+
+The owner explicitly commissioned a new, large, adaptive exploratory campaign after
+V18.3 finished too early. Read `docs/versions/v18-selective-acquisition/exploratory-loop/README.md`
+and outer `.local/v18-4/HANDOFF.md`. Continue useful experiments through at least
+20 September 05:00 America/Los_Angeles (12:00 UTC). A completed queue triggers
+analysis, candidate design, research when needed, validation and refill, not closure.
+An agent reviews each new design; a controller may execute admitted plans but does
+not invent science. Record an exhausted-useful-work state only with a substantive
+review of the remaining candidate explanations and experiments. No occupancy padding.
+
+This current commission supersedes the historical prohibition on filling a new
+exploratory queue, solely for V18.4. Preserve V18.3 and earlier completed science.
+The inherited 13:00 UTC report start, 15:00 UTC delivery, cumulative 64,800 CPU-second
+ceiling and recorded prior consumption remain fixed. One low-priority CPU worker,
+one numerical thread, no GPU, environment synchronization or Sounding Line edits.
+The user explicitly requested further Terra research agents; use them sequentially
+for bounded research, never delegated implementation or audits. Publish each named
+verified result batch after full scientific write-through. Use completion/failure/
+queue-refill events for agent reviews, not repeated polling of healthy computation.
+Keep the V18.4 notifier disarmed during an active operating turn; preserve a live
+review owner. Freeze sources before execution and never edit a worker's snapshot.
+
+## Completed predecessor: V18.3 (2026-09-19)
 
 All eight V18.3 families and required review products are complete. Read
 `docs/versions/v18-selective-acquisition/research-extension/FINAL_REPORT.md` and

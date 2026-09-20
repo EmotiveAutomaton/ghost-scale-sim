@@ -14,6 +14,16 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
 
+## V18.4 continuing exploration
+
+The [new exploratory loop](docs/versions/v18-selective-acquisition/exploratory-loop/README.md)
+is active. Completed batches trigger analysis and further test design through at
+least 20 September 05:00 PDT, within the existing resource limits. The first
+[prospective compression result](docs/versions/v18-selective-acquisition/exploratory-loop/RESULTS.md)
+separates the benefit of declared future purposes from a generic preference for
+more memory diversity. New learned-support and change-adaptation comparisons are
+running or queued; this is adaptive constructed-world discovery.
+
 ## V18.3 research extension complete
 
 All eight families have executed, including intervention training, exhaustive compression, a fresh decision-law holdout and source follow-ons. The [final review](docs/versions/v18-selective-acquisition/research-extension/FINAL_REPORT.md) records conditional advantages, reversals, numerical repairs, full costs and six inspectable cases. Current finite evidence contains 19,136 assigned evaluations; 45 scoped controls pass. These are descriptive constructed-world results. [Coverage](results/v18/research-extension/COVERAGE.json) and [closeout](results/v18/research-extension/CLOSEOUT.json).
