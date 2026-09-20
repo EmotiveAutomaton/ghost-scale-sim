@@ -163,3 +163,41 @@ that this frozen state supports the tested decoder; failure does not prove lost
 information. Shared decoder cases, parent fit seeds, capacities and label budgets
 are paired observations, not new independent worlds. Full raw predictions,
 copied encoders, fitted readouts and independent replay must accompany publication.
+
+## L2a: supplied-law decoding of frozen predictive banks
+
+Full maker support leaves the new-question reversal. Before training a new bank
+objective, test whether existing old-question predictions support new answers
+through a supplied finite-law map. Reuse the verified full-support parent's nine
+selected weights and five retained test conditions. This is paired reuse, not
+new independent cases. Test truth remains evaluator-only. No new labels, fitting,
+capacity selection or threshold selection occur.
+
+For each public world, concatenate a constant and the sixteen artifact probabilities
+under each of the five old question forms into a finite state-by-test matrix.
+The supplied world law defines the target question's state-by-artifact matrix.
+Their pseudoinverse product maps predicted old-question probabilities to a proposed
+new forecast. Compare three fixed maps: five-question bank at relative singular
+cutoff 1e-10, the same bank at 1e-3, and passive-only bank at 1e-10. The original
+model decoder is the fourth arm. No method ranking is a validity gate.
+
+Record every world's rank, smallest retained singular value, condition number,
+decoder norm and full-state target-span residual. Span failure is a scientific
+limitation, not automatically instrument failure. These are supplied controlled
+laws, not intervention identification from passive observations. This diagnostic
+does not establish recursive update closure for arbitrary tests.
+
+Retain every raw mapped forecast, invalidity rate and repair magnitude. The scored
+bank arm floors each entry at 1e-8 and normalizes; this declared numerical repair
+does not establish that the raw map defines valid probabilities. Original decoder
+probabilities remain unchanged. Loss, probability error, raw invalidity, conditioning
+and repair must be interpreted together. Additional generator knowledge is a
+substantial access difference from the original learned decoder.
+
+Known finite closure, a uniform-target placebo, observational aliasing with an
+intervention difference, near-singular truncation, independent forward arithmetic,
+immutable weights, resume/corruption rejection and replay validate the apparatus.
+Replay recomputes whole files with the original batch shape before comparing bounded
+score rows and every raw probability, avoiding changes in floating arithmetic before
+unstable inversion. L2a supplies no new training objective; a later L2b bank-objective
+experiment remains separately reviewed work informed by access and conditioning.

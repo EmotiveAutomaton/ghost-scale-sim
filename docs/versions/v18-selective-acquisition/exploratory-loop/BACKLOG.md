@@ -1,16 +1,16 @@
 # Review and refill backlog
 
-Review 4: P1 and both U1 horizons are verified and published. Both complementary
-old-question L1 supports are verified: recurrence transfers across maker
-combinations but reverses on new questions. Four matched regimes remain running
-or queued, about 2.73 hours from the latest completion, plus a 25% planning margin.
+Review 5: P1, both U1 horizons and all three old-question L1 support regimes are
+verified and published. Full maker support also preserves the new-question reversal.
+Three question-diversity regimes remain running or queued, about 2.12 hours from
+the latest completion, plus a 25% planning margin, with U2 and L3 already admitted.
 Remaining rows require their own protocol, gates and source freeze.
 
 | ID | Next question | Discriminating outcome | Priority |
 |---|---|---|---|
 | P1 → P2 | Is purpose alignment doing the work rather than generic diversity? | Equal-size useful/irrelevant/misleading portfolios separate access from alignment | P1 complete; P2 next refill candidate |
-| L1 | Is missing state/query support causing recurrent transfer failure? | Matched full support or diverse questions repair the reversal | Both support halves verified; four matched regimes pending |
-| L2 | Can an observable closed predictive bank be learned? | Bank objective repairs transfer with no new-question labels | After L1 pilot |
+| L1 | Is missing state/query support causing recurrent transfer failure? | Matched full support or diverse questions repair the reversal | All old-question supports verified; three diverse regimes pending |
+| L2a → L2b | Do old-answer predictions support new answers through the finite law, and can a better bank objective be learned? | Supplied-law maps separate access and conditioning before new bank training | L2a implemented in review 5; L2b remains a separate next design |
 | L3 | Is the failure in memory or its decoder? | Added readouts recover prediction beyond raw-history, question-only and shuffled rivals | Implemented in review 4; admission receipt distinguishes plans from execution |
 | U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes distinguish age from horizon-seeded traces; family comparison addresses omitted law | U32/U96 verified; U2 admitted with replay, R1 still useful |
 | S1 | When is paying to verify independence better than buying evidence? | Crossovers depend on graph uncertainty and action stakes | After provenance research |

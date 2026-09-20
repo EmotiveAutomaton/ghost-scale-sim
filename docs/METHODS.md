@@ -735,3 +735,13 @@ information destruction or that the original predictor used recovered features.
 The L1 full-support comparison holds total history and label counts fixed, so
 examples per individual maker combination fall relative to half-support training.
 Report both test halves as familiar combinations and retain that density caveat.
+
+L2a reuses completed full-support weights and test cases for a paired supplied-law
+decoder intervention. It converts old-question prediction banks into new answers
+with fixed pseudoinverse cutoffs, reports finite-law span and conditioning, and
+retains every invalid raw output before declared floor-and-normalize scoring.
+This adds generator knowledge without new fitting labels. Whole-file replay
+preserves batch arithmetic before potentially unstable inversion; scalar controls,
+observational-alias fixtures and immutable input checks validate the computation.
+It does not establish passive identification, recursive closure, independent
+replication or success of a new bank-training objective.

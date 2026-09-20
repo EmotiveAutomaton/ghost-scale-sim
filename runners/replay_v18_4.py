@@ -46,7 +46,7 @@ def finite(root):
 
 
 def neural(root,output):
-    from ghostscale.validation.soundingline.v18_3 import torch_worker as T
+    from ghostscale.validation.soundingline.v18_4 import torch_worker as T
     import torch
     raw=json.loads(gzip.decompress((root/'neural_points.json.gz').read_bytes()));summary=read(root/'SUMMARY.json')
     grouped={};metrics=('expected_loss','brier','total_variation')
@@ -67,6 +67,17 @@ def neural(root,output):
                 if actual['mean'] is not None:raise ValueError('missing mean differs')
             elif abs(expected-actual['mean'])>1e-10:raise ValueError('independent neural mean differs')
             checked+=1
+    bank_means=0
+    if read(root/'PLAN.json')['design']['study']=='E-bank':
+        diagnostics=read(root/'data/BANK_DIAGNOSTICS.json')
+        for key,reported in summary['bank_diagnostics'].items():
+            condition,mode=key.split('|')
+            selected=[r for r in diagnostics['rows'] if r['condition']==condition and r['mode']==mode]
+            for metric,values in reported.items():
+                actual=[r[metric] for r in selected]
+                expected=dict(minimum=min(actual),maximum=max(actual),mean=math.fsum(actual)/len(actual))
+                if any(not math.isclose(values[k],v,rel_tol=1e-12,abs_tol=1e-10) for k,v in expected.items()):raise ValueError('independent bank-law summary differs')
+                bank_means+=1
     complete=read(root/'neural/COMPLETE.json');inputs=read(root/'data/reader/INPUTS.json');replays=[]
     scratch=output.parent/'forecast-replay';scratch.mkdir(exist_ok=True)
     for reader,predictions in complete['predictions'].items():
@@ -82,13 +93,30 @@ def neural(root,output):
                 from ghostscale.validation.soundingline.v18_4.decoder_worker import forecast
                 fit=root/'neural'/entry['selected']
                 forecast(fit/'READOUT.npz',subset,path,root/'data/reader',read(fit/'COMPLETE.json')['identity'])
+            elif read(root/'PLAN.json')['design']['study']=='E-bank':
+                from ghostscale.validation.soundingline.v18_4.bank_worker import forecast,load_maps
+                # Full-file batches preserve floating arithmetic before ill-conditioned maps.
+                maps=load_maps(root/'data/reader'/inputs['maps'][condition]['name'],len(data['sample'])//len(data['history']))
+                weight=inputs['encoders'][entry['selected']]
+                forecast(root/'data/reader'/weight['name'],data,maps,path,entry['mode'])
             else:T.forecast(root/'neural'/entry['selected']/'BEST.pt',subset,path)
             with np.load(path,allow_pickle=False) as z,np.load(root/'neural'/entry['file'],allow_pickle=False) as original:
-                error=float(np.max(abs(z['probabilities']-original['probabilities'][indices.numpy()])))
+                bank_study=read(root/'PLAN.json')['design']['study']=='E-bank'
+                replay=z['probabilities'][indices.numpy()] if bank_study else z['probabilities']
+                error=float(np.max(abs(replay-original['probabilities'][indices.numpy()])))
             if error>2e-6:raise ValueError('forecast replay differs')
-            replays.append(dict(reader=reader,condition=condition,probes=64,max_absolute_error=error))
+            if read(root/'PLAN.json')['design']['study']=='E-bank':
+                with np.load(path,allow_pickle=False) as z,np.load(root/'neural'/entry['file'],allow_pickle=False) as original:
+                    raw_error=float(np.max(abs(z['raw_probabilities']-original['raw_probabilities'])))
+                    raw=original['raw_probabilities'];p=original['probabilities']
+                    invalid=int(np.sum(np.any(raw< -1e-8,axis=1)|np.any(raw>1+1e-8,axis=1)|(abs(raw.sum(1)-1)>1e-6)))
+                    if invalid!=entry['raw_invalid_rows'] or abs(float(np.mean(abs(raw-p).sum(1)))-entry['mean_repair_l1'])>1e-10:raise ValueError('bank invalidity accounting differs')
+                if raw_error>2e-6:raise ValueError('raw bank replay differs')
+            replays.append(dict(reader=reader,condition=condition,probes=64,max_absolute_error=error,
+                **(dict(raw_forecast_rows=len(raw),max_raw_absolute_error=raw_error,invalidity_reconstructed=True) if bank_study else {})))
     if torch.cuda.is_initialized():raise ValueError('unexpected CUDA')
-    return dict(independent_means=checked,lineage_clusters=len(clusters),forecast_replays=replays)
+    return dict(independent_means=checked,lineage_clusters=len(clusters),forecast_replays=replays,
+        **(dict(independent_bank_diagnostic_means=bank_means) if bank_means else {}))
 
 
 def main():

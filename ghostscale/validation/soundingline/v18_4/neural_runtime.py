@@ -96,12 +96,15 @@ def score_E(root,pulse=lambda **kw:None):
             baseline={r['lineage']:r for r in clusters if r['condition']==condition and r['method']==baseline_method}
             paired[condition+'|'+method+' minus '+baseline_method]={m:stats([None if r[m] is None or baseline[r['lineage']][m] is None else r[m]-baseline[r['lineage']][m] for r in selected],('E-paired',condition,method,m)) for m in ('expected_loss','brier','total_variation')}
     path=root/'neural_points.json.gz';path.write_bytes(gzip.compress(canonical(dict(rows=rows,clusters=clusters)),mtime=0))
-    result=dict(family='L3' if design['study']=='E-decoder' else 'L',cells=summary,paired=paired,raw_sha256=file_digest(path),
+    result=dict(family={'E-decoder':'L3','E-bank':'L2a'}.get(design['study'],'L'),cells=summary,paired=paired,raw_sha256=file_digest(path),
         checks=dict(independent_target_and_exact_reconstructions=reference_checks,independent_scalar_scores=scalar_checks),
         fits=completed['fits'],benchmarks=completed['benchmarks'],environment=completed['environment'],
         learning_control_failures=[k for k,v in completed['fits'].items() if not v['learning_control_passed']],
         independent_unit='coefficient-draw lineage; query probes, fit seeds and 16 architecture cells averaged within it',
         scope=design.get('scope','equal full-distribution simulator supervision; finite architecture discovery, no identified psychological slots'))
+    if design['study']=='E-bank':
+        result['bank_diagnostics']=read(data/'BANK_DIAGNOSTICS.json')['summary']
+        result['raw_forecast_diagnostics']=completed['predictions']
     write(root/'SUMMARY.json',result);return result
 
 
@@ -140,6 +143,11 @@ def run(root,campaign):
         try:
             pulse(phase='before-generation')
             if design['study']=='E':D.prepare(root/'data',**design['data'],pulse=pulse)
+            elif design['study']=='E-bank':
+                from .bank_data import prepare
+                parent=campaign/design['parent_packet']
+                if file_digest(parent/'COMPLETE.json')!=design['parent_complete_sha256']:raise ValueError('bank parent changed')
+                prepare(root/'data',parent,pulse)
             elif design['study']=='E-decoder':
                 from .decoder_data import prepare
                 parents={name:campaign/entry['packet'] for name,entry in design['parents'].items()}
@@ -190,7 +198,7 @@ def run(root,campaign):
             if child.returncode!=0:raise RuntimeError('CPU child failed; retained log and checkpoint')
             if status.get('state')!='complete':emit('resource_cutoff');return 'resource_cutoff'
             pulse(phase='independent-scoring')
-            if design['study'] in ('E','E-decoder'):score_E(root,pulse)
+            if design['study'] in ('E','E-decoder','E-bank'):score_E(root,pulse)
             elif design['study']=='G':
                 from .intervention_data import score
                 score(root,pulse)

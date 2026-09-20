@@ -79,3 +79,27 @@ not adopted here. A random-feature nonlinear map makes the limited decoder famil
 explicit; it is not a claim of unrestricted information recovery. Randomized-target
 results remain comparisons, never a requirement to achieve a desired scientific
 ranking. Sample alignment controls do not reproduce the paper's word-type task.
+
+## Fifth bounded Terra pass: predictive-bank access (20 September UTC)
+
+The local position was stated before the return: exact closure does not imply
+successful learning; the full-support reversal leaves objectives and decoding
+unresolved. One sequential research agent examined bank supervision and inversion
+conditioning without implementation or repository audits.
+
+The reviewer fetched [Littman, Sutton and Singh](https://proceedings.neurips.cc/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf),
+which defines action-conditional tests and linear sufficiency, and
+[Bowling et al.](https://webdocs.cs.ualberta.ca/~bowling/papers/06icml-psr-exploration.pdf),
+which distinguishes taking test actions from ordinary conditioning.
+[Kulesza, Jiang and Singh](https://proceedings.mlr.press/v38/kulesza15.html)
+warn that singular-value truncation can yield large prediction error despite small
+discarded singular values. These methodological inputs are not Ghost results.
+
+L2a tests a narrower precursor before bank-objective fitting: reuse completed
+full-support models' old-answer predictions with fixed supplied-law maps, retaining
+span residuals, conditioning and raw probabilities. A passive-only arm tests reduced
+coverage; a mathematical fixture establishes an alias that actions resolve. The
+scientific cases need not reproduce that fixture's ranking. We reject the return's
+suggestion to gate scientific success on bank improvement or omission-induced
+failure. This diagnostic supplies the intervention law; it does not identify that
+law from passive data or claim a learned predictive state representation.
