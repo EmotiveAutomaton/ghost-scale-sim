@@ -216,3 +216,25 @@ The no-history reference must retain the public world law; an unconditioned prio
 would confound law access with history. A conditional teacher must use the actual
 training-state prior. L4 proceeds first on the separately unresolved exposure
 contrast; feasible-bank and conditional-target studies remain concrete next work.
+
+## Tenth bounded Terra pass: predictive aliases and model-class priors
+
+Local position before research: R1's initial candidates are equivalent under a
+uniform-prior skill permutation. Their selection/averaging tie is a limitation
+of the scientific contrast, while paid access to a distinct law remains testable.
+One sequential Terra researcher challenged this specific interpretation.
+
+The operating reviewer fetched [Stephens's primary label-switching paper](https://stephenslab.uchicago.edu/assets/papers/Stephens2000b.pdf)
+and rechecked [Yao et al. on predictive stacking](https://arxiv.org/abs/1704.02030).
+Permutation symmetry and missing-catalog limits motivate precise scope; they do
+not establish Ghost's result or a preferred ranking. The local repertoire and
+likelihood identity is the load-bearing evidence for R1. R2 continues to test
+finite Bayesian averaging and does not implement stacking.
+
+The return suggests distinct initial laws and explicit equivalence-class prior
+mass. Both are adopted in R2 with the existing native world and paid catalog
+protocol. Its suggested requirement that an active selector choose a diagnostic
+probe is not adopted: R2 has no active probe selector. Its missing-law improvement
+suggestion is an outcome, not a gate. A split-mass duplicate fixture tests algebra;
+the separate doubled-class-mass arm tests an actual prior change. Other cited
+literature in the return is not load-bearing input or a Ghost result.

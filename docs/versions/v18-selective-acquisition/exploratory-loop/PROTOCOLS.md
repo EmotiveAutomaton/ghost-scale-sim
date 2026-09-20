@@ -418,3 +418,43 @@ inverted audit, information-free paid trace, evaluator noninterference, corrupti
 rejection, independent means and frozen whole-unit replay complete the checks.
 Shared audit/report errors, adversarial graphs outside the menu and larger
 multi-step policies remain separate useful extensions, not implemented scope.
+
+## R2: distinct predictive laws and class-prior sensitivity
+
+R1's initial coupling alternatives are exact predictive aliases under the uniform
+skill prior. Use fresh worlds with supplied softmax/satisficing and its opposite
+as the initial pair; paid expansion adds the lexicographic law. Truth is supplied,
+opposite, newly purchasable lexicographic, or a softmax law at one-quarter the
+public temperature, absent from the catalog. Coupling and nominal sharing stay
+false. Four cells cross supplied-rule orientation and endogenous opportunities.
+Twenty fresh coefficient draws, four truths, three orders and two priors assign
+1,920 streams. Repeated priors/orders are paired comparisons, not new worlds.
+
+Equal-class priors give each available law equal mass. The second arm doubles
+the supplied class's unnormalized mass, leaving other classes at one each. It
+represents an explicit prior change equivalent, for averaging, to giving a law
+two equal-prior names. Selection chooses the highest posterior class, not an
+individual duplicate label. Purchase adds the third class with mass one and
+refits its likelihood against all preceding observations. The past-only surprise
+sensor uses the same declared prior on the initial pair. A split-mass duplicate
+fixture separately verifies that merely renaming a class need not change a mix.
+
+Retain R1's nine readers, fixed thresholds 1.5/3, 32 unique source observations,
+paired original-first/composed-first/interleaved orders and native artifact
+matching. Science uses one report per source; copied-source invariance is already
+known and remains a control rather than a duplicated scientific arm. Scored query
+order follows the associated records, so order effects include changing query
+order. Prices and full retrospective state-likelihood charges are unchanged.
+Add mean posterior class entropy in nats as an uncertainty measure; retain every
+step's class probabilities and final evidence. This is finite Bayes averaging,
+not stacking, law invention, an active probing policy or human evidence.
+
+Known categorical Bayes arithmetic separates a mixture from a selected law;
+uniform answers supply a placebo. A fixed native fixture verifies that the two
+law definitions can differ, without requiring any scientific ranking. Scalar
+joint state/class likelihood products reconstruct every prefix and final forecast,
+including class priors; costs, probabilities, entropy and native execution are
+also checked. Copy invariance, past-only triggers, delayed/full refit equivalence,
+evaluator separation, corruption rejection, independent means and whole-stream
+replay validate the apparatus. Failed controls withhold interpretation; ties,
+reversals, approximation under missing truth and ineffective expansion are results.

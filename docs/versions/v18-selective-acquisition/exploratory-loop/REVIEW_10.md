@@ -52,3 +52,18 @@ with a 0.000172 calibrated utility advantage in the reported slice that reverses
 under overstated audit reliability. Graph information can improve without useful
 truth decisions. Shared purchased-channel error and graph omission remain useful
 next experiments; the current initial shared-error factor does not implement them.
+
+R2 is now implemented, validated and source-frozen with adjacent replay. Twenty-three
+isolated controls pass across the new reader, inherited expansion, alias identity,
+runtime and source audits. Eight disjoint full-length timing fixtures, including
+independent every-prefix verification, cost 3.15625 CPU seconds and 3.176894 wall
+seconds. Scaling to 1,920 streams gives about 758 CPU seconds before summary and
+replay overhead; the admitted forecast is 750–1,100 seconds. It is a narrow
+diagnostic, not several hours of occupancy. The L4 trio provides the long queue.
+
+S1's audit-only stopping could reflect prices, the symmetric report construction
+and the binary decision boundary. An asymmetric source-reliability diagnostic or
+the additional audit that breaks its graph alias can separate these explanations;
+simply duplicating calibration cells cannot. Coupled purchased errors remain a
+different intervention. The bank-feasibility diagnostic is still the next learning
+design; R2 addresses a newly discovered catalog limitation without replacing it.

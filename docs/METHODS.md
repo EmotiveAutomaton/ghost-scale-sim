@@ -828,3 +828,12 @@ S1 publication retains all graph-conditional scores beside equal-graph averages.
 An exact net-utility benefit can be tiny and disappear under miscalibration; it
 is not promoted to an audit-success gate. Graph squared-probability error sums
 four components and is distinct from truth logarithmic loss and binary utility.
+
+R2 replaces aliased initial candidates with distinct decision laws and crosses
+equal predictive-class priors with a doubled supplied-class mass. Selection is
+over classes; the doubled mass is an explicit prior change, not equivalent to
+selecting individual duplicate labels. Scalar state/class products reconstruct
+every prefix forecast and final answer independently, including the prior. A
+split-mass duplication control checks invariance for Bayesian averaging. Costs
+and fixed past-only purchase thresholds are retained; no method ranking gates
+validity. Copy repetition stays a control rather than redundant science cells.

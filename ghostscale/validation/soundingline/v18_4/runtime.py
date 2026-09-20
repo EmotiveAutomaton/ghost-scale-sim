@@ -100,6 +100,9 @@ def aggregate(root,limited=lambda:False):
             elif unit['family']=='R1':
                 from .family_expansion import verify, DIMENSIONS, METRICS
                 dimensions=DIMENSIONS;metrics=METRICS
+            elif unit['family']=='R2':
+                from .distinct_families import verify, DIMENSIONS, METRICS
+                dimensions=DIMENSIONS;metrics=METRICS
             elif unit['family']=='S1':
                 from .source_audits import verify, DIMENSIONS, METRICS
                 dimensions=DIMENSIONS;metrics=METRICS
@@ -131,6 +134,8 @@ def dispatch(spec):
         from .matched_prefix import unit
     elif family=='R1':
         from .family_expansion import unit
+    elif family=='R2':
+        from .distinct_families import unit
     elif family=='S1':
         from .source_audits import unit
     else:raise ValueError('unimplemented V18.4 family')
