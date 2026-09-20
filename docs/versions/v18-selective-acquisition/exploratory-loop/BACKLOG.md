@@ -204,3 +204,25 @@ now tests that access route across matched training allocations, while L2b tests
 training targets. A later decoder applied to L2b banks would separate changes in
 learned old-bank accuracy from changes in direct extrapolation. This remains a
 concrete follow-on, not a reason to duplicate the current fit queue.
+
+## Review 14 priorities
+
+The independently sampled realized-target baseline is verified: original-question
+memory gains coexist with losses to the no-history rival on untaught questions.
+Its paired conditional-target fit remains running. L2e now applies the unchanged
+feasible-bank instrument to the completed realized-target fit; the conditional
+bank is a concrete next-design dependency on parent verification and exact input
+pairing. Neither first-arm result alone estimates the target intervention.
+
+The two previously admitted L2d banks address question allocation; L2e addresses
+training targets. Each has an adjacent independent replay, paired reused histories
+and supplied-law access. The new realized-bank forecast is 180–500 CPU seconds,
+informed by L2c's 376.828125-second measured science/replay cost. These bounded
+diagnostics fit the remaining cutoff better than new multihour training runs.
+
+[REVIEW_14](REVIEW_14.md) retains candidate-specific outcomes and priorities for
+development-selection effects, calibrated paid expansion, asymmetric/coupled
+source audits, intervention composition, accuracy-matched costs, partition
+equivalence and explicit predictive-bank objectives. These are useful unfinished
+experiments; no exhausted-useful-work finding is justified. At 12:00 UTC review
+remaining coverage and useful work while retaining the 13:00 science cutoff.

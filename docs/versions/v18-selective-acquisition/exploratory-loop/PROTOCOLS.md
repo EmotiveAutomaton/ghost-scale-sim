@@ -601,3 +601,46 @@ forecast 180–500 CPU seconds per arm; actual timing supersedes that estimate.
 Admission must preserve enough cutoff and CPU allowance for the already queued
 conditional-target pair and the new bounded diagnostics. This adds no seeds or
 duplicated original learning runs.
+
+## L2e: conditional-target comparison through a common bank decoder
+
+The independently sampled realized-target control retains original-menu memory
+gains while losing to its no-history rival on untaught questions. Apply the
+unchanged L2c feasible-bank decoder to the completed L2b realized-target fit, then
+to its matched conditional-target fit only after that parent is independently
+verified. This distinguishes a changed old-answer bank from a changed learned
+decoder's extrapolation. Neither bank result is itself a target-effect estimate
+until the matched second bank has completed and verified.
+
+Use the same loss-independent indices 0–15, 32–47 and 64–79 in each of sixteen
+cells and both maker halves: 1,536 histories, twelve selected banks per history.
+Inputs contain five old-question probability distributions, the public law and
+history. Bind every input to parent plan, completion, replay and forecast hashes.
+Before the second admission, verify all selected worlds, histories, states and
+roster identities match the first. Hidden state remains evaluation-only.
+No refitting, selection or additional initialization seed is introduced.
+
+Keep L2c's convex projection, fixed clipped inverse, same-world uniform 24-state
+prior and history-posterior references, solver tolerances and certificate checks.
+That decoder prior differs from L2b's sixteen-state training teacher; it is a
+stipulated common reference, not an optimal posterior for the test allocation.
+Both old-bank arms have the same external law access. Direct farther tests use
+a different state allocation; their published full-sample means are contextual,
+not paired direct-versus-bank estimates. Compositions and farther bank answers
+remain separate scores. Cases, architectures, seeds and reused worlds are paired,
+not independent replications of training-data generation.
+
+Conditional training might improve both direct and bank forecasts, only direct
+forecasts, only decoded banks, or neither. Those patterns respectively retain a
+bank-quality contribution, direct-decoder dependence, hidden accessible gains,
+or a persistent finite-budget limitation; none identifies latent roles or proves
+that the supplied law could be learned. Relative no-history and prior performance
+is required before interpreting any recovered history. Geometric residuals and
+valid probability certificates are not usefulness gates.
+
+All unchanged bank controls, scalar score/certificate reconstruction, evaluator
+noninterference, corruption rejection, independent means and eight whole-unit
+replays apply. Each admitted bank has an adjacent verification slot. The measured
+L2c science-plus-replay cost was 376.828125 CPU seconds and 6.42 wall minutes;
+retain a 180–500-second forecast per arm, allowing additional accounting reserve.
+Admit only verified-parent arms within the unchanged campaign budget and cutoff.
