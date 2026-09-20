@@ -50,6 +50,11 @@ def stream(index,cell,condition,length,copy_span):
 
 def unit(index,cell=0,condition='goal',length=32,copy_span=1,split='test'):
     w,history,truth=stream(index,cell,condition,length,copy_span)
+    return evaluate_stream(index,cell,condition,length,copy_span,w,history,truth)
+
+
+def evaluate_stream(index,cell,condition,length,copy_span,w,history,truth):
+    """Fixed readers consume a supplied trace; evaluator fields only score forecasts."""
     names,kernels=model_bank();n=len(W.STATES);weights=np.ones((len(names),n))/n
     mixture=np.ones(len(names))/(2*(len(names)-1));mixture[0]=.5
     # Fixed competing models have equal starting state priors and identical evidence.

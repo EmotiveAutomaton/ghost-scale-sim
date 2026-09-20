@@ -37,6 +37,25 @@ validity. All full traces and native actions remain portable evidence.
 
 The initial roster has 19,200 verified finite evaluations, one pilot and one main
 neural packet verified, and five main neural packets still running/queued. U2 is
-a new diagnostic, not repetition of the completed horizon packets. Admission and
-measured control timings will be recorded before appending its adjacent science
-and verification slots. This review is not campaign closeout.
+a new diagnostic, not repetition of the completed horizon packets. This review
+is not campaign closeout.
+
+## Admission outcome
+
+Seventeen scoped controls passed in an isolated source copy: 15.09375 CPU seconds,
+15.43 wall seconds. They include independent window arithmetic, a live planted
+switch, unchanged pre-switch and nested-prefix forecasts, a corruption rejection,
+and complete fixture aggregation/replay. U2 now has 3,360 source-frozen trajectories
+and an adjacent independent verification packet in queue revision 8. The stationary
+condition is generated once; eight active cells avoid duplicating the inactive
+source-sharing factor. Admission is not scientific completion.
+
+U96's measured 1,425.296875 science and 77.703125 verification CPU seconds for
+8,640 trajectories support a 600–1,000 CPU-second forecast for U2, including its
+extra windows and generator reconstruction. The existing neural buffer remains
+several hours; later completion reviews must implement the next objective/decoder
+or family/source designs rather than treating this additional finite roster as
+the campaign's endpoint. Prior U96 CI failed only the retained V15 C11/M01
+instrument check; the first-main-L publication CI was still running at inspection.
+
+[Admission and source-bound plans](../../../../results/v18/exploratory-loop/U2-ADMISSION.json).

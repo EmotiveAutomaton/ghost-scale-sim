@@ -88,3 +88,36 @@ uninformative-observation update, verify copied-source identity, reconstruct pro
 losses with scalar arithmetic and replay native programs. Whether averaging beats
 fixed updating is an experimental outcome, never a gate. The family is still finite;
 mixture success cannot identify human roles or solve arbitrary unmodeled change.
+
+## U2: matched prefixes and absolute skill-change times
+
+The U32/U96 skill reversal confounds observation horizon with trace draws and
+relative change timing. Generate fresh 96-step trajectories under a new lineage,
+with switches at absolute steps 12 or 28. Seed construction excludes horizon,
+condition, copy span and change time: paired conditions share random draws and
+the same pre-change observations. Both an evidence and target draw are consumed
+on every step, including copied evidence. Score prefixes 32/64/96 from the same
+forecasts; do not refit readers or regenerate horizon-specific trajectories.
+
+Use stationary, goal, skill and omitted-rule conditions. Stationary trajectories
+are generated once with the step-12 window anchor; the other conditions use both
+switch times. Cross 20 fresh coefficient draws, eight active rule/coupling/
+opportunity cells (the sharing bit is fixed false), and copy spans 1/3/6. This is
+3,360 assigned trajectories, not independent replicate counts. Static, fixed-role,
+role/rate-mixture and known-state references retain U1's settings and common trace.
+
+Report cumulative prefix prediction loss and expected native matching, plus equal
+16-step windows at post-switch ages 0–16, 16–32 and 48–64. The switch step is
+zero-based and forecasts precede its observation. These windows distinguish
+evidence age from changing proportions of pre/post-change observations. Prefix
+contrasts are paired descriptive trajectories, not a randomized causal estimate
+of extra observation time; the query cycle and evolving posterior also advance.
+Early/late switches share draws but induce different post-change evidence.
+
+Known-answer live checks require the planted skill/goal/rule change at the exact
+step. Placebos require unchanged pre-switch trajectories and horizon-independent
+prefix forecasts. A deterministic arithmetic trace checks every window boundary
+and denominator. Scalar proper scores, source identity, native execution,
+corruption checks and independent means/replay validate the instruments. No
+method advantage or replication of the previous reversal is a validity gate.
+Retain complete trajectories and forecasts, including nulls and reversals.

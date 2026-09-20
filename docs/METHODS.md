@@ -707,3 +707,11 @@ packet retains nine development-selected weight sets, all raw forecasts, and
 independent replay of 64 fixed rows per fit/test file. Repeated queries and fit
 seeds are averaged within coefficient-draw lineage. Question-transfer failure is
 not interpreted as proof that a hidden state lost the relevant information.
+
+U2 makes the observation-horizon comparison within one retained 96-step trajectory.
+Its seed excludes horizon, condition, switch time and copy span; all steps consume
+the same evidence/target draw positions. Exact pre-change and nested-prefix controls
+detect future-condition leakage. Absolute switches and equal post-change windows
+separate evidence age from changing pre/post-change proportions; they do not turn
+sequential prefix differences into a randomized causal estimate. Independent
+arithmetic fixtures check window boundaries, and every full trace remains retained.

@@ -12,7 +12,7 @@ Remaining rows require their own protocol, gates and source freeze.
 | L1 | Is missing state/query support causing recurrent transfer failure? | Matched full support or diverse questions repair the reversal | First regime verified; five matched regimes pending |
 | L2 | Can an observable closed predictive bank be learned? | Bank objective repairs transfer with no new-question labels | After L1 pilot |
 | L3 | Is the failure in memory or its decoder? | Selective nonlinear decoder recovers what a linear decoder misses | After L1 |
-| U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes isolate age; family comparison addresses omitted law | U32/U96 verified; U2 implementation now, R1 still useful |
+| U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes distinguish age from horizon-seeded traces; family comparison addresses omitted law | U32/U96 verified; U2 admitted with replay, R1 still useful |
 | S1 | When is paying to verify independence better than buying evidence? | Crossovers depend on graph uncertainty and action stakes | After provenance research |
 | R1 | Does family averaging avoid the harm of premature revision? | Prequential loss and action consequences separate selection from averaging | After U1/S1 |
 | I1 | Does interchange training generalize beyond supplied interventions? | Untaught joint/ordered interventions separate mapping fit from reusable structure | After L2 |
@@ -32,3 +32,9 @@ and change schedules differ. Before claiming a pure time effect, construct commo
 keeping mixture priors and all reader settings fixed. This isolates evidence age
 from horizon-specific draws. Family revision remains independently motivated by
 the omitted-rule failure. No rerun of the completed packets is needed.
+
+U2 is now implemented, tested and admitted: 3,360 fresh trajectories with fixed
+switch times, nested 32/64/96-step scores and equal post-change windows. Its
+600–1,000 CPU-second forecast comes from the completed U96 packet. The next
+learned coverage result should decide whether L2's predictive-bank objective or
+L3's frozen-state decoder comparison is the sharper immediate next experiment.

@@ -91,6 +91,9 @@ def aggregate(root,limited=lambda:False):
             elif unit['family']=='U':
                 from .adaptation import verify
                 dimensions=('family','cell','condition','length','copy_span');metrics=('expected_loss','pre_change_loss','post_change_loss','expected_match','abstention_loss')
+            elif unit['family']=='U2':
+                from .matched_prefix import verify, DIMENSIONS, METRICS
+                dimensions=DIMENSIONS;metrics=METRICS
             else:raise ValueError('unimplemented verifier')
             verify(unit);count+=1
             for row in unit['rows']:
@@ -113,6 +116,8 @@ def dispatch(spec):
         from .compression import unit
     elif family=='U':
         from .adaptation import unit
+    elif family=='U2':
+        from .matched_prefix import unit
     else:raise ValueError('unimplemented V18.4 family')
     result=unit(**spec);result['request']=request;return result
 
