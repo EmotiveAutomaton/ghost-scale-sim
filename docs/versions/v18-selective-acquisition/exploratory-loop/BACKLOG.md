@@ -1,11 +1,11 @@
 # Review and refill backlog
 
-Review 8: P1, both U1 horizons, U2 and all six main L1 support/question regimes are
-verified and published. Covering compositions repairs prediction while untouched
-farther queries worsen for every learned reader, including full maker support.
-L3, L2a, P2 and R1 have admitted science/replay slots; S1 adds exact paid
-noisy-audit comparisons. Diverse fits averaged 45.71 wall minutes; subsequent
-queue estimates remain provisional in REVIEW_8.
+Review 10: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
+L3/L2a and R1 are verified. R1 publication records useful paid expansion but an
+aliased initial candidate pair; R2 will test distinct laws and class-prior mass.
+S1 has completed its adjacent replay and awaits this review's write-through.
+L4 matched-exposure training runs with further arms and replay already admitted.
+Measured timings and remaining candidates are retained in REVIEW_10.
 Remaining rows require their own protocol, gates and source freeze.
 
 | ID | Next question | Discriminating outcome | Priority |

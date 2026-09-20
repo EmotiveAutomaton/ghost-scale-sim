@@ -28,6 +28,8 @@ supports and full maker support. All three question-diversity comparisons repair
 now-covered compositions while worsening untouched farther queries. Verified frozen-state
 readouts do not establish a history advantage against the question/world rival;
 supplied-law bank decoding improves farther scores but requires probability repair.
+Paid family expansion helps missing-law prediction but often buys unnecessarily;
+its original candidate pair is predictively aliased, limiting the averaging claim.
 Matched-exposure training with a no-history rival is now admitted. This is adaptive
 constructed-world discovery.
 

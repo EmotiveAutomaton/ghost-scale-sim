@@ -816,3 +816,10 @@ P2 reports each content-preserving cyclic shift as well as its mean and range.
 A near tie is retained as a descriptive result; a nonzero shift does not certify
 that useful partition geometry disappeared. Uniform history allocation supports
 the information invariants, while changes in cross-task compatibility remain.
+
+R1 result review establishes that coupling alternatives with uniform skill priors
+are predictively equivalent under a fixed skill permutation. Retain the executed
+comparison as catalog-access evidence; do not infer a selection/averaging result
+from aliased candidates. Equal-label priors reweight predictive equivalence classes.
+The post-result alias control checks repertoire and full likelihood identities;
+every stored fixed/selection/mixture forecast was also compared.

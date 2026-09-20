@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 R1: paid expansion and aliased candidates
+
+Can paying to add a missing explanation improve prediction without wasting resources when the original explanation is correct? In these finite worlds, paid expansion reduces sequential logarithmic loss from 3.94154 to 1.64570 when the added rule is needed, but buys unnecessarily in 67.08% of correct-rule streams at the lower surprise threshold. The initial two candidates are predictively equivalent under a skill-label swap, so their selection–averaging tie does not test competing explanations. This is a descriptive constructed-method result about supplied catalog access and its costs, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-R1-response.md).
+
 ## V18.4 P2: purpose alignment
 
 Does useful compression depend on matching supplemental purposes to the right histories, even when their target content is unchanged? In this finite test, the aligned four-symbol portfolio has lower future logarithmic loss than all seven shifted portfolios: 0.92620 under the original rules and 0.23258 under the alternative rule. Several shifts nearly tie it, while others are worse than training only for the original purpose. Target content alone therefore does not determine transfer; its pairing with history and other tasks matters. This is a descriptive constructed-method result with uniform history allocation and supplied-law decoding, miniature — architecture untested.
