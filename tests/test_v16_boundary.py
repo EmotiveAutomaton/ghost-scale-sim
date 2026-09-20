@@ -1,3 +1,5 @@
+import os
+import signal
 import pytest
 from ghostscale.validation.soundingline.v16.boundary_plan import choose
 from ghostscale.validation.soundingline.v16.boundary_runner import execute
@@ -31,6 +33,9 @@ def test_final_boundary_selection_keeps_nulls_harms_conditions_and_finite_limit(
 def test_final_boundary_actual_interruption_resume(tmp_path,card):
     receipt=control(tmp_path/card,card)
     assert receipt["instrument_state"]=="valid",receipt["checks"]
+    assert receipt["interruption_method"]=="forced_process_exit"
+    if os.name!="nt":
+        assert receipt["interruption_returncode"]==-signal.SIGKILL
 
 
 def test_final_boundary_missing_resume_is_rejected(tmp_path):

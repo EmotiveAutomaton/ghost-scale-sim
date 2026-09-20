@@ -942,3 +942,12 @@ Accounting takes the maximum process/native/uncertainty charge per attempt befor
 adding separately measured child CPU; envelopes and their components are not added
 twice. Elapsed-window fulfillment does not certify continuous occupancy or
 experimental exhaustion. [Final record](versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md).
+
+The owner-requested morning cleanup found a timeout in V16's operational boundary
+interruption fixture, after V18.4 science had closed. On POSIX, SIGTERM requests a
+graceful checkpoint and reader shutdown; Windows termination is abrupt. The
+fixture now forcibly stops only its owned test process on both platforms, records
+the exit code, and on POSIX requires SIGKILL before checking exact retained-byte
+recovery. Its ten-second wait and recovery checks are unchanged. This corrects the
+interruption being tested, not a scientific gate or historical result. Frozen
+source archives retain their original fixture.

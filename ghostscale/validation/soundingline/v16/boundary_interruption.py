@@ -29,7 +29,11 @@ def control(directory, card):
                 time.sleep(.01)
             else:
                 raise ValueError("boundary CLI made no bounded known progress")
-            child.terminate()
+            # SIGTERM asks the POSIX supervisor to checkpoint and unwind its
+            # reader before exiting; that is not an abrupt interruption and
+            # can outlast this fixture's wait. Kill the owned fixture process
+            # on both platforms, then require exact recovery of retained bytes.
+            child.kill()
             child.wait(timeout=10)
         finally:
             if child.poll() is None:
@@ -50,6 +54,7 @@ def control(directory, card):
     result={"execution_state":"completed","instrument_state":"valid" if all(checks.values()) else "failed",
             "checks":checks,"card_id":card,"packet_hash":completion["packet_hash"],"completed_at":now(),
             "scope":"Known final-expansion CLI fixture; no scientific source outcomes reused",
+            "interruption_method":"forced_process_exit","interruption_returncode":child.returncode,
             "files":{path.relative_to(directory).as_posix():file_digest(path) for path in directory.rglob("*.json")}}
     write(directory/"RECEIPT.json",result)
     return result
