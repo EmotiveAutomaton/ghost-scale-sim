@@ -46,7 +46,9 @@ controls are now verified. Restoring original-question exposure still worsens fa
 prediction, including without history; matching total histories and updates
 also retains the deterioration. The larger original-menu bank retains useful
 history under a supplied-law feasible decoder. Diverse training improves those
-paired bank answers despite its worse direct farther forecasts. This is adaptive
+paired bank answers despite its worse direct farther forecasts. Conditional targets
+also yield small improvements in useful bank forecasts under that decoder, despite
+worse direct farther answers. This is adaptive
 constructed-world discovery.
 
 ## V18.3 research extension complete

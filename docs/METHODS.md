@@ -916,3 +916,8 @@ training targets. Its first-arm publication validates accessible history before
 interpreting target effects; all prior and direct-test allocation qualifications
 remain explicit. Byte-identical validated instruments do not require duplicate
 control computation solely for each exported batch.
+
+L2e paired reporting reconstructs identical history/world/state rosters across
+target arms and distinguishes small fixed-fit bank improvements from the broader
+direct-answer reversal. Neither reused fits nor decoder privileges become new
+independent training replications or learned law access.
