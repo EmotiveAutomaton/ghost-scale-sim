@@ -87,19 +87,21 @@ def score_E(root,pulse=lambda **kw:None):
         values['expected_loss']=None if any(r['expected_loss']['infinite'] for r in points) else float(np.mean([r['expected_loss']['value'] for r in points]))
         clusters.append(dict(condition=condition,method=method,lineage=lineage,**values))
     summary={};paired={}
+    design=read(root/'PLAN.json')['design']
+    baseline_method=design.get('baseline_method','direct')
     for condition in manifest['tests']:
         for method in sorted({r['method'] for r in clusters}):
             selected=[r for r in clusters if r['condition']==condition and r['method']==method]
             summary[condition+'|'+method]={m:stats([r[m] for r in selected],('E',condition,method,m)) for m in ('expected_loss','brier','total_variation')}
-            baseline={r['lineage']:r for r in clusters if r['condition']==condition and r['method']=='direct'}
-            paired[condition+'|'+method+' minus direct']={m:stats([None if r[m] is None or baseline[r['lineage']][m] is None else r[m]-baseline[r['lineage']][m] for r in selected],('E-paired',condition,method,m)) for m in ('expected_loss','brier','total_variation')}
+            baseline={r['lineage']:r for r in clusters if r['condition']==condition and r['method']==baseline_method}
+            paired[condition+'|'+method+' minus '+baseline_method]={m:stats([None if r[m] is None or baseline[r['lineage']][m] is None else r[m]-baseline[r['lineage']][m] for r in selected],('E-paired',condition,method,m)) for m in ('expected_loss','brier','total_variation')}
     path=root/'neural_points.json.gz';path.write_bytes(gzip.compress(canonical(dict(rows=rows,clusters=clusters)),mtime=0))
-    result=dict(family='L',cells=summary,paired=paired,raw_sha256=file_digest(path),
+    result=dict(family='L3' if design['study']=='E-decoder' else 'L',cells=summary,paired=paired,raw_sha256=file_digest(path),
         checks=dict(independent_target_and_exact_reconstructions=reference_checks,independent_scalar_scores=scalar_checks),
         fits=completed['fits'],benchmarks=completed['benchmarks'],environment=completed['environment'],
         learning_control_failures=[k for k,v in completed['fits'].items() if not v['learning_control_passed']],
         independent_unit='coefficient-draw lineage; query probes, fit seeds and 16 architecture cells averaged within it',
-        scope='equal full-distribution simulator supervision; finite architecture discovery, no identified psychological slots')
+        scope=design.get('scope','equal full-distribution simulator supervision; finite architecture discovery, no identified psychological slots'))
     write(root/'SUMMARY.json',result);return result
 
 
@@ -138,6 +140,11 @@ def run(root,campaign):
         try:
             pulse(phase='before-generation')
             if design['study']=='E':D.prepare(root/'data',**design['data'],pulse=pulse)
+            elif design['study']=='E-decoder':
+                from .decoder_data import prepare
+                parents={name:campaign/entry['packet'] for name,entry in design['parents'].items()}
+                if any(file_digest(parents[name]/'COMPLETE.json')!=entry['complete_sha256'] for name,entry in design['parents'].items()):raise ValueError('frozen decoder parent changed')
+                prepare(root/'data',parents,design['data'],pulse)
             elif design['study']=='G':
                 from .intervention_data import prepare
                 prepare(root/'data',**design['data'],pulse=pulse)
@@ -155,7 +162,7 @@ def run(root,campaign):
             env=os.environ.copy();env['GHOST_V18_CHILD_LOCK']=str(campaign/'neural-child-owner')
             # Reserve evaluator time and include failed previous attempts in the new allowance.
             env['GHOST_V18_CHILD_CPU_LIMIT']=str(max(0,acceptance['cumulative_cpu_ceiling_seconds']-old-(time.process_time()-cpu)-60))
-            module=design.get('worker_module','ghostscale.validation.soundingline.v18_3.'+{'E':'torch_worker','G':'intervention_worker','E-purpose':'purpose_worker'}[design['study']])
+            module=design.get('worker_module') or 'ghostscale.validation.soundingline.v18_3.'+{'E':'torch_worker','G':'intervention_worker','E-purpose':'purpose_worker'}[design['study']]
             child_started=time.time();clock=None;child_dir=root/'neural';child_dir.mkdir(exist_ok=True)
             with (root/'neural.log').open('ab',buffering=0) as log:
                 child=subprocess.Popen([str(python),'-B','-m',module,
@@ -183,7 +190,7 @@ def run(root,campaign):
             if child.returncode!=0:raise RuntimeError('CPU child failed; retained log and checkpoint')
             if status.get('state')!='complete':emit('resource_cutoff');return 'resource_cutoff'
             pulse(phase='independent-scoring')
-            if design['study']=='E':score_E(root,pulse)
+            if design['study'] in ('E','E-decoder'):score_E(root,pulse)
             elif design['study']=='G':
                 from .intervention_data import score
                 score(root,pulse)

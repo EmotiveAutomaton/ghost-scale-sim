@@ -55,3 +55,27 @@ bottlenecks, causal rate-distortion, Blackwell experiment comparisons, active
 feature acquisition and provenance truth-discovery methods. A later reviewer may
 fetch them if an unresolved design question makes them useful. Repeating searches
 without a concrete decision is not part of the continuing loop.
+
+## Fourth bounded Terra pass: decoder access (20 September UTC)
+
+Local position recorded before this return: failure on new questions does not
+prove state information loss; an additional nonlinear readout tests accessibility
+under additional supervision and its declared capacity. A failed readout bounds
+that decoder, not every possible decoder.
+
+The operating reviewer fetched [Hewitt and Liang's primary paper page](https://aclanthology.org/D19-1275/)
+and [Pimentel et al.'s information-theoretic probing page](https://aclanthology.org/2020.acl-main.420/).
+The former motivates controls against the probe's own learning; the latter frames
+high-capacity extraction as a different objective from ease of decoding. Neither
+establishes the outcome in this simulator. This is a difference of estimand rather
+than a reason to adopt one literature framing as the local answer.
+
+L3 adopts a fixed linear/nonlinear ladder, nested label budgets, untouched test
+lineages, a question-only rival and context-stratified shuffled supervision. It
+uses fresh full maker support to ask about recoverability, while the existing L1
+slate tests combination holdouts. Disjoint maker combinations in every split would
+conflate recoverability with combination transfer, so that research suggestion is
+not adopted here. A random-feature nonlinear map makes the limited decoder family
+explicit; it is not a claim of unrestricted information recovery. Randomized-target
+results remain comparisons, never a requirement to achieve a desired scientific
+ranking. Sample alignment controls do not reproduce the paper's word-type task.

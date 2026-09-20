@@ -17,9 +17,9 @@ def export(root,destination,driver):
     names=['PLAN.json','SOURCE.zip','SUMMARY.json','COMPLETE.json','INDEPENDENT_REPLAY.json']
     if read(root/'PLAN.json')['design']['engine']=='neural':
         names+=['TRAINING.json','neural_points.json.gz']
-        names += [p.relative_to(root).as_posix() for p in (root/'data').rglob('*') if p.is_file() and p.suffix in ('.npz','.gz','.json')]
+        names += [p.relative_to(root).as_posix() for p in (root/'data').rglob('*') if p.is_file() and p.suffix in ('.npz','.gz','.json','.pt')]
         names += [p.relative_to(root).as_posix() for p in (root/'neural').rglob('*') if p.is_file() and
-            (p.name in ('BEST.pt','COMPLETE.json','IDENTITY.json','CONTROLS.json') or p.name.endswith('-PREDICTIONS.npz'))]
+            (p.name in ('BEST.pt','READOUT.npz','COMPLETE.json','IDENTITY.json','CONTROLS.json') or p.name.endswith('-PREDICTIONS.npz'))]
     else:
         names += [p.relative_to(root).as_posix() for part in ('raw','blocks') for p in (root/part).glob('*') if p.is_file()]
     names=sorted(set(names));manifest=dict(files={n:file_digest(root/n) for n in names},

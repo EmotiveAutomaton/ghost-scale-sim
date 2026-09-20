@@ -78,7 +78,11 @@ def neural(root,output):
             inverse=torch.full((len(data['history']),),-1,dtype=torch.long);inverse[used]=torch.arange(len(used))
             subset=dict(history=data['history'][used],length=data['length'][used],query=data['query'][indices],sample=inverse[data['sample'][indices]])
             path=scratch/f'{reader}-{condition}.npz'
-            T.forecast(root/'neural'/entry['selected']/'BEST.pt',subset,path)
+            if read(root/'PLAN.json')['design']['study']=='E-decoder':
+                from ghostscale.validation.soundingline.v18_4.decoder_worker import forecast
+                fit=root/'neural'/entry['selected']
+                forecast(fit/'READOUT.npz',subset,path,root/'data/reader',read(fit/'COMPLETE.json')['identity'])
+            else:T.forecast(root/'neural'/entry['selected']/'BEST.pt',subset,path)
             with np.load(path,allow_pickle=False) as z,np.load(root/'neural'/entry['file'],allow_pickle=False) as original:
                 error=float(np.max(abs(z['probabilities']-original['probabilities'][indices.numpy()])))
             if error>2e-6:raise ValueError('forecast replay differs')

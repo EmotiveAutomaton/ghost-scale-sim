@@ -121,3 +121,45 @@ and denominator. Scalar proper scores, source identity, native execution,
 corruption checks and independent means/replay validate the instruments. No
 method advantage or replication of the previous reversal is a validity gate.
 Retain complete trajectories and forecasts, including nulls and reversals.
+
+## L3: frozen state versus decoder access
+
+The two complementary old-question support regimes preserve the new-question
+reversal. Freeze all nine development-selected encoders from each verified parent.
+On a fresh shared decoder lineage, supply 768 histories per cell for training,
+128 for development and 96 for testing. Training and development cover all maker
+combinations and the eight old/composed questions with the existing balanced
+five-questions-per-history rotation. The two farther question forms remain
+absent from training and development. Original encoders receive no gradient or
+new fitting; their parent hashes bind every packet.
+
+Cross two nested label budgets (384 and 768 histories per cell) with a linear
+ridge readout and a fixed 128-feature random tanh readout. Fit coefficients to
+target distributions and select ridge penalty (0.1, 10, 1000) and softmax
+temperature (0.05, 0.1, 0.25, 0.5, 1) using development loss only. Random features
+use the same fixed seed, standardized training inputs and no learned projection.
+This is a bounded nonlinear decoder, not an unrestricted information test.
+Both budgets complete whole 384-history cycles, balancing the three history
+lengths as well as all maker-state and question combinations.
+
+Each rung compares the frozen direct/flat/split states, full raw history and a
+question/world-only rival. All receive identical query/world features and label
+access. Linear feature dimensions and parameters differ and are reported;
+nonlinear fitted dimensions match while fixed projection sizes differ. Train
+and development transformations are learned from training only. The supplied-law
+exact and predictive-summary forecasts remain privileged reference rulers.
+
+Repeat each representation/rung/budget with targets permuted within question
+context, independently in train and development. This preserves each context's
+target multiset while breaking sample alignment. Residual question-only signal
+is expected; neither chance performance nor a desired method ranking is a gate.
+This control does not reproduce linguistic type-memorization selectivity.
+
+Positive identity recovery, a uniform-target placebo, an independently calculated
+proper score, a known XOR nonlinear/linear distinction, deterministic transforms,
+encoder corruption rejection, resume identity and exact forecast replay validate
+the apparatus. Report all rungs and controls. Extra-supervision recovery shows
+that this frozen state supports the tested decoder; failure does not prove lost
+information. Shared decoder cases, parent fit seeds, capacities and label budgets
+are paired observations, not new independent worlds. Full raw predictions,
+copied encoders, fitted readouts and independent replay must accompany publication.

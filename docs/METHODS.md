@@ -719,3 +719,15 @@ arithmetic fixtures check window boundaries, and every full trace remains retain
 L1 support swaps reuse the test coefficient draws and histories. Report the
 contrast as paired, translate raw condition names into actual exposure, and do
 not count the second support regime as another independent test-world sample.
+
+L3 freezes both verified complementary-support encoder sets and fits separate
+linear and fixed-random-feature nonlinear behavioral readouts. Fresh identical
+label access, a raw-history rival, a question-only rival, context-stratified
+target permutation and two nested balanced label budgets distinguish decoder
+access from an undeclared increase in supervision. All capacities and controls
+remain reportable outcomes; no preferred ranking is a validity gate. Training
+alone sets standardization and random features; development alone selects ridge
+penalty and temperature. The farther question family remains absent from both.
+Public exports retain copied encoders and fitted readouts, and independent replay
+reconstructs predictions from them. This bounded decoder ladder cannot establish
+information destruction or that the original predictor used recovered features.
