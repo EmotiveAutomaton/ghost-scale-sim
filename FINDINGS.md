@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L4: matched total training (20 September 2026 PDT)
+
+Does diverse training still harm farther prediction when histories and update counts match? Yes: farther mean logarithmic loss, where lower is better, rises from 1.68038 to 2.70708 for direct history, 2.10836 to 3.55791 for flat memory, and 2.15324 to 3.77260 for split memory. The no-history reader also worsens, from 1.58653 to 3.08139, while taught compositions improve. Together with the matched-original-exposure comparison, this rules out either reduced original-question exposure or total training volume alone as an explanation. Query allocation, decoder extrapolation and the resulting optimization path remain unresolved. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L4-matched-total-response.md).
+
 ## V18.4 L4: restored exposure (20 September 2026 PDT)
 
 Does restoring original-question exposure prevent diverse training from harming farther predictions? It does not in this comparison: farther mean logarithmic loss, where lower is better, rises from 1.67326 to 2.70708 for direct history, 2.29268 to 3.55791 for flat memory, and 2.01584 to 3.77260 for split memory. The no-history reader also worsens, from 1.61451 to 3.08139, while now-trained compositions improve. Reduced original-question exposure alone therefore cannot explain the boundary; the matched-total control remains pending. This is a descriptive constructed-method result, miniature — architecture untested.

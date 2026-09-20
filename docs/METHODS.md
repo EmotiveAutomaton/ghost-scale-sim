@@ -864,3 +864,9 @@ sources. Scalar policy and likelihood products audit fixed training/development
 cases before fitting and again during replay. Test strata remain balanced, and
 the existing 24-state exact reference is explicitly stipulated. Population loss
 equivalence does not promise finite-budget transfer; all loss rankings remain outcomes.
+
+L4 matched-total reporting triangulates two controls rather than pretending one
+contrast fixes both original-question count and total training volume. Shared
+histories, initialization, updates and development access leave question allocation
+and its optimization consequences different. A no-history reversal prevents
+attributing this boundary uniquely to memory.
