@@ -22,8 +22,8 @@ least 20 September 05:00 PDT, within the existing resource limits. The first
 [prospective compression result](docs/versions/v18-selective-acquisition/exploratory-loop/RESULTS.md)
 separates the benefit of declared future purposes from a generic preference for
 more memory diversity. Both change-adaptation horizons are now verified; the
-longer comparison changes the skill boundary while leaving rule misspecification
-unrepaired. The learned-memory new-question failure survives both complementary training
+matched-prefix diagnostic shows that evidence age and switch timing change the
+skill boundary while leaving rule misspecification unrepaired. The learned-memory new-question failure survives both complementary training
 supports and full maker support. All three question-diversity comparisons repair
 now-covered compositions while worsening untouched farther queries; frozen-state
 readout and supplied-law bank diagnostics remain queued. This is adaptive constructed-world discovery.

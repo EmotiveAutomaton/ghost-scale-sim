@@ -1,9 +1,9 @@
 # Review and refill backlog
 
-Review 8: P1, both U1 horizons and all six main L1 support/question regimes are
+Review 8: P1, both U1 horizons, U2 and all six main L1 support/question regimes are
 verified and published. Covering compositions repairs prediction while untouched
 farther queries worsen for every learned reader, including full maker support.
-U2, L3, L2a, P2 and R1 have admitted science/replay slots; S1 adds exact paid
+L3, L2a, P2 and R1 have admitted science/replay slots; S1 adds exact paid
 noisy-audit comparisons. Diverse fits averaged 45.71 wall minutes; subsequent
 queue estimates remain provisional in REVIEW_8.
 Remaining rows require their own protocol, gates and source freeze.
@@ -14,7 +14,7 @@ Remaining rows require their own protocol, gates and source freeze.
 | L1 | Is missing state/query support causing recurrent transfer failure? | Covered repair versus untouched farther transfer | All six main regimes verified; exposure/optimization remain unresolved |
 | L2a → L2b | Do old-answer predictions support new answers through the finite law, and can a better bank objective be learned? | Supplied-law maps separate access and conditioning before new bank training | L2a implemented in review 5; L2b remains a separate next design |
 | L3 | Is the failure in memory or its decoder? | Added readouts recover prediction beyond raw-history, question-only and shuffled rivals | Implemented in review 4; admission receipt distinguishes plans from execution |
-| U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes distinguish age from horizon-seeded traces; family comparison addresses omitted law | U32/U96 verified; U2 and R1 admitted with replay |
+| U1 → U2/R1 | Does evidence age explain the skill reversal, and can a reader adapt to a changed law? | Nested prefixes distinguish age from horizon-seeded traces; family comparison addresses omitted law | U32/U96/U2 verified; timing and prefix composition matter; R1 remains admitted |
 | S1 | When is paying to verify independence better than buying evidence? | Crossovers depend on graph uncertainty, stakes, prices, calibration and planning horizon | Implemented and reviewed in review 8 with adjacent replay |
 | R1 | Does family averaging avoid the harm of premature revision? | Sequential loss and priced native matches separate selection, averaging and paid catalog expansion | Implemented and admitted in review 7; source/order/trigger controls pass |
 | I1 | Does interchange training generalize beyond supplied interventions? | Untaught joint/ordered interventions separate mapping fit from reusable structure | After L2 |
@@ -94,3 +94,22 @@ evidence, graph misspecification, or an expanded audit menu that breaks the reta
 graph alias. Each requires a new protocol and controls informed by the first exact
 result. I1's untaught joint intervention and C1's accuracy-matched cost comparison
 remain useful. Neither full coverage nor exhausted useful work is established.
+
+## Matched-prefix result during review 8
+
+U2 completed and verified while this review worked. A later independent-source
+skill switch shows a 32-to-96-step reversal within the same stream; an earlier
+switch already favors the mixture at 32. Equal-age windows show an early
+post-change mixture benefit under both timings, so the later switch's shortest
+prefix includes enough pre-change penalty to reverse the cumulative ordering.
+Copies usually remove the skill benefit. Goal-change cumulative benefits can
+persist after static inference has recovered locally. This distinguishes the
+measured prefix estimand from a claim of permanent adaptive superiority.
+
+All 3,360 units, 16,464 independent means and eight whole-stream replays are
+verified. Science plus replay took 10.56 wall minutes and 614.171875 charged CPU
+seconds. R1 addresses the persisting omitted-law failure. A later U diagnostic
+could separately control initial posterior concentration and the arrival rate
+of unique evidence at the same elapsed time. Repeating larger horizons alone
+would not isolate those explanations; priority remains the already admitted
+decoder/bank and paid-inquiry comparisons.

@@ -790,3 +790,9 @@ brute-force contingent-policy enumeration checks the bounded decision recursion.
 Purchase prices are stipulated utility costs. Proper truth loss, binary decisions,
 graph probability error and net utility remain distinct outcomes. Initial shared
 source error does not imply shared errors in the subsequently purchased channels.
+
+U2 reports nested cumulative prefixes beside equal-length windows since the switch.
+A cumulative sign reversal can include changing pre/post-change weights even when
+both methods improve locally. Common random draws remove separate-horizon seed
+confounding; they do not remove these different estimands or create independent
+replications from windows, copy spans or alternative switch times.

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 U2: matched-prefix adaptation (19 September 2026 PDT)
+
+Does the skill-update reversal persist when shorter and longer scores use the same trajectory? It does for the later skill switch with independent evidence: mean logarithmic prediction loss, where lower is better, changes from 0.70717 for the role/rate mixture versus 0.70292 for static inference in the first 32 steps to 0.66483 versus 0.68067 over 96 steps. With the earlier switch, the mixture already leads at 32 steps. Copied evidence usually removes the skill benefit, while goal-change benefits and omitted-rule failures remain. Evidence age and switch timing therefore matter within matched trajectories; longer observation alone does not guarantee an adaptive advantage. These are descriptive constructed-method results, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-U2-response.md).
+
 ## V18.4 L1: full-support question diversity (19 September 2026 PDT)
 
 Does teaching composed questions generalize beyond the taught menu when all maker combinations are represented? It does not in this comparison. On the now-covered compositions, mean logarithmic prediction loss, where lower is better, is 0.84787 for flat memory and 0.83017 for split memory versus 0.87602 for direct history. Untouched farther-question losses are 3.73355, 3.37085 and 2.81020, all worse than their paired old-question-trained counterparts. Full maker support preserves the specific-question repair and farther deterioration seen on both support halves. These are descriptive constructed-method results, miniature — architecture untested.

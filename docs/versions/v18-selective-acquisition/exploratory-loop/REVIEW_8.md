@@ -85,3 +85,28 @@ followed by independent replay. Source, protocol, controls, plans and timing are
 frozen and published. Full-support result CI 35490118722 completed and its failed
 log was inspected: only retained V15 C11/M01 instruments fail. Their tests remain
 unchanged. Admission and execution remain distinct states.
+
+## U2 completion during the same review
+
+The matched-prefix packet completed at 04:53:41 UTC and adjacent verification at
+04:54:16 UTC. All 3,360 units and 10,080 recorded gates pass; independent replay
+reconstructed 16,464 means and eight complete fixed streams exactly. Source,
+plan, raw hashes and portable archive reassembly pass. Ten isolated U2/adaptation/
+runtime controls also pass. The full result is written through RESULTS, exchange,
+FINDINGS, the hypothesis row and synthesis, and METHODS before its separate push.
+
+The later skill switch has a within-stream cumulative sign reversal with
+independent observations; the earlier switch already favors the mixture at the
+shortest prefix. Equal-age windows show that initial evidence, age and the changing
+pre/post-change proportions remain distinct. Goal-change cumulative gains do not
+imply permanent local superiority after static inference recovers. Copied evidence
+and omitted-law failures retain useful negative boundaries. No human, general
+architecture or native-uptake conclusion is drawn.
+
+Actual science cost is 584.890625 charged CPU seconds and 603.165643 wall seconds;
+replay adds 29.28125 charged CPU seconds and 30.572842 wall seconds. The 10.56-minute
+combined duration replaces U2's forecast. L3 is the active subsequent diagnostic;
+L2a, P2, R1 and S1 remain queued with independent replay. Separate initial-posterior
+concentration and evidence-arrival diagnostics remain concrete follow-ons, ranked
+after current access and family tests. Existing S1 admission is the new useful work
+from this review; no extra horizon repetitions or fit seeds are added.
