@@ -811,3 +811,8 @@ neural rival keeps the direct architecture's nominal parameters but zeros every
 history feature and ignores length; query identity learning and history-change
 invariance validate that access contract. The changed sample and fitting budgets
 are explicit costs, not claimed controlled-away nuisances.
+
+P2 reports each content-preserving cyclic shift as well as its mean and range.
+A near tie is retained as a descriptive result; a nonzero shift does not certify
+that useful partition geometry disappeared. Uniform history allocation supports
+the information invariants, while changes in cross-task compatibility remain.

@@ -63,3 +63,12 @@ A conditional teacher must use the training-state prior, not substitute another.
 
 None of the remaining candidates is exhausted. A queue drain still requests
 useful refill, not closure; access-test publication does not fulfill the window.
+
+
+P2 completed with replay during review 9: 640 finite worlds, 8,320 independently
+reconstructed means and eight exact whole-world replays. Aligned four-symbol
+portfolios beat the seven shifted means individually, with close ties under
+several shifts. Costs are 693.59375 CPU seconds and 703.666838 wall seconds.
+A future partition-equivalence diagnostic can distinguish shifts that retain
+useful code structure from those that change it; duplicating random shifts alone
+would be less decisive. L4 remains the immediate admitted learning comparison.

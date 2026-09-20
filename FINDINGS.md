@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 P2: purpose alignment
+
+Does useful compression depend on matching supplemental purposes to the right histories, even when their target content is unchanged? In this finite test, the aligned four-symbol portfolio has lower future logarithmic loss than all seven shifted portfolios: 0.92620 under the original rules and 0.23258 under the alternative rule. Several shifts nearly tie it, while others are worse than training only for the original purpose. Target content alone therefore does not determine transfer; its pairing with history and other tasks matters. This is a descriptive constructed-method result with uniform history allocation and supplied-law decoding, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-P2-response.md).
+
 ## V18.4 L2a: Frozen prediction banks: useful access with unstable raw inversion
 
 Can old-question predictions answer new questions when given the finite world law? They can improve substantially under the fixed truncated bank map: untouched farther-question logarithmic losses are 0.84141 for flat memory and 0.82760 for split memory, versus their original decoders at 2.98964 and 3.06669. But the raw maps frequently violate probability constraints, and truncation trades exact span for stability. This is a descriptive constructed-method result with extra supplied-law access, miniature — architecture untested; it is neither learned law discovery nor evidence that the unrepaired map is a valid probability model.
