@@ -855,3 +855,12 @@ L4 restored-exposure reporting pairs the same test lineages across training arms
 Equal original-question counts exclude dilution as a sole explanation in that
 contrast, while changed history count and optimizer updates remain explicit.
 The equally trained no-history rival tests whether deterioration requires memory.
+
+L2b changes the old-answer training target while holding public inputs, model
+initialization, updates and realized-state development selection fixed. A separate
+uniform state draw supplies the exact sixteen-state teacher prior; conditional
+targets marginalize the supplied finite law given visible history and deduplicated
+sources. Scalar policy and likelihood products audit fixed training/development
+cases before fitting and again during replay. Test strata remain balanced, and
+the existing 24-state exact reference is explicitly stipulated. Population loss
+equivalence does not promise finite-budget transfer; all loss rankings remain outcomes.

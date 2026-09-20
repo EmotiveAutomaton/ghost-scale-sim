@@ -1,15 +1,27 @@
 # Review and refill backlog
 
-Review 11: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
+Review 12: P1/P2, both U1 horizons, U2, all six L1 support/question regimes,
 L3/L2a and R1 are verified. R1 publication records useful paid expansion but an
 aliased initial candidate pair; R2 is admitted to test distinct laws and class-prior mass.
 S1 is now verified and published: audit-only policies stop; limited two-step
 benefits depend on calibration and do not follow from graph information alone.
 L4's original-menu matched-exposure control is now verified and published. The
-paired diverse/restored and original/matched-total arms remain executing/queued.
+diverse/restored arm is now verified and published: restoring old-question exposure
+does not prevent farther deterioration, including without history. The
+original/matched-total arm remains running.
 L2c feasible-bank decoding is implemented; controls, measured timing and
 source-bound admission are retained with REVIEW_11 and its admission receipt.
 Remaining rows require their own protocol, gates and source freeze.
+
+Review 12 implements the next conditional-target comparison under an explicitly
+sampled sixteen-state training prior. Its two fresh paired arms share public
+inputs, initialization, update budget and realized-state development targets.
+Admission and measured controls are retained in [REVIEW_12](REVIEW_12.md) and
+[L2b admission](../../../../results/v18/exploratory-loop/L2b-ADMISSION.json);
+execution is a separate queue state. L2c remains the independently queued
+decoder-feasibility diagnostic; its pending effects are not used to choose this
+target contrast. Matching total exposure, supplied-law decoding, calibration,
+intervention composition and preparation economics remain distinct openings.
 
 | ID | Next question | Discriminating outcome | Priority |
 |---|---|---|---|

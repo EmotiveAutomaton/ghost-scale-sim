@@ -106,9 +106,11 @@ def training_queries(index,mode):
     return tuple(bank[((index//16)+j)%len(bank)] for j in range(5))
 
 
-def make_split(split,per_cell,parity_kind='even',query_kind='old',pulse=lambda **kw:None,pilot=False,support='even',query_mode='old',namespace='v18.4-neural'):
+def make_split(split,per_cell,parity_kind='even',query_kind='old',pulse=lambda **kw:None,pilot=False,support='even',query_mode='old',namespace='v18.4-neural',state_sampling='balanced',target_mode='realized'):
     if support not in ('even','odd','all') or parity_kind not in ('even','odd','all'):raise ValueError('undeclared latent support')
     if query_mode not in ('old','diverse'):raise ValueError('undeclared query mode')
+    if state_sampling not in ('balanced','iid') or target_mode not in ('realized','conditional'):raise ValueError('undeclared target design')
+    if target_mode=='conditional' and state_sampling!='iid':raise ValueError('conditional teacher requires declared IID prior')
     histories=[];lengths=[];worlds=[];query=[];sample_index=[];targets=[];exact=[];ids=[];truth=[]
     summaries={name:[] for name in ('passive_summary','intervention_summary')}
     for cell in range(16):
@@ -116,6 +118,8 @@ def make_split(split,per_cell,parity_kind='even',query_kind='old',pulse=lambda *
             kind=support if split in ('train','dev','pilot') else parity_kind
             candidates=[s for s in NEURAL_STATES if kind=='all' or parity(s)==(1 if kind=='odd' else 0)]
             state=candidates[i%len(candidates)]
+            if state_sampling=='iid' and split in ('train','dev','pilot'):
+                state=int(W.rng(namespace,'iid-state',split,cell,i,pilot).choice(candidates))
             offset={'train':18140000,'dev':18240000,'test':18340000,'pilot':18940000}[split]
             if namespace!='v18.4-neural':offset+=100000000+zlib.crc32(namespace.encode())
             w=W.make_world(cell,offset+i+(100000 if pilot else 0))
@@ -127,9 +131,13 @@ def make_split(split,per_cell,parity_kind='even',query_kind='old',pulse=lambda *
             number=len(histories);histories.append(x);lengths.append(n);worlds.append(wf)
             queries=TRAIN_QUERIES if query_kind=='old' else (FAR_QUERIES if query_kind=='far' else NEW_QUERIES)
             if split in ('train','dev','pilot'):queries=training_queries(i,query_mode)
+            conditional=None
+            if target_mode=='conditional' and split in ('train','pilot'):
+                from .conditional_targets import teacher
+                conditional=teacher(payload,queries,candidates)
             for q,c in enumerate(queries):
                 sample_index.append(number);query.append(context_features(c)+world_features(w))
-                targets.append(W.artifact_matrix(w,c)[state]);exact.append(weights@W.artifact_matrix(w,c))
+                targets.append(W.artifact_matrix(w,c)[state] if conditional is None else conditional[q]);exact.append(weights@W.artifact_matrix(w,c))
                 for name,(summary,_) in summary_weights.items():summaries[name].append(summary@W.artifact_matrix(w,c))
                 ids.append([cell,i,q,length])
             truth.append(dict(state=state,world=w,history=h,summary_decoders={name:meta for name,(_,meta) in summary_weights.items()}))
@@ -141,12 +149,13 @@ def make_split(split,per_cell,parity_kind='even',query_kind='old',pulse=lambda *
                 **{name:np.asarray(values,np.float64) for name,values in summaries.items() if values}),truth
 
 
-def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False,pulse=lambda **kw:None,support='even',query_mode='old',namespace='v18.4-neural',dev_query_mode=None):
+def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False,pulse=lambda **kw:None,support='even',query_mode='old',namespace='v18.4-neural',dev_query_mode=None,state_sampling='balanced',target_mode='realized'):
     import gzip
     root=Path(root);root.mkdir(parents=True,exist_ok=True)
     public_root=root/'reader';public_root.mkdir(exist_ok=True)
     config=dict(support=support,query_mode=query_mode,train_per_cell=train_per_cell,dev_per_cell=dev_per_cell,test_per_cell=test_per_cell,pilot=pilot)
     if namespace!='v18.4-neural':config['namespace']=namespace
+    if state_sampling!='balanced' or target_mode!='realized':config.update(state_sampling=state_sampling,target_mode=target_mode)
     if dev_query_mode is not None:
         if dev_query_mode not in ('old','diverse'):raise ValueError('undeclared development query mode')
         config['dev_query_mode']=dev_query_mode
@@ -168,7 +177,7 @@ def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False
             with np.load(data_path,allow_pickle=False) as z:data={k:z[k].copy() for k in z.files}
             return data,json.loads(gzip.decompress(points.read_bytes()))
         mode=dev_query_mode if split=='dev' and dev_query_mode is not None else query_mode
-        data,truth=make_split(split,n,parity_kind,query_kind,pulse,pilot,support,mode,namespace)
+        data,truth=make_split(split,n,parity_kind,query_kind,pulse,pilot,support,mode,namespace,state_sampling,target_mode)
         np.savez_compressed(data_path,**data);points.write_bytes(gzip.compress(W.canonical(truth),mtime=0))
         write(receipt,dict(data_sha256=file_digest(data_path),points_sha256=file_digest(points)))
         return data,truth
@@ -177,6 +186,10 @@ def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False
     train_payload={f'train_{k}':v for k,v in train.items() if k not in ('exact','ids')}
     train_payload.update({f'dev_{k}':v for k,v in dev.items() if k not in ('exact','ids')})
     np.savez_compressed(public_root/'TRAIN.npz',**train_payload)
+    if state_sampling=='iid':
+        from .conditional_targets import audit
+        checked=audit(root);write(root/'TARGET_AUDIT.json',checked)
+        if not checked['passed']:raise ValueError('conditional target instrument failed')
     cases={};input_paths={};truth_paths={}
     for name,parity_kind,query_kind in (('in-support','even','old'),('new-combinations','odd','old'),
                                        ('new-queries','even','new'),('both-new','odd','new'),('far-queries','all','far')):
@@ -194,6 +207,10 @@ def prepare(root,train_per_cell=128,dev_per_cell=16,test_per_cell=32,pilot=False
                 support=support,query_mode=query_mode,max_history=MAX_HISTORY,history_features=train['history'].shape[2],query_features=train['query'].shape[1],
                 train_histories=len(train['history']),dev_histories=len(dev['history']),pilot=pilot)
     if dev_query_mode is not None:public['dev_query_mode']=dev_query_mode
+    if state_sampling=='iid':
+        public.update(state_sampling=state_sampling,target_mode=target_mode,
+            training_supervision='realized-state or exact history-conditional finite-law distributions; development always shared realized-state targets',
+            test_allocation='retained deterministic balanced half/full-state allocation; exact reference uses stipulated uniform 24-state prior, not claimed allocation-optimal')
     write(root/'EVALUATOR.json',dict(truth=truth_paths,scope='must never be passed to training child'))
     write(public_root/'INPUTS.json',public)
     return public

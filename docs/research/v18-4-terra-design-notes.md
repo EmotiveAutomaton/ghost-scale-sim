@@ -256,3 +256,26 @@ Its resulting six-atom claim does not apply. L2c measures the actual affine rank
 and keeps alias fixtures without assuming scientific nonidentifiability. Other
 source suggestions and optimizer fallbacks are not adopted. The literature
 motivates numerical controls; it supplies no Ghost result or preferred loss ranking.
+
+## Twelfth bounded Terra pass: conditional supervision under the actual prior
+
+Before research, the local position was that exact conditional targets could
+reduce uncertainty in old-bank training without guaranteeing farther transfer.
+A separate uniformly sampled permitted state was proposed to avoid attributing
+a uniform teacher prior to the previous deterministic state allocation.
+
+The reviewer directly checked [Gneiting and Raftery](https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf)
+on strict propriety. Locally, linearity of cross-entropy in its target establishes
+that realized-state and posterior-averaged targets share the same conditional
+expected loss and gradient. This is a population identity, not a finite-budget
+optimization or transfer theorem. Both are simulator-supervised comparisons;
+law enumeration remains privileged training access.
+
+The return's useful warning was to separate changed training targets from changed
+selection targets. L2b therefore keeps shared realized-state development labels
+and old-only development questions. Two suggestions were not adopted: a uniform
+average over states after evidence is incorrect (the mixture needs posterior
+weights), and random state-count balance should be reported rather than gate a
+valid IID draw. A cited distillation page could not be fetched for direct review;
+it is not a load-bearing premise. No literature result is a Ghost result, and
+neither a teacher improvement nor an architectural transfer claim is assumed.

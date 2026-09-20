@@ -62,9 +62,24 @@ def finite(root):
     return dict(units=len(units),independent_means=len(groups),whole_unit_replays=indices)
 
 
+def target_audit(root):
+    if (root/'data/BUILD_PLAN.json').exists() and read(root/'data/BUILD_PLAN.json').get('state_sampling')=='iid':
+        from ghostscale.validation.soundingline.v18_4.conditional_targets import audit
+        actual=audit(root/'data')
+        saved=read(root/'data/TARGET_AUDIT.json')
+        if not actual['passed'] or not saved['passed']:raise ValueError('failed target audit')
+        for key in actual:
+            if key=='max_teacher_error':
+                if max(actual[key],saved[key])>1e-12:raise ValueError('target numerical reconstruction failed')
+            elif actual[key]!=saved[key]:raise ValueError('independent target audit changed')
+        return actual
+    return None
+
+
 def neural(root,output):
     from ghostscale.validation.soundingline.v18_4 import torch_worker as T
     import torch
+    supervision=target_audit(root)
     raw=json.loads(gzip.decompress((root/'neural_points.json.gz').read_bytes()));summary=read(root/'SUMMARY.json')
     grouped={};metrics=('expected_loss','brier','total_variation')
     for row in raw['rows']:
@@ -133,6 +148,7 @@ def neural(root,output):
                 **(dict(raw_forecast_rows=len(raw),max_raw_absolute_error=raw_error,invalidity_reconstructed=True) if bank_study else {})))
     if torch.cuda.is_initialized():raise ValueError('unexpected CUDA')
     return dict(independent_means=checked,lineage_clusters=len(clusters),forecast_replays=replays,
+        **(dict(independent_target_audit=supervision) if supervision else {}),
         **(dict(independent_bank_diagnostic_means=bank_means) if bank_means else {}))
 
 

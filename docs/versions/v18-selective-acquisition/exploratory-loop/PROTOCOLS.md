@@ -508,3 +508,58 @@ apparatus. Fit seeds average within each history; queries/cells/support halves
 remain paired. Every scientific ranking is an outcome. Each packet has an adjacent
 replay slot; all retained input probabilities bind to the published parent's raw
 forecasts, selected weights, plan and completion proof.
+
+## L2b: conditional old-answer targets under a sampled training prior
+
+Restored exposure does not prevent farther deterioration, including in a reader
+without history. L2a/L2c examine access to frozen banks; this separate comparison
+changes how the bank is taught. For a fresh shared lineage, compare exact response
+distributions at the realized hidden state with their exact conditional mixture
+given public history and world. Both arms supervise only the five original
+questions. This is an intervention on finite-sample targets, not a claim that
+the population cross-entropy objective changes: averaging realized-state loss
+under the true posterior equals loss against the conditional distribution.
+
+Training and development states are independently sampled uniformly from the
+sixteen permitted nonzero-skill states, using a separate deterministic random
+stream from world and observation generation. History lengths still cycle through
+8/16/32. The teacher prior has mass 1/16 on those states and zero elsewhere;
+it is not the old 24-state default. Posterior weights deduplicate source roots.
+The teacher is a posterior-weighted mixture, not a uniform average after evidence.
+Its inputs contain no realized-state label or test outcome. It uses supplied law
+access and is an oracle training intervention, not a discovered inference rule.
+
+Each arm uses 768 histories per cell, five old questions per history, 384 shared
+development histories and 96 test lineages; there are sixteen paired architecture
+cells. Direct, flat, split and question/world-only readers use width 48, 64 epochs,
+batch 128 and three matched seeds. Initial parameters, batch order, optimizer and
+update counts match across arms. Development targets are realized-state responses
+in both arms; development queries are old-only, so compositions and farther forms
+are absent from both fitting and selection. Target construction work is metered
+separately through the parent; training cost is not hidden by equal update counts.
+
+Test states retain the deterministic balanced half/full allocations used by the
+existing evaluator, with fresh shared coefficient/history draws. Those halves
+are reporting strata, not withheld training support. The 24-state exact reference
+remains a stipulated comparator, not a Bayes-optimal reference for that allocation.
+This changes the training-state generation relative to L4; only the two new arms
+form the controlled target comparison. Seeds and queries are paired within each
+coefficient lineage; descriptive intervals do not include training-dataset
+replication. No extra seeds are added in response to the desired ordering.
+
+Controls check known posterior mixtures, no-information prior recovery, source-copy
+invariance, cross-entropy/gradient averaging, wrong-prior sensitivity, paired
+public features, identical development/test targets, and absence of realized
+truth from the teacher interface. A separate scalar policy implementation checks
+one fixed training and development history per cell, 160 target rows, before
+fitting and again during extracted-source verification. Hashes bind all generation
+shards and public targets. Corruption with recomputed file hashes must still fail
+the independent target check. Sampled state counts are retained descriptively;
+random imbalance is not a failing instrument or a reason to resample.
+
+Normalization, controls and independent reconstruction gate validity; improved
+prediction does not. Report old, composition and farther scores, no-history
+comparisons, every selected fit and curve, target audit, raw evidence and costs.
+Conditional targets may improve old-menu fitting without transfer, help both,
+do nothing or harm. A feasible-bank decoder and full predictive-state closure
+remain different interventions. Each arm has an adjacent independent replay slot.
