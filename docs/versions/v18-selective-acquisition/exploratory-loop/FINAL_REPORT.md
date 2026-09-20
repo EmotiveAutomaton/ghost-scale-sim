@@ -26,7 +26,7 @@ and unchanged batch findings remain in [RESULTS](RESULTS.md).
 | Do conditional targets repair transfer? | Original-question memory improves, but direct farther answers worsen. Under the common bank decoder, farther loss instead improves slightly: 0.78259 to 0.77983 for flat memory and 0.77849 to 0.77717 for split memory. | A population loss identity does not guarantee finite-budget transfer. No unique cause or learned law access is established. |
 | Does more evidence guarantee adaptation? | On matched trajectories, switch time, evidence age and copies change the skill comparison. A late-switch mixture loses over 32 steps but wins over 96; an early switch already favors it at 32. | Cumulative scores mix pre- and post-change periods. Longer observation does not guarantee benefit or repair a missing law. |
 | Does surprise target useful expansion? | With distinct alternatives, averaging lowers alternative-rule sequential loss from 0.89372 to 0.79964 versus selection. The lower threshold buys in 65.00% of correct-rule streams but 37.50% of missing-law streams; costs erase the mean missing-law action benefit at both prices. | Raw surprise is poorly selective here. Intrinsic uncertainty remains a candidate explanation. Expansion buys supplied catalog access, not invented laws. |
-| Does buying provenance improve decisions? | Audit-only decision policies buy nothing. A calibrated two-step condition yields net utility 0.86359 versus evidence-only 0.86342; this small benefit reverses with overstated audit reliability. | Source information, truth prediction and paid action value differ. Persistent shared errors across both purchased channels were not implemented. |
+| Does buying provenance improve decisions? | Audit-only decision policies buy nothing. A calibrated two-step condition yields net utility 0.86359 versus evidence-only 0.86341; this small benefit reverses with overstated audit reliability. | Source information, truth prediction and paid action value differ. Persistent shared errors across both purchased channels were not implemented. |
 
 The frozen-state decoder ladder recovers aligned signal, but its nonlinear
 question/world-only rival is stronger on taught compositions. Successful decoding
@@ -123,3 +123,36 @@ completed admitted work from incomplete experimental coverage.
 Final native closeout verified that the Ghost notifier and all launcher wrappers
 exited, no Ghost scientific service remains, and all three legacy scheduled tasks
 are disabled. The active reviewer was preserved for publication and delivery.
+
+## Owner-requested morning cleanup
+
+The subsequent owner review independently found no remaining Ghost worker,
+reviewer, notifier or launcher, with all three legacy tasks still disabled.
+Every one of the 61 event acknowledgments matches its exact event hash. A fresh
+check of all 28 public packet exports verified 272 files (2,765,001,976 bytes,
+including duplicate portable metadata/source copies) and their plan, summary,
+replay-driver and source bindings. This complements the retained internal archive
+audit; it is not new scientific execution or a second independent sample.
+
+The completed [closeout CI run](https://github.com/EmotiveAutomaton/ghost-scale-sim/actions/runs/35513365093)
+exposed an additional operational-fixture timeout besides the preserved V15
+C11/M01 failure. The V16 boundary test requested graceful SIGTERM on POSIX,
+although it tests abrupt interruption; reader cleanup could exceed its ten-second
+wait. The [repair](https://github.com/EmotiveAutomaton/ghost-scale-sim/commit/04931b6d43549f3b8dff20baccd8e6fa0248aba8)
+forces exit of the owned fixture process, records its return code and requires
+SIGKILL on POSIX. All byte-preservation and resumed-completion checks remain.
+All four boundary tests pass in an isolated Windows source copy. The completed
+[full Linux rerun](https://github.com/EmotiveAutomaton/ghost-scale-sim/actions/runs/35518356913)
+no longer reports the interruption failure; only the retained V15 C11/M01 gate
+test fails. The [morning receipt](../../../../results/v18/exploratory-loop/MORNING_CHECK.json)
+records both runs; no green repository CI is claimed. Historical instruments and frozen science
+remain unchanged. An old V18.1 README sentence was also corrected to say closed.
+
+The source-audit finding's prose had rounded the evidence-only utility incorrectly:
+the verified value 0.8634148538776637 rounds to 0.86341, as its original tables
+already showed, rather than 0.86342. The exchange, finding, theory row and reports
+now agree; the underlying score and the narrow conclusion are unchanged.
+
+This cleanup is a separate owner-requested maintenance pass after the allocation
+closed. It does not reset or revise the frozen campaign charge or its cutoff.
+No raw evidence, failed attempt, specification or selected weight was deleted.

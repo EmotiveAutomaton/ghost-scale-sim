@@ -1,0 +1,93 @@
+{
+  "at": "2026-09-20T15:19:21.829181+00:00",
+  "cleanup": {
+    "raw_evidence_deleted": false,
+    "scientific_snapshots_modified": false,
+    "specifications_deleted": false,
+    "stale_v18_1_readme_status_corrected": true
+  },
+  "closeout_ci": {
+    "conclusion": "failure",
+    "failures": [
+      "tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates: retained C11/M01 instruments",
+      "tests/test_v16_boundary.py::test_final_boundary_actual_interruption_resume[R02]: graceful shutdown exceeded ten-second fixture wait"
+    ],
+    "run_id": 35513365093
+  },
+  "documentary_rounding_correction": {
+    "changed": [
+      "FINDINGS.md",
+      "docs/theory/READING_INTENT.md",
+      "docs/exchange/v18-4-S1-response.md",
+      "docs/versions/v18-selective-acquisition/exploratory-loop/RESULTS.md",
+      "docs/versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md"
+    ],
+    "correct_five_decimal_text": "0.86341",
+    "exact_value": 0.8634148538776637,
+    "matching_summary_cells": 1,
+    "previous_text": "0.86342",
+    "scope": "Documentary rounding correction only; verified SUMMARY and original tables unchanged.",
+    "source": "results/v18/exploratory-loop/S1-paid-noisy-audits-1/SUMMARY.json"
+  },
+  "frozen_scientific_charge_unchanged": true,
+  "limits": "Existing independent scientific replay and internal-member audit are retained proofs; morning hashes are integrity checks, not new independent science. Repository CI retains failed historical instruments.",
+  "native_check": {
+    "at": "2026-09-20T15:03:53.2667343Z",
+    "ghost_processes": 0,
+    "historical_review_and_runner_pids_absent": true,
+    "legacy_tasks_disabled": 3,
+    "private_receipt_sha256": "bfe11dc05291d682d641b49c681b84963fd2995fef16b133f8a50b8dc90fd0f4"
+  },
+  "notification_state": {
+    "armed": false,
+    "exact_hash_acknowledgments": 61,
+    "pending_events": 0,
+    "stop_present": true
+  },
+  "operational_repair": {
+    "change": "Force abrupt termination of the owned fixture process on both platforms; record exit code and require SIGKILL on POSIX.",
+    "local_tests": {
+      "passed": 4,
+      "platform": "Windows",
+      "receipt_sha256": "db5afe6719432cd1d914b0712fcbeda0e85ac28e32287d7baf502f41d3e5e710",
+      "source_isolation": true
+    },
+    "preserved": "Ten-second wait, retained-byte equality, resumed completion, scientific verdicts and frozen source archives.",
+    "setup_attempts": "Retained import-path, sandbox temporary-directory and omitted commission-file setup failures; fixed the isolated harness, not scientific gates."
+  },
+  "operational_repair_head": "04931b6d43549f3b8dff20baccd8e6fa0248aba8",
+  "public_evidence_check": {
+    "at": "2026-09-20T15:02:38.601391+00:00",
+    "cpu_seconds": 2.9375,
+    "exact_event_acknowledgments": 61,
+    "export_bytes_hashed": 2765001976,
+    "export_files_checked": 272,
+    "notifications_stopped_and_disarmed": true,
+    "packets": 28,
+    "passed": true,
+    "pending_events": 0,
+    "retained_internal_member_audit": 12585,
+    "scope": "Fresh public export hashes and plan/summary/proof/driver/source bindings plus exact event acknowledgments; relies on retained independent scientific replay, does not rerun science or re-extract archive members."
+  },
+  "repair_ci": {
+    "boundary_interruption_timeout_recurred": false,
+    "conclusion": "failure",
+    "databaseId": 35518356913,
+    "failed_log_sha256": "157837c24c67438885b6a6b69e8c2dde6c6dce28fd4bd148113336e0c68a35da",
+    "failed_tests": [
+      "tests/test_v15_gates.py::test_committed_verdicts_have_no_failed_gates"
+    ],
+    "headSha": "04931b6d43549f3b8dff20baccd8e6fa0248aba8",
+    "remaining_failed_instruments": [
+      "C11",
+      "M01"
+    ],
+    "status": "completed",
+    "updatedAt": "2026-09-20T15:17:45Z",
+    "url": "https://github.com/EmotiveAutomaton/ghost-scale-sim/actions/runs/35518356913"
+  },
+  "schema": "v18.4.owner-morning-check.1",
+  "scientific_closeout_head": "c412c82c75d0d3228732182791763b1a1befdc80",
+  "scientific_closeout_sha256": "6fd8ef906c7a595574cacb5a043a45b35d57b7585ead7a9027b7425fc0d5400e",
+  "scope": "Owner-requested cleanup after fixed-cutoff closeout; no new scientific sampling, fitting or allocation."
+}

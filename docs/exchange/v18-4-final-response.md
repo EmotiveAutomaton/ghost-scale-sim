@@ -14,3 +14,10 @@ Final cumulative charge is 56,197.690197 of 64,800 CPU seconds, including prior
 consumption and conservative administration charges.
 
 [Final report](../versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md).
+
+The owner-requested morning cleanup rechecked all public exports and event
+acknowledgments and confirmed that no Ghost services remain. It corrected a
+last-digit prose rounding error and repaired an operational interruption-test
+timeout; the full Linux rerun now fails only on the retained V15 C11/M01 test.
+The scientific results and frozen campaign accounting are unchanged.
+[Cleanup receipt](../../results/v18/exploratory-loop/MORNING_CHECK.json).

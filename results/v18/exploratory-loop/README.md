@@ -28,3 +28,8 @@ designs. Fourteen finite packets contain 38,480 assigned evaluations; fourteen
 neural/access packets are separate. These are not independent-sample counts.
 All 12,585 scientific files and archive hashes passed the documentary audit.
 No scientific work ran after cutoff.
+
+The subsequent owner-requested [morning check](MORNING_CHECK.json) verifies public
+exports and exact event acknowledgments again, confirms service shutdown, and
+records the completed closeout CI's operational interruption-test failure and
+its repair. It supplements the immutable closeout records; it is not new science.

@@ -43,9 +43,9 @@ The [V18.2 finite queue](docs/versions/v18-selective-acquisition/maker-state/FIN
 
 [Mid-run analysis packet — 19 September](docs/versions/v18-selective-acquisition/continuation/MID_RUN_REPORT_2026-09-19.md): all 20 admitted comparison packets, both frozen primaries, validation and open questions.
 
-The five core branches now execute, and their first-wave results have independent
-physical checks and bounded extracted-source replay. The program remains active:
-larger dependency transfer, grounded Stitch, the direct structural rival and the
+The five core branches completed, and their first-wave results have independent
+physical checks and bounded extracted-source replay. The program is closed.
+Larger dependency transfer, grounded Stitch, the direct structural rival and the
 attachment-mask and opaque-label diagnostics are verified. Both frozen final primaries
 held. Two fixed support observations improved seven-part task success by 13.15 points,
 with an 8.82-point one-sided lower bound above the five-point practical margin. In

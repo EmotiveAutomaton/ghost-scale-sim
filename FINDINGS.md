@@ -82,7 +82,7 @@ Does learned history help beyond a reader given only the question and public wor
 
 ## V18.4 S1: source information and decision value
 
-Does paying to investigate copied sources improve truth decisions? Audit-only decision policies buy nothing throughout this finite comparison. Two-step planning sometimes combines audits with evidence: in one calibrated condition its net utility is 0.86359 versus 0.86342 for evidence alone, a small advantage that reverses when audit reliability is overstated. A graph-information policy buys almost two audits yet reaches only 0.75898 net utility there. This is a descriptive constructed-method result: learning source structure and improving a truth decision are different objectives, miniature — architecture untested.
+Does paying to investigate copied sources improve truth decisions? Audit-only decision policies buy nothing throughout this finite comparison. Two-step planning sometimes combines audits with evidence: in one calibrated condition its net utility is 0.86359 versus 0.86341 for evidence alone, a small advantage that reverses when audit reliability is overstated. A graph-information policy buys almost two audits yet reaches only 0.75898 net utility there. This is a descriptive constructed-method result: learning source structure and improving a truth decision are different objectives, miniature — architecture untested.
 
 [Evidence and limits](docs/exchange/v18-4-S1-response.md).
 
