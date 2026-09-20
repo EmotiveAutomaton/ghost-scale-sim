@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L3: Frozen-state readouts: recoverable signal without a demonstrated composition advantage
+
+Can an added decoder recover useful answers from a frozen memory that failed on new questions? The tested readouts recover aligned predictive signal, but they do not establish a memory advantage on taught compositions: at the larger label budget, the question-and-world-only nonlinear rival has lower logarithmic prediction loss than every frozen-memory readout. Untouched farther questions still resist reliable transfer. This is a descriptive constructed-method result, miniature — architecture untested; failure of this bounded decoder family does not prove information loss.
+
+[Evidence and limits](docs/exchange/v18-4-L3-response.md).
+
 ## V18.4 U2: matched-prefix adaptation (19 September 2026 PDT)
 
 Does the skill-update reversal persist when shorter and longer scores use the same trajectory? It does for the later skill switch with independent evidence: mean logarithmic prediction loss, where lower is better, changes from 0.70717 for the role/rate mixture versus 0.70292 for static inference in the first 32 steps to 0.66483 versus 0.68067 over 96 steps. With the earlier switch, the mixture already leads at 32 steps. Copied evidence usually removes the skill benefit, while goal-change benefits and omitted-rule failures remain. Evidence age and switch timing therefore matter within matched trajectories; longer observation alone does not guarantee an adaptive advantage. These are descriptive constructed-method results, miniature — architecture untested.

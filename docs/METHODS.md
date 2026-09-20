@@ -796,3 +796,5 @@ A cumulative sign reversal can include changing pre/post-change weights even whe
 both methods improve locally. Common random draws remove separate-horizon seed
 confounding; they do not remove these different estimands or create independent
 replications from windows, copy spans or alternative switch times.
+
+The frozen-state ladder recovers aligned signal, but the nonlinear question/world-only rival is stronger on taught compositions. Decoder success alone therefore cannot establish useful history; farther transfer and decoder limitations remain distinct. The next learning intervention needs an equally informed no-history rival.
