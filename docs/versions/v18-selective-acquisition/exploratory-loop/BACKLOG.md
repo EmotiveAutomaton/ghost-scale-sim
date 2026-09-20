@@ -239,3 +239,8 @@ source audits, intervention composition, accuracy-matched costs, partition
 equivalence and explicit predictive-bank objectives. These are useful unfinished
 experiments; no exhausted-useful-work finding is justified. At 12:00 UTC review
 remaining coverage and useful work while retaining the 13:00 science cutoff.
+
+During review 15 the L2d original/matched-total bank also verified and published.
+Useful history survives its supplied-law decoder; the diverse counterpart remains
+necessary for the training-allocation contrast. L2e conditional bank is now
+source-bound and admitted with exact roster pairing and adjacent replay.

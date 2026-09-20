@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V18.4 L2d: original-question bank control
+
+Does useful learned history remain accessible through the old-answer bank in the larger original-question training control? Yes with the supplied-law feasible decoder: farther mean logarithmic loss, where lower is better, is 0.82531 for flat memory and 0.82492 for split memory, versus 0.93778 without history and 0.93101 for the same-world prior. This first arm does not yet estimate the effect of diverse training. This is a descriptive constructed-method result, miniature — architecture untested.
+
+[Evidence and limits](docs/exchange/v18-4-L2d-old-bank-response.md).
+
 ## V18.4 L2b: paired target intervention
 
 Does replacing realized-state training targets with exact history-conditional targets repair prediction on untaught questions? It does not repair farther transfer: mean logarithmic loss, where lower is better, rises from 1.70223 to 1.73769 for direct history, 2.91068 to 2.93959 for flat memory and 3.02246 to 3.15191 for split memory. Original-question memory scores improve, but all three history readers still lose to the no-history rival on untaught forms. This is a descriptive constructed-method result, miniature — architecture untested.

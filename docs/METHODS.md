@@ -900,3 +900,8 @@ L2b paired reporting checks shared public arrays, development/test targets and
 world/history/state rosters before interpreting target differences. Differences
 are descriptive within fixed training datasets; conditional targets share a
 population loss identity without guaranteeing finite-budget transfer.
+
+L2d first-arm publication separates accessible history in a verified bank control
+from the unfinished paired training-allocation effect. Equal roster binding makes
+the future between-bank contrast paired; different direct-test allocation still
+prevents relabeling direct full-sample means as decoder intervention effects.

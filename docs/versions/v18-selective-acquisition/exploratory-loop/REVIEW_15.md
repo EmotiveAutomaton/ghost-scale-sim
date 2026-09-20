@@ -76,3 +76,12 @@ actual attempts and costs, verified/public evidence and unexecuted coverage.
 [Conditional-target finding](../../../exchange/v18-4-L2b-conditional-response.md)
 and [paired-bank protocol](PROTOCOLS.md#l2e-conditional-target-comparison-through-a-common-bank-decoder)
 retain the result and prospective diagnostic separately.
+
+The original/matched-total L2d bank completed verification during this review.
+All 1,536 histories, 3,200 independent means and eight whole-unit replays pass.
+All 18,432 learned-bank certificates pass, maximum gap 1.41527415e-14. Flat and
+split farther loss is 0.82531/0.82492, below no-history 0.93778 and prior 0.93101.
+This is a first-arm control; the diverse-bank effect remains pending. Science and
+replay charged 391.140625 CPU seconds and took 6.70 wall minutes, supporting the
+bank forecast. Useful history under this decoder does not imply learned law
+access. The new conditional-bank admission preserves all preceding 52 slots.
