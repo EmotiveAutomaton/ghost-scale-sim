@@ -15,7 +15,7 @@ def event(campaign,key,payload):
     if not path.exists():write(path,dict(id=key,at=now(),**payload))
 
 
-def supervise(campaign,queue,python):
+def supervise(campaign,queue,python,runner_module='runners.run_v18_4'):
     from ghostscale.validation.soundingline.v18_4.priority import below_normal
     below_normal()
     with local_owner(campaign/'supervisor'):
@@ -36,7 +36,7 @@ def supervise(campaign,queue,python):
             if file_digest(root/'PLAN.json')!=job['plan_sha256']:raise ValueError('admitted plan changed')
             with (root/'worker.log').open('ab',buffering=0) as log:
                 started=time.time();clock=None
-                child=subprocess.Popen([str(python),'-B','-m','runners.run_v18_4','--root',str(root),'--campaign',str(campaign)],
+                child=subprocess.Popen([str(python),'-B','-m',runner_module,'--root',str(root),'--campaign',str(campaign)],
                     cwd=source,stdout=log,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL,
                     creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)|getattr(subprocess,'BELOW_NORMAL_PRIORITY_CLASS',0))
                 while child.poll() is None:

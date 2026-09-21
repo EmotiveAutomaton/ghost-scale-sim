@@ -1,5 +1,33 @@
 # Ghost Scale Simulation
 
+The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+
+The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
+
+The omitted-tool experiment separates compatible evidence from complete process coverage. Final artifacts and context never reject the old family, while full witnesses expose the changed rule in 30.39% of its native population. Supplying both rules restores coverage. Twenty-five scientific batches are independently verified; neither cause invention nor human intent is established.
+
+The single alternative transformer site leaves learned factor edits below the practical margin. Original predictions reconstruct exactly within numerical tolerance; the class-mean belief control retains large collateral damage. Twenty-four scientific batches have independent verification and complete replays. No further site search or joint causal-composition admission follows.
+
+The cue-correction comparison verifies source replacement, retraction and duplicate handling. Counting a repeated wrong report as independent adds 1.92615 nats of joint process loss under the neutral prior. Full-joint scores reproduce, while best-process localization is sensitive to numerical ties. Twenty-three scientific batches are verified; supplied report reliability and teacher information remain explicit.
+
+The ridge-probe direction decodes maker factors but changes predictions too little to meet the declared practical margin. A class-mean purpose direction remains a limited candidate; the corresponding belief direction damages stay cases. Independent reconstruction and both complete replays support twenty-two scientific batches. Joint selective access and historical process correspondence remain open.
+
+The native factor fixtures preserve exact stay targets, but whole-state donor replacement imports unwanted skill changes. Both saved readers retain predictive capability; full replacement worsens purpose-change and stay scores while improving belief-change scores. Independent verification and both complete replays support twenty-one scientific batches. Selective access remains a separate experiment.
+
+The equal-size portfolio comparison finds no learned-bank gain: targeted selection recovers the original set, while random and diversity choices worsen learned prediction despite improving exact-bank diagnostics. Independent reconstruction and both full replays verify twenty scientific batches; estimation error, probability repair and training uncertainty remain separate.
+
+The purchase evaluation finds no targeting advantage from centered surprise: it reduces purchases but worsens forecasts when the missing rule is available. Both paid rules lose to the no-purchase mixture on stipulated net-cost scores. Independent reconstruction and both full replays verify nineteen scientific batches; numerical threshold sensitivity and supplied-law privilege remain explicit.
+
+Whole-stream purchase calibration is independently verified. Strict ties prevent identical attained rates, and centered thresholds are sensitive to tiny numerical shifts. Frozen thresholds now support a separate held-out evaluation; calibration alone establishes neither useful targeting nor human intent.
+
+Both tiny sequence readers pass the frozen predictive-capability thresholds in every fit and evidence condition. Independent model and score reconstruction and both complete replays verify the result. Fresh-episode prediction does not establish historical process reconstruction or selective causal access; the latter still needs intervention fixtures.
+
+Persistent count-table learning improves native production, but active acquisition has no demonstrated advantage over demonstrations. Exact ordered replay is identical. Restricting starts leaves the unvisited context at its prior and lowers average success; this is a constructed-method comparison, not intent reconstruction or human expertise.
+
+A fixed public-history reset reduces the rolled-in updater’s large error at 128 observations but does not rescue it: it still loses 3.47050 nats to the reset one-step head. One-step reset effects are small and change sign across source conditions. Independent forecasts, scores and both complete replays verify this bounded constructed-method result; numerical horizon extrapolation remains a rival to accumulated drift.
+
+The single roll-in pass fails to stabilize the updater: independent 32-observation forecast loss increases by 5.74016 nats, with unchanged teacher-refit controls and complete reproducibility. The task study finds no skill-by-objective reversal; a complementary-path symmetry fixes display-on success at 50%, while hiding final evidence loses a small amount of purpose information. These are constructed-method and conditional model results, not human intent or learned expertise.
+
 **An exploratory computational model of cross-agent intent inference, provenance trust, and
 preference learning.** It asks whether an observer can recover a maker's latent goals and
 persistent profile from artifacts, determine when that inference is reliable enough to update its
@@ -13,6 +41,25 @@ studies. It is the companion code to *Art as an Algorithmic Virus* (Zenodo DOI
 ![The Ghost Scale, drawn by a human and rendered by a machine](figures/ghost_scale_pair.png)
 
 *Left: 100% intent, created by a paid artist. Right: 60%. Same figure, same information.*
+
+## V19 week in progress
+
+The [optimizer comparison](docs/versions/v19-local-maker/CONVERGENCE_REPORT.md) and [recursive-update result](docs/versions/v19-local-maker/UPDATE_REPORT.md) have independent numerical verification and both complete replays.
+
+The bounded optimizer comparison verifies an old-world relative bank advantage, local context benefit and strong witnessed-history reversal; none of its fits meets the declared gradient tolerance. The recursive updater preserves useful future predictions, but its modest history advantage reverses at the shorter prefix and its free/teacher gap includes initialization and oracle input privilege. Copied teacher positions are exact pass-throughs. Both results concern constructed methods, not joint historical correspondence or human intent.
+
+The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUFFICIENCY_REPORT.md) shows that posterior-only predictions of fresh episodes can discard operation order already visible in the input. This conditional method counterexample does not prove the same limitation for learned banks.
+
+The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
+
+The [current status](results/v19/CURRENT_STATUS.json) records twenty-eight verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+
+
+The [new commission](docs/versions/v19-local-maker/README.md) is active. Its
+[opening report](docs/versions/v19-local-maker/OPENING_REPORT.md) reproduces the
+paired old-bank benefit and admits an exact three-unit local-goal world with
+110,592 trajectories. Public evidence and evaluator truth have separate exports.
+The [A1 diagnostic](docs/versions/v19-local-maker/A1_REPORT.md) finds a large softmax penalty from repaired linear decoding of noisy banks, with a satisficing reversal. The first local readout screen is exploratory; the broader primary comparison and confirmation remain open.
 
 ## V18.4 fixed-cutoff report
 

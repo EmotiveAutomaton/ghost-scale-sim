@@ -31,6 +31,22 @@ def pending(campaign,state):
     return events
 
 
+def checkpoint_events(campaign,acceptance,config,current=None):
+    """One-shot declared milestones, including interim reporting for new campaigns."""
+    current=current or datetime.now(timezone.utc)
+    checkpoints=list(config.get('checkpoints',[]))
+    if 'minimum_exploration_until' in acceptance:
+        checkpoints.append(dict(id='minimum-window-reached',kind='minimum_exploration_window_reached',at=acceptance['minimum_exploration_until']))
+    if 'interim_at' in acceptance:
+        checkpoints.append(dict(id='interim-report-due',kind='interim_report_due',at=acceptance['interim_at']))
+    if 'deadline' in acceptance:
+        checkpoints.append(dict(id='final-report-due',kind='final_report_due',at=acceptance['deadline']))
+    for checkpoint in checkpoints:
+        target=campaign/'events'/(checkpoint['id']+'.json')
+        if current>=datetime.fromisoformat(checkpoint['at']) and not target.exists():
+            write(target,dict(id=checkpoint['id'],kind=checkpoint['kind'],at=now(),due_at=checkpoint['at']))
+
+
 def supervise(campaign,state,config_path,once=False):
     config=read(config_path);state.mkdir(parents=True,exist_ok=True)
     path=state/'DELIVERY.json';delivery=read(path) if path.exists() else dict(attempts=[])
@@ -48,9 +64,7 @@ def supervise(campaign,state,config_path,once=False):
                         name='supervisor-disappeared-'+str(status['pid']);target=campaign/'events'/(name+'.json')
                         if not target.exists():write(target,dict(id=name,kind='supervisor_disappeared',at=now(),status=status))
                 acceptance=read(campaign/'ACCEPTANCE.json')
-                if datetime.now(timezone.utc)>=datetime.fromisoformat(acceptance['minimum_exploration_until']):
-                    target=campaign/'events/minimum-window-reached.json'
-                    if not target.exists():write(target,dict(id='minimum-window-reached',kind='minimum_exploration_window_reached',at=now()))
+                checkpoint_events(campaign,acceptance,config)
             events=pending(campaign,state)
             write(state/'STATUS.json',dict(pid=os.getpid(),parent_pid=os.getppid(),heartbeat=now(),pending=len(events),
                 armed=(state/'ARMED').exists(),active_review_pid=None),immutable=False)

@@ -1,6 +1,83 @@
 # The methodology layer
 
+The crossed-rule verifier now reconstructs every native path, joint posterior and score; its support ceiling is distinct from improved probability weights. The [support/holdout checker](versions/v19-local-maker/SUPPORT_REVIEW_PROTOCOL.md) independently rebuilds count tables, tied retrieval, complete path propagation, common smoothing, visitation strata and paired scores. Ten targeted controls include a full native fixture and corrupted forecast rejection. The earlier complete regression remains 120 Ghost and five Torch passes; these additional tests do not relabel that historical suite.
+
+The [joint-process verifier](versions/v19-local-maker/JOINT_REVIEW_PROTOCOL.md) independently reconstructs 663,552 native paths, 480 fitted heads and 10,240 score strata, including proper scores over the fixed 5,832-label universe, training-only alphabets and paired log-budget areas. All controls and both complete replays pass. Solver success, strict gradient tolerance, compatible probability and candidate coverage are separate outcomes. Draw and seed variation remain distinct from lineage intervals. The [crossed-rule checker](versions/v19-local-maker/CROSSED_REVIEW_PROTOCOL.md) independently implements full transient execution, law priors, support and infinite-loss accounting; ten isolated controls, including a complete native fixture, pass before admission. The existing full regression retains its 120 Ghost and five Torch passes; this new test file is covered by the additional targeted suite, not retroactively by the earlier regression.
+
+The forward-table audit reconstructs every native path, training selection, transition/endpoint count, exact intermediate-path sum and Monte Carlo forecast independently. Endpoint losses retain natural query mass and paired lineages. Exact propagation separates computational sampling from transition learning; count-dependent smoothing, capacity differences and combined timing prevent a pure extra-compute claim. [Result](versions/v19-local-maker/ROLLOUT_REPORT.md).
+
+The omitted-tool review independently reconstructs native path probabilities, transient states, projection groups and full joint posteriors under two supplied laws. Natural population weighting, explicit infinite-loss mass and empty-support abstention distinguish a wrong compatible family from actual detection. The forward-transition pilot separately freezes count-table training, exact learned propagation, 1/4/16 rollouts and matched direct sampling with shared mechanics metadata. [Omitted-tool result](versions/v19-local-maker/MISSING_TOOL_REPORT.md), [rollout protocol](versions/v19-local-maker/ROLLOUT_PROTOCOL.md).
+
+The single alternate C1 site is checked with separate attention, Gaussian-CDF activation, residual and normalization reconstruction, augmented least-squares probes, and paired original-site effects. All arms keep the same final normalization/head. The next exact missing-tool handler compares original and supplied expanded execution families while retaining legal artifact symbols, full native path weights, explicit abstention and infinite-loss mass. [Site result](versions/v19-local-maker/ALTERNATE_SITE_REPORT.md), [missing-tool protocol](versions/v19-local-maker/MISSING_TOOL_PROTOCOL.md).
+
+Cue correction now has independent full-joint regrouping, closed-form likelihood odds, source-operation audits, paired lineage intervals and complete replay. Modal localization is separately qualified for near-tie sensitivity. The bounded alternative-site implementation reconstructs the transformer residual before final normalization and checks recovery of every original state/output before fitting fixed privileged probes. [Cue result](versions/v19-local-maker/CUE_CORRECTION_REPORT.md), [site protocol](versions/v19-local-maker/ALTERNATE_SITE_PROTOCOL.md).
+
+C1 factor access now has independent augmented least-squares probe verification, explicit finite entropy checks at zero target mass, all seven coordinate-substitution controls and paired lineage intervals. Decodability, edit magnitude and collateral stay damage are separate. The next D1 handler uses probabilistic relation likelihoods with explicit provenance, replacement and retraction on retained complete native hypotheses; it adds no fitted model. [Access result](versions/v19-local-maker/INTERCHANGE_ALIGNMENT_REPORT.md), [cue protocol](versions/v19-local-maker/CUE_CORRECTION_PROTOCOL.md).
+
+C1's native fixture audit now independently checks full-path enumeration, sampled operations, shared random draws, log-likelihood posteriors, pair mappings and all proper scores. The prior independently validated network reconstruction is reused and explicitly distinguished from a new architecture implementation. Its full-state control quantifies unwanted skill transfer; capability and selective access remain separate. The next fixed rank-one probe comparison declares auxiliary training factor labels, closed-form ridge fitting and five control substitutions before fitting. [Fixture result](versions/v19-local-maker/INTERCHANGE_FIXTURE_REPORT.md), [alignment protocol](versions/v19-local-maker/INTERCHANGE_ALIGNMENT_PROTOCOL.md).
+
+The equal-size portfolio comparison finds no learned-bank gain: targeted selection recovers the original set, while random and diversity choices worsen learned prediction despite improving exact-bank diagnostics. Independent reconstruction and both full replays verify twenty scientific batches; estimation error, probability repair and training uncertainty remain separate.
+
+The purchase evaluation finds no targeting advantage from centered surprise: it reduces purchases but worsens forecasts when the missing rule is available. Both paid rules lose to the no-purchase mixture on stipulated net-cost scores. Independent reconstruction and both full replays verify nineteen scientific batches; numerical threshold sensitivity and supplied-law privilege remain explicit.
+
+Whole-stream purchase calibration is independently verified. Strict ties prevent identical attained rates, and centered thresholds are sensitive to tiny numerical shifts. Frozen thresholds now support a separate held-out evaluation; calibration alone establishes neither useful targeting nor human intent.
+
+Both tiny sequence readers pass the frozen predictive-capability thresholds in every fit and evidence condition. Independent model and score reconstruction and both complete replays verify the result. Fresh-episode prediction does not establish historical process reconstruction or selective causal access; the latter still needs intervention fixtures.
+
+Persistent count-table learning improves native production, but active acquisition has no demonstrated advantage over demonstrations. Exact ordered replay is identical. Restricting starts leaves the unvisited context at its prior and lowers average success; this is a constructed-method comparison, not intent reconstruction or human expertise.
+
+A fixed public-history reset reduces the rolled-in updater’s large error at 128 observations but does not rescue it: it still loses 3.47050 nats to the reset one-step head. One-step reset effects are small and change sign across source conditions. Independent forecasts, scores and both complete replays verify this bounded constructed-method result; numerical horizon extrapolation remains a rival to accumulated drift.
+
+The single roll-in pass fails to stabilize the updater: independent 32-observation forecast loss increases by 5.74016 nats, with unchanged teacher-refit controls and complete reproducibility. The task study finds no skill-by-objective reversal; a complementary-path symmetry fixes display-on success at 50%, while hiding final evidence loses a small amount of purpose information. These are constructed-method and conditional model results, not human intent or learned expertise.
+
+V19's [independent optimizer verifier](versions/v19-local-maker/CONVERGENCE_REVIEW_PROTOCOL.md) reconstructs saved forecasts and gradients without importing the producer's scoring or fitting functions. Its known-answer and placebo controls execute before outcome inspection in the existing scientific queue. All five verifier controls and numerical reconstruction now pass; solver success remains separate from gradient tolerance.
+
+The bounded optimizer comparison verifies an old-world relative bank advantage, local context benefit and strong witnessed-history reversal; none of its fits meets the declared gradient tolerance. The recursive updater preserves useful future predictions, but its modest history advantage reverses at the shorter prefix and its free/teacher gap includes initialization and oracle input privilege. Copied teacher positions are exact pass-throughs. Both results concern constructed methods, not joint historical correspondence or human intent.
+
+V19 adds finite-world numerical span/conditioning rulers, paired coefficient-lineage
+resampling and explicit public/evaluator projection checks in
+`ghostscale/validation/soundingline/v19/`. Exact alias fixtures distinguish a true
+null direction from a direction discarded by tolerance. The local-world reference
+includes transient artifact, undo and controller state; its persistent maker table
+alone is not Markov. See the [opening protocol](versions/v19-local-maker/README.md)
+and [local-world contract](versions/v19-local-maker/LOCAL_WORLD_PROTOCOL.md).
+
+A1 adds fixed pre-normalization error matching and a separate post-normalization error record, paired seed-within-lineage regrouping, and linear-versus-hull decoding controls. See the [frozen A1 protocol](versions/v19-local-maker/A1_PROTOCOL.md) and [result](versions/v19-local-maker/A1_REPORT.md).
+
 **What `ghostscale/methods/` is for, why each piece exists, and what it costs to run.**
+
+The first V19 learned readout screens use a fixed 128-coordinate tanh basis and
+ridge fitting, with equal target-head parameter counts and explicitly separate
+observable and local-goal teacher labels. D1 changes relation evidence while
+keeping rearrangement controls identical; D2 compares joint hypotheses with
+independent marginals. Their [pre-fit protocol](versions/v19-local-maker/READOUT_AND_ALTERNATIVES_PROTOCOL.md)
+defines capacity, populations, training schedules, reference privilege and claim
+limits. Model arrays and predictions replay deterministically; measured component
+times are bound separately in execution receipts and are not added twice to costs.
+
+G19-04 adds independent forecast-level score reconstruction and a separately labelled post-screen nested-label mean diagnostic. Reader export allowlists exclude pairing identifiers as well as evaluator arrays; the old-world class stored in original IDs was never fitted but is not blind reader input. [Audit and interpretation](versions/v19-local-maker/READOUT_SCOUT_REPORT.md).
+
+G19-05 extends saved-forecast reconstruction to four nested budgets, sixteen paired lineages and separate goal/operation summaries. Its independent area calculation weights the four geometric budgets by 1/6, 1/3, 1/3 and 1/6. Original pairing IDs are withheld from blind exports even when the class coordinate is constant. [Local screen](versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md).
+
+D1/D2 add independent complete-trajectory regrouping and explicit infinite-loss/coverage checks. Modal selection is audited separately because floating-order ties can change its localized scores while preserving the distribution. The joint-support loss is stable to that change. [Alternative results](versions/v19-local-maker/ALTERNATIVES_REPORT.md).
+
+The admitted probability-head successor reuses frozen representation transforms,
+fits normalized categorical heads with a fixed optimization schedule, and records
+gradient checks and nested-label means. The independent process-sufficiency
+successor compares retained visible-packet groups and a source-derived reachable
+path symmetry; rounded posterior bins alone cannot certify ambiguity. Their
+[frozen protocol](versions/v19-local-maker/SUCCESSOR_PROTOCOL_2026-09-21.md) separates
+the exact persistent-state theorem from possible extra history in learned errors.
+
+The probability-head review reconstructs 40,704 scores, all final objectives/gradients and forecasts from saved coefficients. It separately records a post-result probability-floor sensitivity check, preserving original scores and the protocol deviation. Paired comparisons retain equal-class population weighting and separate goal/operation targets. [Review](versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md).
+
+The bounded convergence comparison holds the softmax objective fixed and records
+solver termination separately from gradient tolerance. B1 adds repeated-episode
+endpoint filtering, exact duplicate-source identity, matching cached/reread features
+and an explicitly auxiliary previous-bank teacher. Its recurrent and update heads
+share target labels but have different input privileges. [Frozen protocol](versions/v19-local-maker/CONVERGENCE_AND_UPDATE_PROTOCOL.md).
+
+The process-sufficiency review derives equal positive path likelihoods from the transient executor before drawing an exact nonidentification conclusion. Numerical equality and rounded bins are checks, not the proof. Complete replay and structural/hash inspection are distinguished from independent numerical resummation. Reader exports deduplicate visible content and withhold evaluator pairing. [Proof and limits](versions/v19-local-maker/PROCESS_SUFFICIENCY_REPORT.md).
 
 Every module in here was added because something specific went wrong. None of it computes a
 finding; all of it computes a reason to believe or disbelieve one. If a piece of this stops
@@ -951,3 +1028,37 @@ the exit code, and on POSIX requires SIGKILL before checking exact retained-byte
 recovery. Its ten-second wait and recovery checks are unchanged. This corrects the
 interruption being tested, not a scientific gate or historical result. Frozen
 source archives retain their original fixture.
+
+B1 verification independently reconstructs retained-law filtering, all saved forecasts and paired scores, with copied teacher pass-through distinguished from learned updates. The [roll-in/task protocol](versions/v19-local-maker/ROLL_IN_AND_TASK_PROTOCOL.md) adds training-only rollout inputs, an identical teacher-refit control and complete probability-weighted task assessment under visible-projection coarsening.
+
+B2 review reconstructs every training-rollout input and saved forecast, checks ridge normal equations without a new fit, and keeps teacher-copy identity separate from learned prediction. E2 uses complete scalar trajectory reaggregation, an explicit reader allowlist, and a post-result analytic complement symmetry checked against every paired path. [Reports](versions/v19-local-maker/ROLL_IN_REPORT.md) and [task audit](versions/v19-local-maker/TASK_REPORT.md). The fixed reset successor adds no fitting and retains every original-prefix forecast.
+
+The fixed-reset review independently rebuilds every saved forecast and cache reset without producer arithmetic, verifies copied-source identity and retains count-feature extrapolation as a separate rival. The [persistent practice protocol](versions/v19-local-maker/PRACTICE_PROTOCOL.md) adds tabular transition learning, native goal-conditioned intervention, exact ordered replay, finite-horizon planning and exact production evaluation with known-answer and placebo controls. It supplies no inverse-intent or tiny-reader capability result.
+
+The [practice review](versions/v19-local-maker/PRACTICE_REPORT.md) rebuilds counts from ordered logs and evaluates the original policies with independent native transitions and dynamic programming. Numerical near-tie policy differences are retained separately from unchanged-policy score verification; identical update histories imply replay identity at every prefix. Context support is recorded per context and weighted by exact optimal occupancy.
+
+The [tiny-reader pilot](versions/v19-local-maker/TINY_READER_PROTOCOL.md) uses two
+frozen CPU architectures and identical observable-distribution teachers, withholding
+development truth from the fitting child. The parent waits and charges native child
+CPU once. Source-copy flags remove duplicates before both encoders. Capability is
+separate from causal admission. Checkpoint files and native timing are bound as
+execution evidence; final parameter arrays, forecasts and learning curves must
+match complete replays. A full parent/child fixture and its replay verify this
+boundary before scientific dispatch.
+
+The [tiny-reader review](versions/v19-local-maker/TINY_READER_REPORT.md) independently evaluates saved GRU and transformer equations in NumPy, then rebuilds every proper-score stratum and paired lineage contrast. Training teachers are exported separately from blind development inputs; prediction admission and causal change/stay admission remain distinct.
+
+The [whole-stream calibration protocol](versions/v19-local-maker/PURCHASE_CALIBRATION_PROTOCOL.md) now has an implemented, admitted calibration handler. It freezes supplied-law sensor thresholds before a separately admitted evaluation and preserves A2/C1 alternatives. Calibration is not a held-out targeting result.
+
+The [purchase calibration review](versions/v19-local-maker/PURCHASE_CALIBRATION_REPORT.md) reconstructs each full prefix from scalar likelihood products and independently checks all whole-stream maxima and strict order statistics. Numerical threshold sensitivity is recorded separately from the unchanged calibration artifact. The [evaluation protocol](versions/v19-local-maker/PURCHASE_EVALUATION_PROTOCOL.md) fixes forecast/action, inert-purchase and complete cost controls before held-out outcomes.
+
+The [independent purchase review](versions/v19-local-maker/PURCHASE_REVIEW_PROTOCOL.md) rebuilds full prefix likelihood products, sensors, strict decisions, native actions, complete costs and paired coefficient-index contrasts. Its numerical controls and all 1,920 streams now verify; full prefix reconstruction and a second independent paired regroup agree. Strict threshold sensitivity remains distinct from replay identity. This verification does not refit a model or alter calibration.
+
+The [independent portfolio checker](versions/v19-local-maker/PORTFOLIO_REVIEW_PROTOCOL.md) reconstructs feature encodings and exact references, solves centered ridge equations, repeats training-only portfolio/ridge selection, and audits every forecast, repaired probability and paired stratum. Anonymous histories, training distributions and evaluator records have separate exports. Its isolated controls and all scientific reconstructions pass; a second paired regroup verifies all 45 contrasts. Selection identity and oracle/learned reversals are reported separately, with post-repair noise mismatch and full acquisition costs.
+
+The [C1 fixture protocol](versions/v19-local-maker/INTERCHANGE_FIXTURE_PROTOCOL.md)
+adds native purpose/belief hybrids with a skill-changing nuisance donor, exact
+change/stay references, complete trajectory audits of a transient-state dynamic
+program, and NumPy reconstruction of unchanged saved sequence readers. It preserves
+the original endpoint bit encoding and separates conditional prediction from the
+known-maker intervention target. No alignment or additional model is fitted.

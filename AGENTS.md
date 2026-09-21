@@ -17,7 +17,31 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Latest campaign: V18.4 fixed-cutoff closeout (2026-09-20)
+## Current campaign: V19 local maker reconstruction (2026-09-21)
+
+The owner commissioned the top-level next-week specification. Read
+`docs/versions/v19-local-maker/README.md`, `CODING_PACKAGE.md`, `ACCEPTANCE.json`
+and `OPENING_MANIFEST.json`, then outer `.local/v19/HANDOFF.md` and native state.
+This is a new 168-hour window, not an extension of V18.4. The accepted ceiling
+is 96 CPU hours including failed attempts and verification, with 16 protected for
+confirmation/replay/closeout. The optional 120-hour ceiling is not accepted.
+One below-normal CPU scientific worker, one numerical thread, no environment
+synchronization. Immutable sources, per-card limits and prior completed work stay
+protected. Use the existing native queue and event-only review ownership.
+
+Implement the exact local-goal world early while retained-data analysis proceeds.
+Opening and successor manifests are frozen before new outcomes; declarative cards
+are not implemented jobs. Continue their specifically admitted branches within the
+resource contract, without a global requirement that every earlier family win.
+No extra sampling solely for occupancy. Keep prediction, process correspondence,
+input privilege, numerical conditioning and exact ambiguity separate. Export public
+evidence separately from evaluator truth. Tiny model fits share a two-setting
+allowance with Sounding Line and require recorded training ownership before fitting.
+Retain per-batch publication and full scientific write-through. Report at the
+immutable interim and final times; routine branch succession needs no new approval.
+No research subagents are commissioned by this new allocation; work inline.
+
+## Completed predecessor: V18.4 fixed-cutoff closeout (2026-09-20)
 
 V18.4 closed at its immutable 13:00 UTC science cutoff. Read
 [the final report](docs/versions/v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md)

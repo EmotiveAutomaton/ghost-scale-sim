@@ -1,5 +1,62 @@
 # The walkthrough
 
+The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+
+The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
+
+The omitted-tool experiment separates compatible evidence from complete process coverage. Final artifacts and context never reject the old family, while full witnesses expose the changed rule in 30.39% of its native population. Supplying both rules restores coverage. Twenty-five scientific batches are independently verified; neither cause invention nor human intent is established.
+
+The single alternative transformer site leaves learned factor edits below the practical margin. Original predictions reconstruct exactly within numerical tolerance; the class-mean belief control retains large collateral damage. Twenty-four scientific batches have independent verification and complete replays. No further site search or joint causal-composition admission follows.
+
+The cue-correction comparison verifies source replacement, retraction and duplicate handling. Counting a repeated wrong report as independent adds 1.92615 nats of joint process loss under the neutral prior. Full-joint scores reproduce, while best-process localization is sensitive to numerical ties. Twenty-three scientific batches are verified; supplied report reliability and teacher information remain explicit.
+
+The ridge-probe direction decodes maker factors but changes predictions too little to meet the declared practical margin. A class-mean purpose direction remains a limited candidate; the corresponding belief direction damages stay cases. Independent reconstruction and both complete replays support twenty-two scientific batches. Joint selective access and historical process correspondence remain open.
+
+The native factor fixtures preserve exact stay targets, but whole-state donor replacement imports unwanted skill changes. Both saved readers retain predictive capability; full replacement worsens purpose-change and stay scores while improving belief-change scores. Independent verification and both complete replays support twenty-one scientific batches. Selective access remains a separate experiment.
+
+The equal-size portfolio comparison finds no learned-bank gain: targeted selection recovers the original set, while random and diversity choices worsen learned prediction despite improving exact-bank diagnostics. Independent reconstruction and both full replays verify twenty scientific batches; estimation error, probability repair and training uncertainty remain separate.
+
+The purchase evaluation finds no targeting advantage from centered surprise: it reduces purchases but worsens forecasts when the missing rule is available. Both paid rules lose to the no-purchase mixture on stipulated net-cost scores. Independent reconstruction and both full replays verify nineteen scientific batches; numerical threshold sensitivity and supplied-law privilege remain explicit.
+
+Whole-stream purchase calibration is independently verified. Strict ties prevent identical attained rates, and centered thresholds are sensitive to tiny numerical shifts. Frozen thresholds now support a separate held-out evaluation; calibration alone establishes neither useful targeting nor human intent.
+
+Both tiny sequence readers pass the frozen predictive-capability thresholds in every fit and evidence condition. Independent model and score reconstruction and both complete replays verify the result. Fresh-episode prediction does not establish historical process reconstruction or selective causal access; the latter still needs intervention fixtures.
+
+Persistent count-table learning improves native production, but active acquisition has no demonstrated advantage over demonstrations. Exact ordered replay is identical. Restricting starts leaves the unvisited context at its prior and lowers average success; this is a constructed-method comparison, not intent reconstruction or human expertise.
+
+A fixed public-history reset reduces the rolled-in updater’s large error at 128 observations but does not rescue it: it still loses 3.47050 nats to the reset one-step head. One-step reset effects are small and change sign across source conditions. Independent forecasts, scores and both complete replays verify this bounded constructed-method result; numerical horizon extrapolation remains a rival to accumulated drift.
+
+The single roll-in pass fails to stabilize the updater: independent 32-observation forecast loss increases by 5.74016 nats, with unchanged teacher-refit controls and complete reproducibility. The task study finds no skill-by-objective reversal; a complementary-path symmetry fixes display-on success at 50%, while hiding final evidence loses a small amount of purpose information. These are constructed-method and conditional model results, not human intent or learned expertise.
+
+## V19 entry point
+
+The [optimizer completion review](docs/versions/v19-local-maker/CONVERGENCE_REPORT.md) keeps execution, solver termination and verified scientific conclusions separate. Independent numerical reconstruction and both complete replays now verify the conditional prediction results.
+
+The bounded optimizer comparison verifies an old-world relative bank advantage, local context benefit and strong witnessed-history reversal; none of its fits meets the declared gradient tolerance. The recursive updater preserves useful future predictions, but its modest history advantage reverses at the shorter prefix and its free/teacher gap includes initialization and oracle input privilege. Copied teacher positions are exact pass-throughs. Both results concern constructed methods, not joint historical correspondence or human intent.
+
+The [process-sufficiency proof](docs/versions/v19-local-maker/PROCESS_SUFFICIENCY_REPORT.md) separates predicting a maker from remembering a particular episode. Two visible operation orders give the same persistent-maker posterior, so an exact bank based only on that posterior loses their order.
+
+The [probability-head comparison](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) shows that readout training can change the apparent benefit of a representation. Probability validity alone does not establish convergence or process correspondence.
+
+The [jointness and frame review](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) explains why separately plausible goals and operations can form an unsupported combined account. Its relation cue adds information; unchanged-evidence frames are identity controls.
+
+The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) separates goal and operation questions. Bank features help from final artifacts but lose to direct history with full witnesses; the reader archive contains only declared evidence and training teachers.
+
+
+The [artifact-history screen](docs/versions/v19-local-maker/READOUT_SCOUT_REPORT.md) finds lower loss with bank features than the other fitted readouts. A label-matched mean remains better; this is a limited method finding, with local process recovery still separate.
+
+
+Follow [current status](results/v19/CURRENT_STATUS.json) for admitted learning and independent alternatives. Admission establishes executable controlled comparisons, not a successful learned result.
+
+
+The active [V19 commission](docs/versions/v19-local-maker/README.md) starts with
+retained-bank reanalysis and a three-unit exact local-maker world. Use its
+[opening report](docs/versions/v19-local-maker/OPENING_REPORT.md) for current
+evidence and limits, and [replay guide](results/v19/README.md) for portable outputs.
+The [A1 result](docs/versions/v19-local-maker/A1_REPORT.md) separates class-dependent decoder error from exact ambiguity and retains the limits of the noise match.
+The versioned protocols distinguish public evidence, evaluator truth and supplied
+oracle-law references before learned-reader experiments.
+
 ## ○ Agent-authored V17 update, 18 September 2026
 
 Can memory, recipient inference and selective effort improve prediction? V17's three
@@ -647,3 +704,21 @@ a picture.
 
 *[← the fastest true picture](README.md) · [every question and its current answer](FINDINGS.md) ·
 [what the world published, next to what this predicted](EVIDENCE.md)*
+
+The [recursive-update review](docs/versions/v19-local-maker/UPDATE_REPORT.md) separates remembering useful forecasts from reconstructing past operations, and a supplied exact teacher from a freely updating reader.
+
+The [roll-in failure](docs/versions/v19-local-maker/ROLL_IN_REPORT.md) shows why a locally fitted updater must be checked in free use. The [task symmetry](docs/versions/v19-local-maker/TASK_REPORT.md) shows why disagreement between two success functions need not identify a skill reversal.
+
+The [reset comparison](docs/versions/v19-local-maker/BOUNDED_RESET_REPORT.md) distinguishes reducing a failure from restoring useful prediction. The [practice protocol](docs/versions/v19-local-maker/PRACTICE_PROTOCOL.md) next tests active acquisition against its exact replay and an off-policy demonstrator.
+
+The [practice comparison](docs/versions/v19-local-maker/PRACTICE_REPORT.md) separates learning from acquisition policy: both learned methods improve production, exact replay matches active learning, and the restricted context keeps its prior.
+
+The [tiny-reader pilot](docs/versions/v19-local-maker/TINY_READER_REPORT.md) now supplies capable fresh-episode predictors. It does not yet supply a local-process decoder or a selectively writable internal state.
+
+The [purchase calibration](docs/versions/v19-local-maker/PURCHASE_CALIBRATION_REPORT.md) freezes how to trigger model expansion before a separate evaluation. Its empirical cap and its eventual usefulness are separate questions.
+
+The [held-out purchase evaluation](docs/versions/v19-local-maker/PURCHASE_EVALUATION_REPORT.md) is independently verified. Centering reduces purchases without improving missing-rule targeting; full sensor costs reverse the apparent action benefit.
+
+The [equal-size portfolio comparison](docs/versions/v19-local-maker/PORTFOLIO_REPORT.md) preserves four selection methods at matched deployed bank width. Both full replays and independent reconstruction verify the learned-bank reversal and targeted-set identity.
+
+The [complete joint-process readout](docs/versions/v19-local-maker/JOINT_READOUT_REPORT.md) now has retained output and anonymous reader evidence. The full adjacent replay matches; numerical acceptance awaits independent reconstruction and portable-replay review.

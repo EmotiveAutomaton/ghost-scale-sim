@@ -1,5 +1,126 @@
 # Every question this project asked, and where its answer stands today
 
+The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+
+Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
+
+## V19 learned forward prediction — sampled rollouts lose to direct lookup
+
+Does composing learned transitions improve endpoint prediction beyond a direct table trained on the same paths? Sixteen learned rollouts lose to direct prediction at all four training budgets; at 2,048 paths the loss penalty is 0.06868 nats. Exact propagation removes a further 0.09813 nats of rollout error, but its 0.02945-nat apparent advantage over direct prediction has a paired lineage interval crossing zero. All 552,960 native paths, 327,680 scores and both full replays verify this exploratory constructed-method result. Supplied mechanics metadata, unequal model capacities and count-dependent smoothing prevent a general simulation or process-reconstruction claim.
+
+[Full result](docs/versions/v19-local-maker/ROLLOUT_REPORT.md).
+
+## V19 omitted tool — compatible evidence can hide missing processes
+
+Can an exact reader detect an omitted tool rule when all artifacts remain legal? Artifact and context evidence never empty the old family, although it assigns zero probability to 19.95% and 27.60% of the true joint-process mass. Full operation witnesses expose the omission in 30.39% of the changed-rule population; supplied expansion restores complete process coverage. All 221,184 paths, 57,344 scores and both full replays verify this constructed-method result. Compatible evidence does not certify a complete hypothesis family, and supplying a missing rule is not inventing it.
+
+[Full result](docs/versions/v19-local-maker/MISSING_TOOL_REPORT.md).
+
+## V19 alternate site — small edits and persistent collateral damage
+
+Does moving the intervention before final normalization make factor access practically selective? No practically meaningful benefit was found for the learned direction: its 32-observation purpose and belief gains are 0.00281 and 0.00623 nats, below the declared 0.02-nat margin. The class-mean belief direction still damages stay cases by 0.21473 nats. All 28,672 scores and both full replays verify this exploratory constructed-method result; joint selective access and human intent are not established.
+
+[Full result](docs/versions/v19-local-maker/ALTERNATE_SITE_REPORT.md).
+
+## V19 cue correction — source identity and retained uncertainty
+
+Can a process reader recover from a wrong report without counting its repetition twice? Source-aware correction restores the appropriate posterior; treating one wrong report as two independent reports adds 1.92615 nats of joint process loss under the neutral prior. All 24,576 scores and both full replays verify the probability-based result. Best-process localization is sensitive to numerical ties. This is a constructed-method result with supplied laws and report reliability, not evidence of human intent or new understanding from rearranging old evidence.
+
+[Full result](docs/versions/v19-local-maker/CUE_CORRECTION_REPORT.md).
+
+## V19 factor access — decodability, small edits and collateral damage
+
+Can a direction that predicts a maker factor selectively change its consequences? No practically meaningful selective benefit was found for the ridge-probe direction: its 32-observation gains are 0.00273–0.00728 nats, below the declared 0.02-nat margin. The class-mean direction gives larger purpose gains with small stay costs, but its belief swap causes large stay damage. All 57,344 scores and both full replays verify this exploratory constructed-method result; joint selective access and human intent are not established.
+
+[Full result](docs/versions/v19-local-maker/INTERCHANGE_ALIGNMENT_REPORT.md).
+
+## V19 native factor fixtures — verified capability and nonselective replacement
+
+Can a reader's internal state change one maker factor without importing an unrelated skill change? The saved readers remain predictively capable, but full-state replacement is not selective: after 32 observations it raises stay-case loss by 0.18134 nats for the transformer and 0.20203 for the recurrent reader. Exact native fixtures, all 41,600 scores and both full replays verify this constructed-method diagnostic; selective access and human intent are not established.
+
+[Full result](docs/versions/v19-local-maker/INTERCHANGE_FIXTURE_REPORT.md).
+
+The equal-size portfolio comparison finds no learned-bank gain: targeted selection recovers the original set, while random and diversity choices worsen learned prediction despite improving exact-bank diagnostics. Independent reconstruction and both full replays verify twenty scientific batches; estimation error, probability repair and training uncertainty remain separate.
+
+The purchase evaluation finds no targeting advantage from centered surprise: it reduces purchases but worsens forecasts when the missing rule is available. Both paid rules lose to the no-purchase mixture on stipulated net-cost scores. Independent reconstruction and both full replays verify nineteen scientific batches; numerical threshold sensitivity and supplied-law privilege remain explicit.
+
+Whole-stream purchase calibration is independently verified. Strict ties prevent identical attained rates, and centered thresholds are sensitive to tiny numerical shifts. Frozen thresholds now support a separate held-out evaluation; calibration alone establishes neither useful targeting nor human intent.
+
+Both tiny sequence readers pass the frozen predictive-capability thresholds in every fit and evidence condition. Independent model and score reconstruction and both complete replays verify the result. Fresh-episode prediction does not establish historical process reconstruction or selective causal access; the latter still needs intervention fixtures.
+
+Persistent count-table learning improves native production, but active acquisition has no demonstrated advantage over demonstrations. Exact ordered replay is identical. Restricting starts leaves the unvisited context at its prior and lowers average success; this is a constructed-method comparison, not intent reconstruction or human expertise.
+
+A fixed public-history reset reduces the rolled-in updater’s large error at 128 observations but does not rescue it: it still loses 3.47050 nats to the reset one-step head. One-step reset effects are small and change sign across source conditions. Independent forecasts, scores and both complete replays verify this bounded constructed-method result; numerical horizon extrapolation remains a rival to accumulated drift.
+
+## V19 single roll-in pass
+
+Does training on its own predictions stabilize the updater? One roll-in pass instead increases forecast loss by 5.74016 nats at 32 independent observations. The unchanged teacher-refit control, independent numerical checks and both complete replays verify this failure. This is a constructed-method result, miniature — architecture untested; it does not establish that roll-in training fails generally.
+
+[Evidence](docs/versions/v19-local-maker/ROLL_IN_REPORT.md).
+
+## V19 task assessment
+
+Does the apparent skill benefit reverse with the task objective? No reversal appears: display-on success is exactly 50% in every purpose/skill group because complementary paths have equal probability. Hiding final evidence modestly worsens purpose inference. This is a constructed-method and model-mechanism result, miniature — architecture untested; the symmetric task measure cannot establish a presentation-skill benefit or human intent.
+
+[Evidence](docs/versions/v19-local-maker/TASK_REPORT.md).
+
+## V19 recursive updating
+
+Can a predictive bank update from new observations without losing useful forecasts? At 32 independent episodes, the learned updater lowers logarithmic loss by 0.01369 nats versus cached history and 0.06668 versus a fixed recurrent state, but remains 0.02396 nats worse than the privileged exact-previous-bank diagnostic. The history comparison reverses at eight episodes. This is an exploratory constructed-method result, miniature — architecture untested; teacher privilege and initialization remain rivals to accumulated update error, and no historical-process or human-intent conclusion follows.
+
+[Evidence and limits](docs/versions/v19-local-maker/UPDATE_REPORT.md).
+
+## V19 bounded optimizer
+
+Does reducing optimization error change the predictive-bank comparison? Under the unchanged penalized objective, the bank lowers old-world logarithmic loss by 0.09829 nats relative to direct history, with a 95% paired lineage interval of [0.06739, 0.13098]. In the local world, artifacts alone give a difference smaller than the declared practical margin, added context favors the bank, and complete operation witnesses favor direct history by 0.77324 nats. All forecasts and gradients verify, but no fit reaches the declared gradient tolerance. This is an exploratory constructed-method advantage with reversals, miniature — architecture untested; process correspondence and human intent remain unestablished.
+
+[Evidence and limits](docs/versions/v19-local-maker/CONVERGENCE_REPORT.md).
+
+## V19 exact maker-bank sufficiency
+
+Can a bank of future predictions preserve the maker's preceding operation order? In the exact three-unit world, two reachable witnessed histories have identical persistent-maker posteriors but different operation orders. Every exact fresh-episode bank that depends only on that posterior therefore loses this distinction. The frozen example holds in all 32 lineage/context pairs. This is a conditional analytic method counterexample, miniature — architecture untested; it does not establish impossibility for learned banks or a result about human intent.
+
+[Proof, execution and limits](docs/versions/v19-local-maker/PROCESS_SUFFICIENCY_REPORT.md).
+
+## V19 probability-valid readout diagnostic
+
+Does probability-valid decoding preserve the earlier bank advantage? With unchanged data and representations, fixed softmax training reduces the old-world bank-minus-history loss difference to -0.00316 nats, with a 95% paired lineage interval of [-0.02721, 0.02473]. In the local world, the bank advantage is below the declared 0.02-nat margin for artifacts alone and added context; sparse and complete operation witnesses favor direct history by 0.13339 and 0.39751 nats. Residual optimization error remains unresolved. This is an exploratory constructed-method diagnostic, miniature — architecture untested; it establishes neither general access failure nor process correspondence or human intent.
+
+[Full comparison](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md).
+
+## V19 independent frame and jointness alternatives
+
+Does preserving goal–process dependence improve local reconstruction? With final artifacts alone, multiplying separate goal and process marginals adds 2.32802 nats of joint logarithmic loss and assigns 86.44% of probability outside the supplied compatible hypothesis family. Complete operation witnesses remove that gap. A truthful supplied relation lowers loss by 0.61413 nats under the neutral prior, but adds evaluator-selected information; rearrangement of unchanged evidence produces no gain in the stipulated identity control. These are exploratory constructed-method results, miniature — architecture untested; they establish neither learned reorganization nor human intent.
+
+[Evidence and limits](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md).
+
+## V19 local-goal readout screen
+
+Does a predictive bank help recover local goals and operations? Its advantage reverses with evidence: across four training budgets, the bank lowers logarithmic loss by 0.13193 nats with final artifacts alone, but raises it by 0.83956 nats when every operation is witnessed, relative to direct history. With artifacts alone it reaches the exact-reference loss plus 0.02 nats at 512 labels; with full witnesses direct history reaches that target at 2,048 labels and the bank does not. This is an exploratory constructed-method result, miniature — architecture untested; joint process correspondence and human intent are not established.
+
+[Learning curves, target split and limits](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md).
+
+## V19 artifact-history readout screen
+
+Can a learned predictive bank make new questions easier to decode from artifact histories? In the old-world screen, it lowers logarithmic loss by 1.87980 nats versus raw history and 0.68281 versus the frozen latent readout, averaged over the two training budgets and four equally weighted classes. Yet at 128 target-labelled histories its loss is 3.00938 nats, versus 2.35439 for the full-data no-history control and 0.78491 for the supplied-law exact reference. This is an exploratory constructed-method advantage among these fitted readouts, miniature — architecture untested; useful local-goal access and process correspondence are not established.
+
+[Evidence, supervision and export limits](docs/versions/v19-local-maker/READOUT_SCOUT_REPORT.md).
+
+## V19 A1: state-error diagnostic
+
+Does the remaining bank error depend on how noisy answers are decoded? In eight paired old-world lineages and two retained fits, the diverse split-memory bank loses 0.05006 nats more than the exact bank under convex-hull decoding, averaged equally over four classes. The 95% paired lineage interval is [0.04282, 0.05753]. Tight linear inversion with fixed probability repair loses a further 0.51409 nats [0.28585, 0.84109], concentrated in the softmax classes. This is an exploratory constructed-method diagnostic, miniature — architecture untested; it establishes neither learned-law access nor local process correspondence.
+
+[Evidence and limits](docs/versions/v19-local-maker/A1_REPORT.md).
+
+## V19 opening: paired bank audit and local-world admission
+
+Does the earlier bank benefit survive a paired reanalysis that keeps numerical conditioning and input privilege explicit? Yes: across 48 retained coefficient lineages, diverse training lowers farther-question logarithmic loss by 0.02937 nats for split memory and 0.02260 for flat memory under the supplied-law decoder. The paired 95% lineage intervals are [-0.03447, -0.02430] and [-0.02694, -0.01832]. These are conditional retained-fit method estimates, miniature — architecture untested; they do not establish learned-law access or local-goal transfer.
+
+The exact local world admits eight lineages and 110,592 trajectories, with 40 local
+evidence fixtures and five predecessor fixtures. Twenty-one scoped controls pass.
+The week and its learned comparisons remain open.
+[Evidence and limits](docs/versions/v19-local-maker/OPENING_REPORT.md).
+
 ## V18.4 fixed-cutoff synthesis (20 September 2026)
 
 Failure on a new question need not mean learned memory lost useful information. V18.4's old-answer banks retain useful history under a supplied-law decoder, even when direct answers worsen. Purpose alignment, change timing, source dependence, and acquisition costs also change which methods help. These are descriptive constructed-method findings, miniature — architecture untested; they establish neither general transfer nor human intent.
@@ -862,3 +983,57 @@ only under a SUPERSEDED marker pointing at the V7 closure that retired it.*
 - **Four separate criteria have now been found unable to do their own job**, each caught by a later
   pass. That is the failure mode this project has most of, and each instance is documented where it
   was found.
+
+## V19 fixed reset — 21 September 2026
+
+Does a fixed reset stabilize the failed updater? It reduces forecast loss by 2.31120 nats at 128 independent observations, but the rolled-in updater remains 3.47050 nats worse than the reset one-step baseline. Both complete replays and independent reconstruction pass. This is a bounded constructed-method result, not process correspondence or human intent.
+
+[Full result](docs/versions/v19-local-maker/BOUNDED_RESET_REPORT.md).
+
+## V19 persistent practice — 21 September 2026
+
+Active practice showed no advantage over observing demonstrations. After 512 episodes with both starting contexts represented, production success was 86.15% for active learning, 87.20% for demonstrations, and 49.19% without learning. Exact replay matched active learning throughout. This is a constructed-method result, not evidence about intent.
+
+[Full result](docs/versions/v19-local-maker/PRACTICE_REPORT.md).
+
+## V19 tiny predictive readers — 21 September 2026
+
+Can small sequence readers retain useful predictive information from observed local-world episodes? Both readers pass all declared capability checks. At 32 independent observations, forecast loss falls by 0.08342 nats for the transformer and 0.09496 for the recurrent reader relative to the fixed training mean. This establishes a constructed predictive instrument, not local-process correspondence, selective causal access or human intent.
+
+[Full result](docs/versions/v19-local-maker/TINY_READER_REPORT.md).
+
+## V19 whole-stream calibration — 21 September 2026
+
+Can whole-stream calibration limit unnecessary model purchases? On the calibration data, raw surprise buys in 9.375% of every stratum; entropy-centered surprise buys in 4.6875–9.375%, with ties lowering some rates. Independent reconstruction and both full replays pass. This validates a constructed calibration method; held-out missing-law targeting remains untested.
+
+[Full result](docs/versions/v19-local-maker/PURCHASE_CALIBRATION_REPORT.md).
+
+## V19 held-out purchase evaluation — independently verified
+
+Does subtracting expected surprise improve purchases of a missing model? No targeting advantage was found. When the missing rule is purchasable, centered surprise buys it less often and loses 0.03400 nats of forecast accuracy to raw surprise. Both paid rules lose to the no-purchase mixture on the stipulated net-cost scores. Independent reconstruction and both full replays verify this exploratory constructed-method result; it does not establish human intent.
+
+[Current report](docs/versions/v19-local-maker/PURCHASE_EVALUATION_REPORT.md).
+
+## V19 equal-size portfolios — independently verified
+
+Does choosing which questions to preserve improve a fixed-size predictive bank? No learned-bank improvement was found. Targeted selection recovered the original five questions in every fit; random and diversity choices worsened loss by 0.15928 and 0.23028 nats, while improving the exact-bank diagnostic. Independent reconstruction and both full replays verify this exploratory constructed-method result; it does not establish local process correspondence or human intent.
+
+[Full scope](docs/versions/v19-local-maker/PORTFOLIO_REPORT.md).
+
+## V19 complete joint-process readout — independently verified
+
+Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? The adjacent replay reproduces all 2,023 deterministic outputs; portable-replay review and independent numerical reconstruction remain pending. The recovered regression passes 120 Ghost controls and five Torch controls without skips and releases the two unchanged alternative designs. This is a constructed-method reproducibility and engineering result; no new accuracy advantage, historical process correspondence or human-intent claim is accepted.
+
+[Report](docs/versions/v19-local-maker/JOINT_READOUT_REPORT.md).
+
+## V19 crossed supplied rules — independently verified
+
+Can a family containing each individual rule change still omit processes when the changes occur together? No process-coverage gain was found from adding the combined rule: a belief-state alias preserves all goal-operation possibilities. The combined rule still improves probability estimates, reducing joint process loss by 0.07178 nats with artifacts alone and 0.09211 with context; the full-witness gain is only 0.00224 nats. Independent reconstruction and both complete replays verify this constructed-method result. Supplied hypotheses do not establish learned cause invention or human intent.
+
+[Report](docs/versions/v19-local-maker/CROSSED_RULE_REPORT.md).
+
+## V19 support and composition holdout — numerical review pending
+
+Does learned transition composition help on queries absent from training when every prediction has the same final smoothing? The support and composition-holdout experiment and both complete replays match all 41 deterministic outputs. Its 640 public queries declare mechanics and proposed operations; hidden endpoints and support labels remain separate. Independent numerical reconstruction is prepared before accepting an accuracy conclusion. This is a constructed-method reproducibility result, not historical process correspondence or human intent.
+
+[Report](docs/versions/v19-local-maker/SUPPORT_HOLDOUT_REPORT.md).
