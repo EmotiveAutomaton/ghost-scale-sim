@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
@@ -52,7 +52,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records twenty-eight verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records twenty-nine verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its
@@ -1375,3 +1375,5 @@ Code is MIT. Prose, figures and data are CC BY 4.0. See [LICENSE](LICENSE).
 To cite this repository, see [CITATION.cff](CITATION.cff), or cite the preprint directly.
 
 QUEUE-14 is complete and verified: 9,216 rows on 192 fresh truth-excluded candidate-family contexts and 36 bounded source replays. Two observations trigger safe abstention in every candidate-aware action method; the forced-candidate control attempts an invalid action every time. The campaign remains active while the remaining commissioned frontier is audited. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).
+
+The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.

@@ -1062,3 +1062,7 @@ change/stay references, complete trajectory audits of a transient-state dynamic
 program, and NumPy reconstruction of unchanged saved sequence readers. It preserves
 the original endpoint bit encoding and separates conditional prediction from the
 known-maker intervention target. No alignment or additional model is fitted.
+
+The [support/holdout result](versions/v19-local-maker/SUPPORT_HOLDOUT_REPORT.md) now has complete independent reconstruction of all 1,120 strata. The support diagnostic conditions on true primitive transitions, so it cannot become a reader-side selection rule. Common final smoothing separates sampling from endpoint probability repair while retaining different fitted factorizations. Conditional lineage uncertainty and two-draw variation are reported separately.
+
+The [revision handler](versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) reuses full native trajectories, collapses only identical Markov revision states while retaining source indices, and contrasts native goal selection with explicit request adoption and supplied-mechanics task optimizers. It records inspection/operation costs and repaired/destroyed success separately. Four new fixture controls plus existing world/runtime/portable-dispatch checks pass in isolation (14 total); scientific reconstruction remains a result-review obligation.

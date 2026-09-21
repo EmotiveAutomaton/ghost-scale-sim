@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1032,8 +1032,8 @@ Can a family containing each individual rule change still omit processes when th
 
 [Report](docs/versions/v19-local-maker/CROSSED_RULE_REPORT.md).
 
-## V19 support and composition holdout — numerical review pending
+## V19 support and composition holdout — independently verified
 
-Does learned transition composition help on queries absent from training when every prediction has the same final smoothing? The support and composition-holdout experiment and both complete replays match all 41 deterministic outputs. Its 640 public queries declare mechanics and proposed operations; hidden endpoints and support labels remain separate. Independent numerical reconstruction is prepared before accepting an accuracy conclusion. This is a constructed-method reproducibility result, not historical process correspondence or human intent.
+Does learned transition composition help on queries absent from training when every prediction has the same final smoothing? Exact learned propagation lowers withheld-composition loss by 0.16115 nats versus direct lookup; sixteen sampled rollouts instead raise it by 0.23095 nats. When all true primitive transitions were observed, both improve, but that diagnostic uses evaluator truth. Independent reconstruction and both complete replays verify this exploratory constructed-method result. Declared mechanics and proposed operations do not establish historical process correspondence or human intent.
 
 [Report](docs/versions/v19-local-maker/SUPPORT_HOLDOUT_REPORT.md).

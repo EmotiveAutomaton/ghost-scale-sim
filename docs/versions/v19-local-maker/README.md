@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -110,4 +110,6 @@ The [joint readout report](JOINT_READOUT_REPORT.md) records the independently ve
 
 The [crossed-rule result](CROSSED_RULE_REPORT.md) records full [independent numerical verification](CROSSED_REVIEW_PROTOCOL.md) and both replays.
 
-The [support/holdout result](SUPPORT_HOLDOUT_REPORT.md) has complete replay evidence and a prepared [independent checker](SUPPORT_REVIEW_PROTOCOL.md).
+The [support/holdout result](SUPPORT_HOLDOUT_REPORT.md) has complete replay evidence and completed [independent numerical reconstruction](SUPPORT_REVIEW_PROTOCOL.md).
+
+The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.

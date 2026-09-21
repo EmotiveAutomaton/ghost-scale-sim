@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-The crossed-rule comparison finds unchanged process coverage but better probability weights when the combined rule is supplied. Independent reconstruction and both complete replays verify twenty-eight scientific batches. Support/holdout execution and both replays verify; its independent numerical adjudication remains pending.
+The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job
@@ -104,4 +104,6 @@ G19-A2-portfolio-1 preserves 125 replay-matched deterministic files. READER.zip 
 
 G19-05-joint-readout-1 is independently numerically verified with both complete replays. READER.zip is consumer input; all native paths, labels, identities and forecasts are separately retained scientific/evaluator material. It is the 27th accepted scientific batch. Full model and forecast arrays remain in the hash-bound evaluator capsule; SCIENTIFIC.zip exports native paths, scores and reproduction source separately from reader inputs.
 
-G19-D-crossed-rules-1 is the 28th independently verified scientific batch; G19-F-support-1 has complete replay integrity and awaits numerical adjudication.
+G19-F-support-1 is the 29th independently verified scientific batch, with exact-propagation advantage and sampled-rollout reversal under the declared holdout.
+
+The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.

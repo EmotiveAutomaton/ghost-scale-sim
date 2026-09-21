@@ -1,5 +1,5 @@
-# Support/holdout execution and replay evidence
+# Independently verified support and composition holdout
 
-Does learned transition composition help on queries absent from training when every prediction has the same final smoothing? The support and composition-holdout experiment and both complete replays match all 41 deterministic outputs. Its 640 public queries declare mechanics and proposed operations; hidden endpoints and support labels remain separate. Independent numerical reconstruction is prepared before accepting an accuracy conclusion. This is a constructed-method reproducibility result, not historical process correspondence or human intent.
+Does learned transition composition help on queries absent from training when every prediction has the same final smoothing? Exact learned propagation lowers withheld-composition loss by 0.16115 nats versus direct lookup; sixteen sampled rollouts instead raise it by 0.23095 nats. When all true primitive transitions were observed, both improve, but that diagnostic uses evaluator truth. Independent reconstruction and both complete replays verify this exploratory constructed-method result. Declared mechanics and proposed operations do not establish historical process correspondence or human intent.
 
-READER.zip contains declared mechanics queries only. SCIENTIFIC_EVALUATOR.zip preserves all raw scientific material, fitted arrays and source; independent numerical acceptance remains pending.
+READER.zip contains only declared mechanics and proposed-operation queries. SCIENTIFIC_EVALUATOR.zip preserves complete raw truth, models, forecasts, inputs and source. VERIFICATION.zip adds independent reconstruction. Neither scientific archive is reader input.
