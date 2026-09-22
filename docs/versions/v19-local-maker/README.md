@@ -1,10 +1,12 @@
 # V19: local maker reconstruction and usable predictive state
 
-Future-schedule grouping is independently verified, bringing the scientific batch count to forty-two. Fixed primitive feedback has completed execution; independent numerical review and replay acceptance remain pending. V19 remains active.
+The primitive input-pooling comparison passed ten isolated controls and is source-admitted with both complete replays. It fixes correct undo-buffer pooling, equally sized wrong current-artifact pooling and unpooled controls before outcomes, retaining one prior per group. Retrospective evidence updating and the hidden-metadata boundary remain independent prepared alternatives.
 
-We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. The fixed feedback comparison completed 640 queries and 1,966,080 paired score rows with no new fits. Execution integrity passes; independent numerical and replay acceptance remain pending. No predictive advantage or process-correspondence claim is accepted yet.
+Fixed primitive feedback is independently verified, bringing the scientific batch count to forty-three. Row replacement improves changed-tool prediction with collateral damage to unchanged queries. V19 remains active; the complete regression refresh is a separate engineering job.
 
-[Feedback execution report](PRIMITIVE_FEEDBACK_REPORT.md).
+We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. With 64 truthful inputs, row replacement improves changed-tool forecasts by 0.19116–0.19524 nats under original training, but worsens unchanged queries by 0.02170–0.02482 nats. Independent reconstruction and both complete replays verify this constructed-method tradeoff; historical process correspondence and human intent remain unestablished.
+
+[Verified feedback report](PRIMITIVE_FEEDBACK_REPORT.md).
 
 We tested whether grouping identical remaining maker-state schedules preserves forecasts while reducing storage. All 4,620,288 saved forecast vectors reconstruct within 1e-12, with both complete replays verified. Float64 weights plus shared integer metadata use 23.96% fewer bytes on available checkpoints, or 22.53% fewer including unused requested-checkpoint metadata. This is a constructed-method storage result; online updating, workspace, speed, historical process correspondence and human intent remain unestablished.
 

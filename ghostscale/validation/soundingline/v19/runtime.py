@@ -195,6 +195,8 @@ def run(root,campaign):
                 from .future_quotient import run as handler
             elif plan['design']['handler']=='primitive-feedback':
                 from .primitive_feedback import run as handler
+            elif plan['design']['handler']=='primitive-pooling':
+                from .primitive_pooling import run as handler
             elif plan['design']['handler']=='feedback-review':
                 from .feedback_review import run as handler
             elif plan['design']['handler']=='quotient-review':

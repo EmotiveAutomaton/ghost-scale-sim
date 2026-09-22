@@ -61,7 +61,7 @@ human-intent result. No sampling interval is attached to deterministic byte coun
 **Pursuit:** test newly supplied retrospective evidence after grouping; the
 complete lossless enumeration still needs tractable implementation and admission.
 Primitive alias pooling is an independent prepared alternative. Neither needs
-this result to win. Fixed primitive feedback has executed and awaits review.
+this result to win. Fixed primitive feedback is now independently verified, with a prediction/stay-damage tradeoff.
 
 All new raw arrays, row maps and schedules remain in the scientific archives.
 Sixteen large inherited joint arrays remain separately hash-bound in the retained

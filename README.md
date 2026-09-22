@@ -1,10 +1,10 @@
 # Ghost Scale Simulation
 
-Future-schedule grouping is independently verified, bringing the scientific batch count to forty-two. Fixed primitive feedback has completed execution; independent numerical review and replay acceptance remain pending. V19 remains active.
+Fixed primitive feedback is independently verified, bringing the scientific batch count to forty-three. Row replacement improves changed-tool prediction with collateral damage to unchanged queries. V19 remains active; the complete regression refresh is a separate engineering job.
 
-We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. The fixed feedback comparison completed 640 queries and 1,966,080 paired score rows with no new fits. Execution integrity passes; independent numerical and replay acceptance remain pending. No predictive advantage or process-correspondence claim is accepted yet.
+We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. With 64 truthful inputs, row replacement improves changed-tool forecasts by 0.19116–0.19524 nats under original training, but worsens unchanged queries by 0.02170–0.02482 nats. Independent reconstruction and both complete replays verify this constructed-method tradeoff; historical process correspondence and human intent remain unestablished.
 
-[Feedback execution report](docs/versions/v19-local-maker/PRIMITIVE_FEEDBACK_REPORT.md).
+[Verified feedback report](docs/versions/v19-local-maker/PRIMITIVE_FEEDBACK_REPORT.md).
 
 We tested whether grouping identical remaining maker-state schedules preserves forecasts while reducing storage. All 4,620,288 saved forecast vectors reconstruct within 1e-12, with both complete replays verified. Float64 weights plus shared integer metadata use 23.96% fewer bytes on available checkpoints, or 22.53% fewer including unused requested-checkpoint metadata. This is a constructed-method storage result; online updating, workspace, speed, historical process correspondence and human intent remain unestablished.
 
@@ -64,7 +64,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records forty-two verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records forty-three verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its

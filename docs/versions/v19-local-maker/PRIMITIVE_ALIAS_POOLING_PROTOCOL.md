@@ -29,7 +29,37 @@ independent full path sum. Export observed inputs/outcomes separately from law,
 pool maps, query targets, posterior scores and population weights. No human
 intent, historical process correspondence or learned causal access follows.
 
-This is prepared, not implemented or admitted. Cap two CPU hours including
+The handler is implemented; isolated controls and source admission precede
+execution. Cap two CPU hours including
 validation, replay and review, within the existing F/global allowance. No new
 tiny setting, sample seed, protected lineage or family-budget extension. It is
 independent of retrospective quotient evidence and needs no preceding win.
+
+## Frozen implementation choices before pooling outcomes
+
+Use one-count addition for each unique complete observed input in every arm,
+matching the earlier additive control. Do not select row replacement after its
+result. The no-feedback comparison isolates the representation change. For the
+correct map, pool eight undo buffers at fixed skill, belief, current artifact and
+operation. The matched wrong map instead pools eight current artifacts at fixed
+skill, belief, undo buffer and operation. Only legal skilled accept-tool rows
+are pooled; all other rows, including undo operations, remain unchanged.
+
+Subtract one unit prior from every source row, sum empirical counts in each
+group, then add one unit prior per outcome to the group. Add each unique full
+input report once, even when several inputs share a group. Record both distinct
+inputs and distinct observed groups. Duplicate reports of the same complete
+input do not add evidence; conflicting duplicates are rejected. Conflicting
+outcomes across distinct inputs in the wrong group remain empirical counts.
+
+Freeze all three maps, budgets 0/16, both input orders, truthful/bit-flipped
+feedback, both tools, both saved draws/support modes and all 640 queries. Compare
+each pooled arm to the unpooled arm at matching feedback, and to its own zero-
+feedback baseline. Retain native/equal-query and changed/stay/support strata;
+the 0.02-nat margin is unchanged. Independent path sums check all forecasts.
+The exact unpooled arm must reproduce the earlier one-count feedback method.
+
+No outcomes from this handler have been consumed. Independent numerical review
+and both complete replays remain required. Retrospective quotient evidence and
+the [input-privilege boundary](INPUT_PRIVILEGE_PROTOCOL.md) remain two independent
+prepared alternatives, without a new model setting or protected lineage.

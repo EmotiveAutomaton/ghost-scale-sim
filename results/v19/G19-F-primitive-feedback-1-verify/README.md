@@ -1,3 +1,3 @@
-# Independent primitive-feedback review admission
+# Independent primitive-feedback review: accepted
 
-Nine isolated controls pass, including a complete native fixture and deliberate table, forecast, loss, population and denominator corruption. Runtime and portable dispatch pass. Source and all inputs are frozen for the existing serial queue. Numerical outcomes remain pending. [Protocol](../../../docs/versions/v19-local-maker/PRIMITIVE_FEEDBACK_REVIEW_PROTOCOL.md).
+All 245,760 forecasts, 1,966,080 paired scores and 92,160 cells reconstruct within 1e-12. Both saved draws stay within eight paired lineages; all 15,360 conditional estimates are in the parent batch REVIEW.zip. Inherited parent fit/path-probability validation remains explicit. [Result](../../../docs/versions/v19-local-maker/PRIMITIVE_FEEDBACK_REPORT.md).
