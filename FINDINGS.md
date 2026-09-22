@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
+Changed-tool transfer removes the overall learned-propagation advantage. Pooling withheld compositions hides a reversal on endpoints actually changed by the tool. All 33 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1056,8 +1056,8 @@ Can a coherent filter retain current-state information when change time and fact
 
 [Full record](docs/versions/v19-local-maker/UNKNOWN_CHANGE_REPORT.md).
 
-## V19 changed-tool support transfer — numerical review pending
+## V19 changed-tool support transfer — independently verified
 
-Does a learned composition advantage survive a changed primitive operation? The frozen-table transfer comparison and both complete replays match all 47 deterministic outputs across 221,184 native paths and 327,680 scored rows. Independent count, path, forecast, score and paired-lineage reconstruction is source-frozen before accepting numerical transfer differences. This is a constructed-method reproducibility result; supplied skills, beliefs and operations make it forward prediction, not historical process reconstruction or human intent.
+Does a learned composition advantage survive a changed primitive operation? No overall advantage survives: learned propagation differs from direct prediction by -0.00081 nats with original training and -0.00931 with composition held out. Within the held-out composition whose original primitives were visited, it helps by 0.14026 nats overall but loses by 0.15154 on endpoints actually changed by the tool. Independent reconstruction and paired replay-verified estimates establish this exploratory constructed-method result, not historical process correspondence or human intent.
 
 [Full record](docs/versions/v19-local-maker/SUPPORT_TRANSFER_REPORT.md).

@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
+Changed-tool transfer removes the overall learned-propagation advantage. Pooling withheld compositions hides a reversal on endpoints actually changed by the tool. All 33 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
@@ -1376,4 +1376,4 @@ To cite this repository, see [CITATION.cff](CITATION.cff), or cite the preprint 
 
 QUEUE-14 is complete and verified: 9,216 rows on 192 fresh truth-excluded candidate-family contexts and 36 bounded source replays. Two observations trigger safe abstention in every candidate-aware action method; the forced-candidate control attempts an invalid action every time. The campaign remains active while the remaining commissioned frontier is audited. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).
 
-The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays have finished; independent numerical reconstruction is prepared before success-rate acceptance. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
+The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction are verified. Transient-state filtering and changed-tool transfer have also completed their independent numerical reviews. Practice-support mixtures now have an implemented handler; off-midpoint filtering and bounded primitive feedback remain prepared alternatives.

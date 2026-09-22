@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
+Changed-tool transfer removes the overall learned-propagation advantage. Pooling withheld compositions hides a reversal on endpoints actually changed by the tool. All 33 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job
@@ -106,4 +106,4 @@ G19-05-joint-readout-1 is independently numerically verified with both complete 
 
 G19-F-support-1 is the 29th independently verified scientific batch, with exact-propagation advantage and sampled-rollout reversal under the declared holdout.
 
-The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction verify the 30th scientific batch. The purpose-switch filtering protocol freezes the next comparison; changed-tool support transfer and unknown-time/skill-change filtering remain prepared alternatives.
+The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction verify the 30th scientific batch. Purpose-switch filtering, unknown-time/type filtering and changed-tool transfer have since completed independent numerical review; their reports retain all qualifications.

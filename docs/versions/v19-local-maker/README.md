@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
+Changed-tool transfer removes the overall learned-propagation advantage. Pooling withheld compositions hides a reversal on endpoints actually changed by the tool. All 33 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -112,12 +112,12 @@ The [crossed-rule result](CROSSED_RULE_REPORT.md) records full [independent nume
 
 The [support/holdout result](SUPPORT_HOLDOUT_REPORT.md) has complete replay evidence and completed [independent numerical reconstruction](SUPPORT_REVIEW_PROTOCOL.md).
 
-The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction are verified. The [purpose-switch filtering protocol](TRANSIENT_FILTER_PROTOCOL.md) freezes the next comparison; changed-tool support transfer and unknown-time/skill-change filtering remain prepared alternatives.
+The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction are verified. The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md), unknown-time/type filtering and changed-tool transfer now have complete independent numerical reviews.
 
-The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md) now includes independent numerical reconstruction and all paired intervals. The [unknown-time/type comparison](UNKNOWN_CHANGE_PROTOCOL.md) implements the next discriminator; changed-tool transfer and the fixed-fit practice-support diagnostic remain prepared alternatives.
+The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md) now includes independent numerical reconstruction and all paired intervals. The [unknown-time/type comparison](UNKNOWN_CHANGE_REPORT.md) and changed-tool transfer are also independently verified; fixed-budget practice mixtures continue the support question.
 
-The [prepared support-mixture design](SUPPORT_MIX_PROTOCOL.md) replaces the already-completed context re-tabulation: the practice learner has two original starting contexts. This future count-reweighting experiment and changed-tool support transfer remain independent alternatives; neither is claimed as implemented. The active unknown-change source snapshot is unchanged.
+The [prepared support-mixture design](SUPPORT_MIX_PROTOCOL.md) replaces the already-completed context re-tabulation: the practice learner has two original starting contexts. The mixture handler is now implemented and has passed isolated controls. Changed-tool transfer is independently verified; all earlier source snapshots remain unchanged.
 
 The [unknown-time/type report](UNKNOWN_CHANGE_REPORT.md) now includes [independent numerical reconstruction](UNKNOWN_REVIEW_PROTOCOL.md) and all paired intervals. The [changed-tool successor](SUPPORT_TRANSFER_PROTOCOL.md) implements the common-smoothing transfer comparison; practice mixtures and off-midpoint actual changes remain prepared alternatives.
 
-The [changed-tool transfer report](SUPPORT_TRANSFER_REPORT.md) verifies complete replay and evidence roles. Its [independent numerical checker](SUPPORT_TRANSFER_REVIEW_PROTOCOL.md) is source-frozen. Practice mixtures and off-midpoint actual changes remain prepared alternatives.
+The [changed-tool transfer report](SUPPORT_TRANSFER_REPORT.md) includes complete replay, independent numerical reconstruction, paired intervals and evidence roles. Practice mixtures proceed through source admission; off-midpoint changes and [bounded primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) remain prepared alternatives.

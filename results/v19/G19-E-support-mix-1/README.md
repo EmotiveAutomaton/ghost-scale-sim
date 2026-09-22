@@ -1,0 +1,3 @@
+# Fixed-budget practice-support mixture admission
+
+Five fixed count-mass mixtures retain one prior, all three budgets, two acquisition arms and both starting contexts. The handler first reconstructs all 576 parent tables and scores from ordered logs; it independently checks every mixed-policy success by exhaustive three-step paths. Eight isolated controls pass, including a complete fixture and deliberate corruption. No new episode, tiny setting or protected lineage is used. Source-frozen original and both replays require later numerical review. [Protocol](../../../docs/versions/v19-local-maker/SUPPORT_MIX_PROTOCOL.md).

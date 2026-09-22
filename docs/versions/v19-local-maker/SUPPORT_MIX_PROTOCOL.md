@@ -2,7 +2,8 @@
 
 Can reallocating a fixed amount of learned transition evidence restore production
 on an unvisited starting context without losing useful visited-context behavior?
-This is a prepared E-family alternative, not an implemented or admitted job.
+The E-family handler is implemented; isolated controls and source admission are
+required before execution. Admission and completion remain distinct.
 
 This replaces the context re-tabulation proposed in the prepared-alternatives
 paragraph of UNKNOWN_CHANGE_PROTOCOL. That paragraph incorrectly says four
@@ -44,3 +45,22 @@ No new neural architecture, tiny setting, episode seed or reserved lineage is us
 This is independent of the separately prepared changed-tool learned support
 transfer in ROUTINE_REVISION_PROTOCOL. Neither requires unknown-change filtering
 to win, and both still need handlers and source-bound admission.
+
+The changed-tool comparison is now independently adjudicated; this mixture handler
+continues on its own question. It reconstructs all 576 original count tables and
+per-context scores from saved ordered logs before new interpretation. The same
+vector-sum planner and first-maximum tie rule remain frozen. Independent evaluation
+sums all 8 cubed possible endpoint paths per context. Near-tie policy sensitivity
+in the parent is retained; no alternate tie rule is selected after outcomes.
+
+Report every adjacent mixture-weight difference and the two endpoint identities,
+separately by 32/128/512 episodes, active/demonstration acquisition, both contexts,
+equal-context mean and restricted-context evaluation. Average the two draws and
+two acquisition seeds within each of eight paired lineages; retain their four
+separate means. Use 10,000 lineage resamples with seed 190501. The two-percentage-
+point margin applies to production success, with uncertainty conditional on saved
+acquisition. No monotonicity, optimal mixture or inverse-inference result is assumed.
+
+Off-midpoint purpose/skill changes and bounded primitive feedback remain two
+independent prepared alternatives, specified in SUPPORT_TRANSFER_PROTOCOL.md and
+PRIMITIVE_FEEDBACK_PROTOCOL.md. Neither requires a mixture advantage.
