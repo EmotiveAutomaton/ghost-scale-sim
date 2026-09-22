@@ -1130,3 +1130,7 @@ The separately frozen assertion repair has now passed all nine mandatory control
 without skips, including the complete native fixture and deliberate corruption.
 Independent campaign reconstruction was observed running afterward. This gate
 verifies the repaired checker apparatus; it does not accept the campaign scores.
+
+Checkpoint compression now has independent reconstruction of all 225,280 rows and separate recombination of 19,800 estimates and intervals, with both full replays verified. The unchanged score floor preserves zero-support penalties; endpoint similarity and retained maker uncertainty receive separate dispositions. The [current-marginal transition diagnostic](versions/v19-local-maker/MARGINAL_TRANSITION_PROTOCOL.md) stores exhaustive unordered pairs as complete Cartesian blocks, verifies every membership with independent tuple transitions and every forecast with scalar contraction, and distinguishes exact binary64 aliases from a fixed numerical display tolerance. Nine isolated transition/runtime/replay controls pass; the first admission test caught a missing portable-dispatch branch, which was repaired before admission. This does not relabel the earlier full regression.
+
+The current-marginal transition comparison now binds 495 sources and eight previously verified endpoint laws. Original and two complete replays are source-admitted, with dispatch pending at this dated publication snapshot. No new outcome is accepted. Primitive feedback and the lossless future-schedule quotient remain prepared alternatives.

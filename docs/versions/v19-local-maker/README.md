@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Checkpoint mixture compression has two verified complete replays: all 111 deterministic outputs match. The fixture-only repair passes all nine controls; independent numerical reconstruction remains pending, and the failed gate is retained. Thirty-nine earlier scientific batches are independently verified. The V19 week remains active.
+Checkpoint compression preserves final endpoint forecasts within the declared margin at 64/256 hypotheses while sometimes discarding true-maker support. All 225,280 rows, 19,800 estimates and both complete replays verify. Forty scientific batches are independently verified; V19 remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -141,3 +141,7 @@ Fixed likelihood tempering has frozen source and inputs after eight isolated con
 The [checkpoint compression comparison](MIXTURE_COMPRESSION_PROTOCOL.md) is implemented and source-frozen after 13 isolated controls, including a complete native parent fixture and deliberate corruption. The five fixed capacities retain complete hypotheses; removed probability mass, indices, weights, proper scores and credible-set size remain separate. Original and both full replays are admitted; no outcome is accepted. Primitive feedback and the exact current-marginal transition diagnostic remain two prepared independent alternatives.
 
 The [checkpoint compression execution report](MIXTURE_COMPRESSION_REPORT.md) records original integrity and exact parent identities. The [independent checker](MIXTURE_COMPRESSION_REVIEW_PROTOCOL.md) is source-frozen with a mandatory serial fixture gate; numerical conclusions and full replay acceptance remain pending.
+
+The [compression numerical report](MIXTURE_COMPRESSION_REPORT.md) now verifies all fixed-capacity contrasts. The [current-marginal transition handler](MARGINAL_TRANSITION_PROTOCOL.md) has passed nine isolated controls after correcting a missing portable dispatch branch; original and two complete replays are source-admitted for the existing serial queue. [Primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) and [future-schedule quotient](FUTURE_SCHEDULE_QUOTIENT_PROTOCOL.md) remain prepared alternatives.
+
+The current-marginal transition comparison now binds 495 sources and eight previously verified endpoint laws. Original and two complete replays are source-admitted, with dispatch pending at this dated publication snapshot. No new outcome is accepted. Primitive feedback and the lossless future-schedule quotient remain prepared alternatives.

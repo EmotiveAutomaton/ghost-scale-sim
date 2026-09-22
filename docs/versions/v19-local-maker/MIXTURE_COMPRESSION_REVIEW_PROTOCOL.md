@@ -67,3 +67,5 @@ The separately frozen assertion repair has now passed all nine mandatory control
 without skips, including the complete native fixture and deliberate corruption.
 Independent campaign reconstruction was observed running afterward. This gate
 verifies the repaired checker apparatus; it does not accept the campaign scores.
+
+Completed review: the repaired checker verifies all 225,280 rows and 14,080 maker-averaged cells within 2.85e-14. A separate event review recombines all 19,800 estimates and paired intervals. Both full replays match 111 deterministic outputs. The [report](MIXTURE_COMPRESSION_REPORT.md) separates endpoint similarity from lost maker support; preceding pending statements describe the admission history.

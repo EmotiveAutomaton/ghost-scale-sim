@@ -1,0 +1,3 @@
+# Current-marginal future-transition admission
+
+Does the current maker distribution determine forecasts after a future change? All complete hypothesis pairs with equal current state and different future state are retained as Cartesian membership blocks, with all eight supplied endpoint laws and four contexts. Same-time, stationary, forecast-alias and corruption controls precede execution. Nine isolated tests pass after a missing portable-dispatch branch was repaired. Original and two full replays are source-admitted, with dispatch pending; no result is accepted. These full-simplex point hypotheses are not claimed reachable posteriors. No new reader input, observations or fits. [Protocol](../../../docs/versions/v19-local-maker/MARGINAL_TRANSITION_PROTOCOL.md).

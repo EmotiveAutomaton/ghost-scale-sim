@@ -1,6 +1,6 @@
 # The walkthrough
 
-Checkpoint mixture compression has two verified complete replays: all 111 deterministic outputs match. The fixture-only repair passes all nine controls; independent numerical reconstruction remains pending, and the failed gate is retained. Thirty-nine earlier scientific batches are independently verified. The V19 week remains active.
+Checkpoint compression preserves final endpoint forecasts within the declared margin at 64/256 hypotheses while sometimes discarding true-maker support. All 225,280 rows, 19,800 estimates and both complete replays verify. Forty scientific batches are independently verified; V19 remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
