@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The unknown-time/type filtering comparison and both complete replays agree on all saved outputs. Independent joint-hypothesis and score reconstruction is source-frozen; numerical differences remain unadjudicated. Thirty-one earlier scientific batches are verified. The V19 week remains active.
+The unknown-time/type mixture preserves prediction and current-state coverage after purpose and skill changes. Its final-checkpoint penalty relative to supplied time/type stays within the declared practical margin, conditional on eight lineages. All 32 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1050,8 +1050,8 @@ Can an account of a possible purpose change preserve current-state information? 
 
 [Full record](docs/versions/v19-local-maker/TRANSIENT_FILTER_REPORT.md).
 
-## V19 unknown-time/type filtering — numerical review pending
+## V19 unknown-time/type filtering — independently verified
 
-Can a coherent filter retain current-state information when the change time and factor are unknown? The five-filter comparison and both complete replays match all 51 deterministic outputs across 4,096 streams and 112,640 scored rows. An independent checker is source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result: the exact law and allowed change family are supplied; historical process correspondence and human intent remain unestablished.
+Can a coherent filter retain current-state information when change time and factor are unknown? After 128 independent observations, the unknown-time/type mixture lowers fresh-endpoint logarithmic loss versus static filtering by 0.05290 nats after a purpose change and 0.08056 after a skill change. Its 90% credible set includes the current maker in 96.48% and 98.05% of cases, respectively. Independent reconstruction, paired regrouping and both complete replays verify this exploratory constructed-method result. The exact law and allowed change family remain supplied; historical process correspondence and human intent are unestablished.
 
 [Full record](docs/versions/v19-local-maker/UNKNOWN_CHANGE_REPORT.md).

@@ -1,6 +1,6 @@
 # The walkthrough
 
-The unknown-time/type filtering comparison and both complete replays agree on all saved outputs. Independent joint-hypothesis and score reconstruction is source-frozen; numerical differences remain unadjudicated. Thirty-one earlier scientific batches are verified. The V19 week remains active.
+The unknown-time/type mixture preserves prediction and current-state coverage after purpose and skill changes. Its final-checkpoint penalty relative to supplied time/type stays within the declared practical margin, conditional on eight lineages. All 32 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

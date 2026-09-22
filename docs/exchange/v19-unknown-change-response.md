@@ -1,5 +1,5 @@
-# V19 unknown-change filtering review — 22 September 2026
+# V19 unknown-change numerical review — 22 September 2026
 
-Can a coherent filter retain current-state information when the change time and factor are unknown? The five-filter comparison and both complete replays match all 51 deterministic outputs across 4,096 streams and 112,640 scored rows. An independent checker is source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result: the exact law and allowed change family are supplied; historical process correspondence and human intent remain unestablished.
+Can a coherent filter retain current-state information when change time and factor are unknown? After 128 independent observations, the unknown-time/type mixture lowers fresh-endpoint logarithmic loss versus static filtering by 0.05290 nats after a purpose change and 0.08056 after a skill change. Its 90% credible set includes the current maker in 96.48% and 98.05% of cases, respectively. Independent reconstruction, paired regrouping and both complete replays verify this exploratory constructed-method result. The exact law and allowed change family remain supplied; historical process correspondence and human intent are unestablished.
 
-[Evidence and limits](../versions/v19-local-maker/UNKNOWN_CHANGE_REPORT.md).
+[Full estimates, evidence and limits](../versions/v19-local-maker/UNKNOWN_CHANGE_REPORT.md).

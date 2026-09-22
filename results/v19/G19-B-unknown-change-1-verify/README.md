@@ -1,3 +1,3 @@
-# Independent unknown-change checker admission
+# Independently verified unknown-change checker
 
-Ten isolated tests pass, including the complete native fixture. Source and completed evidence are frozen for the existing serial queue. This is admission, not numerical acceptance. [Protocol](../../../docs/versions/v19-local-maker/UNKNOWN_REVIEW_PROTOCOL.md).
+All native paths, streams, full hypotheses and joint mappings, current-state distributions, forecasts and scores reconstruct within 5.12e-13. All 4,400 paired contrasts and intervals verify separately. [Complete verification export](../G19-B-unknown-change-1/NUMERICAL_REVIEW.json). The original admission receipt remains historical.

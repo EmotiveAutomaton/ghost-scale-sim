@@ -1,0 +1,3 @@
+# Changed-tool support-transfer admission
+
+Both saved training draws and fit modes, all seven fixed methods and a separate true-law oracle share final 1/32 smoothing. The frozen handler first reproduces all parent forecasts and original-law aggregates. It retains all/changed/stay queries crossed with original-law support. Nine isolated controls pass, including a complete native fixture and deliberate forecast corruption. No new fit, seed or confirmation lineage is used. Original and two replays require later independent numerical adjudication. Supplied operations, skills and beliefs are explicit task inputs. [Protocol](../../../docs/versions/v19-local-maker/SUPPORT_TRANSFER_PROTOCOL.md).
