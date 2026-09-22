@@ -1,6 +1,6 @@
 # The walkthrough
 
-Partial provenance correction does not consistently restore current-maker uncertainty coverage, despite small final prediction effects for the unknown-time/type filter. All 29,500 numerical estimates and both complete replays verify. Thirty-seven scientific batches are independently verified. The V19 week remains active.
+Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Partial provenance correction does not consistently restore current-maker uncertainty coverage, despite small final prediction effects for the unknown-time/type filter. All 29,500 numerical estimates and both complete replays verify. Thirty-seven scientific batches are independently verified. The V19 week remains active.
+Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job
@@ -107,3 +107,5 @@ G19-05-joint-readout-1 is independently numerically verified with both complete 
 G19-F-support-1 is the 29th independently verified scientific batch, with exact-propagation advantage and sampled-rollout reversal under the declared holdout.
 
 The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction verify the 30th scientific batch. Purpose-switch filtering, unknown-time/type filtering and changed-tool transfer have since completed independent numerical review; their reports retain all qualifications.
+
+Fixed likelihood tempering has frozen source and inputs after eight isolated controls; its original and two complete replays are admitted to the existing serial queue. Primitive feedback and fixed-capacity mixture compression remain prepared independent alternatives. No tempering outcome is accepted yet.

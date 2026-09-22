@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Partial provenance correction does not consistently restore current-maker uncertainty coverage, despite small final prediction effects for the unknown-time/type filter. All 29,500 numerical estimates and both complete replays verify. Thirty-seven scientific batches are independently verified. The V19 week remains active.
+Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1085,3 +1085,9 @@ Does counting copied observations as distinct sources change the maker account? 
 Can partial source corrections repair a maker account distorted by copied evidence? Partial correction does not consistently restore current-maker uncertainty coverage. For the unknown-time/type filter, all final prediction contrasts stay within the declared 0.02-nat margin; correction amount and evidence age still change coverage in different directions. Independent reconstruction, all 29,500 estimates and both complete replays verify this constructed-method result under supplied laws. It establishes neither learned provenance detection, historical process correspondence nor human intent.
 
 [Full record](docs/versions/v19-local-maker/PROVENANCE_RESTORATION_REPORT.md).
+
+## V19 retained filter cost
+
+What does allowing an unknown maker-change time and type cost? The retained mixture uses 35 times as many hypothesis weights as a static account at 32 observations and 227 times at 128. All 337,920 cost rows and both complete replays verify. These are constructed-method component costs; coarse whole-filter timings and a symbolic caching calculation do not establish measured query break-even, learned memory efficiency, historical process correspondence or human intent.
+
+[Counts, measured timing limits and symbolic scenarios](docs/versions/v19-local-maker/FILTER_COST_REPORT.md).

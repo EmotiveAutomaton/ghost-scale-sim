@@ -3,7 +3,8 @@
 Can reducing the weight of every supplied observation limit the uncertainty loss
 from undisclosed copies without discarding useful prediction? This is a bounded
 B-family alternative, independent of changed-primitive feedback and cost accounting.
-It is prepared only; no handler, admission or result is claimed.
+The handler is implemented; isolated controls and source-bound admission are
+required before dispatch. No result is claimed.
 
 Reuse the original unknown-time/type and source-omission streams, eight development
 lineages, both saved draws, sixteen makers, lengths 32/128 and every checkpoint.
@@ -31,3 +32,10 @@ No fit, protected lineage or new observations. Cap two CPU hours including
 controls, full replays and independent review, within B and global limits. Freeze
 source and the full roster before execution. Primitive feedback remains the other
 prepared alternative; neither requires this comparison or the cost study to win.
+
+Implementation retains exponent-one addition order for byte-level parent identity,
+then applies each other fixed exponent to every log likelihood while leaving the
+prior untouched. All full joint weights, forecasts, scores and timing calls are
+retained. Parent public evidence remains unchanged; no new reader packet is needed.
+The independent [mixture-compression design](MIXTURE_COMPRESSION_PROTOCOL.md)
+joins primitive feedback as a second prepared alternative after this dispatch.

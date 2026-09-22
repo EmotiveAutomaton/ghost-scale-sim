@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Partial provenance correction does not consistently restore current-maker uncertainty coverage, despite small final prediction effects for the unknown-time/type filter. All 29,500 numerical estimates and both complete replays verify. Thirty-seven scientific batches are independently verified. The V19 week remains active.
+Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -133,3 +133,7 @@ The [earlier/later change report](CHANGE_TIMING_REPORT.md) records verified repl
 The [source-identity omission report](SOURCE_OMISSION_REPORT.md) records verified replay and evidence roles. The [independent checker](SOURCE_OMISSION_REVIEW_PROTOCOL.md) and separate paired regroup are complete. Partial provenance restoration is now independently verified; its successor record below preserves the next alternatives.
 
 The [partial provenance restoration report](PROVENANCE_RESTORATION_REPORT.md) records completed execution and exact apparatus identities. Both complete replays and [independent reconstruction](PROVENANCE_RESTORATION_REVIEW_PROTOCOL.md) verify. The filter-cost handler passed eleven isolated controls and is admitted with original, adjacent and extracted-source execution. Primitive feedback and fixed likelihood tempering remain independent prepared alternatives.
+
+The [retained filter-cost report](FILTER_COST_REPORT.md) independently verifies all counts, scores, timing coverage and both replays. Fixed likelihood tempering is implemented and tested; primitive feedback and [bounded mixture compression](MIXTURE_COMPRESSION_PROTOCOL.md) remain independent prepared alternatives.
+
+Fixed likelihood tempering has frozen source and inputs after eight isolated controls; its original and two complete replays are admitted to the existing serial queue. Primitive feedback and fixed-capacity mixture compression remain prepared independent alternatives. No tempering outcome is accepted yet.
