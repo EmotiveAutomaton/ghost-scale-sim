@@ -1,5 +1,5 @@
-# Purpose-switch filtering: replay verified, numerical review pending
+# V19 purpose-switch filtering review — 22 September 2026
 
 Can an account of a possible purpose change preserve current-state information? The three-filter comparison and both complete replays match all 35 deterministic outputs, covering 2,048 observation streams and 33,792 scored rows. Independent reconstruction is now source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result; the true law and possible switch time are supplied, and historical process correspondence remains unestablished.
 
-READER.zip contains observed context, endpoints and source identities only. SCIENTIFIC_EVALUATOR.zip contains complete raw evidence, laws, posteriors, source, plan and timing; it is never reader input. SUMMARY.json remains unadjudicated. [Report](../../../docs/versions/v19-local-maker/TRANSIENT_FILTER_REPORT.md).
+[Evidence and limits](../versions/v19-local-maker/TRANSIENT_FILTER_REPORT.md).

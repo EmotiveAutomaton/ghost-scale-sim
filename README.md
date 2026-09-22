@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-The routine/request comparison has a small pooled adoption gain and a larger skilled, presentation-purpose effect. Native revision loses net success after stipulated costs. Thirty scientific batches now have independent verification and complete replays; the V19 week remains active.
+The purpose-switch filtering experiment and both complete replays agree; independent stream, posterior and score reconstruction is source-frozen. Thirty earlier scientific batches remain independently verified. No filtering advantage has yet been accepted; the V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

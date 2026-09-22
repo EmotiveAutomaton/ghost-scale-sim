@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The routine/request comparison has a small pooled adoption gain and a larger skilled, presentation-purpose effect. Native revision loses net success after stipulated costs. Thirty scientific batches now have independent verification and complete replays; the V19 week remains active.
+The purpose-switch filtering experiment and both complete replays agree; independent stream, posterior and score reconstruction is source-frozen. Thirty earlier scientific batches remain independently verified. No filtering advantage has yet been accepted; the V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1043,3 +1043,9 @@ Does learned transition composition help on queries absent from training when ev
 Does adopting a changed request improve a fixed revision policy? The pooled success gain is 0.74 percentage points, below the declared 2-point practical margin; skilled presentation-purpose makers gain 2.52–2.80 points across the two routines. Native revision loses 4.31 points of net success versus keeping the artifact after stipulated costs. Independent reconstruction and both complete replays verify this constructed-method result. Explicit purpose adoption and privileged task optimization do not establish learned competence or human endorsement.
 
 [Full record](docs/versions/v19-local-maker/ROUTINE_REVISION_REPORT.md).
+
+## V19 purpose-switch filtering — numerical review pending
+
+Can an account of a possible purpose change preserve current-state information? The three-filter comparison and both complete replays match all 35 deterministic outputs, covering 2,048 observation streams and 33,792 scored rows. Independent reconstruction is now source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result; the true law and possible switch time are supplied, and historical process correspondence remains unestablished.
+
+[Full record](docs/versions/v19-local-maker/TRANSIENT_FILTER_REPORT.md).
