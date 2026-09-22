@@ -175,6 +175,8 @@ def run(root,campaign):
                 from .unknown_change import run as handler
             elif plan['design']['handler']=='support-mix':
                 from .support_mix import run as handler
+            elif plan['design']['handler']=='mix-review':
+                from .mix_review import run as handler
             elif plan['design']['handler']=='rollout-transfer':
                 from .rollout_transfer import run as handler
             elif plan['design']['handler']=='validation-suite':

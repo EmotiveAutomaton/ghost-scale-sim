@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-Changed-tool transfer removes the overall learned-propagation advantage. Pooling withheld compositions hides a reversal on endpoints actually changed by the tool. All 33 scientific batches have independent verification and complete replays. The V19 week remains active.
+The fixed-budget practice-mixture experiment and both complete replays match every deterministic output. Independent numerical reconstruction is source-frozen; no mixture benefit or optimum is accepted. Thirty-three earlier scientific batches are verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

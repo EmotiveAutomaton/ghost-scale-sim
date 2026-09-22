@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Changed-tool transfer removes the overall learned-propagation advantage. Pooling withheld compositions hides a reversal on endpoints actually changed by the tool. All 33 scientific batches have independent verification and complete replays. The V19 week remains active.
+The fixed-budget practice-mixture experiment and both complete replays match every deterministic output. Independent numerical reconstruction is source-frozen; no mixture benefit or optimum is accepted. Thirty-three earlier scientific batches are verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -121,3 +121,5 @@ The [prepared support-mixture design](SUPPORT_MIX_PROTOCOL.md) replaces the alre
 The [unknown-time/type report](UNKNOWN_CHANGE_REPORT.md) now includes [independent numerical reconstruction](UNKNOWN_REVIEW_PROTOCOL.md) and all paired intervals. The [changed-tool successor](SUPPORT_TRANSFER_PROTOCOL.md) implements the common-smoothing transfer comparison; practice mixtures and off-midpoint actual changes remain prepared alternatives.
 
 The [changed-tool transfer report](SUPPORT_TRANSFER_REPORT.md) includes complete replay, independent numerical reconstruction, paired intervals and evidence roles. Practice mixtures proceed through source admission; off-midpoint changes and [bounded primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) remain prepared alternatives.
+
+The [practice-mixture report](SUPPORT_MIX_REPORT.md) verifies complete replay and evidence separation. Its [independent numerical checker](SUPPORT_MIX_REVIEW_PROTOCOL.md) is frozen for serial execution. Off-midpoint changes and bounded primitive feedback remain prepared alternatives.

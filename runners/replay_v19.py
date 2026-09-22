@@ -80,6 +80,7 @@ def main():
     elif kind=='unknown-review':from ghostscale.validation.soundingline.v19.unknown_review import run as handler
     elif kind=='unknown-change':from ghostscale.validation.soundingline.v19.unknown_change import run as handler
     elif kind=='support-mix':from ghostscale.validation.soundingline.v19.support_mix import run as handler
+    elif kind=='mix-review':from ghostscale.validation.soundingline.v19.mix_review import run as handler
     elif kind=='rollout-transfer':from ghostscale.validation.soundingline.v19.rollout_transfer import run as handler
     else:raise ValueError('unsupported replay handler')
     effective=dict(plan,design=dict(plan['design'],retained_root=str(args.retained_root.resolve())))
