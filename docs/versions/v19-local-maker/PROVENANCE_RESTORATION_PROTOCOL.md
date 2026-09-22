@@ -1,8 +1,8 @@
-# Provenance restoration after repeated evidence: prepared alternative
+# Provenance restoration after repeated evidence: bounded implementation
 
 How much source-correction evidence restores a useful current-state account
-after copied evidence has been counted repeatedly? This prepared B/D alternative
-has no implemented handler or admitted job.
+after copied evidence has been counted repeatedly? The handler implements this
+B/D comparison; source-bound admission and execution receipts remain separate.
 
 Use only saved midpoint/stationary streams from G19-B-unknown-change-1, the five
 frozen filters, both lengths, draws, reference factors and all sixteen makers
@@ -37,4 +37,17 @@ evaluator-only. Retain original/adjacent/extracted-source replay and independent
 products. A four-hour cap includes all work within family/global limits. Freeze
 source and roster before outcomes. This is deterministic provenance revision
 under supplied laws, not learned trust or human intent. Changed-primitive
-feedback remains an independent prepared alternative.
+feedback and retained filter-cost accounting remain independent prepared
+alternatives, neither conditional on a restoration benefit.
+
+The exact pair roster is compiled from the saved true source equivalences before
+execution and bound as CORRECTION_ROSTER.json. Every stream must match its
+length/source-condition/checkpoint template. Conditions with the same pair set
+are evaluated once; all original order/budget labels remain aliases, not extra
+replicates. Five frozen filters recompute each corrected prefix. Zero, full and
+bijective label-only renaming must exactly reproduce the saved omission or
+identity-aware current-state forecasts and all five scores. Full joint weights
+and row mappings are saved for every evaluated condition, along with the number
+of true sources retained by reset. The independent checker will reconstruct
+products and all paired contrasts before numerical acceptance. This experiment
+uses no new observations, fits, protected lineages or changed laws.

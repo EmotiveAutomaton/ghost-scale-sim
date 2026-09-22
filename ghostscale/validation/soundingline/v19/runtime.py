@@ -181,6 +181,8 @@ def run(root,campaign):
                 from .omission_review import run as handler
             elif plan['design']['handler']=='source-omission':
                 from .source_omission import run as handler
+            elif plan['design']['handler']=='provenance-restoration':
+                from .provenance_restoration import run as handler
             elif plan['design']['handler']=='support-mix':
                 from .support_mix import run as handler
             elif plan['design']['handler']=='mix-review':

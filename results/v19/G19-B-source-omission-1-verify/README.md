@@ -1,3 +1,3 @@
-# Independent source-omission checker admission
+# Independently verified source omission checker
 
-Eight isolated controls pass, including a complete native fixture. Source and completed evidence are frozen for the existing serial queue. This is admission, not numerical acceptance. [Protocol](../../../docs/versions/v19-local-maker/SOURCE_OMISSION_REVIEW_PROTOCOL.md).
+All paths, observations, joint arrays, forecasts and scores reconstruct within 5.37e-13. All 8,800 metric estimates and intervals separately recombine. [Verification export](../G19-B-source-omission-1/NUMERICAL_REVIEW.json).

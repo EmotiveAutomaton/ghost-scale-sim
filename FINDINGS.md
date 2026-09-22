@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Source-identity omission and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; prediction and uncertainty effects remain unadjudicated. Thirty-five earlier scientific batches remain independently verified. The V19 week remains active.
+Source-identity omission leaves final unknown-time/type prediction within the practical margin while reducing current-maker set inclusion. All numerical estimates, paired intervals and complete replays verify. Thirty-six scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1074,8 +1074,8 @@ Does unknown-time filtering retain its advantage when changes occur earlier or l
 
 [Full record](docs/versions/v19-local-maker/CHANGE_TIMING_REPORT.md).
 
-## V19 source-identity omission — numerical review pending
+## V19 source-identity omission — independently verified
 
-Does counting copied observations as distinct sources change the maker account? The identity-omission comparison and both complete replays agree on 77 deterministic outputs across 4,096 streams and 112,640 scored rows. Independent numerical reconstruction is source-frozen; benefits and harms remain unadjudicated. This is a constructed-method reproducibility result with supplied laws and retained timestamps, not learned provenance detection, historical process correspondence or human intent.
+Does counting copied observations as distinct sources change the maker account? For the filter allowing unknown change time and type, final prediction differences stay within the declared 0.02-nat margin, but its 90% current-maker set includes truth 1.56–5.86 percentage points less often. Independent reconstruction and paired intervals verify this constructed-method result. Supplied laws and visible timestamps limit its scope; prediction similarity does not establish preserved uncertainty, historical process correspondence or human intent.
 
 [Full record](docs/versions/v19-local-maker/SOURCE_OMISSION_REPORT.md).

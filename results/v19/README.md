@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Source-identity omission and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; prediction and uncertainty effects remain unadjudicated. Thirty-five earlier scientific batches remain independently verified. The V19 week remains active.
+Source-identity omission leaves final unknown-time/type prediction within the practical margin while reducing current-maker set inclusion. All numerical estimates, paired intervals and complete replays verify. Thirty-six scientific batches are independently verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job
