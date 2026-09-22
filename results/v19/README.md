@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
+The routine/request comparison has a small pooled adoption gain and a larger skilled, presentation-purpose effect. Native revision loses net success after stipulated costs. Thirty scientific batches now have independent verification and complete replays; the V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job
@@ -106,4 +106,4 @@ G19-05-joint-readout-1 is independently numerically verified with both complete 
 
 G19-F-support-1 is the 29th independently verified scientific batch, with exact-propagation advantage and sampled-rollout reversal under the declared holdout.
 
-The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays have finished; independent numerical reconstruction is prepared before success-rate acceptance. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
+The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction verify the 30th scientific batch. The purpose-switch filtering protocol freezes the next comparison; changed-tool support transfer and unknown-time/skill-change filtering remain prepared alternatives.

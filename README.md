@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
+The routine/request comparison has a small pooled adoption gain and a larger skilled, presentation-purpose effect. Native revision loses net success after stipulated costs. Thirty scientific batches now have independent verification and complete replays; the V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
@@ -52,7 +52,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records twenty-nine verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records thirty verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its

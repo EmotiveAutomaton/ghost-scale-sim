@@ -1,6 +1,6 @@
 # The walkthrough
 
-The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
+The routine/request comparison has a small pooled adoption gain and a larger skilled, presentation-purpose effect. Native revision loses net success after stipulated costs. Thirty scientific batches now have independent verification and complete replays; the V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

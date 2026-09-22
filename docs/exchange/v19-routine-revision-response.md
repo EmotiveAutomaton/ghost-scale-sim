@@ -1,5 +1,5 @@
-# V19 routine/request revision review — 21 September 2026
+# V19 routine/request numerical review — 22 September 2026
 
-Does a fixed revision opportunity distinguish retaining a prior routine from adopting the current request? The five-policy comparison and both complete replays match all 27 deterministic outputs, covering 110,592 native paths and 171,520 revision comparisons. Its 200 anonymous reader packets contain observed requests and visible artifacts only. Independent numerical reconstruction is source-frozen before accepting success or cost differences. This is a constructed-method reproducibility result; learned competence, historical process correspondence and human endorsement remain unestablished.
+Does adopting a changed request improve a fixed revision policy? The pooled success gain is 0.74 percentage points, below the declared 2-point practical margin; skilled presentation-purpose makers gain 2.52–2.80 points across the two routines. Native revision loses 4.31 points of net success versus keeping the artifact after stipulated costs. Independent reconstruction and both complete replays verify this constructed-method result. Explicit purpose adoption and privileged task optimization do not establish learned competence or human endorsement.
 
 [Evidence and limits](../versions/v19-local-maker/ROUTINE_REVISION_REPORT.md).

@@ -161,6 +161,8 @@ def run(root,campaign):
                 from .routine_revision import run as handler
             elif plan['design']['handler']=='routine-review':
                 from .routine_review import run as handler
+            elif plan['design']['handler']=='transient-filter':
+                from .transient_filter import run as handler
             elif plan['design']['handler']=='rollout-transfer':
                 from .rollout_transfer import run as handler
             elif plan['design']['handler']=='validation-suite':
