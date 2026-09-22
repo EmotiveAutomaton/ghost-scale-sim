@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
+Fixed likelihood tempering has verified execution bindings and 45,056 exact exponent-one parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-eight earlier scientific batches are independently verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -136,4 +136,4 @@ The [partial provenance restoration report](PROVENANCE_RESTORATION_REPORT.md) re
 
 The [retained filter-cost report](FILTER_COST_REPORT.md) independently verifies all counts, scores, timing coverage and both replays. Fixed likelihood tempering is implemented and tested; primitive feedback and [bounded mixture compression](MIXTURE_COMPRESSION_PROTOCOL.md) remain independent prepared alternatives.
 
-Fixed likelihood tempering has frozen source and inputs after eight isolated controls; its original and two complete replays are admitted to the existing serial queue. Primitive feedback and fixed-capacity mixture compression remain prepared independent alternatives. No tempering outcome is accepted yet.
+Fixed likelihood tempering has frozen source and inputs after eight isolated controls; its original and two complete replays are admitted to the existing serial queue. Primitive feedback and fixed-capacity mixture compression remain prepared independent alternatives. No tempering outcome is accepted yet. The [execution report](PROVENANCE_TEMPERING_REPORT.md) and [independent checker protocol](PROVENANCE_TEMPERING_REVIEW_PROTOCOL.md) distinguish verified identities from pending numerical adjudication.

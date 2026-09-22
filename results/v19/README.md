@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
+Fixed likelihood tempering has verified execution bindings and 45,056 exact exponent-one parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-eight earlier scientific batches are independently verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

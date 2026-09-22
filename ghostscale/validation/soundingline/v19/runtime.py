@@ -183,6 +183,8 @@ def run(root,campaign):
                 from .filter_cost import run as handler
             elif plan['design']['handler']=='provenance-tempering':
                 from .provenance_tempering import run as handler
+            elif plan['design']['handler']=='tempering-review':
+                from .tempering_review import run as handler
             elif plan['design']['handler']=='source-omission':
                 from .source_omission import run as handler
             elif plan['design']['handler']=='provenance-restoration':

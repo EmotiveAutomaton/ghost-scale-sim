@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Retained filter-cost accounting is independently verified: 337,920 rows, 21,120 cells and 184,320 timing calls. Hypothesis storage grows with the change roster; measured filter calls and symbolic query scenarios remain separate. Thirty-eight scientific batches are independently verified. The V19 week remains active.
+Fixed likelihood tempering has verified execution bindings and 45,056 exact exponent-one parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-eight earlier scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1091,3 +1091,9 @@ Can partial source corrections repair a maker account distorted by copied eviden
 What does allowing an unknown maker-change time and type cost? The retained mixture uses 35 times as many hypothesis weights as a static account at 32 observations and 227 times at 128. All 337,920 cost rows and both complete replays verify. These are constructed-method component costs; coarse whole-filter timings and a symbolic caching calculation do not establish measured query break-even, learned memory efficiency, historical process correspondence or human intent.
 
 [Counts, measured timing limits and symbolic scenarios](docs/versions/v19-local-maker/FILTER_COST_REPORT.md).
+
+## V19 fixed likelihood tempering — numerical review pending
+
+Can reducing observation weight repair uncertainty distorted by undisclosed copies? The fixed-power comparison completed 135,168 scored rows and exactly reproduced 45,056 exponent-one parent rows. Independent numerical reconstruction and complete replay acceptance remain pending; no tempering benefit is accepted. This is a constructed-method execution result under supplied laws, not inferred provenance, historical process correspondence or human intent.
+
+[Full record](docs/versions/v19-local-maker/PROVENANCE_TEMPERING_REPORT.md).
