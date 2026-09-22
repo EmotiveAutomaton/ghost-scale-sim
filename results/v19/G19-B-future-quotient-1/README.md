@@ -1,3 +1,5 @@
-# Future-schedule quotient admission
+# Future-schedule grouping: execution verified
 
-Can grouping complete remaining state schedules preserve every declared future forecast while reducing storage? All saved posteriors, zero-weight groups, both evidence-source conditions and observation draws remain. Missing 128-step checkpoints are recorded without regenerating observations. Nine isolated controls pass. Original and both full replays bind 500 sources and 72 inputs; dispatch is pending at this publication snapshot. No outcome is accepted. [Protocol](../../../docs/versions/v19-local-maker/FUTURE_SCHEDULE_QUOTIENT_PROTOCOL.md).
+We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. The run completed 28,672 saved posterior rows and 4,620,288 future forecast vectors. Execution bindings and internal checks pass; independent numerical reconstruction and complete replay acceptance remain pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+
+All new raw weights, forecast vectors, row maps and schedules are retained in SCIENTIFIC archives. Sixteen inherited parent arrays are separately hash-bound in EVALUATOR_MANIFEST.json. Archives contain evaluator/scientific data, never reader inputs. [Report](../../../docs/versions/v19-local-maker/FUTURE_QUOTIENT_REPORT.md).

@@ -1,6 +1,10 @@
 # Ghost Scale Simulation
 
-Current maker states can agree while future forecasts differ. All 624 time cells, 19,968 forecast summaries and both complete replays verify. Forty-one scientific batches are independently verified; V19 remains active.
+Future-schedule grouping has completed its fixed comparison; independent numerical and storage review is source-admitted. Forty-one earlier scientific batches remain independently verified. V19 remains active.
+
+We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. The run completed 28,672 saved posterior rows and 4,620,288 future forecast vectors. Execution bindings and internal checks pass; independent numerical reconstruction and complete replay acceptance remain pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+
+[Execution report](docs/versions/v19-local-maker/FUTURE_QUOTIENT_REPORT.md).
 
 We tested whether knowing the maker's current state is enough for later prediction. Equal current states can yield different future endpoint forecasts under all eight supplied laws. Independent enumeration of 113,376,896 hypothesis-pair/time instances and 19,968 forecast summaries, plus both complete replays, verifies this constructed-method counterexample. The witnesses are not established reachable posteriors; historical process correspondence and human intent remain unestablished.
 
