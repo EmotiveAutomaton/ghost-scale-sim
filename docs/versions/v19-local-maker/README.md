@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The unknown-time/type mixture preserves prediction and current-state coverage after purpose and skill changes. Its final-checkpoint penalty relative to supplied time/type stays within the declared practical margin, conditional on eight lineages. All 32 scientific batches have independent verification and complete replays. The V19 week remains active.
+The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -119,3 +119,5 @@ The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md) now includes i
 The [prepared support-mixture design](SUPPORT_MIX_PROTOCOL.md) replaces the already-completed context re-tabulation: the practice learner has two original starting contexts. This future count-reweighting experiment and changed-tool support transfer remain independent alternatives; neither is claimed as implemented. The active unknown-change source snapshot is unchanged.
 
 The [unknown-time/type report](UNKNOWN_CHANGE_REPORT.md) now includes [independent numerical reconstruction](UNKNOWN_REVIEW_PROTOCOL.md) and all paired intervals. The [changed-tool successor](SUPPORT_TRANSFER_PROTOCOL.md) implements the common-smoothing transfer comparison; practice mixtures and off-midpoint actual changes remain prepared alternatives.
+
+The [changed-tool transfer report](SUPPORT_TRANSFER_REPORT.md) verifies complete replay and evidence roles. Its [independent numerical checker](SUPPORT_TRANSFER_REVIEW_PROTOCOL.md) is source-frozen. Practice mixtures and off-midpoint actual changes remain prepared alternatives.

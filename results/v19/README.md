@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-The unknown-time/type mixture preserves prediction and current-state coverage after purpose and skill changes. Its final-checkpoint penalty relative to supplied time/type stays within the declared practical margin, conditional on eight lineages. All 32 scientific batches have independent verification and complete replays. The V19 week remains active.
+The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

@@ -1,6 +1,6 @@
 # The walkthrough
 
-The unknown-time/type mixture preserves prediction and current-state coverage after purpose and skill changes. Its final-checkpoint penalty relative to supplied time/type stays within the declared practical margin, conditional on eight lineages. All 32 scientific batches have independent verification and complete replays. The V19 week remains active.
+The changed-tool support-transfer comparison and both complete replays match every deterministic output. Independent count, path, forecast and score reconstruction is source-frozen; numerical transfer differences remain unadjudicated. Thirty-two earlier scientific batches are verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

@@ -157,6 +157,8 @@ def run(root,campaign):
                 from .forward_support import run as handler
             elif plan['design']['handler']=='support-transfer':
                 from .support_transfer import run as handler
+            elif plan['design']['handler']=='transfer-review':
+                from .transfer_review import run as handler
             elif plan['design']['handler']=='support-review':
                 from .support_review import run as handler
             elif plan['design']['handler']=='routine-revision':
