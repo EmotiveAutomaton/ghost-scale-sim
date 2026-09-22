@@ -1,3 +1,3 @@
-# Independent fixed-tempering checker admission
+# Independently verified fixed-tempering checker
 
-Source and inputs are frozen. The existing serial worker must pass the mandatory fixture gate before reconstructing campaign outcomes. Syntax/dispatch inspection is complete; numerical tests and reconstruction remain pending. [Protocol](../../../docs/versions/v19-local-maker/PROVENANCE_TEMPERING_REVIEW_PROTOCOL.md).
+Eight mandatory controls pass; all streams, joint weights, forecasts and scores reconstruct within 5.50e-13. All 7,920 means and contrasts independently recombine. [Evidence](../G19-B-provenance-tempering-1/NUMERICAL_REVIEW.json).

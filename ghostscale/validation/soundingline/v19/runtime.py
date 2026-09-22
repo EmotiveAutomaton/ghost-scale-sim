@@ -185,6 +185,8 @@ def run(root,campaign):
                 from .provenance_tempering import run as handler
             elif plan['design']['handler']=='tempering-review':
                 from .tempering_review import run as handler
+            elif plan['design']['handler']=='mixture-compression':
+                from .mixture_compression import run as handler
             elif plan['design']['handler']=='source-omission':
                 from .source_omission import run as handler
             elif plan['design']['handler']=='provenance-restoration':

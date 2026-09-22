@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Fixed likelihood tempering has verified execution bindings and 45,056 exact exponent-one parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-eight earlier scientific batches are independently verified. The V19 week remains active.
+Fixed likelihood tempering increases true-maker inclusion with wider candidate sets, while maker-state loss changes direction across stationary and changing makers. Final copied-stream endpoint effects stay within 0.02 nats. Independent reconstruction and both full replays verify thirty-nine scientific batches. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

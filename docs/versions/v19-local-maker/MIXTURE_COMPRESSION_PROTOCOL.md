@@ -2,7 +2,8 @@
 
 Can a smaller set of complete maker/change hypotheses preserve useful prediction
 and uncertainty at a fixed checkpoint? This B-family alternative is prepared;
-no handler, admission or outcome is claimed. It is independent of likelihood
+the handler is implemented and admitted after 13 isolated controls. Original
+and both complete replays use frozen sources; no outcome is claimed. It is independent of likelihood
 tempering and changed-primitive feedback.
 
 Reuse the completed identity-aware unknown-time/type mixture and the source-omitted
@@ -38,3 +39,17 @@ Cap two CPU hours including controls, replays and independent review, within the
 B-family/global allowance. No new fits, tiny settings, protected lineages, or
 observations. Source admission and available family budget are required before
 execution. Primitive feedback is the other independent prepared alternative.
+
+Implementation retains int32 hypothesis indices and float64 normalized weights
+for each bounded count, plus maps to every immutable parent joint row. The full
+condition preserves original roster addition order and references parent weights.
+Weight/index byte counts exclude shared roster metadata and runtime overhead;
+the full roster needs no per-row indices. The sixteen-state marginal stores 128
+weight bytes, but future-change sufficiency is a separate question. All retained
+scores use the parent's 1e-300 logarithm floor, explicitly preserving zero-mass
+penalties. The fixed score convention is not selected for compression outcomes.
+No recursive truncation or learned fitting occurs.
+
+Both [primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) and the
+[current-marginal transition diagnostic](MARGINAL_TRANSITION_PROTOCOL.md) remain
+independent prepared alternatives after this comparison is dispatched.

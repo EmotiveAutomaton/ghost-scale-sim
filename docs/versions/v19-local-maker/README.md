@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Fixed likelihood tempering has verified execution bindings and 45,056 exact exponent-one parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-eight earlier scientific batches are independently verified. The V19 week remains active.
+Fixed likelihood tempering increases true-maker inclusion with wider candidate sets, while maker-state loss changes direction across stationary and changing makers. Final copied-stream endpoint effects stay within 0.02 nats. Independent reconstruction and both full replays verify thirty-nine scientific batches. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -136,4 +136,6 @@ The [partial provenance restoration report](PROVENANCE_RESTORATION_REPORT.md) re
 
 The [retained filter-cost report](FILTER_COST_REPORT.md) independently verifies all counts, scores, timing coverage and both replays. Fixed likelihood tempering is implemented and tested; primitive feedback and [bounded mixture compression](MIXTURE_COMPRESSION_PROTOCOL.md) remain independent prepared alternatives.
 
-Fixed likelihood tempering has frozen source and inputs after eight isolated controls; its original and two complete replays are admitted to the existing serial queue. Primitive feedback and fixed-capacity mixture compression remain prepared independent alternatives. No tempering outcome is accepted yet. The [execution report](PROVENANCE_TEMPERING_REPORT.md) and [independent checker protocol](PROVENANCE_TEMPERING_REVIEW_PROTOCOL.md) distinguish verified identities from pending numerical adjudication.
+Fixed likelihood tempering has frozen source and inputs after eight isolated controls; its original and two complete replays are admitted to the existing serial queue. Primitive feedback and fixed-capacity mixture compression remain prepared independent alternatives. Tempering numerical reconstruction and both complete replays are verified. The [execution report](PROVENANCE_TEMPERING_REPORT.md) and [independent checker protocol](PROVENANCE_TEMPERING_REVIEW_PROTOCOL.md) record verified numerical tradeoffs and their limits.
+
+The [checkpoint compression comparison](MIXTURE_COMPRESSION_PROTOCOL.md) is implemented and source-frozen after 13 isolated controls, including a complete native parent fixture and deliberate corruption. The five fixed capacities retain complete hypotheses; removed probability mass, indices, weights, proper scores and credible-set size remain separate. Original and both full replays are admitted; no outcome is accepted. Primitive feedback and the exact current-marginal transition diagnostic remain two prepared independent alternatives.
