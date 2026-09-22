@@ -1,10 +1,10 @@
 # Ghost Scale Simulation
 
-Primitive input pooling has verified execution and both complete replays; its independent numerical checker is source-admitted. Forty-three scientific batches remain independently verified. The frozen 61-file regression passes 247 Ghost and five Torch controls without skips. V19 remains active.
+Primitive input pooling is independently verified, bringing the scientific batch count to forty-four. It improves original-tool prediction and reverses after a tool change. The frozen 61-file regression retains 247 Ghost and five Torch passes without skips. V19 remains active.
 
-We tested whether pooling equivalent tool inputs improves a frozen forward model. All 433 deterministic outputs match across the original and both complete replays. The constructed-method comparison retains 640 queries and 983,040 paired score rows; independent numerical acceptance remains pending. No predictive advantage or historical process correspondence is accepted yet.
+We tested whether pooling equivalent tool inputs improves a frozen forward model. Before new feedback, correct pooling improves original-tool forecast loss by 0.05570–0.06116 nats but worsens changed-tool loss by 0.08843–0.08948 nats. Independent reconstruction, all 9,120 paired estimates and both complete replays verify this constructed-method reversal. Supplied equivalence does not establish learned mechanics, historical process correspondence or human intent.
 
-[Pooling execution and replay report](docs/versions/v19-local-maker/PRIMITIVE_POOLING_REPORT.md).
+[Verified pooling report](docs/versions/v19-local-maker/PRIMITIVE_POOLING_REPORT.md).
 
 We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. With 64 truthful inputs, row replacement improves changed-tool forecasts by 0.19116–0.19524 nats under original training, but worsens unchanged queries by 0.02170–0.02482 nats. Independent reconstruction and both complete replays verify this constructed-method tradeoff; historical process correspondence and human intent remain unestablished.
 
@@ -68,7 +68,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records forty-three verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records forty-four verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its

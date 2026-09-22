@@ -199,6 +199,8 @@ def run(root,campaign):
                 from .primitive_pooling import run as handler
             elif plan['design']['handler']=='pooling-review':
                 from .pooling_review import run as handler
+            elif plan['design']['handler']=='input-privilege':
+                from .input_privilege import run as handler
             elif plan['design']['handler']=='feedback-review':
                 from .feedback_review import run as handler
             elif plan['design']['handler']=='quotient-review':

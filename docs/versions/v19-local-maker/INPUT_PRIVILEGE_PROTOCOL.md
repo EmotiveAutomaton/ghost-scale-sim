@@ -24,7 +24,35 @@ mass conservation and independent enumeration before admitting native results.
 
 This diagnoses input privilege and evidence ambiguity rather than forecasting
 architecture or historical process recovery. It is independent of primitive
-pooling and retrospective quotient updating. The handler is unimplemented and
-unadmitted. Freeze source and all memberships before outcome consumption; cap
+pooling and retrospective quotient updating. Freeze source and all memberships
+before outcome consumption; cap
 two CPU hours including tests, replay and review within unchanged F/global
 ceilings. If those ceilings cannot accommodate it, preserve it as prepared.
+
+## Executable refinement frozen before native outcomes
+
+Score the unchanged 640 retained queries. Group membership uses only the supplied
+query projection and is frozen before dispatch. For each public group, enumerate
+all mechanically legal values of hidden skill/belief, including values with zero
+native policy support. Unskilled tool use is excluded. This adds evaluator
+completions, not scored episodes or queries. Preserve both completion lists and
+retained query indices. A legal endpoint alternative and an alternative with
+positive native probability are separate ambiguity counts.
+
+The uniform arm weights every legal completion equally; the native-law arm uses
+the retained exact query mass, separately for each of eight laws and both tools.
+Within a zero-native-mass group the latter explicitly falls back to uniform legal
+completion. Score native and equal-query populations separately, preserving any
+infinite-loss mass without smoothing or dropping impossible targets. Conditional
+entropy uses native probabilities and is labelled accordingly even in equal-query
+score cells. Store all group endpoint distributions, masses, denominators and
+per-query predictions; exports separate anonymous visible inputs from evaluator
+memberships, rule identities, endpoint truth and probabilities.
+
+No architecture, teacher-label training, optimization schedule or capacity search
+is introduced: the two fixed algorithms are exact enumeration under supplied
+mechanics and exact native-law weighting. Source admission requires live/null,
+independent execution, complete fixture, zero-mass and corruption controls.
+Complete original and extracted-source replays plus independent numerical review
+are required before acceptance. Retrospective quotient updating and the prepared
+pooled-replacement comparison remain independent alternatives.

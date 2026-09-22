@@ -92,6 +92,7 @@ def main():
     elif kind=='primitive-feedback':from ghostscale.validation.soundingline.v19.primitive_feedback import run as handler
     elif kind=='primitive-pooling':from ghostscale.validation.soundingline.v19.primitive_pooling import run as handler
     elif kind=='pooling-review':from ghostscale.validation.soundingline.v19.pooling_review import run as handler
+    elif kind=='input-privilege':from ghostscale.validation.soundingline.v19.input_privilege import run as handler
     elif kind=='feedback-review':from ghostscale.validation.soundingline.v19.feedback_review import run as handler
     elif kind=='quotient-review':from ghostscale.validation.soundingline.v19.quotient_review import run as handler
     elif kind=='source-omission':from ghostscale.validation.soundingline.v19.source_omission import run as handler
