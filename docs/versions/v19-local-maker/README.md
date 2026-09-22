@@ -1,8 +1,14 @@
 # V19: local maker reconstruction and usable predictive state
 
-The primitive input-pooling comparison passed ten isolated controls and is source-admitted with both complete replays. It fixes correct undo-buffer pooling, equally sized wrong current-artifact pooling and unpooled controls before outcomes, retaining one prior per group. Retrospective evidence updating and the hidden-metadata boundary remain independent prepared alternatives.
+[Complete regression refresh](REGRESSION_2026-09-22.md): all 61 V19 test files in the frozen revision pass (247 Ghost and 5 Torch controls; no skips). Engineering validation is separate from scientific acceptance.
 
-Fixed primitive feedback is independently verified, bringing the scientific batch count to forty-three. Row replacement improves changed-tool prediction with collateral damage to unchanged queries. V19 remains active; the complete regression refresh is a separate engineering job.
+The primitive input-pooling comparison has verified execution and both complete replays after ten isolated controls. It fixes correct undo-buffer pooling, equally sized wrong current-artifact pooling and unpooled controls before outcomes, retaining one prior per group. Retrospective evidence updating and the hidden-metadata boundary remain independent prepared alternatives.
+
+Primitive input pooling has verified execution and both complete replays; its independent numerical checker is source-admitted. Forty-three scientific batches remain independently verified. The frozen 61-file regression passes 247 Ghost and five Torch controls without skips. V19 remains active.
+
+We tested whether pooling equivalent tool inputs improves a frozen forward model. All 433 deterministic outputs match across the original and both complete replays. The constructed-method comparison retains 640 queries and 983,040 paired score rows; independent numerical acceptance remains pending. No predictive advantage or historical process correspondence is accepted yet.
+
+[Pooling execution and replay report](PRIMITIVE_POOLING_REPORT.md).
 
 We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. With 64 truthful inputs, row replacement improves changed-tool forecasts by 0.19116–0.19524 nats under original training, but worsens unchanged queries by 0.02170–0.02482 nats. Independent reconstruction and both complete replays verify this constructed-method tradeoff; historical process correspondence and human intent remain unestablished.
 
@@ -19,7 +25,7 @@ We tested whether knowing the maker's current state is enough for later predicti
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
 and unmet conditional admissions. The [serial validation protocol](QUEUE_COMPLETENESS_PROTOCOL.md)
-now covers all 31 V19 test files. Its recovered execution passes 120 Ghost and
+previously covered 31 V19 test files. That recovered execution passed 120 Ghost and
 five installed-Torch controls without skips and has released both fixed successor
 experiments with their adjacent and extracted-source replays. This is an active week, not closeout.
 
