@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Fixed-budget practice mixtures restore unvisited-context production, with no established active-acquisition advantage and no monotonic benefit from further reweighting. All 34 scientific batches have independent verification and complete replays. The V19 week remains active.
+Earlier/later change filtering and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; timing effects remain unadjudicated. Thirty-four earlier scientific batches remain verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

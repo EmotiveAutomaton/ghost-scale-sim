@@ -1095,3 +1095,5 @@ It preserves source-time likelihoods and query-time state projection, reconstruc
 original midpoint/stationary scores first, and reuses the same uniforms without
 counting the old controls again. Eleven isolated timing/runtime/replay checks
 pass, including independent hypothesis products and a complete native fixture.
+
+The [actual-change-timing checker](versions/v19-local-maker/CHANGE_TIMING_REVIEW_PROTOCOL.md) reconstructs scaled hypothesis products, joint mappings, source-time and query-time states, and paired midpoint references independently of producer filtering and scoring. Eight isolated controls pass, including a complete native fixture and corruption rejection. Original and both complete replays match 77 outputs. Numerical acceptance awaits serial reconstruction; means and contrasts retain all actual locations, fixed checkpoints, draw means and paired lineage intervals. Parent controls remain identities, never new replicates.

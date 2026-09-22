@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Fixed-budget practice mixtures restore unvisited-context production, with no established active-acquisition advantage and no monotonic benefit from further reweighting. All 34 scientific batches have independent verification and complete replays. The V19 week remains active.
+Earlier/later change filtering and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; timing effects remain unadjudicated. Thirty-four earlier scientific batches remain verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1067,3 +1067,9 @@ Does a learned composition advantage survive a changed primitive operation? No o
 Can reallocating a fixed practice-evidence budget restore production in an unvisited context? At 512 episodes, a one-quarter matched-context mixture raises average success by 21.14 percentage points for active acquisition and 21.19 for demonstrations. Further reweighting is not uniformly beneficial; fully matched evidence loses some visited-context performance. Independent reconstruction and all paired intervals verify this exploratory constructed-method result, not historical process correspondence or human intent.
 
 [Full record](docs/versions/v19-local-maker/SUPPORT_MIX_REPORT.md).
+
+## V19 actual-change timing — numerical review pending
+
+Does a filter retain useful current-state information when actual changes occur earlier or later? The comparison and both complete replays agree on 77 deterministic outputs across 4,096 streams and 112,640 scored rows. Independent reconstruction is source-frozen; numerical advantages remain unadjudicated. This is a constructed-method reproducibility result with supplied laws, not historical process correspondence or human intent.
+
+[Full record](docs/versions/v19-local-maker/CHANGE_TIMING_REPORT.md).

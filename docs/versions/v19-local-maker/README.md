@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Fixed-budget practice mixtures restore unvisited-context production, with no established active-acquisition advantage and no monotonic benefit from further reweighting. All 34 scientific batches have independent verification and complete replays. The V19 week remains active.
+Earlier/later change filtering and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; timing effects remain unadjudicated. Thirty-four earlier scientific batches remain verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -125,6 +125,7 @@ The [changed-tool transfer report](SUPPORT_TRANSFER_REPORT.md) includes complete
 The [practice-mixture report](SUPPORT_MIX_REPORT.md) verifies complete replay and evidence separation. Its [independent numerical checker](SUPPORT_MIX_REVIEW_PROTOCOL.md) and separate 900-estimate regroup are complete. Off-midpoint changes and bounded primitive feedback remain prepared alternatives.
 
 The [earlier/later change protocol](CHANGE_TIMING_PROTOCOL.md) now has an
-implemented handler and eleven isolated passing controls. Source admission still
-precedes execution. Bounded primitive feedback and source-identity omission remain
+implemented handler and eleven isolated passing controls. Original and both complete replays now verify; numerical acceptance awaits independent reconstruction. Bounded primitive feedback and source-identity omission remain
 two independent prepared alternatives.
+
+The [earlier/later change report](CHANGE_TIMING_REPORT.md) records verified replay and evidence roles. The [independent checker](CHANGE_TIMING_REVIEW_PROTOCOL.md) is source-frozen for serial execution. Primitive feedback and source-identity omission remain two independent prepared alternatives.
