@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-Moving changes away from the midpoint limits the earlier filtering equivalence: late changes in short streams produce a practically meaningful penalty for unknown timing. Prediction still improves over static filtering, while current-state coverage varies. Thirty-five scientific batches are independently verified with complete replays. The V19 week remains active.
+Source-identity omission and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; prediction and uncertainty effects remain unadjudicated. Thirty-five earlier scientific batches remain independently verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

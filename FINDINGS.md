@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Moving changes away from the midpoint limits the earlier filtering equivalence: late changes in short streams produce a practically meaningful penalty for unknown timing. Prediction still improves over static filtering, while current-state coverage varies. Thirty-five scientific batches are independently verified with complete replays. The V19 week remains active.
+Source-identity omission and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; prediction and uncertainty effects remain unadjudicated. Thirty-five earlier scientific batches remain independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1073,3 +1073,9 @@ Can reallocating a fixed practice-evidence budget restore production in an unvis
 Does unknown-time filtering retain its advantage when changes occur earlier or later? After a late change in a 32-observation stream, the unknown-time/type filter loses 0.03128 nats for purpose changes and 0.04596 for skill changes versus supplied timing, exceeding the declared practical margin. It still improves over static filtering. Independent reconstruction and paired intervals verify this timing-dependent constructed-method result; supplied laws, unequal evidence age and uncertain historical process remain explicit. No human intent claim follows.
 
 [Full record](docs/versions/v19-local-maker/CHANGE_TIMING_REPORT.md).
+
+## V19 source-identity omission — numerical review pending
+
+Does counting copied observations as distinct sources change the maker account? The identity-omission comparison and both complete replays agree on 77 deterministic outputs across 4,096 streams and 112,640 scored rows. Independent numerical reconstruction is source-frozen; benefits and harms remain unadjudicated. This is a constructed-method reproducibility result with supplied laws and retained timestamps, not learned provenance detection, historical process correspondence or human intent.
+
+[Full record](docs/versions/v19-local-maker/SOURCE_OMISSION_REPORT.md).

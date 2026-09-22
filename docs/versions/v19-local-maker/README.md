@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Moving changes away from the midpoint limits the earlier filtering equivalence: late changes in short streams produce a practically meaningful penalty for unknown timing. Prediction still improves over static filtering, while current-state coverage varies. Thirty-five scientific batches are independently verified with complete replays. The V19 week remains active.
+Source-identity omission and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; prediction and uncertainty effects remain unadjudicated. Thirty-five earlier scientific batches remain independently verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -129,3 +129,5 @@ implemented handler and eleven isolated passing controls. Original and both comp
 two independent prepared alternatives.
 
 The [earlier/later change report](CHANGE_TIMING_REPORT.md) records verified replay and evidence roles. The [independent checker](CHANGE_TIMING_REVIEW_PROTOCOL.md) is source-frozen for serial execution. Primitive feedback and source-identity omission remain two independent prepared alternatives.
+
+The [source-identity omission report](SOURCE_OMISSION_REPORT.md) records verified replay and evidence roles. The [independent checker](SOURCE_OMISSION_REVIEW_PROTOCOL.md) is source-frozen for serial execution. Primitive feedback and partial provenance restoration remain two independent prepared alternatives.
