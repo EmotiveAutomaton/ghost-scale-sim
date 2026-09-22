@@ -49,3 +49,5 @@ existing B-family/global pool. No fits, new observation draws or protected
 lineages. Independent [primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) and
 [current-marginal transitions](MARGINAL_TRANSITION_PROTOCOL.md) remain prepared;
 neither needs compression to win.
+
+The first independent checker admission was withdrawn before numerical execution after static review found a NumPy boolean in a JSON control verdict. Its source and plan remain retained. A separately frozen replacement converts the verdict to a native boolean and adds a serialization regression check; scientific selection, projection, scoring and population definitions are unchanged. All numerical fixtures remain mandatory before reconstruction.

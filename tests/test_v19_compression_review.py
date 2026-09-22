@@ -11,6 +11,12 @@ from ghostscale.validation.soundingline.v19 import unknown_change as U, source_o
 from ghostscale.validation.soundingline.v18_3.io import canonical, read, write, file_digest
 
 
+def test_control_verdicts_are_native_json_booleans():
+    verdicts=V.controls()
+    assert all(type(v) is bool for v in verdicts.values())
+    assert canonical(verdicts)
+
+
 def test_scalar_projection_ties_and_zero_mass_floor():
     assert all(V.controls().values())
     hs=[('none',0,0),('purpose',16,0),('skill',16,1)]

@@ -51,7 +51,7 @@ def controls():
         'positive:stable_tie': ix == [0] and removed == .5,
         'live:point_loses_coverage': full_score['coverage90'] == 1 and point_score['coverage90'] == 0,
         'positive:zero_mass_floor': point_score['state_loss'] == -math.log(1e-300),
-        'positive:normalized_nonnegative': math.fsum(kept) == 1 and min(kept) >= 0}
+        'positive:normalized_nonnegative': bool(math.fsum(kept) == 1 and min(kept) >= 0)}
 
 
 def regroup(cells, cfg):
