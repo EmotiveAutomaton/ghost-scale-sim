@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
+The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job
@@ -106,4 +106,4 @@ G19-05-joint-readout-1 is independently numerically verified with both complete 
 
 G19-F-support-1 is the 29th independently verified scientific batch, with exact-propagation advantage and sampled-rollout reversal under the declared holdout.
 
-The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
+The [routine and current-request revision comparison](../../docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays have finished; independent numerical reconstruction is prepared before success-rate acceptance. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.

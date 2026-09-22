@@ -159,6 +159,8 @@ def run(root,campaign):
                 from .support_review import run as handler
             elif plan['design']['handler']=='routine-revision':
                 from .routine_revision import run as handler
+            elif plan['design']['handler']=='routine-review':
+                from .routine_review import run as handler
             elif plan['design']['handler']=='rollout-transfer':
                 from .rollout_transfer import run as handler
             elif plan['design']['handler']=='validation-suite':

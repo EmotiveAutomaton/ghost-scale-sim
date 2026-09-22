@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
+The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1037,3 +1037,9 @@ Can a family containing each individual rule change still omit processes when th
 Does learned transition composition help on queries absent from training when every prediction has the same final smoothing? Exact learned propagation lowers withheld-composition loss by 0.16115 nats versus direct lookup; sixteen sampled rollouts instead raise it by 0.23095 nats. When all true primitive transitions were observed, both improve, but that diagnostic uses evaluator truth. Independent reconstruction and both complete replays verify this exploratory constructed-method result. Declared mechanics and proposed operations do not establish historical process correspondence or human intent.
 
 [Report](docs/versions/v19-local-maker/SUPPORT_HOLDOUT_REPORT.md).
+
+## V19 routine/request revision — numerical review pending
+
+Does a fixed revision opportunity distinguish retaining a prior routine from adopting the current request? The five-policy comparison and both complete replays match all 27 deterministic outputs, covering 110,592 native paths and 171,520 revision comparisons. Its 200 anonymous reader packets contain observed requests and visible artifacts only. Independent numerical reconstruction is source-frozen before accepting success or cost differences. This is a constructed-method reproducibility result; learned competence, historical process correspondence and human endorsement remain unestablished.
+
+[Full record](docs/versions/v19-local-maker/ROUTINE_REVISION_REPORT.md).

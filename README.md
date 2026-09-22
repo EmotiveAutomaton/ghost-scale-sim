@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
+The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
@@ -1376,4 +1376,4 @@ To cite this repository, see [CITATION.cff](CITATION.cff), or cite the preprint 
 
 QUEUE-14 is complete and verified: 9,216 rows on 192 fresh truth-excluded candidate-family contexts and 36 bounded source replays. Two observations trigger safe abstention in every candidate-aware action method; the forced-candidate control attempts an invalid action every time. The campaign remains active while the remaining commissioned frontier is audited. See [current queue](results/v18/continuation/CURRENT_QUEUE.json).
 
-The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
+The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays have finished; independent numerical reconstruction is prepared before success-rate acceptance. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.

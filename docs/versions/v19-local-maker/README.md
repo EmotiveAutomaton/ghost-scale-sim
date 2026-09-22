@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
+The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -112,4 +112,4 @@ The [crossed-rule result](CROSSED_RULE_REPORT.md) records full [independent nume
 
 The [support/holdout result](SUPPORT_HOLDOUT_REPORT.md) has complete replay evidence and completed [independent numerical reconstruction](SUPPORT_REVIEW_PROTOCOL.md).
 
-The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
+The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays have finished; independent numerical reconstruction is prepared before success-rate acceptance. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.

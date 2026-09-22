@@ -1,6 +1,6 @@
 # The walkthrough
 
-The support/holdout comparison finds a learned-composition benefit under exact propagation and a sampled-rollout reversal on the withheld sequence. Primitive-transition support distinguishes a favorable subset but is evaluator-only information. Twenty-nine scientific batches now have independent verification and both complete replays; the V19 week remains active.
+The routine/request revision experiment and both complete replays agree; independent policy, outcome and population reconstruction is prepared. Twenty-nine earlier scientific batches remain independently verified. No revision success-rate claim has yet been accepted; the V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
@@ -723,4 +723,4 @@ The [equal-size portfolio comparison](docs/versions/v19-local-maker/PORTFOLIO_RE
 
 The [complete joint-process readout](docs/versions/v19-local-maker/JOINT_READOUT_REPORT.md) now has retained output and anonymous reader evidence. The full adjacent replay matches; numerical acceptance awaits independent reconstruction and portable-replay review.
 
-The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays are prepared for serial execution. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
+The [routine and current-request revision comparison](docs/versions/v19-local-maker/ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original and both complete replays have finished; independent numerical reconstruction is prepared before success-rate acceptance. Transient-state filtering and changed-tool support transfer remain separately prepared alternatives; neither is claimed as an admitted job.
