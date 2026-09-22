@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Fixed likelihood tempering increases true-maker inclusion with wider candidate sets, while maker-state loss changes direction across stationary and changing makers. Final copied-stream endpoint effects stay within 0.02 nats. Independent reconstruction and both full replays verify thirty-nine scientific batches. The V19 week remains active.
+Checkpoint mixture compression has verified execution bindings and 45,056 exact full-mixture parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-nine earlier scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1097,3 +1097,9 @@ What does allowing an unknown maker-change time and type cost? The retained mixt
 Can reducing observation weight repair uncertainty distorted by undisclosed copies? Lower fixed powers widen current-maker candidate sets and increase their observed inclusion, while maker-state loss improves for stationary makers and can worsen after a change. All final copied-stream endpoint-loss intervals for lower powers versus one stay within the declared 0.02-nat margin. Independent reconstruction, all 7,920 estimates and both complete replays verify this constructed-method tradeoff under supplied laws; it establishes neither calibrated uncertainty, inferred provenance, historical process correspondence nor human intent.
 
 [Full record](docs/versions/v19-local-maker/PROVENANCE_TEMPERING_REPORT.md).
+
+## V19 checkpoint compression — numerical review pending
+
+Can a smaller set of complete maker/change hypotheses preserve useful prediction and uncertainty at a fixed checkpoint? The five-capacity comparison completed 225,280 scored rows and exactly reproduced 45,056 full-mixture parent rows. Independent numerical reconstruction and complete replay acceptance remain pending; no compression benefit is accepted. This is a constructed-method execution result under supplied laws, not recursive sufficiency, historical process correspondence or human intent.
+
+[Full record](docs/versions/v19-local-maker/MIXTURE_COMPRESSION_REPORT.md).
