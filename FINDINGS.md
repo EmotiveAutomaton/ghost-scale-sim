@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Partial provenance restoration now has a verified adjacent replay: all 71 deterministic outputs match. Portable replay and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
+Partial provenance restoration now has verified adjacent and extracted-source portable replays: all 71 deterministic outputs match in each. Independent numerical reconstruction remains pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1082,6 +1082,6 @@ Does counting copied observations as distinct sources change the maker account? 
 
 ## V19 partial provenance restoration — numerical review pending
 
-Can partial source corrections repair a maker account distorted by copied evidence? The adjacent replay reproduced all 71 deterministic outputs of the 353,280-row comparison. Portable replay and independent numerical reconstruction remain pending; no correction benefit or harm is accepted. This is a constructed-method reproducibility result under supplied laws and provenance, not historical process correspondence or human intent.
+Can partial source corrections repair a maker account distorted by copied evidence? The extracted-source portable replay and adjacent replay each reproduce all 71 deterministic outputs of the 353,280-row comparison. Independent numerical reconstruction remains pending; no correction benefit or harm is accepted. This is a constructed-method reproducibility result under supplied laws and provenance, not historical process correspondence or human intent.
 
 [Full record](docs/versions/v19-local-maker/PROVENANCE_RESTORATION_REPORT.md).

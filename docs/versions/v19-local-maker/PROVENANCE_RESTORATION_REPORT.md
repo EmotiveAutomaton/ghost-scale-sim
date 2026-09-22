@@ -1,6 +1,6 @@
 # Partial provenance restoration: execution verified, numerical review pending
 
-Can partial source corrections repair a maker account distorted by copied evidence? The adjacent replay reproduced all 71 deterministic outputs of the 353,280-row comparison. Portable replay and independent numerical reconstruction remain pending; no correction benefit or harm is accepted. This is a constructed-method reproducibility result under supplied laws and provenance, not historical process correspondence or human intent.
+Can partial source corrections repair a maker account distorted by copied evidence? The extracted-source portable replay and adjacent replay each reproduce all 71 deterministic outputs of the 353,280-row comparison. Independent numerical reconstruction remains pending; no correction benefit or harm is accepted. This is a constructed-method reproducibility result under supplied laws and provenance, not historical process correspondence or human intent.
 
 This comparison retains the midpoint/stationary streams from the unknown-change
 study, with eight coefficient lineages, two observation draws and sixteen equally
@@ -21,12 +21,13 @@ maker-averaged strata. The original source/plan/environment, 39 frozen inputs,
 468 producer source files, all 71 deterministic outputs and separate timing hash
 verify. Each zero, full and label-only identity covers 112,640 rows. These are
 apparatus identities, not partial-correction benefits or independent replicates.
-The complete adjacent replay matches every one of the 71 deterministic output
-hashes, including raw paths, joint arrays, forecasts and scores. Both executions
-verify the same 468 source files, 39 frozen inputs, plan and environment. Their
-execution-specific timing hashes are verified separately; durations need not
-match. The extracted-source portable replay is executing, with the independent
-checker queued behind it. Neither is accepted by this replay receipt.
+The complete adjacent and freshly extracted-source portable replays each match
+all 71 deterministic output hashes, including raw paths, joint arrays, forecasts
+and scores. All three executions verify the same 468 source files, 39 frozen
+inputs, plan and environment. The portable run used the extracted source tree.
+Execution-specific timing hashes are verified separately; durations need not
+match. The independent checker is executing under its frozen admission; its
+numerical outputs and fixture gate have not been adjudicated by this replay review.
 
 All five supplied-law filters recompute the corrected prefix. The bounded reset
 selects its last sixteen distinct supplied sources again after correction, so its
@@ -40,7 +41,7 @@ scoring kernels. It will reconstruct native path probabilities, endpoint laws,
 saved streams, every hypothesis/prior, joint weight and row map, posterior,
 forecast, type mass, retained true-source count and score. It must pass a complete
 native fixture and scalar-product/corruption controls in the serial worker before
-reading the campaign result. These tests are queued, not reported as passing.
+reading the campaign result. The checker is running; its fixture gate and numerical outputs await their own event review.
 
 Every unique condition is paired against omission and full restoration. Ascending
 versus descending age is paired at every declared budget. Five measures, original
@@ -59,11 +60,10 @@ their exact hashes and byte lengths in EVALUATOR_MANIFEST.json; they are not rea
 inputs and are not embedded in these public archives. Source reproduction remains
 available. Every exported archive member is checked against its original bytes.
 
-**Warrant:** execution, provenance bindings, apparatus identities and complete
-adjacent replay verified; portable replay and independent numerical adjudication
-pending. No empirical
+**Warrant:** execution, provenance bindings, apparatus identities and both complete
+replays verified; independent numerical adjudication pending. No empirical
 benefit, harm, monotonic improvement, calibration or equivalence claim is accepted.
-Miniature — architecture untested. **Pursuit:** finish portable replay and independent
+Miniature — architecture untested. **Pursuit:** finish independent numerical
 reconstruction, then examine every paired correction/age contrast. Bounded
 changed-primitive feedback and retained filter-cost accounting remain independent
 prepared alternatives. The week, immutable reports and protected reserve remain open.
@@ -75,3 +75,5 @@ prepared alternatives. The week, immutable reports and protected reserve remain 
 [evidence roles](../../../results/v19/G19-B-provenance-restoration-1/README.md).
 
 [Adjacent replay evidence](../../../results/v19/G19-B-provenance-restoration-1/ADJACENT_REPLAY.json) binds all output hashes and the separate timing record. The execution-stage receipts remain historical snapshots.
+
+[Portable replay evidence](../../../results/v19/G19-B-provenance-restoration-1/PORTABLE_REPLAY.json) binds the complete extracted-source replay and its separate timing archive. Earlier execution and adjacent-stage receipts remain historical snapshots.
