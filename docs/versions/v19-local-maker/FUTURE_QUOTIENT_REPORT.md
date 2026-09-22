@@ -1,6 +1,6 @@
 # Future-schedule grouping: execution complete, numerical review pending
 
-We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. The run completed 28,672 saved posterior rows and 4,620,288 future forecast vectors. Execution bindings and internal checks pass; independent numerical reconstruction and complete replay acceptance remain pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. Both complete replays reproduce all 88 deterministic outputs, including 28,672 saved posterior rows and 4,620,288 future forecast vectors. This verifies reproducibility of the constructed-method comparison; independent numerical and storage acceptance remains pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
 
 The supplied unknown-time/type roster contains sixteen stationary hypotheses
 and every admitted purpose or skill change after steps 8 through seven steps
@@ -23,8 +23,10 @@ source archive, plan, environment and all 88 deterministic output files. Five
 in-job controls pass. Its separate tuple-transition/unmerged-state forecast
 calculation reports a maximum absolute coordinate discrepancy of 3.16414e-15,
 below the frozen 1e-12 tolerance. This is an internal numerical identity, not
-yet an independently accepted finding. Adjacent and extracted-source replay
-receipts have their own later review events and are not adjudicated here.
+yet an independently accepted finding. Adjacent and extracted-source replay receipts now verify every deterministic
+output, all 500 source files and all 72 inputs in each execution. Their complete
+output hash maps match the original. This is replay acceptance; it does not
+substitute for independent numerical or storage reconstruction.
 
 The new independent checker imports no producer roster, transition, partition,
 forecast or summary function. It rebuilds hypotheses and schedules by direct
@@ -34,7 +36,8 @@ It checks all saved vectors, row maps, population pairs, missing checkpoints,
 summaries and dtype byte counts. Thirteen isolated controls pass, including a
 complete native-data fixture and deliberate weight, forecast, shape, error and
 membership corruption. Its source and 90 inputs are frozen; numerical review
-will run in the existing serial queue. An initial unexecuted checker snapshot
+has completed in the existing serial queue; its separate completion event
+awaits numerical adjudication. An initial unexecuted checker snapshot
 is retained; the replacement avoids repeatedly decompressing the same array.
 
 Per-posterior float64 weight savings are not total storage savings. The review
@@ -45,7 +48,7 @@ from both sides. JSON/NPZ/ZIP artifact sizes are separate from dtype storage;
 neither establishes Python workspace use or an execution-speed advantage.
 
 **Warrant:** a constructed-method execution result with internal identity
-checks; independent numerical and complete replay acceptance are pending.
+checks and both complete replays; independent numerical acceptance is pending.
 Miniature — architecture untested. The supplied laws and parent posteriors
 inherit their previously bound validation. Future forecast preservation would
 still not establish updating on newly revealed past evidence, historical

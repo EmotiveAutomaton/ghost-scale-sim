@@ -1,8 +1,8 @@
 # V19: local maker reconstruction and usable predictive state
 
-Future-schedule grouping has completed its fixed comparison; independent numerical and storage review is source-admitted. Forty-one earlier scientific batches remain independently verified. V19 remains active.
+Future-schedule grouping has both complete replays verified; its completed independent numerical and storage checker awaits adjudication. Forty-one earlier scientific batches remain independently verified. Fixed primitive feedback is source-admitted. V19 remains active.
 
-We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. The run completed 28,672 saved posterior rows and 4,620,288 future forecast vectors. Execution bindings and internal checks pass; independent numerical reconstruction and complete replay acceptance remain pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. Both complete replays reproduce all 88 deterministic outputs, including 28,672 saved posterior rows and 4,620,288 future forecast vectors. This verifies reproducibility of the constructed-method comparison; independent numerical and storage acceptance remains pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
 
 [Execution report](FUTURE_QUOTIENT_REPORT.md).
 
