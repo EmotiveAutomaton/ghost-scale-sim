@@ -1,5 +1,5 @@
-# V19 purpose-switch filtering review — 22 September 2026
+# V19 purpose-switch filtering numerical review — 22 September 2026
 
-Can an account of a possible purpose change preserve current-state information? The three-filter comparison and both complete replays match all 35 deterministic outputs, covering 2,048 observation streams and 33,792 scored rows. Independent reconstruction is now source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result; the true law and possible switch time are supplied, and historical process correspondence remains unestablished.
+Can an account of a possible purpose change preserve current-state information? After 128 independent observations with a purpose switch, the coherent mixture lowers fresh-endpoint logarithmic loss by 0.05473 nats versus static filtering and 0.02530 versus a fixed reset. Its 90% credible set contains the current maker state in 96.48% of cases, versus 33.20% for static filtering. Independent reconstruction and both complete replays verify this exploratory constructed-method result. The true law and possible switch time are supplied; historical process correspondence and human intent remain unestablished.
 
 [Evidence and limits](../versions/v19-local-maker/TRANSIENT_FILTER_REPORT.md).

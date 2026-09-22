@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The purpose-switch filtering experiment and both complete replays agree; independent stream, posterior and score reconstruction is source-frozen. Thirty earlier scientific batches remain independently verified. No filtering advantage has yet been accepted; the V19 week remains active.
+The possible-switch mixture improves fresh-endpoint prediction and current-state coverage after a purpose change; its small stationary penalty and supplied-time privilege remain explicit. Thirty-one scientific batches now have independent verification and complete replays. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1046,6 +1046,6 @@ Does adopting a changed request improve a fixed revision policy? The pooled succ
 
 ## V19 purpose-switch filtering — numerical review pending
 
-Can an account of a possible purpose change preserve current-state information? The three-filter comparison and both complete replays match all 35 deterministic outputs, covering 2,048 observation streams and 33,792 scored rows. Independent reconstruction is now source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result; the true law and possible switch time are supplied, and historical process correspondence remains unestablished.
+Can an account of a possible purpose change preserve current-state information? After 128 independent observations with a purpose switch, the coherent mixture lowers fresh-endpoint logarithmic loss by 0.05473 nats versus static filtering and 0.02530 versus a fixed reset. Its 90% credible set contains the current maker state in 96.48% of cases, versus 33.20% for static filtering. Independent reconstruction and both complete replays verify this exploratory constructed-method result. The true law and possible switch time are supplied; historical process correspondence and human intent remain unestablished.
 
 [Full record](docs/versions/v19-local-maker/TRANSIENT_FILTER_REPORT.md).

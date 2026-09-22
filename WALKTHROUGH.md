@@ -1,6 +1,6 @@
 # The walkthrough
 
-The purpose-switch filtering experiment and both complete replays agree; independent stream, posterior and score reconstruction is source-frozen. Thirty earlier scientific batches remain independently verified. No filtering advantage has yet been accepted; the V19 week remains active.
+The possible-switch mixture improves fresh-endpoint prediction and current-state coverage after a purpose change; its small stationary penalty and supplied-time privilege remain explicit. Thirty-one scientific batches now have independent verification and complete replays. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

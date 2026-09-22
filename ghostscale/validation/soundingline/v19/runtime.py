@@ -165,6 +165,8 @@ def run(root,campaign):
                 from .transient_filter import run as handler
             elif plan['design']['handler']=='transient-review':
                 from .transient_review import run as handler
+            elif plan['design']['handler']=='unknown-change':
+                from .unknown_change import run as handler
             elif plan['design']['handler']=='rollout-transfer':
                 from .rollout_transfer import run as handler
             elif plan['design']['handler']=='validation-suite':

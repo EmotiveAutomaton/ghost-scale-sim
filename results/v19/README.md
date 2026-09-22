@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-The purpose-switch filtering experiment and both complete replays agree; independent stream, posterior and score reconstruction is source-frozen. Thirty earlier scientific batches remain independently verified. No filtering advantage has yet been accepted; the V19 week remains active.
+The possible-switch mixture improves fresh-endpoint prediction and current-state coverage after a purpose change; its small stationary penalty and supplied-time privilege remain explicit. Thirty-one scientific batches now have independent verification and complete replays. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

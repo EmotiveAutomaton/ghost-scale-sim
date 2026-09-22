@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The purpose-switch filtering experiment and both complete replays agree; independent stream, posterior and score reconstruction is source-frozen. Thirty earlier scientific batches remain independently verified. No filtering advantage has yet been accepted; the V19 week remains active.
+The possible-switch mixture improves fresh-endpoint prediction and current-state coverage after a purpose change; its small stationary penalty and supplied-time privilege remain explicit. Thirty-one scientific batches now have independent verification and complete replays. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -114,4 +114,4 @@ The [support/holdout result](SUPPORT_HOLDOUT_REPORT.md) has complete replay evid
 
 The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.md) has frozen policy choices, costs, observations and source after 14 isolated controls. Its original, both complete replays and independent numerical reconstruction are verified. The [purpose-switch filtering protocol](TRANSIENT_FILTER_PROTOCOL.md) freezes the next comparison; changed-tool support transfer and unknown-time/skill-change filtering remain prepared alternatives.
 
-The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md) verifies complete replay and evidence roles. The [independent numerical checker](TRANSIENT_REVIEW_PROTOCOL.md) is source-frozen after nine isolated tests. Changed-tool support transfer and unknown-time/skill-change filtering remain prepared alternatives.
+The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md) now includes independent numerical reconstruction and all paired intervals. The [unknown-time/type comparison](UNKNOWN_CHANGE_PROTOCOL.md) implements the next discriminator; changed-tool transfer and the fixed-fit practice-support diagnostic remain prepared alternatives.
