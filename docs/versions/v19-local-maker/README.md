@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Source-identity omission leaves final unknown-time/type prediction within the practical margin while reducing current-maker set inclusion. All numerical estimates, paired intervals and complete replays verify. Thirty-six scientific batches are independently verified. The V19 week remains active.
+Partial provenance restoration has completed its frozen comparison and apparatus identities. Both full replays and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -131,3 +131,5 @@ two independent prepared alternatives.
 The [earlier/later change report](CHANGE_TIMING_REPORT.md) records verified replay and evidence roles. The [independent checker](CHANGE_TIMING_REVIEW_PROTOCOL.md) is source-frozen for serial execution. Primitive feedback and source-identity omission remain two independent prepared alternatives.
 
 The [source-identity omission report](SOURCE_OMISSION_REPORT.md) records verified replay and evidence roles. The [independent checker](SOURCE_OMISSION_REVIEW_PROTOCOL.md) and separate paired regroup are complete. Primitive feedback and partial provenance restoration remain two independent prepared alternatives.
+
+The [partial provenance restoration report](PROVENANCE_RESTORATION_REPORT.md) records completed execution and exact apparatus identities. Both complete replays and the [independent reconstruction](PROVENANCE_RESTORATION_REVIEW_PROTOCOL.md) remain pending. Primitive feedback and filter-cost accounting remain independent prepared alternatives.

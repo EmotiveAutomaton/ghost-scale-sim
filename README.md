@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-Source-identity omission leaves final unknown-time/type prediction within the practical margin while reducing current-maker set inclusion. All numerical estimates, paired intervals and complete replays verify. Thirty-six scientific batches are independently verified. The V19 week remains active.
+Partial provenance restoration has completed its frozen comparison and apparatus identities. Both full replays and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

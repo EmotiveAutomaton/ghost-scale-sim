@@ -84,6 +84,7 @@ def main():
     elif kind=='omission-review':from ghostscale.validation.soundingline.v19.omission_review import run as handler
     elif kind=='source-omission':from ghostscale.validation.soundingline.v19.source_omission import run as handler
     elif kind=='provenance-restoration':from ghostscale.validation.soundingline.v19.provenance_restoration import run as handler
+    elif kind=='restoration-review':from ghostscale.validation.soundingline.v19.restoration_review import run as handler
     elif kind=='support-mix':from ghostscale.validation.soundingline.v19.support_mix import run as handler
     elif kind=='mix-review':from ghostscale.validation.soundingline.v19.mix_review import run as handler
     elif kind=='rollout-transfer':from ghostscale.validation.soundingline.v19.rollout_transfer import run as handler

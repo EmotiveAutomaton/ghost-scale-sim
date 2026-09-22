@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Source-identity omission leaves final unknown-time/type prediction within the practical margin while reducing current-maker set inclusion. All numerical estimates, paired intervals and complete replays verify. Thirty-six scientific batches are independently verified. The V19 week remains active.
+Partial provenance restoration has completed its frozen comparison and apparatus identities. Both full replays and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1079,3 +1079,9 @@ Does unknown-time filtering retain its advantage when changes occur earlier or l
 Does counting copied observations as distinct sources change the maker account? For the filter allowing unknown change time and type, final prediction differences stay within the declared 0.02-nat margin, but its 90% current-maker set includes truth 1.56–5.86 percentage points less often. Independent reconstruction and paired intervals verify this constructed-method result. Supplied laws and visible timestamps limit its scope; prediction similarity does not establish preserved uncertainty, historical process correspondence or human intent.
 
 [Full record](docs/versions/v19-local-maker/SOURCE_OMISSION_REPORT.md).
+
+## V19 partial provenance restoration — numerical review pending
+
+Can partial source corrections repair a maker account distorted by copied evidence? The frozen comparison completed 353,280 scored rows across 4,096 saved streams and passed its zero, full and label-only identity controls. Independent reconstruction and both complete replays remain pending; no partial-correction benefit or harm is accepted. This is a constructed-method execution result under supplied laws and provenance, not learned trust, historical process correspondence or human intent.
+
+[Full record](docs/versions/v19-local-maker/PROVENANCE_RESTORATION_REPORT.md).
