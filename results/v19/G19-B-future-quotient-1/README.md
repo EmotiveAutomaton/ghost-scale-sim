@@ -1,5 +1,5 @@
-# Future-schedule grouping: execution verified
+# Future-schedule grouping: independently verified
 
-We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. Both complete replays reproduce all 88 deterministic outputs, including 28,672 saved posterior rows and 4,620,288 future forecast vectors. This verifies reproducibility of the constructed-method comparison; independent numerical and storage acceptance remains pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+We tested whether grouping identical remaining maker-state schedules preserves forecasts while reducing storage. All 4,620,288 saved forecast vectors reconstruct within 1e-12, with both complete replays verified. Float64 weights plus shared integer metadata use 23.96% fewer bytes on available checkpoints, or 22.53% fewer including unused requested-checkpoint metadata. This is a constructed-method storage result; online updating, workspace, speed, historical process correspondence and human intent remain unestablished.
 
-All new raw weights, forecast vectors, row maps and schedules are retained in SCIENTIFIC archives. Sixteen inherited parent arrays are separately hash-bound in EVALUATOR_MANIFEST.json. Archives contain evaluator/scientific data, never reader inputs. [Report](../../../docs/versions/v19-local-maker/FUTURE_QUOTIENT_REPORT.md).
+Raw scientific archives and inherited evaluator-array bindings remain unchanged. [Report](../../../docs/versions/v19-local-maker/FUTURE_QUOTIENT_REPORT.md).

@@ -1,8 +1,12 @@
 # V19: local maker reconstruction and usable predictive state
 
-Future-schedule grouping has both complete replays verified; its completed independent numerical and storage checker awaits adjudication. Forty-one earlier scientific batches remain independently verified. Fixed primitive feedback is source-admitted. V19 remains active.
+Future-schedule grouping is independently verified, bringing the scientific batch count to forty-two. Fixed primitive feedback has completed execution; independent numerical review and replay acceptance remain pending. V19 remains active.
 
-We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. Both complete replays reproduce all 88 deterministic outputs, including 28,672 saved posterior rows and 4,620,288 future forecast vectors. This verifies reproducibility of the constructed-method comparison; independent numerical and storage acceptance remains pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. The fixed feedback comparison completed 640 queries and 1,966,080 paired score rows with no new fits. Execution integrity passes; independent numerical and replay acceptance remain pending. No predictive advantage or process-correspondence claim is accepted yet.
+
+[Feedback execution report](PRIMITIVE_FEEDBACK_REPORT.md).
+
+We tested whether grouping identical remaining maker-state schedules preserves forecasts while reducing storage. All 4,620,288 saved forecast vectors reconstruct within 1e-12, with both complete replays verified. Float64 weights plus shared integer metadata use 23.96% fewer bytes on available checkpoints, or 22.53% fewer including unused requested-checkpoint metadata. This is a constructed-method storage result; online updating, workspace, speed, historical process correspondence and human intent remain unestablished.
 
 [Execution report](FUTURE_QUOTIENT_REPORT.md).
 

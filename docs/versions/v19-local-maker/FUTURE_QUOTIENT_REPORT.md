@@ -1,73 +1,73 @@
-# Future-schedule grouping: execution complete, numerical review pending
+# Future-schedule grouping: independently verified
 
-We tested whether grouping identical remaining maker-state schedules preserves future prediction while reducing storage. Both complete replays reproduce all 88 deterministic outputs, including 28,672 saved posterior rows and 4,620,288 future forecast vectors. This verifies reproducibility of the constructed-method comparison; independent numerical and storage acceptance remains pending. No storage advantage, historical process correspondence or human-intent claim is accepted yet.
+We tested whether grouping identical remaining maker-state schedules preserves forecasts while reducing storage. All 4,620,288 saved forecast vectors reconstruct within 1e-12, with both complete replays verified. Float64 weights plus shared integer metadata use 23.96% fewer bytes on available checkpoints, or 22.53% fewer including unused requested-checkpoint metadata. This is a constructed-method storage result; online updating, workspace, speed, historical process correspondence and human intent remain unestablished.
 
-The supplied unknown-time/type roster contains sixteen stationary hypotheses
-and every admitted purpose or skill change after steps 8 through seven steps
-before the horizon. There are 560 hypotheses at horizon 32 and 3,632 at horizon
-128. Grouping uses each complete maker-state sequence from the checkpoint
-through the horizon; all zero-weight classes remain. No fitted capacity,
-probability cutoff, new observations, training or protected lineage is used.
+All eight development laws, both saved observation draws and paired source-aware/
+source-omitted histories remain. The 112 cells contain 28,672 checkpoint posteriors
+and 14,336 paired source rows. Sixteen makers, purpose/skill changes, actual change/
+stationarity and independent/copied observations retain their original pairing.
+No new observations, fits or untouched confirmation lineages were used.
 
-All eight development coefficient lineages and both saved observation draws
-are retained, with sixteen makers, purpose/skill, actual change/stationarity,
-independent/copied observations and paired source-aware/source-omitted inputs.
-The 112 cells contain 28,672 checkpoint posteriors. Every remaining step and
-four contexts produce 4,620,288 eight-endpoint forecast vectors. Horizon 32
-contains all five requested checkpoints, 8/16/17/20/32. Horizon 128 contains
-only 16 and 32; its 8/17/20 checkpoints are explicitly unavailable in the saved
-inputs. No observations are regenerated to fill those gaps.
+The table describes each horizon/checkpoint pair. Original hypotheses count full
+change histories; schedule groups count distinct maker-state sequences from that
+checkpoint through the horizon, including zero-weight groups. Available posterior
+rows count saved distributions across all laws and conditions. Strict break-even
+rows are the smallest number whose weight savings exceed the shared int32
+membership and schedule bytes; common parent metadata is excluded from both sides.
 
-Original execution verifies 500 frozen source files, 72 pinned inputs, the
-source archive, plan, environment and all 88 deterministic output files. Five
-in-job controls pass. Its separate tuple-transition/unmerged-state forecast
-calculation reports a maximum absolute coordinate discrepancy of 3.16414e-15,
-below the frozen 1e-12 tolerance. This is an internal numerical identity, not
-yet an independently accepted finding. Adjacent and extracted-source replay receipts now verify every deterministic
-output, all 500 source files and all 72 inputs in each execution. Their complete
-output hash maps match the original. This is replay acceptance; it does not
-substitute for independent numerical or storage reconstruction.
+| Horizon | Checkpoint | Original hypotheses | Schedule groups | Available posterior rows | Strict break-even rows |
+|---|---|---|---|---|---|
+| 32 | 8 | 560 | 560 | 4096 | Never |
+| 32 | 16 | 560 | 304 | 4096 | 12 |
+| 32 | 17 | 560 | 272 | 4096 | 9 |
+| 32 | 20 | 560 | 176 | 4096 | 4 |
+| 32 | 32 | 560 | 16 | 4096 | 1 |
+| 128 | 8 | 3632 | 3632 | 0 | Never |
+| 128 | 16 | 3632 | 3376 | 4096 | 753 |
+| 128 | 17 | 3632 | 3344 | 0 | 657 |
+| 128 | 20 | 3632 | 3248 | 0 | 466 |
+| 128 | 32 | 3632 | 2864 | 4096 | 184 |
 
-The new independent checker imports no producer roster, transition, partition,
-forecast or summary function. It rebuilds hypotheses and schedules by direct
-bit transitions, groups Python tuples, sums weights accurately, and projects
-the original unmerged distributions into sixteen maker states for every time.
-It checks all saved vectors, row maps, population pairs, missing checkpoints,
-summaries and dtype byte counts. Thirteen isolated controls pass, including a
-complete native-data fixture and deliberate weight, forecast, shape, error and
-membership corruption. Its source and 90 inputs are frozen; numerical review
-has completed in the existing serial queue; its separate completion event
-awaits numerical adjudication. An initial unexecuted checker snapshot
-is retained; the replacement avoids repeatedly decompressing the same array.
+Horizon 128 has no saved posterior at checkpoints 8, 17 or 20. Their metadata is
+retained and charged separately, without inventing missing observations. The
+32-step checkpoint at step 8 merges nothing and adds 58,240 shared bytes. At the
+final 32-step checkpoint, sixteen current maker states are sufficient for the
+remaining endpoint forecasts. This does not imply that they preserve the past.
 
-Per-posterior float64 weight savings are not total storage savings. The review
-will count shared int32 schedules and original membership maps, both with and
-without unavailable-checkpoint metadata, and report when those new bytes are
-repaid relative to original weights alone. Common parent metadata is excluded
-from both sides. JSON/NPZ/ZIP artifact sizes are separate from dtype storage;
-neither establishes Python workspace use or an execution-speed advantage.
+Original weights occupy 329,777,152 float64 bytes. Grouped weights occupy
+247,988,224 bytes; adding 2,780,736 shared bytes for available checkpoints gives
+250,768,960 bytes, a 23.9581% saving. Including all 7,496,448 requested metadata
+bytes gives 255,484,672 bytes, a 22.5281% saving. These are explicitly enumerated
+array-storage costs, not a benchmark of Python workspace, retained archive size,
+or a deployable total-memory footprint. Saved forecasts and reconstruction
+artifacts are separate outputs, not part of this weight-representation comparison.
 
-**Warrant:** a constructed-method execution result with internal identity
-checks and both complete replays; independent numerical acceptance is pending.
-Miniature — architecture untested. The supplied laws and parent posteriors
-inherit their previously bound validation. Future forecast preservation would
-still not establish updating on newly revealed past evidence, historical
-process recovery or human intent.
+The independent checker reconstructs every hypothesis, future schedule, tuple
+membership, grouped weight and unmerged-state forecast. Maximum absolute errors
+are 4.44089e-16 for weights and 3.16414e-15 for forecast coordinates, below 1e-12.
+All row mappings, population pairs, unavailable checkpoints and summary counts
+verify. A separate scalar regroup independently verifies each storage total and
+the strict amortization formula. Both complete original replays reproduce all
+88 deterministic outputs. The checker binds 504 sources and 90 inputs; thirteen
+isolated controls include a native fixture and deliberate corruptions.
 
-**Pursuit:** finish independent reconstruction and then investigate the limits
-of updating after grouping. Bounded changed-primitive feedback and exhaustive
-retrospective-evidence updating remain two independent prepared alternatives,
-requiring implementation and source admission. Neither requires a previous
-branch to win. The week and its resource limits remain active.
+**Warrant:** constructed-method storage advantage for this retained population,
+with numerical forecast preservation and exact replay. Miniature — architecture
+untested. Parent law/posterior likelihood validity is inherited from separately
+bound independent reviews. This establishes no learned access, online update
+guarantee, speed gain, reachable-simplex theorem, historical correspondence or
+human-intent result. No sampling interval is attached to deterministic byte counts.
 
-Every new raw array, row map and schedule is in the scientific archives.
-Sixteen large inherited joint-weight arrays remain in the retained evaluator
-capsule with hashes and byte lengths in EVALUATOR_MANIFEST.json. Source, plan,
-environment and parent review bindings remain available. There are no new
-reader inputs: evaluator schedules, laws, truth and posterior weights must
-not enter reader prompts. The reader exports remain the unchanged parent
-evidence packets.
+**Pursuit:** test newly supplied retrospective evidence after grouping; the
+complete lossless enumeration still needs tractable implementation and admission.
+Primitive alias pooling is an independent prepared alternative. Neither needs
+this result to win. Fixed primitive feedback has executed and awaits review.
 
-[Experiment](FUTURE_SCHEDULE_QUOTIENT_PROTOCOL.md),
+All new raw arrays, row maps and schedules remain in the scientific archives.
+Sixteen large inherited joint arrays remain separately hash-bound in the retained
+evaluator capsule. No new reader inputs are created: schedules, laws, hidden
+hypotheses and posterior weights remain scientific/evaluator material.
+
+[Protocol](FUTURE_SCHEDULE_QUOTIENT_PROTOCOL.md),
 [independent checker](FUTURE_QUOTIENT_REVIEW_PROTOCOL.md),
-[scientific evidence](../../../results/v19/G19-B-future-quotient-1/README.md).
+[evidence](../../../results/v19/G19-B-future-quotient-1/README.md).

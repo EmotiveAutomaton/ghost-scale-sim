@@ -1,7 +1,5 @@
-# Fixed primitive feedback: source admission
+# Fixed primitive feedback: execution verified
 
-The retained forward tables receive 0/4/16/64 unique tool-input reports with unchanged, add-one and observed-row replacement updates. Eleven isolated controls pass; original and two complete replays are source-admitted. No new scientific outcome is accepted.
+We tested whether observed tool transitions can repair a frozen forward model without harming unchanged queries. The fixed feedback comparison completed 640 queries and 1,966,080 paired score rows with no new fits. Execution integrity passes; independent numerical and replay acceptance remain pending. No predictive advantage or process-correspondence claim is accepted yet.
 
-The saved unit pseudocount is preserved once. This pre-dispatch correction to the prepared half-prior wording protects zero-feedback identity. Both saved draws, both support modes, all 640 queries, eight original evaluation lineages, original/changed tools, forward/reverse input ordering and true/wrong feedback stay paired. Distinct input rows are not independent sampled trials. Updated tables, all forecasts and scores stay scientific/evaluator data; exact budget slices contain observed inputs and next artifacts only.
-
-[Protocol](../../../docs/versions/v19-local-maker/PRIMITIVE_FEEDBACK_PROTOCOL.md). Retrospective quotient evidence and primitive input alias pooling remain independently prepared alternatives.
+Reader inputs and scientific/evaluator archives are separated in EVIDENCE_ROLES.json. Full summaries, tables, forecasts and scores are archived with every original hash. [Report](../../../docs/versions/v19-local-maker/PRIMITIVE_FEEDBACK_REPORT.md).
