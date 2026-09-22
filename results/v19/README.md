@@ -1,6 +1,8 @@
 # V19 scientific records and reader export
 
-Checkpoint mixture compression has verified execution bindings and 45,056 exact full-mixture parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-nine earlier scientific batches are independently verified. The V19 week remains active.
+Current maker states can agree while future forecasts differ. All 624 time cells, 19,968 forecast summaries and both complete replays verify. Forty-one scientific batches are independently verified; V19 remains active.
+
+We tested whether knowing the maker's current state is enough for later prediction. Equal current states can yield different future endpoint forecasts under all eight supplied laws. Independent enumeration of 113,376,896 hypothesis-pair/time instances and 19,968 forecast summaries, plus both complete replays, verifies this constructed-method counterexample. The witnesses are not established reachable posteriors; historical process correspondence and human intent remain unestablished.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

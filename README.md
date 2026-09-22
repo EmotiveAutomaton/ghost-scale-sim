@@ -1,6 +1,10 @@
 # Ghost Scale Simulation
 
-Checkpoint compression preserves final endpoint forecasts within the declared margin at 64/256 hypotheses while sometimes discarding true-maker support. All 225,280 rows, 19,800 estimates and both complete replays verify. Forty scientific batches are independently verified; V19 remains active.
+Current maker states can agree while future forecasts differ. All 624 time cells, 19,968 forecast summaries and both complete replays verify. Forty-one scientific batches are independently verified; V19 remains active.
+
+We tested whether knowing the maker's current state is enough for later prediction. Equal current states can yield different future endpoint forecasts under all eight supplied laws. Independent enumeration of 113,376,896 hypothesis-pair/time instances and 19,968 forecast summaries, plus both complete replays, verifies this constructed-method counterexample. The witnesses are not established reachable posteriors; historical process correspondence and human intent remain unestablished.
+
+[Full transition result](docs/versions/v19-local-maker/MARGINAL_TRANSITION_REPORT.md).
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
@@ -52,7 +56,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records forty verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records forty-one verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its

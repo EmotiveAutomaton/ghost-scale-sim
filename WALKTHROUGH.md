@@ -1,6 +1,10 @@
 # The walkthrough
 
-Checkpoint compression preserves final endpoint forecasts within the declared margin at 64/256 hypotheses while sometimes discarding true-maker support. All 225,280 rows, 19,800 estimates and both complete replays verify. Forty scientific batches are independently verified; V19 remains active.
+Current maker states can agree while future forecasts differ. All 624 time cells, 19,968 forecast summaries and both complete replays verify. Forty-one scientific batches are independently verified; V19 remains active.
+
+We tested whether knowing the maker's current state is enough for later prediction. Equal current states can yield different future endpoint forecasts under all eight supplied laws. Independent enumeration of 113,376,896 hypothesis-pair/time instances and 19,968 forecast summaries, plus both complete replays, verifies this constructed-method counterexample. The witnesses are not established reachable posteriors; historical process correspondence and human intent remain unestablished.
+
+[Full transition result](docs/versions/v19-local-maker/MARGINAL_TRANSITION_REPORT.md).
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

@@ -88,6 +88,7 @@ def main():
     elif kind=='mixture-compression':from ghostscale.validation.soundingline.v19.mixture_compression import run as handler
     elif kind=='compression-review':from ghostscale.validation.soundingline.v19.compression_review import run as handler
     elif kind=='marginal-transition':from ghostscale.validation.soundingline.v19.marginal_transition import run as handler
+    elif kind=='future-quotient':from ghostscale.validation.soundingline.v19.future_quotient import run as handler
     elif kind=='source-omission':from ghostscale.validation.soundingline.v19.source_omission import run as handler
     elif kind=='provenance-restoration':from ghostscale.validation.soundingline.v19.provenance_restoration import run as handler
     elif kind=='restoration-review':from ghostscale.validation.soundingline.v19.restoration_review import run as handler
