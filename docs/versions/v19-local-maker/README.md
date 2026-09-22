@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The possible-switch mixture improves fresh-endpoint prediction and current-state coverage after a purpose change; its small stationary penalty and supplied-time privilege remain explicit. Thirty-one scientific batches now have independent verification and complete replays. The V19 week remains active.
+The unknown-time/type filtering comparison and both complete replays agree on all saved outputs. Independent joint-hypothesis and score reconstruction is source-frozen; numerical differences remain unadjudicated. Thirty-one earlier scientific batches are verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -117,3 +117,5 @@ The [routine and current-request revision comparison](ROUTINE_REVISION_PROTOCOL.
 The [purpose-switch filtering report](TRANSIENT_FILTER_REPORT.md) now includes independent numerical reconstruction and all paired intervals. The [unknown-time/type comparison](UNKNOWN_CHANGE_PROTOCOL.md) implements the next discriminator; changed-tool transfer and the fixed-fit practice-support diagnostic remain prepared alternatives.
 
 The [prepared support-mixture design](SUPPORT_MIX_PROTOCOL.md) replaces the already-completed context re-tabulation: the practice learner has two original starting contexts. This future count-reweighting experiment and changed-tool support transfer remain independent alternatives; neither is claimed as implemented. The active unknown-change source snapshot is unchanged.
+
+The [unknown-time/type report](UNKNOWN_CHANGE_REPORT.md) verifies complete replay and evidence roles; [independent numerical reconstruction](UNKNOWN_REVIEW_PROTOCOL.md) is source-frozen. Changed-tool support transfer and fixed-budget support mixtures remain independent prepared alternatives.

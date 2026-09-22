@@ -1,5 +1,5 @@
-# Unknown-time/type filtering admission
+# Unknown-time/type filtering: replay verified, numerical review pending
 
-Five supplied-law filters compare current-state prediction under separately hidden change time and type. Original execution, adjacent replay and extracted-source replay share immutable source and inputs. No result is yet accepted. Reader evidence will contain observed endpoints, context and source identities only; maker, changes, joint hypotheses and scores are evaluator-only.
+Can a coherent filter retain current-state information when the change time and factor are unknown? The five-filter comparison and both complete replays match all 51 deterministic outputs across 4,096 streams and 112,640 scored rows. An independent checker is source-frozen before accepting prediction or state-recovery differences. This is a constructed-method reproducibility result: the exact law and allowed change family are supplied; historical process correspondence and human intent remain unestablished.
 
-[Protocol](../../../docs/versions/v19-local-maker/UNKNOWN_CHANGE_PROTOCOL.md).
+READER.zip contains observed context, endpoints and source identities only. SCIENTIFIC_EVALUATOR.zip and the eight SCIENTIFIC_LINEAGE archives jointly contain complete raw evidence, laws, hypotheses, posteriors, source, plan and timing; they are never reader inputs. EVALUATOR_MANIFEST.json binds every archive member. SUMMARY.json remains unadjudicated. [Report](../../../docs/versions/v19-local-maker/UNKNOWN_CHANGE_REPORT.md).

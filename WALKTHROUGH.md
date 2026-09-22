@@ -1,6 +1,6 @@
 # The walkthrough
 
-The possible-switch mixture improves fresh-endpoint prediction and current-state coverage after a purpose change; its small stationary penalty and supplied-time privilege remain explicit. Thirty-one scientific batches now have independent verification and complete replays. The V19 week remains active.
+The unknown-time/type filtering comparison and both complete replays agree on all saved outputs. Independent joint-hypothesis and score reconstruction is source-frozen; numerical differences remain unadjudicated. Thirty-one earlier scientific batches are verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 

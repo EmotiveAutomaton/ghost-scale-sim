@@ -75,6 +75,7 @@ def main():
     elif kind=='routine-review':from ghostscale.validation.soundingline.v19.routine_review import run as handler
     elif kind=='transient-filter':from ghostscale.validation.soundingline.v19.transient_filter import run as handler
     elif kind=='transient-review':from ghostscale.validation.soundingline.v19.transient_review import run as handler
+    elif kind=='unknown-review':from ghostscale.validation.soundingline.v19.unknown_review import run as handler
     elif kind=='unknown-change':from ghostscale.validation.soundingline.v19.unknown_change import run as handler
     elif kind=='rollout-transfer':from ghostscale.validation.soundingline.v19.rollout_transfer import run as handler
     else:raise ValueError('unsupported replay handler')
