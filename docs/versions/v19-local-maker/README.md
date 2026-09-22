@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Earlier/later change filtering and both complete replays agree on all retained outputs. Independent numerical reconstruction is source-frozen; timing effects remain unadjudicated. Thirty-four earlier scientific batches remain verified. The V19 week remains active.
+Moving changes away from the midpoint limits the earlier filtering equivalence: late changes in short streams produce a practically meaningful penalty for unknown timing. Prediction still improves over static filtering, while current-state coverage varies. Thirty-five scientific batches are independently verified with complete replays. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors

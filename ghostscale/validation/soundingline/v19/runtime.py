@@ -177,6 +177,8 @@ def run(root,campaign):
                 from .timing_review import run as handler
             elif plan['design']['handler']=='change-timing':
                 from .change_timing import run as handler
+            elif plan['design']['handler']=='source-omission':
+                from .source_omission import run as handler
             elif plan['design']['handler']=='support-mix':
                 from .support_mix import run as handler
             elif plan['design']['handler']=='mix-review':
