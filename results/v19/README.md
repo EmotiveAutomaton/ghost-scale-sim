@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Partial provenance restoration has completed its frozen comparison and apparatus identities. Both full replays and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
+Partial provenance restoration now has a verified adjacent replay: all 71 deterministic outputs match. Portable replay and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

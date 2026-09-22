@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-Partial provenance restoration has completed its frozen comparison and apparatus identities. Both full replays and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
+Partial provenance restoration now has a verified adjacent replay: all 71 deterministic outputs match. Portable replay and independent numerical reconstruction remain pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -132,4 +132,4 @@ The [earlier/later change report](CHANGE_TIMING_REPORT.md) records verified repl
 
 The [source-identity omission report](SOURCE_OMISSION_REPORT.md) records verified replay and evidence roles. The [independent checker](SOURCE_OMISSION_REVIEW_PROTOCOL.md) and separate paired regroup are complete. Primitive feedback and partial provenance restoration remain two independent prepared alternatives.
 
-The [partial provenance restoration report](PROVENANCE_RESTORATION_REPORT.md) records completed execution and exact apparatus identities. Both complete replays and the [independent reconstruction](PROVENANCE_RESTORATION_REVIEW_PROTOCOL.md) remain pending. Primitive feedback and filter-cost accounting remain independent prepared alternatives.
+The [partial provenance restoration report](PROVENANCE_RESTORATION_REPORT.md) records completed execution and exact apparatus identities. The adjacent replay matches all 71 outputs; portable replay and the [independent reconstruction](PROVENANCE_RESTORATION_REVIEW_PROTOCOL.md) remain pending. Primitive feedback and filter-cost accounting remain independent prepared alternatives.
