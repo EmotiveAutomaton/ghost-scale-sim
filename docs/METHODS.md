@@ -1085,4 +1085,13 @@ Changed-tool transfer now independently reconstructs both native populations, sa
 
 The fixed-budget support-mixture handler reconstructs saved ordered practice counts and parent scores, mixes empirical count mass with one prior, retains the frozen planner and verifies each score by exhaustive three-step path summation. Five weights and all three budgets remain fixed; no new trajectories or tiny settings are acquired. Eight isolated controls pass, including a complete fixture and deliberate parent-score corruption. [Protocol](versions/v19-local-maker/SUPPORT_MIX_PROTOCOL.md).
 
-The [independent practice-mixture checker](versions/v19-local-maker/SUPPORT_MIX_REVIEW_PROTOCOL.md) reconstructs observed counts and the native kernel without producer functions. Separate Bellman reductions verify saved-policy optimality; explicit path sums preserve the frozen numerical tie choices. Every context/support statistic and paired mixture contrast is retained. Eleven isolated controls pass, including fixture corruption and fit-within-lineage pairing; two initial fixture-mutation failures remain charged. All 1,743 original/replay/portable outputs match; numerical acceptance awaits checker execution.
+The [independent practice-mixture checker](versions/v19-local-maker/SUPPORT_MIX_REVIEW_PROTOCOL.md) reconstructs observed counts and the native kernel without producer functions. Separate Bellman reductions verify saved-policy optimality; explicit path sums preserve the frozen numerical tie choices. Every context/support statistic and paired mixture contrast is retained. Eleven isolated controls pass, including fixture corruption and fit-within-lineage pairing; two initial fixture-mutation failures remain charged. All 1,743 original/replay/portable outputs match; all numerical reconstruction and 900 independently recombined metric estimates now verify.
+
+Practice-mixture numerical review retains every context score, visitation measure, paired interval and numerical policy tie. Support changes and changed seen probabilities remain separate explanations; no optimal weight is selected. [Report](versions/v19-local-maker/SUPPORT_MIX_REPORT.md).
+
+The [change-timing protocol](versions/v19-local-maker/CHANGE_TIMING_PROTOCOL.md)
+transfers the five frozen supplied-law filters to earlier/later actual changes.
+It preserves source-time likelihoods and query-time state projection, reconstructs
+original midpoint/stationary scores first, and reuses the same uniforms without
+counting the old controls again. Eleven isolated timing/runtime/replay checks
+pass, including independent hypothesis products and a complete native fixture.

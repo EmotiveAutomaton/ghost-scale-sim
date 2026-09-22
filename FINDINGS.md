@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-The fixed-budget practice-mixture experiment and both complete replays match every deterministic output. Independent numerical reconstruction is source-frozen; no mixture benefit or optimum is accepted. Thirty-three earlier scientific batches are verified. The V19 week remains active.
+Fixed-budget practice mixtures restore unvisited-context production, with no established active-acquisition advantage and no monotonic benefit from further reweighting. All 34 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1062,8 +1062,8 @@ Does a learned composition advantage survive a changed primitive operation? No o
 
 [Full record](docs/versions/v19-local-maker/SUPPORT_TRANSFER_REPORT.md).
 
-## V19 fixed-budget practice mixtures — numerical review pending
+## V19 fixed-budget practice mixtures — independently verified
 
-Can reallocating a fixed practice-evidence budget restore production in an unvisited context? All 960 saved mixtures and both complete replays match across 1,743 deterministic outputs. The independent count, policy, score and paired-lineage checker is source-frozen; numerical benefits and tradeoffs remain unadjudicated. This is a constructed-method reproducibility result, not historical process correspondence or human intent.
+Can reallocating a fixed practice-evidence budget restore production in an unvisited context? At 512 episodes, a one-quarter matched-context mixture raises average success by 21.14 percentage points for active acquisition and 21.19 for demonstrations. Further reweighting is not uniformly beneficial; fully matched evidence loses some visited-context performance. Independent reconstruction and all paired intervals verify this exploratory constructed-method result, not historical process correspondence or human intent.
 
 [Full record](docs/versions/v19-local-maker/SUPPORT_MIX_REPORT.md).

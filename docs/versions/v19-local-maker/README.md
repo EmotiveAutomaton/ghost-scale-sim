@@ -1,6 +1,6 @@
 # V19: local maker reconstruction and usable predictive state
 
-The fixed-budget practice-mixture experiment and both complete replays match every deterministic output. Independent numerical reconstruction is source-frozen; no mixture benefit or optimum is accepted. Thirty-three earlier scientific batches are verified. The V19 week remains active.
+Fixed-budget practice mixtures restore unvisited-context production, with no established active-acquisition advantage and no monotonic benefit from further reweighting. All 34 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 The [test coverage ledger](../../../results/v19/TEST_COVERAGE.json) distinguishes
 verified batches, the verified joint-process comparison, implemented successors
@@ -122,4 +122,9 @@ The [unknown-time/type report](UNKNOWN_CHANGE_REPORT.md) now includes [independe
 
 The [changed-tool transfer report](SUPPORT_TRANSFER_REPORT.md) includes complete replay, independent numerical reconstruction, paired intervals and evidence roles. Practice mixtures proceed through source admission; off-midpoint changes and [bounded primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) remain prepared alternatives.
 
-The [practice-mixture report](SUPPORT_MIX_REPORT.md) verifies complete replay and evidence separation. Its [independent numerical checker](SUPPORT_MIX_REVIEW_PROTOCOL.md) is frozen for serial execution. Off-midpoint changes and bounded primitive feedback remain prepared alternatives.
+The [practice-mixture report](SUPPORT_MIX_REPORT.md) verifies complete replay and evidence separation. Its [independent numerical checker](SUPPORT_MIX_REVIEW_PROTOCOL.md) and separate 900-estimate regroup are complete. Off-midpoint changes and bounded primitive feedback remain prepared alternatives.
+
+The [earlier/later change protocol](CHANGE_TIMING_PROTOCOL.md) now has an
+implemented handler and eleven isolated passing controls. Source admission still
+precedes execution. Bounded primitive feedback and source-identity omission remain
+two independent prepared alternatives.

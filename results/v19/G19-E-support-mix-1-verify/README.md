@@ -1,3 +1,3 @@
-# Independent practice-mixture checker admission
+# Independently verified practice-mixture checker
 
-Eleven isolated controls pass. Sources and completed evidence are frozen for the existing serial queue. This is admission, not numerical acceptance. [Protocol](../../../docs/versions/v19-local-maker/SUPPORT_MIX_REVIEW_PROTOCOL.md).
+All parent/mixed counts and policy path sums reconstruct within 3.34e-16. All 900 metric estimates and paired intervals verify separately. [Verification export](../G19-E-support-mix-1/NUMERICAL_REVIEW.json). The original admission receipt remains historical.

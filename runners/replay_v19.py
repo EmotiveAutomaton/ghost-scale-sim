@@ -79,6 +79,7 @@ def main():
     elif kind=='transient-review':from ghostscale.validation.soundingline.v19.transient_review import run as handler
     elif kind=='unknown-review':from ghostscale.validation.soundingline.v19.unknown_review import run as handler
     elif kind=='unknown-change':from ghostscale.validation.soundingline.v19.unknown_change import run as handler
+    elif kind=='change-timing':from ghostscale.validation.soundingline.v19.change_timing import run as handler
     elif kind=='support-mix':from ghostscale.validation.soundingline.v19.support_mix import run as handler
     elif kind=='mix-review':from ghostscale.validation.soundingline.v19.mix_review import run as handler
     elif kind=='rollout-transfer':from ghostscale.validation.soundingline.v19.rollout_transfer import run as handler

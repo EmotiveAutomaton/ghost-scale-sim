@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-The fixed-budget practice-mixture experiment and both complete replays match every deterministic output. Independent numerical reconstruction is source-frozen; no mixture benefit or optimum is accepted. Thirty-three earlier scientific batches are verified. The V19 week remains active.
+Fixed-budget practice mixtures restore unvisited-context production, with no established active-acquisition advantage and no monotonic benefit from further reweighting. All 34 scientific batches have independent verification and complete replays. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
