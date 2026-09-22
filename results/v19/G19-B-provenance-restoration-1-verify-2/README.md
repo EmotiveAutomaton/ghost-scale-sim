@@ -1,3 +1,3 @@
-# Independent restoration checker: gated serial admission
+# Independently verified restoration checker
 
-The checker source and inputs are frozen. A mandatory native fixture and known-answer controls must pass in the serial worker before campaign reconstruction. The previous unexecuted checker snapshot is retained, superseded solely to add an explicit live-effect control before dispatch. No numerical outcome was used. [Protocol](../../../docs/versions/v19-local-maker/PROVENANCE_RESTORATION_REVIEW_PROTOCOL.md).
+Eight mandatory controls passed; all paths, correction conditions, joint arrays, forecasts and scores reconstruct within 6.08e-13. All 29,500 estimates and intervals independently recombine. [Evidence](../G19-B-provenance-restoration-1/NUMERICAL_REVIEW.json).

@@ -2,7 +2,7 @@
 
 What does the unknown-time/type filter's predictive improvement cost in retained
 state, likelihood work and repeated queries? This is a finite B-family alternative;
-no implementation or admission is claimed. It does not require provenance
+the handler is implemented and awaits isolated controls and source admission. It does not require provenance
 restoration or a neural reader to win.
 
 Use the completed unknown-time/type, timing and source-omission packets, keeping
@@ -32,3 +32,38 @@ source and input hashes. No evaluator data becomes a reader input. This can
 establish conditional cost tradeoffs, not a learned memory advantage or human
 intent. Cap one CPU hour including controls and review within B/global limits.
 Changed-primitive feedback remains a separate prepared experimental alternative.
+
+## Frozen accounting definitions before execution
+
+One endpoint query asks for the eight outcomes in one of four supplied contexts.
+The common dense law occupies 4,096 float64 bytes. A current-maker distribution
+has sixteen weights (128 bytes); the complete hypothesis vector has H weights
+(8H bytes). These are component sizes, not total resident or peak memory. Priors,
+integer indices, retained JSON observations and temporary buffers are separate.
+
+At each checkpoint count S distinct supplied sources, retaining at most sixteen
+for reset. Logical prefix reconstruction uses H times S likelihood-factor
+applications; mixture projection contributes H weighted terms. A context forecast
+has 128 multiplications and 120 additions. These counts describe the stipulated
+calculation, not CPU instructions. Mixture implementations accumulate sources
+incrementally; static/reset implementations reread at checkpoints. Whole-call
+timings include each implementation's actual checkpoint work and exclude scoring,
+but do not isolate parsing, normalization or individual queries.
+
+The symbolic surface compares caching the current maker posterior once at a fixed
+checkpoint against rebuilding that identical posterior for each query. Write
+U = H*S + projection contributions, and r for the stipulated ratio of an endpoint
+multiplication to an update unit. Costs are U + Q*r*128 and Q*(U + r*128).
+They tie at one query; cached computation first saves work at two queries.
+This algebra is an accounting identity, not an empirical discovery. Parsing,
+normalization, additions and memory costs are omitted from this scenario and may
+change measured break-even. Do not compare costs as if different filters supplied
+identical answers. All five retained score measures accompany every cost cell.
+
+Freeze all three original/adjacent/portable timing files, every original stream,
+forecast, joint index/roster, summary, plan and completion receipt. Verify timing
+row uniqueness, full call coverage and nonnegative finite duration; missing data
+fails admission or the handler. Reproduce the original maker-averaged score cells
+from retained rows without executing any filter. Keep original populations and
+repeated stationary reference copies separate. No new reader export is required:
+cost records are scientific/evaluator products, never reader evidence.

@@ -179,6 +179,8 @@ def run(root,campaign):
                 from .change_timing import run as handler
             elif plan['design']['handler']=='omission-review':
                 from .omission_review import run as handler
+            elif plan['design']['handler']=='filter-cost':
+                from .filter_cost import run as handler
             elif plan['design']['handler']=='source-omission':
                 from .source_omission import run as handler
             elif plan['design']['handler']=='provenance-restoration':

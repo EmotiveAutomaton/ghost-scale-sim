@@ -1,6 +1,6 @@
 # V19 scientific records and reader export
 
-Partial provenance restoration now has verified adjacent and extracted-source portable replays: all 71 deterministic outputs match in each. Independent numerical reconstruction remains pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
+Partial provenance correction does not consistently restore current-maker uncertainty coverage, despite small final prediction effects for the unknown-time/type filter. All 29,500 numerical estimates and both complete replays verify. Thirty-seven scientific batches are independently verified. The V19 week remains active.
 
 [Test coverage](TEST_COVERAGE.json) records the current implementation and queue
 dispositions separately from scientific findings. The complete V19 regression job

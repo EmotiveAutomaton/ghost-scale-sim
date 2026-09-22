@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-Partial provenance restoration now has verified adjacent and extracted-source portable replays: all 71 deterministic outputs match in each. Independent numerical reconstruction remains pending. Thirty-six earlier scientific batches are independently verified. The V19 week remains active.
+Partial provenance correction does not consistently restore current-maker uncertainty coverage, despite small final prediction effects for the unknown-time/type filter. All 29,500 numerical estimates and both complete replays verify. Thirty-seven scientific batches are independently verified. The V19 week remains active.
 
 Does a learned predictive bank help recover the maker’s complete local goal-and-operation sequence? No practical bank advantage was found. Its learning-curve gain over raw history is below 0.007 nats with artifacts or context alone; with sparse and complete operation witnesses, loss increases by 0.09365 and 0.27545 nats. Independent reconstruction and both full replays verify this exploratory constructed-method result. Process compatibility remains poor; historical uniqueness and human intent are not established.
 
@@ -1080,8 +1080,8 @@ Does counting copied observations as distinct sources change the maker account? 
 
 [Full record](docs/versions/v19-local-maker/SOURCE_OMISSION_REPORT.md).
 
-## V19 partial provenance restoration — numerical review pending
+## V19 partial provenance restoration — independently verified
 
-Can partial source corrections repair a maker account distorted by copied evidence? The extracted-source portable replay and adjacent replay each reproduce all 71 deterministic outputs of the 353,280-row comparison. Independent numerical reconstruction remains pending; no correction benefit or harm is accepted. This is a constructed-method reproducibility result under supplied laws and provenance, not historical process correspondence or human intent.
+Can partial source corrections repair a maker account distorted by copied evidence? Partial correction does not consistently restore current-maker uncertainty coverage. For the unknown-time/type filter, all final prediction contrasts stay within the declared 0.02-nat margin; correction amount and evidence age still change coverage in different directions. Independent reconstruction, all 29,500 estimates and both complete replays verify this constructed-method result under supplied laws. It establishes neither learned provenance detection, historical process correspondence nor human intent.
 
 [Full record](docs/versions/v19-local-maker/PROVENANCE_RESTORATION_REPORT.md).
