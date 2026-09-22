@@ -51,3 +51,19 @@ lineages. Independent [primitive feedback](PRIMITIVE_FEEDBACK_PROTOCOL.md) and
 neither needs compression to win.
 
 The first independent checker admission was withdrawn before numerical execution after static review found a NumPy boolean in a JSON control verdict. Its source and plan remain retained. A separately frozen replacement converts the verdict to a native boolean and adds a serialization regression check; scientific selection, projection, scoring and population definitions are unchanged. All numerical fixtures remain mandatory before reconstruction.
+
+That replacement stopped at its fixture gate: eight tests passed, including the
+complete native reconstruction and deliberate corruption test; one assertion
+rejected 0.37499999999999994 against a lower bound of 0.375. Exact rational
+arithmetic gives (3/10)/(1/2 + 3/10) = 3/8; the computed value is one binary64
+step below it. The next frozen checker replaces that lower bound with an
+equality check against the exact expected mass, allowing one binary64 step.
+This is a tighter known-answer check, not a changed scientific tolerance.
+The failed gate, log, source, fixture outputs and CPU charge are retained.
+All nine tests must pass in the serial worker before campaign reconstruction.
+No selection, score, bootstrap, population or practical threshold is changed.
+
+The separately frozen assertion repair has now passed all nine mandatory controls
+without skips, including the complete native fixture and deliberate corruption.
+Independent campaign reconstruction was observed running afterward. This gate
+verifies the repaired checker apparatus; it does not accept the campaign scores.

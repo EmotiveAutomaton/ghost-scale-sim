@@ -1115,3 +1115,18 @@ The [fixed-tempering checker](versions/v19-local-maker/PROVENANCE_TEMPERING_REVI
 The [checkpoint compression comparison](versions/v19-local-maker/MIXTURE_COMPRESSION_PROTOCOL.md) is implemented and source-frozen after 13 isolated controls, including a complete native parent fixture and deliberate corruption. The five fixed capacities retain complete hypotheses; removed probability mass, indices, weights, proper scores and credible-set size remain separate. Original and both full replays are admitted; no outcome is accepted. Primitive feedback and the exact current-marginal transition diagnostic remain two prepared independent alternatives.
 
 The [checkpoint-compression checker](versions/v19-local-maker/MIXTURE_COMPRESSION_REVIEW_PROTOCOL.md) independently sorts probability/index pairs, projects accurately summed state buckets, and reconstructs scalar forecasts, proper scores, credible sets, removal mass and component storage. It preserves the original logarithm floor, fixed capacities and all paired strata. Mandatory ambiguity, tie, zero-mass, change-boundary, complete native-fixture and corruption controls precede numerical reconstruction in the serial worker; admission is not a pass claim. Parent laws and posteriors inherit prior validation. Reader inputs remain unchanged.
+
+Checkpoint-compression complete replay now verifies all 111 deterministic outputs
+against both native reruns. Its first executed independent checker stopped at a
+rounding-sensitive fixture lower bound: the exact reference 3/8 and its adjacent
+binary64 predecessor differed by 5.551115123125783e-17. The separately frozen
+repair uses a one-step equality tolerance against that rational reference;
+scientific tolerances and the 0.02-nat loss margin remain unchanged. Eight other
+controls passed, including full native reconstruction and deliberate corruption.
+The retained failure is an engineering result; all nine controls must pass before
+independent campaign adjudication.
+
+The separately frozen assertion repair has now passed all nine mandatory controls
+without skips, including the complete native fixture and deliberate corruption.
+Independent campaign reconstruction was observed running afterward. This gate
+verifies the repaired checker apparatus; it does not accept the campaign scores.

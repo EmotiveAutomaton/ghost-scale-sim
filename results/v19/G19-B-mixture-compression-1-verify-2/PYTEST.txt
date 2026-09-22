@@ -1,0 +1,18 @@
+.F.......                                                                [100%]
+================================== FAILURES ===================================
+_______________ test_scalar_projection_ties_and_zero_mass_floor _______________
+
+    def test_scalar_projection_ties_and_zero_mass_floor():
+        assert all(V.controls().values())
+        hs=[('none',0,0),('purpose',16,0),('skill',16,1)]
+        weights=[.5,.3,.2];ix,w,removed=V.selection(weights,'2')
+        assert ix==[0,1] and removed==pytest.approx(.2)
+        for step,expected in ((16,0),(17,8)):
+            states=V.current_indices(hs,step);p=V.projection(states,ix,w)
+>           assert p[expected]>=.375
+E           assert np.float64(0.37499999999999994) >= 0.375
+
+tests\test_v19_compression_review.py:27: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_v19_compression_review.py::test_scalar_projection_ties_and_zero_mass_floor
+1 failed, 8 passed in 80.66s (0:01:20)

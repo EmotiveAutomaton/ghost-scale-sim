@@ -22,9 +22,11 @@ def test_scalar_projection_ties_and_zero_mass_floor():
     hs=[('none',0,0),('purpose',16,0),('skill',16,1)]
     weights=[.5,.3,.2];ix,w,removed=V.selection(weights,'2')
     assert ix==[0,1] and removed==pytest.approx(.2)
-    for step,expected in ((16,0),(17,8)):
+    for step,expected,mass in ((16,0,1.),(17,8,3/8)):
         states=V.current_indices(hs,step);p=V.projection(states,ix,w)
-        assert p[expected]>=.375
+        # Exact decimal weights give (3/10)/(1/2+3/10) = 3/8.
+        # Binary64 division can land one adjacent float below that reference.
+        assert p[expected]==pytest.approx(mass,rel=0,abs=math.ulp(mass))
         assert p[0]==pytest.approx(1. if step==16 else .625)
     assert V.selection([.5,.5],'1')[0]==[0]
     assert V.projection([7,2],*V.selection([.5,.5],'1')[:2])[7]==1

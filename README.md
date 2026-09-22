@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-Checkpoint mixture compression has verified execution bindings and 45,056 exact full-mixture parent identities. Complete replay acceptance and independent numerical reconstruction remain pending. Thirty-nine earlier scientific batches are independently verified. The V19 week remains active.
+Checkpoint mixture compression has two verified complete replays: all 111 deterministic outputs match. The fixture-only repair passes all nine controls; independent numerical reconstruction remains pending, and the failed gate is retained. Thirty-nine earlier scientific batches are independently verified. The V19 week remains active.
 
 The learned-forward pilot finds no sampled-rollout advantage over direct endpoint prediction. Exact propagation removes sampling error but leaves an uncertain small advantage at the largest training budget. All native paths, forecasts and scores reconstruct, and both complete replays match. Twenty-six scientific batches are verified; historical process correspondence and the main joint readout remain open.
 
