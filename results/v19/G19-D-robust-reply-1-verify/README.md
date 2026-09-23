@@ -1,3 +1,3 @@
-# Independent robust-decision review
+# Independent review: accepted
 
-The complete scalar fixture and deliberate corruptions pass. The source-bound checker is admitted; numerical acceptance and final write-through remain separate.
+All 3456 original cells reconstruct; 5760 paired estimates separately regroup. [Full report](../../../docs/versions/v19-local-maker/ROBUST_REPLY_REPORT.md).

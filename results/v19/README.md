@@ -1,5 +1,9 @@
 # V19 scientific records and reader export
 
+We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
+
+[Verified report](../../docs/versions/v19-local-maker/ROBUST_REPLY_REPORT.md). 54 scientific batches now have independent acceptance.
+
 We tested how much forecast uncertainty remains when reply reliability is unspecified. Under native weighting with 75%-accurate replies, the mean compatible-set diameter for belief reports is 0.08203 on original tools and 0.11160 on changed tools; for skill reports it is 0.04550 under both. Diameter is half the summed absolute probability differences, from zero for agreement to one for disjoint predictions. All 31,744 sets, 336 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access and historical process correspondence remain unestablished.
 
 [Verified report](../../docs/versions/v19-local-maker/UNCERTAIN_RELIABILITY_REPORT.md). 53 scientific batches now have independent acceptance.
