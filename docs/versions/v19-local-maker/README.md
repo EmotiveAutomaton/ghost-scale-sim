@@ -1,5 +1,7 @@
 # V19: local maker reconstruction and usable predictive state
 
+V19 has 56 independently accepted scientific batches. The operation-versus-goal uncertainty diagnostic is source admitted after 22 isolated controls and was observed executing through the existing serial queue. It retains frozen original forecasts and all development strata. Retrospective updating and learned joint factorization remain two prepared, unimplemented alternatives; no new fit or protected lineage is admitted. [Contract](JOINT_UNCERTAINTY_ADMISSION_PROTOCOL.md).
+
 We tested whether public execution constraints improve frozen joint-process readouts. With complete witnesses and 2,048 labels, restriction reduces the predictive bank’s logarithmic loss from 5.60252 to 0.91337 nats; matched frequencies reach 0.90746. Across training budgets, the bank’s advantage over frozen latent state stays below the declared 0.02-nat margin in every evidence tier. Independent reconstruction, all 160 paired estimates and both complete replays verify this constructed-method result; supplied operations do not establish recovered historical goals.
 
 V19 remains active with 56 independently accepted scientific batches. Public-support decoding is numerically verified; the practical predictive-bank advantage over frozen latent state is absent on this fixed roster. Joint uncertainty decomposition is the next prepared diagnostic; retrospective updating remains independent. [Report](JOINT_SUPPORT_REPORT.md).
@@ -11,8 +13,9 @@ V19 remains active with 55 independently accepted scientific batches. Continuous
 The [continuous-reliability certificate](CONTINUOUS_RELIABILITY_REPORT.md) is
 independently accepted. The [support decoder](JOINT_SUPPORT_REPORT.md) has complete
 replays and independent numerical acceptance. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
-and [joint uncertainty decomposition](JOINT_UNCERTAINTY_PROTOCOL.md) are prepared,
-unimplemented alternatives independent of this diagnostic's outcome.
+remains prepared. The [joint uncertainty decomposition](JOINT_UNCERTAINTY_ADMISSION_PROTOCOL.md)
+is now implemented and source admitted; [learned joint factorization](JOINT_FACTORIZATION_PROTOCOL.md)
+is the second independent prepared alternative.
 
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 

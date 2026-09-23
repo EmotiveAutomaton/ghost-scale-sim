@@ -1,5 +1,7 @@
 # V19 scientific records and reader export
 
+V19 has 56 independently accepted scientific batches. The operation-versus-goal uncertainty diagnostic is source admitted after 22 isolated controls and was observed executing through the existing serial queue. It retains frozen original forecasts and all development strata. Retrospective updating and learned joint factorization remain two prepared, unimplemented alternatives; no new fit or protected lineage is admitted. [Contract](../../docs/versions/v19-local-maker/JOINT_UNCERTAINTY_ADMISSION_PROTOCOL.md).
+
 We tested whether public execution constraints improve frozen joint-process readouts. With complete witnesses and 2,048 labels, restriction reduces the predictive bank’s logarithmic loss from 5.60252 to 0.91337 nats; matched frequencies reach 0.90746. Across training budgets, the bank’s advantage over frozen latent state stays below the declared 0.02-nat margin in every evidence tier. Independent reconstruction, all 160 paired estimates and both complete replays verify this constructed-method result; supplied operations do not establish recovered historical goals.
 
 V19 remains active with 56 independently accepted scientific batches. Public-support decoding is numerically verified; the practical predictive-bank advantage over frozen latent state is absent on this fixed roster. Joint uncertainty decomposition is the next prepared diagnostic; retrospective updating remains independent. [Report](../../docs/versions/v19-local-maker/JOINT_SUPPORT_REPORT.md).
