@@ -1,8 +1,12 @@
 # V19: local maker reconstruction and usable predictive state
 
+We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. All 71 deterministic files match across the original run and both complete replays. The independent scalar checker passes 26 controls and is source admitted; numerical acceptance remains pending. This is a supplied-law constructed-method certificate, not evidence of learned access or historical process correspondence.
+
+V19 remains active with 54 independently accepted scientific batches. Continuous-reliability execution and both complete replays verify; independent numerical acceptance is pending. Retrospective updating and public-evidence support decoding remain two prepared, unimplemented alternatives. [Report](CONTINUOUS_RELIABILITY_REPORT.md).
+
 The [continuous-reliability certificate](CONTINUOUS_RELIABILITY_ADMISSION_PROTOCOL.md)
-is implemented and passes 18 isolated controls; scientific acceptance awaits
-execution, both complete replays and independent numerical review. This is a
+has verified execution and both complete replays after 18 producer controls;
+scientific acceptance awaits independent numerical review. This is a
 new bounded question about every intermediate reliability, with singular
 endpoints explicitly excluded. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
 and [public-evidence support decoder](JOINT_SUPPORT_DECODER_PROTOCOL.md) remain

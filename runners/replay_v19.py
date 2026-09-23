@@ -106,6 +106,7 @@ def main():
     elif kind=='robust-reply':from ghostscale.validation.soundingline.v19.robust_reply import run as handler
     elif kind=='robust-review':from ghostscale.validation.soundingline.v19.robust_review import run as handler
     elif kind=='continuous-reliability':from ghostscale.validation.soundingline.v19.continuous_reliability import run as handler
+    elif kind=='continuous-review':from ghostscale.validation.soundingline.v19.continuous_review import run as handler
     elif kind=='joint-reply-review':from ghostscale.validation.soundingline.v19.joint_reply_review import run as handler
     elif kind=='optional-review':from ghostscale.validation.soundingline.v19.optional_review import run as handler
     elif kind=='optional-disclosure':from ghostscale.validation.soundingline.v19.optional_disclosure import run as handler

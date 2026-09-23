@@ -1,5 +1,9 @@
 # Ghost Scale Simulation
 
+We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. All 71 deterministic files match across the original run and both complete replays. The independent scalar checker passes 26 controls and is source admitted; numerical acceptance remains pending. This is a supplied-law constructed-method certificate, not evidence of learned access or historical process correspondence.
+
+V19 remains active with 54 independently accepted scientific batches. Continuous-reliability execution and both complete replays verify; independent numerical acceptance is pending. Retrospective updating and public-evidence support decoding remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/CONTINUOUS_RELIABILITY_REPORT.md).
+
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 
 [Verified report](docs/versions/v19-local-maker/ROBUST_REPLY_REPORT.md). 54 scientific batches now have independent acceptance.
@@ -108,14 +112,14 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records fifty-two verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records fifty-four verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its
 [opening report](docs/versions/v19-local-maker/OPENING_REPORT.md) reproduces the
 paired old-bank benefit and admits an exact three-unit local-goal world with
 110,592 trajectories. Public evidence and evaluator truth have separate exports.
-The [A1 diagnostic](docs/versions/v19-local-maker/A1_REPORT.md) finds a large softmax penalty from repaired linear decoding of noisy banks, with a satisficing reversal. The first local readout screen is exploratory; the broader primary comparison and confirmation remain open.
+The [A1 diagnostic](docs/versions/v19-local-maker/A1_REPORT.md) finds a large softmax penalty from repaired linear decoding of noisy banks, with a satisficing reversal. The first local screen and the full joint-process comparison are exploratory; confirmation remains open.
 
 ## V18.4 fixed-cutoff report
 

@@ -1,12 +1,16 @@
 # The methodology layer
 
+We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. All 71 deterministic files match across the original run and both complete replays. The independent scalar checker passes 26 controls and is source admitted; numerical acceptance remains pending. This is a supplied-law constructed-method certificate, not evidence of learned access or historical process correspondence.
+
+The independent continuum checker uses scalar hypothesis likelihoods and exact-fraction partition checks, validates singular endpoint exclusion, and compares the accepted finite-set reference. The grid validates implementation; the real-valued algebra is separate. [Review protocol](versions/v19-local-maker/CONTINUOUS_REVIEW_PROTOCOL.md).
+
 The continuous-reliability handler partitions endpoint mass by whether the
 requested bit matches the reply. Nonnegative affine masses yield a conditional
 forecast segment; zero-support endpoints use explicit compatibility flags and
 limits. Exact rational fixtures and an independently implemented scalar Bayes
 grid pass within 18 isolated controls. The grid checks implementation, while
-the algebra supplies the continuum argument. Campaign outputs still require
-both full replays and independent reconstruction before acceptance.
+the algebra supplies the continuum argument. Campaign outputs have verified
+execution and both full replays; independent reconstruction remains pending.
 [Admission contract](versions/v19-local-maker/CONTINUOUS_RELIABILITY_ADMISSION_PROTOCOL.md).
 
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.

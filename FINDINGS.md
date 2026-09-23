@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. All 71 deterministic files match across the original run and both complete replays. The independent scalar checker passes 26 controls and is source admitted; numerical acceptance remains pending. This is a supplied-law constructed-method certificate, not evidence of learned access or historical process correspondence.
+
+V19 remains active with 54 independently accepted scientific batches. Continuous-reliability execution and both complete replays verify; independent numerical acceptance is pending. Retrospective updating and public-evidence support decoding remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/CONTINUOUS_RELIABILITY_REPORT.md).
+
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 
 [Verified report](docs/versions/v19-local-maker/ROBUST_REPLY_REPORT.md). 54 scientific batches now have independent acceptance.
