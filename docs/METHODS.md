@@ -1,6 +1,9 @@
 # The methodology layer
 
-V19 has 58 independently accepted scientific batches. The learned temporal-factorization diagnostic is source admitted after 22 isolated controls and was observed executing through the existing serial queue. It preserves every original forecast and compares its own product of three within-step goal/operation marginals, with native posterior products kept as evaluator references. Retrospective updating and within-step factorization remain two prepared, unimplemented alternatives; no new fit or protected lineage is admitted. [Contract](versions/v19-local-maker/TEMPORAL_FACTORIZATION_ADMISSION_PROTOCOL.md).
+We tested whether dependence between steps improves frozen joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 35 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+
+The independent factorization checker uses scalar integer-label step-pair marginal sums, verifies saved binary64 products before tie-sensitive scoring, reconstructs every metric and separately groups original and reconstructed rows with paired lineage multiplicities. [Protocol](versions/v19-local-maker/TEMPORAL_FACTORIZATION_REVIEW_PROTOCOL.md).
+
 
 We tested whether learned dependence between goal and operation sequences improves joint-process prediction. With complete witnesses and 2,048 labels, removing that dependence increases the predictive bank’s logarithmic loss by 2.30965 nats; the matched-frequency baseline shows a similar penalty. Independent reconstruction, all 80 paired estimates and both complete replays verify this constructed-method advantage. The exact reference needs no such dependence under complete witnesses, so this does not establish recovered historical process or human intent.
 

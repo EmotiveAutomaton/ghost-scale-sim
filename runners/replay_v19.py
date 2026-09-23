@@ -70,6 +70,7 @@ def main():
     elif kind=='joint-support-review':from ghostscale.validation.soundingline.v19.joint_support_review import run as handler
     elif kind=='joint-uncertainty':from ghostscale.validation.soundingline.v19.joint_uncertainty import run as handler
     elif kind=='joint-uncertainty-review':from ghostscale.validation.soundingline.v19.joint_uncertainty_review import run as handler
+    elif kind=='temporal-factorization-review':from ghostscale.validation.soundingline.v19.temporal_factorization_review import run as handler
     elif kind=='temporal-factorization':from ghostscale.validation.soundingline.v19.temporal_factorization import run as handler
     elif kind=='joint-factorization':from ghostscale.validation.soundingline.v19.joint_factorization import run as handler
     elif kind=='joint-factorization-review':from ghostscale.validation.soundingline.v19.joint_factorization_review import run as handler

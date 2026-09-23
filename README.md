@@ -1,5 +1,9 @@
 # Ghost Scale Simulation
 
+We tested whether dependence between steps improves frozen joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 35 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+
+V19 remains active with 58 independently accepted scientific batches. Temporal factorization has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and within-step factorization remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/TEMPORAL_FACTORIZATION_REPORT.md).
+
 We tested whether learned dependence between goal and operation sequences improves joint-process prediction. With complete witnesses and 2,048 labels, removing that dependence increases the predictive bank’s logarithmic loss by 2.30965 nats; the matched-frequency baseline shows a similar penalty. Independent reconstruction, all 80 paired estimates and both complete replays verify this constructed-method advantage. The exact reference needs no such dependence under complete witnesses, so this does not establish recovered historical process or human intent.
 
 V19 remains active with 58 independently accepted scientific batches. Learned sequence dependence improves frozen joint forecasts relative to their own marginal products; matched frequencies share the advantage. Temporal factorization and retrospective updating remain independent alternatives. [Report](docs/versions/v19-local-maker/JOINT_FACTORIZATION_REPORT.md).
