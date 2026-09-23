@@ -1,19 +1,18 @@
 # V19: local maker reconstruction and usable predictive state
 
-The public-mechanics support decoder is source admitted after 20 isolated controls and has begun execution through the existing serial queue. It retains all goal sequences, restricts only mechanically incompatible operation paths, and compares the frozen readouts with matched frequency and uniform-support baselines. No new fit or protected lineage enters; numerical acceptance is pending.
+We tested whether public execution constraints improve frozen joint-process readouts. All 1,457 deterministic files match across the original run and both complete replays. The independent checker passes 21 controls and has completed execution; numerical acceptance remains pending. This is a supplied-mechanics constructed-method comparison; mechanical legality does not establish historical process correspondence.
+
+V19 remains active with 55 independently accepted scientific batches. Public-support decoding has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and joint uncertainty decomposition remain two prepared, unimplemented alternatives. [Report](JOINT_SUPPORT_REPORT.md).
 
 We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
 V19 remains active with 55 independently accepted scientific batches. Continuous-reliability numerical reconstruction and complete replay are verified. Public-evidence support decoding and retrospective updating remain independent prepared alternatives. [Report](CONTINUOUS_RELIABILITY_REPORT.md).
 
-The [continuous-reliability certificate](CONTINUOUS_RELIABILITY_ADMISSION_PROTOCOL.md)
-has verified execution and both complete replays after 18 producer controls;
-scientific acceptance awaits independent numerical review. This is a
-new bounded question about every intermediate reliability, with singular
-endpoints explicitly excluded. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
-and [public-evidence support decoder](JOINT_SUPPORT_DECODER_PROTOCOL.md) remain
-two prepared, unimplemented alternatives. The latter addresses the primary
-joint-process readout's poor compatibility without fitting another model.
+The [continuous-reliability certificate](CONTINUOUS_RELIABILITY_REPORT.md) is
+independently accepted. The [support decoder](JOINT_SUPPORT_REPORT.md) has complete
+replays and a completed independent checker awaiting numerical review. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
+and [joint uncertainty decomposition](JOINT_UNCERTAINTY_PROTOCOL.md) are prepared,
+unimplemented alternatives independent of this diagnostic's outcome.
 
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 

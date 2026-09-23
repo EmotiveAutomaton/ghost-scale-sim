@@ -1,6 +1,8 @@
 # V19 scientific records and reader export
 
-The public-mechanics support decoder is source admitted after 20 isolated controls and has begun execution through the existing serial queue. It retains all goal sequences, restricts only mechanically incompatible operation paths, and compares the frozen readouts with matched frequency and uniform-support baselines. No new fit or protected lineage enters; numerical acceptance is pending.
+We tested whether public execution constraints improve frozen joint-process readouts. All 1,457 deterministic files match across the original run and both complete replays. The independent checker passes 21 controls and has completed execution; numerical acceptance remains pending. This is a supplied-mechanics constructed-method comparison; mechanical legality does not establish historical process correspondence.
+
+V19 remains active with 55 independently accepted scientific batches. Public-support decoding has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and joint uncertainty decomposition remain two prepared, unimplemented alternatives. [Report](../../docs/versions/v19-local-maker/JOINT_SUPPORT_REPORT.md).
 
 We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
