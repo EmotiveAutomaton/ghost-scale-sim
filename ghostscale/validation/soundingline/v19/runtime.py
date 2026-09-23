@@ -155,6 +155,8 @@ def run(root,campaign):
                 from .joint_uncertainty import run as handler
             elif plan['design']['handler']=='joint-uncertainty-review':
                 from .joint_uncertainty_review import run as handler
+            elif plan['design']['handler']=='temporal-factorization':
+                from .temporal_factorization import run as handler
             elif plan['design']['handler']=='joint-factorization':
                 from .joint_factorization import run as handler
             elif plan['design']['handler']=='joint-factorization-review':

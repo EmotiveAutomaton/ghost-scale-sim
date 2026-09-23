@@ -1,3 +1,3 @@
-# Independent joint uncertainty review
+# Independent sequence-factorization review: complete
 
-The complete synthetic fixture, independent scalar marginals and scores and corruption controls pass. The checker is source admitted; campaign numerical acceptance remains pending. Original producer and replay sources remain unchanged.
+All 20,480 learned strata, 128 native rows, 80 paired estimates and 128 means reconstruct. Thirty-three controls passed before dispatch. Raw reconstruction is scientific/evaluator evidence; fitted forecasts and native targets remain inherited verified inputs.

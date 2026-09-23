@@ -1,81 +1,96 @@
-# Learned sequence dependence: execution and replay verified
+# Learned sequence dependence: independently verified
 
-We tested whether learned dependence between goal and operation sequences improves joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+We tested whether learned dependence between goal and operation sequences improves joint-process prediction. With complete witnesses and 2,048 labels, removing that dependence increases the predictive bank’s logarithmic loss by 2.30965 nats; the matched-frequency baseline shows a similar penalty. Independent reconstruction, all 80 paired estimates and both complete replays verify this constructed-method advantage. The exact reference needs no such dependence under complete witnesses, so this does not establish recovered historical process or human intent.
 
-The diagnostic compares each frozen joint forecast with the product of its own
-goal-sequence and operation-sequence marginals. A label identifies one of 27
-three-goal sequences and one of 216 three-operation sequences. Dependence within
-each sequence remains; dependence between the sequences is removed. Unknown
-probability is expanded over all 5,832 labels. No legal-support mask is applied.
-Products can create combinations absent from native support; this is tested.
+Each frozen joint forecast is compared with the product of its own goal-sequence
+and operation-sequence marginals. There are 27 three-goal sequences and 216
+three-operation sequences, giving 5,832 joint labels. Dependence within each
+sequence remains. Every unknown tail is expanded over unseen labels; no public
+or evaluator support mask is applied. Products can create unsupported cross pairs.
 
-Four evidence tiers, budgets 32/128/512/2048, sixteen development lineages, two
-training draws, five paired feature seeds and all four original readouts remain:
-raw history, frozen latent state, predictive bank and matched frequencies.
-Native posterior products are separate evaluator-only rulers. No new fit,
-sample, protected lineage or confirmation is admitted. Supplied native laws
-define the scoring population, not the learned reader inputs.
+The original roster remains four evidence tiers, budgets 32/128/512/2048, sixteen
+development coefficient lineages, two training draws and five paired feature seeds.
+All four readouts remain: raw history, frozen latent state, predictive bank and
+matched frequencies. Native posteriors and their products are evaluator-only rulers.
+No fit, new episode, protected lineage or confirmation enters this diagnostic.
 
-Expected logarithmic loss, in nats, is the native weighted negative natural
-logarithm of forecast probability. Product-minus-original loss is the diagnostic
-contrast; positive values favor the joint forecast. Squared error, excess over
-native entropy, compatible mass, candidate coverage/size, unsupported modal
-claims, confidence, abstention and per-step goal/operation accuracy remain
-separate. A favorable component cannot replace the original G-P1 joint outcome.
+Logarithmic loss is native weighted negative log forecast probability, in nats;
+lower is better. The first table reports product-minus-original loss at 2,048
+labels. A positive number favors the joint forecast. Brackets are paired 95%
+sixteen-lineage bootstrap intervals, conditional on both saved draws and all five
+seeds averaged within each lineage. Native penalty averages the separate supplied
+reference comparison. These intervals do not capture general training uncertainty.
+
+| Evidence supplied | Predictive bank penalty, nats | Matched-frequency penalty | Native reference penalty |
+| --- | ---: | ---: | ---: |
+| Final artifact | 2.31343 [2.21921, 2.40858] | 2.31875 [2.22401, 2.41422] | 2.35104 |
+| Artifact and truthful context | 2.31321 [2.21899, 2.40835] | 2.31875 [2.22401, 2.41422] | 1.86740 |
+| Context and first operation | 2.31197 [2.21779, 2.40706] | 2.31875 [2.22401, 2.41422] | 0.92121 |
+| Complete operation witnesses | 2.30965 [2.21557, 2.40460] | 2.31875 [2.22401, 2.41422] | 0.00000 |
+
+The second table averages the same loss difference over log label budget, using
+normalized trapezoid area. Columns name the original readout; every value compares
+that readout with its own marginal product. The complete receipt retains each
+budget, both training-draw means and all five feature-seed means separately.
+
+| Evidence supplied | Raw history | Frozen latent state | Predictive bank | Matched frequencies |
+| --- | ---: | ---: | ---: | ---: |
+| Final artifact | 1.18570 [1.05230, 1.32296] | 1.18307 [1.04962, 1.32039] | 1.18255 [1.04910, 1.31987] | 1.16218 [1.02622, 1.30200] |
+| Artifact and truthful context | 1.18779 [1.05454, 1.32493] | 1.18286 [1.04941, 1.32019] | 1.18221 [1.04877, 1.31952] | 1.16218 [1.02622, 1.30200] |
+| Context and first operation | 1.08050 [0.94904, 1.21591] | 1.17772 [1.04432, 1.31498] | 1.18019 [1.04677, 1.31748] | 1.16218 [1.02622, 1.30200] |
+| Complete operation witnesses | 0.87375 [0.74477, 1.00666] | 1.16986 [1.03652, 1.30706] | 1.17718 [1.04384, 1.31443] | 1.16218 [1.02622, 1.30200] |
+
+Every learning-area contrast favors the original joint forecast. This establishes
+a conditional advantage over the deliberately factorized version of the same
+forecast, not superiority over the other readouts. Matched frequencies retain
+nearly the same benefit. With full witnesses, the native operation sequence is
+fixed and its product is exactly unchanged. The learned penalty therefore exposes
+useful structure in an imperfect forecast, rather than a need to infer an unknown
+operation sequence in that evidence condition. It does not promote the primary
+bank-versus-history/latent comparison or establish process correspondence.
+
+At the largest budget with full witnesses, the bank's loss rises from 5.60252 to
+7.91217 nats. Its probability on native-compatible processes falls from 0.01123 to
+0.00135. The nominal 90% candidate set expands from 175.5 to 2,308.33 labels on
+average; native candidate coverage barely changes (0.84190 to 0.84352). Per-step
+goal and operation accuracies stay unchanged because the corresponding sequence
+marginals are preserved. A broader candidate set is not stronger localization.
 
 All 1,994 deterministic files match across original, adjacent-source and complete
-extracted-source execution. Every binding verifies: 619 producer sources, 1,285
-inputs per execution, source archives, plans, environments and output/timing
-hashes. Retained evidence includes 20,480 learned score rows, 128 native score
-rows, 145,920 frame forecasts and 912 public packets. These counts establish
-complete replay, not independent numerical correctness.
+extracted-source replay. All 619 producer and 622 checker source files, source
+archives, plans, environments, input/output bindings and timing hashes verify.
+The independent checker covers 145,920 learned frame forecasts, 14,592 native
+frame/law combinations, 20,480 learned strata, 128 native rows and 912 packets.
+Maximum marginal/product discrepancy is 5.00e-16; maximum score discrepancy is
+5.92e-12, within the frozen 1e-10 score tolerance. All original readout metrics
+reproduce within 6.54e-13. A separate direct-index regroup of original raw rows
+verifies all 64 budget contrasts, 16 learning areas and 128 metric means against
+both checker regroupings within 4.55e-13.
 
-The independent checker passes 33 isolated controls, without skips or warnings.
-It imports no producer distribution, factorization, score or regroup routine.
-Scalar integer quotient/remainder memberships and accurate sums reconstruct
-every sequence marginal. Every outer-product probability is checked. After
-saved marginals verify within 1e-12, their binary64 product is scored to retain
-executed tie decisions. Independent lexicographic sorting uses descending
-probability then alphabet-first priority for learned arms and full-label order
-for native rulers. Candidate sets stop at the first cumulative mass reaching
-0.9. The checker reconstructs every native and learned metric, including all
-original joint-readout metrics. It does not fit scoring choices to results.
+Thirty-three isolated controls passed before dispatch. Scalar integer label
+memberships and accurate sums independently reconstruct marginals; every product
+is checked. Saved binary64 marginal products are scored after that check to retain
+executed ties. Independent lexicographic sorting retains original alphabet-first
+priority for learned arms and full-label priority for native rulers; 90% sets stop
+at their first cumulative crossing. All loss, squared error, compatible mass,
+coverage/size, unsupported mode, confidence, abstention, unknown mass and per-step
+goal/operation fields reconstruct. No producer factorization, score or regroup
+routine is imported. Native targets and fitted forecasts remain accepted inputs;
+this review is not a new refit or independent derivation of the generative policy.
 
-Original and reconstructed rows are regrouped separately. Scalar within-lineage
-averages and bootstrap multiplicities implement 10,000 paired sixteen-lineage
-resamples with seed 191005. Expected coverage is 64 budget contrasts, 16 normalized
-log-budget areas and 128 metric means, retaining both draw means and five seed
-means. Lineage intervals condition on retained fits and do not capture general
-training uncertainty. Numerical acceptance belongs to the next completion review.
+Reader inputs are 912 unchanged anonymous evidence packets. Native truth, weights,
+fitted forecasts, marginal arrays, scores and regroupings stay in separate
+scientific/evaluator exports. This is an exploratory constructed-method result,
+miniature — architecture untested beyond admitted rosters. No human intent,
+causal access, confirmation or conditional A3/C2/F2 admission follows. Temporal
+factorization removes between-step dependence and remains a distinct next test;
+retrospective evidence updating is independent. Both tiny settings remain consumed.
 
-Controls cover correlated and independent joints, equal marginals with different
-joints, axis order, incompatible cross pairs, full unknown mass, zeros, invalid
-forecasts/alphabets, candidate ties and a complete synthetic producer/checker
-fixture. Deliberate marginal, loss, localization, coverage, unknown mass, native
-score, reference, reader-field, hash, missing/duplicate-row and summary corruptions
-fail. The checker freezes 622 sources and 1,997 inputs. Its actual execution was
-observed through the existing single-worker queue below normal with one numerical
-thread. Original and both replay source snapshots remain unchanged.
-
-Reader inputs contain only anonymous artifact, context and witnessed operations.
-Fitted forecasts, native targets, posterior weights, learned/native marginals and
-scores are separate scientific/evaluator evidence. Bounded archives retain all
-raw outputs and inherited inputs, with complete source/plan/environment bindings
-and both replays. Replay alone cannot establish numerical or scientific validity.
-
-The inclusive card cap remains 1,800 CPU seconds within A, covering preparation,
-tests, failures, original/replay execution and independent review. A conservative
-synthetic checker screen estimates 493.73 CPU seconds; this is a planning estimate,
-not a runtime guarantee. Native accounting remains binding. Pursuit is open;
-numerical warrant is pending. No campaign completion or confirmation is claimed.
-
-Retrospective updating and temporal factorization remain two prepared,
-unimplemented alternatives. They test earlier-evidence updating and between-step
-dependence respectively. Neither requires this comparison to win. Conditional
-portfolio transfer, causal composition and learned selective transfer retain
-their unmet prerequisites. Both shared tiny settings remain consumed.
+The inclusive 1,800 CPU-second card and campaign clocks are unchanged. Raw data,
+failed preparations, checks, source and replay are retained.
 
 [Admission contract](JOINT_FACTORIZATION_ADMISSION_PROTOCOL.md).
-[Independent review protocol](JOINT_FACTORIZATION_REVIEW_PROTOCOL.md).
-[Execution review](../../../results/v19/G19-A-joint-factorization-1/EXECUTION_REVIEW.json).
+[Independent review](JOINT_FACTORIZATION_REVIEW_PROTOCOL.md).
+[Accepted reconstruction](../../../results/v19/G19-A-joint-factorization-1/FINAL_REVIEW.json).
+[Full regroup](../../../results/v19/G19-A-joint-factorization-1/INDEPENDENT_REGROUP.json).
 [Evidence exports](../../../results/v19/G19-A-joint-factorization-1/EVIDENCE_ROLES.json).

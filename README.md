@@ -1,8 +1,8 @@
 # Ghost Scale Simulation
 
-We tested whether learned dependence between goal and operation sequences improves joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+We tested whether learned dependence between goal and operation sequences improves joint-process prediction. With complete witnesses and 2,048 labels, removing that dependence increases the predictive bank’s logarithmic loss by 2.30965 nats; the matched-frequency baseline shows a similar penalty. Independent reconstruction, all 80 paired estimates and both complete replays verify this constructed-method advantage. The exact reference needs no such dependence under complete witnesses, so this does not establish recovered historical process or human intent.
 
-V19 remains active with 57 independently accepted scientific batches. Learned sequence factorization has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and temporal factorization remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/JOINT_FACTORIZATION_REPORT.md).
+V19 remains active with 58 independently accepted scientific batches. Learned sequence dependence improves frozen joint forecasts relative to their own marginal products; matched frequencies share the advantage. Temporal factorization and retrospective updating remain independent alternatives. [Report](docs/versions/v19-local-maker/JOINT_FACTORIZATION_REPORT.md).
 
 We tested whether frozen joint-process forecast error comes from operations or from goals conditional on those operations. With complete witnesses and 2,048 labels, the predictive bank assigns 4.68916 nats of loss to operations already determined by the evidence; conditional-goal loss is 0.91337 nats against native uncertainty of 0.68049. Independent reconstruction, all 360 paired estimates and both complete replays verify this constructed-method diagnostic; it does not establish historical process correspondence or human intent.
 
@@ -124,7 +124,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records fifty-seven verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records fifty-eight verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its
