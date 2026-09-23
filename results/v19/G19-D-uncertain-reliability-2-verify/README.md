@@ -1,3 +1,3 @@
-# Source-admitted V19 continuation
+# Independent review: accepted
 
-The frozen implementation passes its declared fixture and corruption controls. Execution, complete replay and numerical acceptance remain separate. No new fit, sampled episode or protected lineage is admitted.
+All 384 original cells reconstruct; 336 paired estimates separately regroup. [Full report](../../../docs/versions/v19-local-maker/UNCERTAIN_RELIABILITY_REPORT.md).

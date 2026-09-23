@@ -1,5 +1,9 @@
 # V19 scientific records and reader export
 
+We tested how much forecast uncertainty remains when reply reliability is unspecified. Under native weighting with 75%-accurate replies, the mean compatible-set diameter for belief reports is 0.08203 on original tools and 0.11160 on changed tools; for skill reports it is 0.04550 under both. Diameter is half the summed absolute probability differences, from zero for agreement to one for disjoint predictions. All 31,744 sets, 336 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access and historical process correspondence remain unestablished.
+
+[Verified report](../../docs/versions/v19-local-maker/UNCERTAIN_RELIABILITY_REPORT.md). 53 scientific batches now have independent acceptance.
+
 [Current regression and record health](../../docs/versions/v19-local-maker/REGRESSION_2026-09-23.md): 415 Ghost and five Torch controls pass across 80 frozen test files, with no skips. Three documentary export bindings were repaired; inaccessible temporary fixtures remain an explicit audit limitation.
 
 [Complete regression refresh](../../docs/versions/v19-local-maker/REGRESSION_2026-09-22.md): all 61 V19 test files in the frozen revision pass (247 Ghost and 5 Torch controls; no skips). Engineering validation is separate from scientific acceptance.

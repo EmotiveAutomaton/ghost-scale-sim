@@ -1,5 +1,9 @@
 # Ghost Scale Simulation
 
+We tested how much forecast uncertainty remains when reply reliability is unspecified. Under native weighting with 75%-accurate replies, the mean compatible-set diameter for belief reports is 0.08203 on original tools and 0.11160 on changed tools; for skill reports it is 0.04550 under both. Diameter is half the summed absolute probability differences, from zero for agreement to one for disjoint predictions. All 31,744 sets, 336 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access and historical process correspondence remain unestablished.
+
+[Verified report](docs/versions/v19-local-maker/UNCERTAIN_RELIABILITY_REPORT.md). 53 scientific batches now have independent acceptance.
+
 Reliability mismatch is independently verified, bringing the accepted scientific batch count to fifty-two. V19 remains active; finite uncertain-reliability sets are being admitted, with retrospective updating and robust reply decisions prepared independently.
 
 We tested whether a noisy mechanical reply remains useful when its stated reliability is wrong. Treating a random skill reply as 75% reliable increases forecast loss by 0.00839 nats under both tool rules; treating it as certain assigns zero probability to the true endpoint on 2.22% of native reply mass, making total logarithmic loss infinite. Independent reconstruction, all 13,608 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access, historical process correspondence and human intent remain unestablished.
