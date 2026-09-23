@@ -90,9 +90,28 @@ def main():
     elif kind=='marginal-transition':from ghostscale.validation.soundingline.v19.marginal_transition import run as handler
     elif kind=='future-quotient':from ghostscale.validation.soundingline.v19.future_quotient import run as handler
     elif kind=='primitive-feedback':from ghostscale.validation.soundingline.v19.primitive_feedback import run as handler
+    elif kind=='pooled-replacement':from ghostscale.validation.soundingline.v19.pooled_replacement import run as handler
     elif kind=='primitive-pooling':from ghostscale.validation.soundingline.v19.primitive_pooling import run as handler
+    elif kind=='replacement-review':from ghostscale.validation.soundingline.v19.replacement_review import run as handler
     elif kind=='pooling-review':from ghostscale.validation.soundingline.v19.pooling_review import run as handler
+    elif kind=='noisy-disclosure':from ghostscale.validation.soundingline.v19.noisy_disclosure import run as handler
+    elif kind=='noisy-review':from ghostscale.validation.soundingline.v19.noisy_review import run as handler
+    elif kind=='repeated-disclosure':from ghostscale.validation.soundingline.v19.repeated_disclosure import run as handler
+    elif kind=='repeated-review':from ghostscale.validation.soundingline.v19.repeated_review import run as handler
+    elif kind=='joint-reply':from ghostscale.validation.soundingline.v19.joint_reply import run as handler
+    elif kind=='reliability-mismatch':from ghostscale.validation.soundingline.v19.reliability_mismatch import run as handler
+    elif kind=='mismatch-review':from ghostscale.validation.soundingline.v19.mismatch_review import run as handler
+    elif kind=='uncertain-reliability':from ghostscale.validation.soundingline.v19.uncertain_reliability import run as handler
+    elif kind=='uncertainty-review':from ghostscale.validation.soundingline.v19.uncertainty_review import run as handler
+    elif kind=='robust-reply':from ghostscale.validation.soundingline.v19.robust_reply import run as handler
+    elif kind=='robust-review':from ghostscale.validation.soundingline.v19.robust_review import run as handler
+    elif kind=='joint-reply-review':from ghostscale.validation.soundingline.v19.joint_reply_review import run as handler
+    elif kind=='optional-review':from ghostscale.validation.soundingline.v19.optional_review import run as handler
+    elif kind=='optional-disclosure':from ghostscale.validation.soundingline.v19.optional_disclosure import run as handler
+    elif kind=='disclosure-review':from ghostscale.validation.soundingline.v19.disclosure_review import run as handler
+    elif kind=='metadata-disclosure':from ghostscale.validation.soundingline.v19.metadata_disclosure import run as handler
     elif kind=='input-privilege':from ghostscale.validation.soundingline.v19.input_privilege import run as handler
+    elif kind=='input-privilege-review':from ghostscale.validation.soundingline.v19.input_privilege_review import run as handler
     elif kind=='feedback-review':from ghostscale.validation.soundingline.v19.feedback_review import run as handler
     elif kind=='quotient-review':from ghostscale.validation.soundingline.v19.quotient_review import run as handler
     elif kind=='source-omission':from ghostscale.validation.soundingline.v19.source_omission import run as handler

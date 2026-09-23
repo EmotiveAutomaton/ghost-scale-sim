@@ -3,7 +3,8 @@
 Does replacing a semantic input group's stale empirical counts help adaptation
 where adding one observation preserves the old tool law? The verified pooling
 comparison improves original-tool forecasts and reverses after a tool change.
-This distinction motivates a finite follow-on; no handler or outcome is admitted.
+This distinction motivates a finite follow-on. Its implemented handler requires
+source-bound controls and admission before any outcome is accepted.
 
 Reuse both retained training draws/support modes, all 640 queries, eight existing
 development laws and both tools. Cross unpooled, correct undo-buffer pooling and
@@ -14,6 +15,11 @@ new complete inputs; an unobserved group keeps its original pooled counts.
 Conflicting outcomes from distinct inputs remain counts, including in the wrong
 grouping. Repeated identical reports deduplicate; conflicting same-input reports
 fail. No favorable group selection, extra seeds, model fit or new architecture.
+
+Replacement here retains one unit prior per endpoint. It is distinct from the
+earlier primitive-feedback method that replaced an observed row with a point
+mass. Only the unpooled additive arm inherits that earlier method's exact
+identity. All six new arms have independent scalar count controls.
 
 Freeze memberships, source, exact feedback roster, smoothing at 1/32 and all
 contrasts before dispatch. Verify zero-feedback and unobserved-group identity,

@@ -1,6 +1,38 @@
 # Every question this project asked, and where its answer stands today
 
-Primitive input pooling is independently verified, bringing the scientific batch count to forty-four. It improves original-tool prediction and reverses after a tool change. The frozen 61-file regression retains 247 Ghost and five Torch passes without skips. V19 remains active.
+Reliability mismatch is independently verified, bringing the accepted scientific batch count to fifty-two. V19 remains active; finite uncertain-reliability sets are being admitted, with retrospective updating and robust reply decisions prepared independently.
+
+We tested whether a noisy mechanical reply remains useful when its stated reliability is wrong. Treating a random skill reply as 75% reliable increases forecast loss by 0.00839 nats under both tool rules; treating it as certain assigns zero probability to the true endpoint on 2.22% of native reply mass, making total logarithmic loss infinite. Independent reconstruction, all 13,608 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access, historical process correspondence and human intent remain unestablished.
+
+[Verified mismatch report](docs/versions/v19-local-maker/RELIABILITY_MISMATCH_REPORT.md).
+
+We tested whether joint dependence between noisy replies matters when each field has the same marginal reliability. For two 75%-accurate replies sharing one error, accounting for their dependence reduces forecast loss by 0.05482 nats on original tools and 0.08822 on changed tools compared with treating them as independent. Independent reconstruction, all 7,488 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access, historical process correspondence and human intent remain unestablished.
+
+[Verified joint reply report](docs/versions/v19-local-maker/JOINT_REPLY_REPORT.md).
+
+We tested whether repeated noisy replies add predictive information when their sources are independent or copied. Four independent 75%-accurate replies reduce forecast loss by 0.01368–0.04472 nats versus one reply across the two fields and tool rules. Copies add no information; treating four copies as independent instead increases loss by 0.02651–0.09358 nats. Independent reconstruction, all 29,952 paired estimates and both complete replays verify this supplied-law constructed-method result; learned access, historical process correspondence and human intent remain unestablished.
+
+[Verified repeated reply report](docs/versions/v19-local-maker/REPEATED_DISCLOSURE_REPORT.md).
+
+We tested whether accounting for noisy replies preserves their predictive value. With 75%-accurate replies and supplied native laws, calibrated conditioning reduces forecast loss by 0.01789 nats on original tools and 0.02566 on changed tools. Treating replies as certain assigns zero probability to the true endpoint on 2.53% and 4.00% of native reply mass, making total logarithmic loss infinite. Independent reconstruction, all 14,256 paired estimates and both complete replays verify this constructed-method result; learned access and human intent remain unestablished.
+
+[Verified noisy reply report](docs/versions/v19-local-maker/NOISY_DISCLOSURE_REPORT.md).
+
+We tested whether declining low-value metadata requests improves prediction after request costs. At a stipulated price of 0.1 nats per request, optional requests preserve forced-request forecast loss and reduce cost-adjusted loss by 0.07216 nats on original tools and 0.06626 on changed tools. Independent reconstruction, all 1,944 paired estimates and both complete replays verify this constructed-method advantage; supplied laws and reliable replies do not establish learned access or human intent.
+
+[Verified optional request report](docs/versions/v19-local-maker/OPTIONAL_DISCLOSURE_REPORT.md).
+
+We tested whether choosing which missing mechanic field to request improves endpoint prediction. Under supplied native laws, entropy-based selection reduces logarithmic forecast loss by 0.02823 nats on original tools and 0.04882 nats on changed tools versus equal random requests. Independent reconstruction and both complete replays verify this constructed-method advantage; reliable mechanical replies and law knowledge are supplied, so learned access and human intent remain unestablished.
+
+[Verified disclosure report](docs/versions/v19-local-maker/METADATA_DISCLOSURE_REPORT.md).
+
+We tested whether discarding stale counts improves pooled tool adaptation. With 16 truthful forward-ordered inputs and original training, the mechanically wrong grouping gives the lowest changed-tool forecast loss among the six arms (1.26874 nats) but the highest original-tool loss (1.24071 nats). Correct grouping replacement gives a smaller changed-tool gain and original-tool penalty. Independent reconstruction, all 21,120 paired estimates and both complete replays verify this constructed-method reversal; prediction does not establish learned mechanics, historical process correspondence or human intent.
+
+[Verified replacement report](docs/versions/v19-local-maker/POOLED_REPLACEMENT_REPORT.md).
+
+We tested how much exact endpoint prediction depends on supplied skill and belief. Hiding both creates mechanically ambiguous evidence in 102 of 248 original-tool groups and 120 of 248 changed-tool groups; only 64 and 82 groups have multiple endpoints with positive native support. Independent reconstruction and both complete replays verify this constructed-method input-privilege limit. It does not establish learned access, historical process correspondence or human intent.
+
+[Verified metadata report](docs/versions/v19-local-maker/INPUT_PRIVILEGE_REPORT.md).
 
 We tested whether pooling equivalent tool inputs improves a frozen forward model. Before new feedback, correct pooling improves original-tool forecast loss by 0.05570–0.06116 nats but worsens changed-tool loss by 0.08843–0.08948 nats. Independent reconstruction, all 9,120 paired estimates and both complete replays verify this constructed-method reversal. Supplied equivalence does not establish learned mechanics, historical process correspondence or human intent.
 

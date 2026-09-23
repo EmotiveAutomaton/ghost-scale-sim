@@ -195,12 +195,50 @@ def run(root,campaign):
                 from .future_quotient import run as handler
             elif plan['design']['handler']=='primitive-feedback':
                 from .primitive_feedback import run as handler
+            elif plan['design']['handler']=='pooled-replacement':
+                from .pooled_replacement import run as handler
             elif plan['design']['handler']=='primitive-pooling':
                 from .primitive_pooling import run as handler
+            elif plan['design']['handler']=='replacement-review':
+                from .replacement_review import run as handler
             elif plan['design']['handler']=='pooling-review':
                 from .pooling_review import run as handler
+            elif plan['design']['handler']=='noisy-disclosure':
+                from .noisy_disclosure import run as handler
+            elif plan['design']['handler']=='noisy-review':
+                from .noisy_review import run as handler
+            elif plan['design']['handler']=='repeated-disclosure':
+                from .repeated_disclosure import run as handler
+            elif plan['design']['handler']=='repeated-review':
+                from .repeated_review import run as handler
+            elif plan['design']['handler']=='joint-reply':
+                from .joint_reply import run as handler
+            elif plan['design']['handler']=='reliability-mismatch':
+                from .reliability_mismatch import run as handler
+            elif plan['design']['handler']=='mismatch-review':
+                from .mismatch_review import run as handler
+            elif plan['design']['handler']=='uncertain-reliability':
+                from .uncertain_reliability import run as handler
+            elif plan['design']['handler']=='uncertainty-review':
+                from .uncertainty_review import run as handler
+            elif plan['design']['handler']=='robust-reply':
+                from .robust_reply import run as handler
+            elif plan['design']['handler']=='robust-review':
+                from .robust_review import run as handler
+            elif plan['design']['handler']=='joint-reply-review':
+                from .joint_reply_review import run as handler
+            elif plan['design']['handler']=='optional-review':
+                from .optional_review import run as handler
+            elif plan['design']['handler']=='optional-disclosure':
+                from .optional_disclosure import run as handler
+            elif plan['design']['handler']=='disclosure-review':
+                from .disclosure_review import run as handler
+            elif plan['design']['handler']=='metadata-disclosure':
+                from .metadata_disclosure import run as handler
             elif plan['design']['handler']=='input-privilege':
                 from .input_privilege import run as handler
+            elif plan['design']['handler']=='input-privilege-review':
+                from .input_privilege_review import run as handler
             elif plan['design']['handler']=='feedback-review':
                 from .feedback_review import run as handler
             elif plan['design']['handler']=='quotient-review':
