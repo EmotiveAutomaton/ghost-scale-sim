@@ -1,5 +1,5 @@
-# Frozen joint versus marginal products: admitted
+# Learned sequence dependence
 
-V19 has 57 independently accepted scientific batches. The learned joint-factorization diagnostic is source admitted after 22 isolated controls and was observed executing through the existing serial queue. It preserves every original forecast and compares its own goal/operation marginal product, with native posterior products kept as evaluator references. Retrospective updating and temporal factorization remain two prepared, unimplemented alternatives; no new fit or protected lineage is admitted.
+We tested whether learned dependence between goal and operation sequences improves joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
 
-The inclusive 1,800 CPU-second card retains tests, failures, execution, both replays and independent review. [Contract](../../../docs/versions/v19-local-maker/JOINT_FACTORIZATION_ADMISSION_PROTOCOL.md).
+Reader packets, inherited scientific inputs and scientific outputs are separate archives. Independent numerical acceptance is pending.

@@ -1,6 +1,9 @@
 # V19: local maker reconstruction and usable predictive state
 
-V19 has 57 independently accepted scientific batches. The learned joint-factorization diagnostic is source admitted after 22 isolated controls and was observed executing through the existing serial queue. It preserves every original forecast and compares its own goal/operation marginal product, with native posterior products kept as evaluator references. Retrospective updating and temporal factorization remain two prepared, unimplemented alternatives; no new fit or protected lineage is admitted. [Contract](JOINT_FACTORIZATION_ADMISSION_PROTOCOL.md).
+We tested whether learned dependence between goal and operation sequences improves joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+
+V19 remains active with 57 independently accepted scientific batches. Learned sequence factorization has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and temporal factorization remain two prepared, unimplemented alternatives. [Report](JOINT_FACTORIZATION_REPORT.md).
+
 
 We tested whether frozen joint-process forecast error comes from operations or from goals conditional on those operations. With complete witnesses and 2,048 labels, the predictive bank assigns 4.68916 nats of loss to operations already determined by the evidence; conditional-goal loss is 0.91337 nats against native uncertainty of 0.68049. Independent reconstruction, all 360 paired estimates and both complete replays verify this constructed-method diagnostic; it does not establish historical process correspondence or human intent.
 

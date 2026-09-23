@@ -1,5 +1,9 @@
 # The walkthrough
 
+We tested whether learned dependence between goal and operation sequences improves joint-process prediction. All 1,994 deterministic files match across the original run and both complete replays. The independent checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+
+V19 remains active with 57 independently accepted scientific batches. Learned sequence factorization has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and temporal factorization remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/JOINT_FACTORIZATION_REPORT.md).
+
 We tested whether frozen joint-process forecast error comes from operations or from goals conditional on those operations. With complete witnesses and 2,048 labels, the predictive bank assigns 4.68916 nats of loss to operations already determined by the evidence; conditional-goal loss is 0.91337 nats against native uncertainty of 0.68049. Independent reconstruction, all 360 paired estimates and both complete replays verify this constructed-method diagnostic; it does not establish historical process correspondence or human intent.
 
 V19 remains active with 57 independently accepted scientific batches. Joint uncertainty decomposition is numerically verified: operation forecast error and conditional-goal ambiguity are separate. Learned joint factorization is the next prepared diagnostic; retrospective updating remains independent. [Report](docs/versions/v19-local-maker/JOINT_UNCERTAINTY_REPORT.md).
