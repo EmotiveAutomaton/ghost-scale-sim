@@ -1,5 +1,10 @@
 # Continuous reliability: prepared independent alternative
 
+Implementation update, 23 September: the handler and its isolated controls now
+exist. The [executable admission contract](CONTINUOUS_RELIABILITY_ADMISSION_PROTOCOL.md)
+freezes the proof, grid and output roles. The original prepared scope below is
+retained; execution and independent scientific acceptance remain separate.
+
 Does the finite reply set miss any endpoint forecast when reliability can take
 every value between one half and one? This is an unimplemented D-family
 certificate study, independent of the robust-decision ranking and retrospective

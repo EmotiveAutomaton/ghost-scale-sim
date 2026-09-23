@@ -225,6 +225,8 @@ def run(root,campaign):
                 from .robust_reply import run as handler
             elif plan['design']['handler']=='robust-review':
                 from .robust_review import run as handler
+            elif plan['design']['handler']=='continuous-reliability':
+                from .continuous_reliability import run as handler
             elif plan['design']['handler']=='joint-reply-review':
                 from .joint_reply_review import run as handler
             elif plan['design']['handler']=='optional-review':

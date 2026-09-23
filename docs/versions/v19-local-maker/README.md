@@ -1,5 +1,14 @@
 # V19: local maker reconstruction and usable predictive state
 
+The [continuous-reliability certificate](CONTINUOUS_RELIABILITY_ADMISSION_PROTOCOL.md)
+is implemented and passes 18 isolated controls; scientific acceptance awaits
+execution, both complete replays and independent numerical review. This is a
+new bounded question about every intermediate reliability, with singular
+endpoints explicitly excluded. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
+and [public-evidence support decoder](JOINT_SUPPORT_DECODER_PROTOCOL.md) remain
+two prepared, unimplemented alternatives. The latter addresses the primary
+joint-process readout's poor compatibility without fitting another model.
+
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 
 [Verified report](ROBUST_REPLY_REPORT.md). 54 scientific batches now have independent acceptance.

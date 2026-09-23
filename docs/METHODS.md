@@ -1,5 +1,14 @@
 # The methodology layer
 
+The continuous-reliability handler partitions endpoint mass by whether the
+requested bit matches the reply. Nonnegative affine masses yield a conditional
+forecast segment; zero-support endpoints use explicit compatibility flags and
+limits. Exact rational fixtures and an independently implemented scalar Bayes
+grid pass within 18 isolated controls. The grid checks implementation, while
+the algebra supplies the continuum argument. Campaign outputs still require
+both full replays and independent reconstruction before acceptance.
+[Admission contract](versions/v19-local-maker/CONTINUOUS_RELIABILITY_ADMISSION_PROTOCOL.md).
+
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 
 [Verified report](versions/v19-local-maker/ROBUST_REPLY_REPORT.md). 54 scientific batches now have independent acceptance.
