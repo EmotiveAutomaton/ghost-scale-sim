@@ -1,8 +1,8 @@
 # The walkthrough
 
-We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. All 71 deterministic files match across the original run and both complete replays. The independent scalar checker passes 26 controls and is source admitted; numerical acceptance remains pending. This is a supplied-law constructed-method certificate, not evidence of learned access or historical process correspondence.
+We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
-V19 remains active with 54 independently accepted scientific batches. Continuous-reliability execution and both complete replays verify; independent numerical acceptance is pending. Retrospective updating and public-evidence support decoding remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/CONTINUOUS_RELIABILITY_REPORT.md).
+V19 remains active with 55 independently accepted scientific batches. Continuous-reliability numerical reconstruction and complete replay are verified. Public-evidence support decoding and retrospective updating remain independent prepared alternatives. [Report](docs/versions/v19-local-maker/CONTINUOUS_RELIABILITY_REPORT.md).
 
 We tested whether fixed decisions under unknown reply reliability improve prediction. With random skill replies, equal averaging and the normalized probability envelope increase native forecast loss by 0.00842 and 0.00567 nats versus making no request; with truthful replies they reduce loss by 0.02394 and 0.01654 nats. All 728,064 coding inequalities, 5,760 paired estimates and both complete replays verify. This supplied-law constructed-method tradeoff does not establish a generally superior decision, learned access or historical process correspondence.
 

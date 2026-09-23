@@ -1,3 +1,3 @@
 # Independent continuous-reliability review
 
-The complete scalar fixture and corruption controls pass. The checker is source admitted; campaign numerical acceptance remains pending. The original failed routing test is retained in accounting and was repaired without changing scientific outcomes.
+All 31,744 certificates and 32 summaries reconstruct. Full source, input, environment and output bindings verify. Twenty-six isolated controls passed before dispatch; the retained initial routing-control failure is charged. Native masses are inherited from the verified parent.

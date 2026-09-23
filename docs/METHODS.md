@@ -1,8 +1,8 @@
 # The methodology layer
 
-We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. All 71 deterministic files match across the original run and both complete replays. The independent scalar checker passes 26 controls and is source admitted; numerical acceptance remains pending. This is a supplied-law constructed-method certificate, not evidence of learned access or historical process correspondence.
+We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
-The independent continuum checker uses scalar hypothesis likelihoods and exact-fraction partition checks, validates singular endpoint exclusion, and compares the accepted finite-set reference. The grid validates implementation; the real-valued algebra is separate. [Review protocol](versions/v19-local-maker/CONTINUOUS_REVIEW_PROTOCOL.md).
+The independent continuum checker reconstructs all 535,424 compatible grid vectors and compares 91,008 compatible finite-reference vectors. A separate original-cell regroup exactly reproduces all 32 summaries, keeping exact stored equality and 1e-12 collapse counts distinct. Scalar hypothesis likelihoods and exact-fraction partitions validate singular endpoint exclusion. The grid validates implementation; the real-valued algebra is separate. [Review protocol](versions/v19-local-maker/CONTINUOUS_REVIEW_PROTOCOL.md).
 
 The continuous-reliability handler partitions endpoint mass by whether the
 requested bit matches the reply. Nonnegative affine masses yield a conditional
