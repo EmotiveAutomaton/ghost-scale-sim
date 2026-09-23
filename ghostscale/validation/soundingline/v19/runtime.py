@@ -153,6 +153,8 @@ def run(root,campaign):
                 from .joint_support_review import run as handler
             elif plan['design']['handler']=='joint-uncertainty':
                 from .joint_uncertainty import run as handler
+            elif plan['design']['handler']=='joint-uncertainty-review':
+                from .joint_uncertainty_review import run as handler
             elif plan['design']['handler']=='joint-review':
                 from .joint_review import run as handler
             elif plan['design']['handler']=='crossed-rules':

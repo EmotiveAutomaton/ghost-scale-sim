@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+We tested whether frozen joint-process forecast error comes from operations or from goals conditional on those operations. All 1,289 deterministic files match across the original run and both complete replays. The independent scalar checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
+
+V19 remains active with 56 independently accepted scientific batches. Joint uncertainty decomposition has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and learned joint factorization remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/JOINT_UNCERTAINTY_REPORT.md).
+
 We tested whether public execution constraints improve frozen joint-process readouts. With complete witnesses and 2,048 labels, restriction reduces the predictive bank’s logarithmic loss from 5.60252 to 0.91337 nats; matched frequencies reach 0.90746. Across training budgets, the bank’s advantage over frozen latent state stays below the declared 0.02-nat margin in every evidence tier. Independent reconstruction, all 160 paired estimates and both complete replays verify this constructed-method result; supplied operations do not establish recovered historical goals.
 
 V19 remains active with 56 independently accepted scientific batches. Public-support decoding is numerically verified; the practical predictive-bank advantage over frozen latent state is absent on this fixed roster. Joint uncertainty decomposition is the next prepared diagnostic; retrospective updating remains independent. [Report](docs/versions/v19-local-maker/JOINT_SUPPORT_REPORT.md).

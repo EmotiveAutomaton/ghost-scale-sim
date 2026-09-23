@@ -1,5 +1,5 @@
-# Operation and conditional-goal uncertainty: admitted
+# Operation and conditional-goal uncertainty
 
-V19 has 56 independently accepted scientific batches. The operation-versus-goal uncertainty diagnostic and both complete replay jobs finished execution after 22 isolated admission controls. Their outputs await the next independent event review; no numerical result is accepted yet. Retrospective updating and learned joint factorization remain two prepared, unimplemented alternatives; no new fit or protected lineage is admitted.
+We tested whether frozen joint-process forecast error comes from operations or from goals conditional on those operations. All 1,289 deterministic files match across the original run and both complete replays. The independent scalar checker passes 33 controls and has begun execution; numerical acceptance remains pending. This is a constructed-method diagnostic, not evidence of historical process correspondence or human intent.
 
-The 1,800 CPU-second card includes controls, failures, original execution, both complete replays and independent review. Numerical acceptance awaits complete reconstruction. [Contract](../../../docs/versions/v19-local-maker/JOINT_UNCERTAINTY_ADMISSION_PROTOCOL.md).
+Reader packets, inherited scientific inputs and scientific outputs are separate archives. Independent numerical acceptance is pending.

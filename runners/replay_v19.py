@@ -69,6 +69,7 @@ def main():
     elif kind=='joint-support':from ghostscale.validation.soundingline.v19.joint_support import run as handler
     elif kind=='joint-support-review':from ghostscale.validation.soundingline.v19.joint_support_review import run as handler
     elif kind=='joint-uncertainty':from ghostscale.validation.soundingline.v19.joint_uncertainty import run as handler
+    elif kind=='joint-uncertainty-review':from ghostscale.validation.soundingline.v19.joint_uncertainty_review import run as handler
     elif kind=='joint-review':from ghostscale.validation.soundingline.v19.joint_review import run as handler
     elif kind=='crossed-rules':from ghostscale.validation.soundingline.v19.crossed_rules import run as handler
     elif kind=='crossed-review':from ghostscale.validation.soundingline.v19.crossed_review import run as handler
