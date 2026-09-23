@@ -1,3 +1,3 @@
-# Independent public-support decoding review
+# Independent support review: complete
 
-The complete synthetic fixture, independent mechanics and corruption controls pass. The checker is source admitted; campaign numerical acceptance remains pending. Original producer and replay sources remain unchanged.
+All 23,040 strata and 160 paired estimates reconstruct. Twenty-one isolated controls passed before dispatch. Raw reconstruction is scientific/evaluator evidence; fitted forecasts and native posteriors are inherited verified inputs.

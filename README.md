@@ -1,8 +1,8 @@
 # Ghost Scale Simulation
 
-We tested whether public execution constraints improve frozen joint-process readouts. All 1,457 deterministic files match across the original run and both complete replays. The independent checker passes 21 controls and has completed execution; numerical acceptance remains pending. This is a supplied-mechanics constructed-method comparison; mechanical legality does not establish historical process correspondence.
+We tested whether public execution constraints improve frozen joint-process readouts. With complete witnesses and 2,048 labels, restriction reduces the predictive bank’s logarithmic loss from 5.60252 to 0.91337 nats; matched frequencies reach 0.90746. Across training budgets, the bank’s advantage over frozen latent state stays below the declared 0.02-nat margin in every evidence tier. Independent reconstruction, all 160 paired estimates and both complete replays verify this constructed-method result; supplied operations do not establish recovered historical goals.
 
-V19 remains active with 55 independently accepted scientific batches. Public-support decoding has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and joint uncertainty decomposition remain two prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/JOINT_SUPPORT_REPORT.md).
+V19 remains active with 56 independently accepted scientific batches. Public-support decoding is numerically verified; the practical predictive-bank advantage over frozen latent state is absent on this fixed roster. Joint uncertainty decomposition is the next prepared diagnostic; retrospective updating remains independent. [Report](docs/versions/v19-local-maker/JOINT_SUPPORT_REPORT.md).
 
 We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
@@ -116,7 +116,7 @@ The [exact process-sufficiency result](docs/versions/v19-local-maker/PROCESS_SUF
 
 The [probability-head diagnostic](docs/versions/v19-local-maker/PROBABILITY_HEAD_REPORT.md) largely removes the earlier bank advantage under a changed objective and fixed training schedule. Optimization remains unresolved; complete operation witnesses still favor direct history.
 
-The [current status](results/v19/CURRENT_STATUS.json) records fifty-five verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
+The [current status](results/v19/CURRENT_STATUS.json) records fifty-six verified scientific batches. The [local-goal screen](docs/versions/v19-local-maker/LOCAL_PRIMARY_REPORT.md) finds a bank advantage with final artifacts alone and a reversal with complete operation witnesses. Goal prediction and joint process correspondence remain separate; the [independent alternatives](docs/versions/v19-local-maker/ALTERNATIVES_REPORT.md) show a joint-compatibility cost of multiplying marginals and distinguish supplied relation information from reorganization.
 
 
 The [new commission](docs/versions/v19-local-maker/README.md) is active. Its

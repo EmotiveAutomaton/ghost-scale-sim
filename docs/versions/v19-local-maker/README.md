@@ -1,8 +1,8 @@
 # V19: local maker reconstruction and usable predictive state
 
-We tested whether public execution constraints improve frozen joint-process readouts. All 1,457 deterministic files match across the original run and both complete replays. The independent checker passes 21 controls and has completed execution; numerical acceptance remains pending. This is a supplied-mechanics constructed-method comparison; mechanical legality does not establish historical process correspondence.
+We tested whether public execution constraints improve frozen joint-process readouts. With complete witnesses and 2,048 labels, restriction reduces the predictive bank’s logarithmic loss from 5.60252 to 0.91337 nats; matched frequencies reach 0.90746. Across training budgets, the bank’s advantage over frozen latent state stays below the declared 0.02-nat margin in every evidence tier. Independent reconstruction, all 160 paired estimates and both complete replays verify this constructed-method result; supplied operations do not establish recovered historical goals.
 
-V19 remains active with 55 independently accepted scientific batches. Public-support decoding has verified execution and complete replays; independent numerical acceptance is pending. Retrospective updating and joint uncertainty decomposition remain two prepared, unimplemented alternatives. [Report](JOINT_SUPPORT_REPORT.md).
+V19 remains active with 56 independently accepted scientific batches. Public-support decoding is numerically verified; the practical predictive-bank advantage over frozen latent state is absent on this fixed roster. Joint uncertainty decomposition is the next prepared diagnostic; retrospective updating remains independent. [Report](JOINT_SUPPORT_REPORT.md).
 
 We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
@@ -10,7 +10,7 @@ V19 remains active with 55 independently accepted scientific batches. Continuous
 
 The [continuous-reliability certificate](CONTINUOUS_RELIABILITY_REPORT.md) is
 independently accepted. The [support decoder](JOINT_SUPPORT_REPORT.md) has complete
-replays and a completed independent checker awaiting numerical review. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
+replays and independent numerical acceptance. The [retrospective-evidence design](RETROSPECTIVE_QUOTIENT_PROTOCOL.md)
 and [joint uncertainty decomposition](JOINT_UNCERTAINTY_PROTOCOL.md) are prepared,
 unimplemented alternatives independent of this diagnostic's outcome.
 

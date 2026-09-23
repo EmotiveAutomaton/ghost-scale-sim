@@ -1,5 +1,5 @@
 # V19 public execution support
 
-We tested whether public execution constraints improve frozen joint-process readouts. All 1,457 deterministic files match across the original run and both complete replays. The independent checker passes 21 controls and has completed execution; numerical acceptance remains pending. This is a supplied-mechanics constructed-method comparison; mechanical legality does not establish historical process correspondence.
+We tested whether public execution constraints improve frozen joint-process readouts. With complete witnesses and 2,048 labels, restriction reduces the predictive bank’s logarithmic loss from 5.60252 to 0.91337 nats; matched frequencies reach 0.90746. Across training budgets, the bank’s advantage over frozen latent state stays below the declared 0.02-nat margin in every evidence tier. Independent reconstruction, all 160 paired estimates and both complete replays verify this constructed-method result; supplied operations do not establish recovered historical goals.
 
 [Report](../versions/v19-local-maker/JOINT_SUPPORT_REPORT.md).
