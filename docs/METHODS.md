@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether identical frozen local-goal forecasts conceal different native target distributions. All 974 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+
+The independent collision checker reconstructs exact sorted groups, scalar native moments and directly centered within-law errors. Law multiplicities rebuild group means before uncertainty is calculated. A separate third regroup expands centered group bias from forecast cross-moments; equal-mass law-pair factorization preserves exact resampling at lower cost. All public reader fields remain unchanged. [Protocol](versions/v19-local-maker/FORECAST_COLLISION_REVIEW_PROTOCOL.md).
+
 We tested whether averaging within probability bins hides frame-level absolute errors. At 2,048 labels, even twenty bins conceal 7.7–13.3% of the predictive bank’s absolute probability error across positions under native weighting. Independent reconstruction, all 5,508 paired estimates and both complete replays verify this constructed-method diagnostic. Historical goal correspondence and human intent remain unestablished.
 
 Independent absolute-error review reconstructs scalar residuals, signed-bin sums, raw weighted contributions, accepted bin discrepancies, empty means, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_ABSOLUTE_ENVELOPE_REVIEW_PROTOCOL.md).

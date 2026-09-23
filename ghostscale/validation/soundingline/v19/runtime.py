@@ -175,6 +175,8 @@ def run(root,campaign):
                 from .goal_absolute_envelope_review import run as handler
             elif plan['design']['handler']=='forecast-collision':
                 from .forecast_collision import run as handler
+            elif plan['design']['handler']=='forecast-collision-review':
+                from .forecast_collision_review import run as handler
             elif plan['design']['handler']=='goal-absolute-envelope':
                 from .goal_absolute_envelope import run as handler
             elif plan['design']['handler']=='goal-squared-decomposition':

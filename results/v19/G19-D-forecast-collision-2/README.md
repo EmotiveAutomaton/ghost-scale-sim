@@ -1,3 +1,5 @@
-# Exact forecast collisions: source admitted
+# Exact forecast collisions: execution and replay verified
 
-All 48 isolated controls pass. Exact complete forecast vectors define groups over the full law/frame roster; native target variation within and across laws remains separate. Both complete replays, independent scalar reconstruction and a third law-multiplicity regroup are required. Numerical acceptance is pending. [Contract](../../../docs/versions/v19-local-maker/FORECAST_COLLISION_ADMISSION_PROTOCOL.md).
+We tested whether identical frozen local-goal forecasts conceal different native target distributions. All 974 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+
+Reader, inherited scientific inputs and scientific outputs have separate archives.

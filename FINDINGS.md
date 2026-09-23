@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+We tested whether identical frozen local-goal forecasts conceal different native target distributions. All 974 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+
+V19 remains active with 72 independently accepted scientific batches. Exact forecast-collision execution and both complete replays are verified; its admitted independent checker owns the next numerical review. Retrospective updating and full joint-goal forecast partitions remain prepared alternatives. [Report](docs/versions/v19-local-maker/FORECAST_COLLISION_REPORT.md).
+
 We tested whether averaging within probability bins hides frame-level absolute errors. At 2,048 labels, even twenty bins conceal 7.7–13.3% of the predictive bank’s absolute probability error across positions under native weighting. Independent reconstruction, all 5,508 paired estimates and both complete replays verify this constructed-method diagnostic. Historical goal correspondence and human intent remain unestablished.
 
 V19 remains active with 72 independently accepted scientific batches. Absolute-error envelopes are independently verified; the source-frozen exact forecast-collision comparison is executing, with both full replays queued. [Report](docs/versions/v19-local-maker/GOAL_ABSOLUTE_ENVELOPE_REPORT.md).
