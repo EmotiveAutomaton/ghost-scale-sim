@@ -1,5 +1,7 @@
 # V19: local maker reconstruction and usable predictive state
 
+The public-mechanics support decoder is source admitted after 20 isolated controls and has begun execution through the existing serial queue. It retains all goal sequences, restricts only mechanically incompatible operation paths, and compares the frozen readouts with matched frequency and uniform-support baselines. No new fit or protected lineage enters; numerical acceptance is pending.
+
 We tested whether endpoint forecasts bound every intermediate reliability of a binary reply. Independent reconstruction verifies all 31,744 conditional certificates and both complete replays. The continuous interval adds no coordinate extrema or total-variation diameter beyond the compatible finite-set endpoints; 4,224 impossible truthful endpoints are excluded. This is a supplied-law constructed-method certificate, not learned access or historical process correspondence.
 
 V19 remains active with 55 independently accepted scientific batches. Continuous-reliability numerical reconstruction and complete replay are verified. Public-evidence support decoding and retrospective updating remain independent prepared alternatives. [Report](CONTINUOUS_RELIABILITY_REPORT.md).

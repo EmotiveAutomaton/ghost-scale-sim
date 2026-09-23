@@ -1,8 +1,8 @@
-# Public-evidence support decoding: prepared primary-readout alternative
+# Public-evidence support decoding: admitted primary-readout alternative
 
 Can publicly available execution constraints improve the already fitted joint
 process readouts, and how much of the improvement is available to a cheap
-uniform-support reader? This is a prepared, unimplemented G19-A diagnostic of
+uniform-support reader? This is an implemented, source-admitted G19-A diagnostic of
 the main joint-process comparison. It requires no new sequence-model setting,
 new fit, new episode or protected lineage. Initial cap: 3,600 CPU seconds,
 including tests, original, both complete replays and independent review,
@@ -45,3 +45,5 @@ of a true compatible path. Require full replay, independent numerical
 reconstruction and separate reader/evaluator exports before acceptance.
 This is a supplied-mechanics decoding comparison, not a new architecture,
 learned policy reconstruction, confirmation or human-intent result.
+
+[Exact implementation/admission contract](JOINT_SUPPORT_ADMISSION_PROTOCOL.md). Twenty isolated controls pass; numerical acceptance remains pending. The source-bound serial queue includes original and both complete replays. Retrospective updating and [joint uncertainty decomposition](JOINT_UNCERTAINTY_PROTOCOL.md) remain prepared independent alternatives.
