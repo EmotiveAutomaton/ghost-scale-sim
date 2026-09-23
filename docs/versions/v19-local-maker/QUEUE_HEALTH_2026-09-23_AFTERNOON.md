@@ -1,0 +1,13 @@
+# Queue health, 23 September 2026 afternoon
+
+The queue had drained after a scoped checker budget blocker. Removing costly array allocations from scalar checks restored that card without changing its scope, tolerances, safety margins or cap. All 81 isolated controls passed. The checker ran through the existing single-worker queue and completed at 15:46 Pacific; final third regroup and independent scientific adjudication remain pending. There are still 71 accepted scientific batches.
+
+The incremental audit verified 72 newly completed jobs, 48,087 frozen-source bindings, 44,112 input bindings, 66,485 output bindings, 2,039 public-export bindings and 373 event acknowledgements, with no new mismatches or unreadable files. The preceding audit covers 188 earlier completed jobs and explicitly records 3,038 inaccessible disposable fixture files. Those exceptions remain; this is not a claim that every historical file was readable. The new optimized checker was verified separately after this audit.
+
+Current charge is 20.391 CPU hours of 96, including failures and verification. The 16-hour protected reserve and all 32 confirmation plus 32 test lineages remain untouched. Both tiny training settings have been consumed. The earlier full frozen suite passed 415 Ghost controls plus five CPU Torch controls across 80 test files; subsequent additions have targeted admissions, including today's 81-control repair suite.
+
+The two independent prepared alternatives are exact forecast collisions and exhaustive retrospective updating. They still require implementation, known-answer controls and tractability within their existing caps. The selective-access conditional branches remain unpromoted. Empty execution slots during result adjudication do not imply scientific exhaustion.
+
+All times below are Pacific. The next independent checker adjudication and branch preparation are expected within roughly 15–35 minutes of restored event delivery, based on recent review turns; this is an estimate, not a receipt. The publication event is due today at 16:00. Formal owner reports are due Friday 25 September at 06:26 and Monday 28 September at 06:26. These are reporting points, not mandatory approval pauses. No owner decision currently blocks routine continuation.
+
+Duplicate current CPU counters, remote-head metadata and prepared-branch aliases were reconciled. The exact prior documentary snapshots are retained in the optimized checker's PRE_REPAIR_DOCUMENTS archive. The remote head was verified as f87c748; current batches remain pending publication. See [machine-readable health](../../../results/v19/HEALTH_2026-09-23_AFTERNOON.json) and [repair admission](../../../results/v19/G19-D-goal-absolute-envelope-1-verify-optimized-1/ADMISSION.json).

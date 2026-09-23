@@ -155,6 +155,60 @@ def run(root,campaign):
                 from .joint_uncertainty import run as handler
             elif plan['design']['handler']=='joint-uncertainty-review':
                 from .joint_uncertainty_review import run as handler
+            elif plan['design']['handler']=='goal-decision':
+                from .goal_decision import run as handler
+            elif plan['design']['handler']=='goal-abstention':
+                from .goal_abstention import run as handler
+            elif plan['design']['handler']=='goal-calibration':
+                from .goal_calibration import run as handler
+            elif plan['design']['handler']=='goal-calibration-review':
+                from .goal_calibration_review import run as handler
+            elif plan['design']['handler']=='goal-operation-calibration-review':
+                from .goal_operation_calibration_review import run as handler
+            elif plan['design']['handler']=='goal-purpose-calibration-review':
+                from .goal_purpose_calibration_review import run as handler
+            elif plan['design']['handler']=='goal-bin-resolution-review':
+                from .goal_bin_resolution_review import run as handler
+            elif plan['design']['handler']=='goal-squared-decomposition-review':
+                from .goal_squared_decomposition_review import run as handler
+            elif plan['design']['handler']=='goal-absolute-envelope-review':
+                from .goal_absolute_envelope_review import run as handler
+            elif plan['design']['handler']=='forecast-collision':
+                from .forecast_collision import run as handler
+            elif plan['design']['handler']=='goal-absolute-envelope':
+                from .goal_absolute_envelope import run as handler
+            elif plan['design']['handler']=='goal-squared-decomposition':
+                from .goal_squared_decomposition import run as handler
+            elif plan['design']['handler']=='goal-bin-resolution':
+                from .goal_bin_resolution import run as handler
+            elif plan['design']['handler']=='goal-purpose-calibration':
+                from .goal_purpose_calibration import run as handler
+            elif plan['design']['handler']=='goal-artifact-calibration':
+                from .goal_artifact_calibration import run as handler
+            elif plan['design']['handler']=='goal-artifact-calibration-review':
+                from .goal_artifact_calibration_review import run as handler
+            elif plan['design']['handler']=='goal-operation-calibration':
+                from .goal_operation_calibration import run as handler
+            elif plan['design']['handler']=='goal-class-reliability-review':
+                from .goal_class_reliability_review import run as handler
+            elif plan['design']['handler']=='goal-class-reliability':
+                from .goal_class_reliability import run as handler
+            elif plan['design']['handler']=='goal-coarsening':
+                from .goal_coarsening import run as handler
+            elif plan['design']['handler']=='goal-coarsening-review':
+                from .goal_coarsening_review import run as handler
+            elif plan['design']['handler']=='goal-abstention-review':
+                from .goal_abstention_review import run as handler
+            elif plan['design']['handler']=='goal-decision-review':
+                from .goal_decision_review import run as handler
+            elif plan['design']['handler']=='goal-mass-review':
+                from .goal_mass_review import run as handler
+            elif plan['design']['handler']=='goal-mass-control':
+                from .goal_mass_control import run as handler
+            elif plan['design']['handler']=='temporal-mass-control':
+                from .temporal_mass_control import run as handler
+            elif plan['design']['handler']=='witnessed-goal-review':
+                from .witnessed_goal_review import run as handler
             elif plan['design']['handler']=='witnessed-goal-factorization':
                 from .witnessed_goal_factorization import run as handler
             elif plan['design']['handler']=='within-step-factorization':

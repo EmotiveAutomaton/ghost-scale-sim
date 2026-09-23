@@ -1,6 +1,57 @@
 # The methodology layer
 
-V19 has 59 independently accepted scientific batches. Conditional goal factorization is source admitted after 46 isolated controls and was observed executing through the existing serial queue. It compares the witnessed-operation restriction with the product of three goal marginals, preserving original forecasts and separate native rulers. Retrospective updating and temporal alphabet-mass matching remain two prepared independent alternatives. The full within-step comparison retains a timing blocker; no new fit or protected lineage is admitted. [Contract](versions/v19-local-maker/WITNESSED_GOAL_ADMISSION_PROTOCOL.md).
+We tested whether averaging within probability bins hides frame-level absolute errors. At 2,048 labels, even twenty bins conceal 7.7–13.3% of the predictive bank’s absolute probability error across positions under native weighting. Independent reconstruction, all 5,508 paired estimates and both complete replays verify this constructed-method diagnostic. Historical goal correspondence and human intent remain unestablished.
+
+Independent absolute-error review reconstructs scalar residuals, signed-bin sums, raw weighted contributions, accepted bin discrepancies, empty means, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_ABSOLUTE_ENVELOPE_REVIEW_PROTOCOL.md).
+
+We tested whether small average errors inside probability bins conceal larger frame-level errors. At 2,048 labels, variation within ten bins accounts for 24.6–46.6% of the predictive bank’s squared probability error across positions under native weighting. Independent reconstruction, all 2,772 paired estimates and both complete replays verify this constructed-method diagnostic. Historical goal correspondence and human intent remain unestablished.
+
+Independent squared-error review reconstructs scalar residual moments, centered variances, empty conditional moments, unbinned error, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_SQUARED_DECOMPOSITION_REVIEW_PROTOCOL.md).
+
+We tested whether finer probability bins expose hidden local-goal forecast errors. At 2,048 labels, moving from ten to twenty bins reveals up to 0.31400 additional percentage points of absolute discrepancy for the predictive bank under native weighting. Independent reconstruction, all 4,392 paired estimates and both complete replays verify this constructed-method diagnostic. No practical-impact threshold was specified; historical goal correspondence and human intent remain unestablished.
+
+Independent fixed-bin review reconstructs scalar memberships, packed bin sums, coarsening, empty means, refinement increments, unbinned squared errors, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_BIN_RESOLUTION_REVIEW_PROTOCOL.md).
+
+We tested whether pooling public task requests hides opposing errors in local-goal probabilities. At 2,048 labels, request pooling hides up to 0.11078 percentage points of absolute calibration discrepancy in the predictive bank under native weighting. Independent reconstruction, all 2,196 paired estimates and both complete replays verify this constructed-method diagnostic. No practical-impact threshold was specified; historical goal correspondence and human intent remain unestablished.
+
+Independent purpose calibration reconstructs scalar group/bin sums, empty means, conditional signed errors, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_PURPOSE_CALIBRATION_REVIEW_PROTOCOL.md).
+
+We tested whether pooling visible endpoint artifacts hides opposing errors in local-goal probabilities. At 2,048 labels, endpoint pooling hides up to 0.23066 percentage points of absolute calibration discrepancy in the predictive bank under native weighting. Independent reconstruction, all 2,196 paired estimates and both complete replays verify this constructed-method diagnostic. No practical-impact threshold was specified; historical goal correspondence and human intent remain unestablished.
+
+Independent artifact calibration reconstructs scalar group/bin sums, empty means, conditional signed errors, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_ARTIFACT_CALIBRATION_REVIEW_PROTOCOL.md).
+
+We tested whether pooling witnessed operations hides opposing errors in local-goal probabilities. At 2,048 labels, pooling hides 0.00927–0.01149 percentage points of absolute calibration discrepancy at the first two positions; the third shows none beyond rounding. Independent reconstruction, all 2,196 paired estimates and both complete replays verify this constructed-method diagnostic. Historical goal correspondence and human intent remain unestablished.
+
+Independent operation calibration reconstructs scalar group/bin sums, empty means, conditional signed errors, parent identities and paired-law estimates. Original and reconstructed rows are separately regrouped; native and equal-frame populations remain distinct. [Protocol](versions/v19-local-maker/GOAL_OPERATION_CALIBRATION_REVIEW_PROTOCOL.md).
+
+We tested whether confidence in a selected local goal hides errors in the other goal probabilities. At 2,048 labels, the predictive bank's full three-goal squared probability error is 0.00645–0.01385 across positions under native weighting. Independent reconstruction, all 2,700 paired estimates and both complete replays verify this constructed-method diagnostic. Selected-goal confidence alone does not measure this error; historical goal correspondence and human intent remain unestablished.
+
+Independent class reliability reconstructs scalar marginals, fixed bins, explicit one-hot Brier expectation and its uncertainty decomposition. Original and reconstructed rows receive separate paired-law regrouping, retaining class means and descriptive equal-class means. [Protocol](versions/v19-local-maker/GOAL_CLASS_RELIABILITY_REVIEW_PROTOCOL.md).
+
+We tested whether confidence in local-goal reports matches their native expected correctness. At 2,048 labels, the predictive bank overstates correctness by 1.73–2.97 percentage points across the three positions under native weighting. Independent reconstruction, all 900 paired estimates and both complete replays verify this constructed-method calibration finding. Historical goal correspondence and human intent remain unestablished.
+
+Independent confidence review validates scalar goal marginals and native correctness before exact binary64 bin/support decisions. Scalar bin sums, proper losses, clipping and infinite outcomes are reconstructed. Pooled bin ratios keep empty bins undefined; original and reconstructed rows separately reproduce every paired estimate. [Protocol](versions/v19-local-maker/GOAL_CALIBRATION_REVIEW_PROTOCOL.md).
+
+We tested whether broader local-goal reports improve accuracy while retaining less specificity. At 2,048 labels, the predictive bank's three binary goal vocabularies lower always-reported step error from 13.45% to 4.60–9.94%, while retaining 1.64–1.79 fine alternatives per claim. Independent reconstruction, all 9,600 paired estimates and both complete replays verify this constructed-method reporting tradeoff. Fine-goal forecasts are unchanged; historical correspondence and human intent remain unestablished.
+
+Independent coarsening review validates scalar integer-label projections and saved binary64 marginals before strict report decisions. Direct fine-label accumulation reconstructs partial-report support and specificity. Pooled ratios keep zero coverage undefined; original and reconstructed rows separately reproduce all paired estimates. [Protocol](versions/v19-local-maker/GOAL_COARSENING_REVIEW_PROTOCOL.md).
+
+We tested whether declining uncertain local-goal reports reduces errors at useful coverage. At 2,048 labels and an abstention cost of 0.1, separate-step reporting retains 76.43% coverage and lowers the predictive bank's error among reported steps from 13.45% to 0.12%. Independent reconstruction, all 1,920 paired estimates and both complete replays verify this constructed-method tradeoff. The forecast is unchanged; historical goal correspondence and human intent remain unestablished.
+
+Independent abstention review validates executed binary64 marginals before strict thresholds, enumerates partial-report compatibility against sparse native paths, keeps empty-report conditional error undefined, and pools incorrect mass over coverage before taking a ratio. Scalar means and paired lineage multiplicities independently reconstruct every estimate. [Protocol](versions/v19-local-maker/GOAL_ABSTENTION_REVIEW_PROTOCOL.md).
+
+We tested whether choosing a whole goal path sacrifices stepwise accuracy with the forecast held fixed. At 2,048 labels, separate step decisions lower the predictive bank's native-weighted step accuracy by 0.08349 percentage points despite improving its own forecast objective. Independent reconstruction, all 240 paired estimates and both complete replays verify this constructed-method reversal. It does not establish historical goal correspondence or human intent.
+
+Independent decision review reconstructs conditional forecasts with integer labels and scalar sums, verifies saved binary64 probabilities and marginals before exact tie choices, separately checks stepwise and whole-path objectives, and regroups original and reconstructed rows with paired lineage multiplicities. [Protocol](versions/v19-local-maker/GOAL_DECISION_REVIEW_PROTOCOL.md).
+
+We tested whether redistributing probability between goal paths seen and unseen in training explains the gain after all operations are witnessed. At 2,048 labels, redistribution lowers the predictive bank’s logarithmic loss by 0.10244 nats; changing probabilities within those groups adds a 0.04608-nat reduction. Independent reconstruction, all 40 paired estimates and both complete replays verify this constructed-method decomposition. It does not establish historical goal correspondence or human intent.
+
+Independent group-mass review uses accurate scalar conditional and group sums, verifies saved binary64 quantities before tie-sensitive scoring, checks the logarithmic-loss decomposition, and separately regroups original and reconstructed rows with paired lineage multiplicities. Only exactly zero paths are omitted from scalar mass sums. [Protocol](versions/v19-local-maker/GOAL_MASS_REVIEW_PROTOCOL.md).
+
+We tested whether dependence among goals improves prediction after all operations are witnessed. Removing it lowers the predictive bank’s logarithmic loss by 0.14852 nats at 2,048 labels; matched frequencies improve by 0.15200. Independent reconstruction, all 20 paired estimates and both complete replays verify this constructed-method reversal. The native reference instead loses accuracy, so the learned gain does not establish historical goal correspondence or human intent.
+
+Independent scalar conditioning and goal-marginal reconstruction verifies every distribution and score. A third direct-index regroup of original rows verifies all 20 paired estimates and 48 means within 5.69e-14. Saved binary64 values retain executed ties; original fits and native targets remain inherited verified inputs. Both original and accepted public-support scores reproduce. [Protocol](versions/v19-local-maker/WITNESSED_GOAL_REVIEW_PROTOCOL.md).
+
 
 We tested whether dependence between steps improves frozen joint-process prediction. Removing it lowers the predictive bank’s logarithmic loss by 0.07256 nats with complete witnesses and 2,048 labels; matched frequencies improve by 0.05747. Independent reconstruction, all 80 paired estimates and both complete replays verify this constructed-method reversal. The native reference instead loses accuracy, so the learned improvement does not establish historical process correspondence or human intent.
 
@@ -1243,3 +1294,75 @@ The [current-state future-transition review](versions/v19-local-maker/MARGINAL_T
 The [future-schedule quotient](versions/v19-local-maker/FUTURE_SCHEDULE_QUOTIENT_PROTOCOL.md) groups all retained hypotheses by their remaining state sequence, preserving zero-weight groups, full memberships and all future forecasts. Nine isolated controls pass before admission, including a native-parent fixture, unavailable-checkpoint handling and deliberate corruption. It uses no fit or new observation; shared metadata and per-posterior weights receive separate byte counts.
 
 The [future-schedule checker](versions/v19-local-maker/FUTURE_QUOTIENT_REVIEW_PROTOCOL.md) independently rebuilds the full hypothesis roster, bit transitions, tuple partitions, accurately summed grouped weights and unmerged state forecasts. It checks complete population pairing, parent row maps, absent checkpoints and all summaries. Thirteen isolated controls pass before source admission. Float64 weights, shared int32 metadata, retained artifacts, workspace and execution speed remain distinct costs; execution alone did not accept a speed or total-storage benefit; subsequent independent review accepts only the enumerated weight-plus-metadata array saving.
+
+The conditional-goal alphabet-mass control passes 61 isolated controls and is source admitted with both complete replays in the existing serial queue. Its conservative four-pass estimate is 721.09 CPU seconds within the inclusive 1,800-second card. The full temporal alphabet-mass comparison remains timing-blocked after one exact vectorization improvement. Retrospective updating and goal-decision decoding remain two independently prepared alternatives.
+
+Independent conditional-goal verification reconstructs all 112,640 frame forecasts, 7,680 score strata and 5,120 accepted parent rows. A separate direct-index bootstrap reproduces 32 budget contrasts, eight learning areas and 48 metric means against both checker regroupings within 5.56e-15. Scalar group-loss decomposition agrees within 2.43e-17; original fitted forecasts and native targets remain inherited accepted inputs. [Review](versions/v19-local-maker/GOAL_MASS_REVIEW_PROTOCOL.md).
+
+The goal-decision comparison is source admitted after 34 isolated controls. The existing serial queue dispatched it and both complete replays; native below-normal priority was verified. Its completion events own result review and numerical acceptance remains pending. Retrospective updating and goal-report abstention are two prepared independent alternatives. No new fit or protected lineage is used.
+
+Independent goal-decision review reconstructs all 225,280 frame forecasts, 10,240 score strata, 32 native rows and 5,120 parent loss cells. A separate direct-index bootstrap reproduces 192 budget contrasts, 48 log-budget areas and 64 metric means within 1.34e-15. Binary64 marginals are independently checked before exact modal ties; forecast objectives and native expected accuracy remain separate. [Review](versions/v19-local-maker/GOAL_DECISION_REVIEW_PROTOCOL.md).
+
+The fixed-cost goal-abstention comparison is source admitted after 47 isolated controls. The existing serial queue dispatched it and both complete replays at verified below-normal priority. Numerical acceptance awaits completion and independent reconstruction. Retrospective evidence updating and less specific goal reporting remain two prepared independent alternatives. No new fit or protected lineage is used.
+
+A third direct-index regroup of original abstention rows reproduces 1,536 budget contrasts, 384 log-budget areas and 288 means within 2.78e-15. Conditional error divides pooled incorrect mass by pooled coverage; zero coverage remains undefined. Native loss and forecast loss are distinct, and binary64 thresholds preserve executed strict choices. [Review](versions/v19-local-maker/GOAL_ABSTENTION_REVIEW_PROTOCOL.md).
+
+Goal coarsening now has independent numerical acceptance and both complete replays; the fine-goal forecast remains unchanged.
+
+A third direct-index regroup of original coarsening rows reproduces 7,680 budget contrasts, 1,920 log-budget areas and 1,920 means within 1.56e-15. Conditional error and alternatives per claim divide pooled masses; zero coverage remains undefined. Independent integer partitions and fine-label native scoring preserve specificity and exact binary64 report decisions. [Review](versions/v19-local-maker/GOAL_COARSENING_REVIEW_PROTOCOL.md).
+
+Goal-confidence calibration passed 55 isolated controls and all three admitted executions completed through the existing serial queue. Reproduction and numerical acceptance await their independent completion-event review. Retrospective updating and complete class-wise goal reliability remain prepared, unimplemented alternatives. No new fit, sample or protected lineage was used.
+
+A third direct-index bootstrap reproduces 720 budget contrasts, 180 log-budget areas and 192 calibration means within 9.55e-15. Complete fixed-bin numerator/denominator sums retain empty bins; pooled-bin discrepancy remains separate from average lineage-bin discrepancy. Native self-forecasts have zero calibration error but nonzero proper uncertainty. [Review](versions/v19-local-maker/GOAL_CALIBRATION_REVIEW_PROTOCOL.md).
+
+Complete class-wise goal reliability passed 55 isolated controls and a separate uniform-probability check. The source-admitted job was observed executing through the existing serial queue, with both complete replays queued. Numerical acceptance requires independent scalar reconstruction and paired regrouping. Retrospective updating and operation-conditioned goal reliability remain prepared, unimplemented alternatives. Class-wise one-versus-rest Brier sums must reproduce multiclass loss and native-uncertainty plus squared-error decomposition. Equal-class means preserve all labels; pooled bin counts are aggregated within class before division. [Contract](versions/v19-local-maker/GOAL_CLASS_RELIABILITY_ADMISSION_PROTOCOL.md).
+
+A third direct-index paired-law bootstrap verifies 2,160 budget contrasts, 540 log-budget areas, 576 class means and 192 descriptive equal-class means within 7.11e-15. Native self-forecasts retain uncertainty with zero calibration error. Complete class-wise sums prevent cancellation across classes; pooling within a class can still conceal opposing errors. [Review](versions/v19-local-maker/GOAL_CLASS_RELIABILITY_REVIEW_PROTOCOL.md).
+
+Operation-conditioned goal calibration retains every joint operation/bin weight, forecast sum and native-correctness sum before conditioning. Absolute discrepancy before versus after operation pooling measures cancellation. Explicit empty groups and native self-calibration are controls. Source admission passes 56 isolated tests. [Contract](versions/v19-local-maker/GOAL_OPERATION_CALIBRATION_ADMISSION_PROTOCOL.md).
+
+Operation-conditioned calibration now has independent scalar reconstruction of every operation/bin sum, mass, conditional signed error and empty mean. A third direct-index bootstrap verifies 576 within-readout gaps, 1,296 budget contrasts, 324 log-budget areas and 576 means within 1.78e-15. Absolute discrepancy before and after pooling operations separates cancellation from changed forecasts. No magnitude threshold or architecture ranking is added. [Review](versions/v19-local-maker/GOAL_OPERATION_CALIBRATION_REVIEW_PROTOCOL.md).
+
+Endpoint-artifact calibration uses all eight visible three-bit endpoint tuples, independently of witnessed operation grouping. The public endpoint alone sets membership. Every group/bin weight, forecast sum and native-correctness sum is retained before conditional division. Marginalization, native self-calibration and explicit empty groups validate the diagnostic. Source admission passes 57 isolated controls. [Contract](versions/v19-local-maker/GOAL_ARTIFACT_CALIBRATION_ADMISSION_PROTOCOL.md).
+
+Endpoint-artifact calibration now has independent scalar reconstruction of every group/bin sum, group mass, conditional signed error, empty mean and parent identity. A third direct-index paired-law bootstrap verifies 576 means, 576 within-readout gaps, 1,296 budget contrasts and 324 normalized log-budget areas within 2.50e-16. Grouping changes neither evidence nor forecasts; the absolute-value order measures cancellation. Native and equal-frame populations remain separate. [Review](versions/v19-local-maker/GOAL_ARTIFACT_CALIBRATION_REVIEW_PROTOCOL.md).
+
+Public requested-purpose calibration retains both legal observed task requests, including empty groups. The grouping excludes hidden adopted purpose and is invariant to artifact and operation changes at fixed request. Scalar controls verify pooled and grouped discrepancy, native self, bin boundaries and marginalization. All 58 isolated controls pass. [Contract](versions/v19-local-maker/GOAL_PURPOSE_CALIBRATION_ADMISSION_PROTOCOL.md). Retrospective updating and fixed-bin resolution sensitivity remain prepared alternatives.
+
+Public-request calibration now has independent scalar reconstruction of every group/bin sum, group mass, conditional signed error, empty mean and parent identity. A third direct-index paired-law bootstrap verifies 576 means, 576 within-readout gaps, 1,296 budget contrasts and 324 normalized log-budget areas within 1.37e-15. Grouping changes neither evidence nor forecasts; the absolute-value order measures cancellation. Native and equal-frame populations remain separate. [Review](versions/v19-local-maker/GOAL_PURPOSE_CALIBRATION_REVIEW_PROTOCOL.md).
+
+The fixed-bin diagnostic uses nested five, ten and twenty-bin partitions with
+integer-ratio boundaries and probability one in the last bin. It retains raw
+probabilities, bin IDs, joint masses, weighted forecast/native-correctness sums
+and undefined empty means. Refinement monotonicity, coarsening conservation and
+unchanged unbinned squared error are separate controls. Seventy-nine isolated
+controls pass after one output-directory repair; the failed setup is retained.
+No new fit or sample is used. [Contract](versions/v19-local-maker/GOAL_BIN_RESOLUTION_ADMISSION_PROTOCOL.md).
+
+Fixed-bin resolution now has complete independent scalar reconstruction of probabilities, ordered integer-ratio memberships, packed weights and sums, empty means, coarsening identities and unchanged unbinned squared error. A third direct-index bootstrap verifies 576 means, 1,152 within-readout refinement estimates, 2,592 budget contrasts and 648 normalized log-budget areas within 4.20e-15. The partitions are nested and frozen; this diagnoses sensitivity of aggregation without recalibrating any reader. [Review](versions/v19-local-maker/GOAL_BIN_RESOLUTION_REVIEW_PROTOCOL.md).
+
+The squared-residual diagnostic decomposes unchanged ten-bin mean squared error
+into weighted squared conditional mean residuals and within-bin residual variance.
+First and second weighted moments, empty conditional means, memberships and
+unbinned errors remain explicit. Fifty-five isolated controls pass, including an
+independent pairwise variance identity, signed/opposing residuals, boundaries,
+corruptions, complete synthetic execution and native/portable dispatch. The
+independent numerical review must reconstruct moments and centered variances;
+no scientific result is accepted at source admission. [Contract](versions/v19-local-maker/GOAL_SQUARED_DECOMPOSITION_ADMISSION_PROTOCOL.md).
+
+Squared residual decomposition now has independent scalar reconstruction of ten-bin first and second residual moments, centered variance, empty conditional moments, and unchanged unbinned squared error. A third direct-index paired bootstrap verifies 576 means, 1,152 component estimates, 1,296 budget contrasts and 324 normalized log-budget areas within 8.89e-16. The displayed within-bin shares are ratios of summed goal-component means, not separately bootstrapped ratios. No forecast is recalibrated. [Review](versions/v19-local-maker/GOAL_SQUARED_DECOMPOSITION_REVIEW_PROTOCOL.md).
+
+The absolute-error envelope compares unbinned weighted absolute residuals with
+the accepted five-, ten- and twenty-bin discrepancies. It preserves raw signed
+residuals, per-frame weighted absolute contributions, bin sums and empty means.
+Eighty-four isolated controls pass, including independent scalar absolute and
+signed-bin sums, native self, unequal/zero weights, exact boundaries, permutations,
+faulty bin scores, corrupted parents, complete synthetic execution and portable
+dispatch. Parent forecasts and all accepted binned scores must reproduce. Source
+admission accepts no new scientific result. [Contract](versions/v19-local-maker/GOAL_ABSOLUTE_ENVELOPE_ADMISSION_PROTOCOL.md).
+
+Absolute residual envelopes now have independent scalar reconstruction and a third direct-index paired bootstrap: 576 means, 1,728 envelope estimates, 3,024 budget contrasts and 756 normalized log-budget areas agree within 9.94e-15. Sixteen laws are resampled with both training draws and five fit seeds retained inside each law. Reported hidden-error shares are ratios of sums across goal components, with no separately bootstrapped ratio intervals. No forecast is changed. [Review](versions/v19-local-maker/GOAL_ABSOLUTE_ENVELOPE_REVIEW_PROTOCOL.md).
+
+The exact forecast-collision comparison is source admitted after 48 isolated controls. Its original and both complete replays are queued through the existing serial executor. The first attempt failed before scoring on native probability roundoff; its source, partial evidence and charge are retained. The replacement preserves raw probabilities, exact group membership and scoring. Numerical acceptance requires independent scalar reconstruction and a third law-resampled regroup. Retrospective updating and full joint-goal forecast partitions remain independent prepared alternatives.
+
+Collision inference resamples sixteen paired laws and rebuilds group target sums and masses inside every resample. The two training draws and five seeds remain paired; pooled group means are never treated as independent laws. Equal-frame mass permits an exact law-pair Gram factorization, checked by direct scalar enumeration. Reader inputs remain unchanged; group means and decomposition arrays are evaluator-only. No tolerance merges, clipping or new fits are admitted. [Contract](versions/v19-local-maker/FORECAST_COLLISION_ADMISSION_PROTOCOL.md).

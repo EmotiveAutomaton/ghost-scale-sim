@@ -43,6 +43,7 @@ def main():
     elif kind=='packet-zero':from ghostscale.validation.soundingline.v19.retained import packet_zero as handler
     elif kind=='local-world':from ghostscale.validation.soundingline.v19.local_world import admission as handler
     elif kind=='state-error':from ghostscale.validation.soundingline.v19.state_error import run as handler
+    elif kind=='forecast-collision':from ghostscale.validation.soundingline.v19.forecast_collision import run as handler
     elif kind in ('readout-scout','local-primary'):from ghostscale.validation.soundingline.v19.readouts import run as handler
     elif kind in ('frame','jointness'):from ghostscale.validation.soundingline.v19.local_alternatives import run as handler
     elif kind=='probability-head':from ghostscale.validation.soundingline.v19.probability_head import run as handler
@@ -70,6 +71,32 @@ def main():
     elif kind=='joint-support-review':from ghostscale.validation.soundingline.v19.joint_support_review import run as handler
     elif kind=='joint-uncertainty':from ghostscale.validation.soundingline.v19.joint_uncertainty import run as handler
     elif kind=='joint-uncertainty-review':from ghostscale.validation.soundingline.v19.joint_uncertainty_review import run as handler
+    elif kind=='goal-decision':from ghostscale.validation.soundingline.v19.goal_decision import run as handler
+    elif kind=='goal-abstention':from ghostscale.validation.soundingline.v19.goal_abstention import run as handler
+    elif kind=='goal-calibration':from ghostscale.validation.soundingline.v19.goal_calibration import run as handler
+    elif kind=='goal-calibration-review':from ghostscale.validation.soundingline.v19.goal_calibration_review import run as handler
+    elif kind=='goal-operation-calibration-review':from ghostscale.validation.soundingline.v19.goal_operation_calibration_review import run as handler
+    elif kind=='goal-purpose-calibration-review':from ghostscale.validation.soundingline.v19.goal_purpose_calibration_review import run as handler
+    elif kind=='goal-bin-resolution-review':from ghostscale.validation.soundingline.v19.goal_bin_resolution_review import run as handler
+    elif kind=='goal-squared-decomposition-review':from ghostscale.validation.soundingline.v19.goal_squared_decomposition_review import run as handler
+    elif kind=='goal-absolute-envelope-review':from ghostscale.validation.soundingline.v19.goal_absolute_envelope_review import run as handler
+    elif kind=='goal-absolute-envelope':from ghostscale.validation.soundingline.v19.goal_absolute_envelope import run as handler
+    elif kind=='goal-squared-decomposition':from ghostscale.validation.soundingline.v19.goal_squared_decomposition import run as handler
+    elif kind=='goal-bin-resolution':from ghostscale.validation.soundingline.v19.goal_bin_resolution import run as handler
+    elif kind=='goal-purpose-calibration':from ghostscale.validation.soundingline.v19.goal_purpose_calibration import run as handler
+    elif kind=='goal-artifact-calibration':from ghostscale.validation.soundingline.v19.goal_artifact_calibration import run as handler
+    elif kind=='goal-artifact-calibration-review':from ghostscale.validation.soundingline.v19.goal_artifact_calibration_review import run as handler
+    elif kind=='goal-operation-calibration':from ghostscale.validation.soundingline.v19.goal_operation_calibration import run as handler
+    elif kind=='goal-class-reliability':from ghostscale.validation.soundingline.v19.goal_class_reliability import run as handler
+    elif kind=='goal-class-reliability-review':from ghostscale.validation.soundingline.v19.goal_class_reliability_review import run as handler
+    elif kind=='goal-coarsening':from ghostscale.validation.soundingline.v19.goal_coarsening import run as handler
+    elif kind=='goal-coarsening-review':from ghostscale.validation.soundingline.v19.goal_coarsening_review import run as handler
+    elif kind=='goal-abstention-review':from ghostscale.validation.soundingline.v19.goal_abstention_review import run as handler
+    elif kind=='goal-decision-review':from ghostscale.validation.soundingline.v19.goal_decision_review import run as handler
+    elif kind=='goal-mass-review':from ghostscale.validation.soundingline.v19.goal_mass_review import run as handler
+    elif kind=='goal-mass-control':from ghostscale.validation.soundingline.v19.goal_mass_control import run as handler
+    elif kind=='temporal-mass-control':from ghostscale.validation.soundingline.v19.temporal_mass_control import run as handler
+    elif kind=='witnessed-goal-review':from ghostscale.validation.soundingline.v19.witnessed_goal_review import run as handler
     elif kind=='witnessed-goal-factorization':from ghostscale.validation.soundingline.v19.witnessed_goal_factorization import run as handler
     elif kind=='within-step-factorization':from ghostscale.validation.soundingline.v19.within_step_factorization import run as handler
     elif kind=='temporal-factorization-review':from ghostscale.validation.soundingline.v19.temporal_factorization_review import run as handler

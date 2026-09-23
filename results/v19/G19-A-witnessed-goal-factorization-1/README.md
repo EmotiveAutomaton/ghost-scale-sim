@@ -1,5 +1,5 @@
-# Conditional goal dependence: admitted
+# Witnessed-goal dependence: verified reversal
 
-V19 has 59 independently accepted scientific batches. Conditional goal factorization is source admitted after 46 isolated controls and was observed executing through the existing serial queue. It compares the witnessed-operation restriction with the product of three goal marginals, preserving original forecasts and separate native rulers. Retrospective updating and temporal alphabet-mass matching remain two prepared independent alternatives. The full within-step comparison retains a timing blocker; no new fit or protected lineage is admitted.
+We tested whether dependence among goals improves prediction after all operations are witnessed. Removing it lowers the predictive bank’s logarithmic loss by 0.14852 nats at 2,048 labels; matched frequencies improve by 0.15200. Independent reconstruction, all 20 paired estimates and both complete replays verify this constructed-method reversal. The native reference instead loses accuracy, so the learned gain does not establish historical goal correspondence or human intent.
 
-[Contract](../../../docs/versions/v19-local-maker/WITNESSED_GOAL_ADMISSION_PROTOCOL.md).
+[Report](../../../docs/versions/v19-local-maker/WITNESSED_GOAL_REPORT.md).
