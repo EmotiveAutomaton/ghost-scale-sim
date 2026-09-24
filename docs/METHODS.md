@@ -1,6 +1,6 @@
 # The methodology layer
 
-We tested whether identical frozen local-goal forecasts conceal different native target distributions. All 974 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+We tested whether identical frozen local-goal forecasts conceal different native target distributions. At 2,048 labels, the predictive bank distinguishes all 704 public frames, while the frequency baseline merges them into 121–124 forecast groups. Remaining bank target variation is across laws, not across frames within a law. Independent reconstruction, all 4,464 paired estimates and both complete replays verify this constructed-method result; historical process correspondence and human intent remain unestablished.
 
 The independent collision checker reconstructs exact sorted groups, scalar native moments and directly centered within-law errors. Law multiplicities rebuild group means before uncertainty is calculated. A separate third regroup expands centered group bias from forecast cross-moments; equal-mass law-pair factorization preserves exact resampling at lower cost. All public reader fields remain unchanged. [Protocol](versions/v19-local-maker/FORECAST_COLLISION_REVIEW_PROTOCOL.md).
 

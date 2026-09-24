@@ -1,3 +1,3 @@
-# Independent exact forecast-collision review
+# Independent exact forecast-collision review complete
 
-58 controls pass. Complete scalar reconstruction, paired law resampling and source admission are verified on synthetic fixtures. Campaign numerical acceptance remains pending. The original and replay sources remain frozen.
+All 640 scalar group reconstructions, 5,120 parent identities and the separately coded third regroup pass. All 4,464 paired summaries verify; intervals condition on the retained fits. No historical-process claim.

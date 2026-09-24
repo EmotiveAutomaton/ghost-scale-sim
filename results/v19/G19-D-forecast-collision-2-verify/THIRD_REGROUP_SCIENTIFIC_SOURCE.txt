@@ -1,0 +1,39 @@
+ fields=('draw','seed','budget','arm','forecast','weighting');arms=('raw-history','frozen-latent','learned-bank','matched-frequency');forecasts=('restricted','goal-product');weights=('native','equal-frame');metrics=('squared_error','group_bias','within_law_variation','across_law_variation')
+ ds,ss,bs,ls=(cfg[k] for k in ('training_draws','fit_seeds','budgets','development_lineages'))
+ rows=json.loads(gzip.decompress((vr/'reconstructed_points.json.gz').read_bytes()));ri={tuple(r[k] for k in fields):r for r in rows}
+ assert len(ri)==640 and set(ri)==set(product(ds,ss,bs,arms,forecasts,weights))
+ samples=np.random.default_rng(191022).integers(len(ls),size=(10000,len(ls)));counts=np.array([np.bincount(v,minlength=len(ls)) for v in samples]);assert digest(counts.tolist())==read(root/'BOOTSTRAP.json')['count_digest']
+ used=R.card_consumed(c,dict(accounting_card=card),'');boot={};maxpoint=0.;bundle_hashes={}
+ for ix,ident in enumerate(product(ds,ss,bs,arms,forecasts,weights)):
+  assert used+time.process_time()-start<1680,'leave 120 operating seconds inside cap'
+  d,s,b,a,f,w=ident;file=vr/'reconstructed_groups'/f'{d}-E2-full-{s}-{b}-{a}-{f}-{w}.npz'
+  with np.load(file,allow_pickle=False) as z:saved=dict(z)
+  values=T.resample(saved,np.vstack([np.ones((1,len(ls)),int),counts]))
+  maxpoint=max(maxpoint,float(np.max(abs(values[0]-np.array(ri[ident]['values'])))))
+  key=b,a,f,w
+  if key not in boot:boot[key]=np.zeros_like(values[1:])
+  boot[key]+=values[1:]/(len(ds)*len(ss));bundle_hashes[file.name]=sha(file)
+  if ix%160==159:print(json.dumps(dict(bundles=ix+1,cpu_seconds=time.process_time()-start)),flush=True)
+ # Independent table assembly from a dense paired draw/seed grid and third-regroup arrays.
+ estimates=[];contrasts=[];areas=[]
+ def report(grid,b):
+  return dict(mean=float(grid.mean()),draw_means=grid.mean(axis=1).tolist(),fit_seed_means=grid.mean(axis=0).tolist(),low=float(np.percentile(b,2.5)),high=float(np.percentile(b,97.5)))
+ for f,w,m,t,g in product(forecasts,weights,range(4),range(3),range(3)):
+  ident=dict(forecast=f,weighting=w,metric=metrics[m],step=t,goal=g)
+  grids={(b,a):np.array([[ri[d,s,b,a,f,w]['values'][m][t][g] for s in ss] for d in ds]) for b,a in product(bs,arms)}
+  for a,b in product(arms,bs):estimates.append(dict(ident,arm=a,budget=b,**report(grids[b,a],boot[b,a,f,w][:,m,t,g])))
+  for a in (a for a in arms if a!='learned-bank'):
+   curves=np.stack([grids[b,'learned-bank']-grids[b,a] for b in bs]);bb=np.stack([boot[b,'learned-bank',f,w][:,m,t,g]-boot[b,a,f,w][:,m,t,g] for b in bs])
+   for i,b in enumerate(bs):contrasts.append(dict(ident,arm='learned-bank',baseline=a,budget=b,**report(curves[i],bb[i])))
+   spacing=np.diff(np.log(np.array(bs,float)))/np.log(bs[-1]/bs[0]);area=np.tensordot(spacing,(curves[:-1]+curves[1:])/2,axes=1);ba=spacing@((bb[:-1]+bb[1:])/2)
+   areas.append(dict(ident,arm='learned-bank',baseline=a,**report(area,ba)))
+ rebuilt=dict(estimates=estimates,contrasts=contrasts,normalized_log_budget_area=areas);summary=read(root/'SUMMARY.json');err=0.
+ def compare(a,b):
+  global err
+  if isinstance(a,dict):assert set(a)==set(b);[compare(a[k],b[k]) for k in a]
+  elif isinstance(a,list):assert len(a)==len(b);[compare(x,y) for x,y in zip(a,b)]
+  elif isinstance(a,(int,float)):
+   assert abs(a-b)<1e-10,(a,b);err=max(err,abs(a-b))
+  else:assert a==b
+ compare(rebuilt,{k:summary[k] for k in rebuilt});compare(rebuilt,read(vr/'INDEPENDENT_REGROUP.json'));compare(rebuilt,read(vr/'ORIGINAL_ROW_REGROUP.json'))
+ assert maxpoint<1e-10
