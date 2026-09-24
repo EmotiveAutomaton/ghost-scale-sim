@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether covering more query contexts preserves retrospective updates better than retaining only recent sources at the same count. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+
+Independent ranked-context selection, direct group/report Bayes numerators, bit schedules and indexed state accumulation reconstruct all seven retention states and eight endpoint reports. Explicit one-hot proper losses check regret, and independent structural sets recount compact storage. Exact support and NaN masks remain separate. All 80 isolated controls pass; original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/BALANCED_REVIEW_PROTOCOL.md).
+
 We tested whether retaining only recent source state preserves updates from a later report about the past. With a half chance of copying, retaining the most recent half of the time span loses 15.4-35.3% of the report's small future-prediction gain. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
 Direct group/report Bayes numerators, independent bit schedules and indexed state accumulation reconstruct all four retention windows and eight endpoint reports. Explicit one-hot proper losses check regret, and independent structural sets recount compact storage. Exact support and NaN masks remain separate. All 73 isolated controls pass; original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/FORGETTING_REVIEW_PROTOCOL.md).

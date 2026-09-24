@@ -57,6 +57,7 @@ def main():
     elif kind=='source-interval':from ghostscale.validation.soundingline.v19.source_interval import run as handler
     elif kind=='interval-review':from ghostscale.validation.soundingline.v19.interval_review import run as handler
     elif kind=='source-prior':from ghostscale.validation.soundingline.v19.source_prior import run as handler
+    elif kind=='balanced-review':from ghostscale.validation.soundingline.v19.balanced_review import run as handler
     elif kind=='balanced-retention':from ghostscale.validation.soundingline.v19.balanced_retention import run as handler
     elif kind=='retrospective-forgetting':from ghostscale.validation.soundingline.v19.retrospective_forgetting import run as handler
     elif kind=='report-context':from ghostscale.validation.soundingline.v19.report_context import run as handler
