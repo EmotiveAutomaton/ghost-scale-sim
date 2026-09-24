@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether averaging the whole future hides different retention errors in immediate and later forecasts. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+
+Independent rational midpoint-time selection, direct group/report Bayes numerators, bit schedules and indexed state accumulation reconstruct all five retention states and eight endpoint reports. Explicit one-hot proper losses check regret, and independent structural sets recount compact storage. Exact support and NaN masks remain separate. All 380 isolated controls pass; original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/RETENTION_HORIZON_REVIEW_PROTOCOL.md).
+
 We tested whether covering more source times preserves retrospective updates better than retaining only recent sources at the same count. At half copying, evenly spaced retention lowers expected squared prediction loss in only 2 of 14 half-count settings and none of the 14 quarter-count settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
 Independent rational midpoint-time selection, direct group/report Bayes numerators, bit schedules and indexed state accumulation reconstruct all five retention states and eight endpoint reports. Explicit one-hot proper losses check regret, and independent structural sets recount compact storage. Exact support and NaN masks remain separate. All 109 isolated controls pass; original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/TIME_RETENTION_REVIEW_PROTOCOL.md).

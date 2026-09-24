@@ -60,6 +60,7 @@ def main():
     elif kind=='balanced-review':from ghostscale.validation.soundingline.v19.balanced_review import run as handler
     elif kind=='time-retention-review':from ghostscale.validation.soundingline.v19.time_retention_review import run as handler
     elif kind=='retention-source-prior':from ghostscale.validation.soundingline.v19.retention_source_prior import run as handler
+    elif kind=='retention-horizon-review':from ghostscale.validation.soundingline.v19.retention_horizon_review import run as handler
     elif kind=='retention-horizon':from ghostscale.validation.soundingline.v19.retention_horizon import run as handler
     elif kind=='time-retention':from ghostscale.validation.soundingline.v19.time_retention import run as handler
     elif kind=='balanced-retention':from ghostscale.validation.soundingline.v19.balanced_retention import run as handler
