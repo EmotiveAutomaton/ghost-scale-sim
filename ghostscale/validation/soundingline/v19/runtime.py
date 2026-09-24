@@ -219,6 +219,8 @@ def run(root,campaign):
                 from .aggregate_context_state import run as handler
             elif plan['design']['handler']=='aggregate-report-state':
                 from .aggregate_report_state import run as handler
+            elif plan['design']['handler']=='aggregate-precision':
+                from .aggregate_precision import run as handler
             elif plan['design']['handler']=='byte-retention':
                 from .byte_retention import run as handler
             elif plan['design']['handler']=='announced-query-retention':

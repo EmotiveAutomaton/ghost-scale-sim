@@ -67,6 +67,7 @@ def main():
     elif kind=='aggregate-prior-basis':from ghostscale.validation.soundingline.v19.aggregate_prior_basis import run as handler
     elif kind=='aggregate-context-state':from ghostscale.validation.soundingline.v19.aggregate_context_state import run as handler
     elif kind=='aggregate-report-state':from ghostscale.validation.soundingline.v19.aggregate_report_state import run as handler
+    elif kind=='aggregate-precision':from ghostscale.validation.soundingline.v19.aggregate_precision import run as handler
     elif kind=='byte-retention':from ghostscale.validation.soundingline.v19.byte_retention import run as handler
     elif kind=='announced-query-retention':from ghostscale.validation.soundingline.v19.announced_query_retention import run as handler
     elif kind=='retention-query':from ghostscale.validation.soundingline.v19.retention_query import run as handler
