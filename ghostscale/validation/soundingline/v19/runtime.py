@@ -207,6 +207,24 @@ def run(root,campaign):
                 from .retention_source_prior import run as handler
             elif plan['design']['handler']=='retention-horizon-review':
                 from .retention_horizon_review import run as handler
+            elif plan['design']['handler']=='retention-query-review':
+                from .retention_query_review import run as handler
+            elif plan['design']['handler']=='byte-retention-review':
+                from .byte_retention_review import run as handler
+            elif plan['design']['handler']=='aggregate-report-review':
+                from .aggregate_report_review import run as handler
+            elif plan['design']['handler']=='aggregate-prior-basis':
+                from .aggregate_prior_basis import run as handler
+            elif plan['design']['handler']=='aggregate-context-state':
+                from .aggregate_context_state import run as handler
+            elif plan['design']['handler']=='aggregate-report-state':
+                from .aggregate_report_state import run as handler
+            elif plan['design']['handler']=='byte-retention':
+                from .byte_retention import run as handler
+            elif plan['design']['handler']=='announced-query-retention':
+                from .announced_query_retention import run as handler
+            elif plan['design']['handler']=='retention-query':
+                from .retention_query import run as handler
             elif plan['design']['handler']=='retention-horizon':
                 from .retention_horizon import run as handler
             elif plan['design']['handler']=='time-retention':

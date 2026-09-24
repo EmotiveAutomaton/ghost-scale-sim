@@ -1,0 +1,3 @@
+# Query-announced retention: timing blocked
+
+The first complete-support estimate is 6,662.50 CPU seconds against a 3,600-second cap. One identified repair removes unnecessary cross-query computation and lowers it to 4,870.64 seconds. The repaired candidate passes 102 isolated controls but remains unadmitted. No saved population was reduced and no native scientific outcome was consumed. Failed controls, both source snapshots and timing records remain. Further repair needs a new identified cause. Fixed-byte retention, highest-probability retention and aggregate report state remain separate alternatives.

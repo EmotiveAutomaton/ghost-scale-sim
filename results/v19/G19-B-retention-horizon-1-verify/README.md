@@ -1,3 +1,3 @@
-# Independent retention-horizon reconstruction
+# Completed independent horizon reconstruction
 
-380 isolated controls pass. All report members, source factors, support masks, future forecasts and one-hot proper losses are checked. Numerical acceptance requires completion and separate original-row regroup. Original sources stay frozen.
+All 83 metrics, support masks, span membership, proper losses and storage reconstruct. Separate original-row regroup and all inherited whole-future rows verify. Scientific/evaluator evidence only.

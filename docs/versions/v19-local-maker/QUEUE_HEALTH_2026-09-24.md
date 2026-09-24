@@ -60,3 +60,7 @@ use the existing event service; their one-shot boundary behavior was tested,
 while future actual delivery remains unobserved.
 
 [Machine-readable audit](../../../results/v19/HEALTH_2026-09-24.json).
+
+## Completion review
+
+The frozen integration run completed: 2,943 ordinary and five serial CPU Torch controls pass without failures, skips or warnings. Outcome, source, log and child-accounting bindings verify; disposable fixture rehash remains limited as recorded in the [completion report](INTEGRATION_2026-09-24_REPORT.md). The separate horizon original-row review is now accepted. Query-context retention has its own later targeted source admission; it is outside this frozen 155-file scope.
