@@ -1,6 +1,6 @@
 # The methodology layer
 
-We tested whether averaging the whole future hides different retention errors in immediate and later forecasts. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+We tested whether averaging the whole future hides different retention errors in immediate and later forecasts. All 1,064 deterministic outputs match both complete replays, and the independent checker has completed. Separate original-row regrouping and final numerical acceptance remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
 
 Independent rational midpoint-time selection, direct group/report Bayes numerators, bit schedules and indexed state accumulation reconstruct all five retention states and eight endpoint reports. Explicit one-hot proper losses check regret, and independent structural sets recount compact storage. Exact support and NaN masks remain separate. All 380 isolated controls pass; original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/RETENTION_HORIZON_REVIEW_PROTOCOL.md).
 
