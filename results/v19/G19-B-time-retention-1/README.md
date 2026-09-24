@@ -1,0 +1,3 @@
+# Matched-count time-balanced retention: source admitted
+
+89 isolated controls pass, including scalar Bayes, compact joint tables, one-hot losses, source permutation, outcome/context-blind midpoint selection, mass preservation and informative-old-source fixtures. Full retained support and both complete replays are admitted. Two-report dependence and source-prior sensitivity of retention remain prepared alternatives. The complete-support synthetic timing passes on the first attempt, including balanced, random and single-context rosters. Numerical acceptance requires independent reconstruction and paired regroup. Scientific/evaluator evidence only; no new reader input.
