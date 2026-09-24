@@ -199,6 +199,8 @@ def run(root,campaign):
                 from .source_interval import run as handler
             elif plan['design']['handler']=='interval-review':
                 from .interval_review import run as handler
+            elif plan['design']['handler']=='balanced-retention':
+                from .balanced_retention import run as handler
             elif plan['design']['handler']=='retrospective-forgetting':
                 from .retrospective_forgetting import run as handler
             elif plan['design']['handler']=='report-context':
