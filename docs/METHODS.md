@@ -1,10 +1,24 @@
 # The methodology layer
 
-We tested whether revealing a past report’s query context adds future information without revealing its source. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+We tested whether revealing a past report’s query context adds future information without revealing its source. With a half chance of copying, context disclosure adds 0.0000225–0.0001724 in expected future squared-loss reduction across retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
-Independent source-wise Bayes, bit schedules and indexed state accumulation reconstruct all 40 report forecasts. Explicit one-hot proper losses check future loss reduction and context-refinement regret. Exact support and NaN masks remain separate. All 68 isolated controls pass; original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/CONTEXT_REVIEW_PROTOCOL.md).
 
-Report-context disclosure compares eight endpoint-only reports with 32 context/endpoint reports, marginalizing unknown sources within each context. Exact report-law weighting separates future squared-loss reduction from source entropy reduction. Scalar Bayes, one-hot losses, sparse support, context permutation, constant-context identity and an informative-context positive pass among 59 isolated controls. Full-support timing includes three complete executions and an independent reconstruction reserve within 3,600 CPU seconds. No context-disclosure result is yet accepted. [Contract](versions/v19-local-maker/REPORT_CONTEXT_ADMISSION.md).
+Bounded retrospective forgetting retains full, half-window, quarter-window or no
+past-source joint state while preserving all source probability mass in a declared
+uniform-maker-prior remainder. Scalar Bayes, explicit one-hot losses and separately
+materialized compact joint tables pass 59 isolated controls. The first full-support
+timing estimate failed the inclusive cap and remains preserved with its source.
+An exact copying-segment factorization propagates eight independent-report
+directions once and reuses them at all five copy probabilities. All controls pass
+again. The final prospective estimate is about 2,494 of 3,600 CPU seconds, including
+three executions and independent reconstruction. Storage counts describe a
+materializable compact state; measured reference timing is not optimized compact
+latency. No native forgetting result is accepted.
+[Contract](versions/v19-local-maker/RETROSPECTIVE_FORGETTING_ADMISSION.md).
+
+Independent source-wise Bayes, bit schedules and indexed state accumulation reconstruct all 40 report forecasts. Explicit one-hot proper losses check future loss reduction and context-refinement regret. Exact support and NaN masks remain separate. All 68 isolated controls pass; independent original-row regroup now verifies all 1,120 draw strata, 560 law strata and 70 population rows. [Protocol](versions/v19-local-maker/CONTEXT_REVIEW_PROTOCOL.md).
+
+Report-context disclosure compares eight endpoint-only reports with 32 context/endpoint reports, marginalizing unknown sources within each context. Exact report-law weighting separates future squared-loss reduction from source entropy reduction. Scalar Bayes, one-hot losses, sparse support, context permutation, constant-context identity and an informative-context positive pass among 59 isolated controls. Full-support timing includes three complete executions and an independent reconstruction reserve within 3,600 CPU seconds. Independent reconstruction and original-row regroup now accept the numerical result. [Contract](versions/v19-local-maker/REPORT_CONTEXT_ADMISSION.md).
 
 We tested whether binary reports preserve the future information carried by full endpoint reports. With a half chance of copying, each fixed binary report loses over 99.3% of the full report's small future squared-loss improvement (0.0000099–0.000164). Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 

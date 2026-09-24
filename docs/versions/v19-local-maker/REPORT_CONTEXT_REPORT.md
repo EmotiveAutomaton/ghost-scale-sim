@@ -1,71 +1,70 @@
-# Report-context disclosure: execution and replay review
+# Report-context disclosure: independently verified
 
-We tested whether revealing a past report’s query context adds future information without revealing its source. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+We tested whether revealing a past report’s query context adds future information without revealing its source. With a half chance of copying, context disclosure adds 0.0000225–0.0001724 in expected future squared-loss reduction across retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
-V19 remains active with 81 independently accepted scientific batches. Report-context execution and both complete replays are verified. The independent checker passed 68 isolated controls and has completed execution; numerical acceptance awaits its separate completion-event review. Two-report dependence and bounded retrospective forgetting remain prepared alternatives; source disclosure and the prior-conditional reachable rival remain timing-blocked.
+V19 remains active with 82 independently accepted scientific batches. Report-context disclosure is independently verified. Bounded retrospective forgetting passed 59 isolated controls and complete-support timing after one exact factorization repair; its frozen original was observed executing through the existing serial queue, with both complete replays queued. Two-report dependence and context-balanced retention remain prepared alternatives. Source disclosure and the prior-conditional reachable rival remain timing-blocked.
 
-The frozen comparison retains 28,672 posterior rows, 505,856 source candidates,
-eight development laws, two evidence conditions, seven available checkpoint cells
-and two observation draws. Each draw has 128 equally weighted Cartesian identities.
-Five copying probabilities and forty report values yield 5,734,400 posterior/report
-queries and 143,360 summary rows. All 48 unavailable checkpoint strata remain absent.
-No observations, fits or protected lineages were added.
+The population retains 28,672 posterior rows and 505,856 distinct source candidates,
+eight development laws, both posterior evidence conditions, seven available
+horizon/checkpoint cells and two observation draws. Each draw contains 128 equally
+weighted Cartesian identities. Five copying probabilities and forty report values
+give 5,734,400 posterior/report queries and 143,360 summary rows. All 48 unavailable
+checkpoint strata remain absent. No new observations, fits or protected lineages.
 
-Sources have equal selection probability. Compare eight endpoint-only reports
-with 32 context/endpoint reports, ordered by context then endpoint. The disclosed
-context is the selected source’s public query context. Sources within that context
-remain marginalized; the report does not disclose source identity. Supplied laws,
-complete hypothesis weights and source rosters are evaluator information. Exact
-support and undefined values remain distinct. Expected multiclass squared loss
-weights reports by their exact probabilities and retains every future time, four
-contexts and eight endpoints. Future prediction gain and source entropy reduction
-are separate estimands; disclosing context is extra evidence.
+An endpoint report has eight values; a context/endpoint report has 32. Context is
+the selected source's public query context; source identity remains marginalized.
+Uniform source selection and complete laws are supplied. All reports are weighted
+by their exact probability within each posterior; equal identities, two paired
+draws within each law, and eight equal laws follow. Evidence and checkpoint
+settings remain separate. Context disclosure is additional evidence.
 
-All 1,064 deterministic outputs match the original and both complete
-replays. All 835 source files, 164
-inherited inputs, plans, source archives, environments, output hashes and separate
-timing bindings verify. All 900 output
-members are retained in 24 checked scientific/evaluator archives. Public
-input bindings point to verified scientific files and archive members. No reader
-input changed. A1’s accepted 17,408-row, 144-cell regroup and portable replay were
-reverified with eight lineages, both fit seeds and four equally weighted classes.
-G19-04/G19-05/B1/D1/D2 remain complete. Both tiny settings are consumed, with actual
-training ownership consistent across both handoffs.
+The table ranges across fourteen evidence/horizon/checkpoint settings. Rows give
+the chance of copying a retained observation. The next three columns give the
+reduction in expected multiclass squared loss for endpoint reports, for reports
+also revealing context, and the additional gain. Squared errors sum over eight
+endpoints and average every future time and four query contexts. The last column
+is reduction in source entropy, measured in nats; it concerns source uncertainty,
+not prediction accuracy.
 
-The independent checker imports no producer evaluator, summarizer or sparse
-transition operator. Source-wise Bayes factors enumerate all report values;
-independent bit schedules and indexed state accumulation reconstruct every future
-coordinate. Explicit expected one-hot losses check loss reduction and context
-refinement regret. All 68 isolated controls pass without skips or warnings,
-including dense/sparse/disjoint/constant laws, single-source and constant-context
-identities, source/context permutations, informative-context positive, certain-copy
-placebo, each retained-field and NaN-mask corruption, and complete native integration
-with input/summary/roster/timing faults. No scoring tolerance or criterion changed.
+| Copy probability | Endpoint gain | Context/endpoint gain | Added future gain | Source entropy reduction (nats) |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 3.59098e-05–0.00045973 | 9.23309e-05–0.000760807 | 5.64211e-05–0.000301077 | 1.25771–1.28117 |
+| 0.25 | 2.06887e-05–0.000287856 | 5.75393e-05–0.000524295 | 3.68506e-05–0.000236439 | 1.18359–1.25297 |
+| 0.5 | 9.90154e-06–0.000163679 | 3.23918e-05–0.000336035 | 2.24903e-05–0.000172356 | 1.0223–1.18991 |
+| 0.75 | 2.98458e-06–7.02369e-05 | 1.36175e-05–0.000164046 | 1.06329e-05–9.38091e-05 | 0.778783–1.08265 |
+| 1 | 1.09454e-33–2.2763e-32 | 2.80935e-34–7.54905e-33 | -2.07645e-32–1.90029e-34 | 0.384421–0.880176 |
 
-Timing covers all seven structural cells and both source densities using two
-complete 32-row synthetic archived batches per shape. Reconstruction is allotted
-1452.00 CPU seconds after a 50% timing margin
-and I/O reserve. The final inclusive estimate is
-3085.97 of 3,600 CPU seconds, including
-all prior executions/checks, independent reconstruction, 150 seconds for regrouping
-and 200 for operations. Source and 1066 inputs were frozen before the
-checker entered the existing single-worker queue at verified below-normal priority.
+This is a descriptive information gain. No practical margin or confirmatory
+interval was frozen; practical importance remains inconclusive. At certain
+copying no maker-state information is added, although context can still identify
+a subset of possible sources. Rounding residuals remain in the evidence.
 
-Numerical acceptance requires its completion event and independent regrouping of
-ORIGINAL rows into 1,120 draw strata, 560 law strata and 70 population rows. Two
-draws remain inside each of eight equally weighted laws; evidence/checkpoint/copy
-probability cells remain separate. Replay identity alone does not validate the
-mathematics. No practical margin or confirmatory interval was frozen, so practical
-importance remains inconclusive even if a numerical difference is reproduced.
+All 1,064 deterministic producer outputs match both complete replays. Every source,
+plan, environment, input, output and separately bound timing verifies. All 900
+producer output members in 24 scientific/evaluator archives and 164 public input
+bindings verify. No reader input changed.
 
-Pursuit remains open. Two-report dependence and bounded retrospective forgetting
-are prepared, unimplemented independent alternatives requiring complete-support
-timing and source admission. Source disclosure and prior-conditional reachable
-updating retain their timing blockers. A3/C2/F2 prerequisites and protected lineages
-are unchanged. This is execution/replay integrity for a supplied-law method test,
-miniature — architecture untested beyond this roster. The week remains active.
+Independent scalar source factors, bit schedules and indexed state accumulation
+reconstruct all future coordinates. Explicit expected losses against eight
+one-hot outcomes check forecast gain and context-refinement regret. Exact supports
+and undefined raw values remain distinct. All 68 isolated controls pass. The
+checker has 838 frozen sources, 1,066 inputs and 1,070 deterministic outputs.
+
+A separate standard-library regroup of ORIGINAL rows imports no scientific
+summarizer. All 1,120 draw strata, 560 law strata and 70 population rows reproduce,
+including every Cartesian identity. Maximum discrepancy is 7.10543e-15 against the
+unchanged absolute tolerance 1e-12. Repeated reports and draws are not independent
+coefficient laws. Reconstructed raw rows and paired summaries are exported as
+scientific/evaluator evidence.
+
+Pursuit remains open: bounded forgetting tests whether a compact recent-source
+window loses useful retrospective state; two-report dependence tests joint state
+requirements. Source disclosure and the reachable-posterior rival retain timing
+blockers. Warrant is supplied-law constructed-method evidence, miniature —
+architecture untested beyond this roster. Learned provenance, historical process
+correspondence and human intent remain unestablished. The research week is active.
 
 [Frozen contract](REPORT_CONTEXT_ADMISSION.md).
-[Independent protocol](CONTEXT_REVIEW_PROTOCOL.md).
-[Execution evidence](../../../results/v19/G19-B-report-context-1/EXECUTION_REVIEW.json).
-[Evidence roles](../../../results/v19/G19-B-report-context-1/EXECUTION_EVIDENCE_ROLES.json).
+[Independent checker](CONTEXT_REVIEW_PROTOCOL.md).
+[Numerical review](../../../results/v19/G19-B-report-context-1/FINAL_REVIEW.json).
+[Paired regroup](../../../results/v19/G19-B-report-context-1/INDEPENDENT_REGROUP.json).

@@ -1,0 +1,3 @@
+# Bounded retrospective forgetting: source admitted
+
+59 isolated controls pass, including scalar Bayes, compact joint tables, one-hot losses, source permutation, mass preservation and informative-old-source fixtures. Full retained support and both complete replays are admitted. Two-report dependence and context-balanced retention remain prepared alternatives. The first timing rejection is preserved with its exact source; an exact copying-segment reduction resolves the identified redundancy. Numerical acceptance requires independent reconstruction and paired regroup. Scientific/evaluator evidence only; no new reader input.
