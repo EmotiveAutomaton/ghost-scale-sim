@@ -1,3 +1,5 @@
-# Unknown retrospective source identity: source admitted
+# Unknown-source execution and replays verified
 
-48 isolated controls pass. All retained source/report identities are admitted with both complete replays. Independent numerical review remains required. All exports are scientific/evaluator evidence; no new reader inputs.
+We tested whether a report with unknown source identity requires likelihood weighting before updating. All 1,064 deterministic outputs match both complete replays. Independent numerical acceptance remains pending after a recorded checker repair. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+
+All exports are scientific/evaluator evidence. Numerical reconstruction and separate regroup remain pending.
