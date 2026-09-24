@@ -1,3 +1,5 @@
-# Joint versus marginal forecast partitions: source admitted
+# Joint partition execution and replay verified
 
-53 isolated controls pass. All law/frame pairs, native joint targets and exact memberships remain retained. Both complete replays and independent numerical reconstruction are required; no outcome is accepted. [Contract](../../../docs/versions/v19-local-maker/JOINT_FORECAST_PARTITION_ADMISSION.md).
+We tested whether full local-goal forecasts distinguish native dependencies that their marginals merge. All 366 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+
+Reader inputs and scientific/evaluator outputs have separate archives.

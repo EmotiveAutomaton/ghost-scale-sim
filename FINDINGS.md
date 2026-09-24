@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+We tested whether full local-goal forecasts distinguish native dependencies that their marginals merge. All 366 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+
+V19 remains active with 73 independently accepted scientific batches. Joint-versus-marginal partition execution and both complete replays are verified; the admitted independent checker owns the next numerical review. Retrospective full-simplex and reachable-posterior updating remain prepared, unimplemented alternatives. [Report](docs/versions/v19-local-maker/JOINT_PARTITION_REPORT.md).
+
 We tested whether identical frozen local-goal forecasts conceal different native target distributions. At 2,048 labels, the predictive bank distinguishes all 704 public frames, while the frequency baseline merges them into 121–124 forecast groups. Remaining bank target variation is across laws, not across frames within a law. Independent reconstruction, all 4,464 paired estimates and both complete replays verify this constructed-method result; historical process correspondence and human intent remain unestablished.
 
 V19 remains active with 73 independently accepted scientific batches. The exact joint-versus-marginal partition comparison passed 53 isolated controls and ran through the existing serial queue. Native completion receipts exist for the original and both replays; their completion events own integrity and numerical review. Retrospective full-simplex and reachable-posterior updating remain prepared alternatives. [Contract](docs/versions/v19-local-maker/JOINT_FORECAST_PARTITION_ADMISSION.md).

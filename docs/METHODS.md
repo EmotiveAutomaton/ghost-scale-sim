@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether full local-goal forecasts distinguish native dependencies that their marginals merge. All 366 deterministic outputs match the original and both complete replays. Independent numerical acceptance remains pending. This is a constructed-method diagnostic; historical process correspondence and human intent remain unestablished.
+
+The independent partition checker reconstructs exact sorted groups and all 27 native target moments. A full law cross-moment expansion rebuilds pooled denominators for every resample, separately from the producer’s centered pair distances. Every setting retains its own forecast-to-group binding. Reader inputs remain unchanged. [Protocol](versions/v19-local-maker/JOINT_PARTITION_REVIEW_PROTOCOL.md).
+
 The joint-partition handler freezes the complete 27-outcome target, exact joint and marginal forecast groups, both populations and 10,000 paired law resamples. Every setting retains all memberships, using hash-bound reuse only for identical complete partitions. An independent cross-moment calculation passes exhaustive scalar controls. No numerical result is accepted. [Contract](versions/v19-local-maker/JOINT_FORECAST_PARTITION_ADMISSION.md).
 
 We tested whether identical frozen local-goal forecasts conceal different native target distributions. At 2,048 labels, the predictive bank distinguishes all 704 public frames, while the frequency baseline merges them into 121–124 forecast groups. Remaining bank target variation is across laws, not across frames within a law. Independent reconstruction, all 4,464 paired estimates and both complete replays verify this constructed-method result; historical process correspondence and human intent remain unestablished.
