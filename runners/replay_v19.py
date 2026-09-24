@@ -60,6 +60,7 @@ def main():
     elif kind=='retrospective-forgetting':from ghostscale.validation.soundingline.v19.retrospective_forgetting import run as handler
     elif kind=='report-context':from ghostscale.validation.soundingline.v19.report_context import run as handler
     elif kind=='report-coarsening':from ghostscale.validation.soundingline.v19.report_coarsening import run as handler
+    elif kind=='forgetting-review':from ghostscale.validation.soundingline.v19.forgetting_review import run as handler
     elif kind=='context-review':from ghostscale.validation.soundingline.v19.context_review import run as handler
     elif kind=='coarsening-review':from ghostscale.validation.soundingline.v19.coarsening_review import run as handler
     elif kind=='prior-review':from ghostscale.validation.soundingline.v19.prior_review import run as handler
