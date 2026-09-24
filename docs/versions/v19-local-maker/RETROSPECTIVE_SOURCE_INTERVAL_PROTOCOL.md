@@ -15,7 +15,7 @@ calibrated real-world provenance probability. Enumerate all retained source and
 future identities and require direct interior-alpha controls, constant and
 disjoint laws, endpoint inclusion and deliberately invalid intervals.
 
-This remains unimplemented and unadmitted. A complete synthetic timing gate,
+The implementation is now source admitted after 78 isolated controls and a complete synthetic timing gate; numerical acceptance remains pending. See [implementation contract](SOURCE_INTERVAL_ADMISSION.md). A
 source freeze, original and both full replays, independent reconstruction and
 paired law summaries are required. The prospective inclusive cap is 3,600 CPU
 seconds within B-family/global limits. No fit, new observation, protected lineage

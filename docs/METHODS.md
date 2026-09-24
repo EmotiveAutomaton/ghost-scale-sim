@@ -1,6 +1,8 @@
 # The methodology layer
 
-We tested whether uncertainty about a past report's source changes retrospective updating. All 2,181 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+The provenance-interval successor retains exact monotone posterior segments, report support and endpoint probability bounds. Accepted signed future directions reconstruct every coordinate envelope; coordinate extrema cannot be combined arbitrarily into a joint forecast. Fixed endpoint support failures stay separate from midpoint worst-case error. Seventy-eight isolated controls and full-support timing pass before source admission. [Contract](versions/v19-local-maker/SOURCE_INTERVAL_ADMISSION.md).
+
+We tested whether uncertainty about a past report's source changes retrospective updating. With a half chance of copying, an always-copy account rules out 41.1–41.3% of report probability across the retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
 Independent source identities, bit schedules and scalar likelihoods reconstruct all report factors. Direct hypothesis updates and indexed state-change accumulations cover every future coordinate. Scalar weighted-error cancellation checks source-mixture discrepancies; support failure remains separate. Complete source and paired draw strata preserve denominators. [Protocol](versions/v19-local-maker/SOURCE_REVIEW_PROTOCOL.md).
 

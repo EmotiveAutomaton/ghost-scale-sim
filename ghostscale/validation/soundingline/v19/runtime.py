@@ -195,6 +195,8 @@ def run(root,campaign):
                 from .sufficient_review import run as handler
             elif plan['design']['handler']=='source-review':
                 from .source_review import run as handler
+            elif plan['design']['handler']=='source-interval':
+                from .source_interval import run as handler
             elif plan['design']['handler']=='goal-absolute-envelope':
                 from .goal_absolute_envelope import run as handler
             elif plan['design']['handler']=='goal-squared-decomposition':

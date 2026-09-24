@@ -1,79 +1,68 @@
-# Retrospective source uncertainty: execution and replay review
+# Retrospective source uncertainty: independently verified
 
-We tested whether uncertainty about a past report's source changes retrospective updating. All 2,181 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+We tested whether uncertainty about a past report's source changes retrospective updating. With a half chance of copying, an always-copy account rules out 41.1–41.3% of report probability across the retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
-V19 remains active with 76 independently accepted scientific batches. Source-mixture execution and both complete replays are verified; the source-frozen independent checker owns numerical review. Two-report dependence and bounded provenance intervals remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked.
+V19 remains active with 77 independently accepted scientific batches. Source-mixture numerical reconstruction and all 1,120 paired strata are verified. The bounded provenance-interval implementation passed 78 isolated controls and full-support timing; its original was observed executing through the existing serial queue, with both complete replays queued. Numerical acceptance remains pending independent review. Two-report dependence and unknown source identity remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked.
 
-The fixed roster contains 28,672 retained posterior rows from eight development
-laws, two posterior evidence conditions, seven available horizon/checkpoint cells,
-two observation draws and 128 rows inside each draw. Each posterior is paired
-with every true distinct retained source, including its original time, context
-and endpoint. Copies count once. In total there are 505,856 source queries and
-20,234,240 endpoint/copy-probability queries. These queries are not independent
-laws. Forty-eight missing checkpoint strata remain unavailable; no observations,
-fits, seeds or protected lineages were added.
+The fixed population has eight development laws, two paired observation draws,
+two posterior evidence conditions and seven available horizon/checkpoint cells.
+Each draw contains 128 equally weighted initial-maker, change-type, change/no-change
+and duplicate/no-duplicate combinations. Every true distinct retained source is
+evaluated; source means are taken within a posterior before averaging rows, draws
+and laws. Repeated questions and sources are not independent laws. The 48 missing
+checkpoint strata remain unavailable. Confirmation and test lineages are untouched.
 
-The new report copies a source with a frozen probability of zero, one quarter,
-one half, three quarters or one; otherwise it draws a fresh native emission from
-that past maker state. Always-independent and always-copy rivals share the same
-retained posterior and law. True source identities select reports in both
-posterior evidence conditions; this is supplied evaluator information, not
-learned provenance. Every report endpoint and remaining forecast time/context/
-endpoint is covered. A source is never multiplied into the posterior twice.
+The source-aware posterior uses recorded source identities in its old evidence;
+the source-omitted posterior treats that old evidence without them. True source
+identities design the NEW retrospective reports in BOTH conditions. The fresh
+report copies its selected old source with probability zero, one quarter, one half,
+three quarters or one; otherwise it samples an independent native emission from
+that source's past maker state. All eight report endpoints are enumerated.
 
-At the old endpoint the correct posterior is a convex mixture of the old
-posterior and an independently updated posterior. At a different endpoint every
-possible update equals the independent update, while the copy rival has no
-support. Lossless factors retain all probabilities, masks, source identities,
-mixture coefficients and forecast discrepancies. Bound posterior weights, laws
-and schedules reconstruct every update. Support-failure mass stays separate
-from supported error mass. Conditional error divides pooled error mass by pooled
-supported mass and is undefined when support is zero. Sources are averaged within
-each posterior first; draws stay paired within laws. No score or effect magnitude
-is accepted from replay alone.
+At half copying probability, the always-copy rival excludes 41.0868–41.2905% of
+report probability across the 14 evidence/checkpoint settings. The always-independent
+rival supports every possible report but differs from correct mixture updating.
+Its report-weighted mean of the largest absolute future-coordinate discrepancy is
+0.002460–0.006850. This is a difference in event probability, not total variation
+and not the maximum across the whole population. For the always-copy rival the
+corresponding discrepancy conditional on supported reports is 0.000645–0.001990;
+that smaller conditional error omits its separately reported unsupported mass.
+No practical-effect threshold was specified. These are descriptive ranges over
+the fixed settings, not confidence intervals or a ranking on a shared-support loss.
 
-All 2,181 deterministic outputs match the original and both full replays, including
-the extracted-source replay. All 790 original sources, 90 inputs, archives, plans
-and environment fingerprints verify. Three timing logs are separately bound.
-Raw factors and summary rows are preserved in checked scientific/evaluator
-archives, with inherited input bytes bound to immutable published archives.
-Reader inputs are unchanged. Earlier admission failures remain retained.
+The independent checker reconstructs all 505,856 source queries and 20,234,240
+endpoint/copy-probability queries from bound hypotheses, laws and observations.
+It independently constructs source identities and bit schedules, scalar past-state
+likelihoods, direct hypothesis Bayes updates and indexed future-state changes.
+Every remaining time, context and endpoint is covered. Exact support masks are
+separate from the frozen absolute numerical tolerance of one trillionth.
+All 143,360 summary rows and 1,120 paired law/evidence/checkpoint/draw/probability
+strata reproduce. A separate standard-library regroup of original rows differs
+from the checker by at most 2.44e-15; it imports neither
+scientific summarizer. Two draws stay paired within each of eight laws. Conditional
+error divides pooled error mass by pooled supported mass, undefined for zero support.
 
-The independent checker passed 73 isolated controls without skips or warnings.
-It reconstructs bit transitions and source identities, past-state masses and
-scalar report likelihoods. Direct hypothesis Bayes updates and indexed state-
-change accumulations reconstruct every future coordinate. Scalar cancelled
-weighted-error expressions independently check the producer's endpoint/alpha
-arrays and summaries. Exact support masks remain separate from the frozen
-1e-12 numerical tolerance. Direct small-roster enumeration, constant/sparse/
-disjoint laws, impossible reports, duplicate identities, corruption of every
-factor, missing raw files, changed source mappings and complete synthetic
-producer/checker integration are exercised.
+All 2,181 deterministic original outputs match both complete replays, including
+the extracted-source replay. The original binds 790 sources and 90 inputs; the
+checker binds 793 sources and 2,193 inputs. Source archives, output/input bytes,
+plans and environment fingerprints all verify. Seventy-three isolated controls
+passed before checker admission. Original raw factors and new reconstruction
+records remain scientific/evaluator exports; reader inputs are unchanged.
 
-The full-support synthetic estimate is 1077.18
-CPU seconds inclusive under the unchanged 3,600-second card cap, including
-301.62 seconds for independent reconstruction,
-250 for a separate final regroup and 200 for operations. Tests and all completed
-executions are charged. The existing serial supervisor dispatched the checker
-with 793 frozen sources and 2,193 bound inputs; native BelowNormal priority was
-verified. Its separate completion event owns numerical adjudication. That review
-must independently regroup original raw rows, preserving all paired law/source/
-checkpoint/draw/alpha strata, before accepting source-conditioned quantities.
+All 112 timing batches cover 28,672 posterior rows and 505,856 sources. The original
+timed section used 79.640625 CPU seconds for source evaluation, raw writes and
+accumulation; parent loading is excluded there and included in native accounting.
+Division by query count describes amortization, not single-query latency. Earlier
+admission and export failures remain retained and charged. Replay consistency does
+not replace the independent numerical checks above.
 
-The producer's timed region includes source-batch evaluation, raw serialization
-and source accumulation; parent loading is outside it. Native total CPU includes
-those additional costs. A cost divided by query count is amortized cost, not
-single-query latency. Timing coverage remains part of independent review.
+Pursuit advances to the prepared bounded provenance-interval test and retains the
+two-report dependence alternative. The prior-conditional reachable rival remains
+timing-blocked after its identified optimization. A3/C2/F2 triggers are unchanged.
+This is a supplied-law constructed-method result, miniature — architecture untested
+beyond this roster. No learned source inference, minimal representation, historical
+process recovery or human intent follows.
 
-Two-report dependence and bounded provenance intervals remain substantive
-prepared alternatives. The prior-conditional reachable comparison remains
-timing-blocked after one identified optimization. A3/C2/F2 retain their specific
-triggers. The week is active; no exhaustion is claimed. This is a supplied-law
-constructed-method comparison, miniature — architecture untested beyond this
-roster. Learned provenance, historical process correspondence and human intent
-are outside its warrant.
-
-[Frozen design](RETROSPECTIVE_SOURCE_ADMISSION.md).
-[Independent review](SOURCE_REVIEW_PROTOCOL.md).
-[Execution evidence](../../../results/v19/G19-B-retrospective-source-1/EXECUTION_REVIEW.json).
-[Evidence roles](../../../results/v19/G19-B-retrospective-source-1/EXECUTION_EVIDENCE_ROLES.json).
+[Design](RETROSPECTIVE_SOURCE_ADMISSION.md). [Independent review](SOURCE_REVIEW_PROTOCOL.md).
+[Final evidence](../../../results/v19/G19-B-retrospective-source-1/FINAL_REVIEW.json).
+[Paired regroup](../../../results/v19/G19-B-retrospective-source-1/INDEPENDENT_REGROUP.json).

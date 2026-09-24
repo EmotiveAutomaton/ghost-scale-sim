@@ -54,6 +54,7 @@ def main():
     elif kind=='retrospective-source':from ghostscale.validation.soundingline.v19.retrospective_source import run as handler
     elif kind=='sufficient-review':from ghostscale.validation.soundingline.v19.sufficient_review import run as handler
     elif kind=='source-review':from ghostscale.validation.soundingline.v19.source_review import run as handler
+    elif kind=='source-interval':from ghostscale.validation.soundingline.v19.source_interval import run as handler
     elif kind in ('readout-scout','local-primary'):from ghostscale.validation.soundingline.v19.readouts import run as handler
     elif kind in ('frame','jointness'):from ghostscale.validation.soundingline.v19.local_alternatives import run as handler
     elif kind=='probability-head':from ghostscale.validation.soundingline.v19.probability_head import run as handler
