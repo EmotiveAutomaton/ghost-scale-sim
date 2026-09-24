@@ -1,3 +1,3 @@
-# Independent source-prior reconstruction
+# Completed independent source-prior reconstruction
 
-74 isolated controls pass. All priors, source factors, support masks, future forecasts and one-hot proper losses are checked. Numerical acceptance requires completion and separate original-row regroup. Original sources stay frozen.
+All source priors, Bayes quantities, forecasts and explicit one-hot losses reconstruct. All 1,120 original-row paired strata verify independently. Scientific/evaluator evidence only; no reader input.

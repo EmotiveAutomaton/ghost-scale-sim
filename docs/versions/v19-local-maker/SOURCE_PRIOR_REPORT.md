@@ -1,84 +1,73 @@
-# Source-prior misspecification: execution and replay review
+# Source-prior misspecification: independently verified
 
-We tested whether assuming equal source probabilities distorts forecasts when reports favor earlier or later observations. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+We tested whether assuming equal source probabilities distorts forecasts when reports favor earlier or later observations. With a half chance of copying, the mean largest future-probability error is 0.00028–0.00159 for later-source selection and 0.00072–0.00256 for earlier-source selection. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
-V19 remains active with 79 independently accepted scientific batches. Source-prior execution and both complete replays are verified. The independent checker passed 74 isolated controls and was observed executing through the existing serial queue. Two-report dependence and report-content coarsening remain prepared alternatives; source disclosure and the prior-conditional reachable rival remain timing-blocked.
+V19 remains active with 80 independently accepted scientific batches. Source-prior misspecification is independently verified. Fixed report-content coarsening passed 59 isolated controls and full-support timing; its source-frozen original and both complete replays are admitted for serial dispatch. Two-report dependence and report-context disclosure remain prepared alternatives. Source disclosure and the prior-conditional reachable rival remain timing-blocked.
 
-The frozen comparison keeps 28,672 posterior rows, 505,856 distinct source
-candidates, five copying probabilities and every report endpoint and future
-coordinate. Eight development laws, two posterior evidence conditions, seven
-available horizon/checkpoint cells and two observation draws remain paired.
-Each draw contains 128 equally weighted Cartesian identities. The two nonuniform
-selection laws yield 2,293,760 posterior/report queries and 143,360 summary rows.
-All 48 unavailable checkpoint strata remain absent. No observations, fits or
-protected lineages were added.
+The population retains 28,672 posterior rows, 505,856 distinct source candidates,
+eight development laws, two evidence conditions, seven available checkpoint cells
+and two observation draws. Each draw contains 128 Cartesian identities with equal
+weight. Five copying probabilities, eight report endpoints and two nonuniform
+selection laws give 2,293,760 posterior/report queries and 143,360 summary rows.
+All 48 unavailable checkpoint strata remain absent. No new observations, fits,
+confirmation lineages or test lineages were consumed.
 
-Source selection has three supplied priors: equal mass, mass proportional to the
-original observation time, and mass proportional to its reciprocal. The exact
-account uses the true prior; the rival always uses equal mass. Every prior is
-strictly positive and shares support. Selection probabilities remain inside each
-posterior. Expected errors are weighted by the true marginalized report law, not
-an average of source-level errors. Retain source conditional entropy, exact
-support, future-schedule total variation, largest future-probability difference,
-mean future total variation, squared forecast discrepancy and proper-score regret
-separately. Squared loss sums the eight endpoint classes and averages every future
-time and all four contexts. Unsupported report errors remain NaN.
+The correct account uses the supplied source-selection law. The rival assumes
+equal source probability. Later-source probability is proportional to original
+observation time; earlier-source probability is proportional to its reciprocal.
+Errors average under the true report law inside each posterior, then over the
+128 identities, both draws within each law, and eight equally weighted laws.
 
-All 1,064 deterministic outputs match the original, adjacent and extracted-source
-replays. All 819 source files, 164 inherited inputs, plans, source archives,
-output hashes and environment fingerprints verify; each execution's timing is
-separately bound. All raw output members are retained in 33 checked
-scientific/evaluator archives. Inherited inputs bind checked public files and
-archive members. There is no new reader input or reader exposure to evaluator
-truth. The admitted A1 paired regroup and portable replay remain bound: eight
-lineages, two fit seeds, 17,408 rows and 144 cells, with four equal class weights.
-The completed learned readouts and B1/D1/D2 branches are not restarted. Both tiny
-settings are already consumed, and training ownership agrees across handoffs.
+The table ranges over fourteen evidence/horizon/checkpoint settings. Largest
+error means the largest absolute future-probability difference across every
+future time, context and endpoint, subsequently averaged under the report law.
+Squared-loss regret means excess expected multiclass squared loss from assuming
+the wrong source prior, summed over endpoints and averaged over future times
+and contexts. Both are probability-based quantities; no practical-effect margin
+or confidence interval was prescribed.
 
-The independent checker imports no producer evaluation, grouping or sparse
-transition kernels. Scalar source normalizers and source-wise hypothesis
-numerators reconstruct every posterior. Independent bit schedules and indexed
-state sums rebuild every future coordinate. Explicit losses against all eight
-one-hot outcomes check the proper-score identity independently of squared error.
-Exact support and NaN masks remain distinct, with the existing absolute 1e-12
-tolerance on normalized numerical quantities.
+| Copy probability | Later-source largest error | Earlier-source largest error | Later-source squared-loss regret | Earlier-source squared-loss regret |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 0.000189379–0.00241431 | 0.00115849–0.00420467 | 1.59168e-07–1.55731e-05 | 5.43705e-06–3.9387e-05 |
+| 0.25 | 0.000319053–0.00205016 | 0.00093619–0.00344958 | 8.22849e-07–1.325e-05 | 3.6993e-06–3.04383e-05 |
+| 0.5 | 0.000281941–0.00158645 | 0.00071945–0.00255541 | 7.68969e-07–9.98309e-06 | 2.37795e-06–2.03771e-05 |
+| 0.75 | 0.000183346–0.000906836 | 0.000423674–0.00140941 | 3.66549e-07–4.61252e-06 | 9.53548e-07–8.85154e-06 |
+| 1 | 1.37224e-17–4.41377e-17 | 1.40514e-17–4.25072e-17 | -7.44988e-20–8.83366e-20 | -8.59093e-20–8.56915e-20 |
 
-The first checker test run had 17 failures and 57 passes because its constant-law
-identity used exact equality on nonexact decimal floating-point products. Its
-source and log remain retained and charged. Replacing only that fixture's values
-with exactly representable binary fractions yields 74 isolated passing controls,
-without skips or warnings. This changed no scientific kernel or tolerance. The
-controls include scalar Bayes and one-hot losses, sparse/disjoint/constant laws,
-single-source and permutation identities, every retained-field corruption, full
-parent integration, altered hashes, row counts, source pairing and timing.
+Both misspecified accounts differ below certain copying. At certain copying the
+maker posterior remains unchanged and forecast differences are rounding scale.
+Tiny signed squared-loss regrets at that endpoint are retained floating-point
+residuals, not evidence that a wrong prior helps. Exact support masks and raw
+undefined values remain preserved; all three positive source priors have the
+same report support.
 
-Full-support synthetic timing covers all seven structural cells and both native
-source densities, including complete archive loading, with two 32-row batches
-per shape. Scaling the slowest batch with a 50% margin and input reserve assigns
-1039.50 CPU seconds to full reconstruction.
-The inclusive estimate is 2577.10 seconds
-under the unchanged 3,600-second card, including prior execution, both replays,
-tests and failures, 150 seconds for a separate regroup and 200 for operations.
-The source-frozen verifier binds 822 files and 1,066 inputs and was observed
-executing below normal priority through the existing serial queue. Its completion
-event owns numerical review.
+All 1,064 deterministic producer files match both complete replays. All source,
+plan, environment, input, output and separate timing bindings verify. The 900
+producer output members in 33 scientific/evaluator archives and 164 public input
+bindings were checked. No new reader inputs were introduced.
 
-Numerical acceptance remains pending all reconstructed summaries and a separate
-regroup of original rows: 1,120 draw strata, 560 law strata and 70 population rows.
-Both draws remain inside each of eight equally weighted laws. No practical
-threshold or confidence interval was specified. Replay equality does not validate
-the mathematics; cost per query is amortization, not measured query latency.
+The independent checker reconstructs scalar source normalizers, source posterior
+weights, entropy, report support, hypothesis updates and every future forecast.
+Independent bit schedules and indexed future-state sums replace producer kernels.
+Explicit one-hot losses independently verify squared forecast regret. The checker
+has 822 frozen source files, 1,066 inputs and 1,070 bound deterministic outputs.
+Its 74 isolated controls pass. An earlier decimal-equality fixture failure remains
+retained and charged; only the fixture's exact binary fractions were repaired.
 
-Pursuit remains open with two prepared, unimplemented independent alternatives:
-dependence between two retrospective reports and fixed binary coarsenings of report
-content. Both require controls, full-support timing and source admission. Source
-disclosure and prior-conditional reachable updating retain their recorded timing
-blockers; A3/C2/F2 retain their prerequisites. Warrant is execution/replay integrity
-for a supplied-law method test, miniature — architecture untested beyond this
-roster. Numerical magnitude, learned provenance, historical process correspondence
-and human intent are not established here. The research week remains active.
+A separate standard-library regroup of original rows imports no scientific
+summarizer. It verifies all 1,120 draw strata, 560 law strata and 70 population
+rows, retaining both draws inside eight laws. Maximum regroup discrepancy is
+7.11e-15 against the frozen absolute tolerance 1e-12. Reconstructed rows and
+paired summaries are exported separately as scientific/evaluator evidence.
+Runtime divided by query count is amortization, not single-query latency.
 
-[Source contract](SOURCE_PRIOR_ADMISSION.md).
-[Independent verification](PRIOR_REVIEW_PROTOCOL.md).
-[Execution evidence](../../../results/v19/G19-B-source-prior-1/EXECUTION_REVIEW.json).
-[Evidence roles](../../../results/v19/G19-B-source-prior-1/EXECUTION_EVIDENCE_ROLES.json).
+Pursuit remains open: fixed report-content coarsening and two-report dependence
+address distinct questions. Warrant is descriptive, supplied-law constructed
+method evidence, miniature — architecture untested beyond this roster. These
+results establish neither learned provenance, historical process correspondence
+nor human intent. The research week remains active.
+
+[Frozen contract](SOURCE_PRIOR_ADMISSION.md).
+[Independent checker](PRIOR_REVIEW_PROTOCOL.md).
+[Numerical review](../../../results/v19/G19-B-source-prior-1/FINAL_REVIEW.json).
+[Paired regroup](../../../results/v19/G19-B-source-prior-1/INDEPENDENT_REGROUP.json).
