@@ -1,8 +1,8 @@
 # Unknown retrospective source identity: execution and replay review
 
-We tested whether a report with unknown source identity requires likelihood weighting before updating. All 1,064 deterministic outputs match both complete replays. Independent numerical acceptance remains pending after a recorded checker repair. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+We tested whether a report with unknown source identity requires likelihood weighting before updating. All 1,064 deterministic outputs match both complete replays. The repaired independent checker has completed; numerical acceptance awaits its separate review. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
 
-V19 remains active with 78 independently accepted scientific batches. Unknown-source execution and both complete replays are verified. The repaired, source-frozen independent checker owns numerical reconstruction; the original checker remains failed. Two-report dependence and source-identity disclosure value remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked.
+V19 remains active with 78 independently accepted scientific batches. Unknown-source execution and both complete replays are verified. The repaired independent checker has completed and awaits numerical review; the original checker remains failed. Two-report dependence and source-identity disclosure value remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked.
 
 The fixed population retains 28,672 posterior rows: eight development laws, two
 posterior evidence conditions, seven available horizon/checkpoint cells, two
@@ -58,8 +58,10 @@ CPU seconds under the 3,600-second card, including
 independent original-row regroup and 200 for operations. The existing supervisor
 was restarted only after native confirmation that the failed worker and prior
 supervisor exited. The repaired checker was observed executing below normal
-priority with 810 frozen source files and 1,066 bound inputs. Its completion event
-owns numerical review.
+priority with 810 frozen source files and 1,066 bound inputs. It completed at 05:27 UTC on 24 September. Its separate completion event
+owns numerical review. This portable-replay and retained-failure review did not
+consume the repaired checker's numerical outputs. The earlier refill was resolved
+by that admitted checker execution; its new completion/refill events remain open.
 
 Numerical acceptance still requires every reconstructed summary and an independent
 regroup of original rows: 1,120 paired draw strata, 560 law strata and 70 population
@@ -69,7 +71,7 @@ Support-failure probability and conditional error remain distinct. No practical
 threshold or confidence interval was specified. Timing divided by query count
 is amortization, not single-query latency.
 
-Pursuit remains open: unknown-source reconstruction is under independent review;
+Pursuit remains open: completed unknown-source reconstruction awaits independent numerical adjudication;
 two-report dependence and source disclosure are prepared alternatives. The
 prior-conditional reachable rival remains timing-blocked; A3/C2/F2 retain their
 specific triggers. Warrant is execution/replay integrity for a supplied-law

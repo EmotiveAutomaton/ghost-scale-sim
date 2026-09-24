@@ -1,6 +1,6 @@
 # The methodology layer
 
-We tested whether a report with unknown source identity requires likelihood weighting before updating. All 1,064 deterministic outputs match both complete replays. Independent numerical acceptance remains pending after a recorded checker repair. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+We tested whether a report with unknown source identity requires likelihood weighting before updating. All 1,064 deterministic outputs match both complete replays. The repaired independent checker has completed; numerical acceptance awaits its separate review. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
 
 Independent scalar source normalizers and source-wise hypothesis accumulation reconstruct all future coordinates. The failed absolute reciprocal check remains recorded; its repair checks the defining dimensionless mass identity at the unchanged tolerance. All source and report supports stay exact. Paired draw/law regroup remains mandatory. [Protocol](versions/v19-local-maker/IDENTITY_REVIEW_PROTOCOL.md).
 
