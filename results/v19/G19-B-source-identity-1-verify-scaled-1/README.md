@@ -1,3 +1,3 @@
-# Independent unknown-source reconstruction
+# Completed independent source-identity reconstruction
 
-78 isolated controls pass. All source factors, support masks and future discrepancies are checked. Campaign numerical acceptance remains pending. Original sources stay frozen.
+Every retained source normalizer, posterior, support mask and future discrepancy reconstructs within the frozen tolerance. All 1,120 original-row paired strata verify independently. The original absolute reciprocal check remains failed. Scientific/evaluator evidence only; no reader input.

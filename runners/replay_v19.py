@@ -56,6 +56,8 @@ def main():
     elif kind=='source-review':from ghostscale.validation.soundingline.v19.source_review import run as handler
     elif kind=='source-interval':from ghostscale.validation.soundingline.v19.source_interval import run as handler
     elif kind=='interval-review':from ghostscale.validation.soundingline.v19.interval_review import run as handler
+    elif kind=='source-prior':from ghostscale.validation.soundingline.v19.source_prior import run as handler
+    elif kind=='source-disclosure':from ghostscale.validation.soundingline.v19.source_disclosure import run as handler
     elif kind=='source-identity':from ghostscale.validation.soundingline.v19.source_identity import run as handler
     elif kind=='identity-review':from ghostscale.validation.soundingline.v19.identity_review import run as handler
     elif kind in ('readout-scout','local-primary'):from ghostscale.validation.soundingline.v19.readouts import run as handler

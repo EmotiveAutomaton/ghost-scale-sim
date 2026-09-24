@@ -1,5 +1,5 @@
 # Unknown-source execution and replays verified
 
-We tested whether a report with unknown source identity requires likelihood weighting before updating. All 1,064 deterministic outputs match both complete replays. The repaired independent checker has completed; numerical acceptance awaits its separate review. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+We tested whether a report with unknown source identity requires likelihood weighting before updating. With a half chance of copying, equal averaging of source-specific posteriors gives a mean largest future-probability error of 0.00300–0.00637 across retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
 All exports are scientific/evaluator evidence. Numerical reconstruction and separate regroup remain pending.
