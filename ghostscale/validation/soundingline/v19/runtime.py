@@ -203,6 +203,10 @@ def run(root,campaign):
                 from .balanced_review import run as handler
             elif plan['design']['handler']=='time-retention-review':
                 from .time_retention_review import run as handler
+            elif plan['design']['handler']=='retention-source-prior':
+                from .retention_source_prior import run as handler
+            elif plan['design']['handler']=='retention-horizon':
+                from .retention_horizon import run as handler
             elif plan['design']['handler']=='time-retention':
                 from .time_retention import run as handler
             elif plan['design']['handler']=='balanced-retention':

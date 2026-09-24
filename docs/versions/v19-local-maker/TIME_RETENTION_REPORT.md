@@ -1,79 +1,73 @@
-# Time-balanced retention: execution and replay review
+# Time-balanced retention: independently verified
 
-We tested whether covering more source times preserves retrospective updates better than retaining only recent sources at the same count. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+We tested whether covering more source times preserves retrospective updates better than retaining only recent sources at the same count. At half copying, evenly spaced retention lowers expected squared prediction loss in only 2 of 14 half-count settings and none of the 14 quarter-count settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
-V19 remains active with 84 independently accepted scientific batches. Time-balanced retention execution and both complete replays are verified. The independent checker passed 109 isolated controls and was observed executing through the existing serial queue. Two-report dependence and source-prior sensitivity of fixed retention remain prepared alternatives; source disclosure and the prior-conditional reachable rival remain timing-blocked.
+V19 remains active with 85 independently accepted scientific batches. Time-balanced retention is independently verified. Time-localized retention passed 221 isolated controls and complete-support timing; its frozen original was observed executing in the existing serial queue, with both complete replays queued. Source-prior sensitivity and two-report dependence retain timing blockers. Highest-probability source selection and query-specific retention remain prepared alternatives.
 
-Five states compare full retention, recent half/quarter cutoffs and evenly spaced
-source times at those same two counts. The fixed selector takes midpoint ranks
-in sorted source time; neither contexts nor endpoints affect selection. Every
-source keeps its original uniform probability. Omitted source likelihoods use
-an explicit original uniform sixteen-maker-prior remainder. The copy histogram
-still includes all sources. Equal retained counts need not imply equal bytes.
+The retained population contains 28,672 posteriors and 505,856 source candidates
+across eight development laws, two evidence conditions, two draws and seven
+horizon/checkpoint cells. Each draw has all 128 Cartesian identities. Five copy
+probabilities and eight endpoints give 1,146,880 shared report queries. All 143,360
+summary rows and fifty metrics remain; 48 unavailable strata stay absent. There
+are no new fits, observations or protected lineages.
 
-The complete roster retains 28,672 posteriors, 505,856 source candidates, 143,360
-summary rows and 1,146,880 shared posterior/report queries. Eight laws, two evidence
-conditions, two draws and seven checkpoint/horizon structures remain paired. Each
-draw has all 128 Cartesian identities. All 48 unavailable strata remain absent.
-Fifty metrics keep unsupported mass, supported expected squared regret, largest
-future-probability error, group total variation, retained counts, forgotten mass
-and storage separate. Undefined raw values remain NaN. No fit, new observation
-or protected lineage is used.
+Full retention is compared with recent half/quarter cutoffs and evenly spaced
+source times at the same counts. The fixed selector takes midpoint ranks in sorted
+time, independent of contexts and endpoints. Every omitted source preserves its
+original selection probability in an explicit uniform sixteen-maker-prior remainder.
+The copied-endpoint histogram still includes every source.
+
+At half copying, spacing minus recency changes expected squared prediction loss
+by -0.000000369 to +0.000002533 at half count, and +0.000000782 to +0.000004568 at
+quarter count. These ranges cover fourteen evidence/horizon/checkpoint cells,
+with two draws inside each of eight equally weighted laws. Squared loss sums over
+endpoint outcomes, averages future times and contexts, and weights reports by
+the full-retention report probabilities. Negative differences mean spacing helps.
+
+Relative to recency's regret against full retention, spacing changes half-count
+regret by -0.67% to +88.04%, and increases quarter-count regret by 1.86% to 48.75%.
+These are ratios of paired population means; absolute effects remain small.
+No practical margin or confirmatory interval was frozen. Sources, reports and
+draws are not independent laws. No practical equivalence or universal superiority
+claim follows. The two half-count improvements occur in the source-aware condition.
+
+Unsupported report mass is zero on this roster. Full retention and certain copying
+have zero regret. Exact support and undefined raw NaN masks are preserved. Equal
+source counts do not imply equal bytes: float64 masses, int32 indices/counts and
+the shared 32-float prior table are reported separately. Reference execution time
+does not establish optimized compact-state latency.
 
 All 1,064 deterministic outputs match original, adjacent and extracted-source
-executions. All 859 original frozen sources and
-164 input bindings verify, with source archives,
-plans, environments and separately bound timings. Complete producer outputs are
-preserved in 12 scientific/evaluator archives. Reader inputs are
-unchanged. Replay establishes reproduction; numerical acceptance remains pending.
+executions. All 859 producer source members, 164 inputs per execution, output
+hashes, plans, environments and separate timings verify. All 900 producer export
+members verify. The checker has 862 frozen sources, 1,066 bound inputs and 1,070
+deterministic outputs, all verified. Scientific/evaluator archives preserve raw
+outputs and reconstructed rows. Reader inputs are unchanged.
 
-The independent checker selects exact rational interval midpoints, constructs
-direct group/report Bayes numerators, independently decodes bit schedules and
-propagates every future time, context and endpoint. Explicit expected one-hot
-squared losses verify regret; structural sets recount mixed and deterministic
-cells and their storage. Deterministic cells reuse group weights. Float64 masses,
-int32 indices/counts and the shared prior table stay distinct. It imports no
-producer evaluator, selector, summarizer, transition operator or direction kernel.
-Reference timing is not an optimized compact-state latency measurement.
+The independent checker uses exact rational midpoint selection, direct group/report
+Bayes numerators, independent bit schedules and every future coordinate. Explicit
+expected one-hot losses verify regret; structural sets recount storage. It imports
+no producer evaluator, selector, summarizer, transition operator or direction kernel.
+All 109 isolated controls passed before execution. The fixed tolerance is 1e-12.
 
-All 109 isolated controls pass without skips or warnings. Controls include
-all midpoint counts for source lengths 1 through 32, irregular times, empty/full
-selection, context/endpoint-blindness, source permutation, older informative time,
-dense/sparse/constant/disjoint laws, full/certain-copy identities, every raw-field
-and NaN-mask corruption, summary/pair/roster/timing/binding faults, native integration
-and portable dispatch. The absolute tolerance remains one trillionth.
+A separate standard-library regroup of ORIGINAL rows reproduces all fifty metrics
+in 1,120 draw strata, 560 law strata and seventy population cells, with largest
+disagreement 5.32907e-15. Both count contrasts remain paired at all three levels;
+each preserves all ten per-state metrics. A1's accepted eight-lineage/two-fit,
+four-equal-class regroup and portable binding reverify; it was not rerun.
 
-Full-support synthetic timing covers all seven structural cells and both source
-densities. Three serialized 32-row batches per shape include decompression and
-all checker coordinates. Conservative checker allowance is
-834.00 CPU seconds, including a 50 percent
-margin and 180 seconds I/O allowance. Inclusive admission is
-2101.49/3600 seconds, including prior
-attempts, all three executions, tests, checker, 150 seconds original-row regroup
-and 200 seconds operations. 862 checker sources and
-1066 inputs are frozen. The existing serial queue was observed running
-that checker below normal priority. An early integrity attempt encountered the
-still-running portable replay; its failed receipt and CPU charge remain retained.
-
-Numerical adjudication requires checker completion and a separate standard-library
-regroup of ORIGINAL rows into 1,120 draw strata, 560 law strata and 70 population
-cells, retaining all fifty metrics and both spaced-minus-recent paired contrasts.
-Both draws stay inside each equally weighted law. Source/report counts are not
-independent laws. No practical margin or confirmatory interval was frozen. Scope
-is a supplied-law constructed method, miniature - architecture untested beyond
-this roster. Learned provenance, historical process correspondence and human
-intent remain unestablished.
-
-A1's accepted eight-lineage, two-fit, four-equal-class regroup and portable replay
-bindings reverify. G19-04/G19-05/B1/D1/D2 remain complete. Both tiny settings are
-consumed with shared ownership recorded. Two-report dependence and source-prior
-sensitivity of retention remain prepared, unimplemented alternatives. Source
-disclosure and prior-conditional reachable updating retain timing blockers.
-A3/C2/F2 prerequisites and untouched confirmation lineages remain protected.
-V19 stays active with 84 independently accepted batches; resource ceilings and
-immutable reporting times remain unchanged.
+Warrant: descriptive reversal, with practical importance inconclusive; supplied-law
+constructed method, miniature - architecture untested beyond this roster. Learned
+provenance, historical process correspondence and human intent remain unestablished.
+Pursuit remains open: source-prior sensitivity and two-report dependence ask distinct
+questions. Source disclosure and the prior-conditional reachable rival retain timing
+blockers. A3/C2/F2 prerequisites and confirmation lineages remain protected.
 
 [Frozen contract](TIME_RETENTION_ADMISSION.md).
 [Independent protocol](TIME_RETENTION_REVIEW_PROTOCOL.md).
-[Execution review](../../../results/v19/G19-B-time-retention-1/EXECUTION_REVIEW.json).
-[Evidence roles](../../../results/v19/G19-B-time-retention-1/EXECUTION_EVIDENCE_ROLES.json).
+[Numerical review](../../../results/v19/G19-B-time-retention-1/FINAL_REVIEW.json).
+[Paired regroup](../../../results/v19/G19-B-time-retention-1/INDEPENDENT_REGROUP.json).
+
+The time-localized successor is source admitted after 221 isolated controls. Complete-support synthetic timing covers all seven structural cells and both source densities, including serialization; the inclusive estimate is 3213.24 of 3,600 CPU seconds. Its five retention states preserve every source probability and an explicit original-prior remainder. Sorted-time midpoint ranks use no context or outcome information. Original, adjacent and extracted-source executions use 872 frozen sources and 164 inputs. Independent reconstruction and original-row regroup remain necessary before numerical acceptance. [Contract](RETENTION_HORIZON_PROTOCOL.md).
+
+The successor keeps the current checkpoint, near half of strictly future steps and remaining far steps distinct. Empty spans remain unavailable; their raw errors are NaN and summary entries are null. Weighted recombination must reproduce whole-future loss. Source-prior retention remains timing-blocked at 4,378.23 inclusive CPU seconds, and the two-report partial kernel at 12,854.69, each against a 3,600-second cap. Their complete sources and tests remain in the admission archives; neither produced new native outcomes. Highest-probability source selection and query-specific retention are prepared independently.
