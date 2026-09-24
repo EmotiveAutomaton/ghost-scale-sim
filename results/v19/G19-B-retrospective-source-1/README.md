@@ -1,3 +1,5 @@
-# Retrospective source mixture: source admitted
+# Retrospective source mixture execution and replay verified
 
-34 isolated controls pass. All retained true sources, endpoints and future forecasts are admitted with both complete replays. Independent numerical review remains required. All exports are scientific/evaluator evidence; no new reader inputs.
+We tested whether uncertainty about a past report's source changes retrospective updating. All 2,181 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+
+All exports are scientific/evaluator evidence. Input bindings reuse immutable inherited arrays; no new reader input exists.

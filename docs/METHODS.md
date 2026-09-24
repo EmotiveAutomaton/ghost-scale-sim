@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether uncertainty about a past report's source changes retrospective updating. All 2,181 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+
+Independent source identities, bit schedules and scalar likelihoods reconstruct all report factors. Direct hypothesis updates and indexed state-change accumulations cover every future coordinate. Scalar weighted-error cancellation checks source-mixture discrepancies; support failure remains separate. Complete source and paired draw strata preserve denominators. [Protocol](versions/v19-local-maker/SOURCE_REVIEW_PROTOCOL.md).
+
 The source-mixture successor enumerates every retained true source, all eight report endpoints and five fixed copy probabilities. Exact convex-mixture identities retain all supported updates; a sparse schedule-increment operator measures every remaining-time forecast difference. Unsupported rival reports stay separate from supported error mass. Its complete synthetic benchmark and 34 controls pass before native source admission. [Contract](versions/v19-local-maker/RETROSPECTIVE_SOURCE_ADMISSION.md).
 
 We tested whether retaining joint past-state information permits exact updates from a new report about the past. It reproduces all 18,481,152 report updates within rounding error, but its factored storage exceeds full hypothesis weights after the earliest checkpoint. Independent reconstruction, all 224 paired strata and both complete replays verify this supplied-law constructed-method result. Minimal state, learned access, historical process correspondence and human intent remain unestablished.
