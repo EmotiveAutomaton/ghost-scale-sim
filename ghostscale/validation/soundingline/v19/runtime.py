@@ -183,6 +183,8 @@ def run(root,campaign):
                 from .joint_partition_review import run as handler
             elif plan['design']['handler']=='retrospective-quotient':
                 from .retrospective_quotient import run as handler
+            elif plan['design']['handler']=='retrospective-review':
+                from .retrospective_review import run as handler
             elif plan['design']['handler']=='goal-absolute-envelope':
                 from .goal_absolute_envelope import run as handler
             elif plan['design']['handler']=='goal-squared-decomposition':

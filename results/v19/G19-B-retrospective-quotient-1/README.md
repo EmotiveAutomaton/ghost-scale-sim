@@ -1,3 +1,5 @@
-# Retrospective full-simplex certificate: source admitted
+# Retrospective execution and replay verified
 
-24 isolated controls pass. Complete hypothesis pair and third-member identities, all reports and future schedules are retained through lossless factorization. Both complete replays and independent numerical reconstruction are required. No outcome is accepted. [Contract](../../../docs/versions/v19-local-maker/RETROSPECTIVE_QUOTIENT_ADMISSION.md).
+We tested whether preserving future forecasts also preserves updates from a new report about the past. All 43 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a constructed-method certificate over possible mixtures; it does not establish reachable-posterior effects, historical process correspondence or human intent.
+
+All exported laws, mixtures and kernels are scientific/evaluator evidence. There are no new reader inputs.

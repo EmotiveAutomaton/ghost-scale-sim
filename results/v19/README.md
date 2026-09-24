@@ -1,5 +1,9 @@
 # V19 scientific records and reader export
 
+We tested whether preserving future forecasts also preserves updates from a new report about the past. All 43 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a constructed-method certificate over possible mixtures; it does not establish reachable-posterior effects, historical process correspondence or human intent.
+
+V19 remains active with 74 independently accepted scientific batches. Retrospective full-simplex execution and both complete replays are verified; the admitted independent checker owns the next numerical review. Reachable-posterior updating and joint retrospective likelihood state remain prepared, unimplemented alternatives. [Report](../../docs/versions/v19-local-maker/RETROSPECTIVE_QUOTIENT_REPORT.md).
+
 We tested whether full local-goal forecasts distinguish native dependencies that their marginals merge. They add no distinctions on this roster: joint and marginal groups coincide in all 320 settings, and all 240 paired budget and curve contrasts are zero. Independent reconstruction, all 624 summaries and both complete replays verify this constructed-method null; historical process correspondence and human intent remain unestablished.
 
 V19 remains active with 74 independently accepted scientific batches. The retrospective full-simplex certificate passed 24 isolated controls and was observed executing through the existing serial queue, with both complete replays admitted. Its separate completion events own numerical review. Reachable-posterior updating and joint retrospective likelihood state remain prepared, unimplemented alternatives. [Report](../../docs/versions/v19-local-maker/JOINT_PARTITION_REPORT.md).

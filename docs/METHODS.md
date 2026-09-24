@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether preserving future forecasts also preserves updates from a new report about the past. All 43 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a constructed-method certificate over possible mixtures; it does not establish reachable-posterior effects, historical process correspondence or human intent.
+
+The independent checker enumerates complete past-state and future-schedule bindings with direct bit transitions and integer counters. Scalar Bayes kernels and separately rearranged arithmetic verify both quotient weights; scalar endpoint differences reconstruct future-coordinate maxima. Every original identity and multiplicity remains bound before equivalent calculations are shared. Impossible reports and binary64/tolerance counts remain separate. [Protocol](versions/v19-local-maker/RETROSPECTIVE_REVIEW_PROTOCOL.md).
+
 We tested whether full local-goal forecasts distinguish native dependencies that their marginals merge. They add no distinctions on this roster: joint and marginal groups coincide in all 320 settings, and all 240 paired budget and curve contrasts are zero. Independent reconstruction, all 624 summaries and both complete replays verify this constructed-method null; historical process correspondence and human intent remain unestablished.
 
 The retrospective certificate now enumerates every divergent-past within-group hypothesis pair, every outside third hypothesis and all prior-time endpoint reports. It retains complete memberships and exact multiplicities while sharing likelihood kernels by past states. Complete future schedules reconstruct all forecasts; a future-state-set reduction is used only for maxima. Direct scalar conditioning verifies the factorization on synthetic controls. No native retrospective outcome is accepted here. [Admission](versions/v19-local-maker/RETROSPECTIVE_QUOTIENT_ADMISSION.md).
