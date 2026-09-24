@@ -1,5 +1,5 @@
-# Joint retrospective state execution and replay verified
+# Joint retrospective state: independently verified
 
-We tested whether retaining joint past-state information permits exact updates from a new report about the past. All 981 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test of single-report sufficiency and storage; it does not establish minimal state, learned access, historical process correspondence or human intent.
+We tested whether retaining joint past-state information permits exact updates from a new report about the past. It reproduces all 18,481,152 report updates within rounding error, but its factored storage exceeds full hypothesis weights after the earliest checkpoint. Independent reconstruction, all 224 paired strata and both complete replays verify this supplied-law constructed-method result. Minimal state, learned access, historical process correspondence and human intent remain unestablished.
 
-All exports are scientific/evaluator evidence. Inherited input bytes are bound to existing immutable archives; no new reader input exists.
+All exports are scientific/evaluator evidence; no reader input is added.

@@ -1,75 +1,79 @@
-# Joint retrospective sufficient state: execution review
+# Joint retrospective state: independent numerical acceptance
 
-We tested whether retaining joint past-state information permits exact updates from a new report about the past. All 981 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test of single-report sufficiency and storage; it does not establish minimal state, learned access, historical process correspondence or human intent.
+We tested whether retaining joint past-state information permits exact updates from a new report about the past. It reproduces all 18,481,152 report updates within rounding error, but its factored storage exceeds full hypothesis weights after the earliest checkpoint. Independent reconstruction, all 224 paired strata and both complete replays verify this supplied-law constructed-method result. Minimal state, learned access, historical process correspondence and human intent remain unestablished.
 
-V19 remains active with 75 independently accepted scientific batches. Joint retrospective state execution and both complete replays are verified; the source-frozen independent checker owns numerical review. Source uncertainty and two-report dependence remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked.
+A future-schedule group merges hypotheses with identical maker states from the
+checkpoint onward. A report about the past can distinguish members of that group.
+Keeping the joint probability of future group and past maker state supplies the
+numerator needed to update the group. This test checks that algebra on every
+available retained posterior and report, with supplied emission laws.
 
-The fixed roster contains 28,672 retained posterior rows: eight laws, two source
+The census contains 28,672 posterior rows: eight development laws, two source
 conditions, seven available horizon/checkpoint cells, two observation draws and
-128 rows within each draw. It enumerates 18,481,152 possible report queries,
-including impossible outcomes, across all past times and four contexts with
-eight endpoints. These repeated queries are not independent samples. The three
-missing 128-horizon checkpoints remain unavailable in all 48 law/source strata;
-their structural support maps are retained without generating new posterior data.
+128 rows per draw. All 18,481,152 enumerated report queries have positive probability
+on this roster. Impossible reports remain exercised by zero/disjoint synthetic
+controls. The 48 missing 128-horizon checkpoint strata are explicitly unavailable;
+their structural maps were checked without regenerating posterior observations.
+Both draws remain paired within each law. This finite census needs no sampling interval.
 
-The representation stores future-group weights and joint mass with past maker
-state. Singleton masses reuse their exactly identical group weight; every mixed
-group/state cell, including zeros, remains stored at every past time. Storage
-counts distinguish full hypothesis weights, group weights, logical full joint
-tables, factored floating-point values, and shared integer support/maps/schedules.
-No minimality or storage advantage is accepted before independent reconstruction.
+The producer's largest total variation is 2.81576e-16; independent summation gives
+4.52216e-16, both below the frozen 1e-12 tolerance. Total variation is half the
+sum of absolute differences in updated group probabilities. It bounds the error
+of every remaining-time endpoint forecast by contraction through the common
+supplied law. It is not a measured maximum forecast error. Different summation
+orders are not asserted to give bit-identical rounding-scale maxima.
 
-All 981 deterministic file bindings match the original, adjacent and complete
-extracted-source replay. All 782 frozen source files, 76 inputs, source archives,
-plans and environment fingerprints verify. Separate measured timing logs are
-bound for all three executions. New raw scientific outputs are exported in
-checked archives. Inherited arrays are reproduced by exact member bindings to
-their immutable published archives; all member bytes were verified.
+Rows below are the seven available structural cells, each shared by 4,096
+posteriors. Full weights, future groups, logical joint and factored values count
+float64 entries per posterior, so multiplying by eight gives bytes. Logical joint
+counts every supported group/past-state cell across past times. Factored values
+count group weights plus every mixed-group joint cell, including zero masses;
+singleton masses reuse their identical group weight. The last three columns are
+shared int32 structure bytes per cell, not per posterior.
 
-The independent checker passes 50 isolated controls without skips or warnings.
-Two preliminary integration failures remain retained and charged: a miniature
-test fixture did not satisfy the producer's fixed prior roster, and NumPy boolean
-control values required conversion for JSON serialization. Both identified causes
-were corrected before native admission. Original scientific sources are unchanged.
-Tests exercise complete synthetic producer/checker execution, scalar full-posterior
-conditioning and every future coordinate, constant/zero/disjoint laws, sparse
-posteriors, singleton and mixed groups, support corruption, dropped masses,
-denominator corruption, impossible reports, summary binding, storage and timing.
+| Horizon | Checkpoint | Full weights | Future groups | Logical joint | Factored values | Shared support bytes | Shared schedule bytes | Shared membership bytes |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 32 | 8 | 560 | 560 | 4,480 | 560 | 53,760 | 56,000 | 2,240 |
+| 32 | 16 | 560 | 304 | 5,344 | 1,040 | 78,592 | 20,672 | 2,240 |
+| 32 | 17 | 560 | 272 | 5,136 | 1,056 | 79,168 | 17,408 | 2,240 |
+| 32 | 20 | 560 | 176 | 4,128 | 1,104 | 77,824 | 9,152 | 2,240 |
+| 32 | 32 | 560 | 16 | 1,280 | 1,296 | 81,920 | 64 | 2,240 |
+| 128 | 16 | 3,632 | 3,376 | 54,496 | 4,112 | 668,416 | 1,525,952 | 14,528 |
+| 128 | 32 | 3,632 | 2,864 | 92,640 | 4,368 | 1,206,016 | 1,111,232 | 14,528 |
 
-The checker reconstructs maker transitions from bits, complete paths and support
-maps. Indexed scalar accumulation rebuilds group/state masses. Full-hypothesis
-matrix products independently reconstruct mixed-group report numerators; separate
-past-state marginal calculations check all report denominators. Singleton weights
-are compared exactly. Every update is compared to reconstruction from the saved
-tables. Different floating-point summation orders are checked at the frozen
-1e-12 tolerance, not described as bit-identical. The reported total variation
-bounds all future endpoint-probability errors; it is not a measured maximum.
-No numerical sufficiency claim is accepted from replay alone.
+The earliest checkpoint ties full-weight storage at 560 values. Later factored
+tables use 1.13216 to 2.31429 times the full-weight count. Thus this implementation
+restores single-report sufficiency without demonstrating compression against full
+hypothesis weights. Logical joint storage and shared maps are reported separately;
+neither unused zeros nor integer structure is hidden. No minimality theorem follows.
 
-The full-support synthetic timing estimate is 1315.86
-CPU seconds inclusive under the unchanged 3,600-second card cap. It includes
-271.83 seconds for independent reconstruction,
-250 for a separate final regroup and 200 for operations. Tests, failures and all
-previous executions are charged. The existing serial supervisor dispatched the
-source-frozen checker; BelowNormal priority was verified. Its event owns numerical
-adjudication. Both draws must stay paired within each law, with all source and
-checkpoint strata retained. This finite census requires no sampling interval.
+All 981 original deterministic outputs match both complete replays. The source
+archives, 782 producer and 785 checker source files, 76 producer and 989 checker
+inputs, environments and all output bindings verify. Independent bit transitions
+reconstruct all ten support maps; indexed accumulation rebuilds joint masses;
+direct hypothesis products and separately accumulated past-state marginals check
+every report denominator. Singleton identities are exact. A separately coded
+regroup reproduces all 224 law/source/checkpoint/draw strata and every reconstructed
+summary row from original raw records. All 896 timing batches per execution bind.
 
-Original timings measure joint construction and all queries together in a fixed
-32-row batch. A cost divided by query count is amortized cost, not single-query
-latency; the timed region excludes serialization and parent loading. Total native
-CPU accounting remains separate and includes those costs.
+The measured construction-plus-query regions take 131.734375, 154.578125 and
+137.718750 CPU seconds in original, adjacent and portable execution. Each covers
+all report queries in 32-row batches. Dividing by query count gives amortized cost,
+not single-query latency; serialization and parent loading are excluded from those
+timed regions and retained in total native accounting. This is no speed comparison
+against a separately timed full-weight implementation.
 
-Source uncertainty and two-report dependence remain substantive prepared,
-unimplemented alternatives. The prior-conditional reachable comparison remains
-blocked by its full-roster timing after one bounded optimization. No fit, seed
-padding, protected lineage, new scientific owner or budget extension was used.
-A3/C2/F2 retain their own triggers. The week is active; no exhaustion is claimed.
-This is a supplied-law constructed-method test, miniature â€” architecture untested
-beyond the declared roster. General minimal state, learned access, historical
-process correspondence and human intent remain outside its warrant.
+Fifty isolated controls passed, including deliberate support, mass, denominator,
+storage and timing corruption. The two preliminary fixture/serialization failures
+and all source snapshots remain retained and charged. Existing scientific and
+evaluator archives preserve full raw arrays; the independent reconstruction has
+its own checked export. No reader inputs, fitted model, observation, protected
+lineage or service owner were added. The miniature is architecture untested beyond
+the declared roster; historical correspondence and human intent are not measured.
+
+V19 remains active with 76 independently accepted scientific batches. Single-report joint-state sufficiency and its storage cost are independently verified. The source-mixture comparison passed 34 isolated controls and was observed executing through the existing serial queue, with both complete replays queued. Numerical acceptance awaits completion-event review. Two-report dependence and bounded provenance intervals remain prepared alternatives; the prior-conditional reachable rival remains timing-blocked.
 
 [Execution protocol](RETROSPECTIVE_SUFFICIENT_STATE_PROTOCOL.md).
 [Independent review](SUFFICIENT_REVIEW_PROTOCOL.md).
-[Execution evidence](../../../results/v19/G19-B-retrospective-sufficient-1/EXECUTION_REVIEW.json).
-[Evidence roles](../../../results/v19/G19-B-retrospective-sufficient-1/EXECUTION_EVIDENCE_ROLES.json).
+[Numerical acceptance](../../../results/v19/G19-B-retrospective-sufficient-1/FINAL_REVIEW.json).
+[Complete regroup](../../../results/v19/G19-B-retrospective-sufficient-1/INDEPENDENT_REGROUP.json).

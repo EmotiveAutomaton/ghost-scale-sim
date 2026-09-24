@@ -189,6 +189,8 @@ def run(root,campaign):
                 from .reachable_retrospective import run as handler
             elif plan['design']['handler']=='retrospective-sufficient':
                 from .retrospective_sufficient import run as handler
+            elif plan['design']['handler']=='retrospective-source':
+                from .retrospective_source import run as handler
             elif plan['design']['handler']=='sufficient-review':
                 from .sufficient_review import run as handler
             elif plan['design']['handler']=='goal-absolute-envelope':
