@@ -1,3 +1,3 @@
-# Independent report-content reconstruction
+# Completed independent report-content reconstruction
 
-67 isolated controls pass. All report members, source factors, support masks, future forecasts and one-hot proper losses are checked. Numerical acceptance requires completion and separate original-row regroup. Original sources stay frozen.
+All report likelihoods, Bayes quantities, future forecasts, explicit one-hot losses and fine-to-coarse regrets reconstruct. All 1,120 original-row paired strata verify independently. Scientific/evaluator evidence only; no reader input.

@@ -57,6 +57,7 @@ def main():
     elif kind=='source-interval':from ghostscale.validation.soundingline.v19.source_interval import run as handler
     elif kind=='interval-review':from ghostscale.validation.soundingline.v19.interval_review import run as handler
     elif kind=='source-prior':from ghostscale.validation.soundingline.v19.source_prior import run as handler
+    elif kind=='report-context':from ghostscale.validation.soundingline.v19.report_context import run as handler
     elif kind=='report-coarsening':from ghostscale.validation.soundingline.v19.report_coarsening import run as handler
     elif kind=='coarsening-review':from ghostscale.validation.soundingline.v19.coarsening_review import run as handler
     elif kind=='prior-review':from ghostscale.validation.soundingline.v19.prior_review import run as handler
