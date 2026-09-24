@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether assuming equal source probabilities distorts forecasts when reports favor earlier or later observations. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+
+Independent source-wise Bayes sums, bit schedules and indexed state accumulation reconstruct all prior-specific forecasts. Explicit one-hot proper losses independently check squared forecast regret. All supports and NaN masks stay exact. The first failed identity fixture is retained; 74 controls pass after using exact binary fractions. Paired original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/PRIOR_REVIEW_PROTOCOL.md).
+
 Source-prior misspecification now has a frozen finite-Bayes handler: three supplied source priors, complete report marginalization, exact support masks and separate multiclass proper-loss regret versus squared forecast discrepancy. Scalar one-hot controls and full-support timing precede execution. Source disclosure retains its dense and sparse timing failures without native scientific admission. [Prior contract](versions/v19-local-maker/SOURCE_PRIOR_ADMISSION.md); [disclosure blocker](../results/v19/G19-B-source-disclosure-1/BLOCKER.json).
 
 We tested whether a report with unknown source identity requires likelihood weighting before updating. With a half chance of copying, equal averaging of source-specific posteriors gives a mean largest future-probability error of 0.00300–0.00637 across retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.

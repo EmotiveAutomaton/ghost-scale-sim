@@ -201,6 +201,8 @@ def run(root,campaign):
                 from .interval_review import run as handler
             elif plan['design']['handler']=='source-prior':
                 from .source_prior import run as handler
+            elif plan['design']['handler']=='prior-review':
+                from .prior_review import run as handler
             elif plan['design']['handler']=='source-disclosure':
                 from .source_disclosure import run as handler
             elif plan['design']['handler']=='source-identity':
