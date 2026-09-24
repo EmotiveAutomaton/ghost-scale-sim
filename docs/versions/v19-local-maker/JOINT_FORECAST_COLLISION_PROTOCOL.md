@@ -1,8 +1,7 @@
-# Joint forecast partitions: prepared independent alternative
+# Joint forecast partitions: implemented successor
 
 Does retaining the full 27-outcome forecast over three local goals distinguish
-native dependencies that its nine marginal probabilities discard? This is an
-unimplemented D2 alternative, independent of retrospective updating. It reuses
+native dependencies that its nine marginal probabilities discard? This D2 alternative is implemented and source admitted, independent of retrospective updating. It reuses
 the admitted goal-decision roster, without a fit, new sample or protected lineage.
 
 Group all law/frame pairs separately by exact binary64 equality of the full
@@ -25,3 +24,5 @@ an executable full-scope synthetic cost model, source and exact uncertainty summ
 before outcomes. The separate inclusive cap is 1,800 CPU seconds within the
 existing family/global ceiling. If it cannot fit, record the scoped limitation;
 do not replace exhaustive grouping with sampled collisions or enlarge a cap.
+
+The [executable admission](JOINT_FORECAST_PARTITION_ADMISSION.md) freezes its complete calculation and uncertainty. Native execution receipts are present; numerical and replay acceptance await independent completion-event review. The prepared description above is preserved in the frozen source.

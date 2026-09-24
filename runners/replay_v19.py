@@ -45,6 +45,7 @@ def main():
     elif kind=='state-error':from ghostscale.validation.soundingline.v19.state_error import run as handler
     elif kind=='forecast-collision':from ghostscale.validation.soundingline.v19.forecast_collision import run as handler
     elif kind=='forecast-collision-review':from ghostscale.validation.soundingline.v19.forecast_collision_review import run as handler
+    elif kind=='joint-forecast-partition':from ghostscale.validation.soundingline.v19.joint_forecast_partition import run as handler
     elif kind in ('readout-scout','local-primary'):from ghostscale.validation.soundingline.v19.readouts import run as handler
     elif kind in ('frame','jointness'):from ghostscale.validation.soundingline.v19.local_alternatives import run as handler
     elif kind=='probability-head':from ghostscale.validation.soundingline.v19.probability_head import run as handler

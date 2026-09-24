@@ -1,5 +1,7 @@
 # The methodology layer
 
+The joint-partition handler freezes the complete 27-outcome target, exact joint and marginal forecast groups, both populations and 10,000 paired law resamples. Every setting retains all memberships, using hash-bound reuse only for identical complete partitions. An independent cross-moment calculation passes exhaustive scalar controls. No numerical result is accepted. [Contract](versions/v19-local-maker/JOINT_FORECAST_PARTITION_ADMISSION.md).
+
 We tested whether identical frozen local-goal forecasts conceal different native target distributions. At 2,048 labels, the predictive bank distinguishes all 704 public frames, while the frequency baseline merges them into 121–124 forecast groups. Remaining bank target variation is across laws, not across frames within a law. Independent reconstruction, all 4,464 paired estimates and both complete replays verify this constructed-method result; historical process correspondence and human intent remain unestablished.
 
 The independent collision checker reconstructs exact sorted groups, scalar native moments and directly centered within-law errors. Law multiplicities rebuild group means before uncertainty is calculated. A separate third regroup expands centered group bias from forecast cross-moments; equal-mass law-pair factorization preserves exact resampling at lower cost. All public reader fields remain unchanged. [Protocol](versions/v19-local-maker/FORECAST_COLLISION_REVIEW_PROTOCOL.md).
