@@ -1,6 +1,8 @@
 # The methodology layer
 
-We tested whether uncertainty about copying leaves bounded future forecasts after a report about the past. All 4,170 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+The unknown-source successor marginalizes likelihoods before Bayes normalization. Its uniform rival averages only compatible source-conditioned posteriors, with excluded source fractions retained; the most-recent-source rival retains unsupported report mass separately. Complete source coefficients and immutable posteriors/laws reconstruct every future forecast. Full-roster batch timing and 48 isolated controls precede admission. [Contract](versions/v19-local-maker/SOURCE_IDENTITY_ADMISSION.md).
+
+We tested whether uncertainty about copying leaves bounded future forecasts after a report about the past. With copying probability anywhere from zero to one, the mean of each source’s largest future-probability width is 0.00492–0.01370 across retained settings. Independent reconstruction, all 896 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
 Independent scalar copy fractions reconstruct interval bounds, report probabilities and exact support masks. Accepted complete parent directions bind every future coordinate; homogeneous distances scale along one joint posterior segment. Sources average inside posteriors, with paired draws inside equally weighted laws. Equal-supported-endpoint averages are descriptive counts. [Protocol](versions/v19-local-maker/INTERVAL_REVIEW_PROTOCOL.md).
 
