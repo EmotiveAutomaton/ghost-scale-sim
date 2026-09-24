@@ -205,6 +205,8 @@ def run(root,campaign):
                 from .report_coarsening import run as handler
             elif plan['design']['handler']=='source-prior':
                 from .source_prior import run as handler
+            elif plan['design']['handler']=='context-review':
+                from .context_review import run as handler
             elif plan['design']['handler']=='coarsening-review':
                 from .coarsening_review import run as handler
             elif plan['design']['handler']=='prior-review':
