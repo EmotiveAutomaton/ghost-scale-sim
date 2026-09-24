@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether binary reports preserve the future information carried by full endpoint reports. All 1,064 deterministic outputs match both complete replays; independent numerical reconstruction and paired regroup remain pending. This is a supplied-law constructed-method test, with no established learned provenance, historical process correspondence or human intent.
+
+Independent report-member enumeration, source-wise Bayes sums, bit schedules and indexed state accumulation reconstruct all report forecasts. Explicit one-hot proper losses independently check future loss reduction and fine-to-coarse regret. Exact supports and NaN masks remain distinct. All 67 isolated controls pass; independent original-row regroup remains mandatory. [Protocol](versions/v19-local-maker/COARSENING_REVIEW_PROTOCOL.md).
+
 Fixed report-content coarsening computes eight endpoint and six binary report updates at a supplied equal source prior. It separates future proper-loss reduction from conditional source entropy. Complete scalar Bayes, explicit one-hot loss and discarded/retained informative-bit controls pass. The first sparse-array dimensionality and missing portable-dispatch failures are preserved and charged; neither scoring tolerances nor criteria changed. No numerical coarsening result is yet accepted. [Contract](versions/v19-local-maker/REPORT_COARSENING_ADMISSION.md).
 
 We tested whether assuming equal source probabilities distorts forecasts when reports favor earlier or later observations. With a half chance of copying, the mean largest future-probability error is 0.00028–0.00159 for later-source selection and 0.00072–0.00256 for earlier-source selection. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
