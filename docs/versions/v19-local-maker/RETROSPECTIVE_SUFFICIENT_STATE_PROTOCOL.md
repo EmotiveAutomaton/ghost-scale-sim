@@ -2,7 +2,7 @@
 
 How much additional state is sufficient to update a future-schedule quotient
 exactly after any one separately sourced report about the past? This B-family
-alternative is prepared but unimplemented. It can run independently of whether
+alternative is implemented and awaits admission. It can run independently of whether
 the full-simplex witness or prior-conditional reachable rival finds a discrepancy.
 
 Use only the accepted unknown-time/type and source-omitted posterior rosters,
@@ -34,3 +34,29 @@ Require complete synthetic timing, source admission, original and both full
 replays and independent numerical review within a 3,600-second inclusive cap,
 competing within existing B-family and global limits. No fit, sampled replacement,
 protected lineage, new service, or automatic expenditure extension is admitted.
+
+Pre-execution implementation clarification: singleton-group masses equal their
+retained group weights exactly and are reused; every mixed group's past-state
+mass is stored at every report time, including zero cells. Report both the logical
+full joint table size and this explicitly factored size, with shared integer maps
+and future schedules separate. No equality between different posteriors is assumed.
+
+All report probabilities and updated group coordinates are compared directly with
+full-hypothesis Bayes conditioning. The total variation between the two updated
+group distributions bounds the absolute error of every remaining-time endpoint
+forecast, since each supplied endpoint probability is between zero and one.
+Record that exhaustive bound as a bound, never as a measured maximum forecast
+error. Full forecasts remain losslessly reconstructable from the stored tables,
+law and schedules. Small controls expand every coordinate and check this inequality.
+This avoids repeating equivalent native contractions while preserving a certificate
+for all forecast coordinates. Construction and all32 report queries at every past
+time are timed together per fixed32-row batch; per-query amortization is labelled
+as such, not a separately measured latency. Both draws stay paired in review.
+
+The first complete synthetic estimate exceeded the cap. One bounded algebraic
+optimization shares the identical singleton numerator calculation between the
+joint-state and direct-hypothesis expressions, while computing every mixed-group
+numerator independently both ways. Singleton contributions to normalized update
+distance are retained exactly through their common numerator and both normalizers.
+All logical cells and original identities remain represented. Expanded scalar
+controls must agree; a fresh full-support timing gate is mandatory.

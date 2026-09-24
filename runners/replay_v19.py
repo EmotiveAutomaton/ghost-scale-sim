@@ -49,6 +49,8 @@ def main():
     elif kind=='joint-partition-review':from ghostscale.validation.soundingline.v19.joint_partition_review import run as handler
     elif kind=='retrospective-quotient':from ghostscale.validation.soundingline.v19.retrospective_quotient import run as handler
     elif kind=='retrospective-review':from ghostscale.validation.soundingline.v19.retrospective_review import run as handler
+    elif kind=='reachable-retrospective':from ghostscale.validation.soundingline.v19.reachable_retrospective import run as handler
+    elif kind=='retrospective-sufficient':from ghostscale.validation.soundingline.v19.retrospective_sufficient import run as handler
     elif kind in ('readout-scout','local-primary'):from ghostscale.validation.soundingline.v19.readouts import run as handler
     elif kind in ('frame','jointness'):from ghostscale.validation.soundingline.v19.local_alternatives import run as handler
     elif kind=='probability-head':from ghostscale.validation.soundingline.v19.probability_head import run as handler
