@@ -1,5 +1,9 @@
 # V19: local maker reconstruction and usable predictive state
 
+We tested whether uncertainty about copying leaves bounded future forecasts after a report about the past. All 4,170 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+
+V19 remains active with 77 independently accepted scientific batches. Provenance-interval execution and both complete replays are verified; the source-frozen independent checker owns numerical review. Two-report dependence and unknown source identity remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked. [Report](RETROSPECTIVE_INTERVAL_REPORT.md).
+
 We tested whether uncertainty about a past report's source changes retrospective updating. With a half chance of copying, an always-copy account rules out 41.1–41.3% of report probability across the retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
 
 V19 remains active with 77 independently accepted scientific batches. Source-mixture numerical reconstruction and all 1,120 paired strata are verified. The bounded provenance-interval implementation passed 78 isolated controls and full-support timing; its original and both complete replays now have completion receipts through the existing serial queue. Their separate events own integrity and numerical review. Numerical acceptance remains pending independent review. Two-report dependence and unknown source identity remain prepared, unimplemented alternatives. The prior-conditional reachable rival remains timing-blocked. [Report](RETROSPECTIVE_SOURCE_REPORT.md).

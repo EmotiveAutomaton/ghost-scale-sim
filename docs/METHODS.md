@@ -1,5 +1,9 @@
 # The methodology layer
 
+We tested whether uncertainty about copying leaves bounded future forecasts after a report about the past. All 4,170 deterministic outputs match both complete replays. Independent numerical acceptance remains pending. This is a supplied-law constructed-method test; learned provenance, historical process correspondence and human intent remain unestablished.
+
+Independent scalar copy fractions reconstruct interval bounds, report probabilities and exact support masks. Accepted complete parent directions bind every future coordinate; homogeneous distances scale along one joint posterior segment. Sources average inside posteriors, with paired draws inside equally weighted laws. Equal-supported-endpoint averages are descriptive counts. [Protocol](versions/v19-local-maker/INTERVAL_REVIEW_PROTOCOL.md).
+
 The provenance-interval successor retains exact monotone posterior segments, report support and endpoint probability bounds. Accepted signed future directions reconstruct every coordinate envelope; coordinate extrema cannot be combined arbitrarily into a joint forecast. Fixed endpoint support failures stay separate from midpoint worst-case error. Seventy-eight isolated controls and full-support timing pass before source admission. [Contract](versions/v19-local-maker/SOURCE_INTERVAL_ADMISSION.md).
 
 We tested whether uncertainty about a past report's source changes retrospective updating. With a half chance of copying, an always-copy account rules out 41.1–41.3% of report probability across the retained settings. Independent reconstruction, all 1,120 paired strata and both complete replays verify this supplied-law constructed-method result. Learned provenance, historical process correspondence and human intent remain unestablished.
