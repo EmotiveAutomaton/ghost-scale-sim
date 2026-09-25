@@ -1,0 +1,3 @@
+# Precision stability: admitted execution
+
+41 isolated controls and full-support timing pass. The existing serial queue executed the frozen original and both full replays. Numerical acceptance remains pending independent reconstruction of parent arrays, scalar ranges, exact interval denominators, every feasible ordered assignment pair and all vertex contrasts, conservative regret and candidate sets, all 72 strata and nine equal-law cells. This arithmetic box does not certify true real-valued law ranges. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/PRECISION_STABILITY_IMPLEMENTATION.md).

@@ -1,3 +1,5 @@
-# Robust channel regret: admitted execution
+# Robust channel regret: verified result
 
-37 isolated controls and full-support synthetic timing pass. The existing serial queue executed the frozen original and both full replays. Independent acceptance must reconstruct parent rosters, costs, prior optima, all 420 robust channel problems and every policy, tie, score line, regret and byte charge, including independent intersection checks and all 57,344 original-row joins. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/ROBUST_CHANNEL_REGRET_IMPLEMENTATION.md).
+We tested whether guarding against uncertain cue reliability improves storage beyond the policy chosen for two-thirds reliability, and found no reduction in worst expected regret in these 420 problems. It improves on fixed storage in 147. Independent rational reconstruction and both full replays verify this constructed-method result; forecast accuracy and process correspondence remain unestablished.
+
+Raw relational rows, exact selections, source, inputs, environment, original/replay receipts and independent reconstruction are retained. The complete regroup is in INDEPENDENT_REGROUP.zip; its JSON locator records the unchanged member hash. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/ROBUST_CHANNEL_REGRET_REPORT.md).
