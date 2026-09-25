@@ -1,0 +1,3 @@
+# Partial prior disclosure: admitted execution
+
+39 isolated controls and complete-support synthetic timing pass. The existing serial queue executed the frozen original and both full replays. Independent acceptance must reconstruct all parent rosters, costs, prior optima, 2,100 exact disclosure problems, every conditional score, tie, choice, information value and byte charge, and 57,344 relational rows joined to 15 mixtures and five partitions. Zero-probability cells remain explicitly undefined. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/PARTIAL_PRIOR_IMPLEMENTATION.md).

@@ -1,3 +1,5 @@
-# Prior information: admitted execution
+# Prior information: verified result
 
-41 isolated controls and complete-support timing pass. The initial dispatch failed before scientific calculation because its handler name was unregistered. That failed attempt and both unstarted replay plans remain retained; a new immutable plan corrects only the entry-point label. Source and scientific design are identical. The existing serial queue executed the corrected original and both full replays. Independent acceptance requires reconstructing all parent rosters, structural costs, prior optima, 420 rational mixture comparisons, all ties and byte charges, 57,344 relational rows and the full joined 860,160-evaluation paired/equal-law population. No new fits, observations, protected lineages or reader inputs.
+We tested whether knowing the source prior before choosing what to store improves retained coverage. Prior revelation improves expected retained mass in 174 of 420 distinct mixture problems. Independent rational reconstruction verifies all 57,344 roster rows, their 860,160 mixture evaluations and both complete replays. This is a constructed-method result about gross information value in a finite storage library; it does not establish forecast accuracy or process correspondence.
+
+Exact selections, relational raw rows, all original and replay receipts, source, input, environment and independent review bindings are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/PRIOR_INFORMATION_REPORT.md).
