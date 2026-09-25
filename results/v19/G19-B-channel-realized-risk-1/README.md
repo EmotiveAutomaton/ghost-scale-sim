@@ -1,3 +1,5 @@
-# Channel realized risk: admitted execution
+# Realized-risk channel storage: verified result
 
-43 isolated controls and full-support synthetic timing pass. The existing serial queue dispatched the frozen original, observed running below normal priority, and executed both full replays. Independent numerical acceptance remains pending reconstruction of ancestors, all 1,260 risk problems, every policy/lottery/tie and threshold, expected and realized costs, all 57,344 roster rows and 2,580,480 joined evaluations, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/CHANNEL_REALIZED_RISK_IMPLEMENTATION.md).
+We tested whether limiting every realized coverage loss removes a storage lottery’s expected regret advantage. At the optimal fixed-storage loss limit, 54 of 420 problems retain an advantage over unrestricted deterministic cue policies, while 93 become worse. Relaxing the limit halfway toward one restores all 174 improving problems. Independent rational reconstruction and both full replays verify this constructed-method tradeoff; forecast accuracy and process correspondence remain unestablished.
+
+Raw policy and lottery tables, full population joins, independent regroup, source/input/environment identities and both complete replays are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/CHANNEL_REALIZED_RISK_REPORT.md).

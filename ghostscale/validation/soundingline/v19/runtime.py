@@ -253,6 +253,8 @@ def run(root,campaign):
                 from .precision_stability import run as handler
             elif plan['design']['handler']=='coupled-precision':
                 from .coupled_precision import run as handler
+            elif plan['design']['handler']=='cue-acquisition-cost':
+                from .cue_acquisition_cost import run as handler
             elif plan['design']['handler']=='channel-realized-risk':
                 from .channel_realized_risk import run as handler
             elif plan['design']['handler']=='noisy-prior-disclosure':

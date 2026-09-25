@@ -1,0 +1,3 @@
+# Cue acquisition cost: admitted execution
+
+99 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original below normal priority and executed both full replays. Independent numerical acceptance awaits reconstruction of ancestors, all 28 libraries, 1,260 channels, 5,040 fee problems, every paid/free policy and tie, break-even fees, 57,344 roster rows and 10,321,920 joins, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/CUE_ACQUISITION_COST_IMPLEMENTATION.md).

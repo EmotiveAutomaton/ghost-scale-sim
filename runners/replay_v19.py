@@ -90,6 +90,8 @@ def main():
         from ghostscale.validation.soundingline.v19.precision_stability import run as handler
     elif kind=='coupled-precision':
         from ghostscale.validation.soundingline.v19.coupled_precision import run as handler
+    elif kind=='cue-acquisition-cost':
+        from ghostscale.validation.soundingline.v19.cue_acquisition_cost import run as handler
     elif kind=='channel-realized-risk':
         from ghostscale.validation.soundingline.v19.channel_realized_risk import run as handler
     elif kind=='noisy-prior-disclosure':
