@@ -1,0 +1,3 @@
+# Cue-reliability misspecification: admitted execution
+
+39 isolated controls and full-support synthetic timing pass. The existing serial queue executed the frozen original and both full replays. Independent acceptance must reconstruct parent rosters, costs, prior optima, all 3,780 nominal/actual channel problems, every frozen choice, rational score, regret, unexpected label and byte charge, and all 57,344 rows joined to 135 conditions. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/CHANNEL_MISSPECIFICATION_IMPLEMENTATION.md).
