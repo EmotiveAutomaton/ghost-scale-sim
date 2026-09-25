@@ -1,0 +1,3 @@
+# Noisy prior disclosure: admitted execution
+
+41 isolated controls and complete-support synthetic timing pass. The existing serial queue executed the frozen original and both full replays. Independent acceptance must reconstruct all parent rosters, costs, prior optima, 1,260 exact channel problems, every conditional score, zero-probability label, tie, choice, certainty penalty and byte charge, and 57,344 relational rows joined to 15 mixtures and three channels. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/NOISY_PRIOR_IMPLEMENTATION.md).

@@ -1,3 +1,5 @@
-# Partial prior disclosure: admitted execution
+# Partial prior disclosure: verified result
 
-39 isolated controls and complete-support synthetic timing pass. The existing serial queue executed the frozen original and both full replays. Independent acceptance must reconstruct all parent rosters, costs, prior optima, 2,100 exact disclosure problems, every conditional score, tie, choice, information value and byte charge, and 57,344 relational rows joined to 15 mixtures and five partitions. Zero-probability cells remain explicitly undefined. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/PARTIAL_PRIOR_IMPLEMENTATION.md).
+We tested whether partial disclosure of the source prior improves retained coverage. It improves expected retained mass in 348 of 1,260 distinct partial-disclosure problems, capturing the full-disclosure benefit in 342. Independent rational reconstruction verifies all 57,344 roster rows, their 4,300,800 disclosure evaluations and both complete replays. This is a constructed-method result about gross information value in a finite storage library; it does not establish forecast accuracy or process correspondence.
+
+Exact selections, relational raw rows, all original and replay receipts, source, input, environment and independent review bindings are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/PARTIAL_PRIOR_REPORT.md).
