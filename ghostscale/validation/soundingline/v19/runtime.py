@@ -221,6 +221,8 @@ def run(root,campaign):
                 from .aggregate_context_state import run as handler
             elif plan['design']['handler']=='aggregate-report-state':
                 from .aggregate_report_state import run as handler
+            elif plan['design']['handler']=='law-rounding-envelope':
+                from .law_rounding_envelope import run as handler
             elif plan['design']['handler']=='shared-law-precision':
                 from .shared_law_precision import run as handler
             elif plan['design']['handler']=='aggregate-precision':

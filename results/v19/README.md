@@ -1,5 +1,9 @@
 # V19 scientific records and reader export
 
+We asked whether predictive memory improves recovery of a maker’s local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access is also unestablished. These 89 accepted batches concern constructed methods; human intent remains unestablished. V19 remains active.
+
+V19 interim preparation is complete with 89 independently accepted scientific batches. The supplied-law rounding-envelope comparison passed 23 isolated controls and complete-support timing, and its original plus two complete replays are source admitted; the original was observed executing through the existing serial queue. Numerical acceptance remains pending. Source mass per byte remains a prepared independent alternative. Protected lineages, reserve and immutable reporting times are unchanged. [Interim packet](../../docs/versions/v19-local-maker/INTERIM_REPORT.md).
+
 We tested whether shared-law precision and highest-probability source retention could fit their complete V19 comparisons. Both implementations pass controls, but inclusive timing projects 4,094.10 and 6,866.40 CPU seconds against their separate 3,600-second caps. Neither scientific comparison was admitted. These are scoped engineering blockers, not scientific nulls or evidence that the week is exhausted.
 
 V19 remains active with 89 independently accepted scientific batches. Shared-law precision and highest-probability retention are implemented but timing-blocked. Shared-law rounding envelopes and source-probability-per-byte allocation remain prepared, unimplemented alternatives. The immutable interim and final reporting times, untouched lineages and protected reserve are unchanged. [Engineering report](../../docs/versions/v19-local-maker/SHARED_LAW_PRECISION_REPORT.md).
