@@ -225,6 +225,8 @@ def run(root,campaign):
                 from .law_rounding_envelope import run as handler
             elif plan['design']['handler']=='law-likelihood-envelope':
                 from .law_likelihood_envelope import run as handler
+            elif plan['design']['handler']=='schedule-likelihood-envelope':
+                from .schedule_likelihood_envelope import run as handler
             elif plan['design']['handler']=='source-mass-frontier':
                 from .source_mass_frontier import run as handler
             elif plan['design']['handler']=='shared-law-precision':
