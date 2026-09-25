@@ -1,5 +1,7 @@
 # V19 interim packet — prepared 25 September 2026
 
+Update before the immutable checkpoint: the rounding-envelope original and both complete replays now verify, with independent scalar reconstruction and equal-law regroup. The accepted count is 90. The 89-batch synthesis below remains its dated preparation baseline; the primary learning conclusions are unchanged. Source mass per byte is source admitted and relative-likelihood accumulation is prepared. [New batch](LAW_ROUNDING_ENVELOPE_REPORT.md).
+
 We asked whether predictive memory improves recovery of a maker’s local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access is also unestablished. These 89 accepted batches concern constructed methods; human intent remains unestablished. V19 remains active.
 
 This packet is prepared ahead of the immutable **25 September 13:26:05 UTC

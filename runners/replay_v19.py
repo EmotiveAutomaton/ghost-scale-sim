@@ -69,6 +69,7 @@ def main():
     elif kind=='aggregate-context-state':from ghostscale.validation.soundingline.v19.aggregate_context_state import run as handler
     elif kind=='aggregate-report-state':from ghostscale.validation.soundingline.v19.aggregate_report_state import run as handler
     elif kind=='law-rounding-envelope':from ghostscale.validation.soundingline.v19.law_rounding_envelope import run as handler
+    elif kind=='source-mass-frontier':from ghostscale.validation.soundingline.v19.source_mass_frontier import run as handler
     elif kind=='shared-law-precision':from ghostscale.validation.soundingline.v19.shared_law_precision import run as handler
     elif kind=='aggregate-precision':from ghostscale.validation.soundingline.v19.aggregate_precision import run as handler
     elif kind=='byte-retention':from ghostscale.validation.soundingline.v19.byte_retention import run as handler
