@@ -59,6 +59,7 @@ def main():
     elif kind=='source-prior':from ghostscale.validation.soundingline.v19.source_prior import run as handler
     elif kind=='balanced-review':from ghostscale.validation.soundingline.v19.balanced_review import run as handler
     elif kind=='time-retention-review':from ghostscale.validation.soundingline.v19.time_retention_review import run as handler
+    elif kind=='retention-mass-priority':from ghostscale.validation.soundingline.v19.retention_mass_priority import run as handler
     elif kind=='retention-source-prior':from ghostscale.validation.soundingline.v19.retention_source_prior import run as handler
     elif kind=='retention-horizon-review':from ghostscale.validation.soundingline.v19.retention_horizon_review import run as handler
     elif kind=='retention-query-review':from ghostscale.validation.soundingline.v19.retention_query_review import run as handler
@@ -67,6 +68,7 @@ def main():
     elif kind=='aggregate-prior-basis':from ghostscale.validation.soundingline.v19.aggregate_prior_basis import run as handler
     elif kind=='aggregate-context-state':from ghostscale.validation.soundingline.v19.aggregate_context_state import run as handler
     elif kind=='aggregate-report-state':from ghostscale.validation.soundingline.v19.aggregate_report_state import run as handler
+    elif kind=='shared-law-precision':from ghostscale.validation.soundingline.v19.shared_law_precision import run as handler
     elif kind=='aggregate-precision':from ghostscale.validation.soundingline.v19.aggregate_precision import run as handler
     elif kind=='byte-retention':from ghostscale.validation.soundingline.v19.byte_retention import run as handler
     elif kind=='announced-query-retention':from ghostscale.validation.soundingline.v19.announced_query_retention import run as handler

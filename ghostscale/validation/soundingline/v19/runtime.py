@@ -203,6 +203,8 @@ def run(root,campaign):
                 from .balanced_review import run as handler
             elif plan['design']['handler']=='time-retention-review':
                 from .time_retention_review import run as handler
+            elif plan['design']['handler']=='retention-mass-priority':
+                from .retention_mass_priority import run as handler
             elif plan['design']['handler']=='retention-source-prior':
                 from .retention_source_prior import run as handler
             elif plan['design']['handler']=='retention-horizon-review':
@@ -219,6 +221,8 @@ def run(root,campaign):
                 from .aggregate_context_state import run as handler
             elif plan['design']['handler']=='aggregate-report-state':
                 from .aggregate_report_state import run as handler
+            elif plan['design']['handler']=='shared-law-precision':
+                from .shared_law_precision import run as handler
             elif plan['design']['handler']=='aggregate-precision':
                 from .aggregate_precision import run as handler
             elif plan['design']['handler']=='byte-retention':
