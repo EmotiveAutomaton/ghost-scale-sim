@@ -1,0 +1,3 @@
+# Prior information: admitted execution
+
+41 isolated controls and complete-support timing pass. The initial dispatch failed before scientific calculation because its handler name was unregistered. That failed attempt and both unstarted replay plans remain retained; a new immutable plan corrects only the entry-point label. Source and scientific design are identical. The existing serial queue executed the corrected original and both full replays. Independent acceptance requires reconstructing all parent rosters, structural costs, prior optima, 420 rational mixture comparisons, all ties and byte charges, 57,344 relational rows and the full joined 860,160-evaluation paired/equal-law population. No new fits, observations, protected lineages or reader inputs.

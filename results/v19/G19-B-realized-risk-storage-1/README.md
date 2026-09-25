@@ -1,3 +1,5 @@
-# Realized-risk storage: admitted execution
+# Realized-risk storage: verified result
 
-33 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Independent numerical acceptance requires reconstruction of parent rosters, structural costs and prior optima, every survivor/exclusion set at all three floors, all exact basic lotteries, weights, expected masses, realized guarantees, unrestricted costs, byte charges and ties, all 172,032 original rows and paired/equal-law summaries. Architecture, capacity, evaluator inputs and schedule were frozen before outcomes. No unrestricted storage, forecast accuracy, learned-access or historical-process claim. Reader inputs: none.
+We tested whether a storage lottery can keep its expected advantage while guaranteeing minimum coverage in every draw. Half-baseline guarantees retain an expected advantage in 24 of 28 problems; full-baseline guarantees eliminate it in all 28. Independent reconstruction verifies all 172,032 rows and both complete replays. This is a constructed-method result about storage under supplied priors; it does not establish forecast accuracy or process correspondence.
+
+Raw rational selections and rows, original and both complete replay receipts, source, input, environment and independent review bindings are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/REALIZED_RISK_STORAGE_REPORT.md).
