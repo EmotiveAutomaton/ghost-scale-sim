@@ -1,3 +1,5 @@
-# Robust source mass: admitted execution
+# Robust source mass: verified result
 
-41 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Independent numerical acceptance requires reconstruction of parent source rosters, structural costs and exact optima, all candidate identities, masks, exact rational masses, regrets, bytes and ties, all 57,344 original rows and paired/equal-law summaries. Architecture, capacity, evaluator inputs and schedule were frozen before outcomes. No unrestricted minimax knapsack, forecast-optimality, learned-access or historical-process claim. Reader inputs: none.
+We tested whether storage can protect source probability when the source prior is uncertain. At the final 32-observation checkpoint and 6,928-byte budget, the greatest minimum retained mass in the frozen policy library is 50.00%, versus 16.03% for recency. Independent rational reconstruction, all 57,344 rows and both complete replays verify this constructed-method result. This establishes a finite-library storage choice; forecast accuracy, learned provenance, historical process correspondence and human intent remain unestablished.
+
+Raw rational selections and rows, original and both complete replay receipts, source, input, environment and independent review bindings are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/ROBUST_SOURCE_MASS_REPORT.md).
