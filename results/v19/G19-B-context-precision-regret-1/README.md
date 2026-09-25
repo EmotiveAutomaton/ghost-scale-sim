@@ -1,0 +1,3 @@
+# Context precision regret: admitted execution
+
+45 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Numerical acceptance requires independent reconstruction of all 648 assignments, four count vertices, 72 original rows and nine equal-law cells. Retain every regret/absolute/balanced/vertex optimum, tie, regret and uniform comparison; separately report scalar tie sensitivity. Source, evaluator labels, architecture, capacity, byte budgets and schedules were frozen before outcomes. No attained-error, learned-access or historical-process claim. Reader inputs: none.

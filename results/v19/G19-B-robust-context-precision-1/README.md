@@ -1,3 +1,5 @@
-# Robust context precision: admitted execution
+# Robust context precision: verified result
 
-35 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Numerical acceptance requires independent reconstruction of all 648 assignments, four count vertices, 72 original rows and nine equal-law cells. Retain every robust/balanced/vertex optimum, tie, regret and uniform comparison; separately report scalar tie sensitivity. Source, laws, architecture, capacity, byte budgets and schedules were frozen before outcomes. No attained-error, learned-access or historical-process claim. Reader inputs: none.
+We tested whether uncertain query composition requires a different precision allocation and found no improvement over the balanced-query choice in these eight laws. Independent reconstruction verifies all 648 assignments, 72 strata and both complete replays. Twenty-eight computed tie sets change under scalar summation, with negligible changes in the bound. This is a constructed-method result about conservative supplied-law error bounds; attained inference errors, learned access, historical process correspondence and human intent remain unestablished.
+
+All source and input bindings, raw arrays, independent regroup, two complete replay receipts, tie sensitivity and the failed administrative check are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/ROBUST_CONTEXT_PRECISION_REPORT.md).
