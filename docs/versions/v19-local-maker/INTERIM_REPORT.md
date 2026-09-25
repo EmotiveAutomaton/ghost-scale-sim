@@ -1,5 +1,7 @@
 # V19 interim packet — prepared 25 September 2026
 
+Post-checkpoint update: the immutable interim time was 25 September 13:26:05.197905 UTC. At that cutoff 92 batches were independently accepted; the schedule executions were complete but unreviewed. This subsequent event review accepts the 93rd batch after all 144 strata and both replays verify. The earlier primary-learning synthesis remains unchanged. Context-specific precision allocation is now source admitted. The separate interim checkpoint event retains its own acknowledgement; this update does not move the deadline or claim punctual delivery. [Schedule result](SCHEDULE_LIKELIHOOD_ENVELOPE_REPORT.md).
+
 Update before the immutable checkpoint: accumulated likelihood bounds are independently verified across all 72 law/precision/length strata and both complete replays. There are 92 accepted batches. The earlier 89-batch synthesis and later annotations remain dated snapshots; original learning conclusions are unchanged. The query-schedule comparison is source admitted. [New batch](LAW_LIKELIHOOD_ENVELOPE_REPORT.md).
 
 Update before the immutable checkpoint: source-mass allocation is now independently verified across all 84 distinct problems and 5,376 paired strata, with both complete replays. There are 91 accepted batches. The earlier 89-batch synthesis and 90-batch annotation below remain dated snapshots; primary learning conclusions are unchanged. Likelihood accumulation is source admitted. [New batch](SOURCE_MASS_FRONTIER_REPORT.md).

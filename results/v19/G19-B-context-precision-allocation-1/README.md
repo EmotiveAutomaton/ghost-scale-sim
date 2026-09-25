@@ -1,0 +1,3 @@
+# Context precision allocation: admitted execution
+
+31 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Numerical acceptance requires independent reconstruction of all 648 assignments, 72 original rows, nine equal-law cells, choices, ties, dominance and uniform comparisons. Source, laws, architecture, byte budgets and schedules were frozen before allocation outcomes. This finite supplied-law bound does not establish realized error, learned access or historical process. Reader inputs: none.

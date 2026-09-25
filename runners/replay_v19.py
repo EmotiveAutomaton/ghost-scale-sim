@@ -71,6 +71,7 @@ def main():
     elif kind=='law-rounding-envelope':from ghostscale.validation.soundingline.v19.law_rounding_envelope import run as handler
     elif kind=='law-likelihood-envelope':from ghostscale.validation.soundingline.v19.law_likelihood_envelope import run as handler
     elif kind=='schedule-likelihood-envelope':from ghostscale.validation.soundingline.v19.schedule_likelihood_envelope import run as handler
+    elif kind=='context-precision-allocation':from ghostscale.validation.soundingline.v19.context_precision_allocation import run as handler
     elif kind=='source-mass-frontier':from ghostscale.validation.soundingline.v19.source_mass_frontier import run as handler
     elif kind=='shared-law-precision':from ghostscale.validation.soundingline.v19.shared_law_precision import run as handler
     elif kind=='aggregate-precision':from ghostscale.validation.soundingline.v19.aggregate_precision import run as handler
