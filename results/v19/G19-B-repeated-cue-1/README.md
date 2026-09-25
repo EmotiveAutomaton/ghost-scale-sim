@@ -1,3 +1,5 @@
-# Repeated cue dependence: admitted execution
+# Repeated cue dependence: verified result
 
-220 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original below normal priority and executed both full replays. Independent numerical acceptance awaits reconstruction of ancestors, all 28 libraries, 3,780 dependence problems, all nine pair probabilities, every mask score and tie, incremental and wrong-independence value, 57,344 roster rows and 7,741,440 joins, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/REPEATED_CUE_IMPLEMENTATION.md).
+We tested whether a second source cue still helps when it can copy the first cue’s error. At two-thirds correctness, it improves storage in 174 of 420 problems when independent, 172 when copied half the time, and none when always copied. Mistakenly assuming independence harms storage in two and 27 problems at the latter two levels. Independent reconstruction and both full replays verify this constructed-method result; forecast accuracy and process correspondence remain unestablished.
+
+All pairwise decisions, raw population joins, independent regroup, source/input/environment bindings and both complete replays are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/REPEATED_CUE_REPORT.md).

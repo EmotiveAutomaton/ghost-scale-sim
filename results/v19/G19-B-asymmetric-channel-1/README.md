@@ -1,0 +1,3 @@
+# Asymmetric cue errors: admitted execution
+
+58 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original below normal priority and executed both full replays. Independent numerical acceptance requires ancestor reconstruction, all 28 libraries and 420 mixture problems, every policy score at four vertices and nine diagnostics, ties, expected and realized costs, all 57,344 rows and 860,160 joins, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/ASYMMETRIC_CHANNEL_IMPLEMENTATION.md).
