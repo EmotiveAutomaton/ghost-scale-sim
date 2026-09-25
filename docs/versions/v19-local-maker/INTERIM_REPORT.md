@@ -112,3 +112,5 @@ verified publication and owned-service closeout. No exhaustion or uninterrupted
 occupancy claim is made.
 
 Execution update: the frozen original was observed running at 2026-09-25T11:44:28.726472+00:00 through the existing serial queue, with adjacent and extracted-source complete replays queued. Its completion events own numerical review; this admission does not change the 89 accepted batches.
+
+Completion-presence update: the original and both replay jobs now have execution receipts. Output integrity, replay equality and independent numerical acceptance remain for their separate completion-event review. The interim content and admission batch were ordinarily published and remote-head verified at `43bc17d02dd749cbde8536f86f2f9c6ddd6469d3`.
