@@ -78,6 +78,8 @@ def main():
     elif kind=='source-prior-regret':from ghostscale.validation.soundingline.v19.source_prior_regret import run as handler
     elif kind=='randomized-source-storage':from ghostscale.validation.soundingline.v19.randomized_source_storage import run as handler
     elif kind=='randomized-source-regret':from ghostscale.validation.soundingline.v19.randomized_source_regret import run as handler
+    elif kind=='prior-mixture-misspecification':
+        from ghostscale.validation.soundingline.v19.prior_mixture_misspecification import run as handler
     elif kind=='noisy-prior-disclosure':
         from ghostscale.validation.soundingline.v19.noisy_prior_disclosure import run as handler
     elif kind=='partial-prior-disclosure':
