@@ -1,0 +1,7 @@
+# V19 randomized source-prior regret response — 25 September 2026
+
+We tested whether minimizing expected source-prior regret favors the same storage lottery as maximizing expected coverage. Expected regret falls in all 28 distinct problems relative to both the coverage lottery and deterministic minimax regret; minimum expected coverage falls in 23. Every selected lottery has worse maximum realized regret than its deterministic baseline. Independent rational reconstruction, all 57,344 rows and both complete replays verify this constructed-method tradeoff. Forecast accuracy, learned provenance, historical process correspondence and human intent remain unestablished.
+
+V19 remains active with 100 independently accepted scientific batches. Randomized source-prior regret is independently verified. Realized-risk-constrained storage passed 33 isolated controls and complete-support timing; the existing serial queue dispatched its frozen original and both full replays. Their execution receipts are complete; independent numerical acceptance belongs to completion-event review. Precision-choice stability and prior-informed lottery value remain two prepared alternatives. The immutable interim population remains 92; eight later acceptances are dated separately. Protected lineages, the 16-hour reserve and final time are unchanged.
+
+[Report](../versions/v19-local-maker/RANDOMIZED_SOURCE_REGRET_REPORT.md).

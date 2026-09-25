@@ -1,0 +1,3 @@
+# Realized-risk storage: admitted execution
+
+33 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Independent numerical acceptance requires reconstruction of parent rosters, structural costs and prior optima, every survivor/exclusion set at all three floors, all exact basic lotteries, weights, expected masses, realized guarantees, unrestricted costs, byte charges and ties, all 172,032 original rows and paired/equal-law summaries. Architecture, capacity, evaluator inputs and schedule were frozen before outcomes. No unrestricted storage, forecast accuracy, learned-access or historical-process claim. Reader inputs: none.
