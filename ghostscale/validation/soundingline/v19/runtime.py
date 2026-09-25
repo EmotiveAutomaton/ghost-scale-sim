@@ -245,6 +245,8 @@ def run(root,campaign):
                 from .prior_mixture_misspecification import run as handler
             elif plan['design']['handler']=='channel-misspecification':
                 from .channel_misspecification import run as handler
+            elif plan['design']['handler']=='robust-channel-regret':
+                from .robust_channel_regret import run as handler
             elif plan['design']['handler']=='noisy-prior-disclosure':
                 from .noisy_prior_disclosure import run as handler
             elif plan['design']['handler']=='partial-prior-disclosure':

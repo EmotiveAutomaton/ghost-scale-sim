@@ -1,3 +1,5 @@
-# Cue-reliability misspecification: admitted execution
+# Cue-channel misspecification: verified result
 
-39 isolated controls and full-support synthetic timing pass. The existing serial queue executed the frozen original and both full replays. Independent acceptance must reconstruct parent rosters, costs, prior optima, all 3,780 nominal/actual channel problems, every frozen choice, rational score, regret, unexpected label and byte charge, and all 57,344 rows joined to 135 conditions. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/CHANNEL_MISSPECIFICATION_IMPLEMENTATION.md).
+We tested whether misjudging cue reliability can harm storage when the source mixture is correct. When an uninformative cue is treated as two-thirds correct, cue-guided storage performs worse than ignoring it in 147 of 420 distinct problems. Independent rational reconstruction and both full replays verify this constructed-method reversal; it does not establish forecast accuracy or process correspondence.
+
+Raw relational rows, exact selections, source, inputs, environment, original/replay receipts and independent reconstruction are retained. The complete regroup is in INDEPENDENT_REGROUP.zip; its JSON locator records the unchanged member hash. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/CHANNEL_MISSPECIFICATION_REPORT.md).
