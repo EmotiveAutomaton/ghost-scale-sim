@@ -1,5 +1,7 @@
 # V19 interim packet — prepared 25 September 2026
 
+Update before the immutable checkpoint: source-mass allocation is now independently verified across all 84 distinct problems and 5,376 paired strata, with both complete replays. There are 91 accepted batches. The earlier 89-batch synthesis and 90-batch annotation below remain dated snapshots; primary learning conclusions are unchanged. Likelihood accumulation is source admitted. [New batch](SOURCE_MASS_FRONTIER_REPORT.md).
+
 Update before the immutable checkpoint: the rounding-envelope original and both complete replays now verify, with independent scalar reconstruction and equal-law regroup. The accepted count is 90. The 89-batch synthesis below remains its dated preparation baseline; the primary learning conclusions are unchanged. Source mass per byte is source admitted and relative-likelihood accumulation is prepared. [New batch](LAW_ROUNDING_ENVELOPE_REPORT.md).
 
 We asked whether predictive memory improves recovery of a maker’s local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access is also unestablished. These 89 accepted batches concern constructed methods; human intent remains unestablished. V19 remains active.
