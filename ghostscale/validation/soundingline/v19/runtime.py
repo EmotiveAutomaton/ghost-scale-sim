@@ -237,6 +237,8 @@ def run(root,campaign):
                 from .robust_source_mass import run as handler
             elif plan['design']['handler']=='source-prior-regret':
                 from .source_prior_regret import run as handler
+            elif plan['design']['handler']=='randomized-source-storage':
+                from .randomized_source_storage import run as handler
             elif plan['design']['handler']=='source-mass-frontier':
                 from .source_mass_frontier import run as handler
             elif plan['design']['handler']=='shared-law-precision':

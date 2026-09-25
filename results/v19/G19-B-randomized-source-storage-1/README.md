@@ -1,0 +1,3 @@
+# Randomized source storage: admitted execution
+
+37 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original and both full replays; all have execution receipts. Independent numerical acceptance requires reconstruction of parent source rosters, structural costs and exact optima, all candidate identities, masks, exact rational lotteries, weights, expected masses, worst realized masses, realized bytes and ties, all 57,344 original rows and paired/equal-law summaries. Architecture, capacity, evaluator inputs and schedule were frozen before outcomes. No pointwise improvement or unrestricted robust knapsack, forecast-optimality, learned-access or historical-process claim. Reader inputs: none.
