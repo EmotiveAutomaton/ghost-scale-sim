@@ -251,6 +251,8 @@ def run(root,campaign):
                 from .randomized_channel_regret import run as handler
             elif plan['design']['handler']=='precision-stability':
                 from .precision_stability import run as handler
+            elif plan['design']['handler']=='coupled-precision':
+                from .coupled_precision import run as handler
             elif plan['design']['handler']=='noisy-prior-disclosure':
                 from .noisy_prior_disclosure import run as handler
             elif plan['design']['handler']=='partial-prior-disclosure':

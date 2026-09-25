@@ -1,0 +1,3 @@
+# Coupled arithmetic interpolation: admitted execution
+
+46 isolated controls and full-support timing pass. The existing serial queue executed the frozen original and both full replays. Numerical acceptance remains pending independent reconstruction of parent identities, exact lines, every vertex and objective crossing, boundary values, open-interval ties, possible and guaranteed choices, regret maxima, containing-box comparisons, all 72 strata and nine equal-law cells. This one-parameter sensitivity model does not certify exact real-valued ranges. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/COUPLED_PRECISION_IMPLEMENTATION.md).

@@ -88,6 +88,8 @@ def main():
         from ghostscale.validation.soundingline.v19.randomized_channel_regret import run as handler
     elif kind=='precision-stability':
         from ghostscale.validation.soundingline.v19.precision_stability import run as handler
+    elif kind=='coupled-precision':
+        from ghostscale.validation.soundingline.v19.coupled_precision import run as handler
     elif kind=='noisy-prior-disclosure':
         from ghostscale.validation.soundingline.v19.noisy_prior_disclosure import run as handler
     elif kind=='partial-prior-disclosure':

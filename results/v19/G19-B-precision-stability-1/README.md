@@ -1,3 +1,5 @@
-# Precision stability: admitted execution
+# Precision-choice stability: verified result
 
-41 isolated controls and full-support timing pass. The existing serial queue executed the frozen original and both full replays. Numerical acceptance remains pending independent reconstruction of parent arrays, scalar ranges, exact interval denominators, every feasible ordered assignment pair and all vertex contrasts, conservative regret and candidate sets, all 72 strata and nine equal-law cells. This arithmetic box does not certify true real-valued law ranges. No fits, new observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/PRECISION_STABILITY_IMPLEMENTATION.md).
+We tested whether small arithmetic differences can change storage-precision choices. The interval check guarantees an optimum in 22 of 24 problems, while certifying every previously tied choice in only 17. Even the largest bound on lost objective value is below 0.000000000000048 in accumulated log-range units. Independent reconstruction and both full replays verify this constructed-method result within the box between two arithmetic evaluations; exact real-valued accuracy and process correspondence remain unestablished.
+
+Raw exact pair bounds, source, inputs, environment, original/replay receipts and independent reconstruction are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/PRECISION_STABILITY_REPORT.md).
