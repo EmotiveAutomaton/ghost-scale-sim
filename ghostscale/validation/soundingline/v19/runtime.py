@@ -229,6 +229,8 @@ def run(root,campaign):
                 from .schedule_likelihood_envelope import run as handler
             elif plan['design']['handler']=='context-precision-allocation':
                 from .context_precision_allocation import run as handler
+            elif plan['design']['handler']=='robust-context-precision':
+                from .robust_context_precision import run as handler
             elif plan['design']['handler']=='source-mass-frontier':
                 from .source_mass_frontier import run as handler
             elif plan['design']['handler']=='shared-law-precision':

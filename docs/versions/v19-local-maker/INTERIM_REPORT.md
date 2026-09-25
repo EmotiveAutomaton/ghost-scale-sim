@@ -1,3 +1,32 @@
+# V19 interim checkpoint — reconciled 25 September 2026
+
+Post-reconciliation execution update: V19 remains active with 94 independently accepted scientific batches. The interim checkpoint is reconciled with 92 accepted batches at its cutoff and two afterward. Context precision allocation is verified with scalar tie sensitivity retained. Robust precision under uncertain query composition passed 35 isolated controls and complete-support timing; the existing serial queue dispatched its frozen original and both full replays. Their execution receipts are complete; numerical acceptance belongs to the next completion review. Robust source-prior retention and minimax regret allocation remain two prepared alternatives. Protected lineages, the 16-hour reserve and final time are unchanged.
+
+The immutable checkpoint was **25 September 13:26:05.197905 UTC**. This event
+was emitted at 13:49:00 UTC and is being reconciled at 2026-09-25T14:00:21.360254+00:00. Delivery is late;
+the checkpoint and final endpoint remain unchanged. Exactly **92 batches** were
+accepted at the cutoff. The schedule and context-allocation reviews bring the
+current count to **94**; neither is backdated into the checkpoint population.
+
+The primary learning synthesis below remains unchanged: the supported joint-process
+comparison shows no practical bank advantage over frozen latent state, and
+selective purpose-and-belief access remains unestablished. The new storage result
+is a supplied-law method result, not evidence of learned access or historical intent.
+
+We tested whether assigning storage precision by query context tightens a supplied-law error bound. At 1,536 bytes, the largest posterior total-variation bound after 128 balanced observations falls from 0.027783 for feasible uniform precision to 0.013637. All 648 assignments, 72 strata and both complete replays verify this constructed-method result. Seven computed optimizer ties change under scalar summation, without a material bound change. These are conservative bounds, not attained inference errors; learned access, historical process correspondence and human intent remain unestablished.
+
+Current queue: original and both allocation replays are complete and independently
+verified. Robust precision and robust source-prior retention remain prepared
+successors. Both shared tiny settings remain consumed by Ghost; no additional fit
+is admitted. All 32 confirmation and 32 test lineages remain untouched. Current
+charged CPU is 31.574303 of 96 hours; all 16 protected hours remain.
+Closeout preparation is 27 September 13:26:05.197905 UTC and the immutable final
+endpoint is 28 September at the same time. No exhaustion or continuous occupancy
+claim is made. [Latest result](CONTEXT_PRECISION_REPORT.md).
+
+The following is the retained preparation and earlier update record. Its counts,
+resource snapshots and queue descriptions are historical, not current state.
+
 # V19 interim packet — prepared 25 September 2026
 
 Post-checkpoint update: the immutable interim time was 25 September 13:26:05.197905 UTC. At that cutoff 92 batches were independently accepted; the schedule executions were complete but unreviewed. This subsequent event review accepts the 93rd batch after all 144 strata and both replays verify. The earlier primary-learning synthesis remains unchanged. Context-specific precision allocation is now source admitted. The separate interim checkpoint event retains its own acknowledgement; this update does not move the deadline or claim punctual delivery. [Schedule result](SCHEDULE_LIKELIHOOD_ENVELOPE_REPORT.md).
