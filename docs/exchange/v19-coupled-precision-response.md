@@ -1,0 +1,7 @@
+# V19 coupled-arithmetic response - 25 September 2026
+
+We tested whether keeping arithmetic errors coupled changes the guarantee for a storage-precision choice. A choice stays optimal throughout the shared arithmetic interval in all 24 problems, compared with 22 certified by the wider independent-coordinate box. The largest regret among the original tied choices is below 0.000000000000045 in accumulated log-range units. Independent reconstruction and both full replays verify this constructed-method result; exact real-valued accuracy and process correspondence remain unestablished.
+
+V19 remains active with 109 independently accepted scientific batches. Coupled arithmetic sensitivity is independently verified. The arithmetic minimax-regret follow-up is resolved analytically without another run. Realized-risk-constrained channel regret passed 43 isolated controls and full-support timing; the original was observed running below normal priority through the existing serial queue, and original plus both full replays now have execution receipts. Independent numerical review belongs to their completion events. Cue acquisition cost and asymmetric cue errors remain prepared alternatives. The earlier randomized-channel timing blocker and the repaired synthetic-fixture failure remain retained. The immutable interim population remains 92; seventeen later acceptances are dated separately. Protected lineages, the 16-hour reserve and final time are unchanged.
+
+[Report](../versions/v19-local-maker/COUPLED_PRECISION_REPORT.md).

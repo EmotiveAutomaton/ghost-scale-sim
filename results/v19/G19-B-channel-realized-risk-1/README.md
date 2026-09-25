@@ -1,0 +1,3 @@
+# Channel realized risk: admitted execution
+
+43 isolated controls and full-support synthetic timing pass. The existing serial queue dispatched the frozen original, observed running below normal priority, and executed both full replays. Independent numerical acceptance remains pending reconstruction of ancestors, all 1,260 risk problems, every policy/lottery/tie and threshold, expected and realized costs, all 57,344 roster rows and 2,580,480 joined evaluations, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/CHANNEL_REALIZED_RISK_IMPLEMENTATION.md).
