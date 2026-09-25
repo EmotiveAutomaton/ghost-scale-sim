@@ -1,3 +1,5 @@
-# Cue acquisition cost: admitted execution
+# Cue acquisition cost: verified result
 
-99 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original below normal priority and executed both full replays. Independent numerical acceptance awaits reconstruction of ancestors, all 28 libraries, 1,260 channels, 5,040 fee problems, every paid/free policy and tie, break-even fees, 57,344 roster rows and 10,321,920 joins, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/CUE_ACQUISITION_COST_IMPLEMENTATION.md).
+We tested when paying for a source cue ceases to improve storage. With a cue that is correct two-thirds of the time, acquisition has positive net value in 147 of 420 problems when free, 125 at a fee of 1/64, and 34 at 1/16; none benefits at 1/4. Fees are hypothetical source-probability utility. Independent rational reconstruction and both full replays verify this constructed-method result; forecast accuracy and process correspondence remain unestablished.
+
+Raw policy and fee tables, full population joins, independent regroup, source/input/environment identities and both complete replays are retained. Reader inputs: none. [Report](../../../docs/versions/v19-local-maker/CUE_ACQUISITION_COST_REPORT.md).

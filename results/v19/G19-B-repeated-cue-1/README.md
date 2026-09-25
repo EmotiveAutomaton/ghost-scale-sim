@@ -1,0 +1,3 @@
+# Repeated cue dependence: admitted execution
+
+220 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original below normal priority and executed both full replays. Independent numerical acceptance awaits reconstruction of ancestors, all 28 libraries, 3,780 dependence problems, all nine pair probabilities, every mask score and tie, incremental and wrong-independence value, 57,344 roster rows and 7,741,440 joins, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/REPEATED_CUE_IMPLEMENTATION.md).
