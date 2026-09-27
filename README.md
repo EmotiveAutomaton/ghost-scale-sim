@@ -18,6 +18,8 @@ human intent, human values or historical process correspondence.
 - **Whole repository:** use the [documentation map](docs/README.md) and
   [version index](docs/versions/README.md).
 
+Latest verified V19 result: conditional second-cue purchase improves supplied-law storage decisions. [Finding and limits](docs/versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).
+
 ## Research question
 
 What information about a maker survives in an artifact, what additional evidence

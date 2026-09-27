@@ -1,6 +1,6 @@
 # The methodology layer
 
-Conditional second-cue acquisition integrates buy/decline decisions after the first label, retaining all mask and decision ties, expected fees, gross/net utility, constant-policy comparisons and expected/realized byte charges. All 281 isolated controls pass. Complete-support synthetic runs took [11.703125, 11.859375, 11.8125] CPU seconds; the inclusive estimate is 995.839 of 1,800 seconds. Original and both full replays have execution receipts; independent numerical acceptance awaits completion-event review. [Frozen contract](versions/v19-local-maker/ADAPTIVE_SECOND_CUE_IMPLEMENTATION.md).
+Independent conditional-acquisition review enumerates complete paid contingent policies after latent-event integration, reconstructing all decisions, ties, break-even fees and costs. All 57,344 rows, 30,965,760 joins, 241,920 paired strata, 120,960 law strata and 15,120 equal-law cells verify. All 280 isolated controls and both full replays pass. [Report](versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).
 
 Independent asymmetric-channel review reconstructs source-first bilinear policy scores, all four vertices, nine diagnostics, every tie and expected/realized costs. Ancestors, 57,344 rows, 860,160 joins, 6,720 paired strata, 3,360 law strata and 420 equal-law cells verify. All 57 isolated review controls and both complete replays pass. [Report](versions/v19-local-maker/ASYMMETRIC_CHANNEL_REPORT.md).
 

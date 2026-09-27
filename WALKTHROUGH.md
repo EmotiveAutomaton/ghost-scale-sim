@@ -7,6 +7,8 @@ qualifications and attribution markers. For current work use the
 The former accumulated batch preface is preserved in the
 [documentation archive](docs/archive/documentation-2026-09-27/README.md).
 
+Current V19 result: conditional acquisition improves storage under a known cue law; prediction and historical correspondence remain separate. [Report](docs/versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).
+
 ## Read the title colour first
 
 **The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as

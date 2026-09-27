@@ -8,6 +8,8 @@ first; use result receipts to distinguish proposals, execution and acceptance.
 
 - [ACCEPTANCE.json](ACCEPTANCE.json)
 - [CODING_PACKAGE.md](CODING_PACKAGE.md)
+- [FINAL_PREPARATION.md](FINAL_PREPARATION.md)
+
 - [INTERIM_REPORT.md](INTERIM_REPORT.md)
 - [OPENING_MANIFEST.json](OPENING_MANIFEST.json)
 - [PROVENANCE.json](PROVENANCE.json)
@@ -17,6 +19,8 @@ first; use result receipts to distinguish proposals, execution and acceptance.
 ## Reports and health snapshots
 
 - [A1_REPORT.md](A1_REPORT.md)
+
+- [ADAPTIVE_SECOND_CUE_REPORT.md](ADAPTIVE_SECOND_CUE_REPORT.md)
 - [AGGREGATE_PRECISION_REPORT.md](AGGREGATE_PRECISION_REPORT.md)
 - [AGGREGATE_REPORT_REVIEW_PROTOCOL.md](AGGREGATE_REPORT_REVIEW_PROTOCOL.md)
 - [AGGREGATE_REPORT_STATE_ADMISSION.md](AGGREGATE_REPORT_STATE_ADMISSION.md)
