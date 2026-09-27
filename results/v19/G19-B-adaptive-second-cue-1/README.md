@@ -1,0 +1,3 @@
+# Conditional second-cue acquisition: admitted execution
+
+281 isolated controls and complete-support synthetic timing pass. The existing serial queue dispatched the frozen original below normal priority and executed both full replays. Independent numerical acceptance requires ancestor reconstruction, all 28 libraries and 15,120 acquisition problems, every conditional decision and tie, break-even fees, expected fees, gross/net masses and byte costs, all 57,344 rows and 30,965,760 joins, paired/equal-law regroup and both replays. No fits, observations, protected lineages or reader inputs. [Frozen contract](../../../docs/versions/v19-local-maker/ADAPTIVE_SECOND_CUE_IMPLEMENTATION.md).

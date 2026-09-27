@@ -90,6 +90,8 @@ def main():
         from ghostscale.validation.soundingline.v19.precision_stability import run as handler
     elif kind=='coupled-precision':
         from ghostscale.validation.soundingline.v19.coupled_precision import run as handler
+    elif kind=='adaptive-second-cue':
+        from ghostscale.validation.soundingline.v19.adaptive_second_cue import run as handler
     elif kind=='asymmetric-channel':
         from ghostscale.validation.soundingline.v19.asymmetric_channel import run as handler
     elif kind=='repeated-cue':
