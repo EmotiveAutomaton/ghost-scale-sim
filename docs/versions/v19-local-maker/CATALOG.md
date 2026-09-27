@@ -10,6 +10,9 @@ first; use result receipts to distinguish proposals, execution and acceptance.
 - [CODING_PACKAGE.md](CODING_PACKAGE.md)
 - [FINAL_PREPARATION.md](FINAL_PREPARATION.md)
 
+- [FINAL_VALIDATION_REPORT.md](FINAL_VALIDATION_REPORT.md)
+- [REPORT_READY.md](REPORT_READY.md)
+
 - [INTERIM_REPORT.md](INTERIM_REPORT.md)
 - [OPENING_MANIFEST.json](OPENING_MANIFEST.json)
 - [PROVENANCE.json](PROVENANCE.json)

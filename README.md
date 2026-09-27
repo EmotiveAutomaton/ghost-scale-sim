@@ -18,7 +18,7 @@ human intent, human values or historical process correspondence.
 - **Whole repository:** use the [documentation map](docs/README.md) and
   [version index](docs/versions/README.md).
 
-Latest verified V19 result: conditional second-cue purchase improves supplied-law storage decisions. [Finding and limits](docs/versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).
+V19 final integration passed 4,701 controls. The 114-batch synthesis is [prepared for final delivery](docs/versions/v19-local-maker/REPORT_READY.md); endpoint accounting and native closeout remain due.
 
 ## Research question
 

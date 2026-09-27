@@ -5,7 +5,7 @@ final endpoint is 28 September 2026 at 13:26:05 UTC / 06:26:05 Pacific. The inte
 population is fixed at its September 25 cutoff; later acceptances remain separate.
 Use dated primary records and native state for current execution, not old prose.
 
-Latest acceptance: [conditional second-cue acquisition](ADAPTIVE_SECOND_CUE_REPORT.md). The campaign now has 114 accepted batches; final validation and closeout remain required.
+The 114-batch [synthesis is prepared](REPORT_READY.md). [Final integration](FINAL_VALIDATION_REPORT.md) passed 4,701 controls; endpoint accounting, publication reconciliation and native closeout remain required.
 
 [Final preparation and frozen remaining scope](FINAL_PREPARATION.md).
 

@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+We checked whether the final V19 implementation still passes its frozen controls. All 4,696 ordinary controls and five CPU Torch controls pass, with no failures, skips or warnings. Source, primary outputs, logs and child accounting verify; 483,326 disposable fixture files remain retained but were not independently rehashed. This is engineering validation, not new scientific evidence or confirmation. [Review](docs/versions/v19-local-maker/FINAL_VALIDATION_REPORT.md).
+
 We tested whether waiting for the first cue before buying a second improves storage. At two-thirds cue correctness and a fee of 1/64, conditional purchase beats the better constant decision in 170 of 420 independent-cue problems and 134 when copying occurs half the time; fully copied cues yield no gain. Independent reconstruction and both full replays verify this constructed-method result; forecast accuracy and process correspondence remain unestablished.
 
 V19 has 114 accepted scientific batches: the fixed 92-batch interim and 22 later acceptances. Final preparation is under way; the endpoint remains 28 September 13:26:05 UTC. Two prepared alternatives remain unadmitted, protected lineages remain unused, and no exhaustion or continuous occupancy is claimed. [Report](docs/versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).

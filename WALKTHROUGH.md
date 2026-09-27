@@ -7,7 +7,7 @@ qualifications and attribution markers. For current work use the
 The former accumulated batch preface is preserved in the
 [documentation archive](docs/archive/documentation-2026-09-27/README.md).
 
-Current V19 result: conditional acquisition improves storage under a known cue law; prediction and historical correspondence remain separate. [Report](docs/versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).
+V19 now has a [prepared 114-batch synthesis](docs/versions/v19-local-maker/REPORT_READY.md) and verified final integration. Prediction, process correspondence and endpoint closeout remain distinct.
 
 ## Read the title colour first
 

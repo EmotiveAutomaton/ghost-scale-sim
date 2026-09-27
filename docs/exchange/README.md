@@ -14,6 +14,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V19
 
+- [v19-final-validation-response.md](v19-final-validation-response.md)
+
 - [v19-adaptive-second-cue-response.md](v19-adaptive-second-cue-response.md)
 
 - [v19-a1-state-error-response.md](v19-a1-state-error-response.md)
