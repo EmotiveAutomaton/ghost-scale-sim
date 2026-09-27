@@ -18,6 +18,11 @@ The format is adopted from the sibling project's theory folder
 
 ---
 
+The earlier front-page curator-tier source and its attribution markers are retained
+in the [September 27 documentation archive](../archive/documentation-2026-09-27/README.md).
+The shortened repository gateway is navigation; it does not replace those source
+statements or alter the quotations and claims in the hypothesis store.
+
 ## Format for the hypothesis store
 
     TOP OF FILE   the theory in the curator's words, then two or three lines of what it claims,

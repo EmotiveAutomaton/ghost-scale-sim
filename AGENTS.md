@@ -17,6 +17,23 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## Documentation map and proposed V20 (2026-09-27)
+
+Use `docs/README.md` as the navigation map and `docs/versions/README.md` for
+active, proposed and closed allocations. V19's `CATALOG.md` indexes its stable
+scientific paths. Keep entry pages short: replace the current overview rather
+than prepending a full batch history. Complete findings still belong in the
+version report, FINDINGS, theory table and summary, and exchange as required.
+Archive superseded prose with provenance; do not relocate frozen scientific
+inputs, sources, result receipts or runtime paths for cosmetic organization.
+
+The September 27 package is filed in `docs/versions/v20-contribution-reconstruction/`.
+The owner requested documentation cleanup and an implementation plan BEFORE
+go-ahead. V20 is proposed only: do not implement it, admit tests, create acceptance
+or campaign clocks, change gear, launch a worker or consume a model setting until
+that go-ahead. The supplied package's commission language does not override the
+owner's current planning-only instruction. Preserve the existing V19 closeout.
+
 ## Current campaign: V19 local maker reconstruction (2026-09-21)
 
 The owner commissioned the top-level next-week specification. Read

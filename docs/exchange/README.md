@@ -1,69 +1,214 @@
-# The Sounding Line exchange
+# Sounding Line exchange index
 
-Sounding Line is a separate project that reads real text. It cannot construct ground truth: the
-only thing it knows about a corpus is a label somebody guessed. This simulation can construct
-ground truth, so Sounding Line sends it questions about **mechanism** and
-`ghostscale/validation/soundingline/` answers them.
+Ghost supplies constructed known-answer tests; Sounding Line supplies the separate
+real-text contribution task and its source-specific evidence. Human records may
+establish observed actions while leaving private goals and unobserved actions
+unknown. Neither project's labels automatically establish the other's claims.
 
-This directory is the correspondence. It is here so the repository is self-contained: someone
-reading `results/validation/soundingline/t1_triangle.json` can find, without leaving the repo,
-what was asked and what was sent back.
+These are repository request/response records. A response file is not proof of
+message delivery or downstream use. V20 will require an explicit consumer receipt.
+For current science read the [V19 overview](../versions/v19-local-maker/README.md);
+for proposed work read the [V20 plan](../versions/v20-contribution-reconstruction/README.md).
+The earlier annotated exchange index is preserved in the
+[documentation archive](../archive/documentation-2026-09-27/README.md).
 
-| file | who wrote it | what it is |
-|---|---|---|
-| [v18-1-cyclic-misspecified-physical-response.md](v18-1-cyclic-misspecified-physical-response.md) | **Codex agent in this repository** | Verified charged physical candidate-family misspecification boundary by topology, with budget exhaustion and retained checker/filing failures. |
-| [v18-1-cyclic-physical-response.md](v18-1-cyclic-physical-response.md) | **Codex agent in this repository** | Verified charged physical query-preparation diagnostic, cost boundary and next misspecification frontier. |
-| [v18-1-cyclic-misspecified-response.md](v18-1-cyclic-misspecified-response.md) | **Codex agent in this repository** | Verified truth-excluded candidate-family detection/abstention screen and explicit unsafe control. |
-| [v18-1-mid-run-response.md](v18-1-mid-run-response.md) | **Codex agent in this repository** | Complete reportable mid-stage evidence, full-menu transfer and analysis packet. |
-| [v18-1-cyclic-action-response.md](v18-1-cyclic-action-response.md) | **Codex agent in this repository** | Verified action-evidence batch, current 57-check validity pass and notification handover repair. |
-| [v18-1-cyclic-target-response.md](v18-1-cyclic-target-response.md) | **Codex agent in this repository** | Verified fresh two-target public-query screen, designed placebo, planning boundary and next action-evidence question. |
-| [v18-1-cyclic-cost-response.md](v18-1-cyclic-cost-response.md) | **Codex agent in this repository** | Verified exposed-context decomposition of decision-selector cost and evidence quality, with failed calibration and checker repair retained. |
-| [v18-1-cyclic-final-response.md](v18-1-cyclic-final-response.md) | **Codex agent in this repository** | Verified held second and last final primary on untouched cyclic-union contexts, with query-cost and representation boundaries retained. |
-| [v18-1-cyclic-response.md](v18-1-cyclic-response.md) | **Codex agent in this repository** | Verified cyclic candidate-union discovery, retained admission failure, stronger rivals and active-campaign decision. |
-| [v18-1-final-primary-response.md](v18-1-final-primary-response.md) | **Codex agent in this repository** | Verified held first final primary on untouched opaque-label structures, with the direct rival boundary and active-campaign disposition retained. |
-| [v18-1-permuted-response.md](v18-1-permuted-response.md) | **Codex agent in this repository** | Verified opaque-label discovery, repaired the final-plan sampling record and froze one untouched primary without claiming its outcome. |
-| [v18-1-mask-response.md](v18-1-mask-response.md) | **Codex agent in this repository** | Verified the attachment-mask forecast diagnostic and admitted the opaque-label structural contrast. |
-| [v18-1-event1-response.md](v18-1-event1-response.md) | **Codex agent in this repository** | Verified larger transfer, grounded Stitch and structural direct results; stronger forecast rival admitted. |
-| [v18-1-progress-response.md](v18-1-progress-response.md) | **Codex agent in this repository** | Active branching continuation, first-wave mechanisms and limits, support correction, verified bridge and remaining transfer/rival work. |
-| [v18-final-response.md](v18-final-response.md) | **Codex agent in this repository** | Completed selective-acquisition study, paid-checking cost reversal, full finite replay, examples and bounded interpretation. |
-| [v17-final-response.md](v17-final-response.md) | **Codex agent in this repository** | Final qualified closure, three confirmed comparisons, retained apparatus failure, proof scopes and delivered reader/evaluator products. |
-| [v17-continuation-response.md](v17-continuation-response.md) | **Codex agent in this repository** | Historical continuation decision, frozen scope and admission. |
-| [v17-setup-response.md](v17-setup-response.md) | **Codex agent in this repository** | Full A-E setup, executed screens, independent checks and early reader handoff; analysis and fresh evaluation remain open. |
-| [v17-initial-response.md](v17-initial-response.md) | **Codex agent in this repository** | Initial V17 viability assessment and graphic baseline screen; limited scope, remaining implementation and no campaign-completion claim. |
-| [v16-acquired-craft-response.md](v16-acquired-craft-response.md) | **Codex agent in this repository** | Accepted V16 commission: completed acquired-craft study, fresh confirmation, proof scopes and transfer limits; repository record, not an outbound message. |
-| `batch-1-request.md` | Sounding Line | S-1 … S-6. Six questions about mechanism. |
-| `batch-1-received-by-sounding-line.md` | Sounding Line | their own write-up of what came back. |
-| `batch-2-request.md` | Sounding Line | T-1 … T-4. The triangle, automaticity, countability, the uncertain reader. |
-| `batch-2-response.md` | **this repository** | the authored reply: five results, two corrections to batch one, and a validity register. |
-| `batch-2-received-by-sounding-line.md` | Sounding Line | their write-up of the same batch. Kept because it is not a copy — it is what the other project took from it, which is worth being able to compare. |
-| `batch-3-request.md` | Sounding Line | no experiments. Methodology tooling, and the argument for a standing positive control. |
-| *(no batch-3 response document)* | **this repository** | batch three was never answered as a single document. Its answer is the methodology layer itself plus the T-6 … T-10 verdict files in `results/validation/soundingline/`, and the correction to batch two's headline lives in those verdicts. An earlier version of this row listed a `batch-3-response.md` that does not exist. |
-| `batch-4-request.md` | Sounding Line | S-11 … S-15. The first batch where the simulation is the only place the answer exists, because it has ground truth about a number. |
-| `batch-4-response-S11.md` | **this repository** | S-11 only. The component count was a one-line bug: exceedances summed across the spectrum where Horn's rule takes the leading run. S-12 to S-15 are not yet run. |
+## V19
 
-Batch three was answered twice: once as infrastructure -- `ghostscale/methods/`, gate blocks in
-every verdict written since (S-1, S-45 and S-6 predate them and are exempted by name in
-`tests/test_gates.py`), described in [docs/METHODS.md](../METHODS.md) --
-and once as results, when that infrastructure was turned on the batch-two findings and one of them
-did not survive.
+- [v19-a1-state-error-response.md](v19-a1-state-error-response.md)
+- [v19-aggregate-precision-response.md](v19-aggregate-precision-response.md)
+- [v19-aggregate-report-state-response.md](v19-aggregate-report-state-response.md)
+- [v19-alternate-site-response.md](v19-alternate-site-response.md)
+- [v19-alternatives-response.md](v19-alternatives-response.md)
+- [v19-asymmetric-channel-response.md](v19-asymmetric-channel-response.md)
+- [v19-balanced-retention-response.md](v19-balanced-retention-response.md)
+- [v19-bounded-reset-response.md](v19-bounded-reset-response.md)
+- [v19-byte-retention-response.md](v19-byte-retention-response.md)
+- [v19-change-timing-response.md](v19-change-timing-response.md)
+- [v19-channel-misspecification-response.md](v19-channel-misspecification-response.md)
+- [v19-channel-realized-risk-response.md](v19-channel-realized-risk-response.md)
+- [v19-context-precision-regret-response.md](v19-context-precision-regret-response.md)
+- [v19-context-precision-response.md](v19-context-precision-response.md)
+- [v19-continuation-timing-response.md](v19-continuation-timing-response.md)
+- [v19-continuous-reliability-response.md](v19-continuous-reliability-response.md)
+- [v19-convergence-response.md](v19-convergence-response.md)
+- [v19-coupled-precision-response.md](v19-coupled-precision-response.md)
+- [v19-crossed-rule-response.md](v19-crossed-rule-response.md)
+- [v19-cue-acquisition-cost-response.md](v19-cue-acquisition-cost-response.md)
+- [v19-cue-correction-response.md](v19-cue-correction-response.md)
+- [v19-filter-cost-response.md](v19-filter-cost-response.md)
+- [v19-forecast-collision-response.md](v19-forecast-collision-response.md)
+- [v19-future-quotient-response.md](v19-future-quotient-response.md)
+- [v19-goal-absolute-envelope-response.md](v19-goal-absolute-envelope-response.md)
+- [v19-goal-abstention-response.md](v19-goal-abstention-response.md)
+- [v19-goal-artifact-calibration-response.md](v19-goal-artifact-calibration-response.md)
+- [v19-goal-bin-resolution-response.md](v19-goal-bin-resolution-response.md)
+- [v19-goal-calibration-response.md](v19-goal-calibration-response.md)
+- [v19-goal-class-reliability-response.md](v19-goal-class-reliability-response.md)
+- [v19-goal-coarsening-response.md](v19-goal-coarsening-response.md)
+- [v19-goal-decision-response.md](v19-goal-decision-response.md)
+- [v19-goal-mass-control-response.md](v19-goal-mass-control-response.md)
+- [v19-goal-operation-calibration-response.md](v19-goal-operation-calibration-response.md)
+- [v19-goal-purpose-calibration-response.md](v19-goal-purpose-calibration-response.md)
+- [v19-goal-squared-decomposition-response.md](v19-goal-squared-decomposition-response.md)
+- [v19-input-privilege-response.md](v19-input-privilege-response.md)
+- [v19-integration-2026-09-24-response.md](v19-integration-2026-09-24-response.md)
+- [v19-interchange-alignment-response.md](v19-interchange-alignment-response.md)
+- [v19-interchange-fixtures-response.md](v19-interchange-fixtures-response.md)
+- [v19-interim-preparation-response.md](v19-interim-preparation-response.md)
+- [v19-joint-factorization-response.md](v19-joint-factorization-response.md)
+- [v19-joint-partition-response.md](v19-joint-partition-response.md)
+- [v19-joint-portable-response.md](v19-joint-portable-response.md)
+- [v19-joint-readout-response.md](v19-joint-readout-response.md)
+- [v19-joint-replay-regression-response.md](v19-joint-replay-regression-response.md)
+- [v19-joint-reply-response.md](v19-joint-reply-response.md)
+- [v19-joint-support-response.md](v19-joint-support-response.md)
+- [v19-joint-uncertainty-response.md](v19-joint-uncertainty-response.md)
+- [v19-law-likelihood-envelope-response.md](v19-law-likelihood-envelope-response.md)
+- [v19-law-rounding-envelope-response.md](v19-law-rounding-envelope-response.md)
+- [v19-local-primary-response.md](v19-local-primary-response.md)
+- [v19-marginal-transition-response.md](v19-marginal-transition-response.md)
+- [v19-metadata-disclosure-response.md](v19-metadata-disclosure-response.md)
+- [v19-missing-tool-response.md](v19-missing-tool-response.md)
+- [v19-mixture-compression-response.md](v19-mixture-compression-response.md)
+- [v19-noisy-disclosure-response.md](v19-noisy-disclosure-response.md)
+- [v19-noisy-prior-response.md](v19-noisy-prior-response.md)
+- [v19-opening-response.md](v19-opening-response.md)
+- [v19-optional-disclosure-response.md](v19-optional-disclosure-response.md)
+- [v19-partial-prior-response.md](v19-partial-prior-response.md)
+- [v19-pooled-replacement-response.md](v19-pooled-replacement-response.md)
+- [v19-portfolio-response.md](v19-portfolio-response.md)
+- [v19-practice-response.md](v19-practice-response.md)
+- [v19-precision-stability-response.md](v19-precision-stability-response.md)
+- [v19-primitive-feedback-response.md](v19-primitive-feedback-response.md)
+- [v19-primitive-pooling-response.md](v19-primitive-pooling-response.md)
+- [v19-prior-information-response.md](v19-prior-information-response.md)
+- [v19-prior-mixture-response.md](v19-prior-mixture-response.md)
+- [v19-probability-head-response.md](v19-probability-head-response.md)
+- [v19-process-sufficiency-response.md](v19-process-sufficiency-response.md)
+- [v19-provenance-restoration-response.md](v19-provenance-restoration-response.md)
+- [v19-provenance-tempering-response.md](v19-provenance-tempering-response.md)
+- [v19-purchase-calibration-response.md](v19-purchase-calibration-response.md)
+- [v19-purchase-evaluation-response.md](v19-purchase-evaluation-response.md)
+- [v19-randomized-source-regret-response.md](v19-randomized-source-regret-response.md)
+- [v19-randomized-source-storage-response.md](v19-randomized-source-storage-response.md)
+- [v19-readout-scout-response.md](v19-readout-scout-response.md)
+- [v19-realized-risk-storage-response.md](v19-realized-risk-storage-response.md)
+- [v19-reliability-mismatch-response.md](v19-reliability-mismatch-response.md)
+- [v19-repeated-cue-response.md](v19-repeated-cue-response.md)
+- [v19-repeated-disclosure-response.md](v19-repeated-disclosure-response.md)
+- [v19-report-coarsening-response.md](v19-report-coarsening-response.md)
+- [v19-report-context-response.md](v19-report-context-response.md)
+- [v19-retention-horizon-response.md](v19-retention-horizon-response.md)
+- [v19-retention-query-response.md](v19-retention-query-response.md)
+- [v19-retrospective-forgetting-response.md](v19-retrospective-forgetting-response.md)
+- [v19-retrospective-identity-response.md](v19-retrospective-identity-response.md)
+- [v19-retrospective-interval-response.md](v19-retrospective-interval-response.md)
+- [v19-retrospective-quotient-response.md](v19-retrospective-quotient-response.md)
+- [v19-retrospective-source-response.md](v19-retrospective-source-response.md)
+- [v19-retrospective-sufficient-response.md](v19-retrospective-sufficient-response.md)
+- [v19-robust-channel-response.md](v19-robust-channel-response.md)
+- [v19-robust-context-precision-response.md](v19-robust-context-precision-response.md)
+- [v19-robust-reply-response.md](v19-robust-reply-response.md)
+- [v19-robust-source-mass-response.md](v19-robust-source-mass-response.md)
+- [v19-roll-in-response.md](v19-roll-in-response.md)
+- [v19-rollout-response.md](v19-rollout-response.md)
+- [v19-routine-revision-response.md](v19-routine-revision-response.md)
+- [v19-schedule-likelihood-envelope-response.md](v19-schedule-likelihood-envelope-response.md)
+- [v19-source-mass-frontier-response.md](v19-source-mass-frontier-response.md)
+- [v19-source-omission-response.md](v19-source-omission-response.md)
+- [v19-source-prior-regret-response.md](v19-source-prior-regret-response.md)
+- [v19-source-prior-response.md](v19-source-prior-response.md)
+- [v19-support-holdout-response.md](v19-support-holdout-response.md)
+- [v19-support-mix-response.md](v19-support-mix-response.md)
+- [v19-support-transfer-response.md](v19-support-transfer-response.md)
+- [v19-task-response.md](v19-task-response.md)
+- [v19-temporal-factorization-response.md](v19-temporal-factorization-response.md)
+- [v19-time-retention-response.md](v19-time-retention-response.md)
+- [v19-tiny-reader-response.md](v19-tiny-reader-response.md)
+- [v19-transient-filter-response.md](v19-transient-filter-response.md)
+- [v19-uncertain-reliability-response.md](v19-uncertain-reliability-response.md)
+- [v19-unknown-change-response.md](v19-unknown-change-response.md)
+- [v19-update-response.md](v19-update-response.md)
+- [v19-witnessed-goal-factorization-response.md](v19-witnessed-goal-factorization-response.md)
 
-## Two rules that came out of this exchange and are worth keeping
+## V18
 
-Both defects that shipped in batch one were the same shape, and both would have been caught by a
-check costing a few seconds:
+- [v18-1-cyclic-action-response.md](v18-1-cyclic-action-response.md)
+- [v18-1-cyclic-cost-response.md](v18-1-cyclic-cost-response.md)
+- [v18-1-cyclic-final-response.md](v18-1-cyclic-final-response.md)
+- [v18-1-cyclic-misspecified-physical-response.md](v18-1-cyclic-misspecified-physical-response.md)
+- [v18-1-cyclic-misspecified-response.md](v18-1-cyclic-misspecified-response.md)
+- [v18-1-cyclic-physical-response.md](v18-1-cyclic-physical-response.md)
+- [v18-1-cyclic-response.md](v18-1-cyclic-response.md)
+- [v18-1-cyclic-target-response.md](v18-1-cyclic-target-response.md)
+- [v18-1-event1-response.md](v18-1-event1-response.md)
+- [v18-1-final-primary-response.md](v18-1-final-primary-response.md)
+- [v18-1-mask-response.md](v18-1-mask-response.md)
+- [v18-1-mid-run-response.md](v18-1-mid-run-response.md)
+- [v18-1-permuted-response.md](v18-1-permuted-response.md)
+- [v18-1-progress-response.md](v18-1-progress-response.md)
+- [v18-2-core-wave-response.md](v18-2-core-wave-response.md)
+- [v18-2-final-response.md](v18-2-final-response.md)
+- [v18-2-first-block-response.md](v18-2-first-block-response.md)
+- [v18-3-A-response.md](v18-3-A-response.md)
+- [v18-3-B-response.md](v18-3-B-response.md)
+- [v18-3-C-response.md](v18-3-C-response.md)
+- [v18-3-D-response.md](v18-3-D-response.md)
+- [v18-3-E-response.md](v18-3-E-response.md)
+- [v18-3-F-response.md](v18-3-F-response.md)
+- [v18-3-final-response.md](v18-3-final-response.md)
+- [v18-3-G-response.md](v18-3-G-response.md)
+- [v18-3-H-response.md](v18-3-H-response.md)
+- [v18-3-source-followons-response.md](v18-3-source-followons-response.md)
+- [v18-4-final-response.md](v18-4-final-response.md)
+- [v18-4-L-all-diverse-response.md](v18-4-L-all-diverse-response.md)
+- [v18-4-L-all-old-response.md](v18-4-L-all-old-response.md)
+- [v18-4-L-even-diverse-response.md](v18-4-L-even-diverse-response.md)
+- [v18-4-L-even-old-response.md](v18-4-L-even-old-response.md)
+- [v18-4-L-odd-diverse-response.md](v18-4-L-odd-diverse-response.md)
+- [v18-4-L-odd-old-response.md](v18-4-L-odd-old-response.md)
+- [v18-4-L2a-response.md](v18-4-L2a-response.md)
+- [v18-4-L2b-conditional-response.md](v18-4-L2b-conditional-response.md)
+- [v18-4-L2b-realized-response.md](v18-4-L2b-realized-response.md)
+- [v18-4-L2c-response.md](v18-4-L2c-response.md)
+- [v18-4-L2d-old-bank-response.md](v18-4-L2d-old-bank-response.md)
+- [v18-4-L2d-paired-response.md](v18-4-L2d-paired-response.md)
+- [v18-4-L2e-paired-response.md](v18-4-L2e-paired-response.md)
+- [v18-4-L2e-realized-bank-response.md](v18-4-L2e-realized-bank-response.md)
+- [v18-4-L3-response.md](v18-4-L3-response.md)
+- [v18-4-L4-matched-total-response.md](v18-4-L4-matched-total-response.md)
+- [v18-4-L4-old-exposure-response.md](v18-4-L4-old-exposure-response.md)
+- [v18-4-L4-restored-exposure-response.md](v18-4-L4-restored-exposure-response.md)
+- [v18-4-P-response.md](v18-4-P-response.md)
+- [v18-4-P2-response.md](v18-4-P2-response.md)
+- [v18-4-P3-partition-response.md](v18-4-P3-partition-response.md)
+- [v18-4-R1-response.md](v18-4-R1-response.md)
+- [v18-4-R2-response.md](v18-4-R2-response.md)
+- [v18-4-S1-response.md](v18-4-S1-response.md)
+- [v18-4-U2-response.md](v18-4-U2-response.md)
+- [v18-4-U32-response.md](v18-4-U32-response.md)
+- [v18-4-U96-response.md](v18-4-U96-response.md)
+- [v18-final-response.md](v18-final-response.md)
 
-1. **Switch the manipulation off and confirm something changes.** S-2's per-position goal mixture
-   was drawn and discarded — `V5Environment.sample_feature` ignores `artifact.goal` once a creator
-   is bound. The feature streams were bit-identical with the manipulation off.
-2. **Freeze anything fitted.** S-3's detector threshold was the median of the pooled
-   *ground-truth-labelled* divergences, re-fitted per cell. Frozen, its headline rise fell from
-   +0.125 to +0.046.
+## V17
 
-Neither was a statistics problem and neither would have been caught by a larger sample. Both are
-now standing gates — `live` and `no_oracle` in `ghostscale/methods/gates.py` — and both are
-recorded as `expected_to_fail` on the modules they describe, so the evidence travels with the
-result instead of living in a commit message.
+- [v17-continuation-response.md](v17-continuation-response.md)
+- [v17-final-response.md](v17-final-response.md)
+- [v17-initial-response.md](v17-initial-response.md)
+- [v17-setup-response.md](v17-setup-response.md)
 
-A third earned its place during batch two: a **placebo** arm that must reproduce the control
-*exactly* rather than within an interval. It caught a side channel drawing from the rollout's RNG,
-and a `1/3` that is not uniform in floating point. Both moved a headline number.
+## V16
+
+- [v16-acquired-craft-response.md](v16-acquired-craft-response.md)
+
+## Earlier exchanges
+
+- [batch-1-received-by-sounding-line.md](batch-1-received-by-sounding-line.md)
+- [batch-1-request.md](batch-1-request.md)
+- [batch-2-received-by-sounding-line.md](batch-2-received-by-sounding-line.md)
+- [batch-2-request.md](batch-2-request.md)
+- [batch-2-response.md](batch-2-response.md)
+- [batch-3-request.md](batch-3-request.md)
+- [batch-4-request.md](batch-4-request.md)
+- [batch-4-response-S11.md](batch-4-response-S11.md)
+- [batch-4-response-S12-S14-S15.md](batch-4-response-S12-S14-S15.md)
