@@ -1,11 +1,11 @@
 # V19: local maker reconstruction and usable predictive state
 
-**Scientific window closed; administrative closeout remains pending.** The accepted
+**Scientific window closed; final scientific report published.** The accepted
 final endpoint is 28 September 2026 at 13:26:05 UTC / 06:26:05 Pacific. The interim
 population is fixed at its September 25 cutoff; later acceptances remain separate.
 Use dated primary records and native state for current execution, not old prose.
 
-The [final scientific report](FINAL_REPORT.md) preserves 114 accepted batches and all 420 queue dispositions. [Final integration](FINAL_VALIDATION_REPORT.md) passed 4,701 controls. Publication and final service shutdown remain pending; historical monitoring CPU is explicitly incomplete in the [closeout ledger](../../../results/v19/closeout-20260928/README.md).
+The [final scientific report](FINAL_REPORT.md) preserves 114 accepted batches and all 420 queue dispositions. [Final integration](FINAL_VALIDATION_REPORT.md) passed 4,701 controls. The [administrative receipt](../../../results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records publication and service closure; historical monitoring CPU remains explicitly incomplete.
 
 [Final preparation and frozen remaining scope](FINAL_PREPARATION.md).
 

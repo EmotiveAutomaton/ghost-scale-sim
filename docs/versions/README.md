@@ -7,7 +7,7 @@ not start a clock or authorize execution.
 | Version | Status | Entry point |
 |---|---|---|
 | V20 | Approved; fixed Friday October 2 finish | [Contribution reconstruction](v20-contribution-reconstruction/README.md) |
-| V19 | Scientific window closed; administrative closeout pending | [Final scientific report](v19-local-maker/FINAL_REPORT.md) |
+| V19 | Scientific window closed; final report published | [Final scientific report](v19-local-maker/FINAL_REPORT.md) |
 | V18.4 | Closed; remaining frontier retained | [Final report](v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md) |
 | V18.3 | Closed | [Final report](v18-selective-acquisition/research-extension/FINAL_REPORT.md) |
 | V18.2 | Closed | [Final report](v18-selective-acquisition/maker-state/FINAL_REPORT.md) |

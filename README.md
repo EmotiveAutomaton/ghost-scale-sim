@@ -8,8 +8,8 @@ human intent, human values or historical process correspondence.
 ## Start here
 
 - **V19 scientific window closed:** [final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
-  All 114 accepted batches are preserved. Publication, final service shutdown and
-  the recorded monitoring-cost limitation remain explicit in the closeout receipt.
+  All 114 accepted batches and the final report are published. The
+  [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
   See the version protocol and primary results for execution and acceptance.
@@ -18,7 +18,7 @@ human intent, human values or historical process correspondence.
 - **Whole repository:** use the [documentation map](docs/README.md) and
   [version index](docs/versions/README.md).
 
-V19 final integration passed 4,701 controls. Its [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.md) separates the unchanged findings from pending administrative closeout.
+V19 final integration passed 4,701 controls. Its [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.md) separates the unchanged findings from administrative closure and its accounting limitation.
 
 ## Research question
 

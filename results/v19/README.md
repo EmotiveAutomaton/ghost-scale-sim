@@ -4,7 +4,7 @@
 
 We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.
 
-All 114 accepted batches and 420 queue dispositions are preserved. Publication and final monitoring shutdown remain pending; prior exited monitoring services lack complete CPU receipts. [Final report](../../docs/versions/v19-local-maker/FINAL_REPORT.md).
+All 114 accepted batches and 420 queue dispositions are preserved. The final report is published; service closure is recorded in the [administrative receipt](closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json). Prior exited monitoring services lack complete CPU receipts. [Final report](../../docs/versions/v19-local-maker/FINAL_REPORT.md).
 
 We checked whether the final V19 implementation still passes its frozen controls. All 4,696 ordinary controls and five CPU Torch controls pass, with no failures, skips or warnings. Source, primary outputs, logs and child accounting verify; 483,326 disposable fixture files remain retained but were not independently rehashed. This is engineering validation, not new scientific evidence or confirmation. [Review](../../docs/versions/v19-local-maker/FINAL_VALIDATION_REPORT.md).
 

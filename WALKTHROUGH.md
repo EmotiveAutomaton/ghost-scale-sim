@@ -7,7 +7,7 @@ qualifications and attribution markers. For current work use the
 The former accumulated batch preface is preserved in the
 [documentation archive](docs/archive/documentation-2026-09-27/README.md).
 
-V19 has a [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.md) covering 114 accepted batches. Prediction and process correspondence remain distinct; publication, service shutdown and incomplete monitoring costs remain explicit.
+V19 has a [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.md) covering 114 accepted batches. Prediction and process correspondence remain distinct; the final report is published, and [administrative closure](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) retains incomplete historical monitoring costs.
 
 ## Read the title colour first
 
