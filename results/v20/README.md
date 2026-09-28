@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Opening scientific report](../../docs/versions/v20-contribution-reconstruction/OPENING_REPORT.md), [validity](opening-wave-1/VALIDITY.json), [measured continuation forecast](opening-wave-1/FORECAST.json).
 - [Setup and launch report](SETUP_REPORT.md), [validity](SETUP_VALIDITY.json).
 - [Current dated status](CURRENT_STATUS.json), [opening forecast](OPENING_FORECAST.json).
 - [Acceptance](ACCEPTANCE.json), [finite study forest](FOREST.json).

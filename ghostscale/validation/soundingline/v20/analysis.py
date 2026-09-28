@@ -41,7 +41,7 @@ def review(roots):
                         loss=float(-np.log(np.maximum(q,1e-12)).mean());brier=float(((mass*mass).sum(1)+unknown*unknown-2*q+1).mean())
                         if not np.isclose(loss,metrics['candidate_event_log_loss']) or not np.isclose(brier,metrics['candidate_event_brier']):raise ValueError('candidate-event score differs')
         if observed!=set(population):raise ValueError('missing or extra raw forecast population')
-        key=tuple((k,str(d.get(k))) for k in ['branch','tier','history','train_cases','shift','split','reliability','copied','irrelevant','candidate_budget'])
+        key=tuple((k,str(d.get(k))) for k in ['branch','tier','history','train_cases','shift','split','reliability','copied','irrelevant','candidate_budget','fee','review_observed'])
         for row in s.get('population',[]):
             method=row['method']+('/'+row['update'] if 'update' in row else '')
             for metric,v in row['metrics'].items():groups[(key,metric)][row['lineage']][method].append(v)

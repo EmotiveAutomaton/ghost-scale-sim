@@ -9,6 +9,12 @@ from ghostscale.validation.soundingline.v20.runtime import scientific_files
 
 def replay(original,destination,pulse=lambda **kw:None):
     started=time.process_time();plan=read(original/'PLAN.json');destination.mkdir(parents=True,exist_ok=False)
+    # Admission metadata is part of scientific_files for native packets. Rebuild
+    # it from the bound plan; engineering fixtures may have no CARD.json.
+    if (original/'CARD.json').exists():
+        write(destination/'CARD.json',dict(id=original.name,design=plan['design'],
+            plan_sha256=file_digest(original/'PLAN.json'),source_archive_sha256=plan['source_archive_sha256'],
+            environment=plan['environment']))
     summary=run_study(destination,plan['design'],pulse)
     if summary!=read(original/'SUMMARY.json'):raise ValueError('replayed summary differs')
     expected={n:h for n,h in read(original/'COMPLETE.json')['files'].items() if n not in ('SUMMARY.json','EVIDENCE_ROLES.json')}

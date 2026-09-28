@@ -11,6 +11,8 @@ The [setup receipt](../results/v20/SETUP_VALIDITY.json) records 40 controls, exa
 extracted-source replays and the retained saturation repair. None establishes
 scientific superiority before the matched discovery and confirmation comparisons.
 
+The [opening review](versions/v20-contribution-reconstruction/OPENING_REPORT.md) reconstructs all 2,555,904 saved forecast rows and fully replays the seven original scientific blocks. Native admission cards are rebuilt from the bound plan during replay; card-free engineering fixtures remain supported. Review groups separate acquisition fee and observed inspection, preventing unlike comparisons from being averaged as repeated fits. A separate observed-inspection witness conditions both maker posteriors before comparing future endpoint banks; order-witness storage costs do not measure inspection-specific memory. Four focused review regressions pass; the initial missing-card replay failure and all its costs remain retained.
+
 
 We checked whether the final V19 implementation still passes its frozen controls. All 4,696 ordinary controls and five CPU Torch controls pass, with no failures, skips or warnings. Source, primary outputs, logs and child accounting verify; 483,326 disposable fixture files remain retained but were not independently rehashed. This is engineering validation, not new scientific evidence or confirmation. [Review](versions/v19-local-maker/FINAL_VALIDATION_REPORT.md).
 

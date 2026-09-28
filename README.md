@@ -12,7 +12,7 @@ human intent, human values or historical process correspondence.
   requires its own final records and native closeout; a drained queue is not closure.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
-  See the version protocol and primary results for execution and acceptance.
+  The [opening review](docs/versions/v20-contribution-reconstruction/OPENING_REPORT.md) verifies seven packets and finds no structured-reader primary advantage. Confirmation remains untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and

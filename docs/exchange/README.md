@@ -14,6 +14,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Opening scientific wave](v20-opening-wave-response.md)
+
 - [Setup and launch](v20-setup-response.md)
 
 ## V19

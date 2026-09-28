@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Opening scientific review](OPENING_REPORT.md): failed context primary, separate acquisition/correction findings, full scientific replay.
 - [Results and live report index](../../../results/v20/README.md).
 
 One scientific CPU worker and one numerical thread, below normal priority, no GPU
