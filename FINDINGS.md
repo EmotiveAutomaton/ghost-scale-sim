@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 longest-history evidence tiers
+
+We tested whether richer evidence and 64 or 256 retained episodes give the structured reader an advantage. None of the twelve new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. Stored zero probability reaches 58.72% of truths through numerical underflow. All 5,505,024 forecasts verify, and the complete block with the most zeros replays exactly. These are constructed-method results. The context primary remains failed, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_HISTORY_REPORT.md).
+
 ## V20 long-history evidence-tier checkpoint
 
 We tested whether 64 retained episodes give the structured reader an advantage across richer evidence tiers. None of the seven new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. The artifact-only condition at 512 labels assigns stored zero probability to 2.46% of truths through numerical underflow. All 3,211,264 forecasts verify, and that complete block replays exactly. These are constructed-method results. The context primary remains failed, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_HISTORY_REPORT.md).
