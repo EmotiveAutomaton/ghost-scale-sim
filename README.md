@@ -7,9 +7,9 @@ human intent, human values or historical process correspondence.
 
 ## Start here
 
-- **Current campaign:** [V19 local maker reconstruction](docs/versions/v19-local-maker/README.md).
-  Its original final endpoint is 28 September 2026 at 13:26:05 UTC. Completion
-  requires its own final records and native closeout; a drained queue is not closure.
+- **V19 scientific window closed:** [final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
+  All 114 accepted batches and the final report are published. The
+  [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
   The [evidence-tier repeated-fit continuation](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md) brings the verified total to 229 packets. All 18 new diagnostics fail, bringing the paired-fit evidence-tier total to 54 failures; confirmation is untouched.
@@ -18,7 +18,7 @@ human intent, human values or historical process correspondence.
 - **Whole repository:** use the [documentation map](docs/README.md) and
   [version index](docs/versions/README.md).
 
-V19 final integration passed 4,701 controls. The 114-batch synthesis is [prepared for final delivery](docs/versions/v19-local-maker/REPORT_READY.md); endpoint accounting and native closeout remain due.
+V19 final integration passed 4,701 controls. Its [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.md) separates the unchanged findings from administrative closure and its accounting limitation.
 
 ## Research question
 
@@ -29,7 +29,7 @@ decoder failures, supplied constraints and validated improvements in a method.
 
 ## What is implemented
 
-The code contains the closed V1–V18 studies and the active V19 apparatus. V19 has
+The code contains the closed V1–V18 studies and the V19 apparatus. V19 has
 an exact local-goal dependency-edit world, learned and exact readouts, retention,
 transfer and evidence-policy comparisons, source-frozen native execution,
 independent checkers and replay. Implementation is not the same as an accepted

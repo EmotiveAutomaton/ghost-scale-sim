@@ -1,5 +1,11 @@
 # The methodology layer
 
+## V19 scientific endpoint — 28 September 2026
+
+We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.
+
+All 114 accepted batches and 420 queue dispositions are preserved. The final report is published; service closure is recorded in the [administrative receipt](../results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json). Prior exited monitoring services lack complete CPU receipts. [Final report](versions/v19-local-maker/FINAL_REPORT.md).
+
 ## V20 contribution instrument
 
 The [evidence-tier review](versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md) verifies 60 further packets and four complete scientific replays. A retained-data audit reconstructs the exact-match frequency estimator and separates matched-query loss contributions from unchanged prior fallback. These evidence tiers remain nonprimary diagnostics. All saved secondary scores, capped loss and exact-zero mass are checked separately; producer source and settings are unchanged.

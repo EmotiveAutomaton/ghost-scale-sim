@@ -52,6 +52,12 @@ We tested whether more labels or one retained episode gives the structured reade
 
 We tested whether structured contribution accounts outperform matched direct readers. They did not in the opening context comparison: structured capped log loss was 3.64028, versus 3.61385 for direct frequencies, 3.59771 for the joint neural reader and 3.58216 for legal-support uniform prediction; lower is better. Acquisition and correction helped in their separate tests, while irrelevant updates harmed forecasts. All seven packets passed independent verification and full frozen-source replay after a retained replay-helper repair. These are constructed-method results, not evidence of human intent; confirmation remains untouched. [Opening report](docs/versions/v20-contribution-reconstruction/OPENING_REPORT.md).
 
+## V19 scientific endpoint — 28 September 2026
+
+We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.
+
+All 114 accepted batches and 420 queue dispositions are preserved. The final report is published; service closure is recorded in the [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json). Prior exited monitoring services lack complete CPU receipts. [Final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
+
 ## V20 contribution setup
 
 We checked whether the new contribution studies can execute and preserve verifiable evidence. All 40 scoped controls pass in both development and extracted source, and all eight complete small family replays agree. Sounding Line's actual event validator and offline exporter accept all four evidence tiers; native hidden launch and real event delivery also pass. A retained numerical saturation failure was repaired in log space without changing the criterion. This is engineering validation, not evidence of learned-reader superiority or human intent. [Report](results/v20/SETUP_REPORT.md).

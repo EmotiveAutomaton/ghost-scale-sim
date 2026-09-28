@@ -7,7 +7,7 @@ qualifications and attribution markers. For current work use the
 The former accumulated batch preface is preserved in the
 [documentation archive](docs/archive/documentation-2026-09-27/README.md).
 
-V19 now has a [prepared 114-batch synthesis](docs/versions/v19-local-maker/REPORT_READY.md) and verified final integration. Prediction, process correspondence and endpoint closeout remain distinct.
+V19 has a [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.md) covering 114 accepted batches. Prediction and process correspondence remain distinct; the final report is published, and [administrative closure](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) retains incomplete historical monitoring costs.
 
 ## Read the title colour first
 
