@@ -1,5 +1,11 @@
 # The methodology layer
 
+## V19 scientific endpoint — 28 September 2026
+
+We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.
+
+All 114 accepted batches and 420 queue dispositions are preserved. Publication and final monitoring shutdown remain pending; prior exited monitoring services lack complete CPU receipts. [Final report](versions/v19-local-maker/FINAL_REPORT.md).
+
 ## V20 contribution instrument
 
 The [V20 protocol](versions/v20-contribution-reconstruction/PROTOCOL.md) defines

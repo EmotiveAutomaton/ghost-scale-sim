@@ -1,5 +1,7 @@
 # V19 document catalog
 
+[Final scientific report and endpoint limits](FINAL_REPORT.md).
+
 Every campaign document below remains at its stable source-bound path. This is
 a navigation inventory, not an acceptance ledger. Read the [version overview](README.md)
 first; use result receipts to distinguish proposals, execution and acceptance.

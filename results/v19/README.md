@@ -1,5 +1,11 @@
 # V19 scientific records and reader export
 
+## V19 scientific endpoint — 28 September 2026
+
+We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.
+
+All 114 accepted batches and 420 queue dispositions are preserved. Publication and final monitoring shutdown remain pending; prior exited monitoring services lack complete CPU receipts. [Final report](../../docs/versions/v19-local-maker/FINAL_REPORT.md).
+
 We checked whether the final V19 implementation still passes its frozen controls. All 4,696 ordinary controls and five CPU Torch controls pass, with no failures, skips or warnings. Source, primary outputs, logs and child accounting verify; 483,326 disposable fixture files remain retained but were not independently rehashed. This is engineering validation, not new scientific evidence or confirmation. [Review](../../docs/versions/v19-local-maker/FINAL_VALIDATION_REPORT.md).
 
 We tested whether waiting for the first cue before buying a second improves storage. At two-thirds cue correctness and a fee of 1/64, conditional purchase beats the better constant decision in 170 of 420 independent-cue problems and 134 when copying occurs half the time; fully copied cues yield no gain. Independent reconstruction and both full replays verify this constructed-method result; forecast accuracy and process correspondence remain unestablished.

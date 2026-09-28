@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V19 final endpoint response](v19-final-response.md).
+
 Ghost supplies constructed known-answer tests; Sounding Line supplies the separate
 real-text contribution task and its source-specific evidence. Human records may
 establish observed actions while leaving private goals and unobserved actions
