@@ -12,10 +12,7 @@ human intent, human values or historical process correspondence.
   requires its own final records and native closeout; a drained queue is not closure.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
-  The [longest-history review](docs/versions/v20-contribution-reconstruction/LONG_HISTORY_REPORT.md) adds five verified primary failures, a stored-zero audit and a complete 256-episode replay.
-  The [history-curve review](docs/versions/v20-contribution-reconstruction/HISTORY_CURVE_REPORT.md) verifies eighteen further primary failures and a complete 64-episode replay.
-  The [learning-budget review](docs/versions/v20-contribution-reconstruction/SCORE_BOUNDARY_REPORT.md) adds six primary failures and verifies a saved-score repair.
-  The [opening review](docs/versions/v20-contribution-reconstruction/OPENING_REPORT.md) verifies seven packets and finds no structured-reader primary advantage. Confirmation remains untouched.
+  The [evidence-tier review](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md) brings the verified total to 96 packets, with four new complete replays and an exact-match estimator audit. The context primary remains failed; confirmation is untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and

@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 evidence tiers and learning curves
+
+We tested whether richer records and short histories give the structured reader an advantage. None of the 60 new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. With 16 complete past records and 32,768 labels, its capped log loss is 1.06422, versus 0.80049 for direct frequencies and 0.79957 for the legal template; lower is better. All 27,525,120 forecasts verify and four complete reference blocks replay exactly. These are constructed-method results; the context primary remains failed and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md).
+
 ## V20 longest-history learning curve
 
 We tested whether 256 retained episodes give the structured reader a primary advantage. None of the five training budgets passes. At 32,768 labels, its capped log loss is 9.90534, versus 2.55699 for direct frequencies and 2.49182 for the legal template. At the smallest budget, 36.15% of true answers receive stored zero probability from numerical underflow. All 2,293,760 forecasts verify and the complete reference block replays exactly. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_HISTORY_REPORT.md).

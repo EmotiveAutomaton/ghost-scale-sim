@@ -14,6 +14,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Evidence tiers and learning curves](v20-evidence-tier-response.md)
+
 - [Longest-history learning curve](v20-long-history-response.md)
 
 - [Retained-history learning curves](v20-history-curve-response.md)

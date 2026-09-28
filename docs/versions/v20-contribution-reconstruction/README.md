@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Evidence-tier learning curves](EVIDENCE_TIER_REPORT.md): 60 verified nonprimary diagnostics, exact-match estimator audit and four complete replays.
 - [Longest-history curve](LONG_HISTORY_REPORT.md): five primary failures, stored-zero underflow audit, full 256-episode replay and measured forest refill.
 - [Retained-history learning curves](HISTORY_CURVE_REPORT.md): eighteen further primary failures, full 64-episode replay, measured queue recalibration.
 - [Learning budgets and saved-score repair](SCORE_BOUNDARY_REPORT.md): six further primary failures, retained numerical failure, complete repair replay.
