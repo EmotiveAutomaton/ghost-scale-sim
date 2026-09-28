@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 long-history evidence-tier checkpoint
+
+We tested whether 64 retained episodes give the structured reader an advantage across richer evidence tiers. None of the seven new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. The artifact-only condition at 512 labels assigns stored zero probability to 2.46% of truths through numerical underflow. All 3,211,264 forecasts verify, and that complete block replays exactly. These are constructed-method results. The context primary remains failed, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_HISTORY_REPORT.md).
+
 ## V20 evidence tiers and learning curves
 
 We tested whether richer records and short histories give the structured reader an advantage. None of the 60 new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. With 16 complete past records and 32,768 labels, its capped log loss is 1.06422, versus 0.80049 for direct frequencies and 0.79957 for the legal template; lower is better. All 27,525,120 forecasts verify and four complete reference blocks replay exactly. These are constructed-method results; the context primary remains failed and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md).

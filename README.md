@@ -12,7 +12,7 @@ human intent, human values or historical process correspondence.
   requires its own final records and native closeout; a drained queue is not closure.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
-  The [evidence-tier review](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md) brings the verified total to 96 packets, with four new complete replays and an exact-match estimator audit. The context primary remains failed; confirmation is untouched.
+  The [long-history evidence review](docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_HISTORY_REPORT.md) brings the verified total to 103 packets. Seven further diagnostics fail the comparison rule; the context primary remains failed and confirmation is untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and

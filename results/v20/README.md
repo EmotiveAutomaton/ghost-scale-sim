@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Long-history evidence checkpoint](../../docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_HISTORY_REPORT.md), [validity](history-tier-wave-1/VALIDITY.json), [forecast](history-tier-wave-1/FORECAST.json).
 - [Evidence-tier learning curves](../../docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md), [validity](learning-curve-wave-1/VALIDITY.json), [forecast](learning-curve-wave-1/FORECAST.json).
 - [Longest-history curve](../../docs/versions/v20-contribution-reconstruction/LONG_HISTORY_REPORT.md), [validity](long-history-wave-1/VALIDITY.json), [forecast](long-history-wave-1/FORECAST.json).
 - [Retained-history learning curves](../../docs/versions/v20-contribution-reconstruction/HISTORY_CURVE_REPORT.md), [validity](history-wave-1/VALIDITY.json), [forecast](history-wave-1/FORECAST.json).
