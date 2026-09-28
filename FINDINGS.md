@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 longest-history learning curve
+
+We tested whether 256 retained episodes give the structured reader a primary advantage. None of the five training budgets passes. At 32,768 labels, its capped log loss is 9.90534, versus 2.55699 for direct frequencies and 2.49182 for the legal template. At the smallest budget, 36.15% of true answers receive stored zero probability from numerical underflow. All 2,293,760 forecasts verify and the complete reference block replays exactly. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_HISTORY_REPORT.md).
+
 ## V20 retained-history learning curves
 
 We tested whether longer retained histories give the structured reader a primary advantage. None of the 18 new conditions passes. At 32,768 labels and 64 past episodes, its capped log loss is 4.18870, versus 2.58658 for direct frequencies and 2.52141 for the legal template. All 8,257,536 new forecasts verify, and a complete 64-episode block replays exactly. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/HISTORY_CURVE_REPORT.md).

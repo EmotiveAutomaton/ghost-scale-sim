@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Longest-history curve](../../docs/versions/v20-contribution-reconstruction/LONG_HISTORY_REPORT.md), [validity](long-history-wave-1/VALIDITY.json), [forecast](long-history-wave-1/FORECAST.json).
 - [Retained-history learning curves](../../docs/versions/v20-contribution-reconstruction/HISTORY_CURVE_REPORT.md), [validity](history-wave-1/VALIDITY.json), [forecast](history-wave-1/FORECAST.json).
 - [Learning budgets and score repair](../../docs/versions/v20-contribution-reconstruction/SCORE_BOUNDARY_REPORT.md), [validity](score-boundary-1/VALIDITY.json), [continuation forecast](score-boundary-1/FORECAST.json).
 - [Opening scientific report](../../docs/versions/v20-contribution-reconstruction/OPENING_REPORT.md), [validity](opening-wave-1/VALIDITY.json), [measured continuation forecast](opening-wave-1/FORECAST.json).
