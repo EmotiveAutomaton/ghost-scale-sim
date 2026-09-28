@@ -6,11 +6,15 @@ establish observed actions while leaving private goals and unobserved actions
 unknown. Neither project's labels automatically establish the other's claims.
 
 These are repository request/response records. A response file is not proof of
-message delivery or downstream use. V20 will require an explicit consumer receipt.
+message delivery or downstream use. V20 now has an actual event-validator and offline-export consumer receipt.
 For current science read the [V19 overview](../versions/v19-local-maker/README.md);
-for proposed work read the [V20 plan](../versions/v20-contribution-reconstruction/README.md).
+for the new campaign read the [V20 protocol and index](../versions/v20-contribution-reconstruction/README.md).
 The earlier annotated exchange index is preserved in the
 [documentation archive](../archive/documentation-2026-09-27/README.md).
+
+## V20
+
+- [Setup and launch](v20-setup-response.md)
 
 ## V19
 

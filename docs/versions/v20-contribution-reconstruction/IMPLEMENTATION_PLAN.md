@@ -1,6 +1,8 @@
 # V20 implementation plan
 
-Prepared 27 September 2026. **Proposed, not implemented or admitted.**
+Prepared 27 September 2026. **Historical proposal, subsequently approved.**
+The later owner commission and [execution protocol](PROTOCOL.md) supersede the
+planning-only status and rolling-clock proposal below. Original plan prose follows.
 
 The September 27 source packet is adequate to begin implementation after the
 owner's go-ahead. Its main scientific choices are already made: a small exact

@@ -1,31 +1,22 @@
-# V20: contribution reconstruction — proposed
+﻿# V20 contribution reconstruction
 
-**Status: documentation and implementation plan only. Awaiting the owner's go-ahead.**
-No V20 code, tests, acceptance file, queue, worker, model fit or campaign clock has
-been created. The September 27 instruction to plan first takes precedence over
-the authorization language inside the supplied specification.
+Implementation approved 27 September 2026. The fixed finish is Friday 2 October
+at 05:00 Pacific (12:00 UTC). The scientific cutoff is Thursday 1 October at
+21:00 Pacific, with eight hours reserved for review, export and delivery.
 
-The question is whether a structured account of contribution and process recovers
-distinctions that direct reading misses, at matched evidence and cost. Ghost
-provides constructed known-answer tests for Sounding Line's contribution reader;
-it does not establish human intentions from simulator success.
+The question is whether structured contribution accounts recover distinctions that
+matched direct readers miss, and which distinctions require episode evidence.
+These are constructed-method tests, not evidence about private human intent.
 
-- [Implementation plan](IMPLEMENTATION_PLAN.md): sequence, reusable components,
-  branch dependencies, validity requirements, resources and launch conditions.
-- [Original coding package](CODING_PACKAGE.md): the supplied September 27 document,
-  preserved byte for byte. Its Gear 2 preference is not an applied resource setting.
-- [Specification provenance](PROVENANCE.json): source identity and inspected
-  companion/interface pins.
-- [V19](../v19-local-maker/README.md): the preceding active campaign, with its own
-  records, pending review and September 28 endpoint. This plan does not reopen or
-  reset it.
+- [Execution protocol](PROTOCOL.md): targets, complete G0-G7 consumers, whole-lineage
+  splits, controls, resources, finite continuation and reporting.
+- [Model registry](MODEL_REGISTRY.json): finite new fit allowance and fixed settings.
+- [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
+- [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
+  its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Results and live report index](../../../results/v20/README.md).
 
-After approval, start with the smallest complete exact case and its independent
-consumer, then compare matched readers. Keep an independent episode-retention
-branch ready while source adaptation proceeds. Pilot measurements determine
-capacity; the five-day clock starts only at the shared Sounding Line readiness
-boundary, never on this document's creation date.
-
-The only requested next decision is approval to implement this plan. Routine
-schema mapping, finite-world construction, controls and scheduling remain
-implementation work within the supplied scope.
+One scientific CPU worker and one numerical thread, below normal priority, no GPU
+or environment synchronization. V19 keeps its own September 28 final closeout.
+Sounding Line retains resource priority. Frozen results, sources and failed attempts
+are preserved; named accepted batches are published during the week.

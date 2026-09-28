@@ -1,5 +1,17 @@
 # The methodology layer
 
+## V20 contribution instrument
+
+The [V20 protocol](versions/v20-contribution-reconstruction/PROTOCOL.md) defines
+an exact 24,576-trajectory contribution world, separately coded rational execution
+and posterior checking, matched finite readers, joint and bit-factorized MLPs,
+proper squared probability loss and explicitly capped log loss, whole-lineage
+uncertainty, actual canonical export and immutable complete-family replay.
+The [setup receipt](../results/v20/SETUP_VALIDITY.json) records 40 controls, exact
+extracted-source replays and the retained saturation repair. None establishes
+scientific superiority before the matched discovery and confirmation comparisons.
+
+
 We checked whether the final V19 implementation still passes its frozen controls. All 4,696 ordinary controls and five CPU Torch controls pass, with no failures, skips or warnings. Source, primary outputs, logs and child accounting verify; 483,326 disposable fixture files remain retained but were not independently rehashed. This is engineering validation, not new scientific evidence or confirmation. [Review](versions/v19-local-maker/FINAL_VALIDATION_REPORT.md).
 
 Independent conditional-acquisition review enumerates complete paid contingent policies after latent-event integration, reconstructing all decisions, ties, break-even fees and costs. All 57,344 rows, 30,965,760 joins, 241,920 paired strata, 120,960 law strata and 15,120 equal-law cells verify. All 280 isolated controls and both full replays pass. [Report](versions/v19-local-maker/ADAPTIVE_SECOND_CUE_REPORT.md).

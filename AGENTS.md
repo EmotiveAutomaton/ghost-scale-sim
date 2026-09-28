@@ -17,22 +17,30 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Documentation map and proposed V20 (2026-09-27)
+## Documentation map and active V20 (2026-09-27)
 
-Use `docs/README.md` as the navigation map and `docs/versions/README.md` for
-active, proposed and closed allocations. V19's `CATALOG.md` indexes its stable
-scientific paths. Keep entry pages short: replace the current overview rather
-than prepending a full batch history. Complete findings still belong in the
-version report, FINDINGS, theory table and summary, and exchange as required.
-Archive superseded prose with provenance; do not relocate frozen scientific
-inputs, sources, result receipts or runtime paths for cosmetic organization.
+Use `docs/README.md` and `docs/versions/README.md` for navigation. Keep entry pages
+short and scientific paths stable. Archive superseded prose with provenance.
 
-The September 27 package is filed in `docs/versions/v20-contribution-reconstruction/`.
-The owner requested documentation cleanup and an implementation plan BEFORE
-go-ahead. V20 is proposed only: do not implement it, admit tests, create acceptance
-or campaign clocks, change gear, launch a worker or consume a model setting until
-that go-ahead. The supplied package's commission language does not override the
-owner's current planning-only instruction. Preserve the existing V19 closeout.
+The owner approved implementation of all V20 studies and continuous useful work
+through Friday 2 October 2026 at 05:00 Pacific (12:00 UTC). This supersedes the
+previous planning-only restriction. Read `docs/versions/v20-contribution-reconstruction/README.md`,
+`PROTOCOL.md`, `MODEL_REGISTRY.json`, `results/v20/` and outer `.local/v20/HANDOFF.md`.
+The fixed science cutoff is 2 October 04:00 UTC; reserve eight hours for final
+review/export/delivery. This shortened shared window must not be called 120 hours.
+
+Use the separate frozen V20 sources, accounting and native queue. Gear 1 is one
+below-normal CPU worker and one numerical thread, no GPU or environment sync.
+The 90-hour CPU ceiling includes setup, failures, checks and replay, with at least
+18 hours protected. Whole-lineage confirmation stays untouched until its frozen
+opening. No runtime padding, repeated valid jobs or undeclared model settings.
+Use the finite conditional forest, independent validity, full scientific write-through
+and per-nameable-batch publication. Completion/failure/refill and aligned four-hour
+operational checkpoints request bounded reviews; do not poll healthy work with models.
+
+V19 retains its existing closeout owner and original endpoint. V20 runs in a separate
+checkout while V19 closes. Preserve Sounding Line's running Stage 13 and priority.
+No research subagents are commissioned for this allocation; implement inline.
 
 ## Current campaign: V19 local maker reconstruction (2026-09-21)
 

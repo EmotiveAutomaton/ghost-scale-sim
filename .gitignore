@@ -177,3 +177,14 @@ results/v16/closeout-setup/study-products/figure-layout/preview-*/
 results/v16/closeout-setup/full-regression-1/retained-fixtures/
 results/v16/closeout-setup/replay-source-closure/retained-fixtures/
 results/v16/closeout-setup/replay-source-closure/actual-source-1/private/
+
+# V20 raw forecasts and runtime sources remain locally hash-bound.
+results/v20/packets/**/reader/
+results/v20/packets/**/evaluator/
+results/v20/packets/**/training/
+results/v20/packets/**/raw/*_points.npz
+results/v20/packets/**/SOURCE.zip
+results/v20/packets/**/STATUS.json
+results/v20/packets/**/worker.log
+results/v20/packets/**/OWNER.lock
+results/v20/packets/**/PLAN.json

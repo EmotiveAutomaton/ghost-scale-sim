@@ -1,5 +1,10 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 contribution setup
+
+We checked whether the new contribution studies can execute and preserve verifiable evidence. All 40 scoped controls pass in both development and extracted source, and all eight complete small family replays agree. Sounding Line's actual event validator and offline exporter accept all four evidence tiers; native hidden launch and real event delivery also pass. A retained numerical saturation failure was repaired in log space without changing the criterion. This is engineering validation, not evidence of learned-reader superiority or human intent. [Report](results/v20/SETUP_REPORT.md).
+
+
 We checked whether the final V19 implementation still passes its frozen controls. All 4,696 ordinary controls and five CPU Torch controls pass, with no failures, skips or warnings. Source, primary outputs, logs and child accounting verify; 483,326 disposable fixture files remain retained but were not independently rehashed. This is engineering validation, not new scientific evidence or confirmation. [Review](docs/versions/v19-local-maker/FINAL_VALIDATION_REPORT.md).
 
 We tested whether waiting for the first cue before buying a second improves storage. At two-thirds cue correctness and a fee of 1/64, conditional purchase beats the better constant decision in 170 of 420 independent-cue problems and 134 when copying occurs half the time; fully copied cues yield no gain. Independent reconstruction and both full replays verify this constructed-method result; forecast accuracy and process correspondence remain unestablished.

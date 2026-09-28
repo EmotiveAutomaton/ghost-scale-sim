@@ -4,12 +4,12 @@ Start with the status of the work, then follow its evidence. This index describe
 where documents belong; it does not replace scientific verdicts or live native
 state. Updated 27 September 2026.
 
-## Current and proposed work
+## Current work
 
 | Status | Entry point | Use |
 |---|---|---|
 | Active V19, closeout still required | [V19 index](versions/v19-local-maker/README.md) | Accepted contract, interim synthesis, detailed catalog and primary records |
-| Proposed V20, awaiting implementation approval | [V20 index](versions/v20-contribution-reconstruction/README.md) | Original September 27 specification and implementation plan; no runtime started |
+| Approved V20, implementation and admission | [V20 index](versions/v20-contribution-reconstruction/README.md) | Original specification, execution protocol and current result records |
 | Closed V1–V18 allocations | [Version index](versions/README.md) | Specifications, reports and retained failures; historical instructions do not reopen them |
 
 ## Reading order for an operating agent

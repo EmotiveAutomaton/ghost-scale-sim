@@ -10,9 +10,9 @@ human intent, human values or historical process correspondence.
 - **Current campaign:** [V19 local maker reconstruction](docs/versions/v19-local-maker/README.md).
   Its original final endpoint is 28 September 2026 at 13:26:05 UTC. Completion
   requires its own final records and native closeout; a drained queue is not closure.
-- **Proposed next work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
-  The specification is filed and the implementation plan is ready for review.
-  No V20 implementation, acceptance, scientific queue or clock has started.
+- **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
+  Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
+  See the version protocol and primary results for execution and acceptance.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and
@@ -36,7 +36,7 @@ independent checkers and replay. Implementation is not the same as an accepted
 scientific result: consult [current status](results/v19/CURRENT_STATUS.json),
 [coverage](results/v19/TEST_COVERAGE.json) and each named result's review.
 
-The proposed V20 contribution world is not implemented. V19's skill-dependent
+V20 implements a separate exact contribution world and G0-G7 consumers. V19's skill-dependent
 tool action is not an AI-use generator and must not be relabelled as one.
 
 ## Documentation map
