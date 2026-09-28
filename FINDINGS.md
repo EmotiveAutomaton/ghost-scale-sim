@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 learning budgets and saved-score repair
+
+We tested whether more labels or one retained episode gives the structured reader a primary advantage. None of the six new conditions passes: at 32,768 labels without history, its capped log loss is 3.60082, versus 3.52468 for direct frequencies and 3.58216 for the legal template. A saved-probability scoring defect was repaired and fully replayed; earlier findings are unchanged. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SCORE_BOUNDARY_REPORT.md).
+
 ## V20 opening scientific wave
 
 We tested whether structured contribution accounts outperform matched direct readers. They did not in the opening context comparison: structured capped log loss was 3.64028, versus 3.61385 for direct frequencies, 3.59771 for the joint neural reader and 3.58216 for legal-support uniform prediction; lower is better. Acquisition and correction helped in their separate tests, while irrelevant updates harmed forecasts. All seven packets passed independent verification and full frozen-source replay after a retained replay-helper repair. These are constructed-method results, not evidence of human intent; confirmation remains untouched. [Opening report](docs/versions/v20-contribution-reconstruction/OPENING_REPORT.md).

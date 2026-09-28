@@ -6,7 +6,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V20 | Opening wave verified; primary fails; fixed Friday October 2 finish | [Contribution reconstruction](v20-contribution-reconstruction/README.md) |
+| V20 | Thirteen packets verified; primary fails; saved-score repair replayed; fixed Friday October 2 finish | [Contribution reconstruction](v20-contribution-reconstruction/README.md) |
 | V19 | Active; September 28 final closeout required | [Local maker reconstruction](v19-local-maker/README.md) |
 | V18.4 | Closed; remaining frontier retained | [Final report](v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md) |
 | V18.3 | Closed | [Final report](v18-selective-acquisition/research-extension/FINAL_REPORT.md) |

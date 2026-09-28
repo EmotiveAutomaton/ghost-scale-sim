@@ -6,6 +6,24 @@ from pathlib import Path
 from ghostscale.validation.soundingline.v18_3.io import read,write,file_digest,now,digest
 from ghostscale.validation.soundingline.v20.runtime import validate_design,fingerprint,consumed
 
+def source_binding(campaign,forest,queue):
+    """Apply an explicitly admitted source repair without rewriting the forest."""
+    path=campaign/'SUCCESSOR_SOURCE.json'
+    if not path.exists():
+        return Path(forest['source']),Path(forest['archive']),read(Path(queue['jobs'][0]['root'])/'PLAN.json')
+    binding=read(path)
+    if binding['forest_sha256']!=file_digest(campaign/'FOREST.json'):
+        raise ValueError('source repair belongs to a different forest')
+    admission=read(Path(binding['admission']))
+    manifest=binding['manifest'];source=Path(binding['source']);archive=Path(binding['archive'])
+    if not admission.get('passed') or file_digest(Path(binding['admission']))!=manifest['admission_sha256']:
+        raise ValueError('source repair requires verified admission')
+    if admission['sources']!=manifest['sources'] or manifest['environment']!=fingerprint():
+        raise ValueError('source repair binding differs')
+    if file_digest(archive)!=manifest['source_archive_sha256'] or any(file_digest(source/n)!=h for n,h in manifest['sources'].items()):
+        raise ValueError('source repair capsule changed')
+    return source,archive,manifest
+
 def refill(campaign,selection,review):
     campaign=campaign.resolve();r=read(review)
     if not r.get('passed'):raise ValueError('verified completed-result review required')
@@ -16,7 +34,7 @@ def refill(campaign,selection,review):
     by={digest(d):d for d in forest['designs']}
     already={digest(read(Path(j['root'])/'PLAN.json')['design']) for j in queue['jobs']}
     if len(ids)!=len(set(ids)) or any(k not in by or k in already for k in ids):raise ValueError('duplicate or unregistered successor')
-    source=Path(forest['source']);archive=Path(forest['archive']);manifest=read(Path(queue['jobs'][0]['root'])/'PLAN.json')
+    source,archive,manifest=source_binding(campaign,forest,queue)
     added=[];clock=0
     for key in ids:
         d=by[key];validate_design(d);jid=f"v20-{len(queue['jobs']):04d}-{d['branch'].lower()}";root=Path(a['artifact_root'])/jid;root.mkdir(exist_ok=False);os.link(archive,root/'SOURCE.zip')

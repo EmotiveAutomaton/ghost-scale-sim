@@ -2,6 +2,8 @@
 
 ## V20 contribution instrument
 
+The [saved-score repair](versions/v20-contribution-reconstruction/SCORE_BOUNDARY_REPORT.md) makes the scorer validate and use the exact stored probabilities. Repeated normalization could cross the fixed 90% confidence boundary by one floating-point step. The independent checker and scientific thresholds are unchanged. Fifty scoped controls pass; the complete repaired scientific block replays exactly. Pending identities and future forest admissions bind the repaired capsule while preserving original designs, source and failures.
+
 The [V20 protocol](versions/v20-contribution-reconstruction/PROTOCOL.md) defines
 an exact 24,576-trajectory contribution world, separately coded rational execution
 and posterior checking, matched finite readers, joint and bit-factorized MLPs,

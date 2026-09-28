@@ -74,7 +74,13 @@ class Readers:
             fairness='Same labels and evidence; all candidate support equal. Parameter/storage/compute differ and are reported; no capacity-matched advantage asserted.')
 
 def score(p,y):
-    p=normalize(p);q=p[np.arange(len(y)),y];mode=p.argmax(1)
+    # Score the exact forecast that is retained and independently checked.
+    # Renormalizing here can move a value by one ULP across the fixed 0.9
+    # confidence boundary even when its row already sums to one within rounding.
+    p=np.asarray(p,float)
+    if p.ndim!=2 or not np.isfinite(p).all() or (p<0).any() or not np.allclose(p.sum(1),1,atol=1e-10):
+        raise ValueError('score requires normalized forecast')
+    q=p[np.arange(len(y)),y];mode=p.argmax(1)
     marginal=p@LABELS;target=LABELS[y]
     return dict(log_loss=-np.log(np.maximum(q,1e-12)),brier=(p*p).sum(1)-2*q+1,correct=(mode==y).astype(float),
         tool_brier=(marginal[:,0]-target[:,0])**2,goal_brier=((marginal[:,-2:]-target[:,-2:])**2).mean(1),
