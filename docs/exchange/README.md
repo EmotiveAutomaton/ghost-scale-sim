@@ -14,6 +14,18 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Evidence-tier repeated-fit continuation](v20-evidence-tier-fit-continuation-response.md)
+
+- [Evidence-tier repeated-fit review](v20-evidence-tier-fit-response.md)
+
+- [Repeated-fit review](v20-fit-seed-response.md)
+
+- [Maximum label budget](v20-maximum-label-budget-response.md)
+
+- [Final long-history label-budget diagnostics](v20-final-long-history-budget-response.md)
+
+- [Long-history label-budget review](v20-long-history-budget-response.md)
+
 - [Longest-history evidence review](v20-longest-history-evidence-response.md)
 
 - [Long-history evidence checkpoint](v20-long-history-evidence-response.md)

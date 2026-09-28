@@ -14,6 +14,12 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Evidence-tier repeated-fit continuation](EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md): eighteen further paired-fit diagnostic failures; all forecasts verified.
+- [Evidence-tier repeated fits](EVIDENCE_TIER_FIT_REPORT.md): final context condition and 36 paired-fit diagnostic failures; no new exact-zero truths.
+- [Repeated fits](FIT_SEED_REPORT.md): 29 failed paired-fit context conditions, final complete-record diagnostic and numerical-zero audit.
+- [Maximum label budget](MAXIMUM_LABEL_BUDGET_REPORT.md): nineteen verified failures, no exact-zero truths, immutable replay reuse and measured forest refill.
+- [Final long-history label-budget diagnostics](LONG_HISTORY_FINAL_BUDGET_REPORT.md): two verified failures, no exact-zero truths and immutable replay reuse.
+- [Long-history label budgets](LONG_HISTORY_BUDGET_REPORT.md): eight verified diagnostic failures, all-zero audit and immutable replay reuse.
 - [Longest-history evidence review](LONGEST_EVIDENCE_HISTORY_REPORT.md): twelve verified diagnostic failures, all-zero audit and full reference replay.
 - [Long-history evidence checkpoint](LONG_EVIDENCE_HISTORY_REPORT.md): seven verified diagnostic failures, stored-zero audit and full artifact replay.
 - [Evidence-tier learning curves](EVIDENCE_TIER_REPORT.md): 60 verified nonprimary diagnostics, exact-match estimator audit and four complete replays.

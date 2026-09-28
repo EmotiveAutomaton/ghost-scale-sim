@@ -1,5 +1,29 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 evidence-tier repeated-fit continuation
+
+We tested whether repeating the fits gives the structured reader an advantage with four or sixteen retained episodes. All 18 paired-fit evidence-tier diagnostics fail. All 8,257,536 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md).
+
+## V20 evidence-tier repeated fits
+
+We tested whether repeating the fits changes the remaining long-history context comparison or the evidence-tier diagnostics. The context comparison and all 36 diagnostics fail after averaging both fits within each generator world. All 16,973,824 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_REPORT.md).
+
+## V20 repeated-fit review
+
+We tested whether repeating the fits changes the structured reader advantage. None of the 29 context conditions passes after averaging both fit seeds within each generator world; the final large-budget complete-record diagnostic also fails. All 13,762,560 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FIT_SEED_REPORT.md).
+
+## V20 maximum-label-budget review
+
+We tested whether 131,072 training labels give the structured reader an advantage across retained histories and evidence tiers. All five new context comparisons and fourteen other evidence diagnostics fail the declared comparison rule. All 8,716,288 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_BUDGET_REPORT.md).
+
+## V20 final long-history label-budget diagnostics
+
+We tested whether 32,768 training labels give the structured reader an advantage with 256 retained sparse or complete records. Neither condition passes the declared comparison rule. All 917,504 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; the context primary remains failed and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_HISTORY_FINAL_BUDGET_REPORT.md).
+
+## V20 long-history label budgets
+
+We tested whether more training labels rescue structured reading of 256 retained episodes across richer evidence tiers. None of the eight new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. All 3,670,016 forecasts verify. Exact zero probability reaches 4.22% of truths through numerical underflow; the earlier implementation-family replays remain valid. These are constructed-method results. The context primary remains failed, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_HISTORY_BUDGET_REPORT.md).
+
 ## V20 longest-history evidence tiers
 
 We tested whether richer evidence and 64 or 256 retained episodes give the structured reader an advantage. None of the twelve new diagnostic conditions beats both direct rivals and the legal template under the declared comparison rule. Stored zero probability reaches 58.72% of truths through numerical underflow. All 5,505,024 forecasts verify, and the complete block with the most zeros replays exactly. These are constructed-method results. The context primary remains failed, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_HISTORY_REPORT.md).

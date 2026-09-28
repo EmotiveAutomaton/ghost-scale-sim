@@ -3,6 +3,12 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Evidence-tier repeated-fit continuation](../../docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md), [validity](tier-fit-wave-2/VALIDITY.json), [paired fits](tier-fit-wave-2/PAIRED_FITS.json).
+- [Evidence-tier repeated fits](../../docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_REPORT.md), [validity](tier-fit-wave-1/VALIDITY.json), [paired fits](tier-fit-wave-1/PAIRED_FITS.json).
+- [Repeated fits](../../docs/versions/v20-contribution-reconstruction/FIT_SEED_REPORT.md), [validity](fit-seed-wave-1/VALIDITY.json), [paired fits](fit-seed-wave-1/PAIRED_FITS.json).
+- [Maximum label budget](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_BUDGET_REPORT.md), [validity](max-budget-wave-1/VALIDITY.json), [forecast](max-budget-wave-1/FORECAST.json).
+- [Final long-history label-budget diagnostics](../../docs/versions/v20-contribution-reconstruction/LONG_HISTORY_FINAL_BUDGET_REPORT.md), [validity](budget-tier-wave-2/VALIDITY.json), [forecast](budget-tier-wave-2/FORECAST.json).
+- [Long-history label budgets](../../docs/versions/v20-contribution-reconstruction/LONG_HISTORY_BUDGET_REPORT.md), [validity](budget-tier-wave-1/VALIDITY.json), [forecast](budget-tier-wave-1/FORECAST.json).
 - [Longest-history evidence review](../../docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_HISTORY_REPORT.md), [validity](long-tier-wave-1/VALIDITY.json), [forecast](long-tier-wave-1/FORECAST.json).
 - [Long-history evidence checkpoint](../../docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_HISTORY_REPORT.md), [validity](history-tier-wave-1/VALIDITY.json), [forecast](history-tier-wave-1/FORECAST.json).
 - [Evidence-tier learning curves](../../docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md), [validity](learning-curve-wave-1/VALIDITY.json), [forecast](learning-curve-wave-1/FORECAST.json).
