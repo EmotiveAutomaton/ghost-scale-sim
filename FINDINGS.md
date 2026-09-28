@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 retained-history learning curves
+
+We tested whether longer retained histories give the structured reader a primary advantage. None of the 18 new conditions passes. At 32,768 labels and 64 past episodes, its capped log loss is 4.18870, versus 2.58658 for direct frequencies and 2.52141 for the legal template. All 8,257,536 new forecasts verify, and a complete 64-episode block replays exactly. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/HISTORY_CURVE_REPORT.md).
+
 ## V20 learning budgets and saved-score repair
 
 We tested whether more labels or one retained episode gives the structured reader a primary advantage. None of the six new conditions passes: at 32,768 labels without history, its capped log loss is 3.60082, versus 3.52468 for direct frequencies and 3.58216 for the legal template. A saved-probability scoring defect was repaired and fully replayed; earlier findings are unchanged. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SCORE_BOUNDARY_REPORT.md).

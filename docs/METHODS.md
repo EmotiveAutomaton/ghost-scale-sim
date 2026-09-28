@@ -2,6 +2,8 @@
 
 ## V20 contribution instrument
 
+The [retained-history review](versions/v20-contribution-reconstruction/HISTORY_CURVE_REPORT.md) independently reconstructs 8,257,536 further forecasts and all secondary summaries, with a full frozen-source 64-episode replay. The existing checker and scientific settings are unchanged. Whole-lineage history and learning contrasts remain paired; capped loss and exact zero mass are reported separately.
+
 The [saved-score repair](versions/v20-contribution-reconstruction/SCORE_BOUNDARY_REPORT.md) makes the scorer validate and use the exact stored probabilities. Repeated normalization could cross the fixed 90% confidence boundary by one floating-point step. The independent checker and scientific thresholds are unchanged. Fifty scoped controls pass; the complete repaired scientific block replays exactly. Pending identities and future forest admissions bind the repaired capsule while preserving original designs, source and failures.
 
 The [V20 protocol](versions/v20-contribution-reconstruction/PROTOCOL.md) defines
