@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Sixteen-episode repeated-fit review](SIXTEEN_EPISODE_FIT_REPORT.md): three further paired-fit diagnostic failures; all forecasts verified.
 - [Evidence-tier repeated-fit continuation](EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md): eighteen further paired-fit diagnostic failures; all forecasts verified.
 - [Evidence-tier repeated fits](EVIDENCE_TIER_FIT_REPORT.md): final context condition and 36 paired-fit diagnostic failures; no new exact-zero truths.
 - [Repeated fits](FIT_SEED_REPORT.md): 29 failed paired-fit context conditions, final complete-record diagnostic and numerical-zero audit.

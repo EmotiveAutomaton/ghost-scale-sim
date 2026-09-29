@@ -12,7 +12,7 @@ human intent, human values or historical process correspondence.
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
-  The [evidence-tier repeated-fit continuation](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md) brings the verified total to 229 packets. All 18 new diagnostics fail, bringing the paired-fit evidence-tier total to 54 failures; confirmation is untouched.
+  The [sixteen-episode repeated-fit review](docs/versions/v20-contribution-reconstruction/SIXTEEN_EPISODE_FIT_REPORT.md) brings the verified total to 232 packets. All three new diagnostics fail, bringing the paired-fit evidence-tier total to 57 failures; confirmation is untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and

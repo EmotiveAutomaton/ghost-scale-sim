@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Sixteen-episode repeated-fit review](v20-sixteen-episode-fit-response.md)
+
 - [Evidence-tier repeated-fit continuation](v20-evidence-tier-fit-continuation-response.md)
 
 - [Evidence-tier repeated-fit review](v20-evidence-tier-fit-response.md)

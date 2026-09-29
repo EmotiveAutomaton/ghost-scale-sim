@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 sixteen-episode repeated fits
+
+We tested whether repeating the fits gives the structured reader an advantage with sixteen retained episodes and 8,192 training labels. All three paired-fit evidence-tier diagnostics fail. All 1,376,256 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SIXTEEN_EPISODE_FIT_REPORT.md).
+
 ## V20 evidence-tier repeated-fit continuation
 
 We tested whether repeating the fits gives the structured reader an advantage with four or sixteen retained episodes. All 18 paired-fit evidence-tier diagnostics fail. All 8,257,536 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/EVIDENCE_TIER_FIT_CONTINUATION_REPORT.md).
