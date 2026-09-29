@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 longer-history evidence shifts
+
+We tested whether longer histories and richer records preserve a structured-reader advantage under changed rules. All ten new comparisons fail the declared criterion; all 4,587,520 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_SHIFT_REPORT.md).
+
 ## V20 longer-history context shifts
 
 We tested whether longer histories let structured context reading retain an advantage under changed execution or presentation rules. All five new comparisons fail the declared advantage criterion. All 2,293,760 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_CONTEXT_SHIFT_REPORT.md).
