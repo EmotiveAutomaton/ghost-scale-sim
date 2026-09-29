@@ -12,7 +12,7 @@ human intent, human values or historical process correspondence.
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
-  The [acquisition reliability review](docs/versions/v20-contribution-reconstruction/ACQUISITION_RELIABILITY_REPORT.md) brings the verified total to 311 packets. Low-reliability cues reverse the learned-selector advantage; all 48 first-fit shift comparisons fail. Three full references replay; confirmation remains untouched.
+  The [candidate expansion and correction review](docs/versions/v20-contribution-reconstruction/OMISSION_CORRECTION_REPORT.md) brings the verified total to 318 packets. Finite candidate expansion improves coverage; corrected context helps while irrelevant updates harm. Two full references replay; confirmation remains untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and

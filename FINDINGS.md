@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 candidate expansion and context correction
+
+We tested whether expanding a finite candidate list and revising context improve contribution forecasts. Candidate expansion raises truth coverage from 75.02% to 100% and lowers capped log loss from 3.82024 to 3.59492. Correcting false context helps at both training budgets; irrelevant updates harm at both. All 3,276,800 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/OMISSION_CORRECTION_REPORT.md).
+
 ## V20 acquisition reliability and omission
 
 We tested whether learned evidence acquisition stays useful when cues are noisy, copied or costly. With independent cues, it loses to the cheapest record after fees at 50% and 65% reliability, and wins at 80% and 95%, at every tested price. Six nominal conditions duplicate chance-cue evidence. All five new shift diagnostics fail. Forced omission still assigns zero probability to 24.98% of truths. All 14,352,384 forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/ACQUISITION_RELIABILITY_REPORT.md).
