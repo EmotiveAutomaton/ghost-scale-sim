@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 final long-history presentation diagnostic
+
+We tested whether complete records and 256 past episodes give the structured reader an advantage after a presentation change. The comparison fails. All 458,752 forecasts verify, with no exact-zero truth probabilities. This is a constructed-method result; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FINAL_LONG_HISTORY_SHIFT_REPORT.md).
+
 ## V20 longest-history evidence shifts
 
 We tested whether 256 retained episodes preserve a structured-reader advantage under changed execution and presentation rules. All eight new evidence-tier comparisons fail the declared criterion. All 3,670,016 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_SHIFT_REPORT.md).

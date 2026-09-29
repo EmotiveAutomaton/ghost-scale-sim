@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Final long-history presentation diagnostic](v20-final-long-history-shift-response.md)
+
 - [Longest-history evidence shifts](v20-longest-evidence-shift-response.md)
 
 - [Longer-history evidence shifts](v20-long-evidence-shift-response.md)

@@ -6,7 +6,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V20 | 341 packets verified; eight further evidence-tier shift comparisons fail, full replay evidence reused; fixed Friday October 2 finish | [Contribution reconstruction](v20-contribution-reconstruction/README.md) |
+| V20 | 342 packets verified; final long-history presentation diagnostic fails, full replay evidence reused; fixed Friday October 2 finish | [Contribution reconstruction](v20-contribution-reconstruction/README.md) |
 | V19 | Scientific window closed; final report published | [Final scientific report](v19-local-maker/FINAL_REPORT.md) |
 | V18.4 | Closed; remaining frontier retained | [Final report](v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md) |
 | V18.3 | Closed | [Final report](v18-selective-acquisition/research-extension/FINAL_REPORT.md) |
