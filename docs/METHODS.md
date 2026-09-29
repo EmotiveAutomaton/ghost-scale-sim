@@ -8,6 +8,8 @@ All 114 accepted batches and 420 queue dispositions are preserved. The final rep
 
 ## V20 contribution instrument
 
+The [shift review](versions/v20-contribution-reconstruction/SHIFT_REPORT.md) pairs each transfer block to its immutable native first-fit counterpart, verifies identical training examples, and bootstraps differences across whole coefficient worlds. Shifted and native evaluation samples differ; there is no row pairing. Both shifted reference blocks replay completely. The changed execution rule affects both proposal routes, and every learned reader receives exact shifted-law legal support; this does not test recovery of an unknown law. Producer source, criteria and the numerical reviewer are unchanged.
+
 The [evidence-tier review](versions/v20-contribution-reconstruction/EVIDENCE_TIER_REPORT.md) verifies 60 further packets and four complete scientific replays. A retained-data audit reconstructs the exact-match frequency estimator and separates matched-query loss contributions from unchanged prior fallback. These evidence tiers remain nonprimary diagnostics. All saved secondary scores, capped loss and exact-zero mass are checked separately; producer source and settings are unchanged.
 
 The [longest-history review](versions/v20-contribution-reconstruction/LONG_HISTORY_REPORT.md) independently verifies five further packets and a full 256-episode replay. A separate count-based reconstruction checks every stored exact-zero truth against common support and finite learned log odds. All such odds underflow on exponentiation; this is distinct from logical candidate omission. Saved forecasts, scoring rules and producer source are unchanged.

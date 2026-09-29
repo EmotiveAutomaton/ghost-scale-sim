@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 execution and presentation shifts
+
+We tested whether structured reading transfers across changed execution and presentation rules. All 41 comparisons fail the declared advantage criterion. The presentation change worsens structured context reading in all six matched conditions. All 18,808,832 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SHIFT_REPORT.md).
+
 ## V20 sixteen-episode repeated fits
 
 We tested whether repeating the fits gives the structured reader an advantage with sixteen retained episodes and 8,192 training labels. All three paired-fit evidence-tier diagnostics fail. All 1,376,256 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SIXTEEN_EPISODE_FIT_REPORT.md).
