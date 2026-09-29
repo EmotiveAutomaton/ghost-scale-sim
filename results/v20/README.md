@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Longer-history context shifts](../../docs/versions/v20-contribution-reconstruction/LONG_CONTEXT_SHIFT_REPORT.md), [validity](shift-wave-3/VALIDITY.json), [paired shifts](shift-wave-3/PAIRED_SHIFTS.json).
 - [Candidate expansion and context correction](../../docs/versions/v20-contribution-reconstruction/OMISSION_CORRECTION_REPORT.md), [validity](omission-correction-wave-1/VALIDITY.json), [correction audit](omission-correction-wave-1/CORRECTION_AUDIT.json).
 - [Acquisition reliability and omission](../../docs/versions/v20-contribution-reconstruction/ACQUISITION_RELIABILITY_REPORT.md), [validity](acquisition-wave-1/VALIDITY.json), [policy audit](acquisition-wave-1/POLICY_AUDIT.json).
 - [Long-history shift continuation](../../docs/versions/v20-contribution-reconstruction/SHIFT_CONTINUATION_REPORT.md), [validity](shift-wave-2/VALIDITY.json), [paired shifts](shift-wave-2/PAIRED_SHIFTS.json).

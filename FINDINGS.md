@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 longer-history context shifts
+
+We tested whether longer histories let structured context reading retain an advantage under changed execution or presentation rules. All five new comparisons fail the declared advantage criterion. All 2,293,760 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_CONTEXT_SHIFT_REPORT.md).
+
 ## V20 candidate expansion and context correction
 
 We tested whether expanding a finite candidate list and revising context improve contribution forecasts. Candidate expansion raises truth coverage from 75.02% to 100% and lowers capped log loss from 3.82024 to 3.59492. Correcting false context helps at both training budgets; irrelevant updates harm at both. All 3,276,800 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/OMISSION_CORRECTION_REPORT.md).

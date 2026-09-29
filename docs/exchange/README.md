@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Longer-history context shifts](v20-long-context-shift-response.md)
+
 - [Candidate expansion and context correction](v20-omission-correction-response.md)
 
 - [Acquisition reliability and omission](v20-acquisition-reliability-response.md)
