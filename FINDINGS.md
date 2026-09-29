@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 longest-history evidence shifts
+
+We tested whether 256 retained episodes preserve a structured-reader advantage under changed execution and presentation rules. All eight new evidence-tier comparisons fail the declared criterion. All 3,670,016 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_SHIFT_REPORT.md).
+
 ## V20 longer-history evidence shifts
 
 We tested whether longer histories and richer records preserve a structured-reader advantage under changed rules. All ten new comparisons fail the declared criterion; all 4,587,520 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results, and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_SHIFT_REPORT.md).

@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Longest-history evidence shifts](v20-longest-evidence-shift-response.md)
+
 - [Longer-history evidence shifts](v20-long-evidence-shift-response.md)
 
 - [Longer-history context shifts](v20-long-context-shift-response.md)

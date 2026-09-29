@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Longest-history evidence shifts](LONGEST_EVIDENCE_SHIFT_REPORT.md): eight further failed diagnostics with 256 past episodes; all forecasts verified and full replays reused.
 - [Longer-history evidence shifts](LONG_EVIDENCE_SHIFT_REPORT.md): ten further failed comparisons across evidence tiers; all forecasts verified and full replays reused.
 - [Longer-history context shifts](LONG_CONTEXT_SHIFT_REPORT.md): five further failed context comparisons; all forecasts verified and full replay evidence reused.
 - [Candidate expansion and context correction](OMISSION_CORRECTION_REPORT.md): ranked finite coverage and context-revision controls; all forecasts and two full references verify.

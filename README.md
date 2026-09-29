@@ -12,7 +12,7 @@ human intent, human values or historical process correspondence.
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
-  The [longer-history evidence shift review](docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_SHIFT_REPORT.md) brings the verified total to 333 packets. All ten new comparisons fail; full replay evidence is reused and confirmation remains untouched. Earlier acquisition, expansion and correction findings remain separate.
+  The [longest-history evidence shift review](docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_SHIFT_REPORT.md) brings the verified total to 341 packets. All eight new comparisons fail; full replay evidence is reused and confirmation remains untouched. Earlier acquisition, expansion and correction findings remain separate.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and
