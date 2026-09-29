@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Maximum-label shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_SHIFT_REPORT.md), [validity](shift-wave-7/VALIDITY.json), [candidate freeze](shift-wave-7/CONFIRMATION_CANDIDATE.json).
 - [Final long-history presentation diagnostic](../../docs/versions/v20-contribution-reconstruction/FINAL_LONG_HISTORY_SHIFT_REPORT.md), [validity](shift-wave-6/VALIDITY.json), [paired shift](shift-wave-6/PAIRED_SHIFTS.json).
 - [Longest-history evidence shifts](../../docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_SHIFT_REPORT.md), [validity](shift-wave-5/VALIDITY.json), [paired shifts](shift-wave-5/PAIRED_SHIFTS.json).
 - [Longer-history evidence shifts](../../docs/versions/v20-contribution-reconstruction/LONG_EVIDENCE_SHIFT_REPORT.md), [validity](shift-wave-4/VALIDITY.json), [paired shifts](shift-wave-4/PAIRED_SHIFTS.json).

@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 maximum-label shifts
+
+We tested whether the largest label budget lets structured reading outperform matched direct readers under changed rules. One of twenty comparisons passes the discovery criterion: context plus four past episodes under the changed execution rule. The other nineteen fail. All 9,175,040 forecasts verify, and the complete candidate replays exactly. This is a constructed-method discovery result; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_SHIFT_REPORT.md).
+
 ## V20 final long-history presentation diagnostic
 
 We tested whether complete records and 256 past episodes give the structured reader an advantage after a presentation change. The comparison fails. All 458,752 forecasts verify, with no exact-zero truth probabilities. This is a constructed-method result; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FINAL_LONG_HISTORY_SHIFT_REPORT.md).
