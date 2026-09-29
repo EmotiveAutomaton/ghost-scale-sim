@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 long-history shift continuation
+
+We tested whether structured reading retains an advantage under changed execution or presentation rules with 64 past episodes. Both new diagnostics fail the declared advantage criterion. All 917,504 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SHIFT_CONTINUATION_REPORT.md).
+
 ## V20 execution and presentation shifts
 
 We tested whether structured reading transfers across changed execution and presentation rules. All 41 comparisons fail the declared advantage criterion. The presentation change worsens structured context reading in all six matched conditions. All 18,808,832 new forecasts verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SHIFT_REPORT.md).
