@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Acquisition reliability and omission](../../docs/versions/v20-contribution-reconstruction/ACQUISITION_RELIABILITY_REPORT.md), [validity](acquisition-wave-1/VALIDITY.json), [policy audit](acquisition-wave-1/POLICY_AUDIT.json).
 - [Long-history shift continuation](../../docs/versions/v20-contribution-reconstruction/SHIFT_CONTINUATION_REPORT.md), [validity](shift-wave-2/VALIDITY.json), [paired shifts](shift-wave-2/PAIRED_SHIFTS.json).
 - [Execution and presentation shift review](../../docs/versions/v20-contribution-reconstruction/SHIFT_REPORT.md), [validity](shift-wave-1/VALIDITY.json), [paired shifts](shift-wave-1/PAIRED_SHIFTS.json).
 - [Sixteen-episode repeated-fit review](../../docs/versions/v20-contribution-reconstruction/SIXTEEN_EPISODE_FIT_REPORT.md), [validity](tier-fit-wave-3/VALIDITY.json), [paired fits](tier-fit-wave-3/PAIRED_FITS.json).

@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Acquisition reliability and omission](v20-acquisition-reliability-response.md)
+
 - [Long-history shift continuation](v20-shift-continuation-response.md)
 
 - [Execution and presentation shift review](v20-shift-response.md)
