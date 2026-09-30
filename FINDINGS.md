@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 sixteen-episode native references
+
+We tested whether structured reading gains an advantage under native rules with sixteen past episodes and 32,768 training labels. All three paired-fit evidence-tier comparisons fail. All 1,376,256 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SIXTEEN_EPISODE_NATIVE_REFERENCE_REPORT.md).
+
 ## V20 lower-label acquisition across repeated fits
 
 We tested whether the lower-label acquisition advantage at high fees survives a second training draw. It does not: averaging both fits makes selection worse than buying the cheapest record under noisy independent cues, at every tested fee. All 9,895,936 new forecasts and a complete source replay verify. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LOWER_LABEL_ACQUISITION_PAIRED_REPORT.md).

@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Sixteen-episode native references](v20-sixteen-episode-native-reference-response.md)
+
 - [Lower-label acquisition paired fits](v20-lower-label-acquisition-paired-response.md)
 
 - [Maximum-label native references](v20-maximum-label-native-reference-response.md)
