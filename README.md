@@ -13,6 +13,7 @@ human intent, human values or historical process correspondence.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
   Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
   The [September 30 interim report](docs/versions/v20-contribution-reconstruction/INTERIM_REPORT.md) covers 570 verified packets: no advantage in 115 completed native paired comparisons, one shifted-context candidate and three artifact diagnostics. Confirmation remains untouched.
+  The [longest-history maximum-label native review](docs/versions/v20-contribution-reconstruction/LONGEST_HISTORY_MAX_LABEL_NATIVE_REPORT.md) brings the verified total to 573 packets. All three new native comparisons fail across both fits; confirmation is untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and
