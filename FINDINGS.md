@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 maximum-label long-record paired shifts
+
+We tested whether the largest training budget preserves a structured-reader advantage across repeated fits with 64 past episodes and sparse or complete records under changed rules. Both comparisons fail: structured reading loses to every required rival. All 917,504 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_LONG_RECORD_PAIRED_SHIFT_REPORT.md).
+
 ## V20 maximum-label long-history paired shifts
 
 We tested whether the structured-reader advantage survives repeated training with 64 past episodes under changed rules. The artifact-only execution diagnostic passes; the presentation-change and sparse-record comparisons fail. All 1,376,256 new forecasts and the positive full-block replay verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_LONG_HISTORY_PAIRED_SHIFT_REPORT.md).
