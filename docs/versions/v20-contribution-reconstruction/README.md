@@ -14,6 +14,17 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Repeated-fit longest-record shifts](REPEATED_FIT_LONGEST_RECORD_SHIFT_REPORT.md): five further paired-fit failures against every rival, all forecasts verified, native references admitted.
+- [Repeated-fit long-record shifts](REPEATED_FIT_LONG_RECORD_SHIFT_REPORT.md): three further paired-fit failures against every rival, all forecasts verified, native references admitted.
+- [Repeated-fit evidence and long-history shifts](REPEATED_FIT_EVIDENCE_SHIFT_REPORT.md): ten failed comparisons, all forecasts verified, eight native counterparts unavailable.
+- [Repeated-fit longer-history context shifts](REPEATED_FIT_LONG_CONTEXT_SHIFT_REPORT.md): four paired-fit failures against every required rival; all forecasts verified, full replays reused.
+- [Correction learning curve and candidate completion](CORRECTION_LEARNING_CURVE_REPORT.md): smallest-budget specificity failure, larger-budget gains, candidate coverage/loss divergence and three full replays.
+- [Candidate fit and label-budget sensitivity](CANDIDATE_FIT_BUDGET_REPORT.md): finite expansion gains, retained omission failures and two full references.
+- [Acquisition fit and label-budget sensitivity](ACQUISITION_FIT_BUDGET_REPORT.md): repeated-fit reversal, unresolved low-fee copied-cue advantage, lower-label policy changes and three full replays.
+- [Repeated-fit context shifts](REPEATED_FIT_CONTEXT_SHIFT_REPORT.md): two failed paired-fit comparisons at 32,768 labels; all new forecasts verified and full replays reused.
+- [Maximum-label record shifts](MAXIMUM_LABEL_RECORD_SHIFT_REPORT.md): three further failed sparse/complete-record comparisons; all forecasts verified and full replays reused.
+- [Maximum-label long-history shifts](MAXIMUM_LABEL_LONG_HISTORY_SHIFT_REPORT.md): one further positive artifact diagnostic and two failures; all forecasts and the positive full replay verified.
+- [Maximum-label evidence shifts](MAXIMUM_LABEL_EVIDENCE_SHIFT_REPORT.md): two positive artifact diagnostics and twelve failures; all forecasts and both positive full replays verified.
 - [Maximum-label shifts](MAXIMUM_LABEL_SHIFT_REPORT.md): one shifted-context discovery candidate, nineteen failures, full candidate replay and frozen confirmation extension.
 - [Final long-history presentation diagnostic](FINAL_LONG_HISTORY_SHIFT_REPORT.md): one further failed comparison; all forecasts verified and full replays reused.
 - [Longest-history evidence shifts](LONGEST_EVIDENCE_SHIFT_REPORT.md): eight further failed diagnostics with 256 past episodes; all forecasts verified and full replays reused.

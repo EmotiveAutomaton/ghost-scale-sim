@@ -1,5 +1,49 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 repeated-fit longest-record shifts
+
+We tested whether repeating training preserves a structured-reader advantage with 256 past episodes under changed rules. All five artifact, sparse-record and complete-record paired-fit diagnostics fail: structured reading loses to every required rival. All 2,293,760 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONGEST_RECORD_SHIFT_REPORT.md).
+
+## V20 repeated-fit long-record shifts
+
+We tested whether repeating training preserves a structured-reader advantage with 256 past episodes under changed rules. All three sparse- or complete-record paired-fit diagnostics fail: structured reading loses to every required rival. All 1,376,256 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONG_RECORD_SHIFT_REPORT.md).
+
+## V20 repeated-fit evidence and long-history shifts
+
+We tested whether repeating training preserves a structured-reader advantage after rule changes across evidence tiers and longer histories. All ten paired-fit comparisons fail the discovery rule: two context comparisons and eight evidence-tier diagnostics. All 4,587,520 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/REPEATED_FIT_EVIDENCE_SHIFT_REPORT.md).
+
+## V20 repeated-fit longer-history context shifts
+
+We tested whether repeating training preserves a structured-reader advantage after rule changes with 16 or 256 past episodes. All four paired-fit context comparisons fail: structured reading loses to every required rival. All 1,835,008 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONG_CONTEXT_SHIFT_REPORT.md).
+
+## V20 correction learning curve and candidate completion
+
+We tested whether more training makes context revision and candidate expansion reliable. At 128 labels, correcting false context helps less than an irrelevant update, and retracting it makes predictions worse. Correction exceeds the controls at the five larger budgets. Larger candidate lists improve coverage; one lower-label capped-loss comparison is unresolved. All 10,420,224 forecasts and three full replays verify. These are constructed-method findings; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/CORRECTION_LEARNING_CURVE_REPORT.md).
+
+## V20 candidate fit and label-budget sensitivity
+
+We tested whether finite candidate expansion still helps after reducing labels or repeating training. Adding one or four ranked alternatives improves truth coverage and capped log loss in both panels; with four additions, coverage reaches 81.82% with fewer labels and 82.35% after averaging the larger-data fits. Forced choice still gives zero probability to 24.98% of truths. All 1,572,864 new forecasts verify. These are constructed-method findings; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/CANDIDATE_FIT_BUDGET_REPORT.md).
+
+## V20 acquisition fit and label-budget sensitivity
+
+We tested whether learned evidence acquisition keeps its advantage when training is repeated or reduced. Across both larger-data fits, independent noisy cues still make selection worse than buying the cheapest record; reliable cues favor selection. The copied-cue advantage at the cheapest fee is unresolved after averaging fits. With fewer labels and the highest fee, selection instead wins under noisy cues. All 18,874,368 new forecasts verify. These are constructed-method findings; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/ACQUISITION_FIT_BUDGET_REPORT.md).
+
+## V20 repeated-fit context shifts
+
+We tested whether repeating training preserves a structured-reader advantage after rule changes with four past episodes and 32,768 labels. Both paired-fit context comparisons fail. All 917,504 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/REPEATED_FIT_CONTEXT_SHIFT_REPORT.md).
+
+## V20 maximum-label record shifts
+
+We tested whether the largest label budget and 64 past episodes give structured reading an advantage with sparse or complete records after a rule change. All three new comparisons fail. All 1,376,256 forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_RECORD_SHIFT_REPORT.md).
+
+## V20 maximum-label long-history shifts
+
+We tested whether the largest label budget and 64 past episodes give structured reading an advantage under changed rules. The artifact-only execution comparison passes the diagnostic rule; artifact presentation and sparse-record execution comparisons fail. All 1,376,256 forecasts verify, and the positive block replays exactly. No truth receives exact zero probability. This is a constructed-method result; the context primary remains separate and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_LONG_HISTORY_SHIFT_REPORT.md).
+
+## V20 maximum-label evidence shifts
+
+We tested whether the largest label budget gives structured reading an advantage under changed rules with artifact, sparse or complete records. Two artifact-only comparisons pass the diagnostic rule under changed execution, with four and sixteen past episodes; the other twelve fail. All 6,422,528 forecasts verify and both positive blocks replay exactly, with no exact-zero truth probabilities. This is a constructed-method result; the earlier context discovery candidate remains separate and confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_EVIDENCE_SHIFT_REPORT.md).
+
 ## V20 maximum-label shifts
 
 We tested whether the largest label budget lets structured reading outperform matched direct readers under changed rules. One of twenty comparisons passes the discovery criterion: context plus four past episodes under the changed execution rule. The other nineteen fail. All 9,175,040 forecasts verify, and the complete candidate replays exactly. This is a constructed-method discovery result; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_SHIFT_REPORT.md).

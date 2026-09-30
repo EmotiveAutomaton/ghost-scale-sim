@@ -3,6 +3,17 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Repeated-fit longest-record shifts](../../docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONGEST_RECORD_SHIFT_REPORT.md), [validity](shift-wave-15/VALIDITY.json), [paired fits](shift-wave-15/PAIRED_FITS.json).
+- [Repeated-fit long-record shifts](../../docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONG_RECORD_SHIFT_REPORT.md), [validity](shift-wave-14/VALIDITY.json), [paired fits](shift-wave-14/PAIRED_FITS.json).
+- [Repeated-fit evidence and long-history shifts](../../docs/versions/v20-contribution-reconstruction/REPEATED_FIT_EVIDENCE_SHIFT_REPORT.md), [validity](shift-wave-13/VALIDITY.json), [paired fits](shift-wave-13/PAIRED_FITS.json).
+- [Repeated-fit longer-history context shifts](../../docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONG_CONTEXT_SHIFT_REPORT.md), [validity](shift-wave-12/VALIDITY.json), [paired fits](shift-wave-12/PAIRED_FITS.json).
+- [Correction learning curve and candidate completion](../../docs/versions/v20-contribution-reconstruction/CORRECTION_LEARNING_CURVE_REPORT.md), [validity](correction-wave-2/VALIDITY.json), [paired correction fits](correction-wave-2/CORRECTION_PAIRED_FITS.json).
+- [Candidate fit and label-budget sensitivity](../../docs/versions/v20-contribution-reconstruction/CANDIDATE_FIT_BUDGET_REPORT.md), [validity](omission-wave-2/VALIDITY.json), [paired fits](omission-wave-2/PAIRED_FITS.json).
+- [Acquisition fit and label-budget sensitivity](../../docs/versions/v20-contribution-reconstruction/ACQUISITION_FIT_BUDGET_REPORT.md), [validity](acquisition-wave-2/VALIDITY.json), [paired fits](acquisition-wave-2/PAIRED_FITS.json).
+- [Repeated-fit context shifts](../../docs/versions/v20-contribution-reconstruction/REPEATED_FIT_CONTEXT_SHIFT_REPORT.md), [validity](shift-wave-11/VALIDITY.json), [paired fits](shift-wave-11/PAIRED_FITS.json).
+- [Maximum-label record shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_RECORD_SHIFT_REPORT.md), [validity](shift-wave-10/VALIDITY.json), [paired shifts](shift-wave-10/PAIRED_SHIFTS.json).
+- [Maximum-label long-history shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_LONG_HISTORY_SHIFT_REPORT.md), [validity](shift-wave-9/VALIDITY.json), [paired shifts](shift-wave-9/PAIRED_SHIFTS.json).
+- [Maximum-label evidence shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_EVIDENCE_SHIFT_REPORT.md), [validity](shift-wave-8/VALIDITY.json), [paired shifts](shift-wave-8/PAIRED_SHIFTS.json).
 - [Maximum-label shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_SHIFT_REPORT.md), [validity](shift-wave-7/VALIDITY.json), [candidate freeze](shift-wave-7/CONFIRMATION_CANDIDATE.json).
 - [Final long-history presentation diagnostic](../../docs/versions/v20-contribution-reconstruction/FINAL_LONG_HISTORY_SHIFT_REPORT.md), [validity](shift-wave-6/VALIDITY.json), [paired shift](shift-wave-6/PAIRED_SHIFTS.json).
 - [Longest-history evidence shifts](../../docs/versions/v20-contribution-reconstruction/LONGEST_EVIDENCE_SHIFT_REPORT.md), [validity](shift-wave-5/VALIDITY.json), [paired shifts](shift-wave-5/PAIRED_SHIFTS.json).

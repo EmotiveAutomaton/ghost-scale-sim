@@ -16,6 +16,28 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Repeated-fit longest-record shifts](v20-repeated-fit-longest-record-shift-response.md)
+
+- [Repeated-fit long-record shifts](v20-repeated-fit-long-record-shift-response.md)
+
+- [Repeated-fit evidence and long-history shifts](v20-repeated-fit-evidence-shift-response.md)
+
+- [Repeated-fit longer-history context shifts](v20-repeated-fit-long-context-shift-response.md)
+
+- [Correction learning curve and candidate completion](v20-correction-learning-curve-response.md)
+
+- [Candidate fit and label-budget sensitivity](v20-candidate-fit-budget-response.md)
+
+- [Acquisition fit and label-budget sensitivity](v20-acquisition-fit-budget-response.md)
+
+- [Repeated-fit context shifts](v20-repeated-fit-context-shift-response.md)
+
+- [Maximum-label record shifts](v20-maximum-label-record-shift-response.md)
+
+- [Maximum-label long-history shifts](v20-maximum-label-long-history-shift-response.md)
+
+- [Maximum-label evidence shifts](v20-maximum-label-evidence-shift-response.md)
+
 - [Maximum-label shifts](v20-maximum-label-shift-response.md)
 
 - [Final long-history presentation diagnostic](v20-final-long-history-shift-response.md)
