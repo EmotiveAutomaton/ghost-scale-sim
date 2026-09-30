@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 maximum-label short-record paired shifts
+
+We tested whether the largest training budget gives structured reading an advantage with zero or one past episode under changed rules. All five paired-fit diagnostics fail; joint neural reading outperforms structured reading in every condition. All 2,293,760 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_SHORT_RECORD_PAIRED_SHIFT_REPORT.md).
+
 ## V20 maximum-label paired shifts
 
 We tested whether the largest training budget preserves a structured-reader advantage across both registered fits under changed rules. The four-episode context candidate still passes; the other fourteen comparisons fail. All 6,881,280 new forecasts and the full second-fit candidate replay verify, with no exact-zero truth probabilities. These are constructed-method findings; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_PAIRED_SHIFT_REPORT.md).
