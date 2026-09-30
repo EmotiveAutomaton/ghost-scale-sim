@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [September 30 interim report](INTERIM_REPORT.md): 570 verified packets; native paired comparisons fail, four shifted discovery findings remain, confirmation untouched.
 - [Longest-history native references](LONGEST_HISTORY_NATIVE_REFERENCE_REPORT.md): three native paired-fit failures, six matched shifts, all forecasts verified and full replays reused.
 - [Sixteen-episode native references](SIXTEEN_EPISODE_NATIVE_REFERENCE_REPORT.md): three native paired-fit failures, six matched shifts, all forecasts verified and full replays reused.
 - [Lower-label acquisition paired fits](LOWER_LABEL_ACQUISITION_PAIRED_REPORT.md): high-fee noisy-cue advantage fails across fits, final native reference fails, all forecasts and full replay verified.

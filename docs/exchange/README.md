@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [September 30 interim report](v20-interim-20260930-response.md)
+
 - [Longest-history native references](v20-longest-history-native-reference-response.md)
 
 - [Sixteen-episode native references](v20-sixteen-episode-native-reference-response.md)

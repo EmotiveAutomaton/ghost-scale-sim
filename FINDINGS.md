@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 interim report — 30 September
+
+We tested whether structured contribution accounts outperform matched direct readers. All 115 completed native-rule comparisons across both fits fail the declared advantage criterion. Changed execution retains one context discovery candidate and three artifact-only diagnostics. The interim record now contains 570 verified packets; confirmation remains untouched. These are constructed-method findings, not evidence of human intent. [Report](docs/versions/v20-contribution-reconstruction/INTERIM_REPORT.md).
+
 ## V20 longest-history native references
 
 We tested whether structured reading gains an advantage under native rules with 256 past episodes and 8,192 training labels. All three paired-fit evidence-tier comparisons fail against every required rival. All 1,376,256 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONGEST_HISTORY_NATIVE_REFERENCE_REPORT.md).
