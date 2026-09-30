@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 complete-record paired shifts
+
+We tested whether repeating training preserves a structured-reader advantage with 256 past episodes under changed rules. Both complete-record paired-fit diagnostics fail: structured reading loses to every required rival. All 917,504 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/COMPLETE_RECORD_PAIRED_SHIFT_REPORT.md).
+
 ## V20 repeated-fit longest-record shifts
 
 We tested whether repeating training preserves a structured-reader advantage with 256 past episodes under changed rules. All five artifact, sparse-record and complete-record paired-fit diagnostics fail: structured reading loses to every required rival. All 2,293,760 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/REPEATED_FIT_LONGEST_RECORD_SHIFT_REPORT.md).

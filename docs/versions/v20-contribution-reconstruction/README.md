@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Complete-record paired shifts](COMPLETE_RECORD_PAIRED_SHIFT_REPORT.md): two further paired-fit failures against every rival, all forecasts verified, native learning-curve points admitted.
 - [Repeated-fit longest-record shifts](REPEATED_FIT_LONGEST_RECORD_SHIFT_REPORT.md): five further paired-fit failures against every rival, all forecasts verified, native references admitted.
 - [Repeated-fit long-record shifts](REPEATED_FIT_LONG_RECORD_SHIFT_REPORT.md): three further paired-fit failures against every rival, all forecasts verified, native references admitted.
 - [Repeated-fit evidence and long-history shifts](REPEATED_FIT_EVIDENCE_SHIFT_REPORT.md): ten failed comparisons, all forecasts verified, eight native counterparts unavailable.
