@@ -14,6 +14,7 @@ These are constructed-method tests, not evidence about private human intent.
 - [Original coding package](CODING_PACKAGE.md) and [source provenance](PROVENANCE.json).
 - [Historical implementation plan](IMPLEMENTATION_PLAN.md): prepared before approval;
   its planning-only status and rolling-clock proposal are superseded by the protocol.
+- [Maximum-label native references](MAXIMUM_LABEL_NATIVE_REFERENCE_REPORT.md): nineteen native paired-fit failures, 38 matched shift comparisons, all forecasts verified and full replays reused.
 - [Final maximum-label paired shift](FINAL_MAXIMUM_LABEL_PAIRED_SHIFT_REPORT.md): one further paired-fit failure against every rival, all forecasts verified, full replay evidence reused.
 - [Maximum-label long-record paired shifts](MAXIMUM_LABEL_LONG_RECORD_PAIRED_SHIFT_REPORT.md): two further paired-fit failures against every rival, all forecasts verified, full replay evidence reused.
 - [Maximum-label long-history paired shifts](MAXIMUM_LABEL_LONG_HISTORY_PAIRED_SHIFT_REPORT.md): 64-episode artifact positive retained across fits, two failures, all forecasts and full positive replay verified.

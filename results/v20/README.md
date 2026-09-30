@@ -3,6 +3,7 @@
 V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Maximum-label native references](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_NATIVE_REFERENCE_REPORT.md), [validity](native-reference-wave-1/VALIDITY.json), [paired fits](native-reference-wave-1/PAIRED_FITS.json), [matched shifts](native-reference-wave-1/PAIRED_SHIFTS.json).
 - [Final maximum-label paired shift](../../docs/versions/v20-contribution-reconstruction/FINAL_MAXIMUM_LABEL_PAIRED_SHIFT_REPORT.md), [validity](shift-wave-22/VALIDITY.json), [paired fits](shift-wave-22/PAIRED_FITS.json).
 - [Maximum-label long-record paired shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_LONG_RECORD_PAIRED_SHIFT_REPORT.md), [validity](shift-wave-21/VALIDITY.json), [paired fits](shift-wave-21/PAIRED_FITS.json).
 - [Maximum-label long-history paired shifts](../../docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_LONG_HISTORY_PAIRED_SHIFT_REPORT.md), [validity](shift-wave-20/VALIDITY.json), [paired fits](shift-wave-20/PAIRED_FITS.json).

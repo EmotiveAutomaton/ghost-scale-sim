@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 maximum-label native references
+
+We tested whether structured reading gains an advantage under native rules at the largest training budget. All 19 paired-fit comparisons fail, including all five context primary conditions. All 8,716,288 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/MAXIMUM_LABEL_NATIVE_REFERENCE_REPORT.md).
+
 ## V20 final maximum-label paired shift
 
 We tested whether the largest training budget gives structured reading an advantage with 64 complete past records under a presentation change. The paired-fit comparison fails against every required rival. All 458,752 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FINAL_MAXIMUM_LABEL_PAIRED_SHIFT_REPORT.md).
