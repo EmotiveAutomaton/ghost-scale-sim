@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Maximum-label evidence paired shifts](v20-maximum-label-evidence-paired-shift-response.md)
+
 - [Maximum-label short-record paired shifts](v20-maximum-label-short-record-paired-shift-response.md)
 
 - [Maximum-label paired shifts](v20-maximum-label-paired-shift-response.md)
