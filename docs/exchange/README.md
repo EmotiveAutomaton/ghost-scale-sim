@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Final small-label long-history shifts](v20-final-small-label-long-history-shift-response.md)
+
 - [Small-label paired long-history shifts](v20-small-label-paired-long-history-shift-response.md)
 
 - [Small-label long-history shifts](v20-small-label-long-history-shift-response.md)

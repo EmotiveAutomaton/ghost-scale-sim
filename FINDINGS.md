@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 final small-label long-history shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with 64 retained episodes and 512 training labels. All five remaining paired comparisons fail. All 2,293,760 new forecasts verify; two exact-zero truth probabilities trace to numerical underflow. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FINAL_SMALL_LABEL_LONG_HISTORY_SHIFT_REPORT.md).
+
 ## V20 small-label paired long-history shifts
 
 We tested whether structured reading gains an advantage under execution or presentation shifts with 64 retained episodes and 128 or 512 training labels across both registered fits. All eleven completed paired comparisons fail. All 7,798,784 new forecasts verify; 3,004 exact-zero truth probabilities trace to numerical underflow. Five further conditions still lack their second fit. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SMALL_LABEL_PAIRED_LONG_HISTORY_SHIFT_REPORT.md).
