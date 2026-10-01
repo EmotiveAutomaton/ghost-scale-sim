@@ -16,6 +16,28 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Small-label paired long-history shifts](v20-small-label-paired-long-history-shift-response.md)
+
+- [Small-label long-history shifts](v20-small-label-long-history-shift-response.md)
+
+- [Lower-label sixty-four-episode shifts](v20-lower-label-sixty-four-episode-shift-response.md)
+
+- [Sixty-four-episode paired shifts](v20-sixty-four-episode-paired-shift-response.md)
+
+- [Short-history paired evidence shifts](v20-short-history-paired-evidence-shift-response.md)
+
+- [Short-history evidence shifts](v20-short-history-evidence-shift-response.md)
+
+- [One-episode evidence shifts](v20-one-episode-evidence-shift-response.md)
+
+- [Lower-label paired context shifts](v20-lower-label-paired-context-shift-response.md)
+
+- [Long native histories and lower-label shifts](v20-long-native-lower-label-shift-response.md)
+
+- [Sixty-four-episode native label comparisons](v20-sixty-four-episode-label-native-response.md)
+
+- [Lower-label long-history native references](v20-lower-label-long-history-native-response.md)
+
 - [Longest-history maximum-label native references](v20-longest-history-max-label-native-response.md)
 
 - [September 30 interim report](v20-interim-20260930-response.md)

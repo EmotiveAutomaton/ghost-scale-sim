@@ -1,5 +1,49 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 small-label paired long-history shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with 64 retained episodes and 128 or 512 training labels across both registered fits. All eleven completed paired comparisons fail. All 7,798,784 new forecasts verify; 3,004 exact-zero truth probabilities trace to numerical underflow. Five further conditions still lack their second fit. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SMALL_LABEL_PAIRED_LONG_HISTORY_SHIFT_REPORT.md).
+
+## V20 small-label long-history shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with 64 retained episodes and 128 or 512 training labels. All ten first-fit comparisons fail. All 4,587,520 new forecasts verify, with no exact-zero truth probabilities. Both-fit comparisons remain incomplete. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SMALL_LABEL_LONG_HISTORY_SHIFT_REPORT.md).
+
+## V20 lower-label sixty-four-episode shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with 64 retained episodes and 2,048 training labels when both registered fits are evaluated. All eight completed evidence-tier comparisons fail. All 7,340,032 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LOWER_LABEL_SIXTY_FOUR_EPISODE_SHIFT_REPORT.md).
+
+## V20 sixty-four-episode paired shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with 64 retained episodes when both registered fits are evaluated. All sixteen completed evidence-tier comparisons fail. All 7,340,032 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SIXTY_FOUR_EPISODE_PAIRED_SHIFT_REPORT.md).
+
+## V20 short-history paired evidence shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts when both registered fits are evaluated. All nineteen completed evidence-tier comparisons fail. All 8,716,288 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SHORT_HISTORY_PAIRED_EVIDENCE_SHIFT_REPORT.md).
+
+## V20 short-history evidence shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts across evidence tiers and short histories. All seventeen completed paired-fit comparisons fail; seven further first-fit comparisons also fail. All 13,303,808 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SHORT_HISTORY_EVIDENCE_SHIFT_REPORT.md).
+
+## V20 one-episode evidence shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with one retained episode and 8,192 training labels. All six comparisons fail across both registered fits. All 5,505,024 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/ONE_EPISODE_EVIDENCE_SHIFT_REPORT.md).
+
+## V20 lower-label paired context shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with fewer training labels. All 24 comparisons fail across both registered fits. All 16,056,320 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LOWER_LABEL_PAIRED_CONTEXT_SHIFT_REPORT.md).
+
+## V20 long native histories and lower-label context shifts
+
+We tested whether structured reading gains an advantage with long native histories or lower-label shifted context. All seven native comparisons fail across both fits, and all thirteen shifted-context comparisons fail in their first fit. All 9,175,040 new forecasts verify; 94,777 exact-zero truth probabilities come from numerical underflow. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONG_NATIVE_LOWER_LABEL_SHIFT_REPORT.md).
+
+## V20 sixty-four-episode native label comparisons
+
+We tested whether structured reading gains an advantage under native rules with 64 past episodes at three training-label budgets. All eight paired-fit evidence-tier comparisons fail against every required rival. All 3,670,016 new forecasts verify; 1,437 exact-zero truth probabilities come from numerical underflow. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/SIXTY_FOUR_EPISODE_LABEL_NATIVE_REPORT.md).
+
+## V20 lower-label long-history native references
+
+We tested whether structured reading gains an advantage under native rules with 64 or 256 past episodes and 2,048 training labels. All six paired-fit evidence-tier comparisons fail against every required rival. All 2,752,512 new forecasts verify; 768 exact-zero truth probabilities come from numerical underflow. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LOWER_LABEL_LONG_HISTORY_NATIVE_REPORT.md).
+
 ## V20 longest-history maximum-label native references
 
 We tested whether structured reading gains an advantage under native rules with 256 past episodes and 32,768 training labels. All three paired-fit evidence-tier comparisons fail against every required rival. All 1,376,256 new forecasts verify, with no exact-zero truth probabilities. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/LONGEST_HISTORY_MAX_LABEL_NATIVE_REPORT.md).

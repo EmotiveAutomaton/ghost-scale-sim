@@ -16,6 +16,17 @@ These are constructed-method tests, not evidence about private human intent.
   its planning-only status and rolling-clock proposal are superseded by the protocol.
 - [September 30 interim report](INTERIM_REPORT.md): 570 verified packets; native paired comparisons fail, four shifted discovery findings remain, confirmation untouched.
 - [Longest-history native references](LONGEST_HISTORY_NATIVE_REFERENCE_REPORT.md): three native paired-fit failures, six matched shifts, all forecasts verified and full replays reused.
+- [Small-label paired long-history shifts](SMALL_LABEL_PAIRED_LONG_HISTORY_SHIFT_REPORT.md): eleven paired failures, five pairs incomplete; all forecasts and underflow zeros verified, full replays reused.
+- [Small-label long-history shifts](SMALL_LABEL_LONG_HISTORY_SHIFT_REPORT.md): ten first-fit failures; both-fit comparisons incomplete, all forecasts verified and full replays reused.
+- [Lower-label sixty-four-episode shifts](LOWER_LABEL_SIXTY_FOUR_EPISODE_SHIFT_REPORT.md): 8 paired-fit failures; all forecasts verified, no exact-zero truths, full replays reused.
+- [Sixty-four-episode paired shifts](SIXTY_FOUR_EPISODE_PAIRED_SHIFT_REPORT.md): 16 paired-fit failures; all forecasts verified, no exact-zero truths, full replays reused.
+- [Short-history paired evidence shifts](SHORT_HISTORY_PAIRED_EVIDENCE_SHIFT_REPORT.md): 19 paired-fit failures; all forecasts verified, no exact-zero truths, full replays reused.
+- [Short-history evidence shifts](SHORT_HISTORY_EVIDENCE_SHIFT_REPORT.md): 17 paired-fit and seven further first-fit failures; all forecasts verified, no exact-zero truths, full replays reused.
+- [One-episode evidence shifts](ONE_EPISODE_EVIDENCE_SHIFT_REPORT.md): six paired-fit nonprimary failures; all forecasts verified, no exact-zero truths, full replays reused.
+- [Lower-label paired context shifts](LOWER_LABEL_PAIRED_CONTEXT_SHIFT_REPORT.md): 24 paired-fit failures; all forecasts verified, no exact-zero truths, full replays reused.
+- [Long native histories and lower-label shifts](LONG_NATIVE_LOWER_LABEL_SHIFT_REPORT.md): seven native paired-fit and thirteen shifted first-fit failures; all forecasts verified, zeros audited, full replays reused.
+- [Sixty-four-episode native label comparisons](SIXTY_FOUR_EPISODE_LABEL_NATIVE_REPORT.md): eight paired-fit failures, all forecasts verified, 1,437 underflow zeros, full replays reused.
+- [Lower-label long-history native references](LOWER_LABEL_LONG_HISTORY_NATIVE_REPORT.md): six native paired-fit failures, all forecasts verified, 768 underflow zeros, full replays reused.
 - [Longest-history maximum-label native references](LONGEST_HISTORY_MAX_LABEL_NATIVE_REPORT.md): three native paired-fit failures, six matched shifts, all forecasts verified and full replays reused.
 - [Sixteen-episode native references](SIXTEEN_EPISODE_NATIVE_REFERENCE_REPORT.md): three native paired-fit failures, six matched shifts, all forecasts verified and full replays reused.
 - [Lower-label acquisition paired fits](LOWER_LABEL_ACQUISITION_PAIRED_REPORT.md): high-fee noisy-cue advantage fails across fits, final native reference fails, all forecasts and full replay verified.
