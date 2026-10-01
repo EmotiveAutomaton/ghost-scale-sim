@@ -1,8 +1,11 @@
 # V20 results
 
-V20 is running under the fixed Friday 2 October, 05:00 Pacific finish. Execution,
+V20 now targets Thursday 1 October at 05:00 Pacific, latest 06:00, under the
+[owner endpoint amendment](../../docs/versions/v20-contribution-reconstruction/ENDPOINT_AMENDMENT.md). Execution,
 verification, accepted discovery and confirmation remain distinct states.
 
+- [Frozen candidate confirmation admission](confirmation-c01/ADMISSION.json): both original V20-C01 fits queued after the twelve diagnostic blocks; all held until 01:00 Pacific.
+- [Earlier-finish controller validity](finish-20261001/CONTROL_VALIDITY.json): nine operational controls pass; final delivery remains future work.
 - [September 30 interim report](../../docs/versions/v20-contribution-reconstruction/INTERIM_REPORT.md), [validity](interim-20260930/VALIDITY.json), [bound synthesis](interim-20260930/SYNTHESIS.json), [new paired fits](interim-20260930/PAIRED_FITS.json).
 - [Longest-history native references](../../docs/versions/v20-contribution-reconstruction/LONGEST_HISTORY_NATIVE_REFERENCE_REPORT.md), [validity](native-reference-wave-3/VALIDITY.json), [paired fits](native-reference-wave-3/PAIRED_FITS.json), [matched shifts](native-reference-wave-3/PAIRED_SHIFTS.json).
 - [Small-label paired long-history shifts](../../docs/versions/v20-contribution-reconstruction/SMALL_LABEL_PAIRED_LONG_HISTORY_SHIFT_REPORT.md), [validity](shift-wave-28/VALIDITY.json), [paired fits](shift-wave-28/PAIRED_FITS.json), [matched shifts](shift-wave-28/PAIRED_SHIFTS.json).

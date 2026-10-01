@@ -11,7 +11,8 @@ human intent, human values or historical process correspondence.
   All 114 accepted batches and the final report are published. The
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
-  Implementation approved; Gear 1 studies finish Friday 2 October at 05:00 Pacific.
+  Owner advanced the Gear 1 finish to Thursday 1 October, target 05:00 Pacific, latest 06:00.
+  See the [endpoint amendment](docs/versions/v20-contribution-reconstruction/ENDPOINT_AMENDMENT.md).
   The [September 30 interim report](docs/versions/v20-contribution-reconstruction/INTERIM_REPORT.md) covers 570 verified packets: no advantage in 115 completed native paired comparisons, one shifted-context candidate and three artifact diagnostics. Confirmation remains untouched.
   The [small-label paired long-history shift review](docs/versions/v20-contribution-reconstruction/SMALL_LABEL_PAIRED_LONG_HISTORY_SHIFT_REPORT.md) brings the verified total to 761 packets. Eleven paired comparisons fail; 3,004 exact-zero truths trace to underflow. Confirmation is untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,

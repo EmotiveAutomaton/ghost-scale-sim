@@ -22,21 +22,29 @@ authorship and contribution records retain their original attribution.
 Use `docs/README.md` and `docs/versions/README.md` for navigation. Keep entry pages
 short and scientific paths stable. Archive superseded prose with provenance.
 
-The owner approved implementation of all V20 studies and continuous useful work
-through Friday 2 October 2026 at 05:00 Pacific (12:00 UTC). This supersedes the
-previous planning-only restriction. Read `docs/versions/v20-contribution-reconstruction/README.md`,
-`PROTOCOL.md`, `MODEL_REGISTRY.json`, `results/v20/` and outer `.local/v20/HANDOFF.md`.
-The fixed science cutoff is 2 October 04:00 UTC; reserve eight hours for final
-review/export/delivery. This shortened shared window must not be called 120 hours.
+The owner approved all V20 studies, then on September 30 advanced the finish to
+Thursday October 1, 2026: target 05:00 Pacific, latest 06:00 Pacific. Read
+`docs/versions/v20-contribution-reconstruction/ENDPOINT_AMENDMENT.md`, its JSON,
+`README.md`, `PROTOCOL.md`, `MODEL_REGISTRY.json`, `results/v20/`, and outer
+`.local/v20/FINISH_AMENDMENT.json` plus `finish-20261001/OPERATING_PLAN.md` and
+`HANDOFF.md`. This owner amendment supersedes the historical Friday endpoint.
+Preserve the original acceptance and frozen scientific bytes. Stop optional
+exploratory expansion; freeze remaining discovery September 30 at 23:00 Pacific.
+Confirmation still opens October 1 at 01:00 Pacific: twelve original diagnostics,
+then both original V20-C01 fits within their inclusive 4,000-second CPU bound.
+Science stops October 1 at 04:30 Pacific. Prepare final synthesis before confirmation
+and deliver with verified owned-service closure by 06:00 Pacific at the latest.
+Record unexecuted or partial scope honestly; no validity or criterion waiver.
 
 Use the separate frozen V20 sources, accounting and native queue. Gear 1 is one
 below-normal CPU worker and one numerical thread, no GPU or environment sync.
 The 90-hour CPU ceiling includes setup, failures, checks and replay, with at least
 18 hours protected. Whole-lineage confirmation stays untouched until its frozen
 opening. No runtime padding, repeated valid jobs or undeclared model settings.
-Use the finite conditional forest, independent validity, full scientific write-through
-and per-nameable-batch publication. Completion/failure/refill and aligned four-hour
-operational checkpoints request bounded reviews; do not poll healthy work with models.
+Retain the unused conditional forest as an explicit frontier; keep independent
+validity, full scientific write-through and per-nameable-batch publication.
+Completion/failure and declared operational checkpoints request bounded reviews;
+do not poll healthy work with models.
 
 V19 retains its existing closeout owner and original endpoint. V20 runs in a separate
 checkout while V19 closes. Preserve Sounding Line's running Stage 13 and priority.

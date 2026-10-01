@@ -1,0 +1,25 @@
+{
+  "controls": [
+    "unchanged original scientific acceptance and resources",
+    "changed acceptance rejected",
+    "changed owner amendment rejected",
+    "earlier confirmation rejected",
+    "invalid clock ordering rejected",
+    "automatic cutoff exact boundary and idempotence",
+    "earlier final event emitted",
+    "live review owner preserved",
+    "real harmless subprocess receives new prompt; cutoff enforced while active"
+  ],
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "production_deployment": "separate machine-local native receipt; final completion not asserted here",
+  "schema": "v20.finish-control-validity.1",
+  "scope": "Operational earlier-finish controller only; no scientific code or outcomes changed",
+  "source_sha256": {
+    "finish_control.py": "e26b656f90ac2aefa2a8c38eb3ef969f180122e0c5e291cf9e2d6dd41fd09c9c",
+    "finish_notifier_core.py": "9094f91a7c1e755ac34f5e808a7e6a3e1851a4b1cfebc83206711fbc74d6879b",
+    "test_finish.py": "23c709796ba7f64b35505d16f8b313ffe496bb840b1bc68ba488a940a74f0a26"
+  },
+  "tests": 9
+}

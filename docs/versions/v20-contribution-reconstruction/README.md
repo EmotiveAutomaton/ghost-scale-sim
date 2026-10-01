@@ -1,8 +1,10 @@
 ﻿# V20 contribution reconstruction
 
-Implementation approved 27 September 2026. The fixed finish is Friday 2 October
-at 05:00 Pacific (12:00 UTC). The scientific cutoff is Thursday 1 October at
-21:00 Pacific, with eight hours reserved for review, export and delivery.
+Implementation approved 27 September 2026. The owner advanced delivery on September
+30 to **Thursday October 1: target 05:00 Pacific, latest 06:00 Pacific**. Science
+stops at 04:30 Pacific; the confirmation opening remains 01:00. The original Friday
+acceptance is preserved. See the [endpoint amendment](ENDPOINT_AMENDMENT.md) and
+[operational control validity](../../../results/v20/finish-20261001/CONTROL_VALIDITY.json).
 
 The question is whether structured contribution accounts recover distinctions that
 matched direct readers miss, and which distinctions require episode evidence.
