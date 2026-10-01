@@ -8,6 +8,8 @@ All 114 accepted batches and 420 queue dispositions are preserved. The final rep
 
 ## V20 contribution instrument
 
+The [final confirmation review](versions/v20-contribution-reconstruction/CONFIRMATION_REPORT.md) checks all fourteen frozen blocks together, averages both registered fits within each untouched coefficient world, verifies identical evaluation inputs across fits, and replays one complete frozen candidate block. The original native diagnostics remain distinct from the shifted-context candidate. Positive probabilities below the capped-loss floor and exact zero mass are reported separately; no score or threshold changed.
+
 The [lower-label acquisition paired review](versions/v20-contribution-reconstruction/LOWER_LABEL_ACQUISITION_PAIRED_REPORT.md) completes both registered fits at both acquisition label budgets, averaging fits inside worlds before comparing budgets. Every choice and score is checked; the complete second-fit high-fee reference replays. A private aggregate-assembly failure is retained and repaired without changing scientific source, scores or criteria.
 
 The [correction learning-curve review](versions/v20-contribution-reconstruction/CORRECTION_LEARNING_CURVE_REPORT.md) checks update specificity against unchanged and irrelevant controls across six paired-fit budgets, averaging fits within worlds. Separate candidate increments distinguish increased coverage from unresolved capped-loss changes and improved squared loss. It reuses hash-bound prior results and performs three full references for the new interpretation; scientific source and criteria remain unchanged.

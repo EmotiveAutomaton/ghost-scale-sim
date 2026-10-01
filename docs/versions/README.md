@@ -6,7 +6,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V20 | 794 packets verified; final twelve short-history shift pairs fail, one shifted-context candidate and three artifact diagnostics remain, confirmation untouched; owner-amended Thursday October 1 finish, 05:00 target / 06:00 latest Pacific | [Contribution reconstruction](v20-contribution-reconstruction/README.md) |
+| V20 | Closed October 1; 808 verified packets, shifted-context candidate confirmed, native primary failed, 44 deferrals | [Final report](v20-contribution-reconstruction/FINAL_REPORT.md) |
 | V19 | Scientific window closed; final report published | [Final scientific report](v19-local-maker/FINAL_REPORT.md) |
 | V18.4 | Closed; remaining frontier retained | [Final report](v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md) |
 | V18.3 | Closed | [Final report](v18-selective-acquisition/research-extension/FINAL_REPORT.md) |

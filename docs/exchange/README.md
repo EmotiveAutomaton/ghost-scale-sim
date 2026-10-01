@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V20
 
+- [Final confirmation and closure](v20-final-response.md)
+
 - [Final short-history shifts](v20-final-short-history-shift-response.md)
 
 - [No-history artifact shifts](v20-no-history-artifact-shift-response.md)

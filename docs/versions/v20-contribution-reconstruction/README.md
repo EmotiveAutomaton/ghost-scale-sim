@@ -6,6 +6,8 @@ stops at 04:30 Pacific; the confirmation opening remains 01:00. The original Fri
 acceptance is preserved. See the [endpoint amendment](ENDPOINT_AMENDMENT.md) and
 [operational control validity](../../../results/v20/finish-20261001/CONTROL_VALIDITY.json).
 
+**Closed October 1:** [final report](FINAL_REPORT.md), [confirmation](CONFIRMATION_REPORT.md), and [closure evidence](../../../results/v20/closeout-20261001/ADMINISTRATIVE_CLOSEOUT.json). 808 packets verified; the frozen changed-execution context candidate is confirmed, the native primary remains failed, and 44 admitted deferrals remain.
+
 The question is whether structured contribution accounts recover distinctions that
 matched direct readers miss, and which distinctions require episode evidence.
 These are constructed-method tests, not evidence about private human intent.

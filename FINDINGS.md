@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 final confirmation and closure
+
+We tested whether a structured contribution account outperforms matched direct readers. The native primary remains failed. The frozen changed-execution context candidate is confirmed on 32 untouched worlds: capped log loss improves by 0.05462 natural-log units over the joint neural reader (descriptive interval 0.03891–0.07136), with no increase in confident errors. All six fixed diagnostic comparisons fail. These are constructed-method findings. [Confirmation](docs/versions/v20-contribution-reconstruction/CONFIRMATION_REPORT.md); [final report](docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md). All 808 accepted packets are verified; 44 admitted deferrals remain.
+
 ## V20 final short-history shifts
 
 We tested whether structured reading gains an advantage under execution or presentation shifts with four or sixteen retained episodes and 2,048 training labels. All twelve paired comparisons fail. All 11,010,048 new forecasts verify; no truth receives exactly zero probability. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FINAL_SHORT_HISTORY_SHIFT_REPORT.md).

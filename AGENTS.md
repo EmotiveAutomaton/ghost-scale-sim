@@ -9,15 +9,17 @@ authorship and contribution records retain their original attribution.
 - Read the remainder of this file and the reading sequence below before acting.
 - Check the live runner PID and heartbeat before touching imported code. An idle
   machine is a state to report, not an instruction to invent work.
-- On this workstation, read `C:/Users/abrah/.codex/project-memory/ghost-scale/INDEX.md`
-  if present. It indexes dated local memories; current specifications and primary
+- Read `project-memory/ghost-scale/INDEX.md` under the agent's private configuration
+  root if present. It indexes dated local memories; current specifications and primary
   records take precedence over stale notes. Never copy private memory into public files.
 - The repository is `ghost-scale-sim/` inside the outer Ghost Scale Simulation
   workspace. Use the repository as the working directory for Python and Git.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Documentation map and active V20 (2026-09-27)
+## Documentation map and closed V20 (2026-10-01)
+
+V20 scientific work is closed. Read `docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md`, `results/v20/confirmation-final/VALIDITY.json`, `results/v20/closeout-20261001/` and the local HANDOFF before future work. All 808 accepted packets are verified: the frozen shifted-context candidate is confirmed; the native primary and six fixed diagnostic conditions fail. Forty-four admitted deferrals and the unexecuted conditional frontier remain. Do not restart, refill or repeat valid science in this allocation. Exact publication and owned-service exits are recorded separately in the administrative receipt. The former operating schedule below is retained as history.
 
 Use `docs/README.md` and `docs/versions/README.md` for navigation. Keep entry pages
 short and scientific paths stable. Archive superseded prose with provenance.

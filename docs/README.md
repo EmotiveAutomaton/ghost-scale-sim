@@ -9,7 +9,7 @@ state. Updated 27 September 2026.
 | Status | Entry point | Use |
 |---|---|---|
 | Active V19, closeout still required | [V19 index](versions/v19-local-maker/README.md) | Accepted contract, interim synthesis, detailed catalog and primary records |
-| Approved V20, implementation and admission | [V20 index](versions/v20-contribution-reconstruction/README.md) | Original specification, execution protocol and current result records |
+| Closed V20; confirmation and final report complete | [V20 index](versions/v20-contribution-reconstruction/README.md) | Final result, confirmation, coverage, costs and closure receipts |
 | Closed V1–V18 allocations | [Version index](versions/README.md) | Specifications, reports and retained failures; historical instructions do not reopen them |
 
 ## Reading order for an operating agent

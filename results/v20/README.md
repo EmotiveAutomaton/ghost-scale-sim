@@ -1,8 +1,6 @@
 # V20 results
 
-V20 now targets Thursday 1 October at 05:00 Pacific, latest 06:00, under the
-[owner endpoint amendment](../../docs/versions/v20-contribution-reconstruction/ENDPOINT_AMENDMENT.md). Execution,
-verification, accepted discovery and confirmation remain distinct states.
+V20 scientific work closed October 1: 808 verified packets, one confirmed shifted-context candidate, failed native primary and six failed fixed diagnostic comparisons. Forty-four admitted deferrals and the conditional frontier remain. See the [final report](../../docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md), [confirmation validity](confirmation-final/VALIDITY.json), [coverage](closeout-20261001/COVERAGE.json), [costs](closeout-20261001/COSTS.json), and [administrative closure](closeout-20261001/ADMINISTRATIVE_CLOSEOUT.json). Historical records below retain their original pending statuses.
 
 - [Frozen candidate confirmation admission](confirmation-c01/ADMISSION.json): both original V20-C01 fits queued after the twelve diagnostic blocks; all held until 01:00 Pacific.
 - [Earlier-finish controller validity](finish-20261001/CONTROL_VALIDITY.json): nine operational controls pass; final delivery remains future work.

@@ -10,11 +10,11 @@ human intent, human values or historical process correspondence.
 - **V19 scientific window closed:** [final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
   All 114 accepted batches and the final report are published. The
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
-- **New active work:** [V20 contribution reconstruction](docs/versions/v20-contribution-reconstruction/README.md).
-  Owner advanced the Gear 1 finish to Thursday 1 October, target 05:00 Pacific, latest 06:00.
-  See the [endpoint amendment](docs/versions/v20-contribution-reconstruction/ENDPOINT_AMENDMENT.md).
-  The [September 30 interim report](docs/versions/v20-contribution-reconstruction/INTERIM_REPORT.md) covers 570 verified packets: no advantage in 115 completed native paired comparisons, one shifted-context candidate and three artifact diagnostics. Confirmation remains untouched.
-  The [final short-history shift review](docs/versions/v20-contribution-reconstruction/FINAL_SHORT_HISTORY_SHIFT_REPORT.md) brings the verified total to 794 packets. All twelve paired comparisons fail; confirmation remains untouched.
+- **V20 closed:** [final report](docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md).
+  808 packets verified; the frozen changed-execution context candidate is confirmed,
+  the native primary remains failed, and 44 admitted deferrals remain.
+  [Confirmation evidence](results/v20/confirmation-final/VALIDITY.json) and
+  [administrative closure](results/v20/closeout-20261001/ADMINISTRATIVE_CLOSEOUT.json).
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and

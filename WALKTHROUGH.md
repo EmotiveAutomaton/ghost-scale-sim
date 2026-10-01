@@ -1,9 +1,9 @@
 # The walkthrough
 
 This is the illustrated narrative of the earlier research, with its original
-qualifications and attribution markers. For current work use the
-[V19 index](docs/versions/v19-local-maker/README.md); the next
-[V20 plan](docs/versions/v20-contribution-reconstruction/README.md) is unimplemented.
+qualifications and attribution markers. For the completed current studies use the
+[V19 final report](docs/versions/v19-local-maker/FINAL_REPORT.md) and
+[V20 final report](docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md).
 The former accumulated batch preface is preserved in the
 [documentation archive](docs/archive/documentation-2026-09-27/README.md).
 
