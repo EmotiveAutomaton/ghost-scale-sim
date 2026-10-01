@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V20 final short-history shifts
+
+We tested whether structured reading gains an advantage under execution or presentation shifts with four or sixteen retained episodes and 2,048 training labels. All twelve paired comparisons fail. All 11,010,048 new forecasts verify; no truth receives exactly zero probability. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/FINAL_SHORT_HISTORY_SHIFT_REPORT.md).
+
 ## V20 no-history artifact shifts
 
 We tested whether structured reading gains an advantage from artifacts alone under execution or presentation shifts, with 2,048 training labels and no retained history. Both paired comparisons fail. All 1,835,008 new forecasts verify; no truth receives exactly zero probability. These are constructed-method results; confirmation remains untouched. [Report](docs/versions/v20-contribution-reconstruction/NO_HISTORY_ARTIFACT_SHIFT_REPORT.md).
