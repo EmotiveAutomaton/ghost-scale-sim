@@ -18,6 +18,7 @@ These are constructed-method tests, not evidence about private human intent.
   its planning-only status and rolling-clock proposal are superseded by the protocol.
 - [September 30 interim report](INTERIM_REPORT.md): 570 verified packets; native paired comparisons fail, four shifted discovery findings remain, confirmation untouched.
 - [Longest-history native references](LONGEST_HISTORY_NATIVE_REFERENCE_REPORT.md): three native paired-fit failures, six matched shifts, all forecasts verified and full replays reused.
+- [No-history artifact shifts](NO_HISTORY_ARTIFACT_SHIFT_REPORT.md): both paired failures at 2,048 labels; all forecasts verified, no exact-zero truths.
 - [Final small-label long-history shifts](FINAL_SMALL_LABEL_LONG_HISTORY_SHIFT_REPORT.md): five remaining paired failures; panel complete, all forecasts and underflow zeros verified.
 - [Small-label paired long-history shifts](SMALL_LABEL_PAIRED_LONG_HISTORY_SHIFT_REPORT.md): eleven paired failures, five pairs incomplete; all forecasts and underflow zeros verified, full replays reused.
 - [Small-label long-history shifts](SMALL_LABEL_LONG_HISTORY_SHIFT_REPORT.md): ten first-fit failures; both-fit comparisons incomplete, all forecasts verified and full replays reused.

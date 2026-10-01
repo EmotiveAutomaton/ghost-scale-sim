@@ -14,7 +14,7 @@ human intent, human values or historical process correspondence.
   Owner advanced the Gear 1 finish to Thursday 1 October, target 05:00 Pacific, latest 06:00.
   See the [endpoint amendment](docs/versions/v20-contribution-reconstruction/ENDPOINT_AMENDMENT.md).
   The [September 30 interim report](docs/versions/v20-contribution-reconstruction/INTERIM_REPORT.md) covers 570 verified packets: no advantage in 115 completed native paired comparisons, one shifted-context candidate and three artifact diagnostics. Confirmation remains untouched.
-  The [final small-label long-history review](docs/versions/v20-contribution-reconstruction/FINAL_SMALL_LABEL_LONG_HISTORY_SHIFT_REPORT.md) brings the verified total to 766 packets. Five further paired comparisons fail; the outstanding panel is complete. Confirmation is untouched.
+  The [no-history artifact shift review](docs/versions/v20-contribution-reconstruction/NO_HISTORY_ARTIFACT_SHIFT_REPORT.md) brings the verified total to 770 packets. Both paired comparisons fail; confirmation remains untouched.
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
   then primary records and the local operating handoff.
 - **Whole repository:** use the [documentation map](docs/README.md) and
