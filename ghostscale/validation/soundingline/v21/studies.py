@@ -136,7 +136,7 @@ def learned(root,d,pulse):
             methods={'converged-direct':direct.predict(xx,support),'shared-maker':latent.predict(xx,support),
                 'grouped-empirical':grouped.predict(xx,support),'naive-bayes':forecast(nb,xx,support=support),
                 'naive-bayes-without-evidence':forecast(nb,xx,(1,),support=support)}
-            for name in ('direct-table','direct-mlp'): 
+            for name in ('direct-table','direct-mlp'):
                 with np.errstate(divide='ignore'):methods['fixed-schedule-mlp' if name=='direct-mlp' else name]=np.log(compatibility.predict(xx,name,support))
             if fresh_model:methods['fresh-law-direct']=fresh_model.predict(xx,support)
             for name,lp in methods.items():population.append(dict(fit=fit,lineage=lineage,reader=name,metrics=retain(root,f'{fit}-{lineage}-{name}',lp,yy)))
