@@ -17,6 +17,37 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## Active V21 and permanent six-hour health cadence (2026-10-10)
+
+The owner approved the October 10 research program and errata, including the
+broader design choices, Gear 2 opening execution and six-hour routine queue
+reviews. Read `docs/versions/v21-supporting-mechanisms/README.md`, `PROTOCOL.md`,
+`CARDS.json`, `results/v21/CURRENT_STATUS.json` and outer `.local/v21/HANDOFF.md`.
+V21 is the Ghost companion to Sounding Line Stage 13; do not reopen Ghost V13
+or any closed V20 work. Development is isolated from immutable live capsules.
+
+Gear 2 permits three below-normal scientific CPU workers with one numerical
+thread each, no GPU and no environment synchronization. Sounding Line retains
+priority. The 72-CPU-hour ceiling includes setup/failures/reviews, with 18 hours
+protected. Follow the immutable acceptance: discovery freeze October 15 00:00
+Pacific, confirmation opening 06:00, science cutoff October 16 10:00, final
+snapshot and allocation end October 16 18:00. Do not reset these clocks.
+
+**Permanent routine cadence: six hours, replacing four.** Keep fixed six-hour
+native health checkpoints in the durable watcher while a campaign is active;
+unrelated result acknowledgements do not postpone them. This explicitly amends
+the historical event-only restriction below. Failures, disappearance, queue
+depletion and meaningful scientific boundaries may wake earlier. Suppress
+competing reviews while an operator is active, preserve a live review owner,
+verify actual event delivery and acknowledge exact hashes only after landing.
+Closed campaigns have no recurring wake. No research agents are commissioned.
+
+The law-marginal ceiling, converged direct rival, duplicate-removal diagnostics,
+asymmetric historical evidence and headroom gate are mandatory. Conditional
+cards are not implemented/admitted jobs. Implement and independently validate
+eligible successors before dispatch, with one bounded repair per family. Keep
+full scientific write-through and publication after every nameable valid batch.
+
 ## Documentation map and closed V20 (2026-10-01)
 
 V20 scientific work is closed. Read `docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md`, `results/v20/confirmation-final/VALIDITY.json`, `results/v20/closeout-20261001/` and the local HANDOFF before future work. All 808 accepted packets are verified: the frozen shifted-context candidate is confirmed; the native primary and six fixed diagnostic conditions fail. Forty-four admitted deferrals and the unexecuted conditional frontier remain. Do not restart, refill or repeat valid science in this allocation. Exact publication and owned-service exits are recorded separately in the administrative receipt. The former operating schedule below is retained as history.
@@ -212,7 +243,7 @@ source-bound admission and an immutable worker checkout. The old completed
 screen queue remains historical. Use matching extracted source for resume;
 do not edit imported files or synchronize a live environment.
 
-### Standing rule: event-only agent wakes
+### Historical event-only wake rule; qualified by the six-hour rule above
 
 After a long-running simulation is launched, a healthy process is a legitimate
 terminal state for the agent turn. Record its PID, immutable window and expected
@@ -220,11 +251,12 @@ outputs, then stop. Use a non-LLM supervisor to detect completion, failure,
 disappearance or a predefined scientific checkpoint. Invoke an agent only on
 those state transitions; native monitoring may poll cheaply without model turns.
 
-Do not use periodic model checks, a Stop hook, a recursive queue rule or a
+Apart from the owner-requested six-hour health checkpoints, do not use periodic
+model checks, a Stop hook, a recursive queue rule or a
 "work remains" condition to continue merely because external computation is
 running. Do not restart valid work to refresh reports or reset monitoring clocks.
-This latest user instruction supersedes older generic timed-wake suggestions
-for this project. Preserve a live notification delivery across supervisor
+The October 10 six-hour amendment supersedes this paragraph's former prohibition
+of all routine timed checks. Preserve a live notification delivery across supervisor
 restarts; a configured wake is not proof of actual model delivery.
 
 ### Standing rule: background services have no desktop windows

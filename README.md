@@ -7,12 +7,18 @@ human intent, human values or historical process correspondence.
 
 ## Start here
 
+- **Active V21:** [supporting mechanism program](docs/versions/v21-supporting-mechanisms/README.md).
+  Gear 2 CPU queue, six-hour routine health reviews, and the October 10 validity
+  errata. Friday October 16 reporting snapshot: 18:00 Pacific.
 - **V19 scientific window closed:** [final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
   All 114 accepted batches and the final report are published. The
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.
 - **V20 closed:** [final report](docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md).
   808 packets verified; the frozen changed-execution context candidate is confirmed,
   the native primary remains failed, and 44 admitted deferrals remain.
+  The [V21 forensic audit](docs/versions/v21-supporting-mechanisms/OPENING_REPORT.md)
+  attributes the shift benefit to cancellation of duplicated evidence, rather than
+  general structured transfer; the historical V20 reports remain unchanged.
   [Confirmation evidence](results/v20/confirmation-final/VALIDITY.json) and
   [administrative closure](results/v20/closeout-20261001/ADMINISTRATIVE_CLOSEOUT.json).
 - **Working agent:** read [AGENTS.md](AGENTS.md), the current campaign index,
@@ -38,6 +44,9 @@ independent checkers and replay. Implementation is not the same as an accepted
 scientific result: consult [current status](results/v19/CURRENT_STATUS.json),
 [coverage](results/v19/TEST_COVERAGE.json) and each named result's review.
 
+V21 adds law-marginal ceilings, converged/fresh-law direct rivals, shared-maker
+inference, sparse execution adaptation, support/factorization diagnostics and
+record/export consumers. Conditional research cards still require admission.
 V20 implements a separate exact contribution world and G0-G7 consumers. V19's skill-dependent
 tool action is not an AI-use generator and must not be relabelled as one.
 
@@ -50,7 +59,7 @@ tool action is not an AI-use generator and must not be relabelled as one.
 | How were the instruments checked? | [Methods](docs/METHODS.md) and [audit passes](docs/README.md#audit-passes) |
 | How does the earlier research fit together? | [Illustrated walkthrough](WALKTHROUGH.md) and [historical narrative](docs/HISTORY.md) |
 | What was requested and returned? | [Exchange index](docs/exchange/README.md) |
-| What should be implemented next? | [V20 plan](docs/versions/v20-contribution-reconstruction/IMPLEMENTATION_PLAN.md) |
+| What should be implemented next? | [V21 weekly plan](docs/versions/v21-supporting-mechanisms/IMPLEMENTATION_PLAN.md) |
 
 ## Scope and limits
 

@@ -1,8 +1,12 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 duplicated-evidence audit
+
+We asked whether V20's shifted advantage reflects transferable structure or duplicated evidence. Removing the duplicated evidence feature eliminates naive Bayes's shift benefit. These are constructed-method results on reused V20 worlds, not fresh confirmation or evidence of general transfer. The two-fit, 32-world change in natural-log loss moves from −0.04769 to −0.00358 (descriptive interval −0.01331 to 0.00651); removing the claim instead makes the shift harmful by 0.10046. All 786,432 forecasts and the complete 386-file frozen replay verify. [Report](docs/versions/v21-supporting-mechanisms/OPENING_REPORT.md).
+
 ## V20 final confirmation and closure
 
-We tested whether a structured contribution account outperforms matched direct readers. The native primary remains failed. The frozen changed-execution context candidate is confirmed on 32 untouched worlds: capped log loss improves by 0.05462 natural-log units over the joint neural reader (descriptive interval 0.03891–0.07136), with no increase in confident errors. All six fixed diagnostic comparisons fail. These are constructed-method findings. [Confirmation](docs/versions/v20-contribution-reconstruction/CONFIRMATION_REPORT.md); [final report](docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md). All 808 accepted packets are verified; 44 admitted deferrals remain.
+The historical frozen comparison remains confirmed: a native-trained naive-Bayes reader loses less than the fixed-schedule MLP under changed execution, by 0.05462 natural-log units (descriptive interval 0.03891–0.07136). V21's audit attributes the shift benefit to cancellation of native double counting of claim and evidence; this is not evidence of general structured transfer. The native primary and six fixed diagnostic comparisons fail. These are constructed-method findings. [Historical confirmation](docs/versions/v20-contribution-reconstruction/CONFIRMATION_REPORT.md); [unchanged V20 report](docs/versions/v20-contribution-reconstruction/FINAL_REPORT.md); [V21 qualification](docs/versions/v21-supporting-mechanisms/OPENING_REPORT.md). All 808 accepted V20 packets are preserved; 44 admitted deferrals remain.
 
 ## V20 final short-history shifts
 

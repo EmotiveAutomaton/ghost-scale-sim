@@ -1,5 +1,11 @@
 # The methodology layer
 
+## V21: reachable ceilings, fitted rivals and duplicate-factor audit
+
+The [V21 protocol](versions/v21-supporting-mechanisms/PROTOCOL.md) separates supplied-law uncertainty, law uncertainty and reader excess. The log-domain law mixture integrates joint evidence masses, checked against an independently grouped sequential law/maker calculation. A converged direct reader uses disjoint validation lineages and saved learning curves; B/C admission requires exact-law headroom beyond that rival. Original and widened disposition ranges, asymmetric history observations, matched support and training-law diversity remain explicit. Sparse-current-execution adaptation counts all shifted labels and has no hidden shifted validation budget.
+
+The [opening duplicate audit](versions/v21-supporting-mechanisms/OPENING_REPORT.md) reconstructs both retained V20 naive-Bayes fits, checks 786,432 forecasts, averages fits inside 32 worlds, and matches a complete 386-file frozen replay. Removing the duplicated evidence factor eliminates the shift benefit. This qualifies the old comparison with the fixed-schedule MLP; it does not establish general structured transfer. Historical V20 bytes are preserved. A lazy-NPZ verifier I/O repair retained the interrupted attempt and CPU charge and passed an array-read regression without changing scores.
+
 ## V19 scientific endpoint — 28 September 2026
 
 We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.

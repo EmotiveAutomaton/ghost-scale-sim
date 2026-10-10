@@ -2,13 +2,14 @@
 
 Start with the status of the work, then follow its evidence. This index describes
 where documents belong; it does not replace scientific verdicts or live native
-state. Updated 27 September 2026.
+state. Updated 10 October 2026.
 
 ## Current work
 
 | Status | Entry point | Use |
 |---|---|---|
-| Active V19, closeout still required | [V19 index](versions/v19-local-maker/README.md) | Accepted contract, interim synthesis, detailed catalog and primary records |
+| Active V21, supporting mechanism program | [V21 index](versions/v21-supporting-mechanisms/README.md) | October 10 program and errata, exact ceilings, matched readers, six-hour reviews |
+| Closed V19 | [V19 index](versions/v19-local-maker/README.md) | Final scientific report and administrative closure |
 | Closed V20; confirmation and final report complete | [V20 index](versions/v20-contribution-reconstruction/README.md) | Final result, confirmation, coverage, costs and closure receipts |
 | Closed V1–V18 allocations | [Version index](versions/README.md) | Specifications, reports and retained failures; historical instructions do not reopen them |
 

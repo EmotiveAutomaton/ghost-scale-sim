@@ -184,6 +184,13 @@ results/v20/packets/**/evaluator/
 results/v20/packets/**/training/
 results/v20/packets/**/raw/*_points.npz
 results/v20/packets/**/SOURCE.zip
+
+# V21 retains raw numerical arrays and native operating state outside publication.
+results/v21/**/*_points.npz
+results/v21/packets/**/worker.log
+results/v21/packets/**/STATUS.json
+results/v21/packets/**/OWNER.lock
+results/v21/packets/**/SOURCE.zip
 results/v20/packets/**/STATUS.json
 results/v20/packets/**/worker.log
 results/v20/packets/**/OWNER.lock
