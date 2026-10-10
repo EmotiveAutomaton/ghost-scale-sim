@@ -6,6 +6,8 @@ The [V21 protocol](versions/v21-supporting-mechanisms/PROTOCOL.md) separates sup
 
 The [opening duplicate audit](versions/v21-supporting-mechanisms/OPENING_REPORT.md) reconstructs both retained V20 naive-Bayes fits, checks 786,432 forecasts, averages fits inside 32 worlds, and matches a complete 386-file frozen replay. Removing the duplicated evidence factor eliminates the shift benefit. This qualifies the old comparison with the fixed-schedule MLP; it does not establish general structured transfer. Historical V20 bytes are preserved. A lazy-NPZ verifier I/O repair retained the interrupted attempt and CPU charge and passed an array-read regression without changing scores.
 
+The [native support diagnostic](versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md) reuses one frozen direct predictor per fit. Independent scalar scoring checks 32,768 forecasts; full frozen-source scientific replay matches 129 files. Separate regrouping reconstructs every summary and support mask, checks 2,048 supplied posteriors by sequential law/maker grouping, and averages fits within worlds before 4,096 bootstrap draws. Infinite losses remain explicit. This validates a retained-predictor support comparison, not a new law-marginal boundary or method-by-support interaction.
+
 ## V19 scientific endpoint — 28 September 2026
 
 We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.

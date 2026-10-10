@@ -6,6 +6,7 @@ separate local campaign directory. No status count substitutes for a live check.
 
 - [Opening duplicate-evidence audit](opening-duplicate-audit/ACCEPTANCE.json):
   786,432 verified forecasts on reused V20 worlds, with complete frozen replay.
+- [Native support diagnostic](native-support-00/VALIDITY.json): 32,768 checked forecasts, 129-file frozen scientific replay, explicit truth exclusion.
 - [Admission controls](ADMISSION_VALIDITY.json) and
   [verifier I/O repair](VERIFIER_REPAIR.json).
 - [Frozen source archives](SOURCE_BINDINGS.json): opening and core source hashes.

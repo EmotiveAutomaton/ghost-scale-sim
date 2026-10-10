@@ -10,6 +10,7 @@ human intent, human values or historical process correspondence.
 - **Active V21:** [supporting mechanism program](docs/versions/v21-supporting-mechanisms/README.md).
   Gear 2 CPU queue, six-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
+  [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
 - **V19 scientific window closed:** [final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
   All 114 accepted batches and the final report are published. The
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.

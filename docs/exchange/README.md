@@ -14,6 +14,11 @@ for the new campaign read the [V20 protocol and index](../versions/v20-contribut
 The earlier annotated exchange index is preserved in the
 [documentation archive](../archive/documentation-2026-09-27/README.md).
 
+## V21
+
+- [Native support diagnostic](v21-native-support-response.md)
+- [Opening duplicate audit](v21-opening-response.md)
+
 ## V20
 
 - [Final confirmation and closure](v20-final-response.md)

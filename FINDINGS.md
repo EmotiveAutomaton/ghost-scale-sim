@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 native support diagnostic
+
+Does a hard rule excluding supposedly impossible histories improve reconstruction? In this native constructed-method diagnostic, supplied exact support lowers natural-log loss from 3.8643 to 3.4505 nats, but learned support excludes truth in 1.59% of forecasts and makes uncapped log loss infinite. The eight-world paired reduction is 0.4138 nats (descriptive 95% interval 0.3844 to 0.4459); the full Brier improvement remains uncertain. This is development evidence, miniature - architecture untested, with no shifted-law or structured-reader superiority claim. [Report](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md).
+
 ## V21 duplicated-evidence audit
 
 We asked whether V20's shifted advantage reflects transferable structure or duplicated evidence. Removing the duplicated evidence feature eliminates naive Bayes's shift benefit. These are constructed-method results on reused V20 worlds, not fresh confirmation or evidence of general transfer. The two-fit, 32-world change in natural-log loss moves from −0.04769 to −0.00358 (descriptive interval −0.01331 to 0.00651); removing the claim instead makes the shift harmful by 0.10046. All 786,432 forecasts and the complete 386-file frozen replay verify. [Report](docs/versions/v21-supporting-mechanisms/OPENING_REPORT.md).
