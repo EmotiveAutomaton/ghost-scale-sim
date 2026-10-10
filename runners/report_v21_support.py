@@ -64,8 +64,10 @@ def report(packet):
         with np.load(source / 'evaluator' / f'{world}_points.npz') as z:
             truth, supplied = z['truth'], np.exp(z['supplied_logp'])
         rows = W.enumerate_world(world, d['shift'], d['regime'])
+        history_rows = W.enumerate_world(world, d['history_shift'], d['regime']) if d.get('history_shift') else rows
         reference = scalar_mixture([rows], x, d['tier'], W.CONTEXTS,
-                                   d['history_tier'], d['observed'], d['history_observed'])
+                                   d['history_tier'], d['observed'], d['history_observed'],
+                                   history_worlds=[history_rows])
         error = float(np.max(np.abs(reference - supplied)))
         max_reference_error = max(max_reference_error, error)
         assert error < 1e-10
@@ -155,9 +157,10 @@ def report(packet):
                 supplied_reference_max_abs_error=max_reference_error,
                 all_summary_metrics_reconstructed=True, all_masks_reconstructed=True,
                 illustrative_cases=cases,
-                limitations=['Native original-law artifact-only current evidence; four complete past episodes.',
+                design={key: d.get(key) for key in ('tier', 'history', 'history_tier', 'history_observed', 'shift', 'history_shift', 'regime')},
+                limitations=['Retained predictor support diagnostic for this bound design.',
                              'One retained converged direct predictor per fit; no method-by-support comparison.',
-                             'No shifted C03 block accepted here; no native-to-shift contrast available.',
+                             'A cross-block native-to-shift contrast requires separately verified matching cells.',
                              'Upstream law-marginal family full replay is separate; no new ceiling claim.',
                              'Eight development worlds, two shared fits nested within each; no confirmation.',
                              'Candidate-identity pruning is a finite stress test, not a model of deployment noise.'])

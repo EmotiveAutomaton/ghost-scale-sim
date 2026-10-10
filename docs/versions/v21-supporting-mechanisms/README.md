@@ -17,6 +17,7 @@ This is Ghost V21 alongside Sounding Line Stage 13. V20 remains closed.
 - [Card registry](CARDS.json): every commissioned card, including B07.
 - [Opening result](OPENING_REPORT.md): retained-data test of duplicated evidence.
 - [Native support diagnostic](NATIVE_SUPPORT_REPORT.md): verified first C03 block and full scientific replay.
+- [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.
 - [Setup report](SETUP_REPORT.md): implemented scope, active queue, checks and timing.
 - [Current receipt](../../../results/v21/CURRENT_STATUS.json): a dated snapshot,
   not a substitute for native heartbeat and ownership.
