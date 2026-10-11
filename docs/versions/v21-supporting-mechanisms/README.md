@@ -19,6 +19,7 @@ This is Ghost V21 alongside Sounding Line Stage 13. V20 remains closed.
 - [Opening result](OPENING_REPORT.md): retained-data test of duplicated evidence.
 - [Native support diagnostic](NATIVE_SUPPORT_REPORT.md): verified first C03 block and full scientific replay.
 - [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.
+- [October 11 queue health](HEALTH_REPORT_20261011.md): recovered execution, complete numerical checks, timing and twelve-hour monitoring.
 - [October 11 notifier repair](NOTIFIER_REPAIR_20261011.md): restored delivery, twelve-hour checks and retirement after final reporting.
 - [Setup report](SETUP_REPORT.md): implemented scope, active queue, checks and timing.
 - [Current receipt](../../../results/v21/CURRENT_STATUS.json): a dated snapshot,

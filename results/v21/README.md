@@ -4,6 +4,8 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [October 11 health validity](health-20261011/VALIDITY.json): all 268 plans, 108 completed packets and five complete family replays; scientific interpretation remains separate.
+- [Notifier recovery](notifier-repair-20261011/VALIDITY.json): twelve-hour cadence, real delivery and closed-campaign retirement controls.
 - [Opening duplicate-evidence audit](opening-duplicate-audit/ACCEPTANCE.json):
   786,432 verified forecasts on reused V20 worlds, with complete frozen replay.
 - [Native support diagnostic](native-support-00/VALIDITY.json): 32,768 checked forecasts, 129-file frozen scientific replay, explicit truth exclusion.
