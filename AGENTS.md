@@ -17,11 +17,12 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Active V21 and permanent six-hour health cadence (2026-10-10)
+## Active V21 and permanent twelve-hour health cadence (2026-10-11)
 
 The owner approved the October 10 research program and errata, including the
-broader design choices, Gear 2 opening execution and six-hour routine queue
-reviews. Read `docs/versions/v21-supporting-mechanisms/README.md`, `PROTOCOL.md`,
+broader design choices and Gear 2 opening execution. On October 11 the owner
+replaced six-hour routine queue reviews with twelve-hour reviews. Read
+`docs/versions/v21-supporting-mechanisms/README.md`, `PROTOCOL.md`,
 `CARDS.json`, `results/v21/CURRENT_STATUS.json` and outer `.local/v21/HANDOFF.md`.
 V21 is the Ghost companion to Sounding Line Stage 13; do not reopen Ghost V13
 or any closed V20 work. Development is isolated from immutable live capsules.
@@ -33,14 +34,17 @@ protected. Follow the immutable acceptance: discovery freeze October 15 00:00
 Pacific, confirmation opening 06:00, science cutoff October 16 10:00, final
 snapshot and allocation end October 16 18:00. Do not reset these clocks.
 
-**Permanent routine cadence: six hours, replacing four.** Keep fixed six-hour
+**Permanent routine cadence: twelve hours, replacing six.** Keep fixed twelve-hour
 native health checkpoints in the durable watcher while a campaign is active;
 unrelated result acknowledgements do not postpone them. This explicitly amends
 the historical event-only restriction below. Failures, disappearance, queue
 depletion and meaningful scientific boundaries may wake earlier. Suppress
 competing reviews while an operator is active, preserve a live review owner,
 verify actual event delivery and acknowledge exact hashes only after landing.
-Closed campaigns have no recurring wake. No research agents are commissioned.
+Batch routine completions at these checks. Failures, held verification boundaries
+and a depleted queue may request earlier action. At the finite program end, write
+one final report, verify owned-service closure and retire the notifier. Closed
+campaigns have no recurring wake. No research agents are commissioned.
 
 The law-marginal ceiling, converged direct rival, duplicate-removal diagnostics,
 asymmetric historical evidence and headroom gate are mandatory. Conditional
@@ -243,7 +247,7 @@ source-bound admission and an immutable worker checkout. The old completed
 screen queue remains historical. Use matching extracted source for resume;
 do not edit imported files or synchronize a live environment.
 
-### Historical event-only wake rule; qualified by the six-hour rule above
+### Historical event-only wake rule; qualified by the twelve-hour rule above
 
 After a long-running simulation is launched, a healthy process is a legitimate
 terminal state for the agent turn. Record its PID, immutable window and expected
@@ -251,11 +255,11 @@ outputs, then stop. Use a non-LLM supervisor to detect completion, failure,
 disappearance or a predefined scientific checkpoint. Invoke an agent only on
 those state transitions; native monitoring may poll cheaply without model turns.
 
-Apart from the owner-requested six-hour health checkpoints, do not use periodic
+Apart from the owner-requested twelve-hour health checkpoints, do not use periodic
 model checks, a Stop hook, a recursive queue rule or a
 "work remains" condition to continue merely because external computation is
 running. Do not restart valid work to refresh reports or reset monitoring clocks.
-The October 10 six-hour amendment supersedes this paragraph's former prohibition
+The October 11 twelve-hour amendment supersedes this paragraph's former prohibition
 of all routine timed checks. Preserve a live notification delivery across supervisor
 restarts; a configured wake is not proof of actual model delivery.
 

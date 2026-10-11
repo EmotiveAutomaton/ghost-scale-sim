@@ -7,7 +7,7 @@ import argparse
 import os
 import subprocess
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from ghostscale.validation.soundingline.v16.runtime import local_owner
@@ -37,6 +37,47 @@ def actionable(campaign, state, events, current=None):
     return ready, waiting
 
 
+def review_environment(config):
+    """Preserve the configured user profile through detached Windows launches."""
+    environment = os.environ.copy()
+    if config.get('review_user_profile'):
+        profile = Path(config['review_user_profile'])
+        if not profile.is_absolute() or not (profile / '.codex').is_dir():
+            raise ValueError('review user profile is not an existing Codex profile')
+        environment['USERPROFILE'] = str(profile)
+        environment['HOMEDRIVE'] = profile.drive
+        environment['HOMEPATH'] = str(profile)[len(profile.drive):]
+    return environment
+
+
+def delivery_events(campaign, config, events):
+    """Collect routine completions until a health check or real intervention."""
+    if not config.get('batch_completions_until_health'):
+        return events
+    urgent = any(e['kind'] != 'batch_complete' or e['id'] in config.get('urgent_event_ids', [])
+                 for e in events)
+    if urgent or (campaign / 'HOLD').exists():
+        return events
+    return []
+
+
+def closed_receipt(campaign):
+    """Only a recorded final report and native science closure retire the watcher."""
+    path = campaign / 'CLOSEOUT.json'
+    if not path.exists():
+        return False
+    receipt = read(path)
+    if receipt.get('state') != 'closed' or not receipt.get('owned_scientific_services_stopped'):
+        return False
+    report = Path(receipt['final_report'])
+    if not report.is_file() or file_digest(report) != receipt['final_report_sha256']:
+        raise ValueError('closed campaign final report identity differs')
+    status_path = campaign / 'QUEUE-STATUS.json'
+    if status_path.exists() and alive(read(status_path)['pid']):
+        return False
+    return True
+
+
 def supervise(campaign, state, config_path, once=False):
     config = read(config_path)
     state.mkdir(parents=True, exist_ok=True)
@@ -51,6 +92,12 @@ def supervise(campaign, state, config_path, once=False):
             last.update(exit_code='interrupted_notifier', finished_at=now())
             write(path, delivery, immutable=False)
         while True:
+            if closed_receipt(campaign):
+                (state / 'ARMED').unlink(missing_ok=True)
+                write(state / 'STATUS.json', dict(pid=os.getpid(), parent_pid=os.getppid(),
+                    heartbeat=now(), state='closed; no further wakes', armed=False,
+                    active_review_pid=None), immutable=False)
+                return
             status_path = campaign / 'QUEUE-STATUS.json'
             if status_path.exists():
                 status = read(status_path)
@@ -62,6 +109,7 @@ def supervise(campaign, state, config_path, once=False):
             checkpoint_events(campaign, read(campaign / 'ACCEPTANCE.json'), config)
             all_events = pending(campaign, state)
             events, deferred = actionable(campaign, state, all_events)
+            events = delivery_events(campaign, config, events)
             snapshot = dict(pid=os.getpid(), parent_pid=os.getppid(), heartbeat=now(),
                             pending=len(all_events), actionable=len(events), deferred=len(deferred),
                             armed=(state / 'ARMED').exists(), active_review_pid=None)
@@ -69,7 +117,9 @@ def supervise(campaign, state, config_path, once=False):
             write(state / 'SERVICE_COST.json', dict(at=now(), cpu_seconds=time.process_time()-cpu_start), immutable=False)
             if (state / 'STOP').exists():
                 return
-            if events and (state / 'ARMED').exists():
+            retry_at = delivery.get('retry_not_before')
+            retry_ready = not retry_at or datetime.now(timezone.utc) >= datetime.fromisoformat(retry_at)
+            if events and retry_ready and (state / 'ARMED').exists():
                 argv = config['command']
                 if any(x in argv for x in ('resume', '--last', '--dangerously-bypass-approvals-and-sandbox', '--ignore-rules', '--ignore-user-config')):
                     raise ValueError('unsafe or competing review command')
@@ -83,23 +133,33 @@ def supervise(campaign, state, config_path, once=False):
                 delivery['attempts'].append(entry)
                 write(path, delivery, immutable=False)
                 (state / 'ARMED').unlink()
-                with (state / f'review-{number}.jsonl').open('wb') as out, (state / f'review-{number}.stderr.log').open('wb') as err:
-                    child = subprocess.Popen(argv, cwd=config['cwd'], stdin=subprocess.PIPE, stdout=out, stderr=err,
-                                             creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
-                    entry['pid'] = child.pid
-                    write(path, delivery, immutable=False)
-                    child.stdin.write(text.encode('utf-8'))
-                    child.stdin.close()
-                    while child.poll() is None:
-                        write(state / 'STATUS.json', dict(snapshot, heartbeat=now(), armed=False, active_review_pid=child.pid), immutable=False)
-                        time.sleep(10)
+                # A file-backed stdin cannot crash this owner if the CLI exits before reading.
+                input_path = state / f'review-{number}.input.txt'
+                input_path.write_text(text, encoding='utf-8')
+                exit_code = -1
+                with input_path.open('rb') as source, (state / f'review-{number}.jsonl').open('wb') as out, (state / f'review-{number}.stderr.log').open('wb') as err:
+                    try:
+                        child = subprocess.Popen(argv, cwd=config['cwd'], stdin=source, stdout=out, stderr=err,
+                            env=review_environment(config), creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+                    except OSError as exc:
+                        entry['launch_error'] = str(exc)
+                    else:
+                        entry['pid'] = child.pid
+                        write(path, delivery, immutable=False)
+                        while child.poll() is None:
+                            write(state / 'STATUS.json', dict(snapshot, heartbeat=now(), armed=False, active_review_pid=child.pid), immutable=False)
+                            time.sleep(10)
+                        exit_code = child.returncode
                 remaining = pending(campaign, state)
                 ready, waiting = actionable(campaign, state, remaining)
                 unresolved = {e['id'] for e in remaining}
                 active_unresolved = {e['id'] for e in ready}
-                entry.update(exit_code=child.returncode, finished_at=now(),
+                entry.update(exit_code=exit_code, finished_at=now(),
                              acknowledged=[e['id'] for e in events if e['id'] not in unresolved],
                              deferred=[e['id'] for e in events if e['id'] in {w['id'] for w in waiting}])
+                delivery.pop('retry_not_before', None)
+                if active_unresolved.intersection(entry['events']):
+                    delivery['retry_not_before'] = (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat()
                 write(path, delivery, immutable=False)
                 if once:
                     return
@@ -107,7 +167,8 @@ def supervise(campaign, state, config_path, once=False):
                     failures = sum(bool(set(a['events']) & active_unresolved) for a in delivery['attempts'])
                     if failures >= 3:
                         write(state / 'DELIVERY_FAILED.json', dict(at=now(), unacknowledged=sorted(active_unresolved), attempts=failures))
-                        return
+                        # Keep an inspectable owner alive, but do not spend on endless retries.
+                        continue
                 if config.get('auto_rearm_after_acknowledged_review') and not (state / 'STOP').exists():
                     (state / 'ARMED').touch()
             time.sleep(10)

@@ -128,12 +128,14 @@ selection and its multiplicity. Use 32 untouched worlds with both fits nested.
 If none qualifies, freeze one diagnostic that distinguishes information limits
 from reader failure. No later discovery replaces a frozen selection.
 
-Routine operational reviews occur every **six hours**, permanently replacing the
-former four-hour cadence for Ghost. Their times do not move after a result ACK.
+The October 11 owner amendment sets routine operational reviews every **twelve
+hours**, replacing six. The original scientific acceptance stays immutable. Their times do not move after a result ACK.
 Failure, disappearance, queue depletion, source amendments and named scientific
 boundaries can trigger earlier reviews. A local monitor is not proof of delivery:
 verify a real bounded review with an exact event hash acknowledgement, then arm
-the production watcher after the current operating turn. Preserve one review owner.
+the production watcher after the current operating turn. Preserve one review owner. Batch routine completions at those checkpoints;
+failures or an empty/held queue may require earlier action. After final reporting
+and verified scientific-service closure, the notifier exits without further wakes.
 
 Every named result batch requires independent regrouping, a complete replay for
 each new implementation family or semantic repair, readable cases, documentary

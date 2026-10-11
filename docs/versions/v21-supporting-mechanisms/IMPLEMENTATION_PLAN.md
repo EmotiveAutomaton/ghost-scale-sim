@@ -30,7 +30,7 @@ advance an independent ready card when a mechanism stops; there is no requiremen
 that all prior families win. Keep useful unimplemented or resource-deferred cards
 visible. Do not claim 24 hours of runway from unimplemented descriptions.
 
-Six-hour reviews check native identities, fresh heartbeats, shared host resources,
+Twelve-hour reviews check native identities, fresh heartbeats, shared host resources,
 cost accounting, completed result coverage, future queue runway and validity gates.
 They implement the next eligible conditional consumer when needed, within the
 program's one two-hour active repair allowance per family. Stop an affected lane

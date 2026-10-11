@@ -5,7 +5,8 @@ reconstruction error beyond a properly fitted direct reader? Which distinctions
 remain unavailable from the evidence itself? These are constructed-method tests.
 
 The owner approved implementation on October 10, Gear 2 for the opening study,
-the accompanying validity errata, and a permanent six-hour routine health cadence.
+and the accompanying validity errata. The October 11 instruction replaces routine
+six-hour checks with a permanent twelve-hour cadence; closed campaigns stop waking.
 This is Ghost V21 alongside Sounding Line Stage 13. V20 remains closed.
 
 - [Research program](GHOST_SCALE_RESEARCH_PROGRAM_2026-10-10.md) and
@@ -18,6 +19,7 @@ This is Ghost V21 alongside Sounding Line Stage 13. V20 remains closed.
 - [Opening result](OPENING_REPORT.md): retained-data test of duplicated evidence.
 - [Native support diagnostic](NATIVE_SUPPORT_REPORT.md): verified first C03 block and full scientific replay.
 - [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.
+- [October 11 notifier repair](NOTIFIER_REPAIR_20261011.md): restored delivery, twelve-hour checks and retirement after final reporting.
 - [Setup report](SETUP_REPORT.md): implemented scope, active queue, checks and timing.
 - [Current receipt](../../../results/v21/CURRENT_STATUS.json): a dated snapshot,
   not a substitute for native heartbeat and ownership.
