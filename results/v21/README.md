@@ -1,5 +1,8 @@
 # V21 public evidence
 
+[Finite omission](omission/VALIDITY.json): one verified scientific block, full replay, complete score reconstruction and blind missing-candidate fixtures.
+
+
 [Current status](CURRENT_STATUS.json) is a dated snapshot. Native process ownership,
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.

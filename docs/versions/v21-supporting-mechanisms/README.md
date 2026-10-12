@@ -20,6 +20,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Weekly implementation and continuation](IMPLEMENTATION_PLAN.md): the finite
   branch forest, implementation status and review obligations.
 - [Card registry](CARDS.json): every commissioned card, including B07.
+- [Finite candidate omission](OMISSION_REPORT.md): complete replay and all scores verified; exact/coarse scores differ; D05 retraction admitted.
 - [Consequential selection](SELECTION_REPORT.md): full replay, content interventions and native-history support verified; C05 omission admitted.
 - [Executable and historical routes](ROUTES_REPORT.md): full replay, all scores and native support verified; E01 selection admitted.
 - [Knowledge, skill and permission](FACTORS_REPORT.md): full replay and counterfactuals verified; exact direct lookup matches joint inference; E04 routes admitted.

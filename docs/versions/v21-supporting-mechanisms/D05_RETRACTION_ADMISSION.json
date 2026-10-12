@@ -1,0 +1,22 @@
+{
+  "card": "G21-D05",
+  "status": "registered initial supplied-law update ruler; scientific acceptance requires complete frozen replay",
+  "question": "Can a source-keyed incremental ledger retract or replace evidence with the same posterior as independent raw recomputation?",
+  "world": "A static binary latent state with a positive supplied prior drawn per world. Source reports are independent symmetric noisy observations with reliability 0.6, 0.8 or 1. History lengths 4, 16 and 64 share exactly nested draws.",
+  "updates": ["true correction", "false correction", "retraction", "irrelevant addition", "unchanged repeat"],
+  "interventions": "True correction and retraction begin with source zero deliberately wrong; false correction begins with source zero true. Other updates use the unchanged generated history. Update labels and true state stay evaluator-only; reader payloads contain source-linked reports and the actual replacement/deletion operation.",
+  "readers": ["frozen conclusion", "append-only factor summary", "independent raw recomputation", "incremental source-keyed ledger"],
+  "implementations": "Raw recomputation multiplies source probabilities independently for both states. Incremental ledger stores positive log sums, exact zero counts and removable source factors; each update touches at most two factors, with identical repeats idempotent. It never calls the raw decoder. Append-only adds reports without deleting old factors and ignores retraction; it is an explicitly limited comparator.",
+  "conflicts": "Certain false reports can make all state masses zero. Record undefined-evidence conflict and use the supplied prior as an explicit common fallback. Removing an offending zero factor must restore valid support. A fallback score is not a posterior under impossible evidence.",
+  "population": {"worlds": 8, "cases_per_world": 256, "fits": [], "split": "development"},
+  "metrics": ["uncapped log loss", "full Brier", "accuracy", "confident errors", "conflict fraction", "initial CPU", "update CPU", "serialized payload bytes", "factors visited"],
+  "controls": ["independent raw posterior equivalence within 1e-12", "exact conflict and retraction recovery", "irrelevant evidence placebo", "unchanged-repeat idempotence", "long mixed update sequence", "ledger cannot invoke raw decoder"],
+  "cost_scope": "Record setup and one-update process CPU separately; shared-host timing is descriptive. Payloads include prior and actual retained records/aggregate state, excluding common executable codec. No latency/storage advantage is presumed.",
+  "criterion": "Initial method ruler only. Numerical equivalence is necessary, not evidence of latency or storage benefit. Do not continue a superiority claim without measured benefit and correction specificity. No original-world headroom or learned-superiority gate inherited.",
+  "fixtures": "12 canonical retraction cases, with truth/prior/posteriors evaluator-only; exercise Sounding Line validator and offline exporter read-only, no live model inference.",
+  "per_packet_cpu_cap_seconds": 900,
+  "full_replay": "Complete original finite design from identical frozen source under a new identity.",
+  "repair_allowance_active_hours": 2,
+  "repairs_used": 0,
+  "remaining_scope": ["Learned or uncertain reliability", "Original-world historical targets", "Multiple-update amortization", "Isolated wall-clock latency", "Dynamic latent state"]
+}

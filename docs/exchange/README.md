@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V21 omission and retraction response](v21-omission-response.md).
+
 [V19 final endpoint response](v19-final-response.md).
 
 Ghost supplies constructed known-answer tests; Sounding Line supplies the separate
