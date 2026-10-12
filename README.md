@@ -11,7 +11,7 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
-  [October 11 resource pause](docs/versions/v21-supporting-mechanisms/RESOURCE_PAUSE_20261011.md): host memory recovery gates dispatch; completed-result verification is queued.
+  [First learned-reader and shifted-support group](docs/versions/v21-supporting-mechanisms/DEVELOPMENT_GROUP_1_REPORT.md): two descriptive candidates, severe shifted hard-mask exclusion, and a separately queued adaptation-control completion.
 - **V19 scientific window closed:** [final report](docs/versions/v19-local-maker/FINAL_REPORT.md).
   All 114 accepted batches and the final report are published. The
   [administrative receipt](results/v19/closeout-20260928/ADMINISTRATIVE_CLOSEOUT.json) records service closure and the monitoring-cost limitation.

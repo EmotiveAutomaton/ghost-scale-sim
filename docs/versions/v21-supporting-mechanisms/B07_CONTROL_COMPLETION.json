@@ -1,0 +1,36 @@
+{
+  "schema": "v21.instrumentation-completion.1",
+  "family": "G21-B07",
+  "registered_before_new_control_outcomes": true,
+  "reason": "Opening adaptation packets omitted native modular forecasts and duplicate-removal adaptation controls.",
+  "original_identities_preserved": true,
+  "active_repair_allowance_hours": 2,
+  "settings": {
+    "training_laws": [8, 64],
+    "native_labels": [512, 2048, 8192],
+    "shifted_labels": [0, 16, 64, 256],
+    "fits": [0, 1],
+    "development_worlds": 8,
+    "cases_per_world": 256
+  },
+  "new_outputs": [
+    "Native forecasts from the same modular, direct and fresh-law fits at each adaptation budget.",
+    "Native and shifted naive-Bayes forecasts with and without the evidence feature in each episode."
+  ],
+  "count_adaptation": "Append exactly the same k shifted labels to native count data, retain the one-half pseudocount, and do not use shifted validation labels.",
+  "count_arm_role": "Additional dependence diagnostic; does not replace the registered primary direct rival or modify the target.",
+  "validity": [
+    "Every original shifted forecast must reproduce within 1e-10 maximum absolute probability error.",
+    "Independent probability-domain reconstruction checks every added count forecast.",
+    "All retained proper scores are independently checked.",
+    "One complete scientific supplement replays from its frozen source before acceptance."
+  ],
+  "cost_limits": {
+    "each_supplement_cpu_seconds": 300,
+    "six_supplements_and_one_replay_cpu_seconds": 2100,
+    "engineering_pilot": "One engineering world, one fit, eight cases: complete consumer twice, 33 identical retained files and 448 checked forecasts."
+  },
+  "unchanged": ["Original scientific scores", "0.1-nat target", "confirmation populations", "campaign clocks", "72-hour total and 18-hour protection"],
+  "privileges": ["Supplied two-kernel execution library", "Supplied exact target support"],
+  "interpretation": "A missing-control repair, not a fresh confirmation or repeated valid discovery."
+}

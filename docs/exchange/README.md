@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V21
 
+- [First learned-reader and shifted-support response](v21-development-group-1-response.md)
+
 - [Native support diagnostic](v21-native-support-response.md)
 - [Opening duplicate audit](v21-opening-response.md)
 

@@ -1,5 +1,7 @@
 # Verification of the first completed groups
 
+**Current disposition, October 12:** [the group report](DEVELOPMENT_GROUP_1_REPORT.md) supersedes the pending status below for B01, C03 and the opening F03 subset. Five family replays and 173 numerical receipts now verify; B07 retains an exact pending event until its missing-control supplement lands. Routine health cadence is twelve hours. The original scheduling record below is retained as history.
+
 The first learned-reader, sparse-adaptation and offline-export groups have executed,
 but their scientific acceptance remains pending. Twenty completed blocks, including
 their dependencies, have matching plan, completion, source, environment and retained

@@ -45,6 +45,8 @@ Wall-time and CPU forecasts are updated from complete-block receipts. Three
 workers accelerate ready work; the CPU ceiling does not promise continuous
 three-worker occupancy through Friday.
 
+The [first completed-group review](DEVELOPMENT_GROUP_1_REPORT.md) lands the opening learned-reader, support and offline-export evidence. Two descriptive cells warrant B02/B03 dependence and persistence discrimination, not automatic promotion. B07 receives one bounded missing-control completion under a new frozen capsule, with original shifted prediction reproduction and a complete scientific replay before acceptance. Its seven admitted jobs reserve at most 2,100 CPU seconds and precede the remaining opening queue; the replay holds dispatch for a named review. B02/B03 and C02/C04 remain the next independent implementation priorities.
+
 Remaining validity work is explicit: the initial F03 packet covers all four
 evidence tiers; copying, false-context, omission and retraction fixtures must land
 with their corresponding implemented families. B07 modular adaptation is also implemented and gated by the exact sparse-shift

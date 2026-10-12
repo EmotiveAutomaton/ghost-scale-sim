@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 learned-reader and shifted-support group
+
+Does sharing a learned maker state improve reconstruction beyond the strongest matched reader? Two of 30 development comparisons clear the descriptive 0.02-nat margin, while the two primary native settings lose at 8,192 labels and 64 training laws. Learned hard support excludes truth in 79.5% to 95.3% of changed-execution forecasts and gives infinite uncapped log loss. These are constructed-method findings, miniature - architecture untested, not confirmation or a general mechanism claim. [Report](docs/versions/v21-supporting-mechanisms/DEVELOPMENT_GROUP_1_REPORT.md).
+
 ## V21 native support diagnostic
 
 Does a hard rule excluding supposedly impossible histories improve reconstruction? In this native constructed-method diagnostic, supplied exact support lowers natural-log loss from 3.8643 to 3.4505 nats, but learned support excludes truth in 1.59% of forecasts and makes uncapped log loss infinite. The eight-world paired reduction is 0.4138 nats (descriptive 95% interval 0.3844 to 0.4459); the full Brier improvement remains uncertain. This is development evidence, miniature - architecture untested, with no shifted-law or structured-reader superiority claim. [Report](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md).
