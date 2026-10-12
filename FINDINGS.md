@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 target-focused acquisition
+
+Does buying information about the historical target beat buying unpredictable reports? With supplied laws, target-focused purchasing lowers fee-adjusted log loss by 0.1806–0.3327 nats against the strongest tested alternative across all 16 condition/fee cells. The entropy policy always buys the contrasting episode, so the irrelevant random-action trap is not the observed cause. This is a verified constructed-method result, miniature — architecture untested, with no learned acquisition or confirmation. [Report](docs/versions/v21-supporting-mechanisms/ACQUISITION_REPORT.md).
+
 ## V21 joint heads and marginal controls
 
 Does preserving target dependence explain the compact joint reader’s gain? The rank-four head lowers native log loss by 0.1011 nats against the same-budget direct joint head, but the direct head’s own marginal-product control has lower mean loss than rank four in both execution conditions. A dependence-specific advantage is not established. These are verified constructed-method development results, with no promotion or confirmation. A shifted complete-current 512-label shared-maker cell adds one descriptive candidate; higher labels do not retain the practical margin. [Report](docs/versions/v21-supporting-mechanisms/JOINT_REPORT.md).

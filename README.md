@@ -11,6 +11,7 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
+  [Target-focused acquisition](docs/versions/v21-supporting-mechanisms/ACQUISITION_REPORT.md): supplied-law purchasing beats tested alternatives under declared fees; unknown-source grouping admitted.
   [Joint-head and marginal-control result](docs/versions/v21-supporting-mechanisms/JOINT_REPORT.md): native gains do not establish dependence-specific benefit; D01 acquisition admitted.
   [Persistence diagnostic](docs/versions/v21-supporting-mechanisms/PERSISTENCE_REPORT.md): useful personal history can become harmful under unrelated authorship; C02 architectures admitted.
   [Copied-evidence diagnostic](docs/versions/v21-supporting-mechanisms/DEPENDENCE_REPORT.md): generic tempering beats the latent reader in the tested native cell; B03 persistence admitted.

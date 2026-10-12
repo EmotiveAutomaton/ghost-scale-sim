@@ -1,0 +1,22 @@
+{
+  "schema": "v21.d03-admission.1",
+  "family": "G21-D03",
+  "registered_before_scientific_outcomes": true,
+  "question": "Does integrating uncertain copying groups retain useful evidence without requiring perfectly supplied source labels?",
+  "scope": "Initial supplied-law information ruler under original native laws. Eight development worlds and 64 current cases per world, context-current evidence, no trainable fits or confirmation. This finite subset does not exhaust learned provenance or wider regimes.",
+  "grid": {"report_counts": [1,2,4,8], "root_counts": [1,2,4], "valid_geometry": "roots <= reports; all roots used", "graphs": ["uniform random onto assignment", "balanced assignment shuffled across report positions"], "source_id_interventions": ["independent erasure", "independent replacement by a uniform label, including the original"], "intervention_rates": [0,0.1,0.3]},
+  "report_model": "Each root draws one binary route-preference cue with reliability .8 conditional on the current maker. All reports from that root copy its cue exactly. The root count and cue/noise reliabilities are supplied equally where used. Maker identity and true root assignments remain evaluator-only, except the explicitly supplied-provenance arm.",
+  "readers": {
+    "supplied-roots": "Use one likelihood per true independent root; a privileged provenance diagnostic.",
+    "inferred-groups": "Marginalize all onto labelled copying assignments with a uniform prior, using observed reports and the supplied source-ID error channel. Balanced graphs are a prespecified prior-mismatch challenge.",
+    "naive-independent": "Multiply every report likelihood as if independent; ignore source labels.",
+    "conservative-envelope": "Enumerate feasible numbers of zero/one roots given reports and the supplied root count; project the current goal probability onto that posterior interval, then mix the goal-conditioned target distributions. This conservative decision rule is not a graph posterior or a general minimax solution."
+  },
+  "matching": "All readers, rates and label interventions share current cases, root outcomes and copying graphs within a geometry. Compare random and balanced graph populations within worlds, not by treating reports or cells as independent worlds. Replace source labels by a bijection to verify numerical permutation invariance.",
+  "checks": ["Known copying null: repeated copies preserve the one-root posterior", "Independent-root positive control", "Contradictory independent cues return equal goal likelihood", "Hidden/corrupted source reference", "Independent used-root-set dynamic program against inclusion-exclusion", "Conservative envelope consistency", "Complete serialization and two consumer replays", "Full-grid one-world cost pilot", "Full frozen scientific family replay before acceptance"],
+  "scoring": "Uncapped joint log loss, full multiclass Brier, modal/bit accuracy, confident errors and all retained score diagnostics. Whole-world paired intervals. Keep root-count, reliability and generator-law privileges distinct from learned provenance. No changed-execution result is claimed by this native subset.",
+  "duplicates": "At one root label replacement cannot change labels. At zero intervention hidden and corrupt conditions coincide. Balanced and random graphs may coincide at degenerate geometries; such rows are controls, not additional independent evidence.",
+  "limits": {"per_packet_cpu_seconds":1200,"original_plus_full_replay_cpu_seconds":2400,"cost_pilot_cpu_seconds":300,"family_repair_active_hours":2},
+  "repair": "One pre-admission repair converts a NumPy boolean control to a JSON-safe Python boolean. Failed source and consumer output are retained; probabilities and thresholds were unchanged. No further family repair is available.",
+  "stopping": "Complete the finite original-law group and one full replay once; evaluate whether inferred-group gain survives label permutation and balanced graphs. Preserve reversals and dependencies on supplied root count/noise. Wider laws and learned source models remain conditional. D04/B04/B05 and eligible new-world branches remain independent successors. No additional F03 category is claimed."
+}

@@ -4,6 +4,7 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [Acquisition validity](acquisition/VALIDITY.json): four supplied-law conditions, all policy/fee choices and full 177-file replay.
 - [Copied-evidence validity](dependence/VALIDITY.json): one accepted native B02 block, full 603-file replay and 12 copying fixtures.
 - [Fallible-record validity](reliability/VALIDITY.json): two accepted C04 conditions, full 330-file replay and 12 false-context fixtures.
 - [First completed-group validity](development-group-1/VALIDITY.json): 173 numerically checked packets; 47 newly accepted scientific blocks, two support gate dispositions, and explicit B07 pending controls.
