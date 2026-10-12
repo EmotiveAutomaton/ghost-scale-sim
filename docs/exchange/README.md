@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V21 opportunity and candidate-control response](v21-opportunities-response.md).
+
 [V21 retraction and opportunity response](v21-retraction-response.md).
 
 [V21 omission and retraction response](v21-omission-response.md).

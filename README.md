@@ -11,6 +11,7 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
+  [Contrasting opportunities](docs/versions/v21-supporting-mechanisms/OPPORTUNITIES_REPORT.md): better joint reconstruction does not establish better fresh-context selection; direct parity and modal ties retained; candidate dependence controls admitted.
   [Context retraction](docs/versions/v21-supporting-mechanisms/RETRACTION_REPORT.md): incremental revision matches raw inference without a CPU/storage advantage; D06 contrasting opportunities admitted.
   [Finite candidate omission](docs/versions/v21-supporting-mechanisms/OMISSION_REPORT.md): evidence ranking improves exact coverage and full-catalog loss while the coarse score reverses; retraction branch admitted.
   [Consequential selection](docs/versions/v21-supporting-mechanisms/SELECTION_REPORT.md): content influence differs from character counts; exact choice aliases and native-history support verified; omission branch admitted.

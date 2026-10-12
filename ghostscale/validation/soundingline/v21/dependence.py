@@ -92,6 +92,17 @@ class EpisodeGroups:
         return O.normalize_log(np.where(support,lp,-np.inf))
 
 
+class ExactTable:
+    """Chronological exact-match rival with the original empirical-prior fallback."""
+    def __init__(self,x,y):
+        self.prior=np.bincount(y,minlength=128)+.5;self.prior/=self.prior.sum();self.table={}
+        for row,target in zip(x,y):self.table.setdefault(row.tobytes(),np.zeros(128))[target]+=1
+
+    def predict(self,x,support):
+        mass=np.array([self.table.get(row.tobytes(),np.zeros(128))+.5*self.prior for row in x])*support
+        with np.errstate(divide='ignore'):return np.log(mass/mass.sum(1,keepdims=True))
+
+
 def choose_power(model,vx,vy):
     losses=[]
     for power in POWERS:
@@ -124,6 +135,7 @@ def run(root,d,pulse):
         latent=SharedMaker(x,y,fit_seed=fit,states=d.get('states',32),iterations=d.get('iterations',40),pulse=pulse)
         assert latent.metadata['effective_states']>=2
         groups=EpisodeGroups(x,y);pooled=GroupedTable(x,y);nb=counts(x,y)
+        exact=ExactTable(x,y) if d.get('include_exact_table') else None
         selected,curve=choose_power(groups,vx,vy)
         direct=Direct.__new__(Direct)
         with np.load(src/'training'/f'{fit}-direct-model_points.npz') as z:direct.params=[z[f'parameter_{i}'] for i in range(4)]
@@ -144,6 +156,7 @@ def run(root,d,pulse):
                     'converged-direct':direct.predict(xx,support),
                     'naive-bayes':forecast(nb,xx,support=support),
                     'naive-bayes-without-evidence':forecast(nb,xx,(1,),support=support)}
+                if exact is not None:arms['direct-table']=exact.predict(xx,support)
                 for power in POWERS:arms[f'episode-power-{power}']=groups.predict(xx,support,power)
                 arms['episode-calibrated']=arms[f'episode-power-{selected}']
                 for name,lp in arms.items():
@@ -165,4 +178,4 @@ def run(root,d,pulse):
             'Independent-data exact-law headroom does not admit superiority in new copied cells.',
             'Native-trained direct parameters are frozen; new copying-specific fit convergence is untested.',
             'Common exact current support is supplied; no inferred provenance or human mechanism claim.',
-            'Initial original-law native cell; shifted, wide-law and calibration-transfer extensions remain conditional.'])
+            ('Candidate-specific native/changed paired cells; copying-specific convergence and calibration transfer remain conditional.' if d.get('include_exact_table') else 'Initial original-law native cell; shifted, wide-law and calibration-transfer extensions remain conditional.')])

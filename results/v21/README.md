@@ -1,5 +1,7 @@
 # V21 public evidence
 
+[Contrasting opportunities](opportunities/VALIDITY.json): full replay, independent selection and all scores verified; modal ties qualified.
+
 [Context retraction](retraction/VALIDITY.json): full replay, all scores and incremental/raw equivalence verified; CPU/storage advantage unmet.
 
 [Finite omission](omission/VALIDITY.json): one verified scientific block, full replay, complete score reconstruction and blind missing-candidate fixtures.

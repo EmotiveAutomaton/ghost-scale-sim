@@ -669,3 +669,5 @@ The exact forecast-collision comparison is source admitted after 48 isolated con
 The [V21 omission ruler](docs/versions/v21-supporting-mechanisms/OMISSION_REPORT.md) separates exact-type recovery from success on a coarser candidate-or-unknown event; changing the target can reverse the score comparison.
 
 The [V21 retraction ruler](docs/versions/v21-supporting-mechanisms/RETRACTION_REPORT.md) verifies that changing only source-linked factors reproduces a full calculation, while showing why fewer factor visits need not mean lower CPU or storage costs.
+
+The [V21 opportunity ruler](docs/versions/v21-supporting-mechanisms/OPPORTUNITIES_REPORT.md) distinguishes learning a joint maker state from predicting output in new contexts. Exact direct inference matches the personal posterior, and floating modal ties require qualification.

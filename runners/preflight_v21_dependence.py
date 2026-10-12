@@ -10,11 +10,12 @@ from ghostscale.validation.soundingline.v21.dependence import run
 from runners.review_v21 import verify
 
 
-def preflight(base,soundingline):
+def preflight(base,soundingline,include_exact_table=False):
     source=base/'engineering-source';source.mkdir(parents=True)
     d=dict(handler='dependence',tier='context',history=4,history_tier='complete',history_observed=True,law_count='exact',
         training_lineages=[71000710,71000711],training_cases=128,validation_lineages=[71000712],validation_cases=64,
         lineages=[71000713],test_cases=8,fit_seeds=[0,1],states=4,iterations=3,soundingline=str(soundingline),export_fixtures=True)
+    if include_exact_table:d['include_exact_table']=True
     (source/'training').mkdir();(source/'reader').mkdir();(source/'evaluator').mkdir()
     for fit in (0,1):
         x,y=data(d,'training',fit);vx,vy=data(d,'validation',fit)

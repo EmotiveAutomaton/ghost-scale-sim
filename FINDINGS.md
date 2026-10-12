@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 contrasting opportunities
+
+Do contrasting opportunities help identify a fixed maker? With four contexts, target-information selection lowers joint preference-and-skill loss by 0.066 nats versus random selection, but does not establish better prediction in fresh contexts. Equally informed direct inference matches personal inference. These are constructed-method results with supplied laws, tie-sensitive modal accuracy and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/OPPORTUNITIES_REPORT.md).
+
 ## V21 context retraction
 
 Can an incremental evidence ledger revise conclusions as accurately as recomputing from raw reports? It matches the full calculation, but shows no CPU or storage advantage in this test. True corrections help; false corrections hurt equally. This is a verified constructed-method result, with supplied reliability and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/RETRACTION_REPORT.md).
