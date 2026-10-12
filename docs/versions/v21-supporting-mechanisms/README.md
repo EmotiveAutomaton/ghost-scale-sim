@@ -33,6 +33,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Opening result](OPENING_REPORT.md): retained-data test of duplicated evidence.
 - [Native support diagnostic](NATIVE_SUPPORT_REPORT.md): verified first C03 block and full scientific replay.
 - [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.
+- [October 12 supervisor recovery](SUPERVISOR_RECOVERY_20261012.md): temporary-file race repaired; two live workers adopted without restart.
 - [October 12 native health](HEALTH_REPORT_20261012.md): actual twelve-hour inspection, unchanged owners, measured runway and fixed next checkpoint.
 - [October 11 queue health](HEALTH_REPORT_20261011.md): recovered execution, complete numerical checks, timing and twelve-hour monitoring.
 - [October 11 notifier repair](NOTIFIER_REPAIR_20261011.md): restored delivery, twelve-hour checks and retirement after final reporting.
