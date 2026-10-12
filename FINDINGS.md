@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 predictive memory
+
+Does preserving future predictions also preserve witnessed history? The 40-byte predictive head preserves the full-history forecast but retains no order or inspection witnesses. At 1,024 bytes, the hybrid preserves prediction and 23.12% of queried witnesses, versus 25.00% for the ledger alone. This is a constructed-method result; no general hybrid advantage, learned compression or confirmation is established. [Report](docs/versions/v21-supporting-mechanisms/MEMORY_REPORT.md).
+
 ## V21 chronological roles and matched support
 
 We asked whether separating preference, skill and opportunity changes improves reconstruction. The one-role model has lower mean loss than unrestricted transitions in all 24 observed-change cells, but does not uniformly beat a static model. In the 96-episode, position-24 example it identifies skill changes correctly 67.2% of the time. This is a supplied-law constructed-method result, miniature — architecture untested; it establishes neither stable human values nor confirmation. Learned shifted support still excludes 3.34% of truths and has infinite loss. [Report](docs/versions/v21-supporting-mechanisms/DRIFT_REPORT.md).

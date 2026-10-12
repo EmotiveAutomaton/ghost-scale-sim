@@ -13,6 +13,8 @@ For active V21, the [first learned-reader and shifted-support report](docs/versi
 
 The [V21 copied-evidence diagnostic](docs/versions/v21-supporting-mechanisms/DEPENDENCE_REPORT.md) finds that generic tempering beats the latent reader in the tested native context cell. Supplied copy roots help, but neither that cell nor offline fixture compatibility establishes maker-specific inference.
 
+The [V21 memory ruler](docs/versions/v21-supporting-mechanisms/MEMORY_REPORT.md) separates preserved endpoint forecasts from lost witnessed history under actual byte ceilings; compact ledgers and hybrid predictors have distinct costs.
+
 ## Read the title colour first
 
 **The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as

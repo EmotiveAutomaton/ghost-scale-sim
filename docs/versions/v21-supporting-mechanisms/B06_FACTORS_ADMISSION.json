@@ -1,0 +1,23 @@
+{
+  "schema": "v21.b06-admission.1",
+  "family": "G21-B06",
+  "registered_before_scientific_outcomes": true,
+  "question": "Which observed factor separates a desired action from unavailable knowledge, imperfect skill or external permission, when the goal is held fixed across counterfactual twins?",
+  "scope": "Initial exact supplied-law information and restricted-representation ruler. Matched learned direct fitting and unknown laws remain conditional. No architecture superiority or original-world headroom is claimed.",
+  "world": "Four independent fair binary states: goal, knowledge of the option, execution skill, permission. Intended action is goal AND knowledge AND permission. Execution matches intention with world-specific probability drawn uniformly from .55..65 for low skill or .85..95 for high skill; otherwise it flips. The final binary outcome is observed.",
+  "population": {"worlds": "71010000..71010007", "random_namespace": "v21-b06-twins", "all_states": 16, "paired_execution_draws_per_state": 64, "fit_seeds": [], "confirmation": false},
+  "counterfactuals": "Each world uses the same 64 uniform execution draws for all 16 states. Flip knowledge, skill or permission while keeping goal and other factors fixed. Shuffle case ordering with an evaluator-only permutation before reader export, so row order does not identify the latent state. Twins and repeated reveal conditions remain paired within worlds.",
+  "observations": ["endpoint only", "endpoint and exact knowledge", "endpoint and exact skill", "endpoint and exact permission", "endpoint and all three factors"],
+  "readers": {
+    "goal-only": "Retain the goal marginal of the full endpoint/cue posterior and all exact revealed factor values; remaining unavailable factors use independent fair priors.",
+    "skill-only": "Retain the skill marginal of the same posterior and exact revealed values; remaining unavailable factors use independent fair priors.",
+    "joint": "Exact 16-state posterior under supplied law and identical observed evidence.",
+    "direct-table": "Precompute every evidence-to-target table entry from the same supplied joint distribution before test cases. Same information as joint inference, no fitted labels or learned capacity claim."
+  },
+  "scores": ["uncapped four-factor joint log loss", "full multiclass Brier", "modal and confidence errors", "each factor accuracy and log loss", "expected fresh endpoint log loss under the true channel", "paired twin outcome changes"],
+  "controls": ["uninformative execution returns uniform endpoint-only posterior", "knowledge/permission swaps have identical endpoint likelihood", "a knowledge witness breaks that exact alias", "full factor reveals preserve only two possible goals", "all possible observations match independent scalar generative enumeration", "complete engineering consumers", "bounded full-grid cost pilot", "full scientific family replay before acceptance"],
+  "analysis": "Average cases/twins within each coefficient world, then pair reader/reveal contrasts across eight worlds with 4096 resamples. Exact reveals are privileged observations. Knowledge and permission are deliberately symmetric without separating cues, so expansion stops at that exact alias. Every reader is native-only; no original-world execution-shift result or copied-evidence product is present.",
+  "limits": {"per_packet_cpu_seconds": 450, "original_plus_replay_cpu_seconds": 900, "pilot_cpu_seconds": 120, "family_repair_active_hours": 2},
+  "continuation": "Assess which factor cue changes identifiability and whether exact direct lookup matches structured inference. Keep learned goal/skill/joint/direct fitting and broader new-world tests visible; prioritize E04 and missing omission, decisive-selection and retraction fixtures after this initial ruler.",
+  "limitations": "Constructed binary variables are not measurements of human traits. Supplied law, exact observation, restricted output representation, historical aliasing and learned capacity remain separate. Miniature — architecture untested. No F03 category, promotion or confirmation is admitted here."
+}
