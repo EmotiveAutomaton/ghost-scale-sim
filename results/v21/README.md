@@ -4,6 +4,7 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [Source-group validity](provenance/VALIDITY.json): 221,184 original forecasts, 5,185-file full replay and independent source-assignment reconstruction.
 - [Acquisition validity](acquisition/VALIDITY.json): four supplied-law conditions, all policy/fee choices and full 177-file replay.
 - [Copied-evidence validity](dependence/VALIDITY.json): one accepted native B02 block, full 603-file replay and 12 copying fixtures.
 - [Fallible-record validity](reliability/VALIDITY.json): two accepted C04 conditions, full 330-file replay and 12 false-context fixtures.

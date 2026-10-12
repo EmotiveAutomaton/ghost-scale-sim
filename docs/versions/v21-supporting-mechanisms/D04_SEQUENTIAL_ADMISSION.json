@@ -1,0 +1,52 @@
+{
+  "schema": "v21.d04-admission.1",
+  "family": "G21-D04",
+  "registered_before_scientific_outcomes": true,
+  "question": "Does two-step acquisition recover complementary order evidence more efficiently than one-step information, a useful fixed schedule and threshold stopping?",
+  "scope": "Initial supplied-law order-recovery ruler, original coefficient laws, native and changed execution, eight reused development worlds and 64 current cases per world. No learned acquisition, maker-learning objective, task-performance objective or confirmation.",
+  "grid": {
+    "purchase_budgets": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "per_purchase_fees": [
+      0,
+      0.01,
+      0.05,
+      0.2
+    ],
+    "entropy_threshold_nats": 0.1
+  },
+  "observations": "Context-current evidence conditions the full historical target. A fair independent pad and its XOR with operation order are two truthful complementary records; each alone is independent of the target, together they reveal order. Six other records are conditionally independent binary order readings with supplied reliability .8. All policies and budgets share current cases and potential reports.",
+  "policies": {
+    "greedy-information": "Purchase the largest one-step expected order-entropy reduction only when it exceeds the fee; stop otherwise.",
+    "two-step-lookahead": "Minimize fee plus expected residual order entropy over at most two steps, allowing stopping, and repeat from the observed history within the total budget.",
+    "fixed-pair-first": "Buy the complementary pair first, then noisy readings, always spending the full allowed budget. This strong fixed rival knows the useful pair.",
+    "uncertainty-threshold": "Use greedy net information but stop once order entropy is at most .1 nats."
+  },
+  "ties": "Choose the first action within 1e-14 of the minimum expected loss; require improvement over stopping greater than 1e-12. Declared before numerical preflight and scientific outcomes.",
+  "scoring": "Retain uncapped full-target log loss, full multiclass Brier and all standard score diagnostics, purchase count, log loss plus stipulated nat-equivalent fees, and missed order-identification opportunity. Bootstrap eight paired whole-world means, never policies, cases or fitted seeds. No fits are used. Report every policy's native-to-shift contrast.",
+  "missed_identification": "Positive remaining order entropy despite a budget of at least two, when purchasing the available complementary pair could have resolved order. This is not full-history identification and not necessarily fee-optimal purchasing.",
+  "costs": "Retain setup, complete consumer CPU and newly computed posterior counts. Shared memoization, loop order, independent checks and export prevent interpreting these as isolated per-policy latency. Fees do not establish a real CPU price; any claim of a practical lookahead advantage requires separate fair cost measurement.",
+  "checks": [
+    "Uninformative single shares",
+    "Exactly identifying pair",
+    "Greedy noisy-record choice",
+    "Lookahead complementary choice",
+    "Expensive-fee stopping",
+    "Independent scalar state enumeration and two-step decision reconstruction",
+    "Two complete engineering consumers",
+    "Full-grid 64-case one-world cost pilot",
+    "Full frozen-source scientific replay before acceptance"
+  ],
+  "limits": {
+    "per_packet_cpu_seconds": 1800,
+    "native_shift_and_native_replay_cpu_seconds": 5400,
+    "pilot_cpu_seconds": 300,
+    "family_repair_active_hours": 2
+  },
+  "stopping": "Run native, changed and one complete native reference once. Separate comparison with greedy from comparison with the strong fixed schedule, and all CPU-cost limitations. Preserve learned acquisition and independent B04/B05/new-world successors. No additional F03 category is claimed. Miniature — architecture untested.",
+  "repair": "One pre-admission bounded repair handles zero-prior order states without 0/0. The failed consumer/source are retained and charged; deterministic-order controls added, scores and thresholds unchanged. No further family repair."
+}

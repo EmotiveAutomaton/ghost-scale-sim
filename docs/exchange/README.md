@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V21
 
+- [Uncertain-source and sequential-acquisition response](v21-provenance-response.md)
+
 - [Acquisition and unknown-source response](v21-acquisition-response.md)
 
 - [Joint-head and acquisition response](v21-joint-response.md)
