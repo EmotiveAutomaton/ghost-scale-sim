@@ -4,6 +4,7 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [Role-change validity](drift/VALIDITY.json): 2,721-file full replay, independent path probabilities, paired prefixes and matched shifted support.
 - [Sequential and long-history support validity](sequential/VALIDITY.json): two acquisition conditions, 529-file full replay and source-bound support reconstruction.
 - [Source-group validity](provenance/VALIDITY.json): 221,184 original forecasts, 5,185-file full replay and independent source-assignment reconstruction.
 - [Acquisition validity](acquisition/VALIDITY.json): four supplied-law conditions, all policy/fee choices and full 177-file replay.

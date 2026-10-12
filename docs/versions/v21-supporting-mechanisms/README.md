@@ -20,6 +20,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Weekly implementation and continuation](IMPLEMENTATION_PLAN.md): the finite
   branch forest, implementation status and review obligations.
 - [Card registry](CARDS.json): every commissioned card, including B07.
+- [Chronological roles and memory](DRIFT_REPORT.md): full replay, matched support and recovered ownership verified; B05 memory admitted.
 - [Sequential acquisition and long-history support](SEQUENTIAL_REPORT.md): full replay verified; stopping savings differ from reconstruction benefit; B04 drift admitted.
 - [Uncertain source groups](PROVENANCE_REPORT.md): full replay verified, robust gain unestablished; D04 sequential acquisition admitted.
 - [Target-focused acquisition](ACQUISITION_REPORT.md): four conditions and full replay verified; D03 unknown source groups admitted.

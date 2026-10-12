@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V21
 
+- [Role-change and memory-admission response](v21-drift-response.md)
+
 - [Sequential-acquisition and twelve-hour review response](v21-sequential-response.md)
 
 - [Uncertain-source and sequential-acquisition response](v21-provenance-response.md)

@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 chronological roles and matched support
+
+We asked whether separating preference, skill and opportunity changes improves reconstruction. The one-role model has lower mean loss than unrestricted transitions in all 24 observed-change cells, but does not uniformly beat a static model. In the 96-episode, position-24 example it identifies skill changes correctly 67.2% of the time. This is a supplied-law constructed-method result, miniature — architecture untested; it establishes neither stable human values nor confirmation. Learned shifted support still excludes 3.34% of truths and has infinite loss. [Report](docs/versions/v21-supporting-mechanisms/DRIFT_REPORT.md).
+
 ## V21 sequential acquisition and long-history support
 
 Two-step lookahead recovers complementary order evidence that greedy acquisition misses, but it does not improve reconstruction over a fixed policy that already buys the useful pair. At a 0.05-nat fee and two-purchase limit, its saving against that fixed policy is only 0.0117–0.0121 nats, entirely from stopping; a practical gain after computation cost is unestablished. This is a verified constructed-method diagnostic, miniature — architecture untested, with supplied law and no confirmation. The separate long-history support test again excludes 16.43% of truths under learned hard pruning. [Report](docs/versions/v21-supporting-mechanisms/SEQUENTIAL_REPORT.md).

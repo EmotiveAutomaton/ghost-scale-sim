@@ -1,0 +1,70 @@
+{
+  "schema": "v21.b05-admission.1",
+  "family": "G21-B05",
+  "registered_before_scientific_outcomes": true,
+  "question": "At matched serialized byte ceilings, can a sufficient predictor preserve future endpoint forecasts while a source-linked ledger preserves witnessed historical order and inspection?",
+  "scope": "Initial native static supplied-law ruler with a sufficient posterior and exact four-probability predictive head. Learned heads, dynamic role changes and query-aware retention remain conditional; this is not an architecture superiority screen.",
+  "population": {
+    "worlds": "71010000..71010007",
+    "random_namespace": "v21-b05-streams",
+    "streams_per_world": 16,
+    "history_per_stream": 512,
+    "future_cases_per_stream": 32,
+    "historical_queries_per_stream": 32,
+    "fit_seeds": [],
+    "confirmation": false
+  },
+  "grid": {
+    "serialized_byte_ceilings": [
+      256,
+      1024,
+      4096,
+      16384
+    ],
+    "readers": [
+      "raw-history",
+      "maker-posterior",
+      "predictive-head",
+      "episode-ledger",
+      "predictor-plus-ledger"
+    ]
+  },
+  "world": "Reuse the declared B04 world-specific static eight-state opportunity/preference/skill endpoint channel, with separately seeded B05 histories. Each history additionally contains observed order and inspection bits independently drawn from fair coins. The input contains these witnessed events; evaluator maker state and future endpoints remain separate.",
+  "targets": "Four-way future opportunity/artifact prediction and, separately, four-way order/inspection for uniformly queried historical episodes. Report order and inspection accuracy separately. Do not merge future prediction with historical correspondence.",
+  "codecs": {
+    "header": "Eight bytes include schema magic, reader kind and record count.",
+    "raw_history": "Retain the latest complete 24-byte records: a 16-byte source digest, four-byte episode index and four observed one-byte fields.",
+    "maker_posterior": "Eight float64 posterior probabilities plus header, fitted by exact supplied-channel conditioning on all 512 observed endpoints.",
+    "predictive_head": "Four float64 future endpoint probabilities plus header; exact readout of the sufficient posterior, not a trained neural head.",
+    "episode_ledger": "Retain the latest complete eight-byte records: index plus four observed fields. The source digest reconstructs from the public case ID and index under the common schema.",
+    "predictor_plus_ledger": "Full-history posterior plus as many latest eight-byte ledger records as fit."
+  },
+  "information_boundary": "Shared supplied-law channel, codec and public case ID are external common metadata. Byte comparisons count actual per-maker payload, not application code, transient working memory or an optimal compression bound. Query indices are independent of retention; no truth-dependent record selection. Missing witnesses receive the exact independent uniform prior.",
+  "controls": [
+    "Uninformative channel retains a uniform maker posterior",
+    "Fully retained witnesses recover exactly",
+    "Endpoint-identical historical twins serialize to the same predictive memory",
+    "Ledger distinguishes those twins",
+    "All payloads obey byte ceilings",
+    "Independent byte parser and count-likelihood decoder check every forecast",
+    "Two complete engineering consumers",
+    "One-world full-size cost pilot",
+    "Complete frozen scientific replay before acceptance"
+  ],
+  "analysis": "Pair reader differences inside each of eight coefficient worlds; streams, future cases, queries and byte settings are not independent worlds. Report every reader and both targets, exact byte use, retained coverage, separate order/inspection accuracy and shared consumer CPU. No native-to-shift contrast exists in this native-only subset. Every observed episode enters once; there is no copied-evidence multiplication arm.",
+  "limits": {
+    "per_packet_cpu_seconds": 900,
+    "original_plus_replay_cpu_seconds": 1800,
+    "pilot_cpu_seconds": 300,
+    "family_repair_active_hours": 2
+  },
+  "continuation": "Proceed only on the measured cost/quality frontier; preserve the exact counterexample that predictive equivalence need not preserve witnessed history. Do not call a predictive state historical memory when its witness is lost. Independent new-world B06/E04 and remaining fixture categories retain priority after the initial branch.",
+  "limitations": "Supplied-law miniature \u00e2\u20ac\u201d architecture untested. No human memory, stable values, learned architecture, original-world headroom, confirmation or new F03 category claim. The raw versus compact ledger comparison includes declared encoding choices.",
+  "repair": {
+    "reason": "Pre-dispatch design-schema conflict: B05 storage history used the original-world history field, whose registered grid stops at 64. Renamed the independent memory length to history_episodes; original-world validation unchanged. Frozen memory-1 retained; no PLAN or executed identity created by rejected admission.",
+    "repairs_used": 1,
+    "maximum_active_repair_hours": 2,
+    "no_second_repair": true,
+    "scientific_outcomes_exposed": false
+  }
+}
