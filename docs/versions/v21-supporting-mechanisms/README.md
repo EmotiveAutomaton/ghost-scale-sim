@@ -28,6 +28,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [October 11 queue health](HEALTH_REPORT_20261011.md): recovered execution, complete numerical checks, timing and twelve-hour monitoring.
 - [October 11 notifier repair](NOTIFIER_REPAIR_20261011.md): restored delivery, twelve-hour checks and retirement after final reporting.
 - [October 11 resource pause](RESOURCE_PAUSE_20261011.md): native memory failure, retained partial block, bounded queued verification and fixed next check.
+- [October 11 commit-memory pause](COMMIT_MEMORY_PAUSE_20261011.md): a second retained allocation failure and recovery checks for both physical RAM and system commit capacity.
 - [Setup report](SETUP_REPORT.md): implemented scope, active queue, checks and timing.
 - [Current receipt](../../../results/v21/CURRENT_STATUS.json): a dated snapshot,
   not a substitute for native heartbeat and ownership.

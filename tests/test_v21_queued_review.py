@@ -69,7 +69,9 @@ def test_changed_summary_is_not_a_valid_reaggregation(tmp_path):
 
 
 def test_resource_release_requires_owner_exit_and_headroom():
-    from runners.release_v21_resource_hold import release_ready, matches
+    from functools import partial
+    from runners.release_v21_resource_hold import release_ready as check, matches
+    release_ready = partial(check, commit_free=41, commit_required=41)
     assert not release_ready(24, 25, True, False, [])
     assert not release_ready(25, 25, True, True, [])
     assert not release_ready(25, 25, False, False, [])
@@ -79,6 +81,13 @@ def test_resource_release_requires_owner_exit_and_headroom():
     expected = dict(pid=12, creation=34)
     assert matches(dict(expected, alive=True), expected)
     assert not matches(dict(pid=12, creation=35, alive=True), expected)
+
+
+def test_resource_release_fails_closed_without_commit_headroom():
+    from runners.release_v21_resource_hold import release_ready
+    assert not release_ready(100, 25, True, False, [])
+    assert not release_ready(100, 25, True, False, [], commit_free=7, commit_required=41)
+    assert release_ready(25, 25, True, False, [], commit_free=41, commit_required=41)
 
 
 def test_complete_queue_consumer_dispatch(tmp_path, monkeypatch):

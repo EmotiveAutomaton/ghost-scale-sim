@@ -1,0 +1,15 @@
+# Native allocation pause — October 11, 2026
+
+The exact-ceiling worker failed while allocating 8 MiB after retaining four of its eight development worlds. Its peak working memory was 84.63 MiB and its charged cost was 0.8007 CPU hours. Native inspection subsequently found system committed memory at 98.0% of its current limit, with 6.51 GiB of commit headroom despite 21.93 GiB of free physical RAM. This supports host commit pressure as the cause; the exact failure-time commit counter was not retained.
+
+Both original service owners are alive and no scientific worker remains. The failed PLAN, source, environment and 26 retained file hashes verify. The partial output, failure and cost remain intact; no identity was retried and no scientific repair allowance was consumed. There are 176 complete items, two failed items and 98 pending items; 10 descendants depend on a failed ceiling. This is an execution incident, not a scientific result. The 173 previously checked completion bindings still match; three newer completions await the ordinary review. The accepted scientific count remains 49.
+
+Dispatch is administratively held. A new frozen native helper releases only this exact hold after all reviewers exit and two observations thirty seconds apart show at least 24.5 GiB free physical memory and 40.5 GiB free commit capacity. The latter covers the 16-GiB reserve and three 8-GiB worker bounds, plus margin. The existing supervisor retains dispatch. Eight isolated operational controls and a real hidden native launch pass; an initial test temporary-directory error is retained and charged. No imported scientific capsule or shared environment changed.
+
+The commit check uses Windows' separate committed-page total and current limit; physical availability is a different quantity. [Microsoft API definition](https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-performance_information).
+
+Charged accounting is 25.8664 CPU hours, including the prepaid 3,600-second setup/service allowance. Observed service counters total 3331.52 seconds, giving 0.00 seconds of overage at this inspection. Retired services without final counters remain a stated accounting limitation. All 18 protected hours remain. Residual opening work is forecast at 23.04 CPU hours with at least 30 percent uncertainty, plus at most 0.33 hours for the priority B07 control completion and full replay. That held boundary precedes further branch selection; B02/B03 and C02/C04 retain priority over expanding the opening grid.
+
+Recovery time is unknown. The fixed twelve-hour checkpoint remains October 12 at 02:00 Pacific / 09:00 UTC. No confirmation population, scientific endpoint or reporting deadline changes. Only the two supplied failure/refill events are eligible for operational acknowledgement after publication; the incomplete B07 result retains its exact deferral.
+
+[Operational receipt](../../../results/v21/commit-memory-review-20261012/REPORT.json) and [recovery validation](../../../results/v21/commit-memory-review-20261012/VALIDITY.json).
