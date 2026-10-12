@@ -1,0 +1,22 @@
+{
+  "card": "G21-E01",
+  "status": "registered initial supplied-program consumer; scientific acceptance requires complete frozen replay",
+  "question": "Can one selection control many content units without changing their characters, and can observed evidence recover the selected proposal?",
+  "world": "Two independently generated binary proposed plans; one Bernoulli choice copies a complete plan. Cosmetic edits toggle a separate style bit and leave content intact.",
+  "descendants": [2, 4, 8],
+  "cosmetic_edits": [0, 1, 4, 16],
+  "witnesses": ["none", "complete"],
+  "weighting_rules": ["character-edits", "uniform-events", "content-intervention"],
+  "readers": ["historical", "direct-enumeration"],
+  "population": {"worlds": 8, "cases_per_world": 256, "fits": [], "split": "development"},
+  "pairing": "Each world reuses identical proposals and choices across nested content prefixes, edit counts and witnesses; none is an independent world.",
+  "interventions": "Change selection to the other proposal or remove one cosmetic edit. Count changed content units; no content effect remains explicitly unnormalized.",
+  "edit_count": "Selection edits zero content characters; every cosmetic edit changes one style character. When there are zero character edits, weights are all zero.",
+  "historical_target": "Identity of selected proposal; exact prior and executable graph supplied equally to scalar direct and historical inference. Identical proposals alias hidden choice.",
+  "criterion": "Descriptive method ruler: separate content intervention, character edits, selection correspondence and exact aliases. No learned architecture superiority or human-share scalar.",
+  "controls": ["selection changes content", "cosmetics leave content unchanged", "distinct proposals identify selection", "identical proposals retain prior without record", "independent scalar execution/posterior"],
+  "fixtures": "12 blind decisive-selection cases through the canonical ProcessCase validator and offline exporter, read-only; evaluator interventions separate.",
+  "per_packet_cpu_cap_seconds": 600,
+  "full_replay": "Complete original design under the same new frozen capsule and a new identity.",
+  "remaining_scope": ["Learned operation graphs", "Unknown selection priors", "Alternative functional targets and realistic edits", "C05 omission and D05 retraction fixtures"]
+}

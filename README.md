@@ -11,6 +11,7 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
+  [Executable and historical routes](docs/versions/v21-supporting-mechanisms/ROUTES_REPORT.md): successful reenactment does not identify history; full replay and support verified; decisive-selection branch admitted.
   [Knowledge, skill and permission](docs/versions/v21-supporting-mechanisms/FACTORS_REPORT.md): exact aliases separate information from representation; direct lookup matches joint inference; E04 routes admitted.
   [Predictive memory](docs/versions/v21-supporting-mechanisms/MEMORY_REPORT.md): a compact predictor loses historical witnesses; a ledger preserves them, with no uniform hybrid advantage; B06 factor tests admitted.
   [Role changes and memory](docs/versions/v21-supporting-mechanisms/DRIFT_REPORT.md): restricted change priors improve some reconstruction comparisons, attribution remains imperfect, and B05 storage tests are admitted.

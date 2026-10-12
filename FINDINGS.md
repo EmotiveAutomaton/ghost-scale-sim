@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 executable and historical routes
+
+Does reproducing an artifact recover the route actually taken? Every tested route reproduces the endpoint, but the shortest route matches history only 23.63% of the time without a current witness. Using 64 past records raises historical-reader accuracy to 63.87%; equally informed direct enumeration matches it. This is a constructed-method result, not learned superiority or confirmation. [Report](docs/versions/v21-supporting-mechanisms/ROUTES_REPORT.md).
+
 ## V21 knowledge, skill and permission
 
 Can an outcome distinguish a maker’s goal from knowledge, skill and permission? Knowledge and permission are exactly aliased without a separating witness in this constructed world. Revealing skill improves future prediction more than revealing either of them, while the equally informed direct table exactly matches joint inference. This is a constructed-method result, not learned architecture superiority or confirmation. [Report](docs/versions/v21-supporting-mechanisms/FACTORS_REPORT.md).

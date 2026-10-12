@@ -17,6 +17,8 @@ The [V21 memory ruler](docs/versions/v21-supporting-mechanisms/MEMORY_REPORT.md)
 
 The [V21 factor ruler](docs/versions/v21-supporting-mechanisms/FACTORS_REPORT.md) separates goal-fixed behavior changes from knowledge/permission aliases and shows exact parity with supplied-information direct lookup.
 
+The [V21 route ruler](docs/versions/v21-supporting-mechanisms/ROUTES_REPORT.md) distinguishes an executable reconstruction, the route actually taken and a forecast of a future choice.
+
 ## Read the title colour first
 
 **The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as
