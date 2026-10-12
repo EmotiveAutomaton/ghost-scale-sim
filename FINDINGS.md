@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 fallible inspection records
+
+Can a fallible inspection record help without excluding the true history? At 95% reliability, hard rejection excludes truth in 4.74% of native and changed-execution forecasts, making uncapped log loss infinite. Soft weighting excludes no truths and reduces loss by 0.4854 and 0.4836 nats, respectively. This is a verified constructed-method diagnostic with supplied reliability and support, miniature - architecture untested, and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/RELIABILITY_REPORT.md).
+
 ## V21 sparse-execution adaptation
 
 Does a separate execution factor reach the fixed reconstruction target with fewer shifted labels? No reader reaches the 0.1-nat excess-loss target in any of six completed development cells. The best modular result is 0.1838 nats (descriptive 95% interval 0.1462–0.2174), so the quarter-label criterion is not met. These are verified constructed-method findings, miniature - architecture untested, with no confirmation. [Report](docs/versions/v21-supporting-mechanisms/ADAPTATION_REPORT.md).

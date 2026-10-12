@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V21
 
+- [Fallible-record and copying-branch response](v21-reliability-response.md)
+
 - [Adaptation controls and additional support response](v21-adaptation-response.md)
 
 - [First learned-reader and shifted-support response](v21-development-group-1-response.md)

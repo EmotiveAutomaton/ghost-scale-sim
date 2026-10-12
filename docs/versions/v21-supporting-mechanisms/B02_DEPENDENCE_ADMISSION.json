@@ -1,0 +1,18 @@
+{
+  "schema": "v21.b02-admission.1",
+  "family": "G21-B02",
+  "question": "Does grouping whole episodes and tempering their evidence explain gains otherwise attributed to sharing a learned maker?",
+  "registered_before_scientific_outcomes": true,
+  "scope": "Initial original-law, native context-current, four complete-past-episode diagnostic at 8192 labels and 64 training laws; broader B02 question retained.",
+  "source_cell": "v21-headroom-01-l64-n8192",
+  "copying": "At each historical position after the first, replace that episode by a copy of the first with probability 0, 0.5 or 0.9. Keep current evidence and target fixed. Coupled random draws pair rates and fits within each world.",
+  "readers": ["learned latent-state full Bayesian sum", "same latent model with supplied independent-root mask", "pooled empirical model", "converged native direct reader", "naive Bayes", "naive Bayes without duplicated current evidence", "episode grouped likelihood at powers 0.25/0.5/1", "validation-selected episode power"],
+  "calibration": "Select one of 0.25/0.5/1 from equal mean log loss across all three copying rates on the existing disjoint validation laws without supplied support. Freeze before development predictions; do not tune on final worlds.",
+  "independence": "Eight development worlds with both fit seeds nested, 256 cases per world. Source records and copied views remain paired; fits and copied cases are not independent worlds.",
+  "headroom": "Bind the independent-data exact-law gate and both validation-stopped source fits. This does not establish new exact-law headroom or direct convergence under copying. Copied-cell results are dependence diagnostics, never superiority or promotion screens until those additional gates exist.",
+  "known_answer_controls": ["No copying leaves evidence unchanged", "Full copying creates a single root", "Removing copied roots matches one-episode latent inference", "Unremoved duplication can change the posterior", "Independent scalar probability-domain grouped and latent references", "Complete engineering consumer replay", "Full frozen scientific replay before acceptance"],
+  "transport": "Twelve known-provenance copying fixtures with one, two or four reports from one root; canonical ProcessCase and offline exporter exercised read-only. Unknown/corrupted source groups remain D03. Truth is evaluator-only.",
+  "cost_limits": {"each_scientific_packet_cpu_seconds": 1800, "diagnostic_plus_full_replay_cpu_seconds": 3600},
+  "stopping": "Land this finite diagnostic once. Stop a maker-specific interpretation if generic tempering matches it. Do not repeat valid cells; shifted/wide-law, fresh duplication-rate calibration transfer and separately gated superiority remain conditional registered successors.",
+  "limitations": ["Full Bayesian sum is over learned latent states, not all generator laws", "Exact current target support supplied equally", "Known-root ablation has provenance privilege", "Direct fitting reused unchanged from native independent training", "No fresh confirmation or human inference", "This initial subset does not exhaust B02 or B03"]
+}

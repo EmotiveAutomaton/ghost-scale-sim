@@ -20,6 +20,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Weekly implementation and continuation](IMPLEMENTATION_PLAN.md): the finite
   branch forest, implementation status and review obligations.
 - [Card registry](CARDS.json): every commissioned card, including B07.
+- [Fallible-record result](RELIABILITY_REPORT.md): full replay verified; supplied soft reliability protects true histories; B02 copying diagnostics admitted.
 - [First completed-group result](DEVELOPMENT_GROUP_1_REPORT.md): 30 learned cells, 17 support diagnostics, two support gate dispositions and 24 offline fixtures.
 - [Verified adaptation and support result](ADAPTATION_REPORT.md): fixed target unmet in six cells; complete controls and replay; C04 admitted.
 - [Adaptation control completion](B07_CONTROL_COMPLETION.json): frozen missing-control supplement; instrumentation now verified in the adaptation report; target not met.
