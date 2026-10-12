@@ -8,6 +8,8 @@ The [opening duplicate audit](versions/v21-supporting-mechanisms/OPENING_REPORT.
 
 The [native support diagnostic](versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md) reuses one frozen direct predictor per fit. Independent scalar scoring checks 32,768 forecasts; full frozen-source scientific replay matches 129 files. Separate regrouping reconstructs every summary and support mask, checks 2,048 supplied posteriors by sequential law/maker grouping, and averages fits within worlds before 4,096 bootstrap draws. Infinite losses remain explicit. This validates a retained-predictor support comparison, not a new law-marginal boundary or method-by-support interaction.
 
+The [resource-paused review](versions/v21-supporting-mechanisms/RESOURCE_PAUSE_20261011.md) submits complete-block verification through the owned queue. Its engineering controls reject changed retained bytes and incorrect summary means, and check that fits remain nested within worlds. Exact matching receipts avoid repeated valid numerical work; queued verification and scientific acceptance remain separate.
+
 ## V19 scientific endpoint — 28 September 2026
 
 We asked whether predictive memory improves recovery of a maker's local goals and process. The supported joint-process comparison shows no practical bank advantage over frozen latent state; selective purpose-and-belief access remains unestablished. These results concern constructed methods, not human intent.

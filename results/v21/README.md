@@ -4,6 +4,7 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [October 11 resource pause](resource-review-20261011/REPORT.json): preserved memory-reserve failure and queued complete-block verification; no new scientific acceptance.
 - [October 11 health validity](health-20261011/VALIDITY.json): all 268 plans, 108 completed packets and five complete family replays; scientific interpretation remains separate.
 - [Notifier recovery](notifier-repair-20261011/VALIDITY.json): twelve-hour cadence, real delivery and closed-campaign retirement controls.
 - [Opening duplicate-evidence audit](opening-duplicate-audit/ACCEPTANCE.json):

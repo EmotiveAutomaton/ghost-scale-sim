@@ -21,6 +21,7 @@ This is Ghost V21 alongside Sounding Line Stage 13. V20 remains closed.
 - [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.
 - [October 11 queue health](HEALTH_REPORT_20261011.md): recovered execution, complete numerical checks, timing and twelve-hour monitoring.
 - [October 11 notifier repair](NOTIFIER_REPAIR_20261011.md): restored delivery, twelve-hour checks and retirement after final reporting.
+- [October 11 resource pause](RESOURCE_PAUSE_20261011.md): native memory failure, retained partial block, bounded queued verification and fixed next check.
 - [Setup report](SETUP_REPORT.md): implemented scope, active queue, checks and timing.
 - [Current receipt](../../../results/v21/CURRENT_STATUS.json): a dated snapshot,
   not a substitute for native heartbeat and ownership.
