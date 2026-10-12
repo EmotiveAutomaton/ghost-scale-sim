@@ -11,6 +11,8 @@ V19 has a [final scientific report](docs/versions/v19-local-maker/FINAL_REPORT.m
 
 For active V21, the [first learned-reader and shifted-support report](docs/versions/v21-supporting-mechanisms/DEVELOPMENT_GROUP_1_REPORT.md) separates two descriptive candidates from confirmation, and support privilege from learned-mask failure.
 
+The [V21 copied-evidence diagnostic](docs/versions/v21-supporting-mechanisms/DEPENDENCE_REPORT.md) finds that generic tempering beats the latent reader in the tested native context cell. Supplied copy roots help, but neither that cell nor offline fixture compatibility establishes maker-specific inference.
+
 ## Read the title colour first
 
 **The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as

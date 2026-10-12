@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 copied evidence and tempering
+
+Does accounting for copied evidence require a learned maker? In this native context subset, quarter-power episode likelihoods beat the learned shared-maker reader by 0.7443–0.8729 nats across copying rates. Known-root removal helps the latent reader but does not establish maker-specific benefit. This is a verified constructed-method diagnostic, miniature — architecture untested, with supplied support and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/DEPENDENCE_REPORT.md).
+
 ## V21 fallible inspection records
 
 Can a fallible inspection record help without excluding the true history? At 95% reliability, hard rejection excludes truth in 4.74% of native and changed-execution forecasts, making uncapped log loss infinite. Soft weighting excludes no truths and reduces loss by 0.4854 and 0.4836 nats, respectively. This is a verified constructed-method diagnostic with supplied reliability and support, miniature - architecture untested, and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/RELIABILITY_REPORT.md).

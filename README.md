@@ -11,6 +11,7 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
+  [Copied-evidence diagnostic](docs/versions/v21-supporting-mechanisms/DEPENDENCE_REPORT.md): generic tempering beats the latent reader in the tested native cell; B03 persistence admitted.
   [Fallible-record diagnostic](docs/versions/v21-supporting-mechanisms/RELIABILITY_REPORT.md): soft weighting avoids hard truth exclusion; B02 copying comparison admitted.
   [Completed adaptation controls](docs/versions/v21-supporting-mechanisms/ADAPTATION_REPORT.md): fixed adaptation target unmet; C04 reliability branch admitted.
   [First learned-reader and shifted-support group](docs/versions/v21-supporting-mechanisms/DEVELOPMENT_GROUP_1_REPORT.md): two descriptive candidates, severe shifted hard-mask exclusion, and the subsequently completed adaptation-control review.
