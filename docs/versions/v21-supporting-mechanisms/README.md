@@ -1,5 +1,21 @@
 # V21 supporting mechanisms, 10–16 October 2026
 
+[Calibrated answer rival](CALIBRATED_ANSWER_REPORT.md): fixed-specificity benefit unestablished after generic dependence correction; adaptive matched-error difference retained, no promotion.
+
+- [Model expansion](EXPANSION_REPORT.md): full replay verified; predictive gains and unnecessary expansion reported together.
+
+- [Mechanism and style](STYLE_REPORT.md): full replay verified; supplied parser result, double inversion and structurally invariant shifts.
+
+- [Authorship topology](AUTHORSHIP_REPORT.md): exact aliases, role/source witnesses and direct parity verified.
+
+- [Inspection records](INSPECTION_REPORT.md): selective absence differs from random absence; exact direct parity and full replay verified.
+
+- [Learned persistence](LEARNED_PERSISTENCE_REPORT.md): complete replay verified; maker-specific historical content use unestablished, personalization scale-up stopped.
+
+- [Widened native context and refill](WIDE_CONTEXT_SUPPORT_REPORT.md): no new maker candidate; source-bound learned persistence admitted.
+
+- [Widened native laws and support](WIDE_NATIVE_SUPPORT_REPORT.md): maker gains absent across three label budgets; hard-pruning truth exclusions and exact replay bindings verified.
+
 - [Full, partial and withheld answers](ANSWER_POLICY_REPORT.md): fixed-specificity tradeoff differs from probability-loss gain; all decisions and full replay verified.
 
 - [Candidate dependence](CANDIDATE_DEPENDENCE_REPORT.md): two shifted candidates survive generic tempering; native artifact attribution does not; answer policy admitted.
@@ -65,3 +81,13 @@ reader losing less than a fixed-schedule MLP under changed execution because the
 shift cancels native double counting of claim and evidence. It is not evidence
 that structured inference transfers. Historical V20 reports retain their bytes;
 the new audit and its limitations are recorded here.
+
+[A04 inspection result](INSPECTION_REPORT.md): the full random/selective missingness and false-record grid is verified, with complete scientific replay and exact direct parity. The [original admission](A04_INSPECTION_ADMISSION.json) remains unchanged.
+
+[E02 authorship result](AUTHORSHIP_REPORT.md): complete scientific replay, every role/source record and exact alias partition verified. Supplied-prior inference resolves conflicting histories but cannot separate aligned policy twins. The [original admission](E02_AUTHORSHIP_ADMISSION.json) is preserved.
+
+[E03 mechanism/style result](STYLE_REPORT.md): full replay, every score and count/selector reconstruction verified. Supplied-parser locality helps; double inversion and exact correlation-regime invariance limit the result. The [original admission](E03_STYLE_ADMISSION.json) remains unchanged.
+
+[C06 model-expansion result](EXPANSION_REPORT.md): full replay, all decisions and costs verified. Predictive surprise detects the known omission; full-library planning can expand unnecessarily. The [original admission](C06_EXPANSION_ADMISSION.json) remains unchanged.
+
+[A03 calibrated-answer supplement](A03_CALIBRATED_ANSWER_ADMISSION.json): add the validation-selected episode rival to all six unchanged native/changed answer-policy cells. Six controls, complete engineering consumers and full-size pilot passed. Seven immutable jobs completed; the [calibrated-answer review](CALIBRATED_ANSWER_REPORT.md) verifies complete scientific replay and all strongest-rival contrasts. No new fits or worlds.

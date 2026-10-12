@@ -1,5 +1,39 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 calibrated answer rival
+
+The test for a maker-specific partial-answer advantage finds none at fixed specificity against the calibrated rival in the native artifact condition. At four, five and six asserted fields, the maker's false-claim differences are +0.293, +0.146 and -0.244 percentage points, with every interval crossing zero. A small adaptive matched-error gain remains: at penalty five both make no observed false claims, while the maker asserts 0.033 more fields per case. These are verified constructed-method development results, not confirmation or evidence of maker-specific causation.
+
+[Report](docs/versions/v21-supporting-mechanisms/CALIBRATED_ANSWER_REPORT.md).
+
+## V21 model expansion
+
+Can predictive checks detect an omitted mechanism when the starting model is confidently wrong? With strong records and four expansion slots, surprise-triggered expansion reduces held-out log loss by 0.531 nats and expands only 2.69% of cases where nothing is omitted. The full-library planner predicts better when a mechanism is missing, but expands every weak-record case even when nothing is missing. These are verified constructed-method results with supplied laws, not open-world discovery or confirmation. [Report](docs/versions/v21-supporting-mechanisms/EXPANSION_REPORT.md).
+
+## V21 mechanism and style
+
+Does compatibility follow mechanism or surface style? With the supplied parser, mechanism-matched training gives 82.86% accuracy versus 17.14% for style-only matching. Two inversions also let the raw surface reader succeed when neither matches. Reversing style correlations leaves every forecast unchanged by construction, so this does not establish learned robustness. These are verified constructed-method results, with no confirmation or claim about actual model families. [Report](docs/versions/v21-supporting-mechanisms/STYLE_REPORT.md).
+
+## V21 authorship topology
+
+Can role records distinguish one stable maker, one changing maker and two makers behind the same artifact? Complete records identify every conflicting-aim history in this finite ruler, but aligned stable and role-conditioned single-maker policies remain indistinguishable. Equally informed direct lookup matches exactly. The single-person model excludes 29.93% of true histories. These are verified constructed-method results with supplied priors and exact source records, not learned authorship detection or confirmation. [Report](docs/versions/v21-supporting-mechanisms/AUTHORSHIP_REPORT.md).
+
+## V21 inspection records
+
+Does a missing inspection record show that no inspection occurred? Random absence does not; selective absence can instead favor inspection. At the half-missingness setting with 5% false records, modeling selective logging reduces log loss by 0.0873 nats, while the naive reader excludes 39.94% of true histories. An equally informed direct lookup matches exactly. These are verified constructed-method results with supplied observation rates, not learned detection or confirmation. [Report](docs/versions/v21-supporting-mechanisms/INSPECTION_REPORT.md).
+
+## V21 learned persistence
+
+Do the two shifted candidates use maker-specific historical content? Neither establishes it: replacing that content independently improves the context candidate's log loss by 0.0145 nats and does not establish a loss change for the complete-evidence candidate. Their inferred same-maker rates remain 0.600 and 0.671 at nominal zero persistence. These are verified constructed-method diagnostics; personalization scale-up stops, with context information, frozen fitting and supplied support kept separate. [Report](docs/versions/v21-supporting-mechanisms/LEARNED_PERSISTENCE_REPORT.md).
+
+## V21 widened native context and support
+
+Does maker sharing improve reconstruction when current context is visible under widened laws? It does not in these three label-budget comparisons: the maker reader loses to the strongest matched rival by 0.271, 0.852 and 0.845 nats. Learned hard support excludes 18.09% of true histories. These are verified constructed-method development results; no new candidate, transfer result or confirmation follows. [Report](docs/versions/v21-supporting-mechanisms/WIDE_CONTEXT_SUPPORT_REPORT.md).
+
+## V21 widened native laws and hard support
+
+Does maker sharing improve reconstruction under widened native laws? It does not in these three label-budget comparisons: it loses to the strongest matched rival by 0.732, 0.998 and 0.417 nats. Learned hard pruning also excludes true histories in both new support diagnostics. These are verified constructed-method development results; no new candidate, transfer result or confirmation follows. [Report](docs/versions/v21-supporting-mechanisms/WIDE_NATIVE_SUPPORT_REPORT.md).
+
 ## V21 full, partial and withheld answers
 
 Does a partial answer improve reconstruction beyond simply making fewer claims? The native artifact reader makes 1.07–1.95 percentage points fewer false claims when exactly four to six fields are asserted than the best original same-label rival. The shifted candidates do not establish a corresponding partial-answer advantage. These are verified constructed-method development results on reused forecasts; the calibrated episode-policy rival remains untested, and no promotion or confirmation follows. [Report](docs/versions/v21-supporting-mechanisms/ANSWER_POLICY_REPORT.md).

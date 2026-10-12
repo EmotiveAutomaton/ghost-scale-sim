@@ -29,3 +29,11 @@ def test_exited_retained_owner_handle_is_not_live(monkeypatch,tmp_path):
     monkeypatch.setattr(S,'native_identity',lambda _:dict(alive=False))
     monkeypatch.setattr(S,'file_digest',lambda _:'bound')
     assert S.adopt_jobs(tmp_path,dict(previous_owner_pid=9,queue_sha256='bound',workers=[]),[])=={}
+
+def test_idle_census_keeps_active_and_dispatch_storage_guards():
+    assert S.artifact_check_due(float('inf'))
+    assert not S.artifact_check_due(3599)
+    assert S.artifact_check_due(3600)
+    for key in ('active','dispatch'):
+        assert not S.artifact_check_due(59,**{key:True})
+        assert S.artifact_check_due(60,**{key:True})

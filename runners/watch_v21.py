@@ -75,8 +75,16 @@ def event(campaign,identity,kind,**more):
 
 def budget_fits(used,reserved,cap,job):return used+reserved+job['cpu_cap_seconds']<=cap
 
+def artifact_check_due(elapsed,active=False,dispatch=False):
+    """Immutable completed packets need no minute-by-minute idle traversal.
+
+    Active work and prospective dispatch retain the one-minute storage guard.
+    The hourly idle census does not change native/model health checkpoints.
+    """
+    return elapsed>=(60 if active or dispatch else 3600)
+
 def supervise(campaign,python,recovery=None):
-    below_normal();active={};service_start=time.process_time();last_artifact_check=0;artifact_bytes=0
+    below_normal();active={};service_start=time.process_time();last_artifact_check=float('-inf');artifact_bytes=0
     with local_owner(campaign/'supervisor'):
         a=read(campaign/'ACCEPTANCE.json');a_hash=file_digest(campaign/'ACCEPTANCE.json')
         service_base=read(campaign/'SERVICE_COST.json').get('cpu_seconds',0) if (campaign/'SERVICE_COST.json').exists() else 0
@@ -92,7 +100,7 @@ def supervise(campaign,python,recovery=None):
             current=datetime.now(timezone.utc)
             if file_digest(campaign/'ACCEPTANCE.json')!=a_hash:raise ValueError('acceptance changed')
             cutoff=(campaign/'STOP').exists() or current>=datetime.fromisoformat(a['report_start'])
-            if time.monotonic()-last_artifact_check>60:
+            if artifact_check_due(time.monotonic()-last_artifact_check,active=bool(active)):
                 artifact_bytes=artifact_size(campaign/'packets')
                 last_artifact_check=time.monotonic()
             for identity,item in list(active.items()):
@@ -136,6 +144,9 @@ def supervise(campaign,python,recovery=None):
             ready=[j for j in pending if set(j.get('requires',[]))<=complete and current>=datetime.fromisoformat(j['not_before'])]
             ready.sort(key=lambda j: not j.get('reserve_eligible',False) if current>=datetime.fromisoformat(a['confirmation_start']) else False)
             if not cutoff and not (campaign/'HOLD').exists():
+                if ready and artifact_check_due(time.monotonic()-last_artifact_check,dispatch=True):
+                    artifact_bytes=artifact_size(campaign/'packets')
+                    last_artifact_check=time.monotonic()
                 for job in ready:
                     if (campaign/'SUPERVISOR_STOP').exists():break
                     if not job.get('reserve_eligible') and current>=datetime.fromisoformat(a['discovery_freeze']):continue

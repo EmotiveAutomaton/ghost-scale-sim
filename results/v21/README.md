@@ -1,5 +1,21 @@
 # V21 public evidence
 
+[Calibrated answer rival](answer-calibrated/VALIDITY.json): all finite decisions and full replay verified; original input checks reused by exact hashes.
+
+[Model expansion](expansion/VALIDITY.json): all scores, histories, policies, costs and complete replay verified; supplied-library limits retained.
+
+[Mechanism and style](style/VALIDITY.json): every score, count table, selector and complete replay verified; supplied privileges and structural invariance retained.
+
+[Authorship topology](authorship/VALIDITY.json): all scores, role records, exact aliases and full scientific replay verified; supplied priors, no learned identification or confirmation.
+
+[Inspection records](inspection/VALIDITY.json): every score, ternary record, posterior and complete scientific replay verified; no learned detection or confirmation.
+
+[Learned persistence](learned-persistence/VALIDITY.json): all scores, full replay, baseline forecasts and independent replacement/mixing checks verified; personalization scale-up stopped.
+
+[Widened native context](wide-context-support/VALIDITY.json): three maker-loss comparisons and hard-pruning failure verified; learned persistence admitted.
+
+[Widened native laws and support](wide-native-support/VALIDITY.json): three failed maker-gain comparisons, two hard-pruning diagnostics, all scores and replay bindings verified.
+
 [Answer policies](answer-policy/VALIDITY.json): full replay and all finite decisions verified; native fixed-specificity gain, shifted limitations and missing calibrated-policy rival retained.
 
 [Candidate dependence](candidate-dependence/VALIDITY.json): original predictions, full replay, generic rivals and native support verified; A03 policies admitted.

@@ -1,5 +1,7 @@
 # V21 full, partial and withheld answers
 
+**Original-rival result, subsequently qualified:** the [calibrated-rival supplement](CALIBRATED_ANSWER_REPORT.md) removes the established native-artifact fixed-specificity advantage while retaining a small adaptive matched-error difference. The original result and its then-missing-rival limitation are preserved below.
+
 Does a partial answer improve reconstruction beyond simply making fewer claims? The native artifact reader makes 1.07–1.95 percentage points fewer false claims when exactly four to six fields are asserted than the best original same-label rival. The shifted candidates do not establish a corresponding partial-answer advantage. These are verified constructed-method development results on reused forecasts; the calibrated episode-policy rival remains untested, and no promotion or confirmation follows.
 
 Six conditions reuse 196,608 saved forecasts from eight original readers. Artifact conditions use 8,192 labels, context and complete conditions 512, each with four same-tier past episodes, inspection hidden, eight training laws, eight development worlds and 256 cases per world. Changed execution affects current and historical episodes; this is not the current-only adaptation intervention. Two fits are averaged within each world before 4,096 paired whole-world bootstrap draws. Reused cases, fitted seeds, decisions and penalty ratios are not independent replications.

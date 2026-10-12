@@ -6,6 +6,22 @@ from ..v18_3.io import read, write, file_digest
 RATIOS = (1., 2., 5., 10.)
 
 
+def forecast_entries(summary, source_format):
+    """Select a preregistered forecast population without refitting or relabeling."""
+    if source_format == 'learned':
+        return [(entry, f"raw/{entry['fit']}-{entry['lineage']}-{entry['reader']}_points.npz")
+                for entry in summary['population']]
+    if source_format != 'dependence-calibrated':
+        raise ValueError('unknown frozen forecast format')
+    entries = [entry for entry in summary['population']
+               if entry['reader'] == 'episode-calibrated' and entry['duplication_rate'] == 0.]
+    identities = [(entry['fit'], entry['lineage']) for entry in entries]
+    if not entries or len(set(identities)) != len(identities):
+        raise ValueError('missing or duplicate calibrated forecast identity')
+    return [(entry, f"raw/{entry['fit']}-{entry['lineage']}-0.0-episode-calibrated_points.npz")
+            for entry in entries]
+
+
 def frontier(probability):
     """Best supported conjunction for each number of asserted binary fields.
 
@@ -64,9 +80,12 @@ def run(root, design, pulse):
         source_design = read(source/'PLAN.json')['design']
         assert source_design['lineages'] == design['lineages']
         assert not source_design.get('split') == 'confirmation'
-        for entry in read(source/'SUMMARY.json')['population']:
+        entries = forecast_entries(read(source/'SUMMARY.json'), design.get('forecast_format', 'learned'))
+        if design.get('forecast_format') == 'dependence-calibrated':
+            assert {(entry['fit'], entry['lineage']) for entry, _ in entries} == {
+                (fit, world) for fit in design['fits'] for world in design['lineages']}
+        for entry, name in entries:
             fit, world, reader = entry['fit'], entry['lineage'], entry['reader']
-            name = f'raw/{fit}-{world}-{reader}_points.npz'
             assert file_digest(source/name) == complete['files'][name]
             with np.load(source/name) as z: probability = np.exp(z['logp']); truth = z['truth']
             m, v, p = frontier(probability); original_forecasts += len(truth)

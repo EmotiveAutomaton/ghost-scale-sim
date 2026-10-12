@@ -1,5 +1,17 @@
 # Ghost Scale Simulation
 
+[Calibrated answer rival](docs/versions/v21-supporting-mechanisms/CALIBRATED_ANSWER_REPORT.md): native fixed-specificity advantage unestablished; small adaptive matched-error difference retained; full replay verified.
+
+[Model expansion](docs/versions/v21-supporting-mechanisms/EXPANSION_REPORT.md): predictive surprise detects known omissions; full-library planning can expand unnecessarily. Complete replay verified.
+
+[Mechanism and style](docs/versions/v21-supporting-mechanisms/STYLE_REPORT.md): parser/locality result verified; double inversion and structural shift invariance prevent a learned-robustness claim.
+
+[Authorship topology](docs/versions/v21-supporting-mechanisms/AUTHORSHIP_REPORT.md): role records separate conflicting histories; aligned policies remain aliased; exact direct parity and complete replay verified.
+
+[Inspection records](docs/versions/v21-supporting-mechanisms/INSPECTION_REPORT.md): random absence is uninformative; selective absence can favor inspection; supplied-channel gain and exact direct parity verified.
+
+[Learned persistence](docs/versions/v21-supporting-mechanisms/LEARNED_PERSISTENCE_REPORT.md): unrelated episode content does not remove the shifted benefit; current personalization scale-up stops.
+
 Ghost Scale constructs small worlds with known answers to test methods for
 recovering a maker's goals, actions and contribution. Sounding Line is the
 separate real-text project. A validated simulator method does not establish
@@ -11,6 +23,8 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
+  [Widened native context](docs/versions/v21-supporting-mechanisms/WIDE_CONTEXT_SUPPORT_REPORT.md): maker gains absent and support exclusions verified; learned persistence admitted.
+  [Widened native laws and support](docs/versions/v21-supporting-mechanisms/WIDE_NATIVE_SUPPORT_REPORT.md): maker gains absent, hard-pruning exclusions verified; no matched widened shift admitted.
   [Answer policies](docs/versions/v21-supporting-mechanisms/ANSWER_POLICY_REPORT.md): native fixed-specificity gains, shifted limitations and complete replay verified.
   [Candidate dependence](docs/versions/v21-supporting-mechanisms/CANDIDATE_DEPENDENCE_REPORT.md): shifted gains survive generic tempering; native artifact attribution does not; answer policy admitted.
   [Contrasting opportunities](docs/versions/v21-supporting-mechanisms/OPPORTUNITIES_REPORT.md): better joint reconstruction does not establish better fresh-context selection; direct parity and modal ties retained; candidate dependence controls admitted.

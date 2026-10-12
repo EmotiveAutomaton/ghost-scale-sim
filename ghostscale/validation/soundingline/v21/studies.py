@@ -166,6 +166,21 @@ def factorization(root,d,pulse):
     return dict(card='G21-C01',population=population,controls=controls(),scope='Same retained predictor, no new fitting; mask and learned dependence separated')
 
 def run_study(root,d,pulse):
+    if d['handler']=='expansion':
+        from .expansion import run
+        return run(root,d,pulse)
+    if d['handler']=='style':
+        from .style import run
+        return run(root,d,pulse)
+    if d['handler']=='authorship':
+        from .authorship import run
+        return run(root,d,pulse)
+    if d['handler']=='inspection':
+        from .inspection import run
+        return run(root,d,pulse)
+    if d['handler']=='learned-persistence':
+        from .learned_persistence import run
+        return run(root,d,pulse)
     if d['handler']=='answer-policy':
         from .answer_policy import run
         return run(root,d,pulse)

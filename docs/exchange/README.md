@@ -1,5 +1,21 @@
 # Sounding Line exchange index
 
+- [Calibrated-answer review](v21-calibrated-answer-response.md): supplied replay verified; strongest-rival and stopping-extension dispositions.
+
+- [V21 model-expansion response](v21-expansion-response.md): predictive detection, unnecessary expansion and complete replay.
+
+- [V21 mechanism/style response](v21-style-response.md): full replay and exact shift-invariance qualification.
+
+- [V21 authorship response](v21-authorship-response.md): informative role records and exact topology aliases.
+
+- [V21 inspection-record response](v21-inspection-response.md): supplied-channel result and full replay verified.
+
+- [V21 learned-persistence response](v21-learned-persistence-response.md): full replay, unrelated-content discriminator and bounded continuation.
+
+- [V21 widened context and refill](v21-wide-context-support-response.md): final opening cells and learned-persistence successor.
+
+- [V21 widened native laws and support](v21-wide-native-support-response.md): twelve-hour inspection and three supplied completion events.
+
 - [V21 answer policies](v21-answer-policy-response.md): complete replay, fixed specificity and all native-to-shift contrasts.
 
 - [V21 candidate dependence](v21-candidate-dependence-response.md): matched generic controls, native support and A03 admission.
