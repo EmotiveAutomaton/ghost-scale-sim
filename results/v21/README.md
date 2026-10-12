@@ -4,12 +4,14 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [Sequential and long-history support validity](sequential/VALIDITY.json): two acquisition conditions, 529-file full replay and source-bound support reconstruction.
 - [Source-group validity](provenance/VALIDITY.json): 221,184 original forecasts, 5,185-file full replay and independent source-assignment reconstruction.
 - [Acquisition validity](acquisition/VALIDITY.json): four supplied-law conditions, all policy/fee choices and full 177-file replay.
 - [Copied-evidence validity](dependence/VALIDITY.json): one accepted native B02 block, full 603-file replay and 12 copying fixtures.
 - [Fallible-record validity](reliability/VALIDITY.json): two accepted C04 conditions, full 330-file replay and 12 false-context fixtures.
 - [First completed-group validity](development-group-1/VALIDITY.json): 173 numerically checked packets; 47 newly accepted scientific blocks, two support gate dispositions, and explicit B07 pending controls.
 - [October 11 resource pause](resource-review-20261011/REPORT.json): preserved memory-reserve failure and queued complete-block verification; no new scientific acceptance.
+- [October 12 native health](health-20261012/REPORT.json): actual held-boundary ownership, resources, coverage and service accounting.
 - [October 11 health validity](health-20261011/VALIDITY.json): all 268 plans, 108 completed packets and five complete family replays; scientific interpretation remains separate.
 - [Notifier recovery](notifier-repair-20261011/VALIDITY.json): twelve-hour cadence, real delivery and closed-campaign retirement controls.
 - [Opening duplicate-evidence audit](opening-duplicate-audit/ACCEPTANCE.json):

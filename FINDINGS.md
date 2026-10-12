@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 sequential acquisition and long-history support
+
+Two-step lookahead recovers complementary order evidence that greedy acquisition misses, but it does not improve reconstruction over a fixed policy that already buys the useful pair. At a 0.05-nat fee and two-purchase limit, its saving against that fixed policy is only 0.0117–0.0121 nats, entirely from stopping; a practical gain after computation cost is unestablished. This is a verified constructed-method diagnostic, miniature — architecture untested, with supplied law and no confirmation. The separate long-history support test again excludes 16.43% of truths under learned hard pruning. [Report](docs/versions/v21-supporting-mechanisms/SEQUENTIAL_REPORT.md).
+
 ## V21 uncertain source groups
 
 Uncertain source grouping did not establish a reconstruction gain robust to source-label noise and copying pattern. With eight reports from four roots, random-copying loss changes range from a 0.00178-nat improvement to a 0.00036-nat deterioration, with every interval including zero. Stronger copy-removal gains occur when the supplied root count already determines the independent evidence. This is a verified constructed-method diagnostic, miniature — architecture untested; learned provenance and confirmation remain untested. [Report](docs/versions/v21-supporting-mechanisms/PROVENANCE_REPORT.md).

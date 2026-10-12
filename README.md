@@ -11,6 +11,7 @@ human intent, human values or historical process correspondence.
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
+  [Sequential acquisition](docs/versions/v21-supporting-mechanisms/SEQUENTIAL_REPORT.md): lookahead resolves complementary order evidence; the useful fixed pair matches reconstruction, and realistic computation advantage remains untested; B04 admitted.
   [Uncertain source groups](docs/versions/v21-supporting-mechanisms/PROVENANCE_REPORT.md): robust inferred-provenance gain is unestablished; duplicate controls and full replay verify; sequential acquisition admitted.
   [Target-focused acquisition](docs/versions/v21-supporting-mechanisms/ACQUISITION_REPORT.md): supplied-law purchasing beats tested alternatives under declared fees; unknown-source grouping admitted.
   [Joint-head and marginal-control result](docs/versions/v21-supporting-mechanisms/JOINT_REPORT.md): native gains do not establish dependence-specific benefit; D01 acquisition admitted.

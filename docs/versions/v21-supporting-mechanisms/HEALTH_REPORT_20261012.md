@@ -1,0 +1,11 @@
+# V21 twelve-hour native health review, October 12
+
+The scheduled 09:00 UTC / 02:00 Pacific checkpoint was actually inspected. The original supervisor and notifier retain their native identities; one review child owns the turn. The queue is deliberately held at the completed sequential-replay boundary, with no active scientist. Both service heartbeats are current. V15's recorded process is absent and closed. No Sounding Line service or environment was changed.
+
+The latest inspection found 55.72 GiB free physical RAM, 123.98 GiB free commit capacity, 661.58 GiB free disk and 48% host CPU load. Packet artifacts occupy 3.378 GiB. There are 300 admitted identities: 240 complete, two retained resource failures, two initial B04 plans withdrawn without execution and 56 pending, including ten descendants blocked by failed ceilings. Numerical coverage and scientific acceptance remain distinct.
+
+The [sequential and support batch](SEQUENTIAL_REPORT.md) accepts three scientific blocks after complete frozen replay and independent score reconstruction. B04's repaired export consumer has passed its engineering controls and bounded pilot; its new immutable plans await dispatch through the same supervisor. Imported capsules remain unchanged.
+
+The charged snapshot is 33.4383 CPU hours, including reviews, both B04 engineering versions and the prepaid 3,600-second setup/service bound. Retained service observations total 4171.53 seconds; the 571.53-second overage is charged. Historical exited services lack some final counters; this is retained explicitly. All 18 protected hours remain. Opening residual demand is estimated at 16.79 CPU hours, with at least 30% uncertainty, plus B04's one-hour aggregate cap. The ceiling can require deferral; these forecasts do not guarantee completion of the finite forest.
+
+The next fixed routine checkpoint is **October 12 at 14:00 Pacific / 21:00 UTC**. Result acknowledgements do not postpone it. B04's held replay boundary, failure or disappearance may wake earlier. Discovery freezes October 15 at 07:00 UTC, confirmation opens at 13:00 UTC, science stops October 16 at 17:00 UTC and final reporting/owned-service closure remain due October 17 at 01:00 UTC. Confirmation remains unopened. [Actual inspection receipt](../../../results/v21/health-20261012/REPORT.json).

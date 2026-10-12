@@ -20,6 +20,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Weekly implementation and continuation](IMPLEMENTATION_PLAN.md): the finite
   branch forest, implementation status and review obligations.
 - [Card registry](CARDS.json): every commissioned card, including B07.
+- [Sequential acquisition and long-history support](SEQUENTIAL_REPORT.md): full replay verified; stopping savings differ from reconstruction benefit; B04 drift admitted.
 - [Uncertain source groups](PROVENANCE_REPORT.md): full replay verified, robust gain unestablished; D04 sequential acquisition admitted.
 - [Target-focused acquisition](ACQUISITION_REPORT.md): four conditions and full replay verified; D03 unknown source groups admitted.
 - [Joint-head result](JOINT_REPORT.md): complete replay, marginal-product rival, six learned cells and two support diagnostics; D01 acquisition admitted.
@@ -32,6 +33,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Opening result](OPENING_REPORT.md): retained-data test of duplicated evidence.
 - [Native support diagnostic](NATIVE_SUPPORT_REPORT.md): verified first C03 block and full scientific replay.
 - [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.
+- [October 12 native health](HEALTH_REPORT_20261012.md): actual twelve-hour inspection, unchanged owners, measured runway and fixed next checkpoint.
 - [October 11 queue health](HEALTH_REPORT_20261011.md): recovered execution, complete numerical checks, timing and twelve-hour monitoring.
 - [October 11 notifier repair](NOTIFIER_REPAIR_20261011.md): restored delivery, twelve-hour checks and retirement after final reporting.
 - [October 11 resource pause](RESOURCE_PAUSE_20261011.md): native memory failure, retained partial block, bounded queued verification and fixed next check.
