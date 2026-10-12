@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 full, partial and withheld answers
+
+Does a partial answer improve reconstruction beyond simply making fewer claims? The native artifact reader makes 1.07–1.95 percentage points fewer false claims when exactly four to six fields are asserted than the best original same-label rival. The shifted candidates do not establish a corresponding partial-answer advantage. These are verified constructed-method development results on reused forecasts; the calibrated episode-policy rival remains untested, and no promotion or confirmation follows. [Report](docs/versions/v21-supporting-mechanisms/ANSWER_POLICY_REPORT.md).
+
 ## V21 candidate dependence
 
 Do the three learned-maker candidates survive a generic dependence correction? The native artifact candidate loses its distinctive advantage, while the two shifted candidates still improve log loss by about 0.053 and 0.051 nats over validation-selected episode weighting. These are verified constructed-method development results; maker-specific causation, copying-specific superiority and confirmation remain unestablished. [Report](docs/versions/v21-supporting-mechanisms/CANDIDATE_DEPENDENCE_REPORT.md).

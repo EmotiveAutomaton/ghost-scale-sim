@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V21 answer policies](v21-answer-policy-response.md): complete replay, fixed specificity and all native-to-shift contrasts.
+
 - [V21 candidate dependence](v21-candidate-dependence-response.md): matched generic controls, native support and A03 admission.
 
 [V21 opportunity and candidate-control response](v21-opportunities-response.md).

@@ -1,5 +1,7 @@
 # V21 supporting mechanisms, 10–16 October 2026
 
+- [Full, partial and withheld answers](ANSWER_POLICY_REPORT.md): fixed-specificity tradeoff differs from probability-loss gain; all decisions and full replay verified.
+
 - [Candidate dependence](CANDIDATE_DEPENDENCE_REPORT.md): two shifted candidates survive generic tempering; native artifact attribution does not; answer policy admitted.
 
 Which retained evidence, maker model and probability representation reduces

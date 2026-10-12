@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [A03 scientific review](versions/v21-supporting-mechanisms/ANSWER_POLICY_REPORT.md) independently enumerates all 2,187 finite partial assignments for every saved forecast, reconstructs 7,077,888 original decisions and all summary metrics, and verifies the complete 4,609-file scientific replay byte for byte. Fixed-cardinality controls distinguish error reduction from fewer assertions; expected risk, realized loss, case coverage and consistent-assignment counts stay separate. Two fits are averaged inside eight reused worlds. Calibrated episode-policy rivals remain untested; no promotion follows.
+
 The [candidate-dependence review](versions/v21-supporting-mechanisms/CANDIDATE_DEPENDENCE_REPORT.md) verifies a full 578-file scientific replay and 995,328 newly scored forecasts, reproduces 147,456 original predictions, rebuilds all copied views and validation-selected powers, and independently checks 73,728 exact-table forecasts. All readers have paired native-to-shift changes with both duplicate controls. Fits remain nested in eight worlds. The native 16-history context support block reconstructs every mask and supplied posterior and reuses its unchanged source-bound family replay. A03 uses independent scalar partial-assignment checks, declared specificity loss, fixed-cardinality rivals and immutable forecast bindings; engineering acceptance does not accept its science.
 
 ## V21: reachable ceilings, fitted rivals and duplicate-factor audit

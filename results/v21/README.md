@@ -1,5 +1,7 @@
 # V21 public evidence
 
+[Answer policies](answer-policy/VALIDITY.json): full replay and all finite decisions verified; native fixed-specificity gain, shifted limitations and missing calibrated-policy rival retained.
+
 [Candidate dependence](candidate-dependence/VALIDITY.json): original predictions, full replay, generic rivals and native support verified; A03 policies admitted.
 
 [Contrasting opportunities](opportunities/VALIDITY.json): full replay, independent selection and all scores verified; modal ties qualified.
