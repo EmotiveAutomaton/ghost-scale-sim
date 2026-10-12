@@ -667,3 +667,5 @@ Goal-confidence calibration passed 55 isolated controls and all three admitted e
 The exact forecast-collision comparison is source admitted after 48 isolated controls. Its original and both complete replays are queued through the existing serial executor. The first attempt failed before scoring on native probability roundoff; its source, partial evidence and charge are retained. The replacement preserves raw probabilities, exact group membership and scoring. Numerical acceptance requires independent scalar reconstruction and a third law-resampled regroup. Retrospective updating and full joint-goal forecast partitions remain independent prepared alternatives.
 
 The [V21 omission ruler](docs/versions/v21-supporting-mechanisms/OMISSION_REPORT.md) separates exact-type recovery from success on a coarser candidate-or-unknown event; changing the target can reverse the score comparison.
+
+The [V21 retraction ruler](docs/versions/v21-supporting-mechanisms/RETRACTION_REPORT.md) verifies that changing only source-linked factors reproduces a full calculation, while showing why fewer factor visits need not mean lower CPU or storage costs.

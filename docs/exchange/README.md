@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V21 retraction and opportunity response](v21-retraction-response.md).
+
 [V21 omission and retraction response](v21-omission-response.md).
 
 [V19 final endpoint response](v19-final-response.md).
