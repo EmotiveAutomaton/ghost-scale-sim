@@ -1,5 +1,7 @@
 # V21 first learned-reader and shifted-support review
 
+Subsequent disposition: the [adaptation control review](ADAPTATION_REPORT.md) completes the B07 instrumentation and full replay described as pending in this dated batch. Its fixed target is not met. The original batch counts and findings below remain the record of that earlier review.
+
 Does sharing a learned maker state improve reconstruction beyond the strongest matched reader? Two of 30 development comparisons clear the descriptive 0.02-nat margin, while the two primary native settings lose at 8,192 labels and 64 training laws. Learned hard support excludes truth in 79.5% to 95.3% of changed-execution forecasts and gives infinite uncapped log loss. These are constructed-method findings, miniature - architecture untested, not confirmation or a general mechanism claim.
 
 Natural-log loss penalizes assigning low probability to the actual seven-bit history; lower is better and units are nats. Full multiclass Brier is the sum of squared probability errors over all 128 histories; lower is better. Modal accuracy is the fraction of highest-probability histories that are correct. Confident error is the fraction of wrong answers assigned at least 90% probability. Exact zeros remain infinite log loss, not a capped finite score.

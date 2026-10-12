@@ -21,7 +21,8 @@ immutable source capsules preserve each running experiment's code identity.
   branch forest, implementation status and review obligations.
 - [Card registry](CARDS.json): every commissioned card, including B07.
 - [First completed-group result](DEVELOPMENT_GROUP_1_REPORT.md): 30 learned cells, 17 support diagnostics, two support gate dispositions and 24 offline fixtures.
-- [Adaptation control completion](B07_CONTROL_COMPLETION.json): frozen missing-control supplement; original B07 transfer acceptance remains pending.
+- [Verified adaptation and support result](ADAPTATION_REPORT.md): fixed target unmet in six cells; complete controls and replay; C04 admitted.
+- [Adaptation control completion](B07_CONTROL_COMPLETION.json): frozen missing-control supplement; instrumentation now verified in the adaptation report; target not met.
 - [Opening result](OPENING_REPORT.md): retained-data test of duplicated evidence.
 - [Native support diagnostic](NATIVE_SUPPORT_REPORT.md): verified first C03 block and full scientific replay.
 - [Pending group verification](VERIFICATION_QUEUE.md): frozen family replays and bounded event deferral; no new scientific acceptance.

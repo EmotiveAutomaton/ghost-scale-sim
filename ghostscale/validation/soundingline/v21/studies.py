@@ -166,6 +166,9 @@ def factorization(root,d,pulse):
     return dict(card='G21-C01',population=population,controls=controls(),scope='Same retained predictor, no new fitting; mask and learned dependence separated')
 
 def run_study(root,d,pulse):
+    if d['handler']=='reliability':
+        from .reliability import run
+        return run(root,d,pulse)
     if d['handler']=='adaptation-controls':
         from .adaptation_controls import run
         return run(root,d,pulse)

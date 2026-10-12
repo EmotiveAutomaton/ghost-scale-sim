@@ -8,7 +8,7 @@ state. Updated 10 October 2026.
 
 | Status | Entry point | Use |
 |---|---|---|
-| Active V21, supporting mechanism program | [V21 index](versions/v21-supporting-mechanisms/README.md) | October 10 program and errata, exact ceilings, matched readers, six-hour reviews |
+| Active V21, supporting mechanism program | [V21 index](versions/v21-supporting-mechanisms/README.md) | October 10 program and errata, exact ceilings, matched readers, twelve-hour reviews |
 | Closed V19 | [V19 index](versions/v19-local-maker/README.md) | Final scientific report and administrative closure |
 | Closed V20; confirmation and final report complete | [V20 index](versions/v20-contribution-reconstruction/README.md) | Final result, confirmation, coverage, costs and closure receipts |
 | Closed V1–V18 allocations | [Version index](versions/README.md) | Specifications, reports and retained failures; historical instructions do not reopen them |

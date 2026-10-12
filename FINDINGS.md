@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 sparse-execution adaptation
+
+Does a separate execution factor reach the fixed reconstruction target with fewer shifted labels? No reader reaches the 0.1-nat excess-loss target in any of six completed development cells. The best modular result is 0.1838 nats (descriptive 95% interval 0.1462–0.2174), so the quarter-label criterion is not met. These are verified constructed-method findings, miniature - architecture untested, with no confirmation. [Report](docs/versions/v21-supporting-mechanisms/ADAPTATION_REPORT.md).
+
 ## V21 learned-reader and shifted-support group
 
 Does sharing a learned maker state improve reconstruction beyond the strongest matched reader? Two of 30 development comparisons clear the descriptive 0.02-nat margin, while the two primary native settings lose at 8,192 labels and 64 training laws. Learned hard support excludes truth in 79.5% to 95.3% of changed-execution forecasts and gives infinite uncapped log loss. These are constructed-method findings, miniature - architecture untested, not confirmation or a general mechanism claim. [Report](docs/versions/v21-supporting-mechanisms/DEVELOPMENT_GROUP_1_REPORT.md).

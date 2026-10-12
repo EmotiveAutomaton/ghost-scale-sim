@@ -1,0 +1,28 @@
+{
+  "schema": "v21.c04-admission.1",
+  "family": "G21-C04",
+  "question": "Can a correctly weighted fallible inspection report retain useful constraints without hard exclusion of the true history?",
+  "status": "implementation and engineering validation before scientific admission",
+  "registered_before_scientific_outcomes": true,
+  "source_cells": ["v21-headroom-01-l64-n8192", "v21-headroom-02-l64-n8192"],
+  "settings": {
+    "source_reliability": [1.0, 0.95, 0.8, 0.5],
+    "readers": ["no-record", "soft-record", "hard-record"],
+    "fits": [0, 1],
+    "development_worlds": 8,
+    "cases_per_world": 256,
+    "target_field": "inspection",
+    "history": "four complete inspection-observed native episodes",
+    "current_evidence": "context-visible artifact",
+    "current_execution": ["native", "changed-tool"]
+  },
+  "generation": "A binary report of current inspection flips independently with probability one minus supplied reliability. A fixed uniform draw per world/case couples reliability levels and is shared by both fits. Current native/shift cases differ; only worlds are paired.",
+  "comparison": "Apply all three treatments to the identical retained direct forecast and common supplied exact target support. Soft likelihood uses the supplied binary channel; hard masking treats the report as certain. If a hard report empties all support, retain the prior and count the explicit conflict.",
+  "headroom": "Both source cells must bind their exact-law positive headroom and both validation-stopped fits before dispatch. No new learned architecture or method-by-support superiority claim.",
+  "scores": ["uncapped joint log loss", "full multiclass Brier", "modal accuracy", "90-percent confident error", "truth exclusion", "conflict frequency"],
+  "stopping": "Complete this finite reliability grid and its full frozen-source replay. No reliability tuning on development outcomes. Stop a hard-constraint recommendation for this noisy field if false records exclude truth; retain metric reversals and uncertainty.",
+  "cost_limits": {"each_packet_cpu_seconds": 300, "two_conditions_plus_full_replay_cpu_seconds": 900},
+  "validation": ["Known binary Bayes answer", "Uninformative report leaves forecasts unchanged", "Certain soft report equals hard projection", "False authoritative report retains positive true mass only under soft treatment", "Empty-support conflict is explicit", "Independent scalar probability-domain update", "Complete engineering consumer replay", "Full scientific frozen-source family replay before acceptance"],
+  "transport": "Twelve engineering false-context fixtures, six correct and six incorrect inspection reports at reliability 0.95/0.8/0.5, exercise the canonical ProcessCase and offline exporter read-only. Report truth and exact posterior remain evaluator-only; case IDs do not encode correctness.",
+  "limits": ["Reliability is supplied, not inferred", "A stipulated independent binary witness is not ordinary semantic context", "Exact target support is supplied equally", "Development worlds are reused and fits nested", "No confirmation or human correspondence", "C02 architecture comparison and B02/B03 mechanism discriminators remain independent conditional work"]
+}
