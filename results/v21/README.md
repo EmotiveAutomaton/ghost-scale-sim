@@ -4,6 +4,7 @@
 heartbeats, immutable plans, raw forecasts and private operations remain in the
 separate local campaign directory. No status count substitutes for a live check.
 
+- [Factor validity](factors/VALIDITY.json): 163,840 original forecasts, 209-file full replay, exact aliases and goal-fixed twins.
 - [Memory validity](memory/VALIDITY.json): 163,840 original forecasts, 3,137-file full replay, actual payload and source-link checks.
 - [Role-change validity](drift/VALIDITY.json): 2,721-file full replay, independent path probabilities, paired prefixes and matched shifted support.
 - [Sequential and long-history support validity](sequential/VALIDITY.json): two acquisition conditions, 529-file full replay and source-bound support reconstruction.

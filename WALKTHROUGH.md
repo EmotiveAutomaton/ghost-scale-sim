@@ -15,6 +15,8 @@ The [V21 copied-evidence diagnostic](docs/versions/v21-supporting-mechanisms/DEP
 
 The [V21 memory ruler](docs/versions/v21-supporting-mechanisms/MEMORY_REPORT.md) separates preserved endpoint forecasts from lost witnessed history under actual byte ceilings; compact ledgers and hybrid predictors have distinct costs.
 
+The [V21 factor ruler](docs/versions/v21-supporting-mechanisms/FACTORS_REPORT.md) separates goal-fixed behavior changes from knowledge/permission aliases and shows exact parity with supplied-information direct lookup.
+
 ## Read the title colour first
 
 **The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as

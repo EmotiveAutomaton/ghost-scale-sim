@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 knowledge, skill and permission
+
+Can an outcome distinguish a maker’s goal from knowledge, skill and permission? Knowledge and permission are exactly aliased without a separating witness in this constructed world. Revealing skill improves future prediction more than revealing either of them, while the equally informed direct table exactly matches joint inference. This is a constructed-method result, not learned architecture superiority or confirmation. [Report](docs/versions/v21-supporting-mechanisms/FACTORS_REPORT.md).
+
 ## V21 predictive memory
 
 Does preserving future predictions also preserve witnessed history? The 40-byte predictive head preserves the full-history forecast but retains no order or inspection witnesses. At 1,024 bytes, the hybrid preserves prediction and 23.12% of queried witnesses, versus 25.00% for the ledger alone. This is a constructed-method result; no general hybrid advantage, learned compression or confirmation is established. [Report](docs/versions/v21-supporting-mechanisms/MEMORY_REPORT.md).

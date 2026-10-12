@@ -1,0 +1,23 @@
+{
+  "schema": "v21.e04-admission.1",
+  "family": "G21-E04",
+  "registered_before_scientific_outcomes": true,
+  "question": "Does added historical evidence identify the route actually taken beyond finding a route that successfully reproduces the artifact?",
+  "scope": "Native finite supplied-law ruler with exact executable routes, paired historical prefixes and a direct enumeration reference. Learned reconstruction, unknown libraries and human process correspondence remain conditional.",
+  "world": "Four equally likely persistent makers. Each world draws a 2 by 4 by 4 table of method probabilities from a Dirichlet distribution with concentration 5 for the maker-preferred method and 1 otherwise. For goal zero preference is maker index; for goal one it is the next method cyclically. Goals are independent fair bits. Four methods produce either binary goal exactly: set goal; set opposite then flip; set goal then flip twice; set opposite, inspect, then flip. Their lengths are 1, 2, 3, 3.",
+  "population": {"worlds": "71010000..71010007", "namespace": "v21-e04", "cases_per_world": 128, "histories": [0, 4, 16, 64], "fit_seeds": [], "confirmation": false},
+  "observations": "Current goal equals the visible artifact. Past complete goal/method records share the same maker. Current witness is absent, inspection presence, or complete method. Every history length takes a prefix of the same 64-event stream; current and future outcomes stay paired. Future choice is method under the opposite supplied goal, not the already determined endpoint.",
+  "readers": {
+    "shortest": "Shortest method consistent with artifact and current witness, deterministic. Future maker belief conditions on current witness only; past history is deliberately unused.",
+    "goal-plausible": "Modal method under population law conditional on goal and current witness. Future belief matches the no-history historical reader; past history is unused.",
+    "historical": "Supplied-law posterior integrates persistent makers using past records and current witness; gives distributions over actual current method and future method.",
+    "direct-enumeration": "Independent scalar sum over the same four maker states and all route outcomes with identical evidence. Exact distribution matching is an information/implementation control, not a fitted architecture comparison."
+  },
+  "scores": ["actual program execution success", "exact route correspondence", "uncapped current-route log loss with explicit infinite fractions", "full multiclass Brier", "confidence errors", "future-method prediction proper losses", "modal selected route length"],
+  "controls": ["all eight programs reach their declared endpoint", "distinct histories share exactly the same endpoint", "uniform maker policies make past records uninformative", "a complete current witness identifies the route", "every scalar posterior agrees with the independent enumeration", "paired-prefix integrity", "complete engineering consumers and bounded full-grid pilot", "complete frozen-source scientific replay before acceptance"],
+  "fixtures": "Twelve blind route-ambiguity/inspection cases exercise the canonical ProcessCase validator and offline exporter read-only, with executable candidate routes public and actual route/posterior evaluator-only. These extend existing alias/inspection semantics; they do not claim omission, decisive selection or retraction coverage.",
+  "analysis": "Pair all cases, readers, history lengths and witness conditions within each coefficient world. Bootstrap world-level contrasts with 4096 draws. Separate successful reenactment, historical accuracy, future prediction, observation privilege and computation. No original-world B/C superiority gate is inherited.",
+  "limits": {"per_packet_cpu_seconds": 600, "original_plus_full_replay_cpu_seconds": 1200, "engineering_pilot_cpu_seconds": 120, "family_repair_active_hours": 2},
+  "continuation": "Land the exact route/history distinction and its fixtures after full replay. Prioritize registered C05 omission, E01 decisive-selection and D05 retraction consumers; retain learned reconstruction and candidate-specific controls as conditional scope. Stop claims that reenactment alone identifies the actual historical route.",
+  "limitations": "Maker policy and complete route catalog are supplied. Ignoring history in heuristic readers is an evidence restriction, not a fair learned capacity test. Current witnesses add information; exact direct enumeration matches the historical posterior. Miniature — architecture untested. No fresh confirmation or live downstream reader inference."
+}
