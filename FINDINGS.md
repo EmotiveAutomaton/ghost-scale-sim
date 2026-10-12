@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 persistence and unrelated histories
+
+Can a reader use personal history without trusting unrelated episodes? With supplied laws, inferred persistence improves log loss by 0.7403–0.8376 nats when all episodes share the current maker, but worsens it by 0.2110–0.2198 nats for unrelated episodes and 0.6296–0.7906 for a coherent foreign-author history. This is a verified constructed-method diagnostic, miniature — architecture untested, not learned contamination detection or confirmation. [Report](docs/versions/v21-supporting-mechanisms/PERSISTENCE_REPORT.md).
+
 ## V21 copied evidence and tempering
 
 Does accounting for copied evidence require a learned maker? In this native context subset, quarter-power episode likelihoods beat the learned shared-maker reader by 0.7443–0.8729 nats across copying rates. Known-root removal helps the latent reader but does not establish maker-specific benefit. This is a verified constructed-method diagnostic, miniature — architecture untested, with supplied support and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/DEPENDENCE_REPORT.md).

@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V21
 
+- [Persistence and joint-architecture response](v21-persistence-response.md)
+
 - [Copied-evidence and persistence response](v21-dependence-response.md)
 
 - [Fallible-record and copying-branch response](v21-reliability-response.md)

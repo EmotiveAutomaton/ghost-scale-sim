@@ -1,0 +1,26 @@
+{
+  "schema": "v21.c02-admission.1",
+  "family": "G21-C02",
+  "question": "At matched evidence, labels and approximate parameter budgets, which finite joint head preserves useful target dependence?",
+  "registered_before_scientific_outcomes": true,
+  "scope": "Initial original-law context-current, four complete historical episodes, native and changed execution. All training and validation remain native. The changed condition alters historical as well as current execution; it is separate from B07's sparse current-only shift.",
+  "population": "Eight development worlds, 256 cases each; fits 0 and 1 nested within each world. 2048 training labels across 64 laws; 4096 validation labels across 16 separate laws. No confirmation.",
+  "architectures": {
+    "direct": "One 128-way softmax head",
+    "autoregressive-forward": "Seven logistic conditionals with all preceding-bit interactions, forward target-bit order",
+    "autoregressive-reverse": "The same conditional family in reversed target-bit order",
+    "pairwise": "Unary and all pairwise target energies, exactly normalized over 128 targets",
+    "low-rank": "A four-component mixture of independent Bernoulli target bits; normalized mixture weights"
+  },
+  "parameter_budgets": [4096, 8192],
+  "width_rule": "For each family, floor((budget - output dimension)/(input dimension + output dimension + 1)); at least one hidden unit. Report actual parameter counts and CPU. Approximate parameter matching does not establish equal function class or compute.",
+  "engineering_choice": "Two finite capacity settings and four-component rank frozen before development. No tuning on scientific outcomes or hidden setting search.",
+  "optimization": "Float64 tanh hidden layer; minibatch Adam .003, batch 256, weight penalty .0001, 120 epochs maximum, validation patience 10 and minimum improvement .0001; retain best weights and every validation curve. A capped fit is unresolved.",
+  "controls": ["Uniform zero-parameter null", "Informative probability perturbation", "Independent scalar probabilities for every saved model forecast", "Central finite-difference gradients", "Supervised known-answer learning", "Two complete engineering consumers", "Full frozen scientific replay before acceptance"],
+  "comparisons": ["Unmasked joint", "Common exact support", "Product of each same predictor's marginals under common support", "Retained converged direct", "Retained naive Bayes", "Retained duplicate-removed naive Bayes"],
+  "admission": "Both bound native and changed reference cells must have exact-law headroom lower bound greater than .02 and two validation-stopped direct fits. Engineering fixtures cannot supply this admission.",
+  "interpretation": "Pair fits inside worlds; report every reader's native-to-shift contrast, proper losses and reversals, ordering, actual capacity, convergence and cost. Fresh-law architecture training is not included in this initial finite-label subset. No superiority or promotion from capped or order-sensitive comparisons.",
+  "cost_limits": {"per_packet_cpu_seconds": 1800, "original_plus_full_replay_cpu_seconds": 3600, "pilot_cpu_seconds": 600},
+  "repair": "One pre-admission engineering repair lengthens the too-short known-answer fixture to the already declared 120-epoch maximum without changing its threshold, scientific optimizer or scoring. Retain failed source and attempt. No second family repair.",
+  "stopping": "Complete this finite setting group and full replay once, retain every setting and unresolved convergence outcome. No optimizer or width search after outcomes. Wider regimes, capacity, label and diversity extensions remain conditional."
+}

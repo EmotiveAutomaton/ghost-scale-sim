@@ -20,6 +20,7 @@ immutable source capsules preserve each running experiment's code identity.
 - [Weekly implementation and continuation](IMPLEMENTATION_PLAN.md): the finite
   branch forest, implementation status and review obligations.
 - [Card registry](CARDS.json): every commissioned card, including B07.
+- [Persistence result](PERSISTENCE_REPORT.md): original/wide supplied-law rulers and full replay verified; contamination protection fails; C02 admitted.
 - [Copied-evidence result](DEPENDENCE_REPORT.md): full replay and copying fixtures verified; generic tempering wins in the native subset; B03 persistence admitted.
 - [Fallible-record result](RELIABILITY_REPORT.md): full replay verified; supplied soft reliability protects true histories; B02 copying diagnostics admitted.
 - [First completed-group result](DEVELOPMENT_GROUP_1_REPORT.md): 30 learned cells, 17 support diagnostics, two support gate dispositions and 24 offline fixtures.
