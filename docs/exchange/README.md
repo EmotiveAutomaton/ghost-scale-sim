@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V21 candidate dependence](v21-candidate-dependence-response.md): matched generic controls, native support and A03 admission.
+
 [V21 opportunity and candidate-control response](v21-opportunities-response.md).
 
 [V21 retraction and opportunity response](v21-retraction-response.md).

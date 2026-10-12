@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 candidate dependence
+
+Do the three learned-maker candidates survive a generic dependence correction? The native artifact candidate loses its distinctive advantage, while the two shifted candidates still improve log loss by about 0.053 and 0.051 nats over validation-selected episode weighting. These are verified constructed-method development results; maker-specific causation, copying-specific superiority and confirmation remain unestablished. [Report](docs/versions/v21-supporting-mechanisms/CANDIDATE_DEPENDENCE_REPORT.md).
+
 ## V21 contrasting opportunities
 
 Do contrasting opportunities help identify a fixed maker? With four contexts, target-information selection lowers joint preference-and-skill loss by 0.066 nats versus random selection, but does not establish better prediction in fresh contexts. Equally informed direct inference matches personal inference. These are constructed-method results with supplied laws, tie-sensitive modal accuracy and no confirmation. [Report](docs/versions/v21-supporting-mechanisms/OPPORTUNITIES_REPORT.md).

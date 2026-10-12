@@ -1,5 +1,7 @@
 # V21 public evidence
 
+[Candidate dependence](candidate-dependence/VALIDITY.json): original predictions, full replay, generic rivals and native support verified; A03 policies admitted.
+
 [Contrasting opportunities](opportunities/VALIDITY.json): full replay, independent selection and all scores verified; modal ties qualified.
 
 [Context retraction](retraction/VALIDITY.json): full replay, all scores and incremental/raw equivalence verified; CPU/storage advantage unmet.

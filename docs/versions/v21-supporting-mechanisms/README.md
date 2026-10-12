@@ -1,5 +1,7 @@
 # V21 supporting mechanisms, 10–16 October 2026
 
+- [Candidate dependence](CANDIDATE_DEPENDENCE_REPORT.md): two shifted candidates survive generic tempering; native artifact attribution does not; answer policy admitted.
+
 Which retained evidence, maker model and probability representation reduces
 reconstruction error beyond a properly fitted direct reader? Which distinctions
 remain unavailable from the evidence itself? These are constructed-method tests.
