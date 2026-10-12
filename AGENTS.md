@@ -27,6 +27,13 @@ replaced six-hour routine queue reviews with twelve-hour reviews. Read
 V21 is the Ghost companion to Sounding Line Stage 13; do not reopen Ghost V13
 or any closed V20 work. Development is isolated from immutable live capsules.
 
+Owner direction, October 11: `main` is the canonical development and publication
+branch, including V21. Organize campaigns in versioned directories; a week of
+testing does not need a separate publication branch. Immutable source capsules
+isolate running workers from checkout changes. Preserve any already-active review
+until it exits, then integrate its verified work before retiring its old branch.
+Continue ordinary publication after each verified nameable batch on `main`.
+
 Gear 2 permits three below-normal scientific CPU workers with one numerical
 thread each, no GPU and no environment synchronization. Sounding Line retains
 priority. The 72-CPU-hour ceiling includes setup/failures/reviews, with 18 hours

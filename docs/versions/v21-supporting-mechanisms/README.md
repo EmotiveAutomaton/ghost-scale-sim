@@ -9,6 +9,10 @@ and the accompanying validity errata. The October 11 instruction replaces routin
 six-hour checks with a permanent twelve-hour cadence; closed campaigns stop waking.
 This is Ghost V21 alongside Sounding Line Stage 13. V20 remains closed.
 
+V21 code, documentation and verified results are consolidated on `main`, following
+the owner's October 11 direction. Versioned directories organize the research;
+immutable source capsules preserve each running experiment's code identity.
+
 - [Research program](GHOST_SCALE_RESEARCH_PROGRAM_2026-10-10.md) and
   [errata](GHOST_SCALE_PROGRAM_ERRATA_2026-10-10.md): preserved original specifications.
 - [Accepted protocol and decisions](PROTOCOL.md): clocks, populations, rivals,
