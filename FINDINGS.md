@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 joint heads and marginal controls
+
+Does preserving target dependence explain the compact joint reader’s gain? The rank-four head lowers native log loss by 0.1011 nats against the same-budget direct joint head, but the direct head’s own marginal-product control has lower mean loss than rank four in both execution conditions. A dependence-specific advantage is not established. These are verified constructed-method development results, with no promotion or confirmation. A shifted complete-current 512-label shared-maker cell adds one descriptive candidate; higher labels do not retain the practical margin. [Report](docs/versions/v21-supporting-mechanisms/JOINT_REPORT.md).
+
 ## V21 persistence and unrelated histories
 
 Can a reader use personal history without trusting unrelated episodes? With supplied laws, inferred persistence improves log loss by 0.7403–0.8376 nats when all episodes share the current maker, but worsens it by 0.2110–0.2198 nats for unrelated episodes and 0.6296–0.7906 for a coherent foreign-author history. This is a verified constructed-method diagnostic, miniature — architecture untested, not learned contamination detection or confirmation. [Report](docs/versions/v21-supporting-mechanisms/PERSISTENCE_REPORT.md).

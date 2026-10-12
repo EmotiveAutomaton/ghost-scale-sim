@@ -166,6 +166,9 @@ def factorization(root,d,pulse):
     return dict(card='G21-C01',population=population,controls=controls(),scope='Same retained predictor, no new fitting; mask and learned dependence separated')
 
 def run_study(root,d,pulse):
+    if d['handler']=='acquisition':
+        from .acquisition import run
+        return run(root,d,pulse)
     if d['handler']=='joint-architectures':
         from .joint_study import run
         return run(root,d,pulse)

@@ -1,0 +1,27 @@
+{
+  "schema": "v21.d01-admission.1",
+  "family": "G21-D01",
+  "question": "Does selecting a record for expected information about the historical target beat selecting an unpredictable record after charging acquisition and decoding?",
+  "registered_before_scientific_outcomes": true,
+  "scope": "Initial exact supplied-law information ruler: context-current evidence, one purchase, original/wide laws and native/changed execution. This is not a learned policy, law-marginal headroom or architecture-superiority screen.",
+  "population": "Eight development worlds, 256 matched current episodes per world; no trainable fits or confirmation. Every policy sees the same candidate reports and target cases.",
+  "records": {
+    "operation-event": "Truthful record of whether revision preceded repair in this episode, relative acquisition cost 2.",
+    "contrasting-context": "One complete episode with inspection observed, by the same maker, drawn at the current context with its request bit flipped; relative cost 4. Context is externally set and the conditional episode law is normalized within maker/context.",
+    "noisy-maker-cue": "Binary route-preference cue with known reliability .8, relative cost 1. The reported cue, not the true maker identity, is revealed.",
+    "random-action-distractor": "Independent eight-way random-action report with no information about the target, relative cost 1. This tests selection by unpredictable outcomes."
+  },
+  "policies": {
+    "target-information": "Choose the largest expected target log-loss reduction minus fee times relative acquisition cost; no purchase wins nonpositive ties.",
+    "action-entropy": "Choose the largest report-outcome entropy minus fee times relative cost; no purchase wins nonpositive ties.",
+    "fixed-cheapest": "Always buy the noisy-maker cue, the prespecified choice among equal-cost records.",
+    "random": "Uniformly choose one of the four reports, using frozen draws shared across fees.",
+    "no-acquisition": "Retain the current-evidence posterior."
+  },
+  "fees": [0, 0.01, 0.05, 0.2],
+  "scoring": "Uncapped joint log loss, full multiclass Brier, modal accuracy, confident errors, actual target-loss reduction, acquisition cost, net loss (log loss plus fee times relative cost), and loss reduction per acquired cost. Report measured table setup, policy and decoder CPU separately; CPU seconds are not silently converted to log-loss units. Amortize setup over 1/10/100/1000 episodes.",
+  "checks": ["Independent scalar regrouping of every current and conditional historical channel", "Separate loop-based joint-outcome entropy and posterior reference", "Zero-information random-action null", "Known informative binary record", "Matched reports across policies and fees", "Two complete isolated engineering consumers", "Bounded full-size cost pilot", "Full frozen scientific replay before acceptance"],
+  "interpretation": "Whole-world paired uncertainty; sampled episodes, policies and fee settings are not independent worlds. Supplied generator law, fixed reliability and same-maker history are privileges. The initial ruler does not establish learnable acquisition, unknown reliability, hidden provenance or sequential complementarity. Native-to-shift contrasts are required; no multiplied-feature reader or duplicated-evidence claim is part of this family.",
+  "limits": {"per_packet_cpu_seconds": 600, "four_conditions_plus_replay_cpu_seconds": 3000, "pilot_cpu_seconds": 300, "family_repair_active_hours": 2},
+  "stopping": "Complete the four finite conditions and one full original/native replay once. Retain policy failures. D03/D04/B04/B05 and eligible new-world branches remain independent successors. Do not extend this information ruler merely to fill time."
+}
