@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V21 consequential selection
+
+Can selecting a plan change content without rewriting it? One selection changes 4.05 of eight content units on average; sixteen cosmetic edits change none. Character counts assign the selection zero weight. Historical inference and equally informed direct enumeration match exactly. This is a constructed-method result, not a human contribution measure or confirmation. [Report](docs/versions/v21-supporting-mechanisms/SELECTION_REPORT.md).
+
 ## V21 executable and historical routes
 
 Does reproducing an artifact recover the route actually taken? Every tested route reproduces the endpoint, but the shortest route matches history only 23.63% of the time without a current witness. Using 64 past records raises historical-reader accuracy to 63.87%; equally informed direct enumeration matches it. This is a constructed-method result, not learned superiority or confirmation. [Report](docs/versions/v21-supporting-mechanisms/ROUTES_REPORT.md).

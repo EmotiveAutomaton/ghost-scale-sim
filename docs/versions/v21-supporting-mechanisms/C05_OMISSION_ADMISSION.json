@@ -1,0 +1,22 @@
+{
+  "card": "G21-C05",
+  "status": "registered initial finite-universe diagnostic; scientific acceptance requires full frozen replay",
+  "question": "Does candidate expansion improve full-universe reconstruction as well as candidate coverage, and what does a calibrated unknown bucket hide?",
+  "world": "100 finite mechanism types: ten operation families crossed with ten parameter values. Each world supplies a positive prior and two independent ten-category noisy cues, with reliability 0.8 for family and 0.6 for parameter.",
+  "omission": "A pre-outcome mechanism rule keeps identities below 100, 90, 75 or 50 for omission rates 0, 0.1, 0.25 and 0.5. Identity is ten times operation family plus parameter. Rule frozen before development, independent of test truth and cue rankings.",
+  "expansion_budgets": [8, 16, 32, 64],
+  "readers": ["forced-choice", "finite-unknown", "uniform-expansion", "evidence-ranked-expansion", "truth-supplied"],
+  "unknown": "Supply exact aggregate remaining posterior mass from the common finite law, but distribute it uniformly across remaining types for full-universe scoring. Candidate-event scoring collapses them to one unknown event and is reported separately. This supplied-law calibration is a privilege, not learned open-world detection.",
+  "expansion": "Uniform expansion uses a fixed training-identity permutation. Evidence ranking uses supplied cue likelihood, stable ties by mechanism identity, without test labels. Both add up to the budget from omitted types. Truth-supplied adds the actual omitted type and is a separately labeled oracle.",
+  "metrics": ["uncapped log loss", "full multiclass Brier", "accuracy", "confident errors", "truth excluded", "explicit candidate coverage", "unknown mass", "candidate-event log loss", "full-universe minus candidate-event loss", "CPU"],
+  "controls": ["no omission gives exact posterior parity", "no-information posterior equals supplied prior", "forced omission assigns zero truth probability", "all omitted types expanded gives exact parity", "independent scalar posterior and ranking", "nested budgets and label-independent omissions", "equal-cue alias probabilities remain explicit"],
+  "population": {"worlds": 8, "cases_per_world": 256, "fits": [], "split": "development"},
+  "pairing": "All omissions, budgets and readers reuse the same world cases. Budget repeats and identical methods are controls, never independent worlds.",
+  "criterion": "Descriptive constructed-method ruler. Require improved coverage and full-universe loss for any expansion benefit; candidate-event improvement alone is insufficient. No B/C learned-superiority claim, headroom promotion or confirmation.",
+  "fixtures": "12 missing-candidate fixtures through canonical ProcessCase validator and offline exporter read-only. Reader observations, declared finite catalog, initial candidates and unknown option separate from evaluator truth and posterior.",
+  "per_packet_cpu_cap_seconds": 600,
+  "full_replay": "Complete original finite design from identical fresh frozen source, new identity.",
+  "remaining_scope": ["Learned unknown mass and law uncertainty", "Open-world concept invention", "Mechanisms beyond the registered finite catalog", "D05 retraction fixtures"],
+  "repair_allowance_active_hours": 2,
+  "repairs_used": 0
+}

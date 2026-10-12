@@ -19,6 +19,8 @@ The [V21 factor ruler](docs/versions/v21-supporting-mechanisms/FACTORS_REPORT.md
 
 The [V21 route ruler](docs/versions/v21-supporting-mechanisms/ROUTES_REPORT.md) distinguishes an executable reconstruction, the route actually taken and a forecast of a future choice.
 
+The [V21 selection ruler](docs/versions/v21-supporting-mechanisms/SELECTION_REPORT.md) separates character editing, content intervention and identification of the historical choice.
+
 ## Read the title colour first
 
 **The Ghost Scale is running on these slides, and the plates are scored as artifacts rather than as

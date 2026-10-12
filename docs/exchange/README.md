@@ -16,6 +16,8 @@ The earlier annotated exchange index is preserved in the
 
 ## V21
 
+- [Selection review and omission admission](v21-selection-response.md)
+
 - [Route review and selection admission](v21-routes-response.md)
 
 - [Factor review and route-admission response](v21-factors-response.md)
