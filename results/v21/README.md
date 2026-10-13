@@ -1,5 +1,7 @@
 # V21 public evidence
 
+[October 13 bounded health and numerical coverage](health-20261013/REPORT.json): unchanged service owners, complete numerical receipt coverage, ten explicit deferrals and unopened confirmation preparation.
+
 [Calibrated answer rival](answer-calibrated/VALIDITY.json): all finite decisions and full replay verified; original input checks reused by exact hashes.
 
 [Model expansion](expansion/VALIDITY.json): all scores, histories, policies, costs and complete replay verified; supplied-library limits retained.

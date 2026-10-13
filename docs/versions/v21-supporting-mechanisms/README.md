@@ -1,5 +1,7 @@
 # V21 supporting mechanisms, 10–16 October 2026
 
+[October 13 native health and diagnostic preparation](HEALTH_REPORT_20261013.md): unchanged service owners, complete numerical receipt coverage, ten explicit deferrals and unopened confirmation preparation.
+
 [Calibrated answer rival](CALIBRATED_ANSWER_REPORT.md): fixed-specificity benefit unestablished after generic dependence correction; adaptive matched-error difference retained, no promotion.
 
 - [Model expansion](EXPANSION_REPORT.md): full replay verified; predictive gains and unnecessary expansion reported together.
