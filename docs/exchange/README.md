@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 A2 response](v22-a2-response.md): Steering signatures and selective uptake, split finite result.
+
 - [V22 C2 response](v22-c2-response.md): Similarity, process evidence and preference records, split finite result.
 
 - [V22 B1 response](v22-b1-response.md): Costly departures and set-point recovery, qualified finite result.

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 A2: Steering signatures and selective uptake
+
+Does recognizing steering reduce content uptake while preserving technique? With a correctly mapped signature, the constructed full-library reader changes its content belief by 0.0167 on average versus 0.1606 for the missing-process reader, while technique-production probability is 89.94% versus 89.46%. But the content gap persists without the signature, so the proposed vanishing-gap control fails. This supports a qualified library-and-signature mechanism, not a clean signature-only explanation.
+
+[Report](docs/versions/v22-mechanism-tests/A2_REPORT.md).
+
 ## V22 C2: Similarity, process evidence and preference records
 
 Do shared processes and records help different inference targets? In the independent constructed world, eight preference records improve loss by 0.423 nats without a shared library and 0.460 with one. A reliable shared-library benefit itself is not established when similarity is hidden. Disclosing the sharing relation identifies the binary preference without records, and a coupled preference witness also helps. The unconditional claim that similarity cannot inform preferences fails; the result depends on what is disclosed and coupled.

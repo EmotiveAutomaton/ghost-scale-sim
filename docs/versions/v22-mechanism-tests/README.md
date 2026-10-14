@@ -1,5 +1,7 @@
 # V22: credibility, preferences and goal hierarchies
 
+- [Reviewed A2: Steering signatures and selective uptake](A2_REPORT.md): split finite result; full replay verified.
+
 - [Reviewed C2: Similarity, process evidence and preference records](C2_REPORT.md): split finite result; full replay verified.
 
 - [Reviewed B1: Costly departures and set-point recovery](B1_REPORT.md): qualified finite result; full replay verified.

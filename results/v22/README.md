@@ -1,5 +1,7 @@
 # V22 evidence
 
+- [A2: Steering signatures and selective uptake](a2/README.md): accepted with split prediction dispositions.
+
 - [C2: Similarity, process evidence and preference records](c2/README.md): accepted with split prediction dispositions.
 
 - [B1: Costly departures and set-point recovery](b1/README.md): accepted with qualified prediction dispositions.

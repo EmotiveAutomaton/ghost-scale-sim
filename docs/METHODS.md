@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [V22 A2 review](versions/v22-mechanism-tests/A2_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 102-file replay. Content change is reported both signed and absolute; opposing claim directions otherwise cancel. Technique probability is the probability of producing the true operation under posterior sampling, not physical execution. Signature presence, its disclosed mapping and the true source goal remain separate strata.
+
 The [V22 C2 review](versions/v22-mechanism-tests/C2_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 102-file replay. Library and preference sharing are crossed independently, with evaluator-only sharing in the primary condition. Both marginal targets are scored separately. Record ablations pair identical cases; sharing-condition contrasts pair coefficient worlds, not individual cases. Known sharing and coupled witnesses remain distinct positive controls.
 
 The [V22 B1 review](versions/v22-mechanism-tests/B1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 118-file replay. Set-point coverage is averaged over dimensions inside cases and then coefficient worlds. Interval width, coverage and future-choice proper scores are separate. Native-to-shift changes are paired by coefficient world, dimension, record count and control; the two direct fits are averaged before uncertainty.

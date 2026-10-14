@@ -1,6 +1,6 @@
 {
   "apparatus": "45 known-answer/runtime controls and seven frozen consumers verified",
-  "at": "2026-10-14T03:10:37.838690+00:00",
+  "at": "2026-10-14T03:10:44.169923+00:00",
   "mechanisms": [
     {
       "confirmation": false,
@@ -26,7 +26,9 @@
     {
       "confirmation": false,
       "id": "A2",
-      "status": "OPEN: scientific interpretation pending"
+      "status": "SPLIT",
+      "finding": "Does recognizing steering reduce content uptake while preserving technique? With a correctly mapped signature, the constructed full-library reader changes its content belief by 0.0167 on average versus 0.1606 for the missing-process reader, while technique-production probability is 89.94% versus 89.46%. But the content gap persists without the signature, so the proposed vanishing-gap control fails. This supports a qualified library-and-signature mechanism, not a clean signature-only explanation.",
+      "report": "A2_REPORT.md"
     },
     {
       "confirmation": false,
