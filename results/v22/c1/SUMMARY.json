@@ -1,0 +1,17 @@
+{
+  "card": "C1",
+  "scientific_state": "accepted finite descriptive result with explicit prediction dispositions",
+  "warrant": "SPLIT",
+  "finding": "Does joint inference improve recovery across a goal hierarchy? Joint reading improves internal-node probability forecasts over the one-direction ablations, but bottom-up inference already matches it at the root. Removing distant evidence can hurt more than removing immediate-child evidence, and root accuracy is not monotone in every coverage series. These are finite constructed-tree results: marginal node scores do not establish a joint-prediction advantage or mathematical smoothness.",
+  "confirmation": false,
+  "automatic_extension": false,
+  "report": "docs/versions/v22-mechanism-tests/C1_REPORT.md",
+  "full_local_aggregate_sha256": {
+    "ANALYSIS.json": "753f61960df7a87bc4365ed81a3596867d4fc8cc0b8fa087068e538f7281c530",
+    "FITS.json": "9704d7494bd298fbcf4d36f7349d5493c431b606d2656ec2f8c646a634ec834f",
+    "HEADROOM.json": "f781a427410f85f64ed624aa00066348234a3b8baa1a14edf9a3bacfe4ccf24f",
+    "PROVENANCE.json": "b0d37a63a0683bb4ec2f17d79a5b4eac4df983bef58dab4da810aa2859051700",
+    "STRATA.csv": "c0371bae23b592ad55cf9ac66ff05ce47008f6be9898768f39afd9612ff27631",
+    "SUPPLEMENT.json": "a3e01e2b3e7393541b51709b15602ca42257e6bb7ebfddbffc54b55df919521b"
+  }
+}

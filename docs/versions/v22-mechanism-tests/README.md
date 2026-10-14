@@ -1,5 +1,7 @@
 # V22: credibility, preferences and goal hierarchies
 
+- [Reviewed C1: Joint goal-tree inference](C1_REPORT.md): split finite result; full replay verified.
+
 - [Reviewed B2: Acquisition routes and devaluation](B2_REPORT.md): qualified finite result; full replay verified.
 
 - [Reviewed A3: Attention withdrawal and its costs](A3_REPORT.md): split finite result; full replay verified.

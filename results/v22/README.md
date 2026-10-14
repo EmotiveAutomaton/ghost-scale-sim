@@ -1,5 +1,7 @@
 # V22 evidence
 
+- [C1: Joint goal-tree inference](c1/README.md): accepted with split prediction dispositions.
+
 - [B2: Acquisition routes and devaluation](b2/README.md): accepted with qualified prediction dispositions.
 
 - [A3: Attention withdrawal and its costs](a3/README.md): accepted with split prediction dispositions.

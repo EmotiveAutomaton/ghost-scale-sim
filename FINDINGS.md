@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 C1: Joint goal-tree inference
+
+Does joint inference improve recovery across a goal hierarchy? Joint reading improves internal-node probability forecasts over the one-direction ablations, but bottom-up inference already matches it at the root. Removing distant evidence can hurt more than removing immediate-child evidence, and root accuracy is not monotone in every coverage series. These are finite constructed-tree results: marginal node scores do not establish a joint-prediction advantage or mathematical smoothness.
+
+[Report](docs/versions/v22-mechanism-tests/C1_REPORT.md).
+
 ## V22 B2: Acquisition routes and devaluation
 
 Can acquisition route predict a choice after need satisfaction? The two-route reader beats both single-route assumptions on post-devaluation choice loss in every tested condition. Under broken contingency its loss is 0.456 nats, versus 0.926 for the model-based-only reader and 1.212 for association-only. Yet observational aliases keep route probability exactly at one half. This is a constructed-mechanism prediction result, not proof that the historical route is always identifiable.

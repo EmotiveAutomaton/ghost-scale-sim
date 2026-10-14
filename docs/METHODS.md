@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [V22 C1 review](versions/v22-mechanism-tests/C1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 102-file replay. Depth-specific node marginals average nodes within cases, cases within worlds, and fits within worlds before paired uncertainty. Both one-direction ablations retain the same full-evidence law weights. Adjacent/distant removal is scored against the saved focus-node truth, not the mean posterior vector; padded nodes never enter scores.
+
 The [V22 B2 review](versions/v22-mechanism-tests/B2_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 110-file replay. Pre-intervention acquisition-route inference and post-devaluation binary choice are scored as separate marginal heads. Single-route zero probability on the other route creates infinite route loss, not infinite choice loss. The observational-alias prior identity is checked against all saved cases.
 
 The [V22 A3 review](versions/v22-mechanism-tests/A3_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 142-file replay. Sequential memory, posterior recognition, sampled technique production, E56 per-step uptake and actual G5 assembly remain separate outcomes. All 600 fixed withdrawal/guard mixtures are examined, including identical controls; matched comparisons use the predeclared 0.02 technique tolerance without selecting a threshold. Physical outputs retain charged inspections and independently checked action execution.
