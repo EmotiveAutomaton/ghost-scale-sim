@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 A3 response](v22-a3-response.md): Attention withdrawal and its costs, split finite result.
+
 - [V22 A2 response](v22-a2-response.md): Steering signatures and selective uptake, split finite result.
 
 - [V22 C2 response](v22-c2-response.md): Similarity, process evidence and preference records, split finite result.

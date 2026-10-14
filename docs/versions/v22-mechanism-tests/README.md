@@ -1,5 +1,7 @@
 # V22: credibility, preferences and goal hierarchies
 
+- [Reviewed A3: Attention withdrawal and its costs](A3_REPORT.md): split finite result; full replay verified.
+
 - [Reviewed A2: Steering signatures and selective uptake](A2_REPORT.md): split finite result; full replay verified.
 
 - [Reviewed C2: Similarity, process evidence and preference records](C2_REPORT.md): split finite result; full replay verified.

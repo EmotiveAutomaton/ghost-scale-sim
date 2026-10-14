@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 A3: Attention withdrawal and its costs
+
+Does withdrawal protect uptake at matched technique? In one fixed mixture comparison with goal-bearing procedures, withdrawal reduces purpose and value memory change by 0.120 and 0.112 while technique accuracy differs by only 0.60 percentage points. Purpose-recognition loss is not established in that comparison. The separate physical learner retains unwanted uptake when useful procedures carry it. These are constructed-mechanism results; they do not establish disgust or a universal protection-with-recognition-cost tradeoff.
+
+[Report](docs/versions/v22-mechanism-tests/A3_REPORT.md).
+
 ## V22 A2: Steering signatures and selective uptake
 
 Does recognizing steering reduce content uptake while preserving technique? With a correctly mapped signature, the constructed full-library reader changes its content belief by 0.0167 on average versus 0.1606 for the missing-process reader, while technique-production probability is 89.94% versus 89.46%. But the content gap persists without the signature, so the proposed vanishing-gap control fails. This supports a qualified library-and-signature mechanism, not a clean signature-only explanation.
