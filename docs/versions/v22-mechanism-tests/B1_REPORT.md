@@ -33,6 +33,8 @@ The direct reader is already worse in range; neither direct change establishes d
 
 Zero costs make weighting identical to exact inference. The independent-effort and nonidentifying-menu controls are retained at every record length; alias menus provide no set-point information. All reader/target proper scores and accuracy/confidence reversals remain available. No equivalent-coverage learning curve, new population or follow-up allocation is inferred.
 
+The arm named independent effort randomizes costs independently of the action effects, but those costs still enter the maker's choice utility. It is therefore **not** the protocol's fully choice-independent costly-label null. That specific control is unexecuted as specified and receives an explicit unresolved disposition. Numerical validity of the saved forecasts does not repair this semantic gap; no claim that irrelevant costly labels are harmless is accepted, and no additional run is authorized by closure.
+
 ## Verification and scope
 
 All 2,048 original case posteriors, 20,480 reader-case forecast bundles and 11,520 world/target score strata have independent numerical receipts. The complete 118-file scientific replay matches. This review rechecked every retained original/replay file hash, the plan, immutable source archive, environment declaration and receipt bindings; it reused the matching numerical work without rerunning science.

@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+V22 scope limits: the fully choice-independent costly-label null remains unexecuted in B1, and A3 retains full flag evidence after withdrawal. [Final dispositions](docs/versions/v22-mechanism-tests/FINAL_REPORT.md).
+
 ## V22 finite pass complete
 
 Can the seven proposed mechanisms survive their controls? V22 is complete: all seven finite results are verified, with mixed findings and no confirmation claim. Source and acquisition-route inference help in these constructed worlds; several uptake, similarity and hierarchy predictions require qualification.

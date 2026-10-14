@@ -4,6 +4,8 @@ Does withdrawal protect uptake at matched technique? In one fixed mixture compar
 
 Sequential policies read the same fresh V22 streams. Content becomes available after step eight; procedure and flag evidence arrive earlier. Withdrawal at posterior flag thresholds 0.7 or 0.9 reduces content precision to 0.05, with an explicit technique-processing penalty. The early guard reduces every channel to 0.2. Procedure-only leaves content memory unchanged by its update rule even when its posterior infers the linked value. This is a property of the apparatus, not demonstrated psychological impermeability.
 
+The separate flag likelihood continues at full precision after withdrawal, including under the early guard. Thus the policies reduce the three content/operation channels, not every source of purpose information. The retained recognition scores cannot establish the cost of withdrawing all purpose-diagnostic evidence.
+
 Purpose/value uptake here means absolute memory change from the initial probability 0.5. Recognition means correct modal purpose prediction; technique means the sampled later operation is correct. All are distinct from probability loss. Prefixes four and eight contain no direct content, so their zero content changes do not demonstrate protection from encountered content.
 
 All weights 0, 0.25, 0.5, 0.75 and 1 are crossed. Each withdrawal or guard policy is mixed with no gate. Of 600 comparisons, 110 meet the mean technique-difference tolerance, including 24 identical no-gate controls; 490 do not. The complete matched set is published. A mean match is not a confidence-interval equivalence test, and no development-selected threshold is introduced. No withdrawal/no-gate mixture matches the pure early guard at the fixed tolerance.

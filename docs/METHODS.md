@@ -1,5 +1,7 @@
 # The methodology layer
 
+V22 semantic scope: B1 randomized costs still enter maker utility, leaving the fully choice-independent costly-label null unexecuted as specified. A3 keeps flag evidence at full precision after channel withdrawal; recognition is not a measure of withdrawing every purpose cue. Numerical receipts remain valid for the actual finite instruments.
+
 The [V22 C1 review](versions/v22-mechanism-tests/C1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 102-file replay. Depth-specific node marginals average nodes within cases, cases within worlds, and fits within worlds before paired uncertainty. Both one-direction ablations retain the same full-evidence law weights. Adjacent/distant removal is scored against the saved focus-node truth, not the mean posterior vector; padded nodes never enter scores.
 
 The [V22 B2 review](versions/v22-mechanism-tests/B2_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 110-file replay. Pre-intervention acquisition-route inference and post-devaluation binary choice are scored as separate marginal heads. Single-route zero probability on the other route creates infinite route loss, not infinite choice loss. The observational-alias prior identity is checked against all saved cases.

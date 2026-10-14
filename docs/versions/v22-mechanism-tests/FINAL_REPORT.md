@@ -26,6 +26,8 @@ All direct fits stopped on validation. At the 8,192-label budget, 157 of 538 tar
 
 The reports retain every reader under the perturbation shift, copied/unrelated histories, aliases, disclosed similarity, wrong signature maps, secondary-score reversals and original exact gates. B2 route-label infinities never substitute for choice scores. C1 node losses are marginal, not joint. A3 sequential memory, E56 per-step scoring and actual G5 execution are separate instruments. The miniature architectures remain untested beyond these finite constructions; there are no human data or human-mechanism conclusions.
 
+Two implementation limits further restrict the warrants. B1's randomized-cost arm still feeds cost into choice utility, so the requested fully choice-independent costly-label null was not executed as specified; that control remains explicitly unresolved. A3 continues to read flag evidence at full precision after withdrawal, so its recognition results do not measure withdrawal of all purpose information. These dispositions require no restart or expansion of the closed finite pass.
+
 ## Costs and closure
 
 Scientific execution, independent checking and full replay consumed 965.578125 measured native CPU seconds. The charged total bound is 4794.671875 seconds (1.331853 CPU hours), including the full 3,600-second setup/service allowance, 49.093750 measured review seconds, a 120-second unmetered-tooling allowance and a 60-second remaining review/exit allowance. This is below the original 12-hour ceiling. The four-hour verification/closure protection was respected; no expansion uses the unused allocation.
