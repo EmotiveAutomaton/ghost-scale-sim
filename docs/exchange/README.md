@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 B1 response](v22-b1-response.md): Costly departures and set-point recovery, qualified finite result.
+
 - [V22 A1 response](v22-a1-response.md): Source inference and fixed trust, split finite result.
 
 - [V22 opening](v22-setup-response.md): seven implemented instruments, validated controls and finite queue.

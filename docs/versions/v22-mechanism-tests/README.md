@@ -1,5 +1,7 @@
 # V22: credibility, preferences and goal hierarchies
 
+- [Reviewed B1: Costly departures and set-point recovery](B1_REPORT.md): qualified finite result; full replay verified.
+
 - [Reviewed A1: Source inference and fixed trust](A1_REPORT.md): split finite result; full replay verified.
 
 The October 13 proposal is commissioned as a finite seven-study first pass.

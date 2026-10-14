@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 B1: Costly departures and set-point recovery
+
+Do costly departures identify preferences more efficiently? Effort weighting narrows the constructed set-point intervals but lowers coverage relative to exact unit weighting. At 32 native records, coverage remains 98.26% and future-choice log loss improves by only 0.0090 nats. The direct reader already trails inside its training range and does not worsen after larger perturbations, so the proposed inside-parity/outside-failure account is not established. These are finite constructed-mechanism results.
+
+[Report](docs/versions/v22-mechanism-tests/B1_REPORT.md).
+
 ## V22 A1: Source inference and fixed trust
 
 Does inferring a source explain uptake better than one fixed trust? In this constructed mechanism, source inference improves native property log loss by 0.102, 0.115 and 0.249 nats against trusts 0.2, 0.54 and 0.9. Steering detection rises from 13.4% without records to 100% with 32 records. The proposed competence ordering of discrepancy-curve peaks fails: with long records, competent informers peak earlier than weak informers on the tested grid. No universal trust crossover or broad architecture claim follows.

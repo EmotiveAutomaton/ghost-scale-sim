@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [V22 B1 review](versions/v22-mechanism-tests/B1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 118-file replay. Set-point coverage is averaged over dimensions inside cases and then coefficient worlds. Interval width, coverage and future-choice proper scores are separate. Native-to-shift changes are paired by coefficient world, dimension, record count and control; the two direct fits are averaged before uncertainty.
+
 The [V22 A1 review](versions/v22-mechanism-tests/A1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 142-file replay. Retained discrepancy curves preserve source goal, competence, reader noise and history length. Signed property error and belief change remain separate from absolute curve heights. Fixed-trust, label, unrelated-history and duplicate controls use the same forecast targets; sparse cells retain missing-world qualifications.
 
 The [V22 setup](versions/v22-mechanism-tests/SETUP_REPORT.md) implements finite

@@ -1,6 +1,6 @@
 {
   "apparatus": "45 known-answer/runtime controls and seven frozen consumers verified",
-  "at": "2026-10-14T03:07:59.469714+00:00",
+  "at": "2026-10-14T03:09:28.025493+00:00",
   "mechanisms": [
     {
       "confirmation": false,
@@ -12,7 +12,9 @@
     {
       "confirmation": false,
       "id": "B1",
-      "status": "OPEN: scientific interpretation pending"
+      "status": "QUALIFIED",
+      "finding": "Do costly departures identify preferences more efficiently? Effort weighting narrows the constructed set-point intervals but lowers coverage relative to exact unit weighting. At 32 native records, coverage remains 98.26% and future-choice log loss improves by only 0.0090 nats. The direct reader already trails inside its training range and does not worsen after larger perturbations, so the proposed inside-parity/outside-failure account is not established. These are finite constructed-mechanism results.",
+      "report": "B1_REPORT.md"
     },
     {
       "confirmation": false,
