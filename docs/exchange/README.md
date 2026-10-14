@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 A1 response](v22-a1-response.md): Source inference and fixed trust, split finite result.
+
 - [V22 opening](v22-setup-response.md): seven implemented instruments, validated controls and finite queue.
 
 - [Calibrated-answer review](v21-calibrated-answer-response.md): supplied replay verified; strongest-rival and stopping-extension dispositions.

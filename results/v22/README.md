@@ -1,5 +1,7 @@
 # V22 evidence
 
+- [A1: Source inference and fixed trust](a1/README.md): accepted with split prediction dispositions.
+
 V22 tests seven finite constructed mechanisms under the
 [version protocol](../../docs/versions/v22-mechanism-tests/PROTOCOL.md).
 

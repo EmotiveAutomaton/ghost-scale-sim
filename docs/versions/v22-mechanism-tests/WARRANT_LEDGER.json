@@ -1,1 +1,43 @@
-{"apparatus":"45 known-answer/runtime controls and seven frozen consumers verified","at":"2026-10-14T02:37:59.516080+00:00","mechanisms":[{"confirmation":false,"id":"A1","status":"OPEN: scientific interpretation pending"},{"confirmation":false,"id":"B1","status":"OPEN: scientific interpretation pending"},{"confirmation":false,"id":"C2","status":"OPEN: scientific interpretation pending"},{"confirmation":false,"id":"A2","status":"OPEN: scientific interpretation pending"},{"confirmation":false,"id":"A3","status":"OPEN: scientific interpretation pending"},{"confirmation":false,"id":"B2","status":"OPEN: scientific interpretation pending"},{"confirmation":false,"id":"C1","status":"OPEN: scientific interpretation pending"}]}
+{
+  "apparatus": "45 known-answer/runtime controls and seven frozen consumers verified",
+  "at": "2026-10-14T03:07:59.469714+00:00",
+  "mechanisms": [
+    {
+      "confirmation": false,
+      "id": "A1",
+      "status": "SPLIT",
+      "finding": "Does inferring a source explain uptake better than one fixed trust? In this constructed mechanism, source inference improves native property log loss by 0.102, 0.115 and 0.249 nats against trusts 0.2, 0.54 and 0.9. Steering detection rises from 13.4% without records to 100% with 32 records. The proposed competence ordering of discrepancy-curve peaks fails: with long records, competent informers peak earlier than weak informers on the tested grid. No universal trust crossover or broad architecture claim follows.",
+      "report": "A1_REPORT.md"
+    },
+    {
+      "confirmation": false,
+      "id": "B1",
+      "status": "OPEN: scientific interpretation pending"
+    },
+    {
+      "confirmation": false,
+      "id": "C2",
+      "status": "OPEN: scientific interpretation pending"
+    },
+    {
+      "confirmation": false,
+      "id": "A2",
+      "status": "OPEN: scientific interpretation pending"
+    },
+    {
+      "confirmation": false,
+      "id": "A3",
+      "status": "OPEN: scientific interpretation pending"
+    },
+    {
+      "confirmation": false,
+      "id": "B2",
+      "status": "OPEN: scientific interpretation pending"
+    },
+    {
+      "confirmation": false,
+      "id": "C1",
+      "status": "OPEN: scientific interpretation pending"
+    }
+  ]
+}

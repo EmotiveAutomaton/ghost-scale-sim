@@ -1,1 +1,42 @@
-{"at":"2026-10-14T02:37:59.513644+00:00","cards":[{"id":"A1","job":"v22-01-a1-first-pass-1","state":"numerically_verified"},{"id":"B1","job":"v22-02-b1-first-pass-1","state":"numerically_verified"},{"id":"C2","job":"v22-03-c2-first-pass-1","state":"numerically_verified"},{"id":"A2","job":"v22-04-a2-first-pass-1","state":"numerically_verified"},{"id":"A3","job":"v22-05-a3-first-pass-1","state":"running"},{"id":"B2","job":"v22-06-b2-first-pass-1","state":"queued"},{"id":"C1","job":"v22-07-c1-first-pass-1","state":"queued"}],"scope":"seven finite first-pass cards; no automatic extension"}
+{
+  "at": "2026-10-14T03:07:59.469165+00:00",
+  "cards": [
+    {
+      "id": "A1",
+      "job": "v22-01-a1-first-pass-1",
+      "state": "reviewed_and_landed",
+      "next_action": "finite first pass complete for this card; no automatic continuation"
+    },
+    {
+      "id": "B1",
+      "job": "v22-02-b1-first-pass-1",
+      "state": "numerically_verified"
+    },
+    {
+      "id": "C2",
+      "job": "v22-03-c2-first-pass-1",
+      "state": "numerically_verified"
+    },
+    {
+      "id": "A2",
+      "job": "v22-04-a2-first-pass-1",
+      "state": "numerically_verified"
+    },
+    {
+      "id": "A3",
+      "job": "v22-05-a3-first-pass-1",
+      "state": "running"
+    },
+    {
+      "id": "B2",
+      "job": "v22-06-b2-first-pass-1",
+      "state": "queued"
+    },
+    {
+      "id": "C1",
+      "job": "v22-07-c1-first-pass-1",
+      "state": "queued"
+    }
+  ],
+  "scope": "seven finite first-pass cards; no automatic extension"
+}

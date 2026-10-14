@@ -1,5 +1,7 @@
 # V22: credibility, preferences and goal hierarchies
 
+- [Reviewed A1: Source inference and fixed trust](A1_REPORT.md): split finite result; full replay verified.
+
 The October 13 proposal is commissioned as a finite seven-study first pass.
 Priority order is A1, B1, C2, A2, A3, B2, C1. V21 remains a separate active
 campaign with its original confirmation and reporting dates.

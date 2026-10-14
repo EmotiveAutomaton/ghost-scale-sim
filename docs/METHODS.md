@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [V22 A1 review](versions/v22-mechanism-tests/A1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 142-file replay. Retained discrepancy curves preserve source goal, competence, reader noise and history length. Signed property error and belief change remain separate from absolute curve heights. Fixed-trust, label, unrelated-history and duplicate controls use the same forecast targets; sparse cells retain missing-world qualifications.
+
 The [V22 setup](versions/v22-mechanism-tests/SETUP_REPORT.md) implements finite
 source-cause inference, inverse homeostatic choices, route acquisition, similarity
 controls, sequential attention and tree inference. Forty-five controls include
