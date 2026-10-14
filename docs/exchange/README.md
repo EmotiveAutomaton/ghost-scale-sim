@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 C2 response](v22-c2-response.md): Similarity, process evidence and preference records, split finite result.
+
 - [V22 B1 response](v22-b1-response.md): Costly departures and set-point recovery, qualified finite result.
 
 - [V22 A1 response](v22-a1-response.md): Source inference and fixed trust, split finite result.

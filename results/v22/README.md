@@ -1,5 +1,7 @@
 # V22 evidence
 
+- [C2: Similarity, process evidence and preference records](c2/README.md): accepted with split prediction dispositions.
+
 - [B1: Costly departures and set-point recovery](b1/README.md): accepted with qualified prediction dispositions.
 
 - [A1: Source inference and fixed trust](a1/README.md): accepted with split prediction dispositions.
