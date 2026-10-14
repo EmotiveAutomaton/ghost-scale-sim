@@ -1,21 +1,18 @@
 {
-  "active": [],
+  "at": "2026-10-14T03:15:43.109795+00:00",
+  "state": "closed",
   "admitted": 7,
-  "at": "2026-10-14T03:11:02.874012+00:00",
-  "completed": 7,
-  "disposed": 0,
-  "earlier_review_on": [
-    "failure",
-    "queue completion"
-  ],
-  "estimate_cpu_seconds": 3579.125,
-  "estimate_scope": "pilot-based first pass incl independent check and replay; host load and review affect elapsed finish",
-  "gear": 2,
   "implemented": 7,
-  "next_routine_review": "2026-10-14T14:31:52.485785+00:00",
-  "pending": 0,
-  "scientific_workers": 0,
+  "completed": 7,
   "scientifically_accepted": 7,
-  "shared_worker_ceiling": 3,
-  "state": "finite queue complete; documentary landing in progress"
+  "confirmation": 0,
+  "disposed": 0,
+  "pending": 0,
+  "active": [],
+  "scientific_workers": 0,
+  "owned_scientific_services_stopped": true,
+  "next_routine_review": null,
+  "charged_bound_hours": 1.3318532986111111,
+  "notifier": "retires after current review exits; peer escrow restored by its existing owner",
+  "final_report": "docs/versions/v22-mechanism-tests/FINAL_REPORT.md"
 }

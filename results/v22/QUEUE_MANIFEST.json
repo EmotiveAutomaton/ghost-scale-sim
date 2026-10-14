@@ -1,1 +1,243 @@
-{"at":"2026-10-14T02:37:59.509525+00:00","jobs":[{"card":"A1","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"A1","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-01-a1-first-pass-1","plan_sha256":"5a603af8f24db2b08aaa87d611bd5c23619ba90c55035cb1743a1d0bec9f29dc","status":"numerically_verified","wall_cap_seconds":5400},{"card":"B1","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"B1","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-02-b1-first-pass-1","plan_sha256":"9bf04347b5142f2895b119b8fa1dfb9a1760390395ce7946ff8baf8d582786fb","status":"numerically_verified","wall_cap_seconds":5400},{"card":"C2","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"C2","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-03-c2-first-pass-1","plan_sha256":"d69b2bacaf3c94cb574916aad5bbbc379d38dfab5b73a691814b296169069c47","status":"numerically_verified","wall_cap_seconds":5400},{"card":"A2","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"A2","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-04-a2-first-pass-1","plan_sha256":"5b8ae9ea0ced3df036b336ba96c09cce3b17fff2886b43210d3276035d595cda","status":"numerically_verified","wall_cap_seconds":5400},{"card":"A3","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"A3","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-05-a3-first-pass-1","plan_sha256":"4f78ad7d23d30759ae20d080e3191bd9d35f049bb28ed8c0d1c5c4aefcc9ef96","status":"running","wall_cap_seconds":5400},{"card":"B2","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"B2","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-06-b2-first-pass-1","plan_sha256":"475c89856822a2eb2114f1134905695ebbd671d0197eba9fbdb8bc53e0374750","status":"queued","wall_cap_seconds":5400},{"card":"C1","cpu_cap_seconds":3600,"design":{"budgets":[2048,8192],"card":"C1","cases":256,"epochs":120,"fits":[0,1],"namespace":"development","validation":2048,"worlds":[0,1,2,3,4,5,6,7]},"id":"v22-07-c1-first-pass-1","plan_sha256":"2b4894cdb5f60cb321ff2eee283e392405f3272d66242359a61d8da5e35fd72b","status":"queued","wall_cap_seconds":5400}]}
+{
+  "at": "2026-10-14T03:15:43.109795+00:00",
+  "jobs": [
+    {
+      "card": "A1",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "A1",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-01-a1-first-pass-1",
+      "plan_sha256": "5a603af8f24db2b08aaa87d611bd5c23619ba90c55035cb1743a1d0bec9f29dc",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    },
+    {
+      "card": "B1",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "B1",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-02-b1-first-pass-1",
+      "plan_sha256": "9bf04347b5142f2895b119b8fa1dfb9a1760390395ce7946ff8baf8d582786fb",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    },
+    {
+      "card": "C2",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "C2",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-03-c2-first-pass-1",
+      "plan_sha256": "d69b2bacaf3c94cb574916aad5bbbc379d38dfab5b73a691814b296169069c47",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    },
+    {
+      "card": "A2",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "A2",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-04-a2-first-pass-1",
+      "plan_sha256": "5b8ae9ea0ced3df036b336ba96c09cce3b17fff2886b43210d3276035d595cda",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    },
+    {
+      "card": "A3",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "A3",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-05-a3-first-pass-1",
+      "plan_sha256": "4f78ad7d23d30759ae20d080e3191bd9d35f049bb28ed8c0d1c5c4aefcc9ef96",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    },
+    {
+      "card": "B2",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "B2",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-06-b2-first-pass-1",
+      "plan_sha256": "475c89856822a2eb2114f1134905695ebbd671d0197eba9fbdb8bc53e0374750",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    },
+    {
+      "card": "C1",
+      "cpu_cap_seconds": 3600,
+      "design": {
+        "budgets": [
+          2048,
+          8192
+        ],
+        "card": "C1",
+        "cases": 256,
+        "epochs": 120,
+        "fits": [
+          0,
+          1
+        ],
+        "namespace": "development",
+        "validation": 2048,
+        "worlds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "id": "v22-07-c1-first-pass-1",
+      "plan_sha256": "2b4894cdb5f60cb321ff2eee283e392405f3272d66242359a61d8da5e35fd72b",
+      "status": "reviewed_and_landed",
+      "wall_cap_seconds": 5400,
+      "scientific_confirmation": false
+    }
+  ]
+}

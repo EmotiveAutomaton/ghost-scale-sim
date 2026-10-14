@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-14T03:15:43.109795+00:00",
+  "passed": true,
+  "cards": 7,
+  "totals": {
+    "files": 818,
+    "independent_posteriors": 14336,
+    "independently_scored_forecasts": 137216,
+    "independently_regrouped_strata": 80102
+  },
+  "original_numerical_checks_reused_by_exact_hash": true,
+  "complete_family_replays": 7,
+  "raw_manifest_bindings_rechecked": true,
+  "fit_count": 28,
+  "all_validation_stopped": true,
+  "report_arithmetic": {
+    "passed": true,
+    "arithmetic_checks": 11078,
+    "environment_verified": true,
+    "paired_worlds": 8,
+    "complete_raw_reconstruction_receipts_reused": true,
+    "no_scientific_rerun": true,
+    "cpu_seconds": 0.109375,
+    "source_sha256": "5d0a2be04063911f91c2a636c6c089654645c3a224c41e9d4f9f0eff20dbee14"
+  },
+  "source_archive_sha256": "049feefc331c158428d7904a047dc5000d4c73d68732dbee5ab4423bc22cadcf",
+  "native_closure_receipt_sha256": "de1f03af2d5a589afef61dd4bb7180146d10b42fec69ea0ac03d9c4a9bcc9a04",
+  "environment_verified": true,
+  "confirmation": false,
+  "owned_scientific_services_stopped": true,
+  "actual_notification_delivery_verified": true,
+  "notifier_exit": "pending natural review exit; not yet claimed observed"
+}

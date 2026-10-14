@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 finite pass complete
+
+Can the seven proposed mechanisms survive their controls? V22 is complete: all seven finite results are verified, with mixed findings and no confirmation claim. Source and acquisition-route inference help in these constructed worlds; several uptake, similarity and hierarchy predictions require qualification.
+
+[Final report](docs/versions/v22-mechanism-tests/FINAL_REPORT.md).
+
 ## V22 C1: Joint goal-tree inference
 
 Does joint inference improve recovery across a goal hierarchy? Joint reading improves internal-node probability forecasts over the one-direction ablations, but bottom-up inference already matches it at the root. Removing distant evidence can hurt more than removing immediate-child evidence, and root accuracy is not monotone in every coverage series. These are finite constructed-tree results: marginal node scores do not establish a joint-prediction advantage or mathematical smoothness.
@@ -42,7 +48,7 @@ Does inferring a source explain uptake better than one fixed trust? In this cons
 
 [Report](docs/versions/v22-mechanism-tests/A1_REPORT.md).
 
-## V22 instrument setup; mechanism outcomes pending
+## V22 instrument setup (historical opening snapshot)
 
 Can source inference, costly preference evidence and goal hierarchies support the
 seven mechanisms in the October 13 proposal? V22 now has executable instruments

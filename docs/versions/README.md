@@ -6,7 +6,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V22 | Active finite seven-study pass, separate from V21 | [Program index](v22-mechanism-tests/README.md) |
+| V22 | Closed finite seven-study pass; all results verified, no confirmation | [Program index](v22-mechanism-tests/README.md) |
 | V21 | Active October 10–16; Gear 2 supporting mechanisms and validity errata | [Program index](v21-supporting-mechanisms/README.md) |
 | V20 | Closed October 1; 808 verified packets, shifted-context candidate confirmed, native primary failed, 44 deferrals | [Final report](v20-contribution-reconstruction/FINAL_REPORT.md) |
 | V19 | Scientific window closed; final report published | [Final scientific report](v19-local-maker/FINAL_REPORT.md) |

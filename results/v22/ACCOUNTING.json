@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-14T03:15:43.109795+00:00",
+  "science_native_seconds": 965.578125,
+  "setup_known": [
+    {
+      "name": "engineering-1",
+      "cpu_seconds": 5.28125
+    },
+    {
+      "name": "engineering-3",
+      "cpu_seconds": 196.546875
+    },
+    {
+      "name": "final-consumers-1",
+      "cpu_seconds": 6.734375
+    }
+  ],
+  "service_measured_seconds": 2.84375,
+  "setup_service_prepaid_seconds": 3600.0,
+  "setup_service_observed_known_seconds": 211.40625,
+  "setup_service_overage_charged_once": 0.0,
+  "review_measured_seconds": 49.09375,
+  "unmetered_review_tooling_bound_seconds": 120.0,
+  "remaining_review_and_exit_tail_bound_seconds": 60.0,
+  "charged_bound_seconds": 4794.671875,
+  "charged_bound_hours": 1.3318532986111111,
+  "ceiling_seconds": 43200,
+  "remaining_seconds": 38405.328125,
+  "protected_review_ceiling_seconds": 14400,
+  "limitations": [
+    "Retired setup and short tooling processes lack complete final counters; original conservative setup/service reserve retained in full.",
+    "120 seconds separately covers unmetered inspection, failed command, documentation, privacy and publication tooling; 60 seconds bounds remaining reviewer/exit tail, not claimed measured CPU.",
+    "Review helper failures are administrative aggregation mistakes; no production family was rerun or repaired.",
+    "Measured service overage is zero and is not charged twice. Notifier remains alive only to finish this delivered review and restore peer escrow after natural exit."
+  ]
+}

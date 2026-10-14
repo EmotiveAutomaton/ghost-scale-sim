@@ -1,5 +1,7 @@
 # V22 evidence
 
+**Finite pass closed:** [final report](../../docs/versions/v22-mechanism-tests/FINAL_REPORT.md), [final validity](FINAL_VALIDITY.json), [accounting](ACCOUNTING.json). Seven accepted descriptive results; no new work queued.
+
 - [C1: Joint goal-tree inference](c1/README.md): accepted with split prediction dispositions.
 
 - [B2: Acquisition routes and devaluation](b2/README.md): accepted with qualified prediction dispositions.

@@ -17,8 +17,13 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Active V22 finite first pass (2026-10-13)
+## Completed V22 finite first pass (2026-10-13)
 
+V22 is closed: all seven finite results have independent numerical checks, complete
+replays and explicit prediction dispositions. Read
+`docs/versions/v22-mechanism-tests/FINAL_REPORT.md`, `results/v22/FINAL_VALIDITY.json`
+and outer `.local/v22/CLOSEOUT.json` before future work. Do not refill, restart
+valid science or schedule recurring V22 reviews. V21 remains active independently.
 The owner commissioned the October 13 next-test sheet as V22. Read
 `docs/versions/v22-mechanism-tests/README.md`, `PROTOCOL.md`, `CARDS.json` and
 outer `.local/v22/HANDOFF.md`. All seven studies are finite constructed mechanisms,
@@ -35,7 +40,8 @@ for verification/closure. No new week-long expansion, confirmation or research
 agents are implied. Every accepted batch needs independent numerical checks,
 complete scientific replay and the existing full documentary write-through.
 
-Both versions retain fixed twelve-hour routine reviews. V22's notifier escrows
+While active, both versions retained fixed twelve-hour routine reviews. V22 is
+now closed; only V21 retains its own ongoing cadence. V22's notifier escrows
 V21's arm token only during its own actual review, checks for a delivery already
 in flight, and restores the prior arm state afterward. Preserve live owners;
 disarm both during an active operator turn. A closed campaign has no recurring

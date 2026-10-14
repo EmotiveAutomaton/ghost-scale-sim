@@ -1,5 +1,7 @@
 # V22: credibility, preferences and goal hierarchies
 
+**Closed finite first pass.** [Final report](FINAL_REPORT.md): all seven results independently verified and replayed, with explicit mixed prediction dispositions. No automatic expansion or confirmation.
+
 - [Reviewed C1: Joint goal-tree inference](C1_REPORT.md): split finite result; full replay verified.
 
 - [Reviewed B2: Acquisition routes and devaluation](B2_REPORT.md): qualified finite result; full replay verified.
