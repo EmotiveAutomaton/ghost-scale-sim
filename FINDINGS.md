@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 B2: Acquisition routes and devaluation
+
+Can acquisition route predict a choice after need satisfaction? The two-route reader beats both single-route assumptions on post-devaluation choice loss in every tested condition. Under broken contingency its loss is 0.456 nats, versus 0.926 for the model-based-only reader and 1.212 for association-only. Yet observational aliases keep route probability exactly at one half. This is a constructed-mechanism prediction result, not proof that the historical route is always identifiable.
+
+[Report](docs/versions/v22-mechanism-tests/B2_REPORT.md).
+
 ## V22 A3: Attention withdrawal and its costs
 
 Does withdrawal protect uptake at matched technique? In one fixed mixture comparison with goal-bearing procedures, withdrawal reduces purpose and value memory change by 0.120 and 0.112 while technique accuracy differs by only 0.60 percentage points. Purpose-recognition loss is not established in that comparison. The separate physical learner retains unwanted uptake when useful procedures carry it. These are constructed-mechanism results; they do not establish disgust or a universal protection-with-recognition-cost tradeoff.

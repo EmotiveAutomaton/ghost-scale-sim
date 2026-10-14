@@ -1,5 +1,7 @@
 # V22 evidence
 
+- [B2: Acquisition routes and devaluation](b2/README.md): accepted with qualified prediction dispositions.
+
 - [A3: Attention withdrawal and its costs](a3/README.md): accepted with split prediction dispositions.
 
 - [A2: Steering signatures and selective uptake](a2/README.md): accepted with split prediction dispositions.

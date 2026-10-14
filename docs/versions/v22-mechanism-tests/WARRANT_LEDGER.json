@@ -1,6 +1,6 @@
 {
   "apparatus": "45 known-answer/runtime controls and seven frozen consumers verified",
-  "at": "2026-10-14T03:10:50.171153+00:00",
+  "at": "2026-10-14T03:10:57.009652+00:00",
   "mechanisms": [
     {
       "confirmation": false,
@@ -40,7 +40,9 @@
     {
       "confirmation": false,
       "id": "B2",
-      "status": "OPEN: scientific interpretation pending"
+      "status": "QUALIFIED",
+      "finding": "Can acquisition route predict a choice after need satisfaction? The two-route reader beats both single-route assumptions on post-devaluation choice loss in every tested condition. Under broken contingency its loss is 0.456 nats, versus 0.926 for the model-based-only reader and 1.212 for association-only. Yet observational aliases keep route probability exactly at one half. This is a constructed-mechanism prediction result, not proof that the historical route is always identifiable.",
+      "report": "B2_REPORT.md"
     },
     {
       "confirmation": false,

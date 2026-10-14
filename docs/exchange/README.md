@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 B2 response](v22-b2-response.md): Acquisition routes and devaluation, qualified finite result.
+
 - [V22 A3 response](v22-a3-response.md): Attention withdrawal and its costs, split finite result.
 
 - [V22 A2 response](v22-a2-response.md): Steering signatures and selective uptake, split finite result.
