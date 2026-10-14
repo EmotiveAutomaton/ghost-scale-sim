@@ -17,6 +17,30 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## Active V22 finite first pass (2026-10-13)
+
+The owner commissioned the October 13 next-test sheet as V22. Read
+`docs/versions/v22-mechanism-tests/README.md`, `PROTOCOL.md`, `CARDS.json` and
+outer `.local/v22/HANDOFF.md`. All seven studies are finite constructed mechanisms,
+with A1/B1/C2 first. V21's fixed obligations, acceptance and frozen sources remain.
+Use immutable V22 capsules, one scientific worker, and a shared Gear 2 ceiling
+of three scientists across versions. Before V21 admits new work, inspect V22's
+live owner and allow its current bounded packet to drain, or retain a shared
+worker slot. V22 itself blocks dispatch when V21 has pending or active work and
+across the fixed V21 freeze/confirmation/report interval. Never reset either clock.
+
+V22 has separate accounting and a 12-CPU-hour finite ceiling, including all setup,
+failures, independent checks, complete replay and services. Protect four hours
+for verification/closure. No new week-long expansion, confirmation or research
+agents are implied. Every accepted batch needs independent numerical checks,
+complete scientific replay and the existing full documentary write-through.
+
+Both versions retain fixed twelve-hour routine reviews. V22's notifier escrows
+V21's arm token only during its own actual review, checks for a delivery already
+in flight, and restores the prior arm state afterward. Preserve live owners;
+disarm both during an active operator turn. A closed campaign has no recurring
+wakes. Consult both local handoffs when either notifier requests a review.
+
 ## Active V21 and permanent twelve-hour health cadence (2026-10-11)
 
 The owner approved the October 10 research program and errata, including the

@@ -19,6 +19,9 @@ human intent, human values or historical process correspondence.
 
 ## Start here
 
+- **Active V22:** [seven finite mechanism studies](docs/versions/v22-mechanism-tests/README.md).
+  Credibility, preferences and goal hierarchies; validated opening apparatus and
+  a separate queue that preserves V21's scheduled work.
 - **Active V21:** [supporting mechanism program](docs/versions/v21-supporting-mechanisms/README.md).
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
   errata. Friday October 16 reporting snapshot: 18:00 Pacific.

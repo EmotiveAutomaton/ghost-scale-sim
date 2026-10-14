@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V22 opening](v22-setup-response.md): seven implemented instruments, validated controls and finite queue.
+
 - [Calibrated-answer review](v21-calibrated-answer-response.md): supplied replay verified; strongest-rival and stopping-extension dispositions.
 
 - [V21 model-expansion response](v21-expansion-response.md): predictive detection, unnecessary expansion and complete replay.

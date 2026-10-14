@@ -1,5 +1,17 @@
 # The methodology layer
 
+The [V22 setup](versions/v22-mechanism-tests/SETUP_REPORT.md) implements finite
+source-cause inference, inverse homeostatic choices, route acquisition, similarity
+controls, sequential attention and tree inference. Forty-five controls include
+independent scalar/vector law-marginal posteriors, exhaustive tiny-tree enumeration,
+unrelated/duplicated evidence, pre-intervention aliases and known similarity
+disclosure. Every production packet retains all forecasts and validation curves,
+independent probability/score/stratum reconstruction and complete scientific
+replay. Direct epoch caps are unresolved; headroom is target- and condition-specific.
+E56's pure scorer and G5's physical learner are reused on fresh V22 identities,
+with independent action execution. Finite grids and separate marginal heads are
+explicit limitations, not continuous-world ceilings or joint prediction scores.
+
 The [model-expansion review](versions/v21-supporting-mechanisms/EXPANSION_REPORT.md) independently verifies 294,912 scores, a byte-identical 1,322-file full replay, all 147,456 original forecasts and decisions, regenerated records/query separation, scalar posterior masses, exact binomial tails, selected subsets, alias removal and evaluation counts. Eight paired worlds determine uncertainty; full-library planning costs and hypothetical addition fees remain separate.
 
 The [mechanism/style review](versions/v21-supporting-mechanisms/STYLE_REPORT.md) independently checks 196,608 scores, a byte-identical 498-file full scientific replay, all count tables and selectors, random archive-name invariance and 98,304 original forecasts. Two fitted seeds are averaged inside eight worlds. All reader shifts are reported; every non-native forecast equals its paired native forecast by archive/parser symmetry, which does not validate learned robustness.

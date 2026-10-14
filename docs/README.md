@@ -8,6 +8,7 @@ state. Updated 10 October 2026.
 
 | Status | Entry point | Use |
 |---|---|---|
+| Active V22, finite mechanism tests | [V22 index](versions/v22-mechanism-tests/README.md) | October 13 proposal, executable controls, source-bound queue and first-pass limits |
 | Active V21, supporting mechanism program | [V21 index](versions/v21-supporting-mechanisms/README.md) | October 10 program and errata, exact ceilings, matched readers, twelve-hour reviews |
 | Closed V19 | [V19 index](versions/v19-local-maker/README.md) | Final scientific report and administrative closure |
 | Closed V20; confirmation and final report complete | [V20 index](versions/v20-contribution-reconstruction/README.md) | Final result, confirmation, coverage, costs and closure receipts |

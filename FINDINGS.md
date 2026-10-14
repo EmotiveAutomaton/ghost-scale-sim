@@ -1,5 +1,18 @@
 # Every question this project asked, and where its answer stands today
 
+## V22 instrument setup; mechanism outcomes pending
+
+Can source inference, costly preference evidence and goal hierarchies support the
+seven mechanisms in the October 13 proposal? V22 now has executable instruments
+for all seven questions. Forty-five controls, seven production-size cost pilots
+and seven final frozen-source consumer replays pass. These validate the apparatus;
+they do not yet establish the scientific predictions.
+
+[Setup report](docs/versions/v22-mechanism-tests/SETUP_REPORT.md). The opening
+queue retains exact-law ceilings, direct validation stops, target-specific
+contrasts and complete scientific replays. This is a constructed-method setup
+result, not confirmation or evidence about people.
+
 ## V21 calibrated answer rival
 
 The test for a maker-specific partial-answer advantage finds none at fixed specificity against the calibrated rival in the native artifact condition. At four, five and six asserted fields, the maker's false-claim differences are +0.293, +0.146 and -0.244 percentage points, with every interval crossing zero. A small adaptive matched-error gain remains: at penalty five both make no observed false claims, while the maker asserts 0.033 more fields per case. These are verified constructed-method development results, not confirmation or evidence of maker-specific causation.
