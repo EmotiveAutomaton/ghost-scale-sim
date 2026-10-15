@@ -1,5 +1,12 @@
 # V21 supporting mechanisms, 10–16 October 2026
 
+**Accelerated final diagnostic running.** The owner’s October 14 instruction
+[cancels calendar waiting](ACCELERATED_CLOSEOUT.md). The
+[frozen diagnostic](FINAL_DIAGNOSTIC_MANIFEST.json) uses all 32 reserved worlds
+in three parallel execution partitions. Verification and final closure follow
+completion immediately; the historical Friday endpoint is an outer limit.
+No new diagnostic outcome is reported yet.
+
 [October 13 native health and diagnostic preparation](HEALTH_REPORT_20261013.md): unchanged service owners, complete numerical receipt coverage, ten explicit deferrals and unopened confirmation preparation.
 
 [Calibrated answer rival](CALIBRATED_ANSWER_REPORT.md): fixed-specificity benefit unestablished after generic dependence correction; adaptive matched-error difference retained, no promotion.

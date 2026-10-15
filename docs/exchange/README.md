@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [V21 accelerated closeout](v21-accelerated-closeout-response.md): owner schedule amendment, frozen 32-world diagnostic and immediate completion review.
+
 - [V22 final response](v22-final-response.md): all seven finite results, limitations and scientific-service closure.
 
 - [V22 C1 response](v22-c1-response.md): Joint goal-tree inference, split finite result.

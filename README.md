@@ -23,7 +23,8 @@ human intent, human values or historical process correspondence.
   [Final report](docs/versions/v22-mechanism-tests/FINAL_REPORT.md): seven verified finite results, mixed prediction dispositions and scientific-service closure.
 - **Active V21:** [supporting mechanism program](docs/versions/v21-supporting-mechanisms/README.md).
   Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
-  errata. Friday October 16 reporting snapshot: 18:00 Pacific.
+  errata. [Accelerated closeout](docs/versions/v21-supporting-mechanisms/ACCELERATED_CLOSEOUT.md):
+  the final 32-world diagnostic is running; verification and closure follow immediately.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
   [Widened native context](docs/versions/v21-supporting-mechanisms/WIDE_CONTEXT_SUPPORT_REPORT.md): maker gains absent and support exclusions verified; learned persistence admitted.
   [Widened native laws and support](docs/versions/v21-supporting-mechanisms/WIDE_NATIVE_SUPPORT_REPORT.md): maker gains absent, hard-pruning exclusions verified; no matched widened shift admitted.

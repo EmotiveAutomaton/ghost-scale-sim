@@ -1,5 +1,10 @@
 # Accepted V21 protocol
 
+**October 14 owner amendment:** [accelerated closeout](ACCELERATED_CLOSEOUT.md)
+supersedes the original calendar waits below. Freeze the prepared diagnostic
+before exposure, run it immediately, and close after verified final reporting.
+Scientific criteria, populations, source identity and resource ceilings remain.
+
 ## Authority and finite allocation
 
 The October 10 owner instruction implements the research program and errata.

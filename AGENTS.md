@@ -47,6 +47,18 @@ in flight, and restores the prior arm state afterward. Preserve live owners;
 disarm both during an active operator turn. A closed campaign has no recurring
 wakes. Consult both local handoffs when either notifier requests a review.
 
+## V21 accelerated closure amendment (2026-10-14)
+
+The owner instructed: finish remaining useful V21 work and close without waiting
+for scheduled boundaries. Read `docs/versions/v21-supporting-mechanisms/ACCELERATED_CLOSEOUT.md`,
+`FINAL_DIAGNOSTIC_MANIFEST.json` and the latest outer `.local/v21/HANDOFF.md`.
+This supersedes the historical freeze/opening waits below and in the frozen
+review prompt. Preserve the original acceptance bytes and all validity/resource
+requirements. One preselected 32-world diagnostic runs as three disjoint CPU
+partitions of one study; pool worlds for the final decision. Finish verification,
+reporting, publication and owned-service closure as soon as it resolves. Do not
+refill exploration or wait for Friday. Original cutoffs remain outer safety limits.
+
 ## Active V21 and permanent twelve-hour health cadence (2026-10-11)
 
 The owner approved the October 10 research program and errata, including the

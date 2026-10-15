@@ -1,5 +1,14 @@
 # The methodology layer
 
+V21's [accelerated final diagnostic](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_MANIFEST.json)
+partitions 32 reserved worlds across three workers without changing its scientific
+implementation. The final consumer pools equally weighted worlds after nesting
+the two fits, checks development training/weight identity and every new score,
+and reconstructs the expected error-budget telescope. Eight targeted controls
+cover missing/duplicate populations, convergence, unequal partition sizes and
+uncapped infinities. These validate the review apparatus; diagnostic results
+remain pending until all three partitions finish and their raw records verify.
+
 V22 semantic scope: B1 randomized costs still enter maker utility, leaving the fully choice-independent costly-label null unexecuted as specified. A3 keeps flag evidence at full precision after channel withdrawal; recognition is not a measure of withdrawing every purpose cue. Numerical receipts remain valid for the actual finite instruments.
 
 The [V22 C1 review](versions/v22-mechanism-tests/C1_REPORT.md) reuses exact independent posterior/score/stratum checks and a complete 102-file replay. Depth-specific node marginals average nodes within cases, cases within worlds, and fits within worlds before paired uncertainty. Both one-direction ablations retain the same full-evidence law weights. Adjacent/distant removal is scored against the saved focus-node truth, not the mean posterior vector; padded nodes never enter scores.

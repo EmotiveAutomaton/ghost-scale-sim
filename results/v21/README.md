@@ -1,5 +1,9 @@
 # V21 public evidence
 
+[Accelerated final diagnostic](accelerated-closeout/README.md): the October 14
+owner amendment freezes one 32-world diagnostic and releases three parallel
+partitions immediately. Prior results stay unchanged; final results are pending.
+
 [October 13 bounded health and numerical coverage](health-20261013/REPORT.json): unchanged service owners, complete numerical receipt coverage, ten explicit deferrals and unopened confirmation preparation.
 
 [Calibrated answer rival](answer-calibrated/VALIDITY.json): all finite decisions and full replay verified; original input checks reused by exact hashes.
