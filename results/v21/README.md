@@ -1,8 +1,13 @@
 # V21 public evidence
 
+[Final closeout](final-closeout/README.md): 337 completed numerical packets,
+127 scientific blocks and 29 family replays, with all failed and unexecuted
+scope retained. The final diagnostic establishes excess direct-reader error;
+no learned-maker mechanism is promoted. Scientific services have exited.
+
 [Accelerated final diagnostic](accelerated-closeout/README.md): the October 14
 owner amendment freezes one 32-world diagnostic and releases three parallel
-partitions immediately. Prior results stay unchanged; final results are pending.
+partitions immediately. Its completed outcome is in the final closeout above.
 
 [October 13 bounded health and numerical coverage](health-20261013/REPORT.json): unchanged service owners, complete numerical receipt coverage, ten explicit deferrals and unopened confirmation preparation.
 

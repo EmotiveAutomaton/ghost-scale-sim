@@ -1,0 +1,41 @@
+{
+  "browser_or_live_inference_tested": false,
+  "categories": [
+    "aliases",
+    "decisive selection",
+    "hidden inspection",
+    "false context",
+    "copied evidence",
+    "missing candidate",
+    "retraction"
+  ],
+  "initial_cases": 24,
+  "initial_evidence_tiers": 4,
+  "receipts": [
+    {
+      "path": "results/v21/development-group-1/TRANSPORT_VALIDITY.json",
+      "sha256": "1be6b10a98788229b1cc74e9d60631d1ac220fcd64663b714322ab7d2fdcd97a"
+    },
+    {
+      "path": "results/v21/reliability/fixtures/CONSUMER.json",
+      "sha256": "921f656e16dd34ad86d490c2f5394e7816c2fb1f8d6c9b17b7ddf70552460152"
+    },
+    {
+      "path": "results/v21/dependence/fixtures/CONSUMER.json",
+      "sha256": "87b687291f2409e0a8a2383821f0efc493fc6c8ae6a925a74d61857ee94f3590"
+    },
+    {
+      "path": "results/v21/selection/VALIDITY.json",
+      "sha256": "aec220b21fc45b06fdc12ef0ffb27a87c302cb35c1d302e04cc3311edbac5833"
+    },
+    {
+      "path": "results/v21/omission/VALIDITY.json",
+      "sha256": "935ce06b50ba5bb5f5ff6322d237f5d216915cf93e9c569153b0080026b6fd73"
+    },
+    {
+      "path": "results/v21/retraction/VALIDITY.json",
+      "sha256": "9afedac6ac724ce8d435966bf85ae942278986fa0b5cf8c4f66958f2e477bc92"
+    }
+  ],
+  "scope": "canonical ProcessCase validation and offline exporter; no browser or live reader-inference validation"
+}

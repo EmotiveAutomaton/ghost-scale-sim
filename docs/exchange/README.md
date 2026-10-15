@@ -1,6 +1,10 @@
 # Sounding Line exchange index
 
+- [V23 calibration checkpoint](v23-calibration-response.md): pooled targets pass, stress limits retained, full replay verified; family queue still gated.
+
 - [V23 specification review](v23-specification-review-response.md): confirmation counterexample, proposed scientific corrections and missing canonical schema; execution not admitted.
+- [V21 final response](v21-final-response.md): no maker-specific promotion;
+  reserved-world reader error, verified finite closure and retained frontier.
 
 - [V21 accelerated closeout](v21-accelerated-closeout-response.md): owner schedule amendment, frozen 32-world diagnostic and immediate completion review.
 

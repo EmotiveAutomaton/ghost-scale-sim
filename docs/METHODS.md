@@ -1,5 +1,12 @@
 # The methodology layer
 
+V23 uses independently tuned and validated adaptive stopping, finite checked
+quadrature, whole-world uncertainty and fresh-process full replay. Its pooled
+calibration meets the declared error targets while retaining 33 failing stress
+strata and unequal-resource counting comparators. [Calibration and limits](versions/v23-research-division/CALIBRATION_REPORT.md).
+Raw gain confirmation never floors negative values; finite support proofs and
+independent balanced law blocks remain mandatory before confirmation.
+
 V21's [accelerated final diagnostic](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_MANIFEST.json)
 partitions 32 reserved worlds across three workers without changing its scientific
 implementation. The final consumer pools equally weighted worlds after nesting
@@ -7,7 +14,10 @@ the two fits, checks development training/weight identity and every new score,
 and reconstructs the expected error-budget telescope. Eight targeted controls
 cover missing/duplicate populations, convergence, unequal partition sizes and
 uncapped infinities. These validate the review apparatus; diagnostic results
-remain pending until all three partitions finish and their raw records verify.
+are now independently verified across every final partition. The exact source's
+two complete family replays are reused by frozen hashes; final new-world scores,
+training/model identity and expected decompositions are freshly reconstructed.
+See [the final method disposition](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_REPORT.md).
 
 V22 semantic scope: B1 randomized costs still enter maker utility, leaving the fully choice-independent costly-label null unexecuted as specified. A3 keeps flag evidence at full precision after channel withdrawal; recognition is not a measure of withdrawing every purpose cue. Numerical receipts remain valid for the actual finite instruments.
 

@@ -1,11 +1,9 @@
 {
   "schema": "ghost-v23-preparation-work-order-v1",
-  "state": "REVIEW_BLOCKED_NOT_ADMITTED",
+  "state": "CALIBRATION_VERIFIED_FAMILY_ADMISSION_PENDING",
   "specification_sha256": "f5315dcfab499d97fc5a4de5bb82964f14750ae6666b42d0ac76a1ac4c305445",
-  "amendment_status": "PROPOSED_AWAITING_OWNER_DECISION",
-  "scientific_jobs_implemented": 0,
-  "scientific_jobs_admitted": 0,
-  "day_zero": null,
+  "amendment_status": "OWNER_ACCEPTED_IMPLEMENT_CORRECTED_V23",
+  "day_zero": "2026-10-15T05:04:15+00:00",
   "day_zero_rule": "actual publication time of V21 final report; never reset for delays",
   "elapsed_limit_days": 7,
   "total_cpu_hours": 90,
@@ -39,9 +37,8 @@
     144,
     144
   ],
-  "world_rungs_status": "PROPOSED_NOT_ACCEPTED",
+  "world_rungs_status": "CALIBRATED_WITH_QUALIFIED_POOLED_GRID_TARGETS",
   "launch_dependencies": [
-    "Owner decision on documented scientific corrections",
     "V21 published final report and hash-bound verified closure",
     "Native absence of predecessor scientific workers; no conflicting reviewer",
     "Implemented canonical ToMpathy schema, commit/version/hash pin and mapping",
@@ -66,14 +63,15 @@
       "optional": false,
       "budget_group": "repairs",
       "priority": 1,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "R2",
@@ -82,14 +80,15 @@
       "optional": false,
       "budget_group": "repairs",
       "priority": 2,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "R3",
@@ -98,14 +97,15 @@
       "optional": false,
       "budget_group": "repairs",
       "priority": 3,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "R4",
@@ -114,14 +114,15 @@
       "optional": false,
       "budget_group": "repairs",
       "priority": 4,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "N1",
@@ -130,14 +131,15 @@
       "optional": false,
       "budget_group": "n1",
       "priority": 5,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "N2",
@@ -146,14 +148,15 @@
       "optional": false,
       "budget_group": "n2",
       "priority": 6,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "N5",
@@ -162,14 +165,15 @@
       "optional": false,
       "budget_group": "n5",
       "priority": 7,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "N3",
@@ -178,14 +182,15 @@
       "optional": false,
       "budget_group": "n3",
       "priority": 8,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "N4",
@@ -194,14 +199,15 @@
       "optional": false,
       "budget_group": "n4",
       "priority": 9,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "N7",
@@ -210,14 +216,15 @@
       "optional": false,
       "budget_group": "n7",
       "priority": 10,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "N6",
@@ -226,14 +233,15 @@
       "optional": false,
       "budget_group": "n6",
       "priority": 11,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     },
     {
       "id": "T1",
@@ -243,13 +251,14 @@
       "budget_group": "twins",
       "priority": 12,
       "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "T2",
@@ -259,13 +268,14 @@
       "budget_group": "twins",
       "priority": 13,
       "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "T4",
@@ -275,13 +285,14 @@
       "budget_group": "twins",
       "priority": 14,
       "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "T3",
@@ -291,13 +302,14 @@
       "budget_group": "twins",
       "priority": 15,
       "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": false
     },
     {
       "id": "N8",
@@ -306,14 +318,15 @@
       "optional": true,
       "budget_group": "n8",
       "priority": 16,
-      "implementation": "NOT_BUILT",
-      "admission": "BLOCKED",
+      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
+      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
         "family_known_answers",
         "family_cost_pilot"
-      ]
+      ],
+      "independent_checker_built": true
     }
   ],
   "reporting": {
@@ -321,5 +334,22 @@
     "model_review": "family_decision_or_12_hour_health_or_failure",
     "public_write_through": "family_decision",
     "closure": "one_final_report_then_no_recurring_wake"
+  },
+  "deadline": "2026-10-22T05:04:15+00:00",
+  "calibration_attempts_admitted": 3,
+  "calibration_attempts_verified": 1,
+  "family_jobs_admitted": 0,
+  "family_pipelines_implemented": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "family_pipelines_production_verified": [],
+  "readiness": "IMPLEMENTATION_STATUS.md",
+  "stopping_policy": {
+    "kill": 0.05,
+    "prior_mean_scale": 0.08,
+    "prior_spread_scale": 0.05
   }
 }

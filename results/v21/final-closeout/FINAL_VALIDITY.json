@@ -1,0 +1,40 @@
+{
+  "acceptance_unchanged": true,
+  "at": "2026-10-15T04:54:34.183806+00:00",
+  "diagnostic_sha256": "a20f765f89d8e2140a502c9a5f8f678c093542dfac98fadbf55148b0eb4a7c2e",
+  "final_manifest_sha256": "baeafb7981c7cf7ff8e9bf4f2e61b76784ce9a67683a992cd1530ecc92d0bae2",
+  "full_scientific_regeneration_scope": "Complete source-matched family replays retained; final new world forecasts independently reconstructed, not needlessly rerun.",
+  "limitations": [
+    "Constructed method, miniature architecture scope",
+    "No surviving maker-mechanism promotion",
+    "Retired services without final native counters have only retained lower bounds; the prepaid allowance covers setup/services, not a claim of exact historical service CPU. Outage tails are separately charged estimates, not restored final native counters."
+  ],
+  "notifier_exit_observed": false,
+  "numerical_coverage_sha256": "bb7d297373bf2e9f128217bc27e627d751c8a423b07433701e3c7b62d16a4b70",
+  "passed": true,
+  "prior_bindings_sha256": "6eedcb9a924d8937f0bdb997df09c5427ef3e082633ce4545b1c325c8dc6fea6",
+  "publication": "pending ordinary main push",
+  "raw_hash_index_sha256": "65b6c666d351921b85a44a0ec7465d5bc544a9b9777206599c93f625428ab30e",
+  "scientific_workers_remaining": 0,
+  "source_identical_family_replays_reused": [
+    {
+      "original": "v21-a01-ceiling-00",
+      "original_complete_sha256": "2ef89442f9d2632c5f06859c1c9c221770229456bbba3787b542df9e95a363d8",
+      "passed": true,
+      "replay": "v21-replay-core2-ceiling-00",
+      "replay_complete_sha256": "f9f2ffee7d66960a9625be299148c7584cffdb39dfb2219b0f4add1b45548876",
+      "scientific_files": 41,
+      "timing_only_json_differences": 0
+    },
+    {
+      "original": "v21-headroom-00-l64-n8192",
+      "original_complete_sha256": "4f3cf9307dc772a0d624c9c33dcad937a9009a5e299bb0ed37154994230a3c57",
+      "passed": true,
+      "replay": "v21-replay-core2-headroom-00",
+      "replay_complete_sha256": "d432fd29b4a28e99fff3554bf7200fb834055e53c03611960956784992bf897a",
+      "scientific_files": 143,
+      "timing_only_json_differences": 2
+    }
+  ],
+  "supervisor_exit_observed": true
+}

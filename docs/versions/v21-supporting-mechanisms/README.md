@@ -1,11 +1,12 @@
 # V21 supporting mechanisms, 10–16 October 2026
 
-**Accelerated final diagnostic running.** The owner’s October 14 instruction
-[cancels calendar waiting](ACCELERATED_CLOSEOUT.md). The
-[frozen diagnostic](FINAL_DIAGNOSTIC_MANIFEST.json) uses all 32 reserved worlds
-in three parallel execution partitions. Verification and final closure follow
-completion immediately; the historical Friday endpoint is an outer limit.
-No new diagnostic outcome is reported yet.
+**Scientific allocation complete.** The [final report](FINAL_REPORT.md) retains
+337 completed numerical packets, 127 scientific blocks, 29 complete family
+replays and all 15 other admitted dispositions. No maker-specific promotion
+survived. The [final 32-world diagnostic](FINAL_DIAGNOSTIC_REPORT.md) establishes
+0.16681 nats of direct-reader excess loss. The scientific supervisor and workers
+have exited; publication and notifier exit have separate administrative receipts.
+No exploratory refill or recurring V21 review remains commissioned.
 
 [October 13 native health and diagnostic preparation](HEALTH_REPORT_20261013.md): unchanged service owners, complete numerical receipt coverage, ten explicit deferrals and unopened confirmation preparation.
 

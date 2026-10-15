@@ -17,13 +17,62 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V23 corrected implementation and calibrated opening (2026-10-14)
+
+The owner authorized implementation of corrected V23. Read
+`docs/versions/v23-research-division/README.md`, `IMPLEMENTATION_CONTRACT.md`,
+`IMPLEMENTATION_STATUS.md`, `CALIBRATION_REPORT.md` and the outer local V23
+handoff and immutable acceptance. The original specification/review are retained
+as historical provenance; their former request for scientific approval is resolved.
+V21 is closed and published. V23 opened at 2026-10-15 05:04:15 UTC, with a fixed
+seven-day outer limit, 90 CPU hours and 18 protected hours. Never reset that clock.
+
+The calibrated stopping policy is verified by full fresh-process replay and
+independent aggregate reconstruction. Its pooled error targets pass; 33 stress
+settings exceed point-rate targets and no universal comparison with counting is
+established. Do not repeat valid calibration to occupy idle resources. Failed
+numerical and I/O attempts remain retained. Raw-gain confirmation requires a real
+finite support proof and independent balanced law blocks; never floor losses.
+
+The canonical schema is owned by the other ToMpathy thread. A dirty working-tree
+interface permits engineering checks only. Family admission requires a committed
+schema snapshot, conformance, controls, largest-cell cost pilots and source-bound
+plans. R1-R4 have retained pipelines and pilot entry points. Other mechanism
+pipelines/checkers and four twins have remaining implementation; registry entries
+are not runnable jobs and unbuilt scope is never a scientific null.
+
+Gear 2 permits at most three below-normal, one-thread CPU scientists; no GPU or
+environment synchronization. Sounding Line retains priority. Keep the notifier
+disarmed during an active operator turn and preserve a live review owner. Fixed
+twelve-hour health checks, failure, family decisions, queue depletion and committed
+dependency delivery drive reviews. Batch cards precede a family decision's full
+public write-through. At the finite end verify closure and retire recurring wakes.
+Continue independent implementation within the accepted scope while a dependency
+is pending; do not reopen closed predecessors or invent occupancy filler.
+
+## Completed V21 scientific allocation (2026-10-14)
+
+V21 science is complete. Read
+`docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md`,
+`results/v21/final-closeout/FINAL_VALIDITY.json`, `COVERAGE.json` and the local
+handoff/closeout receipt. All 337 numerical packets are covered; 127 accepted
+scientific blocks include one final 32-world diagnostic in three partitions.
+Twenty-nine complete family replays are retained. The final diagnostic establishes
+excess direct-reader error; no maker-specific mechanism is promoted. Two resource
+failures, three withdrawals, ten deferrals and the broader unexecuted frontier
+remain. Do not refill, restart valid science or schedule recurring V21 reviews.
+Scientific workers, supervisor and notifier have exited. The final report is
+published on main; `results/v21/final-closeout/ADMINISTRATIVE_CLOSEOUT.json` records
+verified publication and complete owned-service closure.
+The active-V21 instructions below are historical, superseded by this closeout.
+
 ## Completed V22 finite first pass (2026-10-13)
 
 V22 is closed: all seven finite results have independent numerical checks, complete
 replays and explicit prediction dispositions. Read
 `docs/versions/v22-mechanism-tests/FINAL_REPORT.md`, `results/v22/FINAL_VALIDITY.json`
 and outer `.local/v22/CLOSEOUT.json` before future work. Do not refill, restart
-valid science or schedule recurring V22 reviews. V21 remains active independently.
+valid science or schedule recurring V22 reviews. V21 subsequently closed above.
 The owner commissioned the October 13 next-test sheet as V22. Read
 `docs/versions/v22-mechanism-tests/README.md`, `PROTOCOL.md`, `CARDS.json` and
 outer `.local/v22/HANDOFF.md`. All seven studies are finite constructed mechanisms,

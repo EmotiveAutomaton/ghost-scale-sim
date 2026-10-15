@@ -3,8 +3,10 @@
 **October 14 operational amendment:** the [accelerated closeout](ACCELERATED_CLOSEOUT.md)
 and [frozen final diagnostic](FINAL_DIAGNOSTIC_MANIFEST.json) supersede the
 calendar waits and pending-freeze descriptions retained below. Discovery is
-closed; the single 32-world diagnostic is running. Complete its independent
-review and F04 final accounting/reporting, then close without exploratory refill.
+closed; the single 32-world diagnostic and independent final review are complete.
+The [final report](FINAL_REPORT.md) and explicit card dispositions supersede all
+prospective next-step wording retained below as implementation history. No V21
+refill, new promotion, repair or recurring review remains commissioned.
 
 The opening core implements the retained duplicate audit, law-marginal error
 budget/headroom map, observation partitions, converged and fresh-law direct

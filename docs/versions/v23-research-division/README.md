@@ -1,31 +1,31 @@
 # V23: research division and decision-ledger bridge
 
-**Specification reviewed; launch blocked pending corrections and dependencies.**
-No V23 scientific batch, calibration, pilot or confirmation has run. V21 retains
-its three workers and its accelerated final-review process. V22 remains closed.
+**Corrected implementation underway; stopping calibration verified.**
+No family discovery, production pilot or confirmation is admitted. V21 and V22
+are closed. The other thread owns the canonical ToMpathy schema; its provisional
+interface passes engineering tests, but a committed snapshot remains required.
 
-The owner requested review of the October 14 next-round sheet and execution only
-if it has no implementation issues. The review found a confirmation-validity
-error and an unavailable canonical ledger dependency. Proposed corrections are
-concrete in [IMPLEMENTATION_REVIEW.md](IMPLEMENTATION_REVIEW.md); they are not yet
-accepted amendments. The [work order](WORK_ORDER.json) records the full requested
-scope, dependencies and admission conditions, not runnable scientific jobs.
-
+- [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33
+  stress settings remain qualified, independent reconstruction and full replay pass.
+- [Implementation status](IMPLEMENTATION_STATUS.md): built parts and unfinished
+  work for all sixteen families, without treating declarations as executable jobs.
+- [Work order](WORK_ORDER.json), [accepted implementation contract](IMPLEMENTATION_CONTRACT.md)
+  and [canonical ledger mapping](LEDGER_MAPPING.md).
 - [Original specification](GHOST_SCALE_NEXT_ROUND_SPEC_2026-10-14.md), preserved
-  byte for byte. Its historical V21 schedule is superseded by V21's own
-  [accelerated closeout](../v21-supporting-mechanisms/ACCELERATED_CLOSEOUT.md).
-- [Review checks](REVIEW_CHECKS.json): exact arithmetic counterexample and static
-  dependency observations. These are specification checks, not research results.
+  byte for byte; [historical review](IMPLEMENTATION_REVIEW.md) and
+  [review checks](REVIEW_CHECKS.json). The owner has accepted the corrections.
+- [Current recorded state](../../../results/v23/CURRENT_STATUS.json).
 
-The proposed allocation retains 90 CPU hours, including 18 protected hours,
-three below-normal single-thread CPU workers, no GPU, Sounding Line priority,
-and at most seven elapsed days. Day 0 remains V21 final-report publication;
-dependency delays do not silently reset that clock. Implementation can be prepared
-before then under the current request, but scientific execution waits for V21's
-verified closure and the recorded V23 admission gates.
+Day zero is V21's actual final-report publication: 2026-10-15 05:04:15 UTC.
+The seven-day limit ends 2026-10-22 05:04:15 UTC. The 90 CPU-hour ceiling includes
+18 protected hours and all setup, failures, replay and services. Gear 2 permits
+three below-normal single-thread CPU scientists, no GPU, with Sounding Line priority.
+Dependency delays never reset the clock. No occupancy filler or reopening of a
+closed predecessor is authorized.
 
-All eleven core families, the optional play family and four twins remain in
-scope. This preparation does not claim they are implemented. Machine batch cards,
-family-decision publication and twelve-hour health reviews follow the original
-specification's section 8 defaults. No V23 background watcher is installed while
-the launch decision is unresolved.
+R1-R4 have retained pipelines, independent checkers, known-answer gates and cost
+pilot entry points. The remaining mechanism pipelines and four twins need further
+implementation. The finite monitor collects completion, failure and committed-
+schema events and maintains fixed twelve-hour health reviews. Machine cards are
+written per accepted batch; full public scientific write-through occurs at family
+decisions. A final report and verified owned-service shutdown end the campaign.

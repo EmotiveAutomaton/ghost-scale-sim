@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-15T04:54:34.183806+00:00",
+  "charged_cpu_hours": 57.54390507652778,
+  "charged_cpu_seconds": 207158.0582755,
+  "final_notifier_tail_bound_seconds": 60,
+  "final_scientific_partitions_cpu_seconds": 18778.984375,
+  "limitation": "Retired services without final native counters have only retained lower bounds; the prepaid allowance covers setup/services, not a claim of exact historical service CPU. Outage tails are separately charged estimates, not restored final native counters.",
+  "observed_service_cpu_seconds": 12682.03125,
+  "original_protected_reservation_hours": 18,
+  "prepaid_setup_service_seconds": 3600,
+  "remaining_cpu_hours": 14.456094923472222,
+  "total_ceiling_cpu_hours": 72
+}
