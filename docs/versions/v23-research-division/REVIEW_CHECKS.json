@@ -1,0 +1,44 @@
+{
+  "kind": "static_specification_review_not_campaign_result",
+  "observed_at": "2026-10-15T03:22:53.236035+00:00",
+  "specification_sha256": "f5315dcfab499d97fc5a4de5bb82964f14750ae6666b42d0ac76a1ac4c305445",
+  "preserved_original_matches_incoming": true,
+  "confirmation_counterexample": {
+    "distribution": [
+      {
+        "gain": "-1",
+        "probability": "1/10"
+      },
+      {
+        "gain": "2/15",
+        "probability": "9/10"
+      }
+    ],
+    "null_margin": "1/50",
+    "raw_mean": "1/50",
+    "proposed_floor": "-1/10",
+    "floored_mean": "11/100",
+    "proposed_half_maximum_bet": "25/6",
+    "expected_unfloored_one_step_factor": "1",
+    "expected_floored_one_step_factor": "11/8",
+    "verdict": "INVALID_FOR_ORIGINAL_MEAN_NULL",
+    "arithmetic": "exact_rational"
+  },
+  "dependency": {
+    "repository": "ToMpathy",
+    "head": "a4dae2479b5f87c03000d5a4c62690eaad0c5d70",
+    "ref": "refs/heads/codex/0.2-development",
+    "canonical_schema_present": false
+  },
+  "specified_grid_count_including_optional_n4b_and_n8": 1234,
+  "specified_grid_count_excluding_n8": 1210,
+  "twins_and_extra_controls_counted_above": false,
+  "group_caps_cpu_hours": 130,
+  "binding_program_cpu_hours": 90,
+  "scientific_campaign_execution": false,
+  "limitations": [
+    "No numerical family or calibration executed",
+    "No engine schema conformance can pass without canonical implementation",
+    "No model, likelihood, family control or power claim verified by this receipt"
+  ]
+}
