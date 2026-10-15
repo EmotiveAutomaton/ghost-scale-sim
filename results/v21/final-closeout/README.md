@@ -15,3 +15,6 @@ establishes excess direct-reader error, not a maker-mechanism promotion.
 
 Scientific closure precedes publication and notifier-exit verification. Their
 actual outcome belongs in `ADMINISTRATIVE_CLOSEOUT.json` after it is observed.
+
+[Administrative closure](ADMINISTRATIVE_CLOSEOUT.json) verifies the final-report
+publication and exit of all owned services. There are no recurring V21 wakes.

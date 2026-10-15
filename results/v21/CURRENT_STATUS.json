@@ -1,8 +1,9 @@
 {
   "accepted_scientific_blocks": 127,
   "accounting_limitation": "Retired services without final native counters have only retained lower bounds; the prepaid allowance covers setup/services, not a claim of exact historical service CPU. Outage tails are separately charged estimates, not restored final native counters.",
+  "administrative_closeout": "results/v21/final-closeout/ADMINISTRATIVE_CLOSEOUT.json",
   "admitted_work_items": 352,
-  "at": "2026-10-15T04:58:06.327629+00:00",
+  "at": "2026-10-15T05:06:02.137749+00:00",
   "card_dispositions": 31,
   "completed_required_family_replays": 29,
   "completed_work_items": 337,
@@ -24,7 +25,7 @@
   "scientific_supervisor_running": false,
   "scientific_workers": 0,
   "scope_exhausted": false,
-  "state": "science complete; final publication and notifier exit pending",
+  "state": "closed; final report published and all owned services exited",
   "unexecuted_deferrals": 10,
   "validity": "results/v21/final-closeout/FINAL_VALIDITY.json",
   "withdrawals": 3

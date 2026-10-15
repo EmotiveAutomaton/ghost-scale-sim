@@ -28,8 +28,9 @@ Twenty-nine complete family replays are retained. The final diagnostic establish
 excess direct-reader error; no maker-specific mechanism is promoted. Two resource
 failures, three withdrawals, ten deferrals and the broader unexecuted frontier
 remain. Do not refill, restart valid science or schedule recurring V21 reviews.
-Scientific workers and their supervisor have exited. Verify the separate final
-publication and notifier-exit receipt before claiming administrative closure.
+Scientific workers, supervisor and notifier have exited. The final report is
+published on main; `results/v21/final-closeout/ADMINISTRATIVE_CLOSEOUT.json` records
+verified publication and complete owned-service closure.
 The active-V21 instructions below are historical, superseded by this closeout.
 
 ## Completed V22 finite first pass (2026-10-13)
