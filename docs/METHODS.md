@@ -7,7 +7,10 @@ the two fits, checks development training/weight identity and every new score,
 and reconstructs the expected error-budget telescope. Eight targeted controls
 cover missing/duplicate populations, convergence, unequal partition sizes and
 uncapped infinities. These validate the review apparatus; diagnostic results
-remain pending until all three partitions finish and their raw records verify.
+are now independently verified across every final partition. The exact source's
+two complete family replays are reused by frozen hashes; final new-world scores,
+training/model identity and expected decompositions are freshly reconstructed.
+See [the final method disposition](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_REPORT.md).
 
 V22 semantic scope: B1 randomized costs still enter maker utility, leaving the fully choice-independent costly-label null unexecuted as specified. A3 keeps flag evidence at full precision after channel withdrawal; recognition is not a measure of withdrawing every purpose cue. Numerical receipts remain valid for the actual finite instruments.
 

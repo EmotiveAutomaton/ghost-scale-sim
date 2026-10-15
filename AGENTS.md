@@ -17,13 +17,28 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## Completed V21 scientific allocation (2026-10-14)
+
+V21 science is complete. Read
+`docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md`,
+`results/v21/final-closeout/FINAL_VALIDITY.json`, `COVERAGE.json` and the local
+handoff/closeout receipt. All 337 numerical packets are covered; 127 accepted
+scientific blocks include one final 32-world diagnostic in three partitions.
+Twenty-nine complete family replays are retained. The final diagnostic establishes
+excess direct-reader error; no maker-specific mechanism is promoted. Two resource
+failures, three withdrawals, ten deferrals and the broader unexecuted frontier
+remain. Do not refill, restart valid science or schedule recurring V21 reviews.
+Scientific workers and their supervisor have exited. Verify the separate final
+publication and notifier-exit receipt before claiming administrative closure.
+The active-V21 instructions below are historical, superseded by this closeout.
+
 ## Completed V22 finite first pass (2026-10-13)
 
 V22 is closed: all seven finite results have independent numerical checks, complete
 replays and explicit prediction dispositions. Read
 `docs/versions/v22-mechanism-tests/FINAL_REPORT.md`, `results/v22/FINAL_VALIDITY.json`
 and outer `.local/v22/CLOSEOUT.json` before future work. Do not refill, restart
-valid science or schedule recurring V22 reviews. V21 remains active independently.
+valid science or schedule recurring V22 reviews. V21 subsequently closed above.
 The owner commissioned the October 13 next-test sheet as V22. Read
 `docs/versions/v22-mechanism-tests/README.md`, `PROTOCOL.md`, `CARDS.json` and
 outer `.local/v22/HANDOFF.md`. All seven studies are finite constructed mechanisms,

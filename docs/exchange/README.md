@@ -1,5 +1,8 @@
 # Sounding Line exchange index
 
+- [V21 final response](v21-final-response.md): no maker-specific promotion;
+  reserved-world reader error, verified finite closure and retained frontier.
+
 - [V21 accelerated closeout](v21-accelerated-closeout-response.md): owner schedule amendment, frozen 32-world diagnostic and immediate completion review.
 
 - [V22 final response](v22-final-response.md): all seven finite results, limitations and scientific-service closure.

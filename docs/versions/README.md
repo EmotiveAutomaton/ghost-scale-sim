@@ -7,7 +7,7 @@ not start a clock or authorize execution.
 | Version | Status | Entry point |
 |---|---|---|
 | V22 | Closed finite seven-study pass; all results verified, no confirmation | [Program index](v22-mechanism-tests/README.md) |
-| V21 | Final 32-world diagnostic running in Gear 2; accelerated closure after verification | [Program index](v21-supporting-mechanisms/README.md) |
+| V21 | Scientific allocation complete; excess reader error established, no maker-mechanism promotion; incomplete frontier retained | [Final report](v21-supporting-mechanisms/FINAL_REPORT.md) |
 | V20 | Closed October 1; 808 verified packets, shifted-context candidate confirmed, native primary failed, 44 deferrals | [Final report](v20-contribution-reconstruction/FINAL_REPORT.md) |
 | V19 | Scientific window closed; final report published | [Final scientific report](v19-local-maker/FINAL_REPORT.md) |
 | V18.4 | Closed; remaining frontier retained | [Final report](v18-selective-acquisition/exploratory-loop/FINAL_REPORT.md) |

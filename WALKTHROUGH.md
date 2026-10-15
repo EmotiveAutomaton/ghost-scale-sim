@@ -1,5 +1,7 @@
 # The walkthrough
 
+V21 is scientifically complete. No learned-maker advantage survived the maker-specific historical-content test. The final 32-world diagnostic establishes direct-reader excess loss of 0.16681 nats (95% interval 0.14575–0.18847), while exact historical ambiguity remains. These are constructed-method results, not a maker-mechanism confirmation or human evidence. [Final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).
+
 V22 scope limits: the fully choice-independent costly-label null remains unexecuted in B1, and A3 retains full flag evidence after withdrawal. [Final dispositions](docs/versions/v22-mechanism-tests/FINAL_REPORT.md).
 
 [V22 C1: Joint goal-tree inference](docs/versions/v22-mechanism-tests/C1_REPORT.md). Does joint inference improve recovery across a goal hierarchy? Joint reading improves internal-node probability forecasts over the one-direction ablations, but bottom-up inference already matches it at the root. Removing distant evidence can hurt more than removing immediate-child evidence, and root accuracy is not monotone in every coverage series. These are finite constructed-tree results: marginal node scores do not establish a joint-prediction advantage or mathematical smoothness.

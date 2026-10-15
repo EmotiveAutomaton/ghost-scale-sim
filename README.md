@@ -1,5 +1,10 @@
 # Ghost Scale Simulation
 
+[V21 final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md): no
+maker-specific advantage survives the historical-content test. The final
+32-world diagnostic finds 0.16681 nats of direct-reader excess loss; scientific
+services have exited, with all unexecuted scope retained.
+
 [Calibrated answer rival](docs/versions/v21-supporting-mechanisms/CALIBRATED_ANSWER_REPORT.md): native fixed-specificity advantage unestablished; small adaptive matched-error difference retained; full replay verified.
 
 [Model expansion](docs/versions/v21-supporting-mechanisms/EXPANSION_REPORT.md): predictive surprise detects known omissions; full-library planning can expand unnecessarily. Complete replay verified.
@@ -21,10 +26,11 @@ human intent, human values or historical process correspondence.
 
 - **Closed V22:** [seven finite mechanism studies](docs/versions/v22-mechanism-tests/README.md).
   [Final report](docs/versions/v22-mechanism-tests/FINAL_REPORT.md): seven verified finite results, mixed prediction dispositions and scientific-service closure.
-- **Active V21:** [supporting mechanism program](docs/versions/v21-supporting-mechanisms/README.md).
-  Gear 2 CPU queue, twelve-hour routine health reviews, and the October 10 validity
-  errata. [Accelerated closeout](docs/versions/v21-supporting-mechanisms/ACCELERATED_CLOSEOUT.md):
-  the final 32-world diagnostic is running; verification and closure follow immediately.
+- **V21 scientific allocation complete:** [final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).
+  All 337 numerical packets and 127 scientific blocks are verified; 29 complete
+  family replays are retained. No new V21 jobs or recurring reviews remain.
+  [Accelerated closeout](docs/versions/v21-supporting-mechanisms/ACCELERATED_CLOSEOUT.md)
+  preserves the owner amendment and original frozen diagnostic.
   [Native support diagnostic](docs/versions/v21-supporting-mechanisms/NATIVE_SUPPORT_REPORT.md): exact support helps log loss; learned hard pruning excludes truth.
   [Widened native context](docs/versions/v21-supporting-mechanisms/WIDE_CONTEXT_SUPPORT_REPORT.md): maker gains absent and support exclusions verified; learned persistence admitted.
   [Widened native laws and support](docs/versions/v21-supporting-mechanisms/WIDE_NATIVE_SUPPORT_REPORT.md): maker gains absent, hard-pruning exclusions verified; no matched widened shift admitted.
