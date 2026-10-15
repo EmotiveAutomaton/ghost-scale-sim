@@ -1,10 +1,10 @@
 # V23 implementation status
 
-The corrected program is underway. Stopping calibration is fully verified; no
-family discovery or confirmation is admitted. The canonical ToMpathy schema is
-being built by its owning thread and remains uncommitted at this checkpoint.
-Engineering conformance uses its provisional interface without treating it as a
-campaign dependency pin. V21 and V22 are closed.
+The corrected program is underway. Stopping calibration is verified; R1 and R2
+discovery batches are running with finite continuation. No family result or
+confirmation is accepted yet. The canonical ToMpathy schema is pinned to commit
+`2a0c54233344ae3f64bed9806442289d7dab726a`, with repeated conformance checks.
+V21 and V22 are closed. See [opening execution](OPENING_REPORT.md).
 
 The table distinguishes executable parts from remaining admission and development
 work. None of these rows claims that a full family experiment has run.
@@ -12,8 +12,8 @@ work. None of these rows claims that a full family experiment has run.
 | Scope | Built and checked | Still required |
 |---|---|---|
 | Adaptive stopping | Complete seven-look calibration, checked quadrature, held-out choice, full fresh-process replay, independent counts/intervals; structural zeros remain on the curve | Apply the frozen policy only after batch acceptance; record every family trajectory |
-| Confirmation | Raw bounded-gain e-values, correct earlier-discovery e-LOND, independent-law-block enforcement, counterexample controls | Family-specific support proofs, reserved-world runners and fitted confirmation rivals |
-| R1-R4 | Generators/readers, canonical emitters, independent posterior/score checkers, frozen direct fits, retained batch pipeline, secondary metrics, known-answer controls, pilot entry points, small complete engineering replay | Committed schema, production-size pilots, cost admission, full production fits/replays and batch decisions |
+| Confirmation | Raw bounded-gain e-values, correct earlier-discovery e-LOND, independent-law-block enforcement, counterexample controls | Repair-family analytic support proofs now exist; reserved-world runners, nonrepair proofs and fitted confirmation rivals remain |
+| R1-R4 | Generators/readers, canonical emitters, independent posterior/score checkers, frozen direct fits, retained batch pipeline, secondary metrics, known-answer controls, pilot entry points, small complete engineering replay | R1/R2 full production fits/replays and decisions in progress; R3 resource hold, R4 admission after capacity review; all four pilots verified |
 | N1 | Finite recipe/culture/HMM inference, individual/population/partial-pooling/prototype rivals, full-menu law blocks, population ledger adapter and ownership round trip | Independent complete checker, retained fits/training/metrics, largest-cell memory/CPU pilot, population batch pipeline |
 | N2 | Latent mark stories and timing weights; independent per-case posterior reconstruction and ledger round trip | Persist timing-training records/weights, oracle diagnostics, full pipeline and production pilot |
 | N3 | Noisy corrections and literal hard constraints; empty-support failure retained, separate soft supplement, matched supplied design metadata, all-local known-answer control, independent checker and linked correction/revision records | Complete pipeline with explicit unavailable-primary disposition; no dropping inconsistent cases; production pilot |
@@ -31,8 +31,8 @@ N8, plus the separately declared twin grids. Budget deferral requires measured
 cost evidence and is distinct from unimplemented scope. The 90-hour ceiling and
 18-hour reserve bind every group cap.
 
-The next executable milestone is the committed canonical dependency, followed by
-R1's full largest-cell pilot and admission of its two mandatory burn-in batches
-if costs and controls permit. Independent development of the remaining rows can
-continue meanwhile. The first fixed health review is 2026-10-15 17:04:15 UTC;
+The next scientific milestones are R1/R2 complete batch replays and the two
+mandatory burn-in batches, followed by calibrated family decisions. R3 and R4
+have measured cost profiles; their resource holds are distinct from null results.
+Independent development of the remaining rows continues. The first fixed health review is 2026-10-15 17:04:15 UTC;
 dependency-ready or failure events may request an earlier review.

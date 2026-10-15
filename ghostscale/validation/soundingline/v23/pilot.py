@@ -73,10 +73,25 @@ def run(root,plan,pulse):
     model.save(root/'pilot-fit.npz')
     training_seconds=time.process_time()-started
     # Timing remains separate and is never a replayed scientific outcome.
+    profile=[];profile_rows=[]
+    for index,variant in enumerate(registry.variants(family)):
+        clock=time.process_time()
+        public,truth=repairs.sample(variant,'cost-profile',index%16,0)
+        pred,detail=repairs.evaluate(variant,public,truth)
+        error=getattr(checker,'verify_'+family.lower())(variant,public,truth,pred,detail)
+        bundle=ledger.emit(variant,public,schema,[family,'cost-profile',index])
+        if ledger.decode(variant,bundle,schema)!=public:raise ValueError('profile ledger differs')
+        profile.append(dict(variant=variant['id'],cpu_seconds=time.process_time()-clock,cases=1))
+        profile_rows.append(dict(variant=variant,public=public,truth=truth,predictions=pred,details=detail,
+            ledger=bundle,independent_error=error))
+        pulse(phase='grid-cost-profile',family=family,variant=variant['id'])
+    records(root/'cost_profile_points.jsonl.gz',profile_rows)
     write(root/'pilot-cost.json',dict(inference_cpu_seconds=inference_seconds,cases=16,
         training_cpu_seconds=training_seconds,training_labels=128,validation_labels=32,
-        optimizer_epochs=model.metadata['epochs'],scope='upper-cell extrapolation requires resource admission review'))
+        optimizer_epochs=model.metadata['epochs'],profile=profile,
+        scope='largest-cell safety pilot plus one retained control case per grid cell; timing uncertainty and training remain separate'))
     write(root/'SUMMARY.json',dict(state='PILOT_VALID',family=family,largest_variant=v,
         laws=16,cases=16,controls=controls,independent_error=max_error,
         raw_sha256=digest(root/'pilot_points.jsonl.gz'),fit_sha256=digest(root/'pilot-fit.npz'),
+        profile_sha256=digest(root/'cost_profile_points.jsonl.gz'),
         scientific_claim='none; known-answer and cost instrumentation only',selection_using_pilot_effects=False))

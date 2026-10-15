@@ -1,5 +1,6 @@
 """Complete declared design grids, priority and finite program limits."""
 from itertools import product
+from functools import lru_cache
 from .common import canonical
 
 ORDER = ('R1', 'R2', 'R3', 'R4', 'N1', 'N2', 'N5', 'N3', 'N4', 'N7', 'N6',
@@ -105,18 +106,21 @@ def selection_eligible(variant):
     return family in PRIMARY
 
 
-def variant_features(variant):
-    """One frozen encoding of settings; no result-dependent category order."""
-    family = variant['family']
+@lru_cache(None)
+def _feature_levels(family):
     population = variants(family)
     # Design labels are not automatically observed evidence. These knobs are
     # marginalized/inferred by the exact reference, so direct fits must infer
     # them from the same public history rather than receiving the planted value.
     hidden = {'N4': {'mechanism'}}.get(family, set())
     keys = sorted({k for v in population for k in v['settings']} - hidden)
+    return tuple((key,tuple(sorted({canonical(v['settings'].get(key)).decode() for v in population}))) for key in keys)
+
+
+def variant_features(variant):
+    """One frozen encoding of settings; no result-dependent category order."""
     out = []
-    for key in keys:
-        values = sorted({canonical(v['settings'].get(key)).decode() for v in population})
+    for key,values in _feature_levels(variant['family']):
         value = canonical(variant['settings'].get(key)).decode()
         out.extend(float(value == item) for item in values)
     return out

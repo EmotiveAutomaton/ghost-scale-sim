@@ -97,11 +97,13 @@ def r2_trajectory(v, p, policy, law=None):
         flag_before = float(normalize(ll)@state[:, 0])
         if rule:
             floor, threshold, release = rule
-            if release == 'release' and fired and flag_before < .5:
+            # Resolve mathematical boundary ties identically in log-space and
+            # probability-space calculations; this is below the checker tolerance.
+            if release == 'release' and fired and flag_before < .5-1e-12:
                 fired = False
-            fired = fired or flag_before >= threshold
+            fired = fired or flag_before >= threshold-1e-12
         elif policy == 'withdraw-content':
-            fired = fired or flag_before >= .7
+            fired = fired or flag_before >= .7-1e-12
         precision = np.ones(3); flag_precision = 1.
         if policy == 'early-guard':
             precision[:] = .2; flag_precision = .2
@@ -175,7 +177,25 @@ def sample_r3(v, phase, world, case, law=None):
     return dict(history=rows, current=current), dict(y=[y], setpoint=target.tolist(), law=int(law), cost_role=cost_scale)
 
 
-def r3_infer(v, p, role=None, weighting='unit', known_law=None):
+def r3_likelihoods(v,p):
+    """Vectorize fixed finite menus; reuse within one case only."""
+    states=setpoints(v['settings']['dimensions']);rows=p['history']+[p['current']]
+    h=np.array([row['h'] for row in rows]);effects=np.array([row['effects'] for row in rows])
+    costs=np.array([row['costs'] for row in rows]);picked=np.array([row['picked'] for row in p['history']])
+    distances=np.abs(states[None,:,None,:]-h[:,None,None,:]-effects[:,None,:,:])
+    deficits={n:np.sum(distances**n,axis=-1)**.5 for n,_,_ in R3_LAWS}
+    result={}
+    for role in (0.,.5,1.):
+        for law,(n,m,beta) in enumerate(R3_LAWS):
+            # Common before-action drive cancels analytically from softmax.
+            probabilities=normalize(-beta*(deficits[n]+role*costs[:,None,:]))
+            with np.errstate(divide='ignore'):
+                loghistory=np.log(probabilities[np.arange(len(picked))[:,None],np.arange(len(states))[None,:],picked[:,None]])
+            result[role,law]=(loghistory,probabilities[-1])
+    return result
+
+
+def r3_infer(v, p, role=None, weighting='unit', known_law=None, _cache=None):
     s = v['settings']; states = setpoints(s['dimensions'])
     roles = (0., .5, 1.) if role is None else (role,)
     laws = list(range(16)) if known_law is None else [known_law]
@@ -188,15 +208,15 @@ def r3_infer(v, p, role=None, weighting='unit', known_law=None):
         weights = [float(np.mean(weights))]*len(weights)
     elif weighting == 'unit':
         weights = [1.]*len(weights)
-    for row, weight in zip(p['history'], weights):
-        for i, r in enumerate(roles):
-            for j, law in enumerate(laws):
-                ll[i, j] += weight*np.log(choice3(states, np.array(row['h']), np.array(row['effects']), np.array(row['costs']), law, r)[:, row['picked']])
+    cache=r3_likelihoods(v,p) if _cache is None else _cache
+    for i,r in enumerate(roles):
+        for j,law in enumerate(laws):
+            ll[i,j]=np.sum(np.asarray(weights)[:,None]*cache[r,law][0],axis=0)
     post = normalize(ll.ravel()).reshape(ll.shape)
     cur = p['current']; pred = np.zeros(3)
     for i, r in enumerate(roles):
         for j, law in enumerate(laws):
-            pred += post[i, j]@choice3(states, np.array(cur['h']), np.array(cur['effects']), np.array(cur['costs']), law, r)
+            pred += post[i, j]@cache[r,law][1]
     return pred[None, :], post.sum((0, 1)), post.sum((1, 2))
 
 
@@ -206,14 +226,14 @@ def evaluate_r3(v, p, truth=None):
              ('relevance-aware', None, 'unit'), ('assumes-relevant', 1., 'unit'),
              ('effort-weighted', true_role, 'effort'), ('matched-tempering', true_role, 'tempered'),
              ('cost-ignorant', 0., 'unit')]
-    pred, details = {}, {}
+    pred, details = {}, {};cache=r3_likelihoods(v,p)
     for name, role, weighting in specs:
-        pred[name], post, roles = r3_infer(v, p, role, weighting)
+        pred[name], post, roles = r3_infer(v, p, role, weighting,_cache=cache)
         details[name] = dict(setpoint_posterior=post.tolist(), role_posterior=roles.tolist())
     counts = np.bincount([row['picked'] for row in p['history']], minlength=3)+.5
     pred['frequency'] = (counts/counts.sum())[None, :]
     if truth is not None:
-        pred['oracle-law'] = r3_infer(v, p, true_role, known_law=truth['law'])[0]
+        pred['oracle-law'] = r3_infer(v, p, true_role, known_law=truth['law'],_cache=cache)[0]
     return pred, details
 
 
@@ -272,20 +292,38 @@ def tree_messages(parent, emission, reliability, mode='joint'):
 
 def r4_infer(v, p, mode='joint', cue=True, marginal_rho=False, law=None, fixed_trust=False):
     s = v['settings']; parent, levels = tree(s['branching'])
-    probabilities, likelihoods = [], []
     rhos = (.3, .5, .7, .9, .99) if marginal_rho else (.9 if fixed_trust else s['cue_reliability'],)
-    for law_i in range(16) if law is None else [law]:
-        for rho in rhos:
-            emission = np.zeros((len(parent), 2))
-            for i, obs in enumerate(p['evidence']):
-                if obs >= 0 and mode != 'top-down':
-                    emission[i] = np.log([.9 if obs == 0 else .1, .9 if obs == 1 else .1])
-            if cue:
-                emission[p['cue_node']] += np.log([rho if p['cue'] == 0 else 1-rho, rho if p['cue'] == 1 else 1-rho])
-            prob, likelihood = tree_messages(parent, emission, np.linspace(.60, .98, 16)[law_i], mode)
-            probabilities.append(prob); likelihoods.append(likelihood)
-    weights = normalize(likelihoods)
-    return np.tensordot(weights, probabilities, axes=1)
+    combinations=list(product(range(16) if law is None else [law],rhos))
+    reliability=np.array([np.linspace(.60,.98,16)[ell] for ell,_ in combinations])
+    emission=np.zeros((len(parent),len(combinations),2))
+    for i,obs in enumerate(p['evidence']):
+        if obs>=0 and mode!='top-down':emission[i]=np.log([.9 if obs==0 else .1,.9 if obs==1 else .1])
+    if cue:
+        probability=np.array([rho for _,rho in combinations])
+        emission[p['cue_node']]+=np.log(np.stack([probability if p['cue']==0 else 1-probability,
+            probability if p['cue']==1 else 1-probability],axis=1))
+    transition=np.log(np.stack([np.stack([reliability,1-reliability],axis=1),
+        np.stack([1-reliability,reliability],axis=1)],axis=1))
+    below=emission.copy();messages=np.zeros_like(emission)
+    for level in range(4,0,-1):
+        nodes=np.flatnonzero(levels==level);ancestors=np.flatnonzero(levels==level-1)
+        messages[nodes]=logsumexp(transition[None]+below[nodes][:,:,None,:],axis=3)
+        below[ancestors]+=messages[nodes].reshape(len(ancestors),s['branching'],len(combinations),2).sum(1)
+    likelihood=logsumexp(below[0],axis=1)-np.log(2)
+    if mode=='top-down':
+        posterior=np.zeros_like(emission);posterior[0]=normalize(emission[0])
+        for level in range(1,5):
+            nodes=np.flatnonzero(levels==level)
+            predicted=np.einsum('nki,kij->nkj',posterior[parent[nodes]],np.exp(transition))
+            posterior[nodes]=normalize(np.log(predicted)+emission[nodes])
+    else:
+        above=np.zeros_like(emission)-np.log(2)
+        for level in range(1,5):
+            nodes=np.flatnonzero(levels==level)
+            outside=above[parent[nodes]]+below[parent[nodes]]-messages[nodes]
+            above[nodes]=logsumexp(outside[:,:,:,None]+transition[None],axis=2)
+        posterior=normalize(above+below)
+    return np.einsum('k,nkj->nj',normalize(likelihood),posterior)
 
 
 def evaluate_r4(v, p, truth=None):

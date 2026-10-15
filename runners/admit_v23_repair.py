@@ -7,12 +7,17 @@ from pathlib import Path
 import secrets,shutil,subprocess,sys,zipfile
 from datetime import datetime,timezone
 from ghostscale.validation.soundingline.v23.common import read,write,digest
-from ghostscale.validation.soundingline.v23 import registry,runtime,ledger
+from ghostscale.validation.soundingline.v23 import registry,runtime,ledger,support
 from ghostscale.validation.soundingline.v23.family import verify_packet
-from runners.watch_v23_events import alive
+from runners.watch_v23_events import alive,owner
 
 
-def admit(campaign,family,task,cpu_cap,launch=False):
+def admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0):
+    with owner(Path(campaign).resolve()/'admission'):
+        return _admit(campaign,family,task,cpu_cap,launch,repair,cost_recheck)
+
+
+def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0):
     campaign=Path(campaign).resolve();acceptance=read(campaign/'ACCEPTANCE.json')
     if family not in ('R1','R2','R3','R4'):raise ValueError('only independently implemented repair pipelines can be admitted here')
     if not 0<cpu_cap<=14400:raise ValueError('repair packet cap must be positive and at most four CPU hours')
@@ -53,19 +58,44 @@ def admit(campaign,family,task,cpu_cap,launch=False):
     group_limit=8*3600 if task=='pilot' else 14*3600
     if group_spent+group_reserved+cpu_cap>group_limit:raise ValueError('group cap exhausted')
     identity=f'v23-{family.lower()}-'+('pilot-1' if task=='pilot' else 'batch-1')
+    if repair:
+        failed=campaign/'packets'/identity
+        if read(failed/'STATUS.json')['state']!='failed':raise ValueError('repair requires a retained failed original')
+        identity+='-repair-1'
+    if cost_recheck:
+        if repair or task!='pilot' or cost_recheck not in (1,2):raise ValueError('cost recheck is a separate bounded pilot')
+        verify_packet(campaign/'packets'/identity)
+        if cost_recheck==2:verify_packet(campaign/'packets'/(identity+'-cost-recheck-1'))
+        identity+='-cost-recheck-'+str(int(cost_recheck))
     root=campaign/'packets'/identity
     if root.exists():raise ValueError('preserve existing identity; reviewed repairs need a new identity')
-    extras={}
+    extras=dict(confirmation_support=support.repair_bound(family))
     if task=='family-batch':
-        pilot=campaign/'packets'/f'v23-{family.lower()}-pilot-1';pp,ps=verify_packet(pilot)
+        pilot=campaign/'packets'/f'v23-{family.lower()}-pilot-1'
+        repaired=pilot.with_name(pilot.name+'-repair-1')
+        if (repaired/'COMPLETE.json').exists():pilot=repaired
+        for pass_number in (1,2):
+            optimized=campaign/'packets'/f'v23-{family.lower()}-pilot-1-cost-recheck-{pass_number}'
+            if (optimized/'COMPLETE.json').exists():pilot=optimized
+        pp,ps=verify_packet(pilot)
         if ps['state']!='PILOT_VALID':raise ValueError('family pilot not accepted')
         costs=[read(pilot/label/'pilot-cost.json') for label in ('original','replay')]
         case_cost=max(row['inference_cpu_seconds']/row['cases'] for row in costs)
         lower_cost=case_cost*len(registry.variants(family))*16*64*2
+        if all('profile' in row for row in costs):
+            if any({p['variant'] for p in row['profile']}!={v['id'] for v in registry.variants(family)} for row in costs):
+                raise ValueError('cost profile does not cover complete family grid')
+            # Windows process CPU clocks have a 1/64-second quantum. Keep a
+            # nonzero floor for timing uncertainty only, never for scientific gain.
+            estimated=sum(max(1/64,*(next(p['cpu_seconds']/p['cases'] for p in row['profile'] if p['variant']==v['id']) for row in costs))
+                for v in registry.variants(family))*16*64*2*1.5
+            lower_cost=estimated
         if lower_cost>cpu_cap:raise ValueError('largest-cell extrapolation exceeds the admitted batch cap before training')
         if total+reserved+cpu_cap+lower_cost>acceptance['cpu_seconds']-acceptance['protected_cpu_seconds']:
             raise ValueError('second mandatory burn-in batch cannot be reserved')
-        extras=dict(batch=1,variants=[v['id'] for v in registry.variants(family)],worlds=16,cases=64,
+        if group_spent+group_reserved+cpu_cap+lower_cost>group_limit:
+            raise ValueError('second burn-in reservation would invade the family group cap')
+        extras.update(batch=1,variants=[v['id'] for v in registry.variants(family)],worlds=16,cases=64,
             canary_key=secrets.token_hex(32),pilot_complete_sha256=digest(pilot/'COMPLETE.json'),
             pilot_estimated_scientific_cpu_seconds=lower_cost,second_burnin_reservation_seconds=lower_cost)
     source=campaign/'sources'/identity;source.mkdir(parents=True)
@@ -104,4 +134,6 @@ def admit(campaign,family,task,cpu_cap,launch=False):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--campaign',required=True,type=Path);p.add_argument('--family',required=True)
     p.add_argument('--task',choices=['pilot','family-batch'],required=True);p.add_argument('--cpu-cap',required=True,type=float)
-    p.add_argument('--launch',action='store_true');a=p.parse_args();print(admit(a.campaign,a.family,a.task,a.cpu_cap,a.launch))
+    p.add_argument('--launch',action='store_true');p.add_argument('--repair',action='store_true')
+    p.add_argument('--cost-recheck',type=int,choices=[1,2],default=0)
+    a=p.parse_args();print(admit(a.campaign,a.family,a.task,a.cpu_cap,a.launch,a.repair,a.cost_recheck))

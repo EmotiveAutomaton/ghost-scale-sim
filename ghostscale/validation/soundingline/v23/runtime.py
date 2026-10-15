@@ -84,9 +84,15 @@ def verify_plan(root, campaign):
     if now() < acceptance['opened'] or now() >= acceptance['deadline']:
         raise ValueError('outside immutable V23 window')
     if plan['task'] not in ('calibration', 'pilot'):
+        from .support import verify as verify_support
+        verify_support(plan)
         admission = read(campaign/'CALIBRATION_ACCEPTANCE.json')
         summary = Path(admission['summary'])
         completion = Path(admission['complete'])
+        # The original accepted calibration receipt retained sibling-relative
+        # paths. Resolve against the campaign's stable depth, never a capsule cwd.
+        if not summary.is_absolute(): summary = (campaign/summary).resolve()
+        if not completion.is_absolute(): completion = (campaign/completion).resolve()
         if admission['acceptance_sha256'] != digest(campaign/'ACCEPTANCE.json'):
             raise ValueError('calibration admission belongs to another acceptance')
         if digest(summary) != admission['summary_sha256'] or digest(completion) != admission['complete_sha256']:
@@ -179,10 +185,17 @@ def execute_pass(root, campaign, label):
 
 def run(root, campaign):
     root, campaign = Path(root).resolve(), Path(campaign).resolve()
-    plan, acceptance = verify_plan(root, campaign)
+    if (root/'STATUS.json').exists(): raise ValueError('identity was already executed')
     with (root/'OWNER.json').open('x', encoding='utf-8') as f:
         f.write('{"pid":'+str(os.getpid())+',"started":"'+now()+'"}\n')
-    if (root/'STATUS.json').exists(): raise ValueError('identity was already executed')
+    startup=time.process_time()
+    try: plan, acceptance = verify_plan(root, campaign)
+    except BaseException as exc:
+        failure=dict(pid=os.getpid(),parent_pid=os.getppid(),state='failed',phase='startup',
+            heartbeat=now(),cpu_seconds=time.process_time()-startup,error=type(exc).__name__+': '+str(exc))
+        write(root/'STATUS.json',failure)
+        write(campaign/'attempts'/(root.name+'.json'),dict(failure,job=root.name))
+        raise
     below_normal(); start, cpu = time.monotonic(), time.process_time()
     state = dict(state='running', phase='starting'); lock = threading.RLock()
     ended = threading.Event(); faults = []

@@ -35,6 +35,7 @@ def check(row):
 
 
 def review(root,campaign):
+    root,campaign=Path(root).resolve(),Path(campaign).resolve()
     started=time.process_time();plan,summary=verify_packet(root)
     design=read(root/'original/DESIGN.json');tuning=[]
     for index in range(9):

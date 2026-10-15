@@ -1,8 +1,8 @@
 # Ghost Scale Simulation
 
 [V23 calibration](docs/versions/v23-research-division/CALIBRATION_REPORT.md) is verified.
-The corrected program is being built; family admission awaits the committed
-canonical schema and remaining validity/cost gates.
+The canonical schema is committed and pinned. R1 and R2 full batches are running;
+R3/R4 have verified cost pilots. [Opening status and remaining work](docs/versions/v23-research-division/OPENING_REPORT.md).
 
 [V21 final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md): no
 maker-specific advantage survives the historical-content test. The final

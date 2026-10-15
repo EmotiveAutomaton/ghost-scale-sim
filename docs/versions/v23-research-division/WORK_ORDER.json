@@ -1,6 +1,6 @@
 {
   "schema": "ghost-v23-preparation-work-order-v1",
-  "state": "CALIBRATION_VERIFIED_FAMILY_ADMISSION_PENDING",
+  "state": "R1_R2_RUNNING_REMAINING_IMPLEMENTATION_UNFINISHED",
   "specification_sha256": "f5315dcfab499d97fc5a4de5bb82964f14750ae6666b42d0ac76a1ac4c305445",
   "amendment_status": "OWNER_ACCEPTED_IMPLEMENT_CORRECTED_V23",
   "day_zero": "2026-10-15T05:04:15+00:00",
@@ -64,7 +64,7 @@
       "budget_group": "repairs",
       "priority": 1,
       "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "DISCOVERY_BATCH_1_RUNNING_WITH_FINITE_SUCCESSORS",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -81,7 +81,7 @@
       "budget_group": "repairs",
       "priority": 2,
       "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "DISCOVERY_BATCH_1_RUNNING_WITH_FINITE_SUCCESSORS",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -98,7 +98,7 @@
       "budget_group": "repairs",
       "priority": 3,
       "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "VERIFIED_PILOT_RESOURCE_HOLD",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -115,7 +115,7 @@
       "budget_group": "repairs",
       "priority": 4,
       "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "VERIFIED_PILOT_PENDING_RESERVED_CAPACITY",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -132,7 +132,7 @@
       "budget_group": "n1",
       "priority": 5,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -149,7 +149,7 @@
       "budget_group": "n2",
       "priority": 6,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -166,7 +166,7 @@
       "budget_group": "n5",
       "priority": 7,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -183,7 +183,7 @@
       "budget_group": "n3",
       "priority": 8,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -200,7 +200,7 @@
       "budget_group": "n4",
       "priority": 9,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -217,7 +217,7 @@
       "budget_group": "n7",
       "priority": 10,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -234,7 +234,7 @@
       "budget_group": "n6",
       "priority": 11,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -251,7 +251,7 @@
       "budget_group": "twins",
       "priority": 12,
       "implementation": "NOT_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -268,7 +268,7 @@
       "budget_group": "twins",
       "priority": 13,
       "implementation": "NOT_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -285,7 +285,7 @@
       "budget_group": "twins",
       "priority": 14,
       "implementation": "NOT_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -302,7 +302,7 @@
       "budget_group": "twins",
       "priority": 15,
       "implementation": "NOT_BUILT",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -319,7 +319,7 @@
       "budget_group": "n8",
       "priority": 16,
       "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_COMMITTED_SCHEMA_AND_FAMILY_GATES",
+      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
       "dependencies": [
         "all_launch_dependencies",
         "family_source_pin",
@@ -338,7 +338,7 @@
   "deadline": "2026-10-22T05:04:15+00:00",
   "calibration_attempts_admitted": 3,
   "calibration_attempts_verified": 1,
-  "family_jobs_admitted": 0,
+  "family_jobs_admitted": 2,
   "family_pipelines_implemented": [
     "R1",
     "R2",
@@ -351,5 +351,6 @@
     "kill": 0.05,
     "prior_mean_scale": 0.08,
     "prior_spread_scale": 0.05
-  }
+  },
+  "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a"
 }

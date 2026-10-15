@@ -7,6 +7,15 @@ strata and unequal-resource counting comparators. [Calibration and limits](versi
 Raw gain confirmation never floors negative values; finite support proofs and
 independent balanced law blocks remain mandatory before confirmation.
 
+V23's repair families now carry explicit analytic probability-support bounds,
+separately from empirical gain estimates. R2 resolves numerical ties within
+1e-12 at its probability thresholds consistently across log-space and independent
+probability-space reconstruction; its failed pilot is retained. R3 vectorizes
+finite choice likelihoods, and R4 vectorizes tree inference by law and depth,
+with independent scalar comparisons and fresh complete pilot replays. These
+are engineering changes, with no mechanism finding implied. Cost profiles retain
+all variants and use CPU-clock uncertainty only for resource estimates.
+
 V21's [accelerated final diagnostic](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_MANIFEST.json)
 partitions 32 reserved worlds across three workers without changing its scientific
 implementation. The final consumer pools equally weighted worlds after nesting

@@ -1,9 +1,11 @@
 # V23: research division and decision-ledger bridge
 
 **Corrected implementation underway; stopping calibration verified.**
-No family discovery, production pilot or confirmation is admitted. V21 and V22
-are closed. The other thread owns the canonical ToMpathy schema; its provisional
-interface passes engineering tests, but a committed snapshot remains required.
+R1 and R2 discovery batches are admitted and running. V21 and V22 are closed.
+The other thread delivered the canonical ToMpathy schema at commit
+`2a0c54233344ae3f64bed9806442289d7dab726a`; Ghost pins its committed bytes.
+See the [opening report](OPENING_REPORT.md) for pilots, retained failures and
+unfinished scope. No family discovery result or confirmation is accepted yet.
 
 - [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33
   stress settings remain qualified, independent reconstruction and full replay pass.

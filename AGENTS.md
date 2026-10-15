@@ -34,10 +34,10 @@ established. Do not repeat valid calibration to occupy idle resources. Failed
 numerical and I/O attempts remain retained. Raw-gain confirmation requires a real
 finite support proof and independent balanced law blocks; never floor losses.
 
-The canonical schema is owned by the other ToMpathy thread. A dirty working-tree
-interface permits engineering checks only. Family admission requires a committed
-schema snapshot, conformance, controls, largest-cell cost pilots and source-bound
-plans. R1-R4 have retained pipelines and pilot entry points. Other mechanism
+The canonical schema is owned by the other ToMpathy thread and is now pinned to
+its committed 2a0c54233344ae3f64bed9806442289d7dab726a snapshot. Family admission
+requires conformance, controls, largest-cell cost pilots and source-bound plans.
+R1/R2 full discovery batches are running; R3/R4 pilots are verified. Other mechanism
 pipelines/checkers and four twins have remaining implementation; registry entries
 are not runnable jobs and unbuilt scope is never a scientific null.
 
@@ -47,8 +47,11 @@ disarmed during an active operator turn and preserve a live review owner. Fixed
 twelve-hour health checks, failure, family decisions, queue depletion and committed
 dependency delivery drive reviews. Batch cards precede a family decision's full
 public write-through. At the finite end verify closure and retire recurring wakes.
-Continue independent implementation within the accepted scope while a dependency
-is pending; do not reopen closed predecessors or invent occupancy filler.
+The finite family continuation service independently reconstructs completed
+batches, writes machine cards, and advances only the calibrated ladder with frozen
+fits and sources. It stops at decisions/failures/caps; new families require explicit
+admission. Continue remaining implementation; do not reopen closed predecessors
+or invent occupancy filler.
 
 ## Completed V21 scientific allocation (2026-10-14)
 

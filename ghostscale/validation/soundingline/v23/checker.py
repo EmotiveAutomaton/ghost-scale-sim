@@ -59,9 +59,9 @@ def r2(v, public, policy, law=None):
     for index in range(s['prefix']):
         prior_flag = float(mass[states[:, 0] == 1].sum())
         if rule:
-            if rule[2] == 'release' and prior_flag < .5: fired = False
-            fired = fired or prior_flag >= rule[1]
-        if policy == 'withdraw-content': fired = fired or prior_flag >= .7
+            if rule[2] == 'release' and prior_flag < .5-1e-12: fired = False
+            fired = fired or prior_flag >= rule[1]-1e-12
+        if policy == 'withdraw-content': fired = fired or prior_flag >= .7-1e-12
         attention, flag = np.ones(3), 1.
         if policy == 'early-guard': attention[:], flag = .2, .2
         elif policy == 'procedure-only': attention[:2], flag = 0., 0.
@@ -132,16 +132,49 @@ def r4(v, public, *, cue=True, marginal_rho=False, fixed_trust=False, law=None, 
     return sum(w*p for w, p in zip(weights, mixed, strict=True))
 
 
+def r4_grid(v,public,*,cue=True,marginal_rho=False,fixed_trust=False,law=None,topdown=False):
+    """Independent probability-space ancestral recursion, laws vectorized."""
+    b=v['settings']['branching'];count=sum(b**d for d in range(5))
+    parents=[-1]+[(i-1)//b for i in range(1,count)]
+    rhos=(.3,.5,.7,.9,.99) if marginal_rho else ((.9 if fixed_trust else v['settings']['cue_reliability']),)
+    settings=list(product(range(16) if law is None else [law],rhos))
+    matrices=np.array([[[.6+.38*ell/15,.4-.38*ell/15],[.4-.38*ell/15,.6+.38*ell/15]] for ell,_ in settings])
+    emission=np.ones((count,len(settings),2))
+    for i,obs in enumerate(public['evidence']):
+        if obs>=0 and not topdown:emission[i]=[.9 if state==obs else .1 for state in (0,1)]
+    if cue:
+        emission[public['cue_node']]*=np.array([[rho if state==public['cue'] else 1-rho for state in (0,1)] for _,rho in settings])
+    subtree=emission.copy()
+    layers=[np.arange(sum(b**d for d in range(level)),sum(b**d for d in range(level+1))) for level in range(5)]
+    for level in range(4,0,-1):
+        child_mass=np.sum(matrices[None]*subtree[layers[level]][:,:,None,:],axis=3)
+        subtree[layers[level-1]]*=child_mass.reshape(len(layers[level-1]),b,len(settings),2).prod(1)
+    likelihood=subtree[0].sum(1)/2
+    post=np.zeros_like(subtree)
+    post[0]=(emission[0]/emission[0].sum(1,keepdims=True)) if topdown else (subtree[0]/subtree[0].sum(1,keepdims=True))
+    for level in range(1,5):
+        nodes=layers[level];parent_nodes=np.array(parents)[nodes]
+        if topdown:
+            mass=np.sum(post[parent_nodes][:,:,:,None]*matrices[None],axis=2)*emission[nodes]
+            post[nodes]=mass/mass.sum(2,keepdims=True)
+        else:
+            conditioned=matrices[None]*subtree[nodes][:,:,None,:]
+            conditioned/=conditioned.sum(3,keepdims=True)
+            post[nodes]=np.sum(post[parent_nodes][:,:,:,None]*conditioned,axis=2)
+    weights=likelihood/math.fsum(likelihood)
+    return np.sum(post*weights[None,:,None],axis=1)
+
+
 def verify_r4(v, public, truth, predictions, details):
     specs = {'law-marginal': {}, 'bottom-up': {'cue': False}, 'without-cue': {'cue': False},
              'top-down': {'topdown': True}, 'rho-marginal': {'marginal_rho': True}, 'fixed-trust': {'fixed_trust': True}}
     if 'oracle-law' in predictions: specs['oracle-law'] = {'law': truth['law']}
-    error = max(float(np.max(np.abs(r4(v, public, **kw)-np.asarray(details['nodes'][name])))) for name, kw in specs.items())
+    error = max(float(np.max(np.abs(r4_grid(v, public, **kw)-np.asarray(details['nodes'][name])))) for name, kw in specs.items())
     if error > 1e-12: raise ValueError('independent R4 reconstruction mismatch')
     return error
 
 
-def r3(v, public, role=None, weighting='unit', law=None):
+def r3(v, public, role=None, weighting='unit', law=None, _cache=None):
     d = v['settings']['dimensions']; points = np.array(list(product((-1., 0., 1.), repeat=d)))
     law_menu = [(2+i*2/3, .8+j*2.2/3) for i in range(4) for j in range(4)]
     roles = (0., .5, 1.) if role is None else (role,)
@@ -153,13 +186,17 @@ def r3(v, public, role=None, weighting='unit', law=None):
     if weighting == 'unit': row_weights = [1.]*len(row_weights)
     elif weighting == 'tempered': row_weights = [math.fsum(row_weights)/len(row_weights)]*len(row_weights)
     def probabilities(row, role, ell):
+        key=(id(row),role,ell)
+        if _cache is not None and key in _cache:return _cache[key]
         exponent, beta = law_menu[ell]
         h = np.asarray(row['h']); e = np.asarray(row['effects']); costs = np.asarray(row['costs'])
         deficit = np.sqrt(np.sum(np.abs(points[:, None, :]-h-e)**exponent, axis=2))
         # The before-action deficit is the same for every offered action and
         # cancels from the softmax, unlike the production formula.
         z = -beta*(deficit+role*costs); z -= z.max(1, keepdims=True)
-        z = np.exp(z); return z/z.sum(1, keepdims=True)
+        z = np.exp(z); value=z/z.sum(1, keepdims=True)
+        if _cache is not None:_cache[key]=value
+        return value
     joint, future = [], []
     for role in roles:
         row_laws, next_laws = [], []
@@ -179,14 +216,29 @@ def verify_r3(v, public, truth, predictions, details):
     specifications = {'law-marginal': (role, 'unit'), 'unit': (role, 'unit'),
         'relevance-aware': (None, 'unit'), 'assumes-relevant': (1., 'unit'),
         'effort-weighted': (role, 'effort'), 'matched-tempering': (role, 'tempered'), 'cost-ignorant': (0., 'unit')}
-    error = 0.
+    error = 0.;cache={}
+    # Independent probability-space tables, shared only within this verification.
+    # Retain r3's scalar path for adversarial comparisons and standalone checks.
+    points=np.array(list(product((-1.,0.,1.),repeat=v['settings']['dimensions'])))
+    rows=public['history']+[public['current']]
+    for exponent_index in range(4):
+        exponent=2+exponent_index*2/3
+        after=np.asarray([np.sqrt(np.sum(np.abs(points[:,None,:]-np.asarray(row['h'])-
+            np.asarray(row['effects']))**exponent,axis=2)) for row in rows])
+        costs=np.asarray([row['costs'] for row in rows])
+        for beta_index in range(4):
+            ell=exponent_index*4+beta_index;beta=.8+beta_index*2.2/3
+            for cost_role in (0.,.5,1.):
+                mass=np.exp(-beta*(after+cost_role*costs[:,None,:]))
+                mass/=mass.sum(axis=2,keepdims=True)
+                for index,row in enumerate(rows):cache[id(row),cost_role,ell]=mass[index]
     for name, (cost_role, weighting) in specifications.items():
-        probability, post, roles = r3(v, public, cost_role, weighting)
+        probability, post, roles = r3(v, public, cost_role, weighting,_cache=cache)
         error = max(error, float(np.max(np.abs(probability-predictions[name]))),
                     float(np.max(np.abs(post-np.asarray(details[name]['setpoint_posterior'])))),
                     float(np.max(np.abs(roles-np.asarray(details[name]['role_posterior'])))))
     if 'oracle-law' in predictions:
-        error = max(error, float(np.max(np.abs(r3(v, public, role, law=truth['law'])[0]-predictions['oracle-law']))))
+        error = max(error, float(np.max(np.abs(r3(v, public, role, law=truth['law'],_cache=cache)[0]-predictions['oracle-law']))))
     if error > 1e-12: raise ValueError('independent R3 reconstruction mismatch')
     return error
 
