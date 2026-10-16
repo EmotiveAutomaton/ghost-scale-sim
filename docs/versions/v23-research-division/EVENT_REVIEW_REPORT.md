@@ -1,0 +1,11 @@
+# October 15 family and failure review
+
+Does a root or function cue improve root recovery beyond leaf evidence? R4 nominates a 0.99-reliable root cue with no observed leaves after two complete burn-ins: root log-loss gain is 0.64312 nats, with a descriptive 95% interval of 0.62467–0.66157. All 90 settings and 184,320 cases pass reconstruction and full replay; the 20 neutral-cue settings remain exact zeros. This is a constructed-method discovery, not confirmation or evidence about people.
+
+How much does forecasting from the reader’s own policy cost? N5 nominates prior-shift calibration at the largest anchor-shaped bias with no personal records: log-loss gain is 0.94929 nats, with a descriptive 95% interval of 0.90291–0.99567. Both full burn-ins verify all 128 settings and 262,144 cases. This is a constructed-method discovery with supplied population rates; the approximate hierarchical rival is not an exact ceiling, and no human benefit is established.
+
+Does modeling everyone while gating uptake improve prediction? N6 has no selectable family result: two of 108 settings contain one world with no low-warmth, low-competence targets. All 110,592 cases, finite forecasts, raw scores and full replay verify, but the declared whole-world primary remains unavailable. This is an inconclusive constructed-mechanism study, not a null; no world is dropped and no confirmation is admitted.
+
+N2 remains instrument-held: 18 nonstructural settings round both primary readers’ true-class probabilities to one, yielding zero empirical standard error while wrong-class probability remains positive. R3’s fourth partition replay and N4’s sole repaired pilot hit their CPU caps. These retained failures are not scientific nulls, and their numerical guards, grids and raw outputs remain unchanged.
+
+[R4](R4_REPORT.md), [N5](N5_REPORT.md), [N6](N6_REPORT.md), [failure and supporting evidence](../../../results/v23/events-20261015/README.md). N1 remains partially unimplemented and resource-held; N7 exceeds its measured family cap; full twins lack authenticated aggregate inputs and scientific pipelines. Conditional N4b and optional N8 are not admitted. N3 capacity is being reassessed after completed work; no discovery order or confirmation is exposed.

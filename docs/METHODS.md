@@ -1,6 +1,45 @@
 # The methodology layer
 
+N3’s six saved fits now have independent log-softmax validation reconstruction and complete thirteen-file replay. The subsequent discovery summary failed on a missing direction diagnostic for empty literal support. Development now retains an explicit null diagnostic and invalidates the whole-world mean, with four targeted checks covering both case orders and retained-data replay. The failed capsule and every partial case remain; another scientific attempt requires an exception to the one-repair limit. [Review](versions/v23-research-division/N3_FIT_COMPLETE_REPORT.md).
+
+V23 N5/N6 reviews reconstruct every saved proper score, whole-world denominator, secondary metric and interval from retained records, then reproduce the frozen calibrated cards. Uptake counts are additionally rebuilt from individual paths. N5’s primary algebraic correction is kept separate from approximate hierarchical quadrature. N6’s empty conditional worlds remain unavailable. N2’s numerical saturation is diagnosed without substituting structural zeros or invented variance. [Review](versions/v23-research-division/EVENT_REVIEW_REPORT.md).
+
 The [Stage 15 exact profile study](versions/v23-research-division/S15_PROFILE_REPORT.md) freezes twenty independent worlds, exact archived feature/fitting functions, three profile conditions, matched donors and chronology/order controls. All 304 scientific files replay and the frozen checker independently rebuilds scores, intervals and disposition. The final witness is FAIL: three null contrasts miss their upper bounds and option-order differences exceed 1e-7. Future-label and constant own/donor invariance pass. Four decisions per writer leave later personal-penalty calibration untested.
+
+V23 R4’s complete family review checks both burn-ins, the four-part second-batch assembly, all raw root scores and calibrated decisions. First-batch node reconstruction is reused only under matching completion hashes; second-batch depth/subtree scores and intervals are independently rebuilt. All 90 settings and exact structural controls remain visible. [Report](versions/v23-research-division/R4_REPORT.md).
+
+V23 R2's review independently reconstructs all proper scores, both calibrated decisions and 48,000 secondary-summary quantities from retained heads and trajectories. It separates purpose loss, modal accuracy, memory change, benign false alarms and release. Fixed randomized policy mixtures average outcomes at all predeclared weights; a 0.02 mean technique match is descriptive, not an equivalence test. Primary bootstrap intervals and the large diagnostic table's paired-world normal intervals remain distinct. Complete replay, raw hashes and every setting are retained. [R2 report](versions/v23-research-division/R2_REPORT.md).
+
+N1 now has an independent population checker using scaled joint culture/precision/type probabilities. It reconstructs the shared-culture posterior, leave-one-out priors, drift, individual and population readers, partial pooling, prototypes, both choice contexts and recipe presence without production posterior calls. Four structural fixtures and a supplied one-type, no-record identity pass; they are engineering checks, not the empirical one-type or convergence predictions. Full pipeline, retained direct training, largest-cell pilots and admission remain unfinished.
+
+V23 R1 now has a complete raw-probability review: every proper score, primary whole-world gain, batch bootstrap and calibrated decision is reconstructed. Its full specification curve retains parked settings and exact structural zeros. Descriptive pooled intervals are separate from adaptive confirmation. Reader scores, source-goal strata, skepticism contrasts and both-fit matched-information headroom are retained with raw hashes and distinct-process replay receipts. [R1 report](versions/v23-research-division/R1_REPORT.md).
+
+V23 uses independently tuned and validated adaptive stopping, finite checked
+quadrature, whole-world uncertainty and fresh-process full replay. Its pooled
+calibration meets the declared error targets while retaining 33 failing stress
+strata and unequal-resource counting comparators. [Calibration and limits](versions/v23-research-division/CALIBRATION_REPORT.md).
+Raw gain confirmation never floors negative values; finite support proofs and
+independent balanced law blocks remain mandatory before confirmation.
+
+The repair confirmation runner now retains variant-only fitted rivals and the
+original primary contrast separately. It checks all-family discovery dispositions
+and strongest-first nomination order before reserved exposure, keys fresh worlds
+to the frozen order, and averages complete 16-law blocks before betting. Thus
+128 or 256 worlds mean eight or sixteen betting units, not 128 or 256 blocks.
+Earlier completed confirmations alone enter the sequential rejection threshold.
+Sixteen scoped controls pass, including raw-loss preservation, frozen-order and
+resource rejection, disjoint seeds and a tiny complete retained-product replay.
+These are engineering checks; no scientific confirmation has run.
+[Engineering receipt](../results/v23/r1-decision-3-review-2/ENGINEERING_VALIDITY.json).
+
+V23's repair families now carry explicit analytic probability-support bounds,
+separately from empirical gain estimates. R2 resolves numerical ties within
+1e-12 at its probability thresholds consistently across log-space and independent
+probability-space reconstruction; its failed pilot is retained. R3 vectorizes
+finite choice likelihoods, and R4 vectorizes tree inference by law and depth,
+with independent scalar comparisons and fresh complete pilot replays. These
+are engineering changes, with no mechanism finding implied. Cost profiles retain
+all variants and use CPU-clock uncertainty only for resource estimates.
 
 V21's [accelerated final diagnostic](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_MANIFEST.json)
 partitions 32 reserved worlds across three workers without changing its scientific
@@ -1718,3 +1757,35 @@ The three-prior aggregate prototype retains 25 float64 values per future group p
 The storage-precision diagnostic retains actual float32/16 state arrays beside the exact float64 state. Both raw casting and one mass-preserving reconstruction query in float64. Underflow, normalization drift, lost support and unusable report mass remain separate from probability-weighted defined errors. Fixed probability strata retain mass and error sums without empty-stratum imputation. The finite-precision aggregate-state prototype passed 60 isolated controls, but complete-support timing after one storage repair projects 6,007.00 CPU seconds against its 3,600-second cap. No native scientific job was admitted; this is an engineering blocker, not a scientific null. [Contract](versions/v19-local-maker/AGGREGATE_PRECISION_ADMISSION.md).
 
 E03 compares equally sized finite count tables with independent scalar fitting/selection, known mechanism/style reversals, an uninformative-noise control, parser and archive-name invariance, two complete engineering consumers and a bounded pilot. Supplied locality/parser differ from learned family recognition; scientific acceptance still requires complete frozen-source replay.
+
+
+### V23 expanded preparation (October 15)
+
+The [preparation report](versions/v23-research-division/PREPARATION_REPORT.md)
+documents training-only rival packets and complete-world partitioning. Separate
+fitting makes actual convergence cost measurable before discovery admission;
+both mandatory burn-ins remain reserved. Partitions preserve random identities,
+fit bytes, variant coverage and calibrated looks. Each part replays independently;
+only complete, independently reconstructed assembly can enter a family decision.
+
+N2 caches deterministic training tables with exact random-draw equivalence. N4
+and N7 explicitly share training fits across designated design factors before
+discovery, with new namespaces and all records retained. N5 keeps its approximate
+hierarchical ceiling qualification. N6's finite payoff/stopping rule is separately
+reconstructed through every Bellman equation. None of these engineering changes
+turns a failed or unexecuted study into a null.
+
+The four twin prototypes retain separate public and evaluator records, scalar
+references, canonical round trips and actual pinned-engine transport. Eight clean
+and dirty fixtures match 145 scientific files across independent full passes.
+Illustrative fixture shapes do not satisfy empirical realism; matched-shape
+studies and real-data module checks remain separate admissions.
+
+The [continuation review](versions/v23-research-division/CONTINUATION_REPORT.md)
+adds strict case coverage and replay-owner checks for complete partitioned
+families, including separate prefits. Discovery freezing requires all sixteen
+evidence-bound dispositions and fully reviewed nominations; optional N8 waits
+for all mandatory dispositions. The newer committed engine receives derived
+public observations only. Native ledger ingestion preserves fitted forecasts on
+constructed choice fixtures; record-only edit streams do not acquire invented
+choice targets. These are software-boundary checks, not scientific module admission.

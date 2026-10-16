@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-15T14:14:45.507779+00:00",
+  "controller": "preparation-queue-3",
+  "controller_frozen_files_verified": 55,
+  "current_phases": {
+    "N6": "first discovery batch replay",
+    "R3": "original rival fitting",
+    "R4": "second burn-in, first partition replay"
+  },
+  "full_implementation_complete": false,
+  "new_scientific_family_decisions": 0,
+  "next_fixed_health": "2026-10-15T17:04:15+00:00",
+  "notifier": "single hidden native owner verified; arm at final handoff",
+  "numerical_review_pending": [
+    "N5 first discovery batch"
+  ],
+  "numerical_threads_per_worker": 1,
+  "scientific_priority": "below_normal",
+  "scientific_workers": 3,
+  "scoped_controls": 63,
+  "state": "QUEUE_AND_ENGINEERING_HANDOFF_VERIFIED",
+  "twin_engineering_fixtures": 8,
+  "twin_full_replay_files": 145
+}

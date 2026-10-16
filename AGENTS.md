@@ -17,6 +17,51 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V23 corrected implementation and calibrated opening (2026-10-14)
+
+The owner authorized implementation of corrected V23. Read
+`docs/versions/v23-research-division/README.md`, `IMPLEMENTATION_CONTRACT.md`,
+`IMPLEMENTATION_STATUS.md`, `CALIBRATION_REPORT.md` and the outer local V23
+handoff and immutable acceptance. The original specification/review are retained
+as historical provenance; their former request for scientific approval is resolved.
+V21 is closed and published. V23 opened at 2026-10-15 05:04:15 UTC, with a fixed
+seven-day outer limit, 90 CPU hours and 18 protected hours. Never reset that clock.
+
+The calibrated stopping policy is verified by full fresh-process replay and
+independent aggregate reconstruction. Its pooled error targets pass; 33 stress
+settings exceed point-rate targets and no universal comparison with counting is
+established. Do not repeat valid calibration to occupy idle resources. Failed
+numerical and I/O attempts remain retained. Raw-gain confirmation requires a real
+finite support proof and independent balanced law blocks; never floor losses.
+
+The canonical schema is owned by the other ToMpathy thread and is now pinned to
+its committed 2a0c54233344ae3f64bed9806442289d7dab726a snapshot. Family admission
+requires conformance, controls, largest-cell cost pilots and source-bound plans.
+R1/R2/R4/N5 have reviewed discovery nominations. The scientific queue is idle;
+read CHECKPOINT_2026-10-16.md for terminal packet counts and unresolved holds.
+N3's tested reporting fix is not an admitted extra scientific repair. N2-N8 retained pipelines and four twin engineering prototypes are built;
+read PREPARATION_REPORT.md and current IMPLEMENTATION_STATUS.md for execution,
+resource holds and unfinished population/conditional/empirical-shape scope.
+Read CONTINUATION_REPORT.md for the new committed-engine interface checks,
+partition-aware family review, N5's accepted first burn-in and bounded R3 fit
+repair. Existing scientific capsules retain their original dependency pins.
+Registry entries are not runnable jobs and unbuilt scope is never a scientific null.
+The owner approved reallocating unused capacity within the existing total; apply
+the immutable RESOURCE_REALLOCATION supplements without changing acceptance bytes.
+Proceed as soon as prerequisites clear; the deadline is an outer stop, not a wait.
+
+Gear 2 permits at most three below-normal, one-thread CPU scientists; no GPU or
+environment synchronization. Sounding Line retains priority. Keep the notifier
+disarmed during an active operator turn and preserve a live review owner. Fixed
+twelve-hour health checks, failure, family decisions, queue depletion and committed
+dependency delivery drive reviews. Batch cards precede a family decision's full
+public write-through. At the finite end verify closure and retire recurring wakes.
+The finite family continuation service independently reconstructs completed
+batches, writes machine cards, and advances only the calibrated ladder with frozen
+fits and sources. It stops at decisions/failures/caps; new families require explicit
+admission. Continue remaining implementation; do not reopen closed predecessors
+or invent occupancy filler.
+
 ## Completed V21 scientific allocation (2026-10-14)
 
 V21 science is complete. Read

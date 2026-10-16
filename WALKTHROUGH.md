@@ -1,5 +1,7 @@
 # The walkthrough
 
+Can pooled adaptive stopping avoid discarding useful families without nominating too many nulls? On the declared held-out simulation grid, the selected policy stops 725 of 13,181 strong families (5.50%; 95% upper bound 5.90%) and nominates 18 of 6,247 null families (0.288%; upper bound 0.455%). Both pooled targets pass. Thirty-three individual settings exceed at least one point-rate target, so this is a qualified method result, not a universal guarantee. Fresh-process full replay and independent count/interval reconstruction pass. [V23 calibration](docs/versions/v23-research-division/CALIBRATION_REPORT.md).
+
 V21 is scientifically complete. No learned-maker advantage survived the maker-specific historical-content test. The final 32-world diagnostic establishes direct-reader excess loss of 0.16681 nats (95% interval 0.14575–0.18847), while exact historical ambiguity remains. These are constructed-method results, not a maker-mechanism confirmation or human evidence. [Final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).
 
 V22 scope limits: the fully choice-independent costly-label null remains unexecuted in B1, and A3 retains full flag evidence after withdrawal. [Final dispositions](docs/versions/v22-mechanism-tests/FINAL_REPORT.md).

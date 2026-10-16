@@ -1,9 +1,24 @@
 # Sounding Line exchange index
 
+- [October 16 V23 checkpoint](../versions/v23-research-division/CHECKPOINT_2026-10-16.md): recorded queue, verified results and remaining holds.
+- [Sounding Line Stage 15 dependency request](sounding-line-stage15-dependencies-2026-10-15.md): original exact-engine validation requirements.
+- [Sounding Line Stage 15 healing request](sounding-line-stage15-profile-healing-2026-10-15.md): reviewed candidate and a separately frozen successor required; original FAIL preserved.
+
+- [N3 fit and discovery disposition](v23-n3-fit-response.md): six fits verify; discovery summary failed; additional repair pending, no accepted scientific result.
+
 - [Ghost Stage 15 validation failed](ghost-stage15-profile-validation-2026-10-15.md): actual FAIL witness; null bounds and option-order invariance failed; complete replay and independent review retained.
 
-- [Sounding Line Stage 15 dependency request](sounding-line-stage15-dependencies-2026-10-15.md): exact engine/profile twin needed; local data checks continue independently.
+- [V23 R4 discovery](v23-r4-response.md): both burn-ins verified; root-cue setting nominated; full curve and node diagnostics retained.
+- [V23 N5 discovery](v23-n5-response.md): calibration gain nominated; supplied-rate and approximate-reader limits.
+- [V23 N6 disposition](v23-n6-response.md): complete replay; empty conditional worlds prevent family selection.
 
+- [V23 R2 discovery](v23-r2-response.md): all-channel withdrawal reveals recognition cost; false-alarm, release and matched-technique limits retained; confirmation pending.
+
+- [V23 R1 discovery](v23-r1-response.md): matched neutral control passes; strongest signature nominated; broader prediction fails and confirmation remains pending.
+
+- [V23 calibration checkpoint](v23-calibration-response.md): pooled targets pass, stress limits retained, full replay verified; family queue still gated.
+
+- [V23 specification review](v23-specification-review-response.md): confirmation counterexample, proposed scientific corrections and missing canonical schema; execution not admitted.
 - [V21 final response](v21-final-response.md): no maker-specific promotion;
   reserved-world reader error, verified finite closure and retained frontier.
 

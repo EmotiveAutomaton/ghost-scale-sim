@@ -1,5 +1,7 @@
 # Documentation map
 
+[October 15 event review](versions/v23-research-division/EVENT_REVIEW_REPORT.md): R4 and N5 discovery nominations independently verified; N6 primary unavailable; N2 numerical saturation and R3/N4 resource failures retained. This supersedes earlier morning execution snapshots.
+
 Start with the status of the work, then follow its evidence. This index describes
 where documents belong; it does not replace scientific verdicts or live native
 state. Updated 10 October 2026.
@@ -8,8 +10,9 @@ state. Updated 10 October 2026.
 
 | Status | Entry point | Use |
 |---|---|---|
+| Active V23, corrected finite research division | [V23 index](versions/v23-research-division/README.md) | R1/R2 nominations, R4 verified first burn-in/resource hold, N1 resource limit and explicit unfinished scope |
 | Closed V22, seven finite mechanism tests | [V22 index](versions/v22-mechanism-tests/README.md) | Seven reviewed results, retained controls, final report and finite closure |
-| Active V21, supporting mechanism program | [V21 index](versions/v21-supporting-mechanisms/README.md) | October 10 program and errata, exact ceilings, matched readers, twelve-hour reviews |
+| Closed V21, supporting mechanism program | [V21 final report](versions/v21-supporting-mechanisms/FINAL_REPORT.md) | Final scientific report and verified owned-service closure |
 | Closed V19 | [V19 index](versions/v19-local-maker/README.md) | Final scientific report and administrative closure |
 | Closed V20; confirmation and final report complete | [V20 index](versions/v20-contribution-reconstruction/README.md) | Final result, confirmation, coverage, costs and closure receipts |
 | Closed V1–V18 allocations | [Version index](versions/README.md) | Specifications, reports and retained failures; historical instructions do not reopen them |
