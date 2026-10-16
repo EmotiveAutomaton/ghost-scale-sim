@@ -1,11 +1,11 @@
 {
   "accepted_confirmations": 0,
-  "accepted_family_batches": 11,
-  "at": "2026-10-16T20:20:00.111157+00:00",
+  "accepted_family_batches": 12,
+  "at": "2026-10-16T20:49:33.489164+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 40.759765625,
-  "completed_family_batches": 11,
+  "charged_cpu_hours_bound": 42.228914930555554,
+  "completed_family_batches": 12,
   "conditional_studies_complete": [
     "N4b"
   ],
@@ -27,7 +27,7 @@
     "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
-    "R3": "RECOVERED_ASSEMBLY_COMPLETE_NUMERICAL_REVIEW_PENDING",
+    "R3": "FIRST_BURNIN_RECONSTRUCTED_SECOND_BURNIN_GLOBAL_CPU_RESERVE",
     "R4": "NOMINATED",
     "T1": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
     "T2": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
@@ -53,12 +53,13 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-16T20:20:00.111157+00:00",
+    "at": "2026-10-16T20:49:33.489164+00:00",
     "complete_family_decision": false,
-    "execution_replay_source_bindings_verified": 3138,
     "full_scientific_program_complete": false,
+    "n2_first_partition_scientific_files_verified": 1119,
     "originals_preserved": true,
-    "r3_numerical_family_review_pending": true,
+    "r3_first_burnin_reconstructed": true,
+    "r3_terminal_family_review": false,
     "twin_references_present": false
   },
   "max_scientific_workers": 3,
@@ -72,7 +73,7 @@
   "next_routine_health": "2026-10-17T05:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "packet_states": {
-    "complete": 57,
+    "complete": 58,
     "failed": 15,
     "partitioned": 2,
     "running": 3
@@ -86,17 +87,17 @@
     "continuation-queue-20261016": "RUNNING",
     "n2-post-repair-20261016": "RUNNING",
     "population-continuation-20261016": "RUNNING",
-    "r3-recovery-queue-20261016": "RUNNING"
+    "r3-recovery-queue-20261016": "REVIEW_BOUNDARY"
   },
   "replacement_notifier_delivery_observed": true,
-  "report": "docs/versions/v23-research-division/RECOVERY_CHECKPOINT_2026-10-16.md",
+  "report": "docs/versions/v23-research-division/RESERVE_CHECKPOINT_2026-10-16.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
     "RESOURCE_REALLOCATION_3.json"
   ],
   "retained_failed_attempts": 15,
-  "scientific_controllers": 4,
+  "scientific_controllers": 3,
   "scientific_workers": 3,
   "state": "COMPLETION_CONTINUATION_RUNNING",
   "total_cpu_hours": 90,

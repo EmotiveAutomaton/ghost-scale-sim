@@ -1,0 +1,41 @@
+{
+  "N2_part1": {
+    "complete_sha256": "09ba8846cb735d33dc22d4a58c882015623e782a695e1cc7d46a18f564d7635f",
+    "family_decision": false,
+    "original_owner_sha256": "fea75730aace58db4ee05761383cc1fb403b3134143593fedf16bb49a31c76a0",
+    "plan_sha256": "9dd83d337b4cfa071f6e2311074f3a510c034ce67e05dee606cf36e281386db0",
+    "replay_owner_sha256": "a5a08d1593f22b1cf99a2247c0027e5618df97bd3b2c47a48debb17c1ab7c3c1",
+    "replay_sha256": "0b97e236102cd669a0742ac7642db60b4648556b810c9c2f3ec6077a13b1469d",
+    "scientific_files": 1119,
+    "source_archive_sha256": "097c36bdd6d03307f960c5297822ed8934b62e7dedc45f9ebb7844b270f1027f",
+    "state": "partition_execution_verified",
+    "variants": 124,
+    "worlds": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "R3": {
+    "cases": 73728,
+    "complete_sha256": "6e151a4cdad86ad5b3e81a27f46bab02289e9ca19a83764a43fba240d48c127d",
+    "decision": "BURN_IN",
+    "explanation": "The controller performed independent score reconstruction and the calibrated first-burn-in decision. The complete terminal-family review remains required after the second burn-in or evidence-bound resource disposition.",
+    "machine_card_sha256": "c672e0cde2a5a1cc99080eb309953ead9db834ff180ff0f6c2acce4f3f7649f7",
+    "numerical_review_sha256": "d8129a521ef2f10565da369600bce83dfca381b03fff60ec470b81f92af84cdc",
+    "prior_bindings_sha256": "03dbb06977ebc80dd6f726f258f5ad3b3611bfa2f9ee93c1f06f0cf986e9419d",
+    "prior_execution_review_sha256": "b6c1543f31e0f631c9394666473cc1003c4433e49f6f2c8588dc479bebd71049",
+    "prior_raw_hash_index_sha256": "296ce72bb0762a069c3e55d0ade5d496c675a4961050c4ce166291fbfa3a2cc1",
+    "reconstruction_owner": "r3-recovery-queue-20261016",
+    "source_files": {
+      "ghostscale/validation/soundingline/v23/adaptive.py": "9f69f4323dcf21d95ce63a0e31bab5c1c057fca4342d5cdaceb05e173078ed2b",
+      "ghostscale/validation/soundingline/v23/family.py": "b9c085b5ed0b6fdfe5c4d0ad08951053f29955cd3e17bd2706ef5132ff759484",
+      "runners/queue_v23_families.py": "2e8426d716b1ce14247e4060ae25b20e29a54b537199f7860bfbbe5379bae9a8"
+    },
+    "state": "first_burnin_reconstructed",
+    "terminal_family_review": false,
+    "variants": 72,
+    "worlds": 16
+  }
+}
