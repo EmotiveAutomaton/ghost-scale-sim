@@ -17,8 +17,10 @@ def features(v, p, masked=False):
     return np.r_[x, registry.variant_features(v)]
 
 
-def training(family, phase, count, masked=False, pulse=lambda **kw: None, law=None):
-    variants = registry.variants(family); x, y = [], []
+def training(family, phase, count, masked=False, pulse=lambda **kw: None, law=None, variant=None):
+    variants = registry.variants(family) if variant is None else [variant]; x, y = [], []
+    if variant is not None and variant not in registry.variants(family):
+        raise ValueError('unknown variant-specific training target')
     for i in range(count):
         v = variants[i % len(variants)]
         # Every variant spans the law menu; variant index does not encode law.
@@ -28,23 +30,25 @@ def training(family, phase, count, masked=False, pulse=lambda **kw: None, law=No
     return np.asarray(x), np.asarray(y)
 
 
-def fit_family(root, family, pulse):
+def fit_family(root, family, pulse, variant=None, namespace=None):
     root.mkdir(parents=True, exist_ok=False); fitted, metadata = {}, {}
     for masked in (False, True) if family == 'R1' else (False,):
         suffix = '-masked' if masked else ''
-        vx, vy = training(family, 'validation', 4096, masked, pulse)
+        phase = lambda label: label if namespace is None else [namespace, label]
+        vx, vy = training(family, phase('validation'), 4096, masked, pulse, variant=variant)
         np.savez_compressed(root/('validation'+suffix+'.npz'), x=vx, y=vy)
         for labels in (2048, 8192):
-            x, y = training(family, 'training', labels, masked, pulse)
+            x, y = training(family, phase('training'), labels, masked, pulse, variant=variant)
             np.savez_compressed(root/(f'training-{labels}'+suffix+'.npz'), x=x, y=y)
             for fit in (0, 1):
                 for fresh in (False, True) if labels == 8192 else (False,):
                     name = f'direct-{labels}-fit{fit}'+('-fresh' if fresh else '')+suffix
                     def provider(epoch, offset, size, fit=fit):
                         law = int(rng('fresh-law', family, fit, epoch, offset).integers(16))
-                        return training(family, f'fresh-{fit}-{epoch}-{offset}', size, masked, pulse, law)
+                        return training(family, phase(f'fresh-{fit}-{epoch}-{offset}'), size, masked, pulse, law, variant)
                     classes = 3 if family == 'R3' else 2
-                    model = Direct(x, y, vx, vy, classes, family+suffix, fit,
+                    fit_identity = family+suffix if namespace is None else canonical([namespace, family, suffix]).decode()
+                    model = Direct(x, y, vx, vy, classes, fit_identity, fit,
                                    fresh=provider if fresh else None, pulse=pulse)
                     model.save(root/(name+'.npz')); fitted[name] = model
                     metadata[name] = model.metadata
@@ -60,6 +64,11 @@ class Stream:
         self.zip = gzip.GzipFile(fileobj=self.file, mode='wb', filename='', mtime=0)
     def write(self, value): self.zip.write(canonical(value)+b'\n')
     def close(self): self.zip.close(); self.file.close()
+
+
+def run_fits(root,plan,pulse):
+    from .pipeline_new import run_fits as checked_fits
+    return checked_fits(root,plan,pulse,fit_builder=fit_family)
 
 
 def secondary(v, truth, detail):
@@ -126,14 +135,24 @@ def run_batch(root, plan, pulse):
     schema, _ = ledger.canonical_schema(plan['schema_directory'], plan['schema_pin'])
     variants = [v for v in registry.variants(family) if v['id'] in plan['variants']]
     if not variants or len(variants) != len(plan['variants']): raise ValueError('unknown/repeated variant')
+    confirmation = plan.get('task') == 'confirmation'
+    if confirmation:
+        from .confirmation import verify_definition
+        verify_definition(plan)
+        if plan.get('fit_directory'): raise ValueError('confirmation must refit the nominated variant')
+    sample_phase = ['confirmation', plan['nomination_order_sha256']] if confirmation else ['discovery', batch]
+    from .partition import world_indices
+    worlds=world_indices(plan)
     if plan.get('fit_directory'):
         fit_root = Path(plan['fit_directory']); fitmeta = read(fit_root/'FITS.json')
         for relative, expected in plan['fit_hashes'].items():
             if digest(fit_root/relative) != expected: raise ValueError('frozen fit changed')
         fitted = {name: Direct.load(fit_root/(name+'.npz')) for name in fitmeta}
     else:
-        if batch != 1: raise ValueError('only first batch may fit across family')
-        fitted, fitmeta = fit_family(root/'fits', family, pulse)
+        if batch != 1 and not confirmation: raise ValueError('only first batch may fit across family')
+        fitted, fitmeta = fit_family(root/'fits', family, pulse,
+            variant=variants[0] if confirmation else None,
+            namespace=sample_phase if confirmation else None)
     write(root/'DESIGN.json', {k: plan[k] for k in ('family', 'batch', 'variants', 'worlds', 'cases', 'schema_pin')})
     summaries, index = [], {}
     for v in variants:
@@ -144,10 +163,10 @@ def run_batch(root, plan, pulse):
         reader_worlds, gain_worlds, headroom_worlds, strata_worlds, secondary_worlds = {}, [], {}, {}, {}
         max_check, max_roundtrip = 0., 0.
         try:
-            for world in range(plan['worlds']):
+            for world in worlds:
                 rows, predictions, details, truths, bundles = [], [], [], [], []
                 for case in range(plan['cases']):
-                    p, truth = repairs.sample(v, ['discovery', batch], world, case)
+                    p, truth = repairs.sample(v, sample_phase, world, case)
                     prediction, detail = repairs.evaluate(v, p, truth)
                     max_check = max(max_check, getattr(checker, 'verify_'+family.lower())(v, p, truth, prediction, detail))
                     identity = [family, v['id'], batch, world, case]
@@ -200,6 +219,10 @@ def run_batch(root, plan, pulse):
                 pulse(phase='family-batch', family=family, batch=batch, variant=v['id'], world=world+1, worlds=plan['worlds'])
         finally:
             for stream in (public_stream, truth_stream, score_stream, detail_stream, ledger_stream): stream.close()
+        if plan.get('world_indices') is not None:
+            write(folder/'WORLD_AGGREGATES.json',dict(worlds=worlds,reader_worlds=reader_worlds,
+                gains=gain_worlds,headroom=headroom_worlds,secondary_worlds=secondary_worlds,strata=strata_worlds,
+                max_check=max_check,max_roundtrip=max_roundtrip))
         primary = interval(gain_worlds, [v['id'], batch, 'primary'])
         summary = dict(variant=v, primary=primary, world_gains=gain_worlds,
             readers={name: {metric: interval([r[metric] for r in rows], [v['id'], batch, name, metric])
@@ -209,7 +232,7 @@ def run_batch(root, plan, pulse):
             strata={name: interval(values, [v['id'], batch, name]) for name, values in strata_worlds.items()},
             secondary={name:interval(values,[v['id'],batch,'secondary',name]) for name,values in secondary_worlds.items()},
             matched_headroom_groups=headroom_groups(headroom_worlds,fitmeta,v,batch),
-            laws=min(16, plan['worlds']), independent_worlds=plan['worlds'], law_counts={str(i): sum(w % 16 == i for w in range(plan['worlds'])) for i in range(16)},
+            laws=len({w%16 for w in worlds}), independent_worlds=len(worlds), law_counts={str(i): sum(w % 16 == i for w in worlds) for i in range(16)},
             validity=dict(independent_posterior_max_error=max_check, ledger_forecast_max_error=max_roundtrip),
             structural_zero=(family == 'R1' and v['settings']['strength'] == .5) or
                             (family == 'R4' and v['settings']['cue_reliability'] == .5))

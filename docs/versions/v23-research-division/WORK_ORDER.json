@@ -1,43 +1,344 @@
 {
-  "schema": "ghost-v23-preparation-work-order-v1",
-  "state": "R1_R2_RUNNING_REMAINING_IMPLEMENTATION_UNFINISHED",
-  "specification_sha256": "f5315dcfab499d97fc5a4de5bb82964f14750ae6666b42d0ac76a1ac4c305445",
+  "all_scope_implemented": false,
   "amendment_status": "OWNER_ACCEPTED_IMPLEMENT_CORRECTED_V23",
+  "calibration_attempts_admitted": 3,
+  "calibration_attempts_verified": 1,
+  "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
   "day_zero": "2026-10-15T05:04:15+00:00",
   "day_zero_rule": "actual publication time of V21 final report; never reset for delays",
+  "deadline": "2026-10-22T05:04:15+00:00",
   "elapsed_limit_days": 7,
-  "total_cpu_hours": 90,
-  "protected_cpu_hours": 18,
-  "max_scientific_workers": 3,
-  "numerical_threads_per_worker": 1,
-  "priority": "below_normal",
+  "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
+  "execution_dispositions": {
+    "N1": "RESOURCE_HELD_PARTLY_UNBUILT",
+    "N2": "INSTRUMENT_HELD_ZERO_SE",
+    "N3": "INSTRUMENT_HELD_REPORTING_FAILURE_REPAIR_LIMIT",
+    "N4": "RESOURCE_FAILED_PILOT_REPAIR",
+    "N5": "NOMINATED",
+    "N6": "PRIMARY_UNAVAILABLE",
+    "N7": "RESOURCE_HELD",
+    "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
+    "R1": "NOMINATED",
+    "R2": "NOMINATED",
+    "R3": "RESOURCE_FAILED_REPLAY",
+    "R4": "NOMINATED",
+    "T1": "DEPENDENCY_HELD_PARTLY_UNBUILT",
+    "T2": "DEPENDENCY_HELD_PARTLY_UNBUILT",
+    "T3": "DEPENDENCY_HELD_PARTLY_UNBUILT",
+    "T4": "DEPENDENCY_HELD_PARTLY_UNBUILT"
+  },
+  "families": [
+    {
+      "admission": "THREE_BATCHES_VERIFIED_REVIEWED_NOMINATION_AWAITS_CONFIRMATION",
+      "budget_group": "repairs",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "R1",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 1,
+      "question": "Matched steering-signature controls",
+      "specified_grid_size": 36
+    },
+    {
+      "admission": "TWO_BATCHES_VERIFIED_REVIEWED_NOMINATION_AWAITS_CONFIRMATION",
+      "budget_group": "repairs",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "R2",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 2,
+      "question": "Withdrawal of every purpose channel",
+      "specified_grid_size": 16
+    },
+    {
+      "admission": "FIRST_BATCH_FAILED_PART4_REPLAY_CPU_CAP",
+      "budget_group": "repairs",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "R3",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 3,
+      "question": "Choice-independent costly labels",
+      "specified_grid_size": 72
+    },
+    {
+      "admission": "TWO_BURNINS_REVIEWED_NOMINATED",
+      "budget_group": "repairs",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "R4",
+      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 4,
+      "question": "Root and function cues",
+      "specified_grid_size": 90
+    },
+    {
+      "admission": "PILOT_CPU_LIMIT_BEFORE_VERIFICATION_NO_DISCOVERY_ADMISSION",
+      "budget_group": "n1",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N1",
+      "implementation": "RETAINED_WORLD_TRAINING_FIT_BUILDER_AND_PILOT_BUILT_BATCH_UNFINISHED",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 5,
+      "question": "Individual and population identification",
+      "specified_grid_size": 240
+    },
+    {
+      "admission": "FIRST_BATCH_REPLAYED_NUMERICAL_SATURATION_HELD",
+      "budget_group": "n2",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N2",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_ADMISSION_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 6,
+      "question": "Diagnosticity and response-time weights",
+      "specified_grid_size": 124
+    },
+    {
+      "admission": "TWO_BURNINS_REVIEWED_NOMINATED",
+      "budget_group": "n5",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N5",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_ADMISSION_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 7,
+      "question": "Projection bias",
+      "specified_grid_size": 128
+    },
+    {
+      "admission": "FITS_VERIFIED_DISCOVERY_FAILED_ADDITIONAL_REPAIR_PENDING",
+      "budget_group": "n3",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N3",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_ADMISSION_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 8,
+      "question": "Corrections and preference constraints",
+      "specified_grid_size": 96
+    },
+    {
+      "admission": "SOLE_PILOT_REPAIR_CAPPED_UNADMITTED",
+      "budget_group": "n4",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N4",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_ADMISSION_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 9,
+      "question": "Drive recipes, including conditional N4b",
+      "specified_grid_size": 172
+    },
+    {
+      "admission": "PILOT_VERIFIED_PROJECTED_BATCH_EXCEEDS_FAMILY_CAP",
+      "budget_group": "n7",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N7",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_ADMISSION_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 10,
+      "question": "Stated and revealed preferences",
+      "specified_grid_size": 128
+    },
+    {
+      "admission": "BATCH_1_REVIEWED_PRIMARY_UNAVAILABLE",
+      "budget_group": "n6",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N6",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_ADMISSION_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 11,
+      "question": "Model everyone and gate uptake",
+      "specified_grid_size": 108
+    },
+    {
+      "admission": "ENGINEERING_VERIFIED_FULL_SCIENTIFIC_PIPELINE_NOT_ADMITTED",
+      "budget_group": "twins",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "T1",
+      "implementation": "GENERATOR_CHECKER_ADAPTER_AND_ENGINEERING_REPLAY_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 12,
+      "question": "CoAuthor twin",
+      "specified_grid_size": null
+    },
+    {
+      "admission": "ENGINEERING_VERIFIED_FULL_SCIENTIFIC_PIPELINE_NOT_ADMITTED",
+      "budget_group": "twins",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "T2",
+      "implementation": "GENERATOR_CHECKER_ADAPTER_AND_ENGINEERING_REPLAY_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 13,
+      "question": "Chess twin",
+      "specified_grid_size": null
+    },
+    {
+      "admission": "ENGINEERING_VERIFIED_FULL_SCIENTIFIC_PIPELINE_NOT_ADMITTED",
+      "budget_group": "twins",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "T4",
+      "implementation": "GENERATOR_CHECKER_ADAPTER_AND_ENGINEERING_REPLAY_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 14,
+      "question": "Preference-panel twin",
+      "specified_grid_size": null
+    },
+    {
+      "admission": "ENGINEERING_VERIFIED_FULL_SCIENTIFIC_PIPELINE_NOT_ADMITTED",
+      "budget_group": "twins",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "T3",
+      "implementation": "GENERATOR_CHECKER_ADAPTER_AND_ENGINEERING_REPLAY_BUILT",
+      "independent_checker_built": true,
+      "optional": false,
+      "priority": 15,
+      "question": "Wikipedia twin",
+      "specified_grid_size": null
+    },
+    {
+      "admission": "OPTIONAL_NOT_ADMITTED",
+      "budget_group": "n8",
+      "dependencies": [
+        "all_launch_dependencies",
+        "family_source_pin",
+        "family_known_answers",
+        "family_cost_pilot"
+      ],
+      "id": "N8",
+      "implementation": "RETAINED_PIPELINE_CHECKER_PILOT_AND_MANDATORY_DISPOSITION_GATE_BUILT",
+      "independent_checker_built": true,
+      "optional": true,
+      "priority": 16,
+      "question": "Play and threat",
+      "specified_grid_size": 24
+    }
+  ],
+  "family_jobs_admitted": 5,
+  "family_pipelines_implemented": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "N7",
+    "N8"
+  ],
+  "family_pipelines_production_verified": [
+    "R1",
+    "R2",
+    "R4",
+    "N5"
+  ],
   "gpu": false,
-  "sounding_line_priority": true,
   "group_caps_cpu_hours_not_additive_authority": {
-    "setup": 8,
-    "repairs": 14,
+    "confirmation": 15,
     "n1": 16,
-    "n2": 7,
-    "n3": 6,
+    "n2": 24,
+    "n3": 24,
     "n4": 14,
     "n5": 3,
-    "n6": 6,
+    "n6": 8,
     "n7": 7,
     "n8": 2,
-    "twins": 14,
-    "confirmation": 15,
-    "protected": 18
+    "protected": 18,
+    "repairs": 32,
+    "setup": 8,
+    "twins": 14
   },
-  "proposed_world_rungs": [
-    16,
-    16,
-    48,
-    144,
-    144,
-    144,
-    144
-  ],
-  "world_rungs_status": "CALIBRATED_WITH_QUALIFIED_POOLED_GRID_TARGETS",
+  "interface_evidence": "results/v23/continuation-20261015/INTERFACE_VALIDITY.json",
+  "last_event_review": "2026-10-16T02:09:38.058437+00:00",
   "launch_dependencies": [
     "V21 published final report and hash-bound verified closure",
     "Native absence of predecessor scientific workers; no conflicting reviewer",
@@ -49,308 +350,47 @@
     "Independent reconstruction and complete replay before accepting each batch",
     "Verified hidden native ownership and event/12-hour finite monitoring"
   ],
+  "max_scientific_workers": 3,
+  "numerical_threads_per_worker": 1,
   "preparation_order": [
     "canonical ledger mapping",
     "reference readers and conformance",
     "stopping calibration",
     "controls and cost pilots"
   ],
-  "families": [
-    {
-      "id": "R1",
-      "question": "Matched steering-signature controls",
-      "specified_grid_size": 36,
-      "optional": false,
-      "budget_group": "repairs",
-      "priority": 1,
-      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "DISCOVERY_BATCH_1_RUNNING_WITH_FINITE_SUCCESSORS",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "R2",
-      "question": "Withdrawal of every purpose channel",
-      "specified_grid_size": 16,
-      "optional": false,
-      "budget_group": "repairs",
-      "priority": 2,
-      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "DISCOVERY_BATCH_1_RUNNING_WITH_FINITE_SUCCESSORS",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "R3",
-      "question": "Choice-independent costly labels",
-      "specified_grid_size": 72,
-      "optional": false,
-      "budget_group": "repairs",
-      "priority": 3,
-      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "VERIFIED_PILOT_RESOURCE_HOLD",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "R4",
-      "question": "Root and function cues",
-      "specified_grid_size": 90,
-      "optional": false,
-      "budget_group": "repairs",
-      "priority": 4,
-      "implementation": "RETAINED_PIPELINE_AND_CHECKER_BUILT",
-      "admission": "VERIFIED_PILOT_PENDING_RESERVED_CAPACITY",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "N1",
-      "question": "Individual and population identification",
-      "specified_grid_size": 240,
-      "optional": false,
-      "budget_group": "n1",
-      "priority": 5,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "N2",
-      "question": "Diagnosticity and response-time weights",
-      "specified_grid_size": 124,
-      "optional": false,
-      "budget_group": "n2",
-      "priority": 6,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "N5",
-      "question": "Projection bias",
-      "specified_grid_size": 128,
-      "optional": false,
-      "budget_group": "n5",
-      "priority": 7,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "N3",
-      "question": "Corrections and preference constraints",
-      "specified_grid_size": 96,
-      "optional": false,
-      "budget_group": "n3",
-      "priority": 8,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "N4",
-      "question": "Drive recipes, including conditional N4b",
-      "specified_grid_size": 172,
-      "optional": false,
-      "budget_group": "n4",
-      "priority": 9,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "N7",
-      "question": "Stated and revealed preferences",
-      "specified_grid_size": 128,
-      "optional": false,
-      "budget_group": "n7",
-      "priority": 10,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "N6",
-      "question": "Model everyone and gate uptake",
-      "specified_grid_size": 108,
-      "optional": false,
-      "budget_group": "n6",
-      "priority": 11,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    },
-    {
-      "id": "T1",
-      "question": "CoAuthor twin",
-      "specified_grid_size": null,
-      "optional": false,
-      "budget_group": "twins",
-      "priority": 12,
-      "implementation": "NOT_BUILT",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "T2",
-      "question": "Chess twin",
-      "specified_grid_size": null,
-      "optional": false,
-      "budget_group": "twins",
-      "priority": 13,
-      "implementation": "NOT_BUILT",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "T4",
-      "question": "Preference-panel twin",
-      "specified_grid_size": null,
-      "optional": false,
-      "budget_group": "twins",
-      "priority": 14,
-      "implementation": "NOT_BUILT",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "T3",
-      "question": "Wikipedia twin",
-      "specified_grid_size": null,
-      "optional": false,
-      "budget_group": "twins",
-      "priority": 15,
-      "implementation": "NOT_BUILT",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": false
-    },
-    {
-      "id": "N8",
-      "question": "Play and threat",
-      "specified_grid_size": 24,
-      "optional": true,
-      "budget_group": "n8",
-      "priority": 16,
-      "implementation": "GENERATOR_REFERENCE_AND_ADAPTER_BUILT_PIPELINE_UNFINISHED",
-      "admission": "PENDING_IMPLEMENTATION_AND_FAMILY_GATES",
-      "dependencies": [
-        "all_launch_dependencies",
-        "family_source_pin",
-        "family_known_answers",
-        "family_cost_pilot"
-      ],
-      "independent_checker_built": true
-    }
+  "priority": "below_normal",
+  "proposed_world_rungs": [
+    16,
+    16,
+    48,
+    144,
+    144,
+    144,
+    144
   ],
+  "protected_cpu_hours": 18,
+  "readiness": "IMPLEMENTATION_STATUS.md",
   "reporting": {
     "batch": "machine_card_and_raw_evidence",
+    "closure": "one_final_report_then_no_recurring_wake",
     "model_review": "family_decision_or_12_hour_health_or_failure",
-    "public_write_through": "family_decision",
-    "closure": "one_final_report_then_no_recurring_wake"
+    "public_write_through": "family_decision"
   },
-  "deadline": "2026-10-22T05:04:15+00:00",
-  "calibration_attempts_admitted": 3,
-  "calibration_attempts_verified": 1,
-  "family_jobs_admitted": 2,
-  "family_pipelines_implemented": [
-    "R1",
-    "R2",
-    "R3",
-    "R4"
+  "resource_amendments": [
+    "RESOURCE_REALLOCATION.json",
+    "RESOURCE_REALLOCATION_2.json",
+    "RESOURCE_REALLOCATION_3.json"
   ],
-  "family_pipelines_production_verified": [],
-  "readiness": "IMPLEMENTATION_STATUS.md",
+  "schedule": "ASAP after valid prerequisites; original deadline is an outer stop",
+  "schema": "ghost-v23-preparation-work-order-v1",
+  "sounding_line_priority": true,
+  "specification_sha256": "f5315dcfab499d97fc5a4de5bb82964f14750ae6666b42d0ac76a1ac4c305445",
+  "state": "QUEUE_IDLE_REVIEWED_RESULTS_AND_EXPLICIT_HOLDS",
   "stopping_policy": {
     "kill": 0.05,
     "prior_mean_scale": 0.08,
     "prior_spread_scale": 0.05
   },
-  "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a"
+  "total_cpu_hours": 90,
+  "world_rungs_status": "CALIBRATED_WITH_QUALIFIED_POOLED_GRID_TARGETS"
 }

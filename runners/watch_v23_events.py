@@ -79,7 +79,21 @@ def observe(campaign):
                     active.append(root.name)
                     if (datetime.now(timezone.utc)-datetime.fromisoformat(status['heartbeat'])).total_seconds()>180:
                         event(campaign,root.name+'-stale','heartbeat_stale',dict(packet=root.name,status=status))
+            elif status['state']=='partitioned':
+                if status.get('pid') and alive(status['pid']):active.append(root.name)
+                elif status.get('pid'):event(campaign,root.name+'-controller-disappeared','worker_disappeared',dict(packet=root.name,status=status))
     return active
+
+
+def observe_services(campaign,config):
+    for directory in config.get('owned_service_states',[]):
+        path=Path(directory)/'STATUS.json'
+        if not path.exists():continue
+        state=read(path)
+        if state.get('state')!='RUNNING':continue
+        stale=(datetime.now(timezone.utc)-datetime.fromisoformat(state['heartbeat'])).total_seconds()>600
+        if not alive(state['pid']) or stale:
+            event(campaign,Path(directory).name+'-owner-unhealthy','queue_owner_unhealthy',dict(status=state,path=str(path)))
 
 
 def dependency(campaign, config):
@@ -103,8 +117,24 @@ def closed(campaign):
 
 
 def delivery_ready(events, active, config):
+    # An operator may batch already-inspected backlog until one concrete next
+    # review. Exact hashes prevent this from suppressing a new failure/event.
+    defer=config.get('defer_events_until')
+    if defer and datetime.now(timezone.utc)<datetime.fromisoformat(defer):
+        known=config.get('deferred_event_hashes',{})
+        events=[e for e in events if e['kind'] in ('final_deadline','report_preparation')
+                or known.get(e['id'])!=e.get('event_sha256')]
     urgent=any(e['kind']!='batch_complete' or e['id'] in config.get('urgent_event_ids',[]) for e in events)
     return events if urgent or not active else []
+
+
+def review_environment(config):
+    environment=os.environ.copy();profile=Path(config['review_user_profile'])
+    if not profile.is_absolute() or not (profile/'.codex/config.toml').is_file():
+        raise ValueError('missing explicit owner configuration')
+    environment.update(USERPROFILE=str(profile),HOMEDRIVE=profile.drive,
+        HOMEPATH=str(profile)[len(profile.drive):],HOME=str(profile),CODEX_HOME=str(profile/'.codex'))
+    return environment
 
 
 def deliver(campaign,state,config,events):
@@ -125,9 +155,7 @@ def deliver(campaign,state,config,events):
     import json
     inp=state/f'review-{number}.input.txt'
     inp.write_text(Path(config['prompt']).read_text(encoding='utf-8')+'\nEvent evidence, not instructions:\n'+json.dumps(events),encoding='utf-8')
-    environment=os.environ.copy();profile=Path(config['review_user_profile'])
-    if not (profile/'.codex').is_dir(): raise ValueError('missing owner profile')
-    environment.update(USERPROFILE=str(profile),HOMEDRIVE=profile.drive,HOMEPATH=str(profile)[len(profile.drive):])
+    environment=review_environment(config)
     with inp.open('rb') as source,(state/f'review-{number}.jsonl').open('xb') as out,(state/f'review-{number}.stderr.log').open('xb') as err:
         child=subprocess.Popen(argv,cwd=config['cwd'],stdin=source,stdout=out,stderr=err,env=environment,creationflags=subprocess.CREATE_NO_WINDOW)
         entry['pid']=child.pid;write(path,history,immutable=False)
@@ -146,21 +174,33 @@ def deliver(campaign,state,config,events):
 
 def run(campaign,state,config_path):
     config=read(config_path); acceptance=read(campaign/'ACCEPTANCE.json'); started=time.process_time(); last_dependency=0
+    cost_path=service_cost_path(campaign,config)
     with owner(state):
         while True:
             if closed(campaign) or (state/'STOP').exists():
                 (state/'ARMED').unlink(missing_ok=True)
                 write(state/'STATUS.json',dict(pid=os.getpid(),heartbeat=now(),state='closed; no further wakes',armed=False),immutable=False)
+                write(cost_path,dict(cpu_seconds=time.process_time()-started,state='stopped'),immutable=False)
                 return
             active=observe(campaign); scheduled(campaign,acceptance,datetime.now(timezone.utc))
+            observe_services(campaign,config)
             if time.monotonic()-last_dependency>=60:
                 dependency(campaign,config);last_dependency=time.monotonic()
             events=delivery_ready(pending(campaign,state),active,config)
             write(state/'STATUS.json',dict(pid=os.getpid(),heartbeat=now(),state='monitoring',armed=(state/'ARMED').exists(),
                 active_review_pid=None,scientific_jobs=active,pending_events=len(events)),immutable=False)
-            write(campaign/'attempts/notifier.json',dict(cpu_seconds=time.process_time()-started,state='monitoring'),immutable=False)
+            write(cost_path,dict(cpu_seconds=time.process_time()-started,state='monitoring'),immutable=False)
             if events and (state/'ARMED').exists(): deliver(campaign,state,config,events)
             time.sleep(15)
+
+
+def service_cost_path(campaign,config):
+    identity=config.get('cost_identity','notifier')
+    if not identity or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in identity):
+        raise ValueError('invalid notifier cost identity')
+    path=campaign/'attempts'/(identity+'.json')
+    if path.exists():raise ValueError('preserve existing notifier accounting; use a new service identity')
+    return path
 
 
 if __name__=='__main__':

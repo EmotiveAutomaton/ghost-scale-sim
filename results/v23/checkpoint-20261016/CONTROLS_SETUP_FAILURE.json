@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-16T16:58:59.639664+00:00",
+  "state": "failed",
+  "tests": 4,
+  "exit_code": 1,
+  "cpu_seconds": 2.640625,
+  "scope": "N3 empty-support reporting regression, independent correction checker and complete engineering replay; no scientific retry",
+  "reason": "Default pytest temporary directory inaccessible in sandbox; one passed, three setup errors; scientific assertions not failed."
+}

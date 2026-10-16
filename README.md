@@ -1,8 +1,13 @@
 # Ghost Scale Simulation
 
-[V23 calibration](docs/versions/v23-research-division/CALIBRATION_REPORT.md) is verified.
-The canonical schema is committed and pinned. R1 and R2 full batches are running;
-R3/R4 have verified cost pilots. [Opening status and remaining work](docs/versions/v23-research-division/OPENING_REPORT.md).
+[V23 current checkpoint](docs/versions/v23-research-division/CHECKPOINT_2026-10-16.md):
+the scientific queue is idle with 48 complete and 15 failed packet records.
+Four discovery nominations are reviewed; confirmation and remaining family
+dispositions are unfinished. [Readiness and explicit holds](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
+
+The [exact Stage 15 profile validation](docs/versions/v23-research-division/S15_PROFILE_REPORT.md)
+is independently reviewed and **FAIL**: null bounds and option-order invariance
+fail despite planted-signal benefit. The returned witness does not admit downstream science.
 
 [V21 final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md): no
 maker-specific advantage survives the historical-content test. The final
@@ -28,6 +33,7 @@ human intent, human values or historical process correspondence.
 
 ## Start here
 
+- **V23 active, queue held:** [current checkpoint](docs/versions/v23-research-division/CHECKPOINT_2026-10-16.md), [implementation status](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
 - **Closed V22:** [seven finite mechanism studies](docs/versions/v22-mechanism-tests/README.md).
   [Final report](docs/versions/v22-mechanism-tests/FINAL_REPORT.md): seven verified finite results, mixed prediction dispositions and scientific-service closure.
 - **V21 scientific allocation complete:** [final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).
@@ -106,7 +112,7 @@ tool action is not an AI-use generator and must not be relabelled as one.
 | How were the instruments checked? | [Methods](docs/METHODS.md) and [audit passes](docs/README.md#audit-passes) |
 | How does the earlier research fit together? | [Illustrated walkthrough](WALKTHROUGH.md) and [historical narrative](docs/HISTORY.md) |
 | What was requested and returned? | [Exchange index](docs/exchange/README.md) |
-| What should be implemented next? | [V21 weekly plan](docs/versions/v21-supporting-mechanisms/IMPLEMENTATION_PLAN.md) |
+| What should be implemented next? | [V23 implementation status](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md) |
 
 ## Scope and limits
 

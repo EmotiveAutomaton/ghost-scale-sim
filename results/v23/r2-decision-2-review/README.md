@@ -1,0 +1,5 @@
+# R2 discovery review
+
+Does withdrawing every purpose-diagnostic channel impair recognition? R2 finds a cost above 0.02 nats in all eight tested 16- and 32-step settings. The strongest setting is nominated after two batches at 0.17372 nats, with a descriptive 95% interval of 0.15550–0.19195. Benign false alarms carry the accuracy cost; release does not uniformly preserve protection. This is a constructed-method discovery, not confirmation or evidence about people.
+
+REVIEW.json binds two complete original/replay packets and the independent primary reconstruction. CURVE.json and TRAJECTORY.json retain every setting and decision. POLICY_REVIEW.json records 48,000 secondary checks; compressed POLICY_STRATA and MATCHED_TECHNIQUE tables retain all policies, strata and fixed weights. REVIEW_RAW_INDEX.json binds their decompressed bytes and the complete locally retained world diagnostics. RAW_HASH_INDEX.json binds the original scientific products. ENGINEERING_VALIDITY.json distinguishes continuation/N1 checks from scientific admission. See the [full report](../../../docs/versions/v23-research-division/R2_REPORT.md).

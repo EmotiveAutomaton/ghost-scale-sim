@@ -36,7 +36,7 @@ def sample(v, phase, world, case, law=None):
         law=int(law), aspiration=aspirational, shift=shift.tolist())
 
 
-def infer(v, p, mode='law-marginal', shift_estimate=None):
+def infer_scalar(v, p, mode='law-marginal', shift_estimate=None):
     s = v['settings']; recipes, weights, _ = recipe_library()
     signs = (-1., 1.) if s['shift_kind'] == 'individual' else (1.,)
     aspiration_flags = (False, True) if s['aspiration'] else (False,)
@@ -67,23 +67,64 @@ def infer(v, p, mode='law-marginal', shift_estimate=None):
         expected_weights=(posterior.sum(0)@weights).tolist(), support_states=int(ll.size))
 
 
+def infer(v, p, mode='law-marginal', shift_estimate=None):
+    """Same finite model with law/type updates broadcast across nuisance states."""
+    from itertools import product
+    s=v['settings'];recipes,weights,_=recipe_library()
+    states=list(product((-1.,1.) if s['shift_kind']=='individual' else (1.,),
+        (False,True) if s['aspiration'] else (False,),BETAS))
+    sign=np.array([row[0] for row in states]);aspiring=np.array([row[1] for row in states]);beta=np.array([row[2] for row in states])
+    shifts=sign[:,None]*s['shift']*shift_direction()[None,:]
+    prior=np.where(aspiring,s['aspiration'],1-s['aspiration']) if s['aspiration'] else np.ones(len(states))
+    ll=np.broadcast_to(np.log(prior)[:,None],(len(states),len(weights))).copy()
+    if mode not in ('choices-only','training-choices'):
+        observed_shift=shifts if mode=='law-marginal' else np.zeros_like(shifts)
+        if mode=='pooled-correction':observed_shift=np.broadcast_to(shift_estimate,shifts.shape)
+        residual=np.array(p['statement'])[None,None,:]-weights[None,:,:]-observed_shift[:,None,:]
+        ll-=.5*np.sum((residual/s['statement_sd'])**2,axis=2)
+    if mode!='statements-only':
+        for step,row in enumerate(p['history']):
+            sat=satisfaction(row['options'],recipes)
+            utility=(weights@sat.T)[None,:,:]+aspiring[:,None,None]*step/max(1,s['records'])*(shifts@sat.T)[:,None,:]
+            logits=beta[:,None,None]*utility
+            ll+=logits[:,:,row['choice']]-logsumexp(logits,axis=2)
+    sat=satisfaction(p['query'],recipes)
+    utility=(weights@sat.T)[None,:,:]+aspiring[:,None,None]*(shifts@sat.T)[:,None,:]
+    post=normalize(ll.ravel()).reshape(ll.shape)
+    predicted=np.einsum('nt,nta->a',post,normalize(beta[:,None,None]*utility))
+    return predicted[None,:],dict(recipe_presence=(post.sum(0)@(weights>0)).tolist(),
+        expected_weights=(post.sum(0)@weights).tolist(),support_states=int(ll.size))
+
+
 @lru_cache(None)
-def trained_shift(identity, sd, shift, shift_kind, aspiration):
+def shift_training(identity, sd, shift, shift_kind, aspiration):
     v = dict(id=identity, settings=dict(statement_sd=sd, shift=shift, shift_kind=shift_kind,
                                       aspiration=aspiration, records=128))
-    residuals = []
+    residuals = []; retained = []
     # Separate training makers. Their hidden type labels are never used to fit
     # the shift; the choice-only posterior supplies the latent value estimate.
     for i in range(32):
         p, _ = sample(v, 'shift-training', i % 16, i)
         _, detail = infer(v, p, 'training-choices')
         residuals.append(np.array(p['statement'])-detail['expected_weights'])
-    return np.mean(residuals, axis=0)
+        retained.append(dict(identity=['shift-training',identity,i],public=p,
+                             choice_only_expected_weights=detail['expected_weights']))
+    return np.mean(residuals, axis=0), retained
+
+
+def trained_shift(identity, sd, shift, shift_kind, aspiration):
+    return shift_training(identity, sd, shift, shift_kind, aspiration)[0]
+
+
+def shift_training_identity(s):
+    # The same population correction is evaluated at all four personal-history
+    # depths. These independent training makers always have 128 records.
+    return 'N7-shared-shift-'+str([s[k] for k in ('statement_sd','shift','shift_kind','aspiration')])
 
 
 def evaluate(v, p, truth=None):
     s = v['settings']
-    shift = trained_shift(v['id'], s['statement_sd'], s['shift'], s['shift_kind'], s['aspiration'])
+    shift = trained_shift(shift_training_identity(s), s['statement_sd'], s['shift'], s['shift_kind'], s['aspiration'])
     pred, detail = {}, {}
     for name in ('law-marginal', 'choices-only', 'statements-only', 'both-naive', 'pooled-correction'):
         pred[name], detail[name] = infer(v, p, name, shift)

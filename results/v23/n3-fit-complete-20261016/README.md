@@ -1,0 +1,5 @@
+# N3 fit completion and discovery reporting failure
+
+N3 has no accepted scientific result. All six comparison-reader fits now pass independent validation-loss reconstruction and full fresh-process replay, but the first discovery partition failed while reporting an unavailable half-space direction. Its 64 cases, including eight empty-support predictions, remain retained. The reporting fix passes four targeted checks; a further scientific attempt is held because the family already used its one allowed repair. This is an instrument disposition, not a negative result about correction evidence.
+
+[Review](REVIEW.json), [independent fit scores](FIT_NUMERICAL_REVIEW.json), [all training curves](FIT_CURVES.json), [raw hash index](RAW_HASH_INDEX.json) and [targeted controls](CONTROLS.json) bind the evidence. Raw packets remain in the outer workspace under `.local/v23/packets/`. The failed original has no replay or machine card; the partial 64 cases cannot enter a family estimate. No confirmation has been exposed.

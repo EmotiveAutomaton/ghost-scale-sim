@@ -72,3 +72,80 @@ prior. Literal hard constraints can contradict: unavailable predictions stay
 unavailable, with no smoothing, selected-case deletion or substitution of the
 separately named soft supplement. N4b's hidden mechanism label is excluded from
 direct features. Reader privileges must be audited again at each admission.
+
+October 15 preparation amendment: implementation and eligible execution proceed
+as soon as their prerequisites are verified. The calendar is not a wait target.
+Original acceptance bytes, outer stop, CPU limits and protected verification
+remain unchanged. New single-maker families may freeze and fully replay their
+six rival fits in a separate training-only packet before discovery; admission
+reserves both mandatory burn-ins. Validation stopping is not ceiling parity.
+
+N7's first resource pilot reached its cap before completing the grid. Its retained
+bounded repair evaluates the same probability-mass checker in vector form,
+checked against its scalar reference. Before any discovery exposure, the training
+map now shares one population shift fit across personal-history depths 0, 2, 8
+and 32 for each fixed noise, shift size, shift kind and aspiration setting.
+Each fit still uses 32 independent training makers with 128 choices; no hidden
+labels enter estimation. The complete training records and independent posterior
+reconstruction remain retained. This changes the training namespace and dependence
+across depth comparisons explicitly; the failed pilot is not a scientific result.
+
+N4's empirical-Bayes pooled recipe rival uses 32 independent training makers,
+eight random-menu records each, and a symmetric 0.5 pseudocount per finite type.
+It pools choice-only type posteriors and never consumes training type labels.
+The exact generator still has its declared uniform finite type prior. The pooled
+rival is an estimated-prior diagnostic, not an exact hierarchical ceiling.
+The binary N4b probe remains conditional and separate from the 160 four-choice
+main settings and their direct fits.
+
+N6's payoff calculation pays one unit for an adopted successful technique and
+charges one for a failed technique or unwanted purpose uptake, including purpose
+coupling. Each observed record costs 0.001. Proper predictive log reward has the
+declared low-low stakes weight and weight one in other strata. Separate purpose
+adoption has no positive benefit in this commissioned payoff. The finite-horizon
+policy enumerates all four uptake actions and permanent acquisition stopping;
+every Bellman equation is independently rebuilt. This operationalization is a
+constructed decision problem, not a physical-execution claim.
+
+
+The owner approved reallocating unused capacity between families within the
+unchanged 90 CPU-hour ceiling and 18-hour verification reserve. The dated
+RESOURCE_REALLOCATION records preserve each allocation; earlier source plans
+retain their original amendment hashes. Group caps are not additive spending
+permission. Every admission still charges failures, helpers, original work and
+full replay, reserves the mandatory burn-ins, and enforces Gear 2.
+
+Large logical batches may execute as disjoint four-world partitions. Each
+scientific part remains below 14,400 CPU seconds. Random identities, law assignments,
+variant membership, fits, cases and calibrated looks remain unchanged. Every part
+has a separate original/replay pair. Assembly requires exact complete world coverage,
+matching auxiliary fits, all retained raw records, full assembled replay and
+independent score reconstruction. Partial partitions never enter a family decision.
+The logical reservation and its child charges count once. Terminal family decisions
+release unused future reservations through a hash-bound receipt, preserving history.
+
+N4's bounded pre-discovery resource repair shares the pooled recipe training fit
+across personal-history depth and test-menu design for each drive count, recipe
+count, meaning rule and SEEKING representation. Each fit still uses 32 independent
+training makers with eight random-menu records and the same 0.5 pseudocount.
+All records and independent reconstructions are retained. The training namespace
+and cross-condition dependence change explicitly before any N4 discovery exposure;
+the original resource failure remains. Its complete-grid repair profile measures
+four cases per setting, including the original largest supports.
+
+Twin scaffolding has explicit engineering fixtures. Their small counts and timing
+quantiles are illustrative and do not satisfy the empirical realism gate. T1 uses
+finite feature preferences, handling, timing bins and preference/local corrections;
+T2 uses solved game trees and player types; T3 keeps chronological multi-maker
+article revisions with purpose, summary and reversion evidence; T4 uses shared
+items, recipe profiles, reliability and person-balanced versus contribution-weighted
+population estimates. DICES-style Yes/No/Unsure responses use a nominal model;
+an ordinal model is separate. Full matched-shape pipelines, direct-rival comparisons,
+empirical detectability and real-data module smoke checks remain separate admissions.
+
+The committed-engine bridge is a derivative export with observable numeric option
+features and lossless public-context projection. Native schema conformance alone
+is not engine interoperability. Pinned-engine load/choice extraction and observation
+round trips are required. Export never supplies evaluator labels or native latent
+law support to the generic engine baseline. Scientific module admission remains a
+separate claim, and the other repository's working tree stays untouched.

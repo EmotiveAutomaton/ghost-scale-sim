@@ -83,7 +83,7 @@ def verify_n6(v,p,truth,pred,detail):
     return check(pred,expected)
 
 
-def n3(v,p,reader):
+def n3_scalar(v,p,reader):
     d=v['settings']['dimensions'];points=np.array([x for x in product((-1.,0.,1.),repeat=d) if any(x)])
     points/=np.linalg.norm(points,axis=1,keepdims=True)
     states=list(product((v['settings']['beta'],),(v['settings']['local_share'],),range(len(points))))
@@ -108,6 +108,28 @@ def n3(v,p,reader):
     answer=np.zeros(4)
     for m,(beta,share,k) in zip(mass,states):answer+=m*softmax(beta*(np.asarray(p['query'])@points[k]))
     return answer[None,:],mass.reshape(1,1,len(points)).sum((0,1))
+
+
+def n3(v,p,reader):
+    s=v['settings'];points=np.array([x for x in product((-1.,0.,1.),repeat=s['dimensions']) if any(x)])
+    points/=np.linalg.norm(points,axis=1,keepdims=True)
+    mass=np.ones(len(points))/len(points);beta=s['beta'];share=s['local_share']
+    for row in p['history']:
+        edits=np.asarray(row['edits']);picked=row['picked']
+        if reader=='half-space' and picked:
+            mass*=np.einsum('ij,j->i',points,edits[picked])>0
+        elif reader in ('law-marginal','corrections-only'):
+            preference=softmax(beta*(np.einsum('ij,kj->ik',points,edits)-np.array(row['costs'])) )[:,picked]
+            local=softmax(beta*(edits@np.asarray(row['context'])-row['costs']))[picked]
+            mass*=(1-share)*preference+share*local
+        elif reader=='soft-constraint-supplement' and picked:
+            mass*=np.where(np.einsum('ij,j->i',points,edits[picked])>0,.9,.1)
+        if reader!='corrections-only':
+            mass*=softmax(beta*np.einsum('ij,kj->ik',points,np.array(row['menu'])))[:,row['choice']]
+        if mass.sum()==0:return None,None
+        mass/=mass.sum()
+    probability=mass@softmax(beta*np.einsum('ij,kj->ik',points,np.asarray(p['query'])))
+    return probability[None,:],mass
 
 
 def verify_n3(v,p,truth,pred,detail):
@@ -157,5 +179,31 @@ def n2(v,p,weights,average,mode):
 
 def verify_n2(v,p,truth,pred,detail):
     weights=np.array(detail['rt_weights']);average=float(np.average(weights,weights=detail['training_bin_counts']))
-    return check(pred,{name:n2(v,p,weights,average,name) for name in
-      ('law-marginal','class-aware-no-rt','exact-plus-weights','everything-is-preference','response-time-weighted','matched-tempering')})
+    # Independently scale probability masses after each mark. Production sums a
+    # complete log-likelihood tensor; no production probability functions enter.
+    s=v['settings'];classes=('preference','near-tie','mixed-strategy','spontaneous','prime','context')
+    prior=np.zeros(6);prior[0]=1-s['nondiagnostic'];prior[classes.index(s['mark_class'])]+=s['nondiagnostic']
+    masses={name:np.ones((16,2))/32 for name in ('law-marginal','class-aware-no-rt','exact-plus-weights')}
+    plains={name:np.ones(2)/2 for name in ('everything-is-preference','response-time-weighted','matched-tempering')}
+    signs=np.array([-1.,1.]); logistic=lambda z:1/(1+np.exp(-z)); laws=np.linspace(.15,.85,16)
+    for row in p['history']:
+        prob=np.empty((16,6,2));prob[:,0]=logistic(s['beta']*signs);prob[:,1]=logistic(.05*s['beta']*signs)
+        prob[:,2]=laws[:,None];prob[:,3]=.5;prob[:,4]=.6*row['previous']+.4*logistic(s['beta']*signs)
+        prob[:,5]=logistic(s['beta']*(signs+2*row['context']))
+        separation=np.abs(np.log(prob[:,:,1])-np.log(prob[:,:,0]))
+        rt=softmax(-s['rt_slope']*separation[:,:,None]*np.arange(5))[:,:,row['latency_bin']]
+        cue=np.array([.7 if k==row['class_cue'] else .3/5 for k in range(6)])
+        latent=prior[None,:,None]*cue[None,:,None]*(prob if row['choice'] else 1-prob)
+        possible=np.ones(16,bool) if row['opponent'] is None else np.isclose(laws,row['opponent'],atol=1e-12)
+        full=(latent*rt[:,:,None]).sum(1);plain=latent.sum(1)
+        for name,mass in masses.items():
+            likelihood=plain if name=='class-aware-no-rt' else full
+            exponent=weights[row['latency_bin']] if name=='exact-plus-weights' else 1.
+            mass*=likelihood**exponent*possible[:,None];mass/=mass.sum()
+        naive=logistic(s['beta']*signs);naive=naive if row['choice'] else 1-naive
+        for name,mass in plains.items():
+            exponent=weights[row['latency_bin']] if name=='response-time-weighted' else average if name=='matched-tempering' else 1.
+            mass*=naive**exponent;mass/=mass.sum()
+    expected={name:mass.sum(0)[None,:] for name,mass in masses.items()}
+    expected.update({name:mass[None,:] for name,mass in plains.items()})
+    return check(pred,expected)

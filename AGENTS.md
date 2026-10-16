@@ -37,9 +37,18 @@ finite support proof and independent balanced law blocks; never floor losses.
 The canonical schema is owned by the other ToMpathy thread and is now pinned to
 its committed 2a0c54233344ae3f64bed9806442289d7dab726a snapshot. Family admission
 requires conformance, controls, largest-cell cost pilots and source-bound plans.
-R1/R2 full discovery batches are running; R3/R4 pilots are verified. Other mechanism
-pipelines/checkers and four twins have remaining implementation; registry entries
-are not runnable jobs and unbuilt scope is never a scientific null.
+R1/R2/R4/N5 have reviewed discovery nominations. The scientific queue is idle;
+read CHECKPOINT_2026-10-16.md for terminal packet counts and unresolved holds.
+N3's tested reporting fix is not an admitted extra scientific repair. N2-N8 retained pipelines and four twin engineering prototypes are built;
+read PREPARATION_REPORT.md and current IMPLEMENTATION_STATUS.md for execution,
+resource holds and unfinished population/conditional/empirical-shape scope.
+Read CONTINUATION_REPORT.md for the new committed-engine interface checks,
+partition-aware family review, N5's accepted first burn-in and bounded R3 fit
+repair. Existing scientific capsules retain their original dependency pins.
+Registry entries are not runnable jobs and unbuilt scope is never a scientific null.
+The owner approved reallocating unused capacity within the existing total; apply
+the immutable RESOURCE_REALLOCATION supplements without changing acceptance bytes.
+Proceed as soon as prerequisites clear; the deadline is an outer stop, not a wait.
 
 Gear 2 permits at most three below-normal, one-thread CPU scientists; no GPU or
 environment synchronization. Sounding Line retains priority. Keep the notifier

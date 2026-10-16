@@ -1,0 +1,34 @@
+{
+  "state": "RESOURCE_LIMIT_BEFORE_VERIFICATION",
+  "family": "N1",
+  "accepted_scientific_result": false,
+  "full_population_pipeline_complete": false,
+  "original_pass_cpu_cap_seconds": 600,
+  "packet_cpu_cap_seconds": 1200,
+  "measured_packet_cpu_seconds": 602.53125,
+  "original_cpu_seconds": 600.15625,
+  "completed_makers_at_last_pulse": 820,
+  "population_size": 10000,
+  "records_per_maker": 512,
+  "phase": "population-inference",
+  "independent_production_check_complete": false,
+  "full_replay_complete": false,
+  "controls": {
+    "matched_information_max_error": 1.1102230246251565e-16,
+    "no_empirical_convergence_requirement": true,
+    "passed": true,
+    "planted_single_type_max_error": 2.7755575615628914e-17
+  },
+  "plan_sha256": "7c3e4fe66571170ef009d62ad2f8d968f657de924d20dddc5ab9c6b6d6d2ebcd",
+  "source_archive_sha256": "cb54573127f561b2c8608140e0180babfae3515fd9053da96e144f84791b2aa0",
+  "status_sha256": "c30541521abe86068094fd85020528073c39d2ae7e94d2fc90727f1811d38ddd",
+  "original_progress_sha256": "9708f5ce8a985f836599dead461a586a9fb6581fe80750e27cd59d4f62530da1",
+  "retained_partial_files": {
+    "CONTROLS.json": "933778963d5aa1fce4c8891d716ae054c2a4058fc5dfbc12e69cc3fe73ce1bc8",
+    "largest-world/IDENTITY.json": "c0b9b376207f2e28715d11b2263566f880e28f0fffe0bf5289d3cd762437e36a",
+    "largest-world/public_points.npz": "a3bde38076d36ce2647734b152361546182924425a1957a6b3284c8d52baf9de",
+    "largest-world/truth_points.npz": "1657978615b8512beb136b4168ea4db0ecf22f93cfc504681b6fd9a667475376"
+  },
+  "next_step": "bounded implementation/cost work before admitting this largest cell; other families remain explicitly unfinished",
+  "scientific_interpretation": "no null, confirmation, or accepted population result"
+}

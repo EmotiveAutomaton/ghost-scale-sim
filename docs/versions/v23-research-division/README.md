@@ -1,11 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-**Corrected implementation underway; stopping calibration verified.**
-R1 and R2 discovery batches are admitted and running. V21 and V22 are closed.
-The other thread delivered the canonical ToMpathy schema at commit
-`2a0c54233344ae3f64bed9806442289d7dab726a`; Ghost pins its committed bytes.
-See the [opening report](OPENING_REPORT.md) for pilots, retained failures and
-unfinished scope. No family discovery result or confirmation is accepted yet.
+Current checkpoint: [October 16 record and queue integrity pass](CHECKPOINT_2026-10-16.md). The scientific queue is idle; V23 remains incomplete. Four discovery nominations are reviewed, no confirmation is frozen, and remaining holds are listed below.
 
 - [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33
   stress settings remain qualified, independent reconstruction and full replay pass.
@@ -25,9 +20,10 @@ three below-normal single-thread CPU scientists, no GPU, with Sounding Line prio
 Dependency delays never reset the clock. No occupancy filler or reopening of a
 closed predecessor is authorized.
 
-R1-R4 have retained pipelines, independent checkers, known-answer gates and cost
-pilot entry points. The remaining mechanism pipelines and four twins need further
-implementation. The finite monitor collects completion, failure and committed-
+R1-R4 and N2-N8 have retained pipelines, independent checkers, controls and cost
+pilot entry points. Four twin prototypes pass complete engineering replay; full
+empirical-shape admission and remaining population/conditional work are tracked
+in the readiness table. The finite monitor collects completion, failure and committed-
 schema events and maintains fixed twelve-hour health reviews. Machine cards are
 written per accepted batch; full public scientific write-through occurs at family
 decisions. A final report and verified owned-service shutdown end the campaign.

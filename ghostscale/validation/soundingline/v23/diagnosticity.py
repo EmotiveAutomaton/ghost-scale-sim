@@ -56,21 +56,29 @@ def sample(v, phase, world, case, law=None):
 
 
 @lru_cache(None)
-def trained_weights(family_id, kind, share, slope, beta):
+def weight_training(family_id, kind, share, slope, beta):
     v = dict(id=family_id, settings=dict(mark_class=kind, nondiagnostic=share, rt_slope=slope, beta=beta))
     r = rng('diagnosticity-rt-training', family_id)
     total, count = np.zeros(5), np.zeros(5)
+    retained = []
     for i in range(4096):
-        row, truth = mark(v, r, int(r.integers(2)), i % 16, float(r.integers(2)))
+        preference = int(r.integers(2)); previous = float(r.integers(2))
+        row, truth = mark(v, r, preference, i % 16, previous)
         total[row['latency_bin']] += truth['diagnosticity']; count[row['latency_bin']] += 1
+        retained.append(dict(identity=['diagnosticity-rt-training', family_id, i],
+                             public=row, evaluator=dict(truth, preference=preference, law=i % 16)))
     mean = total/np.maximum(count, 1)
     # Absolute diagnosticity relative to a clean preference mark. Weight clipping
     # is a declared heuristic feature, not score clipping or an e-value operation.
     weights = np.clip(mean/beta, 0, 1)
-    return weights, count
+    return weights, count, retained
 
 
-def evaluate(v, p, truth=None):
+def trained_weights(family_id, kind, share, slope, beta):
+    return weight_training(family_id, kind, share, slope, beta)[:2]
+
+
+def evaluate_scalar(v, p, truth=None):
     s = v['settings']; prior = class_prior(v)
     weights, train_counts = trained_weights(v['id'], s['mark_class'], s['nondiagnostic'], s['rt_slope'], s['beta'])
     ll = {name: np.zeros(2) for name in ('law-marginal', 'class-aware-no-rt',
@@ -111,6 +119,52 @@ def evaluate(v, p, truth=None):
         pred['oracle-weighted'] = normalize(oracle_ll)[None, :]
     return pred, dict(rt_weights=weights.tolist(), training_bin_counts=train_counts.tolist(),
                       estimated_diagnosticity=estimated_d, heldout_training=True)
+
+
+def evaluate(v, p, truth=None):
+    """Sum the same conditional likelihoods in a batched law/class tensor."""
+    s = v['settings']; history = p['history']; n = len(history)
+    weights, counts = trained_weights(v['id'], s['mark_class'], s['nondiagnostic'], s['rt_slope'], s['beta'])
+    choice = np.array([row['choice'] for row in history], int)
+    bins = np.array([row['latency_bin'] for row in history], int)
+    previous = np.array([row['previous'] for row in history])
+    context = np.array([row['context'] for row in history])
+    cues = np.array([row['class_cue'] for row in history], int)
+    prob = np.empty((n, 16, 6, 2)); signs = np.array([-1., 1.])
+    prob[:, :, 0] = expit(s['beta']*signs)
+    prob[:, :, 1] = expit(.05*s['beta']*signs)
+    prob[:, :, 2] = np.linspace(.15, .85, 16)[None, :, None]
+    prob[:, :, 3] = .5
+    prob[:, :, 4] = .6*previous[:, None, None]+.4*expit(s['beta']*signs)
+    prob[:, :, 5] = expit(s['beta']*(signs[None, None, :]+2*context[:, None, None]))
+    separation = np.abs(np.log(prob[..., 1])-np.log(prob[..., 0]))
+    latency = normalize(-s['rt_slope']*separation[..., None]*np.arange(5))
+    observed_rt = np.take_along_axis(latency, bins[:, None, None, None], axis=-1)[..., 0]
+    cue = np.where(np.arange(6)[None, :] == cues[:, None], .7, .3/5)
+    latent = class_prior(v)[None, None, :, None]*cue[:, None, :, None]*np.where(choice[:, None, None, None], prob, 1-prob)
+    plain_like = latent.sum(2); full_like = (latent*observed_rt[..., None]).sum(2)
+    visible = np.array([row['opponent'] is not None for row in history])
+    opponents = np.array([row['opponent'] if row['opponent'] is not None else .5 for row in history])
+    possible = ~visible[:, None] | np.isclose(opponents[:, None], np.linspace(.15,.85,16)[None,:], atol=1e-12)
+    full_like = np.where(possible[..., None], full_like, 0.)
+    plain_like = np.where(possible[..., None], plain_like, 0.)
+    w = weights[bins]
+    with np.errstate(divide='ignore'):
+        exact = np.log(full_like).sum(0); no_rt = np.log(plain_like).sum(0)
+        weighted = (w[:, None, None]*np.log(np.where(full_like > 0, full_like, 1))+
+                    np.where(full_like > 0, 0., -np.inf)).sum(0)
+    naive = np.log(np.where(choice[:, None], expit(s['beta']*signs), 1-expit(s['beta']*signs)))
+    average = float(np.average(weights, weights=counts))
+    pred = {name: normalize(value.ravel()).reshape(16,2).sum(0)[None,:] for name,value in
+            [('law-marginal',exact),('class-aware-no-rt',no_rt),('exact-plus-weights',weighted)]}
+    for name, multiplier in [('everything-is-preference',np.ones(n)),('response-time-weighted',w),
+                              ('matched-tempering',np.full(n,average))]:
+        pred[name] = normalize((multiplier[:, None]*naive).sum(0))[None,:]
+    if truth is not None:
+        d = np.array([row['diagnosticity'] for row in truth['marks']])/s['beta']
+        pred['oracle-weighted'] = normalize((d[:,None]*naive).sum(0))[None,:]
+    return pred, dict(rt_weights=weights.tolist(),training_bin_counts=counts.tolist(),
+                     estimated_diagnosticity=(w*s['beta']).tolist(),heldout_training=True)
 
 
 def features(v, p):

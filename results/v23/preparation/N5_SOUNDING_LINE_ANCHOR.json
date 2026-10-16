@@ -1,0 +1,56 @@
+{
+  "source_project": "Sounding Line",
+  "source_path": "results/gear3/G3-S14-MAKER-1/MODAL_MAIN_RESULTS.json",
+  "source_commit": "0a956219cd90003e312b48e5e1a2babbc842b26a",
+  "source_git_blob": "80c341398eccc6e08f822f8b80157c625ae9ad7f",
+  "source_sha256": "200b55daf2086ac086cc62300f16d33aa54ac7888c2fb459fb4ca8e662968cd9",
+  "working_blob_matches_committed_blob": true,
+  "arm": "R27.H0",
+  "arm_meaning": "no maker history",
+  "valid_targets": 231,
+  "class_order": [
+    "accept",
+    "edit",
+    "dismiss",
+    "ignore"
+  ],
+  "valid_class_marginals": {
+    "choices": [
+      0.5891705069124422,
+      0.40679723502304144,
+      0.0,
+      0.004032258064516129
+    ],
+    "observed": [
+      0.5335253456221196,
+      0.21808755760368664,
+      0.22707373271889406,
+      0.021313364055299537
+    ],
+    "predicted": [
+      0.40671082949308823,
+      0.42945161290322603,
+      0.08736635944700456,
+      0.07647119815668194
+    ]
+  },
+  "full_roster_observed_counts": {
+    "accept": 121,
+    "dismiss": 56,
+    "edit": 52,
+    "ignore": 5
+  },
+  "frozen_simulator_base_rates": [
+    0.5,
+    0.22,
+    0.23,
+    0.05
+  ],
+  "qualifications": [
+    "Derived aggregate only; no raw human text or maker identifiers imported.",
+    "The approximately 43% edit probability and never-named dismiss refer to no-history H0, not own-history H2.",
+    "The 0.078032 half-Brier deficit in the specification belongs to a different arm, H2; N5 cannot directly apportion that deficit.",
+    "Simulator base rates are illustrative and remain frozen; exact empirical frequency matching is not claimed.",
+    "Class marginals use equal-writer weights on valid support; full-roster integer counts have a different denominator."
+  ]
+}

@@ -43,7 +43,7 @@ def prior_nodes(concentration, power):
     return gamma/gamma.sum(1, keepdims=True)
 
 
-def quadrature(v, p, power):
+def quadrature_scalar(v, p, power):
     nodes = prior_nodes(v['settings']['concentration'], power)
     logpi = np.log(nodes); ll = np.zeros(len(nodes))
     for row in p['history']:
@@ -51,6 +51,19 @@ def quadrature(v, p, power):
         ll += logits[:, row['choice']]-logsumexp(logits, axis=1)
     post = normalize(ll)
     return post@normalize(logpi+p['query']['quality']*QUALITY)
+
+
+def quadrature(v, p, power):
+    """Same likelihood, using sufficient counts and all row normalizers at once."""
+    nodes = prior_nodes(v['settings']['concentration'], power)
+    counts = np.bincount([row['choice'] for row in p['history']], minlength=4)
+    quality = np.array([row['quality'] for row in p['history']])
+    # The quality term for the observed category is constant across nodes and
+    # cancels from posterior normalization. Every row denominator is retained.
+    ll = np.log(nodes)@counts-np.log(nodes@np.exp(quality[:, None]*QUALITY).T).sum(1)
+    query = nodes*np.exp(p['query']['quality']*QUALITY)
+    query /= query.sum(1, keepdims=True)
+    return normalize(ll)@query
 
 
 def evaluate(v, p, truth=None):

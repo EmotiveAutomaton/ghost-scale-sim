@@ -1,4 +1,5 @@
 """N4: finite drive recipes, linear ablation, and pursuit vigor."""
+from functools import lru_cache
 import numpy as np
 from scipy.special import expit, logsumexp
 from .common import rng, normalize
@@ -39,7 +40,7 @@ def sample(v, phase, world, case, law=None):
         presence=(weights[index] > 0).astype(int).tolist(), vigor=vigor, law=int(law))
 
 
-def infer(v, p, linear=False, seeking=None, known_law=None):
+def infer_scalar(v, p, linear=False, seeking=None, known_law=None):
     s = v['settings']; mode = seeking or s['seeking']
     recipes, weights, _ = recipe_library(s['drives'], exactly=s['recipes'], seeking=mode)
     meaning = 'additive' if linear else s['meaning']
@@ -68,6 +69,56 @@ def infer(v, p, linear=False, seeking=None, known_law=None):
         seeking_model=mode, meaning=meaning, exact_finite=True)
 
 
+def infer(v,p,linear=False,seeking=None,known_law=None,prior=None,retain_types=False):
+    s=v['settings'];mode=seeking or s['seeking'];meaning='additive' if linear else s['meaning']
+    recipes,weights,_=recipe_library(s['drives'],exactly=s['recipes'],seeking=mode)
+    states=[(law,level) for law in (range(16) if known_law is None else [known_law])
+            for level in (range(3) if mode=='vigor' else [1])]
+    beta=np.array([BETAS[law]*(VIGOR[level] if mode=='vigor' else 1) for law,level in states])
+    action=np.array([expit(-.5+VIGOR[level]) if mode=='vigor' else .75 for law,level in states])
+    ll=np.zeros((len(states),len(weights)))
+    if prior is not None:ll+=np.log(prior)[None,:]
+    for row in p['history']:
+        ll+=np.log(action if row['acted'] else 1-action)[:,None]
+        if row['acted']:
+            utility=weights@satisfaction(row['options'],recipes,meaning,row['need']).T
+            logits=beta[:,None,None]*utility[None,:,:]
+            ll+=logits[:,:,row['choice']]-logsumexp(logits,axis=2)
+    post=normalize(ll.ravel()).reshape(ll.shape);marginal=post.sum(0)
+    utility=weights@satisfaction(p['query']['options'],recipes,meaning,p['query']['need']).T
+    forecast=normalize(beta[:,None,None]*utility[None,:,:])
+    vigor=np.zeros(3)
+    for i,(_,level) in enumerate(states):vigor[level]+=post[i].sum()
+    seeking_recipes=np.array([s['drives']-1 in recipe for recipe in recipes])
+    contains=np.any((weights>0)[:,seeking_recipes],axis=1)
+    detail=dict(recipe_presence=(marginal@(weights>0)).tolist(),act_probability=float(post.sum(1)@action),
+        support_states=int(post.size),seeking_model=mode,meaning=meaning,exact_finite=prior is None,
+        vigor_posterior=vigor.tolist(),seeking_profile_mass=float(marginal@contains))
+    if retain_types:detail['type_posterior']=marginal.tolist()
+    return np.einsum('st,sta->a',post,forecast)[None,:],detail
+
+
+def pooling_training(variant_id,drives,recipes,meaning,seeking):
+    return shared_pooling_training(drives,recipes,meaning,seeking)
+
+
+@lru_cache(None)
+def shared_pooling_training(drives,recipes,meaning,seeking):
+    """Empirical-Bayes recipe prior from independent makers, never their truth."""
+    from .common import canonical
+    identity=canonical(['N4-pooling',drives,recipes,meaning,seeking]).decode()
+    v=dict(id=identity,family='N4',settings=dict(drives=drives,recipes=recipes,meaning=meaning,
+        seeking=seeking,records=8,menus='random',extension=False))
+    count=len(recipe_library(drives,exactly=recipes,seeking=seeking)[1])
+    total=np.full(count,.5);records=[]
+    for maker in range(32):
+        public,_=sample(v,'recipe-pooling-training',maker,maker)
+        _,detail=infer(v,public,retain_types=True)
+        posterior=np.array(detail['type_posterior']);total+=posterior
+        records.append(dict(public=public,type_posterior=posterior.tolist()))
+    return total/total.sum(),records
+
+
 def evaluate(v, p, truth=None):
     if v['settings']['extension']:
         return evaluate_extension(v, p, truth)
@@ -75,6 +126,8 @@ def evaluate(v, p, truth=None):
     for name, kwargs in [('law-marginal', {}), ('drive-weights-only', dict(linear=True)),
                          ('seeking-dimension', dict(seeking='dimension')), ('seeking-vigor', dict(seeking='vigor'))]:
         readers[name], details[name] = infer(v, p, **kwargs)
+    s=v['settings'];prior,_=pooling_training(v['id'],s['drives'],s['recipes'],s['meaning'],s['seeking'])
+    readers['pooled-recipe'],details['pooled-recipe']=infer(v,p,prior=prior)
     if truth is not None:
         readers['oracle-law'], details['oracle-law'] = infer(v, p, known_law=truth['law'])
     return readers, details

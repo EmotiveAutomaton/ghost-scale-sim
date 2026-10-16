@@ -1,1 +1,95 @@
-{"at":"2026-10-15T06:17:53.404699+00:00","canonical_schema_commit":"2a0c54233344ae3f64bed9806442289d7dab726a","charged_cpu_hours_bound":1.3564409722222222,"deadline":"2026-10-22T05:04:15+00:00","families_admitted":2,"gear":2,"implementation_complete":false,"independent_family_checkers":["R1","R2","R3","R4","N2","N3","N6","N8"],"max_scientific_workers":3,"next_routine_health":"2026-10-15T17:04:15+00:00","opened":"2026-10-15T05:04:15+00:00","protected_cpu_hours":18,"report":"docs/versions/v23-research-division/OPENING_REPORT.md","retained_failed_attempts":4,"scientific_workers":2,"state":"R1/R2 discovery running; finite continuation active; remaining implementation unfinished","total_cpu_hours":90,"twins_built":0,"verified_calibration_packets":1,"verified_repair_pilots":8}
+{
+  "accepted_confirmations": 0,
+  "accepted_family_batches": 10,
+  "at": "2026-10-16T16:58:28.491547+00:00",
+  "campaign_complete": false,
+  "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
+  "charged_cpu_hours_bound": 36.48594618055556,
+  "completed_family_batches": 11,
+  "confirmation_runner": "repair and eligible N pipelines built; no reserved exposure; N3 excluded without finite support",
+  "continuation": "Queue 6 exited after discovery reporting failure. Additional N3 repair awaits explicit exception; no duplicate controller.",
+  "deadline": "2026-10-22T05:04:15+00:00",
+  "discovery_order_frozen": false,
+  "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
+  "engine_interface_verified": true,
+  "families": {
+    "N1": "RESOURCE_HELD_PARTLY_UNBUILT",
+    "N2": "INSTRUMENT_HELD_ZERO_SE",
+    "N3": "INSTRUMENT_HELD_REPORTING_FAILURE_REPAIR_LIMIT",
+    "N4": "RESOURCE_FAILED_PILOT_REPAIR",
+    "N5": "NOMINATED",
+    "N6": "PRIMARY_UNAVAILABLE",
+    "N7": "RESOURCE_HELD",
+    "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
+    "R1": "NOMINATED",
+    "R2": "NOMINATED",
+    "R3": "RESOURCE_FAILED_REPLAY",
+    "R4": "NOMINATED",
+    "T1": "DEPENDENCY_HELD_PARTLY_UNBUILT",
+    "T2": "DEPENDENCY_HELD_PARTLY_UNBUILT",
+    "T3": "DEPENDENCY_HELD_PARTLY_UNBUILT",
+    "T4": "DEPENDENCY_HELD_PARTLY_UNBUILT"
+  },
+  "families_admitted": 7,
+  "first_actual_review_delivery": "2026-10-15T07:49:30.875830+00:00",
+  "gear": 2,
+  "implementation_complete": false,
+  "independent_family_checkers": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "N7",
+    "N8"
+  ],
+  "last_operator_check": {
+    "at": "2026-10-16T16:58:28.491547+00:00",
+    "implementation_complete": false,
+    "profile": "FAIL",
+    "publication_checkpoint": true,
+    "queue_record": "results/v23/checkpoint-20261016/QUEUE_RECORD.json"
+  },
+  "max_scientific_workers": 3,
+  "n1_pilot": {
+    "cpu_seconds": 602.53125,
+    "known_answer_controls": "passed",
+    "production_admission": false,
+    "state": "RESOURCE_LIMIT_BEFORE_VERIFICATION"
+  },
+  "next_routine_health": "2026-10-16T17:04:15+00:00",
+  "opened": "2026-10-15T05:04:15+00:00",
+  "packet_states": {
+    "complete": 48,
+    "failed": 15
+  },
+  "population_checker": "engineering checks pass; largest production pilot reached CPU cap before independent verification; full batch/admission unfinished",
+  "profile_validation_status": "FAIL",
+  "protected_cpu_hours": 18,
+  "queue_states": {
+    "N3": "INSTRUMENT_FAILED"
+  },
+  "report": "docs/versions/v23-research-division/CHECKPOINT_2026-10-16.md",
+  "resource_amendments": [
+    "RESOURCE_REALLOCATION.json",
+    "RESOURCE_REALLOCATION_2.json",
+    "RESOURCE_REALLOCATION_3.json"
+  ],
+  "retained_failed_attempts": 15,
+  "scientific_controllers": 0,
+  "scientific_workers": 0,
+  "state": "QUEUE_IDLE_REVIEWED_RESULTS_AND_EXPLICIT_HOLDS",
+  "total_cpu_hours": 90,
+  "twin_engineering_fixtures_verified": 8,
+  "twins_built": 4,
+  "twins_scientifically_admitted": 0,
+  "verified_calibration_packets": 1,
+  "verified_family_decisions": 5,
+  "verified_partial_family_batches": 0,
+  "verified_repair_pilots": 8
+}

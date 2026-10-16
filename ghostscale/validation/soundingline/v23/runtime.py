@@ -65,6 +65,10 @@ def verify_plan(root, campaign):
     plan, acceptance = read(root/'PLAN.json'), read(campaign/'ACCEPTANCE.json')
     if digest(campaign/'ACCEPTANCE.json') != plan['acceptance_sha256']:
         raise ValueError('acceptance byte pin changed')
+    if plan.get('resource_amendment_sha256') and digest(campaign/'RESOURCE_REALLOCATION.json')!=plan['resource_amendment_sha256']:
+        raise ValueError('owner resource reallocation binding changed')
+    for name,expected in plan.get('resource_amendment_files',{}).items():
+        if Path(name).name!=name or digest(campaign/name)!=expected:raise ValueError('resource supplement binding changed')
     if environment() != read(campaign/'ENVIRONMENT.json'):
         raise ValueError('scientific environment changed')
     if digest(campaign/'ENVIRONMENT.json') != acceptance['environment_sha256']:
@@ -73,6 +77,8 @@ def verify_plan(root, campaign):
         if digest(REPO/relative) != expected: raise ValueError('source changed: '+relative)
     for path, expected in plan.get('dependency_files', {}).items():
         if digest(Path(path)) != expected: raise ValueError('dependency byte pin changed')
+    for path,expected in plan.get('external_source_files',{}).items():
+        if digest(Path(path))!=expected:raise ValueError('external engine source changed')
     if digest(Path(plan['source_archive'])) != plan['source_archive_sha256']:
         raise ValueError('source archive changed')
     predecessor = Path(acceptance['predecessor_closeout'])
@@ -83,8 +89,14 @@ def verify_plan(root, campaign):
         raise ValueError('V21 remains open')
     if now() < acceptance['opened'] or now() >= acceptance['deadline']:
         raise ValueError('outside immutable V23 window')
-    if plan['task'] not in ('calibration', 'pilot'):
-        from .support import verify as verify_support
+    if plan['task'] in ('profile-validation', 'profile-pilot'):
+        from .profile_validation import verify_configuration
+        verify_configuration(plan)
+    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot'):
+        if plan['family'].startswith('N'):
+            from .support_new import verify as verify_support
+        else:
+            from .support import verify as verify_support
         verify_support(plan)
         admission = read(campaign/'CALIBRATION_ACCEPTANCE.json')
         summary = Path(admission['summary'])
@@ -172,12 +184,35 @@ def execute_pass(root, campaign, label):
     if plan['task'] == 'calibration':
         from .calibration import run as calibrate
         calibrate(root/label, pulse, cpu_cap_seconds=plan['cpu_cap_seconds']/2)
+    elif plan['task'] == 'fits':
+        if plan['family'].startswith('N'):
+            from .pipeline_new import run_fits
+        else:
+            from .pipeline import run_fits
+        run_fits(root/label, plan, pulse)
     elif plan['task'] == 'family-batch':
-        from .pipeline import run_batch
+        if plan['family'].startswith('N'):
+            from .pipeline_new import run_batch
+        else:
+            from .pipeline import run_batch
         run_batch(root/label, plan, pulse)
+    elif plan['task'] == 'confirmation':
+        from .confirmation import run as confirm
+        confirm(root/label, plan, pulse)
     elif plan['task'] == 'pilot':
-        from .pilot import run as pilot
+        if plan['family'] == 'N1':
+            from .population_pipeline import pilot
+        elif plan['family'].startswith('N'):
+            from .pilot_new import run as pilot
+        else:
+            from .pilot import run as pilot
         pilot(root/label, plan, pulse)
+    elif plan['task']=='twin-engineering':
+        from .twin_engineering import run as engineering
+        engineering(root/label,plan,pulse)
+    elif plan['task'] in ('profile-validation','profile-pilot'):
+        from .profile_validation import run as validate_profiles
+        validate_profiles(root/label,plan,pulse)
     else:
         raise ValueError('unimplemented task cannot be admitted: '+plan['task'])
     pulse(phase='pass-complete')

@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-15T14:08:07.003315+00:00",
+  "events": [
+    {
+      "disposition": "Calibration relative-path resolution repaired against campaign root; original failed owner retained; queue 3 uses verified repair.",
+      "event_sha256": "1728a93cacb1e4e7dd4344ce5b20e03cdc888d7116ea470d86a42896e0464695",
+      "id": "preparation-queue-1-failed"
+    },
+    {
+      "disposition": "Deliberate operator stop replaced by frozen preparation queue 3; scientific children preserved.",
+      "event_sha256": "4bbe2b9cd65a3a0c41514315ec84ee00e99aa6ca0b73f587ed75a1e9b2e2d575",
+      "id": "preparation-queue-2-boundary"
+    },
+    {
+      "disposition": "Earlier R4 resource boundary retained; owner-approved reallocation and complete-world partitioning reopen second burn-in.",
+      "event_sha256": "073e74bb695481cece61834807610244407ee8c4bb58b3bae4e9d39e7690bffb",
+      "id": "repair-queue-2-boundary"
+    },
+    {
+      "disposition": "Retained resource-limit receipt in results/v23/n1-resource-pilot; no rerun or scientific null.",
+      "event_sha256": "844c316938ac6e26999395a81708d178726a89e215e022e448ec6c79fd4ffe59",
+      "id": "v23-n1-pilot-1-failed"
+    },
+    {
+      "disposition": "One bounded exact-draw cached-training repair configured in queue 3; original failed fit retained and charged.",
+      "event_sha256": "d35576295a9cc81e7b62d1963891d3e91f4c2e61739c6d6755edb5dfbca1a449",
+      "id": "v23-n2-fits-1-failed"
+    },
+    {
+      "disposition": "One bounded shared-training pilot repair configured in queue 3; original failed pilot retained and charged.",
+      "event_sha256": "232350da9b6d80acfe09cf94878cc926d0d9ddaf034ee3f7ee3b7060126f9371",
+      "id": "v23-n4-pilot-1-failed"
+    },
+    {
+      "disposition": "One bounded repaired pilot completed with full replay; full batch remains resource-held.",
+      "event_sha256": "8113cb91f0eedc7a37ee104caa81e6bd28c131fc054c394a2df80a6e22ed1ed8",
+      "id": "v23-n7-pilot-1-failed"
+    },
+    {
+      "disposition": "Eight engineering fixtures fully replayed and written through; full scientific twins not admitted.",
+      "event_sha256": "d8bf96c4f26113b6413604300fd8e4959ff99286616ab3235547a3a19f850abb",
+      "id": "v23-twin-engineering-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "0ef11cd028f676d2a0605835a6609efe48cd2b9cd50e87271480c8c5e5cb7122",
+      "id": "v23-n2-pilot-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "07598fe2194b813a6a0bbc03d5b9b43a1cee8a473cf9620c75c6957c3e87b735",
+      "id": "v23-n3-pilot-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "de6622584e6a05f7350f416acc950503cefc15b26875932e061ef39d445558e7",
+      "id": "v23-n5-pilot-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "295a542622f998c3629a762212127b73a3bd6e4d8caa57ede671e573119489a8",
+      "id": "v23-n5-pilot-1-cost-recheck-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "711399000ed89e8de3725684bac64d0317c123f2876733121ed699c55a4f8db8",
+      "id": "v23-n6-pilot-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "34fc81b15cd8a6ba08b3e4f089893aa4e751f15ae241920891b42844dab81d79",
+      "id": "v23-n6-pilot-1-cost-recheck-1-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "a95cc00d1bc7387b434b7c0071cadd30e10af39c9c0f1a833777c2f310b8c765",
+      "id": "v23-n6-pilot-1-cost-recheck-2-complete"
+    },
+    {
+      "disposition": "Pilot controls, complete grid, source bindings and original/replay receipt reviewed; engineering admission evidence only.",
+      "event_sha256": "d7701187225ac396fa6a998d38403116cb4d4f91f9a5ea3fdb012bc3433896e8",
+      "id": "v23-n7-pilot-1-repair-1-complete"
+    },
+    {
+      "disposition": "Six source-frozen fixed/fresh fits completely replayed and consumed by an admitted discovery batch; no family decision.",
+      "event_sha256": "2310a3a30c66c333b8933e9cda726f5483fa531e552c069021692e03627c6377",
+      "id": "v23-n5-fits-1-complete"
+    },
+    {
+      "disposition": "Six source-frozen fixed/fresh fits completely replayed and consumed by an admitted discovery batch; no family decision.",
+      "event_sha256": "5fede463e9dfd17546de984d259ca383e35582873fbf64b388def1a4e72ed19b",
+      "id": "v23-n6-fits-1-complete"
+    }
+  ],
+  "unaccepted_science": [
+    "v23-n5-batch-1: full replay complete; independent numerical review pending"
+  ]
+}

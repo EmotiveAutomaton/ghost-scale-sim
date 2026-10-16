@@ -29,3 +29,50 @@ def test_failure_is_urgent_and_closure_needs_report(tmp_path):
     write(tmp_path/'CLOSEOUT.json',dict(state='closed',owned_scientific_services_stopped=True,
         final_report=str(report),final_report_sha256=digest(report)))
     assert monitor.closed(tmp_path)
+def test_disappeared_preparation_owner_requests_one_health_event(tmp_path,monkeypatch):
+    from datetime import datetime,timezone
+    from runners import watch_v23_events as watcher
+    from ghostscale.validation.soundingline.v23.common import write
+    service=tmp_path/'preparation-queue-3'
+    write(service/'STATUS.json',dict(state='RUNNING',pid=123,heartbeat=datetime.now(timezone.utc).isoformat()))
+    monkeypatch.setattr(watcher,'alive',lambda pid:False)
+    config=dict(owned_service_states=[str(service)])
+    watcher.observe_services(tmp_path,config);watcher.observe_services(tmp_path,config)
+    assert len(list((tmp_path/'events').glob('*owner-unhealthy.json')))==1
+
+
+def test_notifier_restart_preserves_prior_accounting(tmp_path):
+    import pytest
+    write(tmp_path/'attempts/notifier.json',dict(cpu_seconds=123,state='stopped'))
+    with pytest.raises(ValueError,match='preserve existing'):
+        monitor.service_cost_path(tmp_path,{})
+    assert monitor.service_cost_path(tmp_path,dict(cost_identity='notifier-next')).name=='notifier-next.json'
+    assert read(tmp_path/'attempts/notifier.json')['cpu_seconds']==123
+    with pytest.raises(ValueError,match='invalid notifier'):
+        monitor.service_cost_path(tmp_path,dict(cost_identity='../escape'))
+
+
+def test_review_environment_pins_existing_owner_configuration(tmp_path,monkeypatch):
+    import pytest
+    with pytest.raises(ValueError,match='owner configuration'):
+        monitor.review_environment(dict(review_user_profile=str(tmp_path)))
+    (tmp_path/'.codex').mkdir();(tmp_path/'.codex/config.toml').write_text('approval_policy="on-request"')
+    monkeypatch.setenv('CODEX_HOME','incorrect-inherited-home')
+    env=monitor.review_environment(dict(review_user_profile=str(tmp_path)))
+    assert env['CODEX_HOME']==str(tmp_path/'.codex')
+    assert env['HOME']==str(tmp_path)
+    assert env['USERPROFILE']==str(tmp_path)
+
+
+def test_bounded_backlog_delay_never_hides_new_failure_or_deadline():
+    from datetime import timedelta
+    config=dict(defer_events_until=(datetime.now(timezone.utc)+timedelta(minutes=10)).isoformat(),
+        deferred_event_hashes={'old':'a','deadline':'d'})
+    old=dict(id='old',kind='instrument_failure',event_sha256='a')
+    assert not monitor.delivery_ready([old],['running'],config)
+    changed=dict(old,event_sha256='b')
+    assert monitor.delivery_ready([changed],['running'],config)==[changed]
+    deadline=dict(id='deadline',kind='final_deadline',event_sha256='d')
+    assert monitor.delivery_ready([deadline],['running'],config)==[deadline]
+    config['defer_events_until']=(datetime.now(timezone.utc)-timedelta(seconds=1)).isoformat()
+    assert monitor.delivery_ready([old],['running'],config)==[old]

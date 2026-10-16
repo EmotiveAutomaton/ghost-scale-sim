@@ -1,0 +1,137 @@
+{
+  "at": "2026-10-15T14:08:07.003315+00:00",
+  "pilots": [
+    {
+      "complete_sha256": "2eaaed7479b808dbcff5069cb2842ec08f3b7cb46eabd32ae4f9a7faaadc876c",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N2",
+      "packet": "v23-n2-pilot-1",
+      "plan_sha256": "8e00415215a88c4a843dc54ff413c81297f2f2efda8ff0769a0098505d9de14f",
+      "replay_sha256": "55f646e820ceb8b4ed4e5cebfe5c4974e7213544f32c7e47ede49691dc4a7662",
+      "scientific_claim": false,
+      "scientific_replay_files": 253,
+      "state": "PILOT_VALID",
+      "variants": 124
+    },
+    {
+      "complete_sha256": "dae6e2128bf085c17c6fb325b559c565527efb8c9b8af0651357e54eee8d16f8",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N3",
+      "packet": "v23-n3-pilot-1",
+      "plan_sha256": "1603328232de5c5c9aeedd76040e72d0a61825251d166e9a2ebb95b89a28da07",
+      "replay_sha256": "00fed7723b682684336bd1d3b80f692232495d9cf861fd38ba231ee72b5accf9",
+      "scientific_claim": false,
+      "scientific_replay_files": 5,
+      "state": "PILOT_VALID",
+      "variants": 96
+    },
+    {
+      "complete_sha256": "5b345eb257b6843431ebebe719ddbf53478519104415293aeec6e972d5b103fe",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N5",
+      "packet": "v23-n5-pilot-1",
+      "plan_sha256": "a63383aca929132fde17408db337e48f5deac3a0d05bd7066a872a7fa3f9dc61",
+      "replay_sha256": "e7fac2f2284f70053a4edafeeb59f952a3894d6f6ca3bacf2f7a06d56890a005",
+      "scientific_claim": false,
+      "scientific_replay_files": 133,
+      "state": "PILOT_VALID",
+      "variants": 128
+    },
+    {
+      "complete_sha256": "e925e9319321b771cbb1e81d6e6b14d201951089465c60ccb5be7ce7db38d1c6",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N5",
+      "packet": "v23-n5-pilot-1-cost-recheck-1",
+      "plan_sha256": "927aea83b323c3f3eb961b53206131ffbbf32db33eaacad19d5f5a9886352bfe",
+      "replay_sha256": "b3d1f1291d4ac285d86042e80c6b626c7749172adf66666488f42bf4d4353f06",
+      "scientific_claim": false,
+      "scientific_replay_files": 133,
+      "state": "PILOT_VALID",
+      "variants": 128
+    },
+    {
+      "complete_sha256": "31611be273ba2e91a93eef6c21205488afb41ecfcc28999893eb52c7df9e8652",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N6",
+      "packet": "v23-n6-pilot-1",
+      "plan_sha256": "b126c0e40ce18dc7062e2703db0ee8b7fa81be3025864a63a553c6521089308c",
+      "replay_sha256": "e1e9fad0bd10f574a00911fd415f3db20df3a94f00eb8c2257fe1d9a8041d3de",
+      "scientific_claim": false,
+      "scientific_replay_files": 221,
+      "state": "PILOT_VALID",
+      "variants": 108
+    },
+    {
+      "complete_sha256": "3dc4d09986add721f42321d78ecfb23b58480edf89064fd8836540e8c0b99705",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N6",
+      "packet": "v23-n6-pilot-1-cost-recheck-1",
+      "plan_sha256": "8d20343aab52b92680b663a69151ff091866e0ac53f1cd9cc255c671b9182063",
+      "replay_sha256": "4ef9d70cf45f53b158d20a0271f5b54b7c13820df7dee97d9c909f2afcfb43cb",
+      "scientific_claim": false,
+      "scientific_replay_files": 221,
+      "state": "PILOT_VALID",
+      "variants": 108
+    },
+    {
+      "complete_sha256": "2bb8857e9b1403911c2d9177a96203c5032c35ecab18e308abde67b696131ed1",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "family": "N6",
+      "packet": "v23-n6-pilot-1-cost-recheck-2",
+      "plan_sha256": "2f35975fa9741cd84d27549f0d51f4a6fcd9232c5daae9a70e9830105c0bb213",
+      "replay_sha256": "4ef9d70cf45f53b158d20a0271f5b54b7c13820df7dee97d9c909f2afcfb43cb",
+      "scientific_claim": false,
+      "scientific_replay_files": 221,
+      "state": "PILOT_VALID",
+      "variants": 108
+    },
+    {
+      "complete_sha256": "f4bc8ea37c24a6d6343d2a0b03dc016660036b9164d154d63885693c2e08932c",
+      "controls": {
+        "empirical_performance_not_a_gate": true,
+        "known_answer": true,
+        "mutation_refused": true
+      },
+      "discovery_disposition": "RESOURCE_DEFERRED",
+      "family": "N7",
+      "family_cap_cpu_hours": 7,
+      "packet": "v23-n7-pilot-1-repair-1",
+      "plan_sha256": "6ab6387d199b9dc6585a21947cbe550ad649c36d5f9d1e8d602d9d053823598a",
+      "projected_complete_batch_cpu_seconds": 65941.65625,
+      "replay_sha256": "49d6d9b4247f765b01f806d41d6f3c15139474f04c924149226cdb6b72444a79",
+      "scientific_claim": false,
+      "scientific_replay_files": 261,
+      "state": "PILOT_VALID",
+      "variants": 128
+    }
+  ],
+  "scope": "Engineering pilots only; raw products retained locally with full replay hashes"
+}

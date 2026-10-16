@@ -62,6 +62,8 @@ def evaluate(v, p, truth=None):
                'absorb-everything': model}
     detail = dict(model=md, withdraw=wd, primary_stratum='warmth=0 and competence=0',
                   compute_fee=.001, stakes=v['settings']['stakes'])
+    from .payoff import evaluate as decision_policy
+    readers['payoff-optimal'], detail['payoff-optimal'] = decision_policy(v, p, truth)
     if truth is not None:
         readers['oracle-law'] = infer(v, p, law=truth['law'])[0]
         for d in (md, wd):
@@ -70,6 +72,12 @@ def evaluate(v, p, truth=None):
             d['failed_technique'] = d['adopted_techniques']*(1-truth['competence'])
             d['nonprediction_payoff'] = d['useful_technique']-d['unwanted_uptake']-d['failed_technique']-.001*d['updates']
         detail['primary_eligible'] = truth['warmth'] == truth['competence'] == 0
+        count=len(p['history'])
+        detail['absorb-everything']=dict(updates=count,adopted_purposes=count,adopted_techniques=count,
+            unwanted_uptake=count*(1-truth['warmth']),useful_technique=count*truth['competence'],
+            failed_technique=count*(1-truth['competence']))
+        item=detail['absorb-everything']
+        item['nonprediction_payoff']=item['useful_technique']-item['failed_technique']-item['unwanted_uptake']-.001*count
     return readers, detail
 
 

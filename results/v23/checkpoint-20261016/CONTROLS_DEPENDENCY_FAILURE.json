@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-16T16:59:19.327114+00:00",
+  "state": "failed",
+  "tests": 4,
+  "exit_code": 1,
+  "cpu_seconds": 1.734375,
+  "scope": "N3 empty-support reporting regression, independent correction checker and complete engineering replay; no scientific retry",
+  "prior_setup_failure": "CONTROLS_SETUP_FAILURE.json",
+  "reason": "Test invocation omitted the campaign isolated dependency path; canonical schema import unavailable. Repaired invocation only; no environment synchronization or source change."
+}
