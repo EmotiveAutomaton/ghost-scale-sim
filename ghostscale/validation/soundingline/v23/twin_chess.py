@@ -74,7 +74,11 @@ def player(v,phase,world,maker,*,games=None,clock_quantiles=None):
     levels=solve(s['depth'],s['branching'],str((v['id'],phase,world)))
     r=rng('T2-player',v['id'],phase,world,maker);states=types(s['branching']);hidden=player_type(v,phase,world,maker)
     if clock_quantiles is None:raise ValueError('declared clock distribution required; no invented real timing')
-    clocks=empirical_quantiles(clock_quantiles['probabilities'],clock_quantiles['seconds'],r,(count+1)*s['depth'])
+    if 'values' in clock_quantiles and 'seconds' in clock_quantiles and clock_quantiles['values']!=clock_quantiles['seconds']:
+        raise ValueError('conflicting clock quantile values and seconds aliases')
+    values=clock_quantiles.get('values',clock_quantiles.get('seconds'))
+    if values is None:raise ValueError('clock quantile values required')
+    clocks=empirical_quantiles(clock_quantiles['probabilities'],values,r,(count+1)*s['depth'])
     history=[];truth=[]
     for game in range(count):
         node=0;opponent=(maker+game+1)%s['players']

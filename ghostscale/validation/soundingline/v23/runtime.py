@@ -9,6 +9,7 @@ import sys
 import threading
 import time
 from .common import digest, read, write
+from . import resource_policy
 
 REPO = Path(__file__).resolve().parents[4]
 
@@ -62,7 +63,8 @@ def cost(campaign):
 
 
 def verify_plan(root, campaign):
-    plan, acceptance = read(root/'PLAN.json'), read(campaign/'ACCEPTANCE.json')
+    plan = read(root/'PLAN.json')
+    acceptance = resource_policy.resolve(campaign, plan)
     if digest(campaign/'ACCEPTANCE.json') != plan['acceptance_sha256']:
         raise ValueError('acceptance byte pin changed')
     if plan.get('resource_amendment_sha256') and digest(campaign/'RESOURCE_REALLOCATION.json')!=plan['resource_amendment_sha256']:
@@ -277,7 +279,8 @@ def run(root, campaign):
             if time.monotonic()-start > plan.get('wall_cap_seconds',plan['cpu_cap_seconds']*4):
                 raise TimeoutError('job elapsed cap reached')
             limit = acceptance['cpu_seconds']-(0 if plan.get('protected') else acceptance['protected_cpu_seconds'])
-            if initial_cost+used >= limit: raise TimeoutError('campaign CPU reserve reached')
+            observed_cost = cost(campaign) if plan.get(resource_policy.BINDING) else initial_cost+used
+            if observed_cost >= limit: raise TimeoutError('campaign CPU reserve reached')
             if now() >= acceptance['deadline'] or (campaign/'STOP').exists(): raise TimeoutError('campaign stop')
             if memory()['available'] < acceptance['free_memory_bytes']: raise MemoryError('host memory reserve')
             if shutil.disk_usage(campaign).free < acceptance['free_disk_bytes']: raise OSError('host disk reserve')

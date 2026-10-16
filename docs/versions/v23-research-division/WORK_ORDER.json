@@ -4,28 +4,39 @@
   "calibration_attempts_admitted": 3,
   "calibration_attempts_verified": 1,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "completion_authority": "Owner-confirmed remaining implementation and bounded repairs, 2026-10-16; original allocation and scientific criteria unchanged.",
+  "completion_authority": "Owner authorized unambiguous addendum implementation while design answers remain pending, 2026-10-16.",
   "conditional_studies_complete": [
     "N4b"
   ],
   "day_zero": "2026-10-15T05:04:15+00:00",
   "day_zero_rule": "actual publication time of V21 final report; never reset for delays",
   "deadline": "2026-10-22T05:04:15+00:00",
+  "dispatch_priority": [
+    "N4c",
+    "N4",
+    "N7",
+    "T1",
+    "T4",
+    "T3",
+    "T2",
+    "R3",
+    "N8"
+  ],
   "elapsed_limit_days": 7,
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "execution_dispositions": {
-    "N1": "PRODUCTION_CONTROLS_PASSED_COST_PROFILE_QUEUED",
+    "N1": "RESOURCE_DEFERRED_COMPLETE_PROFILE_CPU_CAP",
     "N2": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
     "N3": "REPORTING_REPAIR_RUNNING",
-    "N4": "RESOURCE_FAILED_PILOT_REPAIR",
+    "N4": "COMPLETION_PROFILE_RUNNING",
     "N4b": "CONDITIONAL_STUDY_COMPLETE",
     "N5": "NOMINATED",
     "N6": "PRIMARY_UNAVAILABLE",
-    "N7": "RESOURCE_HELD",
+    "N7": "STOCKED_AWAITING_SLOT",
     "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
-    "R3": "PARTITION_RECOVERY_RUNNING",
+    "R3": "SECOND_BURNIN_ADMITTED_AWAITING_SLOT",
     "R4": "NOMINATED",
     "T1": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
     "T2": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
@@ -68,7 +79,7 @@
       "specified_grid_size": 16
     },
     {
-      "admission": "PARTITION_RECOVERY_RUNNING",
+      "admission": "SECOND_BURNIN_ADMITTED_AWAITING_SLOT",
       "budget_group": "repairs",
       "dependencies": [
         "all_launch_dependencies",
@@ -102,7 +113,7 @@
       "specified_grid_size": 90
     },
     {
-      "admission": "PRODUCTION_CONTROLS_PASSED_COST_PROFILE_QUEUED",
+      "admission": "RESOURCE_DEFERRED_COMPLETE_PROFILE_CPU_CAP",
       "budget_group": "n1",
       "dependencies": [
         "all_launch_dependencies",
@@ -170,7 +181,7 @@
       "specified_grid_size": 96
     },
     {
-      "admission": "RESOURCE_FAILED_PILOT_REPAIR",
+      "admission": "COMPLETION_PROFILE_RUNNING",
       "budget_group": "n4",
       "dependencies": [
         "all_launch_dependencies",
@@ -187,7 +198,7 @@
       "specified_grid_size": 172
     },
     {
-      "admission": "RESOURCE_HELD",
+      "admission": "STOCKED_AWAITING_SLOT",
       "budget_group": "n7",
       "dependencies": [
         "all_launch_dependencies",
@@ -333,22 +344,22 @@
   ],
   "gpu": false,
   "group_caps_cpu_hours_not_additive_authority": {
-    "confirmation": 15,
+    "confirmation": 40,
     "n1": 16,
     "n2": 24,
     "n3": 24,
-    "n4": 14,
+    "n4": 44,
     "n5": 3,
     "n6": 8,
-    "n7": 7,
+    "n7": 45,
     "n8": 2,
     "protected": 18,
-    "repairs": 32,
+    "repairs": 48,
     "setup": 8,
-    "twins": 14
+    "twins": 40
   },
   "interface_evidence": "results/v23/continuation-20261015/INTERFACE_VALIDITY.json",
-  "last_event_review": "CONTINUATION_2026-10-16.md",
+  "last_event_review": "ADDENDUM_IMPLEMENTATION_2026-10-16.md",
   "launch_dependencies": [
     "V21 published final report and hash-bound verified closure",
     "Native absence of predecessor scientific workers; no conflicting reviewer",
@@ -363,6 +374,12 @@
   "max_scientific_workers": 3,
   "native_study_workflows_built": true,
   "numerical_threads_per_worker": 1,
+  "original_packet_cpu_hours": 90,
+  "pending_design_decisions": [
+    "N4c scientific definition",
+    "T4 sensitivity mapping",
+    "mandatory/confirmation scheduling decision"
+  ],
   "preparation_order": [
     "canonical ledger mapping",
     "reference readers and conformance",
@@ -390,8 +407,10 @@
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
-    "RESOURCE_REALLOCATION_3.json"
+    "RESOURCE_REALLOCATION_3.json",
+    "ACCEPTANCE_SUPPLEMENT_2026-10-16.json"
   ],
+  "resource_supplement_sha256": "fd51052d69de2ccd68510f6bfbc365478c62f132628cd65c6e2a6c74dd7035ca",
   "schedule": "ASAP after valid prerequisites; original deadline is an outer stop",
   "schema": "ghost-v23-preparation-work-order-v1",
   "sounding_line_priority": true,
@@ -402,6 +421,7 @@
     "prior_mean_scale": 0.08,
     "prior_spread_scale": 0.05
   },
-  "total_cpu_hours": 90,
+  "total_cpu_hours": 285,
+  "worker_expansion_state": "HELD_FOR_MEASURED_INTERFERENCE_CONTRACT",
   "world_rungs_status": "CALIBRATED_WITH_QUALIFIED_POOLED_GRID_TARGETS"
 }

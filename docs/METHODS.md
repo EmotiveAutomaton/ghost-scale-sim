@@ -1,5 +1,13 @@
 # The methodology layer
 
+The V23 [resource supplement](versions/v23-research-division/ADDENDUM_IMPLEMENTATION_2026-10-16.md)
+separates new-admission policy from immutable old packet bounds. Checked successor
+capsules preserve scientific sources while changing only execution policy. Bounded
+concurrent whole-world parts retain complete raw/replay coverage, shared twin
+graphs and the frozen confirmation decision order. Execution partitions are not
+new sample units or additional interim looks. Engineering controls do not establish
+real-world throughput or scientific success.
+
 The N1 complete-profile review authenticates the cap exception, immutable plan/source/dependency bindings and four partial files, independently parses consecutive population-ledger membership, and rechecks the production controls’ complete replay hashes. It reports all 240 cells without inventing effects for unavailable cells. This accepts a resource disposition, not partial-world scientific scores or a full profile replay. [N1 report](versions/v23-research-division/N1_RESOURCE_REPORT.md).
 
 R3’s preserved controller independently reconstructs every first-burn-in proper score and the calibrated card from its matching scientific source. Review binds that controller’s immutable source manifest rather than assuming it equals newer development code. The first-burn-in card cannot waive the required second batch; complete scientific cost includes all reused parts. N2 partition evidence checks original/replay files and parent-world ownership without treating a partial batch as a family decision. [Reserve checkpoint](versions/v23-research-division/RESERVE_CHECKPOINT_2026-10-16.md).

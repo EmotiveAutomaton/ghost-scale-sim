@@ -1,7 +1,7 @@
-"""Service one logical batch through bounded, sequential scientific parts."""
+"""Service one logical batch through bounded, source-frozen scientific parts."""
 import os,time
 from pathlib import Path
-from ghostscale.validation.soundingline.v23 import partition,runtime
+from ghostscale.validation.soundingline.v23 import partition,runtime,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
 from runners.watch_v23_events import owner
 
@@ -11,27 +11,37 @@ def step(campaign,root):
     plan=read(root/'PLAN.json');layout=plan['partition_layout']
     if not plan.get('scheduler_only'):raise ValueError('logical batch required')
     parts=partition.part_paths(root,plan)
-    charged=0.;retained_cpu=0.;done=[];pending=[]
+    charged=0.;retained_cpu=0.;done=[];pending=[];failed=[]
     for index,part in enumerate(parts):
         status=read(part/'STATUS.json') if (part/'STATUS.json').exists() else {}
         if str(index) in plan.get('retained_parts',{}):retained_cpu+=status.get('cpu_seconds',0.)
         else:charged+=status.get('cpu_seconds',0.)
         if status.get('state')=='failed':
-            write(root/'STATUS.json',dict(state='failed',phase='partition-failed',packet=part.name,
-                cpu_seconds=charged,heartbeat=runtime.now()),immutable=False);return
-        if (part/'COMPLETE.json').exists():done.append(part)
+            failed.append(part)
+        elif (part/'COMPLETE.json').exists():done.append(part)
         elif (part/'PLAN.json').exists():pending.append(part)
+    if failed:
+        # Retain sibling reservations until already-running parts drain.
+        write(root/'STATUS.json',dict(state='partitioned' if pending else 'failed',
+            phase='failure-draining' if pending else 'partition-failed',failed_parts=[p.name for p in failed],
+            cpu_seconds=charged,pid=os.getpid(),heartbeat=runtime.now()),immutable=False)
+        return
     write(root/'STATUS.json',dict(state='partitioned',phase='parts',cpu_seconds=charged,pid=os.getpid(),
         parts_complete=len(done),parts_total=len(parts),heartbeat=runtime.now()),immutable=False)
-    if pending:return
     if len(done)==len(parts):
         # Assembly also consumes one scientist slot and has a bounded CPU cap.
-        if queue.active_count(queue.inventory(campaign))>=read(campaign/'ACCEPTANCE.json')['max_scientific_workers']:return
+        with owner(campaign/'admission'):
+            if queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign,plan):return
+            write(root/'STATUS.json',dict(state='partitioned',phase='assembly',uses_scientific_slot=True,
+                cpu_seconds=charged,pid=os.getpid(),heartbeat=runtime.now()),immutable=False)
         started=time.process_time()
         def pulse():
             if time.process_time()-started>layout['assembly_cpu_cap']:raise TimeoutError('assembly CPU cap reached')
         try:
-            receipt=partition.assemble(root,parts,pulse)
+            if plan['task']=='twin-batch':
+                from ghostscale.validation.soundingline.v23.twin_partition import assemble
+            else:assemble=partition.assemble
+            receipt=assemble(root,parts,pulse)
             used=time.process_time()-started
             write(root/'COMPLETE.json',receipt)
             write(root/'STATUS.json',dict(state='complete',phase='review-needed',cpu_seconds=charged+used,
@@ -42,11 +52,17 @@ def step(campaign,root):
                 cpu_seconds=charged+time.process_time()-started,heartbeat=runtime.now()),immutable=False)
             raise
         return
-    index=len(done);part=parts[index]
+    max_parallel=plan.get('max_parallel_parts',1)
+    if type(max_parallel) is not int or not 1<=max_parallel<=3:raise ValueError('invalid bounded partition concurrency')
+    if len(pending)>=max_parallel:return
+    if runtime.now()>=read(campaign/'ACCEPTANCE.json')['report_start'] or (campaign/'STOP').exists():return
+    unstarted=[i for i,part in enumerate(parts) if not (part/'PLAN.json').exists()]
+    if not unstarted:return
+    index=unstarted[0];part=parts[index]
     with owner(campaign/'admission'):
         # Parent already reserves the entire logical batch. This is a slot check,
         # never a second charge of its child budget or a fresh budget decision.
-        if queue.active_count(queue.inventory(campaign))>=read(campaign/'ACCEPTANCE.json')['max_scientific_workers']:return
+        if queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign,plan):return
         cap=layout['part_cpu_cap']
         if cap>14400 or cap*(len(parts)-len(plan.get('retained_parts',{})))+layout['assembly_cpu_cap']>plan['cpu_cap_seconds']:
             raise ValueError('partition reservation changed')

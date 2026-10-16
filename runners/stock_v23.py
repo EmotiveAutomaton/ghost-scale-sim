@@ -8,7 +8,7 @@ import os
 for _key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):os.environ[_key]='1'
 import argparse,math,time
 from pathlib import Path
-from ghostscale.validation.soundingline.v23 import runtime,registry
+from ghostscale.validation.soundingline.v23 import runtime,registry,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
 from ghostscale.validation.soundingline.v23.family import verify_packet
 from runners import admit_v23_repair as admission,queue_v23_families as queue
@@ -29,10 +29,11 @@ def admit_or_hold(campaign,state,name,task,cap,partitioned,repair=False):
 
 def step(campaign,state,config):
     decisions={}
-    acceptance=read(campaign/'ACCEPTANCE.json')
+    acceptance=resource_policy.resolve(campaign)
     if runtime.now()>=acceptance['report_start'] or (campaign/'STOP').exists():return dict(state='STOPPED_AT_CUTOFF',families={})
     if (state/'STOP').exists():return dict(state='OPERATOR_STOP',families={})
-    for name in registry.ORDER:
+    order=resource_policy.ordered(registry.ORDER) if resource_policy.binding(campaign) else registry.ORDER
+    for name in order:
         if name not in config['families']:continue
         item=config['families'][name]
         disposition=state/(name+'-DISPOSITION.json')
@@ -44,7 +45,8 @@ def step(campaign,state,config):
         if not (pilot/'PLAN.json').exists() and item.get('pilot_cpu_cap'):
             if queue.active_count(queue.inventory(campaign))>=acceptance['max_scientific_workers']:
                 decisions[name]='WAITING_FOR_PILOT_SLOT';continue
-            admitted=admission.admit(campaign,name,'pilot',item['pilot_cpu_cap'],launch=True,repair=item.get('pilot_repair',False))
+            admitted=admission.admit(campaign,name,'pilot',item['pilot_cpu_cap'],launch=True,
+                repair=item.get('pilot_repair',False),completion_pilot=item.get('completion_pilot',False))
             if admitted.resolve()!=pilot.resolve():raise ValueError('configured pilot identity differs')
             decisions[name]='PILOT_RUNNING';continue
         if status.get('state')=='failed':
@@ -69,7 +71,8 @@ def step(campaign,state,config):
             partitioned=item.get('partitioned',False)
             if partitioned:
                 from ghostscale.validation.soundingline.v23.partition import layout
-                estimate=layout(16,estimate,2*max(row['auxiliary_cpu_seconds'] for row in costs) if new_family else 0.)['total_cpu_cap']
+                estimate=layout(16,estimate,2*max(row['auxiliary_cpu_seconds'] for row in costs) if new_family else 0.,
+                    min_worlds=1 if resource_policy.binding(campaign) else 4)['total_cpu_cap']
             limit=admission.budget_limits(campaign)[name.lower() if new_family else 'repairs']*3600
             result=None
             if (estimate>14400 and not partitioned) or 2*estimate+item['fit_cpu_cap']>limit:

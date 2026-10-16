@@ -1,6 +1,6 @@
 """Recover only failed execution partitions, retaining verified scientific work."""
 from pathlib import Path
-from ghostscale.validation.soundingline.v23 import family,partition,runtime
+from ghostscale.validation.soundingline.v23 import family,partition,runtime,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
 from runners import queue_v23_families as queue
 from runners.watch_v23_events import owner
@@ -11,7 +11,8 @@ def admit(campaign, original, identity, part_cap):
     if Path(identity).name!=identity or not identity.startswith('v23-'):raise ValueError('unsafe recovery identity')
     if not 0<part_cap<=14400:raise ValueError('invalid bounded recovery cap')
     with owner(campaign/'admission'):
-        acceptance=read(campaign/'ACCEPTANCE.json')
+        original_plan=read(original/'PLAN.json')
+        acceptance=resource_policy.resolve(campaign,original_plan)
         if not acceptance['opened']<=runtime.now()<acceptance['report_start']:raise ValueError('outside original window')
         authority=campaign/'CONTINUATION_AUTHORITY_20261016.json';read(authority)
         plan=read(original/'PLAN.json');status=read(original/'STATUS.json')
@@ -29,7 +30,10 @@ def admit(campaign, original, identity, part_cap):
             else:unstarted.append(i)
         if not failed:raise ValueError('no failed partition to repair')
         cap=part_cap*(len(plan['partition_layout']['chunks'])-len(retained))+plan['partition_layout']['assembly_cpu_cap']
-        state=queue.capacity(campaign,queue.inventory(campaign),cap,budget_group=plan['budget_group'],needs_slot=False)
+        # Recovery retains the original logical packet's source/runtime contract.
+        # Do not grant a new budget that its frozen runtime cannot enforce.
+        state=queue.capacity(campaign,queue.inventory(campaign),cap,budget_group=plan['budget_group'],
+            needs_slot=False,policy_plan=original_plan)
         if state!='AVAILABLE':raise ValueError('recovery capacity held: '+state)
         root=campaign/'packets'/identity
         if root.exists():raise ValueError('preserve existing recovery identity')

@@ -3,7 +3,7 @@ import os
 for _key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):os.environ[_key]='1'
 from pathlib import Path
 import argparse,time
-from ghostscale.validation.soundingline.v23 import runtime,twin_admission,twin_contract,twin_pipeline
+from ghostscale.validation.soundingline.v23 import runtime,twin_admission,twin_contract,twin_pipeline,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
 from ghostscale.validation.soundingline.v23.family import verify_packet
 from runners import queue_v23_families as queue
@@ -15,8 +15,8 @@ from runners.watch_v23_events import owner,event
 def task(campaign,family,identity,kind,cap,extras):
     root=campaign/'packets'/identity
     if not (root/'PLAN.json').exists():
-        if cap>14400:return root,'RESOURCE_DEFERRED'
-        if queue.active_count(queue.inventory(campaign))>=3:return root,'WAITING_FOR_SLOT'
+        if cap>14400 and not (kind=='twin-batch' and extras.get('partitioned_twin')):return root,'RESOURCE_DEFERRED'
+        if queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign):return root,'WAITING_FOR_SLOT'
         try:admit(campaign,identity,kind,family,cap,extras,group='twins')
         except ValueError as exc:
             if any(word in str(exc) for word in ('GLOBAL_CPU_RESERVE','FAMILY_GROUP_CAP')):return root,'RESOURCE_DEFERRED'
@@ -24,6 +24,10 @@ def task(campaign,family,identity,kind,cap,extras):
             raise
         return root,'RUNNING_OR_ADMITTED'
     status=read(root/'STATUS.json') if (root/'STATUS.json').exists() else {}
+    if read(root/'PLAN.json').get('scheduler_only') and status.get('state') not in ('complete','failed'):
+        from runners.partition_v23 import step as partition_step
+        partition_step(campaign,root)
+        status=read(root/'STATUS.json') if (root/'STATUS.json').exists() else {}
     if status.get('state')=='failed':return root,'INSTRUMENT_FAILED'
     if not (root/'COMPLETE.json').exists():return root,'RUNNING_OR_ADMITTED'
     review=root/'TWIN_REVIEW.json'
@@ -38,7 +42,7 @@ def task(campaign,family,identity,kind,cap,extras):
 def step(campaign,state,config):
     if runtime.now()>=read(campaign/'ACCEPTANCE.json')['report_start'] or (campaign/'STOP').exists():return dict(state='STOPPED_AT_CUTOFF')
     decisions={}
-    for family in ('T1','T2','T4','T3'):
+    for family in ('T1','T4','T3','T2'):
         item=config['families'][family]
         if not item.get('empirical_reference'):
             decisions[family]=dict(state='DEPENDENCY_HELD',missing_measured_fields=list(twin_contract.REQUIRED[family]),
@@ -48,7 +52,13 @@ def step(campaign,state,config):
         extras.update(config['implementation_controls'],config['engine_dependency'])
         pilot,outcome=task(campaign,family,'v23-'+family.lower()+'-profile-1','twin-profile',item['profile_cap'],extras)
         if outcome!='VERIFIED':decisions[family]=dict(state=outcome,stage='profile',packet=pilot.name);continue
-        costs=twin_admission.estimate(pilot,family);extras.update(binding(pilot,'pilot'))
+        extras['partitioned_twin']=bool(resource_policy.binding(campaign))
+        try:costs=twin_admission.estimate(pilot,family,partitioned=extras['partitioned_twin'])
+        except ValueError as exc:
+            if 'individual packet limit' not in str(exc):raise
+            decisions[family]=dict(state='RESOURCE_DEFERRED',reason='One whole twin world exceeds the packet limit; makers cannot be split into worlds.')
+            continue
+        extras.update(binding(pilot,'pilot'))
         fits,outcome=task(campaign,family,'v23-'+family.lower()+'-fits-1','twin-fits',costs['fits'],dict(extras,burnin_reservations_seconds=[costs['batch']]))
         if outcome!='VERIFIED':decisions[family]=dict(state=outcome,stage='fitting',packet=fits.name,estimated_cpu_seconds=costs);continue
         extras.update(binding(fits,'fit'));folder=fits/'original/fits'

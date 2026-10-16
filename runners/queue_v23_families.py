@@ -11,7 +11,7 @@ import argparse
 from datetime import datetime,timezone
 from pathlib import Path
 import subprocess,sys,time
-from ghostscale.validation.soundingline.v23 import family,runtime
+from ghostscale.validation.soundingline.v23 import family,runtime,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
 from runners.watch_v23_events import owner,alive,event
 
@@ -25,9 +25,9 @@ def inventory(campaign):
     return result
 
 
-def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',needs_slot=True,replacing_burnin=None):
+def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',needs_slot=True,replacing_burnin=None,policy_plan=None):
     """Reserve unfinished admissions even during their launch/handshake interval."""
-    acceptance=read(campaign/'ACCEPTANCE.json');reserved=0.;group=0.;active=0
+    acceptance=resource_policy.resolve(campaign,policy_plan);reserved=0.;group=0.;active=0
     from runners.admit_v23_repair import reservations_released,burnin_reservation
     for path,plan,status in entries:
         unfinished=status.get('state') not in ('complete','failed')
@@ -36,7 +36,7 @@ def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',
             continue
         if unfinished:
             reserved+=max(0,plan['cpu_cap_seconds']-status.get('cpu_seconds',0.)) if plan.get('scheduler_only') else plan['cpu_cap_seconds']
-            if not plan.get('scheduler_only'):active+=1
+            if not plan.get('scheduler_only') or status.get('uses_scientific_slot'):active+=1
             if plan['budget_group']==budget_group:group+=plan['cpu_cap_seconds']
         elif plan['budget_group']==budget_group:group+=status.get('cpu_seconds',0.)
         released=reservations_released(campaign,plan.get('family',''))
@@ -56,13 +56,13 @@ def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',
     if needs_slot and active>=acceptance['max_scientific_workers']:return 'NO_SLOT'
     if runtime.cost(campaign)+reserved+new_cap>acceptance['cpu_seconds']-acceptance['protected_cpu_seconds']:
         return 'GLOBAL_CPU_RESERVE'
-    from runners.admit_v23_repair import budget_limits
-    if group+new_cap>budget_limits(campaign)[budget_group]*3600:return 'REPAIRS_GROUP_CAP' if budget_group=='repairs' else 'FAMILY_GROUP_CAP'
+    if group+new_cap>acceptance['group_caps_cpu_hours'][budget_group]*3600:return 'REPAIRS_GROUP_CAP' if budget_group=='repairs' else 'FAMILY_GROUP_CAP'
     return 'AVAILABLE'
 
 
 def active_count(entries):
-    return sum(s.get('state') not in ('complete','failed') and not p.get('scheduler_only') for _,p,s in entries)
+    return sum(s.get('state') not in ('complete','failed') and
+        (not p.get('scheduler_only') or s.get('uses_scientific_slot',False)) for _,p,s in entries)
 
 
 def launch(root,campaign,source):
@@ -79,7 +79,7 @@ def launch(root,campaign,source):
 
 
 def step(campaign,config):
-    acceptance=read(campaign/'ACCEPTANCE.json')
+    acceptance=resource_policy.resolve(campaign)
     if runtime.now()>=acceptance['report_start'] or (campaign/'STOP').exists():return dict(state='STOPPED_AT_CUTOFF')
     calibration=read(campaign/'CALIBRATION_ACCEPTANCE.json')
     summary=Path(calibration['summary'])
@@ -91,7 +91,8 @@ def step(campaign,config):
         chosen=summary.parent/'CHOSEN_BEFORE_VALIDATION.json';policy=read(chosen)
     states={}
     from ghostscale.validation.soundingline.v23.registry import ORDER
-    for name in ORDER:
+    order=resource_policy.ordered(ORDER) if resource_policy.binding(campaign) else ORDER
+    for name in order:
         if name not in config['families']:continue
         first=Path(config['families'][name]['first_packet'])
         paths=[first]
@@ -148,8 +149,9 @@ def step(campaign,config):
             if 'ghostscale/validation/soundingline/v23/partition.py' not in previous['sources']:
                 states[name]='RESOURCE_DEFERRED';continue
             from ghostscale.validation.soundingline.v23.partition import layout
-            split=layout(new['worlds'],estimate);cap=split['total_cpu_cap']
+            split=layout(new['worlds'],estimate,min_worlds=1 if resource_policy.binding(campaign) else 4);cap=split['total_cpu_cap']
             new.update(scheduler_only=True,partition_layout=split)
+            if resource_policy.binding(campaign):new['max_parallel_parts']=3
         with owner(campaign/'admission'):
             limit=capacity(campaign,inventory(campaign),cap,second_family=name if batch==2 else None,budget_group=previous['budget_group'],needs_slot=not new.get('scheduler_only'))
             if limit!='AVAILABLE':
@@ -157,7 +159,8 @@ def step(campaign,config):
             root=campaign/'packets'/f'v23-{name.lower()}-batch-{batch}'
             new.update(cpu_cap_seconds=cap,wall_cap_seconds=cap*4,second_burnin_reservation_seconds=0,
                 predecessor_decision=digest(card),confirmation_support=previous['confirmation_support'])
-            source=Path(previous['source_archive']).with_suffix('')
+            new=resource_policy.rebind_successor(campaign,root.name,new,Path(__file__).resolve().parents[1])
+            source=Path(new['source_archive']).with_suffix('')
             for relative,expected_hash in new['sources'].items():
                 if digest(source/relative)!=expected_hash:raise ValueError('source capsule changed')
             write(root/'PLAN.json',new)
@@ -186,6 +189,11 @@ def run(campaign,state,config_path):
     with owner(state):
         try:
             while True:
+                if (state/'STOP').exists():
+                    result=dict(state='OPERATOR_STOP_AT_BOUNDARY',reason='No live scientific packet was stopped')
+                    write(state/'STATUS.json',dict(result,pid=os.getpid(),heartbeat=runtime.now()),immutable=False)
+                    write(cost_path,dict(cpu_seconds=time.process_time()-started,state=result['state']),immutable=False)
+                    return
                 result=step(campaign,config)
                 write(state/'STATUS.json',dict(result,pid=os.getpid(),heartbeat=runtime.now(),config_sha256=digest(config_path)),immutable=False)
                 write(cost_path,dict(cpu_seconds=time.process_time()-started,state=result['state']),immutable=False)

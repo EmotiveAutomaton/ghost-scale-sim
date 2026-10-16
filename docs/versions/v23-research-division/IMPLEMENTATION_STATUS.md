@@ -1,8 +1,15 @@
 # V23 implementation status
 
+Latest engineering update: [resource supplement and finite queue](ADDENDUM_IMPLEMENTATION_2026-10-16.md).
+The 285-hour supplement is active for new admissions; actual concurrency remains
+three until sibling-interference monitoring is validated. N4's completion profile
+is running, N7's raised-cap preparation is stocked, and R3's second burn-in is
+admitted. N4c and the T4 sensitivity interpretation remain pending. Earlier
+resource-hold wording below describes the pre-supplement checkpoint.
+
 Current work: [October 16 completion and repair continuation](CONTINUATION_2026-10-16.md).
 N3's reporting repair is running. R3's recovered first batch passes independent
-reconstruction and requires a second burn-in, currently resource-held. N2's numerical repair and N4b's complete
+reconstruction and its required second burn-in is admitted. N2's numerical repair and N4b's complete
 conditional study are independently verified. N1 production controls passed and
 its largest-cell cost profile hit its finite CPU cap. The full-map study is
 [resource-deferred](N1_RESOURCE_REPORT.md); no smaller grid or partial-world result is substituted.
@@ -15,18 +22,18 @@ The table separates built components, actual execution, and outstanding admissio
 | Stopping | Seven-look calibration, independent reconstruction and complete replay | Apply only to accepted complete logical batches; no partial partitions |
 | Confirmation | R/N runners, N1 whole-population blocks, finite support proofs, independent raw evidence, separate reserved fits, partition assembly and finite order controller | Freeze complete reviewed discovery order before exposure. N1 balances all 32 cultures and retains all assigned makers. N3 remains excluded without finite support. |
 | R1/R2 | Full pipelines, independent checks, complete replay and scientific write-through | Nominated after three/two batches; await confirmation order |
-| R3 | Full retained pipeline, fixed/fresh fits and partitioned batch; provenance-bound recovery of failed parts | All four parts, complete assembly and independent first-burn-in reconstruction pass. The calibrated card requires batch two; its 27,512 CPU-second full-cost reservation remains held. Reevaluate after N3 terminal release. Terminal-family review and disposition remain pending. |
+| R3 | Full retained pipeline, fixed/fresh fits and partitioned batch; provenance-bound recovery of failed parts | First burn-in reconstruction passes. The required second burn-in is admitted under the supplement with a 27,512 CPU-second full-cost reservation and awaits a slot. Terminal-family review remains pending. |
 | R4 | Both complete burn-ins independently reviewed, including partition assembly, raw/node diagnostics and replay | Discovery nomination; confirmation awaits full discovery order. |
 | N1 | Full population ladder, complete-map cost profile, fixed/fresh retained fits, convergence/shuffle controls, precision extension, independent reconstruction and finite admission/controller | Original capped pilot preserved. Production controls pass; the completion profile capped during the first of 240 cells (1,994/10,000 ledger members). No complete profile/replay, fits, full-map burn-in or precision extension admitted. Resource-deferred; full grid retained. Small population and reserved balanced-block checks remain engineering evidence. |
 | N2 | Full calibration equivalence, complete retained-score repair/replay, independent reconstruction and calibrated first-burn-in card | Numerical hold resolved. Second complete burn-in required; original predictions and failed review remain retained. |
 | N3 | Six fits independently verified with complete replay; reporting fix and four targeted checks | Owner authorized additional reporting repair; first full partitioned batch running with unchanged unavailable-support semantics. |
-| N4 | Complete main-grid pipeline and bounded pre-discovery pilot repair; separate N4b conditional pipeline and finite controller | Main-grid repair hit CPU cap. N4b is complete: 12 settings, 12,288 cases, six rivals, full replay and independent reconstruction. [Result](N4B_REPORT.md). |
+| N4 | Complete main-grid pipeline and bounded pre-discovery profiles; separate N4b conditional pipeline and finite controller | New completion profile is running under the supplement; prior capped profiles remain retained. N4b is complete: 12 settings, 12,288 cases, six rivals, full replay and independent reconstruction. [Result](N4B_REPORT.md). N4c design is pending. |
 | N5 | Both full burn-ins and all secondary metrics independently reviewed; full replay | Calibration-gain nomination. Universal 75%-recovery prediction fails in one large-bias/no-history setting; approximate hierarchical reader is not an exact ceiling. |
 | N6 | Full batch, scores, uptake paths, payoff diagnostics and full replay reviewed | PRIMARY_UNAVAILABLE: two empty conditional worlds. No deletion, extra sampling or finite family selection. |
-| N7 | Full retained pipeline, independent recipe checker, retained shift-training evidence, bounded vector/shared-training repair and complete pilot | Full batch projects to about 18.3 CPU hours before fitting, exceeding its 7-hour family cap; resource-held, not a null |
+| N7 | Full retained pipeline, independent recipe checker, retained shift-training evidence, bounded vector/shared-training repair and complete pilot | Stocked under the raised 45-hour cap. Two-world parts keep individual execution below four CPU hours; fits and both mandatory burn-ins are reserved before science. Awaiting a slot. |
 | N8 optional | Full retained pipeline, independent checks, controls, pilot entry point and evidence-bound mandatory-disposition gate | Not admitted before mandatory dispositions and sufficient capacity |
 | T1-T4 | Whole-testbed grids, retained fixed/fresh fits, independent consumers, measured-input gate, shared-world graphs, supported pinned-engine baselines, spike-ins, cost admission and finite controller | Production awaits authenticated empirical summaries. Unobserved revision-purpose engine target and product-module smoke gates remain upstream dependencies. [Exact inputs and limitations](TWIN_INPUT_CONTRACT.md). |
-| Execution | Frozen sources, charged failures/helpers/replay, per-part caps, fit handoffs, protected mandatory reservations and finite family/extension/twin/confirmation controllers | Advance accepted successors; stop at reviewed terminal states, failures or cost boundaries. Original total, reserve and deadline remain. |
+| Execution | Frozen sources, charged failures/helpers/replay, per-part caps, fit handoffs, protected mandatory reservations and finite family/extension/twin/confirmation controllers | New admissions use the hash-bound resource supplement; old packet bounds, reserve and deadline remain. Parallel whole-world parts preserve complete scientific decisions. |
 | Monitoring | Twelve-hour cadence, completion/failure/decision events, logical partition ownership and controller-staleness checks | One notifier; preserve live review ownership and exact hash acknowledgements; retire at finite closeout |
 
 The newer ToMpathy research interface at `82789fdb50d9366ab9352129b01ee37622554dfa`

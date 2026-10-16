@@ -8,7 +8,7 @@ from pathlib import Path
 import secrets
 import shutil
 import zipfile
-from ghostscale.validation.soundingline.v23 import runtime, ledger
+from ghostscale.validation.soundingline.v23 import runtime, ledger, resource_policy
 from ghostscale.validation.soundingline.v23.common import read, write, digest
 from runners import queue_v23_families as queue
 from runners.watch_v23_events import owner
@@ -52,15 +52,19 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
     campaign = Path(campaign).resolve()
     if Path(identity).name != identity or not identity.startswith('v23-'):
         raise ValueError('unsafe packet identity')
-    if not 0 < cap <= 14400:raise ValueError('bounded packet requires at most four CPU hours')
     if not isinstance(extras, dict):raise ValueError('explicit task contract required')
+    partitioned=task=='twin-batch' and extras.get('partitioned_twin',False)
+    if not 0 < cap or (cap>14400 and not partitioned):raise ValueError('bounded packet requires at most four CPU hours')
     extras=dict(extras)
     reserved_keys = {'task','family','budget_group','cpu_cap_seconds','wall_cap_seconds','protected',
         'acceptance_sha256','sources','source_archive','source_archive_sha256','dependency_files',
-        'schema_directory','schema_pin','continuation_authority_sha256','external_source_files','extra_pythonpath'}
+        'schema_directory','schema_pin','continuation_authority_sha256','external_source_files','extra_pythonpath',
+        'scheduler_only','partition_layout','max_parallel_parts','world_indices',resource_policy.BINDING}
     if reserved_keys.intersection(extras):raise ValueError('task extras cannot override admission authority')
     with owner(campaign/'admission'):
-        acceptance = read(campaign/'ACCEPTANCE.json')
+        acceptance = resource_policy.resolve(campaign)
+        if family=='N1' and resource_policy.binding(campaign):
+            raise ValueError('N1 remains resource-deferred under the addendum; no readmission')
         if not acceptance['opened'] <= runtime.now() < acceptance['report_start']:
             raise ValueError('outside immutable scientific window')
         if runtime.environment() != read(campaign/'ENVIRONMENT.json'):
@@ -75,7 +79,14 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             from ghostscale.validation.soundingline.v23.twin_admission import validate
             minimum,reservation=validate(task,family,extras,Path(__file__).resolve().parents[1])
             if cap<minimum:raise ValueError('measured full replay cost exceeds twin cap')
+        if partitioned:
+            if not resource_policy.binding(campaign):raise ValueError('twin partition resource supplement required')
+            from ghostscale.validation.soundingline.v23.twin_admission import estimate
+            split=estimate(Path(extras['pilot_packet']),family,partitioned=True).get('partition_layout')
+            if split:
+                extras.update(scheduler_only=True,partition_layout=split,max_parallel_parts=3)
         state = queue.capacity(campaign, queue.inventory(campaign), cap+reservation, budget_group=group,
+            needs_slot=not extras.get('scheduler_only'),
             replacing_burnin=(family,extras.get('batch')) if task in ('population-batch','conditional-batch','twin-batch') else None)
         if state != 'AVAILABLE':raise ValueError('continuation admission held: '+state)
         pin = read(campaign/'SCHEMA_PIN.json')
@@ -101,7 +112,7 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             source_archive_sha256=digest(archive), schema_directory=pin['directory'], schema_pin=pin,
             dependency_files={str(p):digest(p) for p in (campaign/'dependencies').rglob('*')
                 if p.is_file() and p.suffix in ('.py','.pyd','.dll')},
-            continuation_authority_sha256=authority, canary_key=canary, **extras)
+            continuation_authority_sha256=authority, canary_key=canary, **extras, **resource_policy.binding(campaign))
         if task in ('twin-profile','twin-fits','twin-batch'):
             reference=read(Path(extras['engine_reference_packet'])/'PLAN.json')
             for path,value in reference['external_source_files'].items():
@@ -113,5 +124,5 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
         write(root/'ADMISSION.json', dict(at=runtime.now(), plan_sha256=digest(root/'PLAN.json'),
             continuation_authority_sha256=authority, charged_cpu_seconds=runtime.cost(campaign),
             new_cap_seconds=cap, reserved_successor_seconds=reservation,capacity=state))
-        if launch:queue.launch(root, campaign, source)
+        if launch and not plan.get('scheduler_only'):queue.launch(root, campaign, source)
         return root

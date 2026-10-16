@@ -244,7 +244,8 @@ def run(root,plan,pulse):
             group=str(v['settings']['branching']) if v['family']=='T2' else 'shared'
             fitted={name:Direct.load(fitroot/(name+'.npz')) for name,row in fitmeta.items() if row['class_group']==group}
             if len(fitted)!=6:raise ValueError('six fixed/fresh twin rivals required for this target support')
-        for world in range(1 if pilot else plan['worlds']):
+        from .partition import world_indices
+        for world in ([0] if pilot else world_indices(plan)):
             worlds.append(evaluate_world(root/v['id']/f'world-{world:04d}',v,'cost-profile' if pilot else 'twin-discovery',world,ref,schema,plan['canary_key'],pulse,fitted))
         gains=[row['world_gain'] for row in worlds]
         estimate=interval(gains,[v['id'],'detectability']) if all(g is not None for g in gains) else dict(finite=False,mean=None,lower=None,upper=None,se=None)
@@ -276,9 +277,14 @@ def run(root,plan,pulse):
 def reconstruct(root,plan):
     """Independent proper scoring and whole-world replication, no maker pseudo-n."""
     from .family import rows
-    root=Path(root);checked={}
-    for item in read(root/'SUMMARY.json')['variants']:
+    from .partition import world_indices
+    root=Path(root);checked={};items=read(root/'SUMMARY.json')['variants']
+    if [item['variant']['id'] for item in items]!=[v['id'] for v in registry.variants(plan['family'])]:
+        raise ValueError('incomplete twin variant coverage')
+    for item in items:
         v=item['variant'];means=[]
+        if [world['world'] for world in item['worlds']]!=world_indices(plan):
+            raise ValueError('incomplete twin world coverage')
         for world in item['worlds']:
             folder=root/v['id']/f"world-{world['world']:04d}";gains=[]
             for unit in sorted(folder.glob('maker-*')):
@@ -295,6 +301,7 @@ def reconstruct(root,plan):
                 rival='summary-only' if v['family']=='T3' else 'group-population' if v['family']=='T4' else 'population'
                 mechanism='joint' if v['family']=='T3' else 'individual'
                 delta=rebuilt[rival]['log_loss']-rebuilt[mechanism]['log_loss'];gains.append(float(np.mean(delta)))
+            if len(gains)!=world['makers']:raise ValueError('incomplete twin maker coverage')
             observed=float(np.mean(gains)) if np.isfinite(gains).all() else None
             if observed is None and world['world_gain'] is not None or observed is not None and not np.isclose(observed,world['world_gain'],atol=1e-11,rtol=0):
                 raise ValueError('whole-world twin aggregate differs')

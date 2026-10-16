@@ -1,5 +1,10 @@
 # Ghost Scale Simulation
 
+[V23 resource supplement](docs/versions/v23-research-division/ADDENDUM_IMPLEMENTATION_2026-10-16.md):
+new admissions have a 285 CPU-hour ceiling with 18 protected. N4's completion
+profile is running, N7 is stocked and R3's second burn-in is admitted. Scientific
+criteria and the deadline are unchanged; unresolved designs remain pending.
+
 [V23 completion continuation](docs/versions/v23-research-division/CONTINUATION_2026-10-16.md):
 the queue is running again. N2's retained-data numerical repair is verified;
 the [contingency probe](docs/versions/v23-research-division/N4B_REPORT.md) is complete.

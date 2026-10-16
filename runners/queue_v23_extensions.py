@@ -120,7 +120,8 @@ def step(campaign,config):
         status_path=Path(precedence['service_state'])/'STATUS.json'
         if not status_path.exists() or read(status_path)['state']=='RUNNING':
             return dict(state='RUNNING',phase='WAITING_FOR_PRIOR_AUTHORIZED_ADMISSION')
-    if queue.active_count(queue.inventory(campaign))>=3:return dict(state='RUNNING',phase='WAITING_FOR_SLOT')
+    from ghostscale.validation.soundingline.v23 import resource_policy
+    if config.get('families') and queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign):return dict(state='RUNNING',phase='WAITING_FOR_SLOT')
     states={}
     for name,settings in config['families'].items():
         if name not in ('N1','N4b'):raise ValueError('uncommissioned extension')

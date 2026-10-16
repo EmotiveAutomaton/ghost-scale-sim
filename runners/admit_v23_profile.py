@@ -7,7 +7,7 @@ from pathlib import Path
 import shutil
 import time
 import zipfile
-from ghostscale.validation.soundingline.v23 import profile_validation as study, runtime
+from ghostscale.validation.soundingline.v23 import profile_validation as study, runtime, resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
 from runners.queue_v23_families import inventory,capacity,launch
 from runners.watch_v23_events import owner
@@ -20,7 +20,7 @@ def admit(campaign,sibling,pilot=False,start=False):
     with owner(campaign/'admission'):
         if capacity(campaign,inventory(campaign),cap,budget_group='twins')!='AVAILABLE':
             raise ValueError('profile validation lacks allocation or worker slot')
-        acceptance=read(campaign/'ACCEPTANCE.json')
+        acceptance=resource_policy.resolve(campaign)
         if not acceptance['opened']<=runtime.now()<acceptance['report_start']:
             raise ValueError('outside allocation')
         source_plan=sibling/'results/phase_2_4_stage_15/raw/profile-features-v1/PLAN.json'
@@ -72,7 +72,7 @@ def admit(campaign,sibling,pilot=False,start=False):
             extra_pythonpath=[str(campaign/'bridge-dependencies'),str(engine_source/'engine')],
             profile_source=str(source/'upstream/profile_features.py.txt'),task_source=str(source/'upstream/task_features.py.txt'),
             sounding_line_plan_sha256=study.SL_PLAN,implementation_hash=study.IMPLEMENTATION,ledger_schema_hash=study.SCHEMA,
-            configuration=study.configuration(),**pilot_binding)
+            configuration=study.configuration(),**pilot_binding,**resource_policy.binding(campaign))
         write(root/'PLAN.json',plan)
         write(root/'ADMISSION.json',dict(at=runtime.now(),plan_sha256=digest(root/'PLAN.json'),
             charged_cpu_seconds=runtime.cost(campaign),new_cap_seconds=cap,

@@ -54,7 +54,22 @@ The owner approved reallocating unused capacity within the existing total; apply
 the immutable RESOURCE_REALLOCATION supplements without changing acceptance bytes.
 Proceed as soon as prerequisites clear; the deadline is an outer stop, not a wait.
 
-Gear 2 permits at most three below-normal, one-thread CPU scientists; no GPU or
+October 16 addendum implementation: the owner authorized independent engineering
+while N4c, T4 sensitivity and schedule-design answers remain pending. Read
+`docs/versions/v23-research-division/ADDENDUM_IMPLEMENTATION_2026-10-16.md` and
+the local hash-bound `ACCEPTANCE_SUPPLEMENT_2026-10-16.json`. New admissions use
+285 CPU hours with 18 protected, the original deadline and raised group caps.
+Original acceptance bytes, old reallocation validation and already-admitted packet
+limits remain unchanged. N1 stays resource-deferred; do not readmit it. N4c is
+not an implemented or admitted design. V24 notes are not commissioned V23 studies.
+New successor capsules may replace only runtime/resource-policy code while retaining
+all scientific source bytes, fits and identities. Never edit an existing capsule.
+
+The supplement schedules 8 daytime/10 overnight scientists, with 3 throughout
+October 21 Pacific. Actual concurrency remains at three until measured Sounding
+Line interference monitoring is implemented and validated; a schedule alone is
+not clearance to expand. Reductions drain existing packets and hold new starts.
+All scientists remain below-normal and one numerical thread; no GPU or
 environment synchronization. Sounding Line retains priority. Keep the notifier
 disarmed during an active operator turn and preserve a live review owner. Fixed
 twelve-hour health checks, failure, family decisions, queue depletion and committed

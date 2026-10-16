@@ -8,7 +8,7 @@ import os
 for _key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):os.environ[_key]='1'
 from pathlib import Path
 import argparse,time
-from ghostscale.validation.soundingline.v23 import confirmation,runtime,family
+from ghostscale.validation.soundingline.v23 import confirmation,runtime,family,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest,canonical
 from runners.admit_v23_confirmation import admit
 from runners import queue_v23_families as queue
@@ -30,7 +30,7 @@ def step(campaign,state,config):
             status=read(root/'STATUS.json') if (root/'STATUS.json').exists() else {}
             if status.get('state')=='failed':return dict(state='REVIEW_BOUNDARY',family=name,stage=stage,packet=root.name,reason='Retained failed confirmation apparatus')
             if not (root/'PLAN.json').exists():
-                if queue.active_count(queue.inventory(campaign))>=3:return dict(state='RUNNING',phase='WAITING_FOR_SLOT')
+                if queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign):return dict(state='RUNNING',phase='WAITING_FOR_SLOT')
                 try:
                     admit(campaign,order,index,settings['card'],settings['review'],settings['first_packet'],settings['pilot'],None,True,
                         fit_only=stage=='fits',fit_packet=fits if stage=='science' else None,partitioned=stage=='science' and name!='N1')
@@ -48,7 +48,7 @@ def step(campaign,state,config):
         completed.append(root)
         review=root/'CONFIRMATION_REVIEW.json'
         if not review.exists():
-            if queue.active_count(queue.inventory(campaign))>=3:return dict(state='RUNNING',phase='WAITING_FOR_REVIEW_SLOT')
+            if queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign):return dict(state='RUNNING',phase='WAITING_FOR_REVIEW_SLOT')
             from runners.review_v23_family import replay_owners
             pp,_=family.verify_packet(root);owners=replay_owners(root,pp)
             result=confirmation.ordered_decisions(completed,order,config['order_sha256'])[-1]

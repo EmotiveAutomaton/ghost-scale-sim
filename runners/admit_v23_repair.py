@@ -10,6 +10,7 @@ from ghostscale.validation.soundingline.v23.common import read,write,digest
 from ghostscale.validation.soundingline.v23 import registry,runtime,ledger,support
 from ghostscale.validation.soundingline.v23.family import verify_packet
 from runners.watch_v23_events import alive,owner
+from ghostscale.validation.soundingline.v23 import resource_policy
 
 LIMITS=dict(setup=8,repairs=14,n1=16,n2=7,n3=6,n4=14,n5=3,n6=6,n7=7,n8=2,twins=14)
 
@@ -24,15 +25,7 @@ def calibration_paths(campaign, record):
 
 
 def budget_limits(campaign):
-    result=dict(LIMITS)
-    for path in sorted(Path(campaign).glob('RESOURCE_REALLOCATION*.json')):
-        amendment=read(path)
-        if (amendment.get('total_cpu_hours')!=90 or amendment.get('protected_cpu_hours')!=18 or
-            amendment.get('max_scientific_workers')!=3 or amendment.get('authority')!='owner-approved-2026-10-15'):
-            raise ValueError('resource amendment lacks the accepted unchanged total and gear')
-        result.update(amendment['group_caps_cpu_hours'])
-    if set(result)!=set(LIMITS) or any(not 0<x<=72 for x in result.values()):raise ValueError('invalid group capacity')
-    return result
+    return resource_policy.group_caps(campaign)
 
 
 def reservations_released(campaign,family):
@@ -160,19 +153,26 @@ def optional_readiness(campaign):
     return digest(path)
 
 
-def admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0,partitioned=False):
+def admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0,partitioned=False,completion_pilot=False):
     with owner(Path(campaign).resolve()/'admission'):
-        return _admit(campaign,family,task,cpu_cap,launch,repair,cost_recheck,partitioned)
+        return _admit(campaign,family,task,cpu_cap,launch,repair,cost_recheck,partitioned,completion_pilot)
 
 
-def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0,partitioned=False):
-    campaign=Path(campaign).resolve();acceptance=read(campaign/'ACCEPTANCE.json')
+def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0,partitioned=False,completion_pilot=False):
+    campaign=Path(campaign).resolve();acceptance=resource_policy.resolve(campaign)
+    policy_binding=resource_policy.binding(campaign)
     from ghostscale.validation.soundingline.v23.pipeline_new import BUILT
     new_family=family in BUILT
     if family not in ('R1','R2','R3','R4') and not (family=='N1' and task=='pilot') and not new_family:
         raise ValueError('only independently implemented repair batches or the N1 resource pilot can be admitted here')
     optional_binding=optional_readiness(campaign) if family=='N8' else None
     budget_group='setup' if task=='pilot' else family.lower() if new_family else 'repairs'
+    if completion_pilot:
+        if family!='N4' or task!='pilot' or repair or cost_recheck or not policy_binding:
+            raise ValueError('only the authorized N4 completion pilot is admitted')
+        failed=campaign/'packets/v23-n4-pilot-1-repair-1'
+        if read(failed/'STATUS.json')['state']!='failed':raise ValueError('preserve failed N4 cost profile')
+        budget_group='n4'
     limits=budget_limits(campaign)
     if task=='fits' and not new_family and family!='R3':raise ValueError('separate fits require an admitted family pipeline')
     if not 0<cpu_cap or (cpu_cap>14400 and not (partitioned and task=='family-batch')):
@@ -211,7 +211,7 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
             if status.get('state')!='failed' and not released and not (target/'PLAN.json').exists() and not being_admitted:
                 pending_burnins+=burnin_reservation(campaign,old,batch,amount)
         reserved+=pending_burnins
-        if unfinished and not old.get('scheduler_only'):active.append(root.name)
+        if unfinished and (not old.get('scheduler_only') or status.get('uses_scientific_slot')):active.append(root.name)
         if old['budget_group']==budget_group:
             group_reserved+=pending_burnins
             if unfinished:group_reserved+=old['cpu_cap_seconds']
@@ -230,6 +230,7 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
     group_limit=limits[budget_group]*3600
     if group_spent+group_reserved+cpu_cap>group_limit:raise ValueError('group cap exhausted')
     identity=f'v23-{family.lower()}-'+({'pilot':'pilot-1','fits':'fits-1','family-batch':'batch-1'}[task])
+    if completion_pilot:identity='v23-n4-completion-pilot-1'
     if repair:
         failed=campaign/'packets'/identity
         if read(failed/'STATUS.json')['state']!='failed':raise ValueError('repair requires a retained failed original')
@@ -244,10 +245,14 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
     from ghostscale.validation.soundingline.v23 import support_new
     extras=(dict(canary_key=secrets.token_hex(32)) if family=='N1' else
             dict(confirmation_support=support_new.bound(family) if new_family else support.repair_bound(family)))
+    extras.update(policy_binding)
+    if completion_pilot:
+        extras.update(profile_cases=4,completion_profile_of=str(failed),
+            failed_profile_plan_sha256=digest(failed/'PLAN.json'),failed_profile_status_sha256=digest(failed/'STATUS.json'))
     if (campaign/'RESOURCE_REALLOCATION.json').exists():
         extras['resource_amendment_sha256']=digest(campaign/'RESOURCE_REALLOCATION.json')
         extras['resource_amendment_files']={p.name:digest(p) for p in sorted(campaign.glob('RESOURCE_REALLOCATION*.json'))}
-    if task=='pilot' and new_family:extras['profile_cases']=4 if family=='N4' and repair else 16 if cost_recheck or repair else 1
+    if task=='pilot' and new_family and not completion_pilot:extras['profile_cases']=4 if family=='N4' and repair else 16 if cost_recheck or repair else 1
     if optional_binding:extras['mandatory_dispositions_sha256']=optional_binding
     if family=='N5':
         anchor=Path(__file__).resolve().parents[1]/'results/v23/preparation/N5_SOUNDING_LINE_ANCHOR.json'
@@ -262,6 +267,8 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
         for pass_number in (1,2):
             optimized=campaign/'packets'/f'v23-{family.lower()}-pilot-1-cost-recheck-{pass_number}'
             if (optimized/'COMPLETE.json').exists():pilot=optimized
+        completion_pilot_root=campaign/'packets'/f'v23-{family.lower()}-completion-pilot-1'
+        if (completion_pilot_root/'COMPLETE.json').exists():pilot=completion_pilot_root
         pp,ps=verify_packet(pilot)
         if ps['state']!='PILOT_VALID':raise ValueError('family pilot not accepted')
         if new_family or family=='R3':verify_profile_sources(pp,family,Path(__file__).resolve().parents[1])
@@ -270,8 +277,10 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
         if partitioned:
             from ghostscale.validation.soundingline.v23.partition import layout
             auxiliary=2*max(row['auxiliary_cpu_seconds'] for row in costs) if new_family else 0.
-            split=layout(16,lower_cost,auxiliary);lower_cost=split['total_cpu_cap']
-            if task=='family-batch':extras.update(scheduler_only=True,partition_layout=split)
+            split=layout(16,lower_cost,auxiliary,min_worlds=1 if policy_binding else 4);lower_cost=split['total_cpu_cap']
+            if task=='family-batch':
+                extras.update(scheduler_only=True,partition_layout=split)
+                if policy_binding:extras['max_parallel_parts']=3
         elif lower_cost>14400:raise ValueError('largest-cell extrapolation exceeds four-hour packet cap')
         if task=='fits':
             extra_reserve=2*lower_cost

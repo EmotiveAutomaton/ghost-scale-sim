@@ -27,9 +27,17 @@ negative mechanism results.
 
 Once an authenticated reference is delivered, the finite twin controller checks
 the full grid at the largest cells first, reserves frozen rival fitting and the
-complete sixteen-world grid, and admits only work that fits the unchanged V23
-allocation. A cap failure preserves partial records and ends that admission.
+complete sixteen-world grid, and admits only work that fits the applicable hash-bound
+V23 allocation. New admissions can partition the batch into complete worlds;
+an indivisible world or fit above the packet ceiling remains resource-deferred.
+A cap failure preserves partial records and ends that admission.
 References, controls, sources, engine implementation and fits are hash-bound.
+
+Clock quantiles use `values`; the legacy `seconds` alias is accepted only when
+it agrees if both are supplied. The primary T4 reference uses all 123 released
+DICES raters. A 104-rater reference alone changes realism comparisons under the
+current generator; a scientific sensitivity needs the separately reviewed mapping
+described in the [addendum implementation](ADDENDUM_IMPLEMENTATION_2026-10-16.md).
 
 The shared world graph joins maker identities, revision articles and chronology;
 the original per-maker public exports remain retained. A single future-query

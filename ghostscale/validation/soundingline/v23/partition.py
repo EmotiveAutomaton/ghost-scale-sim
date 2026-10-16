@@ -36,12 +36,17 @@ def world_indices(plan):
     return worlds
 
 
-def layout(worlds,estimated_total,auxiliary_per_part=0.,assembly_cap=300.):
+def layout(worlds,estimated_total,auxiliary_per_part=0.,assembly_cap=300.,min_worlds=4):
     if worlds%4:raise ValueError('partition admission requires complete four-world blocks')
-    chunks=[list(range(w,w+4)) for w in range(0,worlds,4)]
+    if min_worlds not in (1,2,4):raise ValueError('invalid bounded world partition size')
+    width=4
+    while True:
+        chunks=[list(range(w,w+width)) for w in range(0,worlds,width)]
+        cap=math.ceil((estimated_total-auxiliary_per_part)/len(chunks)+auxiliary_per_part+60)
+        if cap<=14400 or width==min_worlds:break
+        width//=2
     # The baseline already contains one auxiliary pass pair. Repeated training
     # reconstruction is charged for every additional part; no hidden free work.
-    cap=math.ceil((estimated_total-auxiliary_per_part)/len(chunks)+auxiliary_per_part+60)
     if not 0<cap<=14400:raise ValueError('partition still exceeds individual packet limit')
     return dict(chunks=chunks,part_cpu_cap=cap,assembly_cpu_cap=assembly_cap,
                 total_cpu_cap=cap*len(chunks)+assembly_cap)

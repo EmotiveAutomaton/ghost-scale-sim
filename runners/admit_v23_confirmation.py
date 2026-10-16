@@ -8,7 +8,7 @@ import secrets
 import shutil
 import zipfile
 from pathlib import Path
-from ghostscale.validation.soundingline.v23 import confirmation, ledger, runtime, support
+from ghostscale.validation.soundingline.v23 import confirmation, ledger, runtime, support, resource_policy
 from ghostscale.validation.soundingline.v23.common import read, write, digest
 from ghostscale.validation.soundingline.v23.family import verify_packet
 from runners.queue_v23_families import launch, inventory
@@ -16,7 +16,7 @@ from runners.watch_v23_events import owner
 
 
 def capacity(campaign, entries, cap, *, discovery_frozen=False):
-    acceptance=read(campaign/'ACCEPTANCE.json');reserved=0.;group=0.;active=0
+    acceptance=resource_policy.resolve(campaign);reserved=0.;group=0.;active=0
     for root,plan,status in entries:
         unfinished=status.get('state') not in ('complete','failed')
         if plan.get('logical_parent'):
@@ -24,7 +24,7 @@ def capacity(campaign, entries, cap, *, discovery_frozen=False):
             continue
         if unfinished:
             reserved+=max(0,plan['cpu_cap_seconds']-status.get('cpu_seconds',0)) if plan.get('scheduler_only') else plan['cpu_cap_seconds']
-            if not plan.get('scheduler_only'):active+=1
+            if not plan.get('scheduler_only') or status.get('uses_scientific_slot'):active+=1
         if plan['budget_group']=='confirmation':
             group+=plan['cpu_cap_seconds'] if unfinished else status.get('cpu_seconds',0.)
         if not discovery_frozen and status.get('state')!='failed' and plan.get('second_burnin_reservation_seconds'):
@@ -33,7 +33,7 @@ def capacity(campaign, entries, cap, *, discovery_frozen=False):
     if active>=acceptance['max_scientific_workers']:raise ValueError('no scientific worker slot')
     if runtime.cost(campaign)+reserved+cap>acceptance['cpu_seconds']-acceptance['protected_cpu_seconds']:
         raise ValueError('global protected reserve would be invaded')
-    if group+cap>15*3600:raise ValueError('confirmation group cap exceeded')
+    if group+cap>acceptance['group_caps_cpu_hours']['confirmation']*3600:raise ValueError('confirmation group cap exceeded')
     return reserved
 
 
@@ -41,7 +41,7 @@ def admit(campaign,order_path,index,card_path,review_path,first_packet,pilot,cap
           *,fit_only=False,fit_packet=None,partitioned=False):
     campaign=Path(campaign).resolve();order_path=Path(order_path).resolve();card_path=Path(card_path).resolve()
     with owner(campaign/'admission'):
-        acceptance=read(campaign/'ACCEPTANCE.json')
+        acceptance=resource_policy.resolve(campaign)
         if not acceptance['opened']<=runtime.now()<acceptance['report_start']:
             raise ValueError('outside scientific admission window')
         entries=confirmation.validate_order(read(order_path))
@@ -120,6 +120,7 @@ def admit(campaign,order_path,index,card_path,review_path,first_packet,pilot,cap
                 from ghostscale.validation.soundingline.v23.partition import layout
                 split=layout(worlds,estimated,auxiliary)
                 estimated=split['total_cpu_cap'];additions.update(scheduler_only=True,partition_layout=split)
+                if resource_policy.binding(campaign):additions['max_parallel_parts']=3
         if cap is None:cap=math.ceil(estimated)
         if cap>14400 and not partitioned:raise ValueError('conservative complete packet exceeds four CPU hours')
         if estimated>cap:raise ValueError('conservative full-fit and replay cost exceeds packet cap')
@@ -136,7 +137,8 @@ def admit(campaign,order_path,index,card_path,review_path,first_packet,pilot,cap
             confirmation_index=index,confirmation_support=support_new.bound(family) if family.startswith('N') else support.repair_bound(family),canary_key=secrets.token_hex(32),
             budget_group='confirmation',cpu_cap_seconds=cap,wall_cap_seconds=cap*4,protected=False,
             schema_directory=pin['directory'],schema_pin=pin,acceptance_sha256=digest(campaign/'ACCEPTANCE.json'),
-            pilot_complete_sha256=digest(pilot/'COMPLETE.json'),first_batch_complete_sha256=digest(first_packet/'COMPLETE.json'),**additions)
+            pilot_complete_sha256=digest(pilot/'COMPLETE.json'),first_batch_complete_sha256=digest(first_packet/'COMPLETE.json'),
+            **additions,**resource_policy.binding(campaign))
         confirmation.verify_definition(plan)
         source=campaign/'sources'/root.name;source.mkdir(parents=True,exist_ok=False)
         repo=Path(__file__).resolve().parents[1]
