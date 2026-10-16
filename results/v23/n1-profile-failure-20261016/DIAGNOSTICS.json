@@ -1,0 +1,24 @@
+{
+  "assigned_population_members": 10000,
+  "complete_profile_cells": 0,
+  "complete_replay": false,
+  "first_variant": {
+    "family": "N1",
+    "id": "N1-0238",
+    "late_effect": true,
+    "settings": {
+      "concentration": 5,
+      "makers": 10000,
+      "records": 512,
+      "structure": "drift-.01"
+    }
+  },
+  "limitations": "Partial maker ledger rows are neither complete population worlds nor independent scientific observations. No primary effect, null, nomination, full twin run or campaign completion is inferred.",
+  "packet": "v23-n1-completion-profile-1",
+  "pass_cpu_cap_seconds": 3600,
+  "pass_cpu_seconds": 3600.03125,
+  "profile_cpu_seconds": 3604.3125,
+  "required_profile_cells": 240,
+  "retained_population_ledger_members": 1994,
+  "total_packet_cpu_cap_seconds": 7200
+}

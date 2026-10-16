@@ -4,7 +4,8 @@ Current work: [October 16 completion and repair continuation](CONTINUATION_2026-
 N3's reporting repair is running. R3's recovered first batch passes independent
 reconstruction and requires a second burn-in, currently resource-held. N2's numerical repair and N4b's complete
 conditional study are independently verified. N1 production controls passed and
-its largest-cell cost profile is running. See the [reserve checkpoint](RESERVE_CHECKPOINT_2026-10-16.md).
+its largest-cell cost profile hit its finite CPU cap. The full-map study is
+[resource-deferred](N1_RESOURCE_REPORT.md); no smaller grid or partial-world result is substituted.
 The prior idle/approval hold is superseded; V23 remains scientifically incomplete.
 
 The table separates built components, actual execution, and outstanding admission.
@@ -16,7 +17,7 @@ The table separates built components, actual execution, and outstanding admissio
 | R1/R2 | Full pipelines, independent checks, complete replay and scientific write-through | Nominated after three/two batches; await confirmation order |
 | R3 | Full retained pipeline, fixed/fresh fits and partitioned batch; provenance-bound recovery of failed parts | All four parts, complete assembly and independent first-burn-in reconstruction pass. The calibrated card requires batch two; its 27,512 CPU-second full-cost reservation remains held. Reevaluate after N3 terminal release. Terminal-family review and disposition remain pending. |
 | R4 | Both complete burn-ins independently reviewed, including partition assembly, raw/node diagnostics and replay | Discovery nomination; confirmation awaits full discovery order. |
-| N1 | Full population ladder, complete-map cost profile, fixed/fresh retained fits, convergence/shuffle controls, precision extension, independent reconstruction and finite admission/controller | Original capped pilot preserved. Production controls pass; largest-cell profile and both full-map burn-ins must fit measured resource bounds. Small population replay and reserved balanced-block consumer checks pass. |
+| N1 | Full population ladder, complete-map cost profile, fixed/fresh retained fits, convergence/shuffle controls, precision extension, independent reconstruction and finite admission/controller | Original capped pilot preserved. Production controls pass; the completion profile capped during the first of 240 cells (1,994/10,000 ledger members). No complete profile/replay, fits, full-map burn-in or precision extension admitted. Resource-deferred; full grid retained. Small population and reserved balanced-block checks remain engineering evidence. |
 | N2 | Full calibration equivalence, complete retained-score repair/replay, independent reconstruction and calibrated first-burn-in card | Numerical hold resolved. Second complete burn-in required; original predictions and failed review remain retained. |
 | N3 | Six fits independently verified with complete replay; reporting fix and four targeted checks | Owner authorized additional reporting repair; first full partitioned batch running with unchanged unavailable-support semantics. |
 | N4 | Complete main-grid pipeline and bounded pre-discovery pilot repair; separate N4b conditional pipeline and finite controller | Main-grid repair hit CPU cap. N4b is complete: 12 settings, 12,288 cases, six rivals, full replay and independent reconstruction. [Result](N4B_REPORT.md). |

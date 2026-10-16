@@ -1,10 +1,10 @@
 {
   "accepted_confirmations": 0,
   "accepted_family_batches": 12,
-  "at": "2026-10-16T20:49:33.489164+00:00",
+  "at": "2026-10-16T21:16:50.344262+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 42.228914930555554,
+  "charged_cpu_hours_bound": 43.52993923611111,
   "completed_family_batches": 12,
   "conditional_studies_complete": [
     "N4b"
@@ -16,7 +16,7 @@
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "engine_interface_verified": true,
   "families": {
-    "N1": "PRODUCTION_CONTROLS_PASSED_LARGEST_CELL_PROFILE_RUNNING",
+    "N1": "RESOURCE_DEFERRED_COMPLETE_PROFILE_CPU_CAP",
     "N2": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
     "N3": "REPORTING_REPAIR_RUNNING",
     "N4": "RESOURCE_FAILED_PILOT_REPAIR",
@@ -53,16 +53,25 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-16T20:49:33.489164+00:00",
+    "at": "2026-10-16T21:16:50.344262+00:00",
     "complete_family_decision": false,
     "full_scientific_program_complete": false,
-    "n2_first_partition_scientific_files_verified": 1119,
+    "n1_terminal_resource_disposition": true,
+    "n3_future_reservation_released": false,
     "originals_preserved": true,
-    "r3_first_burnin_reconstructed": true,
-    "r3_terminal_family_review": false,
+    "r3_capacity": "GLOBAL_CPU_RESERVE",
     "twin_references_present": false
   },
   "max_scientific_workers": 3,
+  "n1_completion_profile": {
+    "complete_cells": 0,
+    "controls": "passed",
+    "cpu_seconds": 3604.3125,
+    "full_replay": false,
+    "production_admission": false,
+    "required_cells": 240,
+    "state": "RESOURCE_DEFERRED"
+  },
   "n1_pilot": {
     "cpu_seconds": 602.53125,
     "known_answer_controls": "passed",
@@ -74,9 +83,9 @@
   "opened": "2026-10-15T05:04:15+00:00",
   "packet_states": {
     "complete": 58,
-    "failed": 15,
+    "failed": 16,
     "partitioned": 2,
-    "running": 3
+    "running": 2
   },
   "pending_external_dependencies": "Measured twin shape inputs and reviewed product-module gates; revision-purpose engine target unavailable",
   "population_checker": "Independent population, complete replay and 32-culture reserved-consumer controls pass; production controls/profile gate full-scale admission",
@@ -86,19 +95,19 @@
     "conditional-continuation-20261016": "REVIEW_BOUNDARY",
     "continuation-queue-20261016": "RUNNING",
     "n2-post-repair-20261016": "RUNNING",
-    "population-continuation-20261016": "RUNNING",
+    "population-continuation-20261016": "REVIEW_BOUNDARY",
     "r3-recovery-queue-20261016": "REVIEW_BOUNDARY"
   },
   "replacement_notifier_delivery_observed": true,
-  "report": "docs/versions/v23-research-division/RESERVE_CHECKPOINT_2026-10-16.md",
+  "report": "docs/versions/v23-research-division/N1_RESOURCE_REPORT.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
     "RESOURCE_REALLOCATION_3.json"
   ],
-  "retained_failed_attempts": 15,
-  "scientific_controllers": 3,
-  "scientific_workers": 3,
+  "retained_failed_attempts": 16,
+  "scientific_controllers": 2,
+  "scientific_workers": 2,
   "state": "COMPLETION_CONTINUATION_RUNNING",
   "total_cpu_hours": 90,
   "twin_engineering_fixtures_verified": 8,

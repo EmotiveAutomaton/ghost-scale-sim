@@ -1,0 +1,16 @@
+{
+  "burnin_batches_complete": 0,
+  "controls": "passed",
+  "cpu_seconds": 3604.3125,
+  "family": "N1",
+  "full_replay": false,
+  "primary_effect": null,
+  "profile_cells_complete": 0,
+  "profile_cells_required": 240,
+  "q_after": null,
+  "q_before": null,
+  "question": "How much can records from other makers improve recovery of an individual maker?",
+  "reason": "Largest-cell-first complete-grid profile exhausted its fixed original-pass CPU limit before completing its first whole population. Full-map fitting and burn-ins are not admissible without that complete replayed profile.",
+  "scientific_decision": false,
+  "state": "RESOURCE_DEFERRED"
+}

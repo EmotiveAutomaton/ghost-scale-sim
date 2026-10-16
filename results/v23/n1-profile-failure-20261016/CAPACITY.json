@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-16T21:16:50.343866+00:00",
+  "charged_cpu_seconds": 156707.78125,
+  "confirmation_cap_cpu_seconds": 54000,
+  "n3_future_reservation_released": false,
+  "ordinary_unreserved_cpu_seconds": 19402.109375,
+  "original_cpu_seconds": 324000,
+  "protected_cpu_seconds": 64800,
+  "r3_current_capacity": "GLOBAL_CPU_RESERVE",
+  "r3_second_batch_cap_seconds": 27512,
+  "reservations": [
+    {
+      "future_burnin_cpu_seconds": 0,
+      "packet": "v23-n2-batch-2",
+      "unfinished_cpu_seconds": 16401.109375
+    },
+    {
+      "future_burnin_cpu_seconds": 0.0,
+      "packet": "v23-n3-batch-1-repair-1",
+      "unfinished_cpu_seconds": 28757.0
+    },
+    {
+      "future_burnin_cpu_seconds": 37932.0,
+      "packet": "v23-n3-fits-1-repair-1",
+      "unfinished_cpu_seconds": 0
+    }
+  ],
+  "reserved_cpu_seconds": 83090.109375
+}

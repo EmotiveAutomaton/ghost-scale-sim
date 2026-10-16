@@ -3,7 +3,8 @@
 Current work: [October 16 completion and repair continuation](CONTINUATION_2026-10-16.md).
 The owner authorized completing the remaining implementation and bounded repairs.
 N3's repair and N2's second burn-in are running. R3's recovered first burn-in passes reconstruction but its mandatory second batch
-is resource-held; N1's largest-cell profile is running and N4b is complete.
+is resource-held. N1's complete-grid profile hit its largest-cell CPU cap; the
+full population study is [resource-deferred](N1_RESOURCE_REPORT.md). N4b is complete.
 [Reserve checkpoint](RESERVE_CHECKPOINT_2026-10-16.md). V23 science remains
 incomplete; four discovery nominations are reviewed and no order is frozen.
 

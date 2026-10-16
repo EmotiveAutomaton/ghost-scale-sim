@@ -3,7 +3,7 @@
 [V23 completion continuation](docs/versions/v23-research-division/CONTINUATION_2026-10-16.md):
 the queue is running again. N2's retained-data numerical repair is verified;
 the [contingency probe](docs/versions/v23-research-division/N4B_REPORT.md) is complete.
-Population work, bounded repairs and reserved confirmation remain active or queued.
+N1 is [resource-deferred](docs/versions/v23-research-division/N1_RESOURCE_REPORT.md) after its complete-grid profile capped; bounded repairs continue and confirmation awaits discovery closure.
 [Readiness and measured dependencies](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
 
 The [exact Stage 15 profile validation](docs/versions/v23-research-division/S15_PROFILE_REPORT.md)

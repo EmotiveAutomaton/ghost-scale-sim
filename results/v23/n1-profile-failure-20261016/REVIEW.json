@@ -1,0 +1,50 @@
+{
+  "actual_scientists": [
+    18608,
+    168880
+  ],
+  "assigned_population_members": 10000,
+  "at": "2026-10-16T21:16:50.344262+00:00",
+  "closed_predecessors": [
+    "V15",
+    "V21",
+    "V22"
+  ],
+  "committed_dependency": "82789fdb50d9366ab9352129b01ee37622554dfa",
+  "complete_profile_cells": 0,
+  "complete_replay": false,
+  "controls_passed": true,
+  "family": "N1",
+  "first_variant": {
+    "family": "N1",
+    "id": "N1-0238",
+    "late_effect": true,
+    "settings": {
+      "concentration": 5,
+      "makers": 10000,
+      "records": 512,
+      "structure": "drift-.01"
+    }
+  },
+  "limitations": "Partial maker ledger rows are neither complete population worlds nor independent scientific observations. No primary effect, null, nomination, full twin run or campaign completion is inferred.",
+  "measured_twin_references": [],
+  "n2_n3_complete_family_dispositions_pending": true,
+  "no_grid_reduction": true,
+  "no_retry_or_scientific_source_change": true,
+  "packet": "v23-n1-completion-profile-1",
+  "partial_records_preserved": true,
+  "pass_cpu_cap_seconds": 3600,
+  "pass_cpu_seconds": 3600.03125,
+  "profile_cpu_seconds": 3604.3125,
+  "question": "How much can records from other makers improve recovery of an individual maker?",
+  "r3_capacity": "GLOBAL_CPU_RESERVE",
+  "reason": "Largest-cell-first complete-grid profile exhausted its fixed original-pass CPU limit before completing its first whole population. Full-map fitting and burn-ins are not admissible without that complete replayed profile.",
+  "required_profile_cells": 240,
+  "result_kind": "Resource disposition; no constructed-mechanism or method effect estimate",
+  "retained_population_ledger_members": 1994,
+  "scientific_curve_available": false,
+  "scientific_family_decision": false,
+  "state": "RESOURCE_DEFERRED",
+  "total_packet_cpu_cap_seconds": 7200,
+  "upstream_adopted": false
+}
