@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+The [exact Stage 15 profile validation](docs/versions/v23-research-division/S15_PROFILE_REPORT.md) is independently reviewed and **FAIL**: null bounds and option-order invariance fail despite planted-signal benefit. The returned witness does not admit downstream science. [Report](docs/versions/v23-research-division/S15_PROFILE_REPORT.md).
+
 [V21 final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md): no
 maker-specific advantage survives the historical-content test. The final
 32-world diagnostic finds 0.16681 nats of direct-reader excess loss; scientific

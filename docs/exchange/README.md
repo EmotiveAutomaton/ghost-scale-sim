@@ -1,5 +1,9 @@
 # Sounding Line exchange index
 
+- [Ghost Stage 15 validation failed](ghost-stage15-profile-validation-2026-10-15.md): actual FAIL witness; null bounds and option-order invariance failed; complete replay and independent review retained.
+
+- [Sounding Line Stage 15 dependency request](sounding-line-stage15-dependencies-2026-10-15.md): exact engine/profile twin needed; local data checks continue independently.
+
 - [V21 final response](v21-final-response.md): no maker-specific promotion;
   reserved-world reader error, verified finite closure and retained frontier.
 

@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [Stage 15 exact profile study](versions/v23-research-division/S15_PROFILE_REPORT.md) freezes twenty independent worlds, exact archived feature/fitting functions, three profile conditions, matched donors and chronology/order controls. All 304 scientific files replay and the frozen checker independently rebuilds scores, intervals and disposition. The final witness is FAIL: three null contrasts miss their upper bounds and option-order differences exceed 1e-7. Future-label and constant own/donor invariance pass. Four decisions per writer leave later personal-penalty calibration untested.
+
 V21's [accelerated final diagnostic](versions/v21-supporting-mechanisms/FINAL_DIAGNOSTIC_MANIFEST.json)
 partitions 32 reserved worlds across three workers without changing its scientific
 implementation. The final consumer pools equally weighted worlds after nesting

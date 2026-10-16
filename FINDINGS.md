@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+Can the exact profile predictor use informative descriptions without a false personal advantage? The frozen Stage 15 validation fails. Planted descriptions improve forecasts, but both uninformative-profile contrasts and the constant-profile contrast against baseline miss their null bounds; option-order invariance also fails. Future-label invariance and constant own/donor equality pass. This is a constructed-method result, not a passed admission witness or evidence about human utility. [Report](docs/versions/v23-research-division/S15_PROFILE_REPORT.md).
+
 V21 is scientifically complete. No learned-maker advantage survived the maker-specific historical-content test. The final 32-world diagnostic establishes direct-reader excess loss of 0.16681 nats (95% interval 0.14575–0.18847), while exact historical ambiguity remains. These are constructed-method results, not a maker-mechanism confirmation or human evidence. [Final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).
 
 V22 scope limits: the fully choice-independent costly-label null remains unexecuted in B1, and A3 retains full flag evidence after withdrawal. [Final dispositions](docs/versions/v22-mechanism-tests/FINAL_REPORT.md).
