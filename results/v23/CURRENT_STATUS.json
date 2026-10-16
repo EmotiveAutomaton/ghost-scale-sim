@@ -1,10 +1,10 @@
 {
   "accepted_confirmations": 0,
   "accepted_family_batches": 11,
-  "at": "2026-10-16T19:58:31.553662+00:00",
+  "at": "2026-10-16T20:20:00.111157+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 39.67860243055556,
+  "charged_cpu_hours_bound": 40.759765625,
   "completed_family_batches": 11,
   "conditional_studies_complete": [
     "N4b"
@@ -16,7 +16,7 @@
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "engine_interface_verified": true,
   "families": {
-    "N1": "PRODUCTION_CONTROLS_PASSED_COST_PROFILE_QUEUED",
+    "N1": "PRODUCTION_CONTROLS_PASSED_LARGEST_CELL_PROFILE_RUNNING",
     "N2": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
     "N3": "REPORTING_REPAIR_RUNNING",
     "N4": "RESOURCE_FAILED_PILOT_REPAIR",
@@ -27,7 +27,7 @@
     "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
-    "R3": "PARTITION_RECOVERY_RUNNING",
+    "R3": "RECOVERED_ASSEMBLY_COMPLETE_NUMERICAL_REVIEW_PENDING",
     "R4": "NOMINATED",
     "T1": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
     "T2": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
@@ -53,11 +53,13 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-16T19:58:31.553662+00:00",
-    "continuation_authorized": true,
+    "at": "2026-10-16T20:20:00.111157+00:00",
+    "complete_family_decision": false,
+    "execution_replay_source_bindings_verified": 3138,
     "full_scientific_program_complete": false,
-    "native_workflows_built": true,
-    "originals_preserved": true
+    "originals_preserved": true,
+    "r3_numerical_family_review_pending": true,
+    "twin_references_present": false
   },
   "max_scientific_workers": 3,
   "n1_pilot": {
@@ -70,9 +72,9 @@
   "next_routine_health": "2026-10-17T05:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "packet_states": {
-    "complete": 54,
+    "complete": 57,
     "failed": 15,
-    "partitioned": 3,
+    "partitioned": 2,
     "running": 3
   },
   "pending_external_dependencies": "Measured twin shape inputs and reviewed product-module gates; revision-purpose engine target unavailable",
@@ -86,7 +88,8 @@
     "population-continuation-20261016": "RUNNING",
     "r3-recovery-queue-20261016": "RUNNING"
   },
-  "report": "docs/versions/v23-research-division/CONTINUATION_2026-10-16.md",
+  "replacement_notifier_delivery_observed": true,
+  "report": "docs/versions/v23-research-division/RECOVERY_CHECKPOINT_2026-10-16.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",

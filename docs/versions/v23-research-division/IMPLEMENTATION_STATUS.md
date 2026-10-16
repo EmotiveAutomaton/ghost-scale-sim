@@ -1,9 +1,10 @@
 # V23 implementation status
 
 Current work: [October 16 completion and repair continuation](CONTINUATION_2026-10-16.md).
-N3 reporting repair and R3 partition recovery are running. N2's numerical repair
-and N4b's complete conditional study are independently verified. N1 production
-controls passed, with measured-cost continuation queued behind active workers.
+N3's reporting repair is running and R3's recovered first batch has assembled,
+awaiting independent numerical review. N2's numerical repair and N4b's complete
+conditional study are independently verified. N1 production controls passed and
+its largest-cell cost profile is running. See the [execution checkpoint](RECOVERY_CHECKPOINT_2026-10-16.md).
 The prior idle/approval hold is superseded; V23 remains scientifically incomplete.
 
 The table separates built components, actual execution, and outstanding admission.
@@ -13,7 +14,7 @@ The table separates built components, actual execution, and outstanding admissio
 | Stopping | Seven-look calibration, independent reconstruction and complete replay | Apply only to accepted complete logical batches; no partial partitions |
 | Confirmation | R/N runners, N1 whole-population blocks, finite support proofs, independent raw evidence, separate reserved fits, partition assembly and finite order controller | Freeze complete reviewed discovery order before exposure. N1 balances all 32 cultures and retains all assigned makers. N3 remains excluded without finite support. |
 | R1/R2 | Full pipelines, independent checks, complete replay and scientific write-through | Nominated after three/two batches; await confirmation order |
-| R3 | Full retained pipeline, fixed/fresh fits and partitioned batch; provenance-bound recovery of failed parts | Recovery admitted for part 4; three verified parts and the failed original retained. No accepted whole batch yet. |
+| R3 | Full retained pipeline, fixed/fresh fits and partitioned batch; provenance-bound recovery of failed parts | All four parts and complete assembly replay/source bindings pass. Independent numerical review awaits a slot. Second-batch capacity remains held on complete scientific cost; reevaluate after N3 terminal release. No accepted family decision yet. |
 | R4 | Both complete burn-ins independently reviewed, including partition assembly, raw/node diagnostics and replay | Discovery nomination; confirmation awaits full discovery order. |
 | N1 | Full population ladder, complete-map cost profile, fixed/fresh retained fits, convergence/shuffle controls, precision extension, independent reconstruction and finite admission/controller | Original capped pilot preserved. Production controls pass; largest-cell profile and both full-map burn-ins must fit measured resource bounds. Small population replay and reserved balanced-block consumer checks pass. |
 | N2 | Full calibration equivalence, complete retained-score repair/replay, independent reconstruction and calibrated first-burn-in card | Numerical hold resolved. Second complete burn-in required; original predictions and failed review remain retained. |

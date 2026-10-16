@@ -2,8 +2,9 @@
 
 Current work: [October 16 completion and repair continuation](CONTINUATION_2026-10-16.md).
 The owner authorized completing the remaining implementation and bounded repairs.
-N3 and R3 repairs are running; N2's numerical repair is verified and its second
-burn-in is running. N4b is complete and N1 controls pass. V23 science remains
+N3's repair and N2's second burn-in are running. R3's recovered assembly awaits
+numerical review; N1's largest-cell profile is running and N4b is complete.
+[Recovery execution checkpoint](RECOVERY_CHECKPOINT_2026-10-16.md). V23 science remains
 incomplete; four discovery nominations are reviewed and no order is frozen.
 
 - [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33

@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-16T20:19:59.998377+00:00",
+  "charged_cpu_seconds": 146735.15625,
+  "ordinary_unreserved_cpu_seconds": 15461.203125,
+  "original_cpu_seconds": 324000,
+  "protected_cpu_seconds": 64800,
+  "r3_admission": false,
+  "r3_current_capacity": "GLOBAL_CPU_RESERVE",
+  "r3_decision_pending": true,
+  "r3_full_logical_batch_cpu_seconds": 17979.359375,
+  "r3_provisional_second_batch_cap_seconds": 27512.0,
+  "r3_recovery_only_cpu_seconds": 4513.546875,
+  "reservations": [
+    {
+      "future_burnin_cpu_seconds": 0,
+      "packet": "v23-n1-completion-profile-1",
+      "state": "running",
+      "unfinished_cpu_seconds": 7200
+    },
+    {
+      "future_burnin_cpu_seconds": 0,
+      "packet": "v23-n2-batch-2",
+      "state": "partitioned",
+      "unfinished_cpu_seconds": 19731.65625
+    },
+    {
+      "future_burnin_cpu_seconds": 0.0,
+      "packet": "v23-n3-batch-1-repair-1",
+      "state": "partitioned",
+      "unfinished_cpu_seconds": 32139.984375
+    },
+    {
+      "future_burnin_cpu_seconds": 37932.0,
+      "packet": "v23-n3-fits-1-repair-1",
+      "state": "complete",
+      "unfinished_cpu_seconds": 0
+    }
+  ],
+  "reserved_cpu_seconds": 97003.640625
+}
