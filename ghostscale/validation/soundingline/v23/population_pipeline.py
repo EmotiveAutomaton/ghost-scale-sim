@@ -65,9 +65,9 @@ def retain_ledger(root,v,public,schema,identity,canary,pulse):
                 prediction_agreement='deterministic identity from complete decoded input equality')
 
 
-def retained_world(root,v,phase,world,schema,canary_key,fitted=None,pulse=lambda **kw:None):
+def retained_world(root,v,phase,world,schema,canary_key,fitted=None,pulse=lambda **kw:None,law=None):
     root=Path(root);root.mkdir(parents=True,exist_ok=False);start=time.process_time()
-    public,truth=makers.n1_world(v,phase,world,pulse=pulse)
+    public,truth=makers.n1_world(v,phase,world,law=law,pulse=pulse)
     identity=['N1',v['id'],phase,world]
     canary=hmac.new(bytes.fromhex(canary_key),canonical(identity),hashlib.sha256).hexdigest()
     save_public(root/'public_points.npz',public)
@@ -151,18 +151,20 @@ def training(root,variants,phase,count,pulse=lambda **kw:None):
     return np.asarray(x),np.asarray(y)
 
 
-def fit_family(root,pulse=lambda **kw:None):
+def fit_family(root,pulse=lambda **kw:None,variant=None,namespace=None):
     """Frozen fixed/fresh rivals with retained population training evidence.
 
     This expensive production entry point is gated by the independent resource
     pilot. Its presence does not authorize starting it or imply convergence.
     """
-    root=Path(root);root.mkdir(parents=True,exist_ok=False);variants=registry.variants('N1')
-    vx,vy=training(root/'validation',variants,'validation',4096,pulse)
+    root=Path(root);root.mkdir(parents=True,exist_ok=False);variants=[variant] if variant is not None else registry.variants('N1')
+    phase=lambda value: value if namespace is None else [namespace,value]
+    vx,vy=training(root/'validation',variants,phase('validation'),4096,pulse)
+    np.savez_compressed(root/'validation.npz',x=vx,y=vy)
     fitted={};metadata={}
     for labels in (2048,8192):
         train_root=root/f'training-{labels}'
-        x,y=training(train_root,variants,'fixed-'+str(labels),labels,pulse)
+        x,y=training(train_root,variants,phase('fixed-'+str(labels)),labels,pulse)
         generated=read(train_root/'INDEX.json')['generated_labels']
         for fit in (0,1):
             for fresh in (False,True) if labels==8192 else (False,):
@@ -171,11 +173,11 @@ def fit_family(root,pulse=lambda **kw:None):
                 def provider(epoch,offset,size):
                     if epoch_cache.get('epoch')!=epoch:
                         target=root/(name+'-epoch-'+str(epoch))
-                        xx,yy=training(target,variants,[name,epoch],labels,pulse)
+                        xx,yy=training(target,variants,phase([name,epoch]),labels,pulse)
                         epoch_cache.update(epoch=epoch,x=xx,y=yy)
                         fresh_generated.append(read(target/'INDEX.json')['generated_labels'])
                     return epoch_cache['x'][offset:offset+size],epoch_cache['y'][offset:offset+size]
-                model=Direct(x,y,vx,vy,3,'N1',fit,fresh=provider if fresh else None,pulse=pulse)
+                model=Direct(x,y,vx,vy,3,'N1' if namespace is None else canonical([namespace,'N1']).decode(),fit,fresh=provider if fresh else None,pulse=pulse)
                 model.save(root/(name+'.npz'));fitted[name]=model
                 metadata[name]=dict(model.metadata,selected_training_labels=model.metadata['generated_training_labels'],
                     all_generated_training_labels=generated+sum(fresh_generated),

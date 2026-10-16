@@ -1,9 +1,10 @@
 # Ghost Scale Simulation
 
-[V23 current checkpoint](docs/versions/v23-research-division/CHECKPOINT_2026-10-16.md):
-the scientific queue is idle with 48 complete and 15 failed packet records.
-Four discovery nominations are reviewed; confirmation and remaining family
-dispositions are unfinished. [Readiness and explicit holds](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
+[V23 completion continuation](docs/versions/v23-research-division/CONTINUATION_2026-10-16.md):
+the queue is running again. N2's retained-data numerical repair is verified;
+the [contingency probe](docs/versions/v23-research-division/N4B_REPORT.md) is complete.
+Population work, bounded repairs and reserved confirmation remain active or queued.
+[Readiness and measured dependencies](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
 
 The [exact Stage 15 profile validation](docs/versions/v23-research-division/S15_PROFILE_REPORT.md)
 is independently reviewed and **FAIL**: null bounds and option-order invariance
@@ -33,7 +34,7 @@ human intent, human values or historical process correspondence.
 
 ## Start here
 
-- **V23 active, queue held:** [current checkpoint](docs/versions/v23-research-division/CHECKPOINT_2026-10-16.md), [implementation status](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
+- **V23 active:** [completion continuation](docs/versions/v23-research-division/CONTINUATION_2026-10-16.md), [implementation status](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
 - **Closed V22:** [seven finite mechanism studies](docs/versions/v22-mechanism-tests/README.md).
   [Final report](docs/versions/v22-mechanism-tests/FINAL_REPORT.md): seven verified finite results, mixed prediction dispositions and scientific-service closure.
 - **V21 scientific allocation complete:** [final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).

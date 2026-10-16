@@ -28,6 +28,9 @@ def verify_packet(root,assembly_pending=False):
 def reconstruct(root,assembly_pending=False):
     """Rebuild aggregate gains from saved probabilities and evaluator labels."""
     root=Path(root);plan,summary=verify_packet(root,assembly_pending);family=plan['family']
+    if family=='N1':
+        from .population_campaign import reconstruct
+        return reconstruct(root/'original',plan)
     if family.startswith('N'):
         from .family_new import reconstruct as reconstruct_new
         return reconstruct_new(root,assembly_pending)
@@ -60,9 +63,22 @@ def reconstruct(root,assembly_pending=False):
 def decide(family,packets,calibration):
     """Structural zeros stay on the curve; no invented SE enters shrinkage."""
     variants=[v for v in registry.variants(family) if family!='N4' or not v['settings']['extension']];identities=[v['id'] for v in variants]
+    verified=[verify_packet(root) for root in packets]
+    if family=='N1':
+        from .population_campaign import decide as population_decide,validate
+        for index,(plan,summary) in enumerate(verified,1):
+            if plan['family']!='N1' or plan['batch']!=index:raise ValueError('population packet sequence changed')
+            validate(plan)
+        return population_decide([summary for _,summary in verified],calibration)
+    numeric=any(plan.get('numerical_validation_packet') for plan,_ in verified)
+    arithmetic=adaptive
+    if numeric:
+        from . import adaptive_numerics
+        if family!='N2':raise ValueError('numerical continuation only admitted for N2')
+        for plan,_ in verified:adaptive_numerics.validate(plan)
+        arithmetic=adaptive_numerics
     estimates={identity:[] for identity in identities}; structural=set();previous=None
-    for batch,root in enumerate(packets,1):
-        plan,summary=verify_packet(root)
+    for batch,(plan,summary) in enumerate(verified,1):
         if plan.get('world_indices') is not None:raise ValueError('partial worlds cannot enter a family decision')
         if plan['family']!=family or plan['batch']!=batch or plan['worlds']!=adaptive.RUNGS[batch-1]:
             raise ValueError('family batch sequence/rung changed')
@@ -89,7 +105,7 @@ def decide(family,packets,calibration):
         active=[i for i,v in enumerate(modeled) if v['id'] in expected]
         late=[i for i,v in enumerate(modeled) if v['late_effect']]
         eligible=[i for i,v in enumerate(modeled) if registry.selection_eligible(v)]
-        decision=adaptive.decide(batch,[estimates[v['id']] for v in modeled],active,late,
+        decision=arithmetic.decide(batch,[estimates[v['id']] for v in modeled],active,late,
             kill=calibration['kill_threshold'],mu_scale=calibration['prior'][0],tau_scale=calibration['prior'][1],eligible=eligible)
         active_ids=identities if batch==1 else [model_ids[i] for i in decision['active']]
         if batch==2 and decision['state']=='CONTINUE':
@@ -102,7 +118,7 @@ def decide(family,packets,calibration):
             if identity in structural:
                 curve.append(dict(variant=v,raw_mean=0.,lower=0.,upper=0.,shrunk_mean=0.,probability_above_margin=0.,structural_zero=True))
             else:
-                means,ses=adaptive.combine([estimates[identity]])
+                means,ses=arithmetic.combine([estimates[identity]])
                 index=model_ids.index(identity)
                 curve.append(dict(variant=v,raw_mean=means[0],lower=means[0]-1.96*ses[0],upper=means[0]+1.96*ses[0],
                     interval_kind='normal approximation of inverse-variance pooled whole-world bootstrap estimates',
@@ -118,6 +134,7 @@ def decide(family,packets,calibration):
 def successor(last_plan,decision,first_packet):
     if decision['state'] not in ('BURN_IN','CONTINUE'):raise ValueError('family is at a review boundary')
     plan=dict(last_plan);batch=last_plan['batch']+1
+    if plan.get('task')=='n2-rescore':plan['task']='family-batch'
     if batch>7:raise ValueError('finite ladder exhausted')
     fit_root=Path(last_plan['fit_directory']) if last_plan.get('fit_directory') else Path(first_packet)/'original/fits'
     plan.update(batch=batch,worlds=adaptive.RUNGS[batch-1],variants=decision['active_ids'],

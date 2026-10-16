@@ -25,10 +25,10 @@ def inventory(campaign):
     return result
 
 
-def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',needs_slot=True):
+def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',needs_slot=True,replacing_burnin=None):
     """Reserve unfinished admissions even during their launch/handshake interval."""
     acceptance=read(campaign/'ACCEPTANCE.json');reserved=0.;group=0.;active=0
-    from runners.admit_v23_repair import reservations_released
+    from runners.admit_v23_repair import reservations_released,burnin_reservation
     for path,plan,status in entries:
         unfinished=status.get('state') not in ('complete','failed')
         if plan.get('logical_parent'):
@@ -40,16 +40,17 @@ def capacity(campaign,entries,new_cap,second_family=None,budget_group='repairs',
             if plan['budget_group']==budget_group:group+=plan['cpu_cap_seconds']
         elif plan['budget_group']==budget_group:group+=status.get('cpu_seconds',0.)
         released=reservations_released(campaign,plan.get('family',''))
-        reserve=0. if released else plan.get('second_burnin_reservation_seconds',0.)
+        reserve=0. if released else burnin_reservation(campaign,plan,2,plan.get('second_burnin_reservation_seconds',0.))
         if status.get('state')!='failed' and reserve and plan['family']!=second_family:
             second=campaign/'packets'/('v23-'+plan['family'].lower()+'-batch-2')
             if not (second/'PLAN.json').exists():
                 reserved+=reserve
                 if plan['budget_group']==budget_group:group+=reserve
         for batch,amount in enumerate(plan.get('burnin_reservations_seconds',[]),1):
-            being_admitted=plan['family']==second_family and batch==2
+            being_admitted=(plan['family']==second_family and batch==2) or replacing_burnin==(plan['family'],batch)
             target=campaign/'packets'/f"v23-{plan['family'].lower()}-batch-{batch}"
             if status.get('state')!='failed' and not released and not (target/'PLAN.json').exists() and not being_admitted:
+                amount=burnin_reservation(campaign,plan,batch,amount)
                 reserved+=amount
                 if plan['budget_group']==budget_group:group+=amount
     if needs_slot and active>=acceptance['max_scientific_workers']:return 'NO_SLOT'
@@ -138,7 +139,11 @@ def step(campaign,config):
         # Full observed packet includes fitting and I/O, so carrying it forward
         # with a 1.5 multiplier conservatively includes sunk first-batch fitting.
         scale=(new['worlds']*len(new['variants']))/(previous['worlds']*len(previous['variants']))
-        estimate=max(300,1.5*status['cpu_seconds']*scale);cap=estimate
+        observed=previous.get('rescore_scientific_cpu_seconds',status.get('scientific_batch_cpu_seconds',status['cpu_seconds']))
+        estimate=max(300,1.5*observed*scale);cap=estimate
+        new.pop('rescore_scientific_cpu_seconds',None)
+        for key in ('retained_parts','repair_parent','repair_parent_plan_sha256','repair_parent_status_sha256'):
+            new.pop(key,None)
         if estimate>14400:
             if 'ghostscale/validation/soundingline/v23/partition.py' not in previous['sources']:
                 states[name]='RESOURCE_DEFERRED';continue

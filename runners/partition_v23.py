@@ -10,11 +10,12 @@ def step(campaign,root):
     from runners import queue_v23_families as queue
     plan=read(root/'PLAN.json');layout=plan['partition_layout']
     if not plan.get('scheduler_only'):raise ValueError('logical batch required')
-    parts=[campaign/'packets'/f'{root.name}-part-{i+1}' for i in range(len(layout['chunks']))]
-    charged=0.;done=[];pending=[]
-    for part in parts:
+    parts=partition.part_paths(root,plan)
+    charged=0.;retained_cpu=0.;done=[];pending=[]
+    for index,part in enumerate(parts):
         status=read(part/'STATUS.json') if (part/'STATUS.json').exists() else {}
-        charged+=status.get('cpu_seconds',0.)
+        if str(index) in plan.get('retained_parts',{}):retained_cpu+=status.get('cpu_seconds',0.)
+        else:charged+=status.get('cpu_seconds',0.)
         if status.get('state')=='failed':
             write(root/'STATUS.json',dict(state='failed',phase='partition-failed',packet=part.name,
                 cpu_seconds=charged,heartbeat=runtime.now()),immutable=False);return
@@ -34,6 +35,7 @@ def step(campaign,root):
             used=time.process_time()-started
             write(root/'COMPLETE.json',receipt)
             write(root/'STATUS.json',dict(state='complete',phase='review-needed',cpu_seconds=charged+used,
+                scientific_batch_cpu_seconds=charged+used+retained_cpu,
                 parts_complete=len(parts),parts_total=len(parts),heartbeat=runtime.now()),immutable=False)
         except BaseException as exc:
             write(root/'STATUS.json',dict(state='failed',phase='assembly',error=repr(exc),
@@ -46,7 +48,7 @@ def step(campaign,root):
         # never a second charge of its child budget or a fresh budget decision.
         if queue.active_count(queue.inventory(campaign))>=read(campaign/'ACCEPTANCE.json')['max_scientific_workers']:return
         cap=layout['part_cpu_cap']
-        if cap>14400 or cap*len(parts)+layout['assembly_cpu_cap']>plan['cpu_cap_seconds']:
+        if cap>14400 or cap*(len(parts)-len(plan.get('retained_parts',{})))+layout['assembly_cpu_cap']>plan['cpu_cap_seconds']:
             raise ValueError('partition reservation changed')
         child=dict(plan,scheduler_only=False,world_indices=layout['chunks'][index],
             logical_parent=str(root.resolve()),logical_plan_sha256=digest(root/'PLAN.json'),

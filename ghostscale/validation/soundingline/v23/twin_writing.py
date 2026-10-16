@@ -31,8 +31,13 @@ def maker(v,phase,world,index,shape,*,records=None):
     if any(k not in shape for k in required):raise ValueError('explicit writing shape required')
     count=shape['records_per_maker'][index] if records is None else records
     if not 1<=count<=shape['records_per_maker'][index]:raise ValueError('invalid engineering prefix')
-    sessions=shape['sessions_per_maker'][index];options=int(shape['options_per_decision'])
-    if sessions<1 or options<2:raise ValueError('invalid sessions/options')
+    sessions=shape['sessions_per_maker'][index];option_shape=shape['options_per_decision']
+    if isinstance(option_shape,dict):
+        sizes=np.array([int(x) for x in sorted(option_shape,key=int)]);masses=np.array([option_shape[str(x)] if str(x) in option_shape else option_shape[int(x)] for x in sizes],float)
+        if np.any(sizes<2) or not np.isfinite(masses).all() or np.any(masses<=0):raise ValueError('invalid empirical option histogram')
+        masses/=masses.sum();options=None
+    else:options=int(option_shape)
+    if sessions<1 or (options is not None and options<2):raise ValueError('invalid sessions/options')
     base=np.array(shape['handling_marginals'],float)
     if base.shape!=(4,) or np.any(base<=0) or not np.isclose(base.sum(),1):raise ValueError('positive handling marginals required')
     r=rng('T1-maker',v['id'],phase,world,index);hidden=int(r.integers(len(TYPES)));effect=v['settings']['personal_effect']
@@ -43,10 +48,11 @@ def maker(v,phase,world,index,shape,*,records=None):
     history=[];marks=[]
     def context(i):
         session=min(sessions-1,i*sessions//count)
-        return dict(options=r.integers(-1,2,(options,4)).tolist(),selected=0,session=session,
+        offered=options if options is not None else int(r.choice(sizes,p=masses))
+        return dict(options=r.integers(-1,2,(offered,4)).tolist(),selected=0,session=session,
             phase=(i*sessions/count)%1,momentum=int(r.choice((-1,1))),edit_delta=r.integers(-1,2,4).tolist())
     for i in range(count):
-        row=context(i);choices,*_=probabilities(row,effect,base);row['selected']=int(r.choice(options,p=choices[hidden]))
+        row=context(i);choices,*_=probabilities(row,effect,base);row['selected']=int(r.choice(len(row['options']),p=choices[hidden]))
         _,handling,latency,correction=probabilities(row,effect,base)
         action=int(r.choice(4,p=handling[hidden]));bin_=int(r.choice(2,p=latency[hidden]));local=bool(r.random()<.3)
         q=.5 if local else float(1/(1+np.exp(-effect*(TYPES[hidden]@row['edit_delta']))))
@@ -59,7 +65,7 @@ def maker(v,phase,world,index,shape,*,records=None):
         if not missing:
             history.append(row)
             if v['settings']['dirty'] and r.random()<.02:history.append(dict(row,record_id=str(i)+'-duplicate',duplicate_of=i))
-    query=context(count-1);choices,*_=probabilities(query,effect,base);query['selected']=int(r.choice(options,p=choices[hidden]))
+    query=context(count-1);choices,*_=probabilities(query,effect,base);query['selected']=int(r.choice(len(query['options']),p=choices[hidden]))
     target=probabilities(query,effect,base)[1][hidden];y=int(r.choice(4,p=target))
     return dict(maker=index,history=history,query=query,statement=statement.tolist(),handling_base=base.tolist()),dict(
         type=hidden,preference=TYPES[hidden].tolist(),marks=marks,y=[y],records_assigned=count,sessions=sessions)

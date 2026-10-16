@@ -71,3 +71,16 @@ def test_partition_reservation_counts_once_and_children_use_slots(tmp_path):
     assert queue.capacity(tmp_path,entries,21000)=='REPAIRS_GROUP_CAP'
     entries.append((tmp_path/'calibration',dict(cpu_cap_seconds=100,budget_group='setup'),dict(state='complete',cpu_seconds=50)))
     assert queue.capacity(tmp_path,entries,20000)=='AVAILABLE'
+
+
+def test_owner_transfer_does_not_release_active_packet_budget(tmp_path):
+    from runners.admit_v23_repair import burnin_reservation
+    authority=tmp_path/'CONTINUATION_AUTHORITY_20261016.json';write(authority,dict(approved=True))
+    failed=tmp_path/'packets/failed';write(failed/'PLAN.json',dict(family='R3'))
+    write(failed/'STATUS.json',dict(state='failed'))
+    write(tmp_path/'reservations/R3-DEFERRED-BURNIN.json',dict(batch=2,failed_packet='failed',
+        failed_plan_sha256=digest(failed/'PLAN.json'),failed_status_sha256=digest(failed/'STATUS.json'),authority_sha256=digest(authority)))
+    assert burnin_reservation(tmp_path,dict(family='R3'),1,100)==100
+    assert burnin_reservation(tmp_path,dict(family='R3'),2,100)==0
+    write(failed/'STATUS.json',dict(state='running'),immutable=False)
+    with pytest.raises(ValueError,match='preserved failed'):burnin_reservation(tmp_path,dict(family='R3'),2,100)

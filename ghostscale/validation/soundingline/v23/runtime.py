@@ -92,7 +92,12 @@ def verify_plan(root, campaign):
     if plan['task'] in ('profile-validation', 'profile-pilot'):
         from .profile_validation import verify_configuration
         verify_configuration(plan)
-    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot'):
+    if plan.get('continuation_authority_sha256'):
+        if digest(campaign/'CONTINUATION_AUTHORITY_20261016.json') != plan['continuation_authority_sha256']:
+            raise ValueError('continuation authority changed')
+    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot','numerical-validation',
+                            'population-controls','population-profile','conditional-pilot','conditional-fits','conditional-batch',
+                            'twin-profile','twin-fits','twin-batch'):
         if plan['family'].startswith('N'):
             from .support_new import verify as verify_support
         else:
@@ -184,6 +189,26 @@ def execute_pass(root, campaign, label):
     if plan['task'] == 'calibration':
         from .calibration import run as calibrate
         calibrate(root/label, pulse, cpu_cap_seconds=plan['cpu_cap_seconds']/2)
+    elif plan['task'] == 'numerical-validation':
+        from .numerical_validation import run as validate_numerics
+        validate_numerics(root/label, plan, pulse)
+    elif plan['task']=='n2-rescore':
+        from .n2_rescore import run as rescore
+        rescore(root/label,plan,pulse)
+    elif plan['task'].startswith('population-'):
+        from . import population_campaign
+        if plan['task']=='population-controls':population_campaign.controls(root/label,pulse)
+        elif plan['task']=='population-profile':population_campaign.profile(root/label,plan,pulse)
+        elif plan['task']=='population-fits':population_campaign.run_fits(root/label,plan,pulse)
+        elif plan['task'] in ('population-batch','population-precision'):population_campaign.run(root/label,plan,pulse)
+        else:raise ValueError('unknown population task')
+    elif plan['task'] in ('conditional-pilot','conditional-fits','conditional-batch'):
+        from .conditional_values import run as conditional
+        conditional(root/label,plan,pulse)
+    elif plan['task'] in ('twin-profile','twin-fits','twin-batch'):
+        from . import twin_pipeline
+        if plan['task']=='twin-fits':twin_pipeline.run_fits(root/label,plan,pulse)
+        else:twin_pipeline.run(root/label,plan,pulse)
     elif plan['task'] == 'fits':
         if plan['family'].startswith('N'):
             from .pipeline_new import run_fits
@@ -199,6 +224,9 @@ def execute_pass(root, campaign, label):
     elif plan['task'] == 'confirmation':
         from .confirmation import run as confirm
         confirm(root/label, plan, pulse)
+    elif plan['task']=='confirmation-fits':
+        from .confirmation import run_fits as confirm_fits
+        confirm_fits(root/label,plan,pulse)
     elif plan['task'] == 'pilot':
         if plan['family'] == 'N1':
             from .population_pipeline import pilot

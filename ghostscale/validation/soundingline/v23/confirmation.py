@@ -64,9 +64,20 @@ def verify_definition(plan):
     worlds = 256 if abs(entry['shrunk_mean']-.02) <= .02 else 128
     if plan['family'] != entry['family'] or plan['variants'] != [entry['variant']]:
         raise ValueError('confirmation cannot replace nominated variant')
-    if plan['worlds'] != worlds or plan['cases'] != 256 or plan['batch'] != 'confirmation':
+    cases=next(v['settings']['makers'] for v in registry.variants('N1') if v['id']==entry['variant']) if plan['family']=='N1' else 256
+    if plan['worlds'] != worlds or plan['cases'] != cases or plan['batch'] != 'confirmation':
         raise ValueError('reserved-world allocation changed')
-    if plan.get('fit_directory'): raise ValueError('variant-only confirmation refitting required')
+    if plan.get('fit_directory'):
+        if not plan.get('confirmation_fit_packet'):raise ValueError('variant-only confirmation refitting required')
+        from .family import verify_packet
+        fp,fs=verify_packet(plan['confirmation_fit_packet'])
+        if (fp.get('task')!='confirmation-fits' or fs.get('state')!='FITS_VERIFIED' or
+                any(fp[k]!=plan[k] for k in ('family','variants','nomination_order_sha256','confirmation_index')) or
+                digest(Path(plan['confirmation_fit_packet'])/'COMPLETE.json')!=plan['confirmation_fit_complete_sha256'] or
+                Path(plan['fit_directory']).resolve()!=(Path(plan['confirmation_fit_packet'])/'original/fits').resolve()):
+            raise ValueError('confirmation fits do not belong to the frozen reserved hypothesis')
+        for name,expected in plan['fit_hashes'].items():
+            if digest(Path(plan['fit_directory'])/name)!=expected:raise ValueError('reserved fit changed')
     return entry
 
 
@@ -84,6 +95,9 @@ def seed_audit(variant, order_sha256, worlds, cases=256):
 
 
 def reconstruct_evidence(root, plan):
+    if plan['family']=='N1':
+        from .population_confirmation import reconstruct
+        return reconstruct(root,plan)
     from .family import rows
     identity = plan['variants'][0]; folder = Path(root)/identity
     rival, mechanism = registry.PRIMARY[plan['family']][:2]
@@ -110,14 +124,43 @@ def reconstruct_evidence(root, plan):
 
 
 def run(root, plan, pulse):
+    if plan['family']=='N1':
+        from .population_confirmation import run as confirm_population
+        return confirm_population(root,plan,pulse)
     if plan['family'].startswith('N'):
         from .pipeline_new import run_batch
     else:from .pipeline import run_batch
     entry=verify_definition(plan)
-    audit=seed_audit(entry['variant'],plan['nomination_order_sha256'],plan['worlds'],plan['cases'])
     run_batch(root,plan,pulse)
-    write(Path(root)/'SEED_AUDIT.json',audit)
-    write(Path(root)/'EVIDENCE.json',reconstruct_evidence(root,plan))
+    if plan.get('world_indices') is None:
+        audit=seed_audit(entry['variant'],plan['nomination_order_sha256'],plan['worlds'],plan['cases'])
+        write(Path(root)/'SEED_AUDIT.json',audit)
+        write(Path(root)/'EVIDENCE.json',reconstruct_evidence(root,plan))
+
+
+def run_fits(root,plan,pulse):
+    """Separate complete replay of variant-only reserved training, before parts."""
+    from . import pipeline,pipeline_new,checker
+    from .common import Direct
+    entry=verify_definition(plan);root=Path(root);root.mkdir(parents=True,exist_ok=False)
+    variant=next(v for v in registry.variants(plan['family']) if v['id']==entry['variant'])
+    builder=pipeline_new.fit_family if plan['family'].startswith('N') else pipeline.fit_family
+    if plan['family']=='N1':
+        from .population_pipeline import fit_family
+        builder=lambda root,family,pulse,variant,namespace:fit_family(root,pulse,variant,namespace)
+    fitted,meta=builder(root/'fits',plan['family'],pulse,variant=variant,namespace=['confirmation',plan['nomination_order_sha256']])
+    checked={}
+    for name,model in fitted.items():
+        suffix='-masked' if name.endswith('-masked') else ''
+        with np.load(root/'fits'/('validation'+suffix+'.npz')) as raw:x,y=raw['x'],raw['y']
+        prediction=model.predict(x);independent=checker.scores(prediction.reshape(-1,prediction.shape[-1]),y.ravel())
+        score=float(np.mean(independent['log_loss']))
+        if not math.isclose(score,meta[name]['validation_log_loss'],abs_tol=1e-8,rel_tol=0):raise ValueError('reserved fit score differs')
+        if not np.array_equal(Direct.load(root/'fits'/(name+'.npz')).predict(x),prediction):raise ValueError('reserved fit serialization differs')
+        checked[name]=dict(validation_log_loss=score,early_stopped=meta[name]['early_stopped'])
+    write(root/'SUMMARY.json',dict(state='FITS_VERIFIED',family=plan['family'],variants=plan['variants'],fits=checked,
+        nomination_order_sha256=plan['nomination_order_sha256'],reserved_test_exposure=False,
+        training_namespace=['confirmation',plan['nomination_order_sha256']]))
 
 
 def ordered_decisions(packets, order_path, order_sha256):

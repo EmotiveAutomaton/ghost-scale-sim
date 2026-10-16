@@ -6,6 +6,7 @@ mass stays zero. Full population ownership and leave-one-out evidence are
 reconstructed before forecasting either context and recipe presence.
 """
 from itertools import combinations, product
+from functools import lru_cache
 import numpy as np
 
 
@@ -26,11 +27,24 @@ def normalize(logmass):
     return x/x.sum(axis=-1,keepdims=True)
 
 
-def choice_likelihood(menu,recipes,types):
-    menu=np.asarray(menu)
+@lru_cache(4096)
+def _choice_likelihood(key):
+    recipes,types=catalog()
+    menu=np.asarray(key).reshape(3,4)
     satisfaction=np.array([[np.prod(option[list(recipe)]) for recipe in recipes] for option in menu])
     utility=types@satisfaction.T
-    return np.array([normalize(beta*utility) for beta in (1.,2.,4.)])
+    result=np.array([normalize(beta*utility) for beta in (1.,2.,4.)])
+    result.flags.writeable=False
+    return result
+
+
+def choice_likelihood(menu,recipes,types):
+    # Independently constructed dictionary and probability-space likelihood;
+    # no production cache or likelihood is shared with the checked reader.
+    menu=np.asarray(menu)
+    if menu.shape!=(3,4) or not np.isin(menu,(0,1)).all():
+        raise ValueError('invalid finite population menu')
+    return _choice_likelihood(tuple(map(int,menu.ravel())))
 
 
 def filter_joint(menus,choices,priors,drift,recipes,types):

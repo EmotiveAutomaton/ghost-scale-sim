@@ -48,7 +48,7 @@ def pending(campaign, state):
     return result
 
 
-def scheduled(campaign, acceptance, current):
+def scheduled(campaign, acceptance, current, config=None):
     opened=datetime.fromisoformat(acceptance['opened']); deadline=datetime.fromisoformat(acceptance['deadline'])
     checkpoint=opened+timedelta(hours=12); count=1
     while checkpoint < deadline:
@@ -60,6 +60,11 @@ def scheduled(campaign, acceptance, current):
     if current >= deadline:
         (campaign/'STOP').touch(exist_ok=True)
         event(campaign,'final-deadline','final_deadline',dict(due=acceptance['deadline']))
+    for item in (config or {}).get('operator_checkpoints',[]):
+        identity=item['id'];due=datetime.fromisoformat(item['due'])
+        if not identity or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in identity):raise ValueError('invalid operator checkpoint')
+        if not item.get('reason') or not opened<=due<deadline:raise ValueError('operator checkpoint outside finite allocation')
+        if current>=due:event(campaign,'operator-'+identity,'operational_checkpoint',dict(due=item['due'],reason=item['reason']))
 
 
 def observe(campaign):
@@ -97,15 +102,27 @@ def observe_services(campaign,config):
 
 
 def dependency(campaign, config):
-    if (campaign/'events/canonical-schema-committed.json').exists(): return
-    if not config.get('schema_repository'): return
-    repo=config['schema_repository']; relative='engine/tompathy_engine/ledger/schema.py'
-    flags=dict(cwd=repo, capture_output=True, text=True, timeout=15, creationflags=subprocess.CREATE_NO_WINDOW)
-    found=subprocess.run(['git','ls-tree','HEAD','--',relative], **flags)
-    if found.returncode == 0 and found.stdout.strip():
-        head=subprocess.run(['git','rev-parse','HEAD'], **flags)
-        if head.returncode == 0:
-            event(campaign,'canonical-schema-committed','dependency_ready',dict(commit=head.stdout.strip(),tree=found.stdout.strip()))
+    if not (campaign/'events/canonical-schema-committed.json').exists() and config.get('schema_repository'):
+        repo=config['schema_repository']; relative='engine/tompathy_engine/ledger/schema.py'
+        flags=dict(cwd=repo, capture_output=True, text=True, timeout=15, creationflags=subprocess.CREATE_NO_WINDOW)
+        found=subprocess.run(['git','ls-tree','HEAD','--',relative], **flags)
+        if found.returncode == 0 and found.stdout.strip():
+            head=subprocess.run(['git','rev-parse','HEAD'], **flags)
+            if head.returncode == 0:
+                event(campaign,'canonical-schema-committed','dependency_ready',dict(commit=head.stdout.strip(),tree=found.stdout.strip()))
+    for item in config.get('watched_committed_dependencies',[]):
+        head=subprocess.run(['git','rev-parse','HEAD'],cwd=item['repository'],capture_output=True,text=True,
+            timeout=15,creationflags=subprocess.CREATE_NO_WINDOW)
+        commit=head.stdout.strip()
+        if head.returncode==0 and len(commit)==40 and all(c in '0123456789abcdef' for c in commit) and commit!=item['baseline_commit']:
+            event(campaign,'committed-dependency-'+commit,'dependency_ready',dict(commit=commit,repository=item['repository'],
+                action='Inspect committed change; this observation never adopts code or restarts science.'))
+    for item in config.get('watched_dependency_files',[]):
+        path=Path(item['path'])
+        if path.is_file():
+            fingerprint=digest(path)
+            event(campaign,'dependency-file-'+fingerprint,'dependency_ready',dict(path=str(path),sha256=fingerprint,
+                action='Validate supplied input contract before any scientific admission.'))
 
 
 def closed(campaign):
@@ -182,7 +199,7 @@ def run(campaign,state,config_path):
                 write(state/'STATUS.json',dict(pid=os.getpid(),heartbeat=now(),state='closed; no further wakes',armed=False),immutable=False)
                 write(cost_path,dict(cpu_seconds=time.process_time()-started,state='stopped'),immutable=False)
                 return
-            active=observe(campaign); scheduled(campaign,acceptance,datetime.now(timezone.utc))
+            active=observe(campaign); scheduled(campaign,acceptance,datetime.now(timezone.utc),config)
             observe_services(campaign,config)
             if time.monotonic()-last_dependency>=60:
                 dependency(campaign,config);last_dependency=time.monotonic()

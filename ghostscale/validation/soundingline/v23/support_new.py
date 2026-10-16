@@ -4,7 +4,10 @@ from .registry import PRIMARY
 
 
 def bound(family):
-    if family=='N2':
+    if family=='N1':
+        lower=-16-math.log(3)
+        proof='At most two nonnegative recipe weights of at most 2, binary conjunctive satisfaction in [0,1], and precision at most 4. Three choice logits have range at most 16; every posterior mixture preserves exp(-16)/3. A whole-population average preserves the same raw-gain bound. Confirmation must separately balance all 32 culture candidates.'
+    elif family=='N2':
         lower=-512-math.log(2)
         proof='Uniform binary prior, at most 128 marks, beta at most 4, and fixed learned weights in [0,1]. Absolute weighted log odds are at most 512, so either posterior probability is at least exp(-512)/2.'
     elif family=='N5':

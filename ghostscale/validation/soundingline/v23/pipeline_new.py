@@ -192,11 +192,15 @@ def verify_case(v, p, truth, prediction, detail):
     return error
 
 
-def score(prediction, truth):
+def score(prediction, truth, stable=False):
     if prediction is None:
         return dict(available=False, reason='EMPTY_HARD_CONSTRAINT_SUPPORT',
                     log_loss=None, half_brier=None, accuracy=None)
     a, b = losses(prediction, truth['y']), checker.scores(prediction, truth['y'])
+    if stable:
+        from .adaptive_numerics import stable_log_loss,independent_log_loss
+        a['log_loss']=stable_log_loss(prediction,truth['y'])
+        b['log_loss']=independent_log_loss(prediction,truth['y'])
     for metric in a:
         if not np.allclose(a[metric], b[metric], atol=1e-12, rtol=0, equal_nan=False):
             raise ValueError('independent proper score mismatch')
@@ -280,17 +284,24 @@ def secondary(v, p, truth, prediction, detail):
     return out
 
 
-def aggregate(values, identity):
+def aggregate(values, identity, stable=False):
     """No deletion of unavailable or nonfinite observations to manufacture a mean."""
     if any(value is None or not math.isfinite(value) for value in values):
         return dict(finite=False, mean=None, lower=None, upper=None, se=None,
                     worlds=len(values), unavailable=sum(value is None for value in values))
+    if stable:
+        from .adaptive_numerics import interval as stable_interval
+        return stable_interval(values,identity)
     return interval(values, identity)
 
 
 def run_batch(root, plan, pulse):
     family = plan['family']
     if family not in BUILT: raise ValueError('N-family pipeline/checker not built: '+family)
+    if plan.get('numerical_validation_packet'):
+        from .adaptive_numerics import validate
+        validate(plan)
+    aggregate_values=lambda values,identity:aggregate(values,identity,stable=bool(plan.get('numerical_validation_packet')))
     confirmation=plan.get('task')=='confirmation'
     if confirmation:
         from .confirmation import verify_definition
@@ -348,7 +359,7 @@ def run_batch(root, plan, pulse):
                 for name, model in fitted.items():
                     probs = model.predict(np.array([features(v, public) for public in publics]))
                     for prediction, prob in zip(predictions, probs): prediction[name] = prob
-                scores = [{name: score(prob, truth) for name, prob in prediction.items()}
+                scores = [{name: score(prob, truth,stable=bool(plan.get('numerical_validation_packet'))) for name, prob in prediction.items()}
                           for prediction, truth in zip(predictions, truths)]
                 for name in predictions[0]:
                     unavailable[name] = unavailable.get(name, 0)+sum(not row[name]['available'] for row in scores)
@@ -385,15 +396,15 @@ def run_batch(root, plan, pulse):
             write(folder/'WORLD_AGGREGATES.json',dict(worlds=worlds,reader_worlds=reader_worlds,
                 gains=gains,headroom=headroom,secondary_worlds=secondary_worlds,strata=strata,
                 target_counts=target_counts,unavailable=unavailable,max_check=max_check,max_roundtrip=max_roundtrip))
-        primary = aggregate(gains, [v['id'], batch, 'primary'])
+        primary = aggregate_values(gains, [v['id'], batch, 'primary'])
         structural = family == 'N5' and v['settings']['offset'] == 0 or family == 'N8' and v['settings']['play_share'] == 0 or family == 'N2' and v['settings']['nondiagnostic'] == 0 or family=='N4' and v['settings']['meaning']=='additive'
         if structural and any(x is None or abs(x)>1e-11 for x in gains): raise ValueError('structural null failed')
         groups = headroom_groups(headroom, fitmeta, v, batch) if family != 'N5' and all(all(x is not None for x in vals) for vals in headroom.values()) else {}
         summary = dict(variant=v, primary=primary, world_gains=gains, primary_counts=target_counts,
             primary_status='AVAILABLE' if primary['finite'] else 'UNAVAILABLE_NO_CASE_DELETION',
-            readers={name:{metric:aggregate([r[metric] for r in rows],[v['id'],batch,name,metric]) for metric in rows[0]} for name,rows in reader_worlds.items()},
-            secondary={name:aggregate(vals,[v['id'],batch,'secondary',name]) for name,vals in secondary_worlds.items()},
-            strata={name:aggregate(vals,[v['id'],batch,'stratum',name]) for name,vals in strata.items()},
+            readers={name:{metric:aggregate_values([r[metric] for r in rows],[v['id'],batch,name,metric]) for metric in rows[0]} for name,rows in reader_worlds.items()},
+            secondary={name:aggregate_values(vals,[v['id'],batch,'secondary',name]) for name,vals in secondary_worlds.items()},
+            strata={name:aggregate_values(vals,[v['id'],batch,'stratum',name]) for name,vals in strata.items()},
             unavailable_predictions=unavailable, matched_headroom_groups=groups,
             approximate_ceiling=family == 'N5', structural_zero=structural,
             headroom_eligible=family != 'N5', laws=len({w%16 for w in worlds}), independent_worlds=len(worlds),

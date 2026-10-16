@@ -1,34 +1,38 @@
 {
   "accepted_confirmations": 0,
-  "accepted_family_batches": 10,
-  "at": "2026-10-16T16:58:28.491547+00:00",
+  "accepted_family_batches": 11,
+  "at": "2026-10-16T19:58:31.553662+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 36.48594618055556,
+  "charged_cpu_hours_bound": 39.67860243055556,
   "completed_family_batches": 11,
-  "confirmation_runner": "repair and eligible N pipelines built; no reserved exposure; N3 excluded without finite support",
-  "continuation": "Queue 6 exited after discovery reporting failure. Additional N3 repair awaits explicit exception; no duplicate controller.",
+  "conditional_studies_complete": [
+    "N4b"
+  ],
+  "confirmation_runner": "R/N and whole-population reserved refits/evidence; checked disjoint partition assembly; frozen-order controller; no reserved exposure yet",
+  "continuation": "Numerical repair verified; required finite successors active. Original total, protected reserve, scientific criteria and deadline unchanged.",
   "deadline": "2026-10-22T05:04:15+00:00",
   "discovery_order_frozen": false,
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "engine_interface_verified": true,
   "families": {
-    "N1": "RESOURCE_HELD_PARTLY_UNBUILT",
-    "N2": "INSTRUMENT_HELD_ZERO_SE",
-    "N3": "INSTRUMENT_HELD_REPORTING_FAILURE_REPAIR_LIMIT",
+    "N1": "PRODUCTION_CONTROLS_PASSED_COST_PROFILE_QUEUED",
+    "N2": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
+    "N3": "REPORTING_REPAIR_RUNNING",
     "N4": "RESOURCE_FAILED_PILOT_REPAIR",
+    "N4b": "CONDITIONAL_STUDY_COMPLETE",
     "N5": "NOMINATED",
     "N6": "PRIMARY_UNAVAILABLE",
     "N7": "RESOURCE_HELD",
     "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
-    "R3": "RESOURCE_FAILED_REPLAY",
+    "R3": "PARTITION_RECOVERY_RUNNING",
     "R4": "NOMINATED",
-    "T1": "DEPENDENCY_HELD_PARTLY_UNBUILT",
-    "T2": "DEPENDENCY_HELD_PARTLY_UNBUILT",
-    "T3": "DEPENDENCY_HELD_PARTLY_UNBUILT",
-    "T4": "DEPENDENCY_HELD_PARTLY_UNBUILT"
+    "T1": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+    "T2": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+    "T3": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+    "T4": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES"
   },
   "families_admitted": 7,
   "first_actual_review_delivery": "2026-10-15T07:49:30.875830+00:00",
@@ -49,11 +53,11 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-16T16:58:28.491547+00:00",
-    "implementation_complete": false,
-    "profile": "FAIL",
-    "publication_checkpoint": true,
-    "queue_record": "results/v23/checkpoint-20261016/QUEUE_RECORD.json"
+    "at": "2026-10-16T19:58:31.553662+00:00",
+    "continuation_authorized": true,
+    "full_scientific_program_complete": false,
+    "native_workflows_built": true,
+    "originals_preserved": true
   },
   "max_scientific_workers": 3,
   "n1_pilot": {
@@ -62,28 +66,36 @@
     "production_admission": false,
     "state": "RESOURCE_LIMIT_BEFORE_VERIFICATION"
   },
-  "next_routine_health": "2026-10-16T17:04:15+00:00",
+  "native_study_workflows_built": true,
+  "next_routine_health": "2026-10-17T05:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "packet_states": {
-    "complete": 48,
-    "failed": 15
+    "complete": 54,
+    "failed": 15,
+    "partitioned": 3,
+    "running": 3
   },
-  "population_checker": "engineering checks pass; largest production pilot reached CPU cap before independent verification; full batch/admission unfinished",
+  "pending_external_dependencies": "Measured twin shape inputs and reviewed product-module gates; revision-purpose engine target unavailable",
+  "population_checker": "Independent population, complete replay and 32-culture reserved-consumer controls pass; production controls/profile gate full-scale admission",
   "profile_validation_status": "FAIL",
   "protected_cpu_hours": 18,
   "queue_states": {
-    "N3": "INSTRUMENT_FAILED"
+    "conditional-continuation-20261016": "REVIEW_BOUNDARY",
+    "continuation-queue-20261016": "RUNNING",
+    "n2-post-repair-20261016": "RUNNING",
+    "population-continuation-20261016": "RUNNING",
+    "r3-recovery-queue-20261016": "RUNNING"
   },
-  "report": "docs/versions/v23-research-division/CHECKPOINT_2026-10-16.md",
+  "report": "docs/versions/v23-research-division/CONTINUATION_2026-10-16.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
     "RESOURCE_REALLOCATION_3.json"
   ],
   "retained_failed_attempts": 15,
-  "scientific_controllers": 0,
-  "scientific_workers": 0,
-  "state": "QUEUE_IDLE_REVIEWED_RESULTS_AND_EXPLICIT_HOLDS",
+  "scientific_controllers": 4,
+  "scientific_workers": 3,
+  "state": "COMPLETION_CONTINUATION_RUNNING",
   "total_cpu_hours": 90,
   "twin_engineering_fixtures_verified": 8,
   "twins_built": 4,

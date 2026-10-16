@@ -76,3 +76,24 @@ def test_bounded_backlog_delay_never_hides_new_failure_or_deadline():
     assert monitor.delivery_ready([deadline],['running'],config)==[deadline]
     config['defer_events_until']=(datetime.now(timezone.utc)-timedelta(seconds=1)).isoformat()
     assert monitor.delivery_ready([old],['running'],config)==[old]
+
+
+def test_one_actionable_checkpoint_does_not_change_fixed_cadence(tmp_path):
+    acceptance=dict(opened='2026-10-15T05:04:15+00:00',deadline='2026-10-22T05:04:15+00:00',report_start='2026-10-22T03:04:15+00:00')
+    config=dict(operator_checkpoints=[dict(id='recovery-review',due='2026-10-16T20:05:00+00:00',reason='Review expected recovered partition assembly')])
+    moment=datetime(2026,10,16,20,6,tzinfo=timezone.utc)
+    monitor.scheduled(tmp_path,acceptance,moment,config);monitor.scheduled(tmp_path,acceptance,moment,config)
+    assert len(list((tmp_path/'events').glob('operator-*.json')))==1
+    assert len(list((tmp_path/'events').glob('health12-*.json')))==3
+
+
+def test_later_committed_dependencies_are_observed_after_initial_schema(tmp_path,monkeypatch):
+    from types import SimpleNamespace
+    write(tmp_path/'events/canonical-schema-committed.json',dict(id='canonical-schema-committed'))
+    calls=[]
+    def run(argv,**kwargs):calls.append(argv);return SimpleNamespace(returncode=0,stdout='b'*40+'\n')
+    monkeypatch.setattr(monitor.subprocess,'run',run)
+    config=dict(watched_committed_dependencies=[dict(repository=str(tmp_path),baseline_commit='a'*40)])
+    monitor.dependency(tmp_path,config);monitor.dependency(tmp_path,config)
+    assert len(list((tmp_path/'events').glob('committed-dependency-*.json')))==1
+    assert calls==[['git','rev-parse','HEAD']]*2

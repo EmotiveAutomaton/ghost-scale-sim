@@ -37,11 +37,15 @@ finite support proof and independent balanced law blocks; never floor losses.
 The canonical schema is owned by the other ToMpathy thread and is now pinned to
 its committed 2a0c54233344ae3f64bed9806442289d7dab726a snapshot. Family admission
 requires conformance, controls, largest-cell cost pilots and source-bound plans.
-R1/R2/R4/N5 have reviewed discovery nominations. The scientific queue is idle;
-read CHECKPOINT_2026-10-16.md for terminal packet counts and unresolved holds.
-N3's tested reporting fix is not an admitted extra scientific repair. N2-N8 retained pipelines and four twin engineering prototypes are built;
+R1/R2/R4/N5 have reviewed discovery nominations. On October 16 the owner explicitly
+authorized completing remaining implementation and bounded repairs, including the
+additional N3 reporting repair. Read CONTINUATION_2026-10-16.md and live packet
+records: N3 resumed, N2 numerical calibration equivalence and R3 partition recovery
+are admitted. The earlier idle checkpoint remains historical. Do not repeat its
+superseded approval hold. Preserve failed originals, finite limits and all validity
+requirements. The retained pipelines now include N1 and full native twin workflows;
 read PREPARATION_REPORT.md and current IMPLEMENTATION_STATUS.md for execution,
-resource holds and unfinished population/conditional/empirical-shape scope.
+resource holds and remaining empirical-shape and product-module dependencies.
 Read CONTINUATION_REPORT.md for the new committed-engine interface checks,
 partition-aware family review, N5's accepted first burn-in and bounded R3 fit
 repair. Existing scientific capsules retain their original dependency pins.
@@ -61,6 +65,16 @@ batches, writes machine cards, and advances only the calibrated ladder with froz
 fits and sources. It stops at decisions/failures/caps; new families require explicit
 admission. Continue remaining implementation; do not reopen closed predecessors
 or invent occupancy filler.
+
+October 16 completion implementation adds separate population, conditional,
+twin and confirmation controllers. N2's retained-score repair passes full replay,
+independent reconstruction and its calibrated first-burn-in decision; continue
+its mandatory second batch. N4b's fixed conditional study is complete; do not
+refill it. N1's production controls and largest-cell profile gate full-map work.
+Read N4B_REPORT.md and TWIN_INPUT_CONTRACT.md. Native twin execution is built,
+but measured shape summaries and product-module gates remain explicit dependencies.
+Confirmation partitions must reproduce complete raw evidence; population
+confirmation balances all 32 cultures and never treats makers as worlds.
 
 ## Completed V21 scientific allocation (2026-10-14)
 

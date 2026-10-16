@@ -1,6 +1,10 @@
 # V23: research division and decision-ledger bridge
 
-Current checkpoint: [October 16 record and queue integrity pass](CHECKPOINT_2026-10-16.md). The scientific queue is idle; V23 remains incomplete. Four discovery nominations are reviewed, no confirmation is frozen, and remaining holds are listed below.
+Current work: [October 16 completion and repair continuation](CONTINUATION_2026-10-16.md).
+The owner authorized completing the remaining implementation and bounded repairs.
+N3 and R3 repairs are running; N2's numerical repair is verified and its second
+burn-in is running. N4b is complete and N1 controls pass. V23 science remains
+incomplete; four discovery nominations are reviewed and no order is frozen.
 
 - [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33
   stress settings remain qualified, independent reconstruction and full replay pass.
@@ -20,10 +24,10 @@ three below-normal single-thread CPU scientists, no GPU, with Sounding Line prio
 Dependency delays never reset the clock. No occupancy filler or reopening of a
 closed predecessor is authorized.
 
-R1-R4 and N2-N8 have retained pipelines, independent checkers, controls and cost
-pilot entry points. Four twin prototypes pass complete engineering replay; full
-empirical-shape admission and remaining population/conditional work are tracked
-in the readiness table. The finite monitor collects completion, failure and committed-
-schema events and maintains fixed twelve-hour health reviews. Machine cards are
+R1-R4, N1-N8 and the native twin workflows have retained pipelines, independent
+checks, controls and cost-profile entry points. Full empirical twin execution
+still requires [measured source summaries](TWIN_INPUT_CONTRACT.md) and applicable
+module gates. The finite monitor collects completion, failure and committed
+dependency events and maintains fixed twelve-hour health reviews. Machine cards are
 written per accepted batch; full public scientific write-through occurs at family
 decisions. A final report and verified owned-service shutdown end the campaign.

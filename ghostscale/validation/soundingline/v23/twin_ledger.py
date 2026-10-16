@@ -10,13 +10,13 @@ from . import ledger
 from .common import canonical
 
 
-def emit(v,public,schema,identity):
+def emit(v,public,schema,identity,world_identity=None):
     e=ledger.Emission(schema,identity);family=v['family']
     if family not in ('T1','T2','T3','T4'):raise ValueError('unknown twin')
     header={k:value for k,value in public.items() if k not in ('history','query')}
     e.add('ContextEvent',event_id=ledger._identity(identity,'header'),session_id=e.session,
         t=ledger.BASE_TIME,kind='other',payload=dict(channel='twin-header',public=header))
-    actor_ids={public.get('maker',0):e.maker};sessions={}
+    actor_ids={public.get('maker',0):e.maker};sessions={};articles={};last_time=ledger.BASE_TIME
     def session(actor,number):
         if actor not in actor_ids:
             actor_ids[actor]=ledger._identity(identity,'actor',actor)
@@ -30,6 +30,12 @@ def emit(v,public,schema,identity):
         e.maker=actor_ids[actor];e.session=sessions[key]
     for i,row in enumerate(public['history']):
         actor=row.get('actor',row.get('maker',public.get('maker',0)))
+        if family=='T3':
+            article=row['article']
+            if article not in articles:
+                aid=ledger._identity(world_identity or identity,'article',article)
+                articles[article]=e.add('Artifact',artifact_id=aid,maker_ids=[],kind='other',source_uri='ghost://v23/article/'+aid,tier='T2',domain='constructed')
+            e.artifact=articles[article]['artifact_id']
         session(actor,row.get('session',row.get('game',row.get('article',0))))
         if family=='T1':
             observed={k:value for k,value in row.items() if k not in ('action','corrected','latency_bin','latency_s','keystrokes')}
@@ -51,14 +57,18 @@ def emit(v,public,schema,identity):
         else:
             # The diff is observed; the latent intent selecting a noisy delta is
             # deliberately not supplied as the chosen discrete alternative.
-            e.decision('history',i,row['alternatives'],None,observed=row)
+            moment=ledger.BASE_TIME+timedelta(seconds=row['time']+1);last_time=max(last_time,moment)
+            decision=e.decision('history',i,row['alternatives'],None,observed=row)
+            decision['t_open']=decision['t_resolve']=moment.isoformat()
+            article_row=articles[row['article']]
+            if e.maker not in article_row['maker_ids']:article_row['maker_ids'].append(e.maker)
             revision=e.add('Revision',revision_id=ledger._identity(identity,'revision',i),artifact_id=e.artifact,
-                maker_id=e.maker,t=ledger.BASE_TIME+timedelta(seconds=e.counter),content_ref=e.content(row['diff']))
-            e.rows['Artifact'][0]['revisions'].append(revision['revision_id'])
+                maker_id=e.maker,t=moment,content_ref=e.content(row['diff']))
+            article_row['revisions'].append(revision['revision_id'])
             if row['summary'] is not None:
                 goal=e.add('StatedGoal',goal_id=ledger._identity(identity,'summary',i),maker_id=e.maker,
                     scope='revision',scope_id=revision['revision_id'],text='synthetic-purpose-'+str(row['summary']),
-                    source='edit_summary',t=ledger.BASE_TIME+timedelta(seconds=e.counter))
+                    source='edit_summary',t=moment)
     session(public.get('maker',0),0)
     if family=='T1':
         for sid in sorted(set(sessions.values())):
@@ -71,7 +81,11 @@ def emit(v,public,schema,identity):
                 attribute='synthetic-recipe-'+str(i),value=value,scale=[],source='self_description',t=ledger.BASE_TIME)
     if 'query' in public:
         count=len(public['query']['values']) if family=='T2' else 4 if family=='T1' else 3
-        e.decision('query',0,list(range(count)),None,observed=public['query'])
+        options=([dict(value=a,style=b) for a,b in zip(public['query']['values'],public['query']['style_features'],strict=True)]
+                 if family=='T2' else list(range(count)))
+        e.decision('query',0,options,None,observed=public['query'])
+    if family=='T3':
+        for row in e.rows['Session']:row['t_end']=max(last_time,ledger.BASE_TIME+timedelta(days=1)).isoformat()
     return e.finish()
 
 

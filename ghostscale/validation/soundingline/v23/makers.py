@@ -43,23 +43,48 @@ def cultures(concentration):
 
 
 def record_loglik(menus, choices, beta, recipes, weights):
+    standard=recipe_library()
+    if recipes!=standard[0] or not np.array_equal(weights,standard[1]):
+        raise ValueError('population likelihood requires its declared recipe library')
     logp = np.zeros(len(weights))
     for menu, choice in zip(menus, choices):
-        utility = satisfaction(menu, recipes)@weights.T
-        logits = beta*utility.T
-        logp += logits[:, choice]-logsumexp(logits, axis=1)
+        logp += population_logprob(menu, beta)[:, choice]
     return logp
+
+
+@lru_cache(12288)
+def _population_logprob(key, beta):
+    """The declared binary three-option menu has only 4,096 possible values.
+
+    Cache likelihood arithmetic, never observations, posteriors or population
+    evidence. The menu and precision fully determine this finite likelihood.
+    """
+    menu = np.array(key).reshape(3, 4)
+    recipes, weights, _ = recipe_library()
+    logits = beta*(satisfaction(menu, recipes)@weights.T).T
+    result = logits-logsumexp(logits, axis=1, keepdims=True)
+    result.flags.writeable = False
+    return result
+
+
+def population_logprob(menu, beta):
+    menu = np.asarray(menu)
+    if menu.shape != (3, 4) or not np.isin(menu, (0, 1)).all():
+        raise ValueError('population cache requires the declared binary menu')
+    return _population_logprob(tuple(map(int, menu.ravel())), float(beta))
 
 
 def type_filter(menus, choices, beta, recipes, weights, priors, drift):
     """Exact forward recursion; rank-one type resets, no quadratic transition."""
+    standard=recipe_library()
+    if recipes!=standard[0] or not np.array_equal(weights,standard[1]):
+        raise ValueError('population likelihood requires its declared recipe library')
     priors = np.atleast_2d(priors)
     posterior, evidence = priors.copy(), np.zeros(len(priors))
     for step, (menu, choice) in enumerate(zip(menus, choices)):
         if step:
             posterior = (1-drift)*posterior+drift*priors
-        logprob = beta*(satisfaction(menu, recipes)@weights.T).T
-        likelihood = np.exp(logprob[:, choice]-logsumexp(logprob, axis=1))
+        likelihood = np.exp(population_logprob(menu, beta)[:, choice])
         updated = posterior*likelihood
         normalizer = updated.sum(1)
         if np.any(normalizer <= 0):

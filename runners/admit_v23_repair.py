@@ -44,6 +44,28 @@ def reservations_released(campaign,family):
     return True
 
 
+def burnin_reservation(campaign, plan, batch, amount):
+    """Owner-authorized transfer of an unstarted successor after a failed batch.
+
+    No running packet reservation is released. A subsequent batch admission must
+    pay its full cap again through the ordinary global/group capacity checks.
+    """
+    path=Path(campaign)/'reservations'/(plan.get('family','')+'-DEFERRED-BURNIN.json')
+    if not path.exists():return amount
+    receipt=read(path)
+    if receipt['batch']!=batch:return amount
+    if digest(Path(campaign)/'CONTINUATION_AUTHORITY_20261016.json')!=receipt['authority_sha256']:
+        raise ValueError('reservation transfer authority changed')
+    failed=Path(campaign)/'packets'/receipt['failed_packet']
+    if (digest(failed/'PLAN.json')!=receipt['failed_plan_sha256'] or
+            digest(failed/'STATUS.json')!=receipt['failed_status_sha256'] or
+            read(failed/'STATUS.json')['state']!='failed'):
+        raise ValueError('reservation transfer requires preserved failed predecessor')
+    if read(failed/'PLAN.json')['family']!=plan.get('family') or batch!=2:
+        raise ValueError('reservation transfer scope mismatch')
+    return 0.
+
+
 def verify_profile_sources(plan,family,repository):
     modules=dict(R3=['repairs'],N2=['diagnosticity','checker_new'],N3=['corrections','checker_new'],
         N4=['values','makers','checker_recipes','checker_new'],N5=['projection','checker_projection','checker_new'],
@@ -179,7 +201,7 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
             continue
         if unfinished:reserved+=max(0,old['cpu_cap_seconds']-status.get('cpu_seconds',0.)) if old.get('scheduler_only') else old['cpu_cap_seconds']
         released=reservations_released(campaign,old.get('family',''))
-        protected_burnin=old.get('second_burnin_reservation_seconds',0.) if status.get('state')!='failed' and not released else 0.
+        protected_burnin=burnin_reservation(campaign,old,2,old.get('second_burnin_reservation_seconds',0.)) if status.get('state')!='failed' and not released else 0.
         second=campaign/'packets'/('v23-'+old.get('family','').lower()+'-batch-2')
         if protected_burnin and not (second/'PLAN.json').exists():reserved+=protected_burnin
         pending_burnins=0.
@@ -187,7 +209,7 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
             target=campaign/'packets'/f"v23-{old['family'].lower()}-batch-{batch}"
             being_admitted=family==old['family'] and task=='family-batch' and batch==1
             if status.get('state')!='failed' and not released and not (target/'PLAN.json').exists() and not being_admitted:
-                pending_burnins+=amount
+                pending_burnins+=burnin_reservation(campaign,old,batch,amount)
         reserved+=pending_burnins
         if unfinished and not old.get('scheduler_only'):active.append(root.name)
         if old['budget_group']==budget_group:

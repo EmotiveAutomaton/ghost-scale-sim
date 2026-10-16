@@ -12,8 +12,11 @@ def same(actual,expected):
     return math.isclose(actual,expected,abs_tol=1e-11,rel_tol=0)
 
 
-def estimate(values,identity):
+def estimate(values,identity,stable=False):
     if any(x is None for x in values):return dict(mean=None,lower=None,upper=None,se=None,finite=False)
+    if stable:
+        from .adaptive_numerics import interval as stable_interval
+        return stable_interval(values,identity)
     return interval(values,identity)
 
 
@@ -33,6 +36,9 @@ def reconstruct(root,assembly_pending=False):
                 if prob is None:metrics={m:None for m in ('log_loss','half_brier','accuracy')}
                 else:
                     measured=checker.scores(prob,label['y'])
+                    if plan.get('numerical_validation_packet'):
+                        from .adaptive_numerics import independent_log_loss
+                        measured['log_loss']=independent_log_loss(prob,label['y'])
                     metrics={m:float(np.mean(x)) if np.isfinite(x).all() else None for m,x in measured.items()}
                 available=all(x is not None for x in metrics.values())
                 if available!=pred['scores'][name]['available']:raise ValueError('availability was changed')
@@ -52,11 +58,11 @@ def reconstruct(root,assembly_pending=False):
         if any(not same(a,b) for a,b in zip(gains,variant['world_gains'],strict=True)):raise ValueError('world gains changed')
         if [len(groups[w]) for w in groups]!=variant['primary_counts']:raise ValueError('primary denominator changed')
         if unavailable!=variant['unavailable_predictions']:raise ValueError('unavailable cases were deleted')
-        primary=estimate(gains,[identity,plan['batch'],'primary'])
+        primary=estimate(gains,[identity,plan['batch'],'primary'],stable=bool(plan.get('numerical_validation_packet')))
         for key in ('mean','se','lower','upper'):
             if not same(primary[key],variant['primary'][key]):raise ValueError('primary interval mismatch')
         for (name,metric),worlds in scores.items():
-            rebuilt=estimate([mean(worlds[w]) for w in groups],[identity,plan['batch'],name,metric])
+            rebuilt=estimate([mean(worlds[w]) for w in groups],[identity,plan['batch'],name,metric],stable=bool(plan.get('numerical_validation_packet')))
             for key in ('mean','se','lower','upper'):
                 if not same(rebuilt[key],variant['readers'][name][metric][key]):raise ValueError('reader interval mismatch')
         out[identity]=dict(cases=len(seen),worlds=len(groups),estimate=primary,

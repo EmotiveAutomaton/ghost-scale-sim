@@ -27,11 +27,11 @@ def test_complete_partition_assembly_matches_unsplit_science(tmp_path,name):
     root=tmp_path/'logical';plan=dict(family=name,batch=1,variants=[v['id']],worlds=4,cases=2,
         schema_directory=directory,schema_pin=dict(files=hashes,schema_version=schema.SCHEMA_VERSION,schema_hash=schema.schema_hash()),
         fit_directory=str(fitroot),fit_hashes={p.name:digest(p) for p in fitroot.iterdir()},canary_key='ab'*32,
-        sources={},scheduler_only=True)
+        sources={},scheduler_only=True,partition_layout=dict(chunks=[[0,1],[2,3]]))
     write(root/'PLAN.json',plan);parts=[]
     runner.run_batch(tmp_path/'whole',plan,lambda **kw:None)
     for index,worlds in enumerate(([0,1],[2,3])):
-        part=tmp_path/('part'+str(index));pp=dict(plan,scheduler_only=False,world_indices=worlds,
+        part=root.with_name(root.name+'-part-'+str(index+1));pp=dict(plan,scheduler_only=False,world_indices=worlds,
             logical_parent=str(root.resolve()),logical_plan_sha256=digest(root/'PLAN.json'))
         write(part/'PLAN.json',pp)
         for label in ('original','replay'):runner.run_batch(part/label,pp,lambda **kw:None)
@@ -48,3 +48,19 @@ def test_complete_partition_assembly_matches_unsplit_science(tmp_path,name):
     for stream in ('public','truth','prediction','posterior','ledger'):
         path=v['id']+'/'+stream+'_points.jsonl.gz'
         assert list(family.rows(root/'original'/path))==list(family.rows(tmp_path/'whole'/path))
+
+
+def test_retained_partition_requires_original_failure_and_unchanged_science(tmp_path):
+    original=tmp_path/'original';part=tmp_path/'part';root=tmp_path/'repaired'
+    keys=dict(family='R3',batch=1,worlds=4,cases=2,variants=['R3-0000'],
+        fit_hashes={'fit':'a'},canary_key='ab',sources={'source':'b'})
+    write(original/'PLAN.json',keys);write(original/'STATUS.json',dict(state='failed'))
+    write(part/'COMPLETE.json',dict(state='verified'))
+    plan=dict(keys,repair_parent=str(original),repair_parent_plan_sha256=digest(original/'PLAN.json'),
+        repair_parent_status_sha256=digest(original/'STATUS.json'),partition_layout=dict(chunks=[[0,1],[2,3]]),
+        retained_parts={'0':dict(path=str(part),complete_sha256=digest(part/'COMPLETE.json'))})
+    child=dict(logical_parent=str(original.resolve()),logical_plan_sha256=digest(original/'PLAN.json'),world_indices=[0,1])
+    partition.verify_part_binding(root,plan,part,child,0)
+    assert partition.part_paths(root,plan)==[part,root.with_name(root.name+'-part-2')]
+    plan['cases']=3
+    with pytest.raises(ValueError,match='scientific definition'):partition.verify_part_binding(root,plan,part,child,0)

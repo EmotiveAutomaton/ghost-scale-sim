@@ -20,17 +20,15 @@ def replay_owners(root, plan):
         raise ValueError('partial worlds are not a reviewable logical batch')
     parts = [root]
     if plan.get('scheduler_only'):
-        parts = [root.with_name(f'{root.name}-part-{i+1}')
-                 for i in range(len(plan['partition_layout']['chunks']))]
+        from ghostscale.validation.soundingline.v23.partition import part_paths
+        parts = part_paths(root, plan)
     receipts, covered = [], []
     for index, part in enumerate(parts):
         child, _ = family.verify_packet(part)
         if part != root:
             worlds = child.get('world_indices')
-            if (child.get('logical_plan_sha256') != digest(root/'PLAN.json') or
-                    Path(child['logical_parent']).resolve() != root.resolve() or
-                    worlds != plan['partition_layout']['chunks'][index]):
-                raise ValueError('partition provenance changed')
+            from ghostscale.validation.soundingline.v23.partition import verify_part_binding
+            verify_part_binding(root,plan,part,child,index)
             covered.extend(worlds)
         original, replay = (read(part/(label+'-owner.json')) for label in ('original', 'replay'))
         if original['pid'] == replay['pid'] or original['at'] >= replay['at']:
@@ -46,6 +44,19 @@ def replay_owners(root, plan):
 
 def validate_raw_identities(root, plan, summary):
     total = 0
+    if plan['family']=='N1':
+        from ghostscale.validation.soundingline.v23.common import rng
+        import numpy as np
+        for item in summary['variants']:
+            identity=item['variant']['id'];phase=['discovery',plan['batch']]
+            for world in range(item['worlds']):
+                folder=root/'original'/identity/f'world-{world:04d}'
+                if read(folder/'IDENTITY.json')['identity']!=['N1',identity,phase,world]:raise ValueError('population identity differs')
+                with np.load(folder/'truth_points.npz') as truth:
+                    expected=int(rng(identity,phase,'law-block',world//16).permutation(32)[world%16])
+                    if int(truth['law'])!=expected or len(truth['y'])!=item['cases_per_world']:raise ValueError('population law or maker coverage differs')
+                    total+=len(truth['y'])
+        return total
     for item in summary['variants']:
         identity = item['variant']['id']; seen = set(); folder = root/'original'/identity
         for pred, truth in zip(family.rows(folder/'prediction_points.jsonl.gz'),

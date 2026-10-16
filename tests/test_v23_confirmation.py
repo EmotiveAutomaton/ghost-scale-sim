@@ -158,3 +158,52 @@ def test_n6_confirmation_excludes_other_strata_without_case_deletion(tmp_path):
     from ghostscale.validation.soundingline.v23.common import read
     actual=confirmation.reconstruct_evidence(tmp_path,plan)
     assert actual['independent_blocks']==1
+
+
+def test_reserved_fit_binding_rejects_discovery_fits_and_different_order(tmp_path,monkeypatch):
+    from ghostscale.validation.soundingline.v23 import family
+    plan,_=frozen_fixture(tmp_path);fitroot=tmp_path/'reserved-fits';write(fitroot/'COMPLETE.json',dict(state='fixture'))
+    fits=fitroot/'original/fits';fits.mkdir(parents=True);write(fits/'FITS.json',{})
+    pp=dict(plan,task='confirmation-fits')
+    monkeypatch.setattr(family,'verify_packet',lambda root:(pp,dict(state='FITS_VERIFIED')))
+    plan.update(confirmation_fit_packet=str(fitroot),confirmation_fit_complete_sha256=digest(fitroot/'COMPLETE.json'),
+        fit_directory=str(fits),fit_hashes={'FITS.json':digest(fits/'FITS.json')})
+    assert confirmation.verify_definition(plan)['family']=='R1'
+    pp['nomination_order_sha256']='f'*64
+    with pytest.raises(ValueError,match='frozen reserved'):confirmation.verify_definition(plan)
+    pp['nomination_order_sha256']=plan['nomination_order_sha256'];pp['task']='fits'
+    with pytest.raises(ValueError,match='frozen reserved'):confirmation.verify_definition(plan)
+
+
+def test_complete_partitioned_confirmation_rebuilds_same_balanced_evidence(tmp_path,monkeypatch):
+    import os
+    from ghostscale.validation.soundingline.v23 import ledger,runtime,partition,family
+    from ghostscale.validation.soundingline.v23.common import Direct,read
+    directory=os.environ['V23_SCHEMA_DIRECTORY'];schema,hashes=ledger.canonical_schema(directory)
+    v=registry.variants('R1')[-1];x,y=pipeline.training('R1','reserved-partition-fixture',16,variant=v)
+    model=Direct(x,y,x,y,2,'reserved-partition-fixture',0,max_epochs=1);fits=tmp_path/'fits';fits.mkdir()
+    model.save(fits/'fixture.npz');write(fits/'FITS.json',{'fixture':model.metadata})
+    monkeypatch.setattr(confirmation,'verify_definition',lambda _:dict(variant=v['id']))
+    root=tmp_path/'logical';plan=dict(task='confirmation',family='R1',batch='confirmation',variants=[v['id']],worlds=16,cases=1,
+        fit_directory=str(fits),fit_hashes={p.name:digest(p) for p in fits.iterdir()},canary_key='ba'*32,sources={},
+        nomination_order_sha256='a'*64,confirmation_support=support.repair_bound('R1'),scheduler_only=True,confirmation_fit_packet='engineering-fixture-only',
+        partition_layout=dict(chunks=[list(range(8)),list(range(8,16))]),schema_directory=directory,
+        schema_pin=dict(files=hashes,schema_version=schema.SCHEMA_VERSION,schema_hash=schema.schema_hash()))
+    write(root/'PLAN.json',plan);confirmation.run(tmp_path/'whole',plan,lambda **kw:None);parts=[]
+    for index,worlds in enumerate(plan['partition_layout']['chunks']):
+        part=root.with_name(root.name+'-part-'+str(index+1));pp=dict(plan,scheduler_only=False,world_indices=worlds,
+            logical_parent=str(root.resolve()),logical_plan_sha256=digest(root/'PLAN.json'));write(part/'PLAN.json',pp)
+        for label in ('original','replay'):confirmation.run(part/label,pp,lambda **kw:None)
+        assert not (part/'original/EVIDENCE.json').exists()
+        write(part/'REPLAY.json',runtime.compare(part/'original',part/'replay'))
+        write(part/'COMPLETE.json',dict(state='verified',plan_sha256=digest(part/'PLAN.json'),
+            replay_sha256=digest(part/'REPLAY.json'),summary_sha256=digest(part/'original/SUMMARY.json')));parts.append(part)
+    completion=partition.assemble(root,parts);write(root/'COMPLETE.json',completion)
+    assembled=read(root/'original/EVIDENCE.json');whole=read(tmp_path/'whole/EVIDENCE.json')
+    for key,stream in (('raw_predictions_sha256','prediction'),('raw_truth_sha256','truth')):
+        a=root/'original'/v['id']/(stream+'_points.jsonl.gz');b=tmp_path/'whole'/v['id']/(stream+'_points.jsonl.gz')
+        assert assembled.pop(key)==digest(a) and whole.pop(key)==digest(b)
+        assert list(family.rows(a))==list(family.rows(b))
+    assert assembled==whole
+    assert read(root/'original/SEED_AUDIT.json')==read(tmp_path/'whole/SEED_AUDIT.json')
+    assert family.reconstruct(root)['state']=='passed'

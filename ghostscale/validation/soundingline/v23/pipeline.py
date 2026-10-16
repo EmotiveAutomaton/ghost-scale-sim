@@ -139,7 +139,8 @@ def run_batch(root, plan, pulse):
     if confirmation:
         from .confirmation import verify_definition
         verify_definition(plan)
-        if plan.get('fit_directory'): raise ValueError('confirmation must refit the nominated variant')
+        if plan.get('fit_directory') and not plan.get('confirmation_fit_packet'):
+            raise ValueError('confirmation must refit the nominated variant')
     sample_phase = ['confirmation', plan['nomination_order_sha256']] if confirmation else ['discovery', batch]
     from .partition import world_indices
     worlds=world_indices(plan)
@@ -220,9 +221,10 @@ def run_batch(root, plan, pulse):
         finally:
             for stream in (public_stream, truth_stream, score_stream, detail_stream, ledger_stream): stream.close()
         if plan.get('world_indices') is not None:
-            write(folder/'WORLD_AGGREGATES.json',dict(worlds=worlds,reader_worlds=reader_worlds,
+            from .partition import encode_nonfinite
+            write(folder/'WORLD_AGGREGATES.json',encode_nonfinite(dict(worlds=worlds,reader_worlds=reader_worlds,
                 gains=gain_worlds,headroom=headroom_worlds,secondary_worlds=secondary_worlds,strata=strata_worlds,
-                max_check=max_check,max_roundtrip=max_roundtrip))
+                max_check=max_check,max_roundtrip=max_roundtrip)))
         primary = interval(gain_worlds, [v['id'], batch, 'primary'])
         summary = dict(variant=v, primary=primary, world_gains=gain_worlds,
             readers={name: {metric: interval([r[metric] for r in rows], [v['id'], batch, name, metric])
