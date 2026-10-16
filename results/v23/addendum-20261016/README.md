@@ -4,10 +4,13 @@ This is an engineering batch, not a new scientific family result. The owner
 authorized independent implementation while scientific-design answers remain
 pending. [Full implementation report](../../../docs/versions/v23-research-division/ADDENDUM_IMPLEMENTATION_2026-10-16.md).
 
-- `IMPLEMENTATION_CHECKS.json`: 84 distinct passing targeted checks, immutable
+- `IMPLEMENTATION_CHECKS.json`: 95 distinct passing targeted checks, immutable
   isolated-run receipt hashes and the checked implementation sources.
 - `DEPLOYMENT.json`: new/old resource-policy separation, actual three-worker
   limit, N4 profile execution, R3 admission, N7 stocking and preserved N2/N3.
+- `COORDINATION_RECOVERY.json`: two subsequent controller exits, tested lock
+  retry and N7 source compatibility, preserved completed parts and live recovery.
+  It supersedes the deployment receipt's controller snapshot.
 
 The live snapshot is [CURRENT_STATUS.json](../CURRENT_STATUS.json). Frozen
 execution plans, source capsules, complete original/replay products and detailed

@@ -23,8 +23,9 @@ Line priority remain unchanged.
 
 ## Running and queued
 
-- N2's second burn-in and N3's repaired first burn-in retain their original
-  controllers, source capsules and scientific bounds.
+- N2's second burn-in retains its original controller. N3's repaired first
+  burn-in uses a replacement controller after the coordination repair below.
+  Both retain their original source capsules and scientific bounds.
 - N4's separately named completion profile is admitted and running with a
   14,400 CPU-second original/replay cap. It retains the complete 160-setting main
   grid, four profile cases per setting, the previous largest-first order and all
@@ -117,3 +118,29 @@ measured evidence, or a new mechanism result. The initial local admission comman
 omitted the isolated schema dependency path and stopped before creating a packet;
 the corrected launcher used the existing dependency directory. Both administrative
 attempts remain charged, and no environment was synchronized.
+
+## Live coordination repair
+
+The final deployment check caught two controller exits at 23:01 UTC. N3's
+controller treated a contended Windows admission byte lock as a fatal permission
+error. The addendum controller rejected N7's existing cost profile because the
+shared recipe module also contained newer population-likelihood caching code.
+N2 and N4 kept running. N3's three completed parts and R3's second-batch admission
+were preserved; no accepted work was repeated.
+
+The repaired lock handling retries only contention on the shared admission
+lock. File-access errors, a competing service owner and scientific errors still
+propagate. N7 source compatibility now checks the exact recipe functions and
+imports it uses, while allowing changes to unrelated population functions.
+Changes to either recipe function, imports, top-level execution, its caller or
+the frozen profile evidence still refuse admission. No scientific criterion or
+profile cost was changed.
+
+New immutable controllers resumed N3's fourth part at 23:10 UTC and retained
+N4/N7 preparation and R3 continuation. The original failed controllers, traces,
+charges and event hashes remain recorded. Four newly completed parts passed
+source/archive and complete original/replay file-binding checks; they are not
+standalone family decisions. The native lock-contention and source-tamper tests
+pass, bringing this implementation batch to **95 distinct passing checks**.
+See [coordination recovery](../../../results/v23/addendum-20261016/COORDINATION_RECOVERY.json).
+The original deployment receipt remains a dated snapshot before these failures.

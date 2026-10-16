@@ -13,7 +13,15 @@ from pathlib import Path
 import subprocess,sys,time
 from ghostscale.validation.soundingline.v23 import family,runtime,resource_policy
 from ghostscale.validation.soundingline.v23.common import read,write,digest
-from runners.watch_v23_events import owner,alive,event
+from runners.watch_v23_events import owner,alive,event,OwnerBusyError
+
+
+def admission_step(campaign, action, *args):
+    """Retry only contention on the shared admission lock, never arbitrary I/O."""
+    try:return action(*args)
+    except OwnerBusyError as exc:
+        if exc.state != (Path(campaign)/'admission').resolve():raise
+        return dict(state='RUNNING',phase='WAITING_FOR_ADMISSION_OWNER')
 
 
 def inventory(campaign):
@@ -194,7 +202,7 @@ def run(campaign,state,config_path):
                     write(state/'STATUS.json',dict(result,pid=os.getpid(),heartbeat=runtime.now()),immutable=False)
                     write(cost_path,dict(cpu_seconds=time.process_time()-started,state=result['state']),immutable=False)
                     return
-                result=step(campaign,config)
+                result=admission_step(campaign,step,campaign,config)
                 write(state/'STATUS.json',dict(result,pid=os.getpid(),heartbeat=runtime.now(),config_sha256=digest(config_path)),immutable=False)
                 write(cost_path,dict(cpu_seconds=time.process_time()-started,state=result['state']),immutable=False)
                 if result['state']!='RUNNING':

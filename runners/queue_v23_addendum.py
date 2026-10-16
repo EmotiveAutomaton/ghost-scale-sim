@@ -62,12 +62,7 @@ def run(campaign,state,config_path):
     with owner(state):
         try:
             while True:
-                try:result=step(campaign,state,config)
-                except OSError as exc:
-                    # Another live admission owner may hold the byte lock briefly.
-                    # Retry only that lock error, not an I/O or scientific failure.
-                    if getattr(exc,'winerror',None) not in (33,36):raise
-                    result=dict(state='RUNNING',phase='WAITING_FOR_ADMISSION_OWNER')
+                result=queue.admission_step(campaign,step,campaign,state,config)
                 idle_since,overdue=idle_watchdog(idle_since,result,time.monotonic())
                 if overdue:
                     event(campaign,identity+'-idle-watchdog','queue_review_boundary',

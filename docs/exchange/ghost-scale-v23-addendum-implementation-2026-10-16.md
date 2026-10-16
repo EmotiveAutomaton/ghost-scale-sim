@@ -2,15 +2,17 @@
 
 The resource and queue changes are running. New admissions use the hash-bound
 285 CPU-hour supplement with 18 hours protected; old packet limits and scientific
-criteria remain intact. N2 and N3 retain their owners, N4's completion profile
-is running, R3's required second burn-in is admitted, and N7 is stocked behind
+criteria remain intact. N2 retains its owner, N3 has a recovered controller,
+N4's completion profile is running, R3's required second burn-in is admitted, and N7 is stocked behind
 the current three-worker occupancy. Eight/ten-worker scheduling is implemented
 but expansion remains held for measured Sounding Line interference monitoring.
 
-Eighty-four distinct targeted engineering checks pass. They cover resource
+Ninety-five distinct targeted engineering checks pass. They cover resource
 binding, old allocation validation, successor source preservation, bounded
 concurrent parts, failure draining, full-world twin assembly, the T2 timing-field
-repair and unchanged confirmation evidence. These are engineering results, not
+repair, real native admission-lock contention, N7 source compatibility and
+unchanged confirmation evidence. Two controller exits were recorded and repaired;
+completed parts and scientific source capsules were preserved. These are engineering results, not
 new evidence about maker mechanisms or human intent.
 
 N4c's scientific definition, the T4 sensitivity mapping, and the discovery versus

@@ -1,10 +1,10 @@
 {
   "accepted_confirmations": 0,
   "accepted_family_batches": 12,
-  "at": "2026-10-16T22:56:38.555105+00:00",
+  "at": "2026-10-16T23:12:13.352436+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 47.16439670138889,
+  "charged_cpu_hours_bound": 47.85426215277778,
   "completed_family_batches": 12,
   "conditional_studies_complete": [
     "N4b"
@@ -53,11 +53,11 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-16T22:56:38.593478+00:00",
-    "evidence": "results/v23/addendum-20261016/DEPLOYMENT.json",
+    "at": "2026-10-16T23:12:13.411287+00:00",
+    "evidence": "results/v23/addendum-20261016/COORDINATION_RECOVERY.json",
     "originals_preserved": true,
     "r3_capacity": "SECOND_BURNIN_ADMITTED",
-    "state": "HEALTHY_WITH_PENDING_DESIGNS",
+    "state": "HEALTHY_AFTER_CONTROLLER_RECOVERY",
     "twin_references_present": false
   },
   "max_scientific_workers": 3,
@@ -81,7 +81,7 @@
   "opened": "2026-10-15T05:04:15+00:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "complete": 61,
+    "complete": 62,
     "failed": 16,
     "partitioned": 3,
     "running": 3
@@ -97,9 +97,11 @@
   "profile_validation_status": "FAIL",
   "protected_cpu_hours": 18,
   "queue_states": {
-    "addendum-queue-20261016": "RUNNING",
+    "addendum-queue-20261016": "failed",
+    "addendum-queue-20261016-recovery-1": "RUNNING",
     "conditional-continuation-20261016": "REVIEW_BOUNDARY",
-    "continuation-queue-20261016": "RUNNING",
+    "continuation-queue-20261016": "failed",
+    "continuation-queue-20261016-recovery-1": "RUNNING",
     "n2-post-repair-20261016": "RUNNING",
     "population-continuation-20261016": "REVIEW_BOUNDARY",
     "r3-recovery-queue-20261016": "REVIEW_BOUNDARY"

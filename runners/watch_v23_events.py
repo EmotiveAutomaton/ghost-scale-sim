@@ -22,13 +22,27 @@ def alive(pid):
     finally: kernel.CloseHandle(ctypes.c_void_p(handle))
 
 
+class OwnerBusyError(PermissionError):
+    """A successfully opened owner file is locked by another process."""
+    def __init__(self, state):
+        self.state = Path(state).resolve()
+        super().__init__('owner byte lock is busy: '+str(self.state))
+
+
 @contextmanager
 def owner(state):
     import msvcrt
     state.mkdir(parents=True, exist_ok=True)
     with (state/'OWNER.lock').open('a+b') as handle:
         if handle.tell() == 0: handle.write(b'0'); handle.flush()
-        handle.seek(0); msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+        handle.seek(0)
+        try: msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+        except OSError as exc:
+            # Windows CRT reports a contended nonblocking byte lock as errno 13,
+            # often without winerror. File-open and other I/O failures propagate.
+            if exc.errno in (13, 36) or getattr(exc, 'winerror', None) in (33, 36):
+                raise OwnerBusyError(state) from exc
+            raise
         try: yield
         finally: handle.seek(0); msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
 

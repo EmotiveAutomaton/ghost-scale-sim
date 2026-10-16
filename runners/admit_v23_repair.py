@@ -100,12 +100,18 @@ def verify_profile_sources(plan,family,repository):
                     continue
             # N4 and N7 have independent functions in one checker file. A change
             # to N4 cannot invalidate an otherwise identical N7 cost profile.
-            if family in ('N4','N7') and module=='checker_recipes':
+            if (family in ('N4','N7') and module=='checker_recipes') or (family=='N7' and module=='makers'):
                 import ast
                 def contract(path):
                     tree=ast.parse(path.read_text(encoding='utf-8'))
-                    selected=[node for node in tree.body if isinstance(node,(ast.Import,ast.ImportFrom)) or
-                              getattr(node,'name',None) in ('dictionary','affordance',family.lower(),'verify_'+family.lower())]
+                    # N7 imports precisely these two independent recipe functions.
+                    # Population likelihood caching is outside its call graph.
+                    names=(('recipe_library','satisfaction') if module=='makers' else
+                           ('dictionary','affordance',family.lower(),'verify_'+family.lower()))
+                    selected=[node for node in tree.body if getattr(node,'name',None) in names or
+                              (not isinstance(node,(ast.FunctionDef,ast.ClassDef)) and not
+                               (isinstance(node,ast.Expr) and isinstance(node.value,ast.Constant) and
+                                isinstance(node.value.value,str)))]
                     return [ast.dump(node,include_attributes=False) for node in selected]
                 if digest(frozen)==plan['sources'][relative] and contract(frozen)==contract(repository/relative):continue
             raise ValueError('cost/fit evidence source changed: '+relative)

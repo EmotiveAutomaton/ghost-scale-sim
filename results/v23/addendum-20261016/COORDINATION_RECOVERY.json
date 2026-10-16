@@ -1,0 +1,110 @@
+{
+  "actual_scientists": 3,
+  "at": "2026-10-16T23:12:13.329414+00:00",
+  "controller_failures": {
+    "addendum-queue-20261016": "ValueError('cost/fit evidence source changed: ghostscale/validation/soundingline/v23/makers.py')",
+    "continuation-queue-20261016": "PermissionError(13, 'Permission denied')"
+  },
+  "controllers": {
+    "addendum-queue-20261016-recovery-1": {
+      "families": {
+        "N4": "WAITING_FOR_PILOT",
+        "N7": "WAITING_FOR_SLOT",
+        "R3": "RUNNING_OR_ADMITTED"
+      },
+      "state": "RUNNING"
+    },
+    "continuation-queue-20261016-recovery-1": {
+      "families": {
+        "N3": "RUNNING_OR_ADMITTED"
+      },
+      "state": "RUNNING"
+    },
+    "n2-post-repair-20261016": {
+      "families": {
+        "N2": "RUNNING_OR_ADMITTED"
+      },
+      "state": "RUNNING"
+    }
+  },
+  "controls_passed": 23,
+  "corrections": [
+    "Retry only a contended admission byte lock; unrelated I/O and scientific errors still fail.",
+    "N7 shared recipe functions and imports must match; unrelated population-function changes may differ."
+  ],
+  "events": {
+    "addendum-queue-20261016-failed": "fa2b1df129d383bab648a6b85bae0b667c16a010972520810a49a48319999f04",
+    "continuation-queue-20261016-failed": "6dd408c09353fdf0e39ab06f54295e53f3edd7378949f5ed45926955b3393ee9",
+    "v23-n2-batch-2-part-2-complete": "87fe10dd3faf0b5ff14b3d84dea2dcd8b2226dcb8ecb854375bb4dbb124b3f0b",
+    "v23-n2-batch-2-part-3-complete": "91d04ce194d62b3544cb6a5d8f06165de9fdd8952478aac24b0166cc88cd075c",
+    "v23-n3-batch-1-repair-1-controller-disappeared": "08d7ebcfdb749ee006a1543fd82df55302feec01bba8d353c9ab79b96660cd38",
+    "v23-n3-batch-1-repair-1-part-2-complete": "8dfafeb4911fcdef40a09f1d6f88866128f5b883462ac282a3df8d14ce8f8d85",
+    "v23-n3-batch-1-repair-1-part-3-complete": "c5d3840498da6ccbe5809af72c19928b547b40c09e6ba79075aac160ff83068c",
+    "v23-r3-batch-2-controller-disappeared": "0c7a0fa6630a8724850f3548e90bddf647d56744e96de8da613c9427114712ad"
+  },
+  "family_result": false,
+  "preserved_science": {
+    "accepted_work_repeated": false,
+    "parts": [
+      {
+        "complete_sha256": "a56566b82500b0b3fac82f22c5c5caca6523a008bd97e9a24ce1e919f85ccd33",
+        "family_decision": false,
+        "original_replay_files_verified": 1119,
+        "packet": "v23-n2-batch-2-part-2",
+        "plan_sha256": "d2512f86b0f9bd457d50490e6479e92859a957e5a21261c62ba8307a2c99c1ae",
+        "replay_sha256": "0f9bcb0f32442bd0b5ba2d0930797eda23dc5f40f5cc25fb4f64e9ce0591ffc2",
+        "world_indices": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "complete_sha256": "0148a22ce0911058fc2d8f78d8fe827134af22101d6fd3cf9334808e030d5093",
+        "family_decision": false,
+        "original_replay_files_verified": 1119,
+        "packet": "v23-n2-batch-2-part-3",
+        "plan_sha256": "457873babe4c7814656f53c2a973c36477edeb3fd57d22ecd2ffce2e23516f8e",
+        "replay_sha256": "c6741823ae8b9900b61039729d31fc780899dbde09ff3f1cc0c640226f1b2b3b",
+        "world_indices": [
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "complete_sha256": "87c08caf9e168e451605142915516691d4713eeaa66c0c820cfed7a6bc529fe8",
+        "family_decision": false,
+        "original_replay_files_verified": 675,
+        "packet": "v23-n3-batch-1-repair-1-part-2",
+        "plan_sha256": "de32d5eb8b8e361c5a9d36cda1144cc219e163911e5dde44a5a532b00aff86b6",
+        "replay_sha256": "d76eb606c158913f1c47ffecb04408fbffdd9a5c886d8c7cc904cf6ca9ae121b",
+        "world_indices": [
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "complete_sha256": "951385c8b20e860191cf9e93360507b5941914011bfa6baac6c06801a3195705",
+        "family_decision": false,
+        "original_replay_files_verified": 675,
+        "packet": "v23-n3-batch-1-repair-1-part-3",
+        "plan_sha256": "edeae39baf8d7616b4ff1df4751f11b8870ece039efe5c0a5cb898abd3493b85",
+        "replay_sha256": "956e9282f15f3b50211026a43504d1dfe4edd1ae4b55c30856622b535c8883d4",
+        "world_indices": [
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "source_capsules_unchanged": true
+  },
+  "review_sha256": "a7557f0d52491b0c09d0368efa221013b650ecc14d2b02fe30765f7fa76c7131",
+  "state": "CONTROLLERS_RECOVERED"
+}
