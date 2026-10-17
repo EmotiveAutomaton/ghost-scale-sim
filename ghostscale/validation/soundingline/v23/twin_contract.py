@@ -3,7 +3,7 @@
 No approximate number in the commissioning prose becomes a measured marginal.
 An engineering fixture can exercise a generator without satisfying this gate.
 """
-import math
+import math,re
 from .common import canonical
 
 REQUIRED={
@@ -17,7 +17,11 @@ REQUIRED={
 def realism(family,reference,constructed):
     if family not in REQUIRED:raise ValueError('unknown twin')
     source=reference.get('source',{})
-    authenticated=(len(source.get('revision',''))==40 and len(source.get('sha256',''))==64 and bool(source.get('citation')))
+    authenticated=bool(re.fullmatch('[0-9a-f]{40}',source.get('revision','')) and
+        re.fullmatch('[0-9a-f]{64}',source.get('sha256','')) and source.get('citation') and
+        source.get('kind','git_commit') in ('git_commit','wikipedia_content_sha1'))
+    if source.get('kind')=='wikipedia_content_sha1':
+        authenticated=authenticated and family=='T3' and all(type(source.get(k)) is int and source[k]>0 for k in ('pageid','revision_id'))
     empirical=reference.get('aggregates',{});rows=[];missing=[]
     for key in REQUIRED[family]:
         observed=empirical.get(key);synthetic=constructed.get(key)

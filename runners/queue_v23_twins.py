@@ -77,7 +77,7 @@ def run(campaign,state,config_path):
     with owner(state):
         try:
             while True:
-                result=step(campaign,state,config)
+                result=queue.admission_step(campaign,step,campaign,state,config)
                 write(state/'STATUS.json',dict(result,pid=os.getpid(),heartbeat=runtime.now(),config_sha256=digest(config_path)),immutable=False)
                 write(charge,dict(cpu_seconds=time.process_time()-started,state=result['state']),immutable=False)
                 if result['state']!='RUNNING':event(campaign,identity+'-boundary','queue_review_boundary',result);return

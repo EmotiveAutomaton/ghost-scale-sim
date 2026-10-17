@@ -23,6 +23,20 @@ def reference(plan):
     twin_contract.require_realism(twin_contract.realism(family,record,record['aggregates']))
     if digest(plan['empirical_source'])!=record['source']['sha256']:
         raise ValueError('empirical source bytes do not authenticate aggregates')
+    if record['source'].get('kind')=='wikipedia_content_sha1':
+        source=read(plan['empirical_source']);identity=record['source']
+        anchors=source.get('article_anchors',[])
+        if source.get('source_identity_kind')!='Wikipedia committed content SHA-1, not Git':
+            raise ValueError('Wikipedia source identity kind differs')
+        if not any(a.get('pageid')==identity['pageid'] and a.get('latest_visible_revision')==identity['revision_id']
+                and a.get('sha1')==identity['revision'] for a in anchors):
+            raise ValueError('Wikipedia content revision anchor differs')
+        if canonical(source.get('aggregates'))!=canonical(record['aggregates']):
+            raise ValueError('Wikipedia aggregate source differs')
+        import re
+        hashes=source.get('request_outputs_sha256',{})
+        if not hashes or not all(re.fullmatch('[0-9a-f]{64}',h) for h in [source.get('intake_terminal_sha256',''),*hashes.values()]):
+            raise ValueError('Wikipedia snapshot hash chain missing')
     return record
 
 

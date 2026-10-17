@@ -7,8 +7,14 @@ backbone. Production admission still requires the measured inputs below. The
 numbers in the original commissioning prose are not those measurements.
 
 Supply a JSON object with `source` and `aggregates`. The source records a committed
-40-character revision, a SHA-256 for the corresponding locally retained source
-file, and a citation. The aggregate keys are defined in `twin_contract.REQUIRED`.
+40-character hexadecimal revision, a SHA-256 for the corresponding locally retained
+source file, and a citation. Git references use `kind=git_commit` (the legacy default).
+The October 17 provisional continuation also accepts T3's explicitly typed
+`wikipedia_content_sha1`, with positive page/revision IDs. It must match an anchor
+in the hash-bound source summary, whose aggregates and snapshot hash chain are
+checked. This authenticates the delivered summary and its declared provenance;
+it does not turn a Wikipedia content identifier into a Git commit or independently
+re-download the source corpus. The aggregate keys are defined in `twin_contract.REQUIRED`.
 Ghost verifies the actual source bytes and reports empirical-versus-constructed
 differences. No raw human text, personal identifiers or demographics are required
 in the public reference.

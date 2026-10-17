@@ -21,6 +21,25 @@ def test_twin_reference_requires_actual_source_bytes(tmp_path):
     with pytest.raises(ValueError,match='authenticate'):pipe.reference(plan)
 
 
+def test_wikipedia_reference_requires_typed_matching_anchor_and_aggregates(tmp_path):
+    shape=dict(editors=2,edits_per_editor=[2,2],editors_per_article=[2],summary_coverage=.5,revert_fraction=.1)
+    source=tmp_path/'source.json'
+    write(source,dict(source_identity_kind='Wikipedia committed content SHA-1, not Git',aggregates=shape,
+        article_anchors=[dict(pageid=1,latest_visible_revision=2,sha1='a'*40)],
+        intake_terminal_sha256='c'*64,request_outputs_sha256={'article.json':'d'*64}))
+    ref=tmp_path/'reference.json'
+    record=dict(source=dict(kind='wikipedia_content_sha1',revision='a'*40,pageid=1,revision_id=2,
+        sha256=digest(source),citation='constructed source fixture'),aggregates=shape)
+    write(ref,record)
+    plan=dict(family='T3',empirical_reference=str(ref),empirical_reference_sha256=digest(ref),empirical_source=str(source))
+    assert pipe.reference(plan)==record
+    record['source']['revision_id']=3;write(ref,record,immutable=False);plan['empirical_reference_sha256']=digest(ref)
+    with pytest.raises(ValueError,match='anchor'):pipe.reference(plan)
+    record['source']['revision_id']=2;record['aggregates']['editors']=3
+    write(ref,record,immutable=False);plan['empirical_reference_sha256']=digest(ref)
+    with pytest.raises(ValueError,match='aggregate'):pipe.reference(plan)
+
+
 def test_full_small_twin_world_and_engine_consumer_replay(tmp_path):
     v=deepcopy(registry.variants('T4')[0]);v['settings'].update(makers=3,items=3)
     shape=dict(raters=3,items=3,ratings_per_rater=[3]*3,raters_per_item=[3]*3,rating_semantics='nominal_yes_no_unsure',rating_marginals=[.2,.3,.5])
