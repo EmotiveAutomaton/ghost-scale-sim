@@ -50,6 +50,24 @@ def test_new_policy_never_weakens_original_reallocation_validation(tmp_path):
     with pytest.raises(ValueError,match='unchanged total'):budget_limits(tmp_path)
 
 
+def test_october17_binding_keeps_both_predecessor_policies(tmp_path):
+    row, old = install(tmp_path)
+    row['group_caps_cpu_hours'].update(conditional=24, n8=8)
+    write(tmp_path/policy.SUPPLEMENT_17, row)
+    bound = dict(file=policy.SUPPLEMENT_17, sha256=digest(tmp_path/policy.SUPPLEMENT_17))
+    write(tmp_path/'ACTIVE_RESOURCE_POLICY.json', dict(schema='v23-resource-policy-pointer-v1',
+        acceptance_supplement=bound), immutable=False)
+    assert policy.resolve(tmp_path)['group_caps_cpu_hours']['n8'] == 8
+    assert policy.resolve(tmp_path, {policy.BINDING:old})['group_caps_cpu_hours']['n8'] == 2
+    assert policy.resolve(tmp_path, {})['cpu_seconds'] == 90*3600
+    assert policy.worker_limit(tmp_path) == 3
+    row['group_caps_cpu_hours']['n8'] = 9
+    write(tmp_path/policy.SUPPLEMENT_17, row, immutable=False)
+    bound['sha256'] = digest(tmp_path/policy.SUPPLEMENT_17)
+    with pytest.raises(ValueError, match='group limits'):
+        policy.resolve(tmp_path, {policy.BINDING:bound})
+
+
 def test_retained_partition_recovery_cannot_use_budget_its_old_runtime_lacks(tmp_path):
     install(tmp_path)
     write(tmp_path/'attempts/charged.json',dict(cpu_seconds=70*3600))

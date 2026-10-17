@@ -2,7 +2,7 @@
   "accepted_confirmations": 0,
   "accepted_family_batches": 17,
   "active_packets": [],
-  "at": "2026-10-17T17:09:13.709631+00:00",
+  "at": "2026-10-17T13:18:09.249121-07:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
   "charged_cpu_hours_bound": 89.52170282352779,
@@ -13,7 +13,7 @@
   ],
   "confirmation_runner": "R/N and whole-population reserved refits/evidence; checked disjoint partition assembly; frozen-order controller; no reserved exposure yet",
   "continuation": "New admissions use the hash-bound 285-hour supplement; protected reserve, scientific criteria, original packet bounds and deadline retained.",
-  "deadline": "2026-10-22T05:04:15+00:00",
+  "deadline": "2026-10-21T22:04:15-07:00",
   "discovery_order_frozen": false,
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "engine_interface_verified": true,
@@ -23,6 +23,7 @@
     "N3": "PRIMARY_UNAVAILABLE",
     "N4": "COMPLETION_PROFILE_CPU_CAP_NO_FULL_MAIN_STUDY",
     "N4b": "CONDITIONAL_STUDY_COMPLETE",
+    "N4c": "CONDITIONAL_STUDY_COMPLETE",
     "N5": "NOMINATED",
     "N6": "PRIMARY_UNAVAILABLE",
     "N7": "NOMINATED",
@@ -34,11 +35,10 @@
     "T1": "INSTRUMENT_FAILED_NUMERICAL_SUCCESSOR_REQUIRED",
     "T2": "MEASURED_INPUT_MISSING",
     "T3": "PROFILE_CPU_CAP_TYPED_SOURCE_ACCEPTED",
-    "T4": "PROFILE_CPU_CAP_PRIMARY_REFERENCE_ACCEPTED_SENSITIVITY_MISSING",
-    "N4c": "CONDITIONAL_STUDY_COMPLETE"
+    "T4": "PROFILE_CPU_CAP_PRIMARY_REFERENCE_ACCEPTED_SENSITIVITY_MISSING"
   },
   "families_admitted": 9,
-  "first_actual_review_delivery": "2026-10-15T07:49:30.875830+00:00",
+  "first_actual_review_delivery": "2026-10-15T00:49:30.87583-07:00",
   "gear": 2,
   "implementation_complete": false,
   "independent_family_checkers": [
@@ -56,7 +56,7 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-17T17:09:13.709638+00:00",
+    "at": "2026-10-17T10:09:13.709638-07:00",
     "record": "results/v23/health12-05-20261017/REVIEW.json",
     "state": "HEALTH_REVIEW_NO_NEW_SCIENTIFIC_ADMISSION"
   },
@@ -85,11 +85,11 @@
     "state": "RESOURCE_CAP_NO_FULL_PROFILE"
   },
   "n4c": {
-    "state": "VERIFIED_CONDITIONAL",
-    "settings": 12,
     "cases": 12288,
+    "confirmation_eligible": false,
     "independent_intervals": 192,
-    "confirmation_eligible": false
+    "settings": 12,
+    "state": "VERIFIED_CONDITIONAL"
   },
   "n7_second_batch_parts": {
     "complete": 8,
@@ -98,12 +98,31 @@
   },
   "native_study_workflows_built": true,
   "next_early_check": null,
-  "next_routine_health": "2026-10-18T05:04:15+00:00",
-  "opened": "2026-10-15T05:04:15+00:00",
+  "next_routine_health": "2026-10-17T22:04:15-07:00",
+  "october17_packet": {
+    "actual_worker_ceiling": 3,
+    "conditional_order": [
+      "N14",
+      "N9",
+      "N13",
+      "N10",
+      "N11",
+      "N12",
+      "N4d",
+      "N15"
+    ],
+    "conditional_state": "COMMISSIONED_NOT_YET_ADMITTED",
+    "confirmation": "WAITING_FOR_N8_TERMINAL_REVIEW_AND_FREEZE",
+    "mandatory_dispositions": "results/v23/packet-20261017/MANDATORY_DISPOSITIONS.json",
+    "n8": "FITS_RUNNING",
+    "source_sha256": "5ce49cdcfe104db20e14635ae7aa7fbf8a40628863aafa400ef8ce25536109ae",
+    "state": "IMPLEMENTING_AND_RUNNING"
+  },
+  "opened": "2026-10-14T22:04:15-07:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "failed": 20,
-    "complete": 93
+    "complete": 93,
+    "failed": 20
   },
   "pending_design_decisions": [
     "T4 sensitivity mapping when actual exclusion roster is supplied"
@@ -156,16 +175,16 @@
   ],
   "twin_cost_profiles_queued": [],
   "twin_engineering_fixtures_verified": 8,
+  "twin_profile_failures": {
+    "T1": "Pinned optimizer ABNORMAL, reproduced and independently diagnosed; no repaired fit accepted",
+    "T3": "CPU cap during first-world maker export; no complete profile/replay",
+    "T4": "CPU cap before engine fit; no complete profile/replay"
+  },
   "twins_built": 4,
   "twins_scientifically_admitted": 0,
   "verified_calibration_packets": 1,
   "verified_family_decisions": 9,
   "verified_partial_family_batches": 0,
   "verified_repair_pilots": 8,
-  "worker_expansion_state": "HELD_FOR_MEASURED_INTERFERENCE_CONTRACT",
-  "twin_profile_failures": {
-    "T1": "Pinned optimizer ABNORMAL, reproduced and independently diagnosed; no repaired fit accepted",
-    "T3": "CPU cap during first-world maker export; no complete profile/replay",
-    "T4": "CPU cap before engine fit; no complete profile/replay"
-  }
+  "worker_expansion_state": "HELD_FOR_MEASURED_INTERFERENCE_CONTRACT"
 }

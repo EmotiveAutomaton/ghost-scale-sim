@@ -172,7 +172,7 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
     if family not in ('R1','R2','R3','R4') and not (family=='N1' and task=='pilot') and not new_family:
         raise ValueError('only independently implemented repair batches or the N1 resource pilot can be admitted here')
     optional_binding=optional_readiness(campaign) if family=='N8' else None
-    budget_group='setup' if task=='pilot' else family.lower() if new_family else 'repairs'
+    budget_group='n8' if family=='N8' else 'setup' if task=='pilot' else family.lower() if new_family else 'repairs'
     if completion_pilot:
         if family!='N4' or task!='pilot' or repair or cost_recheck or not policy_binding:
             raise ValueError('only the authorized N4 completion pilot is admitted')
@@ -226,7 +226,7 @@ def _admit(campaign,family,task,cpu_cap,launch=False,repair=False,cost_recheck=0
     if len(active)>=acceptance['max_scientific_workers'] and not (partitioned and task=='family-batch'):
         raise ValueError('Gear 2 scientist slots are full')
     total=runtime.cost(campaign)
-    if task=='pilot':
+    if task=='pilot' and budget_group=='setup':
         for path in (campaign/'attempts').glob('*.json'):
             row=read(path)
             if path.stem not in packet_names:

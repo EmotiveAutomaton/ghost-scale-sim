@@ -14,8 +14,9 @@ from .common import digest, read
 
 
 LIMITS = dict(setup=8, repairs=14, n1=16, n2=7, n3=6, n4=14, n5=3,
-              n6=6, n7=7, n8=2, twins=14)
+              n6=6, n7=7, n8=2, twins=14, conditional=24)
 SUPPLEMENT = 'ACCEPTANCE_SUPPLEMENT_2026-10-16.json'
+SUPPLEMENT_17 = 'ACCEPTANCE_SUPPLEMENT_2026-10-17.json'
 BINDING = 'acceptance_supplement'
 PRIORITY = ('N4c', 'N4', 'N7', 'T1', 'T4', 'T3', 'T2', 'R3', 'N8')
 
@@ -48,7 +49,7 @@ def binding(campaign):
 
 def supplement(campaign, bound):
     campaign = Path(campaign)
-    if set(bound) != {'file', 'sha256'} or bound['file'] != SUPPLEMENT:
+    if set(bound) != {'file', 'sha256'} or bound['file'] not in (SUPPLEMENT, SUPPLEMENT_17):
         raise ValueError('invalid acceptance supplement binding')
     path = campaign/bound['file']
     if digest(path) != bound['sha256']:
@@ -69,7 +70,10 @@ def supplement(campaign, bound):
             or row['deadline'] != acceptance['deadline']
             or row['report_start'] != acceptance['report_start']):
         raise ValueError('resource supplement changes an unapproved bound')
-    if row['group_caps_cpu_hours'] != dict(n7=45, n4=44, twins=40, repairs=48, confirmation=40):
+    expected_caps = dict(n7=45, n4=44, twins=40, repairs=48, confirmation=40)
+    if bound['file'] == SUPPLEMENT_17:
+        expected_caps.update(conditional=24, n8=8)
+    if row['group_caps_cpu_hours'] != expected_caps:
         raise ValueError('resource supplement group limits differ from authorization')
     expected = dict(timezone='America/Los_Angeles', day_start=8, night_start=22,
                     day_workers=8, night_workers=10, restricted_date='2026-10-21', restricted_workers=3)

@@ -19,6 +19,17 @@ authorship and contribution records retain their original attribution.
 
 ## V23 corrected implementation and calibrated opening (2026-10-14)
 
+October 17 curator packet supersedes earlier pending-design holds. Read
+`docs/versions/v23-research-division/PACKET_REVIEW_2026-10-17.md` and its source
+packet. Mandatory dispositions are recorded; admit N8 under its eight-hour cap,
+then build N14, N9, N13, N10, N11, N12, N4d and N15 in rank order under the new
+24-hour conditional group. Each needs a declared protocol, controls, measured
+costs, six rivals and complete replay. Keep actual concurrency at three and
+all original clocks and prior packet bindings. Freeze in the first idle gap
+after N8 is terminal; run qualified expected-evidence arithmetic before any
+confirmation. V24 directions remain designs. Queue depletion with commissioned
+work remaining requires the next build/admission before acknowledgement.
+
 October 17 provisional continuation: the owner authorizes reasonable analyst
 choices from Sounding Line's theory notes while the next packet is prepared.
 Read `docs/versions/v23-research-division/N4C_PROTOCOL.md`. N4c is a separately

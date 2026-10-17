@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+Current: [October 17 curator packet](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-17.md): mandatory dispositions recorded; N8 pilot replay passed and six rival fits are running. Eight conditional studies are commissioned in rank order. Prior snapshots below retain their dates.
+
 Latest: [twin profile review](docs/versions/v23-research-division/TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
 
 [October 17 provisional continuation](docs/versions/v23-research-division/PROVISIONAL_CONTINUATION_2026-10-17.md):
