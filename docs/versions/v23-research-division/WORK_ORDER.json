@@ -26,22 +26,22 @@
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "execution_dispositions": {
     "N1": "RESOURCE_DEFERRED_COMPLETE_PROFILE_CPU_CAP",
-    "N2": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
-    "N3": "REPORTING_REPAIR_RUNNING",
-    "N4": "COMPLETION_PROFILE_RUNNING",
+    "N2": "STOPPED_BELOW_MARGIN_WITH_POOLING_QUALIFICATION",
+    "N3": "PRIMARY_UNAVAILABLE",
+    "N4": "COMPLETION_PROFILE_CPU_CAP_NO_FULL_MAIN_STUDY",
     "N4b": "CONDITIONAL_STUDY_COMPLETE",
     "N5": "NOMINATED",
     "N6": "PRIMARY_UNAVAILABLE",
-    "N7": "STOCKED_AWAITING_SLOT",
+    "N7": "FIRST_BURNIN_VERIFIED_SECOND_BURNIN_RUNNING",
     "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
-    "R3": "SECOND_BURNIN_ADMITTED_AWAITING_SLOT",
+    "R3": "STOPPED_BELOW_MARGIN",
     "R4": "NOMINATED",
-    "T1": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
-    "T2": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
-    "T3": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
-    "T4": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES"
+    "T1": "MEASURED_SUMMARY_RECEIVED_MODULE_GATES_AND_ADMISSION_PENDING",
+    "T2": "MEASURED_INPUT_MISSING",
+    "T3": "MEASURED_SUMMARY_RECEIVED_SOURCE_IDENTITY_CONVENTION_HELD",
+    "T4": "PRIMARY_SUMMARY_RECEIVED_MODULE_GATES_AND_SENSITIVITY_DESIGN_PENDING"
   },
   "families": [
     {
@@ -79,7 +79,7 @@
       "specified_grid_size": 16
     },
     {
-      "admission": "SECOND_BURNIN_ADMITTED_AWAITING_SLOT",
+      "admission": "STOPPED_BELOW_MARGIN",
       "budget_group": "repairs",
       "dependencies": [
         "all_launch_dependencies",
@@ -130,7 +130,7 @@
       "specified_grid_size": 240
     },
     {
-      "admission": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
+      "admission": "STOPPED_BELOW_MARGIN_WITH_POOLING_QUALIFICATION",
       "budget_group": "n2",
       "dependencies": [
         "all_launch_dependencies",
@@ -164,7 +164,7 @@
       "specified_grid_size": 128
     },
     {
-      "admission": "REPORTING_REPAIR_RUNNING",
+      "admission": "PRIMARY_UNAVAILABLE",
       "budget_group": "n3",
       "dependencies": [
         "all_launch_dependencies",
@@ -181,7 +181,7 @@
       "specified_grid_size": 96
     },
     {
-      "admission": "COMPLETION_PROFILE_RUNNING",
+      "admission": "COMPLETION_PROFILE_CPU_CAP_NO_FULL_MAIN_STUDY",
       "budget_group": "n4",
       "dependencies": [
         "all_launch_dependencies",
@@ -198,7 +198,7 @@
       "specified_grid_size": 172
     },
     {
-      "admission": "STOCKED_AWAITING_SLOT",
+      "admission": "FIRST_BURNIN_VERIFIED_SECOND_BURNIN_RUNNING",
       "budget_group": "n7",
       "dependencies": [
         "all_launch_dependencies",
@@ -232,7 +232,7 @@
       "specified_grid_size": 108
     },
     {
-      "admission": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+      "admission": "MEASURED_SUMMARY_RECEIVED_MODULE_GATES_AND_ADMISSION_PENDING",
       "budget_group": "twins",
       "dependencies": [
         "all_launch_dependencies",
@@ -249,7 +249,7 @@
       "specified_grid_size": null
     },
     {
-      "admission": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+      "admission": "MEASURED_INPUT_MISSING",
       "budget_group": "twins",
       "dependencies": [
         "all_launch_dependencies",
@@ -266,7 +266,7 @@
       "specified_grid_size": null
     },
     {
-      "admission": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+      "admission": "PRIMARY_SUMMARY_RECEIVED_MODULE_GATES_AND_SENSITIVITY_DESIGN_PENDING",
       "budget_group": "twins",
       "dependencies": [
         "all_launch_dependencies",
@@ -283,7 +283,7 @@
       "specified_grid_size": null
     },
     {
-      "admission": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
+      "admission": "MEASURED_SUMMARY_RECEIVED_SOURCE_IDENTITY_CONVENTION_HELD",
       "budget_group": "twins",
       "dependencies": [
         "all_launch_dependencies",
@@ -317,7 +317,7 @@
       "specified_grid_size": 24
     }
   ],
-  "family_jobs_admitted": 5,
+  "family_jobs_admitted": 9,
   "family_pipelines_implemented": [
     "R1",
     "R2",
@@ -359,7 +359,7 @@
     "twins": 40
   },
   "interface_evidence": "results/v23/continuation-20261015/INTERFACE_VALIDITY.json",
-  "last_event_review": "ADDENDUM_IMPLEMENTATION_2026-10-16.md",
+  "last_event_review": "THEORY_WALKTHROUGH_2026-10-17.md",
   "launch_dependencies": [
     "V21 published final report and hash-bound verified closure",
     "Native absence of predecessor scientific workers; no conflicting reviewer",
@@ -415,7 +415,7 @@
   "schema": "ghost-v23-preparation-work-order-v1",
   "sounding_line_priority": true,
   "specification_sha256": "f5315dcfab499d97fc5a4de5bb82964f14750ae6666b42d0ac76a1ac4c305445",
-  "state": "COMPLETION_CONTINUATION_RUNNING",
+  "state": "THEORY_WALKTHROUGH_CHECKPOINT_CAMPAIGN_ACTIVE",
   "stopping_policy": {
     "kill": 0.05,
     "prior_mean_scale": 0.08,

@@ -1,5 +1,19 @@
 # The methodology layer
 
+The October 17 [family reviews](versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md)
+reconstruct every primary score and complete-world estimate, verify all replay
+hashes, and reproduce the frozen N2/N3/R3 cards. N7's first burn-in is separately
+reviewed. Retained secondary summaries have full replay; this review does not
+independently reimplement all their intervals. N3 retains missing support and
+whole-world unavailability. N4's failed cost profile retains every partial hash.
+
+N2's numerical interpretation audit integrates the same Gaussian pooling model
+on nonuniform grids with correct widths. It reproduces collapse near zero despite
+large observed gains elsewhere. Thus a reproduced stopping card is not evidence
+that every raw gain lies below margin, and the declared calibration grid does not
+establish appropriateness in this near-zero-uncertainty regime. No changed prior,
+variance floor, selection or scientific outcome is substituted.
+
 The V23 [resource supplement](versions/v23-research-division/ADDENDUM_IMPLEMENTATION_2026-10-16.md)
 separates new-admission policy from immutable old packet bounds. Checked successor
 capsules preserve scientific sources while changing only execution policy. Bounded
@@ -10,13 +24,13 @@ real-world throughput or scientific success.
 
 The N1 complete-profile review authenticates the cap exception, immutable plan/source/dependency bindings and four partial files, independently parses consecutive population-ledger membership, and rechecks the production controls’ complete replay hashes. It reports all 240 cells without inventing effects for unavailable cells. This accepts a resource disposition, not partial-world scientific scores or a full profile replay. [N1 report](versions/v23-research-division/N1_RESOURCE_REPORT.md).
 
-R3’s preserved controller independently reconstructs every first-burn-in proper score and the calibrated card from its matching scientific source. Review binds that controller’s immutable source manifest rather than assuming it equals newer development code. The first-burn-in card cannot waive the required second batch; complete scientific cost includes all reused parts. N2 partition evidence checks original/replay files and parent-world ownership without treating a partial batch as a family decision. [Reserve checkpoint](versions/v23-research-division/RESERVE_CHECKPOINT_2026-10-16.md).
+R3’s preserved controller independently reconstructs every first-burn-in proper score and the calibrated card from its matching scientific source. Review binds that controller’s immutable source manifest rather than assuming it equals newer development code. The later complete two-batch review records the terminal stop; complete scientific cost includes all reused parts. N2 partition evidence checks original/replay files and parent-world ownership without treating a partial batch as a family decision. [Reserve checkpoint](versions/v23-research-division/RESERVE_CHECKPOINT_2026-10-16.md).
 
 V23's recovered-batch execution audit checks completion and source hashes, both copies of every indexed scientific file, distinct sequential replay owners, retained-part provenance and complete disjoint world coverage. These checks precede the independent numerical family review; they do not accept a calibrated card. Successor costing includes reused original parts as well as recovery and assembly. [Execution checkpoint](versions/v23-research-division/RECOVERY_CHECKPOINT_2026-10-16.md).
 
 The V23 completion pass uses stable normalized log scores, scaled inverse-variance arithmetic and scale-invariant bootstrap variance without epsilon floors. Complete calibration science is byte-identical under the repaired arithmetic and fresh-process replay. Retained N2 predictions are rescored without new outcomes; independent reconstruction accepts the first burn-in. N4b separately preserves forecast-before-observation timing, reconstructs conditional posteriors, and resamples whole worlds. Confirmation parts preserve diagnostic infinities explicitly and reconstruct the same raw evidence as an unsplit packet. [Continuation](versions/v23-research-division/CONTINUATION_2026-10-16.md).
 
-N3’s six saved fits now have independent log-softmax validation reconstruction and complete thirteen-file replay. The subsequent discovery summary failed on a missing direction diagnostic for empty literal support. Development now retains an explicit null diagnostic and invalidates the whole-world mean, with four targeted checks covering both case orders and retained-data replay. The failed capsule and every partial case remain; the owner authorized that exception on October 16 and the complete reporting-repair batch is running. [Review](versions/v23-research-division/N3_FIT_COMPLETE_REPORT.md).
+N3’s six saved fits now have independent log-softmax validation reconstruction and complete thirteen-file replay. The subsequent discovery summary failed on a missing direction diagnostic for empty literal support. Development now retains an explicit null diagnostic and invalidates the whole-world mean, with four targeted checks covering both case orders and retained-data replay. The failed capsule and every partial case remain; the owner authorized that exception on October 16 and the complete reporting-repair batch now has a reviewed unavailable-primary disposition. [Review](versions/v23-research-division/N3_FIT_COMPLETE_REPORT.md).
 
 V23 N5/N6 reviews reconstruct every saved proper score, whole-world denominator, secondary metric and interval from retained records, then reproduce the frozen calibrated cards. Uptake counts are additionally rebuilt from individual paths. N5’s primary algebraic correction is kept separate from approximate hierarchical quadrature. N6’s empty conditional worlds remain unavailable. N2’s numerical saturation is diagnosed without substituting structural zeros or invented variance. [Review](versions/v23-research-division/EVENT_REVIEW_REPORT.md).
 

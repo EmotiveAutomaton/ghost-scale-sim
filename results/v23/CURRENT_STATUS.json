@@ -1,11 +1,11 @@
 {
   "accepted_confirmations": 0,
-  "accepted_family_batches": 12,
-  "at": "2026-10-16T23:12:13.352436+00:00",
+  "accepted_family_batches": 16,
+  "at": "2026-10-17T11:44:43.484260+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 47.85426215277778,
-  "completed_family_batches": 12,
+  "charged_cpu_hours_bound": 85.521953125,
+  "completed_family_batches": 16,
   "conditional_studies_complete": [
     "N4b"
   ],
@@ -17,24 +17,24 @@
   "engine_interface_verified": true,
   "families": {
     "N1": "RESOURCE_DEFERRED_COMPLETE_PROFILE_CPU_CAP",
-    "N2": "FIRST_BURNIN_REPAIR_VERIFIED_SECOND_BURNIN_ADMITTED",
-    "N3": "REPORTING_REPAIR_RUNNING",
-    "N4": "COMPLETION_PROFILE_RUNNING",
+    "N2": "STOPPED_BELOW_MARGIN_WITH_POOLING_QUALIFICATION",
+    "N3": "PRIMARY_UNAVAILABLE",
+    "N4": "COMPLETION_PROFILE_CPU_CAP_NO_FULL_MAIN_STUDY",
     "N4b": "CONDITIONAL_STUDY_COMPLETE",
     "N5": "NOMINATED",
     "N6": "PRIMARY_UNAVAILABLE",
-    "N7": "STOCKED_AWAITING_SLOT",
+    "N7": "FIRST_BURNIN_VERIFIED_SECOND_BURNIN_RUNNING",
     "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
-    "R3": "SECOND_BURNIN_ADMITTED_AWAITING_SLOT",
+    "R3": "STOPPED_BELOW_MARGIN",
     "R4": "NOMINATED",
-    "T1": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
-    "T2": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
-    "T3": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES",
-    "T4": "BUILT_DEPENDENCY_HELD_EMPIRICAL_INPUTS_AND_MODULE_GATES"
+    "T1": "MEASURED_SUMMARY_RECEIVED_MODULE_GATES_AND_ADMISSION_PENDING",
+    "T2": "MEASURED_INPUT_MISSING",
+    "T3": "MEASURED_SUMMARY_RECEIVED_SOURCE_IDENTITY_CONVENTION_HELD",
+    "T4": "PRIMARY_SUMMARY_RECEIVED_MODULE_GATES_AND_SENSITIVITY_DESIGN_PENDING"
   },
-  "families_admitted": 7,
+  "families_admitted": 9,
   "first_actual_review_delivery": "2026-10-15T07:49:30.875830+00:00",
   "gear": 2,
   "implementation_complete": false,
@@ -53,12 +53,9 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-16T23:12:13.411287+00:00",
-    "evidence": "results/v23/addendum-20261016/COORDINATION_RECOVERY.json",
-    "originals_preserved": true,
-    "r3_capacity": "SECOND_BURNIN_ADMITTED",
-    "state": "HEALTHY_AFTER_CONTROLLER_RECOVERY",
-    "twin_references_present": false
+    "at": "2026-10-17T11:44:43.484260+00:00",
+    "report": "THEORY_WALKTHROUGH_CHECKPOINT_CAMPAIGN_ACTIVE",
+    "state": "FULL_COMPLETED_EVIDENCE_REVIEW"
   },
   "max_scientific_workers": 3,
   "n1_completion_profile": {
@@ -76,22 +73,35 @@
     "production_admission": false,
     "state": "RESOURCE_LIMIT_BEFORE_VERIFICATION"
   },
+  "n4_completion_profile": {
+    "full_replay": false,
+    "production_admission": false,
+    "profiled_settings": 13,
+    "required_settings": 160,
+    "retained_cases": 52,
+    "state": "RESOURCE_CAP_NO_FULL_PROFILE"
+  },
+  "n7_second_batch_parts": {
+    "complete": 6,
+    "required": 8,
+    "terminal_family_decision": false
+  },
   "native_study_workflows_built": true,
-  "next_routine_health": "2026-10-17T05:04:15+00:00",
+  "next_routine_health": "2026-10-17T17:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "complete": 62,
-    "failed": 16,
-    "partitioned": 3,
-    "running": 3
+    "complete": 87,
+    "failed": 17,
+    "partitioned": 1,
+    "running": 2
   },
   "pending_design_decisions": [
     "N4c scientific definition",
     "T4 sensitivity mapping",
     "mandatory/confirmation scheduling decision"
   ],
-  "pending_external_dependencies": "Measured twin shape inputs and reviewed product-module gates; revision-purpose engine target unavailable",
+  "pending_external_dependencies": "T1/T4/T3 summaries received; T2 missing, T3 source convention unresolved, T4 sensitivity roster/mapping and reviewed product-module gates remain.",
   "population_checker": "Independent population, complete replay and 32-culture reserved-consumer controls pass; production controls/profile gate full-scale admission",
   "prior_notifier_delivery_observed": true,
   "profile_validation_status": "FAIL",
@@ -101,30 +111,39 @@
     "addendum-queue-20261016-recovery-1": "RUNNING",
     "conditional-continuation-20261016": "REVIEW_BOUNDARY",
     "continuation-queue-20261016": "failed",
-    "continuation-queue-20261016-recovery-1": "RUNNING",
-    "n2-post-repair-20261016": "RUNNING",
+    "continuation-queue-20261016-recovery-1": "REVIEW_BOUNDARY",
+    "family-queue": "REVIEW_BOUNDARY",
+    "family-queue-2": "REVIEW_BOUNDARY",
+    "n2-continuation-queue-20261016": "OPERATOR_HANDOFF",
+    "n2-post-repair-20261016": "REVIEW_BOUNDARY",
     "population-continuation-20261016": "REVIEW_BOUNDARY",
+    "preparation-queue-1": "failed",
+    "preparation-queue-2": "OPERATOR_STOP",
+    "preparation-queue-3": "OPERATOR_STOP",
+    "preparation-queue-4": "failed",
+    "preparation-queue-5": "REVIEW_BOUNDARY",
+    "preparation-queue-6": "REVIEW_BOUNDARY",
     "r3-recovery-queue-20261016": "REVIEW_BOUNDARY"
   },
   "replacement_notifier_delivery_observed": false,
-  "report": "docs/versions/v23-research-division/ADDENDUM_IMPLEMENTATION_2026-10-16.md",
+  "report": "docs/versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
     "RESOURCE_REALLOCATION_3.json",
     "ACCEPTANCE_SUPPLEMENT_2026-10-16.json"
   ],
-  "retained_failed_attempts": 16,
-  "scientific_controllers": 3,
-  "scientific_workers": 3,
-  "state": "ADDENDUM_CONTINUATION_RUNNING",
+  "retained_failed_attempts": 17,
+  "scientific_controllers": 1,
+  "scientific_workers": 2,
+  "state": "THEORY_WALKTHROUGH_CHECKPOINT_CAMPAIGN_ACTIVE",
   "total_cpu_hours": 285,
   "twin_engineering_fixtures_verified": 8,
   "twins_built": 4,
   "twins_scientifically_admitted": 0,
   "verified_calibration_packets": 1,
-  "verified_family_decisions": 5,
-  "verified_partial_family_batches": 0,
+  "verified_family_decisions": 8,
+  "verified_partial_family_batches": 1,
   "verified_repair_pilots": 8,
   "worker_expansion_state": "HELD_FOR_MEASURED_INTERFERENCE_CONTRACT"
 }

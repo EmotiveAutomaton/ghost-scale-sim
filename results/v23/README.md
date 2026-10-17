@@ -1,11 +1,16 @@
 # V23 evidence
 
-[October 16 addendum implementation](addendum-20261016/README.md): 84 distinct
-engineering checks pass; raised resources apply to new admissions, N4's profile
-is running, R3's second burn-in is admitted and N7 is stocked. Actual concurrency
-remains three; pending design choices and empirical dependencies remain explicit.
+[October 17 walkthrough](walkthrough-20261017/README.md): complete N2/N3/R3
+family reviews, N7's first burn-in, failed N4 profile and supplied twin references.
+V23 remains active; no confirmation is recorded.
 
-[N3 fit completion and reporting failure](n3-fit-complete-20261016/README.md): six fits verify; discovery failed on unavailable diagnostics. The additional reporting repair is now authorized and running. [Original capped attempt](n3-fit-event-20261016/README.md) retained.
+[October 16 addendum implementation](addendum-20261016/README.md): 95 distinct
+engineering checks pass, including the coordination repair. Current execution
+supersedes the original running/stocked snapshot. Actual concurrency remains three.
+
+[Historical N3 fit/reporting failure](n3-fit-complete-20261016/README.md) and
+[original capped attempt](n3-fit-event-20261016/README.md) remain retained; the
+[full repaired review](n3-decision-review/README.md) records the unavailable primary.
 
 [October 15 event review](events-20261015/README.md): full [R4](r4-decision-review/README.md), [N5](n5-decision-review/README.md) and [N6](n6-decision-review/README.md) decisions and retained failures. These replace the earlier partial/pending family states below.
 

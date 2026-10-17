@@ -1,10 +1,14 @@
 # Sounding Line exchange index
 
+- [October 17 theory walkthrough](v23-theory-walkthrough-2026-10-17.md): N2 pooling qualification, N3 unavailable primary, R3 terminal stop, N7 ongoing and source deliveries reviewed.
+
+- [Sounding Line measured twin references, October 16](sounding-line-twin-references-2026-10-16/README.md): authenticated T1/T4 aggregates and source mapping; [T3 supplement](sounding-line-twin-references-2026-10-16/T3_README.md) awaits API-native source-identity review; T2 pending and T4 sensitivity blocked. No scientific admission or earlier failure repair.
+
 - [October 16 V23 checkpoint](../versions/v23-research-division/CHECKPOINT_2026-10-16.md): recorded queue, verified results and remaining holds.
 - [Sounding Line Stage 15 dependency request](sounding-line-stage15-dependencies-2026-10-15.md): original exact-engine validation requirements.
 - [Sounding Line Stage 15 healing request](sounding-line-stage15-profile-healing-2026-10-15.md): reviewed candidate and a separately frozen successor required; original FAIL preserved.
 
-- [N3 fit and discovery disposition](v23-n3-fit-response.md): six fits verify; discovery summary failed; additional repair pending, no accepted scientific result.
+- [N3 fit and discovery disposition](v23-n3-fit-response.md): historical six-fit/discovery reporting failure; [complete repaired result](../versions/v23-research-division/N3_REPORT.md) now records an unavailable primary.
 
 - [Ghost Stage 15 validation failed](ghost-stage15-profile-validation-2026-10-15.md): actual FAIL witness; null bounds and option-order invariance failed; complete replay and independent review retained.
 

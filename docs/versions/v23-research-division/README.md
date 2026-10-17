@@ -1,20 +1,16 @@
 # V23: research division and decision-ledger bridge
 
-Current resource update: [October 16 addendum implementation](ADDENDUM_IMPLEMENTATION_2026-10-16.md).
-The new-admission ceiling is 285 CPU hours with 18 protected; original packet
-limits and the deadline are preserved. N4's completion profile is running, N7
-is stocked and R3's second burn-in is admitted. Actual concurrency stays at three
-pending measured sibling-interference monitoring. N4c and T4 sensitivity design
-answers remain pending; no new confirmation has opened.
+Current checkpoint: [October 17 theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md).
+N2 and R3 have reviewed terminal stops; N2 retains the observed-gain/pooling
+qualification. N3's complete batch has an unavailable primary. N7's first
+burn-in is reviewed and its second is running. N4's larger completion profile
+also capped; no main-grid result is accepted. N4b stays complete and N1 stays
+resource-deferred. Four discovery nominations remain unconfirmed.
 
-Current work: [October 16 completion and repair continuation](CONTINUATION_2026-10-16.md).
-The owner authorized completing the remaining implementation and bounded repairs.
-N3's repair and N2's second burn-in are running. R3's recovered first burn-in passes
-reconstruction and its mandatory second batch is now admitted under the supplement.
-N1's complete-grid profile hit its largest-cell CPU cap; the
-full population study is [resource-deferred](N1_RESOURCE_REPORT.md). N4b is complete.
-[Reserve checkpoint](RESERVE_CHECKPOINT_2026-10-16.md). V23 science remains
-incomplete; four discovery nominations are reviewed and no order is frozen.
+The resource supplement remains 285 CPU hours with eighteen protected and actual
+concurrency three. T1/T4/T3 source summaries have arrived; source/module gates,
+T2, T4 sensitivity, N4c and schedule questions remain explicit. No reserved
+confirmation order is frozen. The record is ready for review; V23 is not closed.
 
 - [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33
   stress settings remain qualified, independent reconstruction and full replay pass.

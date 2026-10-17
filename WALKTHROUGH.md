@@ -1,5 +1,10 @@
 # The walkthrough
 
+[Current V23 theory checkpoint](docs/versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md):
+N2 distinguishes observed gain from a pooled-model stop; N3 exposes empty literal
+support; R3 supports the predicted costly-label stop. Full evidence is recorded.
+N7 remains active, main N4 remains incomplete, and confirmation is pending.
+
 Can a changed contingency distinguish mechanisms that produce identical earlier choices? In the constructed N4b probe, changing the contingency improves the true-mechanism log score for the transition and intrinsic-recipe mechanisms by 0.149–0.179 nats. It does not improve that score for the habit mechanism. Unchanged probes remain aliased to numerical precision. This is a finite constructed-mechanism result, separate from the unfinished main N4 study and from confirmatory family selection; it establishes nothing about human values. [Result and retained checks](docs/versions/v23-research-division/N4B_REPORT.md).
 
 Can pooled adaptive stopping avoid discarding useful families without nominating too many nulls? On the declared held-out simulation grid, the selected policy stops 725 of 13,181 strong families (5.50%; 95% upper bound 5.90%) and nominates 18 of 6,247 null families (0.288%; upper bound 0.455%). Both pooled targets pass. Thirty-three individual settings exceed at least one point-rate target, so this is a qualified method result, not a universal guarantee. Fresh-process full replay and independent count/interval reconstruction pass. [V23 calibration](docs/versions/v23-research-division/CALIBRATION_REPORT.md).
