@@ -1,0 +1,94 @@
+{
+  "acceptance_sha256": "b12308c980a2e15180ff52483fa4715861d40fc35ba861c59635e5126add7920",
+  "at": "2026-10-17T17:09:13.707248+00:00",
+  "campaign_complete": false,
+  "confirmation_order_frozen": false,
+  "deadline": "2026-10-22T05:04:15+00:00",
+  "earlier_review": "Actual committed dependency/input arrival, failure or family boundary",
+  "engine_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
+  "event": {
+    "at": "2026-10-17T17:04:16.768606+00:00",
+    "evidence": {
+      "due": "2026-10-17T17:04:15+00:00"
+    },
+    "id": "health12-05",
+    "kind": "twelve_hour_health"
+  },
+  "event_sha256": "ca39d4fd8949d6c47d20a5d8f27993f560114857126a7f4ddf23f7375a3ce7e7",
+  "max_scientific_workers": 3,
+  "missing_inputs": [
+    "T2 measured reference",
+    "T4 actual sensitivity roster"
+  ],
+  "n4c": {
+    "complete_sha256": "788baa2341f18e5cec2029a6a219f23b3483fbd182041a619153e3ac6f76ca05",
+    "confirmation_eligible": false,
+    "new_sampling": false,
+    "new_scientific_replay": false,
+    "primary_ablations_six_rivals_and_192_intervals": "Unchanged independently reviewed evidence reused by exact hashes",
+    "scientific_original_replay_files_verified": 62,
+    "validity_sha256": "364431fd2cc544dddea68b5b6609d85d472fdac002c5fb53006d2068f5646f7a"
+  },
+  "n8_admitted": false,
+  "new_engine_commit": false,
+  "new_scientific_decisions": 0,
+  "next_routine_health": "2026-10-18T05:04:15+00:00",
+  "notifications_disarmed_during_review": true,
+  "notifier_actual_delivery_verified": true,
+  "packet_states": {
+    "complete": 93,
+    "failed": 20
+  },
+  "prior_public_write_through_files_verified": 24,
+  "prior_public_write_through_sha256": "1025757f713ae0420926ed2da031e223c9831a54f7b8601a2f92e8ea1e8f00bc",
+  "prior_publication_commit": "813870a9f80cc715d7d4aebdf8a4d69be8e3597c",
+  "protected_cpu_hours": 18,
+  "queue_states": {
+    "n4c-queue-20261017": {
+      "state": "REVIEW_BOUNDARY",
+      "status_sha256": "44279a82deb4cc24e3e3658baf4ccf458f244763fd76ead3d1991136fb5d7945"
+    },
+    "twin-queue-20261017": {
+      "state": "failed",
+      "status_sha256": "dc4c70004d8d12cb20c6e4c37823616077f3f1a15d41c45f74d62787d131840c"
+    },
+    "twin-queue-20261017-repair-1": {
+      "state": "REVIEW_BOUNDARY",
+      "status_sha256": "0c0a754275c917f1ba713ef5ea9f09e26d5df1919947b4f6c2894c3ae4f16dfe"
+    }
+  },
+  "report_start": "2026-10-22T03:04:15+00:00",
+  "scientific_controllers": 0,
+  "scientific_workers": 0,
+  "state": "HEALTH_REVIEW_NO_NEW_SCIENTIFIC_ADMISSION",
+  "supplement_sha256": "fd51052d69de2ccd68510f6bfbc365478c62f132628cd65c6e2a6c74dd7035ca",
+  "total_cpu_hours": 285,
+  "twin_profiles": {
+    "T1": {
+      "plan_sha256": "62dd8e5479b200bcdb0ef56a98f851c7e46cfb185ab62201f72ec9baf3d09c42",
+      "reference_sha256": "8890c55790eeb7f615d13eedf99b8988a863fce4eafd6df5205afa00616dee01",
+      "source_archive_sha256": "5d9463673b6fb937e46a091dd46b09740b71ec31e915972aef351d8477cdb1d2",
+      "state": "failed",
+      "status_sha256": "73eb6cf4a57bdc6767587003b428c7a99b4168316ccdf7c80daaeb208e0e5425"
+    },
+    "T3": {
+      "plan_sha256": "531990a2e97b477cb9bb280e602cf6ae6425cdb363476e0dbbda3c198d66731f",
+      "reference_sha256": "efc5614be94da2ca1ed56f8d70d1c863c3063bc4762ede5d2376fffa3de5563b",
+      "source_archive_sha256": "16d6beb3f37b6139c7a27e4e29d49abc09bb2d089e4be1b65d0bead02ad3559e",
+      "state": "failed",
+      "status_sha256": "cb3c7d862c8403bca0b472ec68d23ce3f329dbf60e2cc2c6cc0069223794ade0"
+    },
+    "T4": {
+      "plan_sha256": "dca0bef925540b513585163d544113fd450b1b5f232c700085a3a005f33ba3c3",
+      "reference_sha256": "54ed496946544be6ca028bdeed59c21020c00ebb014731cb967c25f49dd8a1fd",
+      "source_archive_sha256": "03ec243be468b222543902c4b0958cd60e7af2e1ce3d13a40b60acdccfc5c838",
+      "state": "failed",
+      "status_sha256": "b403159a5ff7c19162547496b8cb1f3dd77a48030b8bb51640854e055eb24e1e"
+    }
+  },
+  "unresolved_requirements": [
+    "Source-pinned numerical engine successor",
+    "Concrete bounded T3/T4 engineering repair and complete measured profile/replay",
+    "Applicable product-module gates"
+  ]
+}

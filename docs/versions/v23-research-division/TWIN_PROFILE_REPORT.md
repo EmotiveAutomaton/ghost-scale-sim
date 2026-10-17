@@ -91,3 +91,9 @@ priority. The Tuesday October 20 22:00 Pacific target and original Wednesday
 20:04:15 science/report and 22:04:15 outer cutoffs remain unchanged. Fixed
 twelve-hour health checks and meaningful failure/dependency/boundary events
 continue until verified finite closure.
+
+## October 17 fixed health checkpoint
+
+The 17:04 UTC health review found no active scientific worker or controller. All 113 packet statuses are terminal, including 93 completed and 20 failed execution records; these counts are not accepted-study counts. The committed engine and delivered references are unchanged. N4c's complete original/replay bindings and prior independent review still match. No new scientific decision, repair admission or confirmation follows. [Health receipt](../../../results/v23/health12-05-20261017/REVIEW.json).
+
+The next fixed health review is October 17 22:04:15 Pacific; actual dependency delivery, failure or family boundaries can trigger earlier review. The finite campaign remains active with the same unresolved requirements and cutoffs.

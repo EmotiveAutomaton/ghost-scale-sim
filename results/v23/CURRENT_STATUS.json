@@ -2,10 +2,10 @@
   "accepted_confirmations": 0,
   "accepted_family_batches": 17,
   "active_packets": [],
-  "at": "2026-10-17T15:08:14.147981+00:00",
+  "at": "2026-10-17T17:09:13.709631+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 89.47126011519445,
+  "charged_cpu_hours_bound": 89.52170282352779,
   "completed_family_batches": 17,
   "conditional_studies_complete": [
     "N4b",
@@ -56,8 +56,9 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-17T15:08:14.210523+00:00",
-    "state": "TWIN_PROFILE_FAILURE_AND_NUMERICAL_DIAGNOSIS_REVIEW"
+    "at": "2026-10-17T17:09:13.709638+00:00",
+    "record": "results/v23/health12-05-20261017/REVIEW.json",
+    "state": "HEALTH_REVIEW_NO_NEW_SCIENTIFIC_ADMISSION"
   },
   "max_scientific_workers": 3,
   "n1_completion_profile": {
@@ -97,7 +98,7 @@
   },
   "native_study_workflows_built": true,
   "next_early_check": null,
-  "next_routine_health": "2026-10-17T17:04:15+00:00",
+  "next_routine_health": "2026-10-18T05:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
