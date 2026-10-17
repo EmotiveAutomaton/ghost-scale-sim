@@ -1,10 +1,10 @@
 # Ghost Scale Simulation
 
-Latest: [N4c complete conditional review](docs/versions/v23-research-division/N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T3/T4 cost profiles run; T1 stopped on a pinned-engine optimizer failure. Earlier opening snapshots below are dated history.
+Latest: [twin profile review](docs/versions/v23-research-division/TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
 
 [October 17 provisional continuation](docs/versions/v23-research-division/PROVISIONAL_CONTINUATION_2026-10-17.md):
-N4c's pilot and fits passed replay; its full probe batch and T1/T4 cost profiles
-are running, with T3 queued. These are new execution milestones, not confirmed findings.
+records the earlier opening. N4c is now complete; the three twin profiles failed
+and their finite controller exited. Scientific and dependency work remains open.
 
 [N7 full discovery review](docs/versions/v23-research-division/N7_REPORT.md): both burn-ins and all secondary measures verify; confirmation remains pending.
 

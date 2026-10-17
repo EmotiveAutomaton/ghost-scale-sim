@@ -1,11 +1,8 @@
 # V23: research division and decision-ledger bridge
 
-Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T3/T4 cost profiles run; T1 stopped on a pinned-engine optimizer failure. Earlier opening snapshots below are dated history.
+Latest: [twin profile review](TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
 
-Current: [provisional continuation and active queue](PROVISIONAL_CONTINUATION_2026-10-17.md).
-N4c's pilot and fits are replay-verified; its full batch and T1/T4 cost profiles
-are running, with T3 queued. The prior N4c/source-convention/scheduling holds
-below are superseded by this dated update.
+The [provisional continuation](PROVISIONAL_CONTINUATION_2026-10-17.md) records the earlier opening. N4c is now complete. All three twin profiles are failed; the finite controller exited at its review boundary. Missing inputs and product-module gates remain.
 
 October 17: [N4c's provisional protocol](N4C_PROTOCOL.md) is declared under the
 owner's new authorization to resolve reasonable choices and begin work. Controls
@@ -22,8 +19,8 @@ also capped; no main-grid result is accepted. N4b stays complete and N1 stays
 resource-deferred. Five discovery nominations remain unconfirmed.
 
 The resource supplement remains 285 CPU hours with eighteen protected and actual
-concurrency three. T1/T4/T3 source summaries have arrived; source/module gates,
-T2, T4 sensitivity, N4c and schedule questions remain explicit. No reserved
+concurrency three. T1/T4/T3 source summaries are authenticated; T1 numerical repair, T3/T4 complete cost profiles,
+product-module gates, T2 input and T4 sensitivity remain unresolved. N4c is complete; the provisional schedule is active. No reserved
 confirmation order is frozen. The record is ready for review; V23 is not closed.
 
 - [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33

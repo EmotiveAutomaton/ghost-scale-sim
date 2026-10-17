@@ -1,5 +1,7 @@
 # The walkthrough
 
+Can the native twins complete their measured-size cost and engine checks? None of the three delivered twins has an accepted complete profile: writing stops on an optimizer failure, ratings and revisions reach their CPU caps. The writing failure is reproduced and independently diagnosed near a stationary point, but remains failed. These are method-execution limits, not scientific nulls or human-behavior findings. [Twin profile report](docs/versions/v23-research-division/TWIN_PROFILE_REPORT.md).
+
 Can need satisfaction and alternative means distinguish control rules that look identical in ordinary behavior? In N4c's twelve constructed settings, the combined probes improve the true-mechanism log score by 1.127–1.252 nats. Habit cases improve by 1.226–1.252 nats; baseline/sham observations remain aliased. Removing observed goal commitments from probes leaves goal-directed and habitual-goal rules exactly aliased. All 12,288 cases, six rival forecasts, complete replay and 192 whole-world intervals verify. These are stipulated mechanisms, miniature — architecture untested; this does not establish how ends are learned or how humans behave. [N4c report](docs/versions/v23-research-division/N4C_REPORT.md).
 
 [Current provisional continuation](docs/versions/v23-research-division/PROVISIONAL_CONTINUATION_2026-10-17.md):

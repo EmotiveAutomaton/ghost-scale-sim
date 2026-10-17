@@ -1,5 +1,14 @@
 # The methodology layer
 
+The [twin profile review](versions/v23-research-division/TWIN_PROFILE_REPORT.md)
+separates a CPU-cap failure before engine fitting from a numerical optimizer
+failure. It verifies source/dependency/trace bindings, every retained file and
+consecutive public maker membership without interpreting partial scores. The
+writing-fit diagnosis uses an independent 50-digit decimal objective, gradient
+and Hessian, a positive-ridge objective-gap bound, three known-answer controls
+and two fresh-process identical diagnostic records. These validate a numerical
+diagnosis, not a repaired fit or complete scientific profile/replay.
+
 [N4c](versions/v23-research-division/N4C_PROTOCOL.md) adds paired reset interventions
 to an exactly aliased baseline. It separately observes goal-menu commitments and
 actions, integrates four stipulated control rules over sixteen response laws, and

@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [Native twin profile review](v23-twin-profile-failures-2026-10-17.md): complete failure bindings, independent T1 stationarity diagnosis and unresolved profile/dependency gates.
+
 - [T1 engine-fit failure](v23-t1-engine-fit-failure-2026-10-17.md): retained bounded profile failure and numerical-repair requirements; no scientific null.
 
 - [N4c complete conditional response](v23-n4c-response.md): all 12,288 cases, ablations, forecasts and replay verified; three native twin profiles continue.

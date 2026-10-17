@@ -1,14 +1,11 @@
 {
   "accepted_confirmations": 0,
   "accepted_family_batches": 17,
-  "active_packets": [
-    "v23-t3-profile-1",
-    "v23-t4-profile-1"
-  ],
-  "at": "2026-10-17T14:51:40.448892+00:00",
+  "active_packets": [],
+  "at": "2026-10-17T15:08:14.147981+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 89.24546875,
+  "charged_cpu_hours_bound": 89.47126011519445,
   "completed_family_batches": 17,
   "conditional_studies_complete": [
     "N4b",
@@ -34,10 +31,11 @@
     "R2": "NOMINATED",
     "R3": "STOPPED_BELOW_MARGIN",
     "R4": "NOMINATED",
-    "T1": "MEASURED_SUMMARY_RECEIVED_MODULE_GATES_AND_ADMISSION_PENDING",
+    "T1": "INSTRUMENT_FAILED_NUMERICAL_SUCCESSOR_REQUIRED",
     "T2": "MEASURED_INPUT_MISSING",
-    "T3": "MEASURED_SUMMARY_RECEIVED_SOURCE_IDENTITY_CONVENTION_HELD",
-    "T4": "PRIMARY_SUMMARY_RECEIVED_MODULE_GATES_AND_SENSITIVITY_DESIGN_PENDING"
+    "T3": "PROFILE_CPU_CAP_TYPED_SOURCE_ACCEPTED",
+    "T4": "PROFILE_CPU_CAP_PRIMARY_REFERENCE_ACCEPTED_SENSITIVITY_MISSING",
+    "N4c": "CONDITIONAL_STUDY_COMPLETE"
   },
   "families_admitted": 9,
   "first_actual_review_delivery": "2026-10-15T07:49:30.875830+00:00",
@@ -58,8 +56,8 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-17T14:48:24.843029+00:00",
-    "state": "N4C_COMPLETE_REVIEW"
+    "at": "2026-10-17T15:08:14.210523+00:00",
+    "state": "TWIN_PROFILE_FAILURE_AND_NUMERICAL_DIAGNOSIS_REVIEW"
   },
   "max_scientific_workers": 3,
   "n1_completion_profile": {
@@ -98,19 +96,18 @@
     "terminal_family_decision": true
   },
   "native_study_workflows_built": true,
-  "next_early_check": "2026-10-17T15:00:00+00:00",
+  "next_early_check": null,
   "next_routine_health": "2026-10-17T17:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "failed": 18,
-    "complete": 93,
-    "running": 2
+    "failed": 20,
+    "complete": 93
   },
   "pending_design_decisions": [
     "T4 sensitivity mapping when actual exclusion roster is supplied"
   ],
-  "pending_external_dependencies": "T2 measured input; T4 exclusion roster; reviewed product modules. T1/T4/T3 native source profiles admitted or queued.",
+  "pending_external_dependencies": "T2 measured input; T4 exclusion roster; source-pinned numerical engine successor; reviewed product modules. T3/T4 complete resource profiles remain unresolved.",
   "population_checker": "Independent population, complete replay and 32-culture reserved-consumer controls pass; production controls/profile gate full-scale admission",
   "prior_notifier_delivery_observed": true,
   "profile_validation_status": "FAIL",
@@ -136,20 +133,20 @@
     "preparation-queue-6": "REVIEW_BOUNDARY",
     "r3-recovery-queue-20261016": "REVIEW_BOUNDARY",
     "twin-queue-20261017": "failed",
-    "twin-queue-20261017-repair-1": "RUNNING"
+    "twin-queue-20261017-repair-1": "REVIEW_BOUNDARY"
   },
   "replacement_notifier_delivery_observed": true,
-  "report": "docs/versions/v23-research-division/N4C_REPORT.md",
+  "report": "docs/versions/v23-research-division/TWIN_PROFILE_REPORT.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
     "RESOURCE_REALLOCATION_3.json",
     "ACCEPTANCE_SUPPLEMENT_2026-10-16.json"
   ],
-  "retained_failed_attempts": 18,
-  "scientific_controllers": 1,
-  "scientific_workers": 2,
-  "state": "N4C_COMPLETE_T3_T4_PROFILES_RUNNING_T1_ENGINE_FAILED",
+  "retained_failed_attempts": 20,
+  "scientific_controllers": 0,
+  "scientific_workers": 0,
+  "state": "TWIN_PROFILE_FAILURES_REVIEWED_T1_DIAGNOSED_DEPENDENCIES_OPEN",
   "total_cpu_hours": 285,
   "twin_cost_profiles_admitted": [
     "T1",
@@ -166,6 +163,8 @@
   "verified_repair_pilots": 8,
   "worker_expansion_state": "HELD_FOR_MEASURED_INTERFERENCE_CONTRACT",
   "twin_profile_failures": {
-    "T1": "Pinned engine MAP optimizer ABNORMAL; no accepted profile"
+    "T1": "Pinned optimizer ABNORMAL, reproduced and independently diagnosed; no repaired fit accepted",
+    "T3": "CPU cap during first-world maker export; no complete profile/replay",
+    "T4": "CPU cap before engine fit; no complete profile/replay"
   }
 }

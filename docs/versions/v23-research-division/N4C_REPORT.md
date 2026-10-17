@@ -53,6 +53,6 @@ The scientific limitation is structural: the four response rules and their noise
 are supplied, and no acquisition process is simulated. This validates recovery
 under those assumptions, not that the assumptions describe people. N4b remains
 unchanged and main N4's capped profile remains an incomplete resource result.
-N4c is complete and receives no refill; T1/T4/T3 profiles continue separately.
+N4c is complete and receives no refill. The later [twin profile review](TWIN_PROFILE_REPORT.md) records three failed profiles and their separate unresolved requirements.
 
 ![Primary and ablation curves with whole-law-block descriptive intervals](../../../results/v23/n4c-complete/PROBE_CURVES.png)

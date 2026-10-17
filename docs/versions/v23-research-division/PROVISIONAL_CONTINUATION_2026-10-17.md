@@ -1,6 +1,6 @@
 # Provisional continuation from the theory notes
 
-Superseded execution snapshot: [N4c is now complete and reviewed](N4C_REPORT.md). T1/T4/T3 cost profiles continue; no N4c refill.
+Superseded execution snapshot: [N4c is now complete and reviewed](N4C_REPORT.md). The later [twin profile review](TWIN_PROFILE_REPORT.md) records all three failed profiles; no N4c refill. Remaining execution statements below are the historical opening snapshot.
 
 Can controlled changes in needs, candidate ends and available means separate
 mechanisms that produce the same ordinary behavior? On October 17 the owner
