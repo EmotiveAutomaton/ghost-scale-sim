@@ -1,5 +1,9 @@
 # V23: research division and decision-ledger bridge
 
+October 17: [N4c's provisional protocol](N4C_PROTOCOL.md) is declared under the
+owner's new authorization to resolve reasonable choices and begin work. Controls
+and measured admission precede production; this declaration is not a result.
+
 Latest: [complete N7 review](N7_REPORT.md), both burn-ins and all secondary measures verified; NOMINATED. Confirmation remains pending.
 
 The earlier [theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md) and

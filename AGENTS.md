@@ -19,6 +19,17 @@ authorship and contribution records retain their original attribution.
 
 ## V23 corrected implementation and calibrated opening (2026-10-14)
 
+October 17 provisional continuation: the owner authorizes reasonable analyst
+choices from Sounding Line's theory notes while the next packet is prepared.
+Read `docs/versions/v23-research-division/N4C_PROTOCOL.md`. N4c is a separately
+declared twelve-setting conditional study, outside confirmation; source-bound
+controls, complete measured costs, frozen fits and replay still precede acceptance.
+The former wait for N4c design answers is superseded. Preserve prior results and
+all limits. Use the delivered T4 primary, never invent its missing sensitivity
+roster or T2 data. Product-module failures remain failures; typed source provenance
+must distinguish API content revisions from Git commits. New choices are provisional,
+not curator theory claims. The Tuesday target does not move the original cutoffs.
+
 The owner authorized implementation of corrected V23. Read
 `docs/versions/v23-research-division/README.md`, `IMPLEMENTATION_CONTRACT.md`,
 `IMPLEMENTATION_STATUS.md`, `CALIBRATION_REPORT.md` and the outer local V23

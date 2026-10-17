@@ -13,7 +13,10 @@ def cost_estimate(task,packet):
             raise ValueError('complete population cost coverage required')
         batch=3*max(sum(r['cpu_seconds']*cells[r['variant']] for r in x['profile']) for x in rows)
     else:
-        cells={v['id'] for v in conditional_values.variants()}
+        module=conditional_values
+        if (packet/'PLAN.json').exists() and read(packet/'PLAN.json').get('family')=='N4c':
+            from . import conditional_devaluation as module
+        cells={v['id'] for v in module.variants()}
         if any({r['variant'] for r in x['profile']}!=cells for x in rows):
             raise ValueError('complete conditional cost coverage required')
         batch=3*max(sum((r['cpu_seconds']+1/64)/r['cases']*16*64 for r in x['profile']) for x in rows)
@@ -61,19 +64,20 @@ def validate(task,family,extras,repo):
         if extras['population_design']!=expected:raise ValueError('population allocation differs')
         if task not in ('population-batch','population-precision'):raise ValueError('unknown population task')
     elif task.startswith('conditional-'):
-        if family!='N4b':raise ValueError('conditional binary task belongs to N4b')
+        if family not in ('N4b','N4c'):raise ValueError('undeclared conditional family')
         if task=='conditional-pilot':return 0.,0.
-        pilot,pp,summary=bound_packet(extras,'pilot','conditional-pilot','N4b')
+        pilot,pp,summary=bound_packet(extras,'pilot','conditional-pilot',family)
         if summary.get('state')!='PILOT_VALID' or not read(pilot/'original/CONTROLS.json').get('passed'):
             raise ValueError('conditional controls and full grid profile required')
-        for name in ('conditional_values','fit_rivals','values','checker_recipes','common','registry','ledger'):
+        modules=('conditional_devaluation','devaluation','fit_rivals','common','ledger') if family=='N4c' else ('conditional_values','fit_rivals','values','checker_recipes','common','registry','ledger')
+        for name in modules:
             rel='ghostscale/validation/soundingline/v23/'+name+'.py'
             if digest(Path(repo)/rel)!=pp['sources'].get(rel):raise ValueError('conditional pilot source changed')
         costs=cost_estimate(task,pilot)
         if task=='conditional-fits':
             if extras.get('burnin_reservations_seconds')!=[costs['batch']]:raise ValueError('conditional full batch must be reserved')
             return costs['fits'],costs['batch']
-        fit,_,fs=bound_packet(extras,'fit','conditional-fits','N4b')
+        fit,_,fs=bound_packet(extras,'fit','conditional-fits',family)
         if task!='conditional-batch' or fs['state']!='FITS_VERIFIED' or (extras['worlds'],extras['cases'])!=(16,64):
             raise ValueError('conditional full allocation or frozen fits differs')
     else:raise ValueError('unknown extension task')

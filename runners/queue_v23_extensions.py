@@ -35,7 +35,11 @@ def checked(packet):
         if not summary.get('convergence_passed') or not summary.get('shuffle_passed'):state='KNOWN_ANSWER_FAILED'
     if plan['task'] in ('population-batch','population-precision'):
         numerical=population_campaign.reconstruct(packet/'original',plan)
-    if plan['task']=='conditional-batch':numerical=conditional_values.reconstruct(packet/'original',plan)
+    if plan['task']=='conditional-batch':
+        module=conditional_values
+        if plan['family']=='N4c':
+            from ghostscale.validation.soundingline.v23 import conditional_devaluation as module
+        numerical=module.reconstruct(packet/'original',plan)
     write(receipt,dict(state=state,complete_sha256=digest(packet/'COMPLETE.json'),task=plan['task'],
         full_fresh_process_replay=True,independent_numerical_review=numerical))
     return state
@@ -73,7 +77,7 @@ def step_family(campaign,name,config):
     extras.update(binding(fit,'fit'));fitroot=fit/'original/fits'
     extras.update(fit_directory=str(fitroot),fit_hashes={p.name:digest(p) for p in fitroot.iterdir() if p.is_file()})
     if not population:
-        packet,state=ensure(campaign,'v23-n4b-batch-1','conditional-batch',name,costs['batch'],dict(extras,batch=1,worlds=16,cases=64),group)
+        packet,state=ensure(campaign,'v23-'+name.lower()+'-batch-1','conditional-batch',name,costs['batch'],dict(extras,batch=1,worlds=16,cases=64),group)
         return dict(state='COMPLETE' if state=='VERIFIED' else state,stage='conditional-batch',packet=packet.name)
     extras['confirmation_support']=support_new.bound('N1');paths=[];summaries=[];active=None
     acceptance=read(campaign/'CALIBRATION_ACCEPTANCE.json');summary=Path(acceptance['summary'])
@@ -124,7 +128,7 @@ def step(campaign,config):
     if config.get('families') and queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign):return dict(state='RUNNING',phase='WAITING_FOR_SLOT')
     states={}
     for name,settings in config['families'].items():
-        if name not in ('N1','N4b'):raise ValueError('uncommissioned extension')
+        if name not in ('N1','N4b','N4c'):raise ValueError('uncommissioned extension')
         states[name]=step_family(campaign,name,settings)
         if states[name]['state']=='RUNNING_OR_ADMITTED':break
     terminal={'COMPLETE','RESOURCE_DEFERRED','INSTRUMENT_FAILED','KNOWN_ANSWER_FAILED'}
