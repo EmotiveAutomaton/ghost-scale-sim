@@ -49,7 +49,8 @@ def step(campaign,state,config):
                 source_authentication='Committed source revision, source bytes SHA-256, citation and the corresponding locally retained source file')
             continue
         extras={key:item[key] for key in ('empirical_reference','empirical_reference_sha256','empirical_source')}
-        extras.update(config['implementation_controls'],config['engine_dependency'])
+        extras.update(config['implementation_controls'])
+        extras.update(config['engine_dependency'])
         pilot,outcome=task(campaign,family,'v23-'+family.lower()+'-profile-1','twin-profile',item['profile_cap'],extras)
         if outcome!='VERIFIED':decisions[family]=dict(state=outcome,stage='profile',packet=pilot.name);continue
         extras['partitioned_twin']=bool(resource_policy.binding(campaign))

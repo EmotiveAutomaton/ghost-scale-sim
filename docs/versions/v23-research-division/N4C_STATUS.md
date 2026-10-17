@@ -1,5 +1,7 @@
 # N4c opening: 17 October 2026
 
+Superseded execution snapshot: [N4c is now complete and reviewed](N4C_REPORT.md). T1/T4/T3 cost profiles continue; no N4c refill.
+
 Can need satisfaction, candidate-end satisfaction and alternative means distinguish
 an instrumental solution, an action habit, an acquired end and habitual goal selection?
 The [provisional protocol](N4C_PROTOCOL.md) declares twelve settings and a separately
@@ -13,8 +15,9 @@ Ten targeted tests pass, including the existing N4b reconstruction regression.
 The [pilot receipt](../../../results/v23/n4c-opening/PILOT.json) retains hashes,
 controls and measured costs. This is engineering readiness, not a discovery finding.
 
-Six fixed/fresh direct-reader fits are admitted and running from an immutable
-source capsule. The measured conservative allowance is 1,450.5 CPU-seconds for
+Six fixed/fresh direct-reader fits passed complete fresh-process replay and independent
+validation-score checks. The [fit receipt](../../../results/v23/n4c-opening/FITS.json)
+records them. The full conditional batch is running from an immutable source capsule. The measured conservative allowance is 1,450.5 CPU-seconds for
 fitting and replay, plus 960 seconds reserved for the full 12,288-case batch and
 replay. The finite controller proceeds only after verified fits, then independently
 reconstructs the complete batch and stops for review. N4c cannot enter confirmation.

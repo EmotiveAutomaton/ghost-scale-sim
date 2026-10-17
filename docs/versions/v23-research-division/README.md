@@ -1,5 +1,12 @@
 # V23: research division and decision-ledger bridge
 
+Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T1/T4/T3 cost profiles now run. Earlier opening snapshots below are dated history.
+
+Current: [provisional continuation and active queue](PROVISIONAL_CONTINUATION_2026-10-17.md).
+N4c's pilot and fits are replay-verified; its full batch and T1/T4 cost profiles
+are running, with T3 queued. The prior N4c/source-convention/scheduling holds
+below are superseded by this dated update.
+
 October 17: [N4c's provisional protocol](N4C_PROTOCOL.md) is declared under the
 owner's new authorization to resolve reasonable choices and begin work. Controls
 and measured admission precede production; this declaration is not a result.

@@ -1,5 +1,14 @@
 # The methodology layer
 
+[N4c](versions/v23-research-division/N4C_PROTOCOL.md) adds paired reset interventions
+to an exactly aliased baseline. It separately observes goal-menu commitments and
+actions, integrates four stipulated control rules over sixteen response laws, and
+checks log-space posteriors against independently enumerated probability products.
+All probe responses are forecast before observation. Native and six fixed/fresh
+direct forecasts are retained; mechanism-recovery readouts and ablations remain
+outside confirmation. Complete-world reconstruction and fresh-process replay gate
+interpretation. The complete batch, six saved rival predictions, every proper score and whole-world mean now verify. A separate bootstrap reconstruction checks all 192 primary, ablation and forecast intervals to maximum error 4.45e-16. Full replay and all source/raw bindings pass.
+
 The [complete N7 review](versions/v23-research-division/N7_REPORT.md) reconstructs both logical batches, all proper scores and reader/primary intervals, source and replay bindings, and frozen calibrated cards. A separate scalar audit rebuilds every recipe-presence log loss, signed desirable-drive bias and aspiration indicator from posterior records, preserving unavailable values and whole-world uncertainty. The aspiration prediction uses evaluator truth to define its conditional stratum and retains every denominator; it does not validate public identification of aspiration.
 
 The [N7 execution checkpoint](versions/v23-research-division/N7_CHECKPOINT_2026-10-17.md) checks both copies of every indexed scientific file, immutable source/dependency bindings, distinct sequential process owners and disjoint parent worlds. These checks do not replace complete-batch numerical reconstruction or produce a partial family decision. Publication checks distinguish original file hashes from declared Git LF normalization.

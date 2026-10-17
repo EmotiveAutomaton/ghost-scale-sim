@@ -1,5 +1,13 @@
 # V23 implementation status
 
+Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T1/T4/T3 cost profiles now run. Earlier opening snapshots below are dated history.
+
+October 17 continuation: [provisional decisions and active queue](PROVISIONAL_CONTINUATION_2026-10-17.md).
+N4c's complete pilot and six fits are replay-verified; its full batch is running.
+T1/T4 cost profiles are running and T3 is queued under the shared three-worker
+ceiling. N4c, T3 source typing and scheduling holds below are superseded by this
+dated update. Missing T2/T4 sensitivity data and product-module gates remain.
+
 Latest: [complete N7 review](N7_REPORT.md), both burn-ins and all secondary measures verified; NOMINATED. Confirmation remains pending.
 
 The earlier [theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md) and
@@ -27,12 +35,12 @@ The table separates built components, actual execution, and outstanding admissio
 | N1 | Full population ladder, complete-map cost profile, fixed/fresh retained fits, convergence/shuffle controls, precision extension, independent reconstruction and finite admission/controller | Original capped pilot preserved. Production controls pass; the completion profile capped during the first of 240 cells (1,994/10,000 ledger members). No complete profile/replay, fits, full-map burn-in or precision extension admitted. Resource-deferred; full grid retained. Small population and reserved balanced-block checks remain engineering evidence. |
 | N2 | Both burn-ins, 253,952 cases, complete replay and independent primary reconstruction | Frozen stop despite 48 positive point gains above margin; pooled uncertainty qualification. [Report](N2_REPORT.md). |
 | N3 | Six fits, complete 98,304-case batch, repaired unavailable reporting and full replay | PRIMARY_UNAVAILABLE in 96/96 settings; no deletion or soft substitution. [Report](N3_REPORT.md). |
-| N4 | Main-grid pipeline and capped completion profile; complete N4b conditional pipeline | Completion profile capped: 52 retained cases across 13/160 settings, no full profile/replay/main study. N4b complete; N4c pending. |
+| N4 | Main-grid pipeline and capped completion profile; complete N4b; new N4c conditional implementation | Main profile capped: 52 retained cases across 13/160 settings. N4b complete. N4c complete: 12,288 cases, full replay and independent reconstruction; outside confirmation. |
 | N5 | Both full burn-ins and all secondary metrics independently reviewed; full replay | Calibration-gain nomination. Universal 75%-recovery prediction fails in one large-bias/no-history setting; approximate hierarchical reader is not an exact ceiling. |
 | N6 | Full batch, scores, uptake paths, payoff diagnostics and full replay reviewed | PRIMARY_UNAVAILABLE: two empty conditional worlds. No deletion, extra sampling or finite family selection. |
 | N7 | Six retained fits, both full burn-ins, all primary and secondary measures, complete replay | NOMINATED; all 128 settings and 262,144 cases reviewed. [Report](N7_REPORT.md). |
 | N8 optional | Full retained pipeline, independent checks, controls, pilot entry point and evidence-bound mandatory-disposition gate | Not admitted before mandatory dispositions and sufficient capacity |
-| T1-T4 | Whole-testbed workflows, consumers, replay, spike-ins, cost admission and finite controller | T1/T4 and T3 summaries received. T3 source convention, missing T2, T4 sensitivity and product-module gates remain. No scientific twins admitted. |
+| T1-T4 | Whole-testbed workflows, consumers, replay, spike-ins, cost admission and finite controller | T1/T4/T3 cost profiles running; typed T3 source accepted. T2, T4 sensitivity and product-module gates remain. No full twin batch accepted. |
 | Execution | Frozen sources, charged failures/helpers/replay, per-part caps, fit handoffs, protected mandatory reservations and finite family/extension/twin/confirmation controllers | New admissions use the hash-bound resource supplement; old packet bounds, reserve and deadline remain. Parallel whole-world parts preserve complete scientific decisions. |
 | Monitoring | Twelve-hour and failure/decision/dependency events; exact hash acknowledgements | Prior failed delivery retained; replacement watcher actually delivered the October 17 05:45 review. Publication and exact event landing are separate checks. |
 

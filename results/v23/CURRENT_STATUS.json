@@ -1,13 +1,19 @@
 {
   "accepted_confirmations": 0,
   "accepted_family_batches": 17,
-  "at": "2026-10-17T13:26:45.523789+00:00",
+  "active_packets": [
+    "v23-t1-profile-1",
+    "v23-t3-profile-1",
+    "v23-t4-profile-1"
+  ],
+  "at": "2026-10-17T14:48:24.799018+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 88.44660590277778,
+  "charged_cpu_hours_bound": 89.13454427083333,
   "completed_family_batches": 17,
   "conditional_studies_complete": [
-    "N4b"
+    "N4b",
+    "N4c"
   ],
   "confirmation_runner": "R/N and whole-population reserved refits/evidence; checked disjoint partition assembly; frozen-order controller; no reserved exposure yet",
   "continuation": "New admissions use the hash-bound 285-hour supplement; protected reserve, scientific criteria, original packet bounds and deadline retained.",
@@ -53,8 +59,8 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-17T13:26:45.523789+00:00",
-    "state": "COMPLETE_N7_FAMILY_REVIEW"
+    "at": "2026-10-17T14:48:24.843029+00:00",
+    "state": "N4C_COMPLETE_REVIEW"
   },
   "max_scientific_workers": 3,
   "n1_completion_profile": {
@@ -80,30 +86,37 @@
     "retained_cases": 52,
     "state": "RESOURCE_CAP_NO_FULL_PROFILE"
   },
+  "n4c": {
+    "state": "VERIFIED_CONDITIONAL",
+    "settings": 12,
+    "cases": 12288,
+    "independent_intervals": 192,
+    "confirmation_eligible": false
+  },
   "n7_second_batch_parts": {
     "complete": 8,
     "required": 8,
     "terminal_family_decision": true
   },
   "native_study_workflows_built": true,
-  "next_early_check": null,
+  "next_early_check": "2026-10-17T15:00:00+00:00",
   "next_routine_health": "2026-10-17T17:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "complete": 90,
-    "failed": 17
+    "failed": 17,
+    "complete": 93,
+    "running": 3
   },
   "pending_design_decisions": [
-    "N4c scientific definition",
-    "T4 sensitivity mapping",
-    "mandatory/confirmation scheduling decision"
+    "T4 sensitivity mapping when actual exclusion roster is supplied"
   ],
-  "pending_external_dependencies": "T1/T4/T3 summaries received; T2 missing, T3 source convention unresolved, T4 sensitivity roster/mapping and reviewed product-module gates remain.",
+  "pending_external_dependencies": "T2 measured input; T4 exclusion roster; reviewed product modules. T1/T4/T3 native source profiles admitted or queued.",
   "population_checker": "Independent population, complete replay and 32-culture reserved-consumer controls pass; production controls/profile gate full-scale admission",
   "prior_notifier_delivery_observed": true,
   "profile_validation_status": "FAIL",
   "protected_cpu_hours": 18,
+  "provisional_authority": "October 17 owner instruction; see N4C_PROTOCOL.md",
   "queue_states": {
     "addendum-queue-20261016": "failed",
     "addendum-queue-20261016-recovery-1": "REVIEW_BOUNDARY",
@@ -114,6 +127,7 @@
     "family-queue-2": "REVIEW_BOUNDARY",
     "n2-continuation-queue-20261016": "OPERATOR_HANDOFF",
     "n2-post-repair-20261016": "REVIEW_BOUNDARY",
+    "n4c-queue-20261017": "REVIEW_BOUNDARY",
     "population-continuation-20261016": "REVIEW_BOUNDARY",
     "preparation-queue-1": "failed",
     "preparation-queue-2": "OPERATOR_STOP",
@@ -121,10 +135,12 @@
     "preparation-queue-4": "failed",
     "preparation-queue-5": "REVIEW_BOUNDARY",
     "preparation-queue-6": "REVIEW_BOUNDARY",
-    "r3-recovery-queue-20261016": "REVIEW_BOUNDARY"
+    "r3-recovery-queue-20261016": "REVIEW_BOUNDARY",
+    "twin-queue-20261017": "failed",
+    "twin-queue-20261017-repair-1": "RUNNING"
   },
   "replacement_notifier_delivery_observed": true,
-  "report": "docs/versions/v23-research-division/N7_REPORT.md",
+  "report": "docs/versions/v23-research-division/N4C_REPORT.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
@@ -132,10 +148,16 @@
     "ACCEPTANCE_SUPPLEMENT_2026-10-16.json"
   ],
   "retained_failed_attempts": 17,
-  "scientific_controllers": 0,
-  "scientific_workers": 0,
-  "state": "N7_NOMINATION_REVIEWED_REMAINING_DESIGN_AND_DEPENDENCY_HOLDS",
+  "scientific_controllers": 1,
+  "scientific_workers": 3,
+  "state": "N4C_COMPLETE_NATIVE_TWIN_PROFILES_RUNNING",
   "total_cpu_hours": 285,
+  "twin_cost_profiles_admitted": [
+    "T1",
+    "T4",
+    "T3"
+  ],
+  "twin_cost_profiles_queued": [],
   "twin_engineering_fixtures_verified": 8,
   "twins_built": 4,
   "twins_scientifically_admitted": 0,

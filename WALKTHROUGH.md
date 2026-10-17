@@ -1,5 +1,11 @@
 # The walkthrough
 
+Can need satisfaction and alternative means distinguish control rules that look identical in ordinary behavior? In N4c's twelve constructed settings, the combined probes improve the true-mechanism log score by 1.127–1.252 nats. Habit cases improve by 1.226–1.252 nats; baseline/sham observations remain aliased. Removing observed goal commitments from probes leaves goal-directed and habitual-goal rules exactly aliased. All 12,288 cases, six rival forecasts, complete replay and 192 whole-world intervals verify. These are stipulated mechanisms, miniature — architecture untested; this does not establish how ends are learned or how humans behave. [N4c report](docs/versions/v23-research-division/N4C_REPORT.md).
+
+[Current provisional continuation](docs/versions/v23-research-division/PROVISIONAL_CONTINUATION_2026-10-17.md):
+N7 is fully reviewed; N4c's full probe batch and native twin cost profiles now run.
+The older checkpoint below remains dated history. Confirmation is still pending.
+
 [Current V23 theory checkpoint](docs/versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md):
 N2 distinguishes observed gain from a pooled-model stop; N3 exposes empty literal
 support; R3 supports the predicted costly-label stop. Full evidence is recorded.

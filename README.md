@@ -1,5 +1,11 @@
 # Ghost Scale Simulation
 
+Latest: [N4c complete conditional review](docs/versions/v23-research-division/N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T1/T4/T3 cost profiles now run. Earlier opening snapshots below are dated history.
+
+[October 17 provisional continuation](docs/versions/v23-research-division/PROVISIONAL_CONTINUATION_2026-10-17.md):
+N4c's pilot and fits passed replay; its full probe batch and T1/T4 cost profiles
+are running, with T3 queued. These are new execution milestones, not confirmed findings.
+
 [N7 full discovery review](docs/versions/v23-research-division/N7_REPORT.md): both burn-ins and all secondary measures verify; confirmation remains pending.
 
 [V23 theory walkthrough](docs/versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md):

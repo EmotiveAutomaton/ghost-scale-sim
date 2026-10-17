@@ -1,5 +1,9 @@
 # Sounding Line exchange index
 
+- [N4c complete conditional response](v23-n4c-response.md): all 12,288 cases, ablations, forecasts and replay verified; three native twin profiles continue.
+
+- [October 17 provisional continuation](v23-provisional-continuation-2026-10-17.md): N4c pilot/fits verified and full batch running; native T1/T4 profiles running, typed T3 source queued; missing-data and product-module gates retained.
+
 - [N7 complete discovery review](v23-n7-response.md): both burn-ins, all primary and secondary measures and full replay verified; NOMINATED.
 
 - [October 17 N7 execution checkpoint](v23-n7-checkpoint-2026-10-17.md): seven of eight parts verified; actual monitor delivery observed; no new family decision.
