@@ -1,9 +1,11 @@
 # Ghost Scale Simulation
 
+[N7 full discovery review](docs/versions/v23-research-division/N7_REPORT.md): both burn-ins and all secondary measures verify; confirmation remains pending.
+
 [V23 theory walkthrough](docs/versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md):
 N2's frozen stop needs a pooling qualification; N3's primary is unavailable;
-R3 stops below margin. Full reviews and N7's first burn-in are recorded.
-**V23 remains active:** N7's second burn-in is running, main N4's completion
+R3 stops below margin. The later N7 report completes both burn-ins and their review.
+**V23 remains active:** N7's complete discovery is reviewed (NOMINATED), main N4's completion
 profile capped, and confirmation and design/dependency work remain open.
 [Current implementation](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
 

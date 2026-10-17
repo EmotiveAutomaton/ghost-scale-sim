@@ -1,13 +1,14 @@
 # V23: research division and decision-ledger bridge
 
-Later [05:45 delivery and N7 execution checkpoint](N7_CHECKPOINT_2026-10-17.md): seven of eight parts verified, final replay running; actual replacement-watcher delivery observed. No new family decision.
+Latest: [complete N7 review](N7_REPORT.md), both burn-ins and all secondary measures verified; NOMINATED. Confirmation remains pending.
 
-Current checkpoint: [October 17 theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md).
+The earlier [theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md) and
+[execution checkpoint](N7_CHECKPOINT_2026-10-17.md) remain dated history.
 N2 and R3 have reviewed terminal stops; N2 retains the observed-gain/pooling
-qualification. N3's complete batch has an unavailable primary. N7's first
-burn-in is reviewed and its second is running. N4's larger completion profile
+qualification. N3's complete batch has an unavailable primary. N7's two complete
+burn-ins and all secondary measures are reviewed (NOMINATED). N4's larger completion profile
 also capped; no main-grid result is accepted. N4b stays complete and N1 stays
-resource-deferred. Four discovery nominations remain unconfirmed.
+resource-deferred. Five discovery nominations remain unconfirmed.
 
 The resource supplement remains 285 CPU hours with eighteen protected and actual
 concurrency three. T1/T4/T3 source summaries have arrived; source/module gates,

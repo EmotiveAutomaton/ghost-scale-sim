@@ -1,5 +1,7 @@
 # V23 evidence
 
+[N7 complete family review](n7-decision-review/README.md): 128 settings, 262,144 cases, complete replay and all secondary measures verified; NOMINATED.
+
 [N7 execution checkpoint](n7-checkpoint-20261017/README.md): seven of eight parts verified and actual review delivery observed; no new family decision.
 
 [October 17 walkthrough](walkthrough-20261017/README.md): complete N2/N3/R3

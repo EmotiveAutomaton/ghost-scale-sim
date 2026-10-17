@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [N7 complete discovery review](v23-n7-response.md): both burn-ins, all primary and secondary measures and full replay verified; NOMINATED.
+
 - [October 17 N7 execution checkpoint](v23-n7-checkpoint-2026-10-17.md): seven of eight parts verified; actual monitor delivery observed; no new family decision.
 
 - [October 17 theory walkthrough](v23-theory-walkthrough-2026-10-17.md): N2 pooling qualification, N3 unavailable primary, R3 terminal stop, N7 ongoing and source deliveries reviewed.

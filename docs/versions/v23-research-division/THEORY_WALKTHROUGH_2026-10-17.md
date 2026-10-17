@@ -1,5 +1,7 @@
 # Theory walkthrough checkpoint — October 17
 
+Latest: [complete N7 review](N7_REPORT.md), both burn-ins and all secondary measures verified; NOMINATED. Confirmation remains pending. The snapshot below is retained as its earlier dated checkpoint.
+
 Later [05:45 delivery and N7 execution checkpoint](N7_CHECKPOINT_2026-10-17.md): seven of eight parts verified, final replay running; actual replacement-watcher delivery observed. No new family decision.
 
 The completed evidence is recorded and reviewed. **V23 is still active and is not

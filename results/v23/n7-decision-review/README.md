@@ -1,0 +1,5 @@
+# N7 complete family review
+
+Can statements improve future-choice forecasts after correcting presentation bias? N7 nominates a setting with 0 personal records, statement noise 0.25, shared shift 1 and aspiration share 0. Its pooled log-loss gain over choices alone is 0.25012 nats (descriptive 95% interval 0.21182–0.28842). All 128 settings and 262,144 cases pass independent reconstruction and complete replay. This is a constructed-method discovery, not confirmation or evidence about people.
+
+REVIEW.json binds both complete logical batches, sixteen original/replay part pairs, frozen fits, source archives and calibrated cards. RAW_HASH_INDEX.json retains every assembled scientific-file hash. CURVE.json and SPECIFICATION_CURVE.csv preserve all 128 settings; DIAGNOSTICS.json retains readers, headroom and secondary summaries. SECONDARY_BATCH_1.json and SECONDARY_BATCH_2.json verify every secondary formula and whole-world interval; PREDICTION_DESCRIPTIVES.json records all four prediction checks. No reserved confirmation outcomes were exposed.

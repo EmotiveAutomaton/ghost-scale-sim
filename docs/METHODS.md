@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [complete N7 review](versions/v23-research-division/N7_REPORT.md) reconstructs both logical batches, all proper scores and reader/primary intervals, source and replay bindings, and frozen calibrated cards. A separate scalar audit rebuilds every recipe-presence log loss, signed desirable-drive bias and aspiration indicator from posterior records, preserving unavailable values and whole-world uncertainty. The aspiration prediction uses evaluator truth to define its conditional stratum and retains every denominator; it does not validate public identification of aspiration.
+
 The [N7 execution checkpoint](versions/v23-research-division/N7_CHECKPOINT_2026-10-17.md) checks both copies of every indexed scientific file, immutable source/dependency bindings, distinct sequential process owners and disjoint parent worlds. These checks do not replace complete-batch numerical reconstruction or produce a partial family decision. Publication checks distinguish original file hashes from declared Git LF normalization.
 
 The October 17 [family reviews](versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md)

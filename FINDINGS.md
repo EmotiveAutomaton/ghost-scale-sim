@@ -1,6 +1,6 @@
 # Every question this project asked, and where its answer stands today
 
-N7's second burn-in has seven of eight parts verified for complete replay and source integrity; its final part is replaying. No partial outcome decides the family. The replacement watcher has delivered an actual review. [Execution checkpoint](docs/versions/v23-research-division/N7_CHECKPOINT_2026-10-17.md).
+Can statements improve future-choice forecasts after correcting presentation bias? N7 nominates a setting with 0 personal records, statement noise 0.25, shared shift 1 and aspiration share 0. Its pooled log-loss gain over choices alone is 0.25012 nats (descriptive 95% interval 0.21182–0.28842). All 128 settings and 262,144 cases pass independent reconstruction and complete replay. This is a constructed-method discovery, not confirmation or evidence about people. [N7 report](docs/versions/v23-research-division/N7_REPORT.md).
 
 Does weighting by response time improve preference recovery? N2's frozen pooled stopping rule stops the family, yet 48 of 120 nonstructural settings have observed pooled gains above 0.02 nats. The largest is 24.47776 nats, with a descriptive 95% interval of 15.99531–32.96020. Near-zero uncertainty in other settings dominates the pooled model. This is a constructed-method limitation and a descriptive gain pattern, not a confirmed benefit or evidence that timing never helps. [N2 report](docs/versions/v23-research-division/N2_REPORT.md).
 

@@ -1,13 +1,14 @@
 # V23 implementation status
 
-Later [05:45 delivery and N7 execution checkpoint](N7_CHECKPOINT_2026-10-17.md): seven of eight parts verified, final replay running; actual replacement-watcher delivery observed. No new family decision.
+Latest: [complete N7 review](N7_REPORT.md), both burn-ins and all secondary measures verified; NOMINATED. Confirmation remains pending.
 
-Current checkpoint: [October 17 theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md).
+The earlier [theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md) and
+[execution checkpoint](N7_CHECKPOINT_2026-10-17.md) remain dated history.
 N2 and R3 have reviewed terminal stops; N2 retains the observed-gain/pooling
-qualification. N3's complete batch has an unavailable primary. N7's first
-burn-in is reviewed and its second is running. N4's larger completion profile
+qualification. N3's complete batch has an unavailable primary. N7's two complete
+burn-ins and all secondary measures are reviewed (NOMINATED). N4's larger completion profile
 also capped; no main-grid result is accepted. N4b stays complete and N1 stays
-resource-deferred. Four discovery nominations remain unconfirmed.
+resource-deferred. Five discovery nominations remain unconfirmed.
 
 The resource supplement remains 285 CPU hours with eighteen protected and actual
 concurrency three. T1/T4/T3 source summaries have arrived; source/module gates,
@@ -29,7 +30,7 @@ The table separates built components, actual execution, and outstanding admissio
 | N4 | Main-grid pipeline and capped completion profile; complete N4b conditional pipeline | Completion profile capped: 52 retained cases across 13/160 settings, no full profile/replay/main study. N4b complete; N4c pending. |
 | N5 | Both full burn-ins and all secondary metrics independently reviewed; full replay | Calibration-gain nomination. Universal 75%-recovery prediction fails in one large-bias/no-history setting; approximate hierarchical reader is not an exact ceiling. |
 | N6 | Full batch, scores, uptake paths, payoff diagnostics and full replay reviewed | PRIMARY_UNAVAILABLE: two empty conditional worlds. No deletion, extra sampling or finite family selection. |
-| N7 | Six retained fits, complete first burn-in review, full replay and finite controller | First burn-in verified, second running in eight two-world parts. No terminal result. |
+| N7 | Six retained fits, both full burn-ins, all primary and secondary measures, complete replay | NOMINATED; all 128 settings and 262,144 cases reviewed. [Report](N7_REPORT.md). |
 | N8 optional | Full retained pipeline, independent checks, controls, pilot entry point and evidence-bound mandatory-disposition gate | Not admitted before mandatory dispositions and sufficient capacity |
 | T1-T4 | Whole-testbed workflows, consumers, replay, spike-ins, cost admission and finite controller | T1/T4 and T3 summaries received. T3 source convention, missing T2, T4 sensitivity and product-module gates remain. No scientific twins admitted. |
 | Execution | Frozen sources, charged failures/helpers/replay, per-part caps, fit handoffs, protected mandatory reservations and finite family/extension/twin/confirmation controllers | New admissions use the hash-bound resource supplement; old packet bounds, reserve and deadline remain. Parallel whole-world parts preserve complete scientific decisions. |
