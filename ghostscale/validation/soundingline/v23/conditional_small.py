@@ -1,6 +1,7 @@
 """Retained execution for explicitly declared October 17 finite miniatures."""
 from pathlib import Path
 import hashlib,hmac,math,time
+from functools import lru_cache
 import numpy as np
 from . import ledger,fit_rivals,checker
 from .common import Direct,canonical,digest,interval,read,write,rng
@@ -8,13 +9,29 @@ from .pipeline import Stream
 from .pipeline_new import score
 
 
+@lru_cache(maxsize=256)
+def _law_offset(family,phase_bytes):
+    return int(rng('conditional-fresh-law',family,phase_bytes.decode()).integers(16))
+
+
+def training_sample(model,v,phase,world,case):
+    # The inherited fitter resets world to zero per 256-label minibatch. Twelve
+    # variants visit all 16 laws but overweight the early ones. Randomize the
+    # offset independently by fresh minibatch identity; expected law weights match.
+    label=phase[1]
+    if label=='cost-profile' or (isinstance(label,list) and label and label[0]=='fresh'):
+        world += _law_offset(model.FAMILY,canonical(phase))
+    return model.sample(v,phase,world,case)
+
+
 def run(root,plan,pulse,model):
     root=Path(root);root.mkdir(parents=True,exist_ok=False)
     schema,_=ledger.canonical_schema(plan['schema_directory'],plan['schema_pin'])
     write(root/'CONTROLS.json',model.controls());population=model.variants();fitted={};meta={}
     family=model.FAMILY;namespace=family+'-training';classes=model.CLASSES
+    sampler=lambda v,phase,world,case:training_sample(model,v,phase,world,case)
     if plan['task']=='conditional-fits':
-        fitted,meta=fit_rivals.fit(root/'fits',family,population,model.sample,model.features,classes,pulse,namespace)
+        fitted,meta=fit_rivals.fit(root/'fits',family,population,sampler,model.features,classes,pulse,namespace)
         write(root/'SUMMARY.json',dict(state='FITS_VERIFIED',family=family,fits=meta,discovery_exposure=False));return
     pilot=plan['task']=='conditional-pilot'
     if not pilot:
@@ -56,7 +73,7 @@ def run(root,plan,pulse,model):
             forecast_log_loss={name:dict(world_values=values,interval=interval(values,[family,v['id'],'forecast',name])) for name,values in forecasts.items()},
             confusion_counts_by_world=confusion))
         costs.append(dict(variant=v['id'],cpu_seconds=time.process_time()-started,cases=1 if pilot else 1024))
-    training=fit_rivals.profile(root/'training-profile',family,population,model.sample,model.features,classes,pulse,namespace) if pilot else {}
+    training=fit_rivals.profile(root/'training-profile',family,population,sampler,model.features,classes,pulse,namespace) if pilot else {}
     write(root/('pilot-cost.json' if pilot else 'batch-cost.json'),dict(profile=costs,**training))
     write(root/'SUMMARY.json',dict(state='PILOT_VALID' if pilot else 'CONDITIONAL_BATCH_CHECKED',family=family,
         variants=summaries,fits=meta,selection_eligible=False,miniature_architecture_untested=True))

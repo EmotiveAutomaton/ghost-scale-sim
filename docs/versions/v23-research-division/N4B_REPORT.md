@@ -1,5 +1,7 @@
 # Contingency changes distinguish two aliased mechanisms
 
+Training clarification: [fresh-minibatch law weighting](FRESH_RIVAL_QUALIFICATION.md). All laws were represented, with unequal weights; exact primary results and saved forecasts remain unchanged.
+
 Can a changed contingency distinguish mechanisms that produce identical earlier
 choices? In the constructed N4b probe, changing the contingency improves the
 true-mechanism log score for the transition and intrinsic-recipe mechanisms by

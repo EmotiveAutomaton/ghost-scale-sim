@@ -1,5 +1,9 @@
 # The methodology layer
 
+N8 adds a complete two-burn-in, 49,152-case preference-reading review with independent scores, replay and calibrated selection. Discovery now has an exhaustive frozen disposition/order manifest. Confirmation arithmetic applies Jensen only conditionally on a plug-in discovery mean, compares the lowest e-LOND threshold, and draws no worlds. [Report and limitations](versions/v23-research-division/N8_REPORT.md).
+
+N4b/N4c training clarification: all sixteen laws occur in fresh minibatches, with unequal weighting. New miniatures randomize the law offset for uniform expected weights. Original exact primary results and saved predictions are unchanged. [Details](versions/v23-research-division/FRESH_RIVAL_QUALIFICATION.md).
+
 October 17 adds source-bound conditional protocols, explicit reader observation maps, probability-product checks of log-space posteriors, and separately reconstructed whole-block bootstrap quantiles. The retained pipeline rejects a corrupted interval in complete fixture records. These controls establish engineering validity, not a scientific result. [Packet review](versions/v23-research-division/PACKET_REVIEW_2026-10-17.md).
 
 The [twin profile review](versions/v23-research-division/TWIN_PROFILE_REPORT.md)

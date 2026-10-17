@@ -66,7 +66,10 @@ def step_family(campaign,name,config):
         controls,state=ensure(campaign,'v23-n1-controls-1','population-controls',name,config['controls_cap'],{},group)
         if state!='VERIFIED':return dict(state=state,stage='controls',packet=controls.name)
         extras.update(binding(controls,'controls'))
-    pilot,state=ensure(campaign,'v23-'+name.lower()+'-completion-profile-1',pilot_task,name,config['profile_cap'],extras,group)
+    pilot_identity=config.get('profile_identity','v23-'+name.lower()+'-completion-profile-1')
+    if not pilot_identity.startswith('v23-'+name.lower()+'-completion-profile-'):
+        raise ValueError('profile identity does not belong to conditional family')
+    pilot,state=ensure(campaign,pilot_identity,pilot_task,name,config['profile_cap'],extras,group)
     if state!='VERIFIED':return dict(state=state,stage='cost-profile',packet=pilot.name)
     extras.update(binding(pilot,'pilot'));costs=cost_estimate(prefix+'-fits',pilot)
     fitextras=dict(extras,burnin_reservations_seconds=[costs['batch']]*(2 if population else 1))

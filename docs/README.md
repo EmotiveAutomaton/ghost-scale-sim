@@ -1,6 +1,6 @@
 # Documentation map
 
-[October 15 event review](versions/v23-research-division/EVENT_REVIEW_REPORT.md): R4 and N5 discovery nominations independently verified; N6 primary unavailable; N2 numerical saturation and R3/N4 resource failures retained. This supersedes earlier morning execution snapshots.
+[October 17 packet and current work](versions/v23-research-division/PACKET_REVIEW_2026-10-17.md): evidence-bound mandatory dispositions, N8 continuation, and eight ranked conditional studies. The [work order](versions/v23-research-division/OCTOBER17_WORK_ORDER.json) distinguishes implemented studies from remaining builds.
 
 Start with the status of the work, then follow its evidence. This index describes
 where documents belong; it does not replace scientific verdicts or live native
@@ -10,7 +10,7 @@ state. Updated 10 October 2026.
 
 | Status | Entry point | Use |
 |---|---|---|
-| Active V23, corrected finite research division | [V23 index](versions/v23-research-division/README.md) | R1/R2 nominations, R4 verified first burn-in/resource hold, N1 resource limit and explicit unfinished scope |
+| Active V23, corrected finite research division | [V23 index](versions/v23-research-division/README.md) | Current dispositions, confirmation arithmetic, conditional implementation and results |
 | Closed V22, seven finite mechanism tests | [V22 index](versions/v22-mechanism-tests/README.md) | Seven reviewed results, retained controls, final report and finite closure |
 | Closed V21, supporting mechanism program | [V21 final report](versions/v21-supporting-mechanisms/FINAL_REPORT.md) | Final scientific report and verified owned-service closure |
 | Closed V19 | [V19 index](versions/v19-local-maker/README.md) | Final scientific report and administrative closure |

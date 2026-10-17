@@ -4,6 +4,19 @@ import pytest
 from ghostscale.validation.soundingline.v23 import conditional_small as pipeline,covariation,consideration,ledger
 from ghostscale.validation.soundingline.v23.common import Direct,write,read,digest
 
+def test_fresh_minibatches_cover_all_laws_and_fixed_training_stays_unchanged(monkeypatch):
+    v=consideration.variants()[0];counts=np.zeros(16,int)
+    # Integrate all equally likely offsets of the actual 256-label minibatch.
+    for offset in range(16):
+        monkeypatch.setattr(pipeline,'_law_offset',lambda family,phase,o=offset:o)
+        for i in range(256):
+            _,truth=pipeline.training_sample(consideration,v,['N9-training',['fresh',0,0,0]],i//12,i)
+            counts[truth['law']]+=1
+    assert np.array_equal(counts,np.full(16,256))
+    phase=['N9-training',['fixed',2048]]
+    from ghostscale.validation.soundingline.v23.common import canonical
+    assert canonical(pipeline.training_sample(consideration,v,phase,7,0))==canonical(consideration.sample(v,phase,7,0))
+
 @pytest.mark.parametrize('model',[covariation,consideration])
 def test_complete_retained_pipeline_and_interval_reconstruction(tmp_path,monkeypatch,model):
     directory=os.environ['V23_SCHEMA_DIRECTORY'];schema,hashes=ledger.canonical_schema(directory)

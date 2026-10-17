@@ -53,6 +53,13 @@ into any reader input. The exact reader and six fixed/fresh direct rivals predic
 the same eight-class joint responses. Rival training and validation namespaces
 are disjoint from science. Query outcomes never enter the primary readout.
 
+Pre-production training refinement: independently randomize each fresh minibatch's
+reliability offset over all sixteen laws. The inherited 256-case/12-setting
+minibatches visit all sixteen laws but overweight the early ones because they
+reset at law zero. Random offsets give equal expected law weights. Fixed training,
+validation and production allocations are unchanged. Earlier cost pilots are
+retained; the successor pilot/replay binds this refinement before any fitting.
+
 Controls: normalized laws; planted recovery under the strongest setting for
 every reliability; action alias preserved and process information separates it;
 probability/log-space agreement; canonical ledger round trip; evaluator and

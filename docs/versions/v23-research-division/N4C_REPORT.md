@@ -1,5 +1,7 @@
 # N4c: complete conditional devaluation study
 
+Training clarification: [fresh-minibatch law weighting](FRESH_RIVAL_QUALIFICATION.md). All laws were represented, with unequal weights; exact primary results and saved forecasts remain unchanged.
+
 Can need satisfaction and alternative means distinguish control rules that look identical in ordinary behavior? In N4c's twelve constructed settings, the combined probes improve the true-mechanism log score by 1.127–1.252 nats. Habit cases improve by 1.226–1.252 nats; baseline/sham observations remain aliased. Removing observed goal commitments from probes leaves goal-directed and habitual-goal rules exactly aliased. All 12,288 cases, six rival forecasts, complete replay and 192 whole-world intervals verify. These are stipulated mechanisms, miniature — architecture untested; this does not establish how ends are learned or how humans behave.
 
 The [predeclared protocol](N4C_PROTOCOL.md) crossed four rules with 0, 8 and 32

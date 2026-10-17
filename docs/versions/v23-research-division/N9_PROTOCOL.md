@@ -37,6 +37,10 @@ as a withheld target, not extra input for the primary mechanism posterior.
 No evaluator mechanism/law enters any reader feature. The canonical ledger
 retains only observed history and untaken probe menus, with full round trip.
 
+Fresh minibatches independently randomize their reliability offset across all
+sixteen laws. Fixed training/validation allocations remain balanced, and every
+production setting still has exactly sixteen prescribed law blocks.
+
 Known answers cover baseline and narrow-width aliasing, changed-probe recovery,
 high-reliability recovery, probability products versus log space, no hidden-label
 or future-target input, and ledger integrity. Full-grid pilot/replay and six
