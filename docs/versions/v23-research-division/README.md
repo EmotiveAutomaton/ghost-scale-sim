@@ -1,5 +1,7 @@
 # V23: research division and decision-ledger bridge
 
+Later [05:45 delivery and N7 execution checkpoint](N7_CHECKPOINT_2026-10-17.md): seven of eight parts verified, final replay running; actual replacement-watcher delivery observed. No new family decision.
+
 Current checkpoint: [October 17 theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md).
 N2 and R3 have reviewed terminal stops; N2 retains the observed-gain/pooling
 qualification. N3's complete batch has an unavailable primary. N7's first

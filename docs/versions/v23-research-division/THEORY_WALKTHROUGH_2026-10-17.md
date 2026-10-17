@@ -1,5 +1,7 @@
 # Theory walkthrough checkpoint — October 17
 
+Later [05:45 delivery and N7 execution checkpoint](N7_CHECKPOINT_2026-10-17.md): seven of eight parts verified, final replay running; actual replacement-watcher delivery observed. No new family decision.
+
 The completed evidence is recorded and reviewed. **V23 is still active and is not
 a final closeout.** N2, N3 and R3 now have terminal family reviews; N7's first
 burn-in is reviewed and its second is running. Four earlier discovery nominations

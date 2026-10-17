@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+N7's second burn-in has seven of eight parts verified for complete replay and source integrity; its final part is replaying. No partial outcome decides the family. The replacement watcher has delivered an actual review. [Execution checkpoint](docs/versions/v23-research-division/N7_CHECKPOINT_2026-10-17.md).
+
 Does weighting by response time improve preference recovery? N2's frozen pooled stopping rule stops the family, yet 48 of 120 nonstructural settings have observed pooled gains above 0.02 nats. The largest is 24.47776 nats, with a descriptive 95% interval of 15.99531–32.96020. Near-zero uncertainty in other settings dominates the pooled model. This is a constructed-method limitation and a descriptive gain pattern, not a confirmed benefit or evidence that timing never helps. [N2 report](docs/versions/v23-research-division/N2_REPORT.md).
 
 Do literal correction constraints improve preference recovery? N3's primary comparison is unavailable in all 96 settings: hard constraints can empty the finite preference support. All 98,304 cases and complete replay verify; 62,209 half-space predictions are unavailable. No cases are deleted and the soft supplement is not substituted. This is a constructed-method limitation, not evidence that correction records contain no information. [N3 report](docs/versions/v23-research-division/N3_REPORT.md).

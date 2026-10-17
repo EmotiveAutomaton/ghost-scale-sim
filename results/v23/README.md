@@ -1,5 +1,7 @@
 # V23 evidence
 
+[N7 execution checkpoint](n7-checkpoint-20261017/README.md): seven of eight parts verified and actual review delivery observed; no new family decision.
+
 [October 17 walkthrough](walkthrough-20261017/README.md): complete N2/N3/R3
 family reviews, N7's first burn-in, failed N4 profile and supplied twin references.
 V23 remains active; no confirmation is recorded.

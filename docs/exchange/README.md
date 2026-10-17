@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [October 17 N7 execution checkpoint](v23-n7-checkpoint-2026-10-17.md): seven of eight parts verified; actual monitor delivery observed; no new family decision.
+
 - [October 17 theory walkthrough](v23-theory-walkthrough-2026-10-17.md): N2 pooling qualification, N3 unavailable primary, R3 terminal stop, N7 ongoing and source deliveries reviewed.
 
 - [Sounding Line measured twin references, October 16](sounding-line-twin-references-2026-10-16/README.md): authenticated T1/T4 aggregates and source mapping; [T3 supplement](sounding-line-twin-references-2026-10-16/T3_README.md) awaits API-native source-identity review; T2 pending and T4 sensitivity blocked. No scientific admission or earlier failure repair.

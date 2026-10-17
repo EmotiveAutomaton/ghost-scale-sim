@@ -1,10 +1,10 @@
 {
   "accepted_confirmations": 0,
   "accepted_family_batches": 16,
-  "at": "2026-10-17T11:44:43.484260+00:00",
+  "at": "2026-10-17T12:50:29.605502+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 85.521953125,
+  "charged_cpu_hours_bound": 87.81291666666667,
   "completed_family_batches": 16,
   "conditional_studies_complete": [
     "N4b"
@@ -53,9 +53,8 @@
     "N8"
   ],
   "last_operator_check": {
-    "at": "2026-10-17T11:44:43.484260+00:00",
-    "report": "THEORY_WALKTHROUGH_CHECKPOINT_CAMPAIGN_ACTIVE",
-    "state": "FULL_COMPLETED_EVIDENCE_REVIEW"
+    "at": "2026-10-17T12:50:29.605502+00:00",
+    "state": "PARTIAL_EXECUTION_AND_ACTUAL_DELIVERY_VERIFIED"
   },
   "max_scientific_workers": 3,
   "n1_completion_profile": {
@@ -82,19 +81,20 @@
     "state": "RESOURCE_CAP_NO_FULL_PROFILE"
   },
   "n7_second_batch_parts": {
-    "complete": 6,
+    "complete": 7,
     "required": 8,
     "terminal_family_decision": false
   },
   "native_study_workflows_built": true,
+  "next_early_check": "2026-10-17T13:10:00+00:00",
   "next_routine_health": "2026-10-17T17:04:15+00:00",
   "opened": "2026-10-15T05:04:15+00:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "complete": 87,
+    "complete": 88,
     "failed": 17,
     "partitioned": 1,
-    "running": 2
+    "running": 1
   },
   "pending_design_decisions": [
     "N4c scientific definition",
@@ -125,8 +125,8 @@
     "preparation-queue-6": "REVIEW_BOUNDARY",
     "r3-recovery-queue-20261016": "REVIEW_BOUNDARY"
   },
-  "replacement_notifier_delivery_observed": false,
-  "report": "docs/versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md",
+  "replacement_notifier_delivery_observed": true,
+  "report": "docs/versions/v23-research-division/N7_CHECKPOINT_2026-10-17.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
@@ -135,8 +135,8 @@
   ],
   "retained_failed_attempts": 17,
   "scientific_controllers": 1,
-  "scientific_workers": 2,
-  "state": "THEORY_WALKTHROUGH_CHECKPOINT_CAMPAIGN_ACTIVE",
+  "scientific_workers": 1,
+  "state": "N7_EXECUTION_CHECKPOINT_CAMPAIGN_ACTIVE",
   "total_cpu_hours": 285,
   "twin_engineering_fixtures_verified": 8,
   "twins_built": 4,

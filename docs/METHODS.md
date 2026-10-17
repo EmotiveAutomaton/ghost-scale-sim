@@ -1,5 +1,7 @@
 # The methodology layer
 
+The [N7 execution checkpoint](versions/v23-research-division/N7_CHECKPOINT_2026-10-17.md) checks both copies of every indexed scientific file, immutable source/dependency bindings, distinct sequential process owners and disjoint parent worlds. These checks do not replace complete-batch numerical reconstruction or produce a partial family decision. Publication checks distinguish original file hashes from declared Git LF normalization.
+
 The October 17 [family reviews](versions/v23-research-division/THEORY_WALKTHROUGH_2026-10-17.md)
 reconstruct every primary score and complete-world estimate, verify all replay
 hashes, and reproduce the frozen N2/N3/R3 cards. N7's first burn-in is separately

@@ -1,5 +1,7 @@
 # V23 implementation status
 
+Later [05:45 delivery and N7 execution checkpoint](N7_CHECKPOINT_2026-10-17.md): seven of eight parts verified, final replay running; actual replacement-watcher delivery observed. No new family decision.
+
 Current checkpoint: [October 17 theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md).
 N2 and R3 have reviewed terminal stops; N2 retains the observed-gain/pooling
 qualification. N3's complete batch has an unavailable primary. N7's first
@@ -31,7 +33,7 @@ The table separates built components, actual execution, and outstanding admissio
 | N8 optional | Full retained pipeline, independent checks, controls, pilot entry point and evidence-bound mandatory-disposition gate | Not admitted before mandatory dispositions and sufficient capacity |
 | T1-T4 | Whole-testbed workflows, consumers, replay, spike-ins, cost admission and finite controller | T1/T4 and T3 summaries received. T3 source convention, missing T2, T4 sensitivity and product-module gates remain. No scientific twins admitted. |
 | Execution | Frozen sources, charged failures/helpers/replay, per-part caps, fit handoffs, protected mandatory reservations and finite family/extension/twin/confirmation controllers | New admissions use the hash-bound resource supplement; old packet bounds, reserve and deadline remain. Parallel whole-world parts preserve complete scientific decisions. |
-| Monitoring | Twelve-hour and failure/decision/dependency events; exact hash acknowledgements | Prior automatic review failed before model start. Native launch repaired and preflight passes; new actual delivery not yet observed. |
+| Monitoring | Twelve-hour and failure/decision/dependency events; exact hash acknowledgements | Prior failed delivery retained; replacement watcher actually delivered the October 17 05:45 review. Publication and exact event landing are separate checks. |
 
 The newer ToMpathy research interface at `82789fdb50d9366ab9352129b01ee37622554dfa`
 passes constructed native ingestion and applicable fitted-forecast round trips.
