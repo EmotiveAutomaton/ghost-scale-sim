@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+- [T1 engine-fit failure](v23-t1-engine-fit-failure-2026-10-17.md): retained bounded profile failure and numerical-repair requirements; no scientific null.
+
 - [N4c complete conditional response](v23-n4c-response.md): all 12,288 cases, ablations, forecasts and replay verified; three native twin profiles continue.
 
 - [October 17 provisional continuation](v23-provisional-continuation-2026-10-17.md): N4c pilot/fits verified and full batch running; native T1/T4 profiles running, typed T3 source queued; missing-data and product-module gates retained.

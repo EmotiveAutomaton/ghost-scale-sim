@@ -1,6 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T1/T4/T3 cost profiles now run. Earlier opening snapshots below are dated history.
+Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T3/T4 cost profiles run; T1 stopped on a pinned-engine optimizer failure. Earlier opening snapshots below are dated history.
 
 Current: [provisional continuation and active queue](PROVISIONAL_CONTINUATION_2026-10-17.md).
 N4c's pilot and fits are replay-verified; its full batch and T1/T4 cost profiles

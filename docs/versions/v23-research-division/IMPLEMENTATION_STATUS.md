@@ -1,6 +1,6 @@
 # V23 implementation status
 
-Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T1/T4/T3 cost profiles now run. Earlier opening snapshots below are dated history.
+Latest: [N4c complete conditional review](N4C_REPORT.md): 12,288 cases, all ablations and six rivals verified; outside confirmation. T3/T4 cost profiles run; T1 stopped on a pinned-engine optimizer failure. Earlier opening snapshots below are dated history.
 
 October 17 continuation: [provisional decisions and active queue](PROVISIONAL_CONTINUATION_2026-10-17.md).
 N4c's complete pilot and six fits are replay-verified; its full batch is running.
@@ -40,7 +40,7 @@ The table separates built components, actual execution, and outstanding admissio
 | N6 | Full batch, scores, uptake paths, payoff diagnostics and full replay reviewed | PRIMARY_UNAVAILABLE: two empty conditional worlds. No deletion, extra sampling or finite family selection. |
 | N7 | Six retained fits, both full burn-ins, all primary and secondary measures, complete replay | NOMINATED; all 128 settings and 262,144 cases reviewed. [Report](N7_REPORT.md). |
 | N8 optional | Full retained pipeline, independent checks, controls, pilot entry point and evidence-bound mandatory-disposition gate | Not admitted before mandatory dispositions and sufficient capacity |
-| T1-T4 | Whole-testbed workflows, consumers, replay, spike-ins, cost admission and finite controller | T1/T4/T3 cost profiles running; typed T3 source accepted. T2, T4 sensitivity and product-module gates remain. No full twin batch accepted. |
+| T1-T4 | Whole-testbed workflows, consumers, replay, spike-ins, cost admission and finite controller | T3/T4 cost profiles running; T1 profile failed in the pinned engine optimizer; typed T3 source accepted. T2, T4 sensitivity and product-module gates remain. No full twin batch accepted. |
 | Execution | Frozen sources, charged failures/helpers/replay, per-part caps, fit handoffs, protected mandatory reservations and finite family/extension/twin/confirmation controllers | New admissions use the hash-bound resource supplement; old packet bounds, reserve and deadline remain. Parallel whole-world parts preserve complete scientific decisions. |
 | Monitoring | Twelve-hour and failure/decision/dependency events; exact hash acknowledgements | Prior failed delivery retained; replacement watcher actually delivered the October 17 05:45 review. Publication and exact event landing are separate checks. |
 
