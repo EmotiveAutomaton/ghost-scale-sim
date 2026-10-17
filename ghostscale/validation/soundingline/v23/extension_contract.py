@@ -3,6 +3,19 @@ from pathlib import Path
 from .common import read,digest
 from . import population_campaign,conditional_values,registry
 
+CONDITIONAL_MODULES = {
+    'N4b': ('conditional_values','fit_rivals','values','checker_recipes','common','registry','ledger'),
+    'N4c': ('conditional_devaluation','devaluation','fit_rivals','common','ledger'),
+    'N14': ('conditional_covariation','covariation','conditional_small','fit_rivals','common','ledger'),
+    'N9': ('conditional_consideration','consideration','conditional_small','fit_rivals','common','ledger'),
+}
+
+
+def conditional_module(family):
+    import importlib
+    if family not in CONDITIONAL_MODULES:raise ValueError('undeclared conditional family')
+    return importlib.import_module('.'+CONDITIONAL_MODULES[family][0],__package__)
+
 
 def cost_estimate(task,packet):
     packet=Path(packet)
@@ -13,9 +26,7 @@ def cost_estimate(task,packet):
             raise ValueError('complete population cost coverage required')
         batch=3*max(sum(r['cpu_seconds']*cells[r['variant']] for r in x['profile']) for x in rows)
     else:
-        module=conditional_values
-        if (packet/'PLAN.json').exists() and read(packet/'PLAN.json').get('family')=='N4c':
-            from . import conditional_devaluation as module
+        module=conditional_module(read(packet/'PLAN.json')['family']) if (packet/'PLAN.json').exists() else conditional_values
         cells={v['id'] for v in module.variants()}
         if any({r['variant'] for r in x['profile']}!=cells for x in rows):
             raise ValueError('complete conditional cost coverage required')
@@ -64,12 +75,15 @@ def validate(task,family,extras,repo):
         if extras['population_design']!=expected:raise ValueError('population allocation differs')
         if task not in ('population-batch','population-precision'):raise ValueError('unknown population task')
     elif task.startswith('conditional-'):
-        if family not in ('N4b','N4c'):raise ValueError('undeclared conditional family')
+        if family not in CONDITIONAL_MODULES:raise ValueError('undeclared conditional family')
         if task=='conditional-pilot':return 0.,0.
         pilot,pp,summary=bound_packet(extras,'pilot','conditional-pilot',family)
         if summary.get('state')!='PILOT_VALID' or not read(pilot/'original/CONTROLS.json').get('passed'):
             raise ValueError('conditional controls and full grid profile required')
-        modules=('conditional_devaluation','devaluation','fit_rivals','common','ledger') if family=='N4c' else ('conditional_values','fit_rivals','values','checker_recipes','common','registry','ledger')
+        modules=CONDITIONAL_MODULES[family]
+        if family not in ('N4b','N4c'):
+            protocol='docs/versions/v23-research-division/'+family.upper()+'_PROTOCOL.md'
+            if digest(Path(repo)/protocol)!=pp['sources'].get(protocol):raise ValueError('conditional protocol changed after pilot')
         for name in modules:
             rel='ghostscale/validation/soundingline/v23/'+name+'.py'
             if digest(Path(repo)/rel)!=pp['sources'].get(rel):raise ValueError('conditional pilot source changed')

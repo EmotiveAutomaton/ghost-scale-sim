@@ -70,6 +70,10 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
         if runtime.environment() != read(campaign/'ENVIRONMENT.json'):
             raise ValueError('scientific environment changed')
         authority = prerequisites(campaign, task, family, extras)
+        if task.startswith('conditional-') and family not in ('N4b','N4c'):
+            if resource_policy.binding(campaign).get(resource_policy.BINDING,{}).get('file')!=resource_policy.SUPPLEMENT_17:
+                raise ValueError('October 17 conditional authority required')
+            if group!='conditional':raise ValueError('new conditional work must charge conditional group')
         reservation=0.
         if task.startswith(('population-','conditional-')):
             from ghostscale.validation.soundingline.v23.extension_contract import validate
@@ -98,6 +102,10 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
         names = ['ghostscale/__init__.py','ghostscale/validation/__init__.py',
             'ghostscale/validation/soundingline/__init__.py','runners/run_v23.py','runners/launch_background.py']
         names += [p.relative_to(repo).as_posix() for p in sorted((repo/'ghostscale/validation/soundingline/v23').glob('*.py'))]
+        if task.startswith('conditional-') and family not in ('N4b','N4c'):
+            protocol='docs/versions/v23-research-division/'+family.upper()+'_PROTOCOL.md'
+            if not (repo/protocol).is_file():raise ValueError('declared protocol required before sampling')
+            names.append(protocol)
         source = campaign/'sources'/identity;source.mkdir(parents=True, exist_ok=False)
         for name in names:
             target = source/name;target.parent.mkdir(parents=True, exist_ok=True)

@@ -1,12 +1,14 @@
 {
   "accepted_confirmations": 0,
-  "accepted_family_batches": 17,
-  "active_packets": [],
-  "at": "2026-10-17T13:18:09.249121-07:00",
+  "accepted_family_batches": 18,
+  "active_packets": [
+    "v23-n8-batch-2"
+  ],
+  "at": "2026-10-17T20:33:36.248053+00:00",
   "campaign_complete": false,
   "canonical_schema_commit": "2a0c54233344ae3f64bed9806442289d7dab726a",
-  "charged_cpu_hours_bound": 89.52170282352779,
-  "completed_family_batches": 17,
+  "charged_cpu_hours_bound": 89.9757826846389,
+  "completed_family_batches": 18,
   "conditional_studies_complete": [
     "N4b",
     "N4c"
@@ -18,26 +20,26 @@
   "engine_interface_commit": "82789fdb50d9366ab9352129b01ee37622554dfa",
   "engine_interface_verified": true,
   "families": {
-    "N1": "RESOURCE_DEFERRED_COMPLETE_PROFILE_CPU_CAP",
-    "N2": "STOPPED_BELOW_MARGIN_WITH_POOLING_QUALIFICATION",
+    "N1": "RESOURCE_DEFERRED",
+    "N2": "STOPPED_BELOW_MARGIN",
     "N3": "PRIMARY_UNAVAILABLE",
-    "N4": "COMPLETION_PROFILE_CPU_CAP_NO_FULL_MAIN_STUDY",
+    "N4": "RESOURCE_DEFERRED",
     "N4b": "CONDITIONAL_STUDY_COMPLETE",
     "N4c": "CONDITIONAL_STUDY_COMPLETE",
     "N5": "NOMINATED",
     "N6": "PRIMARY_UNAVAILABLE",
     "N7": "NOMINATED",
-    "N8": "NOT_ADMITTED_PENDING_MANDATORY_DISPOSITIONS",
+    "N8": "SECOND_BURNIN_RUNNING",
     "R1": "NOMINATED",
     "R2": "NOMINATED",
     "R3": "STOPPED_BELOW_MARGIN",
     "R4": "NOMINATED",
-    "T1": "INSTRUMENT_FAILED_NUMERICAL_SUCCESSOR_REQUIRED",
-    "T2": "MEASURED_INPUT_MISSING",
-    "T3": "PROFILE_CPU_CAP_TYPED_SOURCE_ACCEPTED",
-    "T4": "PROFILE_CPU_CAP_PRIMARY_REFERENCE_ACCEPTED_SENSITIVITY_MISSING"
+    "T1": "INSTRUMENT_FAILED",
+    "T2": "DEPENDENCY_BLOCKED_AT_FREEZE",
+    "T3": "RESOURCE_DEFERRED",
+    "T4": "RESOURCE_DEFERRED"
   },
-  "families_admitted": 9,
+  "families_admitted": 10,
   "first_actual_review_delivery": "2026-10-15T00:49:30.87583-07:00",
   "gear": 2,
   "implementation_complete": false,
@@ -97,7 +99,7 @@
     "terminal_family_decision": true
   },
   "native_study_workflows_built": true,
-  "next_early_check": null,
+  "next_early_check": "2026-10-17T14:15:00-07:00",
   "next_routine_health": "2026-10-17T22:04:15-07:00",
   "october17_packet": {
     "actual_worker_ceiling": 3,
@@ -111,28 +113,28 @@
       "N4d",
       "N15"
     ],
-    "conditional_state": "COMMISSIONED_NOT_YET_ADMITTED",
+    "conditional_state": "N14_N9_CONTROLS_VERIFIED_OTHER_SIX_COMMISSIONED_TO_BUILD",
     "confirmation": "WAITING_FOR_N8_TERMINAL_REVIEW_AND_FREEZE",
     "mandatory_dispositions": "results/v23/packet-20261017/MANDATORY_DISPOSITIONS.json",
-    "n8": "FITS_RUNNING",
+    "n8": "SECOND_BURNIN_RUNNING",
     "source_sha256": "5ce49cdcfe104db20e14635ae7aa7fbf8a40628863aafa400ef8ce25536109ae",
-    "state": "IMPLEMENTING_AND_RUNNING"
+    "state": "IMPLEMENTING_AND_RUNNING",
+    "work_order": "docs/versions/v23-research-division/OCTOBER17_WORK_ORDER.json"
   },
   "opened": "2026-10-14T22:04:15-07:00",
   "original_packet_cpu_hours": 90,
   "packet_states": {
-    "complete": 93,
-    "failed": 20
+    "complete": 100,
+    "failed": 20,
+    "running": 1
   },
-  "pending_design_decisions": [
-    "T4 sensitivity mapping when actual exclusion roster is supplied"
-  ],
-  "pending_external_dependencies": "T2 measured input; T4 exclusion roster; source-pinned numerical engine successor; reviewed product modules. T3/T4 complete resource profiles remain unresolved.",
+  "pending_design_decisions": [],
+  "pending_external_dependencies": "Only optional committed certified-fit-1 gate for the Stage15 successor; original twins have final V23 dispositions.",
   "population_checker": "Independent population, complete replay and 32-culture reserved-consumer controls pass; production controls/profile gate full-scale admission",
   "prior_notifier_delivery_observed": true,
   "profile_validation_status": "FAIL",
   "protected_cpu_hours": 18,
-  "provisional_authority": "October 17 owner instruction; see N4C_PROTOCOL.md",
+  "provisional_authority": "October 17 curator packet; evidence-bound authority and work order recorded.",
   "queue_states": {
     "addendum-queue-20261016": "failed",
     "addendum-queue-20261016-recovery-1": "REVIEW_BOUNDARY",
@@ -144,6 +146,7 @@
     "n2-continuation-queue-20261016": "OPERATOR_HANDOFF",
     "n2-post-repair-20261016": "REVIEW_BOUNDARY",
     "n4c-queue-20261017": "REVIEW_BOUNDARY",
+    "n8-queue-20261017": "RUNNING",
     "population-continuation-20261016": "REVIEW_BOUNDARY",
     "preparation-queue-1": "failed",
     "preparation-queue-2": "OPERATOR_STOP",
@@ -156,7 +159,7 @@
     "twin-queue-20261017-repair-1": "REVIEW_BOUNDARY"
   },
   "replacement_notifier_delivery_observed": true,
-  "report": "docs/versions/v23-research-division/TWIN_PROFILE_REPORT.md",
+  "report": "docs/versions/v23-research-division/PACKET_REVIEW_2026-10-17.md",
   "resource_amendments": [
     "RESOURCE_REALLOCATION.json",
     "RESOURCE_REALLOCATION_2.json",
@@ -164,9 +167,9 @@
     "ACCEPTANCE_SUPPLEMENT_2026-10-16.json"
   ],
   "retained_failed_attempts": 20,
-  "scientific_controllers": 0,
-  "scientific_workers": 0,
-  "state": "TWIN_PROFILE_FAILURES_REVIEWED_T1_DIAGNOSED_DEPENDENCIES_OPEN",
+  "scientific_controllers": 1,
+  "scientific_workers": 1,
+  "state": "OCTOBER17_COMMISSION_RUNNING",
   "total_cpu_hours": 285,
   "twin_cost_profiles_admitted": [
     "T1",
@@ -186,5 +189,5 @@
   "verified_family_decisions": 9,
   "verified_partial_family_batches": 0,
   "verified_repair_pilots": 8,
-  "worker_expansion_state": "HELD_FOR_MEASURED_INTERFERENCE_CONTRACT"
+  "worker_expansion_state": "THREE_WORKERS_FIXED_BY_OCTOBER17_PACKET"
 }

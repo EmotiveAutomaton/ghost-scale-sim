@@ -10,7 +10,7 @@ from pathlib import Path
 import argparse,time
 from ghostscale.validation.soundingline.v23 import runtime,population_campaign,conditional_values,support_new
 from ghostscale.validation.soundingline.v23.common import read,write,digest
-from ghostscale.validation.soundingline.v23.extension_contract import cost_estimate
+from ghostscale.validation.soundingline.v23.extension_contract import cost_estimate,conditional_module,CONDITIONAL_MODULES
 from ghostscale.validation.soundingline.v23.family import verify_packet
 from runners import queue_v23_families as queue
 from runners.admit_v23_extension import admit
@@ -36,9 +36,7 @@ def checked(packet):
     if plan['task'] in ('population-batch','population-precision'):
         numerical=population_campaign.reconstruct(packet/'original',plan)
     if plan['task']=='conditional-batch':
-        module=conditional_values
-        if plan['family']=='N4c':
-            from ghostscale.validation.soundingline.v23 import conditional_devaluation as module
+        module=conditional_module(plan['family'])
         numerical=module.reconstruct(packet/'original',plan)
     write(receipt,dict(state=state,complete_sha256=digest(packet/'COMPLETE.json'),task=plan['task'],
         full_fresh_process_replay=True,independent_numerical_review=numerical))
@@ -61,7 +59,8 @@ def ensure(campaign,identity,task,family,cap,extras,group):
 
 
 def step_family(campaign,name,config):
-    population=name=='N1';prefix='population' if population else 'conditional';group='n1' if population else 'n4'
+    population=name=='N1';prefix='population' if population else 'conditional'
+    group='n1' if population else 'n4' if name in ('N4b','N4c') else 'conditional'
     extras={};pilot_task=prefix+'-profile' if population else prefix+'-pilot'
     if population:
         controls,state=ensure(campaign,'v23-n1-controls-1','population-controls',name,config['controls_cap'],{},group)
@@ -128,7 +127,7 @@ def step(campaign,config):
     if config.get('families') and queue.active_count(queue.inventory(campaign))>=resource_policy.worker_limit(campaign):return dict(state='RUNNING',phase='WAITING_FOR_SLOT')
     states={}
     for name,settings in config['families'].items():
-        if name not in ('N1','N4b','N4c'):raise ValueError('uncommissioned extension')
+        if name!='N1' and name not in CONDITIONAL_MODULES:raise ValueError('uncommissioned extension')
         states[name]=step_family(campaign,name,settings)
         if states[name]['state']=='RUNNING_OR_ADMITTED':break
     terminal={'COMPLETE','RESOURCE_DEFERRED','INSTRUMENT_FAILED','KNOWN_ANSWER_FAILED'}

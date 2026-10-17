@@ -205,11 +205,8 @@ def execute_pass(root, campaign, label):
         elif plan['task'] in ('population-batch','population-precision'):population_campaign.run(root/label,plan,pulse)
         else:raise ValueError('unknown population task')
     elif plan['task'] in ('conditional-pilot','conditional-fits','conditional-batch'):
-        if plan['family']=='N4c':
-            from .conditional_devaluation import run as conditional
-        else:
-            from .conditional_values import run as conditional
-        conditional(root/label,plan,pulse)
+        from .extension_contract import conditional_module
+        conditional_module(plan['family']).run(root/label,plan,pulse)
     elif plan['task'] in ('twin-profile','twin-fits','twin-batch'):
         from . import twin_pipeline
         if plan['task']=='twin-fits':twin_pipeline.run_fits(root/label,plan,pulse)

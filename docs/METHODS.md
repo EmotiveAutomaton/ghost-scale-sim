@@ -1,5 +1,7 @@
 # The methodology layer
 
+October 17 adds source-bound conditional protocols, explicit reader observation maps, probability-product checks of log-space posteriors, and separately reconstructed whole-block bootstrap quantiles. The retained pipeline rejects a corrupted interval in complete fixture records. These controls establish engineering validity, not a scientific result. [Packet review](versions/v23-research-division/PACKET_REVIEW_2026-10-17.md).
+
 The [twin profile review](versions/v23-research-division/TWIN_PROFILE_REPORT.md)
 separates a CPU-cap failure before engine fitting from a numerical optimizer
 failure. It verifies source/dependency/trace bindings, every retained file and

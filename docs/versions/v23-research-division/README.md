@@ -1,6 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-Current: [October 17 curator packet](PACKET_REVIEW_2026-10-17.md): mandatory dispositions recorded; N8 pilot replay passed and six rival fits are running. Eight conditional studies are commissioned in rank order. Prior snapshots below retain their dates.
+Current: [October 17 curator packet](PACKET_REVIEW_2026-10-17.md): mandatory dispositions recorded; N8 first burn-in replayed and second running. N14/N9 protocols and retained pipelines pass 35 targeted checks; six further conditional studies remain commissioned to build. Prior snapshots below retain their dates.
 
 Latest: [twin profile review](TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
 
