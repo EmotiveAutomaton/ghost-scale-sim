@@ -23,6 +23,12 @@ def prerequisites(campaign, task, family, extras):
         if summary['state'] != 'CALIBRATION_PASSED':raise ValueError('calibration unresolved')
         if digest(root/'COMPLETE.json') != extras['calibration_reference_complete_sha256']:
             raise ValueError('calibration reference changed')
+    elif task=='n2-robust':
+        from ghostscale.validation.soundingline.v23.n2_robust import validate
+        validate(dict(extras,family=family))
+        from ghostscale.validation.soundingline.v23 import resource_policy
+        if resource_policy.binding(campaign).get(resource_policy.BINDING,{}).get('file')!=resource_policy.SUPPLEMENT_17:
+            raise ValueError('D10 requires October 17 authority')
     elif task=='n2-rescore':
         from ghostscale.validation.soundingline.v23.adaptive_numerics import validate
         if family!='N2':raise ValueError('retained score repair belongs to N2')
@@ -74,6 +80,7 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             if resource_policy.binding(campaign).get(resource_policy.BINDING,{}).get('file')!=resource_policy.SUPPLEMENT_17:
                 raise ValueError('October 17 conditional authority required')
             if group!='conditional':raise ValueError('new conditional work must charge conditional group')
+        if task=='n2-robust' and (group not in ('n2','conditional') or cap>5400):raise ValueError('D10 allocation changed')
         reservation=0.
         if task.startswith(('population-','conditional-')):
             from ghostscale.validation.soundingline.v23.extension_contract import validate
@@ -102,6 +109,7 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
         names = ['ghostscale/__init__.py','ghostscale/validation/__init__.py',
             'ghostscale/validation/soundingline/__init__.py','runners/run_v23.py','runners/launch_background.py']
         names += [p.relative_to(repo).as_posix() for p in sorted((repo/'ghostscale/validation/soundingline/v23').glob('*.py'))]
+        if task=='n2-robust':names.append('docs/versions/v23-research-division/N2_ROBUST_PROTOCOL.md')
         if task.startswith('conditional-') and family not in ('N4b','N4c'):
             protocol='docs/versions/v23-research-division/'+family.upper()+'_PROTOCOL.md'
             if not (repo/protocol).is_file():raise ValueError('declared protocol required before sampling')

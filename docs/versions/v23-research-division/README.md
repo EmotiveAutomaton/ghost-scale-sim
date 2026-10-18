@@ -1,54 +1,26 @@
 # V23: research division and decision-ledger bridge
 
-Current: [N14](N14_REPORT.md) and [N9](N9_REPORT.md) complete and fully reviewed. October18 recovery is implementing six remaining studies after a failed background-review launch; no completed science was lost. Six discovery-only nominations remain frozen.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is executing its full batch/replay; N10 is fitting; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is admitted. Completed science was preserved through the overnight review-launch interruption.
 
-Latest: [twin profile review](TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
+Six discovery nominations (N8, N5, R4, N7, R2, R1) are frozen. All six have a
+qualified CONFIRMATION_INFEASIBLE_AS_FROZEN expected-evidence screen; they remain
+discovery-only. No confirmation worlds were drawn. N1/N4/T3/T4 are resource-deferred,
+T1 instrument-failed and T2 dependency-blocked. Original dispositions remain.
 
-The [provisional continuation](PROVISIONAL_CONTINUATION_2026-10-17.md) records the earlier opening. N4c is now complete. All three twin profiles are failed; the finite controller exited at its review boundary. Missing inputs and product-module gates remain.
+- [Current implementation and queue](IMPLEMENTATION_STATUS.md)
+- [Machine status](../../../results/v23/CURRENT_STATUS.json)
+- [October 17 work order](OCTOBER17_WORK_ORDER.json) and [source packet](GHOST_SCALE_PACKET_2026-10-17.md)
+- [N14 report](N14_REPORT.md), [N9 report](N9_REPORT.md), [N8 report](N8_REPORT.md)
+- [N13 protocol](N13_PROTOCOL.md) and [frozen calibration](../../../results/v23/n13-calibration/CALIBRATION.json)
+- [D10 protocol](N2_ROBUST_PROTOCOL.md); original [N2 report](N2_REPORT.md)
+- [Twin dispositions](TWIN_PROFILE_REPORT.md) and [Stage 15 FAIL](S15_PROFILE_REPORT.md)
+- [Accepted contract](IMPLEMENTATION_CONTRACT.md), [calibration](CALIBRATION_REPORT.md), [canonical ledger](LEDGER_MAPPING.md)
+- [Original specification](GHOST_SCALE_NEXT_ROUND_SPEC_2026-10-14.md) and [dated prior navigation](../../archive/v23-status-20261018/README.md)
 
-October 17: [N4c's provisional protocol](N4C_PROTOCOL.md) is declared under the
-owner's new authorization to resolve reasonable choices and begin work. Controls
-and measured admission precede production; this declaration is not a result.
-
-Latest: [complete N7 review](N7_REPORT.md), both burn-ins and all secondary measures verified; NOMINATED. Confirmation remains pending.
-
-The earlier [theory walkthrough](THEORY_WALKTHROUGH_2026-10-17.md) and
-[execution checkpoint](N7_CHECKPOINT_2026-10-17.md) remain dated history.
-N2 and R3 have reviewed terminal stops; N2 retains the observed-gain/pooling
-qualification. N3's complete batch has an unavailable primary. N7's two complete
-burn-ins and all secondary measures are reviewed (NOMINATED). N4's larger completion profile
-also capped; no main-grid result is accepted. N4b stays complete and N1 stays
-resource-deferred. Five discovery nominations remain unconfirmed.
-
-The resource supplement remains 285 CPU hours with eighteen protected and actual
-concurrency three. T1/T4/T3 source summaries are authenticated; T1 numerical repair, T3/T4 complete cost profiles,
-product-module gates, T2 input and T4 sensitivity remain unresolved. N4c is complete; the provisional schedule is active. No reserved
-confirmation order is frozen. The record is ready for review; V23 is not closed.
-
-- [Calibration report](CALIBRATION_REPORT.md): pooled error targets pass, 33
-  stress settings remain qualified, independent reconstruction and full replay pass.
-- [Implementation status](IMPLEMENTATION_STATUS.md): built parts and unfinished
-  work for all sixteen families, without treating declarations as executable jobs.
-- [Work order](WORK_ORDER.json), [accepted implementation contract](IMPLEMENTATION_CONTRACT.md)
-  and [canonical ledger mapping](LEDGER_MAPPING.md).
-- [Original specification](GHOST_SCALE_NEXT_ROUND_SPEC_2026-10-14.md), preserved
-  byte for byte; [historical review](IMPLEMENTATION_REVIEW.md) and
-  [review checks](REVIEW_CHECKS.json). The owner has accepted the corrections.
-- [Current recorded state](../../../results/v23/CURRENT_STATUS.json).
-
-Day zero is V21's actual final-report publication: 2026-10-15 05:04:15 UTC.
-The seven-day limit ends 2026-10-22 05:04:15 UTC. The original 90 CPU-hour ceiling
-is retained for old packets; new admissions use the hash-bound 285-hour supplement,
-including 18 protected hours and all setup, failures, replay and services.
-The actual limit remains three below-normal single-thread CPU scientists, no GPU,
-with Sounding Line priority until measured interference monitoring clears expansion.
-Dependency delays never reset the clock. No occupancy filler or reopening of a
-closed predecessor is authorized.
-
-R1-R4, N1-N8 and the native twin workflows have retained pipelines, independent
-checks, controls and cost-profile entry points. Full empirical twin execution
-still requires [measured source summaries](TWIN_INPUT_CONTRACT.md) and applicable
-module gates. The finite monitor collects completion, failure and committed
-dependency events and maintains fixed twelve-hour health reviews. Machine cards are
-written per accepted batch; full public scientific write-through occurs at family
-decisions. A final report and verified owned-service shutdown end the campaign.
+The immutable window opened October 14 at 22:04:15 Pacific. Scientific admission
+and reporting cutover remain October 21 at 20:04:15; the outer stop is 22:04:15.
+The amended total is 285 CPU-hours, including 18 protected, with the original
+limits retained for prior packets. Three below-normal, single-thread CPU scientists
+maximum, no GPU or environment synchronization; Sounding Line has priority.
+Fixed twelve-hour health checks remain, with earlier failure/result/queue reviews.
+The finite campaign ends with final reporting and verified owned-service closure.

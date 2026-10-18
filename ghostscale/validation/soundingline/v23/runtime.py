@@ -97,7 +97,7 @@ def verify_plan(root, campaign):
     if plan.get('continuation_authority_sha256'):
         if digest(campaign/'CONTINUATION_AUTHORITY_20261016.json') != plan['continuation_authority_sha256']:
             raise ValueError('continuation authority changed')
-    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot','numerical-validation',
+    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot','numerical-validation','n2-robust',
                             'population-controls','population-profile','conditional-pilot','conditional-fits','conditional-batch',
                             'twin-profile','twin-fits','twin-batch'):
         if plan['family'].startswith('N'):
@@ -197,6 +197,9 @@ def execute_pass(root, campaign, label):
     elif plan['task']=='n2-rescore':
         from .n2_rescore import run as rescore
         rescore(root/label,plan,pulse)
+    elif plan['task']=='n2-robust':
+        from .n2_robust import run as robust
+        robust(root/label,plan,pulse)
     elif plan['task'].startswith('population-'):
         from . import population_campaign
         if plan['task']=='population-controls':population_campaign.controls(root/label,pulse)

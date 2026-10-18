@@ -168,6 +168,25 @@ def review_environment(config):
     return environment
 
 
+def require_native_review_host():
+    """Fail before arming if a shell sandbox token would reach the review CLI.
+
+    The CLI itself still runs its ordinary workspace sandbox and approval review.
+    This checks service placement; it changes no token or permission.
+    """
+    if os.name!='nt':return
+    from ctypes import wintypes
+    kernel=ctypes.WinDLL('kernel32',use_last_error=True);advapi=ctypes.WinDLL('advapi32',use_last_error=True)
+    kernel.GetCurrentProcess.restype=wintypes.HANDLE
+    advapi.OpenProcessToken.argtypes=[wintypes.HANDLE,wintypes.DWORD,ctypes.POINTER(wintypes.HANDLE)]
+    advapi.IsTokenRestricted.argtypes=[wintypes.HANDLE];advapi.IsTokenRestricted.restype=wintypes.BOOL
+    kernel.CloseHandle.argtypes=[wintypes.HANDLE];token=wintypes.HANDLE()
+    if not advapi.OpenProcessToken(kernel.GetCurrentProcess(),8,ctypes.byref(token)):raise ctypes.WinError(ctypes.get_last_error())
+    try:
+        if advapi.IsTokenRestricted(token):raise RuntimeError('review service inherited a restricted shell token; launch it through native approval review')
+    finally:kernel.CloseHandle(token)
+
+
 def deliver(campaign,state,config,events):
     argv=config['command']
     if argv[1]!='exec' or any(x in argv for x in ('resume','--last','--dangerously-bypass-approvals-and-sandbox',
@@ -204,6 +223,7 @@ def deliver(campaign,state,config,events):
 
 
 def run(campaign,state,config_path):
+    require_native_review_host()
     config=read(config_path); acceptance=read(campaign/'ACCEPTANCE.json'); started=time.process_time(); last_dependency=0
     cost_path=service_cost_path(campaign,config)
     with owner(state):

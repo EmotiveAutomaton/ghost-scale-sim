@@ -9,6 +9,11 @@ CONDITIONAL_MODULES = {
     'N14': ('conditional_covariation','covariation','conditional_small','fit_rivals','common','ledger'),
     'N9': ('conditional_consideration','consideration','conditional_small','fit_rivals','common','ledger'),
     'N13': ('conditional_falsifier','falsifier','falsifier_calibration','finite_common','conditional_small','fit_rivals','common','ledger'),
+    'N10': ('conditional_corrections','corrections_soft','finite_common','conditional_small','fit_rivals','common','ledger'),
+    'N11': ('conditional_precision','precision_habits','finite_common','conditional_small','fit_rivals','common','ledger'),
+    'N12': ('conditional_overlays','goal_overlays','finite_common','conditional_small','fit_rivals','common','ledger'),
+    'N4d': ('conditional_sacrifice','sacrifice','finite_common','conditional_small','fit_rivals','common','ledger'),
+    'N15': ('conditional_trust','trust_attention','finite_common','conditional_small','fit_rivals','common','ledger'),
 }
 
 
