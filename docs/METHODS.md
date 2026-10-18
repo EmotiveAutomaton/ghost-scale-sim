@@ -1,5 +1,7 @@
 # The methodology layer
 
+D10 adds a retained-data descriptive analysis with validation-only fixed tempering, median variance floors and overflow-safe normalized weights. All original probabilities and gains reproduce; a separate scalar/aggregate reviewer checks 253,952 cases and 248 law-block intervals. No selection rule changes. [Report](versions/v23-research-division/N2_ROBUST_REPORT.md).
+
 N14/N9 complete conditional results retain all 24,576 cases, six rivals, 252 independently reconstructed intervals and full replay. Posterior ties and observation-specific aliases remain explicit; inference resamples law blocks. [N14](versions/v23-research-division/N14_REPORT.md), [N9](versions/v23-research-division/N9_REPORT.md).
 
 N8 adds a complete two-burn-in, 49,152-case preference-reading review with independent scores, replay and calibrated selection. Discovery now has an exhaustive frozen disposition/order manifest. Confirmation arithmetic applies Jensen only conditionally on a plug-in discovery mean, compares the lowest e-LOND threshold, and draws no worlds. [Report and limitations](versions/v23-research-division/N8_REPORT.md).

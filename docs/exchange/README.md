@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[D10 robust reanalysis](v23-n2-robust-response.md): generic tempering, heterogeneous timing gains and bounded variance weights; fully verified.
+
 [N14 complete](v23-n14-response.md) and [N9 complete](v23-n9-response.md): October17 conditional results, fully reviewed.
 
 - [N8 complete response](v23-n8-response.md): 49,152 verified cases, six frozen discovery-only nominations, conditional work continuing.

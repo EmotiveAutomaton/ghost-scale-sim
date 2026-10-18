@@ -1,5 +1,7 @@
 # N2: timing weights and a pooled-stopping limitation
 
+October 18: [D10 robust reanalysis](N2_ROBUST_REPORT.md) is complete. Its descriptive generic-tempering comparison leaves 43/120 point gains above .02 nats and pooled gain .00203. The frozen report and stop below remain unchanged.
+
 Does weighting by response time improve preference recovery? N2's frozen pooled stopping rule stops the family, yet 48 of 120 nonstructural settings have observed pooled gains above 0.02 nats. The largest is 24.47776 nats, with a descriptive 95% interval of 15.99531–32.96020. Near-zero uncertainty in other settings dominates the pooled model. This is a constructed-method limitation and a descriptive gain pattern, not a confirmed benefit or evidence that timing never helps.
 
 Two complete burn-ins cover 124 settings, 32 whole worlds per setting and 64 cases

@@ -105,3 +105,39 @@ def run(root,plan,pulse):
     write(root/'SUMMARY.json',dict(state='DESCRIPTIVE_REANALYSIS_CHECKED',family='N2',cases=total,settings=summaries,
         robust_pooled=pooled,above_margin=dict(count=count,total=120,share=count/120,margin=.02,formal_partial_conjunction_test=False),
         original_decision='STOPPED_BELOW_MARGIN',new_discovery_cases=0,source_receipts=input_hashes))
+
+
+def reconstruct(root,plan):
+    """Separate retained-row aggregation, scalar scores, quantiles and pooling."""
+    from .common import rng
+    root=Path(root);validate(plan);summary=read(root/'SUMMARY.json');checked={};pooled={name:[] for name in ('original','tempered')};above=0;total=0
+    for item in summary['settings']:
+        v=item['variant'];groups={name:{} for name in pooled};seen=set()
+        for row in family.rows(root/(v['id']+'_points.jsonl.gz')):
+            identity=row['identity'];_,name,b,w,k=identity
+            if name!=v['id'] or b not in (1,2) or not 0<=w<16 or not 0<=k<64 or (b,w,k) in seen:raise ValueError('independent coverage mismatch')
+            seen.add((b,w,k));values={key:independent_loss(logit,row['truth']) for key,logit in [('naive',row['naive_log_odds']),('weighted',row['weighted_log_odds']),('tempered',row['exponent']*row['naive_log_odds'])]}
+            if any(not math.isclose(value,row['losses'][key],abs_tol=1e-220,rel_tol=1e-12) for key,value in values.items()):raise ValueError('retained scalar score mismatch')
+            for key in groups:groups[key].setdefault((b,w),[]).append(values['naive' if key=='original' else 'tempered']-values['weighted'])
+        if len(seen)!=2048:raise ValueError('independent complete coverage required')
+        for name,worlds in groups.items():
+            means=[math.fsum(values)/64 for _,values in sorted(worlds.items())];center=math.fsum(means)/32
+            if not np.allclose(means,item['world_gains'][name],atol=1e-10,rtol=1e-10):raise ValueError('independent world means mismatch')
+            indices=rng('bootstrap',['N2-D10',v['id'],name]).integers(32,size=(4096,32))
+            boot=sorted(math.fsum(means[i] for i in draw)/32 for draw in indices)
+            def quantile(q):
+                position=q*(len(boot)-1);low=int(position)
+                return boot[low]+(position-low)*(boot[min(low+1,len(boot)-1)]-boot[low])
+            for key,value in [('mean',center),('lower',quantile(.025)),('upper',quantile(.975))]:
+                if not math.isclose(value,item['estimates'][name][key],abs_tol=1e-10,rel_tol=1e-10):raise ValueError('independent interval mismatch')
+            if not item['structural']:
+                scale=max(abs(x) for x in means);variance=(scale*math.sqrt(math.fsum((x/scale-center/scale)**2 for x in means)/31)/math.sqrt(32))**2 if scale else 0.
+                pooled[name].append((center,variance))
+                if name=='tempered':above+=center>.02
+        checked[v['id']]=dict(cases=len(seen),worlds=32);total+=len(seen)
+    for name,rows in pooled.items():
+        variances=sorted(v for _,v in rows);floor=(variances[59]+variances[60])/2
+        weights=[floor/max(floor,v) for _,v in rows];value=math.fsum(w*m for w,(m,_) in zip(weights,rows,strict=True))/math.fsum(weights)
+        if not math.isclose(value,summary['robust_pooled'][name]['mean'],abs_tol=1e-10,rel_tol=1e-10):raise ValueError('independent robust pool mismatch')
+    if total!=253952 or above!=summary['above_margin']['count']:raise ValueError('independent scope/count mismatch')
+    return dict(state='passed',cases=total,settings=len(checked),intervals_reconstructed=248,variants=checked,above_margin_count=above,independent_scalar_scores=True,independent_variance_floor_and_pool=True)
