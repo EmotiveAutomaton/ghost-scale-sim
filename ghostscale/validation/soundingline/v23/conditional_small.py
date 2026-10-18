@@ -42,7 +42,7 @@ def run(root,plan,pulse,model):
         meta=read(fitroot/'FITS.json');fitted={name:Direct.load(fitroot/(name+'.npz')) for name in meta}
     summaries=[];costs=[]
     for v in population:
-        started=time.process_time();folder=root/v['id'];folder.mkdir();blocks={};forecasts={};confusion={}
+        started=time.process_time();folder=root/v['id'];folder.mkdir();blocks={};forecasts={};confusion={};readouts=[]
         streams={name:Stream(folder/(name+'_points.jsonl.gz')) for name in ('public','truth','prediction','posterior','ledger')}
         try:
             for world in range(1 if pilot else 16):
@@ -65,6 +65,7 @@ def run(root,plan,pulse,model):
                 for name,values in metrics.items():blocks.setdefault(name,[]).append(float(np.mean(values)))
                 for name,values in scores_by_model.items():forecasts.setdefault(name,[]).append(float(np.mean(values)))
                 for name,values in world_confusion.items():confusion.setdefault(name,[]).append(np.sum(values,axis=0).tolist())
+                if not pilot and hasattr(model,'block_readout'):readouts.append(model.block_readout(v,world,metrics))
                 pulse(phase='conditional-small',family=family,variant=v['id'],world=world+1)
         finally:
             for stream in streams.values():stream.close()
@@ -72,11 +73,14 @@ def run(root,plan,pulse,model):
             metrics={name:dict(world_values=values,interval=interval(values,[family,v['id'],name])) for name,values in blocks.items()},
             forecast_log_loss={name:dict(world_values=values,interval=interval(values,[family,v['id'],'forecast',name])) for name,values in forecasts.items()},
             confusion_counts_by_world=confusion))
+        if readouts:summaries[-1]['block_readouts']=readouts
         costs.append(dict(variant=v['id'],cpu_seconds=time.process_time()-started,cases=1 if pilot else 1024))
     training=fit_rivals.profile(root/'training-profile',family,population,sampler,model.features,classes,pulse,namespace) if pilot else {}
     write(root/('pilot-cost.json' if pilot else 'batch-cost.json'),dict(profile=costs,**training))
-    write(root/'SUMMARY.json',dict(state='PILOT_VALID' if pilot else 'CONDITIONAL_BATCH_CHECKED',family=family,
-        variants=summaries,fits=meta,selection_eligible=False,miniature_architecture_untested=True))
+    result=dict(state='PILOT_VALID' if pilot else 'CONDITIONAL_BATCH_CHECKED',family=family,
+        variants=summaries,fits=meta,selection_eligible=False,miniature_architecture_untested=True)
+    if not pilot and hasattr(model,'study_readout'):result['study_readout']=model.study_readout(summaries)
+    write(root/'SUMMARY.json',result)
 
 
 def reconstruct(root,plan,model):
@@ -123,5 +127,9 @@ def reconstruct(root,plan,model):
                 intervals+=1
         for name,values in confusion.items():
             if not np.allclose([np.sum(x,axis=0) for x in values],item['confusion_counts_by_world'][name],atol=1e-12,rtol=0):raise ValueError('confusion reconstruction differs')
+        if hasattr(model,'block_readout'):
+            rebuilt=[model.block_readout(v,w,{name:values[w] for name,values in metrics.items()}) for w in range(16)]
+            if canonical(rebuilt)!=canonical(item['block_readouts']):raise ValueError('block decision differs')
         checked[v['id']]=dict(worlds=16,cases=len(seen))
+    if hasattr(model,'study_readout') and canonical(model.study_readout(summary['variants']))!=canonical(summary['study_readout']):raise ValueError('study decision differs')
     return dict(state='passed',variants=checked,intervals_reconstructed=intervals,selection_eligible=False)

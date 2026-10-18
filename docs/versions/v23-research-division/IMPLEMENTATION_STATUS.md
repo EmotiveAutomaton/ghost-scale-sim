@@ -1,6 +1,6 @@
 # V23 implementation status
 
-Current: [N14](N14_REPORT.md) and [N9](N9_REPORT.md) complete and fully reviewed. October18 recovery is implementing six remaining studies after a failed background-review launch; no completed science was lost. Six discovery-only nominations remain frozen.
+Current: [N14](N14_REPORT.md) and [N9](N9_REPORT.md) complete and fully reviewed. N13 has passed its complete cost pilot and replay and is fitting six rivals. October 18 recovery is implementing five remaining studies after a failed background-review launch; no completed science was lost. Six discovery-only nominations remain frozen.
 
 Latest: [twin profile review](TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
 

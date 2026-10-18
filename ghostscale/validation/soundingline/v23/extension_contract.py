@@ -8,6 +8,7 @@ CONDITIONAL_MODULES = {
     'N4c': ('conditional_devaluation','devaluation','fit_rivals','common','ledger'),
     'N14': ('conditional_covariation','covariation','conditional_small','fit_rivals','common','ledger'),
     'N9': ('conditional_consideration','consideration','conditional_small','fit_rivals','common','ledger'),
+    'N13': ('conditional_falsifier','falsifier','falsifier_calibration','finite_common','conditional_small','fit_rivals','common','ledger'),
 }
 
 
