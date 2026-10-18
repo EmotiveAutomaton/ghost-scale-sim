@@ -1,5 +1,7 @@
 # V23 evidence
 
+[October 18 mid-work snapshot](midwork-20261018/SNAPSHOT.json): all eight conditional studies recorded complete; optional Stage 15 dependency remains the only pending route. Snapshot published before the subsequent queue check.
+
 [N7 complete family review](n7-decision-review/README.md): 128 settings, 262,144 cases, complete replay and all secondary measures verified; NOMINATED.
 
 [N7 execution checkpoint](n7-checkpoint-20261017/README.md): seven of eight parts verified and actual review delivery observed; no new family decision.

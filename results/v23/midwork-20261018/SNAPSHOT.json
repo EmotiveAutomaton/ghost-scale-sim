@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-18T16:13:08.300371+00:00",
+  "kind": "MID_WORK_PUBLICATION_SNAPSHOT",
+  "verification_scope": "Records-only snapshot before the requested subsequent queue and dependency checks; prior scientific reviews unchanged.",
+  "previous_head": "51c0bda5390a0fb8617a784535c55cc9681c7b14",
+  "recorded_status_sha256": "8bf60d062a18fcdf296103ec66a45d8f29999f64fff0a9704c7197ebbb229962",
+  "recorded_status_at": "2026-10-18T14:24:16.834617+00:00",
+  "state": "OPTIONAL_STAGE15_DEPENDENCY_BOUNDARY",
+  "campaign_complete": false,
+  "conditional_studies_complete": [
+    "N4b",
+    "N4c",
+    "N14",
+    "N9",
+    "N13",
+    "N10",
+    "N11",
+    "N12",
+    "N15",
+    "N4d"
+  ],
+  "active_packets_reported": [],
+  "controller_state": "REVIEW_BOUNDARY",
+  "controller_families": {
+    "N10": {
+      "packet": "v23-n10-batch-1",
+      "stage": "conditional-batch",
+      "state": "COMPLETE"
+    },
+    "N11": {
+      "packet": "v23-n11-batch-1",
+      "stage": "conditional-batch",
+      "state": "COMPLETE"
+    },
+    "N12": {
+      "packet": "v23-n12-batch-1",
+      "stage": "conditional-batch",
+      "state": "COMPLETE"
+    },
+    "N15": {
+      "packet": "v23-n15-batch-1",
+      "stage": "conditional-batch",
+      "state": "COMPLETE"
+    },
+    "N4d": {
+      "packet": "v23-n4d-batch-1",
+      "stage": "conditional-batch",
+      "state": "COMPLETE"
+    }
+  },
+  "notifier_heartbeat": "2026-10-18T16:13:05.028877+00:00",
+  "pending_events": 0,
+  "optional_dependency_last_record": {
+    "checked_at": "2026-10-18T14:12:40.653063+00:00",
+    "checked_commit": "5f3ad0a304727fff5e1a6beca592e786ee71b181",
+    "disposition": "Supplied commit changes website/art preparation only; no certified-fit-1 tag, so no Stage 15 successor admission.",
+    "eligible_until": "2026-10-19T12:00:00-07:00",
+    "present": false,
+    "tag": "certified-fit-1"
+  },
+  "next_routine_health": "2026-10-18T10:04:15-07:00"
+}

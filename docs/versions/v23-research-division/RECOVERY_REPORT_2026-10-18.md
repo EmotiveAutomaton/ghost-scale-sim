@@ -54,3 +54,8 @@ Every completed named batch has scientific write-through, provenance and
 ordinary-main publication; bulky raw case files remain in the local retained
 archive under the repository's data policy. [Module witness pointers](../../exchange/v23-module-gate-witnesses.json)
 identify constructed evidence without granting engine-module admission.
+
+At the October 18 09:12 Pacific mid-work request, the recorded conditional queue
+was complete and the monitor reported no scientific jobs. A [records-only
+publication snapshot](../../../results/v23/midwork-20261018/SNAPSHOT.json) preserves
+that state before the subsequent native health and dependency checks.
