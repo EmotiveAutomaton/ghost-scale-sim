@@ -1,5 +1,7 @@
 # V23 implementation status
 
+[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N11 running and three successors queued.
+
 N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 is fitting; N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 The table distinguishes built work from actual execution. A queued study must
@@ -22,7 +24,7 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 | N3 / N6 | PRIMARY_UNAVAILABLE | Preserve unavailable outcomes |
 | N1 / main N4 / T3 / T4 | RESOURCE_DEFERRED | No reduced grid or V23 readmission |
 | T1 / T2 | INSTRUMENT_FAILED / DEPENDENCY_BLOCKED_AT_FREEZE | V24 directions only |
-| Monitoring | Prior failed startup preserved; native startup repair verified | Replacement watcher activation and actual later event landing are separate receipts |
+| Monitoring | Replacement watcher alive; actual native startup response verified; restricted-host guard checked | Arm after publication; next review 06:20 Pacific, routine health 10:04:15 |
 
 N13 uses delivered 42.18% pooled repeated-choice agreement by owner decision;
 the three infeasible 70% sensitivities are unavailable. Its calibration checks
