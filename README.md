@@ -1,10 +1,10 @@
 # Ghost Scale Simulation
 
-[October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N11 running and three successors queued.
+[October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N11 complete, N12 active and two successors queued.
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 is fitting; N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 is complete and independently reviewed; N12 is active, with N4d and N15 queued in the finite continuation service. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
-[Current V23 implementation](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md), [N14 report](docs/versions/v23-research-division/N14_REPORT.md), [N9 report](docs/versions/v23-research-division/N9_REPORT.md). Six nominations remain discovery-only after the frozen expected-evidence screen; no confirmation was run.
+[Current V23 implementation](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md), [N11 report](docs/versions/v23-research-division/N11_REPORT.md), [N14 report](docs/versions/v23-research-division/N14_REPORT.md), [N9 report](docs/versions/v23-research-division/N9_REPORT.md). Six nominations remain discovery-only after the frozen expected-evidence screen; no confirmation was run.
 
 The [exact Stage 15 profile validation](docs/versions/v23-research-division/S15_PROFILE_REPORT.md)
 is independently reviewed and **FAIL**: null bounds and option-order invariance

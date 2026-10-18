@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N11 complete](v23-n11-response.md): learned habit priors, reset probes and model-defined effort; constructed witness pointers do not admit engine modules.
+
 [N10 complete](v23-n10-response.md): residual structure, soft support and hidden-goal detection; [module witness pointers](v23-module-gate-witnesses.json) do not admit engine modules.
 
 [N13 / FX1 P3](v23-n13-response.md): power fails at 2/16, null requirement passes at 0/16; complete verified report.
