@@ -1,10 +1,19 @@
 # October 18 directed-probe packet: viability and rollout
 
+Current rollout update: N17 and N18 have complete replays and independent
+verification, with [N17 calibration limits](N17_REPORT.md) and the
+[N18 constructed-channel qualification](N18_REPORT.md) retained. N16 runs its
+full reserved batch. N16b's original simulation and replay completed, but the
+independent check exhausted its initial reservation. A separate retained-data
+review has a 1,800-CPU-second ceiling inside the original three-hour family
+limit; it runs two fresh reconstructions and draws no new worlds. The original
+failure remains recorded. Its scientific verdict is pending that repair.
+
 N16, N16b, N17 and N18 are viable finite V23 conditional studies. Their protocols
-and implementations are built. N16, N17 and N16b passed their excluded cost
-pilots and complete replays and entered reserved production batches on October 18.
-N18 follows when a Gear 2 slot is available. These are execution states, not
-positive scientific findings. See the dated [work order](OCTOBER18_WORK_ORDER.json)
+and implementations are built. All four passed excluded cost pilots and complete
+replays before entering reserved batches on October 18. Acceptance additionally
+requires independent reconstruction, as distinguished above from execution.
+See the dated [work order](OCTOBER18_WORK_ORDER.json)
 and [machine status](../../../results/v23/CURRENT_STATUS.json).
 
 The source [packet](GHOST_SCALE_PACKET_2026-10-18.md) is retained byte-for-byte.
@@ -22,7 +31,7 @@ a timing margin. They are reservations, not observed final consumption.
 | N16 | Does adaptive probing improve on the fixed order? | 2.827 | 12 |
 | N16b | Can probes give the frozen falsifier adequate power? | 0.373 | 3 |
 | N17 | Can lean, sensitivity and taste be separated? | 0.359 | 3 |
-| N18 | When does a play detector recover enough information? | Awaiting measured pilot | 1.5 |
+| N18 | When does a play detector recover enough information? | 0.083 | 1.5 |
 
 No cells were shed in the first three studies. Every family has an explicit
 finite progression: controls, excluded pilot/replay, frozen reader definitions,
@@ -72,8 +81,8 @@ models. Treat this as an empirical mitigation comparison. [Sloman et al.](https:
 
 ## Verification and operations
 
-Fourteen initial scientific/separation checks pass, plus three monitoring and
-controller checks. One test invocation could not create its system temporary
+Forty-eight distinct targeted checks pass across science/separation, monitoring,
+resource policy, retained-review source preservation and future handoff handling. One test invocation could not create its system temporary
 directory; rerunning the affected tests in workspace scratch passed. No test
 criterion changed. The first controller attempt exposed a missing optional
 family label in historical setup records; a retained successor handles those

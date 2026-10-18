@@ -83,6 +83,23 @@ def ensure(campaign,identity,task,family,cap,extras):
     return packet,'RUNNING_OR_ADMITTED'
 
 def step_family(campaign,family):
+    repairs=campaign/'DIRECTED_REVIEW_REPAIRS.json'
+    repair=read(repairs).get(family) if repairs.exists() else None
+    if repair:
+        from ghostscale.validation.soundingline.v23.family import verify_packet
+        packet=campaign/'packets'/repair['review_packet']
+        if not (packet/'PLAN.json').exists():raise ValueError('retained review repair must be explicitly admitted')
+        status=read(packet/'STATUS.json') if (packet/'STATUS.json').exists() else {}
+        if status.get('state')=='failed':return dict(state='INSTRUMENT_FAILED',stage='retained-review-repair',packet=packet.name)
+        if not (packet/'COMPLETE.json').exists():return dict(state='RUNNING_OR_ADMITTED',stage='retained-review-repair',packet=packet.name)
+        plan,summary=verify_packet(packet)
+        original=campaign/'packets'/repair['original_packet']
+        if summary['state']!='DIRECTED_RETAINED_REVIEW_VERIFIED' or summary['retained_complete_sha256']!=digest(original/'COMPLETE.json'):
+            raise ValueError('retained review did not verify original batch')
+        receipt=original/'RETAINED_REVIEW_ACCEPTANCE.json'
+        if not receipt.exists():write(receipt,dict(state='VERIFIED_WITH_RETAINED_REVIEW_REPAIR',original_complete_sha256=digest(original/'COMPLETE.json'),
+            review_packet=packet.name,review_complete_sha256=digest(packet/'COMPLETE.json'),new_scientific_draws=0))
+        return dict(state='COMPLETE',stage='retained-review-repair',packet=original.name,review_packet=packet.name)
     attempts=[]
     for index,design in enumerate(designs(family),1):
         pilot,state=ensure(campaign,f'v23-{family.lower()}-directed-profile-{index}','conditional-pilot',family,1200,dict(directed_design=design))

@@ -37,6 +37,9 @@ def prerequisites(campaign, task, family, extras):
         if digest(root/'COMPLETE.json')!=extras['rescore_source_complete_sha256']:raise ValueError('N2 source binding changed')
         for key in ('family','batch','worlds','cases','variants','fit_hashes','canary_key'):
             if prior[key]!=(family if key=='family' else extras[key]):raise ValueError('N2 reanalysis changed original design')
+    elif task=='directed-review':
+        from ghostscale.validation.soundingline.v23.directed_review import validate
+        validate(extras,family,Path(__file__).resolve().parents[1])
     elif task.startswith(('population-','conditional-')):
         from ghostscale.validation.soundingline.v23.extension_contract import validate
         validate(task,family,extras,Path(__file__).resolve().parents[1])
@@ -89,10 +92,10 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             # Completed attempts are charged by the canonical cost ledger below;
             # this conservative family check additionally reserves the full next batch.
             from ghostscale.validation.soundingline.v23.extension_contract import validate as directed_validate
-            _,future=directed_validate(task,family,extras,repo)
+            _,future=directed_validate(task,family,extras,repo) if task!='directed-review' else (0,0)
             if prior+cap+future>CAPS[family]:raise ValueError('DIRECTED_FAMILY_CAP')
             extras['directed_authority_sha256']=digest(campaign/'DIRECTED_AUTHORITY_20261018.json')
-        if task.startswith('conditional-') and family not in ('N4b','N4c'):
+        if (task.startswith('conditional-') or task=='directed-review') and family not in ('N4b','N4c'):
             if resource_policy.binding(campaign).get(resource_policy.BINDING,{}).get('file')!=resource_policy.SUPPLEMENT_17:
                 raise ValueError('October 17 conditional authority required')
             if group!='conditional':raise ValueError('new conditional work must charge conditional group')
@@ -130,7 +133,7 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             'ghostscale/validation/soundingline/__init__.py','runners/run_v23.py','runners/launch_background.py']
         names += [p.relative_to(repo).as_posix() for p in sorted((repo/'ghostscale/validation/soundingline/v23').glob('*.py'))]
         if task=='n2-robust':names.append('docs/versions/v23-research-division/N2_ROBUST_PROTOCOL.md')
-        if task.startswith('conditional-') and family not in ('N4b','N4c'):
+        if (task.startswith('conditional-') or task=='directed-review') and family not in ('N4b','N4c'):
             protocol='docs/versions/v23-research-division/'+family.upper()+'_PROTOCOL.md'
             if not (repo/protocol).is_file():raise ValueError('declared protocol required before sampling')
             names.append(protocol)

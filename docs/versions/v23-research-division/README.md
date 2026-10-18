@@ -1,8 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-[N17 completed](N17_REPORT.md): full replay and independent reconstruction pass, including all no-taste gates. N16/N16b/N18 remain in the finite directed queue; inspect the dated work order for live state.
-
-[October 18 work order](OCTOBER18_WORK_ORDER.json) and [viability review](PACKET_REVIEW_2026-10-18.md): all four directed studies are implemented. N16/N16b/N17 are running full reserved batches; N18 awaits a slot. D5 is **RESOURCE_DEFERRED_TO_V24_BY_OWNER** after its failed complete-world cost pilot. The earlier eight studies remain complete.
+[N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. N16 is computing; N16b is undergoing a separately bounded retained-data review repair after the first independent check reached its CPU reservation. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
 
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 

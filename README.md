@@ -1,8 +1,6 @@
 # Ghost Scale Simulation
 
-[N17 is complete](docs/versions/v23-research-division/N17_REPORT.md): synthetic taste prediction improves at 100 records and all no-taste gates pass, with material calibration limits. N16 and N16b continue; N18 is proceeding through its finite queue.
-
-[October 18 directed-probe rollout](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): N16, N16b and N17 have entered reserved full batches after complete cost-pilot replays; N18 is built and queued. D5 is resource-deferred to V24 by owner decision. These new studies have no accepted scientific findings yet.
+[October 18 directed studies](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): [N17](docs/versions/v23-research-division/N17_REPORT.md) and [N18](docs/versions/v23-research-division/N18_REPORT.md) are complete, replayed and independently verified. N16 is computing; N16b is undergoing a bounded check of retained results after its original review reached its CPU reservation. D5 is deferred to V24 by owner decision.
 
 [October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 

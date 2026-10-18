@@ -1,5 +1,7 @@
 # The methodology layer
 
+N18 uses exact finite-channel mutual information and independent entropy/bisection reconstruction. Sixteen independent laws, not its 1,024 repeated enumeration rows, determine uncertainty. Its symmetric-detector assumptions and constructed weak-situation advantage remain explicit. [Report](versions/v23-research-division/N18_REPORT.md).
+
 N17 independently reconstructs all 16,384 held-out comparisons, finite-null maximum likelihood denominators, frozen training posteriors, mechanism updates and law-block intervals. Its e-value threshold controls the registered finite null; empirical gates and imperfect real-aggregate calibration remain separate. [Report](versions/v23-research-division/N17_REPORT.md).
 
 The October 18 directed pipeline freezes public-history policies and exact readers, retains every selection propensity, and separates observed records from evaluator truth. Independent reviews reconstruct scores and whole-law intervals after complete replay. N17 uses a frozen held-out predictive likelihood over a maximum finite-null likelihood, declaring taste only at e-value >=20; its empirical no-taste gate remains separate. N18 enumerates an exact binary channel and counts laws, not repeated enumerations, as evidence. [Protocols and limitations](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md).

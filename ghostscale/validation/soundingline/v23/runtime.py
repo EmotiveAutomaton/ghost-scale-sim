@@ -101,7 +101,7 @@ def verify_plan(root, campaign):
         if digest(campaign/'CONTINUATION_AUTHORITY_20261016.json') != plan['continuation_authority_sha256']:
             raise ValueError('continuation authority changed')
     if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot','profile-successor-pilot','profile-successor-part','numerical-validation','n2-robust',
-                            'population-controls','population-profile','conditional-pilot','conditional-fits','conditional-batch',
+                            'population-controls','population-profile','conditional-pilot','conditional-fits','conditional-batch','directed-review',
                             'twin-profile','twin-fits','twin-batch'):
         if plan['family'].startswith('N'):
             from .support_new import verify as verify_support
@@ -210,6 +210,9 @@ def execute_pass(root, campaign, label):
         elif plan['task']=='population-fits':population_campaign.run_fits(root/label,plan,pulse)
         elif plan['task'] in ('population-batch','population-precision'):population_campaign.run(root/label,plan,pulse)
         else:raise ValueError('unknown population task')
+    elif plan['task']=='directed-review':
+        from .directed_review import run as review_retained
+        review_retained(root/label,plan,pulse)
     elif plan['task'] in ('conditional-pilot','conditional-fits','conditional-batch'):
         from .extension_contract import conditional_module
         conditional_module(plan['family']).run(root/label,plan,pulse)
