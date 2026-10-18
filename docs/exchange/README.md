@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N14 complete](v23-n14-response.md) and [N9 complete](v23-n9-response.md): October17 conditional results, fully reviewed.
+
 - [N8 complete response](v23-n8-response.md): 49,152 verified cases, six frozen discovery-only nominations, conditional work continuing.
 
 - [Native twin profile review](v23-twin-profile-failures-2026-10-17.md): complete failure bindings, independent T1 stationarity diagnosis and unresolved profile/dependency gates.

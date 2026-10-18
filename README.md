@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-Current: [N8 complete and discovery frozen](docs/versions/v23-research-division/N8_REPORT.md): six discovery-only nominations; no confirmation exposure. N14 and N9 are fitting after verified cost pilots. Six further conditional studies remain commissioned to build; 36 targeted engineering checks pass.
+Current: [N14](docs/versions/v23-research-division/N14_REPORT.md) and [N9](docs/versions/v23-research-division/N9_REPORT.md) complete and fully reviewed. October18 recovery is implementing six remaining studies after a failed background-review launch; no completed science was lost. Six discovery-only nominations remain frozen.
 
 Latest: [twin profile review](docs/versions/v23-research-division/TWIN_PROFILE_REPORT.md): T1 optimizer failure reproduced and independently diagnosed; T3/T4 capped before a complete profile. N4c remains fully reviewed outside confirmation. No twin scientific result or confirmation is accepted.
 

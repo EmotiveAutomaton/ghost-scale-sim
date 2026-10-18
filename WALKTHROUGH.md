@@ -1,5 +1,11 @@
 # The walkthrough
 
+Can pervasiveness alone identify automatic choices? In N14, adding covariation, character traits and process traces reduces true-mechanism log loss by 0.421–0.914 nats across twelve settings. All 12,288 cases, 120 independently reconstructed intervals and full replay verify. This is a constructed-mechanism result under stipulated response laws, not a diagnosis of people.
+
+Can an offered branch distinguish an option never considered from one considered and declined? In N9, combined probes change true-mechanism log loss by 0.001–0.992 nats across twelve settings. All 12,288 cases, 132 independently reconstructed intervals and full replay verify. Narrow fear and narrow expertise remain exactly aliased. This is a constructed-mechanism result, not evidence about trauma or people.
+
+[Full N14](docs/versions/v23-research-division/N14_REPORT.md) and [N9](docs/versions/v23-research-division/N9_REPORT.md) records.
+
 Can public play signals prevent a reader from mistaking playful actions for preferences? In N8, the mode-aware reader improves preference log loss by 0.049–2.588 nats across all sixteen play settings; eight no-play controls remain at numerical zero. All 49,152 cases, both burn-ins and complete replay verify. This is a constructed-mechanism discovery, not confirmation or evidence about human emotions. [N8 report](docs/versions/v23-research-division/N8_REPORT.md).
 
 N4b/N4c training clarification: all sixteen laws occur in fresh minibatches, with unequal weighting. New miniatures randomize the law offset for uniform expected weights. Original exact primary results and saved predictions are unchanged. [Details](docs/versions/v23-research-division/FRESH_RIVAL_QUALIFICATION.md).
