@@ -49,3 +49,11 @@ def test_retained_review_accepts_integer_readout_keys(tmp_path,monkeypatch):
         records(folder/(kind+'_points.jsonl.gz'),[dict(identity=['fixture','cell','discovery',w,i],**payload) for w in range(2) for i in range(64)])
     write(root/'SUMMARY.json',c.summarize(model,plan,{'cell':{0:dict(primary=.1),1:dict(primary=.1)}}))
     assert c.reconstruct(root,plan)['passed']
+
+def test_completed_replay_with_live_independent_review_is_still_active(tmp_path,monkeypatch):
+    from runners import watch_v23_events as m
+    packet=tmp_path/'packets/job'
+    write(packet/'PLAN.json',{});write(packet/'COMPLETE.json',dict(state='verified'))
+    write(packet/'STATUS.json',dict(state='reviewing',pid=123))
+    monkeypatch.setattr(m,'alive',lambda _:True)
+    assert m.observe(tmp_path)==['job']

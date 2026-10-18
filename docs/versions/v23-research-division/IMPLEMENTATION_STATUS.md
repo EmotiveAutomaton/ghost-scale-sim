@@ -1,5 +1,7 @@
 # V23 implementation status
 
+[N17 completed](N17_REPORT.md): full replay and independent reconstruction pass, including all no-taste gates. N16/N16b/N18 remain in the finite directed queue; inspect the dated work order for live state.
+
 [October 18 work order](OCTOBER18_WORK_ORDER.json) and [viability review](PACKET_REVIEW_2026-10-18.md): all four directed studies are implemented. N16/N16b/N17 are running full reserved batches; N18 awaits a slot. D5 is **RESOURCE_DEFERRED_TO_V24_BY_OWNER** after its failed complete-world cost pilot. The earlier eight studies remain complete.
 
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.

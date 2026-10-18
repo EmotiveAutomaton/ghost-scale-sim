@@ -87,6 +87,11 @@ def observe(campaign):
         if not root.is_dir() or not (root/'PLAN.json').exists(): continue
         if (root/'COMPLETE.json').exists():
             event(campaign,root.name+'-complete','batch_complete',dict(packet=root.name,sha256=digest(root/'COMPLETE.json')))
+            status_path=root/'STATUS.json'
+            status=read(status_path) if status_path.exists() else {}
+            if status.get('state')=='reviewing':
+                if alive(status['pid']):active.append(root.name)
+                else:event(campaign,root.name+'-review-disappeared','worker_disappeared',dict(packet=root.name,status=status))
         elif (root/'STATUS.json').exists():
             status=read(root/'STATUS.json')
             if status['state']=='failed':

@@ -1,5 +1,7 @@
 # The walkthrough
 
+N17 separates lean, sensitivity and taste in its constructed menus. At 100 records, the taste reader improves held-out log loss by 0.10906 nats (95% whole-law interval 0.09491 to 0.12433). False taste claims are 0/2,048 at 20, 50 and 100 records, and 2/2,048 at 250; all frozen no-taste gates pass. All 16,384 cases, complete replay and independent reconstruction verify. Calibration only partly matches Sounding Line, so these record counts are not validated human-data requirements. [N17 report](docs/versions/v23-research-division/N17_REPORT.md).
+
 [October 18 directed-probe rollout](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): N16, N16b and N17 have entered reserved full batches after complete cost-pilot replays; N18 is built and queued. D5 is resource-deferred to V24 by owner decision. These new studies have no accepted scientific findings yet.
 
 Can observed sacrifices reveal how a maker orders incompatible goals? In N4d, two or six conflict probes improve true-mechanism log loss by 0.095–0.987 nats when stakes are visible and 0.050–0.928 nats when stakes are hidden. Zero probes preserve the exact prior, and hiding stakes sharply weakens recovery of the weighted rule. All 12,288 cases, 108 independently reconstructed intervals, six frozen rivals and full replay verify. This is a constructed-mechanism result, not evidence about human goal priority. [N4d report](docs/versions/v23-research-division/N4D_REPORT.md).
