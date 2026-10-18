@@ -2,9 +2,9 @@
 
 All eight commissioned conditional studies are built. N14, N9, N13 and N10
 are complete and independently reviewed; D10's retained N2 reanalysis is also
-complete. N11 is complete and independently reviewed. N12 is active; N4d
-and N15 are frozen into the finite continuation service and will be admitted
-in order after their own controls, measured costs and reservations pass.
+complete. N11, N12 and N15 are complete and independently reviewed. N4d's
+batch and replay are complete and await full evidence review. Canonical JSON ordering put N15
+before N4d; the valid work and recorded deviation were preserved.
 
 The overnight stall was real: the reviewer failed before starting its work,
 then the monitor disarmed. Completed N14/N9 outputs remained intact. Recovery
@@ -32,14 +32,14 @@ mechanisms or methods, never findings about people or accepted confirmation.
 | N10: corrections | Residual gain .00276–.06192 nats; supplied hidden-alternative limitations remain | [Report](N10_REPORT.md) |
 | N11: precision and habits | All-probe gain .270–.724 nats; automatizing model effort falls, fixed mechanisms remain constant | [Report](N11_REPORT.md) |
 | N12: overlays and final authority | Overlay gain .774–3.567 nats for three mechanisms, but loss .480–.511 for unchanged author-final; zero conflict aliases exactly | [Report](N12_REPORT.md) |
+| N15: source trust and vigilance | Combined-probe gain .009–.535 nats; same-source evidence preserves the exact tracking/vigilance alias | [Report](N15_REPORT.md) |
 | D10: N2 robust analysis | 43/120 above-margin gains over validation tempering; robust pooled gain .00203 nats; original stop unchanged | [Report](N2_ROBUST_REPORT.md) |
 
 The queue retains Gear 2's maximum three below-normal, single-thread CPU
 scientists, no GPU or environment synchronization, and Sounding Line priority.
-N12 is complete with full replay and independent reconstruction. N15 is running six frozen fits. Its measured
-reservation is about .40 CPU-hours for fitting and .27 for its batch, including
-replay/margin; these are conservative reservations, not completion promises.
-Later study ETAs will tighten at their own measured pilots. The current
+N12 and N15 are complete with full replay and independent reconstruction. N4d's cost profile, six frozen fits, reserved batch and fresh replay are complete.
+Its independent reconstruction is present; scientific completion still waits for
+the full evidence review and public write-through. The current
 [machine receipt](../../../results/v23/recovery-20261018/QUEUE_HEALTH.json)
 records actual active packets and charged costs.
 

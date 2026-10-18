@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N15 complete](v23-n15-response.md): second-source failures separate source-specific tracking from global vigilance in the stipulated miniature; no engine module is admitted.
+
 [N12 complete](v23-n12-response.md): overlay inference helps three changing/combined response laws, harms the unchanged author-final law, and preserves exact zero-conflict ambiguity.
 
 [N11 complete](v23-n11-response.md): learned habit priors, reset probes and model-defined effort; constructed witness pointers do not admit engine modules.

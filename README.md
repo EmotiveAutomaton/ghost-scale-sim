@@ -1,10 +1,10 @@
 # Ghost Scale Simulation
 
-[October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N12 complete, N15 active and N4d pending after a recorded controller-order deviation.
+[October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N15 complete; N4d batch complete and awaiting full review after the recorded controller-order deviation.
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 and N12 are complete and independently reviewed. N15 is active; N4d remains pending after canonical JSON ordering placed N15 first. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11, N12 and N15 are complete and independently reviewed. N4d's batch and replay are complete and await full review after canonical JSON ordering placed N15 first. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
-[Current V23 implementation](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md), [N12 report](docs/versions/v23-research-division/N12_REPORT.md), [N11 report](docs/versions/v23-research-division/N11_REPORT.md), [N14 report](docs/versions/v23-research-division/N14_REPORT.md), [N9 report](docs/versions/v23-research-division/N9_REPORT.md). Six nominations remain discovery-only after the frozen expected-evidence screen; no confirmation was run.
+[Current V23 implementation](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md), [N15 report](docs/versions/v23-research-division/N15_REPORT.md), [N12 report](docs/versions/v23-research-division/N12_REPORT.md), [N11 report](docs/versions/v23-research-division/N11_REPORT.md), [N14 report](docs/versions/v23-research-division/N14_REPORT.md), [N9 report](docs/versions/v23-research-division/N9_REPORT.md). Six nominations remain discovery-only after the frozen expected-evidence screen; no confirmation was run.
 
 The [exact Stage 15 profile validation](docs/versions/v23-research-division/S15_PROFILE_REPORT.md)
 is independently reviewed and **FAIL**: null bounds and option-order invariance

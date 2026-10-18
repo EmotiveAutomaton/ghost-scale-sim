@@ -1,8 +1,8 @@
 # V23 implementation status
 
-[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N12 complete, N15 active and N4d pending after a recorded controller-order deviation.
+[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N15 complete; N4d batch complete and awaiting full review after the recorded controller-order deviation.
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 and N12 are complete and independently reviewed. N15 is active; N4d remains pending after canonical JSON ordering placed N15 first. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11, N12 and N15 are complete and independently reviewed. N4d's batch and replay are complete and await full review after canonical JSON ordering placed N15 first. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 The table distinguishes built work from actual execution. A queued study must
 still pass its own complete cost/replay, six-rival fitting, and reserved full-batch
@@ -16,8 +16,8 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 | N10 | Complete and independently reviewed | [Report](N10_REPORT.md); supplied-model limitations retained |
 | N11 | Complete and independently reviewed | [Report](N11_REPORT.md); constructed effort and mechanism limits retained |
 | N12 | Complete and independently reviewed | [Report](N12_REPORT.md); zero-conflict and unchanged-author limits retained |
-| N15 | Built, checked and active in the continuation service | Cost-gated fits/batch/review sequence |
-| N4d | Built and checked; pending after recorded controller-order deviation | Admit after N15; no repeat or reduced grid |
+| N15 | Complete and independently reviewed | [Report](N15_REPORT.md); exact same-source alias and history dilution retained |
+| N4d | Batch and replay complete after recorded controller-order deviation | Full evidence review and public write-through pending; no repeat or reduced grid |
 | D10 | Complete, independently reviewed; 43/120 settings exceed margin over generic tempering | [Report](N2_ROBUST_REPORT.md); original N2 stop unchanged |
 | D5 | Optional Stage 15 successor requires committed certified-fit-1; absent at this check | Recheck before Monday October 19 noon Pacific; otherwise defer to V24 |
 | N4b / N4c | Complete conditional studies | No refill or confirmation |
