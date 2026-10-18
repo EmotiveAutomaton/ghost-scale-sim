@@ -1,6 +1,6 @@
 # V23 implementation status
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is executing its full batch/replay; N10 is fitting; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is running its full batch; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 The table distinguishes built work from actual execution. A queued study must
 still pass its own complete cost/replay, six-rival fitting, and reserved full-batch
@@ -10,8 +10,8 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 | Scope | Current state | Remaining work |
 |---|---|---|
 | N14 / N9 | Complete, reviewed and pushed; 24,576 cases | None in this allocation |
-| N13 | Calibrated, full pilot/replay and six fits complete; full batch/replay running | Complete reconstruction, P3 verdicts and report |
-| N10 | Built, controls/pilot/replay passed; six fits running | Full reserved batch, reconstruction and report |
+| N13 | Complete and independently verified; P3 power FAIL, null PASS | [Report](N13_REPORT.md); FX1 waits |
+| N10 | Full pilot/replay and six fits complete; full batch running | Full replay, reconstruction and report |
 | N11 / N12 / N4d / N15 | Built and checked, protocols frozen in continuation service | Cost-gated sequential admission, fits, batches, reviews |
 | D10 | Complete, independently reviewed; 43/120 settings exceed margin over generic tempering | [Report](N2_ROBUST_REPORT.md); original N2 stop unchanged |
 | D5 | Optional Stage 15 successor requires committed certified-fit-1; absent at this check | Recheck before Monday October 19 noon Pacific; otherwise defer to V24 |

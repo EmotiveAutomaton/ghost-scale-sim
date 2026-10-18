@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N13 / FX1 P3](v23-n13-response.md): power fails at 2/16, null requirement passes at 0/16; complete verified report.
+
 [D10 robust reanalysis](v23-n2-robust-response.md): generic tempering, heterogeneous timing gains and bounded variance weights; fully verified.
 
 [N14 complete](v23-n14-response.md) and [N9 complete](v23-n9-response.md): October17 conditional results, fully reviewed.

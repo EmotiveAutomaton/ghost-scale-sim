@@ -1,6 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is executing its full batch/replay; N10 is fitting; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is running its full batch; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 Six discovery nominations (N8, N5, R4, N7, R2, R1) are frozen. All six have a
 qualified CONFIRMATION_INFEASIBLE_AS_FROZEN expected-evidence screen; they remain

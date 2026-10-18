@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is executing its full batch/replay; N10 is fitting; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is running its full batch; N11, N12, N4d and N15 are built and owned by the finite continuation queue. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 [Current V23 implementation](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md), [N14 report](docs/versions/v23-research-division/N14_REPORT.md), [N9 report](docs/versions/v23-research-division/N9_REPORT.md). Six nominations remain discovery-only after the frozen expected-evidence screen; no confirmation was run.
 
