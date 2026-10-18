@@ -1,6 +1,8 @@
 # Ghost Scale Simulation
 
-[October 18 directed studies](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): [N17](docs/versions/v23-research-division/N17_REPORT.md) and [N18](docs/versions/v23-research-division/N18_REPORT.md) are complete, replayed and independently verified. N16 is computing; N16b is undergoing a bounded check of retained results after its original review reached its CPU reservation. D5 is deferred to V24 by owner decision.
+Can directed binary conflicts give the frozen FX1 falsifier adequate power? N16b fails: 2, 1 and 2 of 16 independent law blocks clear the frozen primary at 2, 4 and 8 probes, versus 13 required. Habit-only false SUPPORTED is 0 at every history and budget. All 9,216 cases, byte-identical replay and two fresh retained-data reconstructions verify. This is a constructed-method limitation; probes do not repair FX1 here, and the unavailable 70% sensitivities remain unavailable. [N16b report](docs/versions/v23-research-division/N16B_REPORT.md).
+
+[October 18 directed studies](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): [N16b](docs/versions/v23-research-division/N16B_REPORT.md), [N17](docs/versions/v23-research-division/N17_REPORT.md) and [N18](docs/versions/v23-research-division/N18_REPORT.md) are complete, replayed and independently verified. N16 is computing. D5 is deferred to V24 by owner decision.
 
 [October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 

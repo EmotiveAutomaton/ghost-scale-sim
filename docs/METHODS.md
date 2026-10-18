@@ -1,5 +1,7 @@
 # The methodology layer
 
+N16b retains N13's nine settings, frozen half-Brier margins and 13-of-16 power bar while appending two, four or eight binary conflict responses. The bridge is a declared coarsening of the ordinary four-category response; stake order is an exact alias. Complete raw replay is byte-identical, and two fresh retained-data reconstructions rebuild all 9,216 scores and law-block decisions without new cases. The first review-cap failure remains separate from the accepted repair. [Report](versions/v23-research-division/N16B_REPORT.md).
+
 N18 uses exact finite-channel mutual information and independent entropy/bisection reconstruction. Sixteen independent laws, not its 1,024 repeated enumeration rows, determine uncertainty. Its symmetric-detector assumptions and constructed weak-situation advantage remain explicit. [Report](versions/v23-research-division/N18_REPORT.md).
 
 N17 independently reconstructs all 16,384 held-out comparisons, finite-null maximum likelihood denominators, frozen training posteriors, mechanism updates and law-block intervals. Its e-value threshold controls the registered finite null; empirical gates and imperfect real-aggregate calibration remain separate. [Report](versions/v23-research-division/N17_REPORT.md).

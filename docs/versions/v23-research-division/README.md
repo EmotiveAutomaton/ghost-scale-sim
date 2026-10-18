@@ -1,6 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-[N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. N16 is computing; N16b is undergoing a separately bounded retained-data review repair after the first independent check reached its CPU reservation. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
+[N16b](N16B_REPORT.md), [N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. N16 is computing. N16b's retained-data repair passed without new cases; its original review-cap failure remains recorded. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
 
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 
@@ -16,6 +16,7 @@ T1 instrument-failed and T2 dependency-blocked. Original dispositions remain.
 - [October 17 work order](OCTOBER17_WORK_ORDER.json) and [source packet](GHOST_SCALE_PACKET_2026-10-17.md)
 - [N14 report](N14_REPORT.md), [N9 report](N9_REPORT.md), [N8 report](N8_REPORT.md)
 - [N13 protocol](N13_PROTOCOL.md) and [frozen calibration](../../../results/v23/n13-calibration/CALIBRATION.json)
+- [N16b report](N16B_REPORT.md), [machine proof](../../../results/v23/n16b/PROOF.json) and [raw index](../../../results/v23/n16b/RAW_INDEX.json)
 - [D10 protocol](N2_ROBUST_PROTOCOL.md); original [N2 report](N2_REPORT.md)
 - [D5 certified Stage 15 successor protocol](S15_SUCCESSOR_PROTOCOL.md); original [Stage 15 FAIL](S15_PROFILE_REPORT.md) remains unchanged
 - [Twin dispositions](TWIN_PROFILE_REPORT.md)

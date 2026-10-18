@@ -1,13 +1,14 @@
 # October 18 directed-probe packet: viability and rollout
 
-Current rollout update: N17 and N18 have complete replays and independent
-verification, with [N17 calibration limits](N17_REPORT.md) and the
+Current rollout update: N16b, N17 and N18 have complete replays and independent
+verification, with [N16b's unchanged FX1 power failure](N16B_REPORT.md),
+[N17 calibration limits](N17_REPORT.md) and the
 [N18 constructed-channel qualification](N18_REPORT.md) retained. N16 runs its
-full reserved batch. N16b's original simulation and replay completed, but the
-independent check exhausted its initial reservation. A separate retained-data
-review has a 1,800-CPU-second ceiling inside the original three-hour family
-limit; it runs two fresh reconstructions and draws no new worlds. The original
-failure remains recorded. Its scientific verdict is pending that repair.
+full reserved batch. N16b's first independent check exhausted its initial
+reservation and remains failed. The separately admitted retained-data repair
+completed two fresh reconstructions at 821.234375 CPU-seconds, drew no new
+worlds and changed no criterion. Its acceptance receipt binds the original and
+repair completion hashes.
 
 N16, N16b, N17 and N18 are viable finite V23 conditional studies. Their protocols
 and implementations are built. All four passed excluded cost pilots and complete
@@ -32,6 +33,10 @@ a timing margin. They are reservations, not observed final consumption.
 | N16b | Can probes give the frozen falsifier adequate power? | 0.373 | 3 |
 | N17 | Can lean, sensitivity and taste be separated? | 0.359 | 3 |
 | N18 | When does a play detector recover enough information? | 0.083 | 1.5 |
+
+N16b's complete observed family charge is 0.6045 CPU-hours, including its
+cost-pilot replay, frozen-fit step, original batch/replay, retained failed review
+and successful repair. This remains inside its unchanged three-hour ceiling.
 
 No cells were shed in the first three studies. Every family has an explicit
 finite progression: controls, excluded pilot/replay, frozen reader definitions,
