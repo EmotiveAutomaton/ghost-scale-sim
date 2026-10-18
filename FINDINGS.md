@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+Can unexplained correction directions reveal a missing goal? In N10, adding residual structure improves hidden-goal log loss by 0.00276–0.06192 nats across twelve settings. Hidden-goal detection AUC is 0.643–0.988 where positives exist; soft support never empties. All 12,288 cases and full replay verify. This is a constructed-mechanism result with a supplied hidden-goal model, not general protection against model misspecification. [N10 report](docs/versions/v23-research-division/N10_REPORT.md).
+
 Can the FX1 falsifier detect the planted minimum goal signal? N13 fails the power requirement: 2 of 16 law blocks clear zero at 81 records, versus 13 required. Habit-only worlds return 0 false SUPPORTED blocks, meeting that requirement. All 9,216 cases and full replay verify. This is a constructed-method limitation; FX1 remains unready to falsify the theory. [N13 report](docs/versions/v23-research-division/N13_REPORT.md).
 
 Does timing still help after generic tempering and robust pooling? In D10, 43 of 120 nonstructural settings (35.8%) retain observed gains above 0.02 nats over a validation-tuned tempered reader. The variance-floored pooled gain is 0.00203 nats. All 253,952 retained cases, 248 intervals and full replay verify. This is a descriptive constructed-method result; N2's frozen stop remains unchanged. [Full report](docs/versions/v23-research-division/N2_ROBUST_REPORT.md).

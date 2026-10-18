@@ -1,5 +1,7 @@
 # The methodology layer
 
+N10 adds matched positive/negative hidden-goal detection, explicit unavailable AUC in all-negative settings, a fixed context-shuffle diagnostic and conditional direction denominators. Independent rank-sum AUC agrees with the pairwise producer; full replay and 204 primary/forecast/diagnostic law intervals verify. [Report](versions/v23-research-division/N10_REPORT.md).
+
 N13 independently calibrates a known-goal oracle to a frozen half-Brier headroom margin, then tests an inferred-goal reader on fresh makers with matched consistency. Known-answer gates pass while the prespecified power bar fails. Separate scalar decision reconstruction covers all within-law confidence bounds; 70% infeasible sensitivities remain unavailable. [Report](versions/v23-research-division/N13_REPORT.md).
 
 D10 adds a retained-data descriptive analysis with validation-only fixed tempering, median variance floors and overflow-safe normalized weights. All original probabilities and gains reproduce; a separate scalar/aggregate reviewer checks 253,952 cases and 248 law-block intervals. No selection rule changes. [Report](versions/v23-research-division/N2_ROBUST_REPORT.md).

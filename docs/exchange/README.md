@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N10 complete](v23-n10-response.md): residual structure, soft support and hidden-goal detection; [module witness pointers](v23-module-gate-witnesses.json) do not admit engine modules.
+
 [N13 / FX1 P3](v23-n13-response.md): power fails at 2/16, null requirement passes at 0/16; complete verified report.
 
 [D10 robust reanalysis](v23-n2-robust-response.md): generic tempering, heterogeneous timing gains and bounded variance weights; fully verified.
