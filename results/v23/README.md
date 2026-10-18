@@ -1,6 +1,6 @@
 # V23 evidence
 
-[October 18 mid-work snapshot](midwork-20261018/SNAPSHOT.json): all eight conditional studies recorded complete; optional Stage 15 dependency remains the only pending route. Snapshot published before the subsequent queue check.
+[October 18 mid-work snapshot](midwork-20261018/SNAPSHOT.json): all eight conditional studies recorded complete; optional Stage 15 dependency remains the only pending route. Snapshot published before the subsequent queue check. The [subsequent health check](midwork-20261018/HEALTH.json) verifies 962 retained original/replay files, all eight published reviews, native service ownership and the still-absent optional tag.
 
 [N7 complete family review](n7-decision-review/README.md): 128 settings, 262,144 cases, complete replay and all secondary measures verified; NOMINATED.
 

@@ -59,3 +59,13 @@ At the October 18 09:12 Pacific mid-work request, the recorded conditional queue
 was complete and the monitor reported no scientific jobs. A [records-only
 publication snapshot](../../../results/v23/midwork-20261018/SNAPSHOT.json) preserves
 that state before the subsequent native health and dependency checks.
+
+The subsequent [health check](../../../results/v23/midwork-20261018/HEALTH.json)
+verified 962 retained original/replay files and the published evidence for all
+eight conditional studies. Native inspection found no scientific worker or
+controller; the single monitor and its launch wrappers remain healthy. Four
+replacement event reviews completed successfully. The certified-fit-1 tag is
+still absent at ToMpathy commit 5f3ad0a304727fff5e1a6beca592e786ee71b181.
+No admitted science remains runnable; the next fixed dependency/health check is
+October 18 at 10:04:15 Pacific. This is an explicit dependency boundary, not a
+worker stall or campaign closeout.
