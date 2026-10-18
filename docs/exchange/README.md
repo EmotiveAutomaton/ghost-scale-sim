@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N12 complete](v23-n12-response.md): overlay inference helps three changing/combined response laws, harms the unchanged author-final law, and preserves exact zero-conflict ambiguity.
+
 [N11 complete](v23-n11-response.md): learned habit priors, reset probes and model-defined effort; constructed witness pointers do not admit engine modules.
 
 [N10 complete](v23-n10-response.md): residual structure, soft support and hidden-goal detection; [module witness pointers](v23-module-gate-witnesses.json) do not admit engine modules.

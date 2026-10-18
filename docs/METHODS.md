@@ -1,5 +1,7 @@
 # The methodology layer
 
+N12 crosses four fixed concurrent-goal/final-authority mechanisms with three conflict rates, six hidden adoption times, sixteen reliability laws and six withheld choices. Independent review recomputes all case-level proper scores, posterior normalizations, primary and secondary means, public/truth separation, exact zero-conflict aliasing and 204 law-block intervals from 12,288 cases. [Report](versions/v23-research-division/N12_REPORT.md).
+
 N11 crosses four fixed miniature mechanisms with 0/8/32 histories, sixteen reliability laws and six reset probes. It retains the full model-defined effort trajectory, verifies exact zero-history aliasing and reconstructs posterior pair shares, seven forecasts, proper scores and 168 law-block intervals from 12,288 cases. [Report](versions/v23-research-division/N11_REPORT.md).
 
 N10 adds matched positive/negative hidden-goal detection, explicit unavailable AUC in all-negative settings, a fixed context-shuffle diagnostic and conditional direction denominators. Independent rank-sum AUC agrees with the pairwise producer; full replay and 204 primary/forecast/diagnostic law intervals verify. [Report](versions/v23-research-division/N10_REPORT.md).

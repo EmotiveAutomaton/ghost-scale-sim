@@ -1,8 +1,8 @@
 # V23 implementation status
 
-[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N11 complete, N12 active and two successors queued.
+[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N12 complete, N15 active and N4d pending after a recorded controller-order deviation.
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 is complete and independently reviewed; N12 is active, with N4d and N15 queued in the finite continuation service. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11 and N12 are complete and independently reviewed. N15 is active; N4d remains pending after canonical JSON ordering placed N15 first. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 The table distinguishes built work from actual execution. A queued study must
 still pass its own complete cost/replay, six-rival fitting, and reserved full-batch
@@ -15,8 +15,9 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 | N13 | Complete and independently verified; P3 power FAIL, null PASS | [Report](N13_REPORT.md); FX1 waits |
 | N10 | Complete and independently reviewed | [Report](N10_REPORT.md); supplied-model limitations retained |
 | N11 | Complete and independently reviewed | [Report](N11_REPORT.md); constructed effort and mechanism limits retained |
-| N12 | Built, checked and active in the continuation service | Cost-gated pilot/fits/batch/review sequence |
-| N4d / N15 | Built and checked, protocols frozen in continuation service | Cost-gated sequential admission, fits, batches, reviews |
+| N12 | Complete and independently reviewed | [Report](N12_REPORT.md); zero-conflict and unchanged-author limits retained |
+| N15 | Built, checked and active in the continuation service | Cost-gated fits/batch/review sequence |
+| N4d | Built and checked; pending after recorded controller-order deviation | Admit after N15; no repeat or reduced grid |
 | D10 | Complete, independently reviewed; 43/120 settings exceed margin over generic tempering | [Report](N2_ROBUST_REPORT.md); original N2 stop unchanged |
 | D5 | Optional Stage 15 successor requires committed certified-fit-1; absent at this check | Recheck before Monday October 19 noon Pacific; otherwise defer to V24 |
 | N4b / N4c | Complete conditional studies | No refill or confirmation |
@@ -25,7 +26,7 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 | N3 / N6 | PRIMARY_UNAVAILABLE | Preserve unavailable outcomes |
 | N1 / main N4 / T3 / T4 | RESOURCE_DEFERRED | No reduced grid or V23 readmission |
 | T1 / T2 | INSTRUMENT_FAILED / DEPENDENCY_BLOCKED_AT_FREEZE | V24 directions only |
-| Monitoring | Replacement watcher alive; actual native startup response verified; restricted-host guard checked | Arm after publication; next review 06:20 Pacific, routine health 10:04:15 |
+| Monitoring | Replacement watcher alive; actual native startup response verified; restricted-host guard checked | Arm after publication; early review 07:45 Pacific, routine health 10:04:15 |
 
 N13 uses delivered 42.18% pooled repeated-choice agreement by owner decision;
 the three infeasible 70% sensitivities are unavailable. Its calibration checks

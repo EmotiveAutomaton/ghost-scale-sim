@@ -31,11 +31,12 @@ mechanisms or methods, never findings about people or accepted confirmation.
 | N13: FX1 falsifier | Power FAIL: 2/16 against 13 required; null PASS: 0 false SUPPORTED; three sensitivities unavailable | [Report](N13_REPORT.md) |
 | N10: corrections | Residual gain .00276–.06192 nats; supplied hidden-alternative limitations remain | [Report](N10_REPORT.md) |
 | N11: precision and habits | All-probe gain .270–.724 nats; automatizing model effort falls, fixed mechanisms remain constant | [Report](N11_REPORT.md) |
+| N12: overlays and final authority | Overlay gain .774–3.567 nats for three mechanisms, but loss .480–.511 for unchanged author-final; zero conflict aliases exactly | [Report](N12_REPORT.md) |
 | D10: N2 robust analysis | 43/120 above-margin gains over validation tempering; robust pooled gain .00203 nats; original stop unchanged | [Report](N2_ROBUST_REPORT.md) |
 
 The queue retains Gear 2's maximum three below-normal, single-thread CPU
 scientists, no GPU or environment synchronization, and Sounding Line priority.
-N12 passed its complete pilot/replay and is running six frozen fits. Its measured
+N12 is complete with full replay and independent reconstruction. N15 is running six frozen fits. Its measured
 reservation is about .40 CPU-hours for fitting and .27 for its batch, including
 replay/margin; these are conservative reservations, not completion promises.
 Later study ETAs will tighten at their own measured pilots. The current
