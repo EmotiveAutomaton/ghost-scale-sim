@@ -19,7 +19,7 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 | N15 | Complete and independently reviewed | [Report](N15_REPORT.md); exact same-source alias and history dilution retained |
 | N4d | Complete and independently reviewed | [Report](N4D_REPORT.md); zero-probe and fixed-stakes aliases retained; main N4 grid remains deferred |
 | D10 | Complete, independently reviewed; 43/120 settings exceed margin over generic tempering | [Report](N2_ROBUST_REPORT.md); original N2 stop unchanged |
-| D5 | Optional Stage 15 successor requires committed certified-fit-1; absent at this check | Recheck before Monday October 19 noon Pacific; otherwise defer to V24 |
+| D5 | `certified-fit-1` dependency validated; separate successor implementation and protocol built | Run the excluded complete-world cost pilot, reserve all 40 worlds if its measured projection fits, then execute disjoint immutable parts and independent assembly |
 | N4b / N4c | Complete conditional studies | No refill or confirmation |
 | N8 / N5 / R4 / N7 / R2 / R1 | Six reviewed discovery nominations; discovery frozen | No confirmation under failed qualified expected-evidence screens |
 | N2 / R3 | Frozen STOPPED_BELOW_MARGIN | D10 does not reopen N2 |

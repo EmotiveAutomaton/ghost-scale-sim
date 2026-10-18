@@ -3,6 +3,16 @@ from pathlib import Path
 import unittest
 import numpy as np
 from ghostscale.validation.soundingline.v23 import profile_validation as s
+from ghostscale.validation.soundingline.v23 import profile_successor as successor
+
+
+class ProfileSuccessorContractTests(unittest.TestCase):
+    def test_successor_is_fixed_before_sampling(self):
+        cfg=successor.configuration()
+        self.assertEqual((cfg['worlds'],cfg['rounds'],cfg['future_prefix']),(40,16,48))
+        self.assertEqual(cfg['probability_tolerance'],1e-9)
+        self.assertTrue(cfg['no_adaptive_stopping'])
+        self.assertEqual(cfg['structural_worlds'],list(range(40)))
 
 
 class ProfileValidationTests(unittest.TestCase):
@@ -57,6 +67,14 @@ class ProfileValidationTests(unittest.TestCase):
         for row in rows:
             if row['condition']=='uninformative':row['gain_baseline']=.02
         self.assertEqual(s.summarize(rows,controls)['status'],'FAIL')
+
+    def test_successor_constructs_long_histories(self):
+        cfg=successor.configuration()
+        records,labels,truth=s.construct(0,'constant',self.f,cfg=cfg)
+        self.assertEqual(len(records),128)
+        self.assertEqual(len(labels),128)
+        self.assertEqual(len(truth['targets']),128)
+        self.assertTrue(all(r['features']['own']==r['features']['donor'] for r in records))
 
 
 if __name__=='__main__':unittest.main()

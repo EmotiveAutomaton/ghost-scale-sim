@@ -15,7 +15,8 @@ T1 instrument-failed and T2 dependency-blocked. Original dispositions remain.
 - [N14 report](N14_REPORT.md), [N9 report](N9_REPORT.md), [N8 report](N8_REPORT.md)
 - [N13 protocol](N13_PROTOCOL.md) and [frozen calibration](../../../results/v23/n13-calibration/CALIBRATION.json)
 - [D10 protocol](N2_ROBUST_PROTOCOL.md); original [N2 report](N2_REPORT.md)
-- [Twin dispositions](TWIN_PROFILE_REPORT.md) and [Stage 15 FAIL](S15_PROFILE_REPORT.md)
+- [D5 certified Stage 15 successor protocol](S15_SUCCESSOR_PROTOCOL.md); original [Stage 15 FAIL](S15_PROFILE_REPORT.md) remains unchanged
+- [Twin dispositions](TWIN_PROFILE_REPORT.md)
 - [Accepted contract](IMPLEMENTATION_CONTRACT.md), [calibration](CALIBRATION_REPORT.md), [canonical ledger](LEDGER_MAPPING.md)
 - [Original specification](GHOST_SCALE_NEXT_ROUND_SPEC_2026-10-14.md) and [dated prior navigation](../../archive/v23-status-20261018/README.md)
 

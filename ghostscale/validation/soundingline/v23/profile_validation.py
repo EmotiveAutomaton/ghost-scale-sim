@@ -57,11 +57,13 @@ def verify_configuration(plan):
 def exact_functions(plan):
     from tompathy_engine.models.backbone import Backbone, Choice
     from tompathy_engine.interface import implementation_hash, schema_hash
-    if implementation_hash() != IMPLEMENTATION or schema_hash() != SCHEMA:
+    expected_implementation=plan.get('implementation_hash',IMPLEMENTATION)
+    expected_schema=plan.get('ledger_schema_hash',SCHEMA)
+    if implementation_hash() != expected_implementation or schema_hash() != expected_schema:
         raise ValueError('loaded engine differs from requested engine')
     namespace = dict(np=np, re=re, hashlib=hashlib, datetime=datetime,
         timezone=timezone, ARMS=ARMS, ACTIONS=ACTIONS,
-        engine=lambda: (Backbone, Choice, IMPLEMENTATION, SCHEMA))
+        engine=lambda: (Backbone, Choice, expected_implementation, expected_schema))
     selected = {}
     for key, expected, names in (
         ('profile_source', PROFILE_HASH, ('profile_vector','choice_features','predict_all')),
@@ -77,8 +79,8 @@ def exact_functions(plan):
     return namespace, selected
 
 
-def construct(world, condition, functions, *, pilot=False):
-    cfg=configuration()
+def construct(world, condition, functions, *, pilot=False, cfg=None):
+    cfg=configuration() if cfg is None else cfg
     random=rng(cfg['pilot_seed_namespace'] if pilot else cfg['seed_namespace'],world)
     writers=cfg['writers']; types=np.tile(np.arange(4),2); random.shuffle(types)
     action_map=random.permutation(4)
@@ -137,7 +139,8 @@ def validate_predictions(records, predictions):
                 raise ValueError('invalid probabilities')
 
 
-def summarize(points, controls):
+def summarize(points, controls, cfg=None):
+    cfg=configuration() if cfg is None else cfg
     result={}; passed=[]
     for condition in CONDITIONS:
         rows=[row for row in points if row['condition']==condition]
@@ -150,7 +153,7 @@ def summarize(points, controls):
             result[condition][comparator]=dict(mean=mean,lower=mean-radius,upper=mean+radius,n=len(values))
             passed.append(mean-radius>.005 if condition=='planted' else mean+radius<=.005)
     structural=bool(controls) and all(c['future_max_difference']<=1e-7 and c['option_max_difference']<=1e-7 and c['constant_max_difference']<=1e-12 for c in controls)
-    complete=len(points)==configuration()['worlds']*3 and len(controls)==configuration()['worlds']
+    complete=len(points)==cfg['worlds']*3 and len(controls)==cfg['worlds']
     return dict(status='PASS' if complete and all(passed) and structural else 'INCONCLUSIVE' if not complete else 'FAIL',
         constructed_world=True,constructed_software_fixture=not complete,
         results=result,structural_controls_pass=structural,complete_fixed_design=complete,
@@ -161,12 +164,15 @@ def run(root,plan,pulse):
     root.mkdir(parents=True,exist_ok=False)
     functions,source_proof=exact_functions(plan)
     write(root/'EXACT_FUNCTIONS.json',source_proof)
-    pilot=plan['task']=='profile-pilot'; count=1 if pilot else configuration()['worlds']
+    cfg=plan['configuration']
+    pilot=plan['task'] in ('profile-pilot','profile-successor-pilot')
+    minimal_pilot=plan['task']=='profile-pilot'
+    worlds=plan.get('world_indices',[0] if pilot else list(range(cfg['worlds'])))
     points=[]; controls=[]
-    for world in range(count):
+    for world in worlds:
         predictions_by_condition={}
-        for condition in (('planted',) if pilot else CONDITIONS):
-            records,labels,truth=construct(world,condition,functions,pilot=pilot)
+        for condition in (('planted',) if minimal_pilot else CONDITIONS):
+            records,labels,truth=construct(world,condition,functions,pilot=pilot,cfg=cfg)
             cell=root/f'w{world:02d}-{condition}'
             write(cell/'READER.json',records); write(cell/'LABELS.json',labels)
             write(cell/'EVALUATOR.json',truth)
@@ -187,8 +193,8 @@ def run(root,plan,pulse):
             predictions_by_condition[condition]=predictions
             if condition=='planted':
                 original_records,original_labels=records,labels
-        if not pilot:
-            original=predictions_by_condition['planted']; prefix=configuration()['future_prefix']
+        if not minimal_pilot:
+            original=predictions_by_condition['planted']; prefix=cfg['future_prefix']
             changed=deepcopy(original_labels); cutoff=original_records[prefix-1]['open_at']
             for i,r in enumerate(original_records):
                 if r['resolved_at']>=cutoff: changed[i]['action']=(changed[i]['action']+1)%4
@@ -210,4 +216,4 @@ def run(root,plan,pulse):
             controls.append(dict(world=world,future_max_difference=float(delta_future),option_max_difference=float(delta_option),constant_max_difference=float(delta_constant)))
         write(root/f'w{world:02d}-POINTS.json',[r for r in points if r['world']==world])
     write(root/'POINTS.json',points); write(root/'CONTROLS.json',controls)
-    write(root/'SUMMARY.json',summarize(points,controls))
+    write(root/'SUMMARY.json',summarize(points,controls,cfg))

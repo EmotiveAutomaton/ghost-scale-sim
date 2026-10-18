@@ -94,10 +94,13 @@ def verify_plan(root, campaign):
     if plan['task'] in ('profile-validation', 'profile-pilot'):
         from .profile_validation import verify_configuration
         verify_configuration(plan)
+    if plan['task'] in ('profile-successor-pilot','profile-successor-part'):
+        from .profile_successor import verify_configuration
+        verify_configuration(plan)
     if plan.get('continuation_authority_sha256'):
         if digest(campaign/'CONTINUATION_AUTHORITY_20261016.json') != plan['continuation_authority_sha256']:
             raise ValueError('continuation authority changed')
-    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot','numerical-validation','n2-robust',
+    if plan['task'] not in ('calibration', 'pilot','twin-engineering','profile-validation','profile-pilot','profile-successor-pilot','profile-successor-part','numerical-validation','n2-robust',
                             'population-controls','population-profile','conditional-pilot','conditional-fits','conditional-batch',
                             'twin-profile','twin-fits','twin-batch'):
         if plan['family'].startswith('N'):
@@ -245,6 +248,9 @@ def execute_pass(root, campaign, label):
         engineering(root/label,plan,pulse)
     elif plan['task'] in ('profile-validation','profile-pilot'):
         from .profile_validation import run as validate_profiles
+        validate_profiles(root/label,plan,pulse)
+    elif plan['task'] in ('profile-successor-pilot','profile-successor-part'):
+        from .profile_successor import run as validate_profiles
         validate_profiles(root/label,plan,pulse)
     else:
         raise ValueError('unimplemented task cannot be admitted: '+plan['task'])
