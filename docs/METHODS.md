@@ -1,5 +1,7 @@
 # The methodology layer
 
+The October 18 directed pipeline freezes public-history policies and exact readers, retains every selection propensity, and separates observed records from evaluator truth. Independent reviews reconstruct scores and whole-law intervals after complete replay. N17 uses a frozen held-out predictive likelihood over a maximum finite-null likelihood, declaring taste only at e-value >=20; its empirical no-taste gate remains separate. N18 enumerates an exact binary channel and counts laws, not repeated enumerations, as evidence. [Protocols and limitations](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md).
+
 N4d crosses four fixed sacrifice rules with 0/2/6 conflict probes, public or hidden stakes and sixteen reliability laws. Independent review reconstructs six rivals, proper scores, baseline/fixed-stakes aliases, the varying-stakes contrast and 108 primary/secondary/forecast law intervals from 12,288 cases. [Report](versions/v23-research-division/N4D_REPORT.md).
 
 N15 crosses four fixed checking mechanisms with 0/8/32 histories, sixteen reliability laws and reset failures of the focal and second source. Independent review reconstructs six rivals, proper scores, exact same-source aliasing, the second-source law change and 108 primary/secondary/forecast law intervals from 12,288 cases. [Report](versions/v23-research-division/N15_REPORT.md).

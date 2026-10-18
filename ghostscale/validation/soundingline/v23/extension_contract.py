@@ -4,6 +4,10 @@ from .common import read,digest
 from . import population_campaign,conditional_values,registry
 
 CONDITIONAL_MODULES = {
+    'N16': ('directed_probes','directed_common','sacrifice','consideration','precision_habits','trust_attention','finite_common','common','ledger'),
+    'N18': ('play_information','directed_common','common','ledger'),
+    'N16b': ('probed_falsifier','directed_probes','directed_common','falsifier','falsifier_calibration','finite_common','common','ledger'),
+    'N17': ('lean_taste','directed_common','common','ledger'),
     'N4b': ('conditional_values','fit_rivals','values','checker_recipes','common','registry','ledger'),
     'N4c': ('conditional_devaluation','devaluation','fit_rivals','common','ledger'),
     'N14': ('conditional_covariation','covariation','conditional_small','fit_rivals','common','ledger'),
@@ -25,6 +29,9 @@ def conditional_module(family):
 
 def cost_estimate(task,packet):
     packet=Path(packet)
+    if (packet/'PLAN.json').exists() and read(packet/'PLAN.json')['family'] in ('N16','N16b','N17','N18'):
+        from .directed_common import estimate
+        return estimate(packet,read(packet/'PLAN.json').get('directed_design',{}))
     rows=[read(packet/label/'pilot-cost.json') for label in ('original','replay')]
     if task.startswith('population-'):
         cells={v['id']:population_campaign.base_worlds(v) for v in registry.variants('N1')}
@@ -87,6 +94,8 @@ def validate(task,family,extras,repo):
         if summary.get('state')!='PILOT_VALID' or not read(pilot/'original/CONTROLS.json').get('passed'):
             raise ValueError('conditional controls and full grid profile required')
         modules=CONDITIONAL_MODULES[family]
+        if family in ('N16','N16b','N17','N18') and extras.get('directed_design',{})!=pp.get('directed_design',{}):
+            raise ValueError('directed design changed after cost pilot')
         if family not in ('N4b','N4c'):
             protocol='docs/versions/v23-research-division/'+family.upper()+'_PROTOCOL.md'
             if digest(Path(repo)/protocol)!=pp['sources'].get(protocol):raise ValueError('conditional protocol changed after pilot')
@@ -98,7 +107,9 @@ def validate(task,family,extras,repo):
             if extras.get('burnin_reservations_seconds')!=[costs['batch']]:raise ValueError('conditional full batch must be reserved')
             return costs['fits'],costs['batch']
         fit,_,fs=bound_packet(extras,'fit','conditional-fits',family)
-        if task!='conditional-batch' or fs['state']!='FITS_VERIFIED' or (extras['worlds'],extras['cases'])!=(16,64):
+        worlds=extras.get('directed_design',{}).get('worlds',16) if family in ('N16','N16b','N17','N18') else 16
+        if worlds not in ((8,16) if family=='N17' else (16,)):raise ValueError('undeclared directed law count')
+        if task!='conditional-batch' or fs['state']!='FITS_VERIFIED' or (extras['worlds'],extras['cases'])!=(worlds,64):
             raise ValueError('conditional full allocation or frozen fits differs')
     else:raise ValueError('unknown extension task')
     if Path(extras['fit_directory']).resolve()!=(fit/'original/fits').resolve():raise ValueError('extension fit location changed')

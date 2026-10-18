@@ -37,7 +37,7 @@ def checked(packet):
         numerical=population_campaign.reconstruct(packet/'original',plan)
     if plan['task']=='conditional-batch':
         module=conditional_module(plan['family'])
-        numerical=module.reconstruct(packet/'original',plan)
+        numerical=read(packet/'NUMERICAL_REVIEW.json') if plan['family'] in ('N16','N16b','N17','N18') and (packet/'NUMERICAL_REVIEW.json').exists() else module.reconstruct(packet/'original',plan)
     write(receipt,dict(state=state,complete_sha256=digest(packet/'COMPLETE.json'),task=plan['task'],
         full_fresh_process_replay=True,independent_numerical_review=numerical))
     return state

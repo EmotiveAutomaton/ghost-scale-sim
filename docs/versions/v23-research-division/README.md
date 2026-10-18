@@ -1,5 +1,7 @@
 # V23: research division and decision-ledger bridge
 
+[October 18 work order](OCTOBER18_WORK_ORDER.json) and [viability review](PACKET_REVIEW_2026-10-18.md): all four directed studies are implemented. N16/N16b/N17 are running full reserved batches; N18 awaits a slot. D5 is **RESOURCE_DEFERRED_TO_V24_BY_OWNER** after its failed complete-world cost pilot. The earlier eight studies remain complete.
+
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 
 N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11, N12, N4d and N15 are complete and independently reviewed. The recorded N15/N4d controller-order deviation did not change either study. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.

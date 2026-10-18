@@ -40,6 +40,8 @@ def step(campaign,root):
         try:
             if plan['task']=='twin-batch':
                 from ghostscale.validation.soundingline.v23.twin_partition import assemble
+            elif plan['family'] in ('N16','N16b','N17','N18'):
+                from ghostscale.validation.soundingline.v23.directed_common import assemble
             else:assemble=partition.assemble
             receipt=assemble(root,parts,pulse)
             used=time.process_time()-started

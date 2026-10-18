@@ -19,6 +19,22 @@ authorship and contribution records retain their original attribution.
 
 ## V23 corrected implementation and calibrated opening (2026-10-14)
 
+October 18 directed-probe packet: read `PACKET_REVIEW_2026-10-18.md` and
+`OCTOBER18_WORK_ORDER.json` under `docs/versions/v23-research-division/`.
+N16/N16b/N17/N18 are built conditional studies with their own declared policy/
+analytic reader rosters, complete cost-pilot replays, frozen definitions and one
+reserved batch each. Their explicit rosters supersede the October 17 six-rival
+requirement only for these new families. Preserve the original clocks, three
+actual scientists, 24-hour conditional group and 18-hour protected reserve.
+D5's successor cost pilot failed; the owner directed V24 deferral. Do not retry
+it in V23. The directed controller performs bounded independent reviews with
+heartbeats and scientific slot accounting. Exact deferred-event handoffs may
+keep a monitor armed while an inspected dependency waits; unfinished evidence
+is never acknowledged as landed. Follow the current local handoff for native
+ownership. V24 design/pilots are separately authorized after V23, capped at
+40 CPU-hours and two workers through October 25 at 22:00 Pacific; no production
+before October 26 at 08:00. No closed study is reopened to occupy the queue.
+
 October 17 curator packet supersedes earlier pending-design holds. Read
 `docs/versions/v23-research-division/PACKET_REVIEW_2026-10-17.md` and its source
 packet. Mandatory dispositions are recorded; admit N8 under its eight-hour cap,

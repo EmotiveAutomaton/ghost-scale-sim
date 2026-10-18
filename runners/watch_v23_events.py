@@ -91,7 +91,7 @@ def observe(campaign):
             status=read(root/'STATUS.json')
             if status['state']=='failed':
                 event(campaign,root.name+'-failed','instrument_failure',dict(packet=root.name,sha256=digest(root/'STATUS.json')))
-            elif status['state']=='running':
+            elif status['state'] in ('running','reviewing'):
                 if not alive(status['pid']):
                     event(campaign,root.name+'-disappeared','worker_disappeared',dict(packet=root.name,status=status))
                 else:
@@ -159,6 +159,28 @@ def delivery_ready(events, active, config):
     return events if urgent or not active else []
 
 
+def deferred_events(campaign,state,events,current=None):
+    """Explicit bounded operator handoff; never acknowledge unfinished evidence.
+
+    Only exact already-inspected events can wait. New failures and deadline events
+    stay visible. An absent or expired handoff cannot silently rearm a failed review.
+    """
+    path=state/'DEFERRED_EVENTS.json'
+    if not path.exists():return set()
+    current=current or datetime.now(timezone.utc)
+    deadline=datetime.fromisoformat(read(campaign/'ACCEPTANCE.json')['report_start'])
+    saved=read(path);byid={e['id']:e for e in events};valid=set()
+    for identity,item in saved.get('events',{}).items():
+        event=byid.get(identity)
+        if event is None:continue
+        due=datetime.fromisoformat(item['due'])
+        if not item.get('reason') or not item.get('next_action') or due>deadline:
+            raise ValueError('invalid bounded review handoff')
+        if event['kind'] in ('final_deadline','report_preparation'):continue
+        if item['event_sha256']==event['event_sha256'] and current<due:valid.add(identity)
+    return valid
+
+
 def review_environment(config):
     environment=os.environ.copy();profile=Path(config['review_user_profile'])
     if not profile.is_absolute() or not (profile/'.codex/config.toml').is_file():
@@ -213,10 +235,11 @@ def deliver(campaign,state,config,events):
             write(state/'STATUS.json',dict(pid=os.getpid(),heartbeat=now(),armed=False,active_review_pid=child.pid),immutable=False)
             time.sleep(10)
         entry.update(exit_code=child.returncode,finished=now())
-    unresolved={e['id'] for e in pending(campaign,state)}
+    remaining=pending(campaign,state);unresolved={e['id'] for e in remaining}
     entry['acknowledged']=[e['id'] for e in events if e['id'] not in unresolved]
     write(path,history,immutable=False)
-    if unresolved.intersection(entry['events']):
+    deferred=deferred_events(campaign,state,remaining)
+    if unresolved.intersection(entry['events'])-deferred:
         # A failed or incomplete operator needs a person, not an endless paid loop.
         write(state/'DELIVERY_UNRESOLVED.json',dict(at=now(),events=sorted(unresolved)),immutable=False)
     elif not closed(campaign) and not (state/'STOP').exists(): (state/'ARMED').touch()
@@ -237,7 +260,9 @@ def run(campaign,state,config_path):
             observe_services(campaign,config)
             if time.monotonic()-last_dependency>=60:
                 dependency(campaign,config);last_dependency=time.monotonic()
-            events=delivery_ready(pending(campaign,state),active,config)
+            pending_events=pending(campaign,state)
+            deferred=deferred_events(campaign,state,pending_events)
+            events=delivery_ready([e for e in pending_events if e['id'] not in deferred],active,config)
             write(state/'STATUS.json',dict(pid=os.getpid(),heartbeat=now(),state='monitoring',armed=(state/'ARMED').exists(),
                 active_review_pid=None,scientific_jobs=active,pending_events=len(events)),immutable=False)
             write(cost_path,dict(cpu_seconds=time.process_time()-started,state='monitoring'),immutable=False)

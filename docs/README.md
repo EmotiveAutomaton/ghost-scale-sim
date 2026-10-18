@@ -1,5 +1,7 @@
 # Documentation map
 
+[October 18 directed-probe work](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md) is the active V23 extension. The [October 18 work order](versions/v23-research-division/OCTOBER18_WORK_ORDER.json) distinguishes running studies, queued work and D5's owner-directed deferral.
+
 [October 17 packet and current work](versions/v23-research-division/PACKET_REVIEW_2026-10-17.md): evidence-bound mandatory dispositions, N8 continuation, and eight ranked conditional studies. The [work order](versions/v23-research-division/OCTOBER17_WORK_ORDER.json) distinguishes implemented studies from remaining builds.
 
 Start with the status of the work, then follow its evidence. This index describes

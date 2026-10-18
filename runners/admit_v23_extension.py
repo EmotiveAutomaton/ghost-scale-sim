@@ -59,7 +59,8 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
     if Path(identity).name != identity or not identity.startswith('v23-'):
         raise ValueError('unsafe packet identity')
     if not isinstance(extras, dict):raise ValueError('explicit task contract required')
-    partitioned=task=='twin-batch' and extras.get('partitioned_twin',False)
+    directed=family in ('N16','N16b','N17','N18')
+    partitioned=(task=='twin-batch' and extras.get('partitioned_twin',False)) or (directed and task=='conditional-batch' and extras.get('partitioned_directed',False))
     if not 0 < cap or (cap>14400 and not partitioned):raise ValueError('bounded packet requires at most four CPU hours')
     extras=dict(extras)
     reserved_keys = {'task','family','budget_group','cpu_cap_seconds','wall_cap_seconds','protected',
@@ -76,6 +77,21 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
         if runtime.environment() != read(campaign/'ENVIRONMENT.json'):
             raise ValueError('scientific environment changed')
         authority = prerequisites(campaign, task, family, extras)
+        if directed:
+            from ghostscale.validation.soundingline.v23.directed_common import CAPS
+            directed_authority=read(campaign/'DIRECTED_AUTHORITY_20261018.json')
+            repo=Path(__file__).resolve().parents[1]
+            if digest(repo/directed_authority['source'])!=directed_authority['source_sha256'] or directed_authority['family_caps_seconds']!=CAPS:
+                raise ValueError('October 18 source authority differs')
+            prior=sum(float(read(p/'STATUS.json').get('cpu_seconds',0)) if (p/'STATUS.json').exists() and read(p/'STATUS.json').get('state') in ('failed','complete','verified')
+                else float(read(p/'PLAN.json')['cpu_cap_seconds']) for p in (campaign/'packets').iterdir()
+                if (p/'PLAN.json').exists() and read(p/'PLAN.json').get('family')==family and not read(p/'PLAN.json').get('logical_parent'))
+            # Completed attempts are charged by the canonical cost ledger below;
+            # this conservative family check additionally reserves the full next batch.
+            from ghostscale.validation.soundingline.v23.extension_contract import validate as directed_validate
+            _,future=directed_validate(task,family,extras,repo)
+            if prior+cap+future>CAPS[family]:raise ValueError('DIRECTED_FAMILY_CAP')
+            extras['directed_authority_sha256']=digest(campaign/'DIRECTED_AUTHORITY_20261018.json')
         if task.startswith('conditional-') and family not in ('N4b','N4c'):
             if resource_policy.binding(campaign).get(resource_policy.BINDING,{}).get('file')!=resource_policy.SUPPLEMENT_17:
                 raise ValueError('October 17 conditional authority required')
@@ -92,8 +108,12 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             if cap<minimum:raise ValueError('measured full replay cost exceeds twin cap')
         if partitioned:
             if not resource_policy.binding(campaign):raise ValueError('twin partition resource supplement required')
-            from ghostscale.validation.soundingline.v23.twin_admission import estimate
-            split=estimate(Path(extras['pilot_packet']),family,partitioned=True).get('partition_layout')
+            if directed:
+                from ghostscale.validation.soundingline.v23.directed_common import estimate
+                split=estimate(Path(extras['pilot_packet']),extras.get('directed_design',{})).get('partition_layout')
+            else:
+                from ghostscale.validation.soundingline.v23.twin_admission import estimate
+                split=estimate(Path(extras['pilot_packet']),family,partitioned=True).get('partition_layout')
             if split:
                 extras.update(scheduler_only=True,partition_layout=split,max_parallel_parts=3)
         state = queue.capacity(campaign, queue.inventory(campaign), cap+reservation, budget_group=group,
@@ -114,6 +134,8 @@ def admit(campaign, identity, task, family, cap, extras, *, group='setup', launc
             protocol='docs/versions/v23-research-division/'+family.upper()+'_PROTOCOL.md'
             if not (repo/protocol).is_file():raise ValueError('declared protocol required before sampling')
             names.append(protocol)
+        if directed:names.append(directed_authority['source'])
+        if family=='N17':names.append('docs/versions/v23-research-division/N17_AGGREGATE_TARGETS.json')
         source = campaign/'sources'/identity;source.mkdir(parents=True, exist_ok=False)
         for name in names:
             target = source/name;target.parent.mkdir(parents=True, exist_ok=True)

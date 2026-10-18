@@ -1,5 +1,7 @@
 # The walkthrough
 
+[October 18 directed-probe rollout](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): N16, N16b and N17 have entered reserved full batches after complete cost-pilot replays; N18 is built and queued. D5 is resource-deferred to V24 by owner decision. These new studies have no accepted scientific findings yet.
+
 Can observed sacrifices reveal how a maker orders incompatible goals? In N4d, two or six conflict probes improve true-mechanism log loss by 0.095–0.987 nats when stakes are visible and 0.050–0.928 nats when stakes are hidden. Zero probes preserve the exact prior, and hiding stakes sharply weakens recovery of the weighted rule. All 12,288 cases, 108 independently reconstructed intervals, six frozen rivals and full replay verify. This is a constructed-mechanism result, not evidence about human goal priority. [N4d report](docs/versions/v23-research-division/N4D_REPORT.md).
 
 Can checking behavior distinguish source-specific trust from general vigilance? In N15, failures of both the focal and second source improve true-mechanism log loss by 0.009–0.535 nats across twelve settings; focal-source failures alone gain 0.005–0.293 nats and preserve the declared exact alias between source tracking and global vigilance. Added failures become less informative after 32 records. All 12,288 cases, 108 independently reconstructed intervals, six frozen rivals and full replay verify. This is a constructed-mechanism result, not evidence about human trust or attention. [N15 report](docs/versions/v23-research-division/N15_REPORT.md).

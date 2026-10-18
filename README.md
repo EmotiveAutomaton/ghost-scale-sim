@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+[October 18 directed-probe rollout](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): N16, N16b and N17 have entered reserved full batches after complete cost-pilot replays; N18 is built and queued. D5 is resource-deferred to V24 by owner decision. These new studies have no accepted scientific findings yet.
+
 [October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 
 N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11, N12, N4d and N15 are complete and independently reviewed. The recorded N15/N4d controller-order deviation did not change either study. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
