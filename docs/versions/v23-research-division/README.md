@@ -1,8 +1,8 @@
 # V23: research division and decision-ledger bridge
 
-[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight conditional implementations built; N15 complete; N4d batch complete and awaiting full review after the recorded controller-order deviation.
+[October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 
-N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11, N12 and N15 are complete and independently reviewed. N4d's batch and replay are complete and await full review after canonical JSON ordering placed N15 first. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
+N14 and N9 are complete and fully reviewed. All eight October 17 conditional studies now have implementations and declared protocols. N13 is complete: FX1 P3 fails power (2/16 against 13 required). N10 is complete and verified. N11, N12, N4d and N15 are complete and independently reviewed. The recorded N15/N4d controller-order deviation did not change either study. D10 retained N2 reanalysis is complete and independently verified. Completed science was preserved through the overnight review-launch interruption.
 
 Six discovery nominations (N8, N5, R4, N7, R2, R1) are frozen. All six have a
 qualified CONFIRMATION_INFEASIBLE_AS_FROZEN expected-evidence screen; they remain

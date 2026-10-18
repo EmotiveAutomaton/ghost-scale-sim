@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[N4d complete](v23-n4d-response.md): visible stake variation separates weighted sacrifice from fixed goal order in the stipulated miniature; N4's main grid remains deferred.
+
 [N15 complete](v23-n15-response.md): second-source failures separate source-specific tracking from global vigilance in the stipulated miniature; no engine module is admitted.
 
 [N12 complete](v23-n12-response.md): overlay inference helps three changing/combined response laws, harms the unchanged author-final law, and preserves exact zero-conflict ambiguity.

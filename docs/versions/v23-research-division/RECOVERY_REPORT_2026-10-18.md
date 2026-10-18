@@ -2,9 +2,9 @@
 
 All eight commissioned conditional studies are built. N14, N9, N13 and N10
 are complete and independently reviewed; D10's retained N2 reanalysis is also
-complete. N11, N12 and N15 are complete and independently reviewed. N4d's
-batch and replay are complete and await full evidence review. Canonical JSON ordering put N15
-before N4d; the valid work and recorded deviation were preserved.
+complete. N11, N12, N4d and N15 are complete and independently reviewed.
+All eight October 17 conditional studies are therefore complete. Canonical JSON
+ordering put N15 before N4d; both valid studies and the deviation were preserved.
 
 The overnight stall was real: the reviewer failed before starting its work,
 then the monitor disarmed. Completed N14/N9 outputs remained intact. Recovery
@@ -17,9 +17,9 @@ explicit available review model and a guard rejecting restricted-host launches.
 A real no-tools startup test returned successfully; the monitor is alive.
 The first full replacement event review landed N11 and independently verified
 its evidence. The notifier is disarmed during this operator turn and will be
-armed after publication and exact event acknowledgement. Next early review:
-**06:48 Pacific today**; fixed twelve-hour
-health next **10:04:15 Pacific**, with failures and depleted queues waking sooner.
+armed after publication and exact event acknowledgement. The next fixed
+twelve-hour health review remains **10:04:15 Pacific**; a new committed dependency
+or failure may wake earlier.
 
 The table names each newly completed review and its scope. These are constructed
 mechanisms or methods, never findings about people or accepted confirmation.
@@ -33,13 +33,14 @@ mechanisms or methods, never findings about people or accepted confirmation.
 | N11: precision and habits | All-probe gain .270–.724 nats; automatizing model effort falls, fixed mechanisms remain constant | [Report](N11_REPORT.md) |
 | N12: overlays and final authority | Overlay gain .774–3.567 nats for three mechanisms, but loss .480–.511 for unchanged author-final; zero conflict aliases exactly | [Report](N12_REPORT.md) |
 | N15: source trust and vigilance | Combined-probe gain .009–.535 nats; same-source evidence preserves the exact tracking/vigilance alias | [Report](N15_REPORT.md) |
+| N4d: sacrifice and goal order | Visible-stakes gain .095–.987 nats; hiding stakes weakens weighted-rule recovery; zero probes alias exactly | [Report](N4D_REPORT.md) |
 | D10: N2 robust analysis | 43/120 above-margin gains over validation tempering; robust pooled gain .00203 nats; original stop unchanged | [Report](N2_ROBUST_REPORT.md) |
 
 The queue retains Gear 2's maximum three below-normal, single-thread CPU
 scientists, no GPU or environment synchronization, and Sounding Line priority.
-N12 and N15 are complete with full replay and independent reconstruction. N4d's cost profile, six frozen fits, reserved batch and fresh replay are complete.
-Its independent reconstruction is present; scientific completion still waits for
-the full evidence review and public write-through. The current
+N12, N15 and N4d are complete with full replay and independent reconstruction.
+The conditional controller exited at its finite review boundary with no queued study.
+Only the optional Stage 15 successor remains at its committed-tag dependency gate. The current
 [machine receipt](../../../results/v23/recovery-20261018/QUEUE_HEALTH.json)
 records actual active packets and charged costs.
 
