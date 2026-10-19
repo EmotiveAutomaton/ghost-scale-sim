@@ -1,6 +1,6 @@
 # V23: research division and decision-ledger bridge
 
-[N16b](N16B_REPORT.md), [N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. N16 is computing. N16b's retained-data repair passed without new cases; its original review-cap failure remains recorded. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
+[N16b](N16B_REPORT.md), [N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. [N16](N16_REPORT.md) is also complete and independently verified; its constructed scheduler primary passes. All four October 18 studies are complete. N16b's retained-data repair passed without new cases; its original review-cap failure remains recorded. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
 
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 

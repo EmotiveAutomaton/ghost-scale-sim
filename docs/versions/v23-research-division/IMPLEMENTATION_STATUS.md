@@ -1,6 +1,6 @@
 # V23 implementation status
 
-[N16b](N16B_REPORT.md), [N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. N16 is computing. N16b's retained-data repair passed without new cases; its original review-cap failure remains recorded. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
+[N16b](N16B_REPORT.md), [N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. [N16](N16_REPORT.md) is also complete and independently verified; its constructed scheduler primary passes. All four October 18 studies are complete. N16b's retained-data repair passed without new cases; its original review-cap failure remains recorded. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
 
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 
@@ -13,7 +13,7 @@ reconstruction and public scientific write-through. Queue state is a dated snaps
 
 | Scope | Current state | Remaining work |
 |---|---|---|
-| N16 | Full fixed batch running | Complete replay and independent reconstruction remain |
+| N16 | Complete and independently verified; constructed scheduler primary PASS | [Report](N16_REPORT.md); powered V24 study remains separate |
 | N16b | Complete and independently verified; P3 power FAIL at 2/4/8 probes | [Report](N16B_REPORT.md); original review failure preserved, retained-data repair drew no new cases |
 | N17 | Complete and independently verified | [Report](N17_REPORT.md); all no-taste gates pass, incomplete human-data calibration |
 | N18 | Complete and independently verified | [Report](N18_REPORT.md); conditional play-detector threshold, 16 independent laws |

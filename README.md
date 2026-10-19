@@ -1,8 +1,10 @@
 # Ghost Scale Simulation
 
+Does choosing probes by expected information beat the frozen fixed order? N16's 20%-randomized adaptive policy gains 0.056776 nats of true-mechanism log score at two added probes (95% whole-law interval 0.050350 to 0.063473), equally weighting N4d, N9, N11 and N15. All 49,152 cases, byte-identical replay and independent reconstruction verify. This is a positive constructed scheduler witness, not evidence about human questions or automatic engine admission. [N16 report](docs/versions/v23-research-division/N16_REPORT.md).
+
 Can directed binary conflicts give the frozen FX1 falsifier adequate power? N16b fails: 2, 1 and 2 of 16 independent law blocks clear the frozen primary at 2, 4 and 8 probes, versus 13 required. Habit-only false SUPPORTED is 0 at every history and budget. All 9,216 cases, byte-identical replay and two fresh retained-data reconstructions verify. This is a constructed-method limitation; probes do not repair FX1 here, and the unavailable 70% sensitivities remain unavailable. [N16b report](docs/versions/v23-research-division/N16B_REPORT.md).
 
-[October 18 directed studies](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): [N16b](docs/versions/v23-research-division/N16B_REPORT.md), [N17](docs/versions/v23-research-division/N17_REPORT.md) and [N18](docs/versions/v23-research-division/N18_REPORT.md) are complete, replayed and independently verified. N16 is computing. D5 is deferred to V24 by owner decision.
+[October 18 directed studies](docs/versions/v23-research-division/PACKET_REVIEW_2026-10-18.md): [N16b](docs/versions/v23-research-division/N16B_REPORT.md), [N17](docs/versions/v23-research-division/N17_REPORT.md) and [N18](docs/versions/v23-research-division/N18_REPORT.md) are complete, replayed and independently verified. N16 is complete and independently verified; its constructed scheduler primary passes. All four October 18 studies are complete. D5 is deferred to V24 by owner decision.
 
 [October 18 queue and recovery report](docs/versions/v23-research-division/RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
 

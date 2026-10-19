@@ -1,10 +1,9 @@
 # October 18 directed-probe packet: viability and rollout
 
-Current rollout update: N16b, N17 and N18 have complete replays and independent
+Current rollout update: N16, N16b, N17 and N18 have complete replays and independent
 verification, with [N16b's unchanged FX1 power failure](N16B_REPORT.md),
 [N17 calibration limits](N17_REPORT.md) and the
-[N18 constructed-channel qualification](N18_REPORT.md) retained. N16 runs its
-full reserved batch. N16b's first independent check exhausted its initial
+[N18 constructed-channel qualification](N18_REPORT.md) retained. [N16's scheduler primary passes](N16_REPORT.md), with all 49,152 cases reviewed. N16b's first independent check exhausted its initial
 reservation and remains failed. The separately admitted retained-data repair
 completed two fresh reconstructions at 821.234375 CPU-seconds, drew no new
 worlds and changed no criterion. Its acceptance receipt binds the original and
