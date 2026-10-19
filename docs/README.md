@@ -1,6 +1,6 @@
 # Documentation map
 
-[October 18 directed-probe work](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md) is the active V23 extension. The [October 18 work order](versions/v23-research-division/OCTOBER18_WORK_ORDER.json) distinguishes running studies, queued work and D5's owner-directed deferral.
+[October 18 directed-probe work](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md) is complete in the closed V23 allocation. The [October 18 work order](versions/v23-research-division/OCTOBER18_WORK_ORDER.json) distinguishes running studies, queued work and D5's owner-directed deferral.
 
 [October 17 packet and current work](versions/v23-research-division/PACKET_REVIEW_2026-10-17.md): evidence-bound mandatory dispositions, N8 continuation, and eight ranked conditional studies. The [work order](versions/v23-research-division/OCTOBER17_WORK_ORDER.json) distinguishes implemented studies from remaining builds.
 
@@ -12,7 +12,7 @@ state. Updated 10 October 2026.
 
 | Status | Entry point | Use |
 |---|---|---|
-| Active V23, corrected finite research division | [V23 index](versions/v23-research-division/README.md) | Current dispositions, confirmation arithmetic, conditional implementation and results |
+| Closed V23, finite allocation complete | [V23 index](versions/v23-research-division/README.md) | Current dispositions, confirmation arithmetic, conditional implementation and results |
 | Closed V22, seven finite mechanism tests | [V22 index](versions/v22-mechanism-tests/README.md) | Seven reviewed results, retained controls, final report and finite closure |
 | Closed V21, supporting mechanism program | [V21 final report](versions/v21-supporting-mechanisms/FINAL_REPORT.md) | Final scientific report and verified owned-service closure |
 | Closed V19 | [V19 index](versions/v19-local-maker/README.md) | Final scientific report and administrative closure |

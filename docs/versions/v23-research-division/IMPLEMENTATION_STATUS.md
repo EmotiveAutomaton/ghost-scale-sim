@@ -1,5 +1,7 @@
 # V23 implementation status
 
+**Closed October 19.** All admitted finite work has terminal dispositions, with zero scientific workers and recurring V23 wakes retired. [Final report](FINAL_REPORT.md), [coverage](../../../results/v23/final-closeout/COVERAGE.json). V24 preparation is separate.
+
 [N16b](N16B_REPORT.md), [N17](N17_REPORT.md) and [N18](N18_REPORT.md) are complete, replayed and independently verified. [N16](N16_REPORT.md) is also complete and independently verified; its constructed scheduler primary passes. All four October 18 studies are complete. N16b's retained-data repair passed without new cases; its original review-cap failure remains recorded. All four studies are implemented. D5 is deferred to V24 by owner decision. [Current work order](OCTOBER18_WORK_ORDER.json), [viability and limitations](PACKET_REVIEW_2026-10-18.md).
 
 [October 18 queue and recovery report](RECOVERY_REPORT_2026-10-18.md): all eight October 17 conditional studies complete and independently reviewed.
@@ -45,6 +47,5 @@ mismatch was corrected; the leak itself was already rejected. Seven D10/admissio
 checks and nine monitor checks pass. No production scientific criterion changed.
 
 The three-worker ceiling, 24-hour conditional group, 285-hour total, protected
-18-hour reserve and original Wednesday cutoffs remain. Scientific completion
-is not claimed. [Work order](OCTOBER17_WORK_ORDER.json), [current machine record](../../../results/v23/CURRENT_STATUS.json),
+18-hour reserve and original Wednesday cutoffs remain. The finite allocation is complete; the wider frontier remains unexecuted. [Work order](OCTOBER17_WORK_ORDER.json), [current machine record](../../../results/v23/CURRENT_STATUS.json),
 and [preserved older implementation record](../../archive/v23-status-20261018/IMPLEMENTATION_STATUS.md).

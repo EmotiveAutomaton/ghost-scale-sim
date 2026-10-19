@@ -1,5 +1,10 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+V23's finite allocation closed October 19 with 33 reviewed logical batches and
+six unconfirmed discovery nominations. N16 supports a constructed scheduler
+comparison; N13/N16b leave FX1 underpowered. The individual claims and limits
+below remain authoritative. [Final report](../versions/v23-research-division/FINAL_REPORT.md).
+
 > **"To appreciate something is to identify the actions taken to create an artifact, then to use
 > those actions to infer the goals of the creator, and to subsequently connect with and learn from
 > the creator if those goals are deemed worthy."** *(the essay, 2026-04)*

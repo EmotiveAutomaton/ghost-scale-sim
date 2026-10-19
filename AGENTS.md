@@ -19,6 +19,16 @@ authorship and contribution records retain their original attribution.
 
 ## V23 corrected implementation and calibrated opening (2026-10-14)
 
+V23 closed October 19. Read `docs/versions/v23-research-division/FINAL_REPORT.md`
+and `results/v23/final-closeout/`: 162 terminal packets, 33 reviewed logical
+batches, six discovery-only nominations and the retained unexecuted frontier.
+N16's constructed scheduler primary passes; N16b still fails FX1 power. All
+scientific/controller/notifier processes exited and recurring V23 wakes are
+retired. Do not restart or refill V23. The owner requested V24 build preparation
+on October 19; that does not move the October 22 pilot opening or October 26
+08:00 Pacific production opening. Keep its separate 40-CPU-hour pilot ceiling,
+two-worker limit and independent validity/admission gates.
+
 October 18 directed-probe packet: read `PACKET_REVIEW_2026-10-18.md` and
 `OCTOBER18_WORK_ORDER.json` under `docs/versions/v23-research-division/`.
 N16/N16b/N17/N18 are built conditional studies with their own declared policy/

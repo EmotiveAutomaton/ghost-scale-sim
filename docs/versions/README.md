@@ -8,7 +8,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V23 | Active October 17 continuation; prior families have explicit dispositions; N8 and eight ranked conditional studies | [Review and work order](v23-research-division/README.md) |
+| V23 | Closed October 19; 33 reviewed logical batches, six unconfirmed nominations, failures and unexecuted frontier retained | [Final report](v23-research-division/FINAL_REPORT.md) |
 | V22 | Closed finite seven-study pass; all results verified, no confirmation | [Program index](v22-mechanism-tests/README.md) |
 | V21 | Scientific allocation complete; excess reader error established, no maker-mechanism promotion; incomplete frontier retained | [Final report](v21-supporting-mechanisms/FINAL_REPORT.md) |
 | V20 | Closed October 1; 808 verified packets, shifted-context candidate confirmed, native primary failed, 44 deferrals | [Final report](v20-contribution-reconstruction/FINAL_REPORT.md) |

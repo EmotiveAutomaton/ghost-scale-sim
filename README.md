@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+V23's finite allocation is complete: 33 independently reviewed logical batches, comprising 19 main-family batches and 14 conditional studies, with 162 terminal execution packets and 22 retained runtime failures. Six discovery nominations remain unconfirmed. Designed probes improve recovery in the constructed scheduler study; directed conflicts do not repair FX1's power. No human-mechanism or automatic engine-admission claim follows. [V23 final report](docs/versions/v23-research-division/FINAL_REPORT.md).
+
 Does choosing probes by expected information beat the frozen fixed order? N16's 20%-randomized adaptive policy gains 0.056776 nats of true-mechanism log score at two added probes (95% whole-law interval 0.050350 to 0.063473), equally weighting N4d, N9, N11 and N15. All 49,152 cases, byte-identical replay and independent reconstruction verify. This is a positive constructed scheduler witness, not evidence about human questions or automatic engine admission. [N16 report](docs/versions/v23-research-division/N16_REPORT.md).
 
 Can directed binary conflicts give the frozen FX1 falsifier adequate power? N16b fails: 2, 1 and 2 of 16 independent law blocks clear the frozen primary at 2, 4 and 8 probes, versus 13 required. Habit-only false SUPPORTED is 0 at every history and budget. All 9,216 cases, byte-identical replay and two fresh retained-data reconstructions verify. This is a constructed-method limitation; probes do not repair FX1 here, and the unavailable 70% sensitivities remain unavailable. [N16b report](docs/versions/v23-research-division/N16B_REPORT.md).
@@ -40,7 +42,7 @@ human intent, human values or historical process correspondence.
 
 ## Start here
 
-- **V23 active:** [completion continuation](docs/versions/v23-research-division/CONTINUATION_2026-10-16.md), [implementation status](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
+- **V23 closed:** [completion continuation](docs/versions/v23-research-division/CONTINUATION_2026-10-16.md), [implementation status](docs/versions/v23-research-division/IMPLEMENTATION_STATUS.md).
 - **Closed V22:** [seven finite mechanism studies](docs/versions/v22-mechanism-tests/README.md).
   [Final report](docs/versions/v22-mechanism-tests/FINAL_REPORT.md): seven verified finite results, mixed prediction dispositions and scientific-service closure.
 - **V21 scientific allocation complete:** [final report](docs/versions/v21-supporting-mechanisms/FINAL_REPORT.md).
