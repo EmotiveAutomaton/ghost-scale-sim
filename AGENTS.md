@@ -17,6 +17,26 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V24 preparation and separate pilot window (2026-10-19)
+
+Read `docs/versions/v24-powered-readers/README.md`, `PROTOCOL.md`,
+`IMPLEMENTATION_STATUS.md`, `CARDS.json`, `results/v24/preparation/` and the
+outer `.local/v24/HANDOFF.md`. Fourteen work cards are declared; only N16 has
+a prepared source-frozen pilot executor. Six new theory directions, optimizer
+repairs and twin speedups remain explicit design/integration work, not jobs.
+The independent law/mechanism block includes N9's complete five-case cycle;
+never reuse the superseded individual-case forecast as an evidence unit.
+
+No V24 scientific pilot has run. Admission opens October 22 at 00:00 Pacific
+and closes October 25 at 22:00; production cannot begin before October 26 at
+08:00 and is not admitted by the pilot runner. Keep the separate forty-hour
+CPU total, already-charged preparation, eight protected verification hours,
+two-worker maximum and single-thread below-normal priority. Execute N16 only
+from its immutable source capsule, with complete replay and independent review.
+The finite event/twelve-hour monitor is built but not launched. Verify native
+launch and delivery separately at opening; a prepared task is not a running job.
+Do not restart V23 or transfer its unused budget.
+
 ## V23 corrected implementation and calibrated opening (2026-10-14)
 
 V23 closed October 19. Read `docs/versions/v23-research-division/FINAL_REPORT.md`

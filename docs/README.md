@@ -12,6 +12,7 @@ state. Updated 10 October 2026.
 
 | Status | Entry point | Use |
 |---|---|---|
+| V24 preparation; scientific pilots not yet open | [V24 index](versions/v24-powered-readers/README.md) | Built N16 pilot, methods, work cards and explicit unbuilt scope |
 | Closed V23, finite allocation complete | [V23 index](versions/v23-research-division/README.md) | Current dispositions, confirmation arithmetic, conditional implementation and results |
 | Closed V22, seven finite mechanism tests | [V22 index](versions/v22-mechanism-tests/README.md) | Seven reviewed results, retained controls, final report and finite closure |
 | Closed V21, supporting mechanism program | [V21 final report](versions/v21-supporting-mechanisms/FINAL_REPORT.md) | Final scientific report and verified owned-service closure |

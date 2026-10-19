@@ -1,5 +1,7 @@
 # The methodology layer
 
+V24 preparation adds probability-mixture support bounds, predictable past-only betting, complete-law-and-mechanism blocks, eta-three search, and a posterior-rank instrument. The N16 forecast preserves five-case N9 pairing and remains design-only; targeted known-answer fixtures are excluded from science. [Protocol and limitations](versions/v24-powered-readers/PROTOCOL.md).
+
 N16 reconstructs all 49,152 cases, selection propensities and whole-law intervals after byte-identical replay. Public secondary results preserve every source/setting contrast, true-omitted subset and actual-count information denominator. Exhausting the six-item menu makes policy order irrelevant; the retained strict-comparison null at six reflects roundoff, not failed convergence. [Report](versions/v23-research-division/N16_REPORT.md).
 
 N16b retains N13's nine settings, frozen half-Brier margins and 13-of-16 power bar while appending two, four or eight binary conflict responses. The bridge is a declared coarsening of the ordinary four-category response; stake order is an exact alias. Complete raw replay is byte-identical, and two fresh retained-data reconstructions rebuild all 9,216 scores and law-block decisions without new cases. The first review-cap failure remains separate from the accepted repair. [Report](versions/v23-research-division/N16B_REPORT.md).

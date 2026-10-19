@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+**V24 preparation:** [bounded pilot protocol and work cards](docs/versions/v24-powered-readers/README.md). The first N16 pilot is built; pilots open October 22, production no earlier than October 26 at 08:00 Pacific. No V24 scientific run has started.
+
 V23's finite allocation is complete: 33 independently reviewed logical batches, comprising 19 main-family batches and 14 conditional studies, with 162 terminal execution packets and 22 retained runtime failures. Six discovery nominations remain unconfirmed. Designed probes improve recovery in the constructed scheduler study; directed conflicts do not repair FX1's power. No human-mechanism or automatic engine-admission claim follows. [V23 final report](docs/versions/v23-research-division/FINAL_REPORT.md).
 
 Does choosing probes by expected information beat the frozen fixed order? N16's 20%-randomized adaptive policy gains 0.056776 nats of true-mechanism log score at two added probes (95% whole-law interval 0.050350 to 0.063473), equally weighting N4d, N9, N11 and N15. All 49,152 cases, byte-identical replay and independent reconstruction verify. This is a positive constructed scheduler witness, not evidence about human questions or automatic engine admission. [N16 report](docs/versions/v23-research-division/N16_REPORT.md).
