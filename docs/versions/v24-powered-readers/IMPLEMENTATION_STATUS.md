@@ -1,8 +1,13 @@
-# V24 implementation status — October 19
+# V24 implementation status — October 20
 
 V23 is closed and published. V24 has no active scientific job. The finite
 design/pilot handoff is scheduled for October 22; the first pilot must still be
 admitted and checked in that window. Production remains separate.
+
+[October 20 preparation](PREPARATION_2026-10-20.md) adds a grouped certified-fit
+adapter, nine passed targeted checks and retained-input equivalence checks.
+A bounded complete retained-fixture replay/reconstruction job is active.
+It generates no scientific worlds and does not admit a fresh D5 or T1 pilot.
 
 The following rows distinguish code that exists from scientific work that ran.
 The final column names the next requirement for each component.
@@ -15,7 +20,7 @@ The final column names the next requirement for each component.
 | N16 retained calibration | 48 stream hashes and all 49,152 primary scores reproduced; complete-group forecast | Fresh pilot costs and uncertainty assessment |
 | N1 search | Eta-three schedule, complete-roster selection, corrected implausibility cut | Full model integration, objective, emulator and cost pilot |
 | Seed extension | One complete look, disjoint seeds, at most twice initial count | Frozen trigger, persistent controller receipt and valid final inference |
-| T1/D5 | Separate repair cards and retained failure prerequisites | Exact-computation changes, certified-fit equivalence and complete profiles |
+| T1/D5 | Grouped exact objective/Hessian adapter; retained T1 decimal check and nine D5 prefix equivalence checks | Complete retained fixture/replay/reconstruction, fresh full profiles and admission |
 | T3/T4 | Separate full-grid acceleration cards | Vectorized export implementation and exact-equivalence benchmarks |
 | Six new theory directions | Six distinct cards with questions, rivals, controls and dependencies | Generators, readers, frozen protocols, cost pilots and replays |
 | Conditional promotions | Evidence-based selection rules and retained FX1 failure route | Full source-by-source review and eligible powered-family designs |
