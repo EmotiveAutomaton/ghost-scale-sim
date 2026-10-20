@@ -6,9 +6,9 @@ Production cannot start before October 26 at 08:00. No V24 scientific pilot or
 production world has been drawn. Engineering fixtures are explicitly excluded.
 
 [October 20 checkpoint](PREPARATION_2026-10-20.md): all closed-result bindings
-reconcile, and a grouped certified-fit adapter is undergoing a complete retained
-fixture check. This is active engineering preparation, outside the scientific
-pilot queue.
+reconcile. The grouped certified-fit adapter passed complete retained-fixture
+replay and independent reconstruction. N16 and D5 now have frozen pilot packets
+and a finite queue; the completed engineering worker has exited.
 
 The owner requested further build preparation on October 19. The governing
 [October 18 packet](../v23-research-division/GHOST_SCALE_PACKET_2026-10-18.md),

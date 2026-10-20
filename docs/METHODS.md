@@ -1,5 +1,7 @@
 # The methodology layer
 
+V24's grouped certified-fit adapter preserves all choices and features while batching objective and Hessian arithmetic by option count. Its full retained fixture has 70,791 fitted calls, complete byte replay and independent scalar reconstruction of chronology, ridge selection, convergence certificates and predictions. Twelve twin exports retain exact canonical bytes in two processes, with source-bound fingerprint caching, truth rejection and copy isolation. Persistent seed decisions prevent repeat optional looks but do not confer fixed-sample inference. [October 20 scope and limitations](versions/v24-powered-readers/PREPARATION_2026-10-20.md).
+
 V24 preparation adds probability-mixture support bounds, predictable past-only betting, complete-law-and-mechanism blocks, eta-three search, and a posterior-rank instrument. The N16 forecast preserves five-case N9 pairing and remains design-only; targeted known-answer fixtures are excluded from science. [Protocol and limitations](versions/v24-powered-readers/PROTOCOL.md).
 
 N16 reconstructs all 49,152 cases, selection propensities and whole-law intervals after byte-identical replay. Public secondary results preserve every source/setting contrast, true-omitted subset and actual-count information denominator. Exhausting the six-item menu makes policy order irrelevant; the retained strict-comparison null at six reflects roundoff, not failed convergence. [Report](versions/v23-research-division/N16_REPORT.md).

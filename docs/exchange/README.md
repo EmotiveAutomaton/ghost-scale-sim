@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V24 preparation](ghost-to-curator-v24-preparation-2026-10-20.md): retained-fit acceleration verified; frozen N16/D5 queue awaits October 22. No new scientific witness or engine admission.
+
 [N4d complete](v23-n4d-response.md): visible stake variation separates weighted sacrifice from fixed goal order in the stipulated miniature; N4's main grid remains deferred.
 
 [N15 complete](v23-n15-response.md): second-source failures separate source-specific tracking from global vigilance in the stipulated miniature; no engine module is admitted.

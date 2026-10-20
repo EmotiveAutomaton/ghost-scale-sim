@@ -21,9 +21,14 @@ authorship and contribution records retain their original attribution.
 
 Read `docs/versions/v24-powered-readers/README.md`, `PROTOCOL.md`,
 `IMPLEMENTATION_STATUS.md`, `CARDS.json`, `results/v24/preparation/` and the
-outer `.local/v24/HANDOFF.md`. Fourteen work cards are declared; only N16 has
-a prepared source-frozen pilot executor. Six new theory directions, optimizer
-repairs and twin speedups remain explicit design/integration work, not jobs.
+outer `.local/v24/HANDOFF.md`. Also read `results/v24/CURRENT_STATUS.json` and
+`PREPARATION_2026-10-20.md` in the version folder. Fourteen work cards are
+declared; N16 and D5 have prepared source-frozen pilot executors. A finite
+source-bound queue runs N16 then D5, without retries or production. D5's exact
+fit adapter completed the full retained fixture, byte replay and independent
+certificate/prediction reconstruction. This is engineering evidence, not a
+fresh scientific result. Six new theory directions, full T1 integration and
+full twin-grid acceleration remain explicit design/integration work, not jobs.
 The independent law/mechanism block includes N9's complete five-case cycle;
 never reuse the superseded individual-case forecast as an evidence unit.
 
@@ -33,6 +38,7 @@ and closes October 25 at 22:00; production cannot begin before October 26 at
 CPU total, already-charged preparation, eight protected verification hours,
 two-worker maximum and single-thread below-normal priority. Execute N16 only
 from its immutable source capsule, with complete replay and independent review.
+The retained engineering job completed and exited; do not rerun it for occupancy.
 The finite event/twelve-hour monitor is built but not launched. Verify native
 launch and delivery separately at opening; a prepared task is not a running job.
 Do not restart V23 or transfer its unused budget.

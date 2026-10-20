@@ -1,4 +1,4 @@
-"""Finite V24 N16 pilot: prepare now, admit only in the authorized pilot window.
+"""Finite V24 N16/D5 pilots: admit only in the authorized pilot window.
 
 One campaign owner serializes science, replay and review. Failed ownership and
 reserved-cost receipts remain for native reconciliation, never automatic reset.
@@ -23,6 +23,14 @@ REPO=Path(__file__).resolve().parents[1]
 def now():return datetime.now(timezone.utc)
 
 
+def implementation(plan):
+    if plan['family']=='N16':return pilot
+    if plan['family']=='D5':
+        from ghostscale.validation.soundingline.v24 import d5
+        return d5
+    raise ValueError('unbuilt pilot family')
+
+
 def verify_sources(packet,plan):
     if REPO.resolve()!=(packet/'source').resolve():
         raise ValueError('run preflight and pilot parent from the immutable source capsule')
@@ -37,7 +45,7 @@ def verify_sources(packet,plan):
     if digest(packet.parent.parent/'ACCEPTANCE.json')!=plan['acceptance_sha256']:raise ValueError('acceptance changed')
     if read(packet.parent.parent/'ACCEPTANCE.json')!=contract.acceptance():raise ValueError('unknown pilot acceptance')
     if runtime.environment()!=plan['environment']:raise ValueError('scientific environment changed; do not synchronize')
-    pilot.validate_design(plan)
+    implementation(plan).validate_design(plan)
 
 
 def preflight(packet):
@@ -47,7 +55,7 @@ def preflight(packet):
     from ghostscale.validation.soundingline.v23 import ledger
     schema,_=ledger.canonical_schema(plan['schema_directory'],plan['schema_pin'])
     pilot.emit(schema,['v24-engineering-excluded','preflight'],{'fixture':'known-observation'})
-    controls=n16.model.controls()
+    controls=n16.model.controls() if plan['family']=='N16' else implementation(plan).preflight(plan)
     if not controls['passed']:raise ValueError('preflight controls failed')
     receipt=dict(state='PREFLIGHT_PASSED_NOT_ADMITTED',new_scientific_worlds=0,
         plan_sha256=digest(packet/'PLAN.json'),source_archive_sha256=plan['source_archive_sha256'],
@@ -116,18 +124,31 @@ def accounting(campaign,family):
     return charged,family_cost
 
 
+def progress_callback(packet,label,plan,started):
+    last=[-float('inf')]
+    def pulse(**progress):
+        elapsed=time.process_time()-started;current=now()
+        # Check every call; persist routine heartbeats at most every five seconds.
+        # D5 can evaluate its objective many times between target boundaries.
+        if elapsed>plan['cpu_cap_seconds']/3:raise TimeoutError('pilot pass CPU allowance')
+        if current>=datetime.fromisoformat(contract.CLOSE):raise TimeoutError('pilot window closed')
+        tick=time.monotonic()
+        if tick-last[0]>=5 or progress.get('phase') in ('starting','complete'):
+            write(packet/(label+'-progress.json'),dict(pid=os.getpid(),heartbeat=current.isoformat(),
+                cpu_seconds=elapsed,**progress),immutable=False)
+            last[0]=tick
+    return pulse
+
+
 def child(packet,label):
     plan=read(packet/'PLAN.json');contract.admission(plan,now(),0)
     runtime.child_handshake(packet,label);runtime.below_normal()
     verify_sources(packet,plan);started=time.process_time()
-    def pulse(**progress):
-        write(packet/(label+'-progress.json'),dict(pid=os.getpid(),heartbeat=now().isoformat(),
-            cpu_seconds=time.process_time()-started,**progress),immutable=False)
-        if time.process_time()-started>plan['cpu_cap_seconds']/3:raise TimeoutError('pilot pass CPU allowance')
-        if now()>=datetime.fromisoformat(contract.CLOSE):raise TimeoutError('pilot window closed')
+    pulse=progress_callback(packet,label,plan,started)
     pulse(phase='starting')
-    if label=='review':write(packet/'INDEPENDENT_REVIEW.json',pilot.reconstruct(packet/'original',plan,pulse))
-    else:pilot.execute(packet/label,plan,pulse)
+    worker=implementation(plan)
+    if label=='review':write(packet/'INDEPENDENT_REVIEW.json',worker.reconstruct(packet/'original',plan,pulse))
+    else:worker.execute(packet/label,plan,pulse)
     pulse(phase='complete')
 
 
@@ -174,8 +195,8 @@ def execute(packet):
                 if active.returncode:raise RuntimeError(f'{label} failed with exit {active.returncode}')
                 active=None
             if label=='replay':
-                originals={p.name:digest(p) for p in (packet/'original').iterdir() if p.is_file()}
-                repeats={p.name:digest(p) for p in (packet/'replay').iterdir() if p.is_file()}
+                originals={p.relative_to(packet/'original').as_posix():digest(p) for p in (packet/'original').rglob('*') if p.is_file()}
+                repeats={p.relative_to(packet/'replay').as_posix():digest(p) for p in (packet/'replay').rglob('*') if p.is_file()}
                 if originals!=repeats:raise ValueError('complete scientific replay mismatch')
                 write(packet/'REPLAY.json',dict(state='PASSED',files=originals))
         write(packet/'COMPLETE.json',dict(state='PILOT_VERIFIED',confirmation=False,

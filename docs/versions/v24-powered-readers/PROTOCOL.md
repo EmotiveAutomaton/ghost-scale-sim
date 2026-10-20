@@ -1,4 +1,4 @@
-# V24 pilot protocol, revision 1
+# V24 pilot protocol, revision 2
 
 This protocol declares preparation choices before any V24 scientific pilot.
 It does not alter V23's frozen results or commission confirmation in the pilot
@@ -109,6 +109,39 @@ pilot, discovery or confirmation evidence. No full pilot has run before the
 authorized opening. End-to-end native pilot acceptance must therefore be checked
 at opening; targeted tests alone do not establish it.
 
+## D5 exact-computation pilot and finite queue
+
+The October 20 preparation completes the old excluded D5 fixture with all
+three 128-target conditions and both full invariance controls. Original and
+replay bytes agree; an independent scalar checker reconstructs all 70,791
+fits, chronological memberships, ridge choices, convergence certificates and
+predictions. The old input/evaluator files regenerate exactly. This permits
+preparation of one fresh cost pilot, not a new scientific verdict.
+
+The adapter groups choices by option count when evaluating the objective and
+Hessian. It retains every choice and feature and leaves the pinned certified
+optimizer, Newton finish and acceptance certificate unchanged. Its code is a
+separate Ghost adapter; no canonical engine module is modified or admitted.
+The old failures and forty-world scientific criteria remain unchanged.
+
+The fresh identity is `v24-d5-pilot-1`, world zero, with the unique namespace
+`ghost-v24-d5-pilot-1`. It retains eight writers, sixteen rounds, all three
+conditions, the 48-target future-label prefix and the same option permutation.
+All generated public inputs, evaluator truth, canonical ledger transport,
+coefficient traces and predictions are retained separately. Full fresh-process
+replay covers every nested file. Independent review regenerates inputs,
+checks canonical transport and reconstructs every fit and prediction.
+This is an excluded cost/control pilot; no effect interval or confirmation
+decision is made from its one world.
+
+The source-frozen queue runs N16 then D5, one pilot at a time. Each parent
+serializes original, replay and independent review under a 5,400-CPU-second
+and four-hour wall cap. The controller verifies completion bindings before
+advancing, stops on failure or exhaustion, and refuses automatic retries.
+The original October 22 opening and October 25 ending remain fixed. Prepared
+preflights establish source and control readiness; actual scientific execution
+and future task delivery have not yet occurred.
+
 ## Search and extensions
 
 N1's implemented scheduling primitive uses eta=3 over all 240 cells, retaining
@@ -126,9 +159,14 @@ emulator and observational target are not yet implemented or fitted.
 
 Seed expansion requires a complete initial look, a prospectively frozen
 promisingness rule, and one disjoint extension of at most the original count.
-The primitive refuses incomplete or already-expanded looks. A controller must
-persist the consumed-extension receipt; the helper alone is not admission or
-optional-stopping validity. The implemented direct-reader rank instrument uses
+The primitive refuses incomplete or already-expanded looks. The persistent
+wrapper now freezes the initial seed roster, protocol hash and mean threshold
+before data. A complete initial mean at or above that threshold permits one
+extension. Both positive and negative decisions consume an exclusive, flushed
+receipt; a partial receipt after interruption is a hold, not another look.
+Family-specific thresholds remain to be declared. This descriptive pilot
+helper does not authorize fixed-sample inference after optional expansion.
+The implemented direct-reader rank instrument uses
 100 independent posterior draws and an independently recorded uniform draw to
 break discrete ties. Truth must be sampled from the prior and observations from
 its likelihood; fixed-truth sweeps do not satisfy the calibration contract.
@@ -137,6 +175,6 @@ follows the joint-distribution requirement in
 [Talts et al.](https://arxiv.org/html/1804.06788v2). Unsupported readers stay
 unavailable; no posterior sampler has been invented for point-only readers.
 
-Six new conceptual directions, optimizer repairs, full-grid export acceleration,
-dependency isolation and conditional promotion decisions are declared separately
-in CARDS.json. Their design status is not a scientific null or a runnable queue.
+Six new conceptual directions, full T1 integration, full-grid export acceleration,
+dependency isolation and further promotion decisions remain separate work in
+CARDS.json. Their pending status is not a scientific null or a runnable queue.

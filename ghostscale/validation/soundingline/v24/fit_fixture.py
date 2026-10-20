@@ -49,8 +49,8 @@ def inputs(plan, condition):
     return records, labels
 
 
-def execute(root, plan, pulse):
-    verify_inputs(plan)
+def execute(root, plan, pulse, *, input_validator=verify_inputs):
+    input_validator(plan)
     root = Path(root)
     root.mkdir(parents=True, exist_ok=False)
     model = load_certified(plan["backbone_source"], plan["backbone_sha256"],
@@ -111,8 +111,8 @@ def objective_gradient(rows, labels, arm, center, offset, penalty):
     return loss, np.asarray(gradient)
 
 
-def reconstruct(root, plan, pulse):
-    verify_inputs(plan)
+def reconstruct(root, plan, pulse, *, input_validator=verify_inputs):
+    input_validator(plan)
     root = Path(root)
     raw = read(root/"RAW_INDEX.json")
     expected = {f"{c}_{suffix}" for c in CONDITIONS for suffix in
