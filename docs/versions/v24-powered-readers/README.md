@@ -65,6 +65,13 @@ distribution metadata. Zero worlds completed and neither replay nor independent
 review ran. This is an apparatus failure, not a T1 scientific result. Its full
 reservation remains charged and V24 will not retry it.
 
+The [T3 complete-grid cost profile](T3_COST_PROFILE_FAILURE.md) passed its
+metadata-aware known-answer export preflight, then exhausted the original
+pass allowance at maker 2,833 of the largest of 24 settings. No world, replay
+or independent review completed. The full reservation remains charged without
+retry. This is a resource/runtime failure, not a T3 mechanism result; complete
+cost remains unknown and T4 remains unprepared.
+
 Forty CPU-hours cover preparation, failed attempts, pilots and verification.
 Two single-thread, below-normal workers are the ceiling; the built N16 runner
 serializes its original, replay and independent review under one campaign owner.

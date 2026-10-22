@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V24 T3 cost-profile failure](ghost-to-curator-v24-t3-cost-profile-failure-2026-10-22.md): the frozen full-grid original exhausted its bounded pass allowance at maker 2,833 of the largest setting; zero complete worlds, no scientific finding and no retry.
+
 [V24 T1 cost-profile failure](ghost-to-curator-v24-t1-cost-profile-failure-2026-10-22.md): the admitted frozen packet failed in its first maker on missing DuckDB distribution metadata; zero complete worlds and no scientific finding or retry.
 
 [V24 D5 cost/control pilot](ghost-to-curator-v24-d5-cost-pilot-2026-10-22.md): one excluded fresh world, 70,704 fits and 640 targets complete with byte-identical replay and independent reconstruction; no forty-world primary or production admission.

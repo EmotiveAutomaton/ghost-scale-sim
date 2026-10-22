@@ -8,7 +8,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V24 | Pilot window active; N16 and D5 verified; admitted T1 cost profile failed as an apparatus with zero complete worlds and no retry; no production before October 26 08:00 Pacific | [Program index](v24-powered-readers/README.md) |
+| V24 | Pilot window active; N16 and D5 verified; T1 and T3 retained as zero-complete-world runtime failures without retry; no production before October 26 08:00 Pacific | [Program index](v24-powered-readers/README.md) |
 | V23 | Closed October 19; 33 reviewed logical batches, six unconfirmed nominations, failures and unexecuted frontier retained | [Final report](v23-research-division/FINAL_REPORT.md) |
 | V22 | Closed finite seven-study pass; all results verified, no confirmation | [Program index](v22-mechanism-tests/README.md) |
 | V21 | Scientific allocation complete; excess reader error established, no maker-mechanism promotion; incomplete frontier retained | [Final report](v21-supporting-mechanisms/FINAL_REPORT.md) |

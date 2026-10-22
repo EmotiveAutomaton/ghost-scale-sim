@@ -1,13 +1,13 @@
 {
   "accounting": {
-    "charged_cpu_seconds": 24858.828125,
-    "remaining_cpu_seconds": 119141.171875,
-    "remaining_unprotected_cpu_seconds": 90341.171875,
+    "charged_cpu_seconds": 24886.296875,
+    "remaining_cpu_seconds": 119113.703125,
+    "remaining_unprotected_cpu_seconds": 90313.703125,
     "total_cpu_seconds": 144000,
     "verification_reserve_seconds": 28800
   },
   "admitted": 4,
-  "at": "2026-10-22T08:57:47.308946+00:00",
+  "at": "2026-10-22T09:51:35.110586+00:00",
   "completed_pilots": [
     {
       "cases": 15360,
@@ -29,7 +29,7 @@
       "worlds": 1
     }
   ],
-  "estimate_limits": "N16 remains descriptive and unpowered. D5 is one excluded cost/control world. T1 produced zero complete worlds and no cost or scientific estimate.",
+  "estimate_limits": "N16 remains descriptive and unpowered. D5 is one excluded cost/control world. T1 and T3 produced zero complete worlds; neither supplies a scientific estimate, and T3 does not supply a complete profile cost.",
   "execution_order": ["N16", "D5", "T1", "T3"],
   "failed_packets": [
     {
@@ -42,12 +42,23 @@
       "result_sha256": "55e9bd16184693caa26cf2f5a3b5c5657823b24bb8c360351a777737835c0a3d",
       "scientific_disposition": "NO_FINDING_APPARATUS_FAILURE",
       "state": "RUNTIME_FAILED_RETAINED"
+    },
+    {
+      "actual_cpu_seconds": 2385.0625,
+      "family": "T3",
+      "id": "v24-t3-cost-profile-1",
+      "new_complete_worlds": 0,
+      "reason": "Original pass exhausted its immutable per-pass CPU allowance at maker 2833 of the largest setting.",
+      "reserved_cpu_seconds": 7140.0,
+      "result_sha256": "7daea28d1fe6cbabbf97ad98ccbaf744eabb23dff9ededd25aa6510ed9cd0e34",
+      "scientific_disposition": "NO_FINDING_RESOURCE_FAILURE",
+      "state": "RUNTIME_FAILED_RETAINED"
     }
   ],
   "finite_queue_manifest_sha256": "a9f41d8012cca72f9578330fb28ceba77aba8583c0ff4e2ea39942f4fe7526ce",
   "finite_queue_preflight_sha256": "cc29d7fd3f8139432ac0cdc2a6bdbcc48095750d41c5dc8578fa5a430894a8e3",
   "new_theory_design_cards": 6,
-  "next_eligible_card": "T3 is the sole active cost-profile packet. Review its terminal event before any later card decision.",
+  "next_eligible_card": "No source-frozen packet is currently eligible. T3 is retained without retry; T4 remains unprepared with missing empirical targets, and the failure review stays disarmed pending evidenced repair.",
   "pilot_close": "2026-10-25T22:00:00-07:00",
   "pilot_open": "2026-10-22T00:00:00-07:00",
   "prepared_packets": [
@@ -87,9 +98,9 @@
   ],
   "preparation_failures_retained": 3,
   "production_not_before": "2026-10-26T08:00:00-07:00",
-  "running": 1,
-  "running_packet": "v24-t3-cost-profile-1",
-  "state": "T1_FAILURE_LANDED_T3_COST_PROFILE_RUNNING",
+  "running": 0,
+  "running_packet": null,
+  "state": "T1_AND_T3_FAILURES_RETAINED_NO_ACTIVE_SCIENCE",
   "unbuilt_cards_are_not_queued_scientific_jobs": true,
   "work_cards": 14
 }

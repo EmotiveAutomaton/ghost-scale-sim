@@ -57,5 +57,7 @@ The dependency builder now also freezes the retained distribution metadata, and
 the preflight executes a known-answer canonical engine export rather than merely
 importing the engine hash surface. The distinct T3 complete-grid cost profile
 passed that strengthened zero-world preflight and was admitted as the sole V24
-scientific job at 01:55 Pacific. It remains running; no T3 result is reported
-until original, replay and independent review terminate and reconcile.
+scientific job at 01:55 Pacific. Its original pass later exhausted the immutable
+per-pass CPU allowance at maker 2,833 of the largest setting. No complete world,
+replay or independent review exists. The retained resource failure is documented
+in the [T3 failure report](T3_COST_PROFILE_FAILURE.md); no retry is admitted.

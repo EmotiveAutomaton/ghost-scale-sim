@@ -29,7 +29,7 @@ The final column names the next requirement for each component.
 | Seed extension | Persistent frozen plan, complete initial look, one durable decision, disjoint extension | Family-specific prospective trigger and a separately valid inferential design |
 | D5 | Complete retained equivalence; fresh one-world cost/control pilot, byte replay and independent reconstruction verified in 1,694.875 CPU-seconds | Forty-world primary remains undecided; any powered design needs separate budget and admission |
 | T1 | Exact arithmetic, retained failed-fit decimal check and complete-grid path; admitted source-frozen profile failed in its first maker on missing DuckDB distribution metadata | Apparatus failure retained with zero complete worlds; no retry in this allocation and no scientific disposition |
-| T3/T4 | Exact export cache, complete-grid path and independent native-score reconstruction; T3's metadata-aware frozen packet passed a known-answer engine-export preflight and is the sole active cost profile | Await T3 terminal replay/review evidence; T4 remains unprepared and missing empirical targets remain unavailable |
+| T3/T4 | Exact export cache, complete-grid path and independent native-score reconstruction; T3's metadata-aware frozen packet passed a known-answer export preflight but exhausted its original pass allowance at maker 2,833 of the largest setting | T3 is retained with zero complete worlds and no retry; T4 remains unprepared and missing empirical targets remain unavailable |
 | Six new theory directions | Separate finite generators/readers and known-answer controls for needs/drives, set-points, play/uncertainty, higher-goal editing, context convergence and disturbance | Freeze family-specific protocols and source capsules; run largest-cell cost pilots, complete replay and independent review before admission |
 | Conditional promotions | Evidence-based selection rules and retained FX1 failure route | Full source-by-source review and eligible powered-family designs |
 | pymdp / reader calibration | Isolated dependency card; checked posterior-rank and tie-handling instrument | Separate environment, source pins and actual posterior sampler integration |
@@ -46,6 +46,13 @@ after admission when a deeper engine import requested DuckDB distribution
 metadata absent from the frozen dependency tree. Five partial files, the child
 traceback, 3.5 measured CPU-seconds and the full 10,717.421875-second reservation
 are retained. No complete world, replay or independent review exists.
+
+The distinct T3 packet included the missing dependency metadata and traversed a
+known-answer canonical engine export before admission. It then exhausted its
+immutable original-pass CPU allowance at maker 2,833 of the largest setting.
+The complete 51,050-file partial raw tree is retained and independently hashed;
+no world summary, replay or review exists. The 7,140-second reservation remains
+charged and T3 will not be retried in this allocation.
 
 During October 19 preparation, two test invocations encountered output-directory setup errors. A later full
 transport fixture caught the missing isolated schema runtime; its pinned
