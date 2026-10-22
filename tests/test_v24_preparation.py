@@ -72,6 +72,44 @@ def test_complete_search_roster_and_ties_and_latest_implausibility_cut():
     assert not search.history_match(1,0,0,0,0)['retain']
 
 
+def test_n1_successive_halving_retains_every_score_and_uses_disjoint_worlds():
+    roster=[f'cell-{i:03d}' for i in range(240)];calls=[]
+    order={name:i for i,name in enumerate(roster)}
+    def evaluate(active,worlds,round_):
+        calls.append((active,worlds,round_))
+        return {name:float(order[name]) for name in active}
+    result=search.successive_halving(roster,evaluate)
+    assert result['state']=='SEARCH_COMPLETE_NOT_CONFIRMATION'
+    assert result['selected']=='cell-239' and result['total_worlds']==1048
+    assert [len(r['cells']) for r in result['rounds']]==[240,80,27,9,3,1]
+    assert [r['new_world_indices'] for r in result['rounds']]==[
+        [0],[1,2],[3,4,5,6,7,8],list(range(9,27)),list(range(27,81)),list(range(81,243))]
+    assert sum(len(r['scores']) for r in result['rounds'])==360
+    assert not result['confirmation']
+
+
+def test_n1_successive_halving_refuses_missing_and_nonfinite_scores():
+    with pytest.raises(ValueError):
+        search.successive_halving(['a','b'],lambda active,worlds,round_: {'a':1.})
+    with pytest.raises(ValueError):
+        search.successive_halving(['a','b'],lambda active,worlds,round_: {'a':1.,'b':math.nan})
+
+
+def test_n1_successor_requires_complete_frozen_search_plan():
+    from ghostscale.validation.soundingline.v23 import registry
+    from ghostscale.validation.soundingline.v24.population_successor import validate_design
+    variants=[row['id'] for row in registry.variants('N1')]
+    plan=dict(kind='pilot',task='v24-n1-search',family='N1',confirmation=False,
+              production=False,variant_ids=variants,
+              objective='mean law-marginal minus individual log-loss gain',
+              initial_worlds=1,eta=3,cpu_cap_seconds=10800,canary_key='0'*64)
+    assert validate_design(plan)==variants
+    with pytest.raises(ValueError,match='complete fixed'):
+        validate_design(dict(plan,variant_ids=variants[:-1]))
+    with pytest.raises(ValueError,match='objective'):
+        validate_design(dict(plan,objective='outcome-dependent substitute'))
+
+
 def test_seed_extension_requires_one_complete_look_and_caps_at_double():
     planned=[2,7,10]
     extension=search.seed_extension(planned,planned,True)

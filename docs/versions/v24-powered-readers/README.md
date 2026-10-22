@@ -3,12 +3,19 @@
 Prepared October 19 after V23's verified closeout. This is a separate allocation:
 **pilots open October 22 at 00:00 Pacific and end October 25 at 22:00**.
 Production cannot start before October 26 at 08:00. No V24 scientific pilot or
-production world has been drawn. Engineering fixtures are explicitly excluded.
+production world had been drawn during preparation. Engineering fixtures are
+explicitly excluded. At the October 22 opening, the finite source-frozen queue
+was admitted to run N16 and then D5; an active heartbeat is not a completed
+result.
 
 [October 20 checkpoint](PREPARATION_2026-10-20.md): all closed-result bindings
 reconcile. The grouped certified-fit adapter passed complete retained-fixture
 replay and independent reconstruction. N16 and D5 now have frozen pilot packets
 and a finite queue; the completed engineering worker has exited.
+
+[October 22 opening implementation](PREPARATION_2026-10-22.md) records the
+separate, unadmitted N1/twin/theory engineering built while the immutable queue
+runs. Those live-checkout changes are not imported by the frozen N16/D5 queue.
 
 The owner requested further build preparation on October 19. The governing
 [October 18 packet](../v23-research-division/GHOST_SCALE_PACKET_2026-10-18.md),

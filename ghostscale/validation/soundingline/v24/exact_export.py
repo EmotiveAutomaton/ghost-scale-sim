@@ -77,3 +77,47 @@ class ExactExporter:
             raise ValueError("truth canary reached export")
         result["reader_hash"]=engine_digest(result)
         return result
+
+    def verify_export(self, root, variant, bundle, *, canaries=()):
+        """Write the ordinary bridge artifact using one source-verified cache.
+
+        This is intentionally the same public contract as V23's per-maker
+        ``verify_export``.  The caller owns the exporter for a complete world,
+        so source fingerprints and immutable content conversions are reused
+        without changing row identity, order, or the canonical output.
+        """
+        from ..v23 import engine_bridge
+        from ..v23.common import canonical, write
+
+        root = Path(root)
+        root.mkdir(parents=True, exist_ok=False)
+        exported = self.export(bundle, canaries=canaries)
+        write(root / "reader.json", exported)
+
+        from tompathy_engine.ghost.bridge import load_reader, reader_choices
+        rows, texts = load_reader(root / "reader.json")
+        choices = reader_choices(rows)
+        native = engine_bridge.native_view(exported, self.schema)
+        if variant["family"].startswith("T"):
+            from ..v23.twin_ledger import decode
+        else:
+            decode = ledger.decode
+        if canonical(decode(variant, native, self.schema)) != canonical(
+                decode(variant, bundle, self.schema)):
+            raise ValueError("cached engine projection changed native observations")
+        ledger.export(root / "canonical", native)
+        receipt = dict(
+            state="ENGINE_TRANSPORT_VERIFIED",
+            implementation_hash=exported["implementation_hash"],
+            ledger_schema_hash=exported["ledger_schema_hash"],
+            reader_hash=exported["reader_hash"],
+            records=len(rows),
+            resolved_baseline_choices=len(choices),
+            blob_count=len(texts),
+            native_observations_recovered=True,
+            scientific_engine_admission=False,
+            limitation=("Observable option-feature baseline only; native exact "
+                        "inference and hidden labels are not engine inputs."),
+        )
+        write(root / "CONFORMANCE.json", receipt)
+        return receipt

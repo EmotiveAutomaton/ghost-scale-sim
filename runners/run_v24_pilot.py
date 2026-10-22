@@ -28,6 +28,12 @@ def implementation(plan):
     if plan['family']=='D5':
         from ghostscale.validation.soundingline.v24 import d5
         return d5
+    if plan['family'] in ('T1','T3','T4'):
+        from ghostscale.validation.soundingline.v24 import twin_successor
+        return twin_successor
+    if plan['family']=='N1':
+        from ghostscale.validation.soundingline.v24 import population_successor
+        return population_successor
     raise ValueError('unbuilt pilot family')
 
 

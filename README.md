@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-**V24 preparation:** [bounded pilot protocol and work cards](docs/versions/v24-powered-readers/README.md). N16 and D5 have frozen pilot packets and a finite queue; pilots open October 22, production no earlier than October 26 at 08:00 Pacific. No V24 scientific run has started. [October 20 verified preparation](docs/versions/v24-powered-readers/PREPARATION_2026-10-20.md).
+**V24 pilots:** [bounded pilot protocol and work cards](docs/versions/v24-powered-readers/README.md). N16's first fresh bounded-mixture pilot is verified: its randomized adaptive probe policy gains 0.066551 nats over the fixed order across four balanced blocks and 15,360 cases. This is descriptive pilot evidence, not powered confirmation or production admission. D5 continues under the frozen finite queue; production remains separate and no earlier than October 26 at 08:00 Pacific. [N16 pilot report](docs/versions/v24-powered-readers/N16_PILOT_REPORT.md).
 
 V23's finite allocation is complete: 33 independently reviewed logical batches, comprising 19 main-family batches and 14 conditional studies, with 162 terminal execution packets and 22 retained runtime failures. Six discovery nominations remain unconfirmed. Designed probes improve recovery in the constructed scheduler study; directed conflicts do not repair FX1's power. No human-mechanism or automatic engine-admission claim follows. [V23 final report](docs/versions/v23-research-division/FINAL_REPORT.md).
 
