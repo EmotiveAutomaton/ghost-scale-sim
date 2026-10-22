@@ -134,12 +134,18 @@ def preflight(plan):
     schema, _ = ledger.canonical_schema(plan["schema_directory"], plan["schema_pin"])
     exact = exporter(plan, schema)
     backbone = certified_backbone(plan)
+    from . import pilot
+    known = pilot.emit(schema, ["v24-engineering-excluded", "twin-export-preflight"],
+                       {"fixture": "known-observation"})
+    exported = exact.export(known)
     return dict(passed=True, full_grid=len(expected), world_indices=[0],
                 scientific_worlds=0, cost_profile_only=True,
                 confirmation=False, production=False,
                 engine_sources_verified=len(exact.engine_files),
                 engine_implementation_hash=exact.implementation,
-                certified_backbone_loaded=backbone.__name__)
+                certified_backbone_loaded=backbone.__name__,
+                known_bundle_records=sum(len(rows) for rows in known["rows"].values()),
+                engine_known_bundle_exported=len(exported["records"])>0)
 
 
 def evaluate_world(root, variant, phase, world, reference, schema, key, pulse,

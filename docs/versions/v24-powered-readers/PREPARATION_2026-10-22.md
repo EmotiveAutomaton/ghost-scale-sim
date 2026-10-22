@@ -52,3 +52,10 @@ first maker because DuckDB's frozen Python module required package-distribution
 metadata that the capsule did not contain. The runtime reservation remains
 charged; there is no V24 retry and no scientific result. See the
 [failure report](T1_COST_PROFILE_FAILURE.md).
+
+The dependency builder now also freezes the retained distribution metadata, and
+the preflight executes a known-answer canonical engine export rather than merely
+importing the engine hash surface. The distinct T3 complete-grid cost profile
+passed that strengthened zero-world preflight and was admitted as the sole V24
+scientific job at 01:55 Pacific. It remains running; no T3 result is reported
+until original, replay and independent review terminate and reconcile.

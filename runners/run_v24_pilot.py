@@ -170,6 +170,14 @@ def prepare_twin(campaign,predecessor_plan,family):
             raise ValueError(f'dependency root is ambiguous or missing: {original}')
         target=dependency_target/matches[0];target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(original,target)
+    metadata_files=0
+    for root in roots:
+        for metadata in sorted(root.glob('*.dist-info')):
+            for original in sorted(metadata.rglob('*')):
+                if not original.is_file():continue
+                target=dependency_target/original.relative_to(root)
+                target.parent.mkdir(parents=True,exist_ok=True)
+                shutil.copyfile(original,target);metadata_files+=1
 
     reference=source/'inputs'/f'{family}_REFERENCE.json';reference.parent.mkdir()
     empirical_source=source/'inputs'/f'{family}_SOURCE.json'
@@ -230,6 +238,7 @@ def prepare_twin(campaign,predecessor_plan,family):
         cpu_cap_seconds=cpu_cap,wall_cap_seconds=12*3600,
         family_charged_before_preparation=family_charged,
         preparation_headroom_seconds=preparation_headroom,
+        dependency_metadata_files=metadata_files,
         source_files=hashes,source_archive_sha256=digest(packet/'SOURCE.zip'),
         acceptance_sha256=digest(campaign/'ACCEPTANCE.json'),
         schema_directory=str(schema),schema_pin={k:v for k,v in previous['schema_pin'].items() if k!='directory'},

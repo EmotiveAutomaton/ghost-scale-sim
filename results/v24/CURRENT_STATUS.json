@@ -1,13 +1,13 @@
 {
   "accounting": {
-    "charged_cpu_seconds": 17711.078125,
-    "remaining_cpu_seconds": 126288.921875,
-    "remaining_unprotected_cpu_seconds": 97488.921875,
+    "charged_cpu_seconds": 24858.828125,
+    "remaining_cpu_seconds": 119141.171875,
+    "remaining_unprotected_cpu_seconds": 90341.171875,
     "total_cpu_seconds": 144000,
     "verification_reserve_seconds": 28800
   },
-  "admitted": 3,
-  "at": "2026-10-22T08:49:30.926053+00:00",
+  "admitted": 4,
+  "at": "2026-10-22T08:57:47.308946+00:00",
   "completed_pilots": [
     {
       "cases": 15360,
@@ -30,7 +30,7 @@
     }
   ],
   "estimate_limits": "N16 remains descriptive and unpowered. D5 is one excluded cost/control world. T1 produced zero complete worlds and no cost or scientific estimate.",
-  "execution_order": ["N16", "D5", "T1"],
+  "execution_order": ["N16", "D5", "T1", "T3"],
   "failed_packets": [
     {
       "actual_cpu_seconds": 3.5,
@@ -47,7 +47,7 @@
   "finite_queue_manifest_sha256": "a9f41d8012cca72f9578330fb28ceba77aba8583c0ff4e2ea39942f4fe7526ce",
   "finite_queue_preflight_sha256": "cc29d7fd3f8139432ac0cdc2a6bdbcc48095750d41c5dc8578fa5a430894a8e3",
   "new_theory_design_cards": 6,
-  "next_eligible_card": "T3 remains unadmitted. Before a frozen packet can be eligible, dependency isolation must retain distribution metadata and a zero-world control must traverse the DuckDB-backed export path.",
+  "next_eligible_card": "T3 is the sole active cost-profile packet. Review its terminal event before any later card decision.",
   "pilot_close": "2026-10-25T22:00:00-07:00",
   "pilot_open": "2026-10-22T00:00:00-07:00",
   "prepared_packets": [
@@ -74,13 +74,22 @@
       "plan_sha256": "53f8d5bc09e2bde708e304537df1be07f7ed91577927c948170a89e2c1fbc8e4",
       "preflight_sha256": "934e9856de940324dc6f1e98dbc4c0e28a095819dc3119f15c59357b186e5960",
       "source_archive_sha256": "d272f358d0fbb7350e49992039f51244976972d6744aa9a0d68f6e6621d240b9"
+    },
+    {
+      "cpu_cap_seconds": 7140.0,
+      "dependency_metadata_files": 45,
+      "family": "T3",
+      "id": "v24-t3-cost-profile-1",
+      "plan_sha256": "0aa4e0796763d48e56509f82fa76e3ef8aacf9d44839b53c109e34d4d17d815c",
+      "preflight_sha256": "6f239e20d5d8ebc8b2532ed5d6e37c51f830f453571c870c1cf4f2da7a13f9fa",
+      "source_archive_sha256": "a7c3345c5732db78210192d993b194e6cd6e5349148a1b0ed1f950a145fc9df3"
     }
   ],
   "preparation_failures_retained": 3,
   "production_not_before": "2026-10-26T08:00:00-07:00",
-  "running": 0,
-  "running_packet": null,
-  "state": "T1_RUNTIME_FAILED_RETAINED_DEPENDENCY_REPAIR_REQUIRED",
+  "running": 1,
+  "running_packet": "v24-t3-cost-profile-1",
+  "state": "T1_FAILURE_LANDED_T3_COST_PROFILE_RUNNING",
   "unbuilt_cards_are_not_queued_scientific_jobs": true,
   "work_cards": 14
 }
