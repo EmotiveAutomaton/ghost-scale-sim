@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V24 D5 cost/control pilot](ghost-to-curator-v24-d5-cost-pilot-2026-10-22.md): one excluded fresh world, 70,704 fits and 640 targets complete with byte-identical replay and independent reconstruction; no forty-world primary or production admission.
+
 [V24 N16 pilot](ghost-to-curator-v24-n16-pilot-2026-10-22.md): four fresh balanced blocks and 15,360 cases verify a 0.066551-nat bounded adaptive-policy gain; descriptive pilot evidence only, not confirmation or production admission.
 
 [V24 preparation](ghost-to-curator-v24-preparation-2026-10-20.md): retained-fit acceleration verified; frozen N16/D5 queue awaits October 22. No new scientific witness or engine admission.

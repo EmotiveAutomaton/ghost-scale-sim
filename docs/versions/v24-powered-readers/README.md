@@ -50,6 +50,14 @@ five-case groups, retaining the final four incomplete cases in the epsilon
 calibration but excluding them from sample sizing. The correction changes the
 future evidence unit, not any V23 result. Full details are in the protocol.
 
+The [fresh D5 exact-fit cost/control pilot](D5_COST_PILOT_REPORT.md) completes
+one excluded world, five 128-target paths and 70,704 chronological fits with
+byte-identical replay and independent reconstruction. Its 1,694.875-CPU-second
+packet verifies cost and controls only. It does not decide the forty-world
+primary or repair V23's retained failures. Linear full-study scaling is about
+18.8 CPU-hours for original, replay and review: below the 64-hour future bar,
+above the current four-hour D5 family allowance, and not an admission.
+
 Forty CPU-hours cover preparation, failed attempts, pilots and verification.
 Two single-thread, below-normal workers are the ceiling; the built N16 runner
 serializes its original, replay and independent review under one campaign owner.
