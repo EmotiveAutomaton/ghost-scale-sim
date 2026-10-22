@@ -131,9 +131,15 @@ def validate_profile_plan(plan):
 
 def preflight(plan):
     expected = validate_profile_plan(plan)
+    schema, _ = ledger.canonical_schema(plan["schema_directory"], plan["schema_pin"])
+    exact = exporter(plan, schema)
+    backbone = certified_backbone(plan)
     return dict(passed=True, full_grid=len(expected), world_indices=[0],
                 scientific_worlds=0, cost_profile_only=True,
-                confirmation=False, production=False)
+                confirmation=False, production=False,
+                engine_sources_verified=len(exact.engine_files),
+                engine_implementation_hash=exact.implementation,
+                certified_backbone_loaded=backbone.__name__)
 
 
 def evaluate_world(root, variant, phase, world, reference, schema, key, pulse,

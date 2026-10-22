@@ -1,1 +1,86 @@
-{"accounting":{"charged_cpu_seconds":6962.171875,"remaining_cpu_seconds":137037.828125,"remaining_unprotected_cpu_seconds":108237.828125,"total_cpu_seconds":144000,"verification_reserve_seconds":28800},"admitted":2,"at":"2026-10-22T08:19:44.483082+00:00","completed_pilots":[{"cases":15360,"cpu_seconds":2182.703125,"family":"N16","id":"v24-n16-pilot-1","mean_bounded_log_score_gain_nats":0.06655138151492096,"result_sha256":"1548fdfdc19fff27f2b4598ddd64b00ce541bcccadae2b1aae146e77a516c99b","state":"PILOT_MEASUREMENT_VERIFIED"},{"cpu_seconds":1694.875,"family":"D5","fit_calls":70704,"id":"v24-d5-pilot-1-r1","result_sha256":"36245f95e89e927a3cfbea018de7f310c08a97a08c33de367633f897c91c0100","state":"COST_CONTROL_PILOT_VERIFIED","targets":640,"worlds":1}],"estimate_limits":"N16 remains descriptive and unpowered. D5 is one excluded cost/control world; its linear 18.8-CPU-hour forty-world estimate is not a production admission or power guarantee.","execution":"The frozen serial N16/D5 queue completed both original, full replay and independent review passes without retry.","execution_order":["N16","D5"],"finite_queue_manifest_sha256":"a9f41d8012cca72f9578330fb28ceba77aba8583c0ff4e2ea39942f4fe7526ce","finite_queue_preflight_sha256":"cc29d7fd3f8139432ac0cdc2a6bdbcc48095750d41c5dc8578fa5a430894a8e3","new_theory_design_cards":6,"next_eligible_card":"T1 requires a separately frozen bounded profile packet, complete measured cost profile, replay and independent review before admission.","pilot_close":"2026-10-25T22:00:00-07:00","pilot_open":"2026-10-22T00:00:00-07:00","prepared_packets":[{"cpu_cap_seconds":5400,"family":"N16","id":"v24-n16-pilot-1","plan_sha256":"9a0b32ab886dbdbb23f876713d3607aee65cb519c8dddfd2d4f6e3eb2d4ea0c5","preflight_sha256":"56de1478a8f4bb2472d754f42d015e05e4cebe65ee12d491d28fc3a6ccbe039d","source_archive_sha256":"a46ad5f07ae6f692a20385aef900a5d803a0b92ccaf8f8dbbf722afb7a6959bf","wall_cap_seconds":14400},{"cpu_cap_seconds":5400,"family":"D5","id":"v24-d5-pilot-1-r1","plan_sha256":"e794d08649ff6f4d4149976be904e1ff0c0cb525b934641688314d0647dd7fcb","preflight_sha256":"ce40f6592fb3abde6d112aac72214e54b46951b6e00bcd308077410127a40858","source_archive_sha256":"9362ceb594db0111e0728dc4b437e9455849c2588dea7e500f5d62a165057cb6","wall_cap_seconds":14400}],"production_not_before":"2026-10-26T08:00:00-07:00","retained_engineering_complete":true,"running":0,"running_packet":null,"state":"FROZEN_QUEUE_COMPLETE_SUCCESSOR_PREPARATION_REQUIRED","unbuilt_cards_are_not_queued_scientific_jobs":true,"unexecuted_predecessor_preserved":"v24-d5-pilot-1; superseded before admission by a heartbeat-persistence repair","work_cards":14}
+{
+  "accounting": {
+    "charged_cpu_seconds": 17711.078125,
+    "remaining_cpu_seconds": 126288.921875,
+    "remaining_unprotected_cpu_seconds": 97488.921875,
+    "total_cpu_seconds": 144000,
+    "verification_reserve_seconds": 28800
+  },
+  "admitted": 3,
+  "at": "2026-10-22T08:49:30.926053+00:00",
+  "completed_pilots": [
+    {
+      "cases": 15360,
+      "cpu_seconds": 2182.703125,
+      "family": "N16",
+      "id": "v24-n16-pilot-1",
+      "mean_bounded_log_score_gain_nats": 0.06655138151492096,
+      "result_sha256": "1548fdfdc19fff27f2b4598ddd64b00ce541bcccadae2b1aae146e77a516c99b",
+      "state": "PILOT_MEASUREMENT_VERIFIED"
+    },
+    {
+      "cpu_seconds": 1694.875,
+      "family": "D5",
+      "fit_calls": 70704,
+      "id": "v24-d5-pilot-1-r1",
+      "result_sha256": "36245f95e89e927a3cfbea018de7f310c08a97a08c33de367633f897c91c0100",
+      "state": "COST_CONTROL_PILOT_VERIFIED",
+      "targets": 640,
+      "worlds": 1
+    }
+  ],
+  "estimate_limits": "N16 remains descriptive and unpowered. D5 is one excluded cost/control world. T1 produced zero complete worlds and no cost or scientific estimate.",
+  "execution_order": ["N16", "D5", "T1"],
+  "failed_packets": [
+    {
+      "actual_cpu_seconds": 3.5,
+      "family": "T1",
+      "id": "v24-t1-cost-profile-1",
+      "new_complete_worlds": 0,
+      "reason": "Frozen DuckDB dependency lacked distribution metadata.",
+      "reserved_cpu_seconds": 10717.421875,
+      "result_sha256": "55e9bd16184693caa26cf2f5a3b5c5657823b24bb8c360351a777737835c0a3d",
+      "scientific_disposition": "NO_FINDING_APPARATUS_FAILURE",
+      "state": "RUNTIME_FAILED_RETAINED"
+    }
+  ],
+  "finite_queue_manifest_sha256": "a9f41d8012cca72f9578330fb28ceba77aba8583c0ff4e2ea39942f4fe7526ce",
+  "finite_queue_preflight_sha256": "cc29d7fd3f8139432ac0cdc2a6bdbcc48095750d41c5dc8578fa5a430894a8e3",
+  "new_theory_design_cards": 6,
+  "next_eligible_card": "T3 remains unadmitted. Before a frozen packet can be eligible, dependency isolation must retain distribution metadata and a zero-world control must traverse the DuckDB-backed export path.",
+  "pilot_close": "2026-10-25T22:00:00-07:00",
+  "pilot_open": "2026-10-22T00:00:00-07:00",
+  "prepared_packets": [
+    {
+      "cpu_cap_seconds": 5400,
+      "family": "N16",
+      "id": "v24-n16-pilot-1",
+      "plan_sha256": "9a0b32ab886dbdbb23f876713d3607aee65cb519c8dddfd2d4f6e3eb2d4ea0c5",
+      "preflight_sha256": "56de1478a8f4bb2472d754f42d015e05e4cebe65ee12d491d28fc3a6ccbe039d",
+      "source_archive_sha256": "a46ad5f07ae6f692a20385aef900a5d803a0b92ccaf8f8dbbf722afb7a6959bf"
+    },
+    {
+      "cpu_cap_seconds": 5400,
+      "family": "D5",
+      "id": "v24-d5-pilot-1-r1",
+      "plan_sha256": "e794d08649ff6f4d4149976be904e1ff0c0cb525b934641688314d0647dd7fcb",
+      "preflight_sha256": "ce40f6592fb3abde6d112aac72214e54b46951b6e00bcd308077410127a40858",
+      "source_archive_sha256": "9362ceb594db0111e0728dc4b437e9455849c2588dea7e500f5d62a165057cb6"
+    },
+    {
+      "cpu_cap_seconds": 10717.421875,
+      "family": "T1",
+      "id": "v24-t1-cost-profile-1",
+      "plan_sha256": "53f8d5bc09e2bde708e304537df1be07f7ed91577927c948170a89e2c1fbc8e4",
+      "preflight_sha256": "934e9856de940324dc6f1e98dbc4c0e28a095819dc3119f15c59357b186e5960",
+      "source_archive_sha256": "d272f358d0fbb7350e49992039f51244976972d6744aa9a0d68f6e6621d240b9"
+    }
+  ],
+  "preparation_failures_retained": 3,
+  "production_not_before": "2026-10-26T08:00:00-07:00",
+  "running": 0,
+  "running_packet": null,
+  "state": "T1_RUNTIME_FAILED_RETAINED_DEPENDENCY_REPAIR_REQUIRED",
+  "unbuilt_cards_are_not_queued_scientific_jobs": true,
+  "work_cards": 14
+}

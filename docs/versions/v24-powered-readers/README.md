@@ -58,6 +58,13 @@ primary or repair V23's retained failures. Linear full-study scaling is about
 18.8 CPU-hours for original, replay and review: below the 64-hour future bar,
 above the current four-hour D5 family allowance, and not an admission.
 
+The [T1 complete-grid cost profile](T1_COST_PROFILE_FAILURE.md) was admitted
+after a source, schema, canonical-engine and certified-backbone preflight, but
+failed in the first maker because the frozen DuckDB dependency lacked its
+distribution metadata. Zero worlds completed and neither replay nor independent
+review ran. This is an apparatus failure, not a T1 scientific result. Its full
+reservation remains charged and V24 will not retry it.
+
 Forty CPU-hours cover preparation, failed attempts, pilots and verification.
 Two single-thread, below-normal workers are the ceiling; the built N16 runner
 serializes its original, replay and independent review under one campaign owner.

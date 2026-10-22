@@ -37,3 +37,18 @@ engineering verification record, not fresh scientific evidence.
 
 The immutable N16/D5 queue runs from its separate frozen source and does not
 import these live-checkout changes.
+
+## T1 packet preparation and terminal disposition
+
+The drained queue made T1 the next eligible commissioned card. Four immutable
+preparation capsules were retained. Three stopped before admission: dependency
+root coverage, the aggregate engine hash's omitted YAML source, and family-cap
+headroom were each repaired prospectively. All preparation costs are charged.
+
+The fourth packet passed a zero-world preflight covering the full eight-setting
+grid, canonical transport, all 60 engine files and their aggregate implementation
+hash, and the certified backbone. Its admitted original pass then failed in the
+first maker because DuckDB's frozen Python module required package-distribution
+metadata that the capsule did not contain. The runtime reservation remains
+charged; there is no V24 retry and no scientific result. See the
+[failure report](T1_COST_PROFILE_FAILURE.md).

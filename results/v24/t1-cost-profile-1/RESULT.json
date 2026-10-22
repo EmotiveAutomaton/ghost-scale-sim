@@ -1,0 +1,23 @@
+{
+  "admitted": true,
+  "cause": "The frozen DuckDB module imported, but importlib.metadata could not find the omitted duckdb distribution metadata.",
+  "confirmation": false,
+  "family": "T1",
+  "identity": "v24-t1-cost-profile-1",
+  "independent_review_complete": false,
+  "new_complete_worlds": 0,
+  "original_complete": false,
+  "original_log_sha256": "bc9774ab9969cae8aefdc51a80b5909d00cb1209d3070e2755a2e23b42651217",
+  "partial_files_retained": 5,
+  "plan_sha256": "53f8d5bc09e2bde708e304537df1be07f7ed91577927c948170a89e2c1fbc8e4",
+  "preflight_sha256": "934e9856de940324dc6f1e98dbc4c0e28a095819dc3119f15c59357b186e5960",
+  "production": false,
+  "replay_complete": false,
+  "retained_runtime_reservation_cpu_seconds": 10717.421875,
+  "runtime_cpu_seconds": 3.5,
+  "scientific_disposition": "NO_FINDING_APPARATUS_FAILURE",
+  "source_archive_sha256": "d272f358d0fbb7350e49992039f51244976972d6744aa9a0d68f6e6621d240b9",
+  "state": "RUNTIME_FAILED_RETAINED",
+  "status_sha256": "bd1b92978a24d24cd3ca00ad5b6ef54f6c3eac30778e6be0828337252e54d62f",
+  "t1_total_charged_cpu_seconds": 10748.90625
+}

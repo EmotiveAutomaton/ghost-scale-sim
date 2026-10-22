@@ -28,7 +28,7 @@ The final column names the next requirement for each component.
 | N1 search | Eta-three controller integrated with the retained whole-population kernel and independent score reconstruction; complete-roster selection, fixed tie order, disjoint world allocations, retained exclusions and corrected implausibility cut | Freeze the bounded source packet and run its full cost/replay profile; selection remains outside confirmation |
 | Seed extension | Persistent frozen plan, complete initial look, one durable decision, disjoint extension | Family-specific prospective trigger and a separately valid inferential design |
 | D5 | Complete retained equivalence; fresh one-world cost/control pilot, byte replay and independent reconstruction verified in 1,694.875 CPU-seconds | Forty-world primary remains undecided; any powered design needs separate budget and admission |
-| T1 | Exact arithmetic, retained failed-fit decimal check, complete-grid execution path and independent native-score reconstruction | Freeze a bounded profile packet, run the complete profile and retain its replay/cost evidence |
+| T1 | Exact arithmetic, retained failed-fit decimal check and complete-grid path; admitted source-frozen profile failed in its first maker on missing DuckDB distribution metadata | Apparatus failure retained with zero complete worlds; no retry in this allocation and no scientific disposition |
 | T3/T4 | Exact export cache, complete-grid execution path and independent native-score reconstruction; twelve retained exports agree in two fresh processes | Freeze bounded profile packets, run full profiles and measure whole-pipeline cost; missing empirical targets remain unavailable |
 | Six new theory directions | Separate finite generators/readers and known-answer controls for needs/drives, set-points, play/uncertainty, higher-goal editing, context convergence and disturbance | Freeze family-specific protocols and source capsules; run largest-cell cost pilots, complete replay and independent review before admission |
 | Conditional promotions | Evidence-based selection rules and retained FX1 failure route | Full source-by-source review and eligible powered-family designs |
@@ -40,6 +40,12 @@ Both immutable queue packets completed and the queue owner exited. Their runtime
 completion receipts became reportable only after full replay, independent review
 and documentary write-through. Preparation tests also verify that neither parent
 nor child entry point launches before opening.
+
+The later T1 packet passed its strengthened preflight but failed immediately
+after admission when a deeper engine import requested DuckDB distribution
+metadata absent from the frozen dependency tree. Five partial files, the child
+traceback, 3.5 measured CPU-seconds and the full 10,717.421875-second reservation
+are retained. No complete world, replay or independent review exists.
 
 During October 19 preparation, two test invocations encountered output-directory setup errors. A later full
 transport fixture caught the missing isolated schema runtime; its pinned

@@ -6,6 +6,8 @@ reserved-cost receipts remain for native reconciliation, never automatic reset.
 import argparse
 import ctypes
 from datetime import datetime, timezone
+import hashlib
+import json
 import os
 from pathlib import Path
 import shutil
@@ -116,6 +118,136 @@ def prepare(campaign,predecessor_plan):
         plan_sha256=digest(packet/'PLAN.json'),at=now().isoformat()))
     write(campaign/'accounting/source-preparation.json',dict(kind='preparation',
         cpu_seconds=time.process_time()-started,state='COMPLETE'))
+    return packet
+
+
+def prepare_twin(campaign,predecessor_plan,family):
+    """Freeze one complete excluded T1/T3/T4 cost-profile packet.
+
+    The predecessor supplies the measured reference, canonical engine snapshot,
+    schema and compiled bridge dependencies.  The V24 D5 successor supplies the
+    independently verified certified backbone.  Preparation executes no world.
+    """
+    if family not in ('T1','T3','T4'):raise ValueError('built twin family required')
+    campaign=campaign.resolve();campaign.mkdir(parents=True,exist_ok=True)
+    if not (campaign/'ACCEPTANCE.json').exists():write(campaign/'ACCEPTANCE.json',contract.acceptance())
+    if read(campaign/'ACCEPTANCE.json')!=contract.acceptance():raise ValueError('acceptance differs')
+    previous=read(predecessor_plan)
+    if previous.get('family')!=family or previous.get('task')!='twin-profile':
+        raise ValueError('matching retained twin profile required')
+    identity=f"v24-{family.lower()}-cost-profile-1"
+    _,family_charged=accounting(campaign,family)
+    preparation_headroom=60
+    cpu_cap=contract.FAMILY_SECONDS[family]-family_charged-preparation_headroom
+    if cpu_cap<=0:raise ValueError('no family allowance remains after preparation costs')
+    packet=campaign/'packets'/identity;packet.mkdir(parents=True,exist_ok=False)
+    source=packet/'source';source.mkdir();started=time.process_time()
+    for path in sorted((REPO/'ghostscale').rglob('*.py'))+[
+            Path(__file__).resolve(),REPO/'runners/launch_background.py']:
+        target=source/path.relative_to(REPO);target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(path,target)
+    (source/'runners/__init__.py').write_text('',encoding='utf-8')
+
+    # Preserve the isolated schema and resident canonical runtime used by the
+    # failed predecessor.  Every copied byte is rechecked before the archive is
+    # frozen; no package installation or environment synchronization occurs.
+    schema=source/'schema';schema.mkdir()
+    for name,sha in previous['schema_pin']['files'].items():
+        original=Path(previous['schema_directory'])/name
+        if digest(original)!=sha:raise ValueError('canonical dependency changed')
+        shutil.copyfile(original,schema/name)
+    dependency_target=source/'dependencies';dependency_target.mkdir()
+    retained_root=predecessor_plan.resolve().parents[2]
+    roots=[(retained_root/name).resolve() for name in ('bridge-dependencies','dependencies')]
+    for name,sha in previous['dependency_files'].items():
+        original=Path(name).resolve()
+        if digest(original)!=sha:raise ValueError('retained runtime dependency changed')
+        matches=[]
+        for root in roots:
+            try:matches.append(original.relative_to(root))
+            except ValueError:pass
+        if len(matches)!=1:
+            raise ValueError(f'dependency root is ambiguous or missing: {original}')
+        target=dependency_target/matches[0];target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(original,target)
+
+    reference=source/'inputs'/f'{family}_REFERENCE.json';reference.parent.mkdir()
+    empirical_source=source/'inputs'/f'{family}_SOURCE.json'
+    for original,target,expected in (
+        (Path(previous['empirical_reference']),reference,previous['empirical_reference_sha256']),
+        (Path(previous['empirical_source']),empirical_source,
+         read(previous['empirical_reference'])['source']['sha256']),
+    ):
+        if digest(original)!=expected:raise ValueError('retained empirical input changed')
+        shutil.copyfile(original,target)
+
+    d5_packet=campaign/'packets/v24-d5-pilot-1-r1'
+    d5_plan=read(d5_packet/'PLAN.json')
+    backbone_source=Path(d5_plan['backbone_source'])
+    if digest(backbone_source)!=d5_plan['backbone_sha256']:
+        raise ValueError('certified backbone changed')
+    frozen_backbone=source/'upstream/backbone.py.txt';frozen_backbone.parent.mkdir()
+    shutil.copyfile(backbone_source,frozen_backbone)
+
+    engine_roots=[Path(value).resolve() for value in previous['extra_pythonpath']
+                  if (Path(value).resolve()/'tompathy_engine').is_dir()]
+    if len(engine_roots)!=1:raise ValueError('one retained engine root is required')
+    engine_root=engine_roots[0]/'tompathy_engine';engine_files={};engine_text={}
+    declared={Path(name).resolve().relative_to(engine_root).as_posix():sha
+              for name,sha in previous['external_source_files'].items()}
+    engine_sources=[path for path in sorted(engine_root.rglob('*'))
+                    if path.is_file() and path.suffix in ('.py','.yaml')]
+    if not set(declared).issubset({path.relative_to(engine_root).as_posix()
+                                   for path in engine_sources}):
+        raise ValueError('retained engine source roster changed')
+    for original in engine_sources:
+        relative=original.relative_to(engine_root);name=relative.as_posix()
+        sha=digest(original)
+        if name in declared and sha!=declared[name]:
+            raise ValueError('retained engine source changed')
+        target=dependency_target/'tompathy_engine'/relative
+        target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(original,target)
+        engine_files[name]=sha;engine_text[name]=original.read_text(encoding='utf8')
+    reference_packet=Path(previous['engine_reference_packet'])
+    if digest(reference_packet/'COMPLETE.json')!=previous['engine_reference_complete_sha256']:
+        raise ValueError('retained engine reference completion changed')
+    conformance=read(reference_packet/'original/T1-clean/engine/CONFORMANCE.json')
+    implementation_hash=conformance['implementation_hash']
+    actual_implementation=hashlib.sha256(json.dumps(engine_text,sort_keys=True,
+        ensure_ascii=False,separators=(',',':'),allow_nan=False).encode(
+            'utf-8',errors='backslashreplace')).hexdigest()
+    if actual_implementation!=implementation_hash:
+        raise ValueError('retained engine implementation hash changed')
+
+    hashes={p.relative_to(source).as_posix():digest(p) for p in sorted(source.rglob('*'))
+            if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc'}
+    with zipfile.ZipFile(packet/'SOURCE.zip','x',compression=zipfile.ZIP_DEFLATED) as archive:
+        for name in hashes:archive.write(source/name,name)
+    from ghostscale.validation.soundingline.v23 import registry
+    plan=dict(kind='pilot',task='v24-twin-profile',family=family,identity=identity,
+        production=False,confirmation=False,variant_ids=[v['id'] for v in registry.variants(family)],
+        world_indices=[0],numerical_threads=1,priority='below-normal',
+        cpu_cap_seconds=cpu_cap,wall_cap_seconds=12*3600,
+        family_charged_before_preparation=family_charged,
+        preparation_headroom_seconds=preparation_headroom,
+        source_files=hashes,source_archive_sha256=digest(packet/'SOURCE.zip'),
+        acceptance_sha256=digest(campaign/'ACCEPTANCE.json'),
+        schema_directory=str(schema),schema_pin={k:v for k,v in previous['schema_pin'].items() if k!='directory'},
+        empirical_reference=str(reference),empirical_reference_sha256=digest(reference),
+        empirical_source=str(empirical_source),engine_files=engine_files,
+        implementation_hash=implementation_hash,
+        certified_backbone_source=str(frozen_backbone),
+        certified_backbone_sha256=digest(frozen_backbone),canary_key=previous['canary_key'],
+        predecessor_plan_sha256=digest(predecessor_plan),environment=runtime.environment(),
+        interpreter=str(REPO/'.venv/Scripts/python.exe'),preparation_at=now().isoformat())
+    write(packet/'PLAN.json',plan)
+    write(packet/'PREPARATION.json',dict(state='PREPARED_NOT_ADMITTED',
+        plan_sha256=digest(packet/'PLAN.json'),source_archive_sha256=plan['source_archive_sha256'],
+        predecessor_plan_sha256=plan['predecessor_plan_sha256']))
+    write(packet/'STATUS.json',dict(state='PREPARED_NOT_ADMITTED',pilot_open=contract.OPEN,
+        plan_sha256=digest(packet/'PLAN.json'),at=now().isoformat()))
+    write(campaign/'accounting'/f'{identity}-preparation.json',dict(kind='preparation',
+        family=family,cpu_seconds=time.process_time()-started,state='COMPLETE'))
     return packet
 
 
@@ -232,6 +364,7 @@ def execute(packet):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--prepare',action='store_true');parser.add_argument('--campaign',type=Path)
+    parser.add_argument('--prepare-twin',choices=('T1','T3','T4'))
     parser.add_argument('--predecessor-plan',type=Path);parser.add_argument('--packet',type=Path)
     parser.add_argument('--preflight',action='store_true')
     parser.add_argument('--child',choices=('original','replay','review'))
@@ -239,6 +372,10 @@ def main():
     if args.prepare:
         if not args.campaign or not args.predecessor_plan:parser.error('preparation requires campaign and predecessor plan')
         print(prepare(args.campaign,args.predecessor_plan))
+    elif args.prepare_twin:
+        if not args.campaign or not args.predecessor_plan:
+            parser.error('twin preparation requires campaign and predecessor plan')
+        print(prepare_twin(args.campaign,args.predecessor_plan,args.prepare_twin))
     elif args.preflight:
         if not args.packet:parser.error('preflight requires packet')
         print(preflight(args.packet.resolve()))

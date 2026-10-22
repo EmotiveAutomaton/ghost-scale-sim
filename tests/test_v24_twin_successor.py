@@ -44,3 +44,9 @@ def test_common_v24_runner_routes_only_built_twin_successors():
     assert implementation({'family':'T4'}) is twin_successor
     from ghostscale.validation.soundingline.v24 import population_successor
     assert implementation({'family':'N1'}) is population_successor
+
+
+def test_twin_preparation_rejects_non_twin_family(tmp_path):
+    from runners.run_v24_pilot import prepare_twin
+    with pytest.raises(ValueError,match='built twin'):
+        prepare_twin(tmp_path,tmp_path/'unused.json','N1')
