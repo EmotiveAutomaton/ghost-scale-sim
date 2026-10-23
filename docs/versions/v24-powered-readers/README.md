@@ -30,9 +30,9 @@ filed with their V23 provenance. This folder owns their V24 implementation.
 Read [the protocol](PROTOCOL.md), [the work cards](CARDS.json),
 [implementation status](IMPLEMENTATION_STATUS.md), and
 [preparation verification](../../../results/v24/preparation/VERIFICATION.json).
-The separate local handoff contains native paths, ownership and the prepared
-source capsule. A future handoff is scheduled; a configured task is not proof
-of delivery or admission.
+The separate local handoff contains native paths, ownership and immutable source
+capsules. The October 22 opening and subsequent terminal/health deliveries ran;
+current completion is established by packet receipts and native exit checks.
 
 The first built worker is N16's promoted scheduler pilot: four independent
 blocks, each covering 48 settings, 16 laws and five cases, with complete replay

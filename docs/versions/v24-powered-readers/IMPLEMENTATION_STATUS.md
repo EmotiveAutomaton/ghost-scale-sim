@@ -1,10 +1,10 @@
 # V24 implementation status — October 23
 
-[Eight October 23 follow-ups](FOLLOWUP_PROTOCOL_2026-10-23.md) are source-frozen,
-preflighted and dispatched serially: retained N16 stresses, constructed gallery
+[Eight October 23 follow-ups](FOLLOWUP_PROTOCOL_2026-10-23.md) completed full replay,
+independent numerical review and separate aggregate verification: retained N16 stresses, constructed gallery
 controls, and all six theory miniatures. Twenty targeted checks pass. Consult
 the [current queue](../../../results/v24/review-20261023/FOLLOWUP_QUEUE.json)
-for actual completion; prepared and running packets are not accepted results.
+for actual state. All eight are verified and their scientific workers exited.
 
 V23 is closed and published. The source-frozen finite V24 pilot queue was
 admitted after the October 22 opening and completed N16 then D5 serially.
@@ -18,8 +18,8 @@ and exited. The subsequent N16 and D5 pilot packets completed and were published
 
 [October 22 opening implementation](PREPARATION_2026-10-22.md) records the
 unadmitted full-kernel N1 controller, full-grid twin execution path and six
-separate theory generators/readers. The six theory packets are now source-frozen
-and preflighted; their own cost profiles, replays and reviews are executing.
+separate theory generators/readers. The six theory packets have now completed their bounded pilots, full replays
+and independent reviews. Their supplied-model and descriptive limits remain.
 
 The following rows distinguish code that exists from scientific work that ran.
 The final column names the next requirement for each component.
@@ -29,17 +29,17 @@ The final column names the next requirement for each component.
 | Mixture scoring | Normalized reader, analytic support, strict epsilon selection | Family-specific support and new pilot calibration |
 | Adaptive evidence | Past-only grid stakes, exhaustive null and positive fixtures | Frozen production order, thresholds, power and cost calibration |
 | N16 pilot | Full-grid kernel, canonical streams, source-frozen original/replay/review and write-through verified | Separately freeze any powered design; four pilot blocks remain descriptive |
-| N16 retained calibration | 48 stream hashes and all 49,152 primary scores reproduced; complete-group forecast | Fresh pilot costs and uncertainty assessment |
+| N16 retained calibration | 48 stream hashes and all 49,152 primary scores reproduced; complete-group forecast; fresh pilot cost and retained four-block stress map verified | Separately frozen powered design and uncertainty assessment |
 | N1 search | Eta-three controller integrated with the retained whole-population kernel and independent score reconstruction; complete-roster selection, fixed tie order, disjoint world allocations, retained exclusions and corrected implausibility cut | Freeze the bounded source packet and run its full cost/replay profile; selection remains outside confirmation |
 | Seed extension | Persistent frozen plan, complete initial look, one durable decision, disjoint extension | Family-specific prospective trigger and a separately valid inferential design |
 | D5 | Complete retained equivalence; fresh one-world cost/control pilot, byte replay and independent reconstruction verified in 1,694.875 CPU-seconds | Forty-world primary remains undecided; any powered design needs separate budget and admission |
 | T1 | Exact arithmetic, retained failed-fit decimal check and complete-grid path; admitted source-frozen profile failed in its first maker on missing DuckDB distribution metadata | Apparatus failure retained with zero complete worlds; no retry in this allocation and no scientific disposition |
 | T3/T4 | Exact export cache, complete-grid path and independent native-score reconstruction; T3's metadata-aware frozen packet passed a known-answer export preflight but exhausted its original pass allowance at maker 2,833 of the largest setting | T3 is retained with zero complete worlds and no retry; T4 remains unprepared and missing empirical targets remain unavailable |
-| Six new theory directions | Separate finite generators/readers and known-answer controls for needs/drives, set-points, play/uncertainty, higher-goal editing, context convergence and disturbance | Freeze family-specific protocols and source capsules; run largest-cell cost pilots, complete replay and independent review before admission |
-| Conditional promotions | Evidence-based selection rules and retained FX1 failure route | Full source-by-source review and eligible powered-family designs |
+| Six new theory directions | All six complete finite pilots, byte replay, scalar likelihood reconstruction and independent decimal aggregation | Theory review of supplied mechanisms and observation assumptions; no powered or human claim |
+| Conditional promotions | Constructed gallery controls verified; source-bound N16 stress map verified | Real-data control failures and separately powered family decisions remain |
 | pymdp / reader calibration | Isolated dependency card; checked posterior-rank and tie-handling instrument | Separate environment, source pins and actual posterior sampler integration |
 | Monitoring | Fixed twelve-hour and terminal-event module, tests, frozen local source/configuration and verified native owner | Keep unarmed during an active operator turn; arm for terminal and fixed twelve-hour delivery afterward |
-| Finite queue | Frozen N16/D5 order and sources, real pre-window refusal, no retry; both packets completed original/replay/review | Queue is drained; no production or automatic retry |
+| Finite queue | Original N16/D5 queue and October 23 eight-packet queue complete; native scientists exited | No prepared successor remains; do not refill with repeats |
 
 Both immutable queue packets completed and the queue owner exited. Their runtime
 completion receipts became reportable only after full replay, independent review

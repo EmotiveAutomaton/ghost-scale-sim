@@ -27,10 +27,12 @@ replay and independent review. N16 remains a four-block descriptive pilot;
 D5 remains one excluded cost/control world. T1 and T3 failed before completing
 a world. Their reservations and raw failures remain retained; do not retry them.
 
-The owner commissioned useful follow-ups on October 23. Eight source-frozen
-packets cover a retained N16 stress map, constructed gallery-reference controls
-and the six implemented theory miniatures. Read their actual native state;
-preflight is not completion. Run only the immutable source capsules and retain
+The owner commissioned useful follow-ups on October 23. All eight source-frozen
+follow-up packets completed original execution, byte replay, independent numerical
+review and separate decimal aggregation. Read
+`FOLLOWUP_RESULTS_2026-10-23.md` and `results/v24/followups-20261023/FINAL_VALIDITY.json`.
+Their scientific workers exited and both ownership locks are absent. Do not
+rerun these completed pilots for occupancy. Read actual native state before edits. Run only the immutable source capsules and retain
 every setting, full replay and independent reconstruction. The serial finite
 controller may advance to a distinct family after recording a terminal failure;
 it never retries or invents studies. Keep the existing forty-CPU-hour total,
