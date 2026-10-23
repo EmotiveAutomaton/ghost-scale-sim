@@ -1,5 +1,7 @@
 # Documentation map
 
+[October 23 V24 follow-ups](versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md): received Sounding Line feature package, scheduler stress map, gallery calibration and six descriptive theory pilots; [current queue](../results/v24/review-20261023/FOLLOWUP_QUEUE.json).
+
 [October 18 directed-probe work](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md) is complete in the closed V23 allocation. The [October 18 work order](versions/v23-research-division/OCTOBER18_WORK_ORDER.json) distinguishes running studies, queued work and D5's owner-directed deferral.
 
 [October 17 packet and current work](versions/v23-research-division/PACKET_REVIEW_2026-10-17.md): evidence-bound mandatory dispositions, N8 continuation, and eight ranked conditional studies. The [work order](versions/v23-research-division/OCTOBER17_WORK_ORDER.json) distinguishes implemented studies from remaining builds.

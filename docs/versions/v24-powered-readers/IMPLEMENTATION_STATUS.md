@@ -1,4 +1,10 @@
-# V24 implementation status — October 22
+# V24 implementation status — October 23
+
+[Eight October 23 follow-ups](FOLLOWUP_PROTOCOL_2026-10-23.md) are source-frozen,
+preflighted and dispatched serially: retained N16 stresses, constructed gallery
+controls, and all six theory miniatures. Twenty targeted checks pass. Consult
+the [current queue](../../../results/v24/review-20261023/FOLLOWUP_QUEUE.json)
+for actual completion; prepared and running packets are not accepted results.
 
 V23 is closed and published. The source-frozen finite V24 pilot queue was
 admitted after the October 22 opening and completed N16 then D5 serially.
@@ -8,13 +14,12 @@ queue.
 [October 20 preparation](PREPARATION_2026-10-20.md) adds a grouped certified-fit
 adapter, 33 passed targeted checks and retained-input equivalence checks.
 The complete retained fixture, byte replay and independent reconstruction passed
-and exited. D5 now has a frozen fresh cost-pilot packet. The finite queue is
-prepared to run N16 then D5 during the authorized window.
+and exited. The subsequent N16 and D5 pilot packets completed and were published.
 
 [October 22 opening implementation](PREPARATION_2026-10-22.md) records the
 unadmitted full-kernel N1 controller, full-grid twin execution path and six
-separate theory generators/readers. These remain engineering preparation until
-their own frozen packets, cost profiles, replays and reviews exist.
+separate theory generators/readers. The six theory packets are now source-frozen
+and preflighted; their own cost profiles, replays and reviews are executing.
 
 The following rows distinguish code that exists from scientific work that ran.
 The final column names the next requirement for each component.

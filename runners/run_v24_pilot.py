@@ -26,6 +26,15 @@ def now():return datetime.now(timezone.utc)
 
 
 def implementation(plan):
+    if plan.get('task')=='v24-theory-pilot':
+        from ghostscale.validation.soundingline.v24 import theory_pilot
+        return theory_pilot
+    if plan.get('task')=='v24-gallery-pilot':
+        from ghostscale.validation.soundingline.v24 import gallery_pilot
+        return gallery_pilot
+    if plan.get('task')=='v24-n16-retained':
+        from ghostscale.validation.soundingline.v24 import n16_followup
+        return n16_followup
     if plan['family']=='N16':return pilot
     if plan['family']=='D5':
         from ghostscale.validation.soundingline.v24 import d5
@@ -63,7 +72,7 @@ def preflight(packet):
     from ghostscale.validation.soundingline.v23 import ledger
     schema,_=ledger.canonical_schema(plan['schema_directory'],plan['schema_pin'])
     pilot.emit(schema,['v24-engineering-excluded','preflight'],{'fixture':'known-observation'})
-    controls=n16.model.controls() if plan['family']=='N16' else implementation(plan).preflight(plan)
+    controls=n16.model.controls() if plan['family']=='N16' and not plan.get('task') else implementation(plan).preflight(plan)
     if not controls['passed']:raise ValueError('preflight controls failed')
     receipt=dict(state='PREFLIGHT_PASSED_NOT_ADMITTED',new_scientific_worlds=0,
         plan_sha256=digest(packet/'PLAN.json'),source_archive_sha256=plan['source_archive_sha256'],

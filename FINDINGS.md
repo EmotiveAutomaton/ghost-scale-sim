@@ -1,5 +1,12 @@
 # Every question this project asked, and where its answer stands today
 
+<!-- V24-OCT23-FOLLOWUPS -->
+Can identification reflect context rather than personal mechanism? In the constructed 45-identity, 17-feature pilot, shared context alone gives 5.76% identification against 2.22% global chance; its matched within-context reference is 6.67%. Reusing the same sample gives 100%. This is a methods warning, not a diagnosis of Sounding Line’s failed controls.
+
+Does the retained adaptive-probe benefit depend on the source mechanism? At two probes, all four source means remain positive, from 0.039269 to 0.090729 nats against the correct fixed-order reader. After all six probes, correct-model policy differences are below 3e-17 nats. This descriptive four-block methods result reproduces the original primary and does not establish powered confirmation. [Full theory pilot results](docs/versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md).
+<!-- /V24-OCT23-FOLLOWUPS -->
+
+
 Can the complete measured T3 twin grid finish inside its bounded pilot allowance? No complete cost result was obtained. The frozen 24-setting packet passed its known-answer engine-export preflight, then exhausted the original pass allowance at maker 2,833 of the largest setting. No world, replay or independent review completed. This is a resource/runtime failure, not evidence about the T3 mechanism; the complete profile cost remains unknown and the packet will not be retried. [V24 T3 failure](docs/versions/v24-powered-readers/T3_COST_PROFILE_FAILURE.md).
 
 Can the certified optimizer execute the complete writing-twin cost profile? No result was obtained. The source-frozen packet passed complete-grid, schema, engine-hash and backbone preflight, then failed in the first maker because the frozen DuckDB dependency lacked distribution metadata. No world, replay or independent review completed. This is an apparatus failure, not evidence against the optimizer or writing twins; the V23 failure remains the latest completed T1 evidence. [V24 T1 failure](docs/versions/v24-powered-readers/T1_COST_PROFILE_FAILURE.md).

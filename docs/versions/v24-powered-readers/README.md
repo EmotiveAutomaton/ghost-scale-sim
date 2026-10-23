@@ -1,5 +1,7 @@
 # V24 preparation and finite pilots
 
+[October 23 follow-up results](FOLLOWUP_RESULTS_2026-10-23.md) and [current queue](../../../results/v24/review-20261023/FOLLOWUP_QUEUE.json) cover the owner-authorized retained scheduler map, constructed gallery controls and six theory miniatures. Each result requires full replay and independent review.
+
 [October 23 review](REVIEW_2026-10-23.md): terminal results and complete replay files rechecked; Sounding Line's feature package received with its limitations. New bounded follow-ups are being prepared under the same pilot allocation.
 
 Prepared October 19 after V23's verified closeout. This is a separate allocation:

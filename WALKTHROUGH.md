@@ -1,5 +1,7 @@
 # The walkthrough
 
+[October 23 follow-ups](docs/versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md) distinguish scheduler gains from complete-menu parity, and personal-mechanism claims from context, sample overlap and gallery-reference geometry. Six finite theory pilots retain their supplied-model and descriptive limits.
+
 [V24 preparation](docs/versions/v24-powered-readers/PREPARATION_2026-10-20.md) now has a verified retained-fit acceleration and frozen N16/D5 pilot queue. Scientific pilots open October 22; no new scientific result or production admission follows from these engineering checks.
 
 V23's finite allocation is complete: 33 independently reviewed logical batches, comprising 19 main-family batches and 14 conditional studies, with 162 terminal execution packets and 22 retained runtime failures. Six discovery nominations remain unconfirmed. Designed probes improve recovery in the constructed scheduler study; directed conflicts do not repair FX1's power. No human-mechanism or automatic engine-admission claim follows. [V23 final report](docs/versions/v23-research-division/FINAL_REPORT.md).

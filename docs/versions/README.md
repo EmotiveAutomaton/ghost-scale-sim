@@ -1,5 +1,7 @@
 # Version index
 
+[V24 October 23 follow-ups](v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md) preserve complete replay, independent checks and explicit descriptive limits. Production remains separately unadmitted.
+
 [October 17 packet and current work](v23-research-division/PACKET_REVIEW_2026-10-17.md): mandatory dispositions and ranked conditional studies, with preserved prior results and limits.
 
 Versions are scientific allocations, not generic launch commands. Closed versions

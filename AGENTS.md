@@ -17,31 +17,35 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## V24 preparation and separate pilot window (2026-10-19)
+## V24 pilots and October 23 follow-ups
 
 Read `docs/versions/v24-powered-readers/README.md`, `PROTOCOL.md`,
-`IMPLEMENTATION_STATUS.md`, `CARDS.json`, `results/v24/preparation/` and the
-outer `.local/v24/HANDOFF.md`. Also read `results/v24/CURRENT_STATUS.json` and
-`PREPARATION_2026-10-20.md` in the version folder. Fourteen work cards are
-declared; N16 and D5 have prepared source-frozen pilot executors. A finite
-source-bound queue runs N16 then D5, without retries or production. D5's exact
-fit adapter completed the full retained fixture, byte replay and independent
-certificate/prediction reconstruction. This is engineering evidence, not a
-fresh scientific result. Six new theory directions, full T1 integration and
-full twin-grid acceleration remain explicit design/integration work, not jobs.
-The independent law/mechanism block includes N9's complete five-case cycle;
-never reuse the superseded individual-case forecast as an evidence unit.
+`IMPLEMENTATION_STATUS.md`, `CARDS.json`, `REVIEW_2026-10-23.md`,
+`FOLLOWUP_PROTOCOL_2026-10-23.md`, `results/v24/CURRENT_STATUS.json` and
+the outer `.local/v24/HANDOFF.md` before acting. N16 and D5 completed full
+replay and independent review. N16 remains a four-block descriptive pilot;
+D5 remains one excluded cost/control world. T1 and T3 failed before completing
+a world. Their reservations and raw failures remain retained; do not retry them.
 
-No V24 scientific pilot has run. Admission opens October 22 at 00:00 Pacific
-and closes October 25 at 22:00; production cannot begin before October 26 at
-08:00 and is not admitted by the pilot runner. Keep the separate forty-hour
-CPU total, already-charged preparation, eight protected verification hours,
-two-worker maximum and single-thread below-normal priority. Execute N16 only
-from its immutable source capsule, with complete replay and independent review.
-The retained engineering job completed and exited; do not rerun it for occupancy.
-The finite event/twelve-hour monitor is built but not launched. Verify native
-launch and delivery separately at opening; a prepared task is not a running job.
-Do not restart V23 or transfer its unused budget.
+The owner commissioned useful follow-ups on October 23. Eight source-frozen
+packets cover a retained N16 stress map, constructed gallery-reference controls
+and the six implemented theory miniatures. Read their actual native state;
+preflight is not completion. Run only the immutable source capsules and retain
+every setting, full replay and independent reconstruction. The serial finite
+controller may advance to a distinct family after recording a terminal failure;
+it never retries or invents studies. Keep the existing forty-CPU-hour total,
+eight protected hours, family limits, two-worker ceiling, one numerical thread
+and below-normal priority. The current queue uses one scientist at a time.
+
+The unchanged pilot cutoff is October 25 at 22:00 Pacific. Production cannot
+start before October 26 at 08:00 and is not admitted by this allocation.
+Sounding Line's received 21-channel aggregate package preserves its failed habit
+reference controls, missing measurements and scoped claims. It does not admit
+an engine module. New constructed diagnostics cannot repair its real-data bias.
+Keep the single terminal-event/twelve-hour monitor; disarm notification launches
+during active operator work and acknowledge exact hashes only after landing.
+N1, T4, dependency isolation and powered promotion designs retain their explicit
+unprepared scope. V23 and earlier campaigns stay closed.
 
 ## V23 corrected implementation and calibrated opening (2026-10-14)
 

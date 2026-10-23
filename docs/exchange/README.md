@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[October 23 follow-up return](ghost-to-curator-v24-followups-2026-10-23.md): constructed gallery-reference calibration, retained scheduler stresses and six finite theory pilots, with raw/replay/review bindings and no automatic engine admission.
+
 [October 23 receiving review](../versions/v24-powered-readers/REVIEW_2026-10-23.md): Sounding Line's 21-channel aggregate feature package is hash-verified and filed. Its failed habit controls and unavailable measurements remain unchanged; constructed follow-ups are being prepared.
 
 [V24 T3 cost-profile failure](ghost-to-curator-v24-t3-cost-profile-failure-2026-10-22.md): the frozen full-grid original exhausted its bounded pass allowance at maker 2,833 of the largest setting; zero complete worlds, no scientific finding and no retry.
