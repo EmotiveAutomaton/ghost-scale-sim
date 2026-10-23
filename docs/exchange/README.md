@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[October 23 receiving review](../versions/v24-powered-readers/REVIEW_2026-10-23.md): Sounding Line's 21-channel aggregate feature package is hash-verified and filed. Its failed habit controls and unavailable measurements remain unchanged; constructed follow-ups are being prepared.
+
 [V24 T3 cost-profile failure](ghost-to-curator-v24-t3-cost-profile-failure-2026-10-22.md): the frozen full-grid original exhausted its bounded pass allowance at maker 2,833 of the largest setting; zero complete worlds, no scientific finding and no retry.
 
 [V24 T1 cost-profile failure](ghost-to-curator-v24-t1-cost-profile-failure-2026-10-22.md): the admitted frozen packet failed in its first maker on missing DuckDB distribution metadata; zero complete worlds and no scientific finding or retry.

@@ -1,0 +1,2138 @@
+{
+  "schema": "sounding-line.engine-feature-table.v1",
+  "prepared_at": "2026-10-19",
+  "delivery_due": "2026-10-20T20:00:00-07:00",
+  "delivery_state": "prepared_locally_not_delivered",
+  "scope": "Complete saved aggregate results only; no new fitting, controls, probability claims or external badge deployment.",
+  "engine_pin": "5f3ad0a304727fff5e1a6beca592e786ee71b181",
+  "field_semantics": "Null with reason means not measured/inapplicable, never zero. Identification, featurewise split-half reliability and model ICC are different quantities. V3 record counts are conditional projections, not observed reliability curves.",
+  "rows": [
+    {
+      "id": "PMAP.lean",
+      "label": "Handling rates",
+      "input_needed": [
+        "suggestion_log"
+      ],
+      "definition": "Half-profile fractions of accept, edit, dismiss and ignore across usable menus.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/lean"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.15555555555555556,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 4,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 4,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "measured_descriptive",
+        "mean": 0.033,
+        "q025": 0.0,
+        "q975": 0.08888888888888889,
+        "sd": 0.026615202526402728,
+        "valid_draws": 200,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 4,
+        "features": 4,
+        "maximum": 0.9055287832469887,
+        "median": 0.8123995365477248,
+        "minimum": -0.079316262404199
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.05494708539733154,
+        "ci_high": 0.23305555555555554,
+        "ci_low": 0.030937499999999996,
+        "effect": 0.12255555555555554,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": 0.010777777777777777,
+        "q025": -0.022222222222222223,
+        "q975": 0.06666666666666667,
+        "sd": 0.02661520252640273,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "PMAP.style",
+      "label": "Typed words and punctuation",
+      "input_needed": [
+        "revision_history"
+      ],
+      "definition": "Counts of 100 corpus-most-frequent casefolded produced words and 22 punctuation tokens, divided by all produced word plus punctuation tokens in each half. Includes subsequently deleted text; no part-of-speech filter.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/style"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.4666666666666667,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 122,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 122,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "measured_descriptive",
+        "mean": 0.007000000000000001,
+        "q025": 0.0,
+        "q975": 0.022222222222222223,
+        "sd": 0.011699125302749448,
+        "valid_draws": 200,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 121,
+        "features": 122,
+        "maximum": 0.9658344792285901,
+        "median": 0.47551816773916133,
+        "minimum": -1.1120577365192412
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel.",
+        "Transductive corpus-selected dictionary. The observed 47% is only Sounding Line's definition, with its bias warning; it does not transfer to another word list."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.07647507639657329,
+        "ci_high": 0.613113888888889,
+        "ci_low": 0.30610833333333326,
+        "effect": 0.4596666666666666,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": -0.015222222222222222,
+        "q025": -0.022222222222222223,
+        "q975": 0.0,
+        "sd": 0.011699125302749448,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "PMAP.rhythm",
+      "label": "Logged production rhythm",
+      "input_needed": [
+        "timing_log",
+        "revision_history"
+      ],
+      "definition": "Half-profile medians of pooled within-word intervals, word-onset intervals, and latencies for 20 corpus-most-frequent adjacent typed codepoint pairs; distinct single-codepoint delta ordinals only.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/rhythm"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018",
+        "S15-DRIVE-PMAP-RHYTHM-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.9777777777777777,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 22,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 22,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "measured_descriptive",
+        "mean": 0.03411111111111111,
+        "q025": 0.0,
+        "q975": 0.08888888888888889,
+        "sd": 0.027182567774555237,
+        "valid_draws": 200,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 22,
+        "features": 22,
+        "maximum": 0.9976146196175396,
+        "median": 0.9851566683332629,
+        "minimum": 0.9270942361666434
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel.",
+        "Logged delta timing carries device, recording and task context; not isolated keypress speed or automaticity. Owner-capture use only for ToMpathy rhythm routing."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.021351080265035658,
+        "ci_high": 0.9716666666666667,
+        "ci_low": 0.897888888888889,
+        "effect": 0.9436666666666668,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": 0.011888888888888886,
+        "q025": -0.022222222222222223,
+        "q975": 0.06666666666666667,
+        "sd": 0.027182567774555237,
+        "valid_draws": 200
+      },
+      "separate_rhythm_minus_handling_result": "PMAP-rhythm.json",
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "PMAP.revision",
+      "label": "Revision rates",
+      "input_needed": [
+        "revision_history",
+        "suggestion_log"
+      ],
+      "definition": "Content and housekeeping edits per 100 produced typed words; deleted share of original characters from supported accepted suggestions.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/revision"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.3111111111111111,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 3,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 3,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "measured_descriptive",
+        "mean": 0.03411111111111111,
+        "q025": 0.0,
+        "q975": 0.08888888888888889,
+        "sd": 0.025290912399822778,
+        "valid_draws": 200,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 3,
+        "features": 3,
+        "maximum": 0.9587999291720375,
+        "median": 0.9526765376365175,
+        "minimum": 0.877672354861301
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.06631000761266607,
+        "ci_high": 0.40922499999999995,
+        "ci_low": 0.14855277777777776,
+        "effect": 0.277,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": 0.011888888888888886,
+        "q025": -0.022222222222222223,
+        "q975": 0.06666666666666667,
+        "sd": 0.025290912399822778,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "PMAP.requests",
+      "label": "Request frequency",
+      "input_needed": [
+        "suggestion_log",
+        "revision_history"
+      ],
+      "definition": "Suggestion requests per 100 produced typed words, pooled within each half.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/requests"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.1111111111111111,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 1,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 1,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "measured_descriptive",
+        "mean": 0.027666666666666666,
+        "q025": 0.0,
+        "q975": 0.08888888888888889,
+        "sd": 0.02455611263329935,
+        "valid_draws": 200,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 1,
+        "features": 1,
+        "maximum": 0.9815813869299486,
+        "median": 0.9815813869299486,
+        "minimum": 0.9815813869299486
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.046705882904720344,
+        "ci_high": 0.1937805555555555,
+        "ci_low": -0.004000000000000003,
+        "effect": 0.08344444444444443,
+        "state": "marginal",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": false,
+        "mean": 0.005444444444444444,
+        "q025": -0.022222222222222223,
+        "q975": 0.06666666666666667,
+        "sd": 0.02455611263329935,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "PMAP.length",
+      "label": "Prompt-relative final length",
+      "input_needed": [
+        "final_text",
+        "prompt_metadata"
+      ],
+      "definition": "Mean within-half final nonprompt word count divided by the pooled median for the corresponding prompt.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/length"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.2,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 1,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 1,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "measured_descriptive",
+        "mean": 0.030333333333333334,
+        "q025": 0.0,
+        "q975": 0.08888888888888889,
+        "sd": 0.0255155903362597,
+        "valid_draws": 200,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 1,
+        "features": 1,
+        "maximum": 0.9508272671244403,
+        "median": 0.9508272671244403,
+        "minimum": 0.9508272671244403
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.061564681644371906,
+        "ci_high": 0.30300277777777773,
+        "ci_low": 0.05766388888888888,
+        "effect": 0.16966666666666666,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": 0.00811111111111111,
+        "q025": -0.022222222222222223,
+        "q975": 0.06666666666666667,
+        "sd": 0.0255155903362597,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "PMAP.content_taste",
+      "label": "Accepted-minus-dismissed content",
+      "input_needed": [
+        "suggestion_log",
+        "frozen_content_embeddings"
+      ],
+      "definition": "384-dimensional difference between mean MiniLM vectors of accepted and declined options, pooled within each half.",
+      "source": {
+        "path": "PMAP.json",
+        "sha256": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+        "json_pointer": "/channels/content_taste"
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-PMAP-1018"
+      ],
+      "real_identification": {
+        "status": "measured_descriptive",
+        "absent_B_features": 0,
+        "accuracy": 0.047619047619047616,
+        "chance": 0.023809523809523808,
+        "constant_features": 2,
+        "features": 384,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 382,
+        "writers": 42
+      },
+      "fake_identification": {
+        "status": "incomplete_reference",
+        "mean": 0.014942528735632185,
+        "q025": 0.0,
+        "q975": 0.047619047619047616,
+        "sd": 0.01585932633543425,
+        "valid_draws": 145,
+        "attempted": 200,
+        "invalid": 55
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "method": "median defined featurewise Spearman-Brown corrected Pearson; whole-prompt alternating halves",
+        "defined": 382,
+        "features": 384,
+        "maximum": 0.7757919240747104,
+        "median": 0.044313752683091026,
+        "minimum": -1.543871601896979
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias",
+        "incomplete_fake_reference_no_successful_only_inference"
+      ],
+      "caveats": [
+        "Fixed gallery; minimum four sessions and two prompts; prompt-alternating split; B-only feature scaling. Median feature reliability is not a reliability of the whole channel.",
+        "55 of 200 fake assignments are unsupported. The content channel is uninterpretable for admission; this does not establish absence of taste."
+      ],
+      "badge": null,
+      "paired_real_minus_fake": {
+        "reason": "fixed-gallery coverage missing; no redraw or successful-only inference",
+        "state": "invalid"
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": -0.008866995073891625,
+        "q025": -0.023809523809523808,
+        "q975": 0.023809523809523808,
+        "sd": 0.01585932633543425,
+        "valid_draws": 145
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "V3.accept",
+      "label": "Acceptance",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "One-hot acceptance response. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/accept"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 39,
+        "continuous": 38.85502858264974,
+        "continuous_interval95": [
+          25.428762977334326,
+          135.5128126435005
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.028671201764251353,
+          0.13592144539275236
+        ],
+        "decisions_for_point_eight": 38.85502858264974,
+        "decisions_interval95": [
+          25.428762977334326,
+          135.5128126435005
+        ],
+        "draws": 2000,
+        "effect": 0.09333793798050197,
+        "minimum_integer_records": 39,
+        "standard_error": 0.029125986038895418,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0010029784764393798
+        ],
+        "decisions_for_point_eight": 17578.001911834457,
+        "decisions_interval95": [
+          3984.1214741518543,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.00022750537851480936,
+        "minimum_integer_records": 17579,
+        "standard_error": 0.00030037826976387293,
+        "state": "marginal",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.edit",
+      "label": "Editing",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "One-hot edited-acceptance response. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/edit"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 32,
+        "continuous": 31.37919226596423,
+        "continuous_interval95": [
+          20.306192914939746,
+          114.85483981332054
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.03365449826260843,
+          0.16456711316322223
+        ],
+        "decisions_for_point_eight": 31.37919226596423,
+        "decisions_interval95": [
+          20.306192914939746,
+          114.85483981332054
+        ],
+        "draws": 2000,
+        "effect": 0.11306080619166965,
+        "minimum_integer_records": 32,
+        "standard_error": 0.03550352515393415,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          8.246580659716943e-05
+        ],
+        "decisions_for_point_eight": null,
+        "decisions_interval95": [
+          48500.95211353813,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0,
+        "minimum_integer_records": null,
+        "standard_error": 6.761901376756705e-05,
+        "state": "null",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": true
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.dismiss",
+      "label": "Dismissal",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "One-hot dismissal response. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/dismiss"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 218,
+        "continuous": 217.87040427990215,
+        "continuous_interval95": [
+          83.38826344493768,
+          804.087549407551
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.004949958705504865,
+          0.04577273700512831
+        ],
+        "decisions_for_point_eight": 217.87040427990215,
+        "decisions_interval95": [
+          83.38826344493768,
+          804.087549407551
+        ],
+        "draws": 2000,
+        "effect": 0.018028542441171073,
+        "minimum_integer_records": 218,
+        "standard_error": 0.010363834642934588,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0007548993696245113
+        ],
+        "decisions_for_point_eight": 20995.39823166202,
+        "decisions_interval95": [
+          5294.719486266904,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0001904816488488211,
+        "minimum_integer_records": 20996,
+        "standard_error": 0.00023408298606663922,
+        "state": "marginal",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.ignore",
+      "label": "Ignoring",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "One-hot ignore response. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/ignore"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 766,
+        "continuous": 765.7607949586271,
+        "continuous_interval95": [
+          391.8875965081918,
+          3367.073178013832
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.0011865657577794615,
+          0.010103878058521672
+        ],
+        "decisions_for_point_eight": 765.7607949586271,
+        "decisions_interval95": [
+          391.8875965081918,
+          3367.073178013832
+        ],
+        "draws": 2000,
+        "effect": 0.005196419493168642,
+        "minimum_integer_records": 766,
+        "standard_error": 0.00230494245896137,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "decisions_for_point_eight": null,
+        "decisions_interval95": [
+          null,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0,
+        "minimum_integer_records": null,
+        "standard_error": 3.0063102929011397e-05,
+        "state": "null",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": true
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.handling",
+      "label": "Combined handling",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "Trace ratio across the four one-hot handling coordinates. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/handling"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 51,
+        "continuous": 50.10739226836257,
+        "continuous_interval95": [
+          33.7468728832239,
+          145.07996717414375
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.026831237461486072,
+          0.10596904311450253
+        ],
+        "decisions_for_point_eight": 50.10739226836257,
+        "decisions_interval95": [
+          33.7468728832239,
+          145.07996717414375
+        ],
+        "draws": 2000,
+        "effect": 0.07392705196659168,
+        "minimum_integer_records": 51,
+        "standard_error": 0.02126170756211966,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0006093163983153973
+        ],
+        "decisions_for_point_eight": 25958.843102297888,
+        "decisions_interval95": [
+          6560.733873992179,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0001540663318050084,
+        "minimum_integer_records": 25959,
+        "standard_error": 0.00018317770074728775,
+        "state": "marginal",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.hover_events_log1p",
+      "label": "Logged hover count",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "log(1 + number of logged hover events per menu). Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/hover_events_log1p"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 27,
+        "continuous": 26.731324677866674,
+        "continuous_interval95": [
+          8.776618242224204,
+          86.6637162743653
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.044119082741934545,
+          0.3130718883640734
+        ],
+        "decisions_for_point_eight": 26.731324677866674,
+        "decisions_interval95": [
+          8.776618242224204,
+          86.6637162743653
+        ],
+        "draws": 2000,
+        "effect": 0.1301603507798309,
+        "minimum_integer_records": 27,
+        "standard_error": 0.06931667986753828,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0004004861727611534
+        ],
+        "decisions_for_point_eight": null,
+        "decisions_interval95": [
+          9983.8604357848,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0,
+        "minimum_integer_records": null,
+        "standard_error": 0.00011074351525796789,
+        "state": "null",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": true
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.typed_since_previous_log1p",
+      "label": "Typed text between decision resolutions",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting",
+        "revision_history"
+      ],
+      "definition": "log(1 + user-inserted Unicode codepoints after the previous decision resolution through the current decision resolution), using the frozen D15 row definition. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/typed_since_previous_log1p"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 13,
+        "continuous": 12.248129972508128,
+        "continuous_interval95": [
+          5.565769673216452,
+          46.002612557511
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.0799958201263856,
+          0.41815767435836826
+        ],
+        "decisions_for_point_eight": 12.248129972508128,
+        "decisions_interval95": [
+          5.565769673216452,
+          46.002612557511
+        ],
+        "draws": 2000,
+        "effect": 0.24618217645772214,
+        "minimum_integer_records": 13,
+        "standard_error": 0.09315965220945487,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0019732936102749067
+        ],
+        "decisions_for_point_eight": 4842.468407195087,
+        "decisions_interval95": [
+          2023.0678317570519,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0008253432528439851,
+        "minimum_integer_records": 4843,
+        "standard_error": 0.0006170765113273971,
+        "state": "marginal",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "V3.observed_menu_latency_log1p",
+      "label": "Observed menu latency",
+      "input_needed": [
+        "suggestion_log",
+        "prompt_metadata",
+        "decoding_setting"
+      ],
+      "definition": "log(1 + observed selection/close latency); right-censored menu latencies excluded. Observed-response ICC over writers conditional on these exact prompts. Prompt main-effect variance excluded; setting, writer-by-prompt and residual variance retained. Handling primary is the trace ratio across four one-hot response coordinates.",
+      "source": {
+        "path": "V3.json",
+        "sha256": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+        "json_pointer": "/arms/primary/features/observed_menu_latency_log1p"
+      },
+      "findings_identifiers": [
+        "OPS-S15-D14-PILOT-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "status": "conditional_projection_not_measured_curve",
+        "value": 13,
+        "continuous": 12.800270398320258,
+        "continuous_interval95": [
+          5.90578746684684,
+          41.42532459693331
+        ],
+        "assumptions": "Independent exchangeable records under the fitted variance model; n=4*(1-ICC)/ICC. Changed contexts/dependence may require more."
+      },
+      "control_flags": [
+        "single_stratified_outcome_shuffle_only",
+        "no_paired_fake_writer_reliability_curve"
+      ],
+      "caveats": [
+        "Gaussian observed-response moment model, not latent multinomial reliability. Prompt main variance excluded; setting, writer-by-prompt and residual variance retained.",
+        "D17 slow-pause feature was absent from V3; its later completion was not retroactively fitted.",
+        "16,719 observed latencies; 136 right-censored records excluded."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "response-scale model intraclass correlation, not split-half",
+        "ci95": [
+          0.08805660797127342,
+          0.40380434300527746
+        ],
+        "decisions_for_point_eight": 12.800270398320258,
+        "decisions_interval95": [
+          5.90578746684684,
+          41.42532459693331
+        ],
+        "draws": 2000,
+        "effect": 0.2380914059811759,
+        "minimum_integer_records": 13,
+        "standard_error": 0.08082744315635913,
+        "state": "positive",
+        "unbounded_upper_records": false,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "outcome_control": {
+        "ci95": [
+          0.0,
+          0.0020527694082078545
+        ],
+        "decisions_for_point_eight": 7043.199201394661,
+        "decisions_interval95": [
+          1944.5871057929255,
+          null
+        ],
+        "draws": 2000,
+        "effect": 0.0005676013811569834,
+        "minimum_integer_records": 7044,
+        "standard_error": 0.0006318694048948861,
+        "state": "marginal",
+        "unbounded_upper_records": true,
+        "undefined_draws": 0,
+        "zero_icc_means_infinite_records": false
+      },
+      "findings_subsection": [
+        "V3"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "D17.slow_pause",
+      "label": "Slow-pause mixture share",
+      "input_needed": [
+        "timing_log",
+        "revision_history"
+      ],
+      "definition": "Take the natural log of each between-word interval divided by that session's median within-word interval, excluding system waits; choose a pooled Gaussian mixture with 1-5 components by BIC; estimate writer ICC of each session's slowest-component weight.",
+      "source": {
+        "path": "D17-complete.json",
+        "sha256": "ceebe9f4cad49a9db0f26e8f2cdf202f14f0232ff28f57fbe578ce44fd8922be",
+        "json_pointer": ""
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-MIDRUN-LANDINGS-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "single_writer_shuffle_only",
+        "paired_identity_reference_pending"
+      ],
+      "caveats": [
+        "Three fitted components are not identified psychological processes. Interval conditions on selected mixture.",
+        "Logged timing carries device and recording context; multi-character deltas and zero intervals are explicitly excluded."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "writer ICC conditional on selected pooled mixture",
+        "effect": 0.7240861500490923,
+        "ci95": [
+          0.5386715265887597,
+          0.7989506283738639
+        ],
+        "writers": 53,
+        "sessions": 1389
+      },
+      "original_writer_shuffle_icc": -0.005631613011034867,
+      "findings_subsection": [
+        "D17"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "D29.length",
+      "label": "Final length across sessions",
+      "input_needed": [
+        "final_text",
+        "revision_history"
+      ],
+      "definition": "Pearson correlation of each writer's mean final nonprompt word count across odd/even chronological sessions; at least two sessions per half.",
+      "source": {
+        "path": "D29.json",
+        "sha256": "da687cda28f26b468947a4d812423a208fc46006f9ad7ccbcf63fafc83bc531b",
+        "json_pointer": ""
+      },
+      "findings_identifiers": [
+        "S15-DRIVE-W2-1018"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "original_shuffle_not_new_repeated_paired_fake_comparison"
+      ],
+      "caveats": [
+        "Shared prompts and minimum-time expectations can contribute. Histograms and the separate timer extension do not establish a personal stopping mechanism."
+      ],
+      "badge": null,
+      "other_reliability": {
+        "method": "single Pearson split-half correlation, not Spearman-Brown median",
+        "effect": 0.9081227680294637,
+        "ci95": [
+          0.8395157972970162,
+          0.958549478590685
+        ],
+        "writers": 53
+      },
+      "original_controls": {
+        "even_half_writer_identity_shuffle": {
+          "bootstrap_draws": 2000,
+          "bootstrap_se": 0.1306072318558483,
+          "ci_high": 0.4599147265356617,
+          "ci_low": -0.04849600739833782,
+          "effect": 0.19148036977411464,
+          "expected_direction": 1,
+          "interval": "percentile bootstrap of complete writer odd/even pairs",
+          "p_reference": "approximate two-sided normal Wald; descriptive; state remains percentile-CI based",
+          "seed": 20261017,
+          "state": "marginal",
+          "writers": 53
+        }
+      },
+      "findings_subsection": [
+        "D29"
+      ],
+      "interpretation_status": "descriptive_with_listed_limits"
+    },
+    {
+      "id": "EV1.departure_pause",
+      "label": "Departure and preceding pause",
+      "input_needed": [
+        "final_text",
+        "revision_history",
+        "timing_log",
+        "pinned_engine_reader_export"
+      ],
+      "definition": "Log pre-word pause on page-normalized departure, session-demeaned with the exact original D33 nuisance/history terms. Fixed session intercepts span the nested writer and session intercept space. Covariates: population_surprisal, length, log_frequency, sentence_start, after_punctuation, personal_surprise.",
+      "source": {
+        "path": "EV1_PAUSES_V1.json",
+        "sha256": "32a1855e4b3f471d71407cfaf3281be61841d424a5758efb42dfbf89a007e0fa",
+        "json_pointer": "/summary"
+      },
+      "findings_identifiers": [
+        "S15-EV1-PAUSES-V1"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [],
+      "caveats": [
+        "Conditional within-session association on 44,494 surviving engine-scored original words; does not establish causal attention or explain rejected/vanished words.",
+        "Departure is page-normalized allocated token surprisal, not a complete-word probability."
+      ],
+      "badge": "tested on human writing logs: flagged words came after longer pauses",
+      "primary": {
+        "bootstrap_se": 0.006688571192511754,
+        "ci_high": 0.08647261940480985,
+        "ci_low": 0.06029289532276097,
+        "draws": 2000,
+        "effect": 0.07296016217920945,
+        "interval": "Whole-writer percentile bootstrap; refit session fixed effects in each resample",
+        "observations": 44494,
+        "sessions": 286,
+        "state": "positive",
+        "writers": 41
+      },
+      "support": {
+        "dispositions": {
+          "engine-held-out": 1727,
+          "engine-no-exact-word-match": 2,
+          "engine-not-content": 25102,
+          "engine-scored": 44494,
+          "not-intact-final-word": 7277
+        },
+        "input_sessions": 1399,
+        "original_rows": 78602,
+        "original_writers": 41
+      },
+      "control_reference": {
+        "bias_flag": false,
+        "mean": -5.7300359063710314e-05,
+        "q025": -0.00987418515613403,
+        "q975": 0.010076593104554716,
+        "sd": 0.0050001005866444305,
+        "valid_draws": 200
+      },
+      "fake_writer_control": "Not applicable: departure is computed per document, not from writer assignment",
+      "findings_subsection": [],
+      "interpretation_status": "scoped_instrument_route_supported"
+    },
+    {
+      "id": "EV2.signatures",
+      "label": "Cross-work signature recurrence",
+      "input_needed": [
+        "final_text",
+        "prompt_metadata",
+        "writer_grouping",
+        "pinned_engine_reader_export"
+      ],
+      "definition": "Lowercase literal phrase recurrence per 10,000 words in the same writer's other-prompt documents minus other writers on those same prompts; equal-writer means of equal-source-document means.",
+      "source": {
+        "path": "EV2_SIGNATURES_V1.json",
+        "sha256": "0a6b2e61f6b1d2864f2a17a4a76fb3cb0ded94c527b8b4ccbe50ea5d7b063077",
+        "json_pointer": "/summary"
+      },
+      "findings_identifiers": [
+        "S15-EV2-SIGNATURES-V1"
+      ],
+      "real_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card estimates a different quantity, not fixed-gallery identification."
+      },
+      "fake_identification": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "This card has no fake-writer identification accuracy."
+      },
+      "median_split_half_reliability": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No median of feature split-half reliabilities was measured."
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [],
+      "caveats": [
+        "S1 common supported document-signatures across real and all200 prompt-stratified session reassignments",
+        "Aggregate recurrence only; not a guarantee about each signature, private preferences or exclusively human wording."
+      ],
+      "badge": "recurs in the writer's other work",
+      "primary": {
+        "ci_high": 3.1419352531640783,
+        "ci_low": 0.0461127320427846,
+        "draws": 2000,
+        "effect": 1.3841526165212545,
+        "state": "positive",
+        "writers": 52
+      },
+      "paired_real_minus_fake": {
+        "ci_high": 3.136306937414173,
+        "ci_low": 0.05490716337143828,
+        "draws": 2000,
+        "effect": 1.3778199819861852,
+        "state": "positive",
+        "writers": 52
+      },
+      "support": {
+        "documents": 1399,
+        "dropped_documents": 462,
+        "matched_documents": 769,
+        "matched_signatures": 2348,
+        "matched_writers": 52,
+        "signature_documents": 1231,
+        "signature_writers": 60,
+        "signatures": 3666
+      },
+      "control_reference": {
+        "biased": false,
+        "draws": 200,
+        "mean": 0.006332634535069168,
+        "q025": -0.3893962730336699,
+        "q975": 0.5285752721335507,
+        "sd": 0.25137456635797645
+      },
+      "findings_subsection": [],
+      "interpretation_status": "scoped_instrument_route_supported"
+    },
+    {
+      "id": "EV3.final",
+      "label": "Engine habits: final document",
+      "input_needed": [
+        "final_text"
+      ],
+      "definition": "Unweighted per-session engine-vector averages; PMAP prompt-alternating halves, B-only scaling and fixed gallery; paired real-probe bootstrap; whole-session fake labels preserve counts. 17 features: eight connectives and six punctuation rates using unquoted-word denominator, sentence-length mean/spread, quoted-word share.",
+      "source": {
+        "path": "EV3_IDENTIFICATION_V1.json",
+        "sha256": "1e4e9cd72174d9dfa7d6ad6bc3c47ff2741cd8f114fd4d7a40c2a16065e54db4",
+        "json_pointer": "/summary/variants/final/original"
+      },
+      "findings_identifiers": [
+        "S15-EV3-IDENTIFICATION-V1"
+      ],
+      "real_identification": {
+        "status": "descriptive_control_invalid",
+        "absent_B_features": 0,
+        "accuracy": 0.37777777777777777,
+        "chance": 0.022222222222222223,
+        "constant_features": 0,
+        "features": 17,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 17,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "descriptive_control_invalid",
+        "mean": 0.014333333333333333,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "value": 0.7142636887368157,
+        "method": "median defined featurewise Spearman-Brown; prompt-alternating halves"
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "INVALID for habit-identification admission despite a positive observed contrast; no habit badge.",
+        "Per-session averages do not pool word counts; distinct feature population from PMAP."
+      ],
+      "badge": null,
+      "per_feature_reliability": [
+        {
+          "feature": "and",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.6007652232584247,
+          "reason": null,
+          "spearman_brown": 0.7505975448861164
+        },
+        {
+          "feature": "but",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.4056118227412938,
+          "reason": null,
+          "spearman_brown": 0.5771320590492041
+        },
+        {
+          "feature": "because",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5555289078170937,
+          "reason": null,
+          "spearman_brown": 0.7142636887368157
+        },
+        {
+          "feature": "however",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5125913239186038,
+          "reason": null,
+          "spearman_brown": 0.6777657861882428
+        },
+        {
+          "feature": "therefore",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.3585988554849873,
+          "reason": null,
+          "spearman_brown": 0.527895123769961
+        },
+        {
+          "feature": "although",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.3361758966732113,
+          "reason": null,
+          "spearman_brown": 0.5031910806207723
+        },
+        {
+          "feature": "yet",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.03949264315093995,
+          "reason": null,
+          "spearman_brown": 0.07598445917082917
+        },
+        {
+          "feature": "so",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5849717984101321,
+          "reason": null,
+          "spearman_brown": 0.7381478951195358
+        },
+        {
+          "feature": ",",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.9100843486567206,
+          "reason": null,
+          "spearman_brown": 0.9529258216232632
+        },
+        {
+          "feature": ";",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5769757021706351,
+          "reason": null,
+          "spearman_brown": 0.731749641261377
+        },
+        {
+          "feature": ":",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.3410848335657915,
+          "reason": null,
+          "spearman_brown": 0.5086700334368645
+        },
+        {
+          "feature": "—",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": -0.18931769759182207,
+          "reason": null,
+          "spearman_brown": -0.46705767975800894
+        },
+        {
+          "feature": "?",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5985801422002338,
+          "reason": null,
+          "spearman_brown": 0.7488897508464825
+        },
+        {
+          "feature": "!",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.6970224064174838,
+          "reason": null,
+          "spearman_brown": 0.8214651778098087
+        },
+        {
+          "feature": "sentenceMean",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.7534580558250624,
+          "reason": null,
+          "spearman_brown": 0.8593967255983599
+        },
+        {
+          "feature": "sentenceSpread",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.6874557648085753,
+          "reason": null,
+          "spearman_brown": 0.814783746211635
+        },
+        {
+          "feature": "quotedWordShare",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.15396888207173756,
+          "reason": null,
+          "spearman_brown": 0.2668510121266267
+        }
+      ],
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.07189266352257792,
+        "ci_high": 0.4975583333333332,
+        "ci_low": 0.2299944444444444,
+        "effect": 0.36344444444444446,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": -0.00788888888888889,
+        "q025": -0.022222222222222223,
+        "q975": 0.022222222222222223,
+        "sd": 0.016656054689696713,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    },
+    {
+      "id": "EV3.typed",
+      "label": "Engine habits: surviving typed fragments",
+      "input_needed": [
+        "final_text",
+        "revision_history"
+      ],
+      "definition": "Unweighted per-session engine-vector averages; PMAP prompt-alternating halves, B-only scaling and fixed gallery; paired real-probe bootstrap; whole-session fake labels preserve counts. 17 features: eight connectives and six punctuation rates using unquoted-word denominator, sentence-length mean/spread, quoted-word share.",
+      "source": {
+        "path": "EV3_IDENTIFICATION_V1.json",
+        "sha256": "1e4e9cd72174d9dfa7d6ad6bc3c47ff2741cd8f114fd4d7a40c2a16065e54db4",
+        "json_pointer": "/summary/variants/typed/original"
+      },
+      "findings_identifiers": [
+        "S15-EV3-IDENTIFICATION-V1"
+      ],
+      "real_identification": {
+        "status": "descriptive_control_invalid",
+        "absent_B_features": 0,
+        "accuracy": 0.5111111111111111,
+        "chance": 0.022222222222222223,
+        "constant_features": 1,
+        "features": 17,
+        "missing_A": 0,
+        "missing_B": 0,
+        "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+        "tied_probes": 0,
+        "used_features": 16,
+        "writers": 45
+      },
+      "fake_identification": {
+        "status": "descriptive_control_invalid",
+        "mean": 0.03,
+        "attempted": 200,
+        "invalid": 0
+      },
+      "median_split_half_reliability": {
+        "status": "measured_descriptive",
+        "value": 0.7473405759324285,
+        "method": "median defined featurewise Spearman-Brown; prompt-alternating halves"
+      },
+      "records_needed_for_point_eight": {
+        "value": null,
+        "status": "not_measured",
+        "reason": "No record-count reliability curve or projection was measured for this channel."
+      },
+      "control_flags": [
+        "chance_centered_fake_reference_bias"
+      ],
+      "caveats": [
+        "INVALID for habit-identification admission despite a positive observed contrast; no habit badge.",
+        "Per-session averages do not pool word counts; distinct feature population from PMAP.",
+        "Surviving typed fragments with synthetic gap boundaries, not historical continuous prose"
+      ],
+      "badge": null,
+      "per_feature_reliability": [
+        {
+          "feature": "and",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5861211465811214,
+          "reason": null,
+          "spearman_brown": 0.7390622687863452
+        },
+        {
+          "feature": "but",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.45212103852476954,
+          "reason": null,
+          "spearman_brown": 0.6227043428612339
+        },
+        {
+          "feature": "because",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.6401549620412813,
+          "reason": null,
+          "spearman_brown": 0.7806030245392986
+        },
+        {
+          "feature": "however",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5708065120002959,
+          "reason": null,
+          "spearman_brown": 0.7267687110278396
+        },
+        {
+          "feature": "therefore",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.44127722441643663,
+          "reason": null,
+          "spearman_brown": 0.6123419102735169
+        },
+        {
+          "feature": "although",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.6072246458929403,
+          "reason": null,
+          "spearman_brown": 0.755618883078512
+        },
+        {
+          "feature": "yet",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.049204840803790145,
+          "reason": null,
+          "spearman_brown": 0.0937945363768901
+        },
+        {
+          "feature": "so",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.5153184958340339,
+          "reason": null,
+          "spearman_brown": 0.6801454575401347
+        },
+        {
+          "feature": ",",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.9624099336280094,
+          "reason": null,
+          "spearman_brown": 0.9808449469563701
+        },
+        {
+          "feature": ";",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.8485200843965623,
+          "reason": null,
+          "spearman_brown": 0.918053411005871
+        },
+        {
+          "feature": ":",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.49354234510792216,
+          "reason": null,
+          "spearman_brown": 0.6609017102521578
+        },
+        {
+          "feature": "—",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": null,
+          "reason": "insufficient variation/support or r=-1",
+          "spearman_brown": null
+        },
+        {
+          "feature": "?",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.6832472468157018,
+          "reason": null,
+          "spearman_brown": 0.811820424014643
+        },
+        {
+          "feature": "!",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.667520539820226,
+          "reason": null,
+          "spearman_brown": 0.8006144738609227
+        },
+        {
+          "feature": "sentenceMean",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.8418888722081255,
+          "reason": null,
+          "spearman_brown": 0.9141581611260157
+        },
+        {
+          "feature": "sentenceSpread",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.8496609516809432,
+          "reason": null,
+          "spearman_brown": 0.9187207535616563
+        },
+        {
+          "feature": "quotedWordShare",
+          "missing_A": 0,
+          "missing_B": 0,
+          "paired_writers": 45,
+          "pearson": 0.17679217235112749,
+          "reason": null,
+          "spearman_brown": 0.30046456206096656
+        }
+      ],
+      "paired_real_minus_fake": {
+        "bootstrap_draws": 2000,
+        "bootstrap_se": 0.07371623049006583,
+        "ci_high": 0.6282305555555554,
+        "ci_low": 0.3320944444444444,
+        "effect": 0.4811111111111111,
+        "state": "positive",
+        "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+        "writers": 45
+      },
+      "control_reference": {
+        "bias_flag": true,
+        "mean": 0.007777777777777777,
+        "q025": -0.022222222222222223,
+        "q975": 0.06666666666666667,
+        "sd": 0.026523905970646525,
+        "valid_draws": 200
+      },
+      "findings_subsection": [],
+      "interpretation_status": "control_invalid"
+    }
+  ],
+  "dictionary": {
+    "mode": "hashes_pending_dataset_terms",
+    "definitions": {
+      "words": {
+        "count": 100,
+        "sha256": "a3de7675cdd87bccd3d208ad04adef77e6ee2693cf183e1cc60ad353208e9eab"
+      },
+      "punctuation": {
+        "count": 22,
+        "sha256": "a12265a5114a0abbe357828993a4a0e3025763ae9794e148d46876a8f1bf4887"
+      },
+      "character_bigrams": {
+        "count": 20,
+        "sha256": "ac72f8fd2e474586e687bb562a8ad7a5b0c7b7145c6d95e7c3ac53493ed8c01d"
+      }
+    },
+    "hash_encoding": "SHA256 of UTF-8 JSON array, ensure_ascii=False, compact separators, original order",
+    "source_sha256": "7c923f11761e969636bb7f27319158e3a2e5fca1562414f9e60a09643148fad3",
+    "source_population": "completed produced typed occurrences, including later-deleted; P6 source replay",
+    "normalization": "Unicode casefold; P6 word regex; punctuation Unicode category P",
+    "bigram_population": "adjacent typed codepoint atoms at insertion, including whitespace/punctuation; each atom pair once",
+    "timing": "single-codepoint user delta pairs at distinct ordinals only; logged intervals, not keypresses",
+    "decision": "S5 reversible filing: retain exact lists locally and export their hashes while dataset redistribution terms are unresolved. No claim that the licence forbids aggregate definitions.",
+    "inspected_source": "https://coauthor.stanford.edu/",
+    "license_observation": "The inspected official landing page and local extracted release supplied no explicit dataset licence; the interface code licence is not treated as a dataset licence."
+  },
+  "open_requirements": [
+    "Tuesday digest delivery to ToMpathy and Ghost, with receiving-path/hash receipt.",
+    "Resolve literal dictionary release terms; hashes preserve exact definition identity meanwhile.",
+    "Unmeasured reliability curves and control deficits remain explicit; no extrapolation is invented."
+  ],
+  "sources": {
+    "PMAP": "a48bc49a7ea1f1f15ce5a761ceca1aa0beddf5bca8b94fee4ed1e873cbd3fbc5",
+    "PMAP-rhythm": "685b0245fd5fc481c6c770fb9da3a33af33a4a57b30bea4b68131b993b7f79bc",
+    "V3": "133f616c0a7401ec3f25ba507312d5571d7e098e380ae0f15bd67a85dbce7847",
+    "D17-complete": "ceebe9f4cad49a9db0f26e8f2cdf202f14f0232ff28f57fbe578ce44fd8922be",
+    "D29": "da687cda28f26b468947a4d812423a208fc46006f9ad7ccbcf63fafc83bc531b",
+    "EV1_PAUSES_V1": "32a1855e4b3f471d71407cfaf3281be61841d424a5758efb42dfbf89a007e0fa",
+    "EV2_SIGNATURES_V1": "0a6b2e61f6b1d2864f2a17a4a76fb3cb0ded94c527b8b4ccbe50ea5d7b063077",
+    "EV3_IDENTIFICATION_V1": "1e4e9cd72174d9dfa7d6ad6bc3c47ff2741cd8f114fd4d7a40c2a16065e54db4"
+  }
+}

@@ -1,5 +1,7 @@
 # V24 preparation and finite pilots
 
+[October 23 review](REVIEW_2026-10-23.md): terminal results and complete replay files rechecked; Sounding Line's feature package received with its limitations. New bounded follow-ups are being prepared under the same pilot allocation.
+
 Prepared October 19 after V23's verified closeout. This is a separate allocation:
 **pilots open October 22 at 00:00 Pacific and end October 25 at 22:00**.
 Production cannot start before October 26 at 08:00. No V24 scientific pilot or

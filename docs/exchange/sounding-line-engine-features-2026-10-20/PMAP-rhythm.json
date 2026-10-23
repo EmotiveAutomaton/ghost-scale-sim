@@ -1,0 +1,102 @@
+{
+  "card": "PMAP-rhythm",
+  "channels": {
+    "lean": {
+      "absent_B_features": 0,
+      "accuracy": 0.15555555555555556,
+      "chance": 0.022222222222222223,
+      "constant_features": 0,
+      "features": 4,
+      "missing_A": 0,
+      "missing_B": 0,
+      "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+      "tied_probes": 0,
+      "used_features": 4,
+      "writers": 45
+    },
+    "rhythm": {
+      "absent_B_features": 0,
+      "accuracy": 0.9777777777777777,
+      "chance": 0.022222222222222223,
+      "constant_features": 0,
+      "features": 22,
+      "missing_A": 0,
+      "missing_B": 0,
+      "standardization": "B-only observed means; partial missing cells imputed to B mean; B standard deviations; fixed gallery",
+      "tied_probes": 0,
+      "used_features": 22,
+      "writers": 45
+    }
+  },
+  "cumulative_cap_seconds": 900,
+  "cumulative_seconds": 120.47295090003172,
+  "method": "Same saved sessions and200 assignments; paired real-probe bootstrap2000; complete common B gallery fixed; no raw/model work",
+  "original_primary": {
+    "approximate_two_sided_wald_p": 0.0012194266844588611,
+    "bootstrap_draws": 2000,
+    "bootstrap_se": 0.09619126887230528,
+    "ci_high": 0.4888888888888889,
+    "ci_low": 0.1111111111111111,
+    "effect": 0.3111111111111111,
+    "state": "positive",
+    "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+    "writers": 45,
+    "z": 3.234296779306589
+  },
+  "original_warnings": "PMAP.md/json retain biased original primary, channel-specific flags and 55 unsupported content controls; none cleared by this extension",
+  "own_minus_fake": {
+    "approximate_two_sided_wald_p": 7.546645483790994e-44,
+    "bootstrap_draws": 2000,
+    "bootstrap_se": 0.0591260916853856,
+    "ci_high": 0.9313375,
+    "ci_low": 0.7061652777777777,
+    "effect": 0.821111111111111,
+    "state": "positive",
+    "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+    "writers": 45,
+    "z": 13.887457934481874
+  },
+  "primary": {
+    "approximate_two_sided_wald_p": 7.296188796783537e-44,
+    "bootstrap_draws": 2000,
+    "bootstrap_se": 0.05919579436949485,
+    "ci_high": 0.9333333333333333,
+    "ci_low": 0.7111111111111111,
+    "effect": 0.8222222222222222,
+    "state": "positive",
+    "uncertainty": "real probe-writer bootstrap; complete B gallery fixed; paired arms",
+    "writers": 45,
+    "z": 13.889875640319728
+  },
+  "reporting": {
+    "extension_complete": true,
+    "family": "E",
+    "new_family_nulls": 0,
+    "no_further_extension": true,
+    "raw_text_or_participant_ids_published": false,
+    "theory_todo_integration": "2026-10-18T20:00:00-07:00"
+  },
+  "session_permutation_null": {
+    "bias_flag": false,
+    "invalid_draws": 0,
+    "mean": 0.0011111111111111113,
+    "one_sided_p": 0.004975124378109453,
+    "q025": -0.08888888888888889,
+    "q975": 0.06722222222222235,
+    "sd": 0.03966482814439075,
+    "state": "descriptive",
+    "valid_draws": 200
+  },
+  "status": "verified_complete",
+  "verification": {
+    "at": "2026-10-18T16:36:12.120228+00:00",
+    "complete_sha256": "573c68bd8d7c5091da2f5adcdc907cb1aa108478574461e70534ca7213cb97f4",
+    "completion_outputs": 214,
+    "counted_slot_released": true,
+    "fresh_source_replay_verified": true,
+    "native_workers_exited": true,
+    "plan_sha256": "1fd332218e02f42717b034d502ab3beaeaec04984a4cd7122ed482c42859c7f7",
+    "source_pins": 37,
+    "summary_sha256": "0b652d8f0372f716eaa01ff3201d748de5e972fb69a63febc78982875da00819"
+  }
+}
