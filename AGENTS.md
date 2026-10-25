@@ -17,6 +17,49 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V25 commissioned week, October 25
+
+Read `docs/versions/v25-pieces-and-ends/README.md`, the full source packet,
+`CARDS.json`, each frozen family protocol, `results/v25/CURRENT_STATUS.json`
+and the outer `.local/v25/HANDOFF.md`. The owner explicitly advanced scientific
+opening to October 25, keeping budgets and the November 1 finish. Gear 2 is two
+below-normal, single-thread workers shared with separately admitted N16
+production. New starts close November 2 04:00 UTC; drain at 06:00 UTC.
+Use immutable acceptance, measured per-pass probe reservations, full replay,
+independent reconstruction, raw block records and the claim ledger. Earlier
+V24 pilot acceptance is unchanged and does not fund V25 or production.
+
+## Standing amendments, 25 October
+
+- Commissioned work waiting in the queue is not invented work. Keep at least
+  two prepared packets while commissioned work remains; diagnose and record
+  avoidable idle time. Build/admit the next eligible packet before acknowledging
+  depletion. Acknowledge failures first. With no commissioned work remaining,
+  report completion and retire recurring wakes; never repeat valid science.
+- Engineering/resource failures and failed known-answer checks automatically
+  receive a diagnosed, documented, separately frozen healing packet, at most two
+  per family per week. Preserve and charge failures. Verified contrary scientific
+  results are findings, not targets for healing. Scientific setting changes are
+  new cards. Use the current allocation's healing pool and ceilings; do not
+  reopen T1/T3 or closed versions.
+- After each verified primary, register up to three justified, prospectively
+  frozen follow-ups: stress map, half/double effect-size or evidence-dose check,
+  mechanism contrast, exact-alias/intervention analysis, or one explicitly
+  exploratory surprise check. One generation only; no follow-up of a follow-up.
+  Stay within the designated pool. V25 protects three of its six healing/follow-up
+  hours for healing until October 31 19:00 UTC, and caps each follow-up at half
+  its parent's family ceiling and its remaining follow-up share.
+- `docs/theory/CLAIMS.json` is the version-independent claim ledger. Use stable
+  `G-<version>-<card>-<n>` IDs, allowed wording, estimate, controls, method versus
+  mechanism, architecture/choice-model/reader limits, source and line, and
+  correction/supersession links. Theory rows and exchange notes cite these IDs.
+  Corrections lead every daily or exchange note. The hypothesis store remains
+  `READING_INTENT.md`; keep both it and FINDINGS current in the same landing.
+- Keep one terminal-event/twelve-hour monitor, disarmed during operator work.
+  Evidence must be recorded and ordinary publication verified before exact event
+  acknowledgement. Daily reports list corrections, all pool charges, claim IDs,
+  provisional choices, prepared work and follow-up/healing dispositions.
+
 ## V24 pilots and October 23 follow-ups
 
 Read `docs/versions/v24-powered-readers/README.md`, `PROTOCOL.md`,

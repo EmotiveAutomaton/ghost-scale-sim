@@ -38,7 +38,11 @@ All 512 gallery cells retain their synthetic arrays. Every uniform relabeling re
 
 ## Scheduler stress interpretation
 
-The new stress map compares every candidate to the correct-model fixed order with epsilon 0.1 mixture support. The true-mechanism-omitted candidate receives the fixed lower-bound score by construction, log(0.1), not recovery of the omitted mechanism. Other-omission averages and high-reliability comparisons retain every source and all four block means. Full 192-cell output is published; no favorable subset is selected for confirmation.
+The new stress map compares every candidate to the correct-model fixed order with epsilon 0.1 mixture support. **Superseded wording, retained for provenance:** The true-mechanism-omitted candidate receives the fixed lower-bound score by construction, log(0.1), not recovery of the omitted mechanism.
+
+Correction, 25 October 2026: truth is omitted from the probe chooser's model, not from the unchanged full-library scoring reader. The score compares the true-mechanism probability after the chosen probes, mixed 90:10 with the correct fixed-order comparator, against that comparator. The 48 omitted-truth cell means range from -0.044416 to 0.086741 nats; six are negative, all from N4d. The lowest whole-block value is -0.056958 nats. log(0.1) is an analytic lower bound, not an assigned score. This corrects prose; no saved score, source capsule or scientific result is changed. [Claim G-V24-N16STRESS-2](../../theory/CLAIMS.json).
+
+ Other-omission averages and high-reliability comparisons retain every source and all four block means. Full 192-cell output is published; no favorable subset is selected for confirmation.
 
 ## Verification, cost and limits
 

@@ -1,5 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
+Can designed disturbances identify a hidden controlled variable and reference? With the plant correctly specified, mean gains over four additional natural observations range from 0.214031 to 0.421259 nats after four initial records, and 0.142889 to 0.337281 after eight, all above the 0.1 practical margin. Some wrong-decay settings fall below that margin. These are constructed-method results with an exact Gaussian posterior and five-point product quadrature for probe selection; miniature, architecture untested. Claim `G-V25-W2-1`.
+
+Does an information-chosen intervention improve identification beyond one more passive choice? W1 found no practical advantage at any overlap level: mean true-hypothesis log-score gains were 0.042708, 0.005529 and 0.007848 nats for none, partial and heavy overlap, all below 0.05. These equally weight both rationalities and all sixteen whole-world blocks per setting. This constructed-method result uses the declared exact softmax/habit reader; miniature, architecture untested. Claim `G-V25-W1-1`.
+
+## V25 opening correction, 25 October
+
+Correction, 25 October 2026: truth is omitted from the probe chooser's model, not from the unchanged full-library scoring reader. The score compares the true-mechanism probability after the chosen probes, mixed 90:10 with the correct fixed-order comparator, against that comparator. The 48 omitted-truth cell means range from -0.044416 to 0.086741 nats; six are negative, all from N4d. The lowest whole-block value is -0.056958 nats. log(0.1) is an analytic lower bound, not an assigned score. This corrects prose; no saved score, source capsule or scientific result is changed. Claim `G-V24-N16STRESS-2`.
+
 <!-- V24-OCT23-FOLLOWUPS -->
 Can identification reflect context rather than personal mechanism? In the constructed 45-identity, 17-feature pilot, shared context alone gives 5.76% identification against 2.22% global chance; its matched within-context reference is 6.67%. Reusing the same sample gives 100%. This is a methods warning, not a diagnosis of Sounding Line’s failed controls.
 

@@ -1,5 +1,7 @@
 # Version index
 
+**V25 is open:** [week protocol, cards and results](v25-pieces-and-ends/README.md). W1 and W2 are verified; remaining commissioned studies are being built and admitted at Gear 2. The owner advanced the opening to October 25, with the original budgets and November 1 finish. Separate N16 production may begin after its controls and excluded-block replay.
+
 [V24 October 23 follow-ups](v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md) preserve complete replay, independent checks and explicit descriptive limits. Production remains separately unadmitted.
 
 [October 17 packet and current work](v23-research-division/PACKET_REVIEW_2026-10-17.md): mandatory dispositions and ranked conditional studies, with preserved prior results and limits.

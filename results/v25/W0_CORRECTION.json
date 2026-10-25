@@ -1,0 +1,17 @@
+{
+  "state": "VERIFIED_PROSE_CORRECTION",
+  "at": "2026-10-25T19:50:35.442094+00:00",
+  "source_file": "results/v24/followups-20261023/N16_STRESS_RESULT.json",
+  "source_sha256": "f70dfd0c65b19f419b80f75172ce78427a97b364ecbaf4f8964afd7b75fc4d67",
+  "estimate": {
+    "cell_mean_min": -0.044416294448801824,
+    "cell_mean_max": 0.08674050634497457,
+    "minimum_block": -0.05695834631525471,
+    "negative_cells": 6,
+    "cells": 48
+  },
+  "claim": "G-V24-N16STRESS-2",
+  "data_changed": false,
+  "chooser_omits_truth": true,
+  "scoring_reader_retains_truth": true
+}
