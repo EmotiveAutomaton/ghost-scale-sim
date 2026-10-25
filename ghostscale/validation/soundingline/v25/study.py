@@ -40,7 +40,9 @@ def aggregate(blocks,independent=False):
     return result
 
 def execute(root,plan,pulse,independent=False):
-    root=Path(root);implementation=module(plan['family']);controls=implementation.controls()
+    root=Path(root);implementation=module(plan['family'])
+    if plan['kind']=='followup':implementation=importlib.import_module(__package__+'.followups')
+    controls=implementation.controls()
     if not controls.get('passed'):raise ValueError('known-answer failure')
     if not independent:root.mkdir(exist_ok=False);write(root/'CONTROLS.json',controls)
     rows=[]
@@ -53,13 +55,13 @@ def execute(root,plan,pulse,independent=False):
             if independent:
                 with gzip.open(path,'rt',encoding='utf-8') as f:saved=json.load(f)
                 close(row,saved,tol=1e-9)
-                rows.append(saved)
+                rows.append(dict(setting=saved['setting'],block=saved['block'],data=dict(readouts=saved['data']['readouts'])))
             else:
                 with path.open('xb') as raw:
                     with gzip.GzipFile(filename='',mode='wb',fileobj=raw,mtime=0) as f:f.write(canonical(row)+b'\n')
-                rows.append(row)
+                rows.append(dict(setting=row['setting'],block=row['block'],data=dict(readouts=data['readouts'])))
             pulse(setting=setting_id,block=block,phase='world_complete')
-    summary=dict(family=plan['family'],kind=plan['kind'],state='DESCRIPTIVE_CONSTRUCTED_STUDY',
+    summary=dict(family=plan['family'],kind=plan.get('scientific_kind',plan['kind']),state='DESCRIPTIVE_CONSTRUCTED_STUDY',
         architecture='miniature, architecture untested',independent_blocks_per_setting=plan['blocks'],
         settings=plan['settings'],cells=aggregate(rows,independent),confirmation=False,
         reader='exact finite-library; specified likelihood model; independent arithmetic shares declared generative model',

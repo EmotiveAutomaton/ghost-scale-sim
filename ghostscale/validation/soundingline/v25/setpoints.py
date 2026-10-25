@@ -39,11 +39,13 @@ def marginals(p):return p.reshape(3,5,2).sum(-1).ravel()
 
 def block(setting,identity,independent=False):
     r=rng(*identity);sigma=setting['sigma'];decay=setting['decay'];std=np.sqrt(np.array(sigma)**2+.01)
+    def noise(shape=None):
+        return r.standard_t(3,size=(2,) if shape is None else shape)*std/math.sqrt(3) if setting.get('followup')=='noise' else r.normal(0,std,size=shape)
     outputs=[];raw=[]
     for truth,(perception,ref,gain) in enumerate(HYPOTHESES):
         x=np.zeros(2);ll=np.zeros(30);states=[x.tolist()];lls={};state_at={}
         for t in range(32):
-            y=means(x,decay,independent)[truth]+r.normal(0,std);ll+=likelihood(x,y,sigma,independent);x=y;states.append(x.tolist())
+            y=means(x,decay,independent)[truth]+noise();ll+=likelihood(x,y,sigma,independent);x=y;states.append(x.tolist())
             if t+1 in PREFIXES:
                 p=posterior(ll,independent=independent);mp=marginals(p)
                 outputs.append(record(scores(mp,perception*5+ref+2),reader='exact',truth=truth,history=t+1))
@@ -52,7 +54,7 @@ def block(setting,identity,independent=False):
                 outputs.append(record(dict(controlled_perception_correct=float(np.argmin(ratios)==perception),minimum_variance_ratio=float(min(ratios))),reader='variance',truth=truth,history=t+1))
         branches=[]
         for prefix in (4,8):
-            paired_noise=r.normal(0,std,(4,2));results={}
+            paired_noise=noise((4,2));results={}
             for kind in ('natural','designed'):
                 x=state_at[prefix].copy();ll=lls[prefix].copy();trajectory=[]
                 for t in range(4):
@@ -64,8 +66,10 @@ def block(setting,identity,independent=False):
                     ll+=likelihood(x,y,sigma,independent);trajectory.append(dict(state_before_response=x.tolist(),observed=y.tolist(),axis=axis));x=y
                 results[kind]=marginals(posterior(ll,independent=independent))[perception*5+ref+2]
                 branches.append(dict(prefix=prefix,kind=kind,trajectory=trajectory))
-            value=math.log(results['designed'])-math.log(results['natural'])
-            outputs.append(record(dict(primary=value,above_point_one=float(value>.1)),reader='designed-minus-natural',truth=truth,history=prefix))
+            value=math.log(results['designed'])-math.log(results['natural']) if min(results.values())>0 else None
+            metrics=dict(primary=value,above_point_one=float(value>.1) if value is not None else None)
+            if setting.get('followup'):metrics['unavailable_score']=float(value is None)
+            outputs.append(record(metrics,reader='designed-minus-natural',truth=truth,history=prefix))
         raw.append(dict(truth=truth,states=states,branches=branches))
     return dict(public=dict(sigma=sigma,reader_decay=.9,pulse_timing='observed-state impulse before response',quadrature_order=5),truth_decay=decay,truth_and_observations=raw,readouts=outputs)
 

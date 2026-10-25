@@ -50,6 +50,12 @@ def close(a,b,path='root',tol=1e-10):
         if len(a)!=len(b):raise ValueError('length differs '+path)
         for i,(x,y) in enumerate(zip(a,b)):close(x,y,path+f'[{i}]',tol)
     elif isinstance(a,(int,float)) and not isinstance(a,bool):
+        if path.endswith('.blocks_to_one_nat') and a>0 and b>0:
+            # Reciprocal conditioning: compare the measured nats/block, whose
+            # registered numerical tolerance is 1e-12, rather than amplifying
+            # sub-ulp score noise into an error on a billion-block extrapolation.
+            if not math.isclose(1/a,1/b,abs_tol=1e-12,rel_tol=0):raise ValueError('reciprocal rate disagreement '+path)
+            return
         if not math.isclose(a,b,abs_tol=tol,rel_tol=tol):raise ValueError(f'numerical disagreement {path}: {a} versus {b}')
     elif a!=b:raise ValueError('value differs '+path)
 

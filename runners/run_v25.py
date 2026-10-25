@@ -61,16 +61,25 @@ def prepare(campaign,family,kind='probe',*,parent=None,source=None):
         costs=read(campaign/'accounting'/(parent.name+'.json'))['pass_cpu_seconds']
         # Most expensive of the two sampled cells, measured separately in every pass.
         probes=read(parent/'PASS_COSTS.json')
-        unit={label:max(values) for label,values in probes['setting_seconds'].items()}
-        if any(v<=0 for v in unit.values()):raise ValueError('missing probe cost')
-        projected=sum(unit.values())*len(rows)*blocks
+        # Windows process CPU is quantized. Zero observed ticks are bounded by
+        # one tick, not evidence that a completed probe had no measured work.
+        unit={label:max(max(values),1/64) for label,values in probes['setting_seconds'].items()}
+        inner={k:read(parent/(k+'-cost.json'))['cpu_seconds'] for k in costs}
+        if not probes.get('includes_world_io'):
+            # The whole two-world inner pass includes serialization/review;
+            # use its complete cost plus one tick as an upper bound for either
+            # single world, without replicating process startup per world.
+            unit={k:max(unit[k],inner[k]+1/64) for k in unit}
+        overhead={k:max(0.,costs[k]-(sum(probes['setting_seconds'][k]) if probes.get('includes_world_io') else inner[k])) for k in costs}
+        projected=sum(overhead.values())+sum(unit.values())*len(rows)*blocks
         while projected>registry.FAMILY_HOURS[family]*3600 and shed<3:
             candidate=registry.selected_settings(family,shed+1)
             if candidate==rows:break
-            rows=candidate;shed+=1;projected=sum(unit.values())*len(rows)*blocks
-        caps={k:1.5*v*len(rows)*blocks+10 for k,v in unit.items()};cap=sum(caps.values())
-        # Full source/entry overhead is part of the probe, charged prospectively too.
-        caps={k:max(caps[k],1.5*costs[k]*len(rows)*blocks/2) for k in caps};cap=sum(caps.values())
+            rows=candidate;shed+=1
+            if (family=='W4' and shed>=3) or (family=='W5' and shed>=2):blocks=8
+            projected=sum(overhead.values())+sum(unit.values())*len(rows)*blocks
+        # Entry/hash overhead is measured separately and occurs once per pass.
+        caps={k:1.5*(overhead[k]+v*len(rows)*blocks)+10 for k,v in unit.items()};cap=sum(caps.values())
     plan=dict(family=family,kind=kind,pool='studies',identity=identity,science_identity=identity,settings=rows,blocks=blocks,
         shed_level=shed,source_root=str(source),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),source_archive_sha256=digest(source/'SOURCE.zip'),
         acceptance_sha256=digest(campaign/'ACCEPTANCE.json'),environment_sha256=digest(campaign/'ENVIRONMENT.json'),
@@ -84,13 +93,15 @@ def prepare(campaign,family,kind='probe',*,parent=None,source=None):
     return packet
 
 def child(packet,label):
-    plan=read(packet/'PLAN.json');campaign=packet.parent.parent
+    plan=read(packet/'PLAN.json');campaign=Path(plan.get('accounting_root',packet.parent.parent))
     if digest(campaign/'ACCEPTANCE.json')!=plan['acceptance_sha256']:raise ValueError('acceptance changed')
     runtime.below_normal();runtime.child_handshake(packet,label);verify_source(plan)
     if digest(campaign/'ENVIRONMENT.json')!=plan['environment_sha256'] or runtime.environment()!=read(campaign/'ENVIRONMENT.json'):raise ValueError('scientific environment changed')
-    started=time.process_time();last=[0.];setting_costs=[];setting_start=[started];last_setting=[None]
+    started=time.process_time();last=[0.];setting_costs=[];setting_start=[started];last_setting=[None];timed=[];world_start=[started]
     def pulse(**progress):
         used=time.process_time()-started
+        if progress.get('phase')=='world_complete':
+            timed.append(dict(setting=progress['setting'],cpu_seconds=time.process_time()-world_start[0]));world_start[0]=time.process_time()
         if used>plan['pass_caps'][label] or now()>=datetime.fromisoformat(contract.DRAIN) or (campaign/'STOP').exists():raise TimeoutError('pass CPU or immutable drain')
         setting=progress.get('setting')
         if setting is not None and last_setting[0]!=setting:
@@ -99,18 +110,20 @@ def child(packet,label):
         if time.monotonic()-last[0]>5:
             write(packet/(label+'-progress.json'),dict(pid=os.getpid(),heartbeat=now().isoformat(),cpu_seconds=used,**progress),immutable=False);last[0]=time.monotonic()
     # Timing boundaries surround complete settings, including their first block.
-    original_block=study.module(plan['family']).block
-    timed=[]
-    def timed_block(setting,identity,independent=False):
-        tick=time.process_time();value=original_block(setting,identity,independent=independent);timed.append(dict(setting=identity[-2],cpu_seconds=time.process_time()-tick));return value
-    study.module(plan['family']).block=timed_block
+    if plan.get('production'):
+        from ghostscale.validation.soundingline.v24 import production
+        tick=time.process_time()
+        if label=='review':write(packet/'INDEPENDENT_REVIEW.json',production.reconstruct(packet/'original',plan,pulse))
+        else:production.execute(packet/label,plan,pulse)
+        write(packet/(label+'-cost.json'),dict(cpu_seconds=time.process_time()-started,blocks=[dict(setting=0,cpu_seconds=time.process_time()-tick)]))
+        return
     if label=='review':write(packet/'INDEPENDENT_REVIEW.json',study.reconstruct(packet/'original',plan,pulse))
     else:study.execute(packet/label,plan,pulse)
     write(packet/(label+'-cost.json'),dict(cpu_seconds=time.process_time()-started,blocks=timed))
 
 def execute(packet):
     if os.name!='nt':raise RuntimeError('native Windows accounting required')
-    packet=packet.resolve();campaign=packet.parent.parent;plan=read(packet/'PLAN.json')
+    packet=packet.resolve();plan=read(packet/'PLAN.json');campaign=Path(plan.get('accounting_root',packet.parent.parent))
     if not (packet/'ADMISSION.json').exists():raise ValueError('no owner admission')
     if digest(packet/'PLAN.json')!=read(packet/'ADMISSION.json')['plan_sha256']:raise ValueError('admitted plan changed')
     if (packet/'COMPLETE.json').exists():raise ValueError('completed packet cannot repeat')
@@ -135,7 +148,22 @@ def execute(packet):
         timing={}
         for label in pass_cpu:
             blocks=read(packet/(label+'-cost.json'))['blocks'];timing[label]=[sum(b['cpu_seconds'] for b in blocks if b['setting']==s) for s in range(len(plan['settings']))]
-        write(packet/'PASS_COSTS.json',dict(pass_cpu_seconds=pass_cpu,setting_seconds=timing))
+        write(packet/'PASS_COSTS.json',dict(pass_cpu_seconds=pass_cpu,setting_seconds=timing,includes_world_io=True))
+        if plan.get('healing_parent'):
+            parent=packet.parent/plan['healing_parent'];retained={}
+            for path in sorted((parent/'original').glob('*_points.json*')):
+                bound=digest(path)
+                if plan.get('repair_observations_only'):
+                    import gzip
+                    with gzip.open(path,'rt',encoding='utf-8') as f:before=json.load(f)
+                    with gzip.open(packet/'original'/path.name,'rt',encoding='utf-8') as f:after=json.load(f)
+                    for value in (before,after):
+                        value['data'].pop('readouts')
+                        for field in plan.get('repair_public_metadata',[]):value['data']['public'].pop(field,None)
+                    if before!=after:raise ValueError('derived-measure repair changed retained observations')
+                elif digest(packet/'original'/path.name)!=bound:raise ValueError('healing changed retained scientific draw')
+                retained[path.name]=bound
+            write(packet/'REPAIR_CONTINUITY.json',dict(retained_raw_files=retained,science_identity_unchanged=True,observations_only=bool(plan.get('repair_observations_only'))))
         write(packet/'COMPLETE.json',dict(state='VERIFIED',plan_sha256=digest(packet/'PLAN.json'),summary_sha256=digest(packet/'original/SUMMARY.json'),replay_sha256=digest(packet/'REPLAY.json'),review_sha256=digest(packet/'INDEPENDENT_REVIEW.json'),confirmation=False))
         state='COMPLETE'
     except BaseException as exc:error=f'{type(exc).__name__}: {exc}';raise
@@ -145,7 +173,7 @@ def execute(packet):
                 ctypes.windll.kernel32.TerminateProcess(ctypes.c_void_p(handle),1);ctypes.windll.kernel32.WaitForSingleObject(ctypes.c_void_p(handle),10000)
             cpu+=runtime.child_cpu(handle);ctypes.windll.kernel32.CloseHandle(ctypes.c_void_p(handle))
         if active and active.poll() is None:active.terminate();active.wait(timeout=10)
-        write(campaign/'accounting'/(packet.name+'.json'),dict(pool=plan['pool'],kind=plan['kind'],family=plan['family'],state=state,cpu_seconds=cpu+time.process_time()-started,reserved_cpu_seconds=0 if state=='COMPLETE' else plan['cpu_cap_seconds'],pass_cpu_seconds=pass_cpu,error=error),immutable=False)
+        write(campaign/'accounting'/(packet.name+'.json'),dict(pool=plan['pool'],kind=plan['kind'],family=plan['family'],state=state,cpu_seconds=cpu+time.process_time()-started,wall_seconds=time.monotonic()-wall,reserved_cpu_seconds=0 if state=='COMPLETE' else plan['cpu_cap_seconds'],pass_cpu_seconds=pass_cpu,error=error),immutable=False)
         write(packet/'STATUS.json',dict(state=state,at=now().isoformat(),cpu_seconds=cpu+time.process_time()-started,error=error),immutable=False)
 
 def queue(campaign):
@@ -153,13 +181,20 @@ def queue(campaign):
     accepted=read(campaign/'ACCEPTANCE.json');started=time.process_time();active={};finished=[]
     with (campaign/'QUEUE_OWNER.lock').open('x') as f:f.write(str(os.getpid()))
     try:
+        from ghostscale.validation.soundingline.v24 import production
+        production.reconcile(campaign)
         while now()<datetime.fromisoformat(contract.DRAIN) and not (campaign/'STOP').exists():
             for name,(proc,log) in list(active.items()):
                 if proc.poll() is None:continue
                 log.close();del active[name];packet=campaign/'packets'/name;status=read(packet/'STATUS.json');plan=read(packet/'PLAN.json')
                 if status['state']=='COMPLETE':
                     event(campaign,name+'-complete','batch_complete',dict(packet=name,complete_sha256=digest(packet/'COMPLETE.json')))
-                    if plan['kind']=='probe':
+                    if plan.get('production'):
+                        try:production.advance(campaign,packet)
+                        except Exception as exc:
+                            write(packet/'CONTINUATION_FAILURE.json',dict(error=f'{type(exc).__name__}: {exc}'))
+                            event(campaign,name+'-continuation-failure','admission_failure',dict(packet=name,error=str(exc)))
+                    elif plan['kind']=='probe' or plan.get('scientific_kind')=='probe':
                         try:
                             # New families may not exist in the controller's earlier capsule.
                             # Preparation must import the exact probe's scientific source.
@@ -171,23 +206,33 @@ def queue(campaign):
                         except Exception as exc:
                             write(packet/'STUDY_ADMISSION_FAILURE.json',dict(error=f'{type(exc).__name__}: {exc}'))
                             event(campaign,name+'-study-admission','admission_failure',dict(packet=name,error=str(exc)))
-                else:event(campaign,name+'-failed','packet_failure',dict(packet=name,status_sha256=digest(packet/'STATUS.json')))
+                else:
+                    if status['state'] not in ('FAILED','COMPLETE'):
+                        write(packet/'STATUS.json',dict(state='FAILED',at=now().isoformat(),reason='parent exited without a terminal receipt; reservation retained',exit_code=proc.returncode),immutable=False)
+                    event(campaign,name+'-failed','packet_failure',dict(packet=name,status_sha256=digest(packet/'STATUS.json')))
                 finished.append(name)
             candidates=[]
             for packet in (campaign/'packets').glob('*'):
                 if (packet/'PLAN.json').exists() and (packet/'STATUS.json').exists() and read(packet/'STATUS.json')['state']=='PREPARED':
-                    p=read(packet/'PLAN.json');candidates.append((contract.ORDER.index(p['family']),p['kind']!='study',packet,p))
+                    p=read(packet/'PLAN.json');candidates.append((len(contract.ORDER) if p.get('production') else contract.ORDER.index(p['family']),p['kind']!='study',packet,p))
             for _,__,packet,plan in sorted(candidates):
-                if len(active)>=2 or now()>=datetime.fromisoformat(contract.NEW_STARTS_CLOSE):break
+                if (campaign/'PAUSE_ADMISSIONS').exists():break
+                if len(active)>=2:break
+                if not plan.get('production') and now()>=datetime.fromisoformat(contract.NEW_STARTS_CLOSE):continue
                 if plan['family']=='W5' and not (campaign/'packets/v25-w1-study-1/COMPLETE.json').exists():continue
-                try:contract.admission(plan,accepted,now(),charges(campaign),running=len(active))
+                accounting_root=Path(plan.get('accounting_root',campaign))
+                try:
+                    if plan.get('production'):
+                        from ghostscale.validation.soundingline.v24 import production
+                        production.admission(plan,now(),len(active))
+                    else:contract.admission(plan,accepted,now(),charges(campaign),running=len(active))
                 except ValueError as exc:
                     write(packet/'STATUS.json',dict(state='ADMISSION_HELD',reason=str(exc),at=now().isoformat()),immutable=False)
                     event(campaign,packet.name+'-held','admission_failure',dict(packet=packet.name,reason=str(exc)));continue
                 verify_source(plan)
                 if digest(packet/'CONTROLS_BEFORE_DATA.json')!=plan['controls_sha256'] or not read(packet/'CONTROLS_BEFORE_DATA.json').get('passed'):raise ValueError('known-answer receipt changed')
-                write(packet/'ADMISSION.json',dict(at=now().isoformat(),plan_sha256=digest(packet/'PLAN.json'),charges_before=charges(campaign)))
-                write(campaign/'accounting'/(packet.name+'.json'),dict(pool=plan['pool'],kind=plan['kind'],family=plan['family'],state='RESERVED',reserved_cpu_seconds=plan['cpu_cap_seconds']))
+                write(packet/'ADMISSION.json',dict(at=now().isoformat(),plan_sha256=digest(packet/'PLAN.json'),charges_before=charges(accounting_root)))
+                write(accounting_root/'accounting'/(packet.name+'.json'),dict(pool=plan['pool'],kind=plan['kind'],family=plan['family'],state='RESERVED',reserved_cpu_seconds=plan['cpu_cap_seconds']))
                 env=dict(os.environ,PYTHONPATH=plan['source_root'],PYTHONNOUSERSITE='1',PYTHONDONTWRITEBYTECODE='1')
                 for key in ('OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[key]='1'
                 log=(packet/'parent.log').open('xb')
@@ -197,6 +242,7 @@ def queue(campaign):
             write(campaign/'accounting/controller.json',dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-started,state='RUNNING'),immutable=False)
             if (campaign/'BUILD_COMPLETE.json').exists() and not active and not candidates:
                 event(campaign,'v25-prepared-queue-drained','review_boundary',dict(finished=finished));break
+            if (campaign/'PAUSE_ADMISSIONS').exists() and not active:break
             time.sleep(5)
     finally:
         write(campaign/'QUEUE_STATUS.json',dict(state='STOPPED_WITH_ACTIVE_CHILDREN' if active else 'DRAINED',pid=os.getpid(),active=list(active),finished=finished,at=now().isoformat()),immutable=False)

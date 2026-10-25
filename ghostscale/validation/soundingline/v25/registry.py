@@ -39,4 +39,33 @@ def selected_settings(family,shed=0):
     if family=='W2':
         if shed>=1:rows=[r for r in rows if r['decay']!=.95]
         if shed>=2:rows=[dict(r,gains=[.9]) for r in rows]
+    if family=='W3':
+        if shed>=1:rows=[dict(r,prefixes=[8,32]) for r in rows]
+        if shed>=2:rows=[r for r in rows if r['alignment']!='opposed']
+    if family=='W4':
+        if shed>=1:rows=[r for r in rows if r['alpha']==10]
+        if shed>=2:rows=[dict(r,prefixes=[8,32,128,512]) for r in rows]
+        if shed>=3:rows=[dict(r,worlds=8) for r in rows]
+    if family=='W5':
+        if shed>=1:rows=[dict(r,omit_split=True) for r in rows]
+        if shed>=2:rows=[dict(r,worlds=8) for r in rows]
+    if family=='W6':
+        if shed>=1:rows=[r for r in rows if r['kappa']==3]
+        if shed>=2:rows=[r for r in rows if r['block_probability']!=.3]
+    if family=='W7':
+        if shed>=1:rows=[dict(r,omit_correct_random=(r['epsilon']==.1)) for r in rows]
+        if shed>=2:rows=[dict(r,omit_revision=True) for r in rows]
+    if family=='W8':
+        if shed>=1:rows=[dict(r,omit_windowed_512=True) for r in rows]
+        if shed>=2:rows=[r for r in rows if r['process']!='trend']
+    if family=='W9':
+        if shed>=1:rows=[r for r in rows if r['n']!=80]
+        if shed>=2:rows=[r for r in rows if r['hyperprior']!=[4.,16.]]
+        if shed>=3:rows=[dict(r,omit_deception=True) for r in rows]
+    if family=='W10' and shed>=1:rows=[r for r in rows if r['growth']!='normalized']
+    if family=='W11':
+        if shed>=1:rows=[r for r in rows if not r['stereotype']]
+        if shed>=2:rows=[r for r in rows if r['contact']!=.5]
+    if family=='W12' and shed>=1:rows=[r for r in rows if r['habit_affect']]
+    if family=='W13' and shed>=1:rows=[r for r in rows if r['shift']!='delayed']
     return rows

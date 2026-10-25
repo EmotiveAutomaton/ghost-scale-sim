@@ -1,0 +1,9 @@
+# W12: SACRED_STRUCTURES
+
+Correction first: G-V24-N16STRESS-2 distinguishes the omitted-truth chooser from the full-library scoring reader; the earlier fixed-score sentence was wrong.
+
+Which observations separate an end from a habit that carries affect? Within the trained stake range, trade-offs leave all end/habit cases below one nat through 32 records. The proportions still unresolved after adding affect range from 0.000 to 0.000. Full first-passage and pairwise evidence curves distinguish devaluation, substitution, affect and novel actions; outside-range separation follows from the cache rule and is a control, not a discovery. Four planted types per world are used, rather than the generic eight-maker default. Constructed method result; miniature, architecture untested.
+
+Claim `G-V25-W12-1`.
+
+Every setting is retained in [machine results](../../../results/v25/W12/). 192 whole-world blocks; 195 replayed files. Original, replay and independent review consumed 240.796875 CPU-seconds. Probes and preparation are separately charged. The independent review uses scalar probability arithmetic and Decimal aggregation under the shared declared generative model; it does not validate that model against people.
