@@ -34,7 +34,6 @@ def scheduled(campaign,current):
 
 def actionable(events,active):
     """Batch routine N16 blocks/probes at health checks; wake for decisions."""
-    if not active:return events
     for item in events:
         if item['kind']!='batch_complete':return events
         name=item.get('evidence',{}).get('packet',item['id'])

@@ -6,7 +6,7 @@ from runners.watch_v25 import actionable
 def test_routine_blocks_batch_but_failures_and_health_wake():
     block=dict(id='b',kind='batch_complete',evidence=dict(packet='v24-n16-confirmation-block-002'))
     assert actionable([block],['next'])==[]
-    assert actionable([block],[])==[block]
+    assert actionable([block],[])==[]
     for kind in ('packet_failure','twelve_hour_health','production_boundary'):
         urgent=dict(id='u',kind=kind)
         assert actionable([block,urgent],['next'])==[block,urgent]
