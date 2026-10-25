@@ -1,0 +1,7 @@
+# W1F1 follow-up
+
+Correction first: G-V24-N16STRESS-2 remains the scoring correction; no earlier raw evidence changed.
+
+Can more interventions rescue the weak one-probe advantage? With eight adaptive probes against eight passive records, the true-hypothesis log-score gains are no overlap: 0.164388 nats, partial overlap: 0.136459 nats, heavy overlap: 0.002711 nats. The dose response is not uniform; the heavy-overlap result remains below the 0.05 practical margin. Constructed method result; miniature, architecture untested.
+
+Claim `G-V25-W1F1-1`. Sixteen fresh whole worlds per setting, full replay and independent numerical reconstruction. Frozen protocol, aggregate curves and provenance: [results](../../../results/v25/W1F1/). One generation only; no successor follow-up is registered.

@@ -173,7 +173,8 @@ def deferred_events(campaign,state,events,current=None):
     path=state/'DEFERRED_EVENTS.json'
     if not path.exists():return set()
     current=current or datetime.now(timezone.utc)
-    deadline=datetime.fromisoformat(read(campaign/'ACCEPTANCE.json')['report_start'])
+    acceptance=read(campaign/'ACCEPTANCE.json')
+    deadline=datetime.fromisoformat(acceptance.get('report_start') or acceptance.get('new_starts_close') or acceptance['drain'])
     saved=read(path);byid={e['id']:e for e in events};valid=set()
     for identity,item in saved.get('events',{}).items():
         event=byid.get(identity)

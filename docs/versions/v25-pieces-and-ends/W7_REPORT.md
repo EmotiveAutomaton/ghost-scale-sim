@@ -7,3 +7,5 @@ Do attention events reveal higher goals beyond the final text? There is no pract
 Claim `G-V25-W7-1`.
 
 Every setting is retained in [machine results](../../../results/v25/W7/). 96 whole-world blocks; 99 replayed files. Original, replay and independent review consumed 126.031250 CPU-seconds. Probes and preparation are separately charged. The independent review uses scalar probability arithmetic and Decimal aggregation under the shared declared generative model; it does not validate that model against people.
+
+Retained-history first passage: only 0 to 2.34375% of makers in any cell reach one nat of extra goal evidence within 64 units; all other cases are explicitly censored. The complete calculation reproduces every registered-prefix gain. See RECORDS_NEEDED.json in the result folder.

@@ -1,8 +1,8 @@
 # Version index
 
-**V25 is open:** [week protocol, cards and results](v25-pieces-and-ends/README.md). W1 and W2 are verified; remaining commissioned studies are being built and admitted at Gear 2. The owner advanced the opening to October 25, with the original budgets and November 1 finish. Separate N16 production may begin after its controls and excluded-block replay.
+**V25 is open:** [week protocol, cards and results](v25-pieces-and-ends/README.md). All thirteen families are built; all thirteen primaries and three follow-ups are verified. N16 confirmation is running. The owner advanced the opening to October 25, with the original budgets and November 1 finish. Separate N16 production resumed after exact excluded-block replay and a measured resource repair; no confirmation yet.
 
-[V24 October 23 follow-ups](v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md) preserve complete replay, independent checks and explicit descriptive limits. Production remains separately unadmitted.
+[V24 October 23 follow-ups](v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md) preserve complete replay, independent checks and explicit descriptive limits. Production has its separate V25-authorized acceptance and budget.
 
 [October 17 packet and current work](v23-research-division/PACKET_REVIEW_2026-10-17.md): mandatory dispositions and ranked conditional studies, with preserved prior results and limits.
 
@@ -12,7 +12,7 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
-| V24 | Pilot window active; N16 and D5 verified; T1 and T3 retained as zero-complete-world runtime failures without retry; no production before October 26 08:00 Pacific | [Program index](v24-powered-readers/README.md) |
+| V24 | Pilot window active; N16 and D5 verified; T1 and T3 retained as zero-complete-world runtime failures without retry; separate production advanced under the V25 acceptance | [Program index](v24-powered-readers/README.md) |
 | V23 | Closed October 19; 33 reviewed logical batches, six unconfirmed nominations, failures and unexecuted frontier retained | [Final report](v23-research-division/FINAL_REPORT.md) |
 | V22 | Closed finite seven-study pass; all results verified, no confirmation | [Program index](v22-mechanism-tests/README.md) |
 | V21 | Scientific allocation complete; excess reader error established, no maker-mechanism promotion; incomplete frontier retained | [Final report](v21-supporting-mechanisms/FINAL_REPORT.md) |

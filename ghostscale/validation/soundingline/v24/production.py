@@ -30,6 +30,14 @@ def repeated_distribution_cache():
     try:yield
     finally:n16.model.distributions=original
 
+@contextmanager
+def unused_descriptive_metrics(enabled):
+    """N16.case discards its predecessor's fourth return value, not raw data."""
+    original=n16.model.metrics_for
+    if enabled:n16.model.metrics_for=lambda *args,**kwargs: {}
+    try:yield
+    finally:n16.model.metrics_for=original
+
 def acceptance(opened):
     return dict(version='v24-n16-production-1',opened=opened,drain=DRAIN,cpu_seconds=64*3600,
         builder_hours=8,maximum_blocks=260,cases_per_cell=5,epsilon=.1,margin=.02,
@@ -82,7 +90,7 @@ def execute(root,plan,pulse):
             for variant in n16.model.variants():
                 for case in range(5):
                     identity=[block,law,variant['id'],case]
-                    with repeated_distribution_cache():public,truth,ev,score=n16.case(variant,plan['science_identity'],block,law,case,.1)
+                    with repeated_distribution_cache(),unused_descriptive_metrics(plan.get('source_revision',1)>=3):public,truth,ev,score=n16.case(variant,plan['science_identity'],block,law,case,.1)
                     bundle=pilot.emit(schema,[plan['science_identity'],*identity],public)
                     for kind,payload in [('public',dict(public=public)),('truth',dict(truth=truth)),('evidence',dict(evidence=ev,score=score)),('ledger',dict(ledger=bundle))]:streams[kind].write(dict(identity=identity,**payload))
                     scores.append(dict(identity=identity,**score))
@@ -104,7 +112,9 @@ def reconstruct(root,plan,pulse):
         if truth['truth']!={'law':law,'mechanism':mechanism}:raise ValueError('truth identity mismatch')
         ledger.validate(transport['ledger'],schema)
         if canonical(transport['ledger'])!=canonical(pilot.emit(schema,[plan['science_identity'],*identity],public['public'])):raise ValueError('canonical ledger mismatch')
-        with repeated_distribution_cache():score=n16.check(variant,public['public'],truth['truth'],ev['evidence'],.1)
+        if plan.get('source_revision',1)>=3:score=reconstruct_case(variant,public['public'],truth['truth'],ev['evidence'],.1)
+        else:
+            with repeated_distribution_cache():score=n16.check(variant,public['public'],truth['truth'],ev['evidence'],.1)
         if any(not math.isclose(score[k],ev['score'][k],abs_tol=1e-11,rel_tol=0) for k in score):raise ValueError('independent score mismatch')
         scores.append(dict(identity=identity,**score))
         if len(scores)%48==0:pulse(setting=0,block=block,cases=len(scores))
@@ -112,6 +122,41 @@ def reconstruct(root,plan,pulse):
     if result['cases']!=3840 or not math.isclose(result['mean'],saved['mean'],abs_tol=1e-11,rel_tol=0):raise ValueError('incomplete or inconsistent balanced block')
     if {k:v for k,v in result.items() if k!='mean'}!={k:v for k,v in saved.items() if k!='mean'}:raise ValueError('summary metadata mismatch')
     return dict(state='INDEPENDENT_RECONSTRUCTION_PASSED',cases=3840,global_block=plan['block_index'],summary_sha256=digest(root/'SUMMARY.json'))
+
+def reconstruct_case(variant,public,truth,saved,epsilon):
+    """Exact shared-prefix log reconstruction, checking every retained entry.
+
+    Keys are complete ordered observed choice/outcome prefixes, never rounded
+    probabilities. Policy affects selection only; the full scoring posterior
+    is identical for identical observed prefixes. Batch comparison avoids
+    hundreds of repeated small-array conversion/validation calls per case.
+    """
+    from scipy.special import logsumexp
+    prior,laws=n16.model.state(variant['source'],public)
+    scenarios=['correct']+['omit-'+str(i) for i in range(len(prior))]+['high-reliability']
+    expected=[(s,'P'+str(p)) for s in scenarios for p in range(1,6)]
+    if [(t['scenario'],t['policy']) for t in public['traces']]!=expected or [(t['scenario'],t['policy']) for t in saved['posteriors']]!=expected:raise ValueError('trace roster')
+    logs={():np.log(prior)};distributions={};expected_selection=[];actual_selection=[];expected_gain=[];actual_gain=[];expected_mass=[];actual_mass=[]
+    for trace,posterior in zip(public['traces'],saved['posteriors'],strict=True):
+        if len(trace['steps'])!=6 or len(posterior['mass'])!=6:raise ValueError('trace length')
+        prefix=();available=list(range(6));policy=int(trace['policy'][1:])-1
+        for i,row in enumerate(trace['steps']):
+            key=(prefix,trace['scenario'])
+            if key not in distributions:
+                mass=np.exp(logs[prefix]-logsumexp(logs[prefix]))
+                distributions[key]=n16.model.distributions(mass,laws,available,trace['scenario'])
+            probs,gain=distributions[key];choice=row['choice'];outcome=row['outcome']
+            if choice not in available or not 0<=outcome<laws.shape[-1] or not probs[policy,choice]>0:raise ValueError('invalid action/response')
+            if abs(row['realized_probability']-probs[policy,choice])>1e-12:raise ValueError('realized propensity')
+            expected_selection.append(probs);actual_selection.append(row['selection_probabilities']);expected_gain.append(gain);actual_gain.append(row['expected_information'])
+            next_prefix=prefix+((choice,outcome),)
+            if next_prefix not in logs:
+                value=logs[prefix]+np.log(laws[choice,:,:,outcome]);logs[next_prefix]=value-logsumexp(value)
+            expected_mass.append(np.exp(logs[next_prefix]).sum(1));actual_mass.append(posterior['mass'][i]);prefix=next_prefix;available.remove(choice)
+    for calculated,retained,tolerance in [(expected_selection,actual_selection,1e-12),(expected_gain,actual_gain,1e-12),(expected_mass,actual_mass,1e-11)]:
+        if not np.allclose(calculated,retained,atol=tolerance,rtol=0):raise ValueError('independent complete-trace reconstruction')
+    entries={(e['scenario'],e['policy']):e for e in saved['posteriors']};p=entries['correct','P4']['mass'][1][truth['mechanism']];q=entries['correct','P1']['mass'][1][truth['mechanism']]
+    return dict(raw_gain=math.log(p/q),mixture_gain=math.log((1-epsilon)*(p/q)+epsilon),lower_bound=math.log(epsilon))
 
 def charged(root):
     return math.fsum(max(r.get('cpu_seconds',0),r.get('reserved_cpu_seconds',0)) for r in (read(p) for p in (root/'accounting').glob('*.json')))
@@ -166,7 +211,8 @@ def advance(campaign,packet):
                 original_terminal_sha256=digest(root/'TERMINAL.json'),excluded_complete_sha256=digest(packet/'COMPLETE.json'),
                 exact_old_new_continuity_sha256=digest(packet/'REPAIR_CONTINUITY.json'),projected_cpu_seconds=projection,
                 source_archive_sha256=plan['source_archive_sha256'],authorization='V25 standing automatic resource healing; unchanged design, retained first block, same64-hour ceiling, no scientific setting change.')
-            if not (root/'RESOURCE_REPAIR_EVALUATION.json').exists():write(root/'RESOURCE_REPAIR_EVALUATION.json',repair)
+            evaluation=root/('RESOURCE_REPAIR_EVALUATION.json' if revision==2 else f'RESOURCE_REPAIR_EVALUATION_R{revision}.json')
+            if not evaluation.exists():write(evaluation,repair)
             if repair['state']!='ADMITTED':return
             if not (root/'RESOURCE_REPAIR_ACCEPTED.json').exists():write(root/'RESOURCE_REPAIR_ACCEPTED.json',repair)
         prepare_block(campaign,template,next_block);return

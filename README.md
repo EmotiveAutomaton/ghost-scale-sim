@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-**V25 is open:** [week protocol, cards and results](docs/versions/v25-pieces-and-ends/README.md). W1 and W2 are verified; remaining commissioned studies are being built and admitted at Gear 2. The owner advanced the opening to October 25, with the original budgets and November 1 finish. Separate N16 production may begin after its controls and excluded-block replay.
+**V25 is open:** [week protocol, cards and results](docs/versions/v25-pieces-and-ends/README.md). All thirteen families are built; all thirteen primaries and three follow-ups are verified. N16 confirmation is running. The owner advanced the opening to October 25, with the original budgets and November 1 finish. Separate N16 production resumed after exact excluded-block replay and a measured resource repair; no confirmation yet.
 
 **October 23 follow-ups:** [results and validity limits](docs/versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md). All eight follow-ups are verified: the retained scheduler stress map, constructed gallery controls and six theory miniatures. Their scientific workers have exited. [Current queue](results/v24/review-20261023/FOLLOWUP_QUEUE.json). Sounding Line's aggregate feature return is filed with its failed controls intact.
 
