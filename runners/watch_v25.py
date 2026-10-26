@@ -3,7 +3,7 @@ import argparse,os,time
 from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from ghostscale.validation.soundingline.v23.common import read,write,digest
-from runners.watch_v23_events import owner,event,pending,deliver,closed,alive,require_native_review_host
+from runners.watch_v23_events import owner,event,pending,deliver,closed,alive,require_native_review_host,ReviewOwnerBusyError
 
 def observe(campaign):
     active=[];prepared=[]
@@ -46,6 +46,18 @@ def observe_production(campaign):
         path=root/name
         if path.exists():event(campaign,'n16-'+name.lower().replace('.json',''),'production_boundary',dict(file=name,sha256=digest(path)))
 
+def deliver_when_available(campaign,state,config,events):
+    try:
+        deliver(campaign,state,config,events)
+    except ReviewOwnerBusyError:
+        # A review can outlive the service that launched it. Preserve its
+        # ownership without terminating the replacement monitor.
+        write(state/'STATUS.json',dict(state='waiting_for_existing_review',pid=os.getpid(),
+            heartbeat=datetime.now(timezone.utc).isoformat(),armed=(state/'ARMED').exists()),immutable=False)
+        return False
+    return True
+
+
 def run(campaign,state,config):
     require_native_review_host();cfg=read(config);started=time.process_time();prior=read(campaign/'accounting/monitor.json')['cpu_seconds'] if (campaign/'accounting/monitor.json').exists() else 0
     with owner(state):
@@ -55,7 +67,7 @@ def run(campaign,state,config):
                 write(state/'STATUS.json',dict(state='monitoring',pid=os.getpid(),heartbeat=current.isoformat(),armed=(state/'ARMED').exists(),active_packets=active,pending_events=len(events)),immutable=False)
                 write(campaign/'accounting/monitor.json',dict(pool='preparation',kind='monitoring',cpu_seconds=prior+time.process_time()-started,state='RUNNING'),immutable=False)
                 ready=actionable(events,active)
-                if ready and (state/'ARMED').exists():deliver(campaign,state,cfg,ready)
+                if ready and (state/'ARMED').exists():deliver_when_available(campaign,state,cfg,ready)
                 time.sleep(30)
         finally:
             (state/'ARMED').unlink(missing_ok=True)

@@ -215,6 +215,10 @@ def require_native_review_host():
     finally:kernel.CloseHandle(token)
 
 
+class ReviewOwnerBusyError(RuntimeError):
+    """A prior review still owns delivery; preserve it and keep monitoring."""
+
+
 def deliver(campaign,state,config,events):
     argv=config['command']
     if argv[1]!='exec' or any(x in argv for x in ('resume','--last','--dangerously-bypass-approvals-and-sandbox',
@@ -225,7 +229,7 @@ def deliver(campaign,state,config,events):
         raise ValueError('review executable or prompt changed')
     path=state/'DELIVERY.json'; history=read(path) if path.exists() else dict(attempts=[])
     if history['attempts'] and history['attempts'][-1].get('pid') and 'exit_code' not in history['attempts'][-1]:
-        if alive(history['attempts'][-1]['pid']): raise RuntimeError('preserve live review owner')
+        if alive(history['attempts'][-1]['pid']): raise ReviewOwnerBusyError('preserve live review owner')
         history['attempts'][-1]['exit_code']='interrupted delivery retained'
     number=len(history['attempts'])+1
     entry=dict(events=[e['id'] for e in events],at=now());history['attempts'].append(entry)
