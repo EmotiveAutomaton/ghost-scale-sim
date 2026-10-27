@@ -26,3 +26,5 @@ New starts close November 1 at 20:00 PST; drain by 22:00 PST (November 2
 review mechanism. [Current status](../../../results/v25/CURRENT_STATUS.json)
 distinguishes prepared, running, verified and unbuilt work. No registry row
 is treated as an executed experiment.
+
+October 27: all thirteen primaries, three follow-ups and N16 confirmation are complete. [Current readiness](READINESS_REPORT_2026-10-27.md); [conditional WB1 protocol](W5_CALIBRATION_PROTOCOL.md). Zero scientists are running while real calibration inputs remain unavailable.

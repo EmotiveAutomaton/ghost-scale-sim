@@ -18,3 +18,12 @@ def test_completed_study_repair_supersedes_original(tmp_path):
         write(p/'COMPLETE.json',dict(plan_sha256=digest(p/'PLAN.json')))
         write(p/'STATUS.json',dict(state='COMPLETE'))
     assert verified_primary(tmp_path,'W6').name=='v25-w6-healing-2'
+
+
+def test_calibrated_study_keeps_native_primary_separate(tmp_path):
+    for suffix in ('study-1','calibrated-study-1'):
+        p=tmp_path/'packets'/('v25-w5-'+suffix);p.mkdir(parents=True)
+        write(p/'PLAN.json',dict(kind='study',calibration_variant='wb1-calibrated' if suffix.startswith('calibrated') else None))
+        write(p/'COMPLETE.json',dict(plan_sha256=digest(p/'PLAN.json')))
+        write(p/'STATUS.json',dict(state='COMPLETE'))
+    assert verified_primary(tmp_path,'W5').name=='v25-w5-study-1'

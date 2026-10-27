@@ -22,7 +22,7 @@ def charges(campaign):
     return totals
 
 def frozen_source(campaign):
-    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v25.py','runners/watch_v25.py','runners/watch_v23_events.py','runners/launch_background.py'])
+    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v25.py','runners/prepare_v25_wb1.py','runners/watch_v25.py','runners/watch_v23_events.py','runners/launch_background.py'])
     hashes={name:digest(REPO/name) for name in names};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()
     destination=campaign/'sources'/key
     if not destination.exists():
@@ -42,6 +42,10 @@ def verify_source(plan):
         if digest(source/name)!=bound:raise ValueError('source byte changed: '+name)
 
 def prepare(campaign,family,kind='probe',*,parent=None,source=None):
+    if parent and read(Path(parent)/'PLAN.json').get('calibration_variant')=='wb1-calibrated':
+        from runners.prepare_v25_wb1 import prepare_study
+        if family!='W5' or kind!='study':raise ValueError('calibrated continuation must be W5 study')
+        return prepare_study(campaign,parent,source)
     started=time.process_time();family=family.upper()
     if kind!='probe' and parent is None:raise ValueError('study requires verified measured probe')
     source=Path(source) if source else frozen_source(campaign)

@@ -1,5 +1,7 @@
 # The methodology layer
 
+Optional WB1 calibration prospectively binds complete aggregate receipts, deterministic class selection and tied terciles to a separate W5 study. Independent scalar likelihoods, complete replay and measured per-pass admission preserve native W5. N16 terminal validation checks the first sequential crossing and rehashes the retained full raw/replay archive. [Protocol and limits](versions/v25-pieces-and-ends/W5_CALIBRATION_PROTOCOL.md).
+
 V25 uses frozen finite worlds, full byte replay, independent likelihood arithmetic and whole-world aggregation. Observed first-passage counts replace unstable reciprocal-rate extrapolation. Population detection uses prospective eight-decimal probability ranks and expected randomized tie credit; repaired probes cannot be selected as full-study reports. N16's exact shared-prefix reconstruction validates every trace entry before complete balanced-block betting. All original failures and charged reservations remain. [Setup and limitations](versions/v25-pieces-and-ends/SETUP_REPORT.md).
 
 The October 23 follow-ups add independently coded scalar likelihoods, exact gallery-label expectation checks, fractional tie credit, and separately grouped 50-digit decimal aggregate reconstruction. Every prefix reuses one trajectory, and whole-world blocks remain the evidence unit. The retained N16 stress map uses a supported common comparator under omission. [Protocol](versions/v24-powered-readers/FOLLOWUP_PROTOCOL_2026-10-23.md) and [results](versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md).

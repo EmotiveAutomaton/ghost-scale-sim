@@ -16,6 +16,9 @@ def assumed_laws(e,available,kind,independent=False):
     return labels,softmax(np.array(values),independent),mapping
 
 def block(setting,identity,independent=False):
+    if 'calibrated_library' in setting:
+        from . import wb1
+        return wb1.block(setting,identity,independent)
     r=rng(*identity);e=pieces.library('partial',r);kinds=['true','merged','missing']+([] if setting.get('omit_split') else ['split']);out=[];raw=[]
     laws={(kind,si):assumed_laws(e,a,kind,independent) for kind in kinds for si,a in enumerate(pieces.TRAIN)}
     for maker in range(8):
@@ -40,4 +43,5 @@ def controls():
     remapped=[(w,b,-1 if h<0 else int(inverse[h])) for w,b,h in pieces.HYPOTHESES]
     p=pieces.laws(permuted,tuple(int(inverse[k]) for k in a),remapped)
     close(p.tolist(),law.tolist(),tol=1e-12)
-    return dict(passed=True,relabelled_library_exact_zero_loss=True,true_likelihood_equivalence=True)
+    from . import wb1
+    return dict(passed=True,relabelled_library_exact_zero_loss=True,true_likelihood_equivalence=True,calibrated=wb1.controls())

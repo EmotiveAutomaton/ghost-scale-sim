@@ -1,0 +1,19 @@
+Historical setup through October 26; current status is in ../READINESS_REPORT_2026-10-27.md.
+
+# V25 implementation status
+
+Corrections first: G-V25-W4-2 supersedes the mistaken probe-only export G-V25-W4-1. The actual 96-world full study was already verified; its corrected primary ranges from -0.018175 to -0.007812 at 128 records. Earlier copies are retained as superseded in both receiving folders. G-V24-N16STRESS-2 retains the earlier omitted-truth scoring correction.
+
+All thirteen family implementations and frozen protocols are ready. Thirteen primary families and three one-generation follow-ups are fully replayed and independently reconstructed. W6 passed its second and final healing review; its observed first-passage measure replaces an unstable reciprocal extrapolation, while the primary and generated observations remain fixed. W4 and W12 repairs passed; all failed originals remain charged. No unbuilt family is presented as a null.
+
+N16 production is running again after a complete excluded-block replay of an exact resource optimization. The original first confirmation block, seed identity and evidence process remain. The excluded-block admission forecast was 63.55 CPU-hours; the next complete production block reduced it to 55.06 CPU-hours under the unchanged 64-hour ceiling. Subsequent measured blocks can still trigger a resource stop. The original stop and first unsuccessful optimization are retained. No confirmation is claimed.
+
+Gear 2 is two shared below-normal single-thread scientific workers, no GPU or environment changes. N16 currently uses one scientific slot; the completed V25 program leaves the other available for eligible calibration work. All finite primary and admitted follow-up draws are complete; spare capacity is not filled with repeated valid studies. Optional Sounding Line WB1 library calibration remains eligible until October 28 noon Pacific; PP1/FR1/WC2/TR4 can inform separately frozen follow-ups within the remaining pool.
+
+The single native monitor was repaired and restarted on October 26; see the dated recovery report. It batches routine N16 block events at fixed twelve-hour health checks; failures, family decisions, drained queues and final boundaries can wake earlier. First fixed check: October 26 00:57PDT. It remains disarmed while an operator is active. The native delivery mechanism has previous successful review receipts; a V25-specific review was delivered on October 25; the subsequent ownership conflict is now repaired. V24's former monitor has exited; V25 covers its October 25 22:00PDT administrative close.
+
+All top-level intake specifications are filed byte-exact. Aggregate copies, including corrections, went to Sounding Line and ToMpathy with hash receipts; recipient repositories received copies only. All results are constructed-model evidence, miniature, architecture untested. Current exact states and budget charges: [machine status](../../../results/v25/CURRENT_STATUS.json). [Claims](../../theory/CLAIMS.json), [follow-ups](../../../results/v25/FOLLOWUP_REGISTER.json), [report-binding audit](../../../results/v25/REPORT_BINDING_AUDIT.json).
+
+All 13 primary result-to-plan bindings remain verified. [October 26 recovery and overnight report](RECOVERY_REPORT_2026-10-26.md): 92 complete N16 confirmation blocks are retained and audited; block 92 is being recovered under the unchanged design. The current status record gives measured ETA and charges.
+
+Recovery update, 26 October: block 92 now passes full replay, independent reconstruction and exact equality with all four retained raw streams. Ninety-three complete balanced blocks are recorded; the next block is running. Confirmation remains open. The new checkpoint report's source checksum was normalized to Git LF bytes; its wording and scientific values did not change. [Receipt](../../../results/v25/recovery-20261026/RECOVERY_COMPLETE.json).

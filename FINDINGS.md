@@ -1,12 +1,20 @@
 # Every question this project asked, and where its answer stands today
 
-## N16 overnight confirmation checkpoint, 26 October
+## N16 confirmation and V25 readiness, 27 October
+
+Corrections first: G-V25-W4-2 remains the full-study replacement for the probe-only export; G-V24-N16STRESS-2 retains the chooser-versus-scoring-reader correction. No scientific values or criteria were changed in this review.
+
+Does choosing probes by expected information beat the fixed order by the frozen 0.02-nat margin? Yes, for this constructed scheduler: 175 independent balanced blocks (672,000 cases) reach log evidence 2.998099, crossing the required log 20 = 2.995732 for the first time. The descriptive mean bounded-mixture gain is 0.064793 nats. All blocks retain complete byte replay and independent numerical reconstruction; the terminal audit rehashed 15,406,195,746 original/replay bytes and independently rebuilt the evidence process. This is a constructed-method result, miniature, architecture untested; it establishes neither a human effect nor automatic engine admission. Claim `G-V25-N16CONFIRM-1`. [Terminal report](docs/versions/v25-pieces-and-ends/READINESS_REPORT_2026-10-27.md).
+
+All thirteen primaries and three follow-ups are complete. The optional WB1 calibration path is implemented and validated; its real aggregate is still unavailable. Gear 2 is ready for eligible input, with zero scientific workers currently.
+
+## N16 twelve-hour confirmation checkpoint, 26 October
 
 Corrections first: G-V25-W4-2 remains the full 96-world result, superseding the earlier probe-only export. G-V24-N16STRESS-2 retains the correction that omission affects the chooser, while the scoring reader retains the full library. Neither scientific correction changed in this review.
 
-Does choosing probes by expected information beat the fixed order by the frozen 0.02-nat margin? After 92 complete balanced confirmation blocks (353,280 cases), the mean gain is 0.065373 nats, but accumulated log evidence is 1.590336 against the required log 20 = 2.995732. Confirmation has not been reached. All 92 blocks retain full byte replay and independent numerical reconstruction; a fresh integrity pass rehashed 1,330 original/replay files and independently rebuilt the evidence total. This is a constructed-method checkpoint, miniature, architecture untested; it does not admit an engine module or establish a human result. Claim `G-V25-N16PROGRESS-1`. [Recovery report](docs/versions/v25-pieces-and-ends/RECOVERY_REPORT_2026-10-26.md).
+Does choosing probes by expected information beat the fixed order by the frozen 0.02-nat margin? After 164 complete balanced confirmation blocks (629,760 cases), the mean gain is 0.064867 nats, but accumulated log evidence is 2.813482 against the required log 20 = 2.995732. Confirmation has not been reached. All 164 blocks retain full byte replay and independent numerical reconstruction; this checkpoint rehashed 6,145,411,850 bytes of original and replay streams and independently rebuilt the evidence total. This is a constructed-method checkpoint, miniature, architecture untested; it does not admit an engine module or establish a human result. Claim `G-V25-N16PROGRESS-1`. [Health report](docs/versions/v25-pieces-and-ends/HEALTH_REPORT_2026-10-26_1257PDT.md).
 
-Recovery update, 26 October: block 92 now passes full replay, independent reconstruction and exact equality with all four retained raw streams. Ninety-three complete balanced blocks are recorded; the next block is running. Confirmation remains open. The new checkpoint report's source checksum was normalized to Git LF bytes; its wording and scientific values did not change.
+The delivered batch covers blocks 93 through 163; block 164 and later work are reserved for a later checkpoint. V24 pilot science remains administratively closed, and optional WB1 plus PP1/FR1/WC2/TR4 aggregates were not present at this review.
 
 How many logged outcome blocks match one designed satiation probe when both score the same marginal ends? In the paired heavy-overlap worlds, signal scale 1: first sampled matching prefix 32, averaging 2.969 outcome blocks; signal scale 3: first sampled matching prefix 32, averaging 3.484 outcome blocks. This is a comparison of aggregate sampled prefixes, not a per-maker guarantee or a reciprocal-rate extrapolation. Constructed method result; miniature, architecture untested. Claim `G-V25-W6F1-1`.
 
