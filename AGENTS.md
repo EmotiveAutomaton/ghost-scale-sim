@@ -23,7 +23,7 @@ The owner explicitly approved a separate fresh-seed N16 robustness extension
 after the original confirmation had completed at 175 blocks. Read
 `docs/versions/v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md`,
 `results/v25/n16-robustness-20261030/` and outer
-`.local/v25/n16-robustness-20261030/HANDOFF.md` before acting.
+`.local/v25/n16-robustness-20261030-r1/HANDOFF.md` before acting.
 This is 64 fixed balanced blocks with complete replay and independent review,
 not a continuation of the original e-process or a new confirmation. Preserve
 the original terminal, all prior failures, and V25's other completed studies.
