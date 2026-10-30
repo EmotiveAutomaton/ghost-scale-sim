@@ -1,5 +1,7 @@
 # Documentation map
 
+[V25 final scientific report](versions/v25-pieces-and-ends/FINAL_REPORT.md): thirteen primaries, eight follow-ups and separate N16 confirmation are verified. The owner requested a hold for theory review; the queue and recurring monitor are stopped. [October 30 records audit](versions/v25-pieces-and-ends/HEALTH_REPORT_2026-10-30.md).
+
 [October 23 V24 follow-ups](versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md): received Sounding Line feature package, scheduler stress map, gallery calibration and six descriptive theory pilots; [current queue](../results/v24/review-20261023/FOLLOWUP_QUEUE.json).
 
 [October 18 directed-probe work](versions/v23-research-division/PACKET_REVIEW_2026-10-18.md) is complete in the closed V23 allocation. The [October 18 work order](versions/v23-research-division/OCTOBER18_WORK_ORDER.json) distinguishes running studies, queued work and D5's owner-directed deferral.
@@ -8,13 +10,14 @@
 
 Start with the status of the work, then follow its evidence. This index describes
 where documents belong; it does not replace scientific verdicts or live native
-state. Updated 10 October 2026.
+state. Updated 30 October 2026.
 
 ## Current work
 
 | Status | Entry point | Use |
 |---|---|---|
-| V24 preparation; scientific pilots not yet open | [V24 index](versions/v24-powered-readers/README.md) | Frozen N16/D5 queue, verified retained-fit acceleration, work cards and explicit unbuilt scope |
+| V25 finite science complete; theory-review hold | [V25 index](versions/v25-pieces-and-ends/README.md) | Final report, claim ledger, validity and publication receipts |
+| V24 pilots and follow-ups complete | [V24 index](versions/v24-powered-readers/README.md) | Verified N16/D5 pilots, eight follow-ups and retained T1/T3 runtime failures |
 | Closed V23, finite allocation complete | [V23 index](versions/v23-research-division/README.md) | Current dispositions, confirmation arithmetic, conditional implementation and results |
 | Closed V22, seven finite mechanism tests | [V22 index](versions/v22-mechanism-tests/README.md) | Seven reviewed results, retained controls, final report and finite closure |
 | Closed V21, supporting mechanism program | [V21 final report](versions/v21-supporting-mechanisms/FINAL_REPORT.md) | Final scientific report and verified owned-service closure |

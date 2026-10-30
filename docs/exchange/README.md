@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[October 30 V25 complete return](../versions/v25-pieces-and-ends/HEALTH_REPORT_2026-10-30.md): thirteen primaries and eight follow-ups verified; aggregate copies of the five latest follow-ups delivered and hash-checked in both companion repositories. The owner requested a theory-review hold. [Copy receipt](../../results/v25/closeout-20261030/EXCHANGE_RECEIPT.json).
+
 [October 23 follow-up return](ghost-to-curator-v24-followups-2026-10-23.md): constructed gallery-reference calibration, retained scheduler stresses and six finite theory pilots, with raw/replay/review bindings and no automatic engine admission.
 
 [October 23 receiving review](../versions/v24-powered-readers/REVIEW_2026-10-23.md): Sounding Line's 21-channel aggregate feature package is hash-verified and filed. Its failed habit controls and unavailable measurements remain unchanged; constructed follow-ups are being prepared.
