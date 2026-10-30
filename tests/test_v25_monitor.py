@@ -45,3 +45,15 @@ def test_bounded_deferral_accepts_v25_clock_and_expires(tmp_path):
     event=dict(id='done',kind='batch_complete',event_sha256='bound')
     assert deferred_events(tmp_path,state,[event],datetime(2026,10,26,4,tzinfo=timezone.utc))=={'done'}
     assert deferred_events(tmp_path,state,[event],datetime(2026,10,26,5,tzinfo=timezone.utc))==set()
+
+
+def test_v25_deferral_preserves_backlog_but_never_hides_new_failure(tmp_path):
+    from runners.watch_v25 import reviewable
+    state=tmp_path/'notifications';state.mkdir()
+    write(tmp_path/'ACCEPTANCE.json',dict(drain='2026-11-02T06:00:00+00:00'))
+    write(state/'DEFERRED_EVENTS.json',dict(events={'old':dict(event_sha256='exact',due='2026-10-30T07:57:34+00:00',reason='recorded batch awaiting bounded review',next_action='verify landing')}))
+    old=dict(id='old',kind='batch_complete',event_sha256='exact');new=dict(id='new',kind='packet_failure',event_sha256='new')
+    assert reviewable(tmp_path,state,[old,new],datetime(2026,10,29,20,tzinfo=timezone.utc))==[new]
+    changed=dict(old,event_sha256='changed')
+    assert reviewable(tmp_path,state,[changed],datetime(2026,10,29,20,tzinfo=timezone.utc))==[changed]
+    assert reviewable(tmp_path,state,[old],datetime(2026,10,30,8,tzinfo=timezone.utc))==[old]

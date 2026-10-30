@@ -1,0 +1,23 @@
+# W4F1: exploratory texture
+
+Corrections first: earlier W4 export and N16 stress-map corrections remain; no prior scientific value or criterion changed.
+
+Does estimating a population prior from more other makers improve deviation detection? Across population sizes 8/32/64/256 and concentrations 3/30, estimated-prior minus individual detection at 128 records ranges from -0.073438 to 0.002587; the oracle-prior contrast ranges from -0.079365 to 0.000497. Each reader is calibrated to 5% on a separate near-mean panel; exact-mean false rates remain separate. This is a constructed-method diagnostic of estimation and shrinkage, not a human population claim. Miniature, architecture untested.
+
+Claim `G-V25-W4F1-1`. 288 fresh whole worlds; complete byte replay, independent numerical reconstruction and controls passed.
+
+Population size and concentration identify each setting; entries are paired detection differences at 128 records.
+
+| Size | Concentration | Placebo | Estimated minus individual | Oracle minus individual |
+|---|---|---|---|---|
+| 8 | 3 | False | -0.035268 | 0.000000 |
+| 8 | 30 | False | -0.071429 | -0.079365 |
+| 32 | 3 | False | -0.006071 | -0.001140 |
+| 32 | 30 | False | -0.073438 | -0.044792 |
+| 64 | 3 | False | -0.003912 | -0.001023 |
+| 64 | 30 | False | -0.047619 | -0.030278 |
+| 256 | 3 | False | 0.002587 | 0.000497 |
+| 256 | 30 | False | -0.004626 | -0.027841 |
+| 64 | 10 | True | unavailable | unavailable |
+
+The full curves and descriptive uncertainty are in [machine results](../../../results/v25/W4F1/). [Prospective protocol](TEXTURE_PROTOCOL_2026-10-29.md). This is a single generation from the primary, with no descendant automatically commissioned. Independent arithmetic shares the declared generative model; neither model realism nor human transfer is validated.

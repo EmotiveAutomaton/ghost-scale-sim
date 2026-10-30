@@ -1,19 +1,24 @@
-"""One-generation W1 evidence-dose and W2 non-Gaussian-noise stress tests."""
+"""One-generation evidence-dose, stress and mechanism follow-ups."""
 import math
 import numpy as np
-from . import pieces,setpoints,emotion
+from . import pieces,setpoints,emotion,volatile,attention,texture
 from .common import rng,posterior,information,record,close
 
 def controls():
-    assert pieces.controls()['passed'] and setpoints.controls()['passed'] and emotion.controls()['passed']
+    assert pieces.controls()['passed'] and setpoints.controls()['passed'] and emotion.controls()['passed'] and volatile.controls()['passed'] and attention.controls()['passed'] and texture.controls()['passed']
     # Student t with three degrees of freedom has variance three; scaling by
     # sqrt(3) matches the parent's marginal observation variance exactly.
     assert 3/(3-2)/3==1
-    return dict(passed=True,parent_known_answers=True,t3_variance_matched=True)
+    return dict(passed=True,parent_known_answers=True,t3_variance_matched=True,w8_filter_controls=True,texture_controls=True)
 
 def block(setting,identity,independent=False):
+    if setting['followup']=='population-size':return texture.population_size(setting,identity,independent)
+    if setting['followup']=='signal-dose':return emotion.block(setting,identity,independent)
+    if setting['followup']=='attention-noise':return attention.block(setting,identity,independent)
+    if setting['followup']=='affect-channels':return texture.affect_channels(setting,identity,independent)
     if setting['followup']=='noise':return setpoints.block(setting,identity,independent)
     if setting['followup']=='matched-signature':return matched_signature(setting,identity,independent)
+    if setting['followup']=='tr4-dose':return volatile.block(setting,identity,independent)
     r=rng(*identity);e=pieces.library(setting['overlap'],r)
     laws=[pieces.laws(e,a,independent=independent) for a in pieces.TRAIN]
     generation=[pieces.laws(e,a) for a in pieces.TRAIN]

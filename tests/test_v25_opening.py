@@ -5,6 +5,17 @@ from ghostscale.validation.soundingline.v25 import contract,pieces,setpoints
 def test_piece_controls():assert pieces.controls()['passed']
 def test_hidden_controller_controls():assert setpoints.controls()['passed']
 
+def test_tr4_calibrated_followup_uses_w8_filter(monkeypatch):
+    from ghostscale.validation.soundingline.v25 import followups
+    observed={}
+    def fake(setting,identity,independent=False):
+        observed.update(setting=setting,identity=identity,independent=independent)
+        return {'public':{},'truth_and_observations':[],'readouts':[]}
+    monkeypatch.setattr(followups.volatile,'block',fake)
+    setting=dict(followup='tr4-dose',process='walk',rate=.002)
+    assert followups.block(setting,['fixture'],True)['readouts']==[]
+    assert observed==dict(setting=setting,identity=['fixture'],independent=True)
+
 def fixture():
     a=contract.acceptance('2026-10-25T19:00:00+00:00','x'*64)
     p=dict(family='W1',kind='probe',pool='studies',cpu_cap_seconds=1800,pass_caps=dict(original=600,replay=600,review=600),numerical_threads=1,priority='below-normal')

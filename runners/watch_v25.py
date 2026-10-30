@@ -3,7 +3,7 @@ import argparse,os,time
 from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from ghostscale.validation.soundingline.v23.common import read,write,digest
-from runners.watch_v23_events import owner,event,pending,deliver,closed,alive,require_native_review_host,ReviewOwnerBusyError
+from runners.watch_v23_events import owner,event,pending,deliver,closed,alive,require_native_review_host,ReviewOwnerBusyError,deferred_events
 
 def observe(campaign):
     active=[];prepared=[]
@@ -40,6 +40,12 @@ def actionable(events,active):
         if not name.startswith('v24-n16-confirmation-block-') and '-probe-' not in name:return events
     return []
 
+
+def reviewable(campaign,state,events,current):
+    """Keep exact inspected backlog pending until its bounded next review."""
+    deferred=deferred_events(campaign,state,events,current)
+    return [item for item in events if item['id'] not in deferred]
+
 def observe_production(campaign):
     root=campaign.parent/'v24-n16-production'
     for name in ('TERMINAL.json','RESOURCE_REPAIR_EVALUATION.json','RESOURCE_REPAIR_EVALUATION_R3.json','RESOURCE_REPAIR_ACCEPTED.json','TERMINAL_AFTER_REPAIR.json','THROUGHPUT_24H.json'):
@@ -66,7 +72,7 @@ def run(campaign,state,config):
                 current=datetime.now(timezone.utc);active=observe(campaign);scheduled(campaign,current);observe_production(campaign);events=pending(campaign,state)
                 write(state/'STATUS.json',dict(state='monitoring',pid=os.getpid(),heartbeat=current.isoformat(),armed=(state/'ARMED').exists(),active_packets=active,pending_events=len(events)),immutable=False)
                 write(campaign/'accounting/monitor.json',dict(pool='preparation',kind='monitoring',cpu_seconds=prior+time.process_time()-started,state='RUNNING'),immutable=False)
-                ready=actionable(events,active)
+                ready=actionable(reviewable(campaign,state,events,current),active)
                 if ready and (state/'ARMED').exists():deliver_when_available(campaign,state,cfg,ready)
                 time.sleep(30)
         finally:

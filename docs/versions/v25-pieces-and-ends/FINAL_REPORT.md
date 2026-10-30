@@ -1,0 +1,23 @@
+# V25 final scientific review
+
+Corrections first: the failed W4F1 original remains retained and withheld. Its separately frozen second and final precision repair used the same 288 observations and settings, and passed byte replay and independent high-precision reconstruction. The earlier W4 export correction and N16 stress-map qualification remain unchanged; no prior scientific value or criterion changed.
+
+V25's finite commissioned science is complete locally: thirteen primary families and eight one-generation follow-ups are verified. N16 is separately terminal at its first qualifying threshold crossing, 175 balanced blocks and 672,000 cases, under 22.314 charged CPU hours of its unchanged 64-hour ceiling. No primary, follow-up or N16 block is restarted.
+
+The central result about pieces and ends is that passive choices retain exact and near aliases; interventions help only when they change the likelihoods of the competing end/habit hypotheses. Logged frustration-like signatures did not break shared-piece aliases, while W6F2 mapped the small supplied-law benefit across signal strengths. These are constructed-method results under exact finite readers, not claims about human ends or emotion. Claims `G-V25-W1-1`, `G-V25-W6-1` and `G-V25-W6F2-1` bind the detailed wording.
+
+Attention events added information when the supplied attention law exposed goal violations, especially before the final output already identified the goal. Unrelated and misread attention reduced that value. W7F1 preserved this as a finite-history and nuisance-attention map, not a real-text validation. Claims `G-V25-W7-1` and `G-V25-W7F1-1` bind the detailed wording.
+
+Capture was conditional on the declared learning and habit rules. Modelling a source's ends, filtering exposures and counter-rehearsal had different effects depending on bundling, omission and whether exposure itself incremented habit. Those simulations license diagnostics and design contrasts, not a general psychological mechanism. Claims `G-V25-W3-1` and `G-V25-W10-1` bind the detailed wording.
+
+The final W4F1 question was whether estimating a population prior from more other makers improves deviation detection. Across population sizes 8, 32, 64 and 256 and concentrations 3 and 30, estimated-prior minus individual detection at 128 records ranged from -0.073438 to 0.002587; the oracle-prior contrast ranged from -0.079365 to 0.000497. Each reader was calibrated to 5% on a separate near-mean panel. This is a constructed-method diagnostic of estimation and shrinkage, not a human population claim. Miniature, architecture untested. Claim `G-V25-W4F1-1`.
+
+The October 29 texture continuation comprised four prospectively frozen, primary-derived cards and no descendants. W4F1, W6F2, W7F1 and W12F1 contribute 2,336 fresh whole worlds. Their original and replay records passed independent reconstruction; the final W4F1 audit rehashed 576 raw files and 28,362,480 bytes. Across the complete local record, 40 claim-source bindings and 44 distinct targeted tests passed. The original W4F1 precision failure, W6 failures, excluded probes and all charged reservations remain retained.
+
+Current charged CPU time is approximately 3.161 hours in primary studies, 1.475 in preparation/services, 3.556 in the shared follow-up/healing pool and 0.109 in protected verification. The follow-up subtotal is 1.088 hours. All remain below their immutable ceilings. Historical controller overhead includes the previously labeled estimates and is not reclassified as measured science.
+
+Sounding Line's authenticated WB1 notice supplied no eligible effect table by the October 28 cutoff, so the optional W5 calibration is skipped, not null. PP1 remains cost-held, FR1 and WC2 were not received, and TR4 informed W8F1 while retaining its biased reference and licensing no human effect transfer. No recipient repository is modified beyond packet-authorized aggregate copies, which remain pending with ordinary publication.
+
+The native queue is drained and scientific polling is retired. Local publication, packet-authorized recipient copies and exact event acknowledgements remain unresolved. No event is acknowledged as landed until those actions and origin verification occur. One bounded manual continuation is retained; no automatic publication is scheduled.
+
+Evidence: [current status](../../../results/v25/CURRENT_STATUS.json), [W4F1 report](W4F1_REPORT.md), [final texture validity](../../../results/v25/texture-20261029/FINAL_AFTER_REPAIR.json), [claim ledger](../../theory/CLAIMS.json) and [prospective texture protocol](TEXTURE_PROTOCOL_2026-10-29.md).

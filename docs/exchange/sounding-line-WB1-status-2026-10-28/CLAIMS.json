@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "at": "2026-10-26T12:30:02.344083+00:00",
+      "card": "WB1-source-canonical",
+      "control_status": "passes",
+      "correction_class": "data",
+      "detail": "DRIVE/WB1_SOURCE_CANONICAL_20261026.md",
+      "estimand": "Complete source provenance and invariance of every other prepared value",
+      "id": "OPS-S15-W3-WB1-SOURCE-CANONICAL",
+      "outcome": "infrastructure",
+      "public_wording": "Complete source replay verifies the canonical action references while preserving every other prepared value and the full population; this admits corrected inputs, not a scientific finding.",
+      "scope": "Complete source-only correction; no scientific result",
+      "scope_qualifiers": {
+        "analysis": "Source validation only",
+        "corpus": "Original full P2 source population",
+        "population": "1399 retained sessions",
+        "substrate": "Human process records"
+      },
+      "superseded_by": [],
+      "supersedes": [
+        "OPS-S15-W3-WB1-VERIFIED"
+      ]
+    },
+    {
+      "at": "2026-10-26T12:53:45.397780+00:00",
+      "card": "WB1-effects-cost-canonical",
+      "control_status": "invalid",
+      "correction_class": "instrument",
+      "detail": "DRIVE/WB1_EFFECTS_SPAN_FAILURE_20261026.md",
+      "estimand": "Operational source compatibility and complete cost admission",
+      "id": "OPS-S15-W3-WB1-EFFECTS-SPAN-FAILURE",
+      "outcome": "infrastructure",
+      "public_wording": "The effects-cost probe is instrument-invalid on a repeated acceptance origin; the existing shared-source repair limit is exhausted, so WB1 remains scientifically untested.",
+      "scope": "Failed cost instrument and exact-source diagnosis only",
+      "scope_qualifiers": {
+        "analysis": "Operational diagnosis",
+        "corpus": "Original P2 source; no completed cost result",
+        "population": "Unfinished fixed first-tenth probe",
+        "substrate": "Human process records"
+      },
+      "superseded_by": [],
+      "supersedes": []
+    }
+  ],
+  "snapshot_at": "2026-10-28T19:08:12.215667+00:00",
+  "source_ledger_sha256": "9a20ad7d3518e78a76dd2dbf2557d2418220c8e99c9c6f54e559d203140c5831",
+  "source_repository": "Sounding Line"
+}

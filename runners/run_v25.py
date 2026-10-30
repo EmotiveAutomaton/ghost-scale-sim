@@ -22,7 +22,7 @@ def charges(campaign):
     return totals
 
 def frozen_source(campaign):
-    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v25.py','runners/prepare_v25_wb1.py','runners/watch_v25.py','runners/watch_v23_events.py','runners/launch_background.py'])
+    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v25.py','runners/prepare_v25_wb1.py','runners/prepare_v25_texture.py','runners/watch_v25.py','runners/watch_v23_events.py','runners/launch_background.py'])
     hashes={name:digest(REPO/name) for name in names};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()
     destination=campaign/'sources'/key
     if not destination.exists():
@@ -42,6 +42,10 @@ def verify_source(plan):
         if digest(source/name)!=bound:raise ValueError('source byte changed: '+name)
 
 def prepare(campaign,family,kind='probe',*,parent=None,source=None):
+    if parent and read(Path(parent)/'PLAN.json').get('texture_card'):
+        from runners.prepare_v25_texture import prepare_study
+        if kind!='study':raise ValueError('texture probe continues only to its frozen study')
+        return prepare_study(campaign,parent,source)
     if parent and read(Path(parent)/'PLAN.json').get('calibration_variant')=='wb1-calibrated':
         from runners.prepare_v25_wb1 import prepare_study
         if family!='W5' or kind!='study':raise ValueError('calibrated continuation must be W5 study')
@@ -183,6 +187,9 @@ def execute(packet):
 def queue(campaign):
     if os.name!='nt':raise RuntimeError('native queue required')
     accepted=read(campaign/'ACCEPTANCE.json');started=time.process_time();active={};finished=[]
+    # Each native controller lifetime keeps its own charge; a restart must not
+    # overwrite a predecessor's completed CPU account.
+    controller_cost=campaign/'accounting'/f'controller-{os.getpid()}-{time.time_ns()}.json'
     with (campaign/'QUEUE_OWNER.lock').open('x') as f:f.write(str(os.getpid()))
     try:
         from ghostscale.validation.soundingline.v24 import production
@@ -243,14 +250,14 @@ def queue(campaign):
                 proc=subprocess.Popen([plan['interpreter'],'-B','-m','runners.run_v25','--packet',str(packet)],cwd=plan['source_root'],env=env,stdout=log,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW|subprocess.BELOW_NORMAL_PRIORITY_CLASS)
                 active[packet.name]=(proc,log);write(packet/'STATUS.json',dict(state='LAUNCHING',launcher_pid=proc.pid,at=now().isoformat()),immutable=False)
             write(campaign/'QUEUE_STATUS.json',dict(state='RUNNING' if active else 'WAITING_FOR_PREPARED_COMMISSIONED_WORK',pid=os.getpid(),heartbeat=now().isoformat(),active=list(active),finished=finished),immutable=False)
-            write(campaign/'accounting/controller.json',dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-started,state='RUNNING'),immutable=False)
+            write(controller_cost,dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-started,state='RUNNING'),immutable=False)
             if (campaign/'BUILD_COMPLETE.json').exists() and not active and not candidates:
                 event(campaign,'v25-prepared-queue-drained','review_boundary',dict(finished=finished));break
             if (campaign/'PAUSE_ADMISSIONS').exists() and not active:break
             time.sleep(5)
     finally:
         write(campaign/'QUEUE_STATUS.json',dict(state='STOPPED_WITH_ACTIVE_CHILDREN' if active else 'DRAINED',pid=os.getpid(),active=list(active),finished=finished,at=now().isoformat()),immutable=False)
-        write(campaign/'accounting/controller.json',dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-started,state='STOPPED'),immutable=False)
+        write(controller_cost,dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-started,state='STOPPED'),immutable=False)
         (campaign/'QUEUE_OWNER.lock').unlink()
 
 def main():

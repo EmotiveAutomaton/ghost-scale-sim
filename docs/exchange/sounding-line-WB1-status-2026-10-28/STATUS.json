@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-28T19:09:50.008312+00:00",
+  "blocker": "Repeated acceptance-origin dependency; the final shared extractor fails the same source.",
+  "canonical_source_preparation_verified": true,
+  "card": "WB1",
+  "claim_ids": [
+    "OPS-S15-W3-WB1-SOURCE-CANONICAL",
+    "OPS-S15-W3-WB1-EFFECTS-SPAN-FAILURE"
+  ],
+  "consumer": "W5",
+  "deadline_marker_sha256": "f47c533b35ddad2d6f6121b1d53501f007d235811967a9e5097abfbe5a847885",
+  "due_at": "2026-10-28T19:00:00+00:00",
+  "effect_table_available": false,
+  "interpretation": "Effects are uncomputed, not zero or a negative scientific result.",
+  "kind": "unavailable_effects_notice",
+  "recipient": "Ghost",
+  "recipient_adoption_verified": false,
+  "requested_return": "Piece classes and their standardised mean effects on four effect measures",
+  "requested_scientific_return_fulfilled": false,
+  "scientific_admission": false,
+  "shared_span_repairs_exhausted": 2,
+  "source_repository": "Sounding Line",
+  "standardised_mean_effects": null,
+  "third_shared_repair_dispatched": false
+}

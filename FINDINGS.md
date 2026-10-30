@@ -1,5 +1,29 @@
 # Every question this project asked, and where its answer stands today
 
+## W4F1, October 29
+
+Does estimating a population prior from more other makers improve deviation detection? Across population sizes 8/32/64/256 and concentrations 3/30, estimated-prior minus individual detection at 128 records ranges from -0.073438 to 0.002587; the oracle-prior contrast ranges from -0.079365 to 0.000497. Each reader is calibrated to 5% on a separate near-mean panel; exact-mean false rates remain separate. This is a constructed-method diagnostic of estimation and shrinkage, not a human population claim. Miniature, architecture untested. Claim `G-V25-W4F1-1`. [Report](docs/versions/v25-pieces-and-ends/W4F1_REPORT.md).
+
+## W12F1, October 29
+
+Which observed affect channel separates a valued end from a cached habit? When their blocked-distress flags agree, distress alone leaves the exact end/habit alias intact through 32 trained-range choices. Across all four flag combinations and noise SDs .25/.5/1/2, the unresolved fraction after 32 records ranges from 0.000000 to 0.260417 with pleasure alone and 0.000000 to 0.260417 with both channels. All readers see paired observations. This constructed-method result localizes identification to the supplied signal laws; pleasure is planted as an end-only signal, not validated as a real psychological mechanism. Miniature, architecture untested. Claim `G-V25-W12F1-1`. [Report](docs/versions/v25-pieces-and-ends/W12F1_REPORT.md).
+
+## W7F1, October 29
+
+Does attention mainly help before final outputs reveal the goal, and does unrelated attention obscure it? Across the three habit distributions and unrelated-attention probabilities 0/.1/.3/.6, correct-attention gains per violation range from -0.000766 to 0.008613 nats at 8 units and -0.000111 to 0.000052 at 32. Total gains and information per attention event are retained separately. This is a constructed-method finite-history/noise map; final outputs still have distinct exact goal supports, so no new exact alias is claimed. Miniature, architecture untested. Claim `G-V25-W7F1-1`. [Report](docs/versions/v25-pieces-and-ends/W7F1_REPORT.md).
+
+## W6F2, October 29
+
+Does the small logged-signature benefit survive a larger fresh replication and changing signal strength? At signal scales 0.5, 1.0, 3.0, 6.0, the mean true-ends gain per observed outcome block at 32 records is 0.004917, 0.005656, 0.022134, 0.017948 nats, respectively, against the descriptive .02 margin. Each setting has 64 independent fresh worlds; signal scale is not an assumed linear information multiplier. This is a constructed-method dose map, not powered confirmation or evidence about human emotion. Miniature, architecture untested. Claim `G-V25-W6F2-1`. [Report](docs/versions/v25-pieces-and-ends/W6F2_REPORT.md).
+
+## W8F1 short-history drift dose, 27 October
+
+Corrections first: G-V24-N16STRESS-2 remains the chooser-versus-scoring-reader correction; no saved scientific value changed here.
+
+Does the exact adaptive reader beat its whole-history comparator at short histories as constructed drift increases? At 16 records, whole-history minus adaptive log loss is -0.035924, -0.048129, -0.046063 and 0.010158 nats per record at walk rates 0, 0.002, 0.01 and 0.1. At 32 records the corresponding gains are -0.115874, -0.112941, -0.083648 and 0.115182. Adaptation first exceeds the descriptive 0.01 margin only at the highest ordinal dose; stationary, low and middle drift favor whole-history reading. The retained 64-record sensitivity is -0.186727, -0.248941, -0.160405 and 0.511047. Constructed method result; miniature, architecture untested. Claim `G-V25-W8F1-1`. [Report](docs/versions/v25-pieces-and-ends/W8F1_REPORT.md).
+
+TR4 supplied only the reason and short-history calibration. Its biased temporal reference remains failed, no human effect or rate transferred, and no follow-up of this follow-up is registered.
+
 ## N16 confirmation and V25 readiness, 27 October
 
 Corrections first: G-V25-W4-2 remains the full-study replacement for the probe-only export; G-V24-N16STRESS-2 retains the chooser-versus-scoring-reader correction. No scientific values or criteria were changed in this review.
