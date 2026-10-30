@@ -1,5 +1,10 @@
 # Version index
 
+[October 30 N16 continuation](v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md):
+the owner approved a separate 64-block fresh-seed robustness extension in Gear 2,
+within the existing N16 budget and deadline. The original confirmation and other
+V25 studies remain complete; the earlier hold now applies to those other studies.
+
 **V25 science is complete; hold for theory review:** [final report](v25-pieces-and-ends/FINAL_REPORT.md). All thirteen primaries and eight one-generation follow-ups are verified. Separately budgeted N16 confirmation stopped at its first qualifying threshold crossing: 175 balanced blocks and 672,000 cases. No scientific job or recurring wake remains. [October 30 audit and publication](v25-pieces-and-ends/HEALTH_REPORT_2026-10-30.md).
 
 [V24 October 23 follow-ups](v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md) preserve complete replay, independent checks and explicit descriptive limits. Production has its separate V25-authorized acceptance and budget.

@@ -1,5 +1,12 @@
 # V25: pieces, ends, attention and capture
 
+October 30 continuation: the owner subsequently approved the separate
+[N16 robustness extension](N16_ROBUSTNESS_PROTOCOL_2026-10-30.md), 64 fresh balanced
+blocks in Gear 2 within the existing N16 budget and deadline. It preserves the
+completed confirmation and all other V25 studies, which remain held for theory
+review. [Extension status](../../../results/v25/n16-robustness-20261030/CURRENT_STATUS.json).
+The finite closeout below describes the completed allocation before this new extension.
+
 October 30 verified state: all thirteen primaries and eight one-generation follow-ups are verified. W4F1's failed original remains retained; its separately frozen second and final precision repair passed full replay and independent reconstruction without changing the 288 observations or the earlier W4 primary. No scientific worker remains. WB1 calibration is skipped after its cutoff. Results are published; aggregate copies are hash-verified in both companion projects. The owner requested a hold for theory review. No scientific job or recurring wake remains. [October 30 audit](HEALTH_REPORT_2026-10-30.md). [Final report](FINAL_REPORT.md), [health report](HEALTH_REPORT_2026-10-29.md) and [current status](../../../results/v25/CURRENT_STATUS.json). Earlier dated running/waiting statements below are historical.
 
 The owner advanced the opening to October 25, retaining the original budgets

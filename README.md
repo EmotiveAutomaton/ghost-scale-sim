@@ -1,5 +1,10 @@
 # Ghost Scale Simulation
 
+**October 30 N16 extension:** the owner approved a separate 64-block fresh-seed
+[robustness study](docs/versions/v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md)
+in Gear 2. Its original 175-block confirmation remains complete; other V25 work
+stays on hold for theory review. [Extension status](results/v25/n16-robustness-20261030/CURRENT_STATUS.json).
+
 **V25 complete:** all thirteen primaries and eight follow-ups are verified, including the repaired population study. The four October 29 texture studies cover 2,336 fresh worlds. The scientific queue is drained. [Final report](docs/versions/v25-pieces-and-ends/FINAL_REPORT.md) and [recorded state](results/v25/CURRENT_STATUS.json).
 
 **October 23 follow-ups:** [results and validity limits](docs/versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md). All eight follow-ups are verified: the retained scheduler stress map, constructed gallery controls and six theory miniatures. Their scientific workers have exited. [Current queue](results/v24/review-20261023/FOLLOWUP_QUEUE.json). Sounding Line's aggregate feature return is filed with its failed controls intact.

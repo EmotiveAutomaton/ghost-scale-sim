@@ -1,5 +1,9 @@
 # Documentation map
 
+[Separate N16 robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md):
+approved after the October 30 closeout, with 64 fresh blocks, Gear 2, and the
+original shared budget and deadline. Other completed V25 work remains held for review.
+
 [V25 final scientific report](versions/v25-pieces-and-ends/FINAL_REPORT.md): thirteen primaries, eight follow-ups and separate N16 confirmation are verified. The owner requested a hold for theory review; the queue and recurring monitor are stopped. [October 30 records audit](versions/v25-pieces-and-ends/HEALTH_REPORT_2026-10-30.md).
 
 [October 23 V24 follow-ups](versions/v24-powered-readers/FOLLOWUP_RESULTS_2026-10-23.md): received Sounding Line feature package, scheduler stress map, gallery calibration and six descriptive theory pilots; [current queue](../results/v24/review-20261023/FOLLOWUP_QUEUE.json).

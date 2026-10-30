@@ -17,6 +17,30 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## N16 separate robustness extension, October 30
+
+The owner explicitly approved a separate fresh-seed N16 robustness extension
+after the original confirmation had completed at 175 blocks. Read
+`docs/versions/v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md`,
+`results/v25/n16-robustness-20261030/` and outer
+`.local/v25/n16-robustness-20261030/HANDOFF.md` before acting.
+This is 64 fixed balanced blocks with complete replay and independent review,
+not a continuation of the original e-process or a new confirmation. Preserve
+the original terminal, all prior failures, and V25's other completed studies.
+All other V25 work remains held for the owner's theory review.
+
+Gear 2 remains at most two below-normal single-thread scientific workers across
+Ghost. The isolated extension carries forward all prior N16 charges under the
+original 64-hour ceiling, has its own 24-hour sublimit with two protected hours,
+and retains the November 2 06:00 UTC drain. Its controller reads only explicitly
+prepared packets; it cannot extend the 64-block sample or invent descendants.
+Declared reporting milestones are 16/32/48/64 complete consecutive blocks.
+Keep one extension monitor, disarmed during active operator work; retain the
+twelve-hour cadence, exact post-publication acknowledgements and terminal closure.
+The former V25 monitor stays stopped. Inspect immutable scientific sources and
+native ownership before edits or any restart; never repeat an admitted partial
+packet without a separately recorded recovery/healing decision.
+
 ## V25 commissioned week, October 25
 
 Read `docs/versions/v25-pieces-and-ends/README.md`, the full source packet,

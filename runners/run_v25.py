@@ -22,7 +22,7 @@ def charges(campaign):
     return totals
 
 def frozen_source(campaign):
-    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v25.py','runners/prepare_v25_wb1.py','runners/prepare_v25_texture.py','runners/watch_v25.py','runners/watch_v23_events.py','runners/launch_background.py'])
+    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v25.py','runners/run_n16_robustness.py','runners/watch_n16_robustness.py','runners/prepare_v25_wb1.py','runners/prepare_v25_texture.py','runners/watch_v25.py','runners/watch_v23_events.py','runners/launch_background.py'])
     hashes={name:digest(REPO/name) for name in names};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()
     destination=campaign/'sources'/key
     if not destination.exists():
@@ -118,6 +118,13 @@ def child(packet,label):
         if time.monotonic()-last[0]>5:
             write(packet/(label+'-progress.json'),dict(pid=os.getpid(),heartbeat=now().isoformat(),cpu_seconds=used,**progress),immutable=False);last[0]=time.monotonic()
     # Timing boundaries surround complete settings, including their first block.
+    if plan.get('n16_robustness'):
+        from ghostscale.validation.soundingline.v25 import n16_robustness
+        tick=time.process_time()
+        if label=='review':write(packet/'INDEPENDENT_REVIEW.json',n16_robustness.reconstruct(packet/'original',plan,pulse))
+        else:n16_robustness.execute(packet/label,plan,pulse)
+        write(packet/(label+'-cost.json'),dict(cpu_seconds=time.process_time()-started,blocks=[dict(setting=0,cpu_seconds=time.process_time()-tick)]))
+        return
     if plan.get('production'):
         from ghostscale.validation.soundingline.v24 import production
         tick=time.process_time()
