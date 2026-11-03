@@ -2,7 +2,7 @@
 
 Corrections first: earlier V25 findings and retained failures remain unchanged; this is a separate V26 card.
 
-The threshold reader distinguished the planted circulating policy from the terminal rival faster as its learning rate rose, but the stopping time depended strongly on environment and threshold. At eta=0.1 the censored medians were 35-62 records across the registered cells; at eta=0.005 two cells had no finite median within 256 records and the others ranged from 89 to 214. This is a records-needed map for the declared update laws, not a universal terminal/circulating diagnostic.
+The threshold reader distinguished the planted circulating policy from the terminal rival faster as its learning rate rose, with stopping times varying across the independently seeded cells. At eta=0.1 the censored medians were 35-62 records across the registered cells; at eta=0.005 two cells had no finite median within 256 records and the others ranged from 89 to 214. This is a records-needed map for the declared update laws, not a universal terminal/circulating diagnostic. The stationary and shift settings have identical specialist-menu laws, and theta changes neither the B maker nor its fixed reader roster; differences between those strata do not establish environment or theta effects.
 
 Claim `G-V26-E1-1`.
 

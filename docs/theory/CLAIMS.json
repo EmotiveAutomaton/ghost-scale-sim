@@ -21561,12 +21561,12 @@
       "supersedes": null
     },
     {
-      "allowed_wording": "The threshold reader distinguished the planted circulating policy from the terminal rival faster as its learning rate rose, but the stopping time depended strongly on environment and threshold. At eta=0.1 the censored medians were 35-62 records across the registered cells; at eta=0.005 two cells had no finite median within 256 records and the others ranged from 89 to 214. This is a records-needed map for the declared update laws, not a universal terminal/circulating diagnostic.",
+      "allowed_wording": "The threshold reader distinguished the planted circulating policy from the terminal rival faster as its learning rate rose, with stopping times varying across the independently seeded cells. At eta=0.1 the censored medians were 35-62 records across the registered cells; at eta=0.005 two cells had no finite median within 256 records and the others ranged from 89 to 214. This is a records-needed map for the declared update laws, not a universal terminal/circulating diagnostic. The stationary and shift settings have identical specialist-menu laws, and theta changes neither the B maker nor its fixed reader roster; differences between those strata do not establish environment or theta effects.",
       "architecture": "miniature, architecture untested",
       "assumed_choice_model": "One maker of each type per world, uniformly sampled from eligible start grid; equal type priors and uniform within-type finite states. B2 begins at prior counts2 in every dimension. Four environment mixes separately compare stationary, forced every8, eight-record devaluation from64, shift from128, and a separate trade ladder. Forced choices update state with unit likelihood. Exact source histories, not future outcomes, update the predictor. Usage predictor uses last16 outcomes and uniform fallback on zero total.",
       "claim_kind": "method",
       "control_status": "passes",
-      "correction_class": null,
+      "correction_class": "wording-only: distinguish seed variation from exact-law aliases",
       "estimate": [
         {
           "available_blocks": 16,
@@ -23793,7 +23793,7 @@
       "reader": "Declared exact finite-library readers",
       "source_file": "docs/versions/v26-top-and-ends/E1_REPORT.md",
       "source_line": 5,
-      "source_sha256": "0bb90440a8253a476300c780d8388c3427560cc535c036abb183d66e2e9b6e67",
+      "source_sha256": "69b45c4fe4a0c08e3d703ead7e25b34e24abdaf00db694657185d9d16059b3ed",
       "superseded_by": null,
       "supersedes": null
     },
@@ -30531,6 +30531,84 @@
       "source_file": "docs/versions/v26-top-and-ends/followups-20261103/U1_REPORT.md",
       "source_line": 5,
       "source_sha256": "927ba732f7406061221134f7fd7e32311e72b2fa644aafb74841c3c2802e4225",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can longer observation distinguish slowly circulating values from fixed values? In two fresh 16-world replications at learning rate 0.005, the censor-aware median first crossings of one nat were 218.5 and 178 records; 0/16 and 0/16 worlds remained unresolved at 2,048 records. The stationary and shift-labelled strata have identical specialist-menu laws, so their difference is sampling variation, not an environment effect. This is descriptive constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Only B makers generated; full A/B/B2/C reader roster unchanged. Two selected cells retained with fresh independent worlds. Longer histories use stable log-marginal odds. No trajectory selection based on early results.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": {
+        "replications": [
+          {
+            "blocks": 16,
+            "censored_midpoint_median": 218.5,
+            "environment_label": "stationary",
+            "first_crossing_records": [
+              637.0,
+              596.0,
+              1399.0,
+              305.0,
+              26.0,
+              95.0,
+              216.0,
+              282.0,
+              221.0,
+              23.0,
+              279.0,
+              139.0,
+              49.0,
+              332.0,
+              182.0,
+              39.0
+            ],
+            "unresolved_counts": {
+              "1024": 1,
+              "2048": 0,
+              "256": 7,
+              "512": 3
+            }
+          },
+          {
+            "blocks": 16,
+            "censored_midpoint_median": 178.0,
+            "environment_label": "shift",
+            "first_crossing_records": [
+              20.0,
+              820.0,
+              243.0,
+              151.0,
+              36.0,
+              177.0,
+              455.0,
+              36.0,
+              409.0,
+              509.0,
+              60.0,
+              146.0,
+              174.0,
+              257.0,
+              179.0,
+              192.0
+            ],
+            "unresolved_counts": {
+              "1024": 0,
+              "2048": 0,
+              "256": 5,
+              "512": 1
+            }
+          }
+        ]
+      },
+      "id": "G-V26-E1F1-1",
+      "parent_claim": "G-V26-E1-1",
+      "reader": "Exact full finite roster; specified generative model",
+      "source_file": "docs/versions/v26-top-and-ends/followups-20261103/E1_REPORT.md",
+      "source_line": 5,
+      "source_sha256": "68b9050fbfb9b454548ea0e5efbdbe6945fe3fcd4f1f02e9693d79aef3f7239d",
       "superseded_by": null,
       "supersedes": null
     }

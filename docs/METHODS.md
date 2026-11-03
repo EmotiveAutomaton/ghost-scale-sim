@@ -1,5 +1,12 @@
 # The methodology layer
 
+The November 3 V26 follow-ups add stable log-marginal type odds for extended
+histories, verify unchanged trajectory prefixes and preserve coarse source-reader
+readouts while scoring a finer training grid. First and sustained sample-mean
+crossings are distinguished, and exact-law aliases are labelled as independent
+replications rather than causal contrasts. Whole-world uncertainty and complete
+replay remain mandatory. [Follow-up validity](versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md).
+
 V26 adds excluded design pre-mortems before cost probes, exact hidden-segmentation
 likelihoods checked against brute enumeration, explicit pause/difficulty and
 revision models, deterministic history updates for finite value-type inference,

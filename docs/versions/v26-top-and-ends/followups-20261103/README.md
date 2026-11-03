@@ -1,5 +1,10 @@
 # V26 follow-ups: longer histories and source learning
 
+**Complete November 3:** both follow-ups, 48 scientific worlds and four excluded
+probe worlds, passed full replay and independent reconstruction. All owned
+scientific services and the separate monitor have exited. [Final findings](FINAL_REPORT.md).
+No jobs remain; the opening design below is retained as provenance.
+
 On November 3 the owner approved two separate follow-ups to the verified E1 and
 U1 primaries. The original ten primaries, 56 texture variants and their published
 closeout remain unchanged. [Current queue](../../../../results/v26/followups-20261103/CURRENT_STATUS.json).

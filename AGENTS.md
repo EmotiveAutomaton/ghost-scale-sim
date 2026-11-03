@@ -20,6 +20,12 @@ authorship and contribution records retain their original attribution.
 
 ## V26 separate follow-ups, November 3
 
+Both follow-ups are now scientifically complete: 48 fresh whole-world blocks,
+four excluded probe worlds, complete replay and independent reconstruction.
+Read the follow-up `FINAL_REPORT.md` and `FINAL_VALIDITY.json`. Scientific workers,
+controller and the separate monitor have exited. Do not restart this finite batch
+or create descendants; the opening instructions below are retained as provenance.
+
 The owner approved a separate Gear 2 follow-up batch after V26's finite primary
 and texture queue was closed and published. Read
 `docs/versions/v26-top-and-ends/followups-20261103/README.md`, both protocols,

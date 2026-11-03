@@ -1,6 +1,6 @@
 # Version index
 
-**V26 separate follow-ups:** [E1 longer histories and U1 source learning](v26-top-and-ends/followups-20261103/README.md), within the original allocation. All ten original primaries and 56 texture variants are closed and published.
+**V26 follow-ups complete:** [E1 longer histories and U1 source learning](v26-top-and-ends/followups-20261103/FINAL_REPORT.md), 48 verified scientific worlds; zero remaining jobs. Original ten primaries and 56 texture variants remain closed and published.
 [N16 final robustness](v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md) lands
 all 64 fixed blocks without extending the completed confirmation.
 

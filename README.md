@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-**V26 separate follow-ups approved:** [E1 longer histories and U1 source learning](docs/versions/v26-top-and-ends/followups-20261103/README.md) use fresh worlds in Gear 2 within the original budget and deadline. [Follow-up queue](results/v26/followups-20261103/CURRENT_STATUS.json). The original ten primaries and 56 texture variants are closed and published; [administrative receipt](results/v26/ADMINISTRATIVE_CLOSEOUT.json).
+**V26 follow-ups complete:** [E1 longer histories and U1 source learning](docs/versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md) passed full replay and independent reconstruction on 48 fresh whole-world blocks. No scientific job remains; the separate monitor has stopped. The original ten primaries and 56 texture variants remain closed and published.
 
 **N16 robustness complete:** all 64 fresh blocks and 245,760 cases are verified.
 The descriptive two-probe gain is 0.065036 nats, with a pointwise 95% whole-block

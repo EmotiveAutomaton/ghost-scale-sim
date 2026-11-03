@@ -1,6 +1,6 @@
 # Documentation map
 
-[V26 separate follow-ups](versions/v26-top-and-ends/followups-20261103/README.md): E1 longer histories and U1 source learning, within the original allocation. The original finite queue is closed and published.
+[V26 follow-up results](versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md): E1 longer histories and U1 source learning are complete and verified; no jobs or recurring wakes remain. Original V26 results stay closed and published.
 [N16 completed robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md):
 all 64 blocks verified; earlier dated continuation notes below are historical.
 
