@@ -7,7 +7,8 @@ def presented(p,s,size=8):return (1-s)*p+s*(1-(1-p)**size)
 def conditional(k,s,size=8):return (1-s)*k/size+s*float(k>0)
 
 def block(setting,identity,independent=False):
-    r=rng(*identity);s=setting['s'];tau=setting['tau'];claims=setting.get('claims',32);grid=np.array([0.,.5,1.]);lengths=[1,2,4,8,16,32,64];out=[];raw=[]
+    r=rng(*identity);s=setting['s'];tau=setting['tau'];claims=setting.get('claims',32);grid=np.array([0.,.5,1.]);lengths=setting.get('training_lengths',[1,2,4,8,16,32,64]);out=[];raw=[]
+    if not lengths or len(set(lengths))!=len(lengths) or any(not isinstance(n,int) or not 1<=n<=64 for n in lengths):raise ValueError('invalid training grid')
     for maker in range(32):
         truth=maker%2;ptruth=.7 if truth else .3;track=[];lls=np.zeros(3);priors={}
         for t in range(64):

@@ -18,6 +18,25 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V26 separate follow-ups, November 3
+
+The owner approved a separate Gear 2 follow-up batch after V26's finite primary
+and texture queue was closed and published. Read
+`docs/versions/v26-top-and-ends/followups-20261103/README.md`, both protocols,
+`results/v26/followups-20261103/CURRENT_STATUS.json` and outer
+`.local/v26-followups-20261103/HANDOFF.md`. E1 extends the two censored slow-learning
+cells to 2,048 records; U1 scores source-training prefixes 1 through 64 on fresh
+worlds. These are first-generation descriptive follow-ups to primaries, with no
+descendants. Preserve all original results, capsules, closeout and stopped monitor.
+
+The separate controller inherits the original acceptance and all prior charges,
+uses at most two below-normal single-thread scientists, and charges every probe,
+replay and review to the existing three-hour follow-up share (E1 9,000 seconds;
+U1 1,800 seconds). Original deadlines and healing protection remain. Admission
+requires excluded design checks, known answers and measured full replay. Do not
+reopen the primary queue or interpret independent replication strata as causal
+contrasts when their laws coincide. Retire the separate monitor at finite closure.
+
 ## V26 commissioned week, November 2
 
 Read `docs/versions/v26-top-and-ends/README.md`, the full source packet,

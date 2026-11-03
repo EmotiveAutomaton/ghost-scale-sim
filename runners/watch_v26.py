@@ -21,12 +21,16 @@ def observe(campaign):
 
 def scheduled(campaign,current):
     a=read(campaign/'ACCEPTANCE.json');point=datetime.fromisoformat(a['opened'])+timedelta(hours=12);i=1
+    # A separately authorized follow-up retains the original acceptance clock,
+    # but must not wake on historical checkpoints from the closed primary queue.
+    start=campaign/'MONITOR_START.json'
+    floor=datetime.fromisoformat(read(start)['at']) if start.exists() else datetime.fromisoformat(a['opened'])
     while point<datetime.fromisoformat(a['drain']):
-        if current>=point:event(campaign,f'v26-health12-{i:02d}','twelve_hour_health',dict(due=point.isoformat()))
+        if current>=point>=floor:event(campaign,f'v26-health12-{i:02d}','twelve_hour_health',dict(due=point.isoformat()))
         point+=timedelta(hours=12);i+=1
     for day in range(3,10):
         point=datetime(2026,11,day,4,tzinfo=timezone.utc) # preceding20:00 PST
-        if current>=point:event(campaign,f'v26-daily-{day-1:02d}','daily_report',dict(due=point.isoformat()))
+        if current>=point>=floor:event(campaign,f'v26-daily-{day-1:02d}','daily_report',dict(due=point.isoformat()))
     for key in ('new_starts_close','drain'):
         if current>=datetime.fromisoformat(a[key]):event(campaign,'v26-'+key,'final_deadline',dict(due=a[key]))
     if current>=datetime.fromisoformat(a['drain']):(campaign/'STOP').touch(exist_ok=True)

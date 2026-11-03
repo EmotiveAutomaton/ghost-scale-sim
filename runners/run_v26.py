@@ -92,8 +92,8 @@ def charges(campaign):
         if row.get('kind') in ('followup','healing','texture'):totals[row['kind']]=totals.get(row['kind'],0)+value
     return totals
 
-def frozen_source(campaign):
-    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v26.py','runners/watch_v26.py','runners/watch_v23_events.py','runners/launch_background.py'])
+def frozen_source(campaign,extra_sources=()):
+    names=sorted([p.relative_to(REPO).as_posix() for p in (REPO/'ghostscale').rglob('*.py') if '__pycache__' not in p.parts]+['runners/run_v26.py','runners/watch_v26.py','runners/watch_v23_events.py','runners/launch_background.py']+list(extra_sources))
     hashes={name:digest(REPO/name) for name in names};key=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest()
     destination=campaign/'sources'/key
     if not destination.exists():

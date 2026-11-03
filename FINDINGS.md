@@ -1,5 +1,10 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-U1F1-1
+
+How much revealed source history is needed to approach the reader that knows the source policy? With bias strength 0.5 and 32 new claims, the fresh 16-world mean excess false-hypothesis probability first fell within 0.05 at 24 training records; the first crossing that stayed within the bar through the remaining grid was 24. This is a descriptive grid estimate, not a confidence-certified sample requirement or a label effect. Constructed-method evidence; miniature, architecture untested.
+
+
 ## V26 top-and-ends, November 2
 
 Corrections first: the controller's per-packet landing had duplicated 66 generic snippets at the top of this file. They are consolidated here without changing any saved measurement. Full primary tables, all 56 texture reports, raw replay and independent reviews remain in the V26 version and result directories.

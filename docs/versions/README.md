@@ -1,6 +1,6 @@
 # Version index
 
-**V26 finite queue complete:** [reviewed results](v26-top-and-ends/QUEUE_REVIEW_2026-11-02.md) cover ten primaries and 56 texture variants. Scientific workers have exited; publication remains pending. The separate 60-CPU-hour acceptance through November 8 is unchanged.
+**V26 separate follow-ups:** [E1 longer histories and U1 source learning](v26-top-and-ends/followups-20261103/README.md), within the original allocation. All ten original primaries and 56 texture variants are closed and published.
 [N16 final robustness](v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md) lands
 all 64 fixed blocks without extending the completed confirmation.
 

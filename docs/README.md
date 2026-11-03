@@ -1,6 +1,6 @@
 # Documentation map
 
-[V26 reviewed finite queue](versions/v26-top-and-ends/QUEUE_REVIEW_2026-11-02.md): ten primaries and 56 texture variants complete; no scientific workers remain. Records are audited and wording corrected; publication is pending.
+[V26 separate follow-ups](versions/v26-top-and-ends/followups-20261103/README.md): E1 longer histories and U1 source learning, within the original allocation. The original finite queue is closed and published.
 [N16 completed robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md):
 all 64 blocks verified; earlier dated continuation notes below are historical.
 

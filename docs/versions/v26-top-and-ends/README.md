@@ -1,5 +1,7 @@
 # V26: the top of the hierarchy and its ends
 
+**November 3:** the owner approved separate [long-history and source-learning follow-ups](followups-20261103/README.md) within the original budget and deadline. The original closeout below is preserved.
+
 **November 2 finite closeout:** the queue completed at 09:48 PST: ten primaries and 56 texture variants, no active scientific worker. The [final report](FINAL_REPORT.md), [bounded review](QUEUE_REVIEW_2026-11-02.md), [reporting corrections](../../../results/v26/REPORTING_CORRECTION_20261102.json) and [administrative closeout](../../../results/v26/ADMINISTRATIVE_CLOSEOUT.json) are recorded. The opening contract below is retained as provenance.
 
 The [commissioned packet](GHOST_SCALE_V26_WEEK_PACKET_2026-11-01.md) defines ten

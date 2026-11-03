@@ -58,12 +58,17 @@ def menu_at(r,t,setting):
 
 def block(setting,identity,independent=False):
     r=rng(*identity);dims=setting.get('dimensions',3);hs=roster(dims,tuple(sorted(set([.005,.02,.1,setting.get('eta',.1)]))),tuple(sorted(set([.6,.8,setting.get('theta',.6)]))))
+    horizon=setting.get('max_history',256);levels=setting.get('histories',[8,16,32,64,128,256])
+    if not isinstance(horizon,int) or horizon<1 or any(not isinstance(t,int) or not 1<=t<=horizon for t in levels):raise ValueError('invalid history grid')
     kinds=np.array([h[0] for h in hs]);names=['A','B','B2','C'];prior=np.array([1/(4*sum(kinds==h[0])) for h in hs]);out=[];raw=[]
+    selected=setting.get('truth_types',names)
+    if not selected or len(set(selected))!=len(selected) or not set(selected)<=set(names):raise ValueError('invalid truth roster')
     for maker,typ in enumerate(names):
+        if typ not in selected:continue
         eligible=[i for i,h in enumerate(hs) if h[0]==typ and (typ not in ('B','C') or h[1]==setting['eta']) and (typ!='C' or h[2]==setting['theta'])]
         truth=int(r.choice(eligible));state=states(hs);ll=np.zeros(len(hs));history=[];chosen=[];first={k:None for k in names if k!=typ};lossdiff=[];forced_dims=[]
         environment_setting=dict(setting,environment_dimension=int(r.integers(dims)))
-        for t in range(1,257):
+        for t in range(1,horizon+1):
             menu,forced,phase,dim=menu_at(r,t,environment_setting);law=policy(menu,hs,state,independent);post=posterior(ll,prior,independent);predict=post@law
             shares=np.sum(chosen[-16:],axis=0) if chosen else np.ones(dims)
             if shares.sum()==0:shares=np.ones(dims)
@@ -74,19 +79,27 @@ def block(setting,identity,independent=False):
             chosen.append(menu[y].copy());update(hs,state,menu[y],t)
             post=posterior(ll,prior,independent);typepost=np.array([post[kinds==k].sum() for k in names])
             for rival in first:
-                ev=math.log(typepost[names.index(typ)]/typepost[names.index(rival)])
+                ev=type_log_evidence(ll,prior,kinds,typ,rival,independent) if horizon>256 else math.log(typepost[names.index(typ)]/typepost[names.index(rival)])
                 if ev>=1 and first[rival] is None:first[rival]=t
-            if t in (8,16,32,64,128,256):
+            if t in levels:
                 out.append(record(scores(typepost,maker),truth=typ,reader='exact-type',history=t))
                 out.append(record(dict(usage_minus_exact_loss=math.fsum(lossdiff)/len(lossdiff) if lossdiff else None),truth=typ,reader='next-choice',history=t))
                 cp=post[kinds=='C'];theta=np.array([h[2] for h in hs if h[0]=='C'])
                 out.append(record(dict(theta_point6_mass=float(cp[theta==.6].sum()/cp.sum()) if cp.sum() else None),truth=typ,reader='theta',history=t))
             history.append(dict(menu=menu.tolist(),forced=forced,phase=phase,dimension=dim,choice=y,type_posterior=typepost.tolist()))
-        for rival,hit in first.items():out.append(record(dict(records_to_one_nat=hit,not_within_256=float(hit is None)),truth=typ,reader='threshold',rival=rival))
+        for rival,hit in first.items():out.append(record({'records_to_one_nat':hit,f'not_within_{horizon}':float(hit is None)},truth=typ,reader='threshold',rival=rival))
         lock=int(state['locked'][truth]);lt=int(state['lock_time'][truth])
         out.append(record(dict(locked=float(lock>=0),lock_time=lt if lock>=0 else None,forced_lock_match=float(lock==forced_dims[0]) if forced_dims and lock>=0 else None),truth=typ,reader='path-dependence'))
         raw.append(dict(truth=truth,records=history))
     return dict(public=dict(hypotheses=[dict(kind=h[0],eta=h[1],theta=h[2],initial=h[3].tolist()) for h in hs],prior=prior.tolist(),choice_model='softmax beta3 with .02 uniform lapse; locked C lexicographic'),truth_and_observations=raw,readouts=out)
+
+def type_log_evidence(ll,prior,kinds,truth,rival,independent=False):
+    """Exact type marginal odds without underflow on extended histories."""
+    def logmass(kind):
+        v=ll[kinds==kind]+np.log(prior[kinds==kind]);m=float(max(v))
+        z=math.fsum(math.exp(float(x)-m) for x in v) if independent else float(np.exp(v-m).sum())
+        return m+math.log(z)
+    return logmass(truth)-logmass(rival)
 
 def controls():
     w=np.array([.25,.25,.5]);hs=[('A',0,2,w),('B',0,2,w),('B',.1,2,w),('C',.1,2,w),('B2',0,2,np.ones(3)/3)];s=states(hs);menu=np.eye(3)
