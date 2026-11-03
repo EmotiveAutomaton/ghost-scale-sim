@@ -1,0 +1,31 @@
+{
+  "new_packet": "v26-e1-probe-2",
+  "receipt": {
+    "checks": [
+      {
+        "lock_share": 0.46875,
+        "passed": true,
+        "specialists": 0.5,
+        "weak_evidence_share": 0.84375
+      },
+      {
+        "lock_share": 0.78125,
+        "passed": true,
+        "specialists": 0.75,
+        "weak_evidence_share": 0.9375
+      },
+      {
+        "lock_share": 0.59375,
+        "passed": true,
+        "specialists": 1.0,
+        "weak_evidence_share": 0.90625
+      }
+    ],
+    "passed": true,
+    "reader": "Full declared type posterior, marginalized initial weights and learning rates; same reader as science.",
+    "seed_domain": "check-only-E1",
+    "selected_specialists": 1.0
+  },
+  "source_manifest_sha256": "2c22fea67a841675fae2dadc698386b1393b39313403aa8a8a38a2cd95bada28",
+  "state": "VERIFIED_BEFORE_ADMISSION"
+}

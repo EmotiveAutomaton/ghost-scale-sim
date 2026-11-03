@@ -1,5 +1,9 @@
 # Documentation map
 
+[V26 reviewed finite queue](versions/v26-top-and-ends/QUEUE_REVIEW_2026-11-02.md): ten primaries and 56 texture variants complete; no scientific workers remain. Records are audited and wording corrected; publication is pending.
+[N16 completed robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md):
+all 64 blocks verified; earlier dated continuation notes below are historical.
+
 [Separate N16 robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md):
 approved after the October 30 closeout, with 64 fresh blocks, Gear 2, and the
 original shared budget and deadline. Other completed V25 work remains held for review.

@@ -1,5 +1,12 @@
 # Ghost Scale Simulation
 
+**V26 finite queue complete:** all ten primaries and 56 texture variants finished on November 2 at 09:48 PST, with complete replay and numerical review. No scientific workers remain. [Reviewed findings](docs/versions/v26-top-and-ends/QUEUE_REVIEW_2026-11-02.md), [wording corrections](results/v26/REPORTING_CORRECTION_20261102.json) and [recorded state](results/v26/CURRENT_STATUS.json). Publication remains pending; the 60-CPU-hour acceptance and outer November 8 endpoint are unchanged.
+
+**N16 robustness complete:** all 64 fresh blocks and 245,760 cases are verified.
+The descriptive two-probe gain is 0.065036 nats, with a pointwise 95% whole-block
+interval of 0.063024–0.067048. [Final report](docs/versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md).
+The original confirmation is unchanged. Earlier dated opening notes below are historical.
+
 **October 30 N16 extension:** the owner approved a separate 64-block fresh-seed
 [robustness study](docs/versions/v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md)
 in Gear 2. Its original 175-block confirmation remains complete; other V25 work

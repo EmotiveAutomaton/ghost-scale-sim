@@ -1,0 +1,1240 @@
+{
+  "at": "2026-11-02T18:11:30.778054+00:00",
+  "state": "DRAINED",
+  "gear": 2,
+  "workers_maximum": 2,
+  "active": [],
+  "packets": [
+    {
+      "packet": "v26-e1-probe-1",
+      "family": "E1",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "WITHDRAWN_BEFORE_ADMISSION",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-probe-2",
+      "family": "E1",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-study-1",
+      "family": "E1",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 4764.9375
+    },
+    {
+      "packet": "v26-e1-texture-001",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 193.8046875
+    },
+    {
+      "packet": "v26-e1-texture-001-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-002",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 214.3125
+    },
+    {
+      "packet": "v26-e1-texture-002-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-003",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 222.2109375
+    },
+    {
+      "packet": "v26-e1-texture-003-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-004",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 199.5703125
+    },
+    {
+      "packet": "v26-e1-texture-004-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-005",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 296.203125
+    },
+    {
+      "packet": "v26-e1-texture-005-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-006",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 174.1171875
+    },
+    {
+      "packet": "v26-e1-texture-006-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-007",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 160.921875
+    },
+    {
+      "packet": "v26-e1-texture-007-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e1-texture-008",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 144.9140625
+    },
+    {
+      "packet": "v26-e1-texture-008-probe",
+      "family": "E1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-probe-1",
+      "family": "E2",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-study-1",
+      "family": "E2",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 62.1796875
+    },
+    {
+      "packet": "v26-e2-texture-001",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 40.875
+    },
+    {
+      "packet": "v26-e2-texture-001-probe",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-texture-002",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 41.2265625
+    },
+    {
+      "packet": "v26-e2-texture-002-probe",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-texture-003",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 41.25
+    },
+    {
+      "packet": "v26-e2-texture-003-probe",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-texture-004",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 41.6484375
+    },
+    {
+      "packet": "v26-e2-texture-004-probe",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-texture-005",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 41.71875
+    },
+    {
+      "packet": "v26-e2-texture-005-probe",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e2-texture-006",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 41.6015625
+    },
+    {
+      "packet": "v26-e2-texture-006-probe",
+      "family": "E2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-probe-1",
+      "family": "E3",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-study-1",
+      "family": "E3",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 147.4921875
+    },
+    {
+      "packet": "v26-e3-texture-001",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 46.2890625
+    },
+    {
+      "packet": "v26-e3-texture-001-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-texture-002",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 46.7578125
+    },
+    {
+      "packet": "v26-e3-texture-002-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-texture-003",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 47.25
+    },
+    {
+      "packet": "v26-e3-texture-003-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-texture-004",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 46.125
+    },
+    {
+      "packet": "v26-e3-texture-004-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-texture-005",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 46.6171875
+    },
+    {
+      "packet": "v26-e3-texture-005-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-texture-006",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 44.8359375
+    },
+    {
+      "packet": "v26-e3-texture-006-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-e3-texture-007",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 45.9609375
+    },
+    {
+      "packet": "v26-e3-texture-007-probe",
+      "family": "E3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-probe-1",
+      "family": "H1",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-study-1",
+      "family": "H1",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1060.3359375
+    },
+    {
+      "packet": "v26-h1-texture-001",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 298.1015625
+    },
+    {
+      "packet": "v26-h1-texture-001-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-002",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 699.796875
+    },
+    {
+      "packet": "v26-h1-texture-002-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-003",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 369.6328125
+    },
+    {
+      "packet": "v26-h1-texture-003-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-004",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 391.96875
+    },
+    {
+      "packet": "v26-h1-texture-004-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-005",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 284.9296875
+    },
+    {
+      "packet": "v26-h1-texture-005-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-006",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 816.0703125
+    },
+    {
+      "packet": "v26-h1-texture-006-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-007",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 189.6796875
+    },
+    {
+      "packet": "v26-h1-texture-007-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-008",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 988.734375
+    },
+    {
+      "packet": "v26-h1-texture-008-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h1-texture-009",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 810.328125
+    },
+    {
+      "packet": "v26-h1-texture-009-probe",
+      "family": "H1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-probe-1",
+      "family": "H2",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-study-1",
+      "family": "H2",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 48.609375
+    },
+    {
+      "packet": "v26-h2-texture-001",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 42.7265625
+    },
+    {
+      "packet": "v26-h2-texture-001-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-texture-002",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 46.4765625
+    },
+    {
+      "packet": "v26-h2-texture-002-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-texture-003",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 40.9921875
+    },
+    {
+      "packet": "v26-h2-texture-003-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-texture-004",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 40.78125
+    },
+    {
+      "packet": "v26-h2-texture-004-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-texture-005",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 40.546875
+    },
+    {
+      "packet": "v26-h2-texture-005-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-texture-006",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 40.59375
+    },
+    {
+      "packet": "v26-h2-texture-006-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h2-texture-007",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 41.390625
+    },
+    {
+      "packet": "v26-h2-texture-007-probe",
+      "family": "H2",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-probe-1",
+      "family": "H3",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-study-1",
+      "family": "H3",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 203.8359375
+    },
+    {
+      "packet": "v26-h3-texture-001",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 72.1875
+    },
+    {
+      "packet": "v26-h3-texture-001-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-texture-002",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 139.3125
+    },
+    {
+      "packet": "v26-h3-texture-002-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-texture-003",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 93.46875
+    },
+    {
+      "packet": "v26-h3-texture-003-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-texture-004",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 94.9921875
+    },
+    {
+      "packet": "v26-h3-texture-004-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-texture-005",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 90.890625
+    },
+    {
+      "packet": "v26-h3-texture-005-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-texture-006",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 92.953125
+    },
+    {
+      "packet": "v26-h3-texture-006-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-h3-texture-007",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 95.625
+    },
+    {
+      "packet": "v26-h3-texture-007-probe",
+      "family": "H3",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r1-probe-1",
+      "family": "R1",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r1-study-1",
+      "family": "R1",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 69.375
+    },
+    {
+      "packet": "v26-r1-texture-001",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 52.1953125
+    },
+    {
+      "packet": "v26-r1-texture-001-probe",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r1-texture-002",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 52.265625
+    },
+    {
+      "packet": "v26-r1-texture-002-probe",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r1-texture-003",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 50.4375
+    },
+    {
+      "packet": "v26-r1-texture-003-probe",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r1-texture-004",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 49.4765625
+    },
+    {
+      "packet": "v26-r1-texture-004-probe",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r1-texture-005",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 51.0703125
+    },
+    {
+      "packet": "v26-r1-texture-005-probe",
+      "family": "R1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r13-probe-1",
+      "family": "R13",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r13-study-1",
+      "family": "R13",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 446.7421875
+    },
+    {
+      "packet": "v26-r4-probe-1",
+      "family": "R4",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-r4-study-1",
+      "family": "R4",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1500.9375
+    },
+    {
+      "packet": "v26-u1-probe-1",
+      "family": "U1",
+      "kind": "probe",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-study-1",
+      "family": "U1",
+      "kind": "study",
+      "scientific_kind": "study",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 78.3984375
+    },
+    {
+      "packet": "v26-u1-texture-001",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 43.3125
+    },
+    {
+      "packet": "v26-u1-texture-001-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-texture-002",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 42.46875
+    },
+    {
+      "packet": "v26-u1-texture-002-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-texture-003",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 42.6796875
+    },
+    {
+      "packet": "v26-u1-texture-003-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-texture-004",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 43.4765625
+    },
+    {
+      "packet": "v26-u1-texture-004-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-texture-005",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 43.5234375
+    },
+    {
+      "packet": "v26-u1-texture-005-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-texture-006",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 44.0390625
+    },
+    {
+      "packet": "v26-u1-texture-006-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    },
+    {
+      "packet": "v26-u1-texture-007",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "texture",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 46.7578125
+    },
+    {
+      "packet": "v26-u1-texture-007-probe",
+      "family": "U1",
+      "kind": "texture",
+      "scientific_kind": "probe",
+      "state": "COMPLETE",
+      "phase": null,
+      "cap_seconds": 1800.0
+    }
+  ],
+  "pools_charged_seconds": {
+    "preparation": 308.5625,
+    "studies": 5552.703125,
+    "family:E1": 2973.6875,
+    "followup_healing": 5166.140625,
+    "texture": 5166.140625,
+    "family:E2": 35.40625,
+    "family:E3": 98.3125,
+    "family:H1": 751.09375,
+    "family:H2": 17.046875,
+    "family:H3": 140.53125,
+    "family:R1": 37.5625,
+    "family:R13": 320.46875,
+    "family:R4": 1133.796875,
+    "family:U1": 44.796875
+  },
+  "pool_ceilings_seconds": {
+    "studies": 129600,
+    "preparation": 10800,
+    "followup_healing": 54000,
+    "protected": 21600
+  },
+  "fully_built": true,
+  "science_open": "2026-11-02T16:00:00+00:00",
+  "new_starts_close": "2026-11-09T04:00:00+00:00",
+  "drain": "2026-11-09T06:00:00+00:00",
+  "publication": "PENDING_ORIGIN_VERIFICATION",
+  "scientific_state": "FINITE_QUEUE_COMPLETE",
+  "verified_primary_families": 10,
+  "verified_texture_variants": 56,
+  "latest_records_audit": "results/v26/RECORDS_VALIDITY_20261102.json",
+  "wording_correction": "results/v26/REPORTING_CORRECTION_20261102.json",
+  "final_report": "docs/versions/v26-top-and-ends/FINAL_REPORT.md",
+  "final_validity": "results/v26/FINAL_VALIDITY.json"
+}

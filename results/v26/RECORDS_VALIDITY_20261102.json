@@ -1,0 +1,78 @@
+{
+  "acceptance_sha256": "7b14bda14b355d27257aa5360fc603fe8a706eac498648e8ba5771169d33f631",
+  "counts": {
+    "packets": 66,
+    "raw_bytes": 73559255,
+    "raw_files": 2144,
+    "worlds": 2144
+  },
+  "designs": {
+    "E1": true,
+    "E2": true,
+    "E3": true,
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "R1": true,
+    "R13": true,
+    "R4": true,
+    "U1": true
+  },
+  "environment_sha256": "0db3347ba540206ad91c65116e07b85bedd6e33e41b02755d65a9c8ddddc3e11",
+  "errors": [],
+  "state": "passed",
+  "texture_states": {
+    "E1": {
+      "consecutive": 1,
+      "state": "GRID_EXHAUSTED",
+      "variants": 8
+    },
+    "E2": {
+      "consecutive": 2,
+      "state": "GRID_EXHAUSTED",
+      "variants": 6
+    },
+    "E3": {
+      "consecutive": 0,
+      "state": "GRID_EXHAUSTED",
+      "variants": 7
+    },
+    "H1": {
+      "consecutive": 0,
+      "state": "GRID_EXHAUSTED",
+      "variants": 9
+    },
+    "H2": {
+      "consecutive": 0,
+      "state": "GRID_EXHAUSTED",
+      "variants": 7
+    },
+    "H3": {
+      "consecutive": 0,
+      "state": "GRID_EXHAUSTED",
+      "variants": 7
+    },
+    "R1": {
+      "consecutive": 0,
+      "state": "GRID_EXHAUSTED",
+      "variants": 5
+    },
+    "R13": {
+      "consecutive": 0,
+      "state": "NOT_DECLARED",
+      "variants": 0
+    },
+    "R4": {
+      "consecutive": 0,
+      "state": "NOT_DECLARED",
+      "variants": 0
+    },
+    "U1": {
+      "consecutive": 3,
+      "state": "GRID_EXHAUSTED",
+      "variants": 7
+    }
+  },
+  "at": "2026-11-02T18:07:45.808182+00:00",
+  "audit_scope": "Current saved raw hashes, completion/source/protocol/control bindings and retained replay/reconstruction receipts; no new scientific execution."
+}

@@ -8,7 +8,8 @@ authorship and contribution records retain their original attribution.
 
 - Read the remainder of this file and the reading sequence below before acting.
 - Check the live runner PID and heartbeat before touching imported code. An idle
-  machine is a state to report, not an instruction to invent work.
+  machine is a state to report, not an instruction to invent work. See the standing
+  amendments of October 25 and November 2 for commissioned queue/texture work.
 - Read `project-memory/ghost-scale/INDEX.md` under the agent's private configuration
   root if present. It indexes dated local memories; current specifications and primary
   records take precedence over stale notes. Never copy private memory into public files.
@@ -17,7 +18,49 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V26 commissioned week, November 2
+
+Read `docs/versions/v26-top-and-ends/README.md`, the full source packet,
+every frozen family protocol, `results/v26/CURRENT_STATUS.json`, and outer
+`.local/v26/HANDOFF.md`. Acceptance opens at handoff after V25's drain;
+scientific draws start November 2 16:00 UTC. New starts close November 9
+04:00 UTC and drain at 06:00 UTC. Gear 2 is two below-normal single-thread
+scientists shared across Ghost. Keep immutable capsules, measured reservations,
+full replay, independent reconstruction and the existing twelve-hour monitor.
+N16's finished extension receives final landing only, on its own protected budget.
+
+## Standing amendments, 2 November
+
+E. Before any probe, every card records the intended world property, an excluded
+deterministic or enumerated check over the declared grid (default floor 25%),
+and every contrast fixed by construction. Check-only seeds never enter science.
+Revise a failing grid only within its declared ranges; exhaustion is recorded as
+"design cannot produce the case", never a null. H1/E1 exhaustion goes to the owner.
+
+F. After a verified primary, execute separately frozen, measured texture variants
+from that card's declared grid. These are descriptive and never upgrade a primary.
+Stop a family's lane after five consecutive variants with no estimate changing by
+more than the practical bar, or at the pool/window limit. Records-needed bars are
+one sampled record level; E2 uses one distance bin. Texture has no descendants.
+Within V26's 15-hour shared pool, healing has first claim on four hours until
+November 5 20:00 UTC; follow-ups may use three hours before that release.
+
+G. Every verified primary report and exchange note states, in words, its route
+to Sounding Line and ToMpathy. Bulk copying without the route is not delivery.
+Aggregate copies are authorized by the packet; recipient files stay uncommitted.
+
+The October 25 amendments remain in force. Prepared commissioned studies and
+declared texture are authorized work; historical idle/refill rules do not cancel
+them. Valid contrary findings are never healing targets, and closed science stays closed.
+
 ## N16 separate robustness extension, October 30
+
+November 2: all 64 blocks are complete and the final local audit, report, claim
+`G-V25-N16R-1` and exchange record are landed. Read
+`docs/versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md` and its final
+validity receipt. The finite monitor has stopped; publication is tracked separately.
+No N16 science or recurring wake is commissioned by V26. The following opening
+instructions are retained as historical provenance.
 
 The owner explicitly approved a separate fresh-seed N16 robustness extension
 after the original confirmation had completed at 175 blocks. Read
@@ -335,7 +378,8 @@ campaigns have no recurring wake. No research agents are commissioned.
 The law-marginal ceiling, converged direct rival, duplicate-removal diagnostics,
 asymmetric historical evidence and headroom gate are mandatory. Conditional
 cards are not implemented/admitted jobs. Implement and independently validate
-eligible successors before dispatch, with one bounded repair per family. Keep
+eligible successors before dispatch, with one bounded repair per family
+(historical: see the standing October 25 two-healing amendment). Keep
 full scientific write-through and publication after every nameable valid batch.
 
 ## Documentation map and closed V20 (2026-10-01)
@@ -935,7 +979,8 @@ count; the counts live in files that are rewritten as the program runs:
   here** ("this one has no queue; its runs are minutes"): V13 is a manifest-driven, multi-day card
   program with its own ledger and watchdog, described under Environment. The distinction that
   survives is that V13's queue is a *pre-registered program that ends*, not a loop to keep full —
-  the correct response to an idle machine here is to report state, not to invent work.
+  the correct response to an idle machine here is to report state, not to invent work (historical; see the
+  standing October 25 and November 2 amendments for commissioned work).
 - **Their `FINDINGS.md` two-tier system**, their file locks (`SOUNDING_LINE_SPEC.md`, `prereg/*.py`,
   `locks.py`), and `bounded_v5`/`family_v2`. This repository has its own equivalents — closed
   versions, pre-registration cards, the gates — and two overlapping conventions would be worse than

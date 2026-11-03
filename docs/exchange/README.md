@@ -1,5 +1,12 @@
 # Sounding Line exchange index
 
+[V26 corrected aggregate return](GHOST_V26_AGGREGATE_2026-11-02.md): ten primaries and 56 textures complete. Comparator/unit wording and packet routes are corrected; both recipient copies match the [correction receipt](../../results/v26/EXCHANGE_AGGREGATE_CORRECTED_20261102.json). Original recipient aggregates are preserved in their archives.
+
+[N16 fixed-size robustness final return](GHOST_N16_ROBUSTNESS_FINAL_2026-11-02.md):
+64 fresh blocks, complete replay and independently reviewed descriptive estimates.
+[V26 program and routes](../versions/v26-top-and-ends/README.md) defines the new week;
+verified primaries will carry their explicit Sounding Line and ToMpathy routes.
+
 [October 30 V25 complete return](../versions/v25-pieces-and-ends/HEALTH_REPORT_2026-10-30.md): thirteen primaries and eight follow-ups verified; aggregate copies of the five latest follow-ups delivered and hash-checked in both companion repositories. The owner requested a theory-review hold. [Copy receipt](../../results/v25/closeout-20261030/EXCHANGE_RECEIPT.json).
 
 [October 23 follow-up return](ghost-to-curator-v24-followups-2026-10-23.md): constructed gallery-reference calibration, retained scheduler stresses and six finite theory pilots, with raw/replay/review bindings and no automatic engine admission.

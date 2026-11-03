@@ -1,5 +1,9 @@
 # Version index
 
+**V26 finite queue complete:** [reviewed results](v26-top-and-ends/QUEUE_REVIEW_2026-11-02.md) cover ten primaries and 56 texture variants. Scientific workers have exited; publication remains pending. The separate 60-CPU-hour acceptance through November 8 is unchanged.
+[N16 final robustness](v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md) lands
+all 64 fixed blocks without extending the completed confirmation.
+
 [October 30 N16 continuation](v25-pieces-and-ends/N16_ROBUSTNESS_PROTOCOL_2026-10-30.md):
 the owner approved a separate 64-block fresh-seed robustness extension in Gear 2,
 within the existing N16 budget and deadline. The original confirmation and other

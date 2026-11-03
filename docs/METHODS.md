@@ -1,5 +1,14 @@
 # The methodology layer
 
+V26 adds excluded design pre-mortems before cost probes, exact hidden-segmentation
+likelihoods checked against brute enumeration, explicit pause/difficulty and
+revision models, deterministic history updates for finite value-type inference,
+joint integration of a shared source-selection policy, and complementary-tail
+ranking checked at 50 and 80 decimal digits. Each primary and texture batch retains
+full raw replay and a separate scalar posterior/decimal aggregation route; some
+likelihood kernels and the generative model remain shared. These checks validate
+the specified miniatures, not their realism. [Protocols](versions/v26-top-and-ends/README.md).
+
 The October 29 texture studies retain whole-world uncertainty, compare signal dose and finite evidence histories, and pair affect-channel ablations on exactly the same observations. Population sizes vary while independent calibration and validation panels remain fixed. Boundary-sensitive population ranks receive an independently cross-checked 50/80-digit reconstruction from counts, preserving the eight-decimal rule; the failed double-precision packet stays withheld and charged. [Prospective design](versions/v25-pieces-and-ends/TEXTURE_PROTOCOL_2026-10-29.md) and [precision repair](versions/v25-pieces-and-ends/W4F1_PRECISION_REPAIR.md).
 
 Queue accounting now preserves a separate overhead record for each controller lifetime. Earlier overwritten controller overhead cannot be reconstructed exactly; an additional labeled estimate is retained in the preparation budget. Exact, bounded event deferrals keep inspected unpublished evidence pending without suppressing new failures or acknowledging unlanded results.

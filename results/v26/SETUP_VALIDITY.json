@@ -1,0 +1,129 @@
+{
+  "at": "2026-11-02T16:23:04.998270+00:00",
+  "state": "BUILT_AND_RUNNING",
+  "gear": 2,
+  "workers_maximum": 2,
+  "numerical_threads": 1,
+  "scientific_priority": "below-normal",
+  "primary_families": 10,
+  "primary_settings": 78,
+  "primary_worlds_before_cost_shedding": 1248,
+  "texture_variants": 56,
+  "targeted_tests": {
+    "passed": 23,
+    "exit_code": 0,
+    "test_sha256": "2fa861c93e031049cd6ec9c1eee5bc22910c30614874b7a3ed43fbae8915876c"
+  },
+  "excluded_design_checks": {
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "E1": true,
+    "E2": true,
+    "E3": true,
+    "U1": true,
+    "R1": true,
+    "R4": true,
+    "R13": true
+  },
+  "verified_primaries": [
+    "E2",
+    "E3",
+    "H1",
+    "H2",
+    "H3",
+    "R1",
+    "U1"
+  ],
+  "active": [
+    "v26-e1-study-1",
+    "v26-r4-probe-1"
+  ],
+  "prepared_count": 8,
+  "failed_packets": [],
+  "complete_bindings": [
+    {
+      "packet": "v26-e1-probe-2",
+      "state": "VERIFIED",
+      "complete_sha256": "be89d0afd96a04d5a37373ac0851ca2d66f13c9a956663b8cffb811a9bed5811"
+    },
+    {
+      "packet": "v26-e2-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "8eac2ffde9c621391310dedb4222989ace31dd41af2000b421483c50cd7acb91"
+    },
+    {
+      "packet": "v26-e2-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "993c487b0c98608d3e9f4c2c02b9e946176b8a4ec1296160634de6c0d43aa463"
+    },
+    {
+      "packet": "v26-e3-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "478d5842a79a5ac44a40093e93748975ba89d6de54467df00b8529b50322a916"
+    },
+    {
+      "packet": "v26-e3-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "03dd7b0ae8bf34ce59c1803113cb78983056bd2377974098b21168ce0b4dd48c"
+    },
+    {
+      "packet": "v26-h1-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "4a1569b7ec375347c0fcb4073e5ab82d7751152066f13f82318a43b43591acd9"
+    },
+    {
+      "packet": "v26-h1-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "79660e13c31756df4233a95a0faea441dceefaff09fb0b0918787839b048b7ae"
+    },
+    {
+      "packet": "v26-h2-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "4e6db3f8ab11e33da20ca3d6f0c334faa2298e0d8ce9f76094e48f0260ef9269"
+    },
+    {
+      "packet": "v26-h2-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "9334820e584a98925976af4253d013e07c1a2b9af61b9978ecf5126d9446b071"
+    },
+    {
+      "packet": "v26-h3-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "155aa2a7434260890b51b5dd044fecd0215dfb152ddb3df705c5c81494c8dca9"
+    },
+    {
+      "packet": "v26-h3-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "6b8f9999247d6235e6a7c0e0472dc65bc4d1fefff1ecf253f0ea865515339328"
+    },
+    {
+      "packet": "v26-r1-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "8665aba016debea65b7594c539f92ff562a121266af5adbf26252e5e98641d93"
+    },
+    {
+      "packet": "v26-r1-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "0910953e4959b0f318bd0be67aa3bd92952ce2fbcc53835271a6d0209a7fadbb"
+    },
+    {
+      "packet": "v26-u1-probe-1",
+      "state": "VERIFIED",
+      "complete_sha256": "a911c51599922b2ffd94153f9e649c830e0bf5cb3992863dc79a15bf459b2977"
+    },
+    {
+      "packet": "v26-u1-study-1",
+      "state": "VERIFIED",
+      "complete_sha256": "a012cd252e8515df8f383994cb6b84b7721fa32b6e6d2a8a8521e23388ee80ad"
+    }
+  ],
+  "monitor": "Native service verified and armed at 2026-11-02T16:24:58.929657+00:00; first V26 model delivery pending",
+  "cross_repository_delivery": "H2/H3 delivered after direct approval: 18 hash-verified files per recipient, uncommitted; see EXCHANGE_INITIAL_20261102.json",
+  "publication": "Local records only; publication not performed in this setup turn",
+  "limitations": [
+    "Separate numerical reconstruction shares some likelihood kernels and the generative law.",
+    "Constructed miniatures; architecture untested; no human or language-model inference.",
+    "Cost shedding, finite texture stopping and budget/deadline admission may reduce executed scope."
+  ]
+}

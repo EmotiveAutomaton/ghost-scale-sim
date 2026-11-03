@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-02T18:06:58.746715+00:00",
+  "state": "LOCAL_CORRECTION_VERIFIED",
+  "scientific_measurements_changed": false,
+  "corrections": [
+    {
+      "claim": "G-V26-E2-1",
+      "old_wording": "One joint reader supported both directions only within a finite distance from its trained self: at overlap 4 and eight records, the log-score contrast crossed below zero at distance 0.25 for kappa=2 and 0.5 for kappa=8. The crossover is therefore reader-concentration dependent, rather than a fixed radius of self-based inference.",
+      "new_wording": "Does starting from the reader's own preferences help infer another maker? With four of six pieces matching and eight observations, the self-reader's true-ends log score first fell below the population reader's at total-variation distance 0.25 with prior concentration 2, and 0.5 with concentration 8. These are sampled crossover bins for the declared readers and libraries, not a universal radius of self-based inference.",
+      "classifications": [
+        "wording",
+        "scope"
+      ]
+    },
+    {
+      "claim": "G-V26-E3-1",
+      "old_wording": "When the planted truth was a cached solution, the reader that assumed feelings amplify current goals was worse than the cache-aware reader after 32 records in every registered cell: contrasts ranged from -0.235136 to -0.077815 nats. This adverse result is retained as a model-mismatch finding; it is not a healing target and does not identify human feelings as cached solutions.",
+      "new_wording": "Do cached emotion-like signatures mislead a reader that treats them as amplifiers of current wants? After 32 records under cached-solution truth, adding signatures under the amplifier assumption reduced true-ends log score by 0.077815-0.235136 nats relative to the choice-only reader in every registered cell. The registered comparator ignores signatures; this is a constructed model-mismatch finding, not evidence that human feelings are cached solutions.",
+      "classifications": [
+        "wording",
+        "scope"
+      ]
+    },
+    {
+      "claim": "G-V26-U1-1",
+      "old_wording": "An opaque label initially captured the planted neutral truth more often for the track-record reader than for the exact reader: excess capture was 0.279801-0.299110 at one record. The excess fell within +/-0.05 by 32 records for all three trust thresholds and was near zero by 64. This is a finite-history property of the supplied opacity and track-record laws, not evidence about real labels.",
+      "new_wording": "How many revealed source-history records let a learner approach a reader that already knows the source's selection policy? With bias strength 0.5 and 32 new claims, the track-record learner's mean probability on the false hypothesis exceeded the transparent reader's by 0.279801-0.299110 after one training record. The first sampled training length within 0.05 was 32 in all three settings. These are mean posterior-probability differences, not frequencies of categorical mistakes. Labels have no effect by construction; this is constructed source-policy learning evidence.",
+      "classifications": [
+        "wording",
+        "scope"
+      ]
+    },
+    {
+      "claim": "G-V26-R1-1",
+      "old_wording": "For one intervention, switching contexts produced practical true-hypothesis gains of 0.072171 nats at beta=1 and 0.150107 at beta=3. Removing the cue (0.003648, 0.009767) and satiating the goal (0.032073, 0.026964) stayed below 0.05. The result favors the declared switch intervention, not interventions in general.",
+      "new_wording": "Which intervention separates ends that are aliased on passive choices? After 32 passive records, one information-chosen context switch improved true-hypothesis log score over one more passive choice by 0.072171 nats at choice precision 1 and 0.150107 at precision 3. Removing an available piece (0.003648, 0.009767) and satiating an end (0.032073, 0.026964) stayed below the 0.05 practical bar. These are constructed-method results for the declared interventions.",
+      "classifications": [
+        "wording",
+        "scope"
+      ]
+    },
+    {
+      "claim": "G-V26-R4-1",
+      "old_wording": "Exact tail probabilities reversed the apparent rounded-tail decline: at 1,024 observations the exact-minus-rounded detection contrast was 0.457555. The earlier fall is therefore a rounding artifact in this constructed detector, and exact arithmetic is required for any downstream use.",
+      "new_wording": "Was the apparent decline in W4 detection a rounding artifact? At 1,024 records, ranking by unrounded complementary-tail probabilities improved detection by 0.457555, or 45.7555 percentage points, over the original rounded rule at matched false alarms. The repaired 1,024-record detection also met the declared comparison with 512 records. This validates the precision repair on the retained W4 worlds; downstream uses must preserve tail rankings, not necessarily use exact arithmetic in every implementation.",
+      "classifications": [
+        "wording",
+        "scope"
+      ]
+    }
+  ],
+  "routes_restored_from": "ghostscale/validation/soundingline/v26/registry.py",
+  "truncated_umbrella_summaries_repaired": 5,
+  "source_notes": {
+    "E3": "cached.py computes log(amplifier true-ends probability / choice-only true-ends probability).",
+    "U1": "opacity.py records track-reader minus transparent posterior on h1, conditional on h0; history is source-training length, claims=32."
+  },
+  "prior_aggregate_sha256": "e2d5ef4f3fc514a877387dc4983bb17f0e0c5f25614d10cc184575423d24197c",
+  "corrected_aggregate_sha256": "0c93ba7f4d8370c058651732375b5f0b4b13f4163a24f2205b15b905f79f9c55",
+  "delivery_pending": false,
+  "delivery_receipt": "results/v26/EXCHANGE_AGGREGATE_CORRECTED_20261102.json"
+}
