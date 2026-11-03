@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-03T03:18:35+00:00",
+  "state": "CLOSED",
+  "scientific_state": "FINITE_QUEUE_COMPLETE",
+  "publication": {
+    "repository": "https://github.com/EmotiveAutomaton/ghost-scale-sim.git",
+    "branch": "main",
+    "commit": "a6d348317cfbd8dd2f5564f5eee4b5e3e50c38b3",
+    "exact_origin_ref_verified_before_acknowledgement": true
+  },
+  "events": {
+    "acknowledged": 134,
+    "exact_event_sha256_verified": true,
+    "acknowledged_only_after_publication": true
+  },
+  "services": {
+    "scientific_workers": 0,
+    "controller_running": false,
+    "monitor_running": false,
+    "monitor_pid": 26088,
+    "live_review_owner_preserved": true,
+    "monitor_stop_note": "The watcher was blocked waiting for the bounded review process that produced this closeout. After the closeout record and exact acknowledgements were written, only the verified watcher PID was stopped; its live review child and unrelated processes were preserved."
+  },
+  "queue": {
+    "primaries_verified": 10,
+    "texture_variants_verified": 56,
+    "packets_verified": 66,
+    "raw_world_files_verified": 2144,
+    "raw_bytes_verified": 73559255,
+    "healing_packets": 0,
+    "followups": 0
+  },
+  "recipient_delivery": {
+    "copies_rehashed": 40,
+    "recipient_files_committed": false,
+    "adoption_claimed": false
+  },
+  "n16_separate_budget_preserved": true,
+  "next_review": null
+}

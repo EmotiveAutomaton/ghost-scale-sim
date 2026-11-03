@@ -1,6 +1,6 @@
 # V26: the top of the hierarchy and its ends
 
-**November 2 finite closeout:** the queue completed at 09:48 PST: ten primaries and 56 texture variants, no active scientific worker. The [final report](FINAL_REPORT.md), [bounded review](QUEUE_REVIEW_2026-11-02.md) and [reporting corrections](../../../results/v26/REPORTING_CORRECTION_20261102.json) are recorded. The opening contract below is retained as provenance.
+**November 2 finite closeout:** the queue completed at 09:48 PST: ten primaries and 56 texture variants, no active scientific worker. The [final report](FINAL_REPORT.md), [bounded review](QUEUE_REVIEW_2026-11-02.md), [reporting corrections](../../../results/v26/REPORTING_CORRECTION_20261102.json) and [administrative closeout](../../../results/v26/ADMINISTRATIVE_CLOSEOUT.json) are recorded. The opening contract below is retained as provenance.
 
 The [commissioned packet](GHOST_SCALE_V26_WEEK_PACKET_2026-11-01.md) defines ten
 primary families and bounded descriptive texture lanes. The allocation is 60

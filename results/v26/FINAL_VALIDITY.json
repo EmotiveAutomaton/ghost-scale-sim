@@ -2,7 +2,8 @@
   "at": "2026-11-03T03:13:03.197051+00:00",
   "state": "FINAL_SCIENTIFIC_VALIDITY_PASSED",
   "scientific_state": "FINITE_QUEUE_COMPLETE",
-  "publication_state": "PENDING_ORIGIN_VERIFICATION",
+  "publication_state": "VERIFIED_ON_ORIGIN_MAIN",
+  "publication_commit": "a6d348317cfbd8dd2f5564f5eee4b5e3e50c38b3",
   "packets_verified": 66,
   "primary_families_verified": 10,
   "texture_variants_verified": 56,
@@ -35,5 +36,6 @@
   "scientific_failures": [],
   "healing_packets": [],
   "followups": [],
-  "n16_separate_budget_preserved": true
+  "n16_separate_budget_preserved": true,
+  "administrative_closeout": "results/v26/ADMINISTRATIVE_CLOSEOUT.json"
 }

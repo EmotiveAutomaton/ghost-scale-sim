@@ -1229,12 +1229,19 @@
   "science_open": "2026-11-02T16:00:00+00:00",
   "new_starts_close": "2026-11-09T04:00:00+00:00",
   "drain": "2026-11-09T06:00:00+00:00",
-  "publication": "PENDING_ORIGIN_VERIFICATION",
+  "publication": "VERIFIED_ON_ORIGIN_MAIN",
+  "publication_commit": "a6d348317cfbd8dd2f5564f5eee4b5e3e50c38b3",
   "scientific_state": "FINITE_QUEUE_COMPLETE",
+  "administrative_state": "CLOSED",
+  "actual_scientific_workers": 0,
+  "science_eta_seconds": 0,
+  "acknowledged_event_count": 134,
+  "owned_monitor_stopped": true,
   "verified_primary_families": 10,
   "verified_texture_variants": 56,
   "latest_records_audit": "results/v26/RECORDS_VALIDITY_20261102.json",
   "wording_correction": "results/v26/REPORTING_CORRECTION_20261102.json",
   "final_report": "docs/versions/v26-top-and-ends/FINAL_REPORT.md",
-  "final_validity": "results/v26/FINAL_VALIDITY.json"
+  "final_validity": "results/v26/FINAL_VALIDITY.json",
+  "administrative_closeout": "results/v26/ADMINISTRATIVE_CLOSEOUT.json"
 }
