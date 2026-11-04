@@ -18,6 +18,26 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V26 Friday exploration commission, November 4
+
+The owner commissioned further validity checks, healing where justified, and
+useful exploratory work through Friday's theory review, then explicitly raised
+the cumulative allocation to 110 CPU-hours. Read
+`docs/versions/v26-top-and-ends/friday-20261104/README.md`, its frozen cards,
+`results/v26/friday-20261104/CURRENT_STATUS.json`, the resource supplement and
+outer `.local/v26-friday-20261104/HANDOFF.md`. Work within this separate continuation;
+the previous primary, texture and November 3 follow-up closeouts stay preserved.
+
+Before Friday's 06:00 PST review, a depleted prepared queue requests bounded
+analysis and prospective admission of useful remaining tests, not automatic
+closure. This explicit commission supersedes the earlier no-descendant restriction
+only for newly registered exploratory cards. No valid old packet is restarted.
+All previous charges carry forward under the supplement. Keep Gear 2 at two
+below-normal single-thread scientists, complete replay and independent review,
+known-answer controls, excluded case checks and frozen cost reservations. Keep
+one terminal-event/twelve-hour monitor, disarmed during operator work. Never
+inflate sample counts merely to occupy the remaining clock.
+
 ## V26 separate follow-ups, November 3
 
 Both follow-ups are now scientifically complete: 48 fresh whole-world blocks,

@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+**November4 continuation:** building a separate [exploratory queue for Friday review](docs/versions/v26-top-and-ends/friday-20261104/README.md), with an owner-approved110 CPU-hour cumulative ceiling and Gear2. [Live state](results/v26/friday-20261104/CURRENT_STATUS.json). Earlier finite closeouts below remain historical.
+
 **V26 follow-ups complete:** [E1 longer histories and U1 source learning](docs/versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md) passed full replay and independent reconstruction on 48 fresh whole-world blocks. No scientific job remains; the separate monitor has stopped. The original ten primaries and 56 texture variants remain closed and published.
 
 **N16 robustness complete:** all 64 fresh blocks and 245,760 cases are verified.
