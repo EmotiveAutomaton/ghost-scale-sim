@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-FR-H1X06-1
+
+How does library overlap interact with episode length at 6 top goals and 20 pieces? The separate exploratory map retains 6 settings and 64 independent worlds per setting. Featured cell means (nats) span: primary -0.305799 to 0.1148. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H1-X06_REPORT.md).
+
 ## G-V26-FR-U1X02-1
 
 At source strength 0.5, how does new-claim dose change the source-history learning curve and its uncertainty? The separate exploratory map retains 4 settings and 128 independent worlds per setting. Featured cell means (probabilities) span: excess capture 0.000580477 to 0.0702355. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
