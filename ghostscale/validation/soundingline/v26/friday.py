@@ -274,6 +274,94 @@ def final_refill_cards():
     return result
 
 
+def rare_event_refill_cards():
+    """Rare-deliberation and rare-revision maps after the endpoint refill drained.
+
+    The completed 0.1 maps show larger, noisier information per event than the
+    0.3--0.9 maps.  These cards freeze one lower rate before new data.  Their
+    doubled whole-world count is a prospective precision correction for rarer
+    events, not an extension selected after looking at the new outcomes.
+    """
+    blocks=128
+    common=dict(
+        blocks=blocks,
+        precision=(
+            f'{blocks} independent worlds per cell; maximum binomial Monte Carlo '
+            f'standard error {0.5/math.sqrt(blocks):.4f}; log-score uncertainty '
+            'estimated across worlds. The larger whole-world count is fixed in '
+            'advance because the target events occur with probability 0.05.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method rare-event boundary map; miniature, '
+            'architecture untested; no confirmation or human inference.'
+        ),
+        probe_rule=(
+            'One excluded world at every declared setting; complete original, '
+            'replay and scalar reconstruction. Per-pass cost uses the largest '
+            'observed whole-world time with 50% margin, plus overhead.'
+        ),
+        controls=(
+            'Inherited exact-law known answers plus Friday-specific alias, '
+            'persistence, source and setting checks. Controls never impose a '
+            'desired science effect.'
+        ),
+        construction=(
+            'Makers are nested within worlds. Reader comparisons share '
+            'observations within a setting. Different setting cells use '
+            'independent worlds; no paired causal claim. All unavailable '
+            'outputs remain explicit.'
+        ),
+    )
+    h2=dict(
+        common,id='H2-X04',family='H2',
+        settings=[dict(d=.05,q=q,units=n,hard=h)
+                  for q,n,h in itertools.product((.2,.5),(16,32,64),(1,3))],
+        question=(
+            'With deliberation probability 0.05, does the higher and noisier '
+            'per-deliberation value seen at 0.1 persist across observation dose '
+            'and difficulty burden?'
+        ),
+        case=(
+            'At least 25% of excluded worlds remain uncertain under text-only '
+            'reading at each setting; both deliberation and difficulty have '
+            'positive probability.'
+        ),
+        routes=list(registry.ROUTES['H2']),
+        seed_domain='v26-friday-20261104-h2-x04',
+        registration_reason=(
+            'The completed 0.1 pause map has larger and noisier information per '
+            'deliberation than the 0.3 and 0.6 maps. This card freezes the same '
+            'dose and difficulty grid at 0.05 with 128 worlds per cell before '
+            'new data, to test the rare-deliberation boundary without calling it '
+            'confirmation.'
+        ),
+    )
+    h3=dict(
+        common,id='H3-X05',family='H3',
+        settings=[dict(r=.05,partial=p,discovery_fraction=f,units=n)
+                  for p,f,n in itertools.product((0.,.5,.75),(.25,.75),(12,48))],
+        question=(
+            'With revision rate 0.05, does the larger per-revision value seen at '
+            '0.1 persist across revision completeness, discovery timing and '
+            'document length?'
+        ),
+        case=(
+            'Changed-goal cases have positive probability .5; at least 25% of '
+            'excluded changed-goal documents remain uncertain under the final-text '
+            'reader at each setting.'
+        ),
+        routes=list(registry.ROUTES['H3']),
+        seed_domain='v26-friday-20261104-h3-x05',
+        registration_reason=(
+            'The completed 0.1 revision map has larger per-revision values and as '
+            'few as 48 available worlds in a cell. This card freezes the same '
+            'completeness, timing and length grid at 0.05 with 128 worlds per cell '
+            'before new data, prospectively compensating for rarer revisions.'
+        ),
+    )
+    return [h2,h3]
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair

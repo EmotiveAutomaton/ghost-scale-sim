@@ -115,6 +115,14 @@ now test eight and twenty pieces at lower declared precision. They are separate
 exploratory maps, not retries or confirmation; measured probes and all ordinary
 admission, replay, review and remaining-cap gates still apply.
 
+Those endpoint maps retained the sign pattern at eight, twelve and twenty pieces,
+so further hierarchy sampling is not justified. After the queue drained again,
+two [prospectively frozen rare-event maps](FOURTH_REFILL_REVIEW_2026-11-05.md)
+lower deliberation probability and revision rate from 0.1 to 0.05. Each declares
+128 worlds per cell in advance to compensate for rarer target events. They remain
+exploratory maps and require excluded checks, measured probes and ordinary
+admission before any fixed study.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate
