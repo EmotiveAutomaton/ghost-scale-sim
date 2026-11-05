@@ -7,10 +7,11 @@ from ..v25.pieces import WEIGHTS,HYPOTHESES,laws,controls as old_controls
 TRAIN=((0,1,2,3),(0,1,3,4),(1,2,3,4),(0,1,2,3,4))
 SWITCH=((5,0,2),(5,1,4))
 
-def library(r,structure='varying'):
+def library(r,structure='varying',switch_gap=1.):
+    if not 0<=switch_gap<=1:raise ValueError('switch gap outside [0,1]')
     e=r.choice([0.,.5,1.],(6,3));e[:5,1]=e[:5,0]
     if structure=='constant':e[:5,:2]=.5
-    e[5,:2]=[1,0];return e
+    e[5,:2]=[.5+switch_gap/2,.5-switch_gap/2];return e
 
 def hypotheses(beta=3):return [(w,b,h) for w in range(15) for b in sorted(set([1,3,beta])) for h in range(-1,6)]
 
@@ -25,7 +26,7 @@ def split_pairs(beta,hs=HYPOTHESES):
     return [(i,j) for i,a in enumerate(hs) for j,b in enumerate(hs) if i<j and a[1]==b[1]==beta and a[2]==b[2] and WEIGHTS[a[0],2]==WEIGHTS[b[0],2] and WEIGHTS[a[0],0]!=WEIGHTS[b[0],0]]
 
 def block(setting,identity,independent=False):
-    r=rng(*identity);e=library(r,setting.get('structure','varying'));hs=hypotheses(setting['beta']);training=TRAIN[:setting.get('training_count',4)];base=[laws(e,a,hs,independent=independent) for a in training];probes=probe_set(e,independent,hs);pairs=split_pairs(setting['beta'],hs);out=[];raw=[]
+    r=rng(*identity);e=library(r,setting.get('structure','varying'),setting.get('switch_gap',1.));hs=hypotheses(setting['beta']);training=TRAIN[:setting.get('training_count',4)];base=[laws(e,a,hs,independent=independent) for a in training];probes=probe_set(e,independent,hs);pairs=split_pairs(setting['beta'],hs);out=[];raw=[]
     # Equal fixed random sample of eight split-alias pairs, with both endpoints.
     selected=r.choice(len(pairs),8,replace=False)
     for maker,pairid in enumerate(selected):

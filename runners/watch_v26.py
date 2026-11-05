@@ -16,7 +16,13 @@ def observe(campaign):
             if alive(s['parent_pid']):active.append(p.name)
             else:event(campaign,p.name+'-owner-missing','owner_missing',dict(packet=p.name,status_sha256=digest(p/'STATUS.json')))
     q=campaign/'QUEUE_STATUS.json'
-    if q.exists() and read(q)['state'] not in ('DRAINED','CLOSED') and not alive(read(q)['pid']):event(campaign,'queue-owner-missing-'+digest(q)[:12],'owner_missing',dict(queue_sha256=digest(q)))
+    if q.exists():
+        status=read(q)
+        # The build receipt can precede the controller's first owner heartbeat.
+        # Read once: a simultaneous atomic status replacement must not mix states.
+        if status['state'] not in ('BUILDING','DRAINED','CLOSED'):
+            pid=status.get('pid')
+            if not pid or not alive(pid):event(campaign,'queue-owner-missing-'+digest(q)[:12],'owner_missing',dict(queue_sha256=digest(q)))
     return active
 
 def scheduled(campaign,current):
@@ -33,6 +39,10 @@ def scheduled(campaign,current):
         if current>=point>=floor:event(campaign,f'v26-daily-{day-1:02d}','daily_report',dict(due=point.isoformat()))
     for key in ('new_starts_close','drain'):
         if current>=datetime.fromisoformat(a[key]):event(campaign,'v26-'+key,'final_deadline',dict(due=a[key]))
+    supplement=campaign/'SUPPLEMENT.json'
+    if supplement.exists() and read(supplement).get('review_target'):
+        target=read(supplement)['review_target']
+        if current>=datetime.fromisoformat(target):event(campaign,'v26-friday-theory-review','review_boundary',dict(due=target,hold_new_admissions=True))
     if current>=datetime.fromisoformat(a['drain']):(campaign/'STOP').touch(exist_ok=True)
 
 def run(campaign,state,config):

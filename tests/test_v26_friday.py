@@ -1,0 +1,117 @@
+"""New estimator/knob controls and resource boundary failures, excluded from science."""
+from datetime import datetime,timezone
+import math
+import numpy as np
+import pytest
+from ghostscale.validation.soundingline.v26 import friday,friday_reporting,values,alias_repair,contract
+from ghostscale.validation.soundingline.v26.common import rng,close
+
+
+def test_first_crossing_is_not_sustained_crossing():
+    r=friday.crossing_metrics([0,1.2,.9,2,3])
+    assert r['first_crossing']==2 and r['sustained_crossing']==4 and r['recrossed_below']==1
+    assert friday.crossing_metrics([0,1.2,0])['sustained_crossing'] is None
+    assert friday.crossing_metrics([1,1])['sustained_crossing']==1
+    assert friday.crossing_metrics([0,0])['first_crossing'] is None
+    with pytest.raises(ValueError):friday.crossing_metrics([math.nan])
+
+
+def test_evidence_metrics_do_not_change_trajectory_and_scalar_review_matches():
+    s=dict(environment='forced',eta=.005,theta=.6,max_history=16,histories=[8,16],truth_types=['A','B'])
+    a=values.block(s,['friday-excluded-metrics']);b=values.block(s|dict(evidence_path=True),['friday-excluded-metrics'])
+    assert a['public']==b['public']
+    assert a['readouts']==[r for r in b['readouts'] if r['labels']['reader']!='B-over-A-persistence']
+    for x,y in zip(a['truth_and_observations'],b['truth_and_observations']):assert x['records']==y['records']
+    close(b,values.block(s|dict(evidence_path=True),['friday-excluded-metrics'],True),tol=1e-9)
+
+
+def test_real_switch_strength_and_zero_control():
+    a=alias_repair.library(rng('friday-excluded-gap'),'varying')
+    assert np.array_equal(a,alias_repair.library(rng('friday-excluded-gap'),'varying',1))
+    for gap in (0,.125,.5,1):
+        e=alias_repair.library(rng('friday-excluded-gap'),'varying',gap)
+        assert e[5,0]-e[5,1]==gap
+        hs=alias_repair.hypotheses(3);pairs=alias_repair.split_pairs(3,hs)
+        law=alias_repair.laws(e,alias_repair.SWITCH[0],hs)
+        assert all((np.max(abs(law[i]-law[j]))>1e-12)==(gap>0) for i,j in pairs)
+
+
+def fixture():
+    a=contract.acceptance('2026-11-02T15:00:00+00:00','spec')
+    s=dict(total_cpu_seconds=110*3600,pools_seconds=dict(studies=86*3600,preparation=3*3600,followup_healing=15*3600,protected=6*3600),family_seconds=dict(E1=26*3600),review_target='2026-11-06T14:00:00+00:00')
+    p=dict(family='E1',kind='study',pool='studies',cpu_cap_seconds=1000,pass_caps=dict(original=300,replay=300,review=300),numerical_threads=1,priority='below-normal',design_check_sha256='bound',supplement_sha256='bound',projected_wall_seconds=1000)
+    return a,s,p
+
+
+def test_expansion_includes_prior_charges_and_enforces_gear_and_friday():
+    a,s,p=fixture();now=datetime(2026,11,4,15,tzinfo=timezone.utc)
+    assert friday.admission(p,a,s,now,{'studies':60*3600})
+    with pytest.raises(ValueError,match='family ceiling'):friday.admission(p,a,s,now,{'family:E1':26*3600-999})
+    with pytest.raises(ValueError,match='two shared'):friday.admission(p,a,s,now,{},2)
+    with pytest.raises(ValueError,match='Friday review margin'):friday.admission(p,a,s,datetime(2026,11,6,13,59,tzinfo=timezone.utc),{})
+    with pytest.raises(ValueError,match='pool ceiling'):friday.admission(p,a,s,now,{'studies':86*3600-999})
+
+
+def test_verification_healing_uses_shared_pool_and_declared_attempt():
+    a,s,p=fixture();now=datetime(2026,11,4,15,tzinfo=timezone.utc)
+    healing=p|dict(kind='healing',pool='followup_healing',healing_number=1)
+    assert friday.admission(healing,a,s,now,{'followup_healing':5000})
+    with pytest.raises(ValueError,match='healing limit'):friday.admission(healing|dict(healing_number=3),a,s,now,{})
+    with pytest.raises(ValueError,match='pool ceiling'):friday.admission(healing,a,s,now,{'followup_healing':15*3600-999})
+
+
+def test_public_plan_omits_machine_local_execution_paths():
+    from runners.run_v26_friday import public_plan
+    plan=dict(card='U1-X02',source_root='private-source',interpreter='private-python',accounting_root='private-campaign')
+    assert public_plan(plan)=={'card':'U1-X02'}
+
+
+def test_friday_qualification_does_not_split_multiline_synthesis(tmp_path):
+    path=tmp_path/'READING_INTENT.md'
+    e1=friday_reporting.hypothesis_note('E1')
+    h1=friday_reporting.hypothesis_note('H1')
+    path.write_text(
+        '| G-V26-E1-1 | parent |\n'
+        '| G-V26-H1-1 | parent |\n'
+        f'**What these add up to.** Starting from oneself helped nearby makers {e1}\n'
+        f'and hurt elsewhere; fair rematching narrowed that advantage. {h1}\n',
+        encoding='utf-8',
+    )
+    friday_reporting.repair_hypothesis_notes(path)
+    repaired=path.read_text(encoding='utf-8')
+    assert repaired.count(e1)==repaired.count(h1)==1
+    assert repaired.index(e1)<repaired.index(h1)<repaired.index('**What these add up to.**')
+    assert ('**What these add up to.** Starting from oneself helped nearby makers\n'
+            'and hurt elsewhere; fair rematching narrowed that advantage.\n') in repaired
+
+
+def test_registry_has_no_nominal_shift_alias_and_fixed_samples():
+    cards=friday.cards();assert len({c['id'] for c in cards})==len(cards)==37
+    for c in cards:
+        assert c['blocks'] in (64,128) and c['question'] and c['case']
+        if c['family']=='E1':assert all(s['environment']!='shift' or s['specialists']<1 for s in c['settings'])
+
+
+def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
+    from runners.run_v26_friday import measured_study_caps
+    cost=dict(
+        pass_cpu_seconds=dict(original=3.125,replay=3.0,review=2.984375),
+        setting_seconds=dict(
+            original=[.046875]*11+[.0625],
+            replay=[.046875]*12,
+            review=[.03125]*12,
+        ),
+    )
+    caps=measured_study_caps(cost,[{}]*12,128)
+    assert caps['original']==caps['replay']
+    assert caps['replay']>121.6796875
+    assert caps['review']<caps['replay']
+
+
+def test_monitor_handles_initial_build_and_missing_running_owner(tmp_path):
+    from runners.watch_v26 import observe
+    from ghostscale.validation.soundingline.v26.common import write
+    write(tmp_path/'QUEUE_STATUS.json',dict(state='BUILDING'))
+    assert observe(tmp_path)==[] and not list((tmp_path/'events').glob('*.json'))
+    write(tmp_path/'QUEUE_STATUS.json',dict(state='RUNNING'),immutable=False)
+    assert observe(tmp_path)==[] and len(list((tmp_path/'events').glob('*.json')))==1

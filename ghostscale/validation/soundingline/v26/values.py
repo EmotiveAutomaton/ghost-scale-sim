@@ -68,6 +68,7 @@ def block(setting,identity,independent=False):
         eligible=[i for i,h in enumerate(hs) if h[0]==typ and (typ not in ('B','C') or h[1]==setting['eta']) and (typ!='C' or h[2]==setting['theta'])]
         truth=int(r.choice(eligible));state=states(hs);ll=np.zeros(len(hs));history=[];chosen=[];first={k:None for k in names if k!=typ};lossdiff=[];forced_dims=[]
         environment_setting=dict(setting,environment_dimension=int(r.integers(dims)))
+        evidence=[]
         for t in range(1,horizon+1):
             menu,forced,phase,dim=menu_at(r,t,environment_setting);law=policy(menu,hs,state,independent);post=posterior(ll,prior,independent);predict=post@law
             shares=np.sum(chosen[-16:],axis=0) if chosen else np.ones(dims)
@@ -81,6 +82,8 @@ def block(setting,identity,independent=False):
             for rival in first:
                 ev=type_log_evidence(ll,prior,kinds,typ,rival,independent) if horizon>256 else math.log(typepost[names.index(typ)]/typepost[names.index(rival)])
                 if ev>=1 and first[rival] is None:first[rival]=t
+            if setting.get('evidence_path'):
+                evidence.append(type_log_evidence(ll,prior,kinds,'B','A',independent))
             if t in levels:
                 out.append(record(scores(typepost,maker),truth=typ,reader='exact-type',history=t))
                 out.append(record(dict(usage_minus_exact_loss=math.fsum(lossdiff)/len(lossdiff) if lossdiff else None),truth=typ,reader='next-choice',history=t))
@@ -90,7 +93,12 @@ def block(setting,identity,independent=False):
         for rival,hit in first.items():out.append(record({'records_to_one_nat':hit,f'not_within_{horizon}':float(hit is None)},truth=typ,reader='threshold',rival=rival))
         lock=int(state['locked'][truth]);lt=int(state['lock_time'][truth])
         out.append(record(dict(locked=float(lock>=0),lock_time=lt if lock>=0 else None,forced_lock_match=float(lock==forced_dims[0]) if forced_dims and lock>=0 else None),truth=typ,reader='path-dependence'))
-        raw.append(dict(truth=truth,records=history))
+        if setting.get('evidence_path'):
+            from .friday import crossing_metrics
+            for level in levels:
+                out.append(record(crossing_metrics(evidence[:level]),truth=typ,reader='B-over-A-persistence',history=level))
+            raw.append(dict(truth=truth,records=history,log_B_over_A=evidence))
+        else:raw.append(dict(truth=truth,records=history))
     return dict(public=dict(hypotheses=[dict(kind=h[0],eta=h[1],theta=h[2],initial=h[3].tolist()) for h in hs],prior=prior.tolist(),choice_model='softmax beta3 with .02 uniform lapse; locked C lexicographic'),truth_and_observations=raw,readouts=out)
 
 def type_log_evidence(ll,prior,kinds,truth,rival,independent=False):

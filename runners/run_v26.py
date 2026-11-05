@@ -141,8 +141,20 @@ def execute(packet):
     if digest(packet/'PLAN.json')!=read(packet/'ADMISSION.json')['plan_sha256']:raise ValueError('admitted plan changed')
     if (packet/'COMPLETE.json').exists():raise ValueError('completed packet cannot repeat')
     verify_source(plan);started=time.process_time();cpu=0.;pass_cpu={};active=None;handle=None;state='FAILED';error=None;wall=time.monotonic()
+    verification_parent=plan.get('verification_healing_parent')
+    labels=('replay','review') if verification_parent else ('original','replay','review')
+    if verification_parent:
+        parent=packet.parent/verification_parent
+        if read(parent/'STATUS.json')['state']!='FAILED':raise ValueError('verification healing parent is not failed')
+        for key,name in [('retained_original_raw_index_sha256','original/RAW_INDEX.json'),
+                         ('retained_original_summary_sha256','original/SUMMARY.json'),
+                         ('retained_original_cost_sha256','original-cost.json'),
+                         ('failed_status_sha256','STATUS.json')]:
+            if digest(parent/name)!=plan[key]:raise ValueError('verification healing parent changed: '+name)
+        if digest(packet/'original/RAW_INDEX.json')!=plan['retained_original_raw_index_sha256'] or digest(packet/'original/SUMMARY.json')!=plan['retained_original_summary_sha256'] or digest(packet/'original-cost.json')!=plan['retained_original_cost_sha256']:
+            raise ValueError('retained original copy changed')
     try:
-        for label in ('original','replay','review'):
+        for label in labels:
             env=dict(os.environ,PYTHONPATH=str(plan['source_root']),PYTHONNOUSERSITE='1',PYTHONDONTWRITEBYTECODE='1')
             for key in ('OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[key]='1'
             with (packet/(label+'.log')).open('xb') as log:
@@ -158,10 +170,13 @@ def execute(packet):
                 if active.returncode:raise RuntimeError(f'{label} exit {active.returncode}')
                 active=None
             if label=='replay':write(packet/'REPLAY.json',runtime.compare(packet/'original',packet/'replay'))
+        receipt_pass_cpu=dict(pass_cpu)
+        if verification_parent:receipt_pass_cpu['original']=read(packet/'original-cost.json')['cpu_seconds']
         timing={}
-        for label in pass_cpu:
+        for label in receipt_pass_cpu:
             blocks=read(packet/(label+'-cost.json'))['blocks'];timing[label]=[sum(b['cpu_seconds'] for b in blocks if b['setting']==s) for s in range(len(plan['settings']))]
-        write(packet/'PASS_COSTS.json',dict(pass_cpu_seconds=pass_cpu,setting_seconds=timing,includes_world_io=True))
+        write(packet/'PASS_COSTS.json',dict(pass_cpu_seconds=receipt_pass_cpu,setting_seconds=timing,includes_world_io=True,
+            retained_original_unrepeated=bool(verification_parent)))
         if plan.get('healing_parent'):
             parent=packet.parent/plan['healing_parent'];retained={}
             for path in sorted((parent/'original').glob('*_points.json*')):

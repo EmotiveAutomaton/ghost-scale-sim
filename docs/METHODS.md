@@ -1,5 +1,13 @@
 # The methodology layer
 
+The November 4 continuation separates first evidence crossings, later reversals
+and finite-horizon sustained crossings, without treating the one-nat descriptive
+bar as an error-controlled decision. Retained source-learning curves receive
+whole-world bootstrap analysis. New multifactor maps use per-setting excluded
+case checks, actual intervention-strength controls, fixed world counts, complete
+cost probes and supplement-aware cumulative admission. The original acceptance
+and source capsules stay immutable. [Friday protocols and limits](versions/v26-top-and-ends/friday-20261104/README.md).
+
 The November 3 V26 follow-ups add stable log-marginal type odds for extended
 histories, verify unchanged trajectory prefixes and preserve coarse source-reader
 readouts while scoring a finer training grid. First and sustained sample-mean
