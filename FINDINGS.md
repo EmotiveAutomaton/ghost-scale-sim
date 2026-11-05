@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-FR-H2X05-1
+
+With deliberation probability 0.025, does the positive but noisy per-deliberation value at 0.05 persist across the complete observation-dose and difficulty grid? The separate exploratory map retains 12 settings and 256 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0447569 to 0.104966. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H2-X05_REPORT.md).
+
 ## G-V26-FR-H3X05-1
 
 With revision rate 0.05, does the larger per-revision value seen at 0.1 persist across revision completeness, discovery timing and document length? The separate exploratory map retains 12 settings and 128 independent worlds per setting. Featured cell means (nats per revision) span: primary -0.235126 to 0.499156. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
