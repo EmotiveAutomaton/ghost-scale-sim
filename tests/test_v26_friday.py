@@ -92,6 +92,23 @@ def test_registry_has_no_nominal_shift_alias_and_fixed_samples():
         if c['family']=='E1':assert all(s['environment']!='shift' or s['specialists']<1 for s in c['settings'])
 
 
+def test_refill_cards_are_prospective_bounded_and_design_available():
+    cards=friday.refill_cards()
+    assert len(cards)==8
+    assert len({c['id'] for c in cards})==8
+    assert {c['id'] for c in cards}=={
+        'E2-X02R1','E2-X03R1','E2-X04R1','U1-X03R1','U1-X04R1',
+        'H1-X10','H2-X03','H3-X04',
+    }
+    successors=[c for c in cards if 'resource_successor_of' in c]
+    assert len(successors)==5
+    assert all(c['held_packet'].endswith('-probe') for c in successors)
+    focused=next(c for c in cards if c['id']=='H1-X10')
+    assert focused['blocks']==48 and len(focused['settings'])==4
+    assert {s['episodes'] for s in focused['settings']}=={3,12}
+    assert all(friday.design_check(c)['passed'] for c in cards)
+
+
 def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
     from runners.run_v26_friday import measured_study_caps
     cost=dict(

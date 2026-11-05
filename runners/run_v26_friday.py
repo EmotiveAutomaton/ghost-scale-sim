@@ -151,6 +151,65 @@ def build(campaign):
     print(str(source),flush=True)
 
 
+def register_refill(campaign):
+    """Append the prospectively frozen post-depletion cards and prepare probes."""
+    runtime.below_normal();started=time.process_time()
+    if not (campaign/'BUILD_COMPLETE.json').exists():raise ValueError('initial build is incomplete')
+    if (campaign/'QUEUE_OWNER.lock').exists():raise ValueError('queue owner is still live or requires recovery review')
+    if read(campaign/'QUEUE_STATUS.json')['state']!='DRAINED':raise ValueError('refill requires a drained queue')
+    registration=campaign/'REFILL_REGISTRATION.json'
+    if registration.exists():raise ValueError('refill already registered')
+    source=base.frozen_source(campaign,EXTRAS)
+    repo=Path(read(campaign/'LOCAL_PATHS.json')['repo']);out=repo/'docs/versions/v26-top-and-ends'/REL
+    existing=list(read(campaign/'CARDS.json'));ids={card['id'] for card in existing}
+    cards=friday.refill_cards()
+    if ids.intersection(card['id'] for card in cards):raise ValueError('refill card id already registered')
+    order=max((card.get('queue_order',i) for i,card in enumerate(existing)),default=-1)+1
+    dispositions=[];registered=[]
+    try:
+        for offset,card in enumerate(cards):
+            card=card|dict(queue_order=order+offset);f=card['family'];cid=card['id']
+            if not (campaign/'controls'/(f+'.json')).exists():raise ValueError('missing inherited controls: '+f)
+            protocol=card|dict(
+                interpreter=str(Path(sys.executable).resolve()),
+                module_sha256=digest(source/'ghostscale/validation/soundingline/v26'/f'{registry.MODULES[f]}.py'),
+                source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
+                supplement_sha256=digest(campaign/'SUPPLEMENT.json'),
+            )
+            write(campaign/'protocols'/(cid+'.json'),protocol)
+            check=friday.design_check(card);write(campaign/'designs'/(cid+'.json'),check)
+            write(out/'protocols'/(cid+'.json'),{k:v for k,v in protocol.items() if k!='interpreter'})
+            write(out/'protocols'/(cid+'-DESIGN.json'),check)
+            if check['passed']:
+                packet=prepare(campaign,card,source)
+                dispositions.append(dict(card=cid,state='PROBE_PREPARED',packet=packet.name))
+            else:
+                dispositions.append(dict(card=cid,state='DESIGN_UNAVAILABLE',failed_settings=[r['setting'] for r in check['checks'] if not r['passed']]))
+            registered.append(card)
+        combined=existing+registered
+        write(campaign/'CARDS.json',combined,immutable=False)
+        write(out/'CARDS.json',combined,immutable=False)
+        receipt=dict(
+            at=base.now().isoformat(),source=str(source),
+            source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
+            source_archive_sha256=digest(source/'SOURCE.zip'),
+            trigger='genuine queue depletion before Friday review',
+            previous_registered_cards=len(existing),registered_cards=len(registered),
+            dispositions=dispositions,
+        )
+        write(registration,receipt)
+        write(repo/'results/v26'/REL/'REFILL_REGISTRATION.json',{k:v for k,v in receipt.items() if k!='source'})
+        prepared=[row['packet'] for row in dispositions if row['state']=='PROBE_PREPARED']
+        write(campaign/'QUEUE_STATUS.json',dict(
+            state='WAITING',pid=None,heartbeat=base.now().isoformat(),active=[],
+            prepared=prepared,gear=2,needs_refill=False,
+        ),immutable=False)
+        export(campaign)
+    finally:
+        write(campaign/'accounting'/'refill-registration-1.json',dict(pool='preparation',kind='preparation',cpu_seconds=time.process_time()-started),immutable=False)
+    print(str(source),flush=True)
+
+
 def verify_bindings(campaign,packet,plan):
     base.verify_source(plan)
     for key,name in [('acceptance_sha256','ACCEPTANCE.json'),('environment_sha256','ENVIRONMENT.json'),('supplement_sha256','SUPPLEMENT.json'),
@@ -263,11 +322,12 @@ def queue(campaign):
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--build',action='store_true');parser.add_argument('--queue',action='store_true');parser.add_argument('--prepare-verification-healing',type=Path);parser.add_argument('--run-verification-healing',type=Path)
+    parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--build',action='store_true');parser.add_argument('--register-refill',action='store_true');parser.add_argument('--queue',action='store_true');parser.add_argument('--prepare-verification-healing',type=Path);parser.add_argument('--run-verification-healing',type=Path)
     args=parser.parse_args();campaign=args.campaign.resolve()
     if args.build:build(campaign)
+    elif args.register_refill:register_refill(campaign)
     elif args.queue:queue(campaign)
     elif args.prepare_verification_healing:
         source=base.frozen_source(campaign,EXTRAS);print(prepare_verification_healing(campaign,args.prepare_verification_healing,source),flush=True)
     elif args.run_verification_healing:run_verification_healing(campaign,args.run_verification_healing.resolve())
-    else:parser.error('choose build or queue')
+    else:parser.error('choose build, register-refill or queue')

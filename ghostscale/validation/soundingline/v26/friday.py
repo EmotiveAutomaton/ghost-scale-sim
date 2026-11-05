@@ -72,6 +72,78 @@ def cards():
     return result
 
 
+def refill_cards():
+    """Prospectively declared work for the first genuinely drained Friday queue.
+
+    The E2/U1 successors replace preparations held before admission; they do not
+    repeat a scientific draw. H1-X10 is a cost-driven subset of the unavailable
+    ten-goal grid. The H2/H3 cards fill low-rate boundaries left by the completed
+    interior maps.
+    """
+    original={card['id']:card for card in cards()}
+    result=[]
+
+    for old_id,new_id in (
+        ('E2-X02','E2-X02R1'),('E2-X03','E2-X03R1'),('E2-X04','E2-X04R1'),
+        ('U1-X03','U1-X03R1'),('U1-X04','U1-X04R1'),
+    ):
+        card=dict(original[old_id])
+        card.update(
+            id=new_id,
+            seed_domain=f'v26-friday-20261104-{new_id.lower()}',
+            resource_successor_of=old_id,
+            held_packet=f'v26-friday-20261104-{old_id.lower()}-probe',
+            registration_reason=(
+                'The predecessor preparation was held before admission after a '
+                'separate resource-estimation failure. Its verification-only '
+                'healing is complete; this new source-bound plan repeats no old '
+                'scientific draw.'
+            ),
+        )
+        result.append(card)
+
+    def add(card_id,family,settings,blocks,question,case,reason):
+        result.append(dict(
+            id=card_id,family=family,settings=settings,blocks=blocks,
+            question=question,case=case,
+            precision=f'{blocks} independent worlds per cell; maximum binomial Monte Carlo standard error {0.5/math.sqrt(blocks):.4f}; log-score uncertainty estimated across worlds.',
+            interpretation='Exploratory constructed-method map; miniature, architecture untested; no confirmation or human inference.',
+            routes=list(registry.ROUTES[family]),
+            seed_domain=f'v26-friday-20261104-{card_id.lower()}',
+            probe_rule='One excluded world at every declared setting; complete original, replay and scalar reconstruction. Per-pass cost uses the largest observed whole-world time with 50% margin, plus overhead.',
+            controls='Inherited exact-law known answers plus Friday-specific alias, persistence, source and setting checks. Controls never impose a desired science effect.',
+            construction='Makers are nested within worlds. Reader comparisons share observations within a setting. Different setting cells use independent worlds; no paired causal claim. All unavailable outputs remain explicit.',
+            registration_reason=reason,
+        ))
+
+    add(
+        'H1-X10','H1',
+        [dict(tops=10,pieces=12,episodes=ep,overlap=o,prefixes=[1,2,4,8,16])
+         for ep,o in itertools.product((3,12),('partial','heavy'))],
+        48,
+        'At 10 top goals and 12 pieces, does the short-versus-long episode contrast persist under partial and heavy overlap?',
+        'At least 25% of excluded worlds remain uncertain about the true top goal after one document, at every setting.',
+        'The six-cell 64-world H1-X08 study was never admitted because its measured reservation exceeded the family ceiling. This prospectively frozen four-cell, 48-world map isolates the episode endpoints and both overlap conditions with a declared maximum binomial Monte Carlo standard error of 0.0722.',
+    )
+    add(
+        'H2-X03','H2',
+        [dict(d=.1,q=q,units=n,hard=h) for q,n,h in itertools.product((.2,.5),(16,32,64),(1,3))],
+        64,
+        'With deliberation probability 0.1, how do observation dose and difficulty burden change the value and misreading of pauses?',
+        'At least 25% of excluded worlds remain uncertain under text-only reading at each setting; both deliberation and difficulty have positive probability.',
+        'The completed .3 and .6 maps leave the low-deliberation boundary unresolved; this card freezes the same dose and difficulty grid at 0.1 before any new data.',
+    )
+    add(
+        'H3-X04','H3',
+        [dict(r=.1,partial=p,discovery_fraction=f,units=n) for p,f,n in itertools.product((0.,.5,.75),(.25,.75),(12,48))],
+        64,
+        'With revision rate 0.1, how do incomplete revision and discovery timing change initial versus settled-goal recovery?',
+        'Changed-goal cases have positive probability .5; at least 25% of excluded changed-goal documents remain uncertain under the final-text reader at each setting.',
+        'The completed .3, .6 and .9 maps leave the low-revision boundary unresolved; this card freezes the same completeness, timing and document-length grid at 0.1 before any new data.',
+    )
+    return result
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair

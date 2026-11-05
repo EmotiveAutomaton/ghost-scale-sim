@@ -57,6 +57,14 @@ Two cached-cue cells also fail that family's declared case-frequency floor and
 are excluded before scientific sampling. These are design dispositions, not null
 findings. The original failed grids and their checks remain in `protocols/`.
 
+The initial prepared queue later drained before the Friday checkpoint. A
+[separate prospective review](REFILL_REVIEW_2026-11-04.md) registered eight
+bounded cards: five new source-bound successors for E2/U1 preparations held
+before admission, one cost-focused four-cell hierarchy map, and low-rate pause
+and revision boundary maps. All eight excluded case checks passed before their
+new probes were prepared. The old holds and failed resource estimates remain
+preserved; registration itself is not execution.
+
 Each runnable card has an excluded complete-setting cost probe, followed
 automatically by its fixed 64- or 128-world study if measured reservations fit.
 The sample sizes target maximum binomial Monte Carlo standard errors of 6.25 or
