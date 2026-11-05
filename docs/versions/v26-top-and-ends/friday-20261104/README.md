@@ -149,6 +149,17 @@ worlds per cell to retain near-preceding precision while leaving measured family
 headroom; the H2 map declares 512 worlds per cell before new data because the
 event rate is halved again. Registration remains preparation, not admission.
 
+All twelve 0.0125 pause cells remained positive. The 18-unit revision map instead
+was positive only for complete revisions with early discovery, near zero for
+mostly incomplete revisions with early discovery, and negative in both late-
+discovery cells. After the genuine drain, an
+[eighth prospective refill](EIGHTH_REFILL_REVIEW_2026-11-05.md) freezes the full
+H2 grid at deliberation probability 0.00625 with 1,024 worlds per cell, plus the
+four-cell H3 interaction at 15 document units with 224 worlds per cell. These are
+one lower rare-event boundary and the midpoint of the remaining 12-to-18 revision
+interval. Registration remains preparation, not scientific admission; measured
+probe replay, review and remaining family caps still decide study admission.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate

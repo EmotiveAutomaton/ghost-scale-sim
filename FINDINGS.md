@@ -1,5 +1,17 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-FR-H3X09-1
+
+At revision rate 0.025 and 18 document units, how do revision completeness and discovery timing organize the transition between the 12-unit endpoints and the negative 24-unit cells? The separate exploratory map retains 4 settings and 224 independent worlds per setting. Featured cell means (nats per revision) span: primary -0.454856 to 0.231428. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H3-X09_REPORT.md).
+
+## G-V26-FR-H2X06-1
+
+With deliberation probability 0.0125, does the positive per-deliberation value at 0.025 persist across the complete observation-dose and difficulty grid? The separate exploratory map retains 12 settings and 512 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0544643 to 0.107968. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H2-X06_REPORT.md).
+
 ## G-V26-FR-H3X08-1
 
 At revision rate 0.025 with mostly incomplete revisions, how do intermediate document lengths and discovery timing organize the mixed short-document and negative long-document cells? The separate exploratory map retains 4 settings and 256 independent worlds per setting. Featured cell means (nats per revision) span: primary -1.2801 to -0.295385. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
