@@ -464,6 +464,71 @@ def register_lower_rate_refill(campaign):
     print(str(source),flush=True)
 
 
+def register_revision_length_refill(campaign):
+    """Append two prospective H3 length-localization maps after H3-X06 drains."""
+    runtime.below_normal();started=time.process_time()
+    registration=campaign/'REFILL_REGISTRATION_6.json'
+    if registration.exists():raise ValueError('revision-length refill already registered')
+    if not (campaign/'REFILL_REGISTRATION_5.json').exists():raise ValueError('lower-rate refill is not registered')
+    queue_status=read(campaign/'QUEUE_STATUS.json')
+    if queue_status.get('state')!='DRAINED' or queue_status.get('active') or queue_status.get('prepared'):
+        raise ValueError('revision-length refill requires a genuinely drained queue')
+    if not queue_status.get('needs_refill'):
+        raise ValueError('drained queue does not request useful refill')
+    if (campaign/'QUEUE_OWNER.lock').exists():
+        raise ValueError('queue owner is still live or requires recovery review')
+    source=base.frozen_source(campaign,EXTRAS)
+    repo=Path(read(campaign/'LOCAL_PATHS.json')['repo']);out=repo/'docs/versions/v26-top-and-ends'/REL
+    existing=list(read(campaign/'CARDS.json'));ids={card['id'] for card in existing}
+    cards=friday.revision_length_refill_cards()
+    if ids.intersection(card['id'] for card in cards):raise ValueError('revision-length card id already registered')
+    order=max((card.get('queue_order',i) for i,card in enumerate(existing)),default=-1)+1
+    dispositions=[];registered=[]
+    try:
+        for offset,card in enumerate(cards):
+            card=card|dict(queue_order=order+offset);family=card['family'];card_id=card['id']
+            if not (campaign/'controls'/(family+'.json')).exists():raise ValueError('missing inherited controls: '+family)
+            protocol=card|dict(
+                interpreter=str(Path(sys.executable).resolve()),
+                module_sha256=digest(source/'ghostscale/validation/soundingline/v26'/f'{registry.MODULES[family]}.py'),
+                source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
+                supplement_sha256=digest(campaign/'SUPPLEMENT.json'),
+            )
+            write(campaign/'protocols'/(card_id+'.json'),protocol)
+            check=friday.design_check(card);write(campaign/'designs'/(card_id+'.json'),check)
+            write(out/'protocols'/(card_id+'.json'),{k:v for k,v in protocol.items() if k!='interpreter'})
+            write(out/'protocols'/(card_id+'-DESIGN.json'),check)
+            if check['passed']:
+                packet=prepare(campaign,card,source)
+                dispositions.append(dict(card=card_id,state='PROBE_PREPARED',packet=packet.name))
+            else:
+                dispositions.append(dict(card=card_id,state='DESIGN_UNAVAILABLE',failed_settings=[r['setting'] for r in check['checks'] if not r['passed']]))
+            registered.append(card)
+        combined=existing+registered
+        write(campaign/'CARDS.json',combined,immutable=False)
+        write(out/'CARDS.json',combined,immutable=False)
+        receipt=dict(
+            at=base.now().isoformat(),source=str(source),
+            source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
+            source_archive_sha256=digest(source/'SOURCE.zip'),
+            trigger='genuine queue depletion after the 0.025 revision endpoint map',
+            previous_registered_cards=len(existing),registered_cards=len(registered),
+            drained_status_sha256=digest(campaign/'QUEUE_STATUS.json'),
+            dispositions=dispositions,
+        )
+        write(registration,receipt)
+        write(repo/'results/v26'/REL/'REFILL_REGISTRATION_6.json',{k:v for k,v in receipt.items() if k!='source'})
+        prepared=[row['packet'] for row in dispositions if row['state']=='PROBE_PREPARED']
+        write(campaign/'QUEUE_STATUS.json',dict(
+            state='WAITING',pid=None,heartbeat=base.now().isoformat(),active=[],
+            prepared=prepared,gear=2,needs_refill=False,
+        ),immutable=False)
+        export(campaign)
+    finally:
+        write(campaign/'accounting'/'refill-registration-6.json',dict(pool='preparation',kind='preparation',cpu_seconds=time.process_time()-started),immutable=False)
+    print(str(source),flush=True)
+
+
 def verify_bindings(campaign,packet,plan):
     base.verify_source(plan)
     for key,name in [('acceptance_sha256','ACCEPTANCE.json'),('environment_sha256','ENVIRONMENT.json'),('supplement_sha256','SUPPLEMENT.json'),
@@ -577,7 +642,7 @@ def queue(campaign):
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--build',action='store_true');parser.add_argument('--register-refill',action='store_true');parser.add_argument('--register-continuation-refill',action='store_true');parser.add_argument('--register-final-refill',action='store_true');parser.add_argument('--register-rare-event-refill',action='store_true');parser.add_argument('--register-lower-rate-refill',action='store_true');parser.add_argument('--queue',action='store_true');parser.add_argument('--prepare-verification-healing',type=Path);parser.add_argument('--run-verification-healing',type=Path);parser.add_argument('--healing-number',type=int,default=1)
+    parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--build',action='store_true');parser.add_argument('--register-refill',action='store_true');parser.add_argument('--register-continuation-refill',action='store_true');parser.add_argument('--register-final-refill',action='store_true');parser.add_argument('--register-rare-event-refill',action='store_true');parser.add_argument('--register-lower-rate-refill',action='store_true');parser.add_argument('--register-revision-length-refill',action='store_true');parser.add_argument('--queue',action='store_true');parser.add_argument('--prepare-verification-healing',type=Path);parser.add_argument('--run-verification-healing',type=Path);parser.add_argument('--healing-number',type=int,default=1)
     args=parser.parse_args();campaign=args.campaign.resolve()
     if args.build:build(campaign)
     elif args.register_refill:register_refill(campaign)
@@ -585,8 +650,9 @@ if __name__=='__main__':
     elif args.register_final_refill:register_final_refill(campaign)
     elif args.register_rare_event_refill:register_rare_event_refill(campaign)
     elif args.register_lower_rate_refill:register_lower_rate_refill(campaign)
+    elif args.register_revision_length_refill:register_revision_length_refill(campaign)
     elif args.queue:queue(campaign)
     elif args.prepare_verification_healing:
         source=base.frozen_source(campaign,EXTRAS);print(prepare_verification_healing(campaign,args.prepare_verification_healing,source,args.healing_number),flush=True)
     elif args.run_verification_healing:run_verification_healing(campaign,args.run_verification_healing.resolve())
-    else:parser.error('choose build, register-refill, register-continuation-refill, register-final-refill, register-rare-event-refill, register-lower-rate-refill or queue')
+    else:parser.error('choose build, register-refill, register-continuation-refill, register-final-refill, register-rare-event-refill, register-lower-rate-refill, register-revision-length-refill or queue')

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-FR-H3X06-1
+
+With revision rate 0.025, how does the cell-to-cell sign variation seen at 0.05 behave at the complete and mostly incomplete revision endpoints across discovery timing and document length? The separate exploratory map retains 8 settings and 256 independent worlds per setting. Featured cell means (nats per revision) span: primary -1.69433 to 0.466893. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H3-X06_REPORT.md).
+
 ## G-V26-FR-H2X05-1
 
 With deliberation probability 0.025, does the positive but noisy per-deliberation value at 0.05 persist across the complete observation-dose and difficulty grid? The separate exploratory map retains 12 settings and 256 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0447569 to 0.104966. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.

@@ -453,6 +453,87 @@ def lower_rate_refill_cards():
     return [h2,h3]
 
 
+def revision_length_refill_cards():
+    """Prospective length-transition maps after the 0.025 revision endpoints.
+
+    H3-X06 changed from generally positive 12-unit cells to negative 48-unit
+    cells.  These two sibling cards freeze intermediate lengths separately for
+    complete and mostly incomplete revisions.  They retain both discovery times
+    and do not choose a single observed cell or lower the revision rate again.
+    """
+    blocks=256
+    common=dict(
+        blocks=blocks,
+        precision=(
+            f'{blocks} independent worlds per cell; maximum binomial Monte Carlo '
+            f'standard error {0.5/math.sqrt(blocks):.4f}; log-score uncertainty '
+            'estimated across worlds. The rare-event whole-world count is retained '
+            'from H3-X06 before new data.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method revision-length localization; '
+            'miniature, architecture untested; no confirmation or human inference.'
+        ),
+        probe_rule=(
+            'One excluded world at every declared setting; complete original, '
+            'replay and scalar reconstruction. Per-pass cost uses the largest '
+            'observed whole-world time with 50% margin, plus overhead.'
+        ),
+        controls=(
+            'Inherited exact-law known answers plus Friday-specific alias, '
+            'persistence, source and setting checks. Controls never impose a '
+            'desired science effect.'
+        ),
+        construction=(
+            'Makers are nested within worlds. Reader comparisons share '
+            'observations within a setting. Different setting cells use '
+            'independent worlds; no paired causal claim. All unavailable '
+            'outputs remain explicit.'
+        ),
+        case=(
+            'Changed-goal cases have positive probability .5; at least 25% of '
+            'excluded changed-goal documents remain uncertain under the final-text '
+            'reader at each setting.'
+        ),
+        routes=list(registry.ROUTES['H3']),
+    )
+    complete=dict(
+        common,id='H3-X07',family='H3',
+        settings=[dict(r=.025,partial=0.,discovery_fraction=f,units=n)
+                  for f,n in itertools.product((.25,.75),(24,36))],
+        question=(
+            'At revision rate 0.025 with complete revisions, where between 12 '
+            'and 48 document units does the positive-to-negative per-revision '
+            'transition occur across early and late discovery?'
+        ),
+        seed_domain='v26-friday-20261104-h3-x07',
+        registration_reason=(
+            'Both complete-revision H3-X06 cells are positive at 12 units and '
+            'negative at 48 units. This card freezes 24 and 36 units at both '
+            'declared discovery times before new data, localizing rather than '
+            'confirming the independent-cell sign transition.'
+        ),
+    )
+    incomplete=dict(
+        common,id='H3-X08',family='H3',
+        settings=[dict(r=.025,partial=.75,discovery_fraction=f,units=n)
+                  for f,n in itertools.product((.25,.75),(24,36))],
+        question=(
+            'At revision rate 0.025 with mostly incomplete revisions, how do '
+            'intermediate document lengths and discovery timing organize the '
+            'mixed short-document and negative long-document cells?'
+        ),
+        seed_domain='v26-friday-20261104-h3-x08',
+        registration_reason=(
+            'Mostly incomplete H3-X06 cells are negative at 48 units, while the '
+            '12-unit cells differ by discovery time. This card freezes 24 and '
+            '36 units at both discovery times before new data, retaining the '
+            'whole interaction instead of selecting one observed cell.'
+        ),
+    )
+    return [complete,incomplete]
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair

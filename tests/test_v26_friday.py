@@ -174,6 +174,20 @@ def test_lower_rate_refill_freezes_complete_pause_and_endpoint_revision_maps():
     assert all(friday.design_check(card)['passed'] for card in cards)
 
 
+def test_revision_length_refill_freezes_two_intermediate_endpoint_maps():
+    cards=friday.revision_length_refill_cards()
+    assert [card['id'] for card in cards]==['H3-X07','H3-X08']
+    assert [card['blocks'] for card in cards]==[256,256]
+    complete,incomplete=cards
+    assert all(len(card['settings'])==4 for card in cards)
+    assert all({setting['r'] for setting in card['settings']}=={.025} for card in cards)
+    assert all({setting['units'] for setting in card['settings']}=={24,36} for card in cards)
+    assert all({setting['discovery_fraction'] for setting in card['settings']}=={.25,.75} for card in cards)
+    assert {setting['partial'] for setting in complete['settings']}=={0.}
+    assert {setting['partial'] for setting in incomplete['settings']}=={.75}
+    assert all(friday.design_check(card)['passed'] for card in cards)
+
+
 def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
     from runners.run_v26_friday import measured_study_caps
     cost=dict(

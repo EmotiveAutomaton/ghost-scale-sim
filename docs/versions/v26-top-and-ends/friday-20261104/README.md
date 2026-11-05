@@ -132,6 +132,15 @@ both document lengths and the complete/mostly-incomplete endpoints rather than
 selecting cells by their observed sign. Registration remains preparation, not
 scientific admission.
 
+The 0.025 pause map remained positive in every cell. The 0.025 revision endpoint
+map instead separated generally positive 12-unit cells from negative 48-unit
+cells, with discovery timing also changing one mostly incomplete short-document
+cell. After the genuine drain, a
+[sixth prospective refill](SIXTH_REFILL_REVIEW_2026-11-05.md) freezes two sibling
+four-cell maps at 24 and 36 units: one complete-revision map and one mostly
+incomplete map, each retaining both discovery times. These are prospective
+length-transition localizations, not confirmation or retries.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate
