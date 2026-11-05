@@ -6,6 +6,47 @@ multi-line hypothesis-store synthesis sentences. The qualification is now a
 separate paragraph, the affected prose is repaired, and the regression case is
 covered. Claim rows, estimates and scientific dispositions did not change.
 
+## Late continuation update, 22:00 Pacific
+
+Corrections first: a same-campaign ownership-counting defect briefly allowed
+three scientific children while a manually launched healing overlapped the live
+controller. The newest H3-X04 child was suspended at 05:49:36 UTC and resumed at
+05:51:25 after the healing exited; no packet was aborted, restarted or repeated.
+The controller now counts live same-campaign packets it does not own, and the
+regression case passes. See the [ownership correction](GEAR2_INCIDENT_2026-11-04.md).
+
+Four additional claims have full byte replay, independent scalar and decimal
+whole-world reconstruction, claim-ledger, hypothesis-store, FINDINGS, report and
+route-bearing exchange write-through. E2-X02R1 maps the three-end missing-piece
+case from -6.15066 to 3.76596 nats across fixed cells. The second and final E2
+healing recovered E2-X03R1's nonredundant four-end no-missing-piece map, spanning
+-5.48902 to 6.02357 nats. H2-X03 maps the low-deliberation boundary from 0.0102657
+to 0.0830167 nats per deliberation. U1's second and final healing repeated no
+scientific draw and recovered U1-X04R1 at source strength 1.0, where featured
+excess-capture means span 6.67561e-12 to 0.00187609. Claims are
+`G-V26-FR-E2X02R1-1`, `G-V26-FR-E2X03R1-1`, `G-V26-FR-H2X03-1` and
+`G-V26-FR-U1X04R1-1`, bringing the Friday count to 34. Each is descriptive
+constructed-method evidence from a miniature, architecture-untested world; none
+is confirmation or a human inference.
+
+Four resource failures are separately preserved and charged. E2-X03R1 and
+E2-X04R1 exceeded their original-pass finalization reservations; only X03R1
+received the final E2 healing. U1-X03R1 likewise failed original finalization;
+U1-X04R1 completed original and replay but exceeded its review reservation, so
+only X04R1 received the final U1 healing. The unhealed X04R1 and X03R1 packets
+remain failures, not scientific nulls.
+
+At 06:00 UTC, H1-X10 and H3-X04 are the two below-normal single-thread scientists.
+H1-X10 remains in original execution; H3-X04 has reached independent review.
+No prepared packet remains, but the queue is not depleted while these admitted
+studies run. Current charged views are 132,011.9296875 study seconds,
+1,917.484375 preparation seconds and 7,206.21875 shared follow-up/healing seconds;
+family views remain nested and are not added. The next actionable ETA is the
+estimated finite drain near 09:00 UTC (01:00 Pacific), delivered earlier on a
+failure. The fixed health review remains 15:07:04 UTC. Publication and exact
+event acknowledgements remain deferred pending trusted-origin approval and
+verified remote landing.
+
 ## Verified results
 
 Twenty-seven Friday claims are locally recorded. This count includes the two

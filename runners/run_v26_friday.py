@@ -74,14 +74,15 @@ def prepare(campaign, card, source, probe=None):
     return packet
 
 
-def prepare_verification_healing(campaign, failed, source):
+def prepare_verification_healing(campaign, failed, source, healing_number=1):
     """Freeze replay/review healing around a complete retained original pass."""
     started=time.process_time();failed=failed.resolve();parent=read(failed/'PLAN.json');status=read(failed/'STATUS.json')
     if status['state']!='FAILED' or (failed/'COMPLETE.json').exists():raise ValueError('healing requires one incomplete failed packet')
     if not (failed/'original-cost.json').exists() or not (failed/'original/RAW_INDEX.json').exists() or not (failed/'original/SUMMARY.json').exists():raise ValueError('failed packet has no complete retained original')
     expected=len(parent['settings'])*parent['blocks']
     if len(read(failed/'original/RAW_INDEX.json'))!=expected:raise ValueError('retained original is incomplete')
-    identity=failed.name+'-healing-1';packet=campaign/'packets'/identity
+    if healing_number not in (1,2):raise ValueError('healing limit')
+    identity=failed.name+f'-healing-{healing_number}';packet=campaign/'packets'/identity
     if packet.exists():raise ValueError('existing healing packet requires recovery review')
     original_cpu=read(failed/'original-cost.json')['cpu_seconds'];execution_cap=1.5*original_cpu+30
     caps=dict(original=1.,replay=execution_cap,review=execution_cap)
@@ -89,7 +90,7 @@ def prepare_verification_healing(campaign, failed, source):
     shutil.copy2(failed/'CONTROLS_BEFORE_DATA.json',packet/'CONTROLS_BEFORE_DATA.json')
     plan=parent|dict(kind='healing',scientific_kind='exploratory',pool='followup_healing',identity=identity,
         source_root=str(source),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),source_archive_sha256=digest(source/'SOURCE.zip'),
-        healing_parent=failed.name,verification_healing_parent=failed.name,healing_number=1,accounting_root=str(campaign),
+        healing_parent=failed.name,verification_healing_parent=failed.name,healing_number=healing_number,accounting_root=str(campaign),
         failed_status_sha256=digest(failed/'STATUS.json'),retained_original_raw_index_sha256=digest(failed/'original/RAW_INDEX.json'),
         retained_original_summary_sha256=digest(failed/'original/SUMMARY.json'),retained_original_cost_sha256=digest(failed/'original-cost.json'),
         cpu_cap_seconds=sum(caps.values())+10,pass_caps=caps,projected_wall_seconds=2*read(campaign/'accounting'/(failed.name+'.json'))['wall_seconds']+900)
@@ -228,11 +229,12 @@ def verify_bindings(campaign,packet,plan):
         if digest(probe/'COMPLETE.json')!=plan['cost_probe_complete_sha256']:raise ValueError('cost probe changed')
 
 
-def outside(campaign):
+def outside(campaign, owned=()):
     total=base.outside_scientists(campaign)
-    for name in ('v26','v26-followups-20261103'):
-        root=campaign.parent/name
+    owned=set(owned)
+    for root in (campaign,campaign.parent/'v26',campaign.parent/'v26-followups-20261103'):
         for path in (root/'packets').glob('*/STATUS.json'):
+            if root==campaign and path.parent.name in owned:continue
             s=read(path);pid=s.get('parent_pid') if s.get('state')=='RUNNING' else s.get('launcher_pid') if s.get('state')=='LAUNCHING' else None
             if pid and alive(pid):total+=1
     return total
@@ -287,7 +289,7 @@ def queue(campaign):
             supplement=read(campaign/'SUPPLEMENT.json');stopping=(campaign/'STOP').exists() or base.now()>=datetime.fromisoformat(supplement['review_target'])
             if not stopping and not (campaign/'PAUSE_ADMISSIONS').exists():
                 for packet in candidates:
-                    external=outside(campaign)
+                    external=outside(campaign,active)
                     if len(active)+external>=2:break
                     plan=read(packet/'PLAN.json')
                     try:
@@ -322,12 +324,12 @@ def queue(campaign):
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--build',action='store_true');parser.add_argument('--register-refill',action='store_true');parser.add_argument('--queue',action='store_true');parser.add_argument('--prepare-verification-healing',type=Path);parser.add_argument('--run-verification-healing',type=Path)
+    parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--build',action='store_true');parser.add_argument('--register-refill',action='store_true');parser.add_argument('--queue',action='store_true');parser.add_argument('--prepare-verification-healing',type=Path);parser.add_argument('--run-verification-healing',type=Path);parser.add_argument('--healing-number',type=int,default=1)
     args=parser.parse_args();campaign=args.campaign.resolve()
     if args.build:build(campaign)
     elif args.register_refill:register_refill(campaign)
     elif args.queue:queue(campaign)
     elif args.prepare_verification_healing:
-        source=base.frozen_source(campaign,EXTRAS);print(prepare_verification_healing(campaign,args.prepare_verification_healing,source),flush=True)
+        source=base.frozen_source(campaign,EXTRAS);print(prepare_verification_healing(campaign,args.prepare_verification_healing,source,args.healing_number),flush=True)
     elif args.run_verification_healing:run_verification_healing(campaign,args.run_verification_healing.resolve())
     else:parser.error('choose build, register-refill or queue')

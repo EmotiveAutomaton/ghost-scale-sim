@@ -95,6 +95,12 @@ depletion, and stops at final closure. Reports distinguish queued, running,
 verified, locally recorded and published work. Every verified result receives
 claim-ledger, FINDINGS, hypothesis-store and route-bearing exchange write-through.
 
+During the separately launched U1 healing, the live controller briefly failed to
+count that same-campaign scientist and admitted two of its own. Gear 2 was restored
+by suspending and later resuming the newest child without aborting or restarting
+its packet. The [ownership correction](GEAR2_INCIDENT_2026-11-04.md) records the
+timing, scope and controller regression fix.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate
@@ -102,6 +108,25 @@ original draw, passed byte replay and independent review, and produced the separ
 documented in the [separate failure review](E2-X01_FAILURE_REVIEW.md).
 
 U1-X02 completed its original and replay passes but exceeded its prospectively
-frozen independent-review reservation. It produced no scientific result. Later
-U1 probes are held, and a verification-only healing is frozen without repeating
-the original draw; see the [separate failure review](U1-X02_FAILURE_REVIEW.md).
+frozen independent-review reservation. It produced no scientific result. Its
+verification-only healing later retained the original draw, passed replay and
+independent reconstruction, and produced the separately qualified U1-X02 result;
+see the [failure and healing review](U1-X02_FAILURE_REVIEW.md).
+
+The refill's E2-X03R1 and E2-X04R1 studies separately exceeded their measured
+original-pass reservations during finalization. Neither produced a scientific
+result. Both failures remain charged and separately reviewed. E2's second and
+final weekly healing was assigned to the nonredundant four-end,
+no-missing-piece X03R1 contrast and completed full replay and independent
+reconstruction; X04R1 receives no retry. See the
+[X03R1 review](E2-X03R1_FAILURE_REVIEW.md) and
+[X04R1 review](E2-X04R1_FAILURE_REVIEW.md).
+
+U1-X03R1 separately exceeded its original-pass reservation during finalization
+and produced no scientific result. U1-X04R1 separately completed original and
+replay before its independent-review reservation failed. U1's second and final
+healing is assigned to X04R1 because it retains a complete scientific draw and
+repeats verification only. That healing completed full replay and independent
+reconstruction; X03R1 receives no retry. See the separate
+[X03R1 review](U1-X03R1_FAILURE_REVIEW.md) and
+[X04R1 review](U1-X04R1_FAILURE_REVIEW.md).

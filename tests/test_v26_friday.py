@@ -4,7 +4,7 @@ import math
 import numpy as np
 import pytest
 from ghostscale.validation.soundingline.v26 import friday,friday_reporting,values,alias_repair,contract
-from ghostscale.validation.soundingline.v26.common import rng,close
+from ghostscale.validation.soundingline.v26.common import rng,close,write
 
 
 def test_first_crossing_is_not_sustained_crossing():
@@ -56,8 +56,20 @@ def test_verification_healing_uses_shared_pool_and_declared_attempt():
     a,s,p=fixture();now=datetime(2026,11,4,15,tzinfo=timezone.utc)
     healing=p|dict(kind='healing',pool='followup_healing',healing_number=1)
     assert friday.admission(healing,a,s,now,{'followup_healing':5000})
+    assert friday.admission(healing|dict(healing_number=2),a,s,now,{'followup_healing':5000})
     with pytest.raises(ValueError,match='healing limit'):friday.admission(healing|dict(healing_number=3),a,s,now,{})
     with pytest.raises(ValueError,match='pool ceiling'):friday.admission(healing,a,s,now,{'followup_healing':15*3600-999})
+
+
+def test_outside_counts_same_campaign_manual_scientist(monkeypatch,tmp_path):
+    from runners import run_v26_friday as runner
+    campaign=tmp_path/'campaign'
+    write(campaign/'packets/owned/STATUS.json',dict(state='RUNNING',parent_pid=1))
+    write(campaign/'packets/manual/STATUS.json',dict(state='RUNNING',parent_pid=2))
+    monkeypatch.setattr(runner.base,'outside_scientists',lambda _:0)
+    monkeypatch.setattr(runner,'alive',lambda _:True)
+    assert runner.outside(campaign,{'owned'})==1
+    assert runner.outside(campaign)==2
 
 
 def test_public_plan_omits_machine_local_execution_paths():

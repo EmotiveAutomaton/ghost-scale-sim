@@ -1,5 +1,29 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-FR-U1X04R1-1
+
+At source strength 1.0, how does new-claim dose change the source-history learning curve and its uncertainty? The separate exploratory map retains 4 settings and 128 independent worlds per setting. Featured cell means (probabilities) span: excess capture 6.67561e-12 to 0.00187609. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/U1-X04R1_REPORT.md).
+
+## G-V26-FR-H2X03-1
+
+With deliberation probability 0.1, how do observation dose and difficulty burden change the value and misreading of pauses? The separate exploratory map retains 12 settings and 64 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0102657 to 0.0830167. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H2-X03_REPORT.md).
+
+## G-V26-FR-E2X03R1-1
+
+With 4 ends and missing-piece proxy False, where do own, population and mixture priors cross as prior concentration and library mismatch vary? The separate exploratory map retains 12 settings and 128 independent worlds per setting. Featured cell means (nats) span: primary -5.48902 to 6.02357. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/E2-X03R1_REPORT.md).
+
+## G-V26-FR-E2X02R1-1
+
+With 3 ends and missing-piece proxy True, where do own, population and mixture priors cross as prior concentration and library mismatch vary? The separate exploratory map retains 12 settings and 128 independent worlds per setting. Featured cell means (nats) span: primary -6.15066 to 3.76596. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/E2-X02R1_REPORT.md).
+
 ## G-V26-FR-E1X09-1
 
 At learning rate 0.02 and specialist share 1.0, do one-nat crossings persist, and how often do fixed-value makers cross falsely? The separate exploratory map retains 3 settings and 64 independent worlds per setting. Featured cell means (probabilities) span: ever crossed 0.203125 to 1; final above 0 to 1; recrossed below 0.203125 to 0.859375. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
