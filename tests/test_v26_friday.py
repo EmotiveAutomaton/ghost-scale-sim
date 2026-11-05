@@ -160,6 +160,20 @@ def test_rare_event_refill_freezes_two_higher_precision_boundary_maps():
     assert all(friday.design_check(card)['passed'] for card in cards)
 
 
+def test_lower_rate_refill_freezes_complete_pause_and_endpoint_revision_maps():
+    cards=friday.lower_rate_refill_cards()
+    assert [card['id'] for card in cards]==['H2-X05','H3-X06']
+    assert [card['blocks'] for card in cards]==[256,256]
+    h2,h3=cards
+    assert len(h2['settings'])==12 and {setting['d'] for setting in h2['settings']}=={.025}
+    assert {setting['units'] for setting in h2['settings']}=={16,32,64}
+    assert len(h3['settings'])==8 and {setting['r'] for setting in h3['settings']}=={.025}
+    assert {setting['partial'] for setting in h3['settings']}=={0.,.75}
+    assert {setting['discovery_fraction'] for setting in h3['settings']}=={.25,.75}
+    assert {setting['units'] for setting in h3['settings']}=={12,48}
+    assert all(friday.design_check(card)['passed'] for card in cards)
+
+
 def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
     from runners.run_v26_friday import measured_study_caps
     cost=dict(

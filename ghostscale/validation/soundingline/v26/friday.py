@@ -362,6 +362,97 @@ def rare_event_refill_cards():
     return [h2,h3]
 
 
+def lower_rate_refill_cards():
+    """Prospective lower-rate pause and revision maps after the 0.05 maps.
+
+    H2-X04 remains positive across its complete 0.05 grid, so H2-X05 tests one
+    lower deliberation rate without selecting cells.  H3-X05 crosses zero across
+    its 0.05 cells.  H3-X06 therefore retains the declared completeness
+    endpoints, both discovery times and both document lengths at one lower rate;
+    it does not select cells by their observed sign.
+    """
+    blocks=256
+    common=dict(
+        blocks=blocks,
+        precision=(
+            f'{blocks} independent worlds per cell; maximum binomial Monte Carlo '
+            f'standard error {0.5/math.sqrt(blocks):.4f}; log-score uncertainty '
+            'estimated across worlds. The whole-world count is doubled before '
+            'new data because the target event rate is halved from 0.05 to 0.025.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method lower-rate boundary map; miniature, '
+            'architecture untested; no confirmation or human inference.'
+        ),
+        probe_rule=(
+            'One excluded world at every declared setting; complete original, '
+            'replay and scalar reconstruction. Per-pass cost uses the largest '
+            'observed whole-world time with 50% margin, plus overhead.'
+        ),
+        controls=(
+            'Inherited exact-law known answers plus Friday-specific alias, '
+            'persistence, source and setting checks. Controls never impose a '
+            'desired science effect.'
+        ),
+        construction=(
+            'Makers are nested within worlds. Reader comparisons share '
+            'observations within a setting. Different setting cells use '
+            'independent worlds; no paired causal claim. All unavailable '
+            'outputs remain explicit.'
+        ),
+    )
+    h2=dict(
+        common,id='H2-X05',family='H2',
+        settings=[dict(d=.025,q=q,units=n,hard=h)
+                  for q,n,h in itertools.product((.2,.5),(16,32,64),(1,3))],
+        question=(
+            'With deliberation probability 0.025, does the positive but noisy '
+            'per-deliberation value at 0.05 persist across the complete '
+            'observation-dose and difficulty grid?'
+        ),
+        case=(
+            'At least 25% of excluded worlds remain uncertain under text-only '
+            'reading at each setting; both deliberation and difficulty have '
+            'positive probability.'
+        ),
+        routes=list(registry.ROUTES['H2']),
+        seed_domain='v26-friday-20261104-h2-x05',
+        registration_reason=(
+            'All 12 completed 0.05 pause cells have positive per-deliberation '
+            'means, while their magnitude remains noisy and nonmonotonic across '
+            'dose and difficulty. This card freezes the unchanged grid at 0.025 '
+            'with 256 worlds per cell before new data. It is a separate lower-rate '
+            'boundary map, not confirmation or an extension of the prior draw.'
+        ),
+    )
+    h3=dict(
+        common,id='H3-X06',family='H3',
+        settings=[dict(r=.025,partial=p,discovery_fraction=f,units=n)
+                  for p,f,n in itertools.product((0.,.75),(.25,.75),(12,48))],
+        question=(
+            'With revision rate 0.025, how does the cell-to-cell sign variation '
+            'seen at 0.05 behave at the complete and mostly incomplete revision '
+            'endpoints across discovery timing and document length?'
+        ),
+        case=(
+            'Changed-goal cases have positive probability .5; at least 25% of '
+            'excluded changed-goal documents remain uncertain under the final-text '
+            'reader at each setting.'
+        ),
+        routes=list(registry.ROUTES['H3']),
+        seed_domain='v26-friday-20261104-h3-x06',
+        registration_reason=(
+            'The completed 0.05 revision map crosses zero across independent '
+            'cells. A full doubled 12-cell map would press against the remaining '
+            'H3 family ceiling, so this card prospectively retains the natural '
+            'completeness endpoints, both discovery times and both document '
+            'lengths at 0.025. It selects no cell by observed sign and is not '
+            'confirmation or a paired contrast.'
+        ),
+    )
+    return [h2,h3]
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair

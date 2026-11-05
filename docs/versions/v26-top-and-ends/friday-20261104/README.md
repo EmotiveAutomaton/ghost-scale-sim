@@ -123,6 +123,15 @@ lower deliberation probability and revision rate from 0.1 to 0.05. Each declares
 exploratory maps and require excluded checks, measured probes and ordinary
 admission before any fixed study.
 
+The 0.05 pause map remained positive but noisy in every cell, while the 0.05
+revision map crossed zero across independent cells. After the queue drained, a
+[fifth prospective refill](FIFTH_REFILL_REVIEW_2026-11-05.md) freezes a complete
+0.025 pause grid and an eight-cell 0.025 revision endpoint grid. Both declare 256
+worlds per cell before new data. The revision card retains both discovery times,
+both document lengths and the complete/mostly-incomplete endpoints rather than
+selecting cells by their observed sign. Registration remains preparation, not
+scientific admission.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate
