@@ -141,6 +141,14 @@ four-cell maps at 24 and 36 units: one complete-revision map and one mostly
 incomplete map, each retaining both discovery times. These are prospective
 length-transition localizations, not confirmation or retries.
 
+All eight intermediate-length cells were negative. After the next genuine drain,
+a [seventh prospective refill](SEVENTH_REFILL_REVIEW_2026-11-05.md) freezes an
+18-unit H3 midpoint map across both completeness endpoints and discovery times,
+plus the full H2 grid at deliberation probability 0.0125. The H3 map declares 224
+worlds per cell to retain near-preceding precision while leaving measured family
+headroom; the H2 map declares 512 worlds per cell before new data because the
+event rate is halved again. Registration remains preparation, not admission.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate

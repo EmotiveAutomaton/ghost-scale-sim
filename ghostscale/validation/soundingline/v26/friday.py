@@ -534,6 +534,112 @@ def revision_length_refill_cards():
     return [complete,incomplete]
 
 
+def midpoint_and_half_rate_refill_cards():
+    """Prospective H3 midpoint and H2 half-rate maps after H3-X07/X08.
+
+    Both H3 length-localization maps are negative by 24 units, while the
+    complete 12-unit endpoints were positive and the mostly incomplete
+    endpoints differed by discovery time.  H3-X09 freezes the midpoint of the
+    remaining 12--24 interval across the whole completeness/discovery
+    interaction.  H2-X06 halves the deliberation rate once more while retaining
+    its complete grid; its world count doubles prospectively for the rarer
+    event.  Neither card selects a setting by its new outcome.
+    """
+    common=dict(
+        probe_rule=(
+            'One excluded world at every declared setting; complete original, '
+            'replay and scalar reconstruction. Per-pass cost uses the largest '
+            'observed whole-world time with 50% margin, plus overhead.'
+        ),
+        controls=(
+            'Inherited exact-law known answers plus Friday-specific alias, '
+            'persistence, source and setting checks. Controls never impose a '
+            'desired science effect.'
+        ),
+        construction=(
+            'Makers are nested within worlds. Reader comparisons share '
+            'observations within a setting. Different setting cells use '
+            'independent worlds; no paired causal claim. All unavailable '
+            'outputs remain explicit.'
+        ),
+    )
+    h2_blocks=512
+    h2=dict(
+        common,id='H2-X06',family='H2',blocks=h2_blocks,
+        settings=[dict(d=.0125,q=q,units=n,hard=h)
+                  for q,n,h in itertools.product((.2,.5),(16,32,64),(1,3))],
+        question=(
+            'With deliberation probability 0.0125, does the positive '
+            'per-deliberation value at 0.025 persist across the complete '
+            'observation-dose and difficulty grid?'
+        ),
+        case=(
+            'At least 25% of excluded worlds remain uncertain under text-only '
+            'reading at each setting; both deliberation and difficulty have '
+            'positive probability.'
+        ),
+        precision=(
+            f'{h2_blocks} independent worlds per cell; maximum binomial Monte '
+            f'Carlo standard error {0.5/math.sqrt(h2_blocks):.4f}; log-score '
+            'uncertainty estimated across worlds. The whole-world count is '
+            'doubled before new data because the target event rate is halved '
+            'from 0.025 to 0.0125.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method half-rate boundary map; miniature, '
+            'architecture untested; no confirmation or human inference.'
+        ),
+        routes=list(registry.ROUTES['H2']),
+        seed_domain='v26-friday-20261104-h2-x06',
+        registration_reason=(
+            'All 12 H2-X05 cells remain positive at deliberation probability '
+            '0.025. This card freezes the unchanged grid at 0.0125 and doubles '
+            'the whole-world count before new data. It tests a lower event-rate '
+            'boundary without selecting one favorable cell or calling the '
+            'earlier exploratory map confirmation.'
+        ),
+    )
+    h3_blocks=224
+    h3=dict(
+        common,id='H3-X09',family='H3',blocks=h3_blocks,
+        settings=[dict(r=.025,partial=p,discovery_fraction=f,units=18)
+                  for p,f in itertools.product((0.,.75),(.25,.75))],
+        question=(
+            'At revision rate 0.025 and 18 document units, how do revision '
+            'completeness and discovery timing organize the transition between '
+            'the 12-unit endpoints and the negative 24-unit cells?'
+        ),
+        case=(
+            'Changed-goal cases have positive probability .5; at least 25% of '
+            'excluded changed-goal documents remain uncertain under the final-text '
+            'reader at each setting.'
+        ),
+        precision=(
+            f'{h3_blocks} independent worlds per cell; maximum binomial Monte '
+            f'Carlo standard error {0.5/math.sqrt(h3_blocks):.4f}; log-score '
+            'uncertainty estimated across worlds. The near-256-world count is '
+            'fixed before new data to retain rare-event precision while leaving '
+            'measured reservation headroom under the H3 family ceiling.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method revision-length midpoint map; '
+            'miniature, architecture untested; no confirmation or human inference.'
+        ),
+        routes=list(registry.ROUTES['H3']),
+        seed_domain='v26-friday-20261104-h3-x09',
+        registration_reason=(
+            'H3-X07 and H3-X08 are negative at both 24- and 36-unit lengths. '
+            'The complete 12-unit H3-X06 endpoints were positive, while the '
+            'mostly incomplete 12-unit endpoints differed by discovery time. '
+            'This card freezes the arithmetic midpoint of the remaining 12-to-24 '
+            'interval across both completeness endpoints and discovery times. '
+            'It selects no newly observed cell and fits the remaining H3 family '
+            'allowance prospectively.'
+        ),
+    )
+    return [h2,h3]
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair
