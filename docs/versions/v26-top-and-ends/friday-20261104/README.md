@@ -101,6 +101,13 @@ by suspending and later resuming the newest child without aborting or restarting
 its packet. The [ownership correction](GEAR2_INCIDENT_2026-11-04.md) records the
 timing, scope and controller regression fix.
 
+After the first refill's prepared queue depleted, two prospectively frozen R1
+evidence-dose cards retained the completed maps' effect structures, precisions
+and intervention gaps while reducing passive menu diversity to two or one. See
+the [second refill review](SECOND_REFILL_REVIEW_2026-11-04.md). Registration
+prepares measured probes only; study admission still requires the excluded checks,
+known answers, complete probe replay and independent review, and remaining caps.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate

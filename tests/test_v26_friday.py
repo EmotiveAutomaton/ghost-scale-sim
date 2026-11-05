@@ -121,6 +121,19 @@ def test_refill_cards_are_prospective_bounded_and_design_available():
     assert all(friday.design_check(c)['passed'] for c in cards)
 
 
+def test_continuation_refill_is_two_first_generation_r1_evidence_doses():
+    cards=friday.continuation_refill_cards()
+    assert [card['id'] for card in cards]==['R1-X03','R1-X04']
+    assert [card['blocks'] for card in cards]==[64,64]
+    assert [len(card['settings']) for card in cards]==[20,20]
+    assert [{setting['training_count'] for setting in card['settings']} for card in cards]==[{2},{1}]
+    for card in cards:
+        assert {setting['structure'] for setting in card['settings']}=={'constant','varying'}
+        assert {setting['beta'] for setting in card['settings']}=={1,3}
+        assert {setting['switch_gap'] for setting in card['settings']}=={0.,.125,.25,.5,1.}
+        assert friday.design_check(card)['passed']
+
+
 def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
     from runners.run_v26_friday import measured_study_caps
     cost=dict(

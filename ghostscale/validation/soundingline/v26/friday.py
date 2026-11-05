@@ -144,6 +144,64 @@ def refill_cards():
     return result
 
 
+def continuation_refill_cards():
+    """Two first-generation evidence-dose maps after the first refill drained."""
+    result=[]
+    for card_id,training_count in (('R1-X03',2),('R1-X04',1)):
+        settings=[
+            dict(beta=beta,structure=structure,switch_gap=gap,training_count=training_count)
+            for structure,beta,gap in itertools.product(
+                ('constant','varying'),(1,3),(0.,.125,.25,.5,1.)
+            )
+        ]
+        result.append(dict(
+            id=card_id,family='R1',settings=settings,blocks=64,
+            question=(
+                f'With {training_count} distinct passive training menu'
+                f'{"s" if training_count != 1 else ""}, how do evidence diversity, '
+                'effect structure and actual intervention strength alter split-alias recovery?'
+            ),
+            case=(
+                'Every retained passive menu preserves each declared split alias exactly; '
+                'positive-gap switch interventions separate every split pair, zero gap is '
+                'an exact negative control, remove cannot split the retained pair, and '
+                'constant-effect satiation remains aliased.'
+            ),
+            precision=(
+                '64 independent worlds per cell; maximum binomial Monte Carlo standard '
+                'error 0.0625; log-score uncertainty estimated across worlds.'
+            ),
+            interpretation=(
+                'Exploratory constructed-method evidence-dose map; miniature, architecture '
+                'untested; no confirmation or human inference.'
+            ),
+            routes=list(registry.ROUTES['R1']),
+            seed_domain=f'v26-friday-20261104-{card_id.lower()}',
+            probe_rule=(
+                'One excluded world at every declared setting; complete original, replay '
+                'and scalar reconstruction. Per-pass cost uses the largest observed '
+                'whole-world time with 50% margin, plus overhead.'
+            ),
+            controls=(
+                'Inherited exact-law known answers plus Friday-specific passive-alias, '
+                'zero-gap and positive-switch checks. Controls never impose a desired '
+                'science effect.'
+            ),
+            construction=(
+                'Makers are nested within worlds. Reader comparisons share observations '
+                'within a setting. Different setting cells use independent worlds; no '
+                'paired causal claim. All unavailable outputs remain explicit.'
+            ),
+            registration_reason=(
+                'The completed R1-X01/X02 maps held passive evidence diversity at four '
+                'menus. This first-generation evidence-dose card prospectively reduces '
+                f'that diversity to {training_count} while retaining both effect structures, '
+                'both precisions and all five frozen intervention gaps.'
+            ),
+        ))
+    return result
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair
