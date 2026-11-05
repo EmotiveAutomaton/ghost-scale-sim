@@ -108,6 +108,13 @@ the [second refill review](SECOND_REFILL_REVIEW_2026-11-04.md). Registration
 prepares measured probes only; study admission still requires the excluded checks,
 known answers, complete probe replay and independent review, and remaining caps.
 
+After those cards completed and the queue drained again, the first affordable
+ten-goal hierarchy map showed opposite short- and long-episode signs at twelve
+pieces. Two [prospectively frozen endpoint maps](THIRD_REFILL_REVIEW_2026-11-05.md)
+now test eight and twenty pieces at lower declared precision. They are separate
+exploratory maps, not retries or confirmation; measured probes and all ordinary
+admission, replay, review and remaining-cap gates still apply.
+
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the
 original draw, passed byte replay and independent review, and produced the separate

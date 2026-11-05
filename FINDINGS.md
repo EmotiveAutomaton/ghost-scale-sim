@@ -1,5 +1,29 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-FR-H1X10-1
+
+At 10 top goals and 12 pieces, does the short-versus-long episode contrast persist under partial and heavy overlap? The separate exploratory map retains 4 settings and 48 independent worlds per setting. Featured cell means (nats) span: primary -0.529376 to 0.176783. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H1-X10_REPORT.md).
+
+## G-V26-FR-R1X04-1
+
+With 1 distinct passive training menu, how do evidence diversity, effect structure and actual intervention strength alter split-alias recovery? The separate exploratory map retains 20 settings and 64 independent worlds per setting. Featured cell means (nats) span: primary 0.00462254 to 1.10808. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/R1-X04_REPORT.md).
+
+## G-V26-FR-R1X03-1
+
+With 2 distinct passive training menus, how do evidence diversity, effect structure and actual intervention strength alter split-alias recovery? The separate exploratory map retains 20 settings and 64 independent worlds per setting. Featured cell means (nats) span: primary 0.0142741 to 0.777863. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/R1-X03_REPORT.md).
+
+## G-V26-FR-H3X04-1
+
+With revision rate 0.1, how do incomplete revision and discovery timing change initial versus settled-goal recovery? The separate exploratory map retains 12 settings and 64 independent worlds per setting. Featured cell means (nats per revision) span: primary 0.269135 to 0.733242. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/friday-20261104/H3-X04_REPORT.md).
+
 ## G-V26-FR-U1X04R1-1
 
 At source strength 1.0, how does new-claim dose change the source-history learning curve and its uncertainty? The separate exploratory map retains 4 settings and 128 independent worlds per setting. Featured cell means (probabilities) span: excess capture 6.67561e-12 to 0.00187609. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.

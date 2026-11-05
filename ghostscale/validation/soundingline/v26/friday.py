@@ -202,6 +202,78 @@ def continuation_refill_cards():
     return result
 
 
+def final_refill_cards():
+    """Two narrow hierarchy endpoint maps after the second refill drained.
+
+    H1-X10 found that the short-versus-long episode contrast changed sign at
+    ten top goals and twelve pieces.  The original six-cell maps at eight and
+    twenty pieces were cost-held before admission.  These cards retain only
+    the two episode endpoints and both overlap conditions, and reduce precision
+    prospectively so both endpoint checks can fit the remaining H1 ceiling.
+    """
+    result=[]
+    for card_id,pieces,held in (
+        ('H1-X11',8,'H1-X07'),
+        ('H1-X12',20,'H1-X09'),
+    ):
+        blocks=32
+        result.append(dict(
+            id=card_id,family='H1',
+            settings=[
+                dict(tops=10,pieces=pieces,episodes=episodes,overlap=overlap,
+                     prefixes=[1,2,4,8,16])
+                for episodes,overlap in itertools.product((3,12),('partial','heavy'))
+            ],
+            blocks=blocks,
+            question=(
+                f'At 10 top goals and {pieces} pieces, does the short-versus-long '
+                'episode contrast retain the sign pattern observed at 12 pieces '
+                'under partial and heavy overlap?'
+            ),
+            case=(
+                'At least 25% of excluded worlds remain uncertain about the true '
+                'top goal after one document, at every setting.'
+            ),
+            precision=(
+                f'{blocks} independent worlds per cell; maximum binomial Monte '
+                f'Carlo standard error {0.5/math.sqrt(blocks):.4f}; log-score '
+                'uncertainty estimated across worlds.'
+            ),
+            interpretation=(
+                'Exploratory constructed-method hierarchy endpoint map; miniature, '
+                'architecture untested; no confirmation or human inference.'
+            ),
+            routes=list(registry.ROUTES['H1']),
+            seed_domain=f'v26-friday-20261104-{card_id.lower()}',
+            probe_rule=(
+                'One excluded world at every declared setting; complete original, '
+                'replay and scalar reconstruction. Per-pass cost uses the largest '
+                'observed whole-world time with 50% margin, plus overhead.'
+            ),
+            controls=(
+                'Inherited exact-law known answers plus Friday-specific alias, '
+                'persistence, source and setting checks. Controls never impose a '
+                'desired science effect.'
+            ),
+            construction=(
+                'Makers are nested within worlds. Reader comparisons share '
+                'observations within a setting. Different setting cells use '
+                'independent worlds; no paired causal claim. All unavailable '
+                'outputs remain explicit.'
+            ),
+            held_predecessor=held,
+            registration_reason=(
+                f'The six-cell 64-world {held} study was held before admission '
+                'because its measured reservation exceeded the then-available H1 '
+                'ceiling. After H1-X10 exposed a sign change between episode '
+                'endpoints at 12 pieces, this new card prospectively tests the '
+                f'{pieces}-piece endpoint with four cells and 32 worlds per cell. '
+                'It is a lower-precision exploratory map, not a retry or confirmation.'
+            ),
+        ))
+    return result
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair

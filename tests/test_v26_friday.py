@@ -134,6 +134,20 @@ def test_continuation_refill_is_two_first_generation_r1_evidence_doses():
         assert friday.design_check(card)['passed']
 
 
+def test_final_refill_is_two_narrow_hierarchy_endpoint_maps():
+    cards=friday.final_refill_cards()
+    assert [card['id'] for card in cards]==['H1-X11','H1-X12']
+    assert [card['held_predecessor'] for card in cards]==['H1-X07','H1-X09']
+    assert [card['blocks'] for card in cards]==[32,32]
+    assert [{setting['pieces'] for setting in card['settings']} for card in cards]==[{8},{20}]
+    for card in cards:
+        assert len(card['settings'])==4
+        assert {setting['tops'] for setting in card['settings']}=={10}
+        assert {setting['episodes'] for setting in card['settings']}=={3,12}
+        assert {setting['overlap'] for setting in card['settings']}=={'partial','heavy'}
+        assert friday.design_check(card)['passed']
+
+
 def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
     from runners.run_v26_friday import measured_study_caps
     cost=dict(
