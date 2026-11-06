@@ -1,5 +1,11 @@
 # V26 exploration for Friday's theory review
 
+**November 6: awaiting owner theory review.** The prepared queue is drained and
+the scientific workers and monitor have stopped. The owner requested the recorded
+snapshot and publication. Read the [review report](THEORY_REVIEW_2026-11-06.md)
+and its scope qualifications; the earlier opening and refill descriptions below
+are provenance, not instructions to resume the queue.
+
 The owner commissioned a new continuation on November 4 and explicitly raised
 the cumulative V26 ceiling from 60 to 110 CPU-hours. Gear 2 remains at most two
 below-normal, single-thread scientists. Original results and their closeouts are
@@ -159,6 +165,15 @@ four-cell H3 interaction at 15 document units with 224 worlds per cell. These ar
 one lower rare-event boundary and the midpoint of the remaining 12-to-18 revision
 interval. Registration remains preparation, not scientific admission; measured
 probe replay, review and remaining family caps still decide study admission.
+
+All twelve 0.00625 pause cells remained positive, while the 15-unit revision map
+left only the mostly incomplete late-discovery cell negative. After the genuine
+drain, a [ninth prospective refill](NINTH_REFILL_REVIEW_2026-11-05.md) freezes a
+terminal H2 rate-halving stress at deliberation probability 0.003125 with 2,048
+worlds per cell, plus the complete four-cell H3 interaction at 17 document units
+with 224 worlds per cell. H2 will not halve the event rate again from this result;
+H3-X11 is the final length localization that prospectively fits its family cap.
+Registration remains preparation, not scientific admission.
 
 E2-X01's complete original pass encountered a replay reservation failure; that
 failed packet is not a scientific result. A verification-only healing retained the

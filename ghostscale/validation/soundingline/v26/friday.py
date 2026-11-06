@@ -745,6 +745,113 @@ def transition_and_quarter_rate_refill_cards():
     return [h2,h3]
 
 
+def terminal_rare_rate_and_integer_transition_refill_cards():
+    """Prospective terminal H2 rare-rate and H3 17-unit transition maps.
+
+    H2-X07 remains positive across the full dose/difficulty grid at a
+    deliberation probability of 0.00625. H2-X08 halves the probability once
+    more and doubles the whole-world count before data, then terminates this
+    repeated rate-halving lane regardless of outcome. H3-X10 leaves two
+    interaction cells near zero between the 15- and 18-unit maps. H3-X11 fixes
+    the upper integer midpoint, 17 units, across the complete interaction; it
+    does not select one of those cells. Both cards remain exploratory maps.
+    """
+    common=dict(
+        probe_rule=(
+            'One excluded world at every declared setting; complete original, '
+            'replay and scalar reconstruction. Per-pass cost uses the largest '
+            'observed whole-world time with 50% margin, plus overhead.'
+        ),
+        controls=(
+            'Inherited exact-law known answers plus Friday-specific alias, '
+            'persistence, source and setting checks. Controls never impose a '
+            'desired science effect.'
+        ),
+        construction=(
+            'Makers are nested within worlds. Reader comparisons share '
+            'observations within a setting. Different setting cells use '
+            'independent worlds; no paired causal claim. All unavailable '
+            'outputs remain explicit.'
+        ),
+    )
+    h2_blocks=2048
+    h2=dict(
+        common,id='H2-X08',family='H2',blocks=h2_blocks,
+        settings=[dict(d=.003125,q=q,units=n,hard=h)
+                  for q,n,h in itertools.product((.2,.5),(16,32,64),(1,3))],
+        question=(
+            'With deliberation probability 0.003125, does the positive '
+            'per-deliberation value at 0.00625 persist across the complete '
+            'observation-dose and difficulty grid?'
+        ),
+        case=(
+            'At least 25% of excluded worlds remain uncertain under text-only '
+            'reading at each setting; both deliberation and difficulty have '
+            'positive probability.'
+        ),
+        precision=(
+            f'{h2_blocks} independent worlds per cell; maximum binomial Monte '
+            f'Carlo standard error {0.5/math.sqrt(h2_blocks):.4f}; log-score '
+            'uncertainty estimated across worlds. The whole-world count is '
+            'doubled before new data because the target event rate is halved '
+            'from 0.00625 to 0.003125.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method terminal rare-rate boundary map; '
+            'miniature, architecture untested; no confirmation or human inference.'
+        ),
+        routes=list(registry.ROUTES['H2']),
+        seed_domain='v26-friday-20261104-h2-x08',
+        registration_reason=(
+            'All 12 H2-X07 cells remain positive at deliberation probability '
+            '0.00625, although the smallest mean is close to zero relative to '
+            'its whole-world standard error. This card freezes the unchanged '
+            'grid at 0.003125 and doubles the whole-world count before new data. '
+            'It is the terminal rate-halving stress map for this continuation; '
+            'no further H2 rate halving follows from its outcome.'
+        ),
+    )
+    h3_blocks=224
+    h3=dict(
+        common,id='H3-X11',family='H3',blocks=h3_blocks,
+        settings=[dict(r=.025,partial=p,discovery_fraction=f,units=17)
+                  for p,f in itertools.product((0.,.75),(.25,.75))],
+        question=(
+            'At revision rate 0.025 and 17 document units, how do revision '
+            'completeness and discovery timing organize the remaining '
+            'transition between the 15- and 18-unit maps?'
+        ),
+        case=(
+            'Changed-goal cases have positive probability .5; at least 25% of '
+            'excluded changed-goal documents remain uncertain under the final-text '
+            'reader at each setting.'
+        ),
+        precision=(
+            f'{h3_blocks} independent worlds per cell; maximum binomial Monte '
+            f'Carlo standard error {0.5/math.sqrt(h3_blocks):.4f}; log-score '
+            'uncertainty estimated across worlds. The H3-X10 whole-world count '
+            'is retained before new data so measured reservation, not outcome, '
+            'determines whether the card fits the remaining family allowance.'
+        ),
+        interpretation=(
+            'Exploratory constructed-method revision-length transition map; '
+            'miniature, architecture untested; no confirmation or human inference.'
+        ),
+        routes=list(registry.ROUTES['H3']),
+        seed_domain='v26-friday-20261104-h3-x11',
+        registration_reason=(
+            'At 15 units H3-X10 is positive in three cells and negative in the '
+            'mostly incomplete late-discovery cell; at 18 units only the '
+            'complete early-discovery cell remains positive. This card freezes '
+            '17, the upper integer midpoint of the remaining 15-to-18 interval, '
+            'across the full interaction before new data. It selects no one '
+            'cell and is the final H3 length localization that fits the measured '
+            'family headroom prospectively.'
+        ),
+    )
+    return [h2,h3]
+
+
 def design_check(card):
     """Excluded grid checks inspect laws/short fixtures, never cost or science draws."""
     from . import hierarchy, values, pauses, revision, self_model, cached, opacity, alias_repair

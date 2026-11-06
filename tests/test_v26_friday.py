@@ -218,6 +218,22 @@ def test_transition_and_quarter_rate_refill_freezes_two_budgeted_maps():
     assert all(friday.design_check(card)['passed'] for card in cards)
 
 
+def test_terminal_rare_rate_and_integer_transition_refill_freezes_two_budgeted_maps():
+    cards=friday.terminal_rare_rate_and_integer_transition_refill_cards()
+    assert [card['id'] for card in cards]==['H2-X08','H3-X11']
+    h2,h3=cards
+    assert h2['blocks']==2048 and len(h2['settings'])==12
+    assert {setting['d'] for setting in h2['settings']}=={.003125}
+    assert {setting['units'] for setting in h2['settings']}=={16,32,64}
+    assert 'terminal' in h2['registration_reason']
+    assert h3['blocks']==224 and len(h3['settings'])==4
+    assert {setting['r'] for setting in h3['settings']}=={.025}
+    assert {setting['units'] for setting in h3['settings']}=={17}
+    assert {setting['partial'] for setting in h3['settings']}=={0.,.75}
+    assert {setting['discovery_fraction'] for setting in h3['settings']}=={.25,.75}
+    assert all(friday.design_check(card)['passed'] for card in cards)
+
+
 def test_deterministic_replay_reserves_the_slower_measured_execution_twin():
     from runners.run_v26_friday import measured_study_caps
     cost=dict(

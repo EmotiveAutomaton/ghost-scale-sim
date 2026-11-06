@@ -1,8 +1,8 @@
 # H2-X06 exploratory map
 
-With deliberation probability 0.0125, does the positive per-deliberation value at 0.025 persist across the complete observation-dose and difficulty grid? The separate exploratory map retains 12 settings and 512 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0544643 to 0.107968. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+With deliberation probability 0.0125, does the positive per-deliberation value at 0.025 persist across the complete observation-dose and difficulty grid? The separate exploratory map retains 12 settings and 512 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0544643 to 0.107968. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested. Reported per-event means average whole-world gain/event-count ratios only over worlds with at least one corresponding event; zero-event worlds are unavailable, not zero-valued. The featured cells use 224–469 of 512 sampled worlds each. This is neither an all-world average nor a ratio of pooled gains to pooled event counts; nominal whole-world sample size does not establish precision for this conditional statistic.
 
-Claim `G-V26-FR-H2X06-1`. Earlier finite results and closeouts remain unchanged.
+Claim `G-V26-FR-H2X06-1`. Saved numerical results and finite closeouts remain unchanged; the interpretation was qualified on November 6.
 
 The table lists frozen setting indices, observation strata and featured means. Standard errors use independent whole worlds; makers are averaged within worlds. Means from distinct cells have not been pooled. All cells, missing values and whole-world estimates remain in the aggregate JSON.
 

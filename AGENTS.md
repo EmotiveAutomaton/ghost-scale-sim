@@ -18,6 +18,22 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V26 theory-review hold, November 6
+
+The owner has begun theory review and requested a complete recorded and published
+snapshot. Read `docs/versions/v26-top-and-ends/friday-20261104/THEORY_REVIEW_2026-11-06.md`
+and the current status/validity records. The prepared queue is drained; scientific
+workers and the Friday monitor have stopped. Hold new admissions and recurring
+reviews until further owner direction. This review hold supersedes the earlier
+pre-Friday refill commission below. Preserve all completed science, failed attempts,
+separate healings, admission holds and source capsules. Do not treat unexecuted
+scope as a null or restart a valid packet to fill time.
+
+November 6 reporting qualifications preserve all numerical results: per-event
+H2/H3 summaries condition on worlds containing an event; low-rate H3 generators
+are outside the reader's revision-rate prior. Read the interpretation-correction
+ledger before quoting their means or describing a revision-length transition.
+
 ## V26 Friday exploration commission, November 4
 
 The owner commissioned further validity checks, healing where justified, and

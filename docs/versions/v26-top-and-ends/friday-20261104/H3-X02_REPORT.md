@@ -1,8 +1,8 @@
 # H3-X02 exploratory map
 
-With revision rate 0.6, how do incomplete revision and discovery timing change initial versus settled-goal recovery? The separate exploratory map retains 12 settings and 64 independent worlds per setting. Featured cell means (nats per revision) span: primary 0.0508918 to 0.390279. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+With revision rate 0.6, how do incomplete revision and discovery timing change initial versus settled-goal recovery? The separate exploratory map retains 12 settings and 64 independent worlds per setting. Featured cell means (nats per revision) span: primary 0.0508918 to 0.390279. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested. Reported per-event means average whole-world gain/event-count ratios only over worlds with at least one corresponding event; zero-event worlds are unavailable, not zero-valued. The featured cells use 64–64 of 64 sampled worlds each. This is neither an all-world average nor a ratio of pooled gains to pooled event counts; nominal whole-world sample size does not establish precision for this conditional statistic.
 
-Claim `G-V26-FR-H3X02-1`. Earlier finite results and closeouts remain unchanged.
+Claim `G-V26-FR-H3X02-1`. Saved numerical results and finite closeouts remain unchanged; the interpretation was qualified on November 6.
 
 The table lists frozen setting indices, observation strata and featured means. Standard errors use independent whole worlds; makers are averaged within worlds. Means from distinct cells have not been pooled. All cells, missing values and whole-world estimates remain in the aggregate JSON.
 

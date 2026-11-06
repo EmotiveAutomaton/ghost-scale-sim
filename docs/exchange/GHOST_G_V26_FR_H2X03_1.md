@@ -1,6 +1,6 @@
 # G-V26-FR-H2X03-1
 
-With deliberation probability 0.1, how do observation dose and difficulty burden change the value and misreading of pauses? The separate exploratory map retains 12 settings and 64 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0102657 to 0.0830167. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested.
+With deliberation probability 0.1, how do observation dose and difficulty burden change the value and misreading of pauses? The separate exploratory map retains 12 settings and 64 independent worlds per setting. Featured cell means (nats per deliberation) span: primary 0.0102657 to 0.0830167. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested. Reported per-event means average whole-world gain/event-count ratios only over worlds with at least one corresponding event; zero-event worlds are unavailable, not zero-valued. The featured cells use 63–64 of 64 sampled worlds each. This is neither an all-world average nor a ratio of pooled gains to pooled event counts; nominal whole-world sample size does not establish precision for this conditional statistic.
 
 Sounding Line S5/S6: goal evidence in pauses after modelling choice difficulty.
 
