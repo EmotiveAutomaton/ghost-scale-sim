@@ -192540,6 +192540,266 @@
       "source_sha256": "8fd3f32edd1816d1d422111c25fafbeab3b87220ceb71989bcbef4560b42730b",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. records needed (LV): 113, 95% interval 88.5 to 130; records needed (SP): 103.5, 95% interval 80.5 to 129. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Provisional time split uses the observed stock before the record; exact equality at the set point is negligible. Four independent makers per block/type, except sixty off-grid SP makers per block (960 total). Set-point placement is conditional on the SP family and marginalizes slopes; the selected-case fraction is a pooled numerator/denominator with whole-block bootstrap, with all-maker placement beside it. Fixed-slope hazard retains all LV/HO hypotheses and resets equal class priors. Off-grid draws are never redrawn for failing the case.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 8.5,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            6.5,
+            16.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "HO"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "records",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 64,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 113.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            88.5,
+            130.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "LV"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "records",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 1.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            1.0,
+            1.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "conditional_placement",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "ratio_of_sums",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 1.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            1.0,
+            1.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "fixed_conditional_placement",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "ratio_of_sums",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.9643440975490646,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.9275874318016407,
+            1.0011007632964886
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "fixed_sp_class",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.01724491476892005,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.04595947265625,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.040999178296250764,
+            0.050919767016249236
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "large_tv_share",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.002327192952014063,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 1.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            1.0,
+            1.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "placement",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 64,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 103.5,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            80.5,
+            129.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "records",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.921875,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.8416685897100736,
+            1.0020814102899265
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "offgrid": false,
+            "truth": "SP"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "time_split",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.037629983058725926,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        }
+      ],
+      "id": "G-V26-DAY-G5-T04-1",
+      "reader": "Declared finite exact readers; pointwise whole-block intervals",
+      "source_file": "docs/versions/v26-top-and-ends/day-20261106/G5-T04_REPORT.md",
+      "source_line": 3,
+      "source_sha256": "19ee7aab23d9c7036650aaea1ac37608823ed9e98489e9913234c16dcf94accd",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,

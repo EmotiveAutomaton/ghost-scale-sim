@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-DAY-G5-T04-1
+
+Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. records needed (LV): 113, 95% interval 88.5 to 130; records needed (SP): 103.5, 95% interval 80.5 to 129. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G5-T04_REPORT.md).
+
 ## G-V26-DAY-G5-T03-1
 
 Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: unresolved at this sample size. records needed (LV): 68, 95% interval 59 to 82; records needed (SP): 46, 95% interval 36 to 71. Constructed-method evidence; miniature, architecture untested.
