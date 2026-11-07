@@ -31,7 +31,7 @@ def supplement(opened, packet_sha256, parent_sha256, prior):
         workers=2, numerical_threads=1, priority='below-normal', gpu=False,
         healing_per_card=1, followups=False)
 
-def admission(plan, accepted, current, charges, running=0):
+def admission(plan, accepted, current, charges, running=0, texture_supplement=None):
     if current.tzinfo is None: raise ValueError('aware clock required')
     if accepted['pools_seconds'] != POOLS or accepted['total_cpu_seconds'] != 110*3600: raise ValueError('invalid allocation')
     if accepted['new_starts_close'] != contract.NEW_STARTS_CLOSE or accepted['drain'] != contract.DRAIN: raise ValueError('window changed')
@@ -53,7 +53,24 @@ def admission(plan, accepted, current, charges, running=0):
     if kind == 'probe' and cap > 1800: raise ValueError('probe ceiling')
     if kind == 'healing' and plan.get('healing_number') != 1: raise ValueError('healing limit')
     if charges.get(pool,0)+cap > POOLS[pool] or sum(charges.get(k,0) for k in POOLS)+cap > 110*3600: raise ValueError('pool ceiling')
-    if texture and charges.get('texture:'+f,0)+cap > TEXTURE_HOURS[f]*3600: raise ValueError('texture ceiling')
+    texture_ceiling = TEXTURE_HOURS[f]*3600
+    if texture_supplement is not None:
+        # Owner's November 7 allocation changes only the already-declared G3-T09.
+        # The caller also verifies the supplement's immutable file/acceptance bindings.
+        s = texture_supplement
+        if (s.get('schema') != 'v26-day-g3-t09-allocation-20261107'
+                or s.get('card') != 'G3-T09' or plan.get('card') != 'G3-T09'
+                or f != 'G3' or not texture or kind not in ('probe','texture')
+                or s.get('previous_texture_seconds') != 1800
+                or s.get('texture_seconds') != 3600
+                or s.get('total_cpu_seconds') != accepted['total_cpu_seconds']
+                or s.get('pools_seconds') != POOLS
+                or s.get('new_starts_close') != accepted['new_starts_close']
+                or s.get('drain') != accepted['drain']
+                or not plan.get('resource_supplement_sha256')):
+            raise ValueError('invalid G3-T09 resource supplement')
+        texture_ceiling = s['texture_seconds']
+    if texture and charges.get('texture:'+f,0)+cap > texture_ceiling: raise ValueError('texture ceiling')
     if pool == 'studies':
         projected = charges.get('family:'+f,0)+cap
         if projected > 1.5*STUDY_HOURS[f]*3600: raise ValueError('trigger 1: studies ceiling after shedding')

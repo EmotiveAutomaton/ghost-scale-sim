@@ -20,14 +20,16 @@ authorship and contribution records retain their original attribution.
 
 ## V26 theory-review hold, November 6
 
-November 7 closure: the theory-day packet lifted the hold only for G1–G5 and
-their declared finite texture lanes. All five registered studies and 29 admitted
-textures completed original execution, byte replay and independent reconstruction;
-G3-T09 was admission-held at its frozen texture ceiling and awaits owner review.
-The scientific queue drained and its controller and scientists exited. The
-theory-review hold is restored; remote publication and exact event acknowledgement
-remain pending verified destination trust. No new admissions, descendants or
-recurring scientific reviews are authorized. See the day final report and closeout.
+November 7: the five registered studies and 29 initially admitted textures are
+verified and published on main through 48ff43030. Their finite queue and monitor
+remain closed. The owner separately approved the sole held G3-T09 expanded-library
+map, raising only G3's texture allowance from 0.5 to 1 CPU-hour within the same
+110-hour total and original deadlines. Read the day `G3_T09_ALLOCATION.md`, its
+separate current status and outer `.local/v26-day-g3-t09-20261107/HANDOFF.md`.
+Preserve the original held probe and all closed packets. This continuation uses
+the unchanged declared science, one scientist within Gear 2, complete measured
+replay and reconstruction, and no descendants. At its finite closure restore the
+theory-review hold; no further refill or recurring reviews are authorized.
 
 Later November 6: the owner handed over the separate theory-day packet and
 commissioned G1–G5, their finite texture lanes and at most one diagnosed healing

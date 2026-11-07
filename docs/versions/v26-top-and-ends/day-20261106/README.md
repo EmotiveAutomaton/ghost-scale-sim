@@ -17,7 +17,9 @@ known answers, measured probes and any shedding before scientific draws.
 
 [Setup and native launch report](SETUP_REPORT.md).
 
-[Current running report and verified early findings](RUNNING_REPORT.md).
+[Final report of the initial finite queue](FINAL_REPORT.md).
+[Approved G3-T09 resource continuation](G3_T09_ALLOCATION.md).
+[Original running report and verified early findings](RUNNING_REPORT.md).
 [Bounded numerical repairs](HEALING_REVIEW.md). The source-closure primary and
 its separate honest-source arm have distinct verdicts; the reporting correction
 preserves all estimates and is folded into the report and claim ledger.
