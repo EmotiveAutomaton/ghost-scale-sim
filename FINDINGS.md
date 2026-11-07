@@ -1,5 +1,17 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-DAY-G4-T01-1
+
+How many well-priced offers distinguish a strong terminal weight, and how many records do offers save? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records needed (A9): 237.5, 95% interval 168 to 255; offers needed (A9): 13.5, 95% interval 11 to 16. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G4-T01_REPORT.md).
+
+## G-V26-DAY-G5-T01-1
+
+Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. records needed (LV): 122.5, 95% interval 98 to 159; records needed (SP): 69.5, 95% interval 56 to 98. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G5-T01_REPORT.md).
+
 ## G-V26-DAY-G1-T04-1
 
 Can hidden-stock evidence distinguish direction-relative from need-balance-relative triggers, and locate set points? The separate out-of-case map retains 4 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records to distinguish direction-relative from balance-relative firing (c): 16.5, 95% interval 11.5 to 21; records to distinguish balance-relative from direction-relative firing (d): 16.5, 95% interval 14.5 to 22. Constructed-method evidence; miniature, architecture untested.
