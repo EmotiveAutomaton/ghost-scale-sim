@@ -1,5 +1,10 @@
 # G3-T09 expanded source-library map, November 7
 
+**Complete:** probe and fixed study passed full replay and reconstruction on
+November 7. All thirty declared textures are now resolved. See the
+[final report and closure](G3_T09_FINAL_REPORT.md); the opening decision below
+remains the prospective resource record.
+
 The owner approved running this sole unexecuted declared map while reviewing the
 theory. Only G3's texture allowance increases, from 0.5 to 1 CPU-hour. All earlier
 charges carry forward inside the unchanged 110-hour total and pool ceilings.
@@ -36,4 +41,4 @@ The initial 34 claims and 68 completed execution packets were published and
 remote-verified at `48ff43030cc2efc46e4f63b5b59504d320054519` before the grind
 workflow began. All 7,626 original/replay raw files then passed fresh hash and
 size checks. The initial queue and its monitor remain closed. The continuation
-will receive a separate final result and closure; it does not reopen old science.
+has its separate final result and closure; it did not reopen old science.

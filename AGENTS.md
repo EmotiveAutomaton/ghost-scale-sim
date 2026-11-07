@@ -20,16 +20,17 @@ authorship and contribution records retain their original attribution.
 
 ## V26 theory-review hold, November 6
 
-November 7: the five registered studies and 29 initially admitted textures are
-verified and published on main through 48ff43030. Their finite queue and monitor
-remain closed. The owner separately approved the sole held G3-T09 expanded-library
-map, raising only G3's texture allowance from 0.5 to 1 CPU-hour within the same
-110-hour total and original deadlines. Read the day `G3_T09_ALLOCATION.md`, its
-separate current status and outer `.local/v26-day-g3-t09-20261107/HANDOFF.md`.
-Preserve the original held probe and all closed packets. This continuation uses
-the unchanged declared science, one scientist within Gear 2, complete measured
-replay and reconstruction, and no descendants. At its finite closure restore the
-theory-review hold; no further refill or recurring reviews are authorized.
+November 7 final closure: all five registered studies and thirty declared textures
+are verified. The sole held G3-T09 map completed in its separately owner-approved
+allocation, which raised only G3's texture allowance from 0.5 to 1 CPU-hour within
+the same 110-hour total and original deadlines. Read the day `FINAL_REPORT.md`,
+`G3_T09_FINAL_REPORT.md` and both final validity receipts, plus outer
+`.local/v26-day-g3-t09-20261107/HANDOFF.md`. The original held probe, failed probes
+and completed source capsules remain intact. Both finite controllers and all
+scientists have exited; the original monitor is stopped and no new recurring
+monitor was created. The theory-review hold is restored. No further admissions,
+descendants or recurring scientific reviews are authorized. Publication and exact
+event acknowledgements are verified separately after full documentary landing.
 
 Later November 6: the owner handed over the separate theory-day packet and
 commissioned G1–G5, their finite texture lanes and at most one diagnosed healing

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-DAY-G3-T09-1
+
+When does closing a source model protect against a con or analyst-defined contamination? The separate out-of-case map retains 15 settings with sixteen independent whole-world blocks per setting. Exact con-protection bar: not met; separate honest-source closure arm: unresolved at this sample size. honest-source closure share (0, H): 0.0332031, 95% interval 0.0227265 to 0.0436797; honest-source closure share (1, H): 0.046875, 95% interval 0.0363434 to 0.0574066; closed minus open capture (0, Mc): -0.000370912, 95% interval -0.00116149 to 0.000419668. Contamination grid answer: between 0.05 and 0.1. Smallest tested contamination with an interval wholly above zero: 0.1; unresolved tested levels: 0.05. This is a discrete grid result, not an interpolated threshold. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G3-T09_REPORT.md).
+
 ## G-V26-DAY-G4-T04-1
 
 How many well-priced offers distinguish a strong terminal weight, and how many records do offers save? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records needed (A9): 171.5, 95% interval 133 to 221; offers needed (A9): 12, 95% interval 9 to 15. Constructed-method evidence; miniature, architecture untested.

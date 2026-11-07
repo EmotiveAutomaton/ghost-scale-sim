@@ -18,6 +18,7 @@ known answers, measured probes and any shedding before scientific draws.
 [Setup and native launch report](SETUP_REPORT.md).
 
 [Final report of the initial finite queue](FINAL_REPORT.md).
+[Completed G3-T09 map and final closure](G3_T09_FINAL_REPORT.md).
 [Approved G3-T09 resource continuation](G3_T09_ALLOCATION.md).
 [Original running report and verified early findings](RUNNING_REPORT.md).
 [Bounded numerical repairs](HEALING_REVIEW.md). The source-closure primary and
