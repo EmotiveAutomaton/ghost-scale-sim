@@ -20,6 +20,15 @@ authorship and contribution records retain their original attribution.
 
 ## V26 theory-review hold, November 6
 
+November 7 closure: the theory-day packet lifted the hold only for G1–G5 and
+their declared finite texture lanes. All five registered studies and 29 admitted
+textures completed original execution, byte replay and independent reconstruction;
+G3-T09 was admission-held at its frozen texture ceiling and awaits owner review.
+The scientific queue drained and its controller and scientists exited. The
+theory-review hold is restored; remote publication and exact event acknowledgement
+remain pending verified destination trust. No new admissions, descendants or
+recurring scientific reviews are authorized. See the day final report and closeout.
+
 Later November 6: the owner handed over the separate theory-day packet and
 commissioned G1–G5, their finite texture lanes and at most one diagnosed healing
 per card. Read `docs/versions/v26-top-and-ends/day-20261106/README.md`, its packet,
