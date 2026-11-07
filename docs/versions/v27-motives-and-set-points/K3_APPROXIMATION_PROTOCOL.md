@@ -56,3 +56,14 @@ still fail. Validation therefore advances to 8,192 / 32,768 / 131,072, comparing
 the upper two resolutions under the same rules. Existing excluded calculations
 are reused with source, identity and receipt-hash checks. Only the new resolution
 is computed again for that fixture. No scientific sample has been admitted.
+
+The retained 131,072-particle extension stopped at excluded fixture 1. Fixture 0
+passed. On fixture 1, the second 32,768-particle replicate differed from the
+131,072-particle reference by 0.0768 in posterior mass and 0.3384 nat in margin,
+so it failed both unchanged limits. Both 131,072-particle replicates agreed within
+the limits, and every crossing classification agreed. K3-H2 is therefore frozen
+as one bounded numerical healing: compare 131,072 against 262,144 particles,
+begin with fixture 1, then check the remaining excluded fixtures, and stop at the
+first failure. It keeps every threshold and fixture identity unchanged, reuses
+hash-bound retained paths, admits no science by itself, and has a 43,200-second
+CPU cap. The frozen receipt is `results/v27/K3_RESOLUTION_HEALING_2026-11-07.json`.

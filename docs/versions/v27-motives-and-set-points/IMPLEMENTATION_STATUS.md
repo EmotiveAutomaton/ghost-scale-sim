@@ -48,6 +48,11 @@ The common-random-number revision brings the two 32,768-particle runs within
 both limits, but the 8,192-particle comparisons still fail. A source-frozen
 131,072-particle check now extends the same fixtures and unchanged thresholds,
 reusing saved lower-resolution calculations. Approval alone does not admit science.
+That extension retained a second failure at fixture 1: one 32,768-particle path
+missed both numerical limits, while the 131,072-particle replicate comparison and
+all crossing classifications passed. K3-H2 is frozen to compare 131,072 against
+262,144 particles under the same bars, starting with fixture 1 and stopping on the
+first failure. Dynamic K3 science remains unadmitted.
 Previously verified static comparisons remain unchanged. The approved aggregate
 packages were copied to both explicitly named recipient locations, hash-checked
 and left uncommitted. Earlier copies at compact-date paths are retained.
