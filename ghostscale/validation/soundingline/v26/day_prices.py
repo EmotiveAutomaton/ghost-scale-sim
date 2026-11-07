@@ -1,5 +1,6 @@
 """G4: adaptive finite trade ladder and time-dependent lock-state inference."""
 import numpy as np
+from scipy.special import logsumexp
 from .common import rng,simplex,close
 from .day_common import choices,draw_menu,posteriors,class_prior,margin,sustained,measure
 
@@ -53,7 +54,8 @@ def analyze(raw,s,independent=False):
     for reader,mask in [('full',np.ones(n,bool)),('offers',offers),('ordinary',~offers)]:
         ll=np.cumsum(incr*mask[:,None],axis=0);p=posteriors(ll,prior,independent);ac=margin(ll,prior,~c,c)
         locked=(np.arange(1,n+1)[:,None]>=taus)&c[None,:];mass=np.sum(p*locked,axis=1)
-        with np.errstate(divide='ignore'):lockmargin=np.log(mass)-np.log1p(-mass)
+        logweights=ll+np.log(prior)
+        lockmargin=logsumexp(np.where(locked,logweights,-np.inf),axis=1)-logsumexp(np.where(~locked,logweights,-np.inf),axis=1)
         if truth=='C':
             start=max(1,raw['hypothesis']['tau']);delay=sustained(lockmargin[start-1:]);cross=None if delay is None else start+delay-1
         else:delay=None;cross=sustained(-lockmargin)
@@ -64,7 +66,7 @@ def analyze(raw,s,independent=False):
                 true_locked=truth=='C' and t>=raw['hypothesis']['tau'];v=mass[t-1] if true_locked else 1-mass[t-1]
                 a['lock_posterior_'+str(t)]=float(v)
                 # Compute log probability directly to avoid clipping a tiny probability.
-                logs=ll[t-1]+np.log(prior);from scipy.special import logsumexp
+                logs=ll[t-1]+np.log(prior)
                 keep=locked[t-1] if true_locked else ~locked[t-1];a['lock_logscore_'+str(t)]=float(logsumexp(logs[keep])-logsumexp(logs))
         results[reader]=a
     return results

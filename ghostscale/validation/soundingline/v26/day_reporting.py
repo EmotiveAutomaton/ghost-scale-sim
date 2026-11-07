@@ -82,7 +82,7 @@ def land(campaign,packet,repo):
     if (packet/'LOCAL_LANDING.json').exists():return
     from runners.run_v26_followups import verify_complete
     verify_complete(packet);p=read(packet/'PLAN.json')
-    if p['kind']=='probe':return
+    if p['scientific_kind']=='probe':return
     summary=read(packet/'original/SUMMARY.json');protocol=read(campaign/'protocols'/p['protocol_file']);rows=featured(summary);f=p['family'];claim='G-V26-DAY-'+p['card']+'-1'
     relative='docs/versions/v26-top-and-ends/'+day.REL+'/'+p['card']+'_REPORT.md';report=repo/relative
     outcomes={v:sum(row['verdict']==v for row in rows) for v in ('met','not met','unresolved at this sample size')}
@@ -123,5 +123,7 @@ def land(campaign,packet,repo):
     claims=read(repo/'docs/theory/CLAIMS.json');row=dict(id=claim,allowed_wording=wording,claim_kind='method',architecture='miniature, architecture untested',assumed_choice_model=protocol['modelling_choices'],reader='Declared finite exact readers; pointwise whole-block intervals',estimate=rows,control_status='passes',source_file=relative,source_line=3,source_sha256=digest(report),supersedes=None,superseded_by=None,correction_class=None)
     old=next((x for x in claims['claims'] if x['id']==claim),None)
     if old is not None and old!=row:raise ValueError('claim changed without correction')
-    if old is None:claims['claims'].append(row);write(repo/'docs/theory/CLAIMS.json',claims,immutable=False)
+    if old is None:
+        claims['claims'].append(row)
+        (repo/'docs/theory/CLAIMS.json').write_text(json.dumps(claims,indent=2,sort_keys=True,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     write(packet/'LOCAL_LANDING.json',dict(claim=claim,report=relative,report_sha256=digest(report),published=False,recipient_delivery='awaits owner uptake'))

@@ -1,5 +1,17 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-DAY-G3-1
+
+When does closing a source model protect against a con or analyst-defined contamination? The registered study retains 10 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. honest-source closure share (0, H): 0.0908203, 95% interval 0.0741078 to 0.107533; honest-source closure share (1, H): 0.0917969, 95% interval 0.0725989 to 0.110995; closed minus open capture (0, Mc): -0.0834543, 95% interval -0.0922808 to -0.0746279. Smallest tested contamination with an interval wholly above zero: 0.1; unresolved tested levels: 0.05. This is a discrete grid result, not an interpolated threshold. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G3_REPORT.md).
+
+## G-V26-DAY-G2-1
+
+How many records reveal preemptive identity with and without the frame? The registered study retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. frame-blind to frame-aware records ratio (P): 3.58333, 95% interval 2.92857 to 4.66667; records needed (P): 21.5, 95% interval 18 to 26. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G2_REPORT.md).
+
 ## G-V26-FR-H3X11-1
 
 At revision rate 0.025 and 17 document units, how do revision completeness and discovery timing organize the remaining transition between the 15- and 18-unit maps? The separate exploratory map retains 4 settings and 224 independent worlds per setting. Featured cell means (nats per revision) span: primary -0.656619 to 0.24892. These ranges describe different cells, not an uncertainty interval or a selected winning setting. Constructed-method evidence; miniature, architecture untested. Reported per-event means average whole-world gain/event-count ratios only over worlds with at least one corresponding event; zero-event worlds are unavailable, not zero-valued. The featured cells use 108–133 of 224 sampled worlds each. This is neither an all-world average nor a ratio of pooled gains to pooled event counts; nominal whole-world sample size does not establish precision for this conditional statistic. The generating revision rates [0.025] are absent from the reader prior [0.3, 0.6, 0.9]. This is a misspecified-reader stress test; its negative gains do not establish that revision history is intrinsically harmful or identify a transition for a correctly specified reader.

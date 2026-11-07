@@ -193,7 +193,7 @@ def execute(packet):
                     with gzip.open(path,'rt',encoding='utf-8') as f:before=json.load(f)
                     with gzip.open(packet/'original'/path.name,'rt',encoding='utf-8') as f:after=json.load(f)
                     for value in (before,after):
-                        value['data'].pop('readouts')
+                        value['data'].pop('measures' if plan.get('analysis_contract')=='v26-day-block-v1' else 'readouts')
                         for field in plan.get('repair_public_metadata',[]):value['data']['public'].pop(field,None)
                     if before!=after:raise ValueError('derived-measure repair changed retained observations')
                 elif digest(packet/'original'/path.name)!=bound:raise ValueError('healing changed retained scientific draw')

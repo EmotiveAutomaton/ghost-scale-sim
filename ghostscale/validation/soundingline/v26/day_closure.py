@@ -47,7 +47,8 @@ def trajectory(items,truth,source_code,theta,delta,switch,overpush,pull_away,z,a
                 if agenda[j]==0:a0+=k[j]
                 elif agenda[j]==1:a1+=k[j]
             if harmful>=theta and delta>0:
-                favored=1 if a1>a0 else 0
+                # Symmetric agendas tie mathematically; roundoff must not choose a drift direction.
+                favored=1 if a1-a0>1e-12 else 0
                 for j in range(len(k)):
                     if z[j]==favored:k[j]*=math.exp(delta)
                 k/=k.sum()
@@ -83,7 +84,7 @@ def review_trajectories(items,truth,source_code,theta,delta,switch,overpush,pull
                     closed=True;lengths[i]=t+1
                     if pull_away:ld=np.log(prior)
             if delta>0 and np.exp(lk[(agenda>=0)&(agenda!=z)]).sum()>=theta:
-                favored=1 if np.exp(lk[agenda==1]).sum()>np.exp(lk[agenda==0]).sum() else 0
+                favored=1 if np.exp(lk[agenda==1]).sum()-np.exp(lk[agenda==0]).sum()>1e-12 else 0
                 lk[z==favored]+=delta;lk=lognormalize(lk)
         kp=np.exp(lk[z==truth[i]]).sum();dp=np.exp(ld[z==truth[i]]).sum()
         out[i,0]=math.log(kp);out[i,1]=math.log(dp);out[i,2]=lognormalize(tt)[truth[i]];out[i,3]=lognormalize(oo)[truth[i]];out[i,4]=1-kp;out[i,5]=1-dp;out[i,6]=1. if closed else 0.;out[i,7]=math.log(dp)-math.log(kp);out[i,8]=kp-dp
@@ -106,7 +107,7 @@ def reconstruct_one(items,truth,source_code,s):
                 closed=True;when=t+1
                 if s['pull_away']:ld=np.log(prior)
         if np.exp(lk[(agenda>=0)&(agenda!=z)]).sum()>=s['theta'] and s['delta']>0:
-            a=1 if np.exp(lk[agenda==1]).sum()>np.exp(lk[agenda==0]).sum() else 0;lk[z==a]+=s['delta'];lk-=logsumexp(lk)
+            a=1 if np.exp(lk[agenda==1]).sum()-np.exp(lk[agenda==0]).sum()>1e-12 else 0;lk[z==a]+=s['delta'];lk-=logsumexp(lk)
     kl=float(logsumexp(lk[z==truth]));dl=float(logsumexp(ld[z==truth]));return [kl,dl,float(tt[truth]-logsumexp(tt)),float(oo[truth]-logsumexp(oo)),1-math.exp(kl),1-math.exp(dl),float(closed),dl-kl,math.exp(kl)-math.exp(dl)],when
 
 def observations(s,r,source):

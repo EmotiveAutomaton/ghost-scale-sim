@@ -122,11 +122,15 @@ def verify_bindings(campaign,packet,p):
         if digest(path)!=sha:raise ValueError('parent record changed')
     protocol=read(campaign/'protocols'/p['protocol_file']);check=read(campaign/'designs'/p['design_file'])
     if not check['passed'] and not protocol['out_of_case']:raise ValueError('case failed')
-    if p['settings']!=protocol['settings'] or p['blocks']!=(1 if p['kind']=='probe' else 16):raise ValueError('undeclared sample')
+    if p['settings']!=protocol['settings'] or p['blocks']!=(1 if p['scientific_kind']=='probe' else 16):raise ValueError('undeclared sample')
     if digest(packet/'CONTROLS_BEFORE_DATA.json')!=p['controls_sha256'] or not read(packet/'CONTROLS_BEFORE_DATA.json')['passed']:raise ValueError('controls changed')
     if p['cost_probe']:
         probe=campaign/'packets'/p['cost_probe'];verify_complete(probe)
         if digest(probe/'COMPLETE.json')!=p['cost_probe_complete_sha256']:raise ValueError('probe changed')
+    if p.get('healing_parent'):
+        parent=campaign/'packets'/p['healing_parent']
+        if p['healing_number']!=1 or read(parent/'PLAN.json')['card']!=p['card'] or read(parent/'STATUS.json')['state']!='FAILED':raise ValueError('invalid healing parent')
+        if digest(parent/'original/RAW_INDEX.json')!=p['retained_raw_index_sha256'] or digest(parent/'STATUS.json')!=p['failed_status_sha256']:raise ValueError('healing evidence changed')
 
 def export(campaign):
     repo=Path(read(campaign/'LOCAL_PATHS.json')['repo']);out=repo/'results/v26'/day.REL;rows=[]
@@ -149,6 +153,9 @@ def outside(campaign,owned):
 def primary_terminal(campaign,family,built):
     study=campaign/'packets'/('v26-day-20261106-'+family.lower()+'-study')
     if study.exists():return read(study/'STATUS.json')['state'] in ('COMPLETE','FAILED','ADMISSION_HELD')
+    for path in (campaign/'packets').glob('*/PLAN.json'):
+        p=read(path)
+        if p['family']==family and p.get('healing_parent') and read(path.parent/'STATUS.json')['state'] not in ('COMPLETE','FAILED','ADMISSION_HELD'):return False
     probe=campaign/'packets'/('v26-day-20261106-'+family.lower()+'-probe')
     if (probe/'CONTINUATION_FAILURE.json').exists():return True
     if probe.exists() and read(probe/'STATUS.json')['state'] in ('FAILED','ADMISSION_HELD'):return True
@@ -178,18 +185,34 @@ def texture_streak(campaign,family,cards):
         if streak>=5:break
     return streak
 
+class AdoptedParent:
+    def __init__(self,pid):self.pid=pid
+    def poll(self):return None if alive(self.pid) else 0
+
+
 def queue(campaign):
     runtime.below_normal();started=time.process_time();lock=campaign/'QUEUE_OWNER.lock';active={};account=campaign/'accounting'/f'controller-{os.getpid()}-{time.time_ns()}.json'
     with lock.open('x') as stream:stream.write(str(os.getpid()))
     try:
+        handoff=campaign/'CONTROLLER_HANDOFF.json'
+        if handoff.exists():
+            receipt=read(handoff)
+            if alive(receipt['previous_controller_pid']):raise ValueError('previous controller still alive')
+            for name,proof in receipt['parents'].items():
+                packet=campaign/'packets'/name;p=read(packet/'PLAN.json');s=read(packet/'STATUS.json')
+                if digest(packet/'PLAN.json')!=proof['plan_sha256']:raise ValueError('handoff plan changed')
+                if s['state'] in ('RUNNING','LAUNCHING') and s.get('parent_pid',s.get('launcher_pid'))!=proof['pid']:raise ValueError('handoff owner changed')
+                # Completed parents are reaped normally; no scientific command is restarted.
+                active[name]=(AdoptedParent(proof['pid']),None)
         while True:
             for name,(proc,log) in list(active.items()):
                 if proc.poll() is None:continue
-                log.close();del active[name];packet=campaign/'packets'/name;p=read(packet/'PLAN.json');s=read(packet/'STATUS.json')
+                if log is not None:log.close()
+                del active[name];packet=campaign/'packets'/name;p=read(packet/'PLAN.json');s=read(packet/'STATUS.json')
                 if s['state']=='COMPLETE':
                     a=campaign/'accounting'/(name+'.json');row=read(a);row['lane']=p['lane'];write(a,row,immutable=False)
                     event(campaign,name+'-complete','batch_complete',dict(packet=name,complete_sha256=digest(packet/'COMPLETE.json')))
-                    if p['kind']=='probe':
+                    if p['scientific_kind']=='probe':
                         try:prepare(campaign,read(campaign/'protocols'/p['protocol_file'])|dict(execution_file=p['protocol_file']),Path(p['source_root']),packet)
                         except Exception as exc:
                             write(packet/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(campaign,name+'-prepare-failed','admission_failure',dict(packet=name,error=str(exc)))
@@ -214,8 +237,8 @@ def queue(campaign):
                         if (p/'COMPLETE.json').exists():continue
                         if p.exists() or probe.exists():break
                         if (campaign/'TEXTURE_STOP'/f).exists():break
-                        meta=next(x for x in built['dispositions'] if x['card']==card['id']);protocol=read(campaign/'protocols'/meta['execution_file'])|dict(execution_file=meta['execution_file'])
-                        prepare(campaign,protocol,Path(built['source']));break
+                        meta=next(x for x in built['dispositions'] if x['card']==card['id']);overrides=read(campaign/'PROTOCOL_OVERRIDES.json') if (campaign/'PROTOCOL_OVERRIDES.json').exists() else {};override=overrides.get(card['id'],{});name=override.get('protocol_file',meta['execution_file']);protocol=read(campaign/'protocols'/name)|dict(execution_file=name)
+                        prepare(campaign,protocol,Path(override.get('source',built['source'])));break
             candidates=[p.parent for p in (campaign/'packets').glob('*/PLAN.json') if read(p.parent/'STATUS.json')['state']=='PREPARED'];candidates.sort(key=lambda p:(read(p/'PLAN.json')['queue_order'],read(p/'PLAN.json')['kind']=='probe'))
             stopping=(campaign/'STOP').exists() or base.now()>=datetime.fromisoformat(day.contract.NEW_STARTS_CLOSE)
             if not stopping and not (campaign/'PAUSE_ADMISSIONS').exists():

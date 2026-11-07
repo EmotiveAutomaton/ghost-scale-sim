@@ -101,3 +101,25 @@ def test_report_conjunction_and_uncertain_contamination_threshold():
         summary['cells'].append(dict(setting=i,labels=dict(source='M',truth=0),metric='D_minus_K_logscore',estimate=sum(ci)/2,interval95=ci,estimate_censored=False,lower_censored=False,upper_censored=False))
     wording=primary_readout(summary,featured(summary))
     assert 'above zero: 0.1' in wording and 'unresolved tested levels: 0.05' in wording
+
+
+def test_symmetric_agenda_roundoff_does_not_change_drift_direction():
+    from ghostscale.validation.soundingline.v26.day_closure import library,trajectory,review_trajectories,reconstruct_one
+    # Retained excluded probe regression; not a fresh scientific world.
+    items=np.array([[int(x) for x in '0111010010110110110001001001110111111001110111011001001110011000']],dtype=np.int8)
+    truth=np.array([0]);lib=library();s=next(c for c in day.cards() if c['id']=='G3')['settings'][1]
+    args=(items,truth,1,.7,.01,16,1.,False,*lib)
+    a,aa=trajectory(*args);b,bb=review_trajectories(*args);c,cc=reconstruct_one(items[0],0,1,s)
+    assert np.allclose(a,b,atol=1e-12) and np.allclose(a[0],c,atol=1e-12)
+    assert aa[0]==bb[0] and (None if aa[0]<0 else aa[0])==cc
+
+
+def test_saturated_lock_probability_retains_finite_log_odds():
+    from ghostscale.validation.soundingline.v26.day_prices import analyze
+    s=next(c for c in day.cards() if c['id']=='G4')['settings'][3]
+    raw=dict(hypothesis=dict(type='C',w=[.5,.25,.25],k=0,tau=0),formal_type='C',top=0,known_tau=None,
+        records=[dict(menu=[[1,0,0],[0,1,0],[0,0,1],[0,0,0]],choice=0,offer=False,target=None,price=None) for _ in range(512)])
+    with np.errstate(invalid='raise',divide='raise',over='raise',under='ignore'):
+        a=analyze(raw,s);b=analyze(raw,s,True)
+    assert a['full']['lock_records'] is not None
+    close(a,b,tol=1e-9)
