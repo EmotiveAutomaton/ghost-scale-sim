@@ -155151,12 +155151,13 @@
       "supersedes": null
     },
     {
-      "allowed_wording": "When does closing a source model protect against a con or analyst-defined contamination? The registered study retains 10 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. honest-source closure share (0, H): 0.0908203, 95% interval 0.0741078 to 0.107533; honest-source closure share (1, H): 0.0917969, 95% interval 0.0725989 to 0.110995; closed minus open capture (0, Mc): -0.0834543, 95% interval -0.0922808 to -0.0746279. Smallest tested contamination with an interval wholly above zero: 0.1; unresolved tested levels: 0.05. This is a discrete grid result, not an interpolated threshold. Constructed-method evidence; miniature, architecture untested.",
+      "allowed_wording": "When does closing a source model protect against a con or analyst-defined contamination? The registered study retains 10 settings with sixteen independent whole-world blocks per setting. Exact con-protection bar: met; separate honest-source closure arm: not met. honest-source closure share (0, H): 0.0908203, 95% interval 0.0741078 to 0.107533; honest-source closure share (1, H): 0.0917969, 95% interval 0.0725989 to 0.110995; closed minus open capture (0, Mc): -0.0834543, 95% interval -0.0922808 to -0.0746279. Contamination grid answer: between 0.05 and 0.1. Smallest tested contamination with an interval wholly above zero: 0.1; unresolved tested levels: 0.05. This is a discrete grid result, not an interpolated threshold. Constructed-method evidence; miniature, architecture untested.",
       "architecture": "miniature, architecture untested",
       "assumed_choice_model": "Provisional worlds contain 32 alternating-truth sources, four worlds nested per independent block. Delta=0 runs all five source types; positive delta runs M and H. The gate uses joint posterior probability that an agenda differs from the latent hypothesis, never evaluator truth. K and D are updated independently on the same items; K alone receives post-update drift toward the agenda with greater posterior mass, ties to agenda zero. Con switches after 16 records. Expanded library divides the original agenda prior across strengths 0.5 and 1. Unfittable acts supply equal 0.001 likelihood to every hypothesis. Exact delta-zero dynamic-program values remain controls, not discoveries.",
       "claim_kind": "method",
       "control_status": "passes",
-      "correction_class": null,
+      "correction_class": "reporting scope only; results unchanged",
+      "correction_record": "results/v26/day-20261106/REPORTING_SCOPE_CORRECTION.json",
       "estimate": [
         {
           "bar": null,
@@ -156787,7 +156788,7 @@
       "reader": "Declared finite exact readers; pointwise whole-block intervals",
       "source_file": "docs/versions/v26-top-and-ends/day-20261106/G3_REPORT.md",
       "source_line": 3,
-      "source_sha256": "cce5afb59dd23b03524ccb4e1be0e3ca16cd36937f33ac93410a2fa5cad4e04f",
+      "source_sha256": "d75a04603bfa01ef6123739a9409fd044e29b814acf37193a8fe5300e5989b0e",
       "superseded_by": null,
       "supersedes": null
     }

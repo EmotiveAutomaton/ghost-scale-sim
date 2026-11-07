@@ -16,3 +16,8 @@ Each protocol records provisional implementation choices, excluded case checks,
 known answers, measured probes and any shedding before scientific draws.
 
 [Setup and native launch report](SETUP_REPORT.md).
+
+[Current running report and verified early findings](RUNNING_REPORT.md).
+[Bounded numerical repairs](HEALING_REVIEW.md). The source-closure primary and
+its separate honest-source arm have distinct verdicts; the reporting correction
+preserves all estimates and is folded into the report and claim ledger.

@@ -60,11 +60,14 @@ def primary_readout(summary,rows):
         lo,hi=r['interval95'];tag=', '.join(str(r['labels'][k]) for k in ('truth','source') if k in r['labels'])
         detail.append(f"{labels.get(r['metric'],r['metric'])} ({tag}): {show(r['estimate'],r['estimate_censored'])}, 95% interval {show(lo,r['lower_censored'])} to {show(hi,r['upper_censored'])}")
     barrows=[r for r in selected if r['bar'] is not None]
-    headline='Primary bar conjunction: '+conjunction(barrows)+'. '+('; '.join(detail)+'.' if detail else 'No matching primary stratum in this variant.')
+    assessment=('Exact con-protection bar: '+conjunction([r for r in barrows if r['metric']=='D_minus_K_capture'])+'; separate honest-source closure arm: '+conjunction([r for r in barrows if r['metric']=='closed']) if f=='G3' else 'Primary bar conjunction: '+conjunction(barrows))
+    headline=assessment+'. '+('; '.join(detail)+'.' if detail else 'No matching primary stratum in this variant.')
     if f=='G3':
         crossing=sorted([(summary['settings'][r['setting']]['delta'],r['verdict']) for r in rows if r['metric']=='D_minus_K_logscore' and r['labels'].get('source')=='M' and r['labels'].get('truth')==0 and summary['settings'][r['setting']]['theta']==.7 and summary['settings'][r['setting']]['delta']>0])
         positive=[d for d,v in crossing if v=='met'];uncertain=[d for d,v in crossing if v=='unresolved at this sample size']
-        headline+=' Smallest tested contamination with an interval wholly above zero: '+(str(min(positive)) if positive else 'none')+'; unresolved tested levels: '+(', '.join(map(str,uncertain)) or 'none')+'. This is a discrete grid result, not an interpolated threshold.'
+        lower=[d for d in uncertain if positive and d<min(positive)]
+        grid_answer='above 0.1' if not positive else 'at or below 0.01' if min(positive)==.01 else 'between '+str(max(lower))+' and '+str(min(positive)) if lower else str(min(positive))
+        headline+=' Contamination grid answer: '+grid_answer+'. Smallest tested contamination with an interval wholly above zero: '+(str(min(positive)) if positive else 'none')+'; unresolved tested levels: '+(', '.join(map(str,uncertain)) or 'none')+'. This is a discrete grid result, not an interpolated threshold.'
     return headline
 
 def exact_references(summary):
