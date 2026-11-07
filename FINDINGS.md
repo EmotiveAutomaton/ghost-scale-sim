@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-DAY-G4-T03-1
+
+How many well-priced offers distinguish a strong terminal weight, and how many records do offers save? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records needed (A9): 209.5, 95% interval 194 to 247; offers needed (A9): 13, 95% interval 11 to 15. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G4-T03_REPORT.md).
+
 ## G-V26-DAY-G5-T04-1
 
 Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. records needed (LV): 113, 95% interval 88.5 to 130; records needed (SP): 103.5, 95% interval 80.5 to 129. Constructed-method evidence; miniature, architecture untested.
