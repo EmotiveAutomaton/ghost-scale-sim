@@ -10,9 +10,36 @@ Exceeding the memory cap is a resource failure, not approximate evidence.
 import math,itertools,time
 from collections import defaultdict
 import numpy as np
+from numba import njit
 from .common import rng,measure,posteriors,margin,sustained,scores,close
 
 DYNAMICS=('P0','P+','P-','S','G')
+
+
+@njit
+def static_grid(actions,sizes,shocks,point,width,beta,consumption,lapse,reverse):
+    q=np.full(441,1/441.);logs=np.empty(len(actions));acc=0.;event=np.array([0,1,5]);weights=np.array([.45,.5,.05])
+    for t in range(len(actions)):
+        nxt=np.zeros(441);a=actions[t];size=sizes[t]
+        for z in range(441):
+            state=440-z if reverse else z
+            x=state//21;y=state%21
+            if shocks[t]==0:x=0
+            if shocks[t]==1:y=0
+            u0=min(5.,max(0.,point[0]-width/2-x));u1=min(5.,max(0.,point[1]-width/2-y))
+            if beta>=0 and a<2 and abs(size-5-beta*(u0 if a==0 else u1))>1e-10:continue
+            top=max(1.,u0,u1);p0=math.exp(u0-top);p1=math.exp(u1-top);p2=math.exp(1-top)
+            cp=(1-lapse)*(p0 if a==0 else p1 if a==1 else p2)/(p0+p1+p2)+lapse/3
+            for iz in range(9):
+                e=8-iz if reverse else iz;i=e//3;j=e%3
+                xx=int(min(20.,max(0.,x-consumption*event[i]+(size if a==0 else 0))))
+                yy=int(min(20.,max(0.,y-consumption*event[j]+(size if a==1 else 0))))
+                nxt[xx*21+yy]+=q[state]*cp*weights[i]*weights[j]
+        total=nxt.sum()
+        if total==0:
+            logs[t:]=-np.inf;break
+        acc+=math.log(total);logs[t]=acc;q=nxt/total
+    return logs
 
 
 def update(stock,edge,precision,streak,dynamic,width):
@@ -51,6 +78,9 @@ def generate(s,identity):
 
 
 def likelihood(raw,s,point,dynamic='P0',width=0,beta=None,visible=False,independent=False,max_states=200000):
+    if not visible and dynamic=='P0' and s['needs']==2 and float(s['consumption']).is_integer() and all(float(row['size']).is_integer() for row in raw['records']):
+        rows=raw['records']
+        return static_grid(np.array([r['action'] for r in rows]),np.array([r['size'] for r in rows]),np.array([r['shock'] for r in rows]),np.array(point),width,-1. if beta is None else beta,s['consumption'],s['lapse'],independent),441
     n=s['needs'];edge=tuple(v-width/2 for v in point);precision=(1.,)*n;streak=(0,)*n
     states={(tuple(map(float,x)),edge,precision,streak):1/21**n for x in itertools.product(range(21),repeat=n)}
     events=list(itertools.product((0.,1.,5.),repeat=n));weights=[math.prod(({0.:.45,1.:.5,5.:.05}[v] for v in e)) for e in events]
@@ -88,6 +118,7 @@ def analyze(raw,s,independent=False):
         'dynamic':[(p,d,s['width'],s['beta'],False) for p in points for d in DYNAMICS],
         'visible':[(p,s['dynamic'],s['width'],s['beta'],True) for p in points]}
     for reader,hs in libraries.items():
+        if reader not in s.get('readers',libraries):continue
         paths=[];peaks=[]
         for h in hs:
             if h not in cached:cached[h]=likelihood(raw,s,*h,independent=independent)
@@ -101,7 +132,7 @@ def analyze(raw,s,independent=False):
         if reader=='dynamic':
             yes=np.array([h[1]==s['dynamic'] for h in hs]);other=np.array([h[1] in ('S','P-','G') and h[1]!=s['dynamic'] for h in hs])
             begin=raw['first_long_deficit'];result[reader]['dynamic_records']=sustained(margin(logs,prior,yes,other)[begin:]) if begin is not None else None
-    result['contrasts']=dict(overshoot_ratio=[result['naive']['point_records'],result['aware']['point_records']])
+    if 'naive' in result and 'aware' in result:result['contrasts']=dict(overshoot_ratio=[result['naive']['point_records'],result['aware']['point_records']])
     return result
 
 
@@ -129,7 +160,15 @@ def controls():
 
 
 def design_check(s,identity):
-    found=[generate(s,[identity,'excluded',k])['first_long_deficit'] is not None for k in range(128)]
+    # The scientific dynamics may discard a streak when it is not needed for
+    # their state. The design case still counts actual consecutive deficits.
+    found=[]
+    for k in range(128):
+        raw=generate(s,[identity,'excluded',k]);streak=np.zeros(s['needs'],dtype=int);hit=False
+        for row in raw['records']:
+            streak=np.where(np.array(row['stock'])<np.array(row['edge']),streak+1,0)
+            hit=hit or bool(np.any(streak>=20))
+        found.append(hit)
     share=float(np.mean(found));applicable=s['beta']==0
     return dict(passed=share>=.25 or not applicable,case_share=share,floor=.25,case_applies=applicable,
         expected_signs=dict(naive='misspecified overshoot',aware='true static model on static worlds',band='lower-edge grid test',dynamic='exact hidden-state discrimination; finite cost unknown',visible='ceiling only'),scientific_draws=0)

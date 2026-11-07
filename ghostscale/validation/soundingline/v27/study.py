@@ -1,23 +1,58 @@
 """V27 full raw blocks, fresh process replay and independent reconstruction."""
 from pathlib import Path
-import gzip,importlib,json
+import gzip,importlib,json,math
+import numpy as np
 from . import registry
-from .common import read,write,digest,canonical,close
-from ..v26.day_study import aggregate,extra_environment,verify_extra_environment
+from .common import read,write,digest,canonical,close,rng
+from ..v26.day_study import aggregate as ordinary_aggregate,extra_environment,verify_extra_environment
 
 
-def module(family):return importlib.import_module(__package__+'.'+registry.MODULES[family])
+def aggregate(rows,independent=False):
+    regular=[];extended={}
+    for row in rows:
+        keep=[]
+        for m in row['data']['measures']:
+            if m['statistic']!='extended_mean':keep.append(m);continue
+            key=(row['setting'],m['metric'],json.dumps(m['labels'],sort_keys=True))
+            extended.setdefault(key,[]).append(m['values'])
+        regular.append(row|dict(data=dict(measures=keep)))
+    out=ordinary_aggregate(regular,independent)
+    for (setting,metric,labels),blocks in extended.items():
+        # None explicitly denotes minus infinity for a contradicted reader,
+        # never missing data, clipping, or an arbitrary finite log-score floor.
+        means=[-math.inf if any(v is None for v in b) else math.fsum(b)/len(b) for b in blocks]
+        center=-math.inf if -math.inf in means else math.fsum(means)/len(means)
+        draws=[];n=len(means)
+        if n>1:
+            for pick in rng('extended-bootstrap',setting,metric,labels).integers(0,n,(2000,n)):
+                values=[means[i] for i in pick];draws.append(-math.inf if -math.inf in values else math.fsum(values)/n)
+            draws.sort();lo,hi=draws[49],draws[1949]
+        else:lo=hi=math.nan
+        finite=lambda x:float(x) if math.isfinite(x) else None
+        out.append(dict(setting=setting,metric=metric,labels=json.loads(labels),statistic='extended_mean',estimate=finite(center),
+            estimate_negative_infinity=center==-math.inf,estimate_censored=False,interval95=[finite(lo),finite(hi)],
+            lower_negative_infinity=lo==-math.inf,upper_negative_infinity=hi==-math.inf,lower_censored=False,upper_censored=False,
+            unavailable=math.isnan(center),interval_unavailable=math.isnan(lo) or math.isnan(hi),standard_error=None,
+            blocks=n,observations=sum(map(len,blocks)),method='Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score'))
+    return sorted(out,key=lambda r:(r['metric'],json.dumps(r['labels'],sort_keys=True),r['setting']))
+
+
+def module(family,analysis_module=None):
+    if analysis_module not in (None,'closure_reread'):raise ValueError('unregistered analysis module')
+    return importlib.import_module(__package__+'.'+(analysis_module or registry.MODULES[family]))
 
 
 def execute(root,plan,pulse,independent=False):
-    root=Path(root);impl=module(plan['family']);controls=impl.controls()
+    root=Path(root);impl=module(plan['family'],plan.get('analysis_module'));controls=impl.controls()
     if not controls['passed']:raise ValueError('known-answer failure')
     if not independent:root.mkdir(exist_ok=False);write(root/'CONTROLS.json',controls)
     rows=[]
     for setting,config in enumerate(plan['settings']):
         for block in range(plan['blocks']):
             identity=[plan['science_identity'],plan['family'],setting,block]
-            data=impl.block(config,identity,independent)
+            if plan.get('analysis_module')=='closure_reread':
+                data=impl.retained_block(config,plan,setting,block,independent)
+            else:data=impl.block(config,identity,independent)
             row=dict(setting=setting,configuration=config,block=block,data=data)
             path=root/f'world-{setting:04d}-{block:04d}_points.json.gz'
             if independent:

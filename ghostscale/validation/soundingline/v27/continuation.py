@@ -5,7 +5,7 @@ from .common import read,write,digest,verify_complete
 
 
 def terminal_card(c,cid):
-    matches=[p.parent for p in (c/'packets').glob('*/PLAN.json') if read(p)['card']==cid and read(p)['kind']!='probe']
+    matches=[p.parent for p in (c/'packets').glob('*/PLAN.json') if (read(p)['card']==cid or read(p).get('replaces_card')==cid) and read(p)['scientific_kind']!='probe' and not (c/'withdrawals'/(p.parent.name+'.json')).exists()]
     return matches[0] if len(matches)==1 and (matches[0]/'LOCAL_LANDING.json').exists() else None
 
 
@@ -49,25 +49,29 @@ def eligible_second_generation(c,primary):
 
 
 def register_descendants(c,parent,build_card,source):
-    p=read(parent/'PLAN.json');cid=p['card'];card=read(c/'cards'/(cid+'.json'));landing=read(parent/'LOCAL_LANDING.json')
+    p=read(parent/'PLAN.json');cid=p['card'];card=read(c/'protocols'/(cid+'.json'));landing=read(parent/'LOCAL_LANDING.json')
     marker=c/'expansions'/(cid+'.json')
     if marker.exists():return
     primary=terminal_card(c,p['family']);eligible=eligible_second_generation(c,primary) if primary else False
     generation=card.get('generation',0);registered=[]
-    if card['lane']=='study' or (card['lane']=='followup' and generation==1 and eligible):
+    inherited={k:v for k,v in card.items() if k not in ('source_root','source_manifest_sha256','module_sha256','healing_number','replaces_card','probe_healing_parent','probe_science_identity','study_healing_parent','study_science_identity','supersedes_claim','correction')}
+    if card['lane']=='study' or card.get('replaces_card') or (card['lane']=='followup' and generation==1 and eligible):
         for n,(axis,change) in enumerate(registry.expansion_menu(p['family']),1):
+            if axis=='dose':
+                field='structures' if p['family']=='K7' else 'records'
+                change={field:2*card['settings'][0][field]}
             if generation==1:
                 # New generation crosses a distinct axis with the parent's
                 # frozen perturbation; omit a duplicate instead of refilling.
                 changed=[s|change for s in card['settings']]
                 if changed==card['settings']:continue
             else:changed=[s|change for s in card['settings']]
-            child=card|dict(id=cid+'-F'+str(n),lane='followup',generation=generation+1,settings=changed,
+            child=inherited|dict(id=cid+'-F'+str(n),lane='followup',generation=generation+1,settings=changed,
                 primary_positive_or_sign_reversal=eligible,parent_complete_sha256=digest(parent/'COMPLETE.json'),
                 parent_card=cid,axis=axis,order=20000+1000*contract.ORDER.index(p['family'])+generation*100+n)
             write(c/'cards'/(child['id']+'.json'),child);build_card(c,child,source);registered.append(child['id'])
-    if card['lane'] in ('study','texture') and landing['unresolved']:
-        child=card|dict(id=cid+'-P2',lane='precision',blocks=2*card['blocks'],parent_blocks=card['blocks'],
+    if (card['lane'] in ('study','texture') or card.get('replaces_card')) and landing['unresolved']:
+        child=inherited|dict(id=cid+'-P2',lane='precision',blocks=2*card['blocks'],parent_blocks=card['blocks'],
             parent_complete_sha256=digest(parent/'COMPLETE.json'),parent_card=cid,order=10000+card['order'])
         write(c/'cards'/(child['id']+'.json'),child);build_card(c,child,source);registered.append(child['id'])
     write(marker,dict(parent_complete_sha256=digest(parent/'COMPLETE.json'),registered=registered,
@@ -99,6 +103,8 @@ def advance(c,prepare,build_card,source):
         if next_texture:eligible=[read(c/'cards'/(next_texture+'.json'))]+eligible
         for card in eligible:
             cid=card['id'];done=terminal_card(c,cid)
+            disposition=c/'dispositions'/(cid+'.json')
+            if disposition.exists() and read(disposition)['state']=='WITHDRAWN':continue
             if done:
                 if card['lane']=='followup':register_descendants(c,done,build_card,source)
                 continue

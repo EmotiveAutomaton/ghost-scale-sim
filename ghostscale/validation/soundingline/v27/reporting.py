@@ -27,13 +27,17 @@ def bar(f,config,row):
 def annotate(summary):
     rows=[]
     for row in summary['cells']:
+        if summary['family']=='K7' and row['metric']=='log_score':row=row|dict(metric='true_goal_probability')
         b,d,fixed=bar(summary['family'],summary['settings'][row['setting']],row)
         verdict='descriptive'
         if b is not None:
             if d=='outside':
                 lo,hi=row['interval95']
                 verdict='unresolved at this sample size' if lo is None or hi is None else 'met' if hi<-b or lo>b else 'not met' if lo>=-b and hi<=b else 'unresolved at this sample size'
-            else:verdict=bar_verdict(row,b,d)
+            else:
+                adjusted=dict(row)
+                adjusted['interval95']=[-math.inf if row.get('lower_negative_infinity') else row['interval95'][0],-math.inf if row.get('upper_negative_infinity') else row['interval95'][1]]
+                verdict=bar_verdict(adjusted,b,d)
             if summary['family']=='K6' and row['metric']=='primary':
                 den=next(r for r in summary['cells'] if r['setting']==row['setting'] and r['metric']=='joint_gain')
                 lo,hi=den['interval95']
@@ -55,12 +59,16 @@ def land(campaign,packet,repo):
     summary=read(packet/'original/SUMMARY.json');rows=annotate(summary);card=read(campaign/'cards'/(p['card']+'.json'))
     claim='G-V27-'+p['card']+'-1';verdict=assessment(rows);f=p['family']
     relative='docs/versions/v27-motives-and-set-points/reports/'+p['card']+'.md'
-    wording=registry.QUESTIONS[f]+f" The {p['lane']} card retains {len(p['settings'])} settings and {p['blocks']} independent whole-world blocks per setting. The declared bar conjunction is {verdict}. Constructed-method evidence; miniature, architecture untested."
+    question=card.get('question',registry.QUESTIONS[f])
+    wording=question+f" The {p['lane']} card retains {len(p['settings'])} settings and {p['blocks']} independent whole-world blocks per setting. The declared bar conjunction is {verdict}. Constructed-method evidence; miniature, architecture untested."
+    if card.get('scope_note'):wording+=' '+card['scope_note']
     text=['# '+p['card'],'',wording,'','Claim `'+claim+'`. No human-mechanism or engine validation follows.',
         '', 'The table gives each setting, reader/source stratum, measure, estimate, pointwise 95% whole-block interval and bar disposition. Censored records-needed values are retained as beyond the observed horizon; unavailable intervals are not a null.',
         '', '| Setting | Stratum | Measure | Estimate | 95% interval | Bar | Verdict | Scale only |','|---:|---|---|---:|---|---|---|---|']
     for row in rows:
         def show(v,c=False):return 'beyond horizon' if c else 'unavailable' if v is None else f'{v:.6g}'
+        if row.get('estimate_negative_infinity'):row=row|dict(estimate=-math.inf)
+        if row.get('lower_negative_infinity') or row.get('upper_negative_infinity'):row=row|dict(interval95=[-math.inf if row.get('lower_negative_infinity') else row['interval95'][0],-math.inf if row.get('upper_negative_infinity') else row['interval95'][1]])
         lo,hi=row['interval95'];text.append('| '+str(row['setting'])+' | '+json.dumps(row['labels'],sort_keys=True)+' | '+row['metric'].replace('_',' ')+' | '+show(row['estimate'],row['estimate_censored'])+' | '+show(lo,row['lower_censored'])+' to '+show(hi,row['upper_censored'])+' | '+str(row['bar'])+' '+str(row['direction'])+' | '+row['verdict']+' | '+str(row['packet_by_construction_or_scale_only'])+' |')
     protocol=read(campaign/'protocols'/(p['card']+'.json'))
     text+=['','Modelling choices are provisional: '+protocol['modelling_choices'],
@@ -74,7 +82,7 @@ def land(campaign,packet,repo):
     exchange.write_text('# '+claim+'\n\n'+wording+'\n\n'+'\n\n'.join(registry.ROUTES[f])+'\n\n[Report](../versions/v27-motives-and-set-points/reports/'+p['card']+'.md).\n',encoding='utf-8')
     for name,heading,entry in [
         ('FINDINGS.md','## '+claim,'\n## '+claim+'\n\n'+wording+'\n\n[Report]('+relative+').\n'),
-        ('docs/theory/READING_INTENT.md','| '+claim+' |','| '+claim+' | '+registry.QUESTIONS[f]+' | QUALIFIED. '+wording+' [Report](../versions/v27-motives-and-set-points/reports/'+p['card']+'.md) |\n')]:
+        ('docs/theory/READING_INTENT.md','| '+claim+' |','| '+claim+' | '+question+' | QUALIFIED. '+wording+' [Report](../versions/v27-motives-and-set-points/reports/'+p['card']+'.md) |\n')]:
         path=repo/name;content=path.read_text(encoding='utf-8')
         if heading in content:continue
         if name=='FINDINGS.md':i=content.index('\n');content=content[:i+1]+entry+content[i+1:]

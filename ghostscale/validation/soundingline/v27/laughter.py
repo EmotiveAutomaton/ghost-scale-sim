@@ -96,10 +96,14 @@ def analyze(raw,s,independent=False):
     out={};logs_by={};goal=raw['goal'];prior=np.ones(6)/6;ends=raw['ends']
     for reader,law in [('N',-1),('M',('M1','M2','M3').index(s['law'])),('Mc',0)]:
         logs,bound=forward(symbols,marks,s['qc'],s['q0'],s['fake'],law,surprise,state,independent);logs_by[reader]=logs
+        if np.any(np.all(np.isneginf(logs),axis=1)):
+            out[reader]=dict(true_goal_probability=[0.,0.],top_log_score=None,records=None,
+                boundary_half_brier=[0.,0.],boundary_accuracy=[0.,0.],model_contradicted=1.)
+            continue
         p=posteriors(logs,prior,independent);yes=np.arange(6)==goal
         m=margin(logs,prior,yes,~yes);prob=(p*bound).sum(1);truth=np.array([r[3] for r in raw['records']])
-        out[reader]=dict(log_score=scores(p[-1],goal)['posterior'],top_log_score=float(np.log(p[-1,goal])),
-            records=sustained(m[ends]),boundary_half_brier=float(np.mean((prob-truth)**2)),boundary_accuracy=float(np.mean((prob>.5)==truth)))
+        out[reader]=dict(true_goal_probability=[scores(p[-1],goal)['posterior'],1.],top_log_score=float(np.log(p[-1,goal])),
+            records=sustained(m[ends]),boundary_half_brier=[float(np.mean((prob-truth)**2)),1.],boundary_accuracy=[float(np.mean((prob>.5)==truth)),1.],model_contradicted=0.)
     listener=[]
     for j,truth in enumerate(raw['listener_share']):
         lm=np.array([r[2][j] for r in raw['records']]);evidence=[]
@@ -109,7 +113,7 @@ def analyze(raw,s,independent=False):
             from scipy.special import logsumexp
             evidence.append(logsumexp(logs,axis=1)-math.log(6))
         listener.append(sustained((evidence[truth]-evidence[1-truth])[ends]))
-    out['contrasts']=dict(marker_ratio=[out['N']['records'],out['M']['records']],misread_gain=out['Mc']['top_log_score']-out['N']['top_log_score'],listener_records=listener)
+    out['contrasts']=dict(marker_ratio=[out['N']['records'],out['M']['records']],misread_gain=out['Mc']['top_log_score']-out['N']['top_log_score'] if out['Mc']['top_log_score'] is not None else None,listener_records=listener)
     return out
 
 
@@ -122,7 +126,7 @@ def block(s,identity,independent=False):
                 v=values.setdefault((reader,key),[])
                 if key=='listener_records':v.extend(value)
                 else:v.append(value)
-    for (reader,key),v in values.items():measure(out,key,v,'median_ratio' if key=='marker_ratio' else 'median' if key.endswith('records') else 'mean',reader=reader)
+    for (reader,key),v in values.items():measure(out,key,v,'extended_mean' if key in ('top_log_score','misread_gain') else 'ratio_of_sums' if key in ('true_goal_probability','boundary_half_brier','boundary_accuracy') else 'median_ratio' if key=='marker_ratio' else 'median' if key.endswith('records') else 'mean',reader=reader)
     return dict(observations=raw,measures=out)
 
 
@@ -131,9 +135,13 @@ def controls():
     o=generate(s,['excluded-marker-control']);v=analyze(o,s);w=analyze(o,s,True);close(v,w,tol=1e-12)
     assert abs(v['M']['top_log_score']-v['N']['top_log_score'])<1e-12
     s.update(qc=1.,q0=0.,structures=1);o=generate(s,['excluded-noiseless']);a=analyze(o,s)
-    assert a['M']['boundary_half_brier']<1e-24 and a['M']['boundary_accuracy']==1
+    assert a['M']['boundary_half_brier'][0]<1e-24 and a['M']['boundary_accuracy'][0]==1
     assert abs(sum(LENGTH)-1)<1e-12 and abs(sum(np.arange(10)*LENGTH)-6)<1e-12
-    return dict(passed=True,no_information_marker_equal=True,noiseless_boundary_exact=True,independent_reversed_recursion=True)
+    s.update(qc=.8,q0=0.,law='M3');o=generate(s,['excluded-contradicted-library']);o['records'][0][1]=1
+    # A completion-only library assigns zero support to a first-piece marker,
+    # since the shortest structure has three pieces. Do not floor that score.
+    a=analyze(o,s);assert a['Mc']['model_contradicted']==1 and a['Mc']['top_log_score'] is None
+    return dict(passed=True,no_information_marker_equal=True,noiseless_boundary_exact=True,independent_reversed_recursion=True,zero_support_retained=True)
 
 
 def design_check(s,identity):

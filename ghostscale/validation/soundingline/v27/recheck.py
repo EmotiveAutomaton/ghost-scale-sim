@@ -21,6 +21,7 @@ def library(strengths,honest=.5):
 
 def weakened(prob,fraction):
     if fraction==1:return .5
+    if prob in (0.,1.):return prob
     return float(expit((1-fraction)*(math.log(prob)-math.log1p(-prob))))
 
 
@@ -43,6 +44,11 @@ def pooled(items,strengths,honest=.5,independent=False):
     return np.einsum('a,aiz->iz',a,conditional)
 
 
+def pooled_worlds(items,sources,strengths,honest=.5,independent=False):
+    if len(items)%sources:raise ValueError('incomplete world group')
+    return np.vstack([pooled(items[i:i+sources],strengths,honest,independent) for i in range(0,len(items),sources)])
+
+
 def generate(s,identity):
     r=rng('K5-world',identity);rows=[]
     legacy=s|dict(overpush=1.,expanded=False,pull_away=False)
@@ -59,6 +65,12 @@ def analyze(raw,s,independent=False):
     for row in raw:
         name=row['source'];code=['H','M','Mx','Mc','HU'].index(name);truth=np.array(row['truth']);items=np.array(row['items'],dtype=np.int8)
         v,gate=kernel(items,truth,code,s['theta'],s['delta'],s['switch'],1.,False,*lib)
+        # Exact symmetry, not a tolerance around the scientific threshold:
+        # equal 0/1 counts and the symmetric library give P(truth)=1/2.
+        for i in range(len(items)):
+            retained=items[i,:gate[i]] if gate[i]>=0 else items[i]
+            if np.sum(retained==0)==np.sum(retained==1):v[i,1]=math.log(.5);v[i,5]=.5
+            if s['delta']==0 and np.sum(items[i]==0)==np.sum(items[i]==1):v[i,0]=math.log(.5);v[i,4]=.5
         z,agenda,prob,prior=lib;wout=np.empty_like(v)
         for warning in (0,1):
             mask=np.array(row['warning'])==warning
@@ -85,7 +97,10 @@ def analyze(raw,s,independent=False):
                 D_closed=v[mask,6],K_captured=(kk>.5).astype(float),D_captured=(dd>.5).astype(float))
             for metric,value in stats.items():vals[(name,true,metric)]=np.asarray(value).tolist()
         if name=='Mx':
-            outsider=pooled(items,[.5],.5,independent);insider=pooled(items,s['strengths'] if len(s['strengths'])>1 else [.5,1.],.5+s['bias'],independent)
+            # Each world has exactly `sources` members. Whole-block grouping is
+            # only an uncertainty unit, never an extra common-agenda group.
+            outsider=pooled_worlds(items,s['sources'],[.5],.5,independent)
+            insider=pooled_worlds(items,s['sources'],s['strengths'] if len(s['strengths'])>1 else [.5,1.],.5+s['bias'],independent)
             wrong_out=1-outsider[np.arange(len(truth)),truth];wrong_in=1-insider[np.arange(len(truth)),truth]
             vals[('IG',0,'outsider_minus_insider')]=(wrong_out[truth==0]-wrong_in[truth==0]).tolist()
             vals[('IG',0,'outsider_capture')]=wrong_out[truth==0].tolist();vals[('IG',0,'insider_capture')]=wrong_in[truth==0].tolist()
@@ -105,13 +120,20 @@ def controls():
     for x,y in zip(a,b):close(x.tolist(),y.tolist(),tol=1e-12)
     fixture=np.array([[0,1,1,0],[1,1,0,1]],dtype=np.int8)
     close(pooled(fixture,[.5,1.]).tolist(),pooled(fixture,[.5,1.],independent=True).tolist(),tol=1e-12)
+    two_worlds=np.vstack([fixture,np.ones_like(fixture)])
+    altered=np.vstack([fixture,np.zeros_like(fixture)])
+    close(pooled_worlds(two_worlds,2,[.5])[:2].tolist(),pooled_worlds(altered,2,[.5])[:2].tolist(),tol=1e-12)
     known=old.exact('Mc');honest=old.exact('H')
     # Published exact values, not rounded Monte Carlo estimates.
     # Pinned published values: V26 G3 study CONTROLS.json and EXACT_REFERENCES.json.
     assert abs(known['D_minus_K_capture']-(-.0897098994900386))<1e-12
     assert abs(honest['closed']-.08990315282392991)<1e-12
+    # The original failed probe had exactly fourteen 0s and fourteen 1s at
+    # closure. Both unnormalized count-state likelihoods must be equal.
+    z,agenda,p,prior=library([.5]);weights=prior*p**14*(1-p)**14
+    assert abs(weights[z==0].sum()/weights.sum()-.5)<1e-12
     return dict(passed=True,full_reread_prior=True,zero_tag_D_identity=True,original_library_byte_equivalence=True,
-        independent_group_marginal=True,exact_G3_con=known['D_minus_K_capture'],exact_G3_honest_closed=honest['closed'])
+        cross_world_intervention_invariant=True,balanced_evidence_symmetry=True,independent_group_marginal=True,exact_G3_con=known['D_minus_K_capture'],exact_G3_honest_closed=honest['closed'])
 
 
 def design_check(s,identity):

@@ -4,7 +4,7 @@ DESIGN CHECK: source/protocol/control hashes precede every start; failed attempt
 are retained. Only prepared card files may run. Independent pools and host-load
 hysteresis are tested separately; source capsules isolate all running science.
 """
-import argparse,ctypes,json,math,os,subprocess,sys,time
+import argparse,ctypes,json,math,os,subprocess,sys,time,threading
 from pathlib import Path
 from datetime import datetime
 from ghostscale.validation.soundingline.v27 import contract,registry,study,reporting,continuation
@@ -14,7 +14,7 @@ from runners import run_v27 as native
 from ghostscale.validation.soundingline.v27.common import verify_complete
 from runners.watch_v23_events import event,alive
 
-EXTRAS=('runners/queue_v27.py',)
+EXTRAS=('runners/queue_v27.py','runners/watch_v27.py','runners/watch_v26.py','runners/fixture_v23.py')
 
 
 def charges(c):
@@ -60,7 +60,11 @@ def initialize(c):
 def build_card(c,card,source):
     cid=card['id'];f=card['family'];repo=Path(read(c/'LOCAL_PATHS.json')['repo'])
     if (c/'protocols'/(cid+'.json')).exists():return
-    impl=study.module(f);controls=impl.controls()
+    impl=study.module(f,card.get('analysis_module'));controls=impl.controls()
+    if f=='K7':
+        calibration=read(c/'K7_CALIBRATION.json');chosen=calibration['chosen']
+        card=card|dict(settings=[s|dict(structures=chosen['structures']) if s['structures']==32 else s for s in card['settings']],calibration_sha256=digest(c/'K7_CALIBRATION.json'))
+        if card['lane']=='study':card['settings']=[s|dict(qc=chosen['qc']) for s in card['settings']]
     if not controls['passed']:raise ValueError('controls failed: '+cid)
     checks=[]
     for i,s in enumerate(card['settings']):
@@ -74,19 +78,22 @@ def build_card(c,card,source):
     rival=[]
     for i,s in enumerate(card['settings']):
         fixture=dict(s,makers=1,worlds_per_block=1)
-        data=impl.block(fixture,['excluded-rivals',cid,i])
+        data=impl.precheck(card,i) if card.get('analysis_module')=='closure_reread' else impl.block(fixture,['excluded-rivals',cid,i])
         rival.append(dict(setting=i,measures=data['measures']))
     check=dict(passed=passed,checks=checks,excluded_rival_prechecks=rival,scientific_draws=0)
     protocol=card|dict(modelling_choices=protocol_choices(f),provisional=True,out_of_case=out_of_case,
         source_root=str(source),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
-        module_sha256=digest(source/'ghostscale/validation/soundingline/v27'/(registry.MODULES[f]+'.py')),
+        module_sha256=digest(source/'ghostscale/validation/soundingline/v27'/((card.get('analysis_module') or registry.MODULES[f])+'.py')),
         precheck_under_every_rival=[x.get('expected_signs',{}) for x in checks])
-    write(c/'controls'/(cid+'.json'),controls);write(c/'designs'/(cid+'.json'),check);write(c/'protocols'/(cid+'.json'),protocol)
+    write(c/'controls'/(cid+'.json'),controls);write(c/'designs'/(cid+'.json'),check)
     public=repo/'docs/versions/v27-motives-and-set-points/protocols'
-    write(public/(cid+'.json'),{k:v for k,v in protocol.items() if k!='source_root'});write(public/(cid+'-DESIGN.json'),check)
+    write(public/(cid+'.json'),{k:v for k,v in protocol.items() if k not in ('source_root','retained_manifest')});write(public/(cid+'-DESIGN.json'),check)
     if not passed and not out_of_case:
-        write(c/'dispositions'/(cid+'.json'),dict(state='DESIGN_CANNOT_PRODUCE_CASE',card=cid));return
+        write(c/'dispositions'/(cid+'.json'),dict(state='DESIGN_CANNOT_PRODUCE_CASE',card=cid));write(c/'protocols'/(cid+'.json'),protocol);return
     write(c/'dispositions'/(cid+'.json'),dict(state='BUILT',card=cid))
+    # The protocol is the publication marker seen by the live continuation.
+    # All dependent files must already exist when it appears.
+    write(c/'protocols'/(cid+'.json'),protocol)
     if card['lane']=='study':prepare(c,cid)
 
 
@@ -94,6 +101,9 @@ def build(c,family,primary_only=False):
     runtime.below_normal();start=time.process_time();initialize(c)
     source=native.frozen_source(c,EXTRAS)
     try:
+        if family=='K7' and not (c/'K7_CALIBRATION.json').exists():
+            value=study.module(family).calibrate(registry.primary_settings(family)[0]);write(c/'K7_CALIBRATION.json',value)
+            write(Path(read(c/'LOCAL_PATHS.json')['repo'])/'docs/versions/v27-motives-and-set-points/K7_CALIBRATION.json',value)
         for card in read(c/'CARDS.json'):
             if card['family']==family and (not primary_only or card['lane']=='study'):build_card(c,card,source)
         if not primary_only:write(c/'built'/(family+'.json'),dict(at=native.now().isoformat(),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json')))
@@ -115,7 +125,8 @@ def prepare(c,cid,probe=None):
     identity='v27-'+cid.lower()+('-probe' if is_probe else '-study');packet=c/'packets'/identity
     if packet.exists():raise ValueError('packet already exists; no implicit restart')
     kind='probe' if is_probe else protocol['lane'];lane=protocol['lane'];pool='studies' if lane=='study' else 'followup_healing'
-    p=dict(family=f,card=cid,identity=identity,science_identity=identity,analysis_contract='v27-block-v1',kind=kind,
+    science_identity=protocol.get('probe_science_identity',identity) if is_probe else protocol.get('study_science_identity',identity)
+    p=dict(family=f,card=cid,identity=identity,science_identity=science_identity,analysis_contract='v27-block-v1',kind=kind,
         scientific_kind='probe' if is_probe else lane,lane=lane,pool=pool,settings=rows,setting_indices=indices,
         blocks=1 if is_probe else protocol['blocks'],source_root=str(source),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
         source_archive_sha256=digest(source/'SOURCE.zip'),acceptance_sha256=digest(c/'ACCEPTANCE.json'),
@@ -125,13 +136,17 @@ def prepare(c,cid,probe=None):
         interpreter=str(Path(sys.executable).resolve()),cpu_cap_seconds=sum(caps.values())+10,pass_caps=caps,
         wall_cap_seconds=18*3600,projected_wall_seconds=wall,cost_probe=probe.name if probe else None,
         cost_probe_complete_sha256=digest(probe/'COMPLETE.json') if probe else None,confirmation=False,
-        **{k:protocol[k] for k in ('generation','parent_blocks','parent_complete_sha256','primary_positive_or_sign_reversal','reread_level','retained_inputs') if k in protocol})
-    write(packet/'PLAN.json',p);write(packet/'CONTROLS_BEFORE_DATA.json',read(c/'controls'/(cid+'.json')))
-    write(packet/'STATUS.json',dict(state='PREPARED',at=native.now().isoformat()));return packet
+        **{k:protocol[k] for k in ('generation','parent_blocks','parent_complete_sha256','primary_positive_or_sign_reversal','reread_level','retained_inputs','retained_manifest','retained_manifest_sha256','analysis_module','healing_number','replaces_card') if k in protocol})
+    if is_probe and protocol.get('probe_healing_parent'):p.update(healing_parent=protocol['probe_healing_parent'],repair_observations_only=True)
+    if not is_probe and protocol.get('study_healing_parent'):p.update(healing_parent=protocol['study_healing_parent'],repair_observations_only=True)
+    write(packet/'CONTROLS_BEFORE_DATA.json',read(c/'controls'/(cid+'.json')))
+    write(packet/'STATUS.json',dict(state='PREPARED',at=native.now().isoformat()))
+    write(packet/'PLAN.json',p);return packet
 
 
 def verify(c,packet,p):
     native.verify_source(p)
+    if p.get('retained_manifest') and digest(Path(p['retained_manifest']))!=p['retained_manifest_sha256']:raise ValueError('retained input manifest changed')
     for key,path in [('acceptance_sha256','ACCEPTANCE.json'),('environment_sha256','ENVIRONMENT.json'),
         ('extra_environment_sha256','NUMERICAL_ENVIRONMENT.json'),('protocol_sha256','protocols/'+p['card']+'.json'),
         ('design_check_sha256','designs/'+p['card']+'.json')]:
@@ -153,7 +168,7 @@ def export(c):
         if (packet/'COMPLETE.json').exists() and not (packet/'AGGREGATE_EXPORTED.json').exists():
             verify_complete(packet)
             for name,relative in [('SUMMARY.json','original/SUMMARY.json'),('RAW_INDEX.json','original/RAW_INDEX.json'),('COMPLETE.json','COMPLETE.json'),('REPLAY.json','REPLAY.json'),('INDEPENDENT_REVIEW.json','INDEPENDENT_REVIEW.json'),('PASS_COSTS.json','PASS_COSTS.json'),('CONTROLS.json','CONTROLS_BEFORE_DATA.json')]:write(out/packet.name/name,read(packet/relative))
-            write(out/packet.name/'PUBLIC_PLAN.json',{k:v for k,v in p.items() if k not in ('source_root','interpreter')})
+            write(out/packet.name/'PUBLIC_PLAN.json',{k:v for k,v in p.items() if k not in ('source_root','interpreter','retained_manifest')})
             reporting.land(c,packet,repo);write(packet/'AGGREGATE_EXPORTED.json',dict(at=native.now().isoformat()))
     q=read(c/'QUEUE_STATUS.json') if (c/'QUEUE_STATUS.json').exists() else dict(state='BUILDING',active=[],prepared=[])
     write(out/'CURRENT_STATUS.json',dict(at=native.now().isoformat(),queue=q,packets=rows,
@@ -181,6 +196,19 @@ def queue(c):
     runtime.below_normal();lock=c/'QUEUE_OWNER.lock';active={};start=time.process_time();samples=[];limit=4;last=host_times();last_time=time.monotonic()
     with lock.open('x') as f:f.write(str(os.getpid()))
     source=native.frozen_source(c,EXTRAS)
+    live_load=dict(limit=4);halt=threading.Event()
+    def sample_load():
+        before=host_times();history=[]
+        while not halt.wait(30):
+            current=host_times();fraction=1-(current[0]-before[0])/max(1,current[1]-before[1]);before=current
+            history.append([time.time(),fraction]);history=history[-42:];live_load['limit']=contract.load_limit(history,live_load['limit'])
+            write(c/'HOST_LOAD.json',dict(at=native.now().isoformat(),samples=history,worker_limit=live_load['limit']),immutable=False)
+    sampler=threading.Thread(target=sample_load,daemon=True);sampler.start()
+    opened=datetime.fromisoformat(read(c/'ACCEPTANCE.json')['opened'])
+    occupancy_path=c/'OCCUPANCY.json'
+    previous=sum(read(p).get('wall_seconds',0) for p in (c/'accounting').glob('*.json'))
+    occupancy=read(occupancy_path) if occupancy_path.exists() else dict(busy_worker_seconds=previous,idle_worker_seconds=dict(initial_build_and_validation=max(0,4*(native.now()-opened).total_seconds()-previous)))
+    last_occupancy=time.monotonic();previous_count=0;previous_limit=4
     try:
         while True:
             for name,(proc,log) in list(active.items()):
@@ -193,15 +221,21 @@ def queue(c):
                         except Exception as exc:
                             write(packet/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(c,name+'-continuation','build_required',dict(packet=name,error=str(exc)))
                 else:event(c,name+'-failed','packet_failure',dict(packet=name,status_sha256=digest(packet/'STATUS.json')))
+            # Recover only continuation after already verified probes; never
+            # restart an interrupted or failed scientific execution.
+            for probe in (c/'packets').glob('*/COMPLETE.json'):
+                p=read(probe.parent/'PLAN.json')
+                if p['scientific_kind']!='probe':continue
+                if (probe.parent/'CONTINUATION_FAILURE.json').exists():continue
+                if any(read(x)['card']==p['card'] and read(x)['scientific_kind']!='probe' for x in (c/'packets').glob('*/PLAN.json')):continue
+                try:prepare(c,p['card'],probe.parent)
+                except Exception as exc:
+                    write(probe.parent/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(c,probe.parent.name+'-continuation','build_required',dict(error=str(exc)))
             continuation.advance(c,prepare,build_card,source)
-            current=host_times();tick=time.monotonic()
-            if tick-last_time>=30:
-                fraction=1-(current[0]-last[0])/max(1,current[1]-last[1]);samples.append([time.time(),fraction]);samples=samples[-42:]
-                limit=contract.load_limit(samples,limit);last=current;last_time=tick
-                write(c/'HOST_LOAD.json',dict(at=native.now().isoformat(),samples=samples,worker_limit=limit),immutable=False)
+            limit=live_load['limit']
             candidates=[p.parent for p in (c/'packets').glob('*/PLAN.json') if read(p.parent/'STATUS.json')['state']=='PREPARED']
             candidates.sort(key=lambda p:(read(c/'cards'/(read(p/'PLAN.json')['card']+'.json'))['order'],p.name))
-            stopping=(c/'STOP').exists() or native.now()>=datetime.fromisoformat(contract.NEW_STARTS_CLOSE)
+            stopping=(c/'STOP').exists() or (c/'DRAIN_CONTROLLER').exists() or native.now()>=datetime.fromisoformat(contract.NEW_STARTS_CLOSE)
             if not stopping and not (c/'PAUSE_ADMISSIONS').exists():
                 for packet in candidates:
                     external=outside(c)
@@ -220,13 +254,25 @@ def queue(c):
                     active[packet.name]=(proc,log)
                     write(packet/'STATUS.json',dict(state='LAUNCHING',launcher_pid=proc.pid,at=native.now().isoformat()),immutable=False)
             remaining=[p.name for p in candidates if read(p/'STATUS.json')['state']=='PREPARED']
+            unbuilt=[x['id'] for x in read(c/'CARDS.json') if not (c/'protocols'/(x['id']+'.json')).exists()]
+            elapsed=time.monotonic()-last_occupancy;last_occupancy=time.monotonic()
+            occupancy['busy_worker_seconds']+=elapsed*previous_count
+            cause='build_or_design' if unbuilt else 'admission_or_continuation' if remaining else 'finite_lane_exhaustion'
+            occupancy['idle_worker_seconds'][cause]=occupancy['idle_worker_seconds'].get(cause,0)+elapsed*max(0,previous_limit-previous_count)
+            occupancy['idle_worker_seconds']['host_load']=occupancy['idle_worker_seconds'].get('host_load',0)+elapsed*(4-previous_limit)
+            occupancy['measurement']='Sampled controller occupancy; admission/exit between samples and initial build estimate are approximate.'
+            previous_count=len(active);previous_limit=limit
+            write(occupancy_path,occupancy,immutable=False)
             write(c/'QUEUE_STATUS.json',dict(state='RUNNING' if active else 'BUILD_WAIT',pid=os.getpid(),heartbeat=native.now().isoformat(),
-                active=list(active),prepared=remaining,worker_limit=limit,build_work_remaining=True),immutable=False)
+                active=list(active),prepared=remaining,worker_limit=limit,build_work_remaining=bool(unbuilt or remaining),unbuilt=unbuilt),immutable=False)
             export(c)
+            if not active and not remaining and not stopping:
+                event(c,'v27-ready-queue-depleted','queue_depleted',dict(unbuilt=unbuilt,action='Inspect held/unbuilt work and finite lane exhaustion; do not repeat valid science.'))
             write(c/'accounting'/('controller-'+str(os.getpid())+'.json'),dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-start,state='RUNNING'),immutable=False)
-            if stopping and not active:break
+            if (stopping or (c/'DRAIN_CONTROLLER').exists()) and not active:break
             time.sleep(10)
     finally:
+        halt.set();sampler.join(timeout=5)
         write(c/'accounting'/('controller-'+str(os.getpid())+'.json'),dict(pool='preparation',kind='controller',cpu_seconds=time.process_time()-start,state='STOPPED'),immutable=False)
         lock.unlink()
 

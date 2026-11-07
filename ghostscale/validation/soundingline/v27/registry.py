@@ -66,7 +66,7 @@ def settings_with(f,changes):
     if f=='K1' and changes.get('type_mix')=='no-Ls-Ah':settings=[s for s in settings if s['truth'] not in ('Ls','Ah')]
     if f=='K1' and changes.get('type_mix')=='double-N':
         settings=[s|dict(makers=2*s['makers']) if s['truth']=='N' else s for s in settings]
-    return [s|{k:v for k,v in changes.items() if k!='type_mix'} for s in settings]
+    return [s|changes for s in settings]
 
 
 def cards():
