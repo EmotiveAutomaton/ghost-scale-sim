@@ -20,11 +20,11 @@ See [correction receipts](../../../results/v27/REPORT_CORRECTIONS_2026-11-07.jso
 
 K3's static band pre-check incorrectly used a dynamic counter that resets in
 fixed-state worlds. A separately frozen gate repair counts observed consecutive
-deficits; its excluded case share passes. The original failed gate is retained.
+deficits; its excluded case share passes. The original failed gate is retained. The repaired band comparison is verified: its median of 482 records misses the 128-record bar.
 K7's excluded zero-support cell now preserves a contradicted reader's negative
 infinite log score rather than manufacturing a finite value.
 
-Fourteen targeted tests passed, covering known answers, budget/deadline rules,
+Sixteen targeted tests passed, covering known answers, budget/deadline rules,
 load hysteresis, zero-support reporting and the prepared particle kernels.
 Shared numerical kernels remain a disclosed review limitation; these checks do
 not validate human mechanisms or general architecture.
@@ -34,7 +34,7 @@ and K3's dynamic inference. K3's exact filter exceeded 200,000 states after 25
 of 512 records in an excluded single-hypothesis test. A particle alternative is
 prepared, but is neither admitted nor resolution-validated. Static comparisons
 proceed independently. Earlier-record dispositions and a retained-data closing
-analysis are being assembled. Cross-repository aggregate packages are prepared;
+analysis are prepared; the latter reproduces old scores before stratification. Cross-repository aggregate packages are prepared;
 delivery is recorded separately from verification and publication.
 
 The controller and one native monitor are live. Build/admission reviews are

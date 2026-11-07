@@ -35,7 +35,10 @@ def texture_change(primary,variant):
 def eligible_second_generation(c,primary):
     landed=read(primary/'LOCAL_LANDING.json')
     if landed['verdict']=='met':return True
-    p=read(primary/'PLAN.json');summary=read(primary/'original/SUMMARY.json');rows=reporting.annotate(summary)
+    p=read(primary/'PLAN.json');summary=read(primary/'original/SUMMARY.json');rows=reporting.annotate(summary,read(primary/'CENSOR_BOUNDS.json')['bounds'] if (primary/'CENSOR_BOUNDS.json').exists() else ())
+    # A family can have several primaries. A positive primary remains positive
+    # when another primary or its negative-control arm misses its own bar.
+    if any(r['bar'] is not None and r['verdict']=='met' for r in rows):return True
     checks=read(c/'designs'/(p['card']+'.json')).get('excluded_rival_prechecks',[])
     for row in rows:
         if row['bar'] is None or row['estimate'] is None:continue
@@ -52,7 +55,10 @@ def register_descendants(c,parent,build_card,source):
     p=read(parent/'PLAN.json');cid=p['card'];card=read(c/'protocols'/(cid+'.json'));landing=read(parent/'LOCAL_LANDING.json')
     marker=c/'expansions'/(cid+'.json')
     if marker.exists():return
-    primary=terminal_card(c,p['family']);eligible=eligible_second_generation(c,primary) if primary else False
+    primary=terminal_card(c,p['family'])
+    if primary is None and card.get('root_primary_card'):primary=terminal_card(c,card['root_primary_card'])
+    if primary is None and card.get('subprimary_of') and (card['lane']=='study' or card.get('replaces_card')):primary=parent
+    eligible=eligible_second_generation(c,primary) if primary else False
     generation=card.get('generation',0);registered=[]
     inherited={k:v for k,v in card.items() if k not in ('source_root','source_manifest_sha256','module_sha256','healing_number','replaces_card','probe_healing_parent','probe_science_identity','study_healing_parent','study_science_identity','supersedes_claim','correction')}
     if card['lane']=='study' or card.get('replaces_card') or (card['lane']=='followup' and generation==1 and eligible):
@@ -68,7 +74,7 @@ def register_descendants(c,parent,build_card,source):
             else:changed=[s|change for s in card['settings']]
             child=inherited|dict(id=cid+'-F'+str(n),lane='followup',generation=generation+1,settings=changed,
                 primary_positive_or_sign_reversal=eligible,parent_complete_sha256=digest(parent/'COMPLETE.json'),
-                parent_card=cid,axis=axis,order=20000+1000*contract.ORDER.index(p['family'])+generation*100+n)
+                parent_card=cid,root_primary_card=card.get('root_primary_card',cid),axis=axis,order=20000+1000*contract.ORDER.index(p['family'])+generation*100+n)
             write(c/'cards'/(child['id']+'.json'),child);build_card(c,child,source);registered.append(child['id'])
     if (card['lane'] in ('study','texture') or card.get('replaces_card')) and landing['unresolved']:
         child=inherited|dict(id=cid+'-P2',lane='precision',blocks=2*card['blocks'],parent_blocks=card['blocks'],
@@ -82,11 +88,17 @@ def advance(c,prepare,build_card,source):
     """Call between bounded dispatches. Sources and excluded checks precede data."""
     for f in contract.ORDER:
         primary=terminal_card(c,f)
-        if primary is None:continue
-        register_descendants(c,primary,build_card,source)
+        cards=sorted([read(p) for p in (c/'cards').glob('*.json') if read(p)['family']==f],key=lambda x:x['order'])
+        subprimaries=[]
+        for card in cards:
+            if card.get('subprimary_of') and card['lane']=='study':
+                done=terminal_card(c,card['id'])
+                if done:subprimaries.append(done)
+        if primary is None and not subprimaries:continue
+        for done in ([primary] if primary else [])+subprimaries:register_descendants(c,done,build_card,source)
         cards=sorted([read(p) for p in (c/'cards').glob('*.json') if read(p)['family']==f],key=lambda x:x['order'])
         streak=0;stopped=False;next_texture=None;records=[]
-        for card in (x for x in cards if x['lane']=='texture'):
+        for card in (x for x in cards if x['lane']=='texture' and primary is not None):
             cid=card['id'];done=terminal_card(c,cid)
             if done:
                 proto=read(c/'protocols'/(cid+'.json'))

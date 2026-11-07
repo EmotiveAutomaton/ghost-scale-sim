@@ -9,6 +9,16 @@ a tractable approximation is assessed. Whole-block intervals, complete replay,
 source capsules, measured reservations and shared-kernel limitations remain
 mandatory. [V27 design review](versions/v27-motives-and-set-points/DESIGN_REVIEW.md).
 
+V27 retained-data re-reads reproduce the earlier scoring rule before introducing
+a declared covariate; original observations, source hashes and independent block
+identities stay fixed. The closing re-read separates balanced-evidence closures,
+other closures and sources that remain open. Empty conditional strata retain zero
+denominators. Ratios involving censored learning times use finite-horizon
+identification bounds and whole-block bootstrap bounds; an unobserved crossing
+is not an observed infinity. Original summaries remain alongside explicit
+reporting corrections and reconstruction receipts. Earlier-record dispositions
+are [listed separately](versions/v27-motives-and-set-points/EARLIER_RESULTS.md).
+
 The November 6 theory-day extension adds exact hidden-stock scatter/gather filters
 checked against four-record brute enumeration, explicit frame marginalization,
 an exact source-closure dynamic programme with a separate log-weight simulation,

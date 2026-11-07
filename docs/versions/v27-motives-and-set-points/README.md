@@ -8,6 +8,8 @@ subject to the ten-minute host-load rule. New starts close November 15 at
 [Authorization](../../../results/v27/AUTHORIZATION.json).
 [Implementation status](IMPLEMENTATION_STATUS.md).
 [Design review](DESIGN_REVIEW.md).
+[Earlier-result dispositions](EARLIER_RESULTS.md).
+[Setup report](SETUP_REPORT.md).
 
 Only fully specified, controlled and costed packets enter the scientific queue.
 Declared texture, precision, bounded follow-ups and retained-data re-reads are

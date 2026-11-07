@@ -1,5 +1,83 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K5-T003-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T003.md).
+
+## G-V27-K2-T008-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T008.md).
+
+## G-V27-K7-T003-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T003.md).
+
+## G-V27-K4-T010-1
+
+Which records distinguish predicted harm from uncertainty about outcomes or actions? The texture card retains 12 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K4-T010.md).
+
+## G-V27-K4-T009-1
+
+Which records distinguish predicted harm from uncertainty about outcomes or actions? The texture card retains 12 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K4-T009.md).
+
+## G-V27-K7-T002-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T002.md).
+
+## G-V27-K5-T002-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T002.md).
+
+## G-V27-K2-T007-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T007.md).
+
+## G-V27-K4-T008-1
+
+Which records distinguish predicted harm from uncertainty about outcomes or actions? The texture card retains 12 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K4-T008.md).
+
+## G-V27-K7-T001-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T001.md).
+
+## G-V27-K4-T007-1
+
+Which records distinguish predicted harm from uncertainty about outcomes or actions? The texture card retains 12 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K4-T007.md).
+
+## G-V27-K2-T006-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T006.md).
+
+## G-V27-K3-P3-H1-1
+
+Does the exact lower-edge library distinguish a tolerance band from the declared point grid? The healing card retains 1 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested. Independent static primary from packet K3. No dynamic-reader claim; changing-state primary and remaining dynamic map are still pending.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K3-P3-H1.md).
+
 ## G-V27-K5-T001-1
 
 How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
@@ -122,7 +200,7 @@ Does iterative interpretation recover information or reinforce its initial mista
 
 ## G-V27-K3-P1-1
 
-How many records does exact awareness of overshoot save when locating a fixed hidden set point? The study card retains 1 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested. Independent static primary from packet K3. No dynamic-reader claim; changing-state primary and remaining dynamic map are still pending.
+How many records does exact awareness of overshoot save when locating a fixed hidden set point? The study card retains 1 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested. Independent static primary from packet K3. No dynamic-reader claim; changing-state primary and remaining dynamic map are still pending. Censored learning ratios have finite-horizon identification bounds, not observed infinite values; the separate retained-data bound receipt replaces their display and bar interpretation.
 
 [Report](docs/versions/v27-motives-and-set-points/reports/K3-P1.md).
 

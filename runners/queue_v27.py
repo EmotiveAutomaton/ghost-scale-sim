@@ -32,7 +32,7 @@ def settings_cost(s,f):
     cost=s.get('records',s.get('structures',32))*s.get('makers',s.get('worlds_per_block',1)*s.get('sources',1))
     if f=='K2':cost*=s['targets']
     if f=='K3':cost*=21**s['needs']*(8 if s['dynamic'] in ('S','P-','G','P+') else 1)
-    if f=='K5':cost*=len(s['strengths'])
+    if f=='K5':cost*=len(s.get('strengths',[.5]))
     if f=='K6':cost*=s['goals']*s['rounds']
     return cost
 
@@ -60,6 +60,8 @@ def initialize(c):
 def build_card(c,card,source):
     cid=card['id'];f=card['family'];repo=Path(read(c/'LOCAL_PATHS.json')['repo'])
     if (c/'protocols'/(cid+'.json')).exists():return
+    if f=='K1' and 'type_mix' in card.get('changes',{}):
+        card=card|dict(settings=[s|dict(type_mix=card['changes']['type_mix']) for s in card['settings']])
     impl=study.module(f,card.get('analysis_module'));controls=impl.controls()
     if f=='K7':
         calibration=read(c/'K7_CALIBRATION.json');chosen=calibration['chosen']
@@ -81,7 +83,7 @@ def build_card(c,card,source):
         data=impl.precheck(card,i) if card.get('analysis_module')=='closure_reread' else impl.block(fixture,['excluded-rivals',cid,i])
         rival.append(dict(setting=i,measures=data['measures']))
     check=dict(passed=passed,checks=checks,excluded_rival_prechecks=rival,scientific_draws=0)
-    protocol=card|dict(modelling_choices=protocol_choices(f),provisional=True,out_of_case=out_of_case,
+    protocol=card|dict(modelling_choices=card.get('analysis_description',protocol_choices(f)),provisional=True,out_of_case=out_of_case,
         source_root=str(source),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
         module_sha256=digest(source/'ghostscale/validation/soundingline/v27'/((card.get('analysis_module') or registry.MODULES[f])+'.py')),
         precheck_under_every_rival=[x.get('expected_signs',{}) for x in checks])
@@ -224,6 +226,10 @@ def queue(c):
             # Recover only continuation after already verified probes; never
             # restart an interrupted or failed scientific execution.
             for probe in (c/'packets').glob('*/COMPLETE.json'):
+                # The parent writes COMPLETE before exiting. Its active branch
+                # owns continuation until poll() confirms that exit; recovery
+                # must not prepare the same successor in that short interval.
+                if probe.parent.name in active:continue
                 p=read(probe.parent/'PLAN.json')
                 if p['scientific_kind']!='probe':continue
                 if (probe.parent/'CONTINUATION_FAILURE.json').exists():continue
@@ -231,7 +237,6 @@ def queue(c):
                 try:prepare(c,p['card'],probe.parent)
                 except Exception as exc:
                     write(probe.parent/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(c,probe.parent.name+'-continuation','build_required',dict(error=str(exc)))
-            continuation.advance(c,prepare,build_card,source)
             limit=live_load['limit']
             candidates=[p.parent for p in (c/'packets').glob('*/PLAN.json') if read(p.parent/'STATUS.json')['state']=='PREPARED']
             candidates.sort(key=lambda p:(read(c/'cards'/(read(p/'PLAN.json')['card']+'.json'))['order'],p.name))
@@ -253,6 +258,8 @@ def queue(c):
                         creationflags=subprocess.CREATE_NO_WINDOW|subprocess.BELOW_NORMAL_PRIORITY_CLASS)
                     active[packet.name]=(proc,log)
                     write(packet/'STATUS.json',dict(state='LAUNCHING',launcher_pid=proc.pid,at=native.now().isoformat()),immutable=False)
+            if not stopping and not (c/'PAUSE_ADMISSIONS').exists():
+                continuation.advance(c,prepare,build_card,source)
             remaining=[p.name for p in candidates if read(p/'STATUS.json')['state']=='PREPARED']
             unbuilt=[x['id'] for x in read(c/'CARDS.json') if not (c/'protocols'/(x['id']+'.json')).exists()]
             elapsed=time.monotonic()-last_occupancy;last_occupancy=time.monotonic()

@@ -1,7 +1,7 @@
 """One claim per verified logical card, with full scientific write-through."""
 import json,math
 from pathlib import Path
-from . import registry
+from . import registry,earlier
 from .common import read,write,digest,bar_verdict
 
 
@@ -24,9 +24,11 @@ def bar(f,config,row):
     return None,None,False
 
 
-def annotate(summary):
+def annotate(summary,bounds=()):
     rows=[]
     for row in summary['cells']:
+        replacement=next((b for b in bounds if b['setting']==row['setting'] and b['metric']==row['metric'] and b['labels']==row['labels']),None)
+        if replacement:row=row|replacement
         if summary['family']=='K7' and row['metric']=='log_score':row=row|dict(metric='true_goal_probability')
         b,d,fixed=bar(summary['family'],summary['settings'][row['setting']],row)
         verdict='descriptive'
@@ -42,6 +44,8 @@ def annotate(summary):
                 den=next(r for r in summary['cells'] if r['setting']==row['setting'] and r['metric']=='joint_gain')
                 lo,hi=den['interval95']
                 if lo is None or hi is None or lo<=0<=hi:verdict='unresolved at this sample size'
+            if row['statistic']=='median_ratio' and (row['estimate_censored'] or row['lower_censored'] or row['upper_censored']) and replacement is None:
+                verdict='unresolved at this sample size'
         rows.append(row|dict(bar=b,direction=d,verdict=verdict,packet_by_construction_or_scale_only=fixed))
     return rows
 
@@ -56,7 +60,12 @@ def land(campaign,packet,repo):
     from .common import verify_complete
     verify_complete(packet);p=read(packet/'PLAN.json')
     if p['scientific_kind']=='probe':return
-    summary=read(packet/'original/SUMMARY.json');rows=annotate(summary);card=read(campaign/'cards'/(p['card']+'.json'))
+    from . import censoring
+    summary=read(packet/'original/SUMMARY.json');bounds=censoring.retained(packet)
+    if bounds:
+        receipt=dict(raw_index_sha256=digest(packet/'original/RAW_INDEX.json'),bounds=bounds,independent_median_arithmetic=True,original_scientific_bytes_unchanged=True)
+        write(packet/'CENSOR_BOUNDS.json',receipt);write(repo/'results/v27'/packet.name/'CENSOR_BOUNDS.json',receipt)
+    rows=annotate(summary,bounds);card=read(campaign/'cards'/(p['card']+'.json'))
     claim='G-V27-'+p['card']+'-1';verdict=assessment(rows);f=p['family']
     relative='docs/versions/v27-motives-and-set-points/reports/'+p['card']+'.md'
     question=card.get('question',registry.QUESTIONS[f])
@@ -69,13 +78,15 @@ def land(campaign,packet,repo):
         def show(v,c=False):return 'beyond horizon' if c else 'unavailable' if v is None else f'{v:.6g}'
         if row.get('estimate_negative_infinity'):row=row|dict(estimate=-math.inf)
         if row.get('lower_negative_infinity') or row.get('upper_negative_infinity'):row=row|dict(interval95=[-math.inf if row.get('lower_negative_infinity') else row['interval95'][0],-math.inf if row.get('upper_negative_infinity') else row['interval95'][1]])
-        lo,hi=row['interval95'];text.append('| '+str(row['setting'])+' | '+json.dumps(row['labels'],sort_keys=True)+' | '+row['metric'].replace('_',' ')+' | '+show(row['estimate'],row['estimate_censored'])+' | '+show(lo,row['lower_censored'])+' to '+show(hi,row['upper_censored'])+' | '+str(row['bar'])+' '+str(row['direction'])+' | '+row['verdict']+' | '+str(row['packet_by_construction_or_scale_only'])+' |')
+        lo,hi=row['interval95'];estimate=show(row['estimate'],row['estimate_censored'])
+        if 'identified_estimate_bounds' in row:estimate='['+show(row['identified_estimate_bounds'][0])+', '+('unbounded' if row['upper_bound_unbounded'] else show(row['identified_estimate_bounds'][1]))+']'
+        text.append('| '+str(row['setting'])+' | '+json.dumps(row['labels'],sort_keys=True)+' | '+row['metric'].replace('_',' ')+' | '+estimate+' | '+show(lo,row['lower_censored'])+' to '+('unbounded' if row.get('upper_interval_unbounded') else show(hi,row['upper_censored']))+' | '+str(row['bar'])+' '+str(row['direction'])+' | '+row['verdict']+' | '+str(row['packet_by_construction_or_scale_only'])+' |')
     protocol=read(campaign/'protocols'/(p['card']+'.json'))
     text+=['','Modelling choices are provisional: '+protocol['modelling_choices'],
         '', 'The packet lists some finite-sample expectations as by construction. Those rows remain scale-only; their empirical bar outcomes are not logical guarantees.',
         '', 'Case: '+('out-of-case descriptive map; it cannot upgrade its primary' if protocol['out_of_case'] else 'excluded case check passed')+'.',
         '', 'Complete raw replay and independent reconstruction passed. Shared generators and some numerical kernels remain a limitation. Intervals are pointwise descriptive and are not multiplicity-adjusted; adaptive follow-ups do not convert them to confirmation.',
-        '',*registry.ROUTES[f],'','Earlier related records: '+', '.join('`'+x+'`' for x in registry.EARLIER[f])+'. Each remains intact; any changed interpretation receives a separately frozen retained-data re-read.',
+        '',*registry.ROUTES[f],'',*earlier.prose(f),
         '', '[Protocol](../protocols/'+p['card']+'.json). [Complete measures](../../../../results/v27/'+packet.name+'/SUMMARY.json).','']
     report=repo/relative;report.parent.mkdir(parents=True,exist_ok=True);report.write_text('\n'.join(text),encoding='utf-8',newline='\n')
     exchange=repo/'docs/exchange'/('GHOST_'+claim.replace('-','_')+'.md')
@@ -99,7 +110,10 @@ def land(campaign,packet,repo):
     if any(x['id']==claim for x in claims['claims']):raise ValueError('claim exists without landing receipt')
     claims['claims'].append(dict(id=claim,allowed_wording=wording,claim_kind='method',architecture='miniature, architecture untested',
         assumed_choice_model=protocol['modelling_choices'],reader='Declared exact and approximate readers; approximation and nonconvergence retained',
-        estimate=rows,control_status='passes',source_file=relative,source_line=3,source_sha256=digest(report),
+        estimate=[row for row in rows if row['bar'] is not None],
+        estimate_detail=dict(source_file='results/v27/'+packet.name+'/SUMMARY.json',sha256=digest(packet/'original/SUMMARY.json'),
+            scope='All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.'),
+        control_status='passes',source_file=relative,source_line=3,source_sha256=digest(report),
         supersedes=None,superseded_by=None,correction_class=None))
     ledger.write_text(json.dumps(claims,indent=2,sort_keys=True,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     write(packet/'LOCAL_LANDING.json',dict(claim=claim,report=relative,report_sha256=digest(report),verdict=verdict,
