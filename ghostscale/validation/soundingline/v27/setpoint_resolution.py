@@ -50,17 +50,21 @@ def compare(reference,candidate,begin=0):
         passed=posterior<=LIMITS['posterior'] and error<=LIMITS['margin'] and crossing_pass)
 
 
-def fixture(s,identity,pulse=lambda **kw:None):
+def fixture(s,identity,pulse=lambda **kw:None,counts=COUNTS,retained=None):
     raw=setpoints.generate(s|dict(inference='checked_particles'),identity)
     all_paths={}
-    for count in COUNTS:
+    if retained is not None:
+        if retained['identity']!=identity or retained['configuration']!=s:raise ValueError('retained fixture identity differs')
+        for row in retained['diagnostic_paths']:
+            all_paths[row['particles'],row['replicate']]=dict(posterior=np.array(row['posterior']),margins={k:np.array(v) for k,v in row['margins'].items()})
+    for count in counts:
         for replicate in range(2):
-            all_paths[count,replicate]=paths(raw,s,count,replicate)
+            if (count,replicate) not in all_paths:all_paths[count,replicate]=paths(raw,s,count,replicate)
             pulse(particles=count,replicate=replicate)
-    reference=all_paths[COUNTS[-1],0]
+    reference=all_paths[counts[-1],0]
     checks=[dict(particles=count,replicate=replicate,**compare(reference,all_paths[count,replicate],raw['first_long_deficit'] or 0))
-        for count in COUNTS[-2:] for replicate in range(2) if (count,replicate)!=(COUNTS[-1],0)]
-    return dict(identity=identity,configuration=s,limits=LIMITS,counts=list(COUNTS),replicates=2,
+        for count in counts[-2:] for replicate in range(2) if (count,replicate)!=(counts[-1],0)]
+    return dict(identity=identity,configuration=s,limits=LIMITS,counts=list(counts),replicates=2,
         scientific_draws=0,checks=checks,passed=all(x['passed'] for x in checks),
         diagnostic_paths=[dict(particles=count,replicate=replicate,posterior=value['posterior'].tolist(),
             margins={k:v.tolist() for k,v in value['margins'].items()}) for (count,replicate),value in all_paths.items()])

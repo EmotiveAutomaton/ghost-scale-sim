@@ -41,8 +41,10 @@ independent numerical checks and prospective posterior/decision stability bars.
 The first excluded dynamic check failed its declared numerical limits: two
 32,768-particle replicates differed by 0.0623 in posterior mass and 0.2988 nat
 in margin, against limits 0.05 and 0.25. The check and source are retained.
-A source-frozen common-random-number revision is being checked on the same
-fixtures with unchanged thresholds; approval alone does not admit its science.
+The common-random-number revision brings the two 32,768-particle runs within
+both limits, but the 8,192-particle comparisons still fail. A source-frozen
+131,072-particle check now extends the same fixtures and unchanged thresholds,
+reusing saved lower-resolution calculations. Approval alone does not admit science.
 Previously verified static comparisons remain unchanged. The approved aggregate
 packages were copied to both explicitly named recipient locations, hash-checked
 and left uncommitted. Earlier copies at compact-date paths are retained.

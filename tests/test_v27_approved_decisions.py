@@ -33,3 +33,17 @@ def test_resolution_rejects_bar_crossing_even_when_path_error_is_small():
     b=dict(posterior=a['posterior'].copy(),margins={law:np.r_[np.zeros(127),.99,np.full(22,1.01)] for law in ('S','P-','G')})
     assert resolution.compare(a,a)['passed']
     assert not resolution.compare(a,b)['passed']
+
+
+def test_retained_preflight_is_not_reexecuted(monkeypatch):
+    from ghostscale.validation.soundingline.v27 import registry
+    s=registry.primary_settings('K3')[0]|dict(records=4)
+    identity=['retained-control'];rows=[]
+    for count in (2048,8192,32768):
+        for replicate in range(2):
+            rows.append(dict(particles=count,replicate=replicate,posterior=np.full((4,5),.2).tolist(),
+                             margins={law:[0.]*4 for law in ('S','P-','G')}))
+    def unexpected(*args,**kwargs):raise AssertionError('retained likelihood recomputed')
+    monkeypatch.setattr(resolution,'paths',unexpected)
+    result=resolution.fixture(s,identity,retained=dict(identity=identity,configuration=s,diagnostic_paths=rows))
+    assert result['passed'] and result['diagnostic_paths']==rows

@@ -49,3 +49,10 @@ the two 32,768-particle replicates differed by 0.0623 in posterior mass and
 declared numerical limits did not. The original source and diagnostic receipt
 are retained. The common-random-number revision above changes only numerical
 coupling, preserves the fixture identities, and keeps every tolerance unchanged.
+
+The revised 32,768-particle replicates agree within both numerical limits
+(0.0268 posterior probability and 0.1832 nat); the 8,192-particle comparisons
+still fail. Validation therefore advances to 8,192 / 32,768 / 131,072, comparing
+the upper two resolutions under the same rules. Existing excluded calculations
+are reused with source, identity and receipt-hash checks. Only the new resolution
+is computed again for that fixture. No scientific sample has been admitted.
