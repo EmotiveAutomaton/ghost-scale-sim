@@ -1,5 +1,10 @@
 # Ghost Scale Simulation
 
+**November 6 theory-day extension:** the owner commissioned five finite relevance
+checks and their declared texture lanes. [Design review and protocols](docs/versions/v26-top-and-ends/day-20261106/README.md).
+[Current execution state](results/v26/day-20261106/CURRENT_STATUS.json).
+Earlier work remains held; only this new packet lifts the theory-review hold.
+
 **November 6 theory review:** the [Friday exploration snapshot](docs/versions/v26-top-and-ends/friday-20261104/THEORY_REVIEW_2026-11-06.md) records 50 completed exploratory studies and the retained failures, repairs and holds. No scientific workers remain; new admissions and recurring reviews are held for the owner. Read the event-conditioning and revision-reader qualifications before interpreting the rare-event maps. [Recorded state](results/v26/friday-20261104/CURRENT_STATUS.json). Earlier opening notes and finite closeouts remain historical.
 
 **V26 follow-ups complete:** [E1 longer histories and U1 source learning](docs/versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md) passed full replay and independent reconstruction on 48 fresh whole-world blocks. No scientific job remains; the separate monitor has stopped. The original ten primaries and 56 texture variants remain closed and published.

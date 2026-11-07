@@ -129,9 +129,16 @@ def child(packet,label):
             last_setting[0]=setting;setting_start[0]=time.process_time()
         if time.monotonic()-last[0]>5:
             write(packet/(label+'-progress.json'),dict(pid=os.getpid(),heartbeat=now().isoformat(),cpu_seconds=used,**progress),immutable=False);last[0]=time.monotonic()
+    # The separately authorized theory-day schema has block-bootstrap/censoring
+    # semantics and its own modules; immutable predecessor capsules are unchanged.
+    implementation=study
+    if plan.get('analysis_contract')=='v26-day-block-v1':
+        from ghostscale.validation.soundingline.v26 import day_study
+        day_study.verify_extra_environment(campaign,plan)
+        implementation=day_study
     # Timing boundaries surround complete settings, including their first block.
-    if label=='review':write(packet/'INDEPENDENT_REVIEW.json',study.reconstruct(packet/'original',plan,pulse))
-    else:study.execute(packet/label,plan,pulse)
+    if label=='review':write(packet/'INDEPENDENT_REVIEW.json',implementation.reconstruct(packet/'original',plan,pulse))
+    else:implementation.execute(packet/label,plan,pulse)
     write(packet/(label+'-cost.json'),dict(cpu_seconds=time.process_time()-started,blocks=timed))
 
 def execute(packet):

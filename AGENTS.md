@@ -20,6 +20,18 @@ authorship and contribution records retain their original attribution.
 
 ## V26 theory-review hold, November 6
 
+Later November 6: the owner handed over the separate theory-day packet and
+commissioned G1–G5, their finite texture lanes and at most one diagnosed healing
+per card. Read `docs/versions/v26-top-and-ends/day-20261106/README.md`, its packet,
+protocols and current status, plus outer `.local/v26-day-20261106/HANDOFF.md`.
+This lifts the hold only for those cards. Preserve all earlier closeouts and held
+scope. The day contract carries prior charges inside 110 CPU-hours, two
+below-normal single-thread scientists, November 9 04:00 UTC last starts and
+06:00 UTC drain. No descendants are authorized. Use interval-based bars, retain
+censoring, and distinguish algebraic identities from pre-check expectations.
+Restore the review hold and retire its single monitor at finite closure; record
+that closure date here. Recipient delivery waits for owner uptake.
+
 The owner has begun theory review and requested a complete recorded and published
 snapshot. Read `docs/versions/v26-top-and-ends/friday-20261104/THEORY_REVIEW_2026-11-06.md`
 and the current status/validity records. The prepared queue is drained; scientific

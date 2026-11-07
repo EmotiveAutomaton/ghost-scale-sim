@@ -1,5 +1,15 @@
 # The methodology layer
 
+The November 6 theory-day extension adds exact hidden-stock scatter/gather filters
+checked against four-record brute enumeration, explicit frame marginalization,
+an exact source-closure dynamic programme with a separate log-weight simulation,
+adaptive finite trade ladders and an observed-stock security reader. New results
+use sixteen independent whole-world blocks, pointwise 95% intervals, explicit
+right censoring and block bootstraps for conditional proportions and records
+needed. Nested makers and sources do not increase the independent sample count.
+Resident Numba/LLVM dependencies are pinned alongside NumPy/SciPy; no environment
+synchronization is used. [Theory-day review](versions/v26-top-and-ends/day-20261106/DESIGN_REVIEW.md).
+
 The November 4 continuation separates first evidence crossings, later reversals
 and finite-horizon sustained crossings, without treating the one-nat descriptive
 bar as an error-controlled decision. Retained source-learning curves receive
