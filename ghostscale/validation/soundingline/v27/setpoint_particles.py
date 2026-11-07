@@ -61,7 +61,11 @@ def reference_ancestors(weights,uniform):
 
 def likelihood(raw,s,point,dynamic,width,beta,independent=False,particles=8192,replicate=0):
     if 'inference_key' not in raw:raise ValueError('particle seed identity not recorded')
-    needs=s['needs'];r=rng('particle-engineering',raw['inference_key'],list(point),dynamic,width,beta,particles,replicate)
+    # Common random numbers across dynamic laws at a fixed point reduce
+    # artificial differences while the laws predict identical transitions.
+    # Every candidate retains the same correct marginal bootstrap law; distinct
+    # replicates, populations and worlds retain independent random streams.
+    needs=s['needs'];r=rng('particle-common-laws-v1',raw['inference_key'],list(point),width,beta,particles,replicate)
     stock=r.integers(0,21,(particles,needs)).astype(float);edge=np.tile(np.array(point)-width/2,(particles,1));pi=np.ones_like(stock);streak=np.zeros_like(stock,dtype=int)
     code=('P0','P+','P-','S','G').index(dynamic);logs=[];acc=0.;minimum_ess=particles
     for t,row in enumerate(raw['records']):

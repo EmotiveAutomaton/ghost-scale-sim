@@ -1,5 +1,107 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K5-T013-P2-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T013-P2.md).
+
+## G-V27-K7-T005-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T005-P2.md).
+
+## G-V27-K5-T014-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T014.md).
+
+## G-V27-K2-T028-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T028.md).
+
+## G-V27-K7-T023-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T023.md).
+
+## G-V27-K5-T011-P2-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T011-P2.md).
+
+## G-V27-K2-T027-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T027.md).
+
+## G-V27-K7-T022-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T022.md).
+
+## G-V27-K5-T013-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T013.md).
+
+## G-V27-K7-T004-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T004-P2.md).
+
+## G-V27-K2-T026-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T026.md).
+
+## G-V27-K7-T021-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T021.md).
+
+## G-V27-K5-T010-P2-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T010-P2.md).
+
+## G-V27-K5-T012-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T012.md).
+
+## G-V27-K2-T025-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T025.md).
+
+## G-V27-K7-T020-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T020.md).
+
+## G-V27-K5-T009-P2-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T009-P2.md).
+
 ## G-V27-K7-T019-1
 
 Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.

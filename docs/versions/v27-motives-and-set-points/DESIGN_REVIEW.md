@@ -8,8 +8,8 @@ human mechanisms. Runtime is measured rather than inferred from budget size.
 - Expected finite-sample bars are not algebraic guarantees. Record the packet
   classification and the excluded rival pre-check; separate exact identities
   from expectations, retain censoring and all contrary outcomes.
-- K1 requires a choice-law decision: a locked no-trade rule and finite-drift
-  choice errors cannot both define the same observation. Owner clarification pending.
+- K1's initial choice-law conflict is resolved: the owner preserves locked
+  choices and uses diffusion only for locked makers' times. Lapses remain.
 - K4's finite scale grid need not make its observational laws exactly aliased.
   Compute that grid's likelihoods and report residual identifiability honestly.
 - K7 needs a declared relationship between the repeated structures and their
@@ -17,7 +17,8 @@ human mechanisms. Runtime is measured rather than inferred from budget size.
 - K3's exact changing-state filter exceeded 200,000 states after 25 records
   (40.3125 CPU-seconds), before one full 512-record hypothesis. No states were
   discarded. The exact static reader matches V26 at 1e-12; dynamic science is
-  held pending the owner's choice of checked approximation or costly exact cells.
+  awaiting excluded resolution validation of the owner-approved particle
+  approximation. The completed exact static comparisons remain intact.
 - K7 uses a shared world goal across repeated structures and a new checksum
   library with hierarchy.py's three-episode length distribution. Prefix pieces
   contain no new goal evidence; a final piece does. This explicit construction

@@ -74,10 +74,17 @@ def generate(s,identity):
         after=tuple(float(np.clip(stock[j]-loss[j]+(size if action==j else 0),0,20)) for j in range(n))
         records.append(dict(action=action,size=float(size),shock=shock,stock=list(stock),after=list(after),edge=list(edge),precision=list(precision),streak=list(streak)))
         stock=after
-    return dict(point=list(point),dynamic=s['dynamic'],records=records,first_long_deficit=first)
+    result=dict(point=list(point),dynamic=s['dynamic'],records=records,first_long_deficit=first)
+    if s.get('inference')=='checked_particles':result['inference_key']=identity
+    return result
 
 
 def likelihood(raw,s,point,dynamic='P0',width=0,beta=None,visible=False,independent=False,max_states=200000):
+    if s.get('inference')=='checked_particles' and not visible and dynamic!='P0':
+        from . import setpoint_particles
+        ll,diagnostics=setpoint_particles.likelihood(raw,s,point,dynamic,width,beta,independent,
+            particles=s['particles'],replicate=s.get('particle_replicate',0))
+        return ll,diagnostics['particles']
     if not visible and dynamic=='P0' and s['needs']==2 and float(s['consumption']).is_integer() and all(float(row['size']).is_integer() for row in raw['records']):
         rows=raw['records']
         return static_grid(np.array([r['action'] for r in rows]),np.array([r['size'] for r in rows]),np.array([r['shock'] for r in rows]),np.array(point),width,-1. if beta is None else beta,s['consumption'],s['lapse'],independent),441

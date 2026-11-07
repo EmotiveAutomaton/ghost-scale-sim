@@ -1,0 +1,204 @@
+{
+  "source": "Sounding Line Stage 15 claim ledger",
+  "rows": [
+    {
+      "id": "S15-W5-IN1-20261107",
+      "card": "IN1",
+      "estimand": "Does a writer report stronger emotion when the event better matches its proposed trigger profile?",
+      "estimate": {
+        "bar": 0.1,
+        "interval": [
+          [
+            0.13251685791039908,
+            0.20884080670160873
+          ]
+        ],
+        "value": [
+          0.17125158844245553
+        ]
+      },
+      "outcome": "supports",
+      "control_status": "passes numerical known answers; minimum-effect sensitivity unquantified",
+      "strongest_rival": "Prompted reports and an analyst profile need not measure a biological channel",
+      "scope": "Crowd-enVENT prompted event reports",
+      "scope_qualifiers": {
+        "analysis": "descriptive",
+        "corpus": "Crowd-enVENT",
+        "population": "retained writers",
+        "substrate": "human self-report"
+      },
+      "pursuit": "IN1.w-RAGE and IN1.w-DISGUST itemwise branches; declared specification grid. No channel upgrade for FEAR or PANIC/GRIEF.",
+      "warrant": "Frozen design, complete 2000-draw cluster refits and fresh replay",
+      "public_wording": "Across the four prompted emotions, the frozen trigger-fit index adds a positive descriptive association with reported intensity beyond valence, confidence and response style; only RAGE and DISGUST clear their separate bars.",
+      "detail": "WEEK5/IN1_PRIMARY.md",
+      "supersedes": [],
+      "superseded_by": [],
+      "correction_class": null
+    },
+    {
+      "id": "S15-W5-IN2-20261107",
+      "card": "IN2",
+      "estimand": "Does anticipated harm interact with unpleasantness to increase reported FEAR intensity?",
+      "estimate": {
+        "bar": 0.1,
+        "interval": [
+          [
+            -0.23152170969760566,
+            0.024634980473729938
+          ]
+        ],
+        "value": [
+          -0.09746432741931671
+        ]
+      },
+      "outcome": "inconclusive",
+      "control_status": "passes numerical known answers; minimum-effect sensitivity unquantified",
+      "strongest_rival": "Prompted reports and an analyst profile need not measure a biological channel",
+      "scope": "Crowd-enVENT prompted event reports",
+      "scope_qualifiers": {
+        "analysis": "descriptive",
+        "corpus": "Crowd-enVENT",
+        "population": "retained writers",
+        "substrate": "human self-report"
+      },
+      "pursuit": "Retain the unresolved interaction and the preregistered rival; run the declared appraisal specifications without relabelling stress or changing the model.",
+      "warrant": "Frozen design, complete 2000-draw cluster refits and fresh replay",
+      "public_wording": "The interaction of consequence anticipation and unpleasantness is inconclusive in the prompted FEAR reports; its negative point estimate does not distinguish uncertainty-sensitive fear from stress in the same rating.",
+      "detail": "WEEK5/IN2_PRIMARY.md",
+      "supersedes": [],
+      "superseded_by": [],
+      "correction_class": null
+    },
+    {
+      "id": "S15-W5-IN3-20261107",
+      "card": "IN3",
+      "estimand": "Does perceived control quiet FEAR while strengthening RAGE?",
+      "estimate": {
+        "bar": 0.15,
+        "interval": [
+          [
+            -0.10472270876715363,
+            0.13775852299643002
+          ],
+          [
+            -0.09103682111631609,
+            0.08138831219460724
+          ],
+          [
+            -0.0775460114040604,
+            0.09377414374001719
+          ]
+        ],
+        "value": [
+          0.016024792605620758,
+          -0.0031920485712487647,
+          0.012832744034371993
+        ]
+      },
+      "outcome": "against",
+      "control_status": "passes numerical known answers; minimum-effect sensitivity unquantified",
+      "strongest_rival": "Prompted reports and an analyst profile need not measure a biological channel",
+      "scope": "Crowd-enVENT prompted event reports",
+      "scope_qualifiers": {
+        "analysis": "descriptive",
+        "corpus": "Crowd-enVENT",
+        "population": "retained writers",
+        "substrate": "human self-report"
+      },
+      "pursuit": "IN3.ic: prospective fixed-design sensitivity at the registered 0.15 contrast before an absence claim; preserve both component slopes.",
+      "warrant": "Frozen design, complete 2000-draw cluster refits and fresh replay",
+      "public_wording": "The RAGE-minus-FEAR control contrast lies inside the registered practical band in these self-reports; minimum-effect sensitivity remains to be checked before treating this as evidence of absence.",
+      "detail": "WEEK5/IN3_PRIMARY.md",
+      "supersedes": [],
+      "superseded_by": [],
+      "correction_class": null
+    },
+    {
+      "id": "S15-W5-SP1-H2-20261107",
+      "card": "SP1.h2",
+      "estimand": "Does the thermal comfort set point follow the weather more in naturally ventilated buildings?",
+      "estimate": {
+        "bar": 0.1,
+        "interval": [
+          0.24107110697501058,
+          0.3708500662415716
+        ],
+        "units": "degrees of neutral temperature per outdoor degree",
+        "value": 0.30496884470607777
+      },
+      "outcome": "supports",
+      "control_status": "passes numerical known answers; minimum-effect sensitivity separate",
+      "strongest_rival": "Thermal history, personal control and cohort selection are confounded",
+      "scope": "ASHRAE eligible buildings",
+      "scope_qualifiers": {
+        "analysis": "descriptive observational",
+        "substrate": "human reports"
+      },
+      "pursuit": "Run the all-Griffiths specification and the declared climate/range companions; retain the original invalid uncertainty record and its exact repair.",
+      "warrant": "Frozen design, complete cluster refits and independent replay",
+      "public_wording": "The repaired, unchanged thermal contrast supports a larger outdoor-to-neutral-temperature slope in naturally ventilated buildings than in air-conditioned buildings; this is an observational adaptive-comfort comparison.",
+      "detail": "WEEK5/SP1_h2_PRIMARY.md",
+      "supersedes": [],
+      "superseded_by": [],
+      "correction_class": null
+    },
+    {
+      "id": "S15-W5-SP2-20261107",
+      "card": "SP2",
+      "estimand": "Does steady climate control sharpen thermal sensitivity?",
+      "estimate": {
+        "bar": 0.05,
+        "interval": [
+          0.06874469613450146,
+          0.2115100913857242
+        ],
+        "units": "sensation units per operative-temperature degree",
+        "value": 0.15204718004135803
+      },
+      "outcome": "supports",
+      "control_status": "passes numerical known answers; minimum-effect sensitivity separate",
+      "strongest_rival": "Thermal history, personal control and cohort selection are confounded",
+      "scope": "ASHRAE eligible buildings",
+      "scope_qualifiers": {
+        "analysis": "descriptive observational",
+        "substrate": "human reports"
+      },
+      "pursuit": "Run the declared range-matched, ordinal, at-least-four-degree and recorded personal-control variants before a mechanism claim.",
+      "warrant": "Frozen design, complete cluster refits and independent replay",
+      "public_wording": "Air-conditioned buildings have a larger median sensation-per-degree slope than naturally ventilated buildings in this observational sample; cooling type does not separate thermal history from perceived control.",
+      "detail": "WEEK5/SP2_PRIMARY.md",
+      "supersedes": [],
+      "superseded_by": [],
+      "correction_class": null
+    },
+    {
+      "id": "S15-W5-SP3-20261107",
+      "card": "SP3",
+      "estimand": "Does sustained distance from the proposed thermal reference dull sensitivity?",
+      "estimate": {
+        "bar": 0.01,
+        "interval": [
+          -0.004123481137370194,
+          0.0380700411223036
+        ],
+        "units": "change in sensation-per-degree slope per outdoor-distance degree",
+        "value": 0.01724737437767215
+      },
+      "outcome": "inconclusive",
+      "control_status": "passes numerical known answers; minimum-effect sensitivity separate",
+      "strongest_rival": "Thermal history, personal control and cohort selection are confounded",
+      "scope": "ASHRAE eligible buildings",
+      "scope_qualifiers": {
+        "analysis": "descriptive observational",
+        "substrate": "human reports"
+      },
+      "pursuit": "Run the declared hot/cold, clothing, metabolic-rate, study-cluster, range/ordinal and air-speed companions; do not relabel the point estimate as a reversed mechanism.",
+      "warrant": "Frozen design, complete cluster refits and independent replay",
+      "public_wording": "The registered negative relation between thermal sensitivity and distance from 22 degrees is inconclusive; the observational comparison does not establish dulling.",
+      "detail": "WEEK5/SP3_PRIMARY.md",
+      "supersedes": [],
+      "superseded_by": [],
+      "correction_class": null
+    }
+  ]
+}

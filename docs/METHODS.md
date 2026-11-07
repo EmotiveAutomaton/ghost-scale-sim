@@ -4,8 +4,10 @@ V27 adds binned midpoint diffusion with independent density integration,
 noisy-OR motive filtering, stable six-law stress likelihoods, retained-source
 rechecking, hard versus joint latent-cause interpretation, and hidden-boundary
 marker inference. Every new family has excluded known-answer controls. Exact
-changing-stock inference has an explicit state ceiling and remains held while
-a tractable approximation is assessed. Whole-block intervals, complete replay,
+changing-stock inference has an explicit state ceiling. The owner-approved
+particle alternative has prospective resolution checks against exact static
+controls, independent arithmetic and complete posterior and decision paths;
+its dynamic studies remain unadmitted until those checks pass. Whole-block intervals, complete replay,
 source capsules, measured reservations and shared-kernel limitations remain
 mandatory. [V27 design review](versions/v27-motives-and-set-points/DESIGN_REVIEW.md).
 

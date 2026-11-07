@@ -60,6 +60,10 @@ def initialize(c):
 def build_card(c,card,source):
     cid=card['id'];f=card['family'];repo=Path(read(c/'LOCAL_PATHS.json')['repo'])
     if (c/'protocols'/(cid+'.json')).exists():return
+    if f=='K1':
+        decision=read(c/'DECISIONS.json')['K1']
+        if decision['choice_law']!='locked_choices':raise ValueError('K1 choice law requires a recorded decision')
+        card=card|dict(settings=[s|dict(choice_law='locked_choices') for s in card['settings']],owner_decision=decision)
     if f=='K1' and 'type_mix' in card.get('changes',{}):
         card=card|dict(settings=[s|dict(type_mix=card['changes']['type_mix']) for s in card['settings']])
     impl=study.module(f,card.get('analysis_module'));controls=impl.controls()

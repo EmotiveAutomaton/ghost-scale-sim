@@ -29,17 +29,28 @@ load hysteresis, zero-support reporting and the prepared particle kernels.
 Shared numerical kernels remain a disclosed review limitation; these checks do
 not validate human mechanisms or general architecture.
 
-Two decisions still limit the complete build: K1's locked-choice interpretation,
-and K3's dynamic inference. K3's exact filter exceeded 200,000 states after 25
-of 512 records in an excluded single-hypothesis test. A particle alternative is
-prepared, but is neither admitted nor resolution-validated. Static comparisons
-proceed independently. Earlier-record dispositions and a retained-data closing
-analysis are prepared; the latter reproduces old scores before stratification. Cross-repository aggregate packages are prepared;
-delivery is recorded separately from verification and publication.
+The owner resolved both design decisions on November 7: locked makers preserve
+their choice rule and use diffusion only for timing; K3 may use checked particle
+approximation. [Exact owner decisions](OWNER_DECISIONS_2026-11-07.json).
+K1's excluded cost probe passed original execution, replay and independent
+reconstruction; its full primary is running and all 55 primary/texture cards
+are built. Three additional targeted decision and approximation tests passed.
+K3's exact filter exceeded 200,000 states after 25 of 512 records. Its new
+[resolution protocol](K3_APPROXIMATION_PROTOCOL.md) retains exact static controls,
+independent numerical checks and prospective posterior/decision stability bars.
+The first excluded dynamic check failed its declared numerical limits: two
+32,768-particle replicates differed by 0.0623 in posterior mass and 0.2988 nat
+in margin, against limits 0.05 and 0.25. The check and source are retained.
+A source-frozen common-random-number revision is being checked on the same
+fixtures with unchanged thresholds; approval alone does not admit its science.
+Previously verified static comparisons remain unchanged. The approved aggregate
+packages were copied to both explicitly named recipient locations, hash-checked
+and left uncommitted. Earlier copies at compact-date paths are retained.
 
 The controller and one native monitor are live. Build/admission reviews are
 bounded to at most 60 minutes while eligible work remains; otherwise routine
 health checks are twelve-hourly, with daily and terminal events. The monitor
 stays disarmed during operator work. Configured scheduling does not establish
-actual model delivery. This checkpoint does not claim all seven families are
+actual model delivery. Two completed native monitor deliveries are now recorded
+separately. This checkpoint does not claim all seven families are
 unattended-ready or promise useful computation for the entire allocation.
