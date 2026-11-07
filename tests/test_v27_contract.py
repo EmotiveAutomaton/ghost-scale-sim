@@ -23,6 +23,13 @@ def test_pool_isolation_measured_costs_and_four_slots():
     assert c.accounted(dict(pool='followup_healing',state='RUNNING',cpu_seconds=10,reserved_cpu_seconds=100))==100
 
 
+def test_owner_gear_one_admits_only_one_compute_slot():
+    a,p,t=fixture()
+    assert c.admission(p,a,t,{},running=0,worker_limit=1)
+    with pytest.raises(ValueError,match='shared worker'):
+        c.admission(p,a,t,{},running=1,worker_limit=1)
+
+
 def test_descendant_precision_and_reread_limits():
     a,p,t=fixture();p=p|dict(kind='followup',lane='followup',pool='followup_healing',generation=2)
     with pytest.raises(ValueError,match='primary condition'):c.admission(p,a,t,{})

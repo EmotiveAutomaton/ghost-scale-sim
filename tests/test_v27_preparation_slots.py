@@ -18,3 +18,9 @@ def test_controller_restart_preserves_fresh_host_backoff(tmp_path):
     write(tmp_path/'HOST_LOAD.json',dict(samples=samples,worker_limit=2))
     assert queue.resume_load(tmp_path,clock=1040.)==(2,samples)
     assert queue.resume_load(tmp_path,clock=1200.)==(4,[])
+
+
+def test_gear_one_survives_host_load_recovery(tmp_path):
+    write(tmp_path/'GEAR.json',dict(worker_limit=1))
+    assert queue.requested_limit(tmp_path,2)==1
+    assert queue.requested_limit(tmp_path,4)==1

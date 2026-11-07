@@ -179,7 +179,7 @@ def export(c):
     q=read(c/'QUEUE_STATUS.json') if (c/'QUEUE_STATUS.json').exists() else dict(state='BUILDING',active=[],prepared=[])
     write(out/'CURRENT_STATUS.json',dict(at=native.now().isoformat(),queue=q,packets=rows,
         built_families=[p.stem for p in (c/'built').glob('*.json')],commissioned_cards=len(read(c/'CARDS.json')) if (c/'CARDS.json').exists() else 0,
-        pools_charged_seconds=charges(c),pool_ceilings_seconds=contract.POOLS,gear_limit=4),immutable=False)
+        pools_charged_seconds=charges(c),pool_ceilings_seconds=contract.POOLS,gear_limit=requested_limit(c,4)),immutable=False)
 
 
 def outside(c):
@@ -215,6 +215,12 @@ def resume_load(c,clock=None):
     samples=[x for x in saved.get('samples',[]) if current-x[0]<=1260]
     fresh=bool(samples and current-samples[-1][0]<=120)
     return (saved.get('worker_limit',4),samples) if fresh else (4,[])
+
+
+def requested_limit(c,host_limit):
+    path=c/'GEAR.json';requested=read(path)['worker_limit'] if path.exists() else 4
+    if requested not in (1,2,4):raise ValueError('invalid owner worker limit')
+    return min(requested,host_limit)
 
 
 def queue(c):
@@ -261,7 +267,7 @@ def queue(c):
                 try:prepare(c,p['card'],probe.parent)
                 except Exception as exc:
                     write(probe.parent/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(c,probe.parent.name+'-continuation','build_required',dict(error=str(exc)))
-            limit=live_load['limit']
+            limit=requested_limit(c,live_load['limit'])
             candidates=[p.parent for p in (c/'packets').glob('*/PLAN.json') if read(p.parent/'STATUS.json')['state']=='PREPARED']
             candidates.sort(key=lambda p:(read(c/'cards'/(read(p/'PLAN.json')['card']+'.json'))['order'],p.name))
             stopping=(c/'STOP').exists() or (c/'DRAIN_CONTROLLER').exists() or native.now()>=datetime.fromisoformat(contract.NEW_STARTS_CLOSE)

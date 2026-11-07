@@ -37,7 +37,7 @@ def accounted(row):
 def admission(p,a,now,charges,running=0,worker_limit=4):
     if a!=acceptance(a['opened'],a['packet_sha256']):raise ValueError('acceptance changed')
     if now.tzinfo is None or not datetime.fromisoformat(a['opened'])<=now<datetime.fromisoformat(NEW_STARTS_CLOSE):raise ValueError('outside start window')
-    if worker_limit not in (2,4) or running>=worker_limit:raise ValueError('shared worker slots')
+    if worker_limit not in (1,2,4) or running>=worker_limit:raise ValueError('shared worker slots')
     if p.get('numerical_threads')!=1 or p.get('priority')!='below-normal':raise ValueError('resource mismatch')
     kind=p['kind'];f=p['family'];pool=p['pool'];cap=p['cpu_cap_seconds'];wall=p['projected_wall_seconds']
     if f not in ORDER or kind not in KINDS:raise ValueError('uncommissioned kind or family')

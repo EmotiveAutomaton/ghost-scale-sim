@@ -4,8 +4,9 @@ November 7 setup checkpoint: K2, K4, K5, K6 and K7 have verified primary results
 complete raw replay and independent reconstruction. Their full declared grids
 are built, with sequential texture admission, doubled-block precision packets
 and bounded follow-ups. K3's exact static overshoot comparison is also verified.
-The queue uses four single-thread, below-normal scientists, with the declared
-host-load reduction and independent budget pools. Consult
+The owner subsequently selected Gear 1: one single-thread, below-normal compute
+worker, including long numerical validation. The original budgets and deadlines
+remain unchanged; low host load does not restore the higher gear. Consult
 [current state](../../../results/v27/CURRENT_STATUS.json) for subsequent counts.
 
 Corrections lead this checkpoint. K5's first probe exposed a mathematically tied

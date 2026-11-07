@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K5-T015-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T015.md).
+
 ## G-V27-K1-1
 
 Do decision times distinguish a locked rule from a strong preference after learning personal speed? The study card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.

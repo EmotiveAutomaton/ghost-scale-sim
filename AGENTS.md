@@ -31,6 +31,10 @@ V27 has 760 CPU-hours in four independent pools, opens at its immutable handoff,
 closes new starts November 16 04:00 UTC and drains by 06:00 UTC. Gear 2 permits
 four single-thread below-normal scientists, reducing to two under its host-load
 rule. Keep Sounding Line priority, no GPU and no environment synchronization.
+Current owner direction, November 7: use Gear 1, one single-thread below-normal
+compute worker including long numerical preparation. This lower limit persists
+until the owner changes it; low host load does not restore Gear 2. Preserve the
+original allocation and scientific capsules. See the version's gear-change receipt.
 Build all eligible cards; use declared textures, two-generation follow-ups,
 precision doubles and retained-data re-reads under the packet. Never repeat valid
 old science. Controls, immutable sources, measured reservations, complete replay
