@@ -35,7 +35,8 @@ def pulse(**kw):
     elapsed=time.process_time()-start
     write(root/'STATUS.json',dict(state='RUNNING',pid=os.getpid(),heartbeat=datetime.now(timezone.utc).isoformat(),cpu_seconds=elapsed,**kw),immutable=False)
     kind='resolution_healing' if args.pool=='followup_healing' else 'resolution_preflight'
-    write(c/'accounting'/(args.batch+'.json'),dict(pool=args.pool,kind=kind,state='RUNNING',cpu_seconds=elapsed),immutable=False)
+    write(c/'accounting'/(args.batch+'.json'),dict(pool=args.pool,kind=kind,state='RUNNING',cpu_seconds=elapsed,
+        reserved_cpu_seconds=protocol['cpu_ceiling_seconds']),immutable=False)
     if elapsed>protocol['cpu_ceiling_seconds']:raise TimeoutError('Excluded resolution preparation cap reached')
 try:
     pulse(phase='exact-controls')
