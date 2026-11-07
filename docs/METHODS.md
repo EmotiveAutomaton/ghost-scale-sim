@@ -1,5 +1,14 @@
 # The methodology layer
 
+V27 adds binned midpoint diffusion with independent density integration,
+noisy-OR motive filtering, stable six-law stress likelihoods, retained-source
+rechecking, hard versus joint latent-cause interpretation, and hidden-boundary
+marker inference. Every new family has excluded known-answer controls. Exact
+changing-stock inference has an explicit state ceiling and remains held while
+a tractable approximation is assessed. Whole-block intervals, complete replay,
+source capsules, measured reservations and shared-kernel limitations remain
+mandatory. [V27 design review](versions/v27-motives-and-set-points/DESIGN_REVIEW.md).
+
 The November 6 theory-day extension adds exact hidden-stock scatter/gather filters
 checked against four-record brute enumeration, explicit frame marginalization,
 an exact source-closure dynamic programme with a separate log-weight simulation,

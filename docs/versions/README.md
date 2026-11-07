@@ -1,5 +1,9 @@
 # Version index
 
+[V27 commissioned week](v27-motives-and-set-points/README.md) is active.
+All V26 lanes are closed; adjacent handoff receipts preserve pinned historical
+status files and record the lapse of unused hours.
+
 **V26 follow-ups complete:** [E1 longer histories and U1 source learning](v26-top-and-ends/followups-20261103/FINAL_REPORT.md), 48 verified scientific worlds; zero remaining jobs. Original ten primaries and 56 texture variants remain closed and published.
 [N16 final robustness](v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md) lands
 all 64 fixed blocks without extending the completed confirmation.
@@ -21,6 +25,8 @@ not start a clock or authorize execution.
 
 | Version | Status | Entry point |
 |---|---|---|
+| V27 | Active implementation and controlled execution; seven commissioned families | [Program index](v27-motives-and-set-points/README.md) |
+| V26 | Closed November 7, including the separately approved G3-T09 map | [Day final report](v26-top-and-ends/day-20261106/FINAL_REPORT.md) |
 | V25 | Finite commissioned science complete; owner requested theory-review hold; thirteen primaries, eight follow-ups and separate N16 confirmation verified | [Final report](v25-pieces-and-ends/FINAL_REPORT.md) |
 | V24 | Pilots and eight follow-ups complete; N16 and D5 verified; T1 and T3 retained as zero-complete-world runtime failures without retry | [Program index](v24-powered-readers/README.md) |
 | V23 | Closed October 19; 33 reviewed logical batches, six unconfirmed nominations, failures and unexecuted frontier retained | [Final report](v23-research-division/FINAL_REPORT.md) |

@@ -8,7 +8,7 @@ authorship and contribution records retain their original attribution.
 
 - Read the remainder of this file and the reading sequence below before acting.
 - Check the live runner PID and heartbeat before touching imported code. An idle
-  machine is a state to report, not an instruction to invent work. See the standing
+  machine is a state to report, not an instruction to invent work. See amendment L below and the standing
   amendments of October 25 and November 2 for commissioned queue/texture work.
 - Read `project-memory/ghost-scale/INDEX.md` under the agent's private configuration
   root if present. It indexes dated local memories; current specifications and primary
@@ -18,7 +18,47 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V27 commissioned week, November 7
+
+The owner commissioned the full V27 packet, including amendments H-M below.
+Read `docs/versions/v27-motives-and-set-points/README.md`, its packet and current
+implementation status, `results/v27/AUTHORIZATION.json`, and outer `.local/v27/HANDOFF.md`.
+V26 is closed at this handoff; its unspent allocation lapses and all completed
+scientific bytes stay unchanged. Adjacent `V27_HANDOFF_CLOSEOUT.json` receipts
+record closure without changing status files pinned by completed descendants.
+
+V27 has 760 CPU-hours in four independent pools, opens at its immutable handoff,
+closes new starts November 16 04:00 UTC and drains by 06:00 UTC. Gear 2 permits
+four single-thread below-normal scientists, reducing to two under its host-load
+rule. Keep Sounding Line priority, no GPU and no environment synchronization.
+Build all eligible cards; use declared textures, two-generation follow-ups,
+precision doubles and retained-data re-reads under the packet. Never repeat valid
+old science. Controls, immutable sources, measured reservations, complete replay
+and independent reconstruction precede scientific landing. The 60-minute build
+wake overrides twelve-hour routine checks only while work needs building/admission.
+
+## Standing amendments, 7 November
+
+**H. Build wakes.** While any card of the current version is unbuilt, unadmitted or queued, or a worker is idle while commissioned work is ready, keep one check-in at most 60 minutes ahead. A check-in that finds unbuilt or unadmitted work builds or admits it. For those windows only, this overrides the twelve-hour health cadence and the historical event-only wake rule's bar on periodic model checks and "work remains" continuation. While everything commissioned is admitted and running, the twelve-hour cadence and event-only wakes apply unchanged.
+
+**I. Charge measured CPU.** A finished packet in the follow-ups, healing and texture pool (texture, follow-up, precision follow-up, re-read or healing) is charged the CPU it actually spent, not its reservation. While a packet runs, its reservation counts against its pool. A start is admitted when the pool's measured charges, plus the reservations of its running packets, plus the new reservation fit the pool. An overrun found after a packet finishes is logged and blocks new starts in that pool only, never in other pools.
+
+**J. Follow-ups and descendants.**
+- Amendment C's automatic follow-ups may run two generations deep within a version.
+- Every verified primary, null or unresolved included, still registers C's up to three follow-ups. The second generation (follow-ups of those follow-ups) is registered from C's menu when the primary is positive or when its sign differs from its pre-check's expected sign.
+
+**K. Texture stops after seven.** A family's texture lane stops after seven consecutive variants in which no reported estimate differs from the card's verified primary estimate by more than its practical bar, or at the pool or window limit. This follows the curator's 14 October preference for a stopping rule of about five to seven null batches per family. It replaces amendment F's five.
+
+**L. Idle workers take commissioned work.**
+- An idle worker takes the next ready study, texture cell, follow-up, re-read (section 6) or precision follow-up in the current packet.
+- "Never inflate sample counts merely to occupy the remaining clock" stays, with one exception. Where a primary's or texture cell's interval straddles its bar, a precision follow-up that doubles its blocks is commissioned work, charged to the follow-ups, healing and texture pool.
+
+**M. Workers.** V27 runs up to four single-thread, below-normal Ghost workers under the load rule in section 0.4 of V27's packet.
+
 ## V26 theory-review hold, November 6
+
+November 7 V27 handoff closes every V26 lane. All V26 review holds stand and
+unspent hours lapse; the adjacent handoff closeouts preserve historical pins.
 
 November 7 final closure: all five registered studies and thirty declared textures
 are verified. The sole held G3-T09 map completed in its separately owner-approved
@@ -1064,7 +1104,7 @@ count; the counts live in files that are rewritten as the program runs:
   here** ("this one has no queue; its runs are minutes"): V13 is a manifest-driven, multi-day card
   program with its own ledger and watchdog, described under Environment. The distinction that
   survives is that V13's queue is a *pre-registered program that ends*, not a loop to keep full —
-  the correct response to an idle machine here is to report state, not to invent work (historical; see the
+  the correct response to an idle machine here is to report state, not to invent work (historical; amendment L now requires taking commissioned work; see the
   standing October 25 and November 2 amendments for commissioned work).
 - **Their `FINDINGS.md` two-tier system**, their file locks (`SOUNDING_LINE_SPEC.md`, `prereg/*.py`,
   `locks.py`), and `bounded_v5`/`family_v2`. This repository has its own equivalents — closed

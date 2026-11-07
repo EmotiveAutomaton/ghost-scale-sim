@@ -1,5 +1,11 @@
 # Ghost Scale Simulation
 
+**V27 commissioned week, November 7:** seven constructed-method studies and
+their bounded exploratory lanes are being built and run in Gear 2.
+[Program and design review](docs/versions/v27-motives-and-set-points/README.md).
+[Recorded execution state](results/v27/CURRENT_STATUS.json).
+V26 is closed; the historical notes below retain its original evidence.
+
 **November 6 theory-day extension:** the owner commissioned five finite relevance
 checks and their declared texture lanes. [Design review and protocols](docs/versions/v26-top-and-ends/day-20261106/README.md).
 [Current execution state](results/v26/day-20261106/CURRENT_STATUS.json).

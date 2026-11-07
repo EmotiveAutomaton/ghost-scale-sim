@@ -1,5 +1,9 @@
 # Documentation map
 
+[V27 current program](versions/v27-motives-and-set-points/README.md): motives,
+set points, stress, closing, recursive reading and structural markers. Consult
+its implementation status for prepared work and unresolved design choices.
+
 [V26 follow-up results](versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md): E1 longer histories and U1 source learning are complete and verified; no jobs or recurring wakes remain. Original V26 results stay closed and published.
 [N16 completed robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md):
 all 64 blocks verified; earlier dated continuation notes below are historical.

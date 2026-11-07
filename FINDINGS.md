@@ -1,5 +1,17 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K2-1
+
+Can a reader separate several motives for one act, including feedback from acting? The study card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2.md).
+
+## G-V27-K4-1
+
+Which records distinguish predicted harm from uncertainty about outcomes or actions? The study card retains 12 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K4.md).
+
 ## G-V26-DAY-G3-T09-1
 
 When does closing a source model protect against a con or analyst-defined contamination? The separate out-of-case map retains 15 settings with sixteen independent whole-world blocks per setting. Exact con-protection bar: not met; separate honest-source closure arm: unresolved at this sample size. honest-source closure share (0, H): 0.0332031, 95% interval 0.0227265 to 0.0436797; honest-source closure share (1, H): 0.046875, 95% interval 0.0363434 to 0.0574066; closed minus open capture (0, Mc): -0.000370912, 95% interval -0.00116149 to 0.000419668. Contamination grid answer: between 0.05 and 0.1. Smallest tested contamination with an interval wholly above zero: 0.1; unresolved tested levels: 0.05. This is a discrete grid result, not an interpolated threshold. Constructed-method evidence; miniature, architecture untested.

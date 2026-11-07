@@ -1,5 +1,44 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## V27 motives and set points
+
+| Claim | Question | Status and evidence |
+|---|---|---|
+| G-V27-K2-1 | Can a reader separate several motives for one act, including feedback from acting? | QUALIFIED. Can a reader separate several motives for one act, including feedback from acting? The study card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested. [Report](../versions/v27-motives-and-set-points/reports/K2.md) |
+| G-V27-K4-1 | Which records distinguish predicted harm from uncertainty about outcomes or actions? | QUALIFIED. Which records distinguish predicted harm from uncertainty about outcomes or actions? The study card retains 12 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested. [Report](../versions/v27-motives-and-set-points/reports/K4.md) |
+
+**What these add up to.** These constructed comparisons identify distinctions only within their declared generators and reader libraries. Scale-only verdicts do not validate the curator's human mechanisms. Latest recorded card: G-V27-K2-1; its declared bar conjunction is met.
+
+## Curator positions, 1 to 7 November
+
+These are the curator's positions and exact quotations as supplied in the [V27 packet](../versions/v27-motives-and-set-points/PACKET.md), section 4. They are store entries, not findings.
+
+| Row | Position | His words | Date | Cards | Status |
+|---|---|---|---|---|---|
+| C-1101-1 | A reader reaches a maker's top by running her own expertise as a forward model and fitting it into a larger inference | "The reader largely has to start by using their own expertise and run it as a forward model and try to modify it to fit it into a larger inference." | 2026-11-01 | V26 E2 | OPEN |
+| C-1103-1 | Each Panksepp channel is a pre-solved function: its trigger is the shape of a problem, its function the transformation it applies, run forward to act and backward to read | "They are all chains in the inference that come pre-solved" | 2026-11-03 | V26 G1 | OPEN |
+| C-1104-1 | Some channels' triggers are slopes along a set point, not levels | "I think it is slopes, not levels. But the triggers for some of these things are slopes along the set points" | 2026-11-04 | V26 G1 | OPEN |
+| C-1106-1 | DISGUST follows a read of harmful intent, then stops inquiry | "They never take one step further once you find a puzzle piece that is truly inefficient." | 2026-11-06 | V26 G3 | OPEN |
+| C-1107-1 | Channels fire at graded strength and can fire together | "you're applying like 49% of anger to the solution" | 2026-11-07 | | OPEN |
+| C-1107-2 | A channel's strength may be its fit to its trigger | "I do wonder if the amount that they trigger is simply decided upon how well the scenario fits their trigger" | 2026-11-07 | K4 | OPEN |
+| C-1107-3 | Set points are never seen, only the efforts that restore them | "you never actually see the set point" | 2026-11-07 | K3 | OPEN |
+| C-1107-4 | Restoring efforts overshoot | "People will often overshoot." | 2026-11-07 | K3 | OPEN |
+| C-1107-5 | Precision sharpens with time near a set point | "they increase in resolution over time" | 2026-11-07 | K3 (P+ held as a hypothesis only; no primary measures it) | OPEN |
+| C-1107-6 | A lasting deficit dulls a need | "the resolution decreases. It's still there, but it just gets weaker" | 2026-11-07 | K3 | OPEN |
+| C-1107-7 | Security is maximized, with value falling as other needs get louder; the balance is the control | "That's the actual control, is that it's being balanced." | 2026-11-07 | V26 G5 | OPEN |
+| C-1107-8 | FEAR follows predicted harm; anxiety is a light FEAR; stress is caused by uncertainty, and his gun example shows uncertainty about what to do | "Anxiety is a light form of fear, and stress is caused by uncertainty." | 2026-11-07 | K4 | OPEN |
+| C-1107-9 | Deliberation time reveals how large a decision tree a value sits in; he asks whether a model of the person predicts the trade | "Your decision tree should be smaller" | 2026-11-07 | K1 | OPEN |
+| C-1107-10 | One act can serve several motives at once, read through a network of associations | "anything that can be associated will" | 2026-11-07 | K2 | OPEN |
+| C-1107-11 | Closing on a source keeps what it already taught | "a little piece of it is with you forever" | 2026-11-07 | K5 | OPEN |
+| C-1107-12 | Re-checking is separate, effortful, and only weakens associations; RAGE can drive it | "all you're doing is kind of weakening the associations" | 2026-11-07 | K5 | OPEN |
+| C-1107-13 | In-groups deceive outsiders through shared inference | "this friction is probably where bad actors live" | 2026-11-07 | K5 | OPEN |
+| C-1107-14 | New inferences should refine old ones, recursively | "zero in further on old information and recursively somehow" | 2026-11-07 | K6 | OPEN, logic only |
+| C-1107-15 | Laughter marks a completed hidden structure, and shared laughter marks shared inference | "Humor and laughter is an inference marker." | 2026-11-07 | K7 | OPEN |
+| C-1107-16 | DISGUST may be SEEKING's opposite, with PLAY, LUST and CARE on a loop | "I think disgust might be the opposite of seeking." | 2026-11-07 | | OPEN, logic only |
+| C-1107-17 | Earlier claims can't be flagged: ToMpathy's closed-source state flags nothing, and correction is a re-read | "there's no way to go back and flag them" | 2026-11-07 | K5 | OPEN, adopted as the working position |
+
+**What these add up to.** The positions ask whether choices, timing, restoring efforts and social cues identify hidden motives and control rules. V27 commissions constructed tests; the OPEN labels are not empirical support, and no miniature result alone validates a human mechanism or an engine display.
+
 ## V26 theory-day relevance checks, November 6
 
 | Claim | Question | Status and evidence |
