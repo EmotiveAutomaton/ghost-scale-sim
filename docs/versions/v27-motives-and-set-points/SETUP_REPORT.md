@@ -1,6 +1,6 @@
 # V27 setup and viability report
 
-The packet is running. Five complete study families and two independent static set-point primaries have verified results. The owner resolved both design decisions: K1 preserves locked choices with diffusion timing; K3 uses checked approximation. K1's probe is verified, its primary is running and all 55 cards are built. K3's excluded resolution validation is running; the full seven-family build is not yet complete.
+The packet is running. Six complete study families and two independent static set-point primaries have verified results. The owner resolved both design decisions: K1 preserves locked choices with diffusion timing; K3 uses checked approximation. K1's probe and primary are verified and all 55 cards are built. K3's excluded resolution validation is running; the full seven-family build is not yet complete.
 
 Corrections: K5-H2 replaces the wrong group scope while preserving all 320 observation blocks. K7 has a probability-label correction and explicit zero-support handling. K3's static band gate now counts actual deficits. Censored ratios have finite lower bounds, not observed infinities. Every original and repair remains on record.
 
@@ -8,7 +8,7 @@ The table describes each study family, its verified primary result and the remai
 
 | Family | Verified primary / present state | Next work |
 |---|---|---|
-| Decision timing (K1) | Approved law, verified cost probe, primary running; full grid built | Primary replay/review, then declared texture and follow-ups |
+| Decision timing (K1) | Approved law, verified cost probe and primary; full grid built | Declared texture and follow-ups |
 | Motive separation (K2) | Explaining-away comparison meets its declared bar; associative false-dislike excess also meets its diagnostic bar | Full declared texture grid and bounded follow-ups |
 | Set points (K3) | Static overshoot lower ratio bound is above 1.5; band-grid median 482 records misses 128 | Static follow-ups ready; approved dynamic approximation undergoing excluded resolution checks |
 | Fear and stress (K4) | Designed comparisons distinguish the two uncertainty laws in median 3–10 records | Full texture grid and bounded follow-ups |

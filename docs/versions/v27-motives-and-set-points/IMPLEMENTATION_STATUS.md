@@ -32,9 +32,11 @@ not validate human mechanisms or general architecture.
 The owner resolved both design decisions on November 7: locked makers preserve
 their choice rule and use diffusion only for timing; K3 may use checked particle
 approximation. [Exact owner decisions](OWNER_DECISIONS_2026-11-07.json).
-K1's excluded cost probe passed original execution, replay and independent
-reconstruction; its full primary is running and all 55 primary/texture cards
-are built. Three additional targeted decision and approximation tests passed.
+K1's excluded cost probe and full primary passed execution, complete replay and
+independent reconstruction. All 55 primary/texture cards are built. Its primary
+bar is met; this remains a scale comparison in the constructed model, not a
+human identity result. Four new decision/approximation tests and two resource
+accounting tests passed.
 K3's exact filter exceeded 200,000 states after 25 of 512 records. Its new
 [resolution protocol](K3_APPROXIMATION_PROTOCOL.md) retains exact static controls,
 independent numerical checks and prospective posterior/decision stability bars.

@@ -184,6 +184,17 @@ def export(c):
 
 def outside(c):
     count=0
+    # Long excluded numerical validation consumes a compute slot too. Short
+    # operator checks are separate; registered preparation is never invisible
+    # to the scientific admission/load rule.
+    registered=c/'COUNTED_PREPARATION.json'
+    if registered.exists():
+        for name in read(registered)['batches']:
+            if not name.replace('-','').isalnum():raise ValueError('invalid preparation batch')
+            status=c/name/'STATUS.json'
+            if status.exists():
+                row=read(status)
+                if row.get('state')=='RUNNING' and alive(row.get('pid',0)):count+=1
     for root in c.parent.iterdir():
         if not root.is_dir() or root==c or not root.name.startswith('v2'):continue
         for path in (root/'packets').glob('*/STATUS.json'):
@@ -198,13 +209,22 @@ def host_times():
     return idle.value,kernel.value+user.value
 
 
+def resume_load(c,clock=None):
+    current=time.time() if clock is None else clock
+    saved=read(c/'HOST_LOAD.json') if (c/'HOST_LOAD.json').exists() else {}
+    samples=[x for x in saved.get('samples',[]) if current-x[0]<=1260]
+    fresh=bool(samples and current-samples[-1][0]<=120)
+    return (saved.get('worker_limit',4),samples) if fresh else (4,[])
+
+
 def queue(c):
     runtime.below_normal();lock=c/'QUEUE_OWNER.lock';active={};start=time.process_time();samples=[];limit=4;last=host_times();last_time=time.monotonic()
     with lock.open('x') as f:f.write(str(os.getpid()))
     source=native.frozen_source(c,EXTRAS)
-    live_load=dict(limit=4);halt=threading.Event()
+    saved_limit,saved_samples=resume_load(c)
+    live_load=dict(limit=saved_limit);halt=threading.Event()
     def sample_load():
-        before=host_times();history=[]
+        before=host_times();history=saved_samples
         while not halt.wait(30):
             current=host_times();fraction=1-(current[0]-before[0])/max(1,current[1]-before[1]);before=current
             history.append([time.time(),fraction]);history=history[-42:];live_load['limit']=contract.load_limit(history,live_load['limit'])
