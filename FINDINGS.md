@@ -1,5 +1,23 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V26-DAY-G5-T03-1
+
+Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: unresolved at this sample size. records needed (LV): 68, 95% interval 59 to 82; records needed (SP): 46, 95% interval 36 to 71. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G5-T03_REPORT.md).
+
+## G-V26-DAY-G4-T02-1
+
+How many well-priced offers distinguish a strong terminal weight, and how many records do offers save? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records needed (A9): 125.5, 95% interval 104 to 149; offers needed (A9): 8, 95% interval 7 to 8.5. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G4-T02_REPORT.md).
+
+## G-V26-DAY-G5-T02-1
+
+Can observed security choices distinguish an asymmetric set point from a smooth preference? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: not met. records needed (LV): 130.5, 95% interval 104.5 to 182.5; records needed (SP): 94.5, 95% interval 78 to 127. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v26-top-and-ends/day-20261106/G5-T02_REPORT.md).
+
 ## G-V26-DAY-G4-T01-1
 
 How many well-priced offers distinguish a strong terminal weight, and how many records do offers save? The separate texture variant retains 3 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records needed (A9): 237.5, 95% interval 168 to 255; offers needed (A9): 13.5, 95% interval 11 to 16. Constructed-method evidence; miniature, architecture untested.
