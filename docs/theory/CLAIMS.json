@@ -187312,6 +187312,3664 @@
       "source_sha256": "651e2f3af9b26a1c8c43a2b8dd24ca932f1283901137022b0dff315189798950",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "When does closing a source model protect against a con or analyst-defined contamination? The separate out-of-case map retains 15 settings with sixteen independent whole-world blocks per setting. Exact con-protection bar: not met; separate honest-source closure arm: met. honest-source closure share (0, H): 0, 95% interval 0 to 0; honest-source closure share (1, H): 0, 95% interval 0 to 0; closed minus open capture (0, Mc): 0, 95% interval 0 to 0. Contamination grid answer: above 0.1. Smallest tested contamination with an interval wholly above zero: none; unresolved tested levels: none. This is a discrete grid result, not an interpolated threshold. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Provisional worlds contain 32 alternating-truth sources, four worlds nested per independent block. Delta=0 runs all five source types; positive delta runs M and H. The gate uses joint posterior probability that an agenda differs from the latent hypothesis, never evaluator truth. K and D are updated independently on the same items; K alone receives post-update drift toward the agenda with greater posterior mass, ties to agenda zero. Con switches after 16 records. Expanded library divides the original agenda prior across strengths 0.5 and 1. Unfittable acts supply equal 0.001 likelihood to every hypothesis. Exact delta-zero dynamic-program values remain controls, not discoveries.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.002240978451709796,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0013058244182108986,
+            0.0031761324852086934
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.0004387408725893625,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.0041020210226111594,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0059133922758554495,
+            -0.002290649769366869
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.0008498306971507321,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.12109375,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.10014050628111203,
+            0.142046993718888
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.009830513587592122,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0023906927437139713,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0016145966367565445,
+            0.003166788850671398
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.00036411657436337207,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.004474718829936827,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.005979182346779179,
+            -0.0029702553130944746
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.0007058405487367797,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.1015625,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0860603785961601,
+            0.1170646214038399
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.00727304168946299,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.00835151625921866,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.005417747075976569,
+            0.011285285442460751
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.0013764197183810081,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.00031770820513620727,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0007208343387050071,
+            8.541792843259259e-05
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.00018913238383178044,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 0.0016665764620083386,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0009036178498501279,
+            0.0024295350741665492
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.00035795293102187855,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.1123046875,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.09255059217867032,
+            0.13205878282132968
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.009267915988199446,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0024241513572041584,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0014455968275949756,
+            0.0034027058868133413
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.0004591028352737273,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.119140625,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.09542011912089224,
+            0.14286113087910776
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 5,
+          "standard_error": 0.01112881415773,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 0,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": true,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_capture",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.0,
+            "source": "Mc",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "closed",
+          "observations": 1024,
+          "setting": 10,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.005126449715451458,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.007026254060803279,
+            -0.0032266453700996378
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 6,
+          "standard_error": 0.0008913203454944016,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.004078873301471479,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.005721672017662865,
+            -0.0024360745852800934
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 6,
+          "standard_error": 0.0007707424834962685,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 1,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 1,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 11,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 11,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.005278435743164786,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.003289846335046907,
+            0.007267025151282666
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 6,
+          "standard_error": 0.000932975125900081,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.0006765290252845053,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0011453215970826654,
+            -0.0002077364534863453
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 6,
+          "standard_error": 0.00021994073130881555,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 1,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 1,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 11,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.01,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 11,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.005315102612993316,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.006712332771566729,
+            -0.003917872454419904
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 7,
+          "standard_error": 0.0006555304869798171,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.005108191987253533,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.007174807912348047,
+            -0.003041576062159019
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 7,
+          "standard_error": 0.0009695823808732026,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 2,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 2,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 12,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 12,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0033282534574120763,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0004299239706973732,
+            0.00622658294412678
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 7,
+          "standard_error": 0.001359792678533303,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.00015758179423859347,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0004184624922838176,
+            0.00010329890380663065
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 7,
+          "standard_error": 0.00012239590591705293,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 2,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 2,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 12,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.02,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 12,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.00669504659728433,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.009543960867626225,
+            -0.003846132326942436
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 8,
+          "standard_error": 0.0013366088239232976,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.002249015651703777,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.004272992523245538,
+            -0.00022503878016201604
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 8,
+          "standard_error": 0.0009495776598411764,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 3,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 3,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 13,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 13,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0030865193492837038,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0005282529716529923,
+            0.0067012916702204
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 8,
+          "standard_error": 0.0016959220679033844,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "unresolved at this sample size"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.00024751327354520644,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0005412937777006389,
+            4.626723061022602e-05
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 8,
+          "standard_error": 0.00013783131989565358,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 3,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 3,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 13,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.05,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 13,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.006010365522225864,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.007732620076403119,
+            -0.0042881109680486095
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 9,
+          "standard_error": 0.0008080203248373449,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.004011521104647914,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.006104348755006445,
+            -0.0019186934542893834
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "H",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 9,
+          "standard_error": 0.0009818799861900285,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 4,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "H",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 4,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 14,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "H",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 14,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.003254783462612293,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0005948253411139303,
+            0.005914741584110655
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 9,
+          "standard_error": 0.0012479573476370286,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.00031159470416882796,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.0006706236931199561,
+            4.743428478230018e-05
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "M",
+            "theta": 0.5,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 9,
+          "standard_error": 0.0001684435785492233,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 4,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "M",
+            "theta": 0.7,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 4,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.0,
+          "blocks": 16,
+          "direction": "above",
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 0
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 14,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "delta": 0.1,
+            "source": "M",
+            "theta": 0.9,
+            "truth": 1
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "D_minus_K_logscore",
+          "observations": 1024,
+          "setting": 14,
+          "standard_error": 0.0,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        }
+      ],
+      "id": "G-V26-DAY-G3-T08-1",
+      "reader": "Declared finite exact readers; pointwise whole-block intervals",
+      "source_file": "docs/versions/v26-top-and-ends/day-20261106/G3-T08_REPORT.md",
+      "source_line": 3,
+      "source_sha256": "735bb05e5c44f31d5e0002f471e120a454384c53927432b9d7bd4562cb34ee5e",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can hidden-stock evidence distinguish direction-relative from need-balance-relative triggers, and locate set points? The separate out-of-case map retains 4 settings with sixteen independent whole-world blocks per setting. Primary bar conjunction: met. records to distinguish direction-relative from balance-relative firing (c): 16.5, 95% interval 11.5 to 21; records to distinguish balance-relative from direction-relative firing (d): 16.5, 95% interval 14.5 to 22. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Provisional chronology: menus and restoring choices use start-of-record stocks; hidden decay/drop then restoring are applied together and clipped once; channels use the net start/end change. The ceiling sees both stocks and hidden outcomes. Exact joint 21x21 filtering uses uniform initial stocks and uniform law, set-point-pair and gain priors. Eight independently seeded makers per block per law in primary, four in texture. Case checks use 240 excluded worlds, best rival gain minimizes mean squared probability error within each maker; eligible records are counted per channel. Compilation uses the resident single-thread Numba stack, with all sources and dependencies pinned.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.5000505951990037,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4370906147852434,
+            0.5630105756127641
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.029538574133707078,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.550431736036603,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4764028824791665,
+            0.6244605895940395
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.03473169407723899,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.46396357170865943,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4023174459671702,
+            0.5256096974501486
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.0289221604470644,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.4795840102827449,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.42708136115736794,
+            0.5320866594081218
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.024632367786871306,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 128,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 16.5,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            11.5,
+            21.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_d",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.5249765755121241,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.47440855134182675,
+            0.5755445996824213
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.023724710854944275,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.48583503832648645,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4275804658799584,
+            0.5440896107730145
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.0273309647736659,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 128,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 16.5,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            14.5,
+            22.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_c",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.46297082515884724,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.39323512067922284,
+            0.5327065296384716
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.0327175018638899,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.49174580940162227,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.430099691728612,
+            0.5533919270746326
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "both",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.028922156661622234,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9999999999999956,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.9999999999999873,
+            1.0000000000000038
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 3.846446139903469e-15,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.999999999999982,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.9999999999999445,
+            1.0000000000000195
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 1.7593260827984144e-14,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9916700232537432,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.979287205117136,
+            1.0040528413903504
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.005809576005402392,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9987983296439868,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.997415372988733,
+            1.0001812862992407
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.0006488338690142228,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 7.5,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            5.5,
+            11.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_d",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9999998862519857,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.9999997387814332,
+            1.000000033722538
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 6.918791612971121e-08,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9999990694382429,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.9999970901618794,
+            1.0000010487146065
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 9.28605777981712e-07,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 8.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            6.0,
+            12.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_c",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9999296122030278,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.99979621141483,
+            1.0000630129912256
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 6.25868852845551e-05,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.9999900676328604,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.9999789631784413,
+            1.0000011720872795
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "ceiling",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 5.209813407122365e-06,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.41265987348012134,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.3654854254733173,
+            0.4598343214869254
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.022132566123879226,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.44831275343314203,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.403406477731996,
+            0.49321902913428806
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.021068420688026165,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.4355088145215066,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.3806308450535062,
+            0.49038678398950697
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.02574678325477303,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.44662271958717453,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.3966422598469801,
+            0.49660317932736897
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.02344904660977036,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": null,
+          "estimate_censored": true,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            null,
+            null
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "c"
+          },
+          "lower_censored": true,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_d",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": true,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.4517032114181498,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4089114583842182,
+            0.49449496445208135
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.020076362174785808,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.41636440630282034,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.3734056502457781,
+            0.4593231623598626
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.02015471402855526,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": null,
+          "estimate_censored": true,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            null,
+            null
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "d"
+          },
+          "lower_censored": true,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_c",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": true,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.41361197669982785,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.3647874113715102,
+            0.4624365420281455
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.022906742235601615,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.4511697911675419,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.39752549318567726,
+            0.5048140891494065
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "choices",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.025167988655245232,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 0.10101648134537006,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.05345448797983887,
+            0.14857847471090124
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "arm",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.022314388564637702,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.11174026531118003,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.14616164388381084,
+            -0.07731888673854923
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "arm",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.016149281433541107,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.05,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.04781098440344058,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.008525474611442804,
+            0.08709649419543836
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "arm",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.018431358074529836,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "unresolved at this sample size"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": -0.04511097179404242,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            -0.08594206631958201,
+            -0.0042798772685028255
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "arm",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.019156491229458086,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.5054614474739156,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4406068055937548,
+            0.5703160893540764
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.0304274816240804,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.5575441421300878,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4749972263920874,
+            0.6400910578680883
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "a"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 0,
+          "standard_error": 0.03872806462155262,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.32382596780580786,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.313525205309522,
+            0.3341267303020937
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.004832749861589048,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.3348250356805132,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.32705950076655343,
+            0.34259057059447295
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "b"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 1,
+          "standard_error": 0.003643311628060128,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 21.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            17.0,
+            25.5
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_d",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.4885666334440327,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.4352804715890169,
+            0.5418527952990485
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.02499996397570498,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.4751229530838185,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.41620029367718836,
+            0.5340456124904487
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "c"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 2,
+          "standard_error": 0.02764440731397562,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": null,
+          "blocks": 16,
+          "direction": null,
+          "estimate": 23.0,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            16.0,
+            38.5
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "against_c",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": null,
+          "statistic": "median",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "descriptive"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.3923903361677531,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.3407747484815039,
+            0.4440059238540023
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_0_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.024216190241887495,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": 0.8,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 0.38216948811153184,
+          "estimate_censored": false,
+          "fixed_by_definitions_or_case_expectation": false,
+          "interval95": [
+            0.34117674208858706,
+            0.4231622341344766
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "firings",
+            "truth": "d"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "setpoint_1_256",
+          "observations": 64,
+          "setting": 3,
+          "standard_error": 0.01923233233850146,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        }
+      ],
+      "id": "G-V26-DAY-G1-T04-1",
+      "reader": "Declared finite exact readers; pointwise whole-block intervals",
+      "source_file": "docs/versions/v26-top-and-ends/day-20261106/G1-T04_REPORT.md",
+      "source_line": 3,
+      "source_sha256": "bb90d03188719b5aaff9e195c048eddba9f6c2b668deb70f733f27ec54dc1142",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
