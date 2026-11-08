@@ -78,6 +78,16 @@ rows, unique claim-ledger entries and scoped exchange notes. K3 remains blocked
 and K5-T017 remains failed under the same limits above. [Follow-on validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_0702.json).
 
+The 07:56 UTC build review audited all 28 supplied native events and 32 unique
+event or publication packets. All 1,214 raw SHA-256/size records, 1,310 replay
+bindings, source and protocol bindings, and independent-reconstruction
+receipt-to-summary bindings passed. The 23-packet publication snapshot contains
+thirteen named studies with reports, FINDINGS and theory rows, unique claim-ledger
+entries and scoped exchange notes, plus ten verified probes. K1-F3 completed
+during the review and its eligible second-generation follow-up protocols were
+frozen. K3 remains blocked and K5-T017 remains failed under the same limits
+above. [Build-review validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_0756.json).
+
 The controller and one native monitor are live. Build/admission reviews are
 bounded to at most 60 minutes while eligible work remains; otherwise routine
 health checks are twelve-hourly, with daily and terminal events. The monitor
