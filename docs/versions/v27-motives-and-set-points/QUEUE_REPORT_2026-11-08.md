@@ -214,3 +214,11 @@ replay bindings across the named study and K1-T035's adjacent measured probe,
 both independent reconstructions, 18 public aggregate files and the complete
 report/FINDINGS/theory/claim/exchange chain. K1-T033-P2 and K1-T035 remain
 healthy and running; K3 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2328.json).
+
+K1-T035 then completed and landed locally as `G-V27-K1-T035-1`; its
+timing-ratio interval met the scale-only bar. The bounded audit matched all 96
+raw hashes and sizes and 99 replay bindings, the independent reconstruction,
+nine public aggregate files and the complete report/FINDINGS/theory/claim/
+exchange chain. K1 now has 35 verified textures. K1-T036's measured probe began
+automatically while K1-T033-P2 remained in review; K3 and K5-T017 remain held
+without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2344.json).
