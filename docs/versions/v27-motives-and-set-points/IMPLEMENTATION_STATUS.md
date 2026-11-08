@@ -118,3 +118,13 @@ stays disarmed during operator work. Configured scheduling does not establish
 actual model delivery. Two completed native monitor deliveries are now recorded
 separately. This checkpoint does not claim all seven families are
 unattended-ready or promise useful computation for the entire allocation.
+
+The 19:10 UTC review verified K5-R2 and K1-T027 end to end. Across the two
+new studies and K1-T028's measured probe, all 338 raw hashes and sizes and 347 replay bindings matched;
+both independent reconstructions reproduced their summary hashes. K5-R2 has
+no new empirical bar: its retained-data partitions are descriptive, preserve
+the original richer-library headline, and sharpen its conditional reading
+without reversal. K1-T027 met its declared texture bar. The final runtime
+optimization loaded at a natural packet boundary under controller 161248;
+K1-T028 then passed its measured probe and began automatically. K3 and
+K5-T017 remain held under their unchanged failed gates.

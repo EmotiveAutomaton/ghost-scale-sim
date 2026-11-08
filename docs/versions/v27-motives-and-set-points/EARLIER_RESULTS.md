@@ -29,8 +29,8 @@ Earlier-record dispositions (each identifier is a separate record):
 
 Earlier-record dispositions (each identifier is a separate record):
 
-- `G-V26-DAY-G3-1`: Potentially more informative conditional reading: K5 exposed the role of exactly balanced evidence at closure. K5-R1 is a separately frozen level-one retained-data reread with closure balance as a covariate; it reproduces the earlier scores before stratification and overwrites nothing.
-- `G-V26-DAY-G3-T09-1`: No changed reading: the expanded source-library result remains intact. K5 changes group pooling and priors as well, so its group contrast is not an isolated test of the earlier library effect. No claim is reversed.
+- `G-V26-DAY-G3-1`: More informative conditional reading, without reversal: K5-R1 reproduces the earlier scores and shows that the aggregate con-capture difference includes sources that never close; balanced and other closures have distinct descriptive estimates. It is a separately frozen level-one retained-data reread with closure balance as a covariate and overwrites nothing.
+- `G-V26-DAY-G3-T09-1`: More informative conditional reading, without reversal: K5-R2 reproduces the richer-library scores, then applies K5-R1's prospectively fixed closure-balance partition across all 15 saved settings and 16 original whole-world blocks per setting. Closure balance is a descriptive covariate, not a causal intervention; the original expanded-library result and headline remain intact.
 - `C-1107-17`: Curator position, not a previous empirical result. Its recorded status and wording remain unchanged; this constructed comparison does not establish a human mechanism.
 
 ## K4

@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-08T19:23:00+00:00",
+  "audit_scope": "Post-publication build review: newly completed K5-R2 retained-data reread, K1-T027 timing texture and K1-T028 measured probe.",
+  "claims": [
+    {
+      "claim": "G-V27-K5-R2-1",
+      "complete_sha256": "9bb9f98a8484006289ba480da54a07ec93a466e61225ff96f2ac527484406e7b",
+      "packet": "v27-k5-r2-study",
+      "report_sha256": "719462efacd28290834c1edace8af766edffa9dd8f12028a96f4f69245ad06b9",
+      "summary_sha256": "58a905bff5bcfa880e0f7a8561a0c4bca35bb479c06b3e1f90836e25c6c1653f"
+    },
+    {
+      "claim": "G-V27-K1-T027-1",
+      "complete_sha256": "79e04aff91e53e1e681527506974edd355a3681a6fcd26e7512afa6b96c0c332",
+      "packet": "v27-k1-t027-study",
+      "report_sha256": "70be7a846966e66a815b2db15803246ba5dbe0178bd23feb43c3a1bfbb8b806e",
+      "summary_sha256": "ba69556da0dc88726b31d8fb80792623f62e819140b2f460120dcc802f816446"
+    }
+  ],
+  "decisions_verified": {
+    "K1": "Preserve locked choices; diffusion timing only",
+    "K3": "Use the checked approximation"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 2,
+    "exchange_notes": 2,
+    "findings_rows": 2,
+    "reports": 2,
+    "theory_rows": 2
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": {
+    "K1-T027": "passed for 96 whole-world files",
+    "K1-T028-probe": "passed for 2 excluded whole-world files",
+    "K5-R2": "passed for 240 retained whole-world files"
+  },
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "raw_hash_and_size_checks": 338,
+  "replay_file_bindings": 347,
+  "runtime": {
+    "controller_pid": 161248,
+    "controller_source_manifest_sha256": "1aec82c14f29b5a49057b70872cb5cb220fca73dd24e4cb328d54ba6feba71e2",
+    "monitor_pid": 240232,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "verified_probe": {
+    "complete_sha256": "7871c97adbfdc447a104323434c4fe9e9b8fd55b01429238ee470299bd52c9d6",
+    "packet": "v27-k1-t028-probe",
+    "summary_sha256": "8eb844359701352962011f659868c1d31edf79649e78a04fdda59e6934ae09f3"
+  }
+}

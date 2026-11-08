@@ -71,3 +71,14 @@ Later variants still require their measured probes; no precise full-queue finish
 or uninterrupted four-worker occupancy is promised. Build reviews remain due
 within 60 minutes while actionable work remains. Failed validity gates are held,
 not converted into null results or retried beyond their authorized repair limits.
+
+At the 19:10 UTC review, K5-R2 and K1-T027 were fully verified and landed.
+The bounded audit checked 338 raw hashes and sizes and 347 replay bindings,
+plus both independent reconstructions and their report, FINDINGS, theory,
+claim-ledger and exchange-note bindings. K5-R2 reports descriptive partitions
+only; no empty bar set is treated as an unresolved empirical test. K1 now has
+27 verified textures. K1-T028 passed its measured probe and was running under
+the loaded change-triggered controller at the review snapshot. Charges at
+19:22 UTC were 1.085 study hours, 18.097 preparation hours and 48.095 measured
+follow-up/healing/texture hours; the protected pool remained untouched.
+[Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_1910.json).

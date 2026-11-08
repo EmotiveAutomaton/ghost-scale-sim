@@ -1,5 +1,17 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K1-T027-1
+
+Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K1-T027.md).
+
+## G-V27-K5-R2-1
+
+Does the closure-balance interpretation persist in the saved richer-library map, including truth-pushing sources? The reread card retains 15 settings and 16 independent whole-world blocks per setting. No new empirical bar was declared; all results are descriptive. Constructed-method evidence; miniature, architecture untested. Level-two retained-data interpretation check. All original richer-library observations and scoring rules are preserved. Closure balance enters as a covariate, not a causal intervention; no new primary bar or independent sample is introduced. No descendants are authorized.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-R2.md).
+
 ## G-V27-K1-T026-1
 
 Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
