@@ -187,3 +187,12 @@ across K1-T033, K1-T033-P2's probe and K1-T034's probe, and all three independen
 reconstructions reproduced their summaries. K1-T034 and K1-T033-P2 then began
 under the sole controller. Dynamic K3 and K5-T017 remain held without retry.
 [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2247.json).
+
+K1-T034 then completed and was verified end to end. Its declared interval also
+straddles the scale-only bar, so it is unresolved at this sample size and its
+one prospectively frozen K1-T034-P2 precision double was admitted exactly once.
+The bounded audit matched 66 raw hashes and sizes and 72 replay bindings across
+the named study and its precision probe; both independent reconstructions
+reproduced their summaries. K1-T035's still-running probe is not included in
+this landing. Dynamic K3 and K5-T017 remain held without retry. [Turnover
+validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2301.json).

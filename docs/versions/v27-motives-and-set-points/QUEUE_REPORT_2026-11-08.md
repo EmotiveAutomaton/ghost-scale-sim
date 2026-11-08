@@ -197,3 +197,12 @@ Both probes passed and their studies began under sole controller PID 161248.
 Host load permits four workers, and no ready commissioned packet lacks a worker.
 Dynamic K3 and K5-T017 remain held without retry. K1 has 33 verified textures
 at this boundary. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2247.json).
+
+K1-T034 then completed and landed locally as `G-V27-K1-T034-1`. Its interval
+also straddles the scale-only bar, so the controller registered and admitted
+the single prospectively frozen K1-T034-P2 precision double. The bounded audit
+matched 66 raw hashes and sizes and 72 replay bindings across the named study
+and its precision probe, both independent reconstructions, 18 public aggregate
+files and the complete report/FINDINGS/theory/claim/exchange chain. K1 now has
+34 verified textures. K1-T035's still-running probe is excluded from this
+landing; K3 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2301.json).

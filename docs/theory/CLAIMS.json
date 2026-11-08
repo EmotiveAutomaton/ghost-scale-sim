@@ -256244,6 +256244,54 @@
       "source_sha256": "1151db8e271f0e14fb3206b27004ca3279f73e6f95fd65d93ae932f56995e29a",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 4 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Finite personal-parameter grid over the declared ranges; exact binned first-passage likelihoods. Locked-choice interpretation recorded separately before admission.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 0.5,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 0.4166666666666667,
+          "estimate_censored": false,
+          "interval95": [
+            0.3333333333333333,
+            0.6
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "timing_ratio",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": true,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "unresolved at this sample size"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "395c3defe18eaeea004b3aa3d99b4f12b474e0ca8aced6c51eded1d0b98b7eb6",
+        "source_file": "results/v27/v27-k1-t034-study/SUMMARY.json"
+      },
+      "id": "G-V27-K1-T034-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K1-T034.md",
+      "source_line": 3,
+      "source_sha256": "6a276072bd0a1cd1b577564d27ff35d1336314c8138aee90f8f8aa6ac1bd17de",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
