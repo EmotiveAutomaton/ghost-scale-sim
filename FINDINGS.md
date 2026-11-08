@@ -1,5 +1,17 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K1-T029-1
+
+Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K1-T029.md).
+
+## G-V27-K1-T028-P2-1
+
+Do decision times distinguish a locked rule from a strong preference after learning personal speed? The precision card retains 4 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K1-T028-P2.md).
+
 ## G-V27-K1-T028-1
 
 Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 4 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.

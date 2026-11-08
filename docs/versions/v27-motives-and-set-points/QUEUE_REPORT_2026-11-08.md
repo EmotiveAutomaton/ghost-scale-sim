@@ -89,3 +89,18 @@ so the one permitted doubled-block precision follow-up was registered and its
 probe began beside K1-T029's probe. Both probes then passed and their studies
 were running at the 19:40 UTC boundary. K1 has 28 verified textures here.
 [Turnover receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_1938.json).
+
+## 20:42 UTC precision and texture turnover
+
+K1-T028-P2 and K1-T029 are fully verified and landed locally. The precision
+double resolved its parent's interval and met the declared scale-only bar;
+K1-T029 met its texture bar. K1-T030's measured probe also passed and its study
+was in replay at this boundary. The audit matched 226 raw hashes and sizes and
+235 replay bindings, reproduced all three independent summaries, and checked
+the two named batches' reports, FINDINGS rows, theory rows, unique claim-ledger
+entries and scoped exchange notes. Twenty-nine targeted V27 tests passed.
+
+The controller remains PID 161248 and the monitor PID 240232. The measured
+host-load rule still permits four workers, but only K1's sequential timing lane
+is eligible; dynamic K3 and K5-T017 remain held after their retained failures.
+No ready commissioned packet lacks a worker. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2042.json).

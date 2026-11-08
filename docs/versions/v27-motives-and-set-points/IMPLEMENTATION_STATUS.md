@@ -136,3 +136,13 @@ the packet-authorized doubled-block precision follow-up exactly once. At the
 19:40 UTC boundary, that precision probe and K1-T029's measured probe had both
 passed; their studies were running. The turnover audit therefore covers 68 raw
 hashes/sizes and 77 replay bindings at this boundary.
+
+The 20:42 UTC build review verified K1-T028-P2 and K1-T029 end to end and
+verified K1-T030's measured probe. All 226 raw hashes and sizes and 235 replay
+bindings matched; each independent reconstruction reproduced its original
+summary. The doubled-block precision packet resolved K1-T028's interval and met
+the declared scale-only bar; K1-T029 also met its declared texture bar. Both
+named batches have reports, FINDINGS and theory rows, unique claim-ledger entries
+and scoped exchange notes. Twenty-nine targeted V27 tests passed against the
+repository checkout. Dynamic K3 and K5-T017 remain held under their unchanged
+failed gates. [Build-review validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2042.json).
