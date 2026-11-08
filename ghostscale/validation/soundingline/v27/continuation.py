@@ -4,8 +4,24 @@ from . import registry,contract,reporting
 from .common import read,write,digest,verify_complete
 
 
-def terminal_card(c,cid):
-    matches=[p.parent for p in (c/'packets').glob('*/PLAN.json') if (read(p)['card']==cid or read(p).get('replaces_card')==cid) and read(p)['scientific_kind']!='probe' and not (c/'withdrawals'/(p.parent.name+'.json')).exists()]
+def packet_index(c):
+    """One immutable-plan snapshot per dispatch pass, including replacements.
+
+    Rebuild on the next pass: a persistent cache could miss a newly prepared
+    packet or a withdrawal. Completion/landing markers are still read live.
+    """
+    by_card={};present=set()
+    for path in (c/'packets').glob('*/PLAN.json'):
+        plan=read(path);present.add(plan['card'])
+        if plan['scientific_kind']=='probe' or (c/'withdrawals'/(path.parent.name+'.json')).exists():continue
+        for cid in {plan['card'],plan.get('replaces_card')} - {None}:
+            by_card.setdefault(cid,[]).append(path.parent)
+    return by_card,present
+
+
+def terminal_card(c,cid,index=None):
+    if index is None:index=packet_index(c)[0]
+    matches=index.get(cid,[])
     return matches[0] if len(matches)==1 and (matches[0]/'LOCAL_LANDING.json').exists() else None
 
 
@@ -51,12 +67,12 @@ def eligible_second_generation(c,primary):
     return False
 
 
-def register_descendants(c,parent,build_card,source):
+def register_descendants(c,parent,build_card,source,index=None):
     p=read(parent/'PLAN.json');cid=p['card'];card=read(c/'protocols'/(cid+'.json'));landing=read(parent/'LOCAL_LANDING.json')
     marker=c/'expansions'/(cid+'.json')
     if marker.exists():return
-    primary=terminal_card(c,p['family'])
-    if primary is None and card.get('root_primary_card'):primary=terminal_card(c,card['root_primary_card'])
+    primary=terminal_card(c,p['family'],index)
+    if primary is None and card.get('root_primary_card'):primary=terminal_card(c,card['root_primary_card'],index)
     if primary is None and card.get('subprimary_of') and (card['lane']=='study' or card.get('replaces_card')):primary=parent
     eligible=eligible_second_generation(c,primary) if primary else False
     generation=card.get('generation',0);registered=[]
@@ -86,26 +102,27 @@ def register_descendants(c,parent,build_card,source):
 
 def advance(c,prepare,build_card,source):
     """Call between bounded dispatches. Sources and excluded checks precede data."""
+    index,present=packet_index(c)
     for f in contract.ORDER:
-        primary=terminal_card(c,f)
-        cards=sorted([read(p) for p in (c/'cards').glob('*.json') if read(p)['family']==f],key=lambda x:x['order'])
+        primary=terminal_card(c,f,index)
+        cards=sorted([row for p in (c/'cards').glob('*.json') if (row:=read(p))['family']==f],key=lambda x:x['order'])
         subprimaries=[]
         for card in cards:
             if card.get('subprimary_of') and card['lane']=='study':
-                done=terminal_card(c,card['id'])
+                done=terminal_card(c,card['id'],index)
                 if done:subprimaries.append(done)
         if primary is None and not subprimaries:continue
-        for done in ([primary] if primary else [])+subprimaries:register_descendants(c,done,build_card,source)
-        cards=sorted([read(p) for p in (c/'cards').glob('*.json') if read(p)['family']==f],key=lambda x:x['order'])
+        for done in ([primary] if primary else [])+subprimaries:register_descendants(c,done,build_card,source,index)
+        cards=sorted([row for p in (c/'cards').glob('*.json') if (row:=read(p))['family']==f],key=lambda x:x['order'])
         streak=0;stopped=False;next_texture=None;records=[]
         for card in (x for x in cards if x['lane']=='texture' and primary is not None):
-            cid=card['id'];done=terminal_card(c,cid)
+            cid=card['id'];done=terminal_card(c,cid,index)
             if done:
                 proto=read(c/'protocols'/(cid+'.json'))
                 comparison=texture_change(primary,done)
                 if not proto['out_of_case']:streak=streak+1 if comparison['counts_toward_stop'] else 0
                 records.append(dict(card=cid,streak=streak,out_of_case=proto['out_of_case'],**comparison))
-                register_descendants(c,done,build_card,source)
+                register_descendants(c,done,build_card,source,index)
                 if streak>=7:stopped=True;break
                 continue
             if not stopped:next_texture=cid
@@ -114,12 +131,13 @@ def advance(c,prepare,build_card,source):
         eligible=[x for x in cards if x['lane'] in ('followup','precision')]
         if next_texture:eligible=[read(c/'cards'/(next_texture+'.json'))]+eligible
         for card in eligible:
-            cid=card['id'];done=terminal_card(c,cid)
+            cid=card['id'];done=terminal_card(c,cid,index)
             disposition=c/'dispositions'/(cid+'.json')
             if disposition.exists() and read(disposition)['state']=='WITHDRAWN':continue
             if done:
-                if card['lane']=='followup':register_descendants(c,done,build_card,source)
+                if card['lane']=='followup':register_descendants(c,done,build_card,source,index)
                 continue
             if not (c/'protocols'/(cid+'.json')).exists():continue
-            if any(read(p)['card']==cid for p in (c/'packets').glob('*/PLAN.json')):continue
-            if read(c/'dispositions'/(cid+'.json'))['state']=='BUILT':prepare(c,cid)
+            if cid in present:continue
+            if read(c/'dispositions'/(cid+'.json'))['state']=='BUILT':
+                prepare(c,cid);present.add(cid)

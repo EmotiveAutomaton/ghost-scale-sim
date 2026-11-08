@@ -88,6 +88,29 @@ during the review and its eligible second-generation follow-up protocols were
 frozen. K3 remains blocked and K5-T017 remains failed under the same limits
 above. [Build-review validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_0756.json).
 
+The November 8 owner check found the monitor had stopped at 08:21 UTC after
+a deferred-event record used a list where the monitor requires an ID-keyed map.
+The original record and exact event hashes are retained. The record was repaired,
+its expiry behavior checked, and the sole monitor restarted at 17:58 UTC without
+restarting the scientific controller or changing its source capsules. The stale
+Gear 1 text on the repository front page is corrected to the current Gear 2 direction.
+
+K5-R1's retained-data partition changes the conditional reading of the earlier
+closing result: its overall con-capture difference includes many sources that
+never close. The packet's section 6 therefore commissions K5-R2, a level-two
+re-read of all saved richer-library G3-T09 settings using the same closure-balance
+covariate. It must first reproduce the original scores, uses no new draws, and
+has no descendants. It uses the earlier validated exact reader; it does not retry
+K5-T017 or consume an additional healing attempt.
+
+K1's learning-dose interpretation has a specific limit: every retained setting
+reports R3 at all three ordinary-history prefixes, 0, 16 and 64. The outer
+`ordinary` field does not change that scoring roster or the generated history.
+Use the explicitly labelled within-setting prefix comparisons to read dose;
+differences between cards distinguished only by that outer field are independent
+replicate variation, not a dose effect. The timing-versus-choice primary is
+unaffected. The declared full grids and their existing results are retained.
+
 The controller and one native monitor are live. Build/admission reviews are
 bounded to at most 60 minutes while eligible work remains; otherwise routine
 health checks are twelve-hourly, with daily and terminal events. The monitor

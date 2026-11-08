@@ -223,6 +223,18 @@ def requested_limit(c,host_limit):
     return min(requested,host_limit)
 
 
+def probes_without_successor(c,active):
+    """Recover eligible completions with one plan scan, never a scientific retry."""
+    plans=[(path.parent,read(path)) for path in (c/'packets').glob('*/PLAN.json')]
+    science={p['card'] for _,p in plans if p['scientific_kind']!='probe'}
+    for packet,p in plans:
+        if packet.name in active or p['scientific_kind']!='probe':continue
+        if not (packet/'COMPLETE.json').exists() or (packet/'CONTINUATION_FAILURE.json').exists():continue
+        if p['card'] in science:continue
+        science.add(p['card'])
+        yield packet,p
+
+
 def queue(c):
     runtime.below_normal();lock=c/'QUEUE_OWNER.lock';active={};start=time.process_time();samples=[];limit=4;last=host_times();last_time=time.monotonic()
     with lock.open('x') as f:f.write(str(os.getpid()))
@@ -255,18 +267,13 @@ def queue(c):
                 else:event(c,name+'-failed','packet_failure',dict(packet=name,status_sha256=digest(packet/'STATUS.json')))
             # Recover only continuation after already verified probes; never
             # restart an interrupted or failed scientific execution.
-            for probe in (c/'packets').glob('*/COMPLETE.json'):
+            for probe,p in probes_without_successor(c,active):
                 # The parent writes COMPLETE before exiting. Its active branch
                 # owns continuation until poll() confirms that exit; recovery
                 # must not prepare the same successor in that short interval.
-                if probe.parent.name in active:continue
-                p=read(probe.parent/'PLAN.json')
-                if p['scientific_kind']!='probe':continue
-                if (probe.parent/'CONTINUATION_FAILURE.json').exists():continue
-                if any(read(x)['card']==p['card'] and read(x)['scientific_kind']!='probe' for x in (c/'packets').glob('*/PLAN.json')):continue
-                try:prepare(c,p['card'],probe.parent)
+                try:prepare(c,p['card'],probe)
                 except Exception as exc:
-                    write(probe.parent/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(c,probe.parent.name+'-continuation','build_required',dict(error=str(exc)))
+                    write(probe/'CONTINUATION_FAILURE.json',dict(error=str(exc)));event(c,probe.name+'-continuation','build_required',dict(error=str(exc)))
             limit=requested_limit(c,live_load['limit'])
             candidates=[p.parent for p in (c/'packets').glob('*/PLAN.json') if read(p.parent/'STATUS.json')['state']=='PREPARED']
             candidates.sort(key=lambda p:(read(c/'cards'/(read(p/'PLAN.json')['card']+'.json'))['order'],p.name))

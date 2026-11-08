@@ -2,7 +2,8 @@
 
 **V27 commissioned week, November 7:** seven constructed-method studies and
 their bounded exploratory lanes are being built and run. The owner's latest
-November 7 direction selects Gear 1, including long numerical validation.
+direction selects Gear 2: up to four below-normal, single-thread workers,
+with the packet's measured host-load backoff.
 [Program and design review](docs/versions/v27-motives-and-set-points/README.md).
 [Recorded execution state](results/v27/CURRENT_STATUS.json).
 V26 is closed; the historical notes below retain its original evidence.
