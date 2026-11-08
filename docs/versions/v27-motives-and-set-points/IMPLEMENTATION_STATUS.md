@@ -211,3 +211,11 @@ audit matched all 96 raw hashes and sizes and 99 replay bindings, and the
 independent reconstruction reproduced the original summary. K1-T036's measured
 probe began automatically while K1-T033-P2 remained in review. Dynamic K3 and
 K5-T017 remain held without retry. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2344.json).
+
+K1-T033-P2 then completed and was verified end to end. The prospectively
+frozen doubled-block precision packet resolved K1-T033's earlier interval and
+met its declared scale-only bar. The bounded audit matched 194 raw hashes and
+sizes and 200 replay bindings across the named precision study and K1-T036's
+adjacent measured probe; both independent reconstructions reproduced their
+summaries. K1-T036 began automatically. Dynamic K3 and K5-T017 remain held
+without retry. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2351.json).

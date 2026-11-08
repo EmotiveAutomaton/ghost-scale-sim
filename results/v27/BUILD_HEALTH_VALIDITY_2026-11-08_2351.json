@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-08T23:51:00+00:00",
+  "audit_scope": "K1-T033-P2 precision and the adjacent K1-T036 measured probe completed after local commit 390340f04; the running K1-T036 study was excluded.",
+  "claim": {
+    "claim": "G-V27-K1-T033-P2-1",
+    "complete_sha256": "a3d78dfa6faf3a4a6e301ce8464bc0b68c31a08bccf4b43b4f1fa1977a5acccc",
+    "packet": "v27-k1-t033-p2-study",
+    "report_sha256": "d829e45b8e8529dba5e98284da5d52c5e35fd83a7101cbbf54d2b0e846da92c9",
+    "summary_sha256": "4817cce2a3fde566498b6f7693a7428210b8ed9f7e4dd58138fdffdf65f4996e",
+    "verdict": "met"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 18,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": "passed for 194 whole-world files across the named precision study and adjacent probe; the precision reconstruction reproduced summary 4817cce2a3fde566498b6f7693a7428210b8ed9f7e4dd58138fdffdf65f4996e",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "probe_complete_sha256": {
+    "v27-k1-t036-probe": "1c40167aa0547083b365e416e1194dfc38f8b8209a89fcb49d412fdd7853197d"
+  },
+  "public_export_bindings": 14,
+  "raw_hash_and_size_checks": 194,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 200,
+  "runtime": {
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "no_ready_packet_without_worker": true,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {
+    "K1": 35,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}
