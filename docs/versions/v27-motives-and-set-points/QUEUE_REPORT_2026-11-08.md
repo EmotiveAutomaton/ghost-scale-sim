@@ -82,3 +82,10 @@ the loaded change-triggered controller at the review snapshot. Charges at
 19:22 UTC were 1.085 study hours, 18.097 preparation hours and 48.095 measured
 follow-up/healing/texture hours; the protected pool remained untouched.
 [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_1910.json).
+
+K1-T028 completed before the handoff boundary and passed a separate 64-raw,
+67-replay audit with independent reconstruction. Its declared bar is unresolved,
+so the one permitted doubled-block precision follow-up was registered and its
+probe began beside K1-T029's probe. Both probes then passed and their studies
+were running at the 19:40 UTC boundary. K1 has 28 verified textures here.
+[Turnover receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_1938.json).

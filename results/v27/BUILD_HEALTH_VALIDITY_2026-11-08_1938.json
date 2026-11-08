@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-08T19:38:30+00:00",
+  "claim": "G-V27-K1-T028-1",
+  "complete_sha256": "9559f4227cf0109a1641e483da70149f91a8c854ae6f843aa6e82d35113dd372",
+  "documentary_bindings": {
+    "claim_ledger_source_hash": true,
+    "exchange_note": true,
+    "findings_row": true,
+    "report": true,
+    "theory_row": true
+  },
+  "independent_reconstruction": "passed for 64 whole-world files",
+  "packet": "v27-k1-t028-study",
+  "precision_followup": {
+    "card": "K1-T028-P2",
+    "reason": "The declared interval straddles its bar.",
+    "registered_once": true,
+    "state_at_review": "probe running"
+  },
+  "privacy_check": "Constructed-world records, declared protocol, aggregate report and scoped routes only; no private memory, credentials or human records included.",
+  "raw_hash_and_size_checks": 68,
+  "replay_file_bindings": 77,
+  "report_sha256": "a1f821b1ca4f4ab1dbac30c6314763992ca707b9e490a976fc536559c424bf5d",
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "summary_sha256": "1fa8db8057ebe6591e282498d213849fa0194cfbdfa91fe009af844487a7ac93",
+  "verified_probes": [
+    {"complete_sha256": "d33b187ddee464a69b148ee7b897e81a14f07fe20640c6c9c16a79ab7dc793f1", "packet": "v27-k1-t028-p2-probe", "summary_sha256": "b860f5e6b47dae732b0ade40f6e1d936483c5ad8c61b041e0c302a10240eb7c4"},
+    {"complete_sha256": "009f7a263adbb962af9e2d16210b8e3ca699cb96ec6817fc6a51e4ed0b50ec8d", "packet": "v27-k1-t029-probe", "summary_sha256": "710b7017cd77545afbb1a3829bcbb7399845187fade784f1f19bc5dcff0c932e"}
+  ]
+}

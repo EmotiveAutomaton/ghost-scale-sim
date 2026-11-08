@@ -24,13 +24,17 @@
     {"card": "K5-R2", "complete_sha256": "1c6b50df4ea74d30f74657dfe48b93fe875b24db5dc584ca485b83399a1e4e02", "packet": "v27-k5-r2-probe"},
     {"card": "K5-R2", "complete_sha256": "9bb9f98a8484006289ba480da54a07ec93a466e61225ff96f2ac527484406e7b", "packet": "v27-k5-r2-study"},
     {"card": "K1-T027", "complete_sha256": "79e04aff91e53e1e681527506974edd355a3681a6fcd26e7512afa6b96c0c332", "packet": "v27-k1-t027-study"},
-    {"card": "K1-T028", "complete_sha256": "7871c97adbfdc447a104323434c4fe9e9b8fd55b01429238ee470299bd52c9d6", "packet": "v27-k1-t028-probe"}
+    {"card": "K1-T028", "complete_sha256": "7871c97adbfdc447a104323434c4fe9e9b8fd55b01429238ee470299bd52c9d6", "packet": "v27-k1-t028-probe"},
+    {"card": "K1-T028", "complete_sha256": "9559f4227cf0109a1641e483da70149f91a8c854ae6f843aa6e82d35113dd372", "packet": "v27-k1-t028-study"},
+    {"card": "K1-T028-P2", "complete_sha256": "d33b187ddee464a69b148ee7b897e81a14f07fe20640c6c9c16a79ab7dc793f1", "packet": "v27-k1-t028-p2-probe"},
+    {"card": "K1-T029", "complete_sha256": "009f7a263adbb962af9e2d16210b8e3ca699cb96ec6817fc6a51e4ed0b50ec8d", "packet": "v27-k1-t029-probe"}
   ],
   "latest_audit": "results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_1910.json",
+  "latest_turnover_audit": "results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_1938.json",
   "monitor_live_state": "monitoring_disarmed_for_active_review",
   "monitor_restored": true,
-  "post_handoff_raw_hash_and_size_checks": 338,
-  "post_handoff_replay_file_bindings": 347,
+  "post_handoff_raw_hash_and_size_checks": 406,
+  "post_handoff_replay_file_bindings": 424,
   "publication_tracked_separately": true,
   "queue_snapshot": {
     "active": ["v27-k1-t028-study"],

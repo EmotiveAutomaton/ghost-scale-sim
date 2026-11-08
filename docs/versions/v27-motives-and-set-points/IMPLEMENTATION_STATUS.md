@@ -128,3 +128,11 @@ without reversal. K1-T027 met its declared texture bar. The final runtime
 optimization loaded at a natural packet boundary under controller 161248;
 K1-T028 then passed its measured probe and began automatically. K3 and
 K5-T017 remain held under their unchanged failed gates.
+
+K1-T028 then completed with an unresolved declared bar, passed 64 raw and 67
+replay bindings plus independent reconstruction, and landed as
+`G-V27-K1-T028-1`. Its interval straddles the bar, so the controller registered
+the packet-authorized doubled-block precision follow-up exactly once. At the
+19:40 UTC boundary, that precision probe and K1-T029's measured probe had both
+passed; their studies were running. The turnover audit therefore covers 68 raw
+hashes/sizes and 77 replay bindings at this boundary.
