@@ -69,6 +69,15 @@ The review's bounded publication snapshot contains 38 newly exported packets
 bindings and independent reconstructions checked. Eleven targeted V27 tests
 passed. [Validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_0630.json).
 
+The follow-on 07:02 UTC health snapshot audited all 30 supplied native events
+and 38 unique packets, including 21 exports after the preceding publication
+boundary. All 1,736 raw SHA-256/size records, 1,850 replay bindings, source and
+protocol bindings, and independent-reconstruction receipt-to-summary bindings
+passed. The nine newly named texture studies have reports, FINDINGS and theory
+rows, unique claim-ledger entries and scoped exchange notes. K3 remains blocked
+and K5-T017 remains failed under the same limits above. [Follow-on validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_0702.json).
+
 The controller and one native monitor are live. Build/admission reviews are
 bounded to at most 60 minutes while eligible work remains; otherwise routine
 health checks are twelve-hourly, with daily and terminal events. The monitor

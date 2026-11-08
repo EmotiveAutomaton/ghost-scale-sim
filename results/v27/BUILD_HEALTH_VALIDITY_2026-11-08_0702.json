@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-08T07:03:45.1263808+00:00",
+  "base_commit": "97d0e7a5d3a1469005f1d628761f4c74b6657fb4",
+  "errors": [],
+  "event_audit": {
+    "events": 30,
+    "packet_complete_events": 29,
+    "event_file_sha256_bindings_passed": true,
+    "complete_sha256_bindings_passed": true
+  },
+  "packet_audit": {
+    "independent_reconstruction_receipts_bound_to_summaries": true,
+    "packets": 38,
+    "probes": 20,
+    "raw_files_sha256_and_size_checked": 1736,
+    "replay_bindings_checked": 1850,
+    "source_and_protocol_bindings_checked": true,
+    "studies": 18
+  },
+  "publication_snapshot": {
+    "new_packets": [
+      "v27-k1-f1-probe",
+      "v27-k1-f3-probe",
+      "v27-k1-t004-study",
+      "v27-k1-t005-probe",
+      "v27-k1-t005-study",
+      "v27-k1-t006-probe",
+      "v27-k2-t039-probe",
+      "v27-k2-t039-study",
+      "v27-k2-t040-probe",
+      "v27-k2-t040-study",
+      "v27-k2-t041-probe",
+      "v27-k2-t041-study",
+      "v27-k2-t042-probe",
+      "v27-k2-t042-study",
+      "v27-k2-t043-probe",
+      "v27-k7-t032-probe",
+      "v27-k7-t032-study",
+      "v27-k7-t033-probe",
+      "v27-k7-t033-study",
+      "v27-k7-t034-probe",
+      "v27-k7-t034-study"
+    ],
+    "new_probes": 12,
+    "new_studies": 9,
+    "reports_findings_theory_claims_and_exchange_notes_checked": true
+  },
+  "retained_limits": {
+    "dynamic_k3_admitted": false,
+    "dynamic_k3_reason": "Retained failed numerical gate; owner approval remains conditional on the gate.",
+    "k5_t017_retried": false,
+    "k5_t017_status": "Retained independent-reconstruction failure; both authorized K5 healings are consumed."
+  },
+  "state": "PASSED"
+}
