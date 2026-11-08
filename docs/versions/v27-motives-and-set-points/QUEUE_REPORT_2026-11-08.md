@@ -181,3 +181,19 @@ K1-T032 took about 38 minutes end to end. K1-T033 began at 22:05 UTC; a
 conservatively early next action is 22:35 UTC to inspect its turnover, preserve
 the K3 and K5 holds and land only complete verified evidence. [Turnover
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2208.json).
+
+## 22:47 UTC timing turnover
+
+K1-T033 is fully verified and landed locally as `G-V27-K1-T033-1`. Its
+timing-ratio interval straddles the declared scale-only bar, so the result is
+unresolved at this sample size; this is not a null. Its single allowed
+K1-T033-P2 precision double was frozen before admission. The independent audit
+matched 100 raw hashes and sizes and 109 replay bindings across the named study
+and the K1-T033-P2 and K1-T034 measured probes, all three independent
+reconstructions, 27 public aggregate files and the complete
+report/FINDINGS/theory/claim/exchange write-through.
+
+Both probes passed and their studies began under sole controller PID 161248.
+Host load permits four workers, and no ready commissioned packet lacks a worker.
+Dynamic K3 and K5-T017 remain held without retry. K1 has 33 verified textures
+at this boundary. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2247.json).

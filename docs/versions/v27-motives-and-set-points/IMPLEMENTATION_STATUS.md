@@ -177,3 +177,13 @@ reports, FINDINGS and theory rows, unique claim-ledger entries and scoped
 exchange notes. K1-T033's probe passed and its study began automatically.
 Dynamic K3 and K5-T017 remain held without retry. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2208.json).
+
+The 22:47 UTC turnover verified K1-T033 end to end and verified both succeeding
+measured probes. Its declared timing-ratio interval straddles the scale-only
+bar, so it is unresolved at this sample size; the one prospectively frozen
+doubled-block precision packet was registered and admitted exactly once. The
+independent audit matched 100 raw hashes and sizes and 109 replay bindings
+across K1-T033, K1-T033-P2's probe and K1-T034's probe, and all three independent
+reconstructions reproduced their summaries. K1-T034 and K1-T033-P2 then began
+under the sole controller. Dynamic K3 and K5-T017 remain held without retry.
+[Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2247.json).

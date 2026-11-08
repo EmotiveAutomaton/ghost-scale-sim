@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-08T22:47:00+00:00",
+  "audit_scope": "K1-T033 timing texture and the succeeding K1-T033-P2 and K1-T034 measured probes completed after local commit 39f2c449b; running studies were inspected without changing scientific sources.",
+  "claim": {
+    "claim": "G-V27-K1-T033-1",
+    "complete_sha256": "2bc8dd21c143955110d2287614663c2d6f7ab9e6fe80ac7818ad4ead496f51ec",
+    "packet": "v27-k1-t033-study",
+    "report_sha256": "1151db8e271f0e14fb3206b27004ca3279f73e6f95fd65d93ae932f56995e29a",
+    "summary_sha256": "7f6ffde054406f4a56377c0920097985d026fd355c553de34584d872a9d0dd0e",
+    "verdict": "unresolved at this sample size"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 27,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": "passed for 100 whole-world files across the named study and two adjacent probes; the study reconstruction reproduced summary 7f6ffde054406f4a56377c0920097985d026fd355c553de34584d872a9d0dd0e",
+  "packet_authorization_sha256": "1afcb5b4752ba6eb77a78af7a5a3800a515da9934a3fe6b01951d9e6a4dcf953",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "probe_complete_sha256": {
+    "v27-k1-t033-p2-probe": "722d032aa77bee3458a760a22beb066e64727b2132353c8de693658bf063e353",
+    "v27-k1-t034-probe": "37f3c4f5a416d925e7826ac0da8655cab59eeaf67e51cc05aa9908e9998eac90"
+  },
+  "raw_hash_and_size_checks": 100,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 109,
+  "runtime": {
+    "active_at_snapshot": ["v27-k1-t034-study", "v27-k1-t033-p2-study"],
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "no_ready_packet_without_worker": true,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {"K1": 33, "K2": 56, "K4": 25, "K5": 16, "K6": 16, "K7": 36}
+}
