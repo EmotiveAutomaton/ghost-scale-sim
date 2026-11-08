@@ -64,3 +64,18 @@ def test_probe_recovery_preserves_active_failed_and_existing_science(tmp_path):
     ready=list(probes_without_successor(tmp_path,{'active':None}))
     assert len(ready)==1 and ready[0][1]['card']=='K4'
     assert ready[0][0].name in {'recover','duplicate-probe'}
+
+
+def test_continuation_revision_tracks_admission_inputs_not_heartbeats(tmp_path):
+    from runners.queue_v27 import continuation_revision
+    previous=continuation_revision(tmp_path)
+    for relative in ['cards/K1.json','protocols/K1.json','dispositions/K1.json',
+                     'packets/primary/LOCAL_LANDING.json','withdrawals/primary.json']:
+        write(tmp_path/relative,{'fixture':True})
+        current=continuation_revision(tmp_path)
+        assert current!=previous
+        previous=current
+    write(tmp_path/'packets/primary/STATUS.json',{'heartbeat':'changed'})
+    assert continuation_revision(tmp_path)==previous
+    write(tmp_path/'dispositions/K1.json',{'state':'WITHDRAWN'},immutable=False)
+    assert continuation_revision(tmp_path)!=previous

@@ -235,6 +235,14 @@ def probes_without_successor(c,active):
         yield packet,p
 
 
+def continuation_revision(c):
+    """Watch every input to continuation without reparsing unchanged summaries."""
+    paths=list((c/'packets').glob('*/LOCAL_LANDING.json'))
+    for folder in ('cards','protocols','dispositions','withdrawals'):
+        paths.extend((c/folder).glob('*.json'))
+    return tuple(sorted((p.relative_to(c).as_posix(),p.stat().st_mtime_ns,p.stat().st_size) for p in paths))
+
+
 def queue(c):
     runtime.below_normal();lock=c/'QUEUE_OWNER.lock';active={};start=time.process_time();samples=[];limit=4;last=host_times();last_time=time.monotonic()
     with lock.open('x') as f:f.write(str(os.getpid()))
@@ -252,7 +260,7 @@ def queue(c):
     occupancy_path=c/'OCCUPANCY.json'
     previous=sum(read(p).get('wall_seconds',0) for p in (c/'accounting').glob('*.json'))
     occupancy=read(occupancy_path) if occupancy_path.exists() else dict(busy_worker_seconds=previous,idle_worker_seconds=dict(initial_build_and_validation=max(0,4*(native.now()-opened).total_seconds()-previous)))
-    last_occupancy=time.monotonic();previous_count=0;previous_limit=4
+    last_occupancy=time.monotonic();previous_count=0;previous_limit=4;last_continuation=None
     try:
         while True:
             for name,(proc,log) in list(active.items()):
@@ -296,7 +304,12 @@ def queue(c):
                     active[packet.name]=(proc,log)
                     write(packet/'STATUS.json',dict(state='LAUNCHING',launcher_pid=proc.pid,at=native.now().isoformat()),immutable=False)
             if not stopping and not (c/'PAUSE_ADMISSIONS').exists():
-                continuation.advance(c,prepare,build_card,source)
+                revision=continuation_revision(c)
+                if revision!=last_continuation:
+                    # Keep the pre-call revision: new descendants created by
+                    # this pass must trigger another pass to admit them.
+                    last_continuation=revision
+                    continuation.advance(c,prepare,build_card,source)
             remaining=[p.name for p in candidates if read(p/'STATUS.json')['state']=='PREPARED']
             unbuilt=[x['id'] for x in read(c/'CARDS.json') if not (c/'protocols'/(x['id']+'.json')).exists()]
             elapsed=time.monotonic()-last_occupancy;last_occupancy=time.monotonic()

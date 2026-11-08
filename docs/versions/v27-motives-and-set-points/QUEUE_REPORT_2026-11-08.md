@@ -34,17 +34,26 @@ at 17:58 UTC. Scientific execution continued during that monitoring gap.
 The queue's bookkeeping repeatedly scanned every packet plan for each card and
 completed probe. The repair uses one plan index per dispatch pass, preserving
 withdrawals, ambiguous replacements, active owners and failed-study retry blocks.
-Twelve targeted tests passed in an isolated source capsule. The controller
-replacement waits for its current packet to finish naturally; scientific source
-capsules and completed records remain unchanged.
+The first repair took over at 18:17 UTC after the timing packet completed.
+The remaining repeated summary work is addressed by checking continuation only
+when its input records change. Thirteen targeted tests passed in an isolated
+source capsule; that final optimization is waiting for the current retained-data
+packet's natural boundary. Heartbeat, load, deadline and failure checks continue
+every queue pass. Scientific source capsules and completed records remain unchanged.
+[Runtime receipt](../../../results/v27/RUNTIME_REPAIR_2026-11-08.json).
 
-K5-R2 is newly prepared under section 6 of the packet. Its predecessor's closure
+K5-R2 passed its excluded three-pass probe and started under section 6 of the packet. Its predecessor's closure
 partition changes the conditional reading of the older result, so this second
 and final level applies the same covariate to all 15 saved richer-library
 settings and their 16 original whole-world blocks. It first reproduces the old
 scores, retains full replay and independent reconstruction, and makes no new
 scientific draws. It is separate from the failed K5-T017 instrument and has no
 descendants. [Admission basis](../../../results/v27/K5_R2_ADMISSION_BASIS_2026-11-08.json).
+
+At 18:21 UTC, timing variant 26 was verified, variant 27 had passed its probe
+and was prepared, and K5-R2 was running. The prepared timing study enters after
+the pending controller handoff. These are current execution states, separate
+from the earlier 18:00 UTC audited counts above.
 
 K1's ordinary-history field is a redundant outer axis in the current instrument:
 every setting reports the explicitly labelled 0-, 16- and 64-record reader
