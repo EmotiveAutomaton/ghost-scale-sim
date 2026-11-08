@@ -146,3 +146,16 @@ named batches have reports, FINDINGS and theory rows, unique claim-ledger entrie
 and scoped exchange notes. Twenty-nine targeted V27 tests passed against the
 repository checkout. Dynamic K3 and K5-T017 remain held under their unchanged
 failed gates. [Build-review validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2042.json).
+
+The 21:05 UTC turnover review verified K1-T030 end to end. Its declared timing
+ratio interval straddles the scale-only bar, so the result is unresolved at this
+sample size and the controller registered the single packet-authorized doubled-
+block precision follow-up. An independent audit matched 100 raw hashes and
+sizes and 109 replay bindings across the named study and the two succeeding
+measured probes, all three independent reconstructions, 25 public aggregate
+files and the complete report/FINDINGS/theory/claim/exchange write-through. At
+the review snapshot K1-T031's texture study and K1-T030-P2's measured probe were
+both running under the sole controller; both probes subsequently passed and
+their studies began. No ready commissioned packet lacked a worker. Dynamic K3
+and K5-T017 remain held without retry. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2105.json).

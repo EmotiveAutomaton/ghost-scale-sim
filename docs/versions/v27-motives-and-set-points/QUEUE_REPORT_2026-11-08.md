@@ -104,3 +104,39 @@ The controller remains PID 161248 and the monitor PID 240232. The measured
 host-load rule still permits four workers, but only K1's sequential timing lane
 is eligible; dynamic K3 and K5-T017 remain held after their retained failures.
 No ready commissioned packet lacks a worker. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2042.json).
+
+## 21:05 UTC timing turnover
+
+K1-T030 is fully verified and landed locally as `G-V27-K1-T030-1`. Its timing
+ratio interval straddles the declared scale-only bar, so it is unresolved at
+this sample size; this is not a null. The single allowed K1-T030-P2 precision
+double was frozen before admission. The independent audit matched 100 raw
+hashes and sizes and 109 replay bindings across K1-T030 and the K1-T030-P2 and
+K1-T031 measured probes, all three independent reconstructions, 25 public
+aggregate files and the report, FINDINGS, theory, unique claim-ledger and scoped
+exchange-note bindings.
+
+At the 21:05 UTC snapshot, 573 packets were complete: 287 probes, 66 follow-ups,
+six primary studies, 179 textures, 30 precision packets, three healings and two
+retained-data re-reads. K1-T031's texture study and K1-T030-P2's probe were
+running; the prepared queue was empty because both eligible packets had workers.
+Both probes subsequently passed, and the two corresponding studies began.
+Completed texture counts were K1 30, K2 56, K4 25, K5 16, K6 16 and K7 36.
+K3's dynamic primary and 33 textures remain unbuilt after the failed numerical
+gate, and K5's texture lane remains held at T017 after its retained instrument
+failure and two used healing slots.
+
+Sampled worker time was 52.39 busy hours. Idle causes were 29.48 hours awaiting
+build or design, 21.37 hours under the host-load rule and 3.15 hours during the
+initial build and validation. Charged/remaining pool hours were studies
+1.085/238.915, follow-up/healing/texture 50.501/429.499, preparation
+18.273/1.727 and protected 0/20. The K1 route remains bounded: Sounding Line may
+use timing robustness to nominate later suggestion-latency work, while ToMpathy
+may compare timing benefit with false identity calls; neither route establishes
+a human timing or identity mechanism.
+
+K1-T031's measured probe took about three minutes and the preceding full timing
+variant took about 36 minutes end to end. K1-T030-P2 has twice the whole-world
+blocks and remains probe-gated. A conservatively early next review is 21:30 UTC,
+to inspect both turnovers, preserve the K3/K5 holds and land only complete
+verified evidence. [Turnover receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2105.json).

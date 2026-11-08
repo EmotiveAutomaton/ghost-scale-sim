@@ -1,0 +1,98 @@
+{
+  "at": "2026-11-08T21:05:00+00:00",
+  "audit_scope": "K1-T030 timing texture completed after local commit ad263d133; K1-T030-P2 and K1-T031 turnover inspected without changing scientific sources.",
+  "claim": {
+    "claim": "G-V27-K1-T030-1",
+    "complete_sha256": "18bea1e3ee2bed1d6c2d6170ca7140903becbde86ff9a8993488802907dd9290",
+    "packet": "v27-k1-t030-study",
+    "report_sha256": "4e134fef3c795fe2cda85b06939568d70232a308df740b5ffff7c8f7c96ed1f0",
+    "summary_sha256": "6f231c9eed03e907a23a16a255011a49fcdaa637e0a9c857623e6fbd5e812e88",
+    "verdict": "unresolved at this sample size"
+  },
+  "decisions_verified": {
+    "K1": "Preserve locked choices; diffusion timing only",
+    "K3": "Use the checked approximation"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 9,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": {
+    "K1-T030": "passed for 96 whole-world files and reproduced summary 6f231c9eed03e907a23a16a255011a49fcdaa637e0a9c857623e6fbd5e812e88",
+    "K1-T030-P2-probe": "passed for 2 excluded whole-world files",
+    "K1-T031-probe": "passed for 2 excluded whole-world files"
+  },
+  "occupancy_hours": {
+    "busy": 52.385829930417756,
+    "idle_build_or_design": 29.484064337913683,
+    "idle_host_load": 21.365080234361553,
+    "idle_initial_build_and_validation": 3.1513818434722265
+  },
+  "pool_hours": {
+    "followup_healing_texture": {
+      "charged": 50.50079644097222,
+      "remaining": 429.49920355902776
+    },
+    "preparation": {
+      "charged": 18.27322058026966,
+      "remaining": 1.7267794197303414
+    },
+    "protected": {
+      "charged": 0.0,
+      "remaining": 20.0
+    },
+    "studies": {
+      "charged": 1.0848828125,
+      "remaining": 238.9151171875
+    }
+  },
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "raw_hash_and_size_checks": 100,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision authorizes K4/K6/K7 for Sounding Line and K2/K4/K6/K7 for ToMpathy, not K1.",
+  "replay_file_bindings": 109,
+  "runtime": {
+    "active_at_snapshot": [
+      "v27-k1-t030-p2-probe",
+      "v27-k1-t031-study"
+    ],
+    "controller_pid": 161248,
+    "controller_source_manifest_sha256": "1aec82c14f29b5a49057b70872cb5cb220fca73dd24e4cb328d54ba6feba71e2",
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "no_ready_packet_without_worker": true,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "verified_probe_receipts": [
+    {
+      "complete_sha256": "b7aa27657dcf9d460c1b7140dc6088cd1e5607439acba7b3721098c339e54f3a",
+      "packet": "v27-k1-t030-p2-probe",
+      "summary_sha256": "1d8a4eacc192a79d51be34afb4b7e5a7b37e4344ab4038c7282e274c7f307988"
+    },
+    {
+      "complete_sha256": "e997b27017cb0be1cd1351c3844693018350c12579ad1959773145fdc2e84982",
+      "packet": "v27-k1-t031-probe",
+      "summary_sha256": "b1b395955cd60f461630a224cce4926001a4c10b028c07ee14c03dd8e786bf78"
+    }
+  ],
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {
+    "K1": 30,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  },
+  "verification_note": "The 29 targeted V27 tests passed at the immediately preceding 20:42 UTC boundary; no implementation source changed in this turnover. This receipt adds an independent byte/hash, replay, reconstruction and documentary-binding audit of K1-T030."
+}
