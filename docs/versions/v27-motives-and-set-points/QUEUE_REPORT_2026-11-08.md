@@ -206,3 +206,11 @@ and its precision probe, both independent reconstructions, 18 public aggregate
 files and the complete report/FINDINGS/theory/claim/exchange chain. K1 now has
 34 verified textures. K1-T035's still-running probe is excluded from this
 landing; K3 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2301.json).
+
+K1-T034-P2 then completed and landed locally as `G-V27-K1-T034-P2-1`.
+The doubled-block precision packet resolved K1-T034's earlier interval and met
+the scale-only bar. The bounded audit matched 130 raw hashes and sizes and 136
+replay bindings across the named study and K1-T035's adjacent measured probe,
+both independent reconstructions, 18 public aggregate files and the complete
+report/FINDINGS/theory/claim/exchange chain. K1-T033-P2 and K1-T035 remain
+healthy and running; K3 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2328.json).

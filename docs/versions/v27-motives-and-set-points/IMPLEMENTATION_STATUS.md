@@ -196,3 +196,11 @@ the named study and its precision probe; both independent reconstructions
 reproduced their summaries. K1-T035's still-running probe is not included in
 this landing. Dynamic K3 and K5-T017 remain held without retry. [Turnover
 validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2301.json).
+
+K1-T034-P2 then completed and was verified end to end. The prospectively
+frozen doubled-block precision packet resolved K1-T034's earlier interval and
+met its declared scale-only bar. The bounded audit matched 130 raw hashes and
+sizes and 136 replay bindings across the named precision study and K1-T035's
+adjacent measured probe; both independent reconstructions reproduced their
+summaries. K1-T033-P2 and K1-T035 remain healthy and running. Dynamic K3 and
+K5-T017 remain held without retry. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2328.json).
