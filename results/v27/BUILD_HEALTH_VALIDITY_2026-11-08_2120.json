@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-08T21:20:00+00:00",
+  "audit_scope": "K1-T031 timing texture completed after local commit d8e1b3990; succeeding K1-T032 probe admission inspected without changing scientific sources.",
+  "claim": {
+    "claim": "G-V27-K1-T031-1",
+    "complete_sha256": "8928f668b65d2d7198c9bafb9db7c50f70f8a207d7ff8e3c923b9afd9326b285",
+    "packet": "v27-k1-t031-study",
+    "report_sha256": "7711906c80f130fc7f170ce3b25f34dc1db45b399c4a91c1f23b20bd8c54ad1f",
+    "summary_sha256": "a3969870a551adb0593ecd7fd57477bf6c8da0067262a8d906fc4ff8bed47bda",
+    "verdict": "met"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 9,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": "passed for 64 whole-world files and reproduced summary a3969870a551adb0593ecd7fd57477bf6c8da0067262a8d906fc4ff8bed47bda",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "raw_hash_and_size_checks": 64,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 67,
+  "runtime": {
+    "active_at_snapshot": [
+      "v27-k1-t030-p2-study",
+      "v27-k1-t032-probe"
+    ],
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "no_ready_packet_without_worker": true,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {
+    "K1": 31,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}

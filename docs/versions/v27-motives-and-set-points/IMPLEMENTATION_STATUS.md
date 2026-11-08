@@ -159,3 +159,10 @@ both running under the sole controller; both probes subsequently passed and
 their studies began. No ready commissioned packet lacked a worker. Dynamic K3
 and K5-T017 remain held without retry. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2105.json).
+
+K1-T031 completed at the next turnover and met its declared scale-only texture
+bar. A separate independent audit matched 64 raw hashes and sizes, 67 replay
+bindings, the independent reconstruction, all nine public aggregate files and
+the report/FINDINGS/theory/claim/exchange bindings for `G-V27-K1-T031-1`.
+K1-T030-P2 remained running and K1-T032's measured probe began; the controller
+did not reopen either held lane. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2120.json).

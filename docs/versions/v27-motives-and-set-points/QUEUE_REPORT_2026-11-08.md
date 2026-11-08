@@ -140,3 +140,10 @@ variant took about 36 minutes end to end. K1-T030-P2 has twice the whole-world
 blocks and remains probe-gated. A conservatively early next review is 21:30 UTC,
 to inspect both turnovers, preserve the K3/K5 holds and land only complete
 verified evidence. [Turnover receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2105.json).
+
+K1-T031 then completed and met its declared scale-only bar. The bounded audit
+matched 64 raw hashes and sizes, 67 replay bindings, the independent
+reconstruction, all nine public aggregate files and the complete named-batch
+documentary chain for `G-V27-K1-T031-1`. K1-T030-P2 remained in its original
+pass and K1-T032's measured probe started automatically. K1 now has 31 verified
+textures; K3 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2120.json).
