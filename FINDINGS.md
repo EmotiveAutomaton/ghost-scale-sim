@@ -1,5 +1,107 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K2-T038-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T038.md).
+
+## G-V27-K7-T031-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T031.md).
+
+## G-V27-K7-T021-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T021-P2.md).
+
+## G-V27-K7-T020-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T020-P2.md).
+
+## G-V27-K2-T037-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T037.md).
+
+## G-V27-K7-T012-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T012-P2.md).
+
+## G-V27-K1-T003-1
+
+Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K1-T003.md).
+
+## G-V27-K7-T030-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T030.md).
+
+## G-V27-K7-T011-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T011-P2.md).
+
+## G-V27-K2-T036-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T036.md).
+
+## G-V27-K7-T029-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T029.md).
+
+## G-V27-K7-T010-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T010-P2.md).
+
+## G-V27-K2-T035-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T035.md).
+
+## G-V27-K7-T009-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T009-P2.md).
+
+## G-V27-K7-T028-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T028.md).
+
+## G-V27-K7-T008-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T008-P2.md).
+
+## G-V27-K2-T034-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T034.md).
+
 ## G-V27-K7-T027-1
 
 Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.

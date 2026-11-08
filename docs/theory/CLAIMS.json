@@ -236519,6 +236519,1301 @@
       "source_sha256": "601d0eac0adf7f4f33c28c36b044bd8fbc4d48e8f4bc9a1763b11525b8ddd98b",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Cyclic balanced target encounters; independent Bernoulli contexts and observed payment. Exact temporal reader integrates RAGE. BP has separate conditional-RAGE and act factors, damping 0.5, tolerance 1e-12, 200 iterations. Circular messages have exponent two. Extended Kalman cue learner starts at zero with identity covariance and maps target weight using logit(0.3)+4w. Scores use final dislikes.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "3a52f59559875f43b4ba8a88161f659d0abe51f3d7d6d6f00830321657d73324",
+        "source_file": "results/v27/v27-k2-t034-study/SUMMARY.json"
+      },
+      "id": "G-V27-K2-T034-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K2-T034.md",
+      "source_line": 3,
+      "source_sha256": "e29f397097c15b3d76098d74cffa01f4233721b667f2da951afcb275abf9c6d0",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 4.0,
+          "estimate_censored": false,
+          "interval95": [
+            4.0,
+            4.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.04988540389370999,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.10774011789727633,
+            -0.010811530204846818
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.048062141407249966,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.09679667070277453,
+            -0.010177078527465971
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "63f39fe4db32a9f66030a8ab7bf61cd38dc3e0de801fb4b8ce3562afdc2edf41",
+        "source_file": "results/v27/v27-k7-t008-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T008-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T008-P2.md",
+      "source_line": 3,
+      "source_sha256": "b00b9ec5ecfb9d5b4590974b52ab32c72a6cca2de65210e59006b1df1c9decba",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 1.1428571428571428,
+          "estimate_censored": false,
+          "interval95": [
+            1.0,
+            1.3333333333333333
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": -2.358989402041644e-06,
+          "estimate_censored": false,
+          "interval95": [
+            -6.2328214970390755e-06,
+            1.514842692955787e-06
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": 1.8174636613229717e-06,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": -1.294590759050807e-07,
+          "estimate_censored": false,
+          "interval95": [
+            -4.006380429020168e-07,
+            1.417198910918554e-07
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": 1.2722748589658728e-07,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "6fbd8e9ccbba2f9462b5b4c22ec5d182ba1707271b699bceae48349d60c4f0bf",
+        "source_file": "results/v27/v27-k7-t028-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T028-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T028.md",
+      "source_line": 3,
+      "source_sha256": "1c6ce6a5d42ef90afe437bfbaf3245a5386c0ace391f6f1c9e45fd0b06b7a397",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 4.0,
+          "estimate_censored": false,
+          "interval95": [
+            3.0,
+            4.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.12687242528749088,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.29212788541228885,
+            -0.027780671125951173
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.05249867977589884,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.09330925983292371,
+            -0.01825473306456993
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "99fd99dbb5137a6a13b63d2075adace1ec5d0ed9294cbc48f28d4d7d77929aa6",
+        "source_file": "results/v27/v27-k7-t009-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T009-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T009-P2.md",
+      "source_line": 3,
+      "source_sha256": "186c37c1c6bfb2e8da2a5ee46749c53322cbaaf464a0bd0ddeb0834f11c0e742",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Cyclic balanced target encounters; independent Bernoulli contexts and observed payment. Exact temporal reader integrates RAGE. BP has separate conditional-RAGE and act factors, damping 0.5, tolerance 1e-12, 200 iterations. Circular messages have exponent two. Extended Kalman cue learner starts at zero with identity covariance and maps target weight using logit(0.3)+4w. Scores use final dislikes.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "6159e70f09a68e651b0e5152f15f7fa3d70dbc86d8ab45a01f9ae554ad3497d8",
+        "source_file": "results/v27/v27-k2-t035-study/SUMMARY.json"
+      },
+      "id": "G-V27-K2-T035-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K2-T035.md",
+      "source_line": 3,
+      "source_sha256": "942fb81abcb6746c08d61cb686f0241bd1ea35848dea2566f506a97cc5e3c3d6",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 3.0,
+          "estimate_censored": false,
+          "interval95": [
+            3.0,
+            4.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.12715150124243846,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.22455260253920484,
+            -0.045695666846081506
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.006999674971377882,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.019962432797883567,
+            -0.0003076057237674262
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "3875830e83932df0af153cedb57eedd7186bd1372c27f6f7c544577bbaead893",
+        "source_file": "results/v27/v27-k7-t010-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T010-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T010-P2.md",
+      "source_line": 3,
+      "source_sha256": "4746df8ac4e8b9e166cb0ddbfa8d3765b62303544f3779774c19a5f31afef43d",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 1.0,
+          "estimate_censored": false,
+          "interval95": [
+            0.75,
+            1.1666666666666667
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 2.883650123110155e-07,
+          "estimate_censored": false,
+          "interval95": [
+            -3.57286250617391e-07,
+            9.34016275239422e-07
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": 3.029165125083823e-07,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": -4.877680925152797e-09,
+          "estimate_censored": false,
+          "interval95": [
+            -1.5124684071286147e-08,
+            5.369322220980553e-09
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": 4.807527894564537e-09,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "d5940b056584fb64d0b29abed362173b2d68ca136e329b848f8759a48f4cfbea",
+        "source_file": "results/v27/v27-k7-t029-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T029-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T029.md",
+      "source_line": 3,
+      "source_sha256": "726a1d7bf763cf502e9c2122cdb28af8a17adec13b1f45e228a041e60a36c06a",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Cyclic balanced target encounters; independent Bernoulli contexts and observed payment. Exact temporal reader integrates RAGE. BP has separate conditional-RAGE and act factors, damping 0.5, tolerance 1e-12, 200 iterations. Circular messages have exponent two. Extended Kalman cue learner starts at zero with identity covariance and maps target weight using logit(0.3)+4w. Scores use final dislikes.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "85d276718d5d58cd8362b5def4160e70df2cbcb3030d69aafc4d3d4fa0c02726",
+        "source_file": "results/v27/v27-k2-t036-study/SUMMARY.json"
+      },
+      "id": "G-V27-K2-T036-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K2-T036.md",
+      "source_line": 3,
+      "source_sha256": "5359bdaae9dddc1a04ae116a17d8b148d99bbe2fb510ce6cad52454275984084",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 4.0,
+          "estimate_censored": false,
+          "interval95": [
+            3.0,
+            4.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.14111397778094492,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.24635400904179572,
+            -0.055717973498916384
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.09069792793782328,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.1649852823793796,
+            -0.0356921959011236
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "955177883e9d8443182b3ef1ee686da54329d1a45fb392b75a0d0d058ce20450",
+        "source_file": "results/v27/v27-k7-t011-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T011-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T011-P2.md",
+      "source_line": 3,
+      "source_sha256": "8838d8ae28382b67670fdb0ccc729e85896e126701b0e54c0d589c800e9415b8",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 1.3333333333333333,
+          "estimate_censored": false,
+          "interval95": [
+            1.0,
+            1.3333333333333333
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": -1.4143019199985674e-07,
+          "estimate_censored": false,
+          "interval95": [
+            -3.4112808283902045e-07,
+            5.8267698839306993e-08
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": 9.369111797894336e-08,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": 0.0021796977131138843,
+          "estimate_censored": false,
+          "interval95": [
+            -0.0024669644814069008,
+            0.006826359907634669
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": 0.0021800479416468825,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "8ba1fefe2d4f17b86910ca26a70f7bd3b26caed006e70258af8375b9f3b24df2",
+        "source_file": "results/v27/v27-k7-t030-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T030-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T030.md",
+      "source_line": 3,
+      "source_sha256": "4936bb983219438196b1a394d5eb9887e98e69c91f6de49cd114eb1ee72f2d88",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Finite personal-parameter grid over the declared ranges; exact binned first-passage likelihoods. Locked-choice interpretation recorded separately before admission.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 0.5,
+          "blocks": 16,
+          "direction": "at_most",
+          "estimate": 0.3333333333333333,
+          "estimate_censored": false,
+          "interval95": [
+            0.25,
+            0.4166666666666667
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "timing_ratio",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": true,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "4d87c118b68d1e1ca9c769ea13d97841f646e74c90eabd9215792e1d4f9cb3d0",
+        "source_file": "results/v27/v27-k1-t003-study/SUMMARY.json"
+      },
+      "id": "G-V27-K1-T003-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K1-T003.md",
+      "source_line": 3,
+      "source_sha256": "f80225ee1f0d1059362d26be8859b997d902ca1e25b4cd278e0735d287316031",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 4.0,
+          "estimate_censored": false,
+          "interval95": [
+            3.0,
+            4.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.13673843393349983,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.23244887455791985,
+            -0.055727686155623735
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.15959210948170166,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.3714917922632073,
+            -0.0015605464846002491
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "unresolved at this sample size"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "6513230ccb9297083b7f280c7255ec4fc6eb2c5a7f6ebd10f4eb339a71863a92",
+        "source_file": "results/v27/v27-k7-t012-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T012-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T012-P2.md",
+      "source_line": 3,
+      "source_sha256": "bcba97f7071629218b86f2128ddf9e40903bb7c496018608e684cf295610ab12",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Cyclic balanced target encounters; independent Bernoulli contexts and observed payment. Exact temporal reader integrates RAGE. BP has separate conditional-RAGE and act factors, damping 0.5, tolerance 1e-12, 200 iterations. Circular messages have exponent two. Extended Kalman cue learner starts at zero with identity covariance and maps target weight using logit(0.3)+4w. Scores use final dislikes.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "4f89ebaab99121664dbde7dd17e34f9c774ab824b53824c87ab845d1ddea2373",
+        "source_file": "results/v27/v27-k2-t037-study/SUMMARY.json"
+      },
+      "id": "G-V27-K2-T037-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K2-T037.md",
+      "source_line": 3,
+      "source_sha256": "61b17af8f10edf8b60428f7cbf341141062e3dc53e367d9718afee17b980b94b",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 2.0,
+          "estimate_censored": false,
+          "interval95": [
+            1.5,
+            2.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -1.9076778346783464e-05,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -5.3217970043429076e-05,
+            -8.777431546056118e-07
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -3.6541766182066266e-05,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.00010401571535756568,
+            -1.2721493329927172e-06
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "88352736da18ce4c4ad55ccb0964cac4fa5bb2d5d4d4712d9be77144c78943bf",
+        "source_file": "results/v27/v27-k7-t020-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T020-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T020-P2.md",
+      "source_line": 3,
+      "source_sha256": "07157916a6a7277e5058812ebae767002516c9d8ba83695fc531d725e8bcb44e",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 32,
+          "direction": "at_least",
+          "estimate": 2.0,
+          "estimate_censored": false,
+          "interval95": [
+            1.5,
+            2.0
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.0019306242500600759,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.004629814931074838,
+            -1.632655513716812e-05
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 32,
+          "direction": "below",
+          "estimate": -0.0046071850013595945,
+          "estimate_censored": false,
+          "estimate_negative_infinity": false,
+          "interval95": [
+            -0.011660690410449703,
+            -0.00027819810395790577
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "lower_negative_infinity": false,
+          "method": "Pointwise whole-block percentile bootstrap, 2000 resamples; exact zero model support retains minus-infinite log score",
+          "metric": "misread_gain",
+          "observations": 256,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": null,
+          "statistic": "extended_mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "upper_negative_infinity": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "f0168e6f2061b62b9ca55d393f250d7c61ff55c88175ce2b3ff5a559d26657bb",
+        "source_file": "results/v27/v27-k7-t021-p2-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T021-P2-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T021-P2.md",
+      "source_line": 3,
+      "source_sha256": "0d75be651b44a68a09d630a96784f201c7bb23cb88a220460a2dd8cacde32e4f",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "The world shares one top goal across repeated variable-length structures; each structure conceals that goal until its final piece. Readers infer boundaries, including hidden state for M3. Listener and marker laws are declared before excluded horizon calibration.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "bar": 1.5,
+          "blocks": 16,
+          "direction": "at_least",
+          "estimate": 1.0,
+          "estimate_censored": false,
+          "interval95": [
+            1.0,
+            1.3333333333333333
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise percentile bootstrap, 2000 resamples of entire blocks; unresolved crossings are right-censored",
+          "metric": "marker_ratio",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 0,
+          "standard_error": null,
+          "statistic": "median_ratio",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": -3.990778418841257e-08,
+          "estimate_censored": false,
+          "interval95": [
+            -1.1650281698564607e-07,
+            3.668724860882093e-08
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 2,
+          "standard_error": 3.593565372298497e-08,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        },
+        {
+          "bar": -0.05,
+          "blocks": 16,
+          "direction": "below",
+          "estimate": -0.015197567643433718,
+          "estimate_censored": false,
+          "interval95": [
+            -0.047553527085596695,
+            0.01715839179872926
+          ],
+          "interval_unavailable": false,
+          "labels": {
+            "reader": "contrasts"
+          },
+          "lower_censored": false,
+          "method": "Pointwise Student t interval across independent whole-world blocks",
+          "metric": "misread_gain",
+          "observations": 128,
+          "packet_by_construction_or_scale_only": false,
+          "setting": 4,
+          "standard_error": 0.015180260545962072,
+          "statistic": "mean",
+          "unavailable": false,
+          "upper_censored": false,
+          "verdict": "not met"
+        }
+      ],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "d778b0e0174f911f13bf70832447c7709d13b364ed05376990d7f8f9299305db",
+        "source_file": "results/v27/v27-k7-t031-study/SUMMARY.json"
+      },
+      "id": "G-V27-K7-T031-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K7-T031.md",
+      "source_line": 3,
+      "source_sha256": "59b9b4a95d945e0b26755878851386ddceb504ae2dc3fea1399692295dc82469",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Cyclic balanced target encounters; independent Bernoulli contexts and observed payment. Exact temporal reader integrates RAGE. BP has separate conditional-RAGE and act factors, damping 0.5, tolerance 1e-12, 200 iterations. Circular messages have exponent two. Extended Kalman cue learner starts at zero with identity covariance and maps target weight using logit(0.3)+4w. Scores use final dislikes.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [],
+      "estimate_detail": {
+        "scope": "All descriptive estimates and uncertainty are preserved in the complete summary and report; the ledger carries declared-bar rows.",
+        "sha256": "5fe76730f46467cb727e79870aeba9aeeef7fb585cc93cc65a4ba49778cc1ad0",
+        "source_file": "results/v27/v27-k2-t038-study/SUMMARY.json"
+      },
+      "id": "G-V27-K2-T038-1",
+      "reader": "Declared exact and approximate readers; approximation and nonconvergence retained",
+      "source_file": "docs/versions/v27-motives-and-set-points/reports/K2-T038.md",
+      "source_line": 3,
+      "source_sha256": "7a781d35c980c5a777159fbc34e64d2a4240e4759c333cc3afc891861e2e2314",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,

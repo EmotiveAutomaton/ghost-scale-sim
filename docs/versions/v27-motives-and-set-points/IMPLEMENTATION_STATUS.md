@@ -59,6 +59,16 @@ Previously verified static comparisons remain unchanged. The approved aggregate
 packages were copied to both explicitly named recipient locations, hash-checked
 and left uncommitted. Earlier copies at compact-date paths are retained.
 
+The 8 November build review retained K5-T017's failed independent
+reconstruction: one saved binary value reconstructed as 0 rather than 1. This
+is an instrument failure, not a scientific result. K5-H1 and K5-H2 already use
+the family's two authorized healing slots, so no third healing or implicit
+retry was admitted; the K5 texture continuation remains blocked at T017.
+The review's bounded publication snapshot contains 38 newly exported packets
+(18 studies and 20 probes), with all 2,120 raw hashes and sizes, replay
+bindings and independent reconstructions checked. Eleven targeted V27 tests
+passed. [Validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_0630.json).
+
 The controller and one native monitor are live. Build/admission reviews are
 bounded to at most 60 minutes while eligible work remains; otherwise routine
 health checks are twelve-hourly, with daily and terminal events. The monitor

@@ -1,0 +1,63 @@
+{
+  "at": "2026-11-08T06:32:35.5741978+00:00",
+  "base_commit": "34a4f1e7f71b933982c3104c90f047231bcebcdd",
+  "event_evidence_audit": {
+    "complete_packets": 39,
+    "event_hash_failures": 0,
+    "events": 40,
+    "failed_packets": 1,
+    "prompt_complete_binding_failures": 0,
+    "prompt_raw_files": 2600,
+    "prompt_raw_hash_or_size_failures": 0,
+    "prompt_replay_bindings": 2717
+  },
+  "k3": {
+    "dynamic_science_admitted": false,
+    "failed_fixture": 5,
+    "margin_bar_nats": 0.25,
+    "margin_error_nats": 0.32314387779604203,
+    "state": "FAILED_NUMERICAL_GATE_RETAINED"
+  },
+  "k5_t017": {
+    "diagnosis": "Independent reconstruction disagreed at root.data.measures[46].values[1]: saved 1.0 versus reconstructed 0.0.",
+    "failure_event_sha256": "517d964818f5288c7a9df09501619c044926071802ebb047149661f13ec09b56",
+    "healing_slots_authorized": 2,
+    "healing_slots_consumed": 2,
+    "implicit_retry": false,
+    "scientific_result": false,
+    "status_sha256": "de3063d2c9a94677cb9cab0318c5d2ebb02f3a6298a6ff5315807ff9cb270559",
+    "texture_continuation": "BLOCKED_AT_T017",
+    "third_healing_admitted": false
+  },
+  "publication_snapshot": {
+    "complete_binding_failures": 0,
+    "export_binding_failures": 0,
+    "packets": 38,
+    "probes": 20,
+    "raw_files": 2120,
+    "raw_hash_or_size_failures": 0,
+    "reports_with_findings_theory_claim_and_exchange": 18,
+    "studies": 18
+  },
+  "queue_snapshot": {
+    "active": [
+      "v27-k1-t004-study",
+      "v27-k2-t038-study",
+      "v27-k1-f1-probe",
+      "v27-k1-f2-probe"
+    ],
+    "at": "2026-11-08T06:30:52.308063+00:00",
+    "commissioned_cards": 275,
+    "complete_packets": 332,
+    "failed_packets": 2,
+    "gear_limit": 4,
+    "prepared_packets": 24,
+    "unbuilt_dynamic_k3_cards": 34
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests/test_v27_contract.py tests/test_v27_preparation.py tests/test_v27_approved_decisions.py",
+    "failed": 0,
+    "passed": 11,
+    "warning": "Pytest cache write was denied; test execution and results were unaffected."
+  }
+}
