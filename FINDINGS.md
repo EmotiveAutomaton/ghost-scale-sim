@@ -1,5 +1,35 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K7-T027-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T027.md).
+
+## G-V27-K7-T007-P2-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The precision card retains 6 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T007-P2.md).
+
+## G-V27-K5-T015-P2-1
+
+How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K5-T015-P2.md).
+
+## G-V27-K7-T026-1
+
+Do completion markers reveal hidden structure when surprise or social state can also cause them? The texture card retains 6 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K7-T026.md).
+
+## G-V27-K2-T033-1
+
+Can a reader separate several motives for one act, including feedback from acting? The texture card retains 2 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is unresolved at this sample size. Constructed-method evidence; miniature, architecture untested.
+
+[Report](docs/versions/v27-motives-and-set-points/reports/K2-T033.md).
+
 ## G-V27-K1-T002-1
 
 Do decision times distinguish a locked rule from a strong preference after learning personal speed? The texture card retains 4 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is met. Constructed-method evidence; miniature, architecture untested.
