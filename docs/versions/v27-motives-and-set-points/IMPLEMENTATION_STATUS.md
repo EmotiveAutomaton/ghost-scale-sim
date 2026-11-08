@@ -166,3 +166,14 @@ bindings, the independent reconstruction, all nine public aggregate files and
 the report/FINDINGS/theory/claim/exchange bindings for `G-V27-K1-T031-1`.
 K1-T030-P2 remained running and K1-T032's measured probe began; the controller
 did not reopen either held lane. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2120.json).
+
+The 22:08 UTC turnover verified K1-T030-P2 and K1-T032 end to end. The
+prospectively frozen doubled-block precision packet resolved K1-T030's interval
+and met the declared scale-only bar; K1-T032 also met its texture bar. Across
+the two studies and their adjacent K1-T032 and K1-T033 measured probes, all 292
+raw hashes and sizes and 304 replay bindings matched, and all four independent
+reconstructions reproduced the original summaries. Both named batches have
+reports, FINDINGS and theory rows, unique claim-ledger entries and scoped
+exchange notes. K1-T033's probe passed and its study began automatically.
+Dynamic K3 and K5-T017 remain held without retry. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2208.json).

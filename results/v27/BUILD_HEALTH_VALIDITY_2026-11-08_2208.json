@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-08T22:08:05+00:00",
+  "audit_scope": "K1-T030-P2 precision completion and K1-T032 texture completion, with the adjacent K1-T032 and K1-T033 measured probes.",
+  "claims": [
+    {
+      "claim": "G-V27-K1-T030-P2-1",
+      "complete_sha256": "05ec20ae0cdaf3432740c79d994fa12a997f0013f6c931dfe43e2b28abdef35b",
+      "packet": "v27-k1-t030-p2-study",
+      "report_sha256": "fe5e24d2e5f936f5115eb23a50d330c4cd98609f9ede8dec51240105565e6ff5",
+      "summary_sha256": "e83d8cf7e623e6e5d66e09e88fb080b9dea517507063e76ca0576d385d4b6001",
+      "verdict": "met"
+    },
+    {
+      "claim": "G-V27-K1-T032-1",
+      "complete_sha256": "c32656cbdf6aa95c7d4b08ebb459d1fc687c6e04a29e44f11b0217bc621e458e",
+      "packet": "v27-k1-t032-study",
+      "report_sha256": "712a1771ad8742211ae4ca6700da58e6b0bff1edea3e43f5c525b2623fe3048f",
+      "summary_sha256": "87c2fb8671b5b31c35b49d66964e0a42d7f669d35f57e79032800011e537b615",
+      "verdict": "met"
+    }
+  ],
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 2,
+    "exchange_notes": 2,
+    "findings_rows": 2,
+    "public_aggregate_files": 34,
+    "reports": 2,
+    "theory_rows": 2
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": "passed for both named studies and both adjacent measured probes; the two studies reproduced their original summary hashes from 288 whole-world files",
+  "precision_disposition": "K1-T030-P2 resolved K1-T030's interval and met the declared scale-only bar. It is the single prospectively frozen doubled-block precision packet for K1-T030 and has no further precision descendant.",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "probes": [
+    {
+      "complete_sha256": "71273c3c6627104d8a5ca68440f1adf1d3d739a08358e99b849bf02b6c1eb4be",
+      "packet": "v27-k1-t032-probe"
+    },
+    {
+      "complete_sha256": "25e9fd3660ffe5ccdfb3e49d93a0b070fd486132b813e94a7be4362d576ad20d",
+      "packet": "v27-k1-t033-probe"
+    }
+  ],
+  "raw_hash_and_size_checks": 292,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 304,
+  "runtime": {
+    "active_at_snapshot": [
+      "v27-k1-t033-study"
+    ],
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "no_ready_packet_without_worker": true,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {
+    "K1": 32,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}

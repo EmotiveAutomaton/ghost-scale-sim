@@ -147,3 +147,37 @@ reconstruction, all nine public aggregate files and the complete named-batch
 documentary chain for `G-V27-K1-T031-1`. K1-T030-P2 remained in its original
 pass and K1-T032's measured probe started automatically. K1 now has 31 verified
 textures; K3 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2120.json).
+
+## 22:08 UTC precision and texture turnover
+
+K1-T030-P2 and K1-T032 are fully verified and landed locally. The doubled-block
+precision packet resolved K1-T030's earlier interval and met the scale-only bar;
+K1-T032 also met its declared texture bar. The independent audit matched 292
+raw hashes and sizes and 304 replay bindings across the two studies and their
+adjacent K1-T032 and K1-T033 measured probes. All four independent
+reconstructions, 34 public aggregate files and both named batches' reports,
+FINDINGS rows, theory rows, unique claim-ledger entries and scoped exchange
+notes passed their bindings. K1 has no recipient copy under the recorded
+family-scoped delivery decision.
+
+At the 22:09 UTC snapshot, 579 packets were complete: 290 probes, 66 follow-ups,
+six primary studies, 181 textures, 31 precision packets, three healings and two
+retained-data re-reads. K1-T033's probe passed and its texture study is running;
+no eligible ready packet lacks a worker. Completed texture counts are K1 32,
+K2 56, K4 25, K5 16, K6 16 and K7 36. Dynamic K3 and its 33 textures remain
+unbuilt after the failed numerical gate, and K5's texture lane remains held at
+T017 after its retained instrument failure and two used healing slots.
+
+Sampled worker time is 54.50 busy hours. Idle causes are 31.67 hours awaiting
+build or design, 21.37 hours under the host-load rule and 3.15 hours during the
+initial build and validation. Charged/remaining pool hours are studies
+1.085/238.915, follow-up/healing/texture 54.576/425.424, preparation
+18.374/1.626 and protected 0/20. K1's route remains scoped: Sounding Line may
+use timing robustness to nominate later suggestion-latency work, while ToMpathy
+may compare timing benefit with false identity calls; neither route establishes
+a human timing or identity mechanism.
+
+K1-T032 took about 38 minutes end to end. K1-T033 began at 22:05 UTC; a
+conservatively early next action is 22:35 UTC to inspect its turnover, preserve
+the K3 and K5 holds and land only complete verified evidence. [Turnover
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2208.json).
