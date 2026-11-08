@@ -4,9 +4,9 @@ November 7 setup checkpoint: K2, K4, K5, K6 and K7 have verified primary results
 complete raw replay and independent reconstruction. Their full declared grids
 are built, with sequential texture admission, doubled-block precision packets
 and bounded follow-ups. K3's exact static overshoot comparison is also verified.
-The owner subsequently selected Gear 1: one single-thread, below-normal compute
-worker, including long numerical validation. The original budgets and deadlines
-remain unchanged; low host load does not restore the higher gear. Consult
+The owner restored Gear 2 on November 7 Pacific: up to four single-thread,
+below-normal workers, dropping to two under the packet's measured host-load rule.
+The original budgets and deadlines remain unchanged. Consult
 [current state](../../../results/v27/CURRENT_STATUS.json) for subsequent counts.
 
 Corrections lead this checkpoint. K5's first probe exposed a mathematically tied
@@ -50,9 +50,11 @@ both limits, but the 8,192-particle comparisons still fail. A source-frozen
 reusing saved lower-resolution calculations. Approval alone does not admit science.
 That extension retained a second failure at fixture 1: one 32,768-particle path
 missed both numerical limits, while the 131,072-particle replicate comparison and
-all crossing classifications passed. K3-H2 is frozen to compare 131,072 against
-262,144 particles under the same bars, starting with fixture 1 and stopping on the
-first failure. Dynamic K3 science remains unadmitted.
+all crossing classifications passed. K3-H2 compared 131,072 against 262,144
+particles under the same bars, starting with fixture 1 and stopping on the first
+failure. Fixtures 1, 0, 2, 3 and 4 passed; fixture 5 failed because one
+131,072-particle path missed the unchanged 0.25-nat margin limit at 0.3231 nat.
+The failure is retained and dynamic K3 science remains unadmitted.
 Previously verified static comparisons remain unchanged. The approved aggregate
 packages were copied to both explicitly named recipient locations, hash-checked
 and left uncommitted. Earlier copies at compact-date paths are retained.
