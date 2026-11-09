@@ -1,0 +1,66 @@
+{
+  "at": "2026-11-09T08:57:00+00:00",
+  "audit_scope": "K1-T048 and K1-T049's adjacent measured probe; K1-T049's running study is excluded.",
+  "adjacent_probe": {
+    "complete_sha256": "6a4bd2e414f7b6a87fcbd34b4bc42e43ea638e94889f9c0101ee51a034e92276",
+    "packet": "v27-k1-t049-probe",
+    "review_state": "INDEPENDENT_RECONSTRUCTION_PASSED",
+    "worlds": 2
+  },
+  "claim": {
+    "claim": "G-V27-K1-T048-1",
+    "complete_sha256": "14d2b800abdbadfd2166fbda429b4863ad35f2a61078d268619a4dc013d5c6b5",
+    "packet": "v27-k1-t048-study",
+    "plan_sha256": "5a80a14bbc4ee465217fd4087db2cf4e068ea876dd33a9e82acfa89a57301f4e",
+    "report_sha256": "af0bb8f75f6c01a2c9d4959d7f9349d79905d0958346db318529f023fd3b3485",
+    "summary_sha256": "48a797aae42427c917fb871644066cf90a24e6b1947761310667e0a8330511a7",
+    "verdict": "met"
+  },
+  "controller_recovery": {
+    "failure_class": "engineering export failure after scientific completion",
+    "predecessor_pid": 161248,
+    "predecessor_stopped": true,
+    "replacement_pid": 154036,
+    "replacement_priority": "below-normal",
+    "replacement_source_manifest_sha256": "aead47fe0dd6dff4de7339051c0ff1fb39f61469f0daba0ae24d63b8b63f0a23",
+    "single_controller": true,
+    "scientific_packet_repeated": false
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 9,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "independent_reconstruction": "passed for all 96 K1-T048 study worlds and both K1-T049 measured-probe worlds; both reconstructions reproduced their original summaries",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "public_export_bindings": 17,
+  "raw_hash_and_size_checks": 98,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 104,
+  "runtime": {
+    "controller_pid": 154036,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "targeted_tests": 33,
+  "texture_complete": {
+    "K1": 48,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}
