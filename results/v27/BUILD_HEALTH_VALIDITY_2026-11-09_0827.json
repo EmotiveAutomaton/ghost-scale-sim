@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-09T08:27:00+00:00",
+  "audit_scope": "K1-T045-P2 logical precision aggregation from two independently verified setting partitions; K1-T048's running study is excluded.",
+  "claim": {
+    "claim": "G-V27-K1-T045-P2-1",
+    "complete_sha256": "809ba1835b5ca59cfedbc889806203ea9eb748c6b78244e7678364c8769b753b",
+    "packet": "v27-k1-t045-p2-study",
+    "report_sha256": "c4c88f90ff38c3ff531933f7391524b9adbdca3e362b2a3b9c884e0d3136857d",
+    "summary_sha256": "a63d87a4a2840500a8dfcab6e67c83f9910812396c02598d2933ee0e706e48bb",
+    "verdict": "met"
+  },
+  "documentary_bindings": {"claim_ledger_source_hashes": 1, "exchange_notes": 1, "findings_rows": 1, "public_aggregate_files": 10, "reports": 1, "theory_rows": 1},
+  "engineering_recovery": {
+    "failed_attempts_retained": "The first landing exposed that censored logical aggregates needed to follow bound part raw indexes. After that repair, the interrupted immutable export required an identical-byte verification path. Both failures are retained in the private engineering receipt.",
+    "scientific_bytes_changed": false,
+    "targeted_tests": 33
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "immutable_bindings": {
+    "acceptance_sha256": "d6e35d9d7db6653e291b05c51aa7e32d32719f6d8d172bfe20a774ed96892b3e",
+    "aggregation_sha256": "ae8a8dfb0ac191af088674421e7df6f24610433582d3221ff3df8db506640280",
+    "design_check_sha256": "c5189dc7c953e7401ff338b11e772538b72136fae72b92ca6af9dfa10bc6c7ea",
+    "plan_sha256": "c3bb9eff5dfddc587359e87babe842204395e287687e352cf081667097fbc907",
+    "protocol_sha256": "3008ee623b41a9e91d971354f9d4c1626dd6de7f91ef92ed1ff333824c770b6e",
+    "source_archive_sha256": "523f58a208f7ec9682fa2dcb20d9b195a543cd83aaad38b9ca4c4c29c5decc5d",
+    "source_manifest_sha256": "f362eb22e1741bb44c77ff3f0334d5508bcb8b391831660b836dbdd1c33d85b0"
+  },
+  "independent_reconstruction": "passed separately for both 96-world execution parts; the logical aggregation covers all 192 declared worlds and all six settings exactly once",
+  "parts": [
+    {"complete_sha256": "6d317c22002802816dc796aa44a8039b1f50ee0a67942aa7ed47f9a0556f5810", "packet": "v27-k1-t045-p2-study-part1", "plan_sha256": "5b3a74ad3c5709fa17bed4a9ef71ae28fd6e8a39fc9a60383c18d081fa439dc8", "raw_index_sha256": "093064654b7f3a5e3006516c55ef83bc47c0125d8c1b5ed849d99a2b2df03197"},
+    {"complete_sha256": "6ef4af1d6681cfcb70e5fb0396932d245cc15184b390e3ee31b0c459dd25e200", "packet": "v27-k1-t045-p2-study-part2", "plan_sha256": "282ff273d8d29405372a0c96a7d4df34501667f2d4dc49a22b1c880c95abccf2", "raw_index_sha256": "163ff680fe969c81021284dd69d6e701b48b7462f37ad943919ae01e2dafbcd7"}
+  ],
+  "part_raw_hash_and_size_checks": 192,
+  "part_replay_file_bindings": 198,
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "public_export_bindings": 10,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "runtime": {"controller_pid": 161248, "host_load_worker_limit": 4, "monitor_pid": 240232, "single_controller": true, "single_monitor": true, "v15_pid_absent": true},
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "targeted_tests": 33,
+  "texture_complete": {"K1": 47, "K2": 56, "K4": 25, "K5": 16, "K6": 16, "K7": 36}
+}

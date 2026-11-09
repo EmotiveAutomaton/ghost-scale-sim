@@ -381,3 +381,18 @@ entered replay without an unsplit draw; their logical card remains unlanded
 until both parts pass independent reconstruction. Dynamic K3 and K5-T017 remain
 held without retry. Thirty-one targeted V27 tests passed. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0757.json).
+
+The prospectively frozen K1-T045-P2 precision follow-up then completed as two
+bounded execution parts. Each part passed its own complete replay and independent
+reconstruction; their 192 original raw hashes and sizes and 198 replay bindings
+match. One no-new-draw logical aggregation binds both complete receipts, covers
+all six declared settings and 192 worlds exactly once, and alone receives claim
+`G-V27-K1-T045-P2-1`. The doubled-block result's declared bar conjunction is
+met. Neither execution part has a report, claim or landing receipt. The first
+documentary attempt exposed an aggregate censoring reader gap; the next exposed
+an interrupted-export idempotence gap. Both engineering failures are retained,
+both repairs preserve every scientific byte, and all thirty-three targeted V27
+tests pass. K1 has no recipient copy under the recorded family-scoped delivery
+decision. K1-T048 remains healthy in independent reconstruction. Dynamic K3 and
+K5-T017 remain held without retry. [Aggregation validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0827.json).

@@ -34,13 +34,23 @@ def retained(packet):
     affected=[r for r in summary['cells'] if r['statistic']=='median_ratio' and (r['estimate_censored'] or r['interval_unavailable'] or r['upper_censored'] or r['lower_censored'])]
     if not affected:return []
     result=[];index=read(packet/'original/RAW_INDEX.json')
+    aggregation=read(packet/'AGGREGATION.json') if (packet/'AGGREGATION.json').exists() else None
     for row in affected:
         setting=row['setting'];blocks=[];s=summary['settings'][setting]
         horizon=s.get('records',s.get('structures'))
         if horizon is None:raise ValueError('ratio censor horizon missing')
+        source_packet=packet;source_setting=setting;source_index=index
+        if aggregation:
+            matches=[]
+            for part_name,part_index in aggregation['part_raw_indexes'].items():
+                part_packet=packet.parent/part_name;part_plan=read(part_packet/'PLAN.json')
+                if setting in part_plan['setting_indices']:
+                    matches.append((part_packet,part_plan['setting_indices'].index(setting),part_index))
+            if len(matches)!=1:raise ValueError('logical setting does not map to exactly one split part')
+            source_packet,source_setting,source_index=matches[0]
         for b in range(summary['blocks']):
-            path=packet/'original'/f'world-{setting:04d}-{b:04d}_points.json.gz'
-            if digest(path)!=index[path.name]['sha256']:raise ValueError('censor bound input changed')
+            path=source_packet/'original'/f'world-{source_setting:04d}-{b:04d}_points.json.gz'
+            if digest(path)!=source_index[path.name]['sha256']:raise ValueError('censor bound input changed')
             with gzip.open(path,'rt',encoding='utf-8') as f:raw=json.load(f)
             m=next(m for m in raw['data']['measures'] if m['metric']==row['metric'] and m['labels']==row['labels'])
             blocks.append(m['values'])

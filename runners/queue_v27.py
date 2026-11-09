@@ -243,6 +243,14 @@ def aggregate_ready_splits(c):
         aggregate_split(c,read(path)['card'])
 
 
+def write_verified(path,value):
+    """Create an immutable export, or verify an identical interrupted export."""
+    if path.exists():
+        if read(path)!=value:raise ValueError('existing public aggregate differs: '+str(path))
+        return
+    write(path,value)
+
+
 def verify(c,packet,p):
     native.verify_source(p)
     if p.get('retained_manifest') and digest(Path(p['retained_manifest']))!=p['retained_manifest_sha256']:raise ValueError('retained input manifest changed')
@@ -267,9 +275,9 @@ def export(c):
         packet=path.parent;p=read(path);s=read(packet/'STATUS.json');rows.append(dict(packet=packet.name,card=p['card'],kind=p['kind'],state=s['state'],phase=s.get('phase')))
         if (packet/'COMPLETE.json').exists() and not (packet/'AGGREGATE_EXPORTED.json').exists():
             verify_complete(packet)
-            for name,relative in [('SUMMARY.json','original/SUMMARY.json'),('RAW_INDEX.json','original/RAW_INDEX.json'),('COMPLETE.json','COMPLETE.json'),('REPLAY.json','REPLAY.json'),('INDEPENDENT_REVIEW.json','INDEPENDENT_REVIEW.json'),('PASS_COSTS.json','PASS_COSTS.json'),('CONTROLS.json','CONTROLS_BEFORE_DATA.json')]:write(out/packet.name/name,read(packet/relative))
-            write(out/packet.name/'PUBLIC_PLAN.json',{k:v for k,v in p.items() if k not in ('source_root','interpreter','retained_manifest')})
-            if (packet/'AGGREGATION.json').exists():write(out/packet.name/'AGGREGATION.json',read(packet/'AGGREGATION.json'))
+            for name,relative in [('SUMMARY.json','original/SUMMARY.json'),('RAW_INDEX.json','original/RAW_INDEX.json'),('COMPLETE.json','COMPLETE.json'),('REPLAY.json','REPLAY.json'),('INDEPENDENT_REVIEW.json','INDEPENDENT_REVIEW.json'),('PASS_COSTS.json','PASS_COSTS.json'),('CONTROLS.json','CONTROLS_BEFORE_DATA.json')]:write_verified(out/packet.name/name,read(packet/relative))
+            write_verified(out/packet.name/'PUBLIC_PLAN.json',{k:v for k,v in p.items() if k not in ('source_root','interpreter','retained_manifest')})
+            if (packet/'AGGREGATION.json').exists():write_verified(out/packet.name/'AGGREGATION.json',read(packet/'AGGREGATION.json'))
             reporting.land(c,packet,repo);write(packet/'AGGREGATE_EXPORTED.json',dict(at=native.now().isoformat()))
     q=read(c/'QUEUE_STATUS.json') if (c/'QUEUE_STATUS.json').exists() else dict(state='BUILDING',active=[],prepared=[])
     write(out/'CURRENT_STATUS.json',dict(at=native.now().isoformat(),queue=q,packets=rows,

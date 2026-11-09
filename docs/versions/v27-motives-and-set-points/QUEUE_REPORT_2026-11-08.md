@@ -398,3 +398,20 @@ ToMpathy may compare timing benefit with false identity calls; neither route
 establishes a human timing or identity mechanism. Dynamic K3 and K5-T017 remain
 held without retry. [Audit
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0757.json).
+
+K1-T045-P2 then completed through its two frozen setting partitions. Both parts
+passed complete replay and independent reconstruction; the audit matched 192
+original raw hashes and sizes and 198 replay bindings. A single no-new-draw
+logical aggregation covers all six settings and 192 worlds exactly once and
+landed as `G-V27-K1-T045-P2-1`; its doubled-block declared bar conjunction is
+met. Neither execution part received a claim or report. Ten logical public
+aggregate files and the complete report/FINDINGS/theory/claim/exchange chain
+match. Two interrupted documentary attempts exposed and retained aggregate
+censoring and immutable-export recovery gaps; the repairs changed no scientific
+byte and all 33 targeted tests pass. K1-T048 remains healthy in independent
+reconstruction, so no eligible ready packet lacks a worker. K1's route remains
+scoped: Sounding Line may use timing robustness to nominate later suggestion-
+latency work, while ToMpathy may compare timing benefit with false identity
+calls; neither route establishes a human timing or identity mechanism. Dynamic
+K3 and K5-T017 remain held without retry. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0827.json).

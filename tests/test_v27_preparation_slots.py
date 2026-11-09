@@ -1,3 +1,6 @@
+import gzip,json
+import pytest
+
 from ghostscale.validation.soundingline.v27.common import digest,read,verify_complete,write
 from runners import queue_v27 as queue
 
@@ -63,3 +66,32 @@ def test_split_aggregation_maps_parts_without_copying_raw_bytes(tmp_path):
     aggregation=read(logical/'AGGREGATION.json')
     assert sorted(aggregation['part_raw_indexes'])==[f'v27-{card.lower()}-study-part1',f'v27-{card.lower()}-study-part2']
     assert aggregation['no_new_scientific_draws'] is True
+
+
+def test_split_censoring_reads_bound_part_raw_bytes(tmp_path):
+    from ghostscale.validation.soundingline.v27 import censoring
+    campaign=tmp_path/'v27';logical=campaign/'packets/v27-k1-p2-study';part=campaign/'packets/v27-k1-p2-study-part2'
+    settings=[{'records':5} for _ in range(4)]
+    write(part/'PLAN.json',dict(setting_indices=[3]))
+    index={}
+    for block in range(2):
+        path=part/'original'/f'world-0000-{block:04d}_points.json.gz';path.parent.mkdir(parents=True,exist_ok=True)
+        with gzip.open(path,'wt',encoding='utf-8') as target:
+            json.dump({'data':{'measures':[{'metric':'timing_ratio','labels':{},'values':[[None,1],[2,1]]}]}},target)
+        index[path.name]=dict(sha256=digest(path),bytes=path.stat().st_size)
+    write(logical/'original/SUMMARY.json',dict(card='K1-P2',settings=settings,blocks=2,cells=[dict(
+        setting=3,metric='timing_ratio',labels={},statistic='median_ratio',estimate_censored=True,
+        interval_unavailable=False,upper_censored=True,lower_censored=False)]))
+    write(logical/'original/RAW_INDEX.json',{})
+    write(logical/'AGGREGATION.json',dict(part_raw_indexes={part.name:index}))
+    bounds=censoring.retained(logical)
+    assert len(bounds)==1
+    assert bounds[0]['setting']==3
+    assert bounds[0]['estimate_censored'] is True
+
+
+def test_interrupted_public_export_is_verified_not_overwritten(tmp_path):
+    path=tmp_path/'SUMMARY.json';write(path,{'state':'frozen'})
+    queue.write_verified(path,{'state':'frozen'})
+    with pytest.raises(ValueError,match='existing public aggregate differs'):
+        queue.write_verified(path,{'state':'changed'})
