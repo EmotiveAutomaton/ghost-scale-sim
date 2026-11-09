@@ -381,3 +381,20 @@ compare timing benefit with false identity calls; neither route establishes a
 human timing or identity mechanism. Dynamic K3 and K5-T017 remain held without
 retry. [Audit
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0705.json).
+
+K1-T047 then completed and landed locally as `G-V27-K1-T047-1`; its
+timing-ratio interval met the scale-only bar. The audit matched 98 original raw
+hashes and sizes and 104 replay bindings across the named study and K1-T048's
+adjacent measured probe. Both independent reconstructions reproduced their
+original summaries; seventeen public aggregate files and the complete
+report/FINDINGS/theory/claim/exchange chain match. K1 now has 47 verified
+textures. K1-T048's measured probe passed and its study began automatically.
+The two bounded K1-T045-P2 execution parts completed their
+original passes and entered replay; neither receives a verdict or claim, and
+the logical precision result remains unlanded pending both independent reviews.
+No eligible ready packet lacks a worker. K1's route remains scoped: Sounding
+Line may use timing robustness to nominate later suggestion-latency work, while
+ToMpathy may compare timing benefit with false identity calls; neither route
+establishes a human timing or identity mechanism. Dynamic K3 and K5-T017 remain
+held without retry. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0757.json).

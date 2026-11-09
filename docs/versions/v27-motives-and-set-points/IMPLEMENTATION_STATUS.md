@@ -367,3 +367,17 @@ changes only split scheduling, global-setting seed binding and direct-part
 report suppression relative to the live controller capsule; K1's scientific
 module and the frozen protocol are unchanged. All thirty-one targeted V27 tests
 passed. [Runtime build receipt](../../../results/v27/K1_T045_P2_SPLIT_RUNTIME_BUILD_2026-11-09.json).
+
+K1-T047 then completed and was verified end to end. Its timing-ratio interval
+lies wholly on the passing side of the declared scale-only bar. The bounded
+audit matched 98 original raw hashes and sizes and 104 replay bindings across
+K1-T047 and K1-T048's adjacent measured probe; both independent
+reconstructions reproduced their original summaries. The complete
+report, FINDINGS row, theory row, unique claim-ledger entry and scoped exchange
+note are bound to `G-V27-K1-T047-1`. K1 has no recipient copy under the
+recorded family-scoped delivery decision. K1-T048's measured probe passed and
+its study began automatically. Both K1-T045-P2 execution parts completed original execution and
+entered replay without an unsplit draw; their logical card remains unlanded
+until both parts pass independent reconstruction. Dynamic K3 and K5-T017 remain
+held without retry. Thirty-one targeted V27 tests passed. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0757.json).

@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-09T07:57:00+00:00",
+  "audit_scope": "K1-T047 and K1-T048's adjacent measured probe; the two K1-T045-P2 execution parts and K1-T048's running study are excluded.",
+  "adjacent_probe": {
+    "complete_sha256": "35bed2398219671122630b89bc775362768ed52a1da44d2c98991fdafd29d926",
+    "design_check_sha256": "040f4d6d0cf5ac34c11583435a0269506fcc2f149b27295f01d60edb6a0df1d8",
+    "packet": "v27-k1-t048-probe",
+    "plan_sha256": "9ad736c1b999433136b09a404a672497e0048173efcd14c81da709148c684f96",
+    "protocol_sha256": "816b9cbe352fbbb3404b622ba25f9333b5a3fb775e81fac33bcc3274778fe44d",
+    "summary_sha256": "df0ba6d01a3adfb097760c563cf2faef60a19864d5a1e46b24cafd03a88ba879"
+  },
+  "claim": {
+    "claim": "G-V27-K1-T047-1",
+    "complete_sha256": "e00f3a0ed30e95b5c57d87051bbce51cd2b4875f1c948101ed0198fd6782f622",
+    "packet": "v27-k1-t047-study",
+    "report_sha256": "d95199fc620d64cc75ece9485d3ee55367ee07fbae19477c75bc82e7f69e1a37",
+    "summary_sha256": "bf5111dfb6fe6cca8ae7c208917cda195d47e44fa74433cdd21d3ea0704390f4",
+    "verdict": "met"
+  },
+  "documentary_bindings": {"claim_ledger_source_hashes": 1, "exchange_notes": 1, "findings_rows": 1, "public_aggregate_files": 9, "reports": 1, "theory_rows": 1},
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "immutable_bindings": {
+    "acceptance_sha256": "d6e35d9d7db6653e291b05c51aa7e32d32719f6d8d172bfe20a774ed96892b3e",
+    "design_check_sha256": "0498d938cab94db321a81cb5a28d4580a37025b440f56a4941b6993796c77222",
+    "plan_sha256": "97773b84bfe92483551fe7da449acfafca71311b70959ba56e18e32d260b8fe2",
+    "protocol_sha256": "63838742e06ba6acabc15ac53b59e024b1b31d3f9918d378f8149b917ccf21ae",
+    "source_archive_sha256": "270cadbcb3487e67a7857bbb0644f6e34511deec4da657e8a6c6fc105a3351ba",
+    "source_manifest_sha256": "dbea865c581cf0e7785391c75e522b9d284e969fbb6e6b5b6e80b9a2b767af12"
+  },
+  "independent_reconstruction": "passed for all 96 K1-T047 study worlds and both K1-T048 measured-probe worlds; both reconstructions reproduced their original summaries",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "public_export_bindings": 17,
+  "raw_hash_and_size_checks": 98,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 104,
+  "runtime": {"controller_pid": 161248, "host_load_worker_limit": 4, "monitor_pid": 240232, "single_controller": true, "single_monitor": true, "v15_pid_absent": true},
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "targeted_tests": 31,
+  "texture_complete": {"K1": 47, "K2": 56, "K4": 25, "K5": 16, "K6": 16, "K7": 36}
+}
