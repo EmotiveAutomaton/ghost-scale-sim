@@ -249,3 +249,15 @@ unique claim-ledger entry and scoped exchange note are bound to
 `G-V27-K1-T038-1`; K1 has no recipient copy under the recorded family-scoped
 delivery decision. Dynamic K3 and K5-T017 remain held without retry. [Turnover
 validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0144.json).
+
+K1-T039 then completed and was verified end to end. Its timing-ratio interval
+lies wholly on the passing side of the declared scale-only bar. The bounded
+audit matched 98 raw hashes and sizes and 104 replay bindings across K1-T039
+and K1-T040's measured probe; both independent reconstructions reproduced their
+original summaries.
+The complete report, FINDINGS row, theory row, unique claim-ledger entry and
+scoped exchange note are bound to `G-V27-K1-T039-1`. K1 has no recipient copy
+under the recorded family-scoped delivery decision. K1-T040's measured probe
+passed and its study began automatically without leaving eligible commissioned
+work idle. Dynamic K3 and K5-T017 remain held without retry. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0233.json).
