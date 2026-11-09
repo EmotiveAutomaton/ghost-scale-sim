@@ -304,3 +304,16 @@ suggestion-latency work, while ToMpathy may compare timing benefit with false
 identity calls; neither route establishes a human timing or identity mechanism.
 Dynamic K3 and K5-T017 remain held without retry. [Audit
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0415.json).
+
+K1-T042 then completed and landed locally as `G-V27-K1-T042-1`; its
+timing-ratio interval met the scale-only bar. The audit matched 98 raw hashes
+and sizes and 104 replay bindings across the named study and K1-T043's adjacent
+measured probe, both independent reconstructions, seventeen public aggregate
+files and the complete report/FINDINGS/theory/claim/exchange
+chain. K1 now has 42 verified textures. K1-T043's measured probe passed and its
+study began automatically, so no ready eligible packet lacks a worker. K1's
+route remains scoped: Sounding Line may use timing robustness to nominate later
+suggestion-latency work, while ToMpathy may compare timing benefit with false
+identity calls; neither route establishes a human timing or identity mechanism.
+Dynamic K3 and K5-T017 remain held without retry. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0441.json).
