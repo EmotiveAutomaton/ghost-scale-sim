@@ -261,3 +261,14 @@ under the recorded family-scoped delivery decision. K1-T040's measured probe
 passed and its study began automatically without leaving eligible commissioned
 work idle. Dynamic K3 and K5-T017 remain held without retry. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0233.json).
+
+K1-T040 then completed and was verified end to end. Its timing-ratio interval
+lies wholly on the passing side of the declared scale-only bar. The bounded
+audit matched all 64 raw hashes and sizes and 67 replay bindings; independent
+reconstruction reproduced the original summary. The complete report, FINDINGS
+row, theory row, unique claim-ledger entry and scoped exchange note are bound
+to `G-V27-K1-T040-1`. K1 has no recipient copy under the recorded
+family-scoped delivery decision. K1-T041's measured probe began automatically
+without leaving eligible commissioned work idle. Dynamic K3 and K5-T017 remain
+held without retry. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0254.json).

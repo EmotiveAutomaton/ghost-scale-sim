@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-09T02:54:00+00:00",
+  "audit_scope": "K1-T040 after local commit c082620ccfc04e970f9e4b5dc547267e2c8f7e4a; K1-T041's running measured probe is excluded.",
+  "claim": {
+    "claim": "G-V27-K1-T040-1",
+    "complete_sha256": "c08c08a7ff702393ebc0052b9042066935cde1d3e72259cd433eda287f1296f8",
+    "packet": "v27-k1-t040-study",
+    "report_sha256": "d1f597665fc7db44a4695daad882381e9b2db10a1a4dd1fc304eb18d360cb033",
+    "summary_sha256": "ed0c5f8e3158ab6eae2f4fb5c3612b9d09ddaac2036145f56162cb3a10dc863d",
+    "verdict": "met"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 9,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "immutable_bindings": {
+    "acceptance_sha256": "d6e35d9d7db6653e291b05c51aa7e32d32719f6d8d172bfe20a774ed96892b3e",
+    "design_check_sha256": "e5f42251bf502679680746f0bb31bed949968639a43d88aaac9771e78d2f18c0",
+    "plan_sha256": "ceb8612af0aef861949d333291bd67fe6e3dfe917ebb620f168ede459ac22562",
+    "protocol_sha256": "984dcd51d9f790a47e1d9ba66e854c3849b55eb5cac5378a89df709e4cd65bf9",
+    "source_archive_sha256": "270cadbcb3487e67a7857bbb0644f6e34511deec4da657e8a6c6fc105a3351ba",
+    "source_manifest_sha256": "dbea865c581cf0e7785391c75e522b9d284e969fbb6e6b5b6e80b9a2b767af12"
+  },
+  "independent_reconstruction": "passed for all 64 K1-T040 study worlds and reproduced the original summary",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "public_export_bindings": 9,
+  "raw_hash_and_size_checks": 64,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 67,
+  "runtime": {
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {
+    "K1": 40,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}
