@@ -240,3 +240,12 @@ scoped exchange note are bound to `G-V27-K1-T037-1`; K1 has no recipient copy
 under the recorded family-scoped delivery decision. K1-T038's study began
 automatically. Dynamic K3 and K5-T017 remain held without retry. [Turnover
 validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0106.json).
+
+K1-T038 then completed and was verified end to end. Its declared timing-ratio
+interval lies wholly on the passing side of the scale-only bar. The bounded
+audit matched all 96 raw hashes and sizes, 99 replay bindings and the
+independent reconstruction. The complete report, FINDINGS row, theory row,
+unique claim-ledger entry and scoped exchange note are bound to
+`G-V27-K1-T038-1`; K1 has no recipient copy under the recorded family-scoped
+delivery decision. Dynamic K3 and K5-T017 remain held without retry. [Turnover
+validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0144.json).
