@@ -230,3 +230,13 @@ family-scoped delivery decision. K1-T037's measured probe passed complete replay
 and independent reconstruction, and its study began automatically. Dynamic K3
 and K5-T017 remain held without retry. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0032.json).
+
+K1-T037 then completed and was verified end to end. Its declared timing-ratio
+interval lies wholly on the passing side of the scale-only bar. The bounded
+audit matched all 64 study raw hashes and sizes plus K1-T038's two-world probe,
+72 replay bindings across both packets, and both independent reconstructions.
+The complete report, FINDINGS row, theory row, unique claim-ledger entry and
+scoped exchange note are bound to `G-V27-K1-T037-1`; K1 has no recipient copy
+under the recorded family-scoped delivery decision. K1-T038's study began
+automatically. Dynamic K3 and K5-T017 remain held without retry. [Turnover
+validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0106.json).

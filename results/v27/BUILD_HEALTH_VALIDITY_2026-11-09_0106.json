@@ -1,0 +1,60 @@
+{
+  "at": "2026-11-09T01:06:00+00:00",
+  "audit_scope": "K1-T037 and the adjacent K1-T038 measured probe completed after local commit ba8aaa6fe7515a49ae0aecc5285c9b66bef37dcf; the running K1-T038 study was excluded.",
+  "claim": {
+    "claim": "G-V27-K1-T037-1",
+    "complete_sha256": "a82e76716d4d163d97c4777d54f9033265b21761896d05cefd08794333acb3d9",
+    "packet": "v27-k1-t037-study",
+    "report_sha256": "5c1aaa158a3822c73cad5d30986f3165322ab1b99756fbaf5c67f2176bf7490e",
+    "summary_sha256": "d7dfbf9d48acad0d6d57dd0a9bf5af882ce78216f97b26f629b3b35b4aad3cbf",
+    "verdict": "met"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 17,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "immutable_bindings": {
+    "acceptance_sha256": "d6e35d9d7db6653e291b05c51aa7e32d32719f6d8d172bfe20a774ed96892b3e",
+    "design_check_sha256": "c638924e47c1577c04a98074a947a0fa7a675bba45ed058d363f917bce15fff8",
+    "plan_sha256": "2db8b0184ac38dc1c45709f30fa19da72a5f521cff6707ea44938121eca9e072",
+    "protocol_sha256": "f333d867b744ed6c4a3bd62f514d8a8997a8e953ad8bdf18caefc8cd7e898d76",
+    "source_archive_sha256": "270cadbcb3487e67a7857bbb0644f6e34511deec4da657e8a6c6fc105a3351ba",
+    "source_manifest_sha256": "dbea865c581cf0e7785391c75e522b9d284e969fbb6e6b5b6e80b9a2b767af12"
+  },
+  "independent_reconstruction": "passed for all 66 whole-world files across the named study and adjacent probe; the study reconstruction reproduced summary d7dfbf9d48acad0d6d57dd0a9bf5af882ce78216f97b26f629b3b35b4aad3cbf",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "probe_complete_sha256": {
+    "v27-k1-t038-probe": "45399b067f1826f0f782e2700cbd17fbf3b6977052765260154bcd2ea7237a69"
+  },
+  "public_export_bindings": 14,
+  "raw_hash_and_size_checks": 66,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 72,
+  "runtime": {
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "no_ready_packet_without_worker": true,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "texture_complete": {
+    "K1": 37,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}
