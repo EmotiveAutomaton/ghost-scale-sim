@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-09T06:41:00+00:00",
+  "audit_scope": "K1-T045, its K1-T045-P2 measured probe and K1-T046's adjacent measured probe; K1-T046's running study is excluded.",
+  "adjacent_probes": {
+    "K1-T045-P2": {
+      "complete_sha256": "7a1a81e86fe9fc9e85b7bd361803ede3fcd2bd67c3ccc17848047f880e146ef7",
+      "continuation_failure": "SPLIT_REQUIRED: measured projection exceeds twelve hours",
+      "design_check_sha256": "c5189dc7c953e7401ff338b11e772538b72136fae72b92ca6af9dfa10bc6c7ea",
+      "packet": "v27-k1-t045-p2-probe",
+      "plan_sha256": "548eaf1881ecc676abe3c5a57ff5bc0252bc77d4f28b0b4429c745d814d6a452",
+      "protocol_sha256": "3008ee623b41a9e91d971354f9d4c1626dd6de7f91ef92ed1ff333824c770b6e",
+      "scientific_draws_after_probe": 0,
+      "summary_sha256": "d5e74bb84a951182ecd6cd3905d03ee8c00907a2cea3285f2e2c410a303a86df"
+    },
+    "K1-T046": {
+    "complete_sha256": "823c3b4c5322091097b02ad70a53456b8a06ece19a6df37f728a2b998557347e",
+    "design_check_sha256": "730dda3ebf7cf386abb575d8dbf3f7e5451d479948b1356d0c64153128941855",
+    "packet": "v27-k1-t046-probe",
+    "plan_sha256": "2ab44d8ae62c1efcfe8a3a1c084fe0c591f70ef6b9739da7192e82dddd8aba21",
+    "protocol_sha256": "a0ed07fe492a11eb994bb7da40ac5baa7c4b5c57a4648203afa475b6a21bfd47",
+      "summary_sha256": "9dd650863820f961bf410bcebba68932a615265a4401016e12dae13aa70dc79f"
+    }
+  },
+  "claim": {
+    "claim": "G-V27-K1-T045-1",
+    "complete_sha256": "cf6e2feb5ca1f3c6bbac8b3d3bed40edcc7836aba64d2f71646e863bb696b89c",
+    "packet": "v27-k1-t045-study",
+    "report_sha256": "e3ad8ac62a8dea4e8d648d1840b631b8c83ec451ca6bce69858565d66693ba0d",
+    "summary_sha256": "346373727ef0fe5bf54ae0abe1a7acbf9b8c446e2b2ad10cffa3b61c4df1a129",
+    "verdict": "unresolved at this sample size"
+  },
+  "documentary_bindings": {
+    "claim_ledger_source_hashes": 1,
+    "exchange_notes": 1,
+    "findings_rows": 1,
+    "public_aggregate_files": 25,
+    "reports": 1,
+    "theory_rows": 1
+  },
+  "holds_preserved": {
+    "K3": "Dynamic primary and 33 textures remain unadmitted after K3-H2 failed the unchanged resolution margin gate at fixture 5.",
+    "K5": "T017 remains an independent-reconstruction instrument failure; both authorized healing slots were already used."
+  },
+  "immutable_bindings": {
+    "acceptance_sha256": "d6e35d9d7db6653e291b05c51aa7e32d32719f6d8d172bfe20a774ed96892b3e",
+    "design_check_sha256": "d61837f7245f35599575d7d5506966595d1a002b662d8b09ab596be4be61c0a7",
+    "plan_sha256": "feb5b0ad74a951e2b78d761709ddf1575df513267753f8137f2c489bb4730c0a",
+    "protocol_sha256": "dc7e4bda1fda7af3f8f418da40a2465bd75540a5daf9479a00081f9b0eddf99b",
+    "source_archive_sha256": "270cadbcb3487e67a7857bbb0644f6e34511deec4da657e8a6c6fc105a3351ba",
+    "source_manifest_sha256": "dbea865c581cf0e7785391c75e522b9d284e969fbb6e6b5b6e80b9a2b767af12"
+  },
+  "independent_reconstruction": "passed for all 96 K1-T045 study worlds, both K1-T045-P2 measured-probe worlds and both K1-T046 measured-probe worlds; all three reconstructions reproduced their original summaries",
+  "privacy_check": "Constructed-world records, declared protocols, aggregate reports and scoped routes only; no private memory, credentials or human records included.",
+  "public_export_bindings": 25,
+  "raw_hash_and_size_checks": 100,
+  "recipient_delivery": "No new recipient copy: the recorded owner decision does not authorize K1 recipient aggregates.",
+  "replay_file_bindings": 109,
+  "runtime": {
+    "controller_pid": 161248,
+    "host_load_worker_limit": 4,
+    "monitor_pid": 240232,
+    "single_controller": true,
+    "single_monitor": true,
+    "v15_pid_absent": true
+  },
+  "scientific_bytes_unchanged": true,
+  "state": "PASSED",
+  "targeted_tests": 29,
+  "texture_complete": {
+    "K1": 45,
+    "K2": 56,
+    "K4": 25,
+    "K5": 16,
+    "K6": 16,
+    "K7": 36
+  }
+}

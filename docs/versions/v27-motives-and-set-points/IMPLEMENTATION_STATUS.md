@@ -323,3 +323,21 @@ its study began automatically without leaving eligible commissioned work idle. D
 K5-T017 remain held without retry. Twenty-nine targeted V27 tests passed.
 [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0552.json).
+
+K1-T045 then completed and was verified end to end. Its declared bar
+conjunction is unresolved at this sample size, so the controller registered the
+prospectively frozen doubled-block precision packet exactly once. Its measured
+probe passed, but the full 32-block projection exceeded the unchanged 12-hour
+packet limit. The unsplit continuation was retained as `SPLIT_REQUIRED` with no
+precision study draw; its settings must be split into bounded packets and
+aggregated only after every part passes replay and independent review. The
+bounded audit matched 100 raw hashes and sizes and 109 replay bindings across
+K1-T045, its precision probe and K1-T046's adjacent measured probe; all three
+independent reconstructions reproduced their original summaries. The complete report, FINDINGS row, theory
+row, unique claim-ledger entry and scoped exchange note are bound to
+`G-V27-K1-T045-1`. K1 has no recipient copy under the recorded family-scoped
+delivery decision. K1-T046's measured probe passed and its study began
+automatically. No eligible ready packet lacked a worker; the precision study
+was not ready because the required bounded split was not yet built. Dynamic K3 and K5-T017 remain held
+without retry. Twenty-nine targeted V27 tests passed. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0641.json).

@@ -345,3 +345,24 @@ suggestion-latency work, while ToMpathy may compare timing benefit with false
 identity calls; neither route establishes a human timing or identity mechanism.
 Dynamic K3 and K5-T017 remain held without retry. [Audit
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0552.json).
+
+K1-T045 then completed and landed locally as `G-V27-K1-T045-1`; its
+declared bar conjunction is unresolved at this sample size. The controller
+registered the prospectively frozen doubled-block precision packet exactly
+once. Its measured probe passed, but the full projection exceeded the unchanged
+12-hour packet limit. The unsplit continuation is retained as
+`SPLIT_REQUIRED`, with no precision study draw; a bounded setting split must be
+built before admission and aggregated only after every part verifies. The audit
+matched 100 raw hashes and sizes and 109 replay bindings across the named study,
+its precision probe and K1-T046's adjacent measured probe. All three independent
+reconstructions reproduced their original summaries, and twenty-five public
+aggregate files plus the complete report/FINDINGS/theory/claim/exchange chain
+match. K1 now has 45 verified textures. K1-T046's measured probe passed and its
+study began automatically. No eligible ready packet lacked a worker; the
+precision study was not ready because its required bounded split was not yet
+built. K1's route remains scoped:
+Sounding Line may use timing robustness to nominate later suggestion-latency
+work, while ToMpathy may compare timing benefit with false identity calls;
+neither route establishes a human timing or identity mechanism. Dynamic K3 and
+K5-T017 remain held without retry. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0641.json).
