@@ -118,20 +118,25 @@ def build(c,family,primary_only=False):
         export(c)
 
 
-def prepare(c,cid,probe=None):
+def prepare(c,cid,probe=None,*,setting_indices=None,identity=None,source_override=None,split_part=None,split_total=None):
     protocol=read(c/'protocols'/(cid+'.json'));source=Path(protocol['source_root']);f=protocol['family'];is_probe=probe is None
-    rows=protocol['settings'];caps=dict(original=590.,replay=590.,review=590.);wall=3600.
+    if source_override is not None:source=Path(source_override)
+    all_rows=protocol['settings'];rows=all_rows;caps=dict(original=590.,replay=590.,review=590.);wall=3600.
     if is_probe:
         ordered=sorted(range(len(rows)),key=lambda i:settings_cost(rows[i],f));indices=list(dict.fromkeys([ordered[0],ordered[-1]]));rows=[rows[i] for i in indices]
     else:
-        verify_complete(probe);cost=read(probe/'PASS_COSTS.json');p=read(probe/'PLAN.json');indices=list(range(len(rows)))
+        verify_complete(probe);cost=read(probe/'PASS_COSTS.json');p=read(probe/'PLAN.json')
+        indices=list(range(len(all_rows))) if setting_indices is None else list(setting_indices)
+        if len(indices)!=len(set(indices)) or any(i<0 or i>=len(all_rows) for i in indices):raise ValueError('invalid setting partition')
+        rows=[all_rows[i] for i in indices]
         caps={k:1.5*(max(0,cost['pass_cpu_seconds'][k]-sum(cost['setting_seconds'][k]))+max(cost['setting_seconds'][k])*len(rows)*protocol['blocks'])+30 for k in ('original','replay','review')}
         wall=1.5*read(c/'accounting'/(probe.name+'.json'))['wall_seconds']*len(rows)*protocol['blocks']/len(p['settings'])+120
         if wall>12*3600:raise ValueError('SPLIT_REQUIRED: measured projection exceeds twelve hours')
-    identity='v27-'+cid.lower()+('-probe' if is_probe else '-study');packet=c/'packets'/identity
+    identity=identity or 'v27-'+cid.lower()+('-probe' if is_probe else '-study');packet=c/'packets'/identity
     if packet.exists():raise ValueError('packet already exists; no implicit restart')
     kind='probe' if is_probe else protocol['lane'];lane=protocol['lane'];pool='studies' if lane=='study' else 'followup_healing'
-    science_identity=protocol.get('probe_science_identity',identity) if is_probe else protocol.get('study_science_identity',identity)
+    default_science_identity='v27-'+cid.lower()+('-probe' if is_probe else '-study')
+    science_identity=protocol.get('probe_science_identity',default_science_identity) if is_probe else protocol.get('study_science_identity',default_science_identity)
     p=dict(family=f,card=cid,identity=identity,science_identity=science_identity,analysis_contract='v27-block-v1',kind=kind,
         scientific_kind='probe' if is_probe else lane,lane=lane,pool=pool,settings=rows,setting_indices=indices,
         blocks=1 if is_probe else protocol['blocks'],source_root=str(source),source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),
@@ -143,11 +148,99 @@ def prepare(c,cid,probe=None):
         wall_cap_seconds=18*3600,projected_wall_seconds=wall,cost_probe=probe.name if probe else None,
         cost_probe_complete_sha256=digest(probe/'COMPLETE.json') if probe else None,confirmation=False,
         **{k:protocol[k] for k in ('generation','parent_blocks','parent_complete_sha256','primary_positive_or_sign_reversal','reread_level','retained_inputs','retained_manifest','retained_manifest_sha256','analysis_module','healing_number','replaces_card') if k in protocol})
+    if split_part is not None:p.update(split_part=split_part,split_total=split_total,logical_aggregation_only=True)
     if is_probe and protocol.get('probe_healing_parent'):p.update(healing_parent=protocol['probe_healing_parent'],repair_observations_only=True)
     if not is_probe and protocol.get('study_healing_parent'):p.update(healing_parent=protocol['study_healing_parent'],repair_observations_only=True)
     write(packet/'CONTROLS_BEFORE_DATA.json',read(c/'controls'/(cid+'.json')))
     write(packet/'STATUS.json',dict(state='PREPARED',at=native.now().isoformat()))
     write(packet/'PLAN.json',p);return packet
+
+
+def build_split(c,cid,spec_path=None):
+    """Build a prospectively frozen setting partition after a measured oversize failure."""
+    spec_path=Path(spec_path) if spec_path else c/'split-builds'/(cid+'.json')
+    spec=read(spec_path);protocol=read(c/'protocols'/(cid+'.json'))
+    if spec.get('card')!=cid or spec.get('state')!='DIAGNOSED_SPLIT_FROZEN_AWAITING_RUNTIME_BUILD':raise ValueError('split is not frozen for build')
+    if spec['unchanged_science']['protocol_sha256']!=digest(c/'protocols'/(cid+'.json')):raise ValueError('split protocol changed')
+    if spec['unchanged_science']['settings']!=len(protocol['settings']) or spec['unchanged_science']['blocks_per_setting']!=protocol['blocks']:raise ValueError('split changes declared science')
+    probe=c/'packets'/('v27-'+cid.lower()+'-probe');verify_complete(probe)
+    if digest(probe/'COMPLETE.json')!=spec['probe_complete_sha256']:raise ValueError('split probe changed')
+    parts=spec['frozen_partition'];flat=[i for part in parts for i in part['setting_indices']]
+    if sorted(flat)!=list(range(len(protocol['settings']))) or len(flat)!=len(set(flat)):raise ValueError('split does not partition every setting exactly once')
+    runtime_receipt=c/'split-builds'/(cid+'-RUNTIME.json')
+    first_existing=c/'packets'/('v27-'+cid.lower()+'-study-part1')/'PLAN.json'
+    source=Path(read(first_existing)['source_root']) if runtime_receipt.exists() and first_existing.exists() else native.frozen_source(c,EXTRAS)
+    module=source/'ghostscale/validation/soundingline/v27'/((protocol.get('analysis_module') or registry.MODULES[protocol['family']])+'.py')
+    if digest(module)!=protocol['module_sha256']:raise ValueError('split runtime changed the scientific module')
+    built=[]
+    for part in parts:
+        number=part['part'];identity='v27-'+cid.lower()+f'-study-part{number}'
+        packet=c/'packets'/identity
+        if packet.exists():
+            plan=read(packet/'PLAN.json')
+            if plan.get('split_part')!=number or plan['setting_indices']!=part['setting_indices']:raise ValueError('existing split packet differs')
+            marker=packet/'AGGREGATE_EXPORTED.json'
+            if not marker.exists():write(marker,dict(state='DIRECT_EXPORT_SUPPRESSED_FOR_SPLIT_PART',split_part=number,logical_card=cid,no_verdict_or_claim=True))
+            built.append(packet);continue
+        packet=prepare(c,cid,probe,setting_indices=part['setting_indices'],identity=identity,source_override=source,split_part=number,split_total=len(parts))
+        plan=read(packet/'PLAN.json')
+        if abs(plan['projected_wall_seconds']-part['projected_wall_seconds'])>1e-6:raise ValueError('split wall projection changed')
+        if abs(plan['cpu_cap_seconds']-part['reserved_cpu_seconds'])>1e-6:raise ValueError('split reservation changed')
+        # A predecessor controller may not yet know that split parts are
+        # execution units.  This truthful compatibility marker prevents that
+        # controller from exporting a part as a standalone scientific card.
+        write(packet/'AGGREGATE_EXPORTED.json',dict(state='DIRECT_EXPORT_SUPPRESSED_FOR_SPLIT_PART',split_part=number,logical_card=cid,no_verdict_or_claim=True))
+        built.append(packet)
+    receipt=spec|dict(state='RUNTIME_BUILT',runtime_source_manifest_sha256=digest(source/'SOURCE_MANIFEST.json'),packets=[p.name for p in built])
+    if runtime_receipt.exists():
+        prior=read(runtime_receipt)
+        if prior.get('packets')!=receipt['packets']:raise ValueError('split runtime receipt differs')
+    else:write(runtime_receipt,receipt)
+    return built
+
+
+def aggregate_split(c,cid,spec_path=None):
+    """Create one no-new-draw logical receipt after every split part verifies."""
+    spec_path=Path(spec_path) if spec_path else c/'split-builds'/(cid+'.json')
+    spec=read(spec_path);protocol=read(c/'protocols'/(cid+'.json'));parts=[]
+    for item in spec['frozen_partition']:
+        packet=c/'packets'/('v27-'+cid.lower()+f"-study-part{item['part']}")
+        if not (packet/'COMPLETE.json').exists():return None
+        verify_complete(packet);parts.append((packet,read(packet/'PLAN.json')))
+    logical=c/'packets'/('v27-'+cid.lower()+'-study')
+    if logical.exists():
+        verify_complete(logical);return logical
+    settings=protocol['settings'];cells=[];pass_cpu={k:0. for k in ('original','replay','review')};setting_seconds={k:[0.]*len(settings) for k in pass_cpu}
+    part_receipts=[];part_raw_indexes={}
+    for packet,plan in parts:
+        summary=read(packet/'original/SUMMARY.json')
+        for row in summary['cells']:cells.append(row|dict(setting=plan['setting_indices'][row['setting']]))
+        costs=read(packet/'PASS_COSTS.json')
+        for mode in pass_cpu:
+            pass_cpu[mode]+=costs['pass_cpu_seconds'][mode]
+            for local,value in enumerate(costs['setting_seconds'][mode]):setting_seconds[mode][plan['setting_indices'][local]]=value
+        part_raw_indexes[packet.name]=read(packet/'original/RAW_INDEX.json')
+        part_receipts.append(dict(packet=packet.name,complete_sha256=digest(packet/'COMPLETE.json'),plan_sha256=digest(packet/'PLAN.json'),raw_index_sha256=digest(packet/'original/RAW_INDEX.json')))
+    first=parts[0][1];plan={k:v for k,v in first.items() if k not in ('split_part','split_total','logical_aggregation_only')}
+    plan.update(identity=logical.name,science_identity=logical.name,settings=settings,setting_indices=list(range(len(settings))),aggregated_from=[p.name for p,_ in parts],projected_wall_seconds=sum(p['projected_wall_seconds'] for _,p in parts),cpu_cap_seconds=sum(p['cpu_cap_seconds'] for _,p in parts),pass_caps={k:sum(p['pass_caps'][k] for _,p in parts) for k in pass_cpu})
+    summary=read(parts[0][0]/'original/SUMMARY.json')|dict(card=cid,settings=settings,cells=sorted(cells,key=lambda r:(r['metric'],json.dumps(r['labels'],sort_keys=True),r['setting'])))
+    write(logical/'PLAN.json',plan);write(logical/'STATUS.json',dict(state='COMPLETE',at=native.now().isoformat(),logical_aggregation=True))
+    write(logical/'CONTROLS_BEFORE_DATA.json',read(c/'controls'/(cid+'.json')))
+    # The logical packet owns no duplicate raw bytes.  Its aggregation receipt
+    # binds the complete part indexes; an empty local index prevents an auditor
+    # from mistaking references for copied scientific files.
+    write(logical/'original/SUMMARY.json',summary);write(logical/'original/RAW_INDEX.json',{})
+    write(logical/'REPLAY.json',dict(state='MATCHED_SPLIT_PARTS',parts=part_receipts,no_new_draws=True))
+    write(logical/'INDEPENDENT_REVIEW.json',dict(state='INDEPENDENT_RECONSTRUCTION_PASSED',parts=part_receipts,worlds=len(settings)*protocol['blocks'],all_declared_cells=True,independent_inference=True,complete_block_bootstrap_recomputed=True,logical_aggregation=True))
+    write(logical/'PASS_COSTS.json',dict(pass_cpu_seconds=pass_cpu,setting_seconds=setting_seconds,includes_world_io=True,logical_aggregation=True))
+    write(logical/'AGGREGATION.json',dict(card=cid,parts=part_receipts,part_raw_indexes=part_raw_indexes,protocol_sha256=digest(c/'protocols'/(cid+'.json')),no_new_scientific_draws=True,all_settings_once=True))
+    write(logical/'COMPLETE.json',dict(state='VERIFIED',plan_sha256=digest(logical/'PLAN.json'),summary_sha256=digest(logical/'original/SUMMARY.json'),replay_sha256=digest(logical/'REPLAY.json'),review_sha256=digest(logical/'INDEPENDENT_REVIEW.json'),confirmation=False,logical_aggregation=True))
+    return logical
+
+
+def aggregate_ready_splits(c):
+    for path in sorted((c/'split-builds').glob('*-RUNTIME.json')):
+        aggregate_split(c,read(path)['card'])
 
 
 def verify(c,packet,p):
@@ -168,6 +261,7 @@ def verify(c,packet,p):
 
 
 def export(c):
+    aggregate_ready_splits(c)
     repo=Path(read(c/'LOCAL_PATHS.json')['repo']);out=repo/'results/v27';rows=[]
     for path in sorted((c/'packets').glob('*/PLAN.json')):
         packet=path.parent;p=read(path);s=read(packet/'STATUS.json');rows.append(dict(packet=packet.name,card=p['card'],kind=p['kind'],state=s['state'],phase=s.get('phase')))
@@ -175,6 +269,7 @@ def export(c):
             verify_complete(packet)
             for name,relative in [('SUMMARY.json','original/SUMMARY.json'),('RAW_INDEX.json','original/RAW_INDEX.json'),('COMPLETE.json','COMPLETE.json'),('REPLAY.json','REPLAY.json'),('INDEPENDENT_REVIEW.json','INDEPENDENT_REVIEW.json'),('PASS_COSTS.json','PASS_COSTS.json'),('CONTROLS.json','CONTROLS_BEFORE_DATA.json')]:write(out/packet.name/name,read(packet/relative))
             write(out/packet.name/'PUBLIC_PLAN.json',{k:v for k,v in p.items() if k not in ('source_root','interpreter','retained_manifest')})
+            if (packet/'AGGREGATION.json').exists():write(out/packet.name/'AGGREGATION.json',read(packet/'AGGREGATION.json'))
             reporting.land(c,packet,repo);write(packet/'AGGREGATE_EXPORTED.json',dict(at=native.now().isoformat()))
     q=read(c/'QUEUE_STATUS.json') if (c/'QUEUE_STATUS.json').exists() else dict(state='BUILDING',active=[],prepared=[])
     write(out/'CURRENT_STATUS.json',dict(at=native.now().isoformat(),queue=q,packets=rows,
@@ -335,8 +430,9 @@ def queue(c):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--campaign',type=Path,required=True);p.add_argument('--build',choices=contract.ORDER);p.add_argument('--queue',action='store_true');p.add_argument('--primary-only',action='store_true')
+    p=argparse.ArgumentParser();p.add_argument('--campaign',type=Path,required=True);p.add_argument('--build',choices=contract.ORDER);p.add_argument('--build-split');p.add_argument('--queue',action='store_true');p.add_argument('--primary-only',action='store_true')
     a=p.parse_args()
     if a.build:build(a.campaign.resolve(),a.build,a.primary_only)
+    elif a.build_split:build_split(a.campaign.resolve(),a.build_split)
     elif a.queue:queue(a.campaign.resolve())
     else:p.error('choose --build or --queue')

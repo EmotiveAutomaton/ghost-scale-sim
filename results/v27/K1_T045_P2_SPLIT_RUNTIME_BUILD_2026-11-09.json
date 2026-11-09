@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-09T07:42:28+00:00",
+  "card": "K1-T045-P2",
+  "diagnosis": "The retained measured probe projected the unsplit six-setting, 32-block precision study above the immutable 12-hour packet maximum. No unsplit precision study draw occurred.",
+  "frozen_partition": [
+    {
+      "packet": "v27-k1-t045-p2-study-part1",
+      "setting_indices": [0, 1, 2],
+      "blocks_per_setting": 32,
+      "projected_wall_seconds": 24142.10135520436,
+      "reserved_cpu_seconds": 33164.3125,
+      "plan_sha256": "5b3a74ad3c5709fa17bed4a9ef71ae28fd6e8a39fc9a60383c18d081fa439dc8",
+      "admitted_at": "2026-11-09T07:35:57.293591+00:00"
+    },
+    {
+      "packet": "v27-k1-t045-p2-study-part2",
+      "setting_indices": [3, 4, 5],
+      "blocks_per_setting": 32,
+      "projected_wall_seconds": 24142.10135520436,
+      "reserved_cpu_seconds": 33164.3125,
+      "plan_sha256": "282ff273d8d29405372a0c96a7d4df34501667f2d4dc49a22b1c880c95abccf2",
+      "admitted_at": "2026-11-09T07:35:58.258952+00:00"
+    }
+  ],
+  "logical_aggregation": "Neither part receives a verdict or claim. The logical six-setting K1-T045-P2 card is aggregated only after both parts pass raw binding checks, complete replay and independent reconstruction.",
+  "logical_science_identity": "v27-k1-t045-p2-study",
+  "scientific_module_sha256": "042960c8e9fd3471073570ed32883734e809314c26b7146ba2f3f35e31e5b8a2",
+  "runtime_source_manifest_sha256": "f362eb22e1741bb44c77ff3f0334d5508bcb8b391831660b836dbdd1c33d85b0",
+  "runtime_change_scope": [
+    "ghostscale/validation/soundingline/v27/reporting.py",
+    "ghostscale/validation/soundingline/v27/study.py",
+    "runners/queue_v27.py"
+  ],
+  "seed_binding": "Each part uses the logical card identity and its original global setting index; splitting does not create a new seed domain.",
+  "compatibility_guard": "Direct export is suppressed for each execution part so a predecessor controller cannot mistake a part for a scientific card.",
+  "tests": {
+    "command_scope": "all seven test_v27 files",
+    "passed": 31,
+    "failed": 0,
+    "environment_note": "The monitor capsule PYTHONPATH was removed only from the test subprocess; scientific environments were unchanged."
+  },
+  "host_load_worker_limit": 4,
+  "threads_per_worker": 1,
+  "priority": "below_normal",
+  "gpu": false,
+  "environment_synchronized": false,
+  "holds_preserved": {
+    "K3": "Dynamic K3 remains unadmitted after K3-H2 failed the unchanged numerical resolution gate at fixture 5.",
+    "K5": "K5-T017 remains a retained independent-reconstruction instrument failure with both authorized healing slots used."
+  },
+  "state": "BUILT_ADMITTED_RUNNING"
+}

@@ -60,6 +60,9 @@ def land(campaign,packet,repo):
     from .common import verify_complete
     verify_complete(packet);p=read(packet/'PLAN.json')
     if p['scientific_kind']=='probe':return
+    # Setting partitions are execution units, not scientific cards.  Only the
+    # verified logical aggregate receives a verdict, claim or exchange note.
+    if p.get('split_part'):return
     from . import censoring
     summary=read(packet/'original/SUMMARY.json');bounds=censoring.retained(packet)
     if bounds:

@@ -42,6 +42,12 @@ def module(family,analysis_module=None):
     return importlib.import_module(__package__+'.'+(analysis_module or registry.MODULES[family]))
 
 
+def global_setting_index(plan,setting):
+    """Keep a split packet in the logical card's preregistered seed domain."""
+    indices=plan.get('setting_indices',list(range(len(plan['settings']))))
+    return indices[setting]
+
+
 def execute(root,plan,pulse,independent=False):
     root=Path(root);impl=module(plan['family'],plan.get('analysis_module'));controls=impl.controls()
     if not controls['passed']:raise ValueError('known-answer failure')
@@ -49,7 +55,7 @@ def execute(root,plan,pulse,independent=False):
     rows=[]
     for setting,config in enumerate(plan['settings']):
         for block in range(plan['blocks']):
-            identity=[plan['science_identity'],plan['family'],setting,block]
+            identity=[plan['science_identity'],plan['family'],global_setting_index(plan,setting),block]
             if plan.get('analysis_module')=='closure_reread':
                 data=impl.retained_block(config,plan,setting,block,independent)
             else:data=impl.block(config,identity,independent)

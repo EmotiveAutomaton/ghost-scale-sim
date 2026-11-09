@@ -354,3 +354,16 @@ automatically. The separately frozen K1-T045-P2 setting split remains a build
 item; no unsplit precision science ran. Dynamic K3 and K5-T017 remain held
 without retry. Twenty-nine targeted V27 tests passed. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0705.json).
+
+K1-T045-P2's retained measured probe projected the unsplit six-setting,
+32-block precision study above the immutable twelve-hour packet maximum. The
+diagnosed frozen partition is now built as two three-setting execution parts,
+each retaining 32 blocks per setting and the logical card's original seed
+domain. Both parts were admitted under the four-worker host-load state on
+9 November at 07:35 UTC. Neither part can receive a verdict or claim; the
+logical K1-T045-P2 card is aggregated only after both parts pass complete raw
+binding checks, replay and independent reconstruction. The runtime capsule
+changes only split scheduling, global-setting seed binding and direct-part
+report suppression relative to the live controller capsule; K1's scientific
+module and the frozen protocol are unchanged. All thirty-one targeted V27 tests
+passed. [Runtime build receipt](../../../results/v27/K1_T045_P2_SPLIT_RUNTIME_BUILD_2026-11-09.json).
