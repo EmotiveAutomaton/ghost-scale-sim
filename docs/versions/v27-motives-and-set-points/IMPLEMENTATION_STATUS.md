@@ -341,3 +341,16 @@ automatically. No eligible ready packet lacked a worker; the precision study
 was not ready because the required bounded split was not yet built. Dynamic K3 and K5-T017 remain held
 without retry. Twenty-nine targeted V27 tests passed. [Turnover validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0641.json).
+
+K1-T046 then completed and was verified end to end. Its timing-ratio interval
+lies wholly on the passing side of the declared scale-only bar. The bounded
+audit matched 66 raw hashes and sizes and 72 replay bindings across K1-T046
+and K1-T047's adjacent measured probe; both independent reconstructions
+reproduced their original summaries. The complete report, FINDINGS row, theory
+row, unique claim-ledger entry and scoped exchange note are bound to
+`G-V27-K1-T046-1`. K1 has no recipient copy under the recorded family-scoped
+delivery decision. K1-T047's measured probe passed and its study began
+automatically. The separately frozen K1-T045-P2 setting split remains a build
+item; no unsplit precision science ran. Dynamic K3 and K5-T017 remain held
+without retry. Twenty-nine targeted V27 tests passed. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0705.json).
