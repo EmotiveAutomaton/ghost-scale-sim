@@ -219,3 +219,14 @@ sizes and 200 replay bindings across the named precision study and K1-T036's
 adjacent measured probe; both independent reconstructions reproduced their
 summaries. K1-T036 began automatically. Dynamic K3 and K5-T017 remain held
 without retry. [Turnover validity receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2351.json).
+
+K1-T036 then completed and was verified end to end. Its declared timing-ratio
+interval lies wholly on the passing side of the scale-only bar. The bounded
+audit matched all 96 raw hashes and sizes and 99 replay bindings, and the
+independent reconstruction reproduced the original summary. The complete
+report, FINDINGS row, theory row, unique claim-ledger entry and scoped exchange
+note are bound to `G-V27-K1-T036-1`; K1 has no recipient copy under the recorded
+family-scoped delivery decision. K1-T037's measured probe passed complete replay
+and independent reconstruction, and its study began automatically. Dynamic K3
+and K5-T017 remain held without retry. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0032.json).

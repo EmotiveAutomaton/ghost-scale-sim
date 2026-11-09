@@ -230,3 +230,16 @@ replay bindings across the named study and K1-T036's adjacent measured probe,
 both independent reconstructions, 18 public aggregate files and the complete
 report/FINDINGS/theory/claim/exchange chain. K1-T036 began automatically; K3
 and K5-T017 remain held without retry. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-08_2351.json).
+
+K1-T036 then completed and landed locally as `G-V27-K1-T036-1`; its
+timing-ratio interval met the scale-only bar. The bounded audit matched all 96
+raw hashes and sizes and 99 replay bindings, the independent reconstruction,
+nine public aggregate files and the complete report/FINDINGS/theory/claim/
+exchange chain. K1 now has 36 verified textures. K1-T037's measured probe began
+automatically, passed complete replay and independent reconstruction, and its
+study began without leaving ready commissioned work idle. K1's route
+remains scoped: Sounding Line may use timing robustness to nominate later
+suggestion-latency work, while ToMpathy may compare timing benefit with false
+identity calls; neither route establishes a human timing or identity mechanism.
+Dynamic K3 and K5-T017 remain held without retry. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0032.json).
