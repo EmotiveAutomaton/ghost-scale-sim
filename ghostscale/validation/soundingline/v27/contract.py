@@ -55,7 +55,9 @@ def admission(p,a,now,charges,running=0,worker_limit=4):
         if total>1.5*FAMILY_HOURS[f]*3600:raise ValueError('trigger 1: family ceiling after shedding')
         if total>FAMILY_HOURS[f]*3600 and not p.get('shedding_exhausted'):raise ValueError('shed before family overrun')
     if kind=='probe' and cap>1800:raise ValueError('probe ceiling')
-    if kind=='healing' and p.get('healing_number') not in (1,2):raise ValueError('healing limit')
+    extra=(f in ('K3','K5') and p.get('healing_number')==3 and
+        p.get('healing_authorization')=='owner-20261109-one-extra-per-family')
+    if lane=='healing' and p.get('healing_number') not in (1,2) and not extra:raise ValueError('healing limit')
     if lane=='followup':
         if p.get('generation') not in (1,2):raise ValueError('followup generation')
         if p['generation']==2 and not p.get('primary_positive_or_sign_reversal'):raise ValueError('generation two primary condition')

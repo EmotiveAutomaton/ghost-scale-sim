@@ -5,6 +5,9 @@ remain identical at delta=0. Group pooling integrates a common latent agenda and
 independent source truths, never pretending alternating truths are one truth.
 """
 import math
+from fractions import Fraction
+from functools import lru_cache
+from decimal import Decimal,localcontext
 import numpy as np
 from scipy.special import expit,logsumexp
 from scipy.stats import binom
@@ -23,6 +26,60 @@ def weakened(prob,fraction):
     if fraction==1:return .5
     if prob in (0.,1.):return prob
     return float(expit((1-fraction)*(math.log(prob)-math.log1p(-prob))))
+
+
+@lru_cache(maxsize=8192)
+def exact_unbiased_harm(ones,zeros,strengths):
+    """Rational count-state check before the first non-Bayesian boost."""
+    total=Fraction(0);harm=Fraction(0)
+    for truth in (0,1):
+        q=Fraction(7 if truth else 3,10)
+        for agenda,b,weight in [(-1,Fraction(0),Fraction(1,4))]+[
+                (a,Fraction(str(b)),Fraction(1,8*len(strengths))) for b in strengths for a in (1,0)]:
+            p=q if agenda<0 else (1-b)*q+b*((1-(1-q)**8) if agenda==1 else q**8)
+            value=weight*p**ones*(1-p)**zeros
+            total+=value
+            if agenda>=0 and agenda!=truth:harm+=value
+    return harm/total
+
+
+def no_boost_before_end(items,strengths,theta):
+    ones=zeros=0;threshold=Fraction(str(theta));strengths=tuple(strengths)
+    for item in items:
+        ones+=item==1;zeros+=item==0
+        if exact_unbiased_harm(int(ones),int(zeros),strengths)>=threshold:return False
+    return True
+
+
+def exact_balanced_bias(items,strengths,theta,delta):
+    """Count signed boosts with high precision; equal boosts cancel exactly.
+
+    Balanced observations alone do not imply a tie after bias. The existing
+    agenda tie rule (difference > 1e-12) is retained without widening it.
+    """
+    with localcontext() as ctx:
+        ctx.prec=70
+        D=lambda value:Decimal(str(value))
+        states=[];weights=[]
+        for truth in (0,1):
+            q=D('.7') if truth else D('.3')
+            states.append((truth,-1,q));weights.append(D('.25'))
+            for strength in strengths:
+                b=D(strength)
+                for agenda in (1,0):
+                    p=(1-b)*q+b*((1-(1-q)**8) if agenda==1 else q**8)
+                    states.append((truth,agenda,p));weights.append(D(1)/D(8*len(strengths)))
+        signed=0;boost=D(delta).exp()
+        for item in items:
+            if item>=0:weights=[w*(p if item else 1-p) for w,(_,_,p) in zip(weights,states)]
+            total=sum(weights);weights=[w/total for w in weights]
+            harm=sum(w for w,(truth,agenda,_) in zip(weights,states) if agenda>=0 and agenda!=truth)
+            if delta>0 and harm>=D(theta):
+                diff=sum(w for w,(_,a,_) in zip(weights,states) if a==1)-sum(w for w,(_,a,_) in zip(weights,states) if a==0)
+                favored=1 if diff>D('1e-12') else 0
+                signed+=1 if favored else -1
+                weights=[w*boost if truth==favored else w for w,(truth,_,_) in zip(weights,states)]
+        return signed==0
 
 
 def pooled(items,strengths,honest=.5,independent=False):
@@ -70,7 +127,9 @@ def analyze(raw,s,independent=False):
         for i in range(len(items)):
             retained=items[i,:gate[i]] if gate[i]>=0 else items[i]
             if np.sum(retained==0)==np.sum(retained==1):v[i,1]=math.log(.5);v[i,5]=.5
-            if s['delta']==0 and np.sum(items[i]==0)==np.sum(items[i]==1):v[i,0]=math.log(.5);v[i,4]=.5
+            if (np.sum(items[i]==0)==np.sum(items[i]==1) and
+                    (s['delta']==0 or exact_balanced_bias(items[i],s['strengths'],s['theta'],s['delta']))):
+                v[i,0]=math.log(.5);v[i,4]=.5
         z,agenda,prob,prior=lib;wout=np.empty_like(v)
         for warning in (0,1):
             mask=np.array(row['warning'])==warning

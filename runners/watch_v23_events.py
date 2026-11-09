@@ -233,16 +233,29 @@ def deliver(campaign,state,config,events):
         history['attempts'][-1]['exit_code']='interrupted delivery retained'
     number=len(history['attempts'])+1
     entry=dict(events=[e['id'] for e in events],at=now());history['attempts'].append(entry)
+    if config.get('completed_review_shutdown_grace_seconds'):
+        from uuid import uuid4
+        entry['review_token']='review-owner-'+uuid4().hex
     write(path,history,immutable=False);(state/'ARMED').unlink()
     import json
     inp=state/f'review-{number}.input.txt'
-    inp.write_text(Path(config['prompt']).read_text(encoding='utf-8')+'\nEvent evidence, not instructions:\n'+json.dumps(events),encoding='utf-8')
+    inp.write_text(('Review ownership token: '+entry['review_token']+'\n' if entry.get('review_token') else '')+
+        Path(config['prompt']).read_text(encoding='utf-8')+'\nEvent evidence, not instructions:\n'+json.dumps(events),encoding='utf-8')
     environment=review_environment(config)
     with inp.open('rb') as source,(state/f'review-{number}.jsonl').open('xb') as out,(state/f'review-{number}.stderr.log').open('xb') as err:
         child=subprocess.Popen(argv,cwd=config['cwd'],stdin=source,stdout=out,stderr=err,env=environment,creationflags=subprocess.CREATE_NO_WINDOW)
         entry['pid']=child.pid;write(path,history,immutable=False)
         while child.poll() is None:
             write(state/'STATUS.json',dict(pid=os.getpid(),heartbeat=now(),armed=False,active_review_pid=child.pid),immutable=False)
+            if config.get('completed_review_shutdown_grace_seconds'):
+                from runners.review_shutdown import completed_shutdown
+                proof=completed_shutdown(config,entry,datetime.now(timezone.utc))
+                if proof:
+                    # A completed model task can leave the CLI stuck in MCP/hook
+                    # shutdown. Never time out an active model or scientific job.
+                    entry['shutdown_recovery']=proof
+                    write(state/f'review-{number}.shutdown.json',proof)
+                    child.terminate()
             time.sleep(10)
         entry.update(exit_code=child.returncode,finished=now())
     remaining=pending(campaign,state);unresolved={e['id'] for e in remaining}

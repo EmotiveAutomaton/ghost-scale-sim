@@ -77,7 +77,7 @@ def register_descendants(c,parent,build_card,source,index=None):
     eligible=eligible_second_generation(c,primary) if primary else False
     generation=card.get('generation',0);registered=[]
     inherited={k:v for k,v in card.items() if k not in ('source_root','source_manifest_sha256','module_sha256','healing_number','replaces_card','probe_healing_parent','probe_science_identity','study_healing_parent','study_science_identity','supersedes_claim','correction')}
-    if card['lane']=='study' or card.get('replaces_card') or (card['lane']=='followup' and generation==1 and eligible):
+    if card['lane']=='study' or (card.get('replaces_card') and not card.get('repairs_texture')) or (card['lane']=='followup' and generation==1 and eligible):
         for n,(axis,change) in enumerate(registry.expansion_menu(p['family']),1):
             if axis=='dose':
                 field='structures' if p['family']=='K7' else 'records'

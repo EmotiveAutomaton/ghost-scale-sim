@@ -14,7 +14,7 @@ from runners import run_v27 as native
 from ghostscale.validation.soundingline.v27.common import verify_complete
 from runners.watch_v23_events import event,alive
 
-EXTRAS=('runners/queue_v27.py','runners/watch_v27.py','runners/watch_v26.py','runners/fixture_v23.py')
+EXTRAS=('runners/queue_v27.py','runners/watch_v27.py','runners/watch_v26.py','runners/fixture_v23.py','runners/review_shutdown.py')
 
 
 def charges(c):
@@ -121,6 +121,15 @@ def build(c,family,primary_only=False):
 def prepare(c,cid,probe=None,*,setting_indices=None,identity=None,source_override=None,split_part=None,split_total=None):
     protocol=read(c/'protocols'/(cid+'.json'));source=Path(protocol['source_root']);f=protocol['family'];is_probe=probe is None
     if source_override is not None:source=Path(source_override)
+    succession=c/'K5_H3_SUCCESSION.json';succession_hash=None
+    if source_override is None and succession.exists():
+        amendment=read(succession)
+        if cid in amendment['protocol_hashes']:
+            if digest(c/'protocols'/(cid+'.json'))!=amendment['protocol_hashes'][cid]:raise ValueError('successor protocol changed')
+            verify_complete(c/'packets'/amendment['required_verified_packet'])
+            source=Path(amendment['source_root'])
+            if digest(source/'SOURCE_MANIFEST.json')!=amendment['source_manifest_sha256']:raise ValueError('successor source changed')
+            succession_hash=digest(succession)
     all_rows=protocol['settings'];rows=all_rows;caps=dict(original=590.,replay=590.,review=590.);wall=3600.
     if is_probe:
         ordered=sorted(range(len(rows)),key=lambda i:settings_cost(rows[i],f));indices=list(dict.fromkeys([ordered[0],ordered[-1]]));rows=[rows[i] for i in indices]
@@ -147,9 +156,18 @@ def prepare(c,cid,probe=None,*,setting_indices=None,identity=None,source_overrid
         interpreter=str(Path(sys.executable).resolve()),cpu_cap_seconds=sum(caps.values())+10,pass_caps=caps,
         wall_cap_seconds=18*3600,projected_wall_seconds=wall,cost_probe=probe.name if probe else None,
         cost_probe_complete_sha256=digest(probe/'COMPLETE.json') if probe else None,confirmation=False,
-        **{k:protocol[k] for k in ('generation','parent_blocks','parent_complete_sha256','primary_positive_or_sign_reversal','reread_level','retained_inputs','retained_manifest','retained_manifest_sha256','analysis_module','healing_number','replaces_card') if k in protocol})
+        **{k:protocol[k] for k in ('generation','parent_blocks','parent_complete_sha256','primary_positive_or_sign_reversal','reread_level','retained_inputs','retained_manifest','retained_manifest_sha256','analysis_module','healing_number','healing_authorization','replaces_card') if k in protocol})
     if split_part is not None:p.update(split_part=split_part,split_total=split_total,logical_aggregation_only=True)
-    if is_probe and protocol.get('probe_healing_parent'):p.update(healing_parent=protocol['probe_healing_parent'],repair_observations_only=True)
+    if succession_hash:p['source_correction_sha256']=succession_hash
+    if is_probe and protocol.get('probe_healing_parent'):
+        p.update(healing_parent=protocol['probe_healing_parent'],repair_observations_only=True)
+        parent=read(c/'packets'/protocol['probe_healing_parent']/'PLAN.json')
+        legacy=Path(parent['source_root'])/'ghostscale/validation/soundingline/v27/study.py'
+        if 'def global_setting_index' not in legacy.read_text(encoding='utf-8'):
+            # Older probes seeded their selected settings locally. Preserve the
+            # frozen predecessor's identity, not a later split-run convention.
+            p['seed_setting_indices']=list(range(len(rows)))
+            p['legacy_seed_source_sha256']=digest(legacy)
     if not is_probe and protocol.get('study_healing_parent'):p.update(healing_parent=protocol['study_healing_parent'],repair_observations_only=True)
     write(packet/'CONTROLS_BEFORE_DATA.json',read(c/'controls'/(cid+'.json')))
     write(packet/'STATUS.json',dict(state='PREPARED',at=native.now().isoformat()))

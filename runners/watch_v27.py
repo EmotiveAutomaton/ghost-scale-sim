@@ -1,4 +1,4 @@
-"""V27 finite native monitoring: build wakes, twelve-hour health and daily line."""
+"""V27 finite native monitoring: build wakes, configured health and daily line."""
 import argparse,os,time
 from pathlib import Path
 from datetime import datetime,timedelta,timezone
@@ -9,16 +9,31 @@ from runners.watch_v26 import observe
 
 def scheduled(c,current):
     a=read(c/'ACCEPTANCE.json');opened=datetime.fromisoformat(a['opened']);drain=datetime.fromisoformat(a['drain'])
-    floor=datetime.fromisoformat(read(c/'MONITOR_START.json')['at']);point=opened+timedelta(hours=12);i=1
+    cadence=read(c/'HEALTH_CADENCE.json') if (c/'HEALTH_CADENCE.json').exists() else {}
+    hours=cadence.get('hours',12)
+    if hours not in (6,12):raise ValueError('unsupported health cadence')
+    anchor=datetime.fromisoformat(cadence.get('anchor',a['opened']))
+    floor=datetime.fromisoformat(read(c/'MONITOR_START.json')['at']);point=anchor+timedelta(hours=hours);i=1
     while point<drain:
-        if current>=point>=floor:event(c,f'v27-health12-{i:02d}','twelve_hour_health',dict(due=point.isoformat()))
-        point+=timedelta(hours=12);i+=1
+        if current>=point>=floor:event(c,f'v27-health{hours}-{i:02d}',
+            'six_hour_health' if hours==6 else 'twelve_hour_health',dict(due=point.isoformat()))
+        point+=timedelta(hours=hours);i+=1
     for day in range(8,17):
         point=datetime(2026,11,day,4,tzinfo=timezone.utc)
         if current>=point>=floor:event(c,f'v27-daily-{day-1:02d}','daily_report',dict(due=point.isoformat()))
     q=read(c/'QUEUE_STATUS.json') if (c/'QUEUE_STATUS.json').exists() else dict(build_work_remaining=True)
     wake=c/'BUILD_WAKE.json'
-    if q.get('build_work_remaining') or q.get('prepared') or (not q.get('active') and q.get('eligible_ready')):
+    # A stopped controller with only explicitly held work has no useful hourly
+    # build action. New cards/protocols invalidate this narrow reviewed frontier.
+    frontier=read(c/'REVIEWED_FRONTIER.json') if (c/'REVIEWED_FRONTIER.json').exists() else {}
+    from ghostscale.validation.soundingline.v27.common import digest
+    held_only=(q.get('state')=='DRAINED' and not q.get('active') and not q.get('prepared')
+        and set(q.get('unbuilt',[]))<=set(frontier.get('held_unbuilt',[]))
+        and bool(frontier.get('input_hashes'))
+        and all((c/rel).exists() and digest(c/rel)==bound for rel,bound in frontier.get('input_hashes',{}).items())
+        and len(list((c/'cards').glob('*.json')))==frontier.get('card_count')
+        and len(list((c/'protocols').glob('*.json')))==frontier.get('protocol_count'))
+    if not held_only and (q.get('build_work_remaining') or q.get('prepared') or (not q.get('active') and q.get('eligible_ready'))):
         plan=read(wake) if wake.exists() else dict(due=(current+timedelta(minutes=50)).isoformat())
         if current>=datetime.fromisoformat(plan['due']):
             event(c,'v27-build-'+plan['due'].replace(':','-'),'build_required',dict(due=plan['due']))

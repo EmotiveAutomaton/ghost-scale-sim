@@ -10,6 +10,7 @@ import numpy as np
 parser=argparse.ArgumentParser();parser.add_argument('--campaign',type=Path,required=True);parser.add_argument('--batch',required=True)
 parser.add_argument('--counts',type=int,nargs=3,default=list(resolution.COUNTS));parser.add_argument('--reuse',type=Path)
 parser.add_argument('--order',type=int,nargs='+')
+parser.add_argument('--fixture-indices',type=int,nargs='+')
 parser.add_argument('--pool',choices=('preparation','followup_healing'),default='preparation')
 parser.add_argument('--cpu-ceiling-seconds',type=int,default=21600)
 args=parser.parse_args();c=args.campaign.resolve()
@@ -19,15 +20,17 @@ runtime.below_normal();start=time.process_time();opened=time.monotonic()
 sources={n:digest(source/'ghostscale/validation/soundingline/v27'/n) for n in ('setpoints.py','setpoint_particles.py','setpoint_resolution.py')}
 if args.counts!=sorted(set(args.counts)) or args.counts[0]<2048:raise ValueError('invalid increasing resolution ladder')
 settings=registry.primary_settings('K3')[:15]
-order=args.order if args.order is not None else list(range(len(settings)))
-if sorted(order)!=list(range(len(settings))):raise ValueError('fixture order must contain every excluded setting exactly once')
+selected=args.fixture_indices if args.fixture_indices is not None else list(range(len(settings)))
+if len(selected)!=len(set(selected)) or any(i not in range(len(settings)) for i in selected):raise ValueError('invalid fixture partition')
+order=args.order if args.order is not None else selected
+if sorted(order)!=sorted(selected):raise ValueError('fixture order must contain each selected setting exactly once')
 if not 0<args.cpu_ceiling_seconds<=43200:raise ValueError('invalid CPU ceiling')
 if args.reuse:
     reuse_protocol=read(args.reuse/'PROTOCOL.json')
     for name in ('setpoints.py','setpoint_particles.py'):
         if reuse_protocol['sources'][name]!=sources[name]:raise ValueError('retained likelihood source differs')
 protocol=dict(sources=sources,counts=args.counts,limits=resolution.LIMITS,replicates=2,
-    settings=settings,fixture_order=order,cpu_ceiling_seconds=args.cpu_ceiling_seconds,
+    settings=settings,fixture_order=order,selected_fixtures=selected,cpu_ceiling_seconds=args.cpu_ceiling_seconds,
     pool=args.pool,scientific_draws=0)
 if args.reuse:protocol['retained_preflight_sha256']=digest(args.reuse/'COMPLETE.json')
 write(root/'PROTOCOL.json',protocol)
@@ -65,7 +68,7 @@ try:
         # A failing grid is retained; stop before spending hours on the same
         # inadequate numerical resolution. The next operator diagnoses it.
         if not value['passed']:break
-    write(root/'COMPLETE.json',dict(fixtures=receipts,passed=len(receipts)==len(protocol['settings']) and all(x['passed'] for x in receipts),
+    write(root/'COMPLETE.json',dict(fixtures=receipts,passed=len(receipts)==len(selected) and all(x['passed'] for x in receipts),
         source_hashes=sources,scientific_admission=False,reason='Resolution diagnostics only; scientific protocols and measured probes still required.'))
     state='COMPLETE'
 except Exception as exc:

@@ -44,7 +44,7 @@ def module(family,analysis_module=None):
 
 def global_setting_index(plan,setting):
     """Keep a split packet in the logical card's preregistered seed domain."""
-    indices=plan.get('setting_indices',list(range(len(plan['settings']))))
+    indices=plan.get('seed_setting_indices',plan.get('setting_indices',list(range(len(plan['settings'])))))
     return indices[setting]
 
 

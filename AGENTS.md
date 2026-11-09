@@ -20,6 +20,15 @@ authorship and contribution records retain their original attribution.
 
 ## V27 commissioned week, November 7
 
+November 9 owner amendment: routine queue-health reviews are now every six
+hours, with earlier failure, completion/admission and expected-turnover checks.
+The at-most-60-minute build check remains while actionable commissioned work
+needs building or admission. The owner also approved one additional separately
+frozen repair attempt for each of K3 and K5 (healing number 3), within the same
+total allocation and deadline. Read `results/v27/ADDITIONAL_HEALING_2026-11-09.json`
+and the current handoff. This exception permits no fourth healing, no weakened
+validity gate, and no repetition of valid old science.
+
 The owner commissioned the full V27 packet, including amendments H-M below.
 Read `docs/versions/v27-motives-and-set-points/README.md`, its packet and current
 implementation status, `results/v27/AUTHORIZATION.json`, and outer `.local/v27/HANDOFF.md`.
