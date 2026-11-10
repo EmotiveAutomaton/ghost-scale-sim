@@ -1,0 +1,32 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": ["v27-k5-t037-p2-study", "v27-k5-t038-study"],
+  "at": "2026-11-09T17:33:00+00:00",
+  "closed_science_unchanged": true,
+  "completed_packets_audited": ["v27-k5-t037-study", "v27-k5-t037-p2-probe", "v27-k5-t038-probe"],
+  "documentary_chains_verified": 1,
+  "earlier_actionable_check": "2026-11-09T17:40:00+00:00",
+  "independent_reconstructions_verified": 3,
+  "named_claims": ["G-V27-K5-T037-1"],
+  "occupancy_hours": {
+    "busy_worker": 76.109331,
+    "idle_build_or_design": 84.263726,
+    "idle_host_load": 21.365080,
+    "idle_initial_build_and_validation": 3.151382
+  },
+  "packet_counts": {"complete": 686, "failed": 3, "running": 2, "withdrawn": 3},
+  "pool_snapshot_seconds": {
+    "followup_healing_committed": 278218.546875,
+    "followup_healing_remaining": 1449781.453125,
+    "preparation_charged": 72480.65658897079,
+    "preparation_overrun": 480.6565889707855,
+    "studies_charged": 3905.578125,
+    "studies_remaining": 860094.421875
+  },
+  "raw_hash_and_size_checks": 324,
+  "recipient_copy": {"new_k5_copy": false, "reason": "Recorded family-scoped delivery decision does not authorize K5"},
+  "replay_and_export_bindings_verified": 345,
+  "targeted_tests_passed": 45,
+  "texture_counts": {"K1": 54, "K2": 56, "K4": 25, "K5": 36, "K6": 16, "K7": 36},
+  "worker_limit": 4
+}

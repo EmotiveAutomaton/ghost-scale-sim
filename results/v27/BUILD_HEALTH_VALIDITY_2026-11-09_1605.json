@@ -1,0 +1,43 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": [
+    "v27-k5-t026-p2-study",
+    "v27-k5-t027-p2-study",
+    "v27-k5-t028-study"
+  ],
+  "at": "2026-11-09T16:05:00+00:00",
+  "closed_science_unchanged": true,
+  "completed_packets_audited": [
+    "v27-k5-t025-p2-study",
+    "v27-k5-t027-study"
+  ],
+  "documentary_chains_verified": 2,
+  "earlier_actionable_check": "2026-11-09T16:15:00+00:00",
+  "independent_reconstructions_verified": 2,
+  "named_claims": [
+    "G-V27-K5-T025-P2-1",
+    "G-V27-K5-T027-1"
+  ],
+  "packet_counts": {
+    "complete": 659,
+    "failed": 3,
+    "running": 3,
+    "withdrawn": 3
+  },
+  "raw_hash_and_size_checks": 960,
+  "recipient_copy": {
+    "new_k5_copy": false,
+    "reason": "Recorded family-scoped delivery decision does not authorize K5"
+  },
+  "replay_bindings_verified": 966,
+  "targeted_tests_passed": 45,
+  "texture_counts": {
+    "K1": 54,
+    "K2": 56,
+    "K4": 25,
+    "K5": 26,
+    "K6": 16,
+    "K7": 36
+  },
+  "worker_limit": 4
+}

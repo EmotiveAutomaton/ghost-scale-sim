@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-09T15:37:12.629876+00:00",
+  "complete_sha256": "56b82f079f7677c9c50a01cb98b4736d9c86989b7783ecd8fdbbbcd9997a0efc",
+  "decision": "checked_particle_approximation",
+  "failed_fixture": 5,
+  "healing_number": 3,
+  "margin_error_bar_nat": 0.25,
+  "measurements": [
+    {
+      "margin_error_nat": 0.2796641860704199,
+      "particles": 262144,
+      "posterior_and_crossing_checks_passed": true,
+      "replicate": 0,
+      "within_margin_bar": false
+    },
+    {
+      "margin_error_nat": 0.23212087621226374,
+      "particles": 262144,
+      "posterior_and_crossing_checks_passed": true,
+      "replicate": 1,
+      "within_margin_bar": true
+    },
+    {
+      "margin_error_nat": 0.374715052799786,
+      "particles": 524288,
+      "posterior_and_crossing_checks_passed": true,
+      "replicate": 1,
+      "within_margin_bar": false
+    }
+  ],
+  "numerical_bars_unchanged": true,
+  "result": "FAILED_EXCLUDED_NUMERICAL_VALIDATION",
+  "scientific_admission": false,
+  "scientific_draws": 0,
+  "terminal_disposition": "The separately authorized third K3 healing is exhausted. No fourth healing or dynamic K3 scientific admission is authorized."
+}

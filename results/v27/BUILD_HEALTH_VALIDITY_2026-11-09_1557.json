@@ -1,0 +1,63 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": [
+    "v27-k5-t025-p2-study",
+    "v27-k5-t026-p2-study",
+    "v27-k5-t027-study"
+  ],
+  "at": "2026-11-09T15:57:00+00:00",
+  "closed_science_unchanged": true,
+  "completed_packets_audited": [
+    "v27-k5-t024-p2-study",
+    "v27-k5-t026-study"
+  ],
+  "documentary_chains_verified": 2,
+  "earlier_actionable_check": "2026-11-09T16:15:00+00:00",
+  "excluded_k3_resolution_receipt": "results/v27/K3_H3_RESULT_2026-11-09.json",
+  "independent_reconstructions_verified": 2,
+  "named_claims": [
+    "G-V27-K5-T024-P2-1",
+    "G-V27-K5-T026-1"
+  ],
+  "packet_counts": {
+    "complete": 655,
+    "failed": 3,
+    "running": 3,
+    "withdrawn": 3
+  },
+  "pool_balances_hours": {
+    "followup_healing": 401.4391319444444,
+    "preparation": 0.06370216278589137,
+    "protected": 20.0,
+    "studies": 238.9151171875
+  },
+  "projected_wall_hours_at_admission": {
+    "v27-k5-t025-p2-study": 4.283634760013471,
+    "v27-k5-t026-p2-study": 3.6493699866657454,
+    "v27-k5-t027-study": 1.7734061399940402
+  },
+  "raw_hash_and_size_checks": 960,
+  "recipient_copy": {
+    "new_k5_copy": false,
+    "reason": "Recorded family-scoped delivery decision does not authorize K5"
+  },
+  "replay_bindings_verified": 966,
+  "routine_hours": 6,
+  "scientific_packet_limit_hours": 12,
+  "targeted_tests_passed": 45,
+  "texture_counts": {
+    "K1": 54,
+    "K2": 56,
+    "K4": 25,
+    "K5": 25,
+    "K6": 16,
+    "K7": 36
+  },
+  "worker_limit": 4,
+  "worker_occupancy_hours": {
+    "busy": 73.50587265847103,
+    "idle_build_or_design": 80.51604433696122,
+    "idle_host_load": 21.365080234361557,
+    "idle_initial_build_and_validation": 3.1513818434722265
+  }
+}

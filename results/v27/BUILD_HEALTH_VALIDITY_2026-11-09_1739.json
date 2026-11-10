@@ -1,0 +1,32 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": ["v27-k5-t037-p2-study", "v27-k5-t039-study"],
+  "at": "2026-11-09T17:39:00+00:00",
+  "closed_science_unchanged": true,
+  "completed_packets_audited": ["v27-k5-t038-study", "v27-k5-t039-probe"],
+  "documentary_chains_verified": 1,
+  "earlier_actionable_check": "2026-11-09T17:45:00+00:00",
+  "independent_reconstructions_verified": 2,
+  "named_claims": ["G-V27-K5-T038-1"],
+  "occupancy_hours": {
+    "busy_worker": 76.283868,
+    "idle_build_or_design": 84.445076,
+    "idle_host_load": 21.365080,
+    "idle_initial_build_and_validation": 3.151382
+  },
+  "packet_counts": {"complete": 688, "failed": 3, "running": 2, "withdrawn": 3},
+  "pool_snapshot_seconds": {
+    "followup_healing_committed": 278604.7734375,
+    "followup_healing_remaining": 1449395.2265625,
+    "preparation_charged": 72520.78158897079,
+    "preparation_overrun": 520.7815889707855,
+    "studies_charged": 3905.578125,
+    "studies_remaining": 860094.421875
+  },
+  "raw_hash_and_size_checks": 322,
+  "recipient_copy": {"new_k5_copy": false, "reason": "Recorded family-scoped delivery decision does not authorize K5"},
+  "replay_and_export_bindings_verified": 336,
+  "targeted_tests_passed": 45,
+  "texture_counts": {"K1": 54, "K2": 56, "K4": 25, "K5": 37, "K6": 16, "K7": 36},
+  "worker_limit": 4
+}

@@ -20,6 +20,17 @@ authorship and contribution records retain their original attribution.
 
 ## V27 commissioned week, November 7
 
+November 9 eligible-work endpoint: all admitted lanes have finished. Read
+`docs/versions/v27-motives-and-set-points/FINAL_REPORT_2026-11-09.md` and the
+evening monitoring report. The queue has 720 complete packets, three retained
+failures and three withdrawals; no scientific worker remains. The 34 dynamic
+K3 cards remain held after the third authorized repair failed excluded
+validation. Do not infer a fourth repair from unused capacity. The six-hour
+cadence applies while commissioned work is active; recurring reviews retired
+at this finite endpoint. Native review reports are local records, not messages
+delivered into the owner's interactive conversation. New activity needs an
+explicitly admitted scope and the same scientific gates.
+
 November 9 owner amendment: routine queue-health reviews are now every six
 hours, with earlier failure, completion/admission and expected-turnover checks.
 The at-most-60-minute build check remains while actionable commissioned work

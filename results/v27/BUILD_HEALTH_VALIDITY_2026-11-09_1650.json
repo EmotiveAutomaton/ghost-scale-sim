@@ -1,0 +1,24 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": ["v27-k5-t031-p2-study", "v27-k5-t033-study"],
+  "at": "2026-11-09T16:49:25.322669+00:00",
+  "closed_science_unchanged": true,
+  "completed_packets_audited": ["v27-k5-t032-study", "v27-k5-t033-probe"],
+  "documentary_chains_verified": 1,
+  "earlier_actionable_check": "2026-11-09T17:00:00+00:00",
+  "independent_reconstructions_verified": 2,
+  "named_claims": ["G-V27-K5-T032-1"],
+  "packet_counts": {"complete": 674, "failed": 3, "running": 2, "withdrawn": 3},
+  "preparation_pool_overrun": {
+    "ceiling_seconds": 72000,
+    "charged_seconds": 72173.48471397079,
+    "overrun_seconds": 173.48471397079062,
+    "effect": "Block new preparation-pool starts only; running scientific work and other pools remain unaffected."
+  },
+  "raw_hash_and_size_checks": 322,
+  "recipient_copy": {"new_k5_copy": false, "reason": "Recorded family-scoped delivery decision does not authorize K5"},
+  "replay_bindings_verified": 333,
+  "targeted_tests_passed": 45,
+  "texture_counts": {"K1": 54, "K2": 56, "K4": 25, "K5": 31, "K6": 16, "K7": 36},
+  "worker_limit": 4
+}

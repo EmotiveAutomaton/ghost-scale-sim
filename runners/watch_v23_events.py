@@ -187,6 +187,79 @@ def deferred_events(campaign,state,events,current=None):
     return valid
 
 
+def defer_review_events(campaign,state,events,due,reason,next_action):
+    """Save an inspected backlog to the monitor's canonical bounded handoff.
+
+    This does not acknowledge publication or suppress new/changed events.
+    Callers must supply the exact events they have actually inspected.
+    """
+    current=datetime.now(timezone.utc)
+    due=datetime.fromisoformat(due) if isinstance(due,str) else due
+    acceptance=read(campaign/'ACCEPTANCE.json')
+    deadline=datetime.fromisoformat(acceptance.get('report_start') or acceptance.get('new_starts_close') or acceptance['drain'])
+    if not reason or not next_action or not current<due<=deadline:
+        raise ValueError('invalid bounded review handoff')
+    saved={}
+    for item in events:
+        path=campaign/'events'/(item['id']+'.json')
+        if path.parent.resolve()!=(campaign/'events').resolve() or digest(path)!=item['event_sha256']:
+            raise ValueError('review event changed')
+        if item['kind'] in ('final_deadline','report_preparation'):continue
+        saved[item['id']]=dict(event_sha256=item['event_sha256'],due=due.isoformat(),reason=reason,next_action=next_action)
+    write(state/'DEFERRED_EVENTS.json',dict(at=current.isoformat(),events=saved),immutable=False)
+
+
+def finish_review_delivery(campaign,state,entry):
+    """A review cannot override a failed handoff by manually rearming itself."""
+    remaining=pending(campaign,state);unresolved={e['id'] for e in remaining}
+    entry['acknowledged']=[identity for identity in entry['events'] if identity not in unresolved]
+    deferred=deferred_events(campaign,state,remaining)
+    blocked=unresolved.intersection(entry['events'])-deferred
+    report_state=entry.get('report_record',{}).get('state')
+    report_problem=report_state is not None and report_state!='REPORT_RECORDED'
+    if blocked or report_problem:
+        (state/'ARMED').unlink(missing_ok=True)
+        write(state/'DELIVERY_UNRESOLVED.json',dict(at=now(),events=sorted(blocked),report_state=report_state,
+            action='Inspect and publish or save a bounded handoff with defer_review_events; no automatic retry.'),immutable=False)
+    elif not closed(campaign) and not (state/'STOP').exists():
+        (state/'ARMED').touch()
+    else:
+        (state/'ARMED').unlink(missing_ok=True)
+    return blocked
+
+
+def record_review_report(state, number, entry):
+    import json
+    log=state/f'review-{number}.jsonl'
+    final=None;turn_completed=False;malformed=0
+    if log.exists():
+        with log.open(encoding='utf-8') as stream:
+            for line in stream:
+                try: row=json.loads(line)
+                except (ValueError,UnicodeError): malformed+=1;continue
+                if row.get('type')=='turn.completed':turn_completed=True
+                item=row.get('item',{})
+                if row.get('type')=='item.completed' and item.get('type')=='agent_message' and item.get('text'):
+                    final=item['text']
+    receipt=dict(started=entry['at'],finished=entry.get('finished'),exit_code=entry.get('exit_code'),
+                 review_number=number,turn_completed=turn_completed,malformed_lines=malformed,
+                 delivery='local_report_only',interactive_chat_delivery=False)
+    if final:
+        report=state/f'review-{number}.report.md'
+        body=f"# Queue review {number}\n\nStarted: {entry['at']}\nFinished: {entry.get('finished')}\n\n{final}\n"
+        if report.exists():
+            if report.read_text(encoding='utf-8')!=body:raise ValueError('review report changed')
+        else:report.write_text(body,encoding='utf-8')
+        receipt.update(report=report.name,report_sha256=digest(report),
+                       state='REPORT_RECORDED' if turn_completed else 'REPORT_INCOMPLETE')
+        (state/'LATEST_REVIEW.md').write_text(body,encoding='utf-8')
+    else:
+        receipt.update(state='REPORT_MISSING')
+        (state/'LATEST_REVIEW.md').write_text(f'# Queue review {number}: report missing\n\nInspect REVIEW_STATUS.json and review-{number}.jsonl. Process exit alone is not a completed report.\n',encoding='utf-8')
+    write(state/'REVIEW_STATUS.json',receipt,immutable=False)
+    return receipt
+
+
 def review_environment(config):
     environment=os.environ.copy();profile=Path(config['review_user_profile'])
     if not profile.is_absolute() or not (profile/'.codex/config.toml').is_file():
@@ -258,14 +331,9 @@ def deliver(campaign,state,config,events):
                     child.terminate()
             time.sleep(10)
         entry.update(exit_code=child.returncode,finished=now())
-    remaining=pending(campaign,state);unresolved={e['id'] for e in remaining}
-    entry['acknowledged']=[e['id'] for e in events if e['id'] not in unresolved]
+    entry['report_record']=record_review_report(state,number,entry)
+    finish_review_delivery(campaign,state,entry)
     write(path,history,immutable=False)
-    deferred=deferred_events(campaign,state,remaining)
-    if unresolved.intersection(entry['events'])-deferred:
-        # A failed or incomplete operator needs a person, not an endless paid loop.
-        write(state/'DELIVERY_UNRESOLVED.json',dict(at=now(),events=sorted(unresolved)),immutable=False)
-    elif not closed(campaign) and not (state/'STOP').exists(): (state/'ARMED').touch()
 
 
 def run(campaign,state,config_path):

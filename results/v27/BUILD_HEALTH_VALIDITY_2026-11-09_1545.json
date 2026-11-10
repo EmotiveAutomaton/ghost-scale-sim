@@ -1,0 +1,80 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": [
+    "v27-k5-t024-p2-study",
+    "v27-k5-t025-p2-study",
+    "v27-k5-t026-study"
+  ],
+  "at": "2026-11-09T15:45:39.269158+00:00",
+  "built_families": [
+    "K1",
+    "K2",
+    "K4",
+    "K5",
+    "K6",
+    "K7"
+  ],
+  "closed_science_unchanged": true,
+  "documentary_chains_verified": 4,
+  "earlier_actionable_check": "2026-11-09T16:00:00+00:00",
+  "excluded_k3_resolution": {
+    "complete_sha256": "56b82f079f7677c9c50a01cb98b4736d9c86989b7783ecd8fdbbbcd9997a0efc",
+    "failed_fixture": 5,
+    "healing_number": 3,
+    "margin_errors": {
+      "262144_replicate_0": 0.2796641860704199,
+      "262144_replicate_1": 0.23212087621226374,
+      "524288_replicate_1": 0.374715052799786
+    },
+    "numerical_bars_unchanged": true,
+    "passed": false,
+    "posterior_and_crossing_checks_passed": true,
+    "scientific_admission": false,
+    "scientific_draws": 0,
+    "terminal_state": "FAILED"
+  },
+  "gear": 2,
+  "independent_reconstructions_verified": 11,
+  "named_claims": [
+    "G-V27-K5-T022-1",
+    "G-V27-K5-T023-1",
+    "G-V27-K5-T024-1",
+    "G-V27-K5-T025-1"
+  ],
+  "packet_counts": {
+    "complete": 651,
+    "failed": 3,
+    "running": 3,
+    "withdrawn": 3
+  },
+  "pool_ceilings_seconds": {
+    "followup_healing": 1728000,
+    "preparation": 72000,
+    "protected": 72000,
+    "studies": 864000
+  },
+  "pools_charged_seconds": {
+    "followup_healing": 284074.0390625,
+    "preparation": 71694.28158897079,
+    "studies": 3905.578125
+  },
+  "raw_hash_and_size_checks": 1294,
+  "recipient_copy": {
+    "new_k5_copy": false,
+    "reason": "Recorded family-scoped delivery decision does not authorize K5"
+  },
+  "replay_bindings_verified": 1327,
+  "routine_hours": 6,
+  "scientific_packet_limit_hours": 12,
+  "six_hour_monitor_live": true,
+  "targeted_tests_passed": 45,
+  "texture_counts": {
+    "K1": 54,
+    "K2": 56,
+    "K4": 25,
+    "K5": 24,
+    "K6": 16,
+    "K7": 36
+  },
+  "worker_limit": 4
+}

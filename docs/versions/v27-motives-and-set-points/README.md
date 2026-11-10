@@ -1,5 +1,11 @@
 # V27: motives, set points, stress, closing and laughter
 
+**Current state, 9 November:** all eligible commissioned work has finished.
+Six families are complete; 34 dynamic K3 cards remain held after the final
+authorized numerical repair failed. No workers or recurring reviews remain.
+Read the [final report](FINAL_REPORT_2026-11-09.md) and
+[monitoring review](MONITORING_REVIEW_2026-11-09.md).
+
 The owner commissioned the seven-card [packet](PACKET.md) on November 7.
 The immutable allocation is 760 CPU-hours with up to four Gear 2 scientists,
 subject to the ten-minute host-load rule. New starts close November 15 at

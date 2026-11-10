@@ -1,0 +1,28 @@
+{
+  "acceptance_unchanged": true,
+  "active_scientific_packets": ["v27-k5-t030-study", "v27-k5-t029-p2-study"],
+  "at": "2026-11-09T16:19:31.115653+00:00",
+  "closed_science_unchanged": true,
+  "completed_packets_audited": [
+    "v27-k5-t026-p2-study",
+    "v27-k5-t028-study",
+    "v27-k5-t029-probe",
+    "v27-k5-t027-p2-study",
+    "v27-k5-t029-study",
+    "v27-k5-t030-probe",
+    "v27-k5-t029-p2-probe"
+  ],
+  "documentary_chains_verified": 4,
+  "earlier_actionable_check": "2026-11-09T16:35:00+00:00",
+  "independent_reconstructions_verified": 7,
+  "k3_disposition": "Third and final authorized healing failed excluded numerical validation with zero scientific draws; no fourth healing or dynamic scientific admission.",
+  "named_claims": ["G-V27-K5-T026-P2-1", "G-V27-K5-T028-1", "G-V27-K5-T027-P2-1", "G-V27-K5-T029-1"],
+  "packet_counts": {"complete": 666, "failed": 3, "running": 2, "withdrawn": 3},
+  "pool_charges_seconds": {"followup_healing": 277094.671875, "preparation": 71963.54721397079, "studies": 3905.578125},
+  "raw_hash_and_size_checks": 1926,
+  "recipient_copy": {"new_k5_copy": false, "reason": "Recorded family-scoped delivery decision does not authorize K5"},
+  "replay_bindings_verified": 1947,
+  "targeted_tests_passed": 45,
+  "texture_counts": {"K1": 54, "K2": 56, "K4": 25, "K5": 28, "K6": 16, "K7": 36},
+  "worker_limit": 4
+}

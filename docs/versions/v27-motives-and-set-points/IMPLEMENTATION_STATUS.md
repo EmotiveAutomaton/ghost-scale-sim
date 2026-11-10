@@ -396,3 +396,223 @@ tests pass. K1 has no recipient copy under the recorded family-scoped delivery
 decision. K1-T048 remains healthy in independent reconstruction. Dynamic K3 and
 K5-T017 remain held without retry. [Aggregation validity
 receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_0827.json).
+
+The separately frozen third K5 healing restored the predecessor seed-index
+mapping after its first continuity probe retained a seed-index mismatch. The
+replacement probe and K5-T017-H3 then passed complete raw binding, replay and
+independent reconstruction. The healing's exact-symmetry binary capture uses
+signed 70-digit update accounting; it preserves K5's settings, seeds,
+thresholds and source-bound gates. Its declared bar conjunction is not met.
+The valid repaired result opened the already declared finite texture succession,
+and K5-T018 through K5-T021 each completed and landed with the same overall
+disposition. Across the healing, four successor textures and their five probes,
+the audit matched 1,610 raw hashes and sizes and 1,640 replay bindings; all ten
+independent reconstructions reproduced their summaries. Claims
+`G-V27-K5-T017-H3-1`, `G-V27-K5-T018-1`, `G-V27-K5-T019-1`,
+`G-V27-K5-T020-1` and `G-V27-K5-T021-1` each have one matching report,
+FINDINGS entry, theory row, claim-ledger entry and scoped exchange note. The
+recorded recipient decision does not authorize a K5 copy. K5-T022 began
+automatically. K3-H3 continues only as excluded numerical validation, with no
+scientific draw or admission. Forty-five targeted V27 tests pass. [Build and
+health validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1510.json).
+
+The 15:45 UTC build review verified K5-T022 through K5-T025 end to end and
+verified the adjacent K5-T024-P2, K5-T025-P2 and K5-T026 measured probes. The
+four named textures retain the overall disposition that K5's declared bar
+conjunction is not met; K5-T024 and K5-T025 each registered its single
+prospectively frozen precision double. Across the four studies and seven
+probes, 1,294 raw hashes and sizes and 1,327 replay bindings matched, and all
+eleven independent reconstructions reproduced their summaries. Each named
+result has one report, FINDINGS entry, theory row, unique claim-ledger entry
+and scoped exchange note. K5 remains outside the recorded recipient-copy
+families. Forty-five targeted V27 tests pass.
+
+K3-H3 stopped at excluded fixture 5 under the unchanged prospective numerical
+bars. One 262,144-particle replicate missed the 0.25-nat margin limit at
+0.279664 nat, and the 524,288 comparison missed it at 0.374715 nat; posterior
+mass and crossing-classification checks passed. The fixture used 4,739 CPU
+seconds, made zero scientific draws and admits no dynamic K3 science. This was
+the separately authorized third K3 healing, so no fourth repair is admitted.
+The earlier static K3 evidence remains unchanged. [Build and health validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1545.json).
+The 15:57 UTC owner build review records K3-H3 as failed excluded numerical
+validation at fixture 5. Its unchanged 0.25-nat margin bar failed at 262,144
+particles replicate 0 and 524,288 particles replicate 1, despite passing the
+posterior and crossing checks. It made zero scientific draws. The separately
+authorized third K3 healing is exhausted; no fourth healing or dynamic K3
+scientific admission is authorized.
+
+K5-T024-P2 and K5-T026 completed after the preceding snapshot. A fresh audit
+matched 960 raw hashes and sizes, 966 original/replay bindings, two independent
+reconstructions and both report/FINDINGS/theory/claim chains. K5-T025-P2,
+K5-T026-P2 and K5-T027 are active under the four-worker ceiling. The next early
+turnover check is 16:15 UTC; the fixed six-hour health anchor remains unchanged.
+
+The 16:20 UTC turnover verified K5-T026-P2, K5-T027-P2, K5-T028 and
+K5-T029 end to end, together with three adjacent measured probes. The audit
+matched 1,926 raw hashes and sizes, 1,947 original/replay bindings, seven
+independent reconstructions and four complete report/FINDINGS/theory/claim/
+exchange chains. K5 has 28 verified textures. K5-T030 and K5-T029-P2 are
+running under the retained four-worker host-load ceiling. Dynamic K3 remains
+ineligible after its third and final authorized healing failed excluded
+numerical validation with zero scientific draws. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1620.json).
+
+K5-T030 and K5-T031's adjacent probe then passed complete raw binding, replay
+and independent reconstruction. K5-T030's report, FINDINGS entry, theory row,
+claim and exchange note are complete. K5-T029-P2 and K5-T031 remain active.
+The preparation pool is 29.265964 CPU-seconds over its fixed ceiling; the
+logged overrun blocks new preparation-pool starts only under amendment I.
+Forty-five targeted V27 tests pass. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1630.json).
+
+The 17:07 UTC turnover verified K5-T031-P2, K5-T033 and K5-T034 end to
+end, together with K5-T034's and K5-T035's adjacent measured probes. The
+audit matched 1,284 raw hashes and sizes, 1,319 replay/export bindings, five
+independent reconstructions and three complete report/FINDINGS/theory/claim/
+exchange chains. K5 has 33 verified textures. K5-T035 is healthy in replay;
+its frozen admission projection was 2.10 wall-hours, while its original pass
+turned over in about four minutes. The preparation pool is 292.063 CPU-seconds
+over its fixed ceiling, so new starts in that pool remain blocked without
+affecting the independent scientific pool or already prepared work. Forty-five
+targeted V27 tests pass. K3 remains ineligible after its third and final healing
+failed excluded validation with zero scientific draws. Publication remains
+deferred and no K5 recipient copy is authorized. [Turnover validity
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1707.json).
+
+K5-T035 and K5-T036's measured probe then passed 322 raw hash/size
+checks, 336 replay/export bindings and two independent reconstructions.
+K5-T035's documentary chain is complete locally, bringing K5 to 34 verified
+textures. K5-T036 is healthy in its original pass. Its frozen projection is
+6,060.742 CPU-seconds and 6,836.539 wall-seconds, while observed neighboring
+cards have turned over within minutes. The next deliberately early check is
+17:20 UTC. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1714.json).
+
+K5-T036 and K5-T037's measured probe passed 322 raw hash/size checks,
+336 replay/export bindings and two independent reconstructions. K5-T036's
+report, FINDINGS entry, theory row, claim and exchange note are complete
+locally, bringing K5 to 35 verified textures. K5-T037 is healthy in replay.
+The next deliberately early turnover check is 17:30 UTC, before the fixed
+six-hour health anchor at 20:16:29 UTC. Follow-up/healing/texture commitments
+are 265,526.422 seconds, leaving 1,462,473.578 seconds. Preparation is
+417.985 seconds over its fixed ceiling and remains isolated to that pool.
+[Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1725.json).
+
+K5-T037, its precision probe and K5-T038's probe passed 324 raw
+hash/size checks, 345 replay/export bindings and three independent
+reconstructions. K5-T037's documentary chain is complete locally, bringing
+K5 to 36 verified textures. K5-T037-P2 is healthy in its original pass and
+K5-T038 is healthy in replay; neither is eligible for a timeout. The next
+deliberately early turnover check is 17:40 UTC. Follow-up/healing/texture
+commitments are 278,218.547 seconds, leaving 1,449,781.453 seconds.
+Preparation is 480.657 seconds over its fixed ceiling and remains isolated
+to that pool. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1733.json).
+
+K5-T038 and K5-T039's measured probe passed 322 raw hash/size checks,
+336 replay/export bindings and two independent reconstructions. K5-T038's
+documentary chain is complete locally, bringing K5 to 37 verified textures.
+K5-T037-P2 remains healthy in replay and K5-T039 is healthy in its original
+pass; neither is eligible for a timeout. The next deliberately early turnover
+check is 17:45 UTC. Follow-up/healing/texture commitments are 278,604.773
+seconds, leaving 1,449,395.227 seconds. Preparation is 520.782 seconds over
+its fixed ceiling and remains isolated to that pool. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1739.json).
+
+K5-T037-P2 and K5-T039 passed 960 raw hash/size checks, 974 replay/export
+bindings, two independent reconstructions and two complete documentary
+chains. K5 has 38 verified textures. K5-T040 is healthy in replay and must
+not be timed out. The next deliberately early turnover check is 17:55 UTC.
+Follow-up/healing/texture commitments are 268,006.664 seconds, leaving
+1,459,993.336 seconds. Preparation is 597.110 seconds over its fixed ceiling
+and remains isolated to that pool. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1750.json).
+
+K5-T040 and K5-T041, together with their four adjacent measured probes,
+passed 648 raw hash/size checks, 690 replay/export bindings and six independent
+reconstructions. Both named report/FINDINGS/theory/claim/exchange chains are
+complete locally, bringing K5 to 40 verified textures. K5-T040-P2 is healthy
+in review, K5-T041-P2 is healthy in its original pass and K5-T042 is healthy
+in replay; none is eligible for a timeout. Forty-five targeted V27 tests pass.
+The conservatively early next action is 18:15 UTC, before the fixed six-hour
+health anchor at 20:16:29 UTC. Preparation is 753.016 seconds over its fixed
+ceiling and remains isolated to that pool. Publication and K5 recipient
+delivery remain deferred. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1810.json).
+
+K5-T040-P2 and K5-T042, together with K5-T042-P2's and K5-T043's measured
+probes, passed 964 raw hash/size checks, 992 replay/export bindings and four
+independent reconstructions. Both named documentary chains are complete
+locally, bringing K5 to 41 verified textures. K5-T041-P2 is healthy in replay;
+K5-T042-P2 and K5-T043 are healthy in their original passes. The next
+deliberately early turnover check is 18:25 UTC. Follow-up/healing/texture
+commitments are 296,997.031 seconds, leaving 1,431,002.969 seconds.
+Preparation is 813.828 seconds over its fixed ceiling and remains isolated to
+that pool. Publication and K5 recipient delivery remain deferred. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1817.json).
+
+K5-T041-P2 and K5-T043, together with K5-T043-P2's and K5-T044's measured
+probes, passed 964 raw hash/size checks, 992 replay/export bindings and four
+independent reconstructions. Both named documentary chains are complete
+locally, bringing K5 to 42 verified textures. K5-T042-P2 is healthy in replay;
+K5-T043-P2 and K5-T044 are healthy in their original passes. The next
+deliberately early turnover check is 18:35 UTC. Follow-up/healing/texture
+commitments are 298,846.969 seconds, leaving 1,429,153.031 seconds.
+Preparation is 884.547 seconds over its fixed ceiling and remains isolated to
+that pool. Publication and K5 recipient delivery remain deferred. [Audit
+receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1825.json).
+
+K5-T042-P2 and K5-T044, together with K5-T045's measured probe, passed
+962 raw hash/size checks, 983 replay/export bindings and three independent
+reconstructions. Both named documentary chains are complete locally, bringing
+K5 to 44 verified textures. K5-T043-P2 is healthy in replay and K5-T045 is
+healthy in its original pass. The next deliberately early turnover check is
+18:40 UTC. Follow-up/healing/texture commitments are 286,214.344 seconds,
+leaving 1,441,785.656 seconds. Preparation is 938.469 seconds over its fixed
+ceiling and remains isolated to that pool. Publication and K5 recipient
+delivery remain deferred. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1833.json).
+
+K5-T043-P2 and K5-T045, together with two adjacent measured probes, passed
+964 raw hash/size checks, 992 replay/export bindings and four independent
+reconstructions. Both named documentary chains are complete locally, bringing
+K5 to 46 verified textures. K5-T045-P2 and K5-T046 are healthy in their
+original passes. The next deliberately early turnover check is 18:50 UTC.
+Follow-up/healing/texture commitments are 287,849.336 seconds, leaving
+1,440,150.664 seconds. Preparation is 1,011.203 seconds over its fixed ceiling
+and remains isolated to that pool. Publication and K5 recipient delivery remain
+deferred. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1841.json).
+
+K5-T046 and K5-T047's measured probe passed 322 raw hash/size checks, 336
+replay/export bindings and two independent reconstructions. The named
+documentary chain is complete locally, bringing K5 to 47 verified textures.
+K5-T045-P2 is healthy in replay and K5-T047 is healthy in its original pass.
+The next deliberately early turnover check is 19:00 UTC. Preparation is
+1,070.657 seconds over its fixed ceiling and remains isolated to that pool.
+Publication and K5 recipient delivery remain deferred. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1850.json).
+
+K5-T045-P2 and K5-T047, together with K5-T047-P2's and K5-T048's measured
+probes, passed 964 raw hash/size checks, 992 replay/export bindings and four
+independent reconstructions. Both named documentary chains are complete
+locally, bringing K5 to 49 verified textures. K5-T047-P2 and K5-T048 are
+healthy in their original passes. The next deliberately early turnover check
+is 19:10 UTC. Preparation is 1,140.828 seconds over its fixed ceiling and
+remains isolated to that pool. Publication and K5 recipient delivery remain
+deferred. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1859.json).
+
+K5-T048 passed 320 raw hash/size checks, 327 replay/export bindings and its
+independent reconstruction. Its documentary chain is complete locally,
+bringing K5 to 50 verified textures. K5-T047-P2 remains healthy in replay.
+Its frozen projection is 15,334.006 wall-seconds against a 12,998.125-second
+CPU cap; the deliberately early turnover check remains 19:10 UTC. Sampled
+occupancy is 285,476.605 busy-worker seconds, with 314,475.656 build/design,
+76,914.289 host-load and 11,344.975 initial-validation idle seconds.
+Preparation is 1,200.907 seconds over its fixed ceiling and remains isolated
+to that pool. Publication and K5 recipient delivery remain deferred. [Audit receipt](../../../results/v27/BUILD_HEALTH_VALIDITY_2026-11-09_1908.json).
+
+V27 reached finite eligible-work exhaustion at 19:18 UTC. K5-T047-P2 passed
+640 raw hash/size checks, 647 replay/export bindings and independent
+reconstruction; its complete documentary chain brings K5 to 51 verified
+textures. The final packet counts are 720 complete, three failed and three
+withdrawn, with none running. K3's 34-card dynamic frontier is the only unbuilt
+scope and is hash-bound as held after its third and final healing failed
+excluded validation with zero draws. The controller drained and stopped, its
+lock is absent, obsolete wakes are removed and the sole monitor is marked for
+retirement when this active owner review completes. Publication, exact
+acknowledgement and K5 recipient delivery remain deferred. [Final report](FINAL_REPORT_2026-11-09.md).
