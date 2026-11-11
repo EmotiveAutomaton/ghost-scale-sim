@@ -32,6 +32,12 @@ It replays and independently reconstructs fixture 5, replica 0, at 1,024 and
 repair. Use separate state at outer `.local/k3-rd1-diagnostic-20261111/`;
 preserve the original closeout. Gear 2 and finite monitoring remain as below.
 
+The diagnostic launched November 11 at 04:40 Pacific. Its 1,024-particle replay
+and independent reconstruction are verified; the two 16,384-particle checks
+are active at the recorded checkpoint. Read `DIAGNOSTIC_CHECKPOINT_2026-11-11.md`,
+`results/k3-redesign-20261110/diagnostic-20261111/` and the separate local handoff.
+No further admission follows automatically from this four-job diagnostic.
+
 The owner approved the separate K3 redesign proposal and execution in Gear 2.
 Read `docs/versions/v27-motives-and-set-points/k3-redesign-20261110/README.md`,
 its retained proposal, current status and outer `.local/k3-rd1-20261110/HANDOFF.md`.

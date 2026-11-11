@@ -314346,9 +314346,52 @@
       "source_sha256": "a7c85126f66fecff6473594bc5d7826df015a37c4f7d79d8f22d2929bac0273e",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Does the retained 1,024-particle numerical path reproduce across full replay and independent reconstruction? Both checks pass over all 45 hypotheses and 512 records: the replay is byte-identical, and the largest independent prefix log-likelihood difference is 1.71e-13 against the 1e-9 limit. This is a constructed-method reproducibility result for one retained path; calibration remains failed and the 16,384-particle checks are still running.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Unchanged V27 restoring-action world; one retained excluded fixture, no new draws.",
+      "claim_kind": "method",
+      "control_status": "Full byte replay and independent 45 by 512 reconstruction pass; original calibration fails.",
+      "correction_class": null,
+      "estimate": [
+        {
+          "byte_replay": true,
+          "complete_sha256": "2799e200ad29fd7655790f50267a116d27b75ff1eb864aa0831ef2243b10577d",
+          "cpu_seconds": 59.65625,
+          "hypotheses": 45,
+          "job": "R-low",
+          "maximum_error": 0.0,
+          "plan_sha256": "c19aac7c5d54756857d54fd5fadef97020d22beaf4f2fb5de5a91018fa26e562",
+          "records": 512,
+          "verification_sha256": "0260e9de16c8fd6671bafc26ea40fb17df5f25ceea5bd04bb63caf484380f595"
+        },
+        {
+          "byte_replay": null,
+          "complete_sha256": "310415aab36f11acf317003faf6216b57c9acec7994558302d483239550aba53",
+          "cpu_seconds": 69.84375,
+          "hypotheses": 45,
+          "job": "I-low",
+          "maximum_error": 1.7053025658242404e-13,
+          "plan_sha256": "1185d49230987833091d31c19f24b3840aa46e1e9521a1017be48ed3d7ca3598",
+          "records": 512,
+          "verification_sha256": "2b81f0a5c96ae40968b5e1e66e3b37c2bb257dee242f6d2cfe661b2a2846da14"
+        }
+      ],
+      "estimate_detail": {
+        "sha256": "1f11ccbaae9847f791d8be17dbae07de5abce08e216b4fd59632ad4b70cc30d0",
+        "source_file": "results/k3-redesign-20261110/diagnostic-20261111/LOW_VALIDITY.json"
+      },
+      "id": "G-V27-K3-DIAG1-LOW-1",
+      "reader": "Original fully adapted particle kernel and independent scalar reference, 1,024 particles.",
+      "source_file": "docs/versions/v27-motives-and-set-points/k3-redesign-20261110/DIAGNOSTIC_CHECKPOINT_2026-11-11.md",
+      "source_line": 3,
+      "source_sha256": "bf409dcee4626d6aa529ccc9e4f371ff27a94a55b653c75dd0038cfecf03914e",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-11T12:25:58.403092+00:00"
+  "updated": "2026-11-11T12:44:58.272430+00:00"
 }
