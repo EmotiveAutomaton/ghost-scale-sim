@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-11T03:06:21.816535+00:00",
+  "id": "K3-RD1",
+  "state": "CALIBRATION_FAILED",
+  "method_only": true,
+  "production_authorized": false,
+  "scientific_draws": 0,
+  "queue_complete_sha256": "2e5716ae34058f6b2d5edc8a1fa17f93ac8474735a8d57dda80eee9b0c72b504",
+  "source_manifest_sha256": "9c56fb14d5eed3ca18aabff8d3f68cd37a7b05c6eb943dab107111646178451c",
+  "source_entries_verified": 1072,
+  "source_hash_mismatches": 0,
+  "known_answer_controls": {"passed": 37, "targeted_tests_passed": 13},
+  "frozen_calibration_failure": {
+    "fixture": 5,
+    "adjacent_pairs": [
+      {"populations": [1024, 4096], "retained_run_pairs": 28, "failed_run_pairs": 28, "maximum_dynamic_type_posterior_error": 0.4617292086065299, "maximum_comparison_margin_error_nats": 5.15421787573473, "crossing_failed_run_pairs": 16},
+      {"populations": [4096, 16384], "retained_run_pairs": 28, "failed_run_pairs": 28, "maximum_dynamic_type_posterior_error": 0.3120910837430128, "maximum_comparison_margin_error_nats": 3.45234948665302, "crossing_failed_run_pairs": 7}
+    ],
+    "limits": {"maximum_dynamic_type_posterior_error": 0.05, "maximum_comparison_margin_error_nats": 0.25, "crossing_records": 16},
+    "independent_reconstruction_matches_frozen_assessment": true
+  },
+  "retention_and_bindings": {
+    "complete_jobs": 29,
+    "stopped_failed_jobs": 4,
+    "unstarted_jobs": 42,
+    "plan_result_raw_and_hypothesis_bindings_verified": true,
+    "binding_errors": 0,
+    "failed_replicas_retained": true,
+    "partial_hypothesis_checkpoints_retained": [28, 26, 26, 19]
+  },
+  "phase_a_cpu_seconds_charged": 9421.859375,
+  "phase_a_cpu_hours_charged": 2.617183159722222,
+  "phase_d_cpu_seconds_measured_through_report": 43.8125,
+  "phase_b_started": false,
+  "phase_c_started": false,
+  "validation_fixture_roster_frozen": false,
+  "limitations": [
+    "Neither approved adjacent population pair passed the first fully completed calibration fixture.",
+    "The 15 old plus 15 fresh validation fixtures were not run.",
+    "Conditional full-reader cost probes were not run, so no production cost forecast is established.",
+    "Expanded texture laws remain unvalidated and the noisy-stock observation likelihood remains unsupported.",
+    "This is a constructed-method numerical failure, not evidence for or against a human mechanism."
+  ],
+  "production_recommendation": "DO_NOT_AUTHORIZE"
+}

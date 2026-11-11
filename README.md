@@ -1,10 +1,10 @@
 # Ghost Scale Simulation
 
-**K3 redesign approved, November 10:** a separate 48-CPU-hour numerical-validation
-project is running in Gear 2, with up to four below-normal, single-thread
-workers and measured host-load backoff. Production remains unadmitted.
-[Redesign scope and status](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/README.md).
-V27's eligible work is complete; its dynamic K3 cards remain held.
+**K3 redesign closed, November 10:** the separate numerical reader failed both
+approved adjacent-population calibration gates on the first fully completed
+fixture. No scientific draw occurred, and production is not recommended or
+authorized. [Final validation report](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/FINAL_REPORT_2026-11-10.md).
+V27's eligible work remains complete; its dynamic K3 cards remain held.
 [Program and design review](docs/versions/v27-motives-and-set-points/README.md).
 [Recorded execution state](results/v27/CURRENT_STATUS.json).
 V26 is closed; the historical notes below retain its original evidence.

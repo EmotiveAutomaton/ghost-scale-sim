@@ -1,5 +1,11 @@
 ﻿# K3-RD1: approved numerical redesign
 
+**Closed:** K3-RD1 ended on 10 November 2026 after both approved adjacent
+population pairs failed the first fully completed frozen calibration fixture.
+No scientific draw occurred, phases B and C did not open, and no production is
+recommended or authorized. See the [final report](FINAL_REPORT_2026-11-10.md)
+and the [final validity record](../../../../results/k3-redesign-20261110/FINAL_VALIDITY.json).
+
 The owner approved this separate validation project on 10 November 2026 and
 requested Gear 2. The [original proposal](PROPOSAL.md) is retained unchanged;
 its pre-approval language and [evidence snapshot](EVIDENCE.json) are historical.
@@ -34,11 +40,8 @@ crossing statistic is retrospective. The evaluator-only twenty-record deficit
 clock is reconstructed for all five laws without revealing truth to the reader.
 No old scientific result or source capsule is modified.
 
-All 37 initial controls and 13 targeted tests pass; four calibration workers
-are active. See the [setup report](SETUP_REPORT.md) and
+All 37 initial controls and 13 targeted tests passed; the later numerical
+calibration failed. See the [setup report](SETUP_REPORT.md) and
 [current status](../../../../results/k3-redesign-20261110/CURRENT_STATUS.json)
-for execution evidence. Long-history numerical validity remains unestablished.
-The new finite monitor retains fixed six-hour health reviews and earlier phase,
-failure and completion checks. These create local review reports; they do not
-inject messages into an interactive conversation. Last starts remain November
-15 at 8 p.m. Pacific, with drain by 10 p.m. Production needs a later costed approval.
+for execution evidence. Long-history numerical validity failed the frozen gate.
+The finite monitor was retired at closeout. Production remains unadmitted.
