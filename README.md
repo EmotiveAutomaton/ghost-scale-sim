@@ -1,10 +1,11 @@
 # Ghost Scale Simulation
 
-**November 11 diagnostic:** the separately approved four-job retained-path
-check is running in Gear 2. The 1,024-particle replay and independent
-reconstruction pass; the 16,384-particle pair remains active at this checkpoint.
-The failed calibration and production hold remain unchanged.
-[Diagnostic checkpoint](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/DIAGNOSTIC_CHECKPOINT_2026-11-11.md).
+**November 11 diagnostic complete:** all four separately approved retained-path
+checks pass. The 1,024- and 16,384-particle replays are byte-identical and both
+independent kernels agree within 1e-9 over every retained prefix. The failed
+calibration and production hold remain unchanged; the diagnostic does not
+identify the cause.
+[Diagnostic final report](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/DIAGNOSTIC_FINAL_REPORT_2026-11-11.md).
 
 **K3 redesign closed, November 10:** the separate numerical reader failed both
 approved adjacent-population calibration gates on the first fully completed

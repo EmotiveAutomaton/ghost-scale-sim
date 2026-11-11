@@ -12,9 +12,10 @@ CPU-hours within the same cumulative ceiling. It completes long-path replay
 and independent reconstruction checks; the closed calibration failure and
 production hold remain intact. [Morning audit](MORNING_REVIEW_2026-11-11.md).
 
-The diagnostic launched at 04:40 Pacific. The two 1,024-particle checks are
-verified and the two 16,384-particle checks remain active at the
-[recorded checkpoint](DIAGNOSTIC_CHECKPOINT_2026-11-11.md).
+The diagnostic launched at 04:40 Pacific and is complete. Both retained-path
+replays are byte-identical and both independent kernels match all retained
+prefix log likelihoods within 1e-9. The [finite final report](DIAGNOSTIC_FINAL_REPORT_2026-11-11.md)
+keeps the original calibration failed and production held.
 
 The owner approved this separate validation project on 10 November 2026 and
 requested Gear 2. The [original proposal](PROPOSAL.md) is retained unchanged;

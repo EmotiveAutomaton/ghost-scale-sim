@@ -1,5 +1,9 @@
 # Sounding Line exchange index
 
+[K3 retained-path diagnostic final return](GHOST_K3_DIAGNOSTIC_FINAL_2026-11-11.md):
+both retained replays and independent reconstructions pass; original calibration
+remains failed, with no changing-state or production admission.
+
 [V26 corrected aggregate return](GHOST_V26_AGGREGATE_2026-11-02.md): ten primaries and 56 textures complete. Comparator/unit wording and packet routes are corrected; both recipient copies match the [correction receipt](../../results/v26/EXCHANGE_AGGREGATE_CORRECTED_20261102.json). Original recipient aggregates are preserved in their archives.
 
 [N16 fixed-size robustness final return](GHOST_N16_ROBUSTNESS_FINAL_2026-11-02.md):
