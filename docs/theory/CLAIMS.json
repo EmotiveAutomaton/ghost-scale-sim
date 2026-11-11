@@ -314303,9 +314303,52 @@
       "source_sha256": "10e96711a66adefad58cd10a5330eb1c550e257ac47d8555ff8b1e70572ca39a",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can the redesigned K3 reader reliably distinguish changing hidden states over 512 records? It failed calibration: all 28 comparisons failed for each approved adjacent particle-size pair. Maximum posterior disagreement was 0.461729 and 0.312091 against a 0.05 limit; maximum log-evidence disagreement was 5.154218 and 3.452349 nats against a 0.25-nat limit. This is a constructed-method numerical failure, not evidence for or against the proposed mechanism.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Unchanged V27 restoring-action world; no production executed.",
+      "claim_kind": "method",
+      "control_status": "37 initial controls pass; frozen long-history numerical gate fails",
+      "correction_class": null,
+      "estimate": [
+        {
+          "crossing_failed_run_pairs": 16,
+          "failed_run_pairs": 28,
+          "maximum_comparison_margin_error_nats": 5.15421787573473,
+          "maximum_dynamic_type_posterior_error": 0.4617292086065299,
+          "populations": [
+            1024,
+            4096
+          ],
+          "retained_run_pairs": 28
+        },
+        {
+          "crossing_failed_run_pairs": 7,
+          "failed_run_pairs": 28,
+          "maximum_comparison_margin_error_nats": 3.45234948665302,
+          "maximum_dynamic_type_posterior_error": 0.3120910837430128,
+          "populations": [
+            4096,
+            16384
+          ],
+          "retained_run_pairs": 28
+        }
+      ],
+      "estimate_detail": {
+        "sha256": "bfda9b2c32dbd75b436b775070d14e20b43a72aa29427b8372b6046c3ffdcb67",
+        "source_file": "results/k3-redesign-20261110/FINAL_VALIDITY.json"
+      },
+      "id": "G-V27-K3-RD1-VALIDITY-1",
+      "reader": "Fully adapted finite-branch particle approximation; calibration failed.",
+      "source_file": "docs/versions/v27-motives-and-set-points/k3-redesign-20261110/MORNING_REVIEW_2026-11-11.md",
+      "source_line": 3,
+      "source_sha256": "a7c85126f66fecff6473594bc5d7826df015a37c4f7d79d8f22d2929bac0273e",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-11T02:31:58.452361+00:00"
+  "updated": "2026-11-11T12:25:58.403092+00:00"
 }

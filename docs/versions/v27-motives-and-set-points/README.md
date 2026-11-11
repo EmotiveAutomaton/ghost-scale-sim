@@ -9,6 +9,9 @@ Read the [final report](FINAL_REPORT_2026-11-09.md) and
 [Separate K3 redesign, approved 10 November](k3-redesign-20261110/README.md):
 48 CPU-hours of excluded numerical validation in Gear 2. Production remains
 unadmitted; V27's closeout and failed repairs remain unchanged.
+K3-RD1 subsequently failed calibration and closed. On November 11 the owner
+approved a separate four-job diagnostic within the original total; it does
+not admit production or a replacement inference method.
 
 The owner commissioned the seven-card [packet](PACKET.md) on November 7.
 The immutable allocation is 760 CPU-hours with up to four Gear 2 scientists,

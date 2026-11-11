@@ -1,5 +1,11 @@
 # Sounding Line Week 5 aggregate handoff
 
+[November 10 SP3 sensitivity addendum](sp3-ic-20261110/README.md), verified on
+receipt November 11: the source reports limited conditional sensitivity at the
+registered practical effect. Its observational parent remains inconclusive;
+absence of dulling is not established. This is contextual receipt, not an
+engine or Ghost numerical-method admission. Original source bytes are retained.
+
 Source-side delivery under Week 5 packet section 5. These completed descriptive comparisons are supplied for Ghost K4 (IN1–IN3) and K3 (SP1–SP3). Copying is not recipient uptake, a mechanism finding, or permission to change the engine. The complete Week 5 campaign remains in progress. No participant text, identities, private paths or individual predictions are included.
 
 Original invalid SP1 uncertainty is retained in Sounding Line; SP1.h2 is the separately validated unchanged-contrast repair. IN3 retains its inside-band classification with sensitivity untested; it does not establish absence. All numerical controls and replay limitations remain in the attached records.

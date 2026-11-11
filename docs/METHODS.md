@@ -1,6 +1,6 @@
 # The methodology layer
 
-K3-RD1 adds a separately budgeted fully adapted finite-branch particle reader, exact initial stock enumeration, independent scalar reconstruction and all-pair population/replica checks. The unchanged dynamic world and criteria remain; no production is admitted. [Controls and validity limits](versions/v27-motives-and-set-points/k3-redesign-20261110/SETUP_REPORT.md).
+K3-RD1 adds a separately budgeted fully adapted finite-branch particle reader, exact initial stock enumeration, independent scalar reconstruction and all-pair population/replica checks. Its initial controls passed, but both allowed population pairs failed long-history calibration. Independent saved-likelihood reaggregation is verified; complete numerical path reconstruction awaits the separately approved diagnostic. The unchanged dynamic world and criteria remain; no production is admitted. [Controls and validity limits](versions/v27-motives-and-set-points/k3-redesign-20261110/SETUP_REPORT.md).
 
 V27 adds binned midpoint diffusion with independent density integration,
 noisy-OR motive filtering, stable six-law stress likelihoods, retained-source

@@ -1,0 +1,106 @@
+{
+  "id": "S15-W5-SP3-IC-20261110",
+  "card": "SP3.ic",
+  "result": {
+    "analytic_buildings": 51,
+    "card": "SP3.ic",
+    "draws": 2000,
+    "effects": [
+      {
+        "effect_multiple": -2,
+        "estimate_quantiles": [
+          -0.03790711686007732,
+          -0.02212711518052858,
+          -0.00402298820017234
+        ],
+        "injected_slope": -0.02,
+        "interval_coverage": 0.96,
+        "original_negative_support_rate": 0.18,
+        "worlds": 100,
+        "zero_exclusion_rate": 0.54
+      },
+      {
+        "effect_multiple": -1,
+        "estimate_quantiles": [
+          -0.027907116860077325,
+          -0.012127115180528586,
+          0.005977011799827659
+        ],
+        "injected_slope": -0.01,
+        "interval_coverage": 0.96,
+        "original_negative_support_rate": 0.02,
+        "worlds": 100,
+        "zero_exclusion_rate": 0.18
+      },
+      {
+        "effect_multiple": 0,
+        "estimate_quantiles": [
+          -0.01790711686007732,
+          -0.00212711518052858,
+          0.01597701179982766
+        ],
+        "injected_slope": 0.0,
+        "interval_coverage": 0.96,
+        "original_negative_support_rate": 0.0,
+        "worlds": 100,
+        "zero_exclusion_rate": 0.04
+      },
+      {
+        "effect_multiple": 1,
+        "estimate_quantiles": [
+          -0.007907116860077317,
+          0.007872884819471411,
+          0.02597701179982766
+        ],
+        "injected_slope": 0.01,
+        "interval_coverage": 0.96,
+        "original_negative_support_rate": 0.0,
+        "worlds": 100,
+        "zero_exclusion_rate": 0.09
+      },
+      {
+        "effect_multiple": 2,
+        "estimate_quantiles": [
+          0.002092883139922683,
+          0.01787288481947142,
+          0.03597701179982766
+        ],
+        "injected_slope": 0.02,
+        "interval_coverage": 0.96,
+        "original_negative_support_rate": 0.0,
+        "worlds": 100,
+        "zero_exclusion_rate": 0.38
+      }
+    ],
+    "exclusions": {
+      "covariate_missing": 0,
+      "fewer_than_30": 354,
+      "no_temperature_variation": 0,
+      "ordinal_failure": 0
+    },
+    "failed_draws": [],
+    "full_frame_buildings": 213,
+    "practical_bar": 0.01,
+    "scope": "Fixed observed building design, cluster-wild slope residuals; all original full-frame building bootstrap multiplicities retained",
+    "sensitivity_pass": false,
+    "source_buildings": 567,
+    "source_rows": 42007,
+    "source_sha256": "2c05d9cc6481d394eebb02c9c4f384ce4d7823e03abfd001a24e1ef743fa642a",
+    "status": "ok",
+    "worlds_per_effect": 100
+  },
+  "verified": {
+    "all_worlds_and_draws_replayed": true,
+    "verified": true
+  },
+  "full_card_complete": true,
+  "public_wording": "Under the fixed observed building design, the thermal-distance comparison has limited sensitivity at the registered practical effect; the inconclusive human primary cannot establish absence.",
+  "calibration_outcome": "limited conditional sensitivity",
+  "controls": "Numerical known answers and full replay pass; frozen sensitivity gate fails",
+  "new_p_values": 0,
+  "parent": "S15-W5-SP3-20261107",
+  "source_bindings": {
+    "plan_sha256": "0ebc0882d6d1ce1eba967889c181fea2f8c90482a90c495e7ad711426d8d2fa4",
+    "terminal_sha256": "892db81cf1eae38952e219f0cd7102e2c12c312ba9df0b0581b180da55c1a498"
+  }
+}

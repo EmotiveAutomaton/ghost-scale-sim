@@ -20,6 +20,18 @@ authorship and contribution records retain their original attribution.
 
 ## K3-RD1 approved validation, November 10
 
+November 11: K3-RD1 is closed after both allowed population pairs failed the
+first completed calibration fixture. Its 29 completed and four stopped jobs
+are retained; phases B/C and production remain unadmitted. The owner has now
+explicitly approved the four-job retained-fixture diagnostic described in
+`DIAGNOSTIC_PROPOSAL_2026-11-11.md` in the redesign folder. This separate
+continuation may use at most four CPU-hours within the original cumulative
+48-hour ceiling, with all prior charges and original endpoints retained.
+It replays and independently reconstructs fixture 5, replica 0, at 1,024 and
+16,384 particles. No new worlds, ladder changes, gate changes or automatic
+repair. Use separate state at outer `.local/k3-rd1-diagnostic-20261111/`;
+preserve the original closeout. Gear 2 and finite monitoring remain as below.
+
 The owner approved the separate K3 redesign proposal and execution in Gear 2.
 Read `docs/versions/v27-motives-and-set-points/k3-redesign-20261110/README.md`,
 its retained proposal, current status and outer `.local/k3-rd1-20261110/HANDOFF.md`.

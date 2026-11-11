@@ -6,6 +6,12 @@ No scientific draw occurred, phases B and C did not open, and no production is
 recommended or authorized. See the [final report](FINAL_REPORT_2026-11-10.md)
 and the [final validity record](../../../../results/k3-redesign-20261110/FINAL_VALIDITY.json).
 
+November 11: the owner approved a separate, four-job
+[retained-fixture diagnostic](DIAGNOSTIC_PROPOSAL_2026-11-11.md), capped at four
+CPU-hours within the same cumulative ceiling. It completes long-path replay
+and independent reconstruction checks; the closed calibration failure and
+production hold remain intact. [Morning audit](MORNING_REVIEW_2026-11-11.md).
+
 The owner approved this separate validation project on 10 November 2026 and
 requested Gear 2. The [original proposal](PROPOSAL.md) is retained unchanged;
 its pre-approval language and [evidence snapshot](EVIDENCE.json) are historical.

@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K3-RD1-VALIDITY-1
+
+Can the redesigned K3 reader reliably distinguish changing hidden states over 512 records? It failed calibration: all 28 comparisons failed for each approved adjacent particle-size pair. Maximum posterior disagreement was 0.461729 and 0.312091 against a 0.05 limit; maximum log-evidence disagreement was 5.154218 and 3.452349 nats against a 0.25-nat limit. This is a constructed-method numerical failure, not evidence for or against the proposed mechanism.
+
+[Report](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/MORNING_REVIEW_2026-11-11.md).
+
 ## G-V27-K3-RD1-CONTROLS-1
 
 Does the redesigned hidden-state reader preserve the known-answer likelihood? All 37 initial controls pass, including independent transition arithmetic, exact short prefixes, long deterministic reset histories, static absolute likelihoods, evaluator clocks and impossible-observation rejection. This is a constructed-method control result; 512-record numerical convergence and production remain unestablished.
