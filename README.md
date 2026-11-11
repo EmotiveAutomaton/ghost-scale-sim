@@ -1,9 +1,10 @@
 # Ghost Scale Simulation
 
-**V27 commissioned week, November 7:** seven constructed-method studies and
-their bounded exploratory lanes are being built and run. The owner's latest
-direction selects Gear 2: up to four below-normal, single-thread workers,
-with the packet's measured host-load backoff.
+**K3 redesign approved, November 10:** a separate 48-CPU-hour numerical-validation
+project is running in Gear 2, with up to four below-normal, single-thread
+workers and measured host-load backoff. Production remains unadmitted.
+[Redesign scope and status](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/README.md).
+V27's eligible work is complete; its dynamic K3 cards remain held.
 [Program and design review](docs/versions/v27-motives-and-set-points/README.md).
 [Recorded execution state](results/v27/CURRENT_STATUS.json).
 V26 is closed; the historical notes below retain its original evidence.

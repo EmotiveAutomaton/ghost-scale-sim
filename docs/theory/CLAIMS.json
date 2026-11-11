@@ -314276,9 +314276,36 @@
       "source_sha256": "ed6da9717c8286a77f48f0e9dd9a8d500c7133ea25bed7067a9dc5aeb5342c3c",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Does the redesigned hidden-state reader preserve the known-answer likelihood? All 37 initial controls pass, including independent transition arithmetic, exact short prefixes, long deterministic reset histories, static absolute likelihoods, evaluator clocks and impossible-observation rejection. This is a constructed-method control result; 512-record numerical convergence and production remain unestablished.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Unchanged V27 softmax/lapse restoring-action world with finite independent consumption.",
+      "claim_kind": "method",
+      "control_status": "passes",
+      "correction_class": null,
+      "estimate": [
+        {
+          "estimate": 37,
+          "method": "Known answers and independent arithmetic, not a population estimate.",
+          "metric": "initial_controls_passed",
+          "observations": 37
+        }
+      ],
+      "estimate_detail": {
+        "sha256": "cb0bb23c451390aad60f9396277f914ba2c8a64ddf9ae098c5088d7a41a2078f",
+        "source_file": "results/k3-redesign-20261110/CONTROLS.json"
+      },
+      "id": "G-V27-K3-RD1-CONTROLS-1",
+      "reader": "Fully adapted finite-branch particle likelihood; long-history convergence unestablished.",
+      "source_file": "docs/versions/v27-motives-and-set-points/k3-redesign-20261110/SETUP_REPORT.md",
+      "source_line": 3,
+      "source_sha256": "10e96711a66adefad58cd10a5330eb1c550e257ac47d8555ff8b1e70572ca39a",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-10-29T19:25:40.513179+00:00"
+  "updated": "2026-11-11T02:31:58.452361+00:00"
 }

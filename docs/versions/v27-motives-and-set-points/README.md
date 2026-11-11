@@ -6,6 +6,10 @@ authorized numerical repair failed. No workers or recurring reviews remain.
 Read the [final report](FINAL_REPORT_2026-11-09.md) and
 [monitoring review](MONITORING_REVIEW_2026-11-09.md).
 
+[Separate K3 redesign, approved 10 November](k3-redesign-20261110/README.md):
+48 CPU-hours of excluded numerical validation in Gear 2. Production remains
+unadmitted; V27's closeout and failed repairs remain unchanged.
+
 The owner commissioned the seven-card [packet](PACKET.md) on November 7.
 The immutable allocation is 760 CPU-hours with up to four Gear 2 scientists,
 subject to the ten-minute host-load rule. New starts close November 15 at

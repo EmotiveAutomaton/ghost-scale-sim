@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+## G-V27-K3-RD1-CONTROLS-1
+
+Does the redesigned hidden-state reader preserve the known-answer likelihood? All 37 initial controls pass, including independent transition arithmetic, exact short prefixes, long deterministic reset histories, static absolute likelihoods, evaluator clocks and impossible-observation rejection. This is a constructed-method control result; 512-record numerical convergence and production remain unestablished.
+
+[Report](docs/versions/v27-motives-and-set-points/k3-redesign-20261110/SETUP_REPORT.md).
+
 ## G-V27-K5-T047-P2-1
 
 How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested.

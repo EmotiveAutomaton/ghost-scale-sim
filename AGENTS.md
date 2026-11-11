@@ -18,6 +18,31 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## K3-RD1 approved validation, November 10
+
+The owner approved the separate K3 redesign proposal and execution in Gear 2.
+Read `docs/versions/v27-motives-and-set-points/k3-redesign-20261110/README.md`,
+its retained proposal, current status and outer `.local/k3-rd1-20261110/HANDOFF.md`.
+This is a new 48-CPU-hour validation allowance: A 12 hours, B 24, C 8 and
+D 4 protected for verification/reporting. No production scientific draws,
+automatic fourth V27 healing, larger population ladder or extra algorithm are
+authorized. V27 remains closed with its existing evidence unchanged.
+
+Use the separately frozen sources and native controller. Up to four
+single-thread, below-normal workers, reducing to two under the inherited
+ten-minute host-load rule; no GPU or environment synchronization. Last starts
+remain November 16 04:00 UTC and drain 06:00 UTC. Calibration uses only the
+approved old fixtures and populations. Freeze the chosen adjacent pair and
+all thirty validation fixtures before generating fresh excluded worlds.
+Stop on the first failed frozen gate or resource boundary; retain every
+replica and failure. Unvalidated textures and noisy-stock scope stay explicit.
+
+Keep one separate finite monitor, disarmed during active operator work, with
+fixed six-hour reviews and earlier actionable phase/failure/end checks. Native
+reviews produce local reports; they do not message the interactive conversation.
+Retire recurring checks at finite closure after the final report. A subsequent
+production campaign requires a separately costed owner decision.
+
 ## V27 commissioned week, November 7
 
 November 9 eligible-work endpoint: all admitted lanes have finished. Read

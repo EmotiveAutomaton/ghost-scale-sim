@@ -2,8 +2,11 @@
 
 ## V27 motives and set points
 
+K3-RD1 is a separately approved numerical-validation project. Its initial controls pass; changing-law identification, no-probe aliasing and production remain open. The closed V27 failures and prior claims are unchanged.
+
 | Claim | Question | Status and evidence |
 |---|---|---|
+| G-V27-K3-RD1-CONTROLS-1 | Does the redesigned reader preserve known-answer likelihoods? | QUALIFIED. Does the redesigned hidden-state reader preserve the known-answer likelihood? All 37 initial controls pass, including independent transition arithmetic, exact short prefixes, long deterministic reset histories, static absolute likelihoods, evaluator clocks and impossible-observation rejection. This is a constructed-method control result; 512-record numerical convergence and production remain unestablished. [Report](../versions/v27-motives-and-set-points/k3-redesign-20261110/SETUP_REPORT.md) |
 | G-V27-K5-T047-P2-1 | How do re-reading, fading tags, warnings, group priors and source libraries change capture? | QUALIFIED. How do re-reading, fading tags, warnings, group priors and source libraries change capture? The precision card retains 20 settings and 32 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested. [Report](../versions/v27-motives-and-set-points/reports/K5-T047-P2.md) |
 | G-V27-K5-T048-1 | How do re-reading, fading tags, warnings, group priors and source libraries change capture? | QUALIFIED. How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested. [Report](../versions/v27-motives-and-set-points/reports/K5-T048.md) |
 | G-V27-K5-T047-1 | How do re-reading, fading tags, warnings, group priors and source libraries change capture? | QUALIFIED. How do re-reading, fading tags, warnings, group priors and source libraries change capture? The texture card retains 20 settings and 16 independent whole-world blocks per setting. The declared bar conjunction is not met. Constructed-method evidence; miniature, architecture untested. [Report](../versions/v27-motives-and-set-points/reports/K5-T047.md) |
