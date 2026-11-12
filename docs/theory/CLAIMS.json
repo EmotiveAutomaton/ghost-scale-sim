@@ -314419,9 +314419,106 @@
       "source_sha256": "924ef7090a5d834991ece13498f618fd5c4e508fc1d523b807dc98f2fae25733",
       "superseded_by": null,
       "supersedes": "G-V27-K3-DIAG1-LOW-1"
+    },
+    {
+      "allowed_wording": "Which set-point rules can a visible record distinguish, and how much record is needed? Across the 28-cell planning map, the one-sided defender remains unresolved against the dulling type in 63.75% of ordinary 256-step paths. A prolonged deficit separates them at a median statistic of 86 (95% interval 84–91), with 0.25% unresolved. Extending the ordinary record to 1,024 steps also separates them: median 817.5 (694–917), with 34% unresolved. The apparent alias is therefore horizon-dependent, not an exact equivalence of these positive-rate models. This is a descriptive constructed-method scale map, not evidence about people.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Visible stock 0..24; cost-3 softmax restore/hold/spend, exact specified one-sided, band, moving, dulling and sharpening laws.",
+      "claim_kind": "method",
+      "control_status": "Six known-answer checks, 21 fixed pre-flight comparisons, full byte replay and independent whole-grid reconstruction pass.",
+      "correction_class": null,
+      "estimate": {
+        "one_vs_dull_D256_interval95": [
+          84.0,
+          91.0
+        ],
+        "one_vs_dull_D256_median": 86.0,
+        "one_vs_dull_N1024_censored": 0.34,
+        "one_vs_dull_N1024_interval95": [
+          694.0,
+          917.0
+        ],
+        "one_vs_dull_N1024_median": 817.5,
+        "one_vs_dull_N256_censored": 0.6375,
+        "settings": 28,
+        "worlds_per_setting": 400
+      },
+      "estimate_detail": {
+        "sha256": "6b7d6665cce8a4d2962806d6f1234139e2c6d3a14b06465278485a3a19cc0d4a",
+        "source_file": "results/v28/G2/SUMMARY.json"
+      },
+      "id": "G-V28-G2-1",
+      "reader": "Exact uniform six-type parameter-grid reader; independently written scalar reconstruction; POINT maximum likelihood rival.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v28-maps/reports/G2.md",
+      "source_line": 3,
+      "source_sha256": "22b2409d8b65ea555c1e781f4c003fae8a93ddbd421f164e0e7beecfb1276824",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "When can choices distinguish a resource held as a target from a reserve? In the 40-cell map, target-holder 3 separates from reserve 20 in the plentiful setting at a median statistic of 16 (95% interval 14–19), with no unresolved worlds. In the scarce setting, 65% remain unresolved after 512 steps. A surplus choice with an unmet need occurs in 100% versus 37.75% of worlds. These are descriptive constructed-method scales with initial resource uniform over 0–30, not human evidence.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Visible resource 0..30; exact specified softmax keep/hold/spend laws; initial resource uniform integer 0..30.",
+      "claim_kind": "method",
+      "control_status": "18 known answers, owner-approved retained-path admission, full byte replay and independent whole-grid reconstruction pass; failed fresh-sample comparison retained.",
+      "correction_class": null,
+      "estimate": {
+        "plentiful_interval95": [
+          14.0,
+          19.0
+        ],
+        "plentiful_median": 16.0,
+        "plentiful_telling_worlds": 1.0,
+        "scarce_censored": 0.65,
+        "scarce_telling_worlds": 0.3775,
+        "settings": 40,
+        "worlds_per_setting": 400
+      },
+      "estimate_detail": {
+        "sha256": "e9be6afea81820b28e4f7abad545518c94e7c5f4da35afb061a92212d067fe77",
+        "source_file": "results/v28/G3/SUMMARY.json"
+      },
+      "id": "G-V28-G3-1",
+      "reader": "Exact seven-class, three-weight-pair Bayesian reader; independent scalar reconstruction.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v28-maps/reports/G3.md",
+      "source_line": 3,
+      "source_sha256": "de120a6beb6d978bac1e5702119724fc6e46757c5ccffef3bcd48978eacd3405",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "What must a reader know about a maker's habits, and when does another probabilistic pass help? In the 60-cell map, four passes using only one page hurt all six small-world settings, losing 0.359 to 1.799 nats of true-goal log score versus one pass. With 16 earlier documents, the own-history one-pass reader comes within 0.05 nats of the joint reader in 4 of six small-world settings and 4 of six larger-world settings. These are descriptive constructed-method results, not evidence about people or automatic engine admission.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Known finite habit library and goal distributions; independent token mixture, paired hidden-goal histories.",
+      "claim_kind": "method",
+      "control_status": "Ten known answers, 292 approved uncertainty-aware pre-flight comparisons, exact-tie regression checks, complete seed replay and independent whole-grid reconstruction pass. Original numerical failure retained.",
+      "correction_class": "Numerical representation repair before scientific admission",
+      "estimate": {
+        "history_lengths_paired": true,
+        "independent_library_blocks": 1200,
+        "settings": 60,
+        "unique_page_worlds": 60000
+      },
+      "estimate_detail": {
+        "sha256": "de4513dd8888e0632ac80848a6ab3bc7ccb491db1458c0f4fb4defb2b3363e79",
+        "source_file": "results/v28/G1/SUMMARY.json"
+      },
+      "id": "G-V28-G1-1",
+      "reader": "13 declared joint, library-pass, beam, typical-habit, empirical-history and probability-loop readers.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v28-maps/reports/G1.md",
+      "source_line": 3,
+      "source_sha256": "817edd8aae7f29774afa9679358242023a3433b611094911d79f59b3117a1812",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-11T12:44:58.272430+00:00"
+  "updated": "2026-11-12T00:20:37.073388+00:00"
 }

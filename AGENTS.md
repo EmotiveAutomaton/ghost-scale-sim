@@ -18,6 +18,56 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## V28 finite maps, November 11
+
+The owner commissioned `docs/versions/v28-maps/PACKET.md`. Read that packet,
+its README and cards, `results/v28/CURRENT_STATUS.json`, and outer
+`.local/v28/HANDOFF.md`. This separately funds G0's retrospective and exactly
+three descriptive families. No texture, follow-up, precision, K3 continuation
+or registered scientific claim is admitted. Preserve older administrative items.
+
+Use the frozen source capsules and the existing finite controller, never a
+second instance. Gear 2 permits four below-normal single-thread workers,
+reducing to two under the inherited host-load rule. No GPU or environment sync.
+The twelve-CPU-hour total allocates six to G1, two to G2, one to G3 and three
+protected for diagnosed reruns. Charge preparation and failures. New starts
+close November 15 at 20:00 PST; drain by 22:00. Do not reset these endpoints.
+
+Every family requires known-answer checks, the supplied pre-flight comparison,
+one original whole-grid run, one full seed replay and one independent whole-grid
+reconstruction. A pre-flight mismatch stops that family and reports both values;
+never tune to the baseline or silently relax the gate. Read the current comparison
+receipts before admission. Keep all retained failures and raw data.
+
+November 11 owner decisions admit the prepared continuation. G1 uses the larger
+of its original tolerance and three combined library-block standard errors,
+with the supplied baseline reconstructed from its original scripts and seeds.
+G3 is admitted on exact retained-path validation while its failed fresh-sample
+comparison stays on record. Exact known-answer gates and all scientific sources
+are unchanged. Read `results/v28/OWNER_DECISIONS_20261111.json` and each family's
+admission receipt; these exceptions do not relax other gates or admit new scope.
+
+G1's original whole-grid reconstruction subsequently failed on floating-point
+breaking of exact empirical goal ties and token ranks. Its original campaign
+has reached a finite end and must not restart. The separately frozen numerical
+repair at outer `.local/v28-g1-repair/` uses the protected repair allowance, the
+same grid and seeds, unchanged comparison gates, exact count-symmetry ties and
+explicit twelve-decimal mark ranking with resolution checks. Read its protocol,
+source and status before acting. G2 and G3 are verified and remain untouched.
+
+November 11 finite closure: G1's repair also passed full replay and independent
+reconstruction. All 128 settings are verified; the three reports, G0 page and
+final `THEORY_RETURN.md` are filed. Read `results/v28/FINAL_VALIDITY.json` and
+`CLOSEOUT.json`. No scientific worker or monitor remains, and no further V28
+admission or recurring wake is commissioned. Keep publication separate from
+scientific closure and preserve the earlier administrative holds.
+
+V28 replaces the old build cadence: one expected-end wake while a run is active;
+if a session ends with an unbuilt item, one check at most four hours ahead.
+Suppress native reviews during active operator work. Native reviews produce
+local reports, not interactive chat messages. File three family reports, one
+V27 page under 600 words and one theory return; retire wakes at finite closure.
+
 ## K3-RD1 approved validation, November 10
 
 November 11: K3-RD1 is closed after both allowed population pairs failed the

@@ -4,6 +4,11 @@ The owner commissioned the five cards in [the packet](PACKET.md) on November 6.
 This lifts the theory-review hold for G1–G5 and their declared texture only.
 Earlier primaries, Friday maps, failures and held preparations stay preserved.
 
+November 11 filing check: the supplied `GHOST_SCALE_V26_THEORY_DAY_PACKET_2026-11-06.md`
+is byte-identical to the canonical [PACKET.md](PACKET.md). Its original-name
+source copy is now archived with the version's source material; no duplicate
+remains at the workspace root. [Filing receipt](SOURCE_FILING.json).
+
 The exact-reader controls passed 39 targeted checks before scientific admission.
 The separate day admission contract preserves two below-normal single-thread
 scientists, the cumulative 110-CPU-hour allocation and all prior charges. New

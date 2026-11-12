@@ -1,5 +1,27 @@
 # Every question this project asked, and where its answer stands today
 
+## V28 finite maps, November 11
+
+All three finite maps are verified. G1 uses the separately frozen numerical repair; its original failed reconstruction and both original pre-flight failures remain retained. These are descriptive results, with no registered hypothesis.
+
+### G-V28-G1-1
+
+What must a reader know about a maker's habits, and when does another probabilistic pass help? In the 60-cell map, four passes using only one page hurt all six small-world settings, losing 0.359 to 1.799 nats of true-goal log score versus one pass. With 16 earlier documents, the own-history one-pass reader comes within 0.05 nats of the joint reader in 4 of six small-world settings and 4 of six larger-world settings. These are descriptive constructed-method results, not evidence about people or automatic engine admission.
+
+[Report](docs/versions/v28-maps/reports/G1.md).
+
+### G-V28-G2-1
+
+Which set-point rules can a visible record distinguish, and how much record is needed? Across the 28-cell planning map, the one-sided defender remains unresolved against the dulling type in 63.75% of ordinary 256-step paths. A prolonged deficit separates them at a median statistic of 86 (95% interval 84–91), with 0.25% unresolved. Extending the ordinary record to 1,024 steps also separates them: median 817.5 (694–917), with 34% unresolved. The apparent alias is therefore horizon-dependent, not an exact equivalence of these positive-rate models. This is a descriptive constructed-method scale map, not evidence about people.
+
+[Report](docs/versions/v28-maps/reports/G2.md).
+
+### G-V28-G3-1
+
+When can choices distinguish a resource held as a target from a reserve? In the 40-cell map, target-holder 3 separates from reserve 20 in the plentiful setting at a median statistic of 16 (95% interval 14–19), with no unresolved worlds. In the scarce setting, 65% remain unresolved after 512 steps. A surplus choice with an unmet need occurs in 100% versus 37.75% of worlds. These are descriptive constructed-method scales with initial resource uniform over 0–30, not human evidence.
+
+[Report](docs/versions/v28-maps/reports/G3.md).
+
 ## G-V27-K3-DIAG1-1
 
 Do the retained 1,024- and 16,384-particle numerical paths reproduce across full replay and independent reconstruction? All four checks pass over all 45 hypotheses and 512 records per path: both replays are byte-identical, and the largest independent prefix log-likelihood difference is 1.71e-13 against the 1e-9 limit. This is a constructed-method reproducibility result for two retained paths. The original calibration remains **FAILED**; the diagnostic does not identify the cause of that failure, validate changing-state inference or authorize production.

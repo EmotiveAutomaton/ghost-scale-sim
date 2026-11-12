@@ -1,5 +1,7 @@
 # Sounding Line exchange index
 
+[V28 final theory return](../versions/v28-maps/THEORY_RETURN.md): G-V28-G1-1 through G-V28-G3-1 are descriptive, verified maps. G1 routes personal-history and joint-reading comparisons to Sounding Line and ToMpathy; G2 routes set-point record lengths and simple-reader symptoms to Sounding Line. [Local copy receipts](../../results/v28/EXCHANGE_STATUS.json) distinguish prepared from delivered copies.
+
 [K3 retained-path diagnostic final return](GHOST_K3_DIAGNOSTIC_FINAL_2026-11-11.md):
 both retained replays and independent reconstructions pass; original calibration
 remains failed, with no changing-state or production admission.

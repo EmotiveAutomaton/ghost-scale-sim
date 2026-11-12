@@ -1,5 +1,17 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## V28 finite maps, November 11
+
+All three finite maps are verified. G1 uses the separately frozen numerical repair; its original failed reconstruction and both original pre-flight failures remain retained. These are descriptive results, with no registered hypothesis.
+
+| Descriptive record | Question | Evidence |
+|---|---|---|
+| G-V28-G1-1 | Maker history and joint reading | QUALIFIED. What must a reader know about a maker's habits, and when does another probabilistic pass help? In the 60-cell map, four passes using only one page hurt all six small-world settings, losing 0.359 to 1.799 nats of true-goal log score versus one pass. With 16 earlier documents, the own-history one-pass reader comes within 0.05 nats of the joint reader in 4 of six small-world settings and 4 of six larger-world settings. These are descriptive constructed-method results, not evidence about people or automatic engine admission. [Report](../versions/v28-maps/reports/G1.md) |
+| G-V28-G2-1 | Visible set points | QUALIFIED. Which set-point rules can a visible record distinguish, and how much record is needed? Across the 28-cell planning map, the one-sided defender remains unresolved against the dulling type in 63.75% of ordinary 256-step paths. A prolonged deficit separates them at a median statistic of 86 (95% interval 84–91), with 0.25% unresolved. Extending the ordinary record to 1,024 steps also separates them: median 817.5 (694–917), with 34% unresolved. The apparent alias is therefore horizon-dependent, not an exact equivalence of these positive-rate models. This is a descriptive constructed-method scale map, not evidence about people. [Report](../versions/v28-maps/reports/G2.md) |
+| G-V28-G3-1 | Target or reserve | QUALIFIED. When can choices distinguish a resource held as a target from a reserve? In the 40-cell map, target-holder 3 separates from reserve 20 in the plentiful setting at a median statistic of 16 (95% interval 14–19), with no unresolved worlds. In the scarce setting, 65% remain unresolved after 512 steps. A surplus choice with an unmet need occurs in 100% versus 37.75% of worlds. These are descriptive constructed-method scales with initial resource uniform over 0–30, not human evidence. [Report](../versions/v28-maps/reports/G3.md) |
+
+These maps supply measured costs, learning scales and opportunities for identification under known ground truth. Their expected-score ceilings and equal-action identities are fixed by design; the reported scales were measured. No human motive or engine admission follows, and the K3 calibration failure remains unchanged.
+
 ## V27 motives and set points
 
 K3-RD1 is closed after its frozen long-history numerical gate failed. The initial-control claim remains valid in its limited scope. Changing-law identification and no-probe aliasing remain untested by a validated reader; production is held. The separately approved November 11 diagnostic concerns retained-path reproducibility only. Both the 1,024- and 16,384-particle replay and independent reconstruction pairs pass. These checks do not diagnose or repair the failed calibration. V27 and the failed K3-RD1 result are unchanged.

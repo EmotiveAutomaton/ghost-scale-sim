@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+**V28 complete, November 11:** all three finite descriptive maps passed known-answer checks, full seed replay and independent reconstruction. G1's numerical tie repair is verified; all original failures remain retained. The 128 settings cover 87,200 unique scientific worlds, with G1 histories paired within 1,200 library blocks. The finite queue is idle. [Theory return](docs/versions/v28-maps/THEORY_RETURN.md), [design and maps](docs/versions/v28-maps/README.md), [recorded state](results/v28/CURRENT_STATUS.json).
+
 **November 11 diagnostic complete:** all four separately approved retained-path
 checks pass. The 1,024- and 16,384-particle replays are byte-identical and both
 independent kernels agree within 1e-9 over every retained prefix. The failed
