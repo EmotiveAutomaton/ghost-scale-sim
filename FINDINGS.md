@@ -1,5 +1,33 @@
 # Every question this project asked, and where its answer stands today
 
+## V29 B2: verified descriptive map
+
+**G-V29-B2-1; no registered claim.** What distinguishes a learned harm trigger from a learned safety brake? In the declared cue-correlation-0.5 worlds, their first-100-step alarm rates are 30.3% (95% block interval 28.7-32.0%) and 67.9% (67.1-68.7%). Pairwise separation takes median 4 and 3 steps respectively, reflecting the deliberately opposite starting priors. These are descriptive constructed-method results, not discoveries about human alarm learning.
+
+[Full report](docs/versions/v29-above-the-loops/reports/B2.md). Other commissioned V29 work remains.
+
+
+## V29 Q1: verified descriptive map
+
+**G-V29-Q1-1; no registered claim.** Can one threshold for chosen arousal be distinguished from four ride-specific thresholds? At ordinary need pressure, all 200 shared-threshold worlds and 96.5% of separate-threshold worlds remain unresolved after 1,024 steps; the latter share has a 95% block interval of 94.4-98.6%. Both medians are censored. These are descriptive constructed-method results for the declared finite readers, not evidence about why people seek arousal.
+
+[Full report](docs/versions/v29-above-the-loops/reports/Q1.md). Other commissioned V29 work remains.
+
+
+## V29 Q3: verified descriptive map
+
+**G-V29-Q3-1; no registered claim.** Can a reader tell whether a stress response follows the number of unmet needs or their weighted total? Under equal need weights and ride rate 0.3, 74.5% of COUNT worlds remain unresolved against TOTAL after 2,048 steps (95% block interval 69.2-79.8%). The median is censored. These are descriptive constructed-method results testing a proposed rule, not evidence that stress actually counts needs.
+
+[Full report](docs/versions/v29-above-the-loops/reports/Q3.md). Other commissioned V29 work remains.
+
+
+## V29 X1: verified descriptive map
+
+**G-V29-X1-1; no registered claim.** Can buying distinguish a rule from a large value when refusal cannot? With mixed prices and plentiful resources, the rule remains unresolved in every 1,024-step world without buy offers. When one tenth of offers are purchases, sustained separation takes a median 330 steps (95% block interval 307-390), with 3.5% unresolved; at one half, it takes 116.5 (108.5-127), with none unresolved. These are descriptive constructed-method results, not evidence about people.
+
+[Full report](docs/versions/v29-above-the-loops/reports/X1.md). Other commissioned V29 work remains.
+
+
 ## V29 C1: verified descriptive map
 
 **G-V29-C1-1; no registered claim.** Which events distinguish the two proposed feeling-trigger tables? They give different response laws on 49 of 150 enumerated events. Under an even event mixture, the Round 15 table separates at a median of 4 events (95% block interval 3-5) with correct remedy labels, rising to 7 (5.5-7) when 40% are mislabelled. These are descriptive constructed-method results comparing definitions; they do not establish which table describes people.

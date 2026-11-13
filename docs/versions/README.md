@@ -1,6 +1,6 @@
 # Version index
 
-[V29 above the loops](v29-above-the-loops/README.md) is active: Q2, G1b and C1 primaries verified; implementation and secondary work continue.
+[V29 above the loops](v29-above-the-loops/README.md) is active: Seven primaries verified; remaining implementation and secondary work continue.
 
 [V28 finite maps](v28-maps/README.md) is complete; all three maps are verified and the finite scientific queue is idle.
 V27's eligible science and separately approved K3 diagnostic are complete;

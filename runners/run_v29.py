@@ -54,7 +54,8 @@ def pilot(module,output,pulse):
         with np.load(original/f'cell-{i:03d}_measures.npz',allow_pickle=False) as z:
             trivial='separation' in z and bool(np.all(z['separation']<=10))
             alias='same_probability' in z and bool(np.any(np.all(z['same_probability']==1,axis=0)))
-        if trivial or alias:excluded.append(dict(index=i,setting=s,reason='all 40 within 10 steps' if trivial else 'exact observed-action alias'))
+            declared=module.pilot_exclusion(s,z) if hasattr(module,'pilot_exclusion') else None
+        if trivial or alias or declared:excluded.append(dict(index=i,setting=s,reason=declared or ('all 40 within 10 steps' if trivial else 'exact observed-action class alias')))
         else:admitted.append(s)
     result=dict(passed=True,admitted_settings=admitted,excluded=excluded,pilot_worlds=40,
                 original_summary_sha256=digest(original/'SUMMARY.json'),

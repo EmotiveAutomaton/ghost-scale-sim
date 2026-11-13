@@ -59,3 +59,13 @@ def censored_blocks(values, horizon, blocks=8):
 def audit_controls(checks):
     return dict(passed=all(row['passed'] for row in checks), checks=checks,
                 no_registered_claim=True, miniature='architecture untested')
+
+
+def conditional_blocks(values,mask,blocks=8):
+    """Ratio of event sums, bootstrapping whole original blocks; empty stays absent."""
+    values=np.asarray(values,float);mask=np.asarray(mask,bool)
+    sums=np.where(mask,values,0).reshape(blocks,-1).sum(1);counts=mask.reshape(blocks,-1).sum(1)
+    if counts.sum()==0:return dict(estimate=None,interval95=[None,None],events=0,block_counts=counts.tolist(),blocks=blocks)
+    draws=rng('conditional-block-bootstrap',blocks).integers(blocks,size=(4000,blocks))
+    den=counts[draws].sum(1);num=sums[draws].sum(1);sample=num[den>0]/den[den>0]
+    return dict(estimate=float(sums.sum()/counts.sum()),interval95=np.quantile(sample,[.025,.975]).tolist(),events=int(counts.sum()),block_counts=counts.tolist(),blocks=blocks)
