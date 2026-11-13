@@ -1,5 +1,19 @@
 # Every question this project asked, and where its answer stands today
 
+## V29 C1: verified descriptive map
+
+**G-V29-C1-1; no registered claim.** Which events distinguish the two proposed feeling-trigger tables? They give different response laws on 49 of 150 enumerated events. Under an even event mixture, the Round 15 table separates at a median of 4 events (95% block interval 3-5) with correct remedy labels, rising to 7 (5.5-7) when 40% are mislabelled. These are descriptive constructed-method results comparing definitions; they do not establish which table describes people.
+
+[Full report](docs/versions/v29-above-the-loops/reports/C1.md). Other commissioned V29 work remains.
+
+
+## V29 G1b: verified descriptive map
+
+**G-V29-G1b-1; no registered claim.** Does a maker's history still help when the context changes? With 16 earlier documents, own-history reading beats the typical-context reader in all six constructed settings at habit retention 1 and 0.75, in three at 0.5, and in none at 0.25 or 0. Shrinkage does not dominate both alternatives everywhere. These are descriptive constructed-method results, not evidence about real writers.
+
+[Full report](docs/versions/v29-above-the-loops/reports/G1b.md). Other commissioned V29 work remains.
+
+
 ## V29 Q2: control belief and concern
 
 **G-V29-Q2-1 — descriptive; no registered claim.** Can a reader distinguish low concern from low belief in control? In the 168-cell constructed map, a passive-prior agent with deficit sensitivity 1 is correctly identified at log odds 3 in 13.3% of 150-step uncontrollable worlds (95% block interval 9.0–17.7%), 58.7% of controllable worlds (52.8–64.5%), and 85.0% after an uncontrollable then controllable episode (80.5–89.5%; 300 steps total). These are descriptive constructed-method results, not evidence about people.
