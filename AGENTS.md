@@ -29,9 +29,11 @@ host-load backoff to two; no GPU or environment synchronization.
 
 A native controller is active from a frozen capsule. Inspect its actual ownership
 before changes; add newly prepared jobs with separate immutable sources, never
-edit a live capsule or start a second controller. All eleven primary families are implemented and admitted. Nine maps are verified;
-X2 and X3 remain in execution. Q2 secondary reporting and applicable textures/
-follow-ons are still being prepared. X2, X3 and B3 have each used their one healing;
+edit a live capsule or start a second controller. All eleven primary families are implemented and admitted. Ten maps are verified;
+X3 remains in execution. Q2 retained secondary reporting is complete. The separate
+47-card source-frozen continuation is implemented and its native waiter starts
+only after the primary controller exits. Its finite monitor batches routine
+results at the next expected boundary and reports locally, not into chat. X2, X3 and B3 have each used their one healing;
 B3-H1 corrects shared-fit uncertainty while preserving original point estimates. The owner approved keeping X1's equations and
 correcting the false exact-alias statements. Read the initial X2 reference
 repair receipt before any further healing. Known answers, applicable preflight,

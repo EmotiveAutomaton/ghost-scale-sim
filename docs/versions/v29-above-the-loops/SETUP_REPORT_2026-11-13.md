@@ -1,0 +1,17 @@
+# V29 setup and running checkpoint
+
+All eleven primary families are implemented and admitted in Gear 2. Ten have passed known-answer checks, applicable preflight comparisons, excluded pilots, complete seed replay and independent whole-grid reconstruction. They cover 148,800 fresh scientific worlds. X3, the ideal partner/trust miniature, is still running its pilot before its main map and verification. V29 is not scientifically complete.
+
+The owner's approved X1 correction preserves the equations and replaces the false known-answer statements with exact individual-law checks; class evidence is reported separately. X2, X3 and B3 have each used their one allowed healing attempt. B3's corrected shared-fit intervals refit within whole-block uncertainty calculations; original results and failures remain retained. No further automatic healing is admitted for those families.
+
+The retained Q2 secondary analysis is verified and reported. It separates descriptive conditional action rates from causal effects and qualifies two watched-failure follow-on cells. The B2 learner result qualifies a paired extinction/reminder study. The separately frozen continuation contains 47 finite cards, including mild hubs, those two follow-on families and applicable slope, lapse and longer-record textures. Its native owner waits for the primary controller to exit, then prepares the declared rosters and starts eligible work automatically. Conditional empty grids and budget-held work receive explicit dispositions.
+
+Gear 2 permits up to four below-normal scientific workers with one numerical thread each, reducing to two under inherited host-load protection. The original 60-CPU-hour total, its 24-hour protected share, prior costs and fixed endpoints remain unchanged. Five targeted continuation checks and three monitor checks pass. Source capsules isolate running workers from checkout changes; the scientific environment has not been synchronized.
+
+One hidden finite monitor covers both queues. It batches routine completions for the next expected boundary and requests earlier action on failure or a drained queue. Native review output is a local report; actual delivery has not yet been observed for this monitor. It remains disarmed while the interactive operator is working. The next check and measured progress are maintained in the private operating state. Monitoring retires at finite closure.
+
+The original packet and preflight archive are filed in the version's source-document archive. Supplied theory context is filed privately and hash-verified copies were placed in both companion workspaces. It informs interpretation and routing; the self-contained studies proceeded while that context was located. Aggregate reports and provenance were copied according to the packet's routes, including X2's first-breach contrast for Sounding Line and Q2's completed secondary reporting for ToMpathy. Both companion repositories are left uncommitted.
+
+X3's remaining pilot and full passes determine the primary finish. The continuation then has measured pilot gates and a finite budget; no guaranteed finish time or full execution of every conditional card is asserted. The final tells table, theory return, complete coverage/accounting and owned-service shutdown remain due after execution.
+
+[Current status](../../../results/v29/CURRENT_STATUS.json), [checkpoint audit](../../../results/v29/SETUP_AUDIT.json), [continuation catalogue](CONTINUATION_CARDS.json), [secondary report](reports/SECONDARY.md), [X2 report](reports/X2.md).

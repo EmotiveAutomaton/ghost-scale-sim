@@ -26,9 +26,9 @@ def generate(s, lane='study', worlds=None):
     for t in range(tmax):
         episode=s['order'][t//s['length']]
         inc=r.random(n)<.3; d=np.minimum(6,d+inc); arrivals[:,t]=inc; deficits[:,t]=d
-        if episode=='W':
+        if episode in ('W','F'):
             # Watching is not an owned choice or success. The supplied W is successful.
-            watching[t]=1; successes[:,t]=1; a+=.5
+            watching[t]=1; successes[:,t]=int(episode=='W'); a+=.5*int(episode=='W'); b+=.5*int(episode=='F')
         else:
             act=r.random(n)<logistic(slope*(a/(a+b)*kappa*d-1),floor)
             success=act & (r.random(n)<(.05 if episode=='U' else .7))
@@ -55,7 +55,7 @@ def infer(raw,s):
             # Same-D response is a deterministic feature of the full public record,
             # not an extra independent likelihood factor.
             if t:
-                matched=(raw['successes'][:,t-1]==1)&(d[:,t]==d[:,t-1])&~bool(raw['watching'][t-1])
+                matched=(raw['successes'][:,t-1]==1)&(d[:,t]==d[:,t-1])&(not bool(raw['watching'][t-1]))
                 success_n+=matched; success_delta+=matched*(raw['actions'][:,t]-raw['actions'][:,t-1])
         post=np.exp(ll-logsumexp(ll,axis=1,keepdims=True)); posterior=post
         true=s['truth']; odds[:,t]=ll[:,true]-np.max(np.delete(ll,true,axis=1),axis=1)

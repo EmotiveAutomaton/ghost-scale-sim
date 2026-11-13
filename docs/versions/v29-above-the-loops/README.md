@@ -20,3 +20,5 @@ admitted, executing and verified. [Design review](DESIGN_REVIEW.md) records the
 approved correction and prospective choices. Source theory context remains local;
 it is not part of the public scientific archive. Follow-up admission must use the
 packet's named triggers, finite budget and immutable source records.
+
+All eleven primary families are admitted; ten are verified and X3 is running. [Setup checkpoint](SETUP_REPORT_2026-11-13.md). The source-frozen [47-card finite continuation](CONTINUATION_CARDS.json) is implemented and its native successor waits for primary service closure. [Protocol](protocols/CONTINUATION.md); [retained secondary report](reports/SECONDARY.md). No further design approval is needed for eligible declared cards. Scientific completion and final theory return remain pending.

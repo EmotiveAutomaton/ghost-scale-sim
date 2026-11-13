@@ -29,7 +29,7 @@ def update(counts,harm,safety_absent,forecast,outcome):
 
 
 def generate(s,lane='study',worlds=None):
-    n=worlds or s['worlds'];r=rng('B2',lane,s);steps=s['steps'];cues=r.choice(4,size=(n,steps),p=cue_law(s['rho']));safety=cues//2;forecast=cues%2
+    n=worlds or s['worlds'];r=rng('B2',lane,{k:v for k,v in s.items() if k!='reminder_step'} if s.get('paired_reminder') else s);steps=s['steps'];cues=r.choice(4,size=(n,steps),p=cue_law(s['rho']));safety=cues//2;forecast=cues%2
     alarms=np.empty((n,steps),np.int8);outcomes=np.empty_like(alarms);counts=np.zeros((n,2,2));harm=np.zeros_like(counts)
     for t in range(steps):
         p=probabilities(safety[:,t],forecast[:,t],counts,harm,s)[:,s['truth']];alarms[:,t]=r.random(n)<p
@@ -93,6 +93,10 @@ def run(destination,mode='original',original=None,pulse=lambda **kw:None,selecte
                 rows.append(dict(setting=s,measure='early_pair_separation',rival=NAMES[j],**censored_blocks(out['early_pair_separation'][:,j],min(100,s['steps']),s['blocks'])))
         for key in ('early_alarm_rate','alarm_rate','telling_state_share'):rows.append(dict(setting=s,measure=key,**mean_blocks(out[key],s['blocks'])))
         for j in range(4):rows.append(dict(setting=s,measure='alarm_rate_given_cue_world_present',cue=j,**conditional_blocks(out['state_alarms'][:,j]/np.maximum(1,out['state_counts'][:,j]),out['state_counts'][:,j]>0,s['blocks'])))
+        if s.get('extinction_start') is not None:
+            for phase,lo,hi in (('before_extinction',128,256),('late_extinction',384,512),('after_reminder',513,640)):
+                values=raw['alarms'][:,lo:min(hi,s['steps'])].mean(1)
+                rows.append(dict(setting=s,measure='phase_alarm_rate',phase=phase,**mean_blocks(values,s['blocks'])))
         pulse(family='B2',cell=i+1,cells=len(roster))
     result=dict(family='B2',settings=roster,rows=rows,no_registered_claim=True,learner_note='Declared Beta outcome learners; calm/alarmed priors and cue partition differ by construction.')
     write(dest/'SUMMARY.json',result)

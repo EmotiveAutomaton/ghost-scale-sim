@@ -1,5 +1,19 @@
 # Every question this project asked, and where its answer stands today
 
+## V29 X2: verified descriptive map
+
+**G-V29-X2-1; no registered claim.** Can a reader distinguish a sum that froze from a rule held from the start? For weight 4 and a freeze after 20 refused sales, under mixed prices, plenty and 10% buy offers, 54% remain unresolved after observing the first 1,024 steps (95% block interval 45.6-62.4%). A reader entering at step 1,024 leaves all 200 worlds unresolved. These are descriptive constructed-method results, not evidence about people.
+
+[Full report](docs/versions/v29-above-the-loops/reports/X2.md). X3 and declared finite textures remain.
+
+
+## V29 retained control-history analysis
+
+**G-V29-Q2-2; descriptive, no registered claim.** Does watched success produce the same later effort as owned control? In retained 150-step uncontrollable episodes, watched success raises pushing by 3.63 percentage points (95% block interval 3.21-4.04) for the high-sensitivity passive prior and 3.38 points (2.92-3.85) for the active prior. These two contrasts lie within the declared five-point equivalence band; the other six do not. This is a descriptive constructed-method result, not causal or human evidence.
+
+[Report](docs/versions/v29-above-the-loops/reports/SECONDARY.md). The original success-response sum subtracts an action that necessarily equals one and must not be interpreted as a causal response. The corrected report supplies conditional next-action rates after successful versus failed owned pushes at each current deficit, with denominators and missing strata preserved. Complete-history Bayes already contains that information: a deterministic response feature cannot be counted as independent evidence. Original overall push means reproduce before reanalysis. Full retained-data replay is byte-identical; independent scalar counts agree exactly. Two watched-failure cells are prospectively admitted. X1's ladder-based floor-tracking trigger passes in 51 of 97 cells (52.6%), below 80%; its continuous-reader follow-on is not admitted. Both directions of Q3's even-profile COUNT/TOTAL comparison remain median-censored at both rates, so its weighted-count follow-on is not admitted. Sounding Line route: compare control histories before reading low effort as indifference. ToMpathy route: retain deficit sensitivity and control belief as separate explanations.
+
+
 ## V29 B3: verified descriptive map
 
 **G-V29-B3-1; no registered claim.** When do separate social readouts improve prediction over one total? With independent traits, cross-weight 0.5 and an assertiveness penalty of 0.5, two readouts gain 0.01144 nats per held-out decision (95% block interval 0.00994-0.01294) after 256 training records. Adding a third readout gains 0.00621 (corrected block-refit interval 0.00491-0.00703); in the opposed-trait population it loses 0.00070 (-0.00090 to -0.00047). These are descriptive constructed-method results, not evidence that people use these readouts.

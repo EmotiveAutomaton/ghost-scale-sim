@@ -314537,7 +314537,7 @@
       "registered_claim": false,
       "source_file": "docs/versions/v29-above-the-loops/reports/Q2.md",
       "source_line": 3,
-      "source_sha256": "b479bea7e379388c296247c66b0a9513ce3d65f37905132baf4c267623ff8505",
+      "source_sha256": "68f050e2d69cb72814b3941a347a350d142d1bed7df326bb0c3472dcba4d3165",
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
@@ -314733,9 +314733,58 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Does watched success produce the same later effort as owned control? In retained 150-step uncontrollable episodes, watched success raises pushing by 3.63 percentage points (95% block interval 3.21-4.04) for the high-sensitivity passive prior and 3.38 points (2.92-3.85) for the active prior. These two contrasts lie within the declared five-point equivalence band; the other six do not. This is a descriptive constructed-method result, not causal or human evidence.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Declared control-belief Beta tracker and logistic choices",
+      "claim_kind": "method",
+      "control_status": "Known count fixture, retained primary means, byte replay and independent count reconstruction pass",
+      "estimate": {
+        "equivalence_bar": 0.05,
+        "qualifying_truths": 2,
+        "total_truths": 8
+      },
+      "estimate_detail": {
+        "sha256": "48d40cd7fc54521bf03b3d4d474767a9315160f3098a2e3765daa05c4f70fd5b",
+        "source_file": "results/v29/SECONDARY/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-2",
+      "reader": "Retained conditional counts; exact Bayes primary unchanged",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/SECONDARY.md",
+      "source_line": 3,
+      "source_sha256": "03df4b7cf1e8560c2e7ed3f296204fa3bf4ef36ba2a69e57b5ff199d2a07febf",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader distinguish a sum that froze from a rule held from the start? For weight 4 and a freeze after 20 refused sales, under mixed prices, plenty and 10% buy offers, 54% remain unresolved after observing the first 1,024 steps (95% block interval 45.6-62.4%). A reader entering at step 1,024 leaves all 200 worlds unresolved. These are descriptive constructed-method results, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen ledger rules; matched post-breach types differ in later selling policy.",
+      "claim_kind": "method",
+      "control_status": "Six known answers, twenty preflight paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 124,
+        "worlds": 24800
+      },
+      "estimate_detail": {
+        "sha256": "f19cb109fef9eeae8ffd99b7c39fd5fb61e7686f94338dbaeb412b1f729498c5",
+        "source_file": "results/v29/X2/SUMMARY.json"
+      },
+      "id": "G-V29-X2-1",
+      "reader": "Exact finite class evidence; explicit late-entry streak prior; no hidden evaluator state.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/X2.md",
+      "source_line": 3,
+      "source_sha256": "ba00948d9899d5c547ad7b8e23fc7f42fbf0f2058596d2009a4f3fe6578a5eab",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-13T13:15:14.026931+00:00"
+  "updated": "2026-11-13T13:50:03.589462+00:00"
 }

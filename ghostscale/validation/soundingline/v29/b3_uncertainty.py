@@ -28,10 +28,10 @@ def controls():
     return audit_controls([dict(name='independent refitted predictive statistic',passed=bool(np.allclose(a,b,rtol=0,atol=1e-10))),dict(name='rank-one design has exactly zero extra gain',passed=bool(np.all(score_batch(train,test,16,1.)==0))),dict(name='constant known law has zero extra gain',passed=bool(np.all(score_batch(constant,constant,16,0.)==0))),dict(name='batched refits equal separate refits',passed=bool(np.allclose(a,np.array([score_batch(train[i:i+1],test[i:i+1],16,0.)[0] for i in range(4)]),atol=1e-12,rtol=0)))])
 
 
-def run(original,destination,reference=False,cpu_limit=900):
+def run(original,destination,reference=False,cpu_limit=900,summary_override=None):
     runtime.below_normal();start=time.process_time();original=Path(original);dest=Path(destination);dest.mkdir(exist_ok=False);gate=controls();write(dest/'CONTROLS.json',gate)
     if not gate['passed']:raise ArithmeticError('B3-H1 controls failed')
-    summary=read(original/'SUMMARY.json');manifest=read(original/'RAW_MANIFEST.json');bootstrap={};corrections=[];maximum=0.
+    summary=read(summary_override or original/'SUMMARY.json');manifest=read(original/'RAW_MANIFEST.json');bootstrap={};corrections=[];maximum=0.
     for i,s in enumerate(summary['settings']):
         if s['part']!='B3b':continue
         path=original/f'cell-{i:03d}_points.npz'

@@ -9,7 +9,7 @@ EVENTS=('probe refusal','refusal under unmet need','cheap purchase declined','de
 settings=ledger.settings_x1
 
 def paths(raw,s,reference=False):
-    params=ledger.candidates();records=raw['records'];n,steps,_=records.shape
+    params=ledger.candidates(hub_weights=s.get('hub_weights',(2,4)));records=raw['records'];n,steps,_=records.shape
     if reference:
         value=ledger_reference.kernel_paths(records,params,np.zeros(len(params),int),np.arange(len(params)),np.zeros(len(params)),params,np.arange(4),s.get('slope',1.5),s.get('tremble',.02))
         return value[3],value[4]
@@ -26,7 +26,7 @@ def paths(raw,s,reference=False):
     return full,offered
 
 def infer(raw,s,reference=False):
-    ll,offered=paths(raw,s,reference);params=ledger.candidates();classes=params[:,0].astype(int);true=int(s['truth'][0]);n,steps,_=ll.shape
+    ll,offered=paths(raw,s,reference);params=ledger.candidates(hub_weights=s.get('hub_weights',(2,4)));classes=params[:,0].astype(int);true=int(s['truth'][0]);n,steps,_=ll.shape
     e=class_evidence(ll,classes);eo=class_evidence(offered,classes)
     odds=e[:,:,true,None]-e;best=e[:,:,true]-np.max(np.delete(e,true,axis=2),axis=2)
     offodds=eo[:,:,true]-np.max(np.delete(eo,true,axis=2),axis=2)

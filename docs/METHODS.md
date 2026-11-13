@@ -1,5 +1,7 @@
 # The methodology layer
 
+V29's completed additions include exact hidden freeze-state mixtures with explicit late-entry priors, conditional next-action rates from retained paths, and whole-block refitting for shared predictive-rank uncertainty. Conditional rates retain denominators and are descriptive, not causal effects or extra independent likelihood factors. The finite continuation freezes variant rosters and parent bindings, pairs extinction/reminder paths, and requires complete pilot and main replay/reconstruction before landing. [Secondary analysis](versions/v29-above-the-loops/reports/SECONDARY.md), [continuation protocol](versions/v29-above-the-loops/protocols/CONTINUATION.md).
+
 V29 adds carried control-belief inference, paired cross-context history readers and exact trigger-table comparisons with latent remedy-error marginalization. Known answers, applicable preflight checks, excluded pilots, full replay and independent reconstruction precede each primary landing. Class means stay distinct from individual-law aliases; unresolved times remain censored. Eight library blocks support G1b uncertainty; Q2 uses twelve blocks of worlds. [Current protocols and reports](versions/v29-above-the-loops/README.md).
 
 

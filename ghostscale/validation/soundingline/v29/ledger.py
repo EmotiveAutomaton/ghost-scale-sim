@@ -7,9 +7,9 @@ from .common import logistic, rng, class_evidence, sustained
 CLASSES=('LIVE','RULE','HUB','BACKFIRE','FROZE','THAW','STAIN')
 
 
-def candidates(frozen=False, breach=False):
+def candidates(frozen=False, breach=False, hub_weights=(2,4)):
     rows=[(0,w,0) for w in (1,2,4,8,16,32,64,128,256)]
-    rows += [(1,w,0) for w in (1,2,4)]+[(2,h,0) for h in (2,4)]
+    rows += [(1,w,0) for w in (1,2,4)]+[(2,h,0) for h in hub_weights]
     rows += [(3,2,k) for k in (4,8,16)]
     if frozen: rows += [(4,w,n) for n in (5,10,20,40) for w in (1,2,4,8)]
     if breach: rows += [(kind,w,0) for kind in (5,6) for w in (2,4)]

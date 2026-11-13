@@ -1,6 +1,6 @@
 # Version index
 
-[V29 above the loops](v29-above-the-loops/README.md) is active: Nine primaries verified; all eleven admitted, with secondary work in preparation.
+[V29 above the loops](v29-above-the-loops/README.md) is active: Ten primaries verified; X3 running, secondary reporting complete and finite continuation prepared.
 
 [V28 finite maps](v28-maps/README.md) is complete; all three maps are verified and the finite scientific queue is idle.
 V27's eligible science and separately approved K3 diagnostic are complete;
