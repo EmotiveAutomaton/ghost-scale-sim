@@ -1,5 +1,12 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## V29 descriptive control-belief map
+
+**G-V29-Q2-1 — descriptive; no registered claim.** Can a reader distinguish low concern from low belief in control? In the 168-cell constructed map, a passive-prior agent with deficit sensitivity 1 is correctly identified at log odds 3 in 13.3% of 150-step uncontrollable worlds (95% block interval 9.0–17.7%), 58.7% of controllable worlds (52.8–64.5%), and 85.0% after an uncontrollable then controllable episode (80.5–89.5%; 300 steps total). These are descriptive constructed-method results, not evidence about people.
+
+[Full report](../versions/v29-above-the-loops/reports/Q2.md). The 168-cell primary grid is verified; secondary success-response and watched-control reporting remains open. Other V29 families are still being built and run.
+
+
 ## V28 finite maps, November 11
 
 All three finite maps are verified. G1 uses the separately frozen numerical repair; its original failed reconstruction and both original pre-flight failures remain retained. These are descriptive results, with no registered hypothesis.

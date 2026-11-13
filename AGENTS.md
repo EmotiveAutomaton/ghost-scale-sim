@@ -18,6 +18,26 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
+## Active V29, November 13
+
+The owner commissioned the two-day packet in docs/versions/v29-above-the-loops/.
+Read its PACKET, README, DESIGN_REVIEW, results/v29/CURRENT_STATUS.json and outer
+.local/v29/HANDOFF.md. This separately funds eleven finite descriptive families,
+36 CPU-hours plus 24 protected for the packet's healing, textures and conditional
+follow-ons. Gear 2 is four single-thread below-normal CPU workers with inherited
+host-load backoff to two; no GPU or environment synchronization.
+
+A native controller is active from a frozen capsule. Inspect its actual ownership
+before changes; add newly prepared jobs with separate immutable sources, never
+edit a live capsule or start a second controller. Q2's primary grid is verified,
+with secondary retained-data reporting still open. The other families are not
+all implemented or admitted. The owner approved keeping X1's equations and
+correcting the false exact-alias statements. Read the initial X2 reference
+repair receipt before any further healing. Known answers, applicable preflight,
+40-world excluded pilots, full replay and independent reconstruction remain
+mandatory. Theory context is private and was copied locally to both companions.
+Earlier scientific campaigns remain closed. V28's finite wake discipline applies.
+
 ## V28 finite maps, November 11
 
 The owner commissioned `docs/versions/v28-maps/PACKET.md`. Read that packet,

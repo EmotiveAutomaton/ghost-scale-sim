@@ -314516,9 +314516,34 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader distinguish low concern from low belief in control? In the 168-cell constructed map, a passive-prior agent with deficit sensitivity 1 is correctly identified at log odds 3 in 13.3% of 150-step uncontrollable worlds (95% block interval 9.0–17.7%), 58.7% of controllable worlds (52.8–64.5%), and 85.0% after an uncontrollable then controllable episode (80.5–89.5%; 300 steps total). These are descriptive constructed-method results, not evidence about people.",
+      "architecture": "constructed world; miniature, architecture untested",
+      "assumed_choice_model": "Beta control belief, clipped logistic pushes and specified episode success probabilities.",
+      "claim_kind": "method",
+      "control_status": "Six known answers, 20 exact seeded preflight comparisons, pilot checks, complete replay and independent reconstruction pass.",
+      "estimate": {
+        "independent_blocks_per_cell": 12,
+        "settings": 168,
+        "worlds": 50400
+      },
+      "estimate_detail": {
+        "sha256": "5a46499cefb34a39ac742ab3b9f6f57be9cbda95cc0402bbd06d0bf83ace5db5",
+        "source_file": "results/v29/Q2/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-1",
+      "reader": "Eight exact finite prior/sensitivity candidates; complete action/outcome history.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/Q2.md",
+      "source_line": 3,
+      "source_sha256": "b479bea7e379388c296247c66b0a9513ce3d65f37905132baf4c267623ff8505",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-12T00:20:37.073388+00:00"
+  "updated": "2026-11-13T11:33:23.032279+00:00"
 }
