@@ -1,5 +1,19 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## V29 B3: verified descriptive map
+
+**G-V29-B3-1; no registered claim.** When do separate social readouts improve prediction over one total? With independent traits, cross-weight 0.5 and an assertiveness penalty of 0.5, two readouts gain 0.01144 nats per held-out decision (95% block interval 0.00994-0.01294) after 256 training records. Adding a third readout gains 0.00621 (corrected block-refit interval 0.00491-0.00703); in the opposed-trait population it loses 0.00070 (-0.00090 to -0.00047). These are descriptive constructed-method results, not evidence that people use these readouts.
+
+[Full report](../versions/v29-above-the-loops/reports/B3.md). Other commissioned V29 work remains.
+
+
+## V29 B1: verified descriptive map
+
+**G-V29-B1-1; no registered claim.** Can a reader tell correction at a band edge from correction back to its centre? In ordinary worlds with half-width 4, centre-returning agents separate at a median 48 steps (95% block interval 40.5-53), with none unresolved; edge-stopping agents take 173 (144-202), with 2.5% unresolved. These are descriptive constructed-method results for noisy finite policies, not evidence about human regulation.
+
+[Full report](../versions/v29-above-the-loops/reports/B1.md). Other commissioned V29 work remains.
+
+
 ## V29 B2: verified descriptive map
 
 **G-V29-B2-1; no registered claim.** What distinguishes a learned harm trigger from a learned safety brake? In the declared cue-correlation-0.5 worlds, their first-100-step alarm rates are 30.3% (95% block interval 28.7-32.0%) and 67.9% (67.1-68.7%). Pairwise separation takes median 4 and 3 steps respectively, reflecting the deliberately opposite starting priors. These are descriptive constructed-method results, not discoveries about human alarm learning.

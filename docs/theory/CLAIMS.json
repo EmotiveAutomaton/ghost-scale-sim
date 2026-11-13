@@ -314685,9 +314685,57 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader tell correction at a band edge from correction back to its centre? In ordinary worlds with half-width 4, centre-returning agents separate at a median 48 steps (95% block interval 40.5-53), with none unresolved; edge-stopping agents take 173 (144-202), with 2.5% unresolved. These are descriptive constructed-method results for noisy finite policies, not evidence about human regulation.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "All 24 settings contain 4,800 fresh worlds. Seven controls, the excluded pilot, full replay and independent scalar reader pass. Three retained V28 POINT aggregates reproduce exactly without redrawing V28. The four-type reader integrates 126 candidates; the simpler single-reference signature is an in-sample fit and conditions on ordinary actions, reporting moves outside its support separately. EDGE and CENTRE stopping differs by definition, while inherited softmax noise allows baseline actions inside the band. UNCERTAIN alone can move to the quieter place. Sounding Line route: look for where correction ends after an excursion. ToMpathy route: retain band-edge, centre-return and uncertainty explanations when records are insufficient.",
+      "claim_kind": "method",
+      "control_status": "Known answers, applicable preflight, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 24,
+        "worlds": 4800
+      },
+      "estimate_detail": {
+        "sha256": "6b7230d0d2c5369c061d28bf6d9d1be4aa328dfa32bcf5656e4a1b05fd3e21e4",
+        "source_file": "results/v29/B1/SUMMARY.json"
+      },
+      "id": "G-V29-B1-1",
+      "reader": "Declared finite readers; independent numerical likelihood implementation.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/B1.md",
+      "source_line": 3,
+      "source_sha256": "e2466e83855e6aee66dc63aca8e4f635f8f9a3a733cc56cf30e3ba6bd80e2ce6",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "When do separate social readouts improve prediction over one total? With independent traits, cross-weight 0.5 and an assertiveness penalty of 0.5, two readouts gain 0.01144 nats per held-out decision (95% block interval 0.00994-0.01294) after 256 training records. Adding a third readout gains 0.00621 (corrected block-refit interval 0.00491-0.00703); in the opposed-trait population it loses 0.00070 (-0.00090 to -0.00047). These are descriptive constructed-method results, not evidence that people use these readouts.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "The pilot excludes eight exact equal-weight aliases, leaving 16 settings and 3,200 fresh worlds. Seven known-answer controls, full replay and independent reconstruction pass. The main two-readout fit is per agent; the three-readout extension fits shared rank-two loadings, which requires refitting inside the uncertainty calculation. B3-H1 preserves all point estimates and supersedes only the latter intervals and derived first-positive prefixes. Four thousand whole-block bootstrap samples refit both models on paired training and held-out records; independent covariance-based reconstruction agrees within 4.7e-15. The original summaries remain retained. At equal weights, extra readouts are identical by construction. The fitted axes are abstract and are not identified as named psychological gauges. Sounding Line route: compare distinct decisions rather than assume one total. ToMpathy route: separate predictive rank from psychological interpretation.",
+      "claim_kind": "method",
+      "control_status": "Known answers, applicable preflight, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 16,
+        "worlds": 3200
+      },
+      "estimate_detail": {
+        "sha256": "70290a1d2832164212a11c988b8fb252a54ca4c47112821e49cc34db2558a928",
+        "source_file": "results/v29/B3/SUMMARY.json"
+      },
+      "id": "G-V29-B3-1",
+      "reader": "Declared finite readers; independent numerical likelihood implementation.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/B3.md",
+      "source_line": 3,
+      "source_sha256": "ff72d0c1b7873a31ea514eea959b0feb8197fd6ac0f205a57cb90bdc39055069",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-13T12:26:32.459009+00:00"
+  "updated": "2026-11-13T13:15:14.026931+00:00"
 }

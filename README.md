@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-V29's two-day [above-the-loops campaign](docs/versions/v29-above-the-loops/README.md) is being implemented in Gear 2. Seven primary maps are verified; X2 is running, three families need admission and applicable secondary work remains.
+V29's two-day [above-the-loops campaign](docs/versions/v29-above-the-loops/README.md) is being implemented in Gear 2. Nine primary maps are verified; X2 and X3 are admitted and running. Applicable secondary work is being prepared.
 
 **V28 complete, November 11:** all three finite descriptive maps passed known-answer checks, full seed replay and independent reconstruction. G1's numerical tie repair is verified; all original failures remain retained. The 128 settings cover 87,200 unique scientific worlds, with G1 histories paired within 1,200 library blocks. The finite queue is idle. [Theory return](docs/versions/v28-maps/THEORY_RETURN.md), [design and maps](docs/versions/v28-maps/README.md), [recorded state](results/v28/CURRENT_STATUS.json).
 
