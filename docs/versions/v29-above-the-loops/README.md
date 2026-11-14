@@ -21,4 +21,6 @@ approved correction and prospective choices. Source theory context remains local
 it is not part of the public scientific archive. Follow-up admission must use the
 packet's named triggers, finite budget and immutable source records.
 
-All eleven primary families are admitted; ten are verified and X3 is running. [Setup checkpoint](SETUP_REPORT_2026-11-13.md). The source-frozen [47-card finite continuation](CONTINUATION_CARDS.json) is implemented and its native successor waits for primary service closure. [Protocol](protocols/CONTINUATION.md); [retained secondary report](reports/SECONDARY.md). No further design approval is needed for eligible declared cards. Scientific completion and final theory return remain pending.
+All eleven primary families are verified. [Setup checkpoint](SETUP_REPORT_2026-11-13.md). The source-frozen [47-card finite continuation](CONTINUATION_CARDS.json) is implemented and its native successor waits for primary service closure. [Protocol](protocols/CONTINUATION.md); [retained secondary report](reports/SECONDARY.md). No further design approval is needed for eligible declared cards. Scientific completion and final theory return remain pending.
+
+November 14: 35 continuation maps are verified; two longer-record cards are inapplicable and ten Q2/X2 variants were held or failed. Five Q2 repair cards are executing separately; an extra X2 repair awaits an owner decision. [Queue report](https://github.com/EmotiveAutomaton/ghost-scale-sim/blob/main/docs/versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md).

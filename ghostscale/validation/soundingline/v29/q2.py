@@ -68,8 +68,8 @@ def infer(raw,s):
                 sensitivity_separation=sustained(kappa_odds), final_likelihood=ll,
                 prior_read_right=(prior_odds[:,-1]>=3).astype(float),
                 prior_read_wrong=(prior_odds[:,-1]<=-3).astype(float),
-                prior_correct=(posterior.reshape(n,2,4).sum(2).argmax(1)==s['truth']//4).astype(float),
-                sensitivity_correct=(posterior.reshape(n,2,4).sum(1).argmax(1)==s['truth']%4).astype(float),
+                prior_correct=(np.round(pe,12).argmax(1)==s['truth']//4).astype(float),
+                sensitivity_correct=(np.round(ke,12).argmax(1)==s['truth']%4).astype(float),
                 push_rate=raw['actions'].sum(1)/max(1,np.sum(raw['watching']==0)),
                 success_response_sum=success_delta,success_response_count=success_n)
 

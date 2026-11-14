@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-V29's two-day [above-the-loops campaign](docs/versions/v29-above-the-loops/README.md) is running in Gear 2. Ten primary maps are verified; X3 is running. Retained secondary reporting is complete, and the source-frozen 47-card continuation waits for primary service closure.
+V29's two-day [above-the-loops campaign](docs/versions/v29-above-the-loops/README.md) is running in Gear 2. All eleven primary maps are verified. Retained secondary reporting is complete, and the source-frozen 47-card continuation waits for primary service closure.
 
 **V28 complete, November 11:** all three finite descriptive maps passed known-answer checks, full seed replay and independent reconstruction. G1's numerical tie repair is verified; all original failures remain retained. The 128 settings cover 87,200 unique scientific worlds, with G1 histories paired within 1,200 library blocks. The finite queue is idle. [Theory return](docs/versions/v28-maps/THEORY_RETURN.md), [design and maps](docs/versions/v28-maps/README.md), [recorded state](results/v28/CURRENT_STATUS.json).
 
@@ -199,3 +199,5 @@ walkthrough preface and earlier indexes are preserved byte for byte in the
 [September 27 documentation archive](docs/archive/documentation-2026-09-27/README.md).
 Current entry pages summarize and link; they are not a second chronological log
 of every batch.
+
+November 14: 35 continuation maps are verified; two longer-record cards are inapplicable and ten Q2/X2 variants were held or failed. Five Q2 repair cards are executing separately; an extra X2 repair awaits an owner decision. [Queue report](https://github.com/EmotiveAutomaton/ghost-scale-sim/blob/main/docs/versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md).

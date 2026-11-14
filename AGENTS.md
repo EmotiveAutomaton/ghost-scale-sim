@@ -27,19 +27,24 @@ Read its PACKET, README, DESIGN_REVIEW, results/v29/CURRENT_STATUS.json and oute
 follow-ons. Gear 2 is four single-thread below-normal CPU workers with inherited
 host-load backoff to two; no GPU or environment synchronization.
 
-A native controller is active from a frozen capsule. Inspect its actual ownership
-before changes; add newly prepared jobs with separate immutable sources, never
-edit a live capsule or start a second controller. All eleven primary families are implemented and admitted. Ten maps are verified;
-X3 remains in execution. Q2 retained secondary reporting is complete. The separate
-47-card source-frozen continuation is implemented and its native waiter starts
-only after the primary controller exits. Its finite monitor batches routine
-results at the next expected boundary and reports locally, not into chat. X2, X3 and B3 have each used their one healing;
-B3-H1 corrects shared-fit uncertainty while preserving original point estimates. The owner approved keeping X1's equations and
-correcting the false exact-alias statements. Read the initial X2 reference
-repair receipt before any further healing. Known answers, applicable preflight,
-40-world excluded pilots, full replay and independent reconstruction remain
-mandatory. Theory context is private and was copied locally to both companions.
-Earlier scientific campaigns remain closed. V28's finite wake discipline applies.
+All eleven primary maps and 35 continuation cards are verified. Their original
+controllers have drained and exited. Read the November 14 queue report and
+outer .local/v29-q2-h1-20261114/ state before actions. Q2's first healing repairs
+only auxiliary ranking at numerical ties; five fixed cards run separately in
+Gear 2 with all prior protected costs carried forward. Earlier Q2 likelihoods,
+strong-recovery results and verified auxiliary labels are unchanged. X2's
+texture dating threshold also needs numerical repair, but its earlier repair
+already used its allowance; a separately requested owner decision remains pending.
+Never treat this request as approval or silently retry held X2 variants.
+
+X2, X3 and B3 had previously used their one healing; Q2 now uses its first.
+The owner approved preserving X1's equations and correcting its false exact-alias
+statements. Known answers, applicable preflight, excluded pilots, complete replay
+and independent reconstruction remain mandatory. Preserve all failed originals.
+The first scheduled native review failed because its pinned CLI could not use
+the configured model. The installed newer CLI passed a bounded response test;
+keep monitoring and publication states distinct. Private theory context remains
+local in Ghost and both companions. Earlier scientific campaigns stay closed.
 
 ## V28 finite maps, November 11
 
