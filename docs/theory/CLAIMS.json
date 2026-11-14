@@ -314765,6 +314765,12 @@
       "assumed_choice_model": "Frozen ledger rules; matched post-breach types differ in later selling policy.",
       "claim_kind": "method",
       "control_status": "Six known answers, twenty preflight paths, excluded pilot, full replay and independent reconstruction pass.",
+      "corrected_estimate_detail": {
+        "audit": "results/v29/X2/date-audit-20261114/AUDIT.json",
+        "correction": "One auxiliary date changed; original likelihood and separation results remain unchanged.",
+        "sha256": "8f09c50b15d8e455299d438f4121519b656c2b1f87bd10c8711eb6bd291b2457",
+        "source_file": "results/v29/X2/date-audit-20261114/CORRECTED_SUMMARY.json"
+      },
       "estimate": {
         "settings": 124,
         "worlds": 24800
@@ -314781,13 +314787,7 @@
       "source_sha256": "111a1e09b3512b539b436204753c3dab1dad99894fecd78acbf2501e54bc1efd",
       "status": "descriptive",
       "superseded_by": null,
-      "supersedes": null,
-      "corrected_estimate_detail": {
-        "source_file": "results/v29/X2/date-audit-20261114/CORRECTED_SUMMARY.json",
-        "sha256": "8f09c50b15d8e455299d438f4121519b656c2b1f87bd10c8711eb6bd291b2457",
-        "correction": "One auxiliary date changed; original likelihood and separation results remain unchanged.",
-        "audit": "results/v29/X2/date-audit-20261114/AUDIT.json"
-      }
+      "supersedes": null
     },
     {
       "allowed_wording": "What does a refusal rule earn from an ideal partner? With plentiful resources, probe offers, a 10% private high-price tail and partner loss 10, the rule receives ventures on 99.65% of steps (95% block interval 99.36-99.95%), versus 99.60% (99.26-99.94%) for live weight 20. The corresponding realized market/venture inflows are 76.94 (75.34-78.54) and 76.665 (75.420-77.910) ledger units. These are descriptive constructed-method results, not evidence about human trust.",
@@ -315692,9 +315692,153 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader distinguish a sum that froze from a rule held from the start? In the first admitted setting of X2-H2-slope-double, the median time to sustained class separation is unresolved at 1024 records; 60.0% of 200 worlds remain unresolved (95% whole-block interval 47.9% to 72.1%). The map contains 138 settings and 27,600 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen X2-H2-slope-double laws; fixed behavior is not a discovered mechanism.",
+      "claim_kind": "method",
+      "control_status": "Known-answer paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 138,
+        "worlds": 27600
+      },
+      "estimate_detail": {
+        "sha256": "cd3dc3b39dc7a53ba2ba67c16a2cb989b762c22eafc78b717ad5afb02adbefa5",
+        "source_file": "results/v29/continuation/X2-H2-slope-double/SUMMARY.json"
+      },
+      "id": "G-V29-X2-H2-SLOPE-DOUBLE-1",
+      "reader": "Declared finite roster and observation privileges; see protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/continuation/X2-H2-slope-double.md",
+      "source_line": 3,
+      "source_sha256": "01d1f32138975803b5b9d031d992e3ae588a6275c85f06577fff913173c12e9c",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-slope-half, the median time to sustained class separation is unresolved at 25 records; 100.0% of 300 worlds remain unresolved (95% whole-block interval 100.0% to 100.0%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen Q2-H2-slope-half laws; fixed behavior is not a discovered mechanism.",
+      "claim_kind": "method",
+      "control_status": "Known-answer paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 168,
+        "worlds": 50400
+      },
+      "estimate_detail": {
+        "sha256": "4b8b2c0ed4cd20b31d4b6046aebe7d25ab88e688dbf0c10b81d59d172af29a85",
+        "source_file": "results/v29/continuation/Q2-H2-slope-half/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-H2-SLOPE-HALF-1",
+      "reader": "Declared finite roster and observation privileges; see protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-slope-half.md",
+      "source_line": 3,
+      "source_sha256": "1c6e877da2a7b7d80063caee97c16d6ea015d5d3c509ea5c3f748b3917cd9c0c",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-slope-double, the median time to sustained class separation is unresolved at 25 records; 99.0% of 300 worlds remain unresolved (95% whole-block interval 97.9% to 100.1%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen Q2-H2-slope-double laws; fixed behavior is not a discovered mechanism.",
+      "claim_kind": "method",
+      "control_status": "Known-answer paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 168,
+        "worlds": 50400
+      },
+      "estimate_detail": {
+        "sha256": "dec1f196ef4993344f49e3a06a9c1d07d5fb4f40a2b2a373943b205b967607e4",
+        "source_file": "results/v29/continuation/Q2-H2-slope-double/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-H2-SLOPE-DOUBLE-1",
+      "reader": "Declared finite roster and observation privileges; see protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-slope-double.md",
+      "source_line": 3,
+      "source_sha256": "e29acc4941f2d351234b4307f5e82a30c9b0b522a338d04dd1394a796e90cf02",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-lapse-low, the median time to sustained class separation is unresolved at 25 records; 99.3% of 300 worlds remain unresolved (95% whole-block interval 98.3% to 100.3%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen Q2-H2-lapse-low laws; fixed behavior is not a discovered mechanism.",
+      "claim_kind": "method",
+      "control_status": "Known-answer paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 168,
+        "worlds": 50400
+      },
+      "estimate_detail": {
+        "sha256": "6a684625976b68aca23ba4b9bf025dc9175a1b8b160ad7e17ef2a80dc212ea7f",
+        "source_file": "results/v29/continuation/Q2-H2-lapse-low/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-H2-LAPSE-LOW-1",
+      "reader": "Declared finite roster and observation privileges; see protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-lapse-low.md",
+      "source_line": 3,
+      "source_sha256": "9cc8dfa5db424d70f779a7cc36487a40cf04dc2fadbfbe585cf8afafd8527a76",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-lapse-high, the median time to sustained class separation is unresolved at 25 records; 99.0% of 300 worlds remain unresolved (95% whole-block interval 97.4% to 100.6%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen Q2-H2-lapse-high laws; fixed behavior is not a discovered mechanism.",
+      "claim_kind": "method",
+      "control_status": "Known-answer paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 168,
+        "worlds": 50400
+      },
+      "estimate_detail": {
+        "sha256": "a642e55a678c933ab844aa628d974e69c9ca94aa6e83c20aa51ae8555d0438d9",
+        "source_file": "results/v29/continuation/Q2-H2-lapse-high/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-H2-LAPSE-HIGH-1",
+      "reader": "Declared finite roster and observation privileges; see protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-lapse-high.md",
+      "source_line": 3,
+      "source_sha256": "7d87d2c3be970be68ab74f3fbb60a3f085eb92b62fc7a40843dc78bdfefb57b3",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-long, the median time to sustained class separation is unresolved at 50 records; 96.7% of 300 worlds remain unresolved (95% whole-block interval 95.2% to 98.1%). The map contains 125 settings and 37,500 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen Q2-H2-long laws; fixed behavior is not a discovered mechanism.",
+      "claim_kind": "method",
+      "control_status": "Known-answer paths, excluded pilot, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 125,
+        "worlds": 37500
+      },
+      "estimate_detail": {
+        "sha256": "877b4122a967b4d56a34a88cf807e8833ca31f2ff1ab7244de9cc6ff6f8f899b",
+        "source_file": "results/v29/continuation/Q2-H2-long/SUMMARY.json"
+      },
+      "id": "G-V29-Q2-H2-LONG-1",
+      "reader": "Declared finite roster and observation privileges; see protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-long.md",
+      "source_line": 3,
+      "source_sha256": "17716ae8bbff492687fe753073e0e2d8521509914c4c44c35c2d3c88103c6a03",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-14T10:29:10.339611+00:00"
+  "updated": "2026-11-14T13:01:11.290769+00:00"
 }

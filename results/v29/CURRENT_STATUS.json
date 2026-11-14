@@ -1,1 +1,114 @@
-{"Q2_secondary_reporting":"Verified and landed; two watched-failure follow-ons admitted","active_primary_jobs":[],"active_scientific_workers":2,"admitted_scientific_families":["X1","Q2","G1b","Q3","X3","Q1","C1","B2","B1","B3","X2"],"budget":{"Q2_reserved_cpu_seconds":2400,"accounted_protected_cpu_hours":19.0775,"original_endpoints_retained":true,"overhead_note":"Scientific job costs measured; small preparation/test overhead allowances explicitly conservative.","protected_cpu_hours":24,"reservations_and_measured_costs_distinct":true,"total_cpu_hours":60},"continuation":{"Q2_first_repair":"FAILED excluded pilot; retained","Q2_repair_cards":5,"Q2_second_repair":"owner approved; five cards prepared behind X2","Q2_successor_state":"WAITING_FOR_PREDECESSOR_EXIT","X2_additional_repair":"owner approved; same repair recovered after missing import before audit execution","X2_pilots":"Double-slope and low-lapse excluded pilots passed replay and independent reconstruction; original maps running","X2_retained_primary_date_audit":"COMPLETE; one auxiliary date corrected and published; original likelihood/separation results unchanged","active_X2_jobs":["X2-H2-slope-double-original","X2-H2-lapse-low-original"],"held_or_failed":10,"inapplicable":2,"original_queue_drained":true,"prepared_cards":47,"verified":35},"controller_running":true,"controls":"Four X2 repair checks; Q2 checks over 1180 retained cells; four monitor tests, one retained-audit test and one successor reservation/duplicate-activation test passed.","dispatch_note":"X2 recovery active; Q2 successor waits for actual X2 controller exit","gear":2,"implemented_kernels":["X1","Q2","G1b","Q3","X3","Q1","C1","B2","B1","B3","X2"],"monitor":{"full_scientific_review_delivery":"review in progress; local report completion awaits native delivery receipt","interactive_chat_delivery":false,"new_installed_cli_response_probe_passed":true,"original_and_superseded_monitors_stopped":true,"original_review_failed":true,"replacement_monitor":"native process live; disarmed during operator work"},"preflight":{"C1":"exact controls pass","G1b":"18 retained V28 means reproduced","Q2":"20 exact common-seed comparisons pass","Q3":"redrawn; original baseline not applicable","X1":"18 exact common-seed comparisons pass","X2":"20 exact common-seed comparisons pass"},"prepared_jobs":50,"prepared_jobs_scope":"two separate five-card repairs, five stages each","primary_scientific_worlds_verified":235200,"publication":"Eleven primaries and 35 continuation maps published at 102c8cd51beaf6f959269f586d1f482178448995; X2 retained-date correction published at 74afee73c1a0dcbf137712a5baa51aaf2e0071cb","recorded_at":"2026-11-14T11:42:52.762282+00:00","remaining_build":[],"remaining_families":0,"source_manifest_note":"Opening source hash; later immutable per-family capsules are bound in admission receipts.","source_manifest_sha256":"59be6adeb4668dca6acb0f6a0920fdd958f9145c988044c2214a0cd8048a8670","state":"X2_SECOND_HEALING_RUNNING_Q2_SECOND_HEALING_PREPARED","verified_primary_families":["X1","Q2","G1b","Q3","X3","Q1","C1","B2","B1","B3","X2"]}
+{
+  "Q2_secondary_reporting": "Verified and landed; two watched-failure follow-ons admitted",
+  "active_primary_jobs": [],
+  "active_scientific_workers": 0,
+  "admitted_scientific_families": [
+    "X1",
+    "Q2",
+    "G1b",
+    "Q3",
+    "X3",
+    "Q1",
+    "C1",
+    "B2",
+    "B1",
+    "B3",
+    "X2"
+  ],
+  "budget": {
+    "Q2_reserved_cpu_seconds": 0,
+    "accounted_protected_cpu_hours": 22.881349826388888,
+    "original_endpoints_retained": true,
+    "overhead_note": "Finite successor snapshot includes carried earlier costs and a conservative post-activation review allowance; final monitor cost remains pending.",
+    "protected_cpu_hours": 24,
+    "reservations_and_measured_costs_distinct": true,
+    "total_cpu_hours": 60
+  },
+  "continuation": {
+    "Q2_first_repair": "FAILED excluded pilot; retained",
+    "Q2_repair_cards": 5,
+    "Q2_second_healing_verified": [
+      "Q2-H2-slope-half",
+      "Q2-H2-slope-double",
+      "Q2-H2-lapse-low",
+      "Q2-H2-lapse-high",
+      "Q2-H2-long"
+    ],
+    "Q2_second_repair": "owner approved; five cards verified after X2 exit",
+    "Q2_successor_state": "FINITE_END",
+    "X2_additional_repair": "owner approved; same repair recovered after missing import before audit execution",
+    "X2_pilots": "Completed map evidence and excluded pilots recorded separately; four variants resource-held",
+    "X2_retained_primary_date_audit": "COMPLETE; one auxiliary date corrected and published; original likelihood/separation results unchanged",
+    "X2_second_healing_resource_held": {
+      "X2-H2-lapse-high": "protected-pool admission limit",
+      "X2-H2-lapse-low": "protected-pool admission limit",
+      "X2-H2-long": "protected-pool admission limit",
+      "X2-H2-slope-half": "protected-pool admission limit"
+    },
+    "X2_second_healing_verified": [
+      "X2-H2-slope-double"
+    ],
+    "active_X2_jobs": [],
+    "held_or_failed": 10,
+    "inapplicable": 2,
+    "original_queue_drained": true,
+    "prepared_cards": 47,
+    "verified": 35
+  },
+  "controller_running": false,
+  "controls": "Four X2 repair checks; Q2 checks over 1180 retained cells; four monitor tests, one retained-audit test and one successor reservation/duplicate-activation test passed.",
+  "dispatch_note": "Both repair controllers reached finite ends; documentary publication and final monitor settlement remain pending.",
+  "gear": 2,
+  "implemented_kernels": [
+    "X1",
+    "Q2",
+    "G1b",
+    "Q3",
+    "X3",
+    "Q1",
+    "C1",
+    "B2",
+    "B1",
+    "B3",
+    "X2"
+  ],
+  "monitor": {
+    "full_scientific_review_delivery": "Three replacement CLI scientific reviews recorded as local reports; current review in progress.",
+    "interactive_chat_delivery": false,
+    "new_installed_cli_response_probe_passed": true,
+    "original_and_superseded_monitors_stopped": true,
+    "original_review_failed": true,
+    "replacement_monitor": "native process live; disarmed during operator work"
+  },
+  "preflight": {
+    "C1": "exact controls pass",
+    "G1b": "18 retained V28 means reproduced",
+    "Q2": "20 exact common-seed comparisons pass",
+    "Q3": "redrawn; original baseline not applicable",
+    "X1": "18 exact common-seed comparisons pass",
+    "X2": "20 exact common-seed comparisons pass"
+  },
+  "prepared_jobs": 50,
+  "prepared_jobs_scope": "two separate five-card repairs, five stages each",
+  "primary_scientific_worlds_verified": 235200,
+  "publication": "Snapshot before publication: eleven primaries, 35 original continuations and X2 retained-date correction published; six repair maps and final return awaiting publication.",
+  "recorded_at": "2026-11-14T13:10:09.812987+00:00",
+  "remaining_build": [],
+  "remaining_families": 0,
+  "source_manifest_note": "Opening source hash; later immutable per-family capsules are bound in admission receipts.",
+  "source_manifest_sha256": "59be6adeb4668dca6acb0f6a0920fdd958f9145c988044c2214a0cd8048a8670",
+  "state": "SCIENTIFIC_FINITE_END_DOCUMENTARY_PUBLICATION_PENDING",
+  "verified_primary_families": [
+    "X1",
+    "Q2",
+    "G1b",
+    "Q3",
+    "X3",
+    "Q1",
+    "C1",
+    "B2",
+    "B1",
+    "B3",
+    "X2"
+  ]
+}

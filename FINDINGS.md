@@ -1,5 +1,22 @@
 # Every question this project asked, and where its answer stands today
 
+## November 14 second-healing maps
+
+The separately published X2 retained-date correction precedes these maps; original likelihood and separation results remain intact. Four other X2 variants are resource-held.
+
+**G-V29-X2-H2-SLOPE-DOUBLE-1; descriptive, no registered claim.** Can a reader distinguish a sum that froze from a rule held from the start? In the first admitted setting of X2-H2-slope-double, the median time to sustained class separation is unresolved at 1024 records; 60.0% of 200 worlds remain unresolved (95% whole-block interval 47.9% to 72.1%). The map contains 138 settings and 27,600 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim. [Report](docs/versions/v29-above-the-loops/reports/continuation/X2-H2-slope-double.md).
+
+**G-V29-Q2-H2-SLOPE-HALF-1; descriptive, no registered claim.** Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-slope-half, the median time to sustained class separation is unresolved at 25 records; 100.0% of 300 worlds remain unresolved (95% whole-block interval 100.0% to 100.0%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim. [Report](docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-slope-half.md).
+
+**G-V29-Q2-H2-SLOPE-DOUBLE-1; descriptive, no registered claim.** Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-slope-double, the median time to sustained class separation is unresolved at 25 records; 99.0% of 300 worlds remain unresolved (95% whole-block interval 97.9% to 100.1%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim. [Report](docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-slope-double.md).
+
+**G-V29-Q2-H2-LAPSE-LOW-1; descriptive, no registered claim.** Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-lapse-low, the median time to sustained class separation is unresolved at 25 records; 99.3% of 300 worlds remain unresolved (95% whole-block interval 98.3% to 100.3%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim. [Report](docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-lapse-low.md).
+
+**G-V29-Q2-H2-LAPSE-HIGH-1; descriptive, no registered claim.** Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-lapse-high, the median time to sustained class separation is unresolved at 25 records; 99.0% of 300 worlds remain unresolved (95% whole-block interval 97.4% to 100.6%). The map contains 168 settings and 50,400 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim. [Report](docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-lapse-high.md).
+
+**G-V29-Q2-H2-LONG-1; descriptive, no registered claim.** Which records distinguish a belief about control from sensitivity to deficit? In the first admitted setting of Q2-H2-long, the median time to sustained class separation is unresolved at 50 records; 96.7% of 300 worlds remain unresolved (95% whole-block interval 95.2% to 98.1%). The map contains 125 settings and 37,500 fresh worlds. This is a descriptive constructed-method result, not a registered or human-mechanism claim. [Report](docs/versions/v29-above-the-loops/reports/continuation/Q2-H2-long.md).
+
+
 November 14 operational correction: Q2-H1 failed its excluded pilot; owner-approved Q2-H2 is prepared behind the active X2-H2 runtime recovery. Earlier verified Q2 labels are unchanged. X2 primary auxiliary dates are under a retained audit; original likelihood/separation results remain verified. No repaired scientific map is yet accepted. See the [queue report](docs/versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md).
 
 ## November 14 overnight landing

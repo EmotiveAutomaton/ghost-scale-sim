@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-14T13:10:09.812987+00:00",
+  "held_is_not_null": true,
+  "new_repair_worlds": 266700,
+  "original_continuation_failed_or_held": 10,
+  "original_continuation_inapplicable": 2,
+  "original_continuation_verified": 35,
+  "pilot_exclusions_retained": true,
+  "primary_verified": 11,
+  "separate_q2_h2_verified": [
+    "Q2-H2-slope-half",
+    "Q2-H2-slope-double",
+    "Q2-H2-lapse-low",
+    "Q2-H2-lapse-high",
+    "Q2-H2-long"
+  ],
+  "separate_x2_h2_resource_held": {
+    "X2-H2-lapse-high": "protected-pool admission limit",
+    "X2-H2-lapse-low": "protected-pool admission limit",
+    "X2-H2-long": "protected-pool admission limit",
+    "X2-H2-slope-half": "protected-pool admission limit"
+  },
+  "separate_x2_h2_verified": [
+    "X2-H2-slope-double"
+  ]
+}

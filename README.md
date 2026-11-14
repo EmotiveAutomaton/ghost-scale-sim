@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-V29 has eleven primary maps and 35 continuation maps verified and published. The owner-approved X2 repair is running in Gear 2; five Q2 repair cards are prepared behind it. [Current queue report](docs/versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md).
+V29 has eleven primary maps, 35 original continuation maps and six separately repaired maps verified. Four additional X2 repair variants are resource-held. [Theory return and tells](docs/versions/v29-above-the-loops/THEORY_RETURN.md); [coverage](results/v29/FINAL_COVERAGE_20261114.json).
 
 **V28 complete, November 11:** all three finite descriptive maps passed known-answer checks, full seed replay and independent reconstruction. G1's numerical tie repair is verified; all original failures remain retained. The 128 settings cover 87,200 unique scientific worlds, with G1 histories paired within 1,200 library blocks. The finite queue is idle. [Theory return](docs/versions/v28-maps/THEORY_RETURN.md), [design and maps](docs/versions/v28-maps/README.md), [recorded state](results/v28/CURRENT_STATUS.json).
 
