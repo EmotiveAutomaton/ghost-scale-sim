@@ -81,6 +81,8 @@ All eleven primaries and 35 continuation maps are verified. Q2 and X2 texture fa
 
 ## V29 X2: verified descriptive map
 
+**November 14 correction:** One auxiliary freeze date changed in a retained X2 primary audit. The corrected conditional mean absolute dating error for the affected probe-price cell is 142.6566 steps (95% whole-block interval 127.6853 to 156.1658; 198 dated events). Original likelihood and separation results are unchanged. See the X2 report for the affected setting and provenance.
+
 **G-V29-X2-1; no registered claim.** Can a reader distinguish a sum that froze from a rule held from the start? For weight 4 and a freeze after 20 refused sales, under mixed prices, plenty and 10% buy offers, 54% remain unresolved after observing the first 1,024 steps (95% block interval 45.6-62.4%). A reader entering at step 1,024 leaves all 200 worlds unresolved. These are descriptive constructed-method results, not evidence about people.
 
 [Full report](docs/versions/v29-above-the-loops/reports/X2.md). X3 and declared finite textures remain.

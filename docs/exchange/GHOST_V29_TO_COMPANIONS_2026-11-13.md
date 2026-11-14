@@ -1,6 +1,8 @@
 # V29 initial verified maps
 
-November 14 operational correction: Q2-H1 failed its excluded pilot; owner-approved Q2-H2 is prepared behind the active X2-H2 runtime recovery. Earlier verified Q2 labels are unchanged. X2 primary auxiliary dates are under a retained audit; original likelihood/separation results remain verified. No repaired scientific map is yet accepted. See the [queue report](../versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md). Verified overnight packages were locally delivered to both companions, with all hashes checked and no companion commits.
+**November 14 correction:** One auxiliary freeze date changed in a retained X2 primary audit. The corrected conditional mean absolute dating error for the affected probe-price cell is 142.6566 steps (95% whole-block interval 127.6853 to 156.1658; 198 dated events). Original likelihood and separation results are unchanged. See the X2 report for the affected setting and provenance.
+
+November 14 operational correction: Q2-H1 failed its excluded pilot; owner-approved Q2-H2 is prepared behind the active X2-H2 runtime recovery. Earlier verified Q2 labels are unchanged. X2 primary auxiliary dates have now been audited; see the correction above. Original likelihood/separation results remain verified. No repaired scientific map is yet accepted. See the [queue report](../versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md). Verified overnight packages were locally delivered to both companions, with all hashes checked and no companion commits.
 
 Correction: Q2's original preceding-success diagnostic is retained but not interpreted as a causal response; retained-data secondary analysis remains open.
 
