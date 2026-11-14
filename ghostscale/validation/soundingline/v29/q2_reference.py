@@ -46,7 +46,7 @@ def kernel(deficits, actions, successes, watching, true, slope, floor):
             if sens[true%4]-best<3:lk=t
         result[w,9]=int(prior[true//4]-prior[1-true//4]>=3);result[w,10]=int(prior[true//4]-prior[1-true//4]<=-3)
         result[w,0]=last+2;result[w,1]=lp+2;result[w,2]=lk+2
-        result[w,3]=int(np.argmax(np.round(prior,12))==true//4);result[w,4]=int(np.argmax(np.round(sens,12))==true%4)
+        result[w,3]=int(np.argmax(prior>=np.max(prior)-1e-10)==true//4);result[w,4]=int(np.argmax(sens>=np.max(sens)-1e-10)==true%4)
         result[w,5]=actions[w].sum()/max(1,(watching==0).sum())
     same[:,true]=0
     return result,lls,same

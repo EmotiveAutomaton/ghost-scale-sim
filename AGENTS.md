@@ -27,24 +27,39 @@ Read its PACKET, README, DESIGN_REVIEW, results/v29/CURRENT_STATUS.json and oute
 follow-ons. Gear 2 is four single-thread below-normal CPU workers with inherited
 host-load backoff to two; no GPU or environment synchronization.
 
-All eleven primary maps and 35 continuation cards are verified. Their original
-controllers have drained and exited. Read the November 14 queue report and
-outer .local/v29-q2-h1-20261114/ state before actions. Q2's first healing repairs
-only auxiliary ranking at numerical ties; five fixed cards run separately in
-Gear 2 with all prior protected costs carried forward. Earlier Q2 likelihoods,
-strong-recovery results and verified auxiliary labels are unchanged. X2's
-texture dating threshold also needs numerical repair, but its earlier repair
-already used its allowance; a separately requested owner decision remains pending.
-Never treat this request as approval or silently retry held X2 variants.
+All eleven primary maps and 35 continuation cards are verified and published at
+102c8cd51beaf6f959269f586d1f482178448995. Their original controllers are closed.
+Read the November 14 queue report and current private handoff before actions.
 
-X2, X3 and B3 had previously used their one healing; Q2 now uses its first.
-The owner approved preserving X1's equations and correcting its false exact-alias
-statements. Known answers, applicable preflight, excluded pilots, complete replay
-and independent reconstruction remain mandatory. Preserve all failed originals.
-The first scheduled native review failed because its pinned CLI could not use
-the configured model. The installed newer CLI passed a bounded response test;
-keep monitoring and publication states distinct. Private theory context remains
-local in Ghost and both companions. Earlier scientific campaigns stay closed.
+The owner explicitly approved second numerical healings for X2 and Q2. X2's
+active recovery is outer .local/v29-x2-h2-20261114-r1/; its first startup failed
+on a missing import before the retained audit and remains preserved. The same
+repair's corrected entry point passed an excluded audit fixture. Five fixed
+cards, including the full retained-primary date audit, use unchanged likelihoods,
+seeds and scientific gates. Q2-H1 failed its excluded pilot and is closed.
+Q2-H2 is prepared at .local/v29-q2-h2-20261114/ and waits for actual X2 owner exit.
+Its 2400-second reservation and all prior costs stay inside the original pool.
+No third numerical repair is admitted in either family. Do not restart any
+failed capsule or treat a held or unexecuted card as a scientific null.
+
+Q2-H2's difference-based auxiliary tie checks pass over 1180 retained cells,
+both failed full cells and normalization-shift fixtures. Earlier verified Q2
+labels remain unchanged. X2's earlier dates require its pending retained audit;
+completed primary likelihood and separation results remain intact.
+
+The owner-approved X1 equation correction remains in force. X3 and B3 have
+used their single healing. Known answers, applicable preflight, excluded pilots,
+complete replay and independent reconstruction remain mandatory for every map.
+
+The single active monitor is continuation/notifications-r2; prior monitors are
+stopped and retained. Keep it disarmed during operator work. A compatible native
+CLI response passed, but a full scientific review by the replacement has not
+yet executed. One expected-boundary wake plus failures/drains replaces repeated
+polling; reviews are local reports, not interactive chat messages. Monitor costs
+go to Q2-H2 and are covered by its reservation until activation. At finite end,
+land all eligible results and final theory return before retiring the monitor.
+Private theory context remains local in Ghost and both companions; earlier
+scientific campaigns stay closed.
 
 ## V28 finite maps, November 11
 

@@ -21,6 +21,9 @@ class Adapter:
         return result
     def controls(self,destination,pulse=lambda **kw:None):
         out=Path(destination);out.mkdir(parents=True,exist_ok=True);checks=[];seen=set()
+        if self.plan.get('retained_date_audit'):
+            result=self.module.audit_retained_dates(self.plan['retained_date_audit'],out/'retained-primary-audit',pulse)
+            checks.append(dict(name='complete retained-primary dating audit',passed=result['passed']))
         for base in self.settings():
             key=json.dumps({k:base.get(k) for k in ('part','truth','slope','tremble','hub_weights','order','mu','population','reminder_step','start','tail','loss')},sort_keys=True)
             if key in seen:continue

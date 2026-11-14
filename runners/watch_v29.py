@@ -5,10 +5,14 @@ from pathlib import Path
 from ghostscale.validation.soundingline.v29.common import read,write,digest
 from runners.watch_v23_events import owner,event,pending,deliver,closed,require_native_review_host,ReviewOwnerBusyError,deferred_events,alive
 
-def observe(primary,c,state,current):
+def observe(primary,c,state,current,additional=()):
     for item in pending(primary,primary/'notifications'):
         event(c,'primary-'+item['id'],item['kind'],dict(primary_event_id=item['id'],primary_event_sha256=item['event_sha256'],evidence=item['evidence']))
-    for label,root in [('primary',primary),('continuation',c)]:
+    for root in additional:
+        root=Path(root)
+        for item in pending(root,root/'notifications'):
+            event(c,root.name+'-'+item['id'],item['kind'],dict(source_campaign=root.name,source_event_id=item['id'],source_event_sha256=item['event_sha256'],evidence=item['evidence']))
+    for label,root in [('primary',primary),('continuation',c)]+[(Path(p).name,Path(p)) for p in additional]:
         if (root/'QUEUE_COMPLETE.json').exists():continue
         path=root/'QUEUE_STATUS.json'
         if path.exists():
@@ -17,7 +21,7 @@ def observe(primary,c,state,current):
         elif label=='continuation' and (root/'NATIVE_OWNER.json').exists():
             pid=read(root/'NATIVE_OWNER.json')['pid']
             if not alive(pid):event(c,'continuation-waiter-disappeared','service_failed',dict(pid=pid))
-    if (c/'WAKE_PLAN.json').exists() and not (c/'QUEUE_COMPLETE.json').exists():
+    if (c/'WAKE_PLAN.json').exists() and not (c/'CLOSEOUT.json').exists():
         plan=read(c/'WAKE_PLAN.json')
         if current>=datetime.fromisoformat(plan['due']):event(c,plan['id'],'planned_review',dict(due=plan['due'],reason=plan['reason']))
 
@@ -28,14 +32,14 @@ def review_ready(events):
 
 
 def run(primary,c,state,config):
-    require_native_review_host();cfg=read(config)
+    require_native_review_host();cfg=read(config);cost=Path(cfg.get('accounting_campaign',c))
     with owner(state):
         try:
             while not closed(c) and not (state/'STOP').exists():
-                current=datetime.now(timezone.utc);observe(primary,c,state,current)
+                current=datetime.now(timezone.utc);observe(primary,c,state,current,cfg.get('additional_campaigns',()))
                 events=pending(c,state);deferred=deferred_events(c,state,events,current);ready=[x for x in events if x['id'] not in deferred]
                 write(state/'STATUS.json',dict(state='monitoring',pid=os.getpid(),heartbeat=current.isoformat(),armed=(state/'ARMED').exists(),pending_events=len(ready),interactive_chat_delivery=False),immutable=False)
-                write(c/'accounting'/('monitor-'+str(os.getpid())+'.json'),dict(family='reserve',state='RUNNING',cpu_seconds=time.process_time()),immutable=False)
+                write(cost/'accounting'/('monitor-'+str(os.getpid())+'.json'),dict(family='reserve',state='RUNNING',cpu_seconds=time.process_time()),immutable=False)
                 if review_ready(ready) and (state/'ARMED').exists():
                     try:deliver(c,state,cfg,ready)
                     except ReviewOwnerBusyError:pass
@@ -43,7 +47,7 @@ def run(primary,c,state,config):
         finally:
             (state/'ARMED').unlink(missing_ok=True)
             write(state/'STATUS.json',dict(state='stopped',pid=os.getpid(),at=datetime.now(timezone.utc).isoformat(),armed=False),immutable=False)
-            write(c/'accounting'/('monitor-'+str(os.getpid())+'.json'),dict(family='reserve',state='STOPPED',cpu_seconds=time.process_time()),immutable=False)
+            write(cost/'accounting'/('monitor-'+str(os.getpid())+'.json'),dict(family='reserve',state='STOPPED',cpu_seconds=time.process_time()),immutable=False)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()

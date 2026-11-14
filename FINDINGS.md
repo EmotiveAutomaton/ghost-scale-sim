@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+November 14 operational correction: Q2-H1 failed its excluded pilot; owner-approved Q2-H2 is prepared behind the active X2-H2 runtime recovery. Earlier verified Q2 labels are unchanged. X2 primary auxiliary dates are under a retained audit; original likelihood/separation results remain verified. No repaired scientific map is yet accepted. See the [queue report](docs/versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md).
+
 ## November 14 overnight landing
 
 All eleven primaries and 35 continuation maps are verified. Q2 and X2 texture failures remain explicit; numerical diagnosis and separately admitted repair work are pending.

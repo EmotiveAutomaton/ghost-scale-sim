@@ -44,7 +44,7 @@ def _vector(raw,s):
         normalized=np.exp(ll[:,frozen_model]-logsumexp(ll[:,frozen_model],axis=1,keepdims=True))
         probability=(normalized*state['frozen'][:,frozen_model]).sum(1)
         ftrace[:,t]=probability
-        freeze_estimate=np.where((freeze_estimate==0)&(probability>=.5),start+t+1,freeze_estimate)
+        freeze_estimate=np.where((freeze_estimate==0)&(np.round(probability,12)>=.5),start+t+1,freeze_estimate)
     return dict(class_trace=trace,frozen_trace=ftrace,pair_separation=last+2,final_class_odds=odds,final_likelihood=collapsed,
                 froze=(raw['freeze_time']<=s.get('life',steps)).astype(float),
                 froze_before_entry=(raw['freeze_time']<=start).astype(float),
@@ -55,7 +55,7 @@ def _vector(raw,s):
 
 from pathlib import Path
 from . import ledger_reference
-from .common import sustained,mean_blocks,censored_blocks,conditional_blocks,write,digest,audit_controls
+from .common import sustained,mean_blocks,censored_blocks,conditional_blocks,read,write,digest,audit_controls
 settings=ledger.settings_x2
 
 def infer(raw,s,reference=False):
@@ -67,7 +67,9 @@ def infer(raw,s,reference=False):
     odds=trace[:,:,true,None]-trace;pair=np.stack([sustained(odds[:,:,j]) for j in range(len(classes))],axis=1)
     times=np.arange(start+1,start+steps+1);rec=raw['records'][:,start:start+steps]
     accepted_before=np.sum((rec[:,:,3]==-1)&(rec[:,:,5]==1)&(times[None,:]<raw['freeze_time'][:,None]),axis=1)
-    estimate=np.where(np.any(frozen>=.5,axis=1),np.argmax(frozen>=.5,axis=1)+start+1,0)
+    # Canonical probability precision applies only to the auxiliary dating threshold.
+    dated_probability=np.round(frozen,12)
+    estimate=np.where(np.any(dated_probability>=.5,axis=1),np.argmax(dated_probability>=.5,axis=1)+start+1,0)
     same=np.all(abs(odds)<1e-12,axis=1);same[:,true]=False
     result=dict(separation=sustained(np.min(np.delete(odds,true,axis=2),axis=2)),pair_separation=pair,final_class_odds=odds[:,-1],final_likelihood=ll,froze=(raw['freeze_time']<=life).astype(float),froze_before_entry=(raw['freeze_time']<=start).astype(float),accepted_sales_before_freeze=accepted_before,estimated_freeze=estimate,truth_freeze=raw['freeze_time'],breach=(raw['breach_time']<=life).astype(float),same_probability=same.astype(float))
     if s.get('part')=='X2b':
@@ -76,6 +78,40 @@ def infer(raw,s,reference=False):
         elapsed=np.maximum(0,cross-raw['breach_time']);available=np.maximum(0,steps-raw['breach_time'])
         result.update(post_breach_records=np.where((cross<=steps)&(raw['breach_time']<=steps),elapsed,available+1),post_breach_available=available,post_breach_resolved=((cross<=steps)&(raw['breach_time']<=steps)).astype(float))
     return result
+
+def audit_retained_dates(original,destination,pulse=lambda **kw:None):
+    """Audit only retained primary paths; do not draw new worlds or overwrite results."""
+    original=Path(original);destination=Path(destination);summary=read(original/'SUMMARY.json')
+    for name,expected in read(original/'RAW_MANIFEST.json').items():
+        if digest(original/name)!=expected:raise ValueError('retained primary raw bytes changed')
+    import copy
+    corrected=copy.deepcopy(summary);changes=[];total=0
+    for i,s in enumerate(summary['settings']):
+        with np.load(original/f'cell-{i:03d}_points.npz',allow_pickle=False) as z:raw={k:z[k] for k in z.files}
+        with np.load(original/f'cell-{i:03d}_measures.npz',allow_pickle=False) as z:old={k:z[k] for k in z.files}
+        vector=_vector(raw,s);_,ll,reference=ledger_reference.likelihood(raw,s,True,s.get('part')=='X2b')
+        if not np.allclose(vector['final_likelihood'],ll,rtol=0,atol=1e-8,equal_nan=True):raise ValueError('retained likelihood reconstruction mismatch')
+        if not np.allclose(vector['final_likelihood'],old['final_likelihood'],rtol=0,atol=1e-8,equal_nan=True):raise ValueError('retained likelihood changed')
+        dates=[]
+        for probability in (vector['frozen_trace'],reference):
+            hit=np.round(probability,12)>=.5
+            dates.append(np.where(np.any(hit,axis=1),np.argmax(hit,axis=1)+s['start']+1,0))
+        if not np.array_equal(*dates):raise ValueError('retained dating reconstruction mismatch')
+        estimate=dates[0];different=int(np.sum(estimate!=old['estimated_freeze']));total+=len(estimate)
+        dated=(old['truth_freeze']>s['start'])&(old['truth_freeze']<=s['start']+s['steps'])&(estimate>0)
+        replacements={
+            'absolute_dating_error_observed_and_dated_only':conditional_blocks(abs(estimate-old['truth_freeze']),dated,s['blocks']),
+            'dating_coverage':mean_blocks(dated,s['blocks'])}
+        for row in corrected['rows']:
+            if row['setting']==s and row['measure'] in replacements:row.update(replacements[row['measure']])
+        if different:changes.append(dict(cell=i,setting=s,changed_dates=different,corrected_measures=replacements))
+        pulse(audit_cell=i+1,audit_cells=len(summary['settings']))
+    write(destination/'CORRECTED_SUMMARY.json',corrected)
+    result=dict(passed=True,retained_worlds=total,changed_cells=changes,
+                original_summary_sha256=digest(original/'SUMMARY.json'),
+                corrected_summary_sha256=digest(destination/'CORRECTED_SUMMARY.json'),
+                unchanged_likelihoods=True,no_new_worlds=True)
+    write(destination/'AUDIT.json',result);return result
 
 def pilot_exclusion(s,z):
     return 'fewer than 20 percent of pilot lives froze; design exclusion, not universal LIVE identity' if s.get('part')=='X2' and float(np.mean(z['froze']))<.2 else None

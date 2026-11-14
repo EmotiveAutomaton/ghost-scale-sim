@@ -18,6 +18,17 @@ def test_waiter_failure_and_single_due_plan_are_recorded(tmp_path,monkeypatch):
     now=datetime(2026,11,13,tzinfo=timezone.utc);w.observe(primary,c,state,now);w.observe(primary,c,state,now)
     assert len(list((c/'events').glob('*.json')))==2
 
+def test_repair_events_are_distinct_and_due_wake_survives_prior_drain(tmp_path):
+    primary=tmp_path/'primary';c=tmp_path/'continuation';repair=tmp_path/'q2-repair';state=c/'notifications'
+    write(c/'QUEUE_COMPLETE.json',dict(state='FINITE_END'))
+    write(repair/'events/v29-finite-end.json',dict(id='v29-finite-end',kind='queue_depleted',evidence={}))
+    write(repair/'QUEUE_COMPLETE.json',dict(state='FINITE_END'))
+    write(c/'WAKE_PLAN.json',dict(id='repair-check',due='2026-01-01T00:00:00+00:00',reason='repair result'))
+    w.observe(primary,c,state,datetime(2026,11,14,tzinfo=timezone.utc),[repair])
+    assert (c/'events/q2-repair-v29-finite-end.json').exists()
+    assert (c/'events/repair-check.json').exists()
+
+
 def test_completions_batch_but_failed_or_due_reviews_wake():
     assert not w.review_ready([])
     assert not w.review_ready([dict(kind='batch_complete')])
