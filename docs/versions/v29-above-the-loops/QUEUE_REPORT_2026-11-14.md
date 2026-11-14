@@ -1,5 +1,7 @@
 # V29 queue and records check, November 14
 
+**Later review update:** The retained-primary X2 audit changed one auxiliary date among 24,800 worlds; the separate [correction](reports/X2.md) and its aggregate are published. Original likelihood and separation results remain intact. The excluded double-slope and low-lapse repair pilots passed replay and independent reconstruction; their full maps are running and are not yet verified. Q2-H2 still waits for X2 owner exit.
+
 All eleven primary maps and 35 continuation maps are recorded and published at checkpoint 102c8cd51beaf6f959269f586d1f482178448995. Their 235,200 primary worlds and 582,800 continuation worlds have complete replay and independent reconstruction. Original raw paths, exclusions and failed attempts remain retained locally.
 
 The original primary and continuation controllers finished November 13 at 08:02 and 12:48 Pacific. The scheduled review failed because its pinned CLI could not use the configured model. Science continued to the finite endpoint, but documentary landing and publication waited until this review. This interruption is recorded as a failed delivery.
