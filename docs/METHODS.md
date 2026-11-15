@@ -2,6 +2,12 @@
 
 V30 adds per-cell immutable execution with excluded pilots, full seed replay and independent retained-data reconstruction. Exact finite probe-order maps use enumeration instead of fabricated sampled pilots. Checked activation grids and posterior particles have prospective numerical admission gates; resource stops retain complete cells. See [V30 protocols](versions/v30-the-readers-side/README.md).
 
+V30 shutdown recovery retains interrupted attempts and their charges. Successors
+use the same scientific capsule, settings, seeds, gates and caps, with separate
+identifiers; completed settings are never replaced. Conditional follow-ons resolve
+only hash-bound, science-identical replacements, preventing omissions or double
+counting in their trigger grid. [Recovery audit](versions/v30-the-readers-side/RESTART_REPORT_2026-11-15.md).
+
 V30's completed L primary preserves 95 corrected earlier cells alongside 38
 successor cells. Its retained ranking audit uses half credit within 1e-10 and
 checks adjacent resolutions without changing likelihoods or separation gates.

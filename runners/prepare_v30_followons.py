@@ -15,6 +15,29 @@ def accepted(c,names):
         rows.append(read(path));bindings.append(dict(job=j.name,summary_sha256=digest(path),completion_sha256=digest(j/"COMPLETE.json")))
     return rows,bindings
 
+def k_primary_jobs(c):
+    """Resolve only explicitly recorded, science-identical shutdown successors."""
+    names=[f"K-CORE-R1-{i:04d}" for i in range(156)]
+    record=c/"K_RESTART_RECOVERY.json"
+    if not record.exists():return names
+    seen=set()
+    for item in read(record)["replacements"]:
+        original=item["original"];successor=item["successor"]
+        if original not in names or original in seen or Path(successor).name!=successor:
+            raise ValueError("invalid K recovery identity")
+        seen.add(original)
+        old=c/"jobs"/original;new=c/"jobs"/successor
+        for root,key in ((old,"original_plan_sha256"),(new,"successor_plan_sha256")):
+            if digest(root/"PLAN.json")!=item[key]:raise ValueError("K recovery plan changed")
+        a=read(old/"PLAN.json");b=read(new/"PLAN.json")
+        ignored={"family","admission_sha256"}
+        if {k:v for k,v in a.items() if k not in ignored}!={k:v for k,v in b.items() if k not in ignored}:
+            raise ValueError("K recovery changed scientific or resource settings")
+        if read(old/"COMPLETE.json")["state"] not in ("FAILED","WITHDRAWN_UNSTARTED"):
+            raise ValueError("K recovery cannot replace verified science")
+        names[names.index(original)]=successor
+    return names
+
 def triggers(c):
     out={}
     l_c="L-CORE-R2-0132" if (c/"jobs/L-CORE-R2-0132/PLAN.json").exists() else "L-CORE-GATED-0132"
@@ -36,7 +59,7 @@ def triggers(c):
             comparisons.append(dict(prior=s["rule_prior"],heat=heat,refusal=refusal,triggered=value(heat)<value(refusal)))
         out["R_PERFORMER"]=dict(decided=True,triggered=any(x["triggered"] for x in comparisons),comparisons=comparisons,
             inputs=bind,settings=r_performer.settings(),module="r_performer",cpu_cap_seconds=120,order=9200)
-    item=accepted(c,[f"K-CORE-R1-{i:04d}" for i in range(156)])
+    item=accepted(c,k_primary_jobs(c))
     if item:
         rows,bind=item;groups=[];comparisons=[]
         for a in (.02,.05,.15):
