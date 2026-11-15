@@ -28,6 +28,15 @@ target is a planning estimate; the coming week is the seven-day outer limit
 frozen in ACCEPTANCE.json. Gear 2 is four single-thread below-normal CPU
 workers, reducing to two under inherited host-load backoff. No GPU or sync.
 
+November 15 owner-approved reallocation transfers twenty unused CPU-hours:
+twelve to the shared healing/texture pool and eight to V. The effective ceilings
+in hours are P 2, L 10, R 2, V 16, K 5, N 1, E 1, F 1 and reserve 22; total remains 60.
+Read results/v30/RESOURCE_REALLOCATION_20261115.json and the separate immutable
+local RESOURCE_REALLOCATION.json. Original acceptance, scientific plans, sources,
+deadlines and validity gates stay unchanged. This admits existing resource-held
+work only; it grants no additional numerical repair. The controller reads the
+supplement at startup. Preserve prior charges, including conservative allowances.
+
 The owner approved checked numerical approximation for L's hidden-event
 readers, fresh-page learned-versus-population prediction plus a separate
 true-mix oracle for P, and full-record R separation while preserving the

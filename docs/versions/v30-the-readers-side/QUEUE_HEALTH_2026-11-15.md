@@ -1,5 +1,7 @@
 # V30 queue and recording check, November 15
 
+**Subsequent decision:** the owner approved the [20-hour reallocation](RESOURCE_REALLOCATION_2026-11-15.md), and Gear 2 resumed. The audit below records the preceding resource-boundary snapshot.
+
 Gear 2 remains configured for four single-thread, below-normal scientists with the inherited backoff to two. No scientist is currently running: the reserve has reached its ceiling and V cannot fit another frozen reservation. The queue has 2,925 prepared resource-held jobs. This is a resource boundary, not a crashed runner or a completed scientific program.
 
 All 2,424 verified and 15 deliberately excluded receipts passed plan, source, admission and output-binding checks. The 243 cells awaiting reporting also passed retained raw hashes, full seed replay comparison and independent reconstruction comparison. The two initial audit flags were a classification error: validation-only jobs have no sampled study output. Both validation receipts were checked and the correction is retained. The 21 earlier failures and 366 withdrawals remain preserved; no new scientific failure was found.

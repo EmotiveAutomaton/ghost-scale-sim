@@ -49,4 +49,4 @@ November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,
 
 November 15, 13:00 review: the [216-setting F map](reports/F-enforcement.md) is verified; L shared-event and P uneven textures remain in progress at the snapshot. K finer-map validation is bound separately; admission is not completion.
 
-Current resource boundary: K finer map has 1,296 admitted cells; none has started. All executable scope is built. Budget reallocation is proposed, not active. See QUEUE_HEALTH_2026-11-15.md.
+Current resource boundary: K finer map has 1,296 admitted cells; none has started. All executable scope is built. The owner-approved reallocation is now active, and four V workers have resumed. See RESOURCE_REALLOCATION_2026-11-15.md; earlier partial-map counts remain snapshot values.
