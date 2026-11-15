@@ -34,3 +34,5 @@ November 15 review: the [96-setting exact R order audit](reports/R-order-r2.md) 
 The [blind-reader live-sum subset](reports/V-blind-live4-8.md) is verified for weights 4 and 8; the rest of the hidden map remains partial.
 
 [Shutdown recovery and queue status](RESTART_REPORT_2026-11-15.md): completed records audited and Gear 2 resumed on identical-source K successors.
+
+The [K workload](reports/K-workload.md), [K attention](reports/K-attention.md), [N attention](reports/N-attention.md) and [E extinction](reports/E-extinction.md) maps are verified locally, including explicit pilot exclusions. K’s conditional finer map awaits validation.

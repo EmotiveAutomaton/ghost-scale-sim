@@ -316393,9 +316393,109 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can partial quieting improve completed work in a constructed queue? In the 156-setting map, the frozen point-estimate rule triggers a finer map in 10 of 12 arrival, opening and deadline combinations. Some positive differences are very small; the trigger is descriptive, not a significance test or a familywise conclusion.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 constructed laws and reader assumptions; see protocol.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, complete seed replay and independent reconstruction checked; aliases excluded before main.",
+      "estimate": {
+        "excluded": 0,
+        "sampled": 156,
+        "settings": 156
+      },
+      "estimate_detail": {
+        "sha256": "a356b59abc060c4aedb4538349e1409c8bc3ae106e643f650937b46932a2866b",
+        "source_file": "results/v30/K-workload/VERIFIED.json"
+      },
+      "id": "G-V30-K-WORKLOAD-1",
+      "reader": "See family protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-workload.md",
+      "source_line": 3,
+      "source_sha256": "bf43cc5d1c9ca104cafbd30c41dea514ef275b48d63eba3de1f478a1b3548af6",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can an attention-only watcher distinguish planning from its controls? This 24-setting map retains separation, unresolved and wrong-confidence estimates. Its strong-plan reader is an order-two Markov approximation trained on excluded makers; it is not an exact hidden-queue likelihood.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 constructed laws and reader assumptions; see protocol.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, complete seed replay and independent reconstruction checked; aliases excluded before main.",
+      "estimate": {
+        "excluded": 0,
+        "sampled": 24,
+        "settings": 24
+      },
+      "estimate_detail": {
+        "sha256": "5974ea85cbccf1b748d502a398a7d5c6ae2551c87894ce4beef205757810edf1",
+        "source_file": "results/v30/K-attention/VERIFIED.json"
+      },
+      "id": "G-V30-K-ATTENTION-1",
+      "reader": "See family protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-attention.md",
+      "source_line": 3,
+      "source_sha256": "a049239f9dcdc20ef29816bcdd0d6f3e491709131d8171a763aef869453dc317",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a watcher identify an attention policy from the selected need alone? Three sampled settings and three all-open exact-alias pilot exclusions are retained. The reader marginalizes unseen arrivals and openings under the stipulated finite model.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 constructed laws and reader assumptions; see protocol.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, complete seed replay and independent reconstruction checked; aliases excluded before main.",
+      "estimate": {
+        "excluded": 3,
+        "sampled": 3,
+        "settings": 6
+      },
+      "estimate_detail": {
+        "sha256": "415c9c0445e831f0e43f58c6eb35d73181192f1cae28f837b8e5464352172224",
+        "source_file": "results/v30/N-attention/VERIFIED.json"
+      },
+      "id": "G-V30-N-ATTENTION-1",
+      "reader": "See family protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/N-attention.md",
+      "source_line": 3,
+      "source_sha256": "10523552bb0024bc42237cd638471aa7f136787d798dcc3edae310da6a356b69",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader distinguish unlearning from a context-dependent brake? The finite map retains 48 sampled settings and 12 identical-context pilot exclusions. The models match by construction in the extinction context; renewal outside it follows the stipulated definitions.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 constructed laws and reader assumptions; see protocol.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, complete seed replay and independent reconstruction checked; aliases excluded before main.",
+      "estimate": {
+        "excluded": 12,
+        "sampled": 48,
+        "settings": 60
+      },
+      "estimate_detail": {
+        "sha256": "4994210db023f5a6ec7dc015716dde3284615292abb8cf2f4967c80e4b7bc7c4",
+        "source_file": "results/v30/E-extinction/VERIFIED.json"
+      },
+      "id": "G-V30-E-EXTINCTION-1",
+      "reader": "See family protocol and report.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/E-extinction.md",
+      "source_line": 3,
+      "source_sha256": "737c39215ce00990e112a0b85cfc57f50f36397f6f87101a119e6bf1f281320e",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T18:15:20.730319+00:00"
+  "updated": "2026-11-15T19:48:56.323222+00:00"
 }

@@ -18,10 +18,10 @@ Pending scope is not a null. Reported intervals are pointwise block intervals.
 | Heat versus refusal | Repeated staged offers | All 24 settings complete. Heat median two/four offers versus refusal one at the strongest heat contrast; performer follow-on not triggered. |
 | Best probe order | Six stipulated probe laws and a prior | All 96 successor settings verified locally; earlier 84 exact settings retained. |
 | Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings and a 48-setting blind-reader subset verified; the hidden map remains partial. |
-| Plan quieting and cues | Gap arrivals, windows, attention | K workload/attention maps queued; attention reader approximate. |
-| Loudest versus reachable need | Needs and opening opportunities | N queued. |
-| Extinction across contexts | Alarm after extinction and place change | E queued; return partly fixed by model. |
-| Outside enforcement | Selling during/after enforcement | F queued; drift stipulated. |
+| Plan quieting and cues | Gap arrivals, windows, attention | 156 workload and 24 attention settings verified locally; attention reader approximate. |
+| Loudest versus reachable need | Needs and opening opportunities | Three sampled settings verified; three all-open pilot aliases excluded. |
+| Extinction across contexts | Alarm after extinction and place change | 48 sampled settings verified and 12 pilot aliases excluded; return partly fixed by model. |
+| Outside enforcement | Selling during/after enforcement | F running at the review snapshot; drift stipulated. |
 
 ## Family reports and routes
 
@@ -67,7 +67,7 @@ STATE sees the ledger and learns type; INSIDE knows type. An already known
 type is not updated by refusal, a fixed control. The route to ToMpathy is
 conditional trust evidence. The [blind-reader live-sum subset](reports/V-blind-live4-8.md)
 covers weights 4 and 8; public refusal does not update its forecast by construction.
-The unfinished hidden arms prohibit a full visibility ranking. K/N/E/F remain pending with their original routes.
+The unfinished hidden arms prohibit a full visibility ranking. [K workload](reports/K-workload.md) triggered its finer map in 10 of 12 groups by the frozen point-estimate rule; validation remains pending. [K attention](reports/K-attention.md) uses an approximate reader. [N](reports/N-attention.md) and [E](reports/E-extinction.md) are complete with pilot aliases excluded. Their pointwise intervals and routes are in the reports. F remains running.
 
 ## Validity and limits
 
@@ -90,9 +90,9 @@ and [retained failures](../../../results/v30/RETAINED_FAILURES.json).
 
 ## Not yet run or accepted
 
-Bayesian P remains held. The repaired order map, hidden V, K/N/E/F, L's
+Bayesian P remains held. The hidden V map, F, L's
 conditional follow-on and textures have their dispositions in the
 [roster](IMPLEMENTATION_STATUS.md) and [current state](../../../results/v30/CURRENT_STATUS.json).
 Conditional work requires complete verified inputs. The R performer trigger
-is false; P scale comparison unavailable; L triggered and K remains pending.
+is false; P scale comparison unavailable; L triggered but validation failed; K triggered and its validation is pending.
 Final coverage and resource-held remainders will replace this interim return.

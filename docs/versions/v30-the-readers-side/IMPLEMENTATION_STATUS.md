@@ -12,10 +12,10 @@ All commissioned family implementations, named texture maps and conditional foll
 | R repeated heat/refusal | 24 | verified complete; performer not triggered |
 | R exact probe order | 96 | complete successor audit verified locally; 84 original settings retained and compared |
 | V four visibility arms | 576 | 288 visible cells verified; 61 hidden cells verified at the 10:07 snapshot, remaining hidden grid incomplete |
-| K workload | 156 | 135 verified before shutdown; 21 identical-science recovery/continuation settings admitted |
-| K attention reader | 24 | admitted; explicit Markov approximation |
-| N attention policies | 6 | admitted |
-| E extinction | 60 | admitted after priority families |
+| K workload | 156 | 156 verified: 135 originals and 21 identical-science recovery/continuation successors |
+| K attention reader | 24 | 24 verified; explicit Markov approximation |
+| N attention policies | 6 | 3 verified; 3 pilot aliases excluded |
+| E extinction | 60 | 48 verified; 12 pilot aliases excluded |
 | F outside enforcement | 216 | admitted after priority families |
 | P uneven-label texture | 360 | admitted |
 | L shared-event texture | 108 | R2 successors admitted after new validation |
@@ -42,3 +42,5 @@ November 15 review: the [96-setting exact R order audit](reports/R-order-r2.md) 
 November 15, 10:05 review: the [48-setting BLIND live-sum subset](reports/V-blind-live4-8.md) is verified locally. The hidden grid remains partial; no final resource disposition or four-arm comparison is claimed.
 
 [November 15 shutdown recovery](RESTART_REPORT_2026-11-15.md): all completed bindings passed audit; Gear 2 resumed. V's 227 remaining hidden cells are resource-held. No new numerical repair was admitted.
+
+November 15, 11:45 review: K workload, K attention, N and E evidence is landed locally. K’s frozen point-estimate follow-on trigger is true in 10 of 12 groups; its separate validation is pending. P Bayesian remains held.

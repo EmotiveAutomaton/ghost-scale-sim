@@ -1,5 +1,21 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V30 E-extinction
+
+**G-V30-E-EXTINCTION-1; descriptive, no registered claim.** Can a reader distinguish unlearning from a context-dependent brake? The finite map retains 48 sampled settings and 12 identical-context pilot exclusions. The models match by construction in the extinction context; renewal outside it follows the stipulated definitions. [Report](docs/versions/v30-the-readers-side/reports/E-extinction.md).
+
+## November 15 V30 N-attention
+
+**G-V30-N-ATTENTION-1; descriptive, no registered claim.** Can a watcher identify an attention policy from the selected need alone? Three sampled settings and three all-open exact-alias pilot exclusions are retained. The reader marginalizes unseen arrivals and openings under the stipulated finite model. [Report](docs/versions/v30-the-readers-side/reports/N-attention.md).
+
+## November 15 V30 K-attention
+
+**G-V30-K-ATTENTION-1; descriptive, no registered claim.** Can an attention-only watcher distinguish planning from its controls? This 24-setting map retains separation, unresolved and wrong-confidence estimates. Its strong-plan reader is an order-two Markov approximation trained on excluded makers; it is not an exact hidden-queue likelihood. [Report](docs/versions/v30-the-readers-side/reports/K-attention.md).
+
+## November 15 V30 K-workload
+
+**G-V30-K-WORKLOAD-1; descriptive, no registered claim.** Can partial quieting improve completed work in a constructed queue? In the 156-setting map, the frozen point-estimate rule triggers a finer map in 10 of 12 arrival, opening and deadline combinations. Some positive differences are very small; the trigger is descriptive, not a significance test or a familywise conclusion. [Report](docs/versions/v30-the-readers-side/reports/K-workload.md).
+
 ## November 15 V30 blind-reader subset
 
 **G-V30-V-BLIND-LIVE4-8-1; descriptive, no registered claim.** What does a partner gain from seeing a refusal when the maker's state and record are hidden? In the BLIND condition a public refusal changes the forecast by construction, by zero; this 48-setting subset covers live-sum weights 4 and 8, not the complete hidden-reader map. For illustration, with weight 4, plentiful resources, low offers, loss 2 and no rare large offers, the entrusted share is 57.8% (95% whole-block interval 49.1–66.5%). This is a descriptive constructed-mechanism result, not a claim about people. [Report](docs/versions/v30-the-readers-side/reports/V-blind-live4-8.md).
