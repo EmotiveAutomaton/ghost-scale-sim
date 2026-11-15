@@ -316139,9 +316139,78 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader identify a stipulated rule from answers and staged offers? After the first three binary questions, the rule is settled in 96.5% (95% block interval 94.4–98.6%) at truth-report probability 1, 83.0% (95% block interval 77.1–88.9%) at truth-report probability 0.9, 0.0% (95% block interval 0.0–0.0%) at truth-report probability 0.75, 0.0% (95% block interval 0.0–0.0%) at truth-report probability 0.6. These cells use keep-answer bias 0.5 and rule prior 0.25. This is a constructed-method result; the price contrast is built into the model.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 stipulated action/answer laws.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 384
+      },
+      "estimate_detail": {
+        "sha256": "da830081e680043acc58497c6cb86e97d6a3f55666616322d37fe63ca8d60330",
+        "source_file": "results/v30/R-asked/HIGHLIGHTS.json"
+      },
+      "id": "G-V30-R-ASKED-1",
+      "reader": "Frozen finite Bayesian reader; visibility and finite-probe qualifications apply.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/R-asked.md",
+      "source_line": 3,
+      "source_sha256": "5dc88a628d5dfdc912d51184c21e9020e371335db11ae4e78a0781d1a8361ee1",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "Does heat at an offer identify a rule faster than refusal? Under the analyst's unsettled heat proposal, at heat rates 0.8 versus 0.1, prior 0.25 gives a heat median of 4 offers (95% block interval [2.0, 4.0]) versus refusal 1 ([1.0, 1.0]); prior 0.1 gives a heat median of 2 offers (95% block interval [2.0, 4.0]) versus refusal 1 ([1.0, 1.0]). Heat is slower in both settings; the declared performer follow-on is not triggered. This is a constructed-mechanism result, not evidence that real rules fire a channel.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 stipulated action/answer laws.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 24
+      },
+      "estimate_detail": {
+        "sha256": "ed860d51ec0207900ab5e5f05b0f4dcffb9dd78b585e04b6e455e722c444a620",
+        "source_file": "results/v30/R-heat/HIGHLIGHTS.json"
+      },
+      "id": "G-V30-R-HEAT-1",
+      "reader": "Frozen finite Bayesian reader; visibility and finite-probe qualifications apply.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/R-heat.md",
+      "source_line": 3,
+      "source_sha256": "d656b034f6aa56063741c89cca2548d7db9fba101b26a56405f2467575f6009a",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "What does a partner gain from seeing the maker's state or knowing the maker's type? The complete 288-setting visible-information map reports entrustment, income, defection, partner payoff and forecast changes under both visibility conditions. This constructed-mechanism map is separate from the still-running hidden-state readers; it does not yet establish a four-way visibility ranking.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 stipulated action/answer laws.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 288
+      },
+      "estimate_detail": {
+        "sha256": "ba74c60a032ba0054411ff83eb4e189c3005d979a6226e83cd26a83137cecb4a",
+        "source_file": "results/v30/V-visible/HIGHLIGHTS.json"
+      },
+      "id": "G-V30-V-VISIBLE-1",
+      "reader": "Frozen finite Bayesian reader; visibility and finite-probe qualifications apply.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-visible.md",
+      "source_line": 3,
+      "source_sha256": "b73621da4b75e647373808b997c403f640cdfb2abe9a6640e9d79242f8084ede",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T15:54:02.483816+00:00"
+  "updated": "2026-11-15T16:02:41.853168+00:00"
 }

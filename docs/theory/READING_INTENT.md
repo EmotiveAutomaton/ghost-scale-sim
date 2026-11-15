@@ -1,5 +1,15 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 probes and visible-state maps
+
+**G-V30-R-ASKED-1; descriptive, no registered claim.** Can a reader identify a stipulated rule from answers and staged offers? After the first three binary questions, the rule is settled in 96.5% (95% block interval 94.4–98.6%) at truth-report probability 1, 83.0% (95% block interval 77.1–88.9%) at truth-report probability 0.9, 0.0% (95% block interval 0.0–0.0%) at truth-report probability 0.75, 0.0% (95% block interval 0.0–0.0%) at truth-report probability 0.6. These cells use keep-answer bias 0.5 and rule prior 0.25. This is a constructed-method result; the price contrast is built into the model. [Report](../versions/v30-the-readers-side/reports/R-asked.md).
+
+**G-V30-R-HEAT-1; descriptive, no registered claim.** Does heat at an offer identify a rule faster than refusal? Under the analyst's unsettled heat proposal, at heat rates 0.8 versus 0.1, prior 0.25 gives a heat median of 4 offers (95% block interval [2.0, 4.0]) versus refusal 1 ([1.0, 1.0]); prior 0.1 gives a heat median of 2 offers (95% block interval [2.0, 4.0]) versus refusal 1 ([1.0, 1.0]). Heat is slower in both settings; the declared performer follow-on is not triggered. This is a constructed-mechanism result, not evidence that real rules fire a channel. [Report](../versions/v30-the-readers-side/reports/R-heat.md).
+
+**G-V30-V-VISIBLE-1; descriptive, no registered claim.** What does a partner gain from seeing the maker's state or knowing the maker's type? The complete 288-setting visible-information map reports entrustment, income, defection, partner payoff and forecast changes under both visibility conditions. This constructed-mechanism map is separate from the still-running hidden-state readers; it does not yet establish a four-way visibility ranking. [Report](../versions/v30-the-readers-side/reports/V-visible.md).
+
+These maps quantify stipulated reader and visibility conditions. They do not establish human markers, admit the held Bayesian page reader, or settle the unfinished hidden-state comparison.
+
 ## November 15 V30 additional label maps
 
 **G-V30-P-KM24-1; descriptive, no registered claim.** Can correction recover a maker's largest channel as makers become more alike? At maker concentration 24, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 65.0% of makers (95% whole-block interval 58.4–71.6%), versus 17.7% (8.3–27.0%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts. [Report](../versions/v30-the-readers-side/reports/P-km24.md).
