@@ -50,7 +50,8 @@ and results/v30/L_RANK_R2_AUTHORIZATION.json. R's first exact-order healing
 repairs a leading-reason numerical tie and audits all 96 orders settings;
 R_ORDER_R1 passed replay/reconstruction but failed its newly written assertion.
 The owner approved an assertion-only R_ORDER_R2 successor; require its validation
-before admitting the 96 settings. No further automatic L or R repair. Keep both earlier failures retained.
+before admitting the 96 settings. The successor passed all 15 checks and those
+96 settings are now admitted. No further automatic L or R repair. Keep both earlier failures retained.
 A roster is not an executed or admitted study. Each complete cell requires excluded pilot, full
 seed replay and independent reconstruction. Keep immutable sources and all
 failures; one separately frozen healing per family. Resource stops retain

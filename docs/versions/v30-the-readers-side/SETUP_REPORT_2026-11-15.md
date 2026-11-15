@@ -1,4 +1,6 @@
-# V30 setup report — November 15
+# V30 opening setup report — November 15
+
+Historical opening snapshot, superseded by [the morning queue report](MORNING_REPORT_2026-11-15.md).
 
 The commissioned implementations and finite texture maps are built. Gear 2
 is active, with four single-thread workers and the inherited host-load backoff.
