@@ -1,5 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V30 additional label maps
+
+**G-V30-P-KM24-1; descriptive, no registered claim.** Can correction recover a maker's largest channel as makers become more alike? At maker concentration 24, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 65.0% of makers (95% whole-block interval 58.4–71.6%), versus 17.7% (8.3–27.0%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts. [Report](docs/versions/v30-the-readers-side/reports/P-km24.md).
+
+**G-V30-P-MISSTATED-1; descriptive, no registered claim.** How sensitive is correction to a misstated reader table? The eighteen-setting table-mismatch map is complete, with 300 makers in six blocks per setting and all eight page levels retained. This descriptive constructed-method map measures a known-table assumption; it does not validate a reader for people. [Report](docs/versions/v30-the-readers-side/reports/P-misstated.md).
+
+The complete count/correction maps support conditional reader design in the miniature; they do not establish Bayesian convergence, human markers or engine admission.
+
 November 15 numerical limitation: P's owner-approved collapsed Bayesian repair failed its frozen convergence gate (worst split-chain ratio 1.736; minimum effective sample size 6.505). Its 180 scientific settings remain unrun; valid count/correction maps are unchanged. [Failure report](docs/versions/v30-the-readers-side/reports/P-bayes-held.md).
 
 ## November 15 V30 additional label maps

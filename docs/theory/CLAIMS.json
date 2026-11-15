@@ -316038,9 +316038,110 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can correction recover a maker's largest channel as makers become more alike? At maker concentration 24, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 65.0% of makers (95% whole-block interval 58.4–71.6%), versus 17.7% (8.3–27.0%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 hierarchical label generation and supplied normalized tables.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "corrected": {
+          "block_means": [
+            0.68,
+            0.66,
+            0.72,
+            0.68,
+            0.54,
+            0.62
+          ],
+          "blocks": 6,
+          "estimate": 0.65,
+          "interval95": [
+            0.5839605569175192,
+            0.7160394430824808
+          ],
+          "measure": "largest_label_accuracy",
+          "pages": 128,
+          "reader": "CORRECTED",
+          "standard_error": 0.025690465157330256,
+          "worlds": 300
+        },
+        "count": {
+          "block_means": [
+            0.16,
+            0.06,
+            0.24,
+            0.3,
+            0.2,
+            0.1
+          ],
+          "blocks": 6,
+          "estimate": 0.17666666666666667,
+          "interval95": [
+            0.08335143809638103,
+            0.2699818952369523
+          ],
+          "measure": "largest_label_accuracy",
+          "pages": 128,
+          "reader": "COUNT",
+          "standard_error": 0.03630120904016528,
+          "worlds": 300
+        },
+        "setting": {
+          "blocks": 6,
+          "corrector": "HUMAN",
+          "h": 0.8,
+          "km": 24,
+          "kp": 3,
+          "m": 60,
+          "neutral_shift": 0.0,
+          "pages": 128,
+          "part": "labels",
+          "table": "HUMAN",
+          "worlds": 300
+        }
+      },
+      "estimate_detail": {
+        "sha256": "4f3886d4a5ee46cee82149a3e97d27b89b635dfa702535a8d04297caf722a84e",
+        "source_file": "results/v30/P-km24/VERIFIED.json"
+      },
+      "id": "G-V30-P-KM24-1",
+      "reader": "COUNT and known-table nonnegative least-squares correction; no evaluator mixture enters estimation.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-km24.md",
+      "source_line": 3,
+      "source_sha256": "1a0b6172e2367367f6b7a3d05779cd21e9a19c7a8e831df685a9ede70c9b252f",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "How sensitive is correction to a misstated reader table? The eighteen-setting table-mismatch map is complete, with 300 makers in six blocks per setting and all eight page levels retained. This descriptive constructed-method map measures a known-table assumption; it does not validate a reader for people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 hierarchical label generation and supplied normalized tables.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 18,
+        "worlds_per_setting": 300
+      },
+      "estimate_detail": {
+        "sha256": "f4495227ff7bc6ec8fc3b0a9137360cc54860622b2a3471aace261d3cc8e8650",
+        "source_file": "results/v30/P-misstated/VERIFIED.json"
+      },
+      "id": "G-V30-P-MISSTATED-1",
+      "reader": "COUNT and known-table nonnegative least-squares correction; no evaluator mixture enters estimation.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-misstated.md",
+      "source_line": 3,
+      "source_sha256": "b7ae7c6979c7f172e7d11fbbbaad969edfebd75ddadfa6fcc0783301864751ec",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T11:23:44.468153+00:00"
+  "updated": "2026-11-15T15:54:02.483816+00:00"
 }
