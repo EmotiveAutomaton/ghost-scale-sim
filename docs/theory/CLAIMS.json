@@ -316493,9 +316493,42 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can a reader distinguish a rule held for its own sake from compliance shaped by outside enforcement after the enforcer leaves? In one stipulated 64-step enforcement setting with punishment probability 0.75, fine 16 and drift 0.05, the median time from departure to separation was 52 steps (95% whole-block interval 51–55) for the own-rule maker and 47 (46–49) for the drifting priced maker; neither group remained unresolved at 512 steps. This is a descriptive constructed-mechanism result, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen F own-rule and drifting expected-fine laws; no stock replenishment.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full seed replay and independent reconstruction pass.",
+      "estimate": {
+        "own_interval95": [
+          51,
+          55
+        ],
+        "own_median": 52,
+        "priced_interval95": [
+          46,
+          49
+        ],
+        "priced_median": 47,
+        "unresolved_by_512": 0
+      },
+      "estimate_detail": {
+        "sha256": "f34ac8d6fb24724c2d619c663d5ccfa2792c6b1875b1e60ba80e0c725861a066",
+        "source_file": "results/v30/F-enforcement/VERIFIED.json"
+      },
+      "id": "G-V30-F-ENFORCEMENT-1",
+      "reader": "Knows enforcement schedule and both candidate laws; sees money, need, offers and actions.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/F-enforcement.md",
+      "source_line": 3,
+      "source_sha256": "3d45faaeab1b8a6058c13d74595b9a5537077108ad4fd2df21ac8d0d84fd65eb",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T19:48:56.323222+00:00"
+  "updated": "2026-11-15T21:04:05.781380+00:00"
 }

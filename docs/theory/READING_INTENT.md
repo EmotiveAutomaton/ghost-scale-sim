@@ -1,5 +1,9 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 outside enforcement
+
+**G-V30-F-ENFORCEMENT-1; descriptive, no registered claim.** Can a reader distinguish a rule held for its own sake from compliance shaped by outside enforcement after the enforcer leaves? In one stipulated 64-step enforcement setting with punishment probability 0.75, fine 16 and drift 0.05, the median time from departure to separation was 52 steps (95% whole-block interval 51–55) for the own-rule maker and 47 (46–49) for the drifting priced maker; neither group remained unresolved at 512 steps. This is a descriptive constructed-mechanism result, not evidence about people. [Report](../versions/v30-the-readers-side/reports/F-enforcement.md).
+
 ## November 15 V30 E-extinction
 
 **G-V30-E-EXTINCTION-1; descriptive, no registered claim.** Can a reader distinguish unlearning from a context-dependent brake? The finite map retains 48 sampled settings and 12 identical-context pilot exclusions. The models match by construction in the extinction context; renewal outside it follows the stipulated definitions. [Report](../versions/v30-the-readers-side/reports/E-extinction.md).

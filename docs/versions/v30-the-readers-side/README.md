@@ -38,3 +38,5 @@ The [blind-reader live-sum subset](reports/V-blind-live4-8.md) is verified for w
 The [K workload](reports/K-workload.md), [K attention](reports/K-attention.md), [N attention](reports/N-attention.md) and [E extinction](reports/E-extinction.md) maps are verified locally, including explicit pilot exclusions. K’s conditional finer map awaits validation.
 
 November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,296-cell finer map is admitted. This is not a completed map. F and the L shared-event texture remain in progress; P Bayesian and L middle remain held.
+
+November 15, 13:00 review: the [216-setting F map](reports/F-enforcement.md) is verified; L shared-event and P uneven textures remain in progress at the snapshot. K finer-map validation is bound separately; admission is not completion.
