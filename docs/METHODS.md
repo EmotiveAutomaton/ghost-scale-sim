@@ -1955,3 +1955,8 @@ for all mandatory dispositions. The newer committed engine receives derived
 public observations only. Native ledger ingestion preserves fitted forecasts on
 constructed choice fixtures; record-only edit streams do not acquire invented
 choice targets. These are software-boundary checks, not scientific module admission.
+
+
+## V30 numerical tie audits, November 15
+
+L's event-ranking area gives half credit to positive-negative score differences within 1e-10. This explicit resolution prevents floating-point splitting of theoretical ties. All 191 retained pilot/main records were rescored at 1e-9/1e-10/1e-11, with an independent pairwise control; likelihoods, Brier scores and separation are unchanged. Old summaries remain beside corrected results. R's exact-order repair selects the first leading reason within 1e-12 of the maximum directly, avoiding decimal-rounding boundary instability; its three-nat evidence criterion is unchanged. The first repair's newly written answer-versus-claim assertion was wrong despite successful exact replays; the owner approved an assertion-only correction. See the V30 repair protocols and validation ledger.

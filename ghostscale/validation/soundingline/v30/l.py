@@ -168,10 +168,14 @@ def filter_one(raw,parameter,s,reference=False,resolution=None):
     return (reference_forward if reference else grid_forward)(raw["observed_show"],raw["observed_event"],
              s["detector"]!="none",sh,sf,eh,ef,nodes,lo,hi,fraction,cause)
 
-def auc(y,score):
-    y=np.asarray(y,bool)
+def auc(y,score,resolution=1e-10):
+    """Pairwise event ranking; differences within resolution receive half credit."""
+    y=np.asarray(y,bool);score=np.asarray(score,float)
     if y.sum()==0 or y.sum()==len(y):return np.nan
-    return float((rankdata(score)[y].sum()-y.sum()*(y.sum()+1)/2)/(y.sum()*(len(y)-y.sum())))
+    negative=np.sort(score[~y]);positive=score[y]
+    lower=np.searchsorted(negative,positive-resolution,side="left")
+    upper=np.searchsorted(negative,positive+resolution,side="right")
+    return float(np.mean((lower+.5*(upper-lower))/len(negative)))
 
 def infer(raw,s,reference=False,pulse=lambda **kw:None):
     if s["part"]=="correlation":

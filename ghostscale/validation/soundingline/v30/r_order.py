@@ -18,7 +18,7 @@ def information(belief,emission):
     return float(entropy(belief)-np.sum(mass*entropy(post.T)))
 def batch_emission(s,name,belief):
     if name!="CLAIM":return np.broadcast_to(r.emission(s,name),(len(belief),*r.emission(s,name).shape))
-    claims=np.argmax(np.round(belief,12),axis=1)
+    claims=np.argmax(belief>=np.max(belief,axis=1,keepdims=True)-1e-12,axis=1)
     result=np.broadcast_to(s["q"]*np.eye(4),(len(belief),4,4)).copy()
     result[np.arange(len(belief)),:,claims]+=1-s["q"]
     return result
@@ -59,10 +59,8 @@ def reference_kernel(matrices,cardinality,indices,q,prior):
             if index==4:
                 belief=like*prior;norm=belief.sum()
                 if norm<=0:alive=False;break
-                belief/=norm;claim=0;best=round(belief[0],12)
-                for k in range(1,4):
-                    value=round(belief[k],12)
-                    if value>best:claim=k;best=value
+                belief/=norm;best=np.max(belief);claim=0
+                while belief[claim]<best-1e-12:claim+=1
                 for k in range(4):like[k]*=(q if answer==k else 0.)+((1-q) if answer==claim else 0.)
             else:
                 for k in range(4):like[k]*=matrices[index,k,answer]
@@ -90,6 +88,10 @@ def exact_order_reference(s,order):
         a=r.emission(s,name,reference=True);matrices[i,:,:a.shape[1]]=a;cardinality[i]=a.shape[1]
     return reference_kernel(matrices,cardinality,np.array([r.CORE.index(n) for n in order]),s["q"],r.prior(s))
 
+def order_emission(s,name,belief):
+    if name=="CLAIM":return batch_emission(s,name,belief[None,:])[0]
+    return r.emission(s,name,belief)
+
 def greedy(s):
     # Exact adaptive information-gain policy, no stochastic training.
     prior=r.prior(s);cost=np.zeros(4);settled=np.zeros(4);first_probe=None;nodes=0
@@ -100,10 +102,10 @@ def greedy(s):
         odds=np.array([log[k]-np.max(np.delete(log,k)) for k in range(4)])
         if depth:first=np.where((odds>=3)&(first==6),depth,first)
         if not remaining:cost[:]+=like*first;settled[:]+=like*(odds>=3);return
-        gains=[information(belief,r.emission(s,n,belief)) for n in remaining]
+        gains=[information(belief,order_emission(s,n,belief)) for n in remaining]
         index=int(np.argmax(np.round(gains,12)));name=remaining[index]
         if depth==0:first_probe=name
-        a=r.emission(s,name,belief);following=tuple(n for n in remaining if n!=name)
+        a=order_emission(s,name,belief);following=tuple(n for n in remaining if n!=name)
         for answer in range(a.shape[1]):
             joint=like*a[:,answer]
             if joint.sum()>0:visit(joint,following,first.copy(),depth+1)
@@ -161,6 +163,9 @@ def controls(dest=None,pulse=lambda **kw:None):
         a=exact_order(s,order);b=exact_order_reference(s,order)
         checks.append(dict(name="independent exact order "+str(order),passed=all(np.allclose(x,y,atol=1e-10) for x,y in zip(a,b))))
     checks.append(dict(name="identical emissions have zero information",passed=abs(information(np.full(4,.25),np.full((4,2),.5)))<1e-14))
+    near=np.array([[.23340704371725565,.3506205384685,.35062053846850005,.0653518793457444]])
+    choice=batch_emission(dict(s,q=.6),"CLAIM",near)
+    checks.append(dict(name="near-equal leading reasons retain first-index tie",passed=bool(np.allclose(choice[0]-.6*np.eye(4),np.tile([0.,.4,0.,0.],(4,1)),rtol=0,atol=1e-15))))
     result=audit_controls(checks)
     if dest is not None:write(Path(dest)/"CONTROLS.json",result)
     return result

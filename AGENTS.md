@@ -42,7 +42,15 @@ P's final owner-approved collapsed Bayesian repair failed its frozen convergence
 gate; its 180 scientific settings remain held, with no additional automatic
 repair authorized. COUNT/CORRECTED and the other admitted maps continue.
 L's missing pilot dispatch exclusions were added before any affected cell
-started; use the preserved L-CORE-GATED and L_PAIR_GATED successors.
+started. A later event-ranking tie failure received an owner-approved second
+bounded repair. Its 191 retained records and 194 checks pass; corrected prior
+summaries remain beside originals. Use L-CORE-R2 for the 38 unfinished cells
+and L_PAIR_R2 after its new validation. Read protocols/L_RANK_REPAIR_R2.md
+and results/v30/L_RANK_R2_AUTHORIZATION.json. R's first exact-order healing
+repairs a leading-reason numerical tie and audits all 96 orders settings;
+R_ORDER_R1 passed replay/reconstruction but failed its newly written assertion.
+The owner approved an assertion-only R_ORDER_R2 successor; require its validation
+before admitting the 96 settings. No further automatic L or R repair. Keep both earlier failures retained.
 A roster is not an executed or admitted study. Each complete cell requires excluded pilot, full
 seed replay and independent reconstruction. Keep immutable sources and all
 failures; one separately frozen healing per family. Resource stops retain

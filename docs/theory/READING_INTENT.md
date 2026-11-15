@@ -1,5 +1,13 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 corrected event ranking
+
+**G-V30-L-PARTIAL-R2-1; descriptive partial map.** Can a reader tell frequent triggers, strong reactions and persistence apart? This tests the theory thread's unsettled proposal that shows without visible triggers reveal leftover activation. Ninety-five of 133 one-channel/correlation settings have verified complete evidence; the target-show-rate 0.16 map is complete, the 0.08 map is partial and 0.32 plus the correlation study await the repaired continuation. This is a constructed-method result, not a human stress marker.
+
+Correction first: the event-ranking statistic now gives half credit to positive-negative score differences within 1e-10. All 191 retained pilot/main records pass unchanged reconstruction tolerances; the largest individual-world change from the old rank is 0.000478034. Adjacent resolutions change it by at most 0.000538266, below the frozen 0.001 check. Likelihoods, separation and Brier scores are unchanged. Old summaries and the failed pilot remain retained.
+
+[Report](../versions/v30-the-readers-side/reports/L-partial-rank-r2.md). The complete detector/correlation conclusion remains open; unexecuted cells are not null results.
+
 ## November 15 V30 probes and visible-state maps
 
 **G-V30-R-ASKED-1; descriptive, no registered claim.** Can a reader identify a stipulated rule from answers and staged offers? After the first three binary questions, the rule is settled in 96.5% (95% block interval 94.4–98.6%) at truth-report probability 1, 83.0% (95% block interval 77.1–88.9%) at truth-report probability 0.9, 0.0% (95% block interval 0.0–0.0%) at truth-report probability 0.75, 0.0% (95% block interval 0.0–0.0%) at truth-report probability 0.6. These cells use keep-answer bias 0.5 and rule prior 0.25. This is a constructed-method result; the price contrast is built into the model. [Report](../versions/v30-the-readers-side/reports/R-asked.md).

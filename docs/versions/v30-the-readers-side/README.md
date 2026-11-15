@@ -1,29 +1,30 @@
 # V30: the reader's side
 
-The owner commissioned the November 14 packet on November 15. This is a new
-finite 60-CPU-hour allocation: P/L/R/V/K/N receive 44 hours, E/F six, and
-healing/texture ten. The practical target is the packet's two to three days;
-the requested coming week is an outer seven-day window, not an occupancy goal.
-Exact opening and cutoffs are assigned once in the local acceptance record.
+The November 14 packet was commissioned November 15. This finite allocation
+has 60 CPU-hours: 44 for P/L/R/V/K/N, six for E/F and ten for healing/texture.
+The two-to-three-day target is an estimate; the seven-day outer window and
+resource ceilings remain fixed. Gear 2 allows four below-normal, single-thread
+CPU scientists, reducing to two under host load. No GPU or environment changes.
 
-[Design review](DESIGN_REVIEW.md) separates equations, corrected known answers,
-prospective choices and owner decisions. [Current status](../../../results/v30/CURRENT_STATUS.json)
-distinguishes implemented, admitted, executing and verified scope.
+Read the [packet](PACKET.md), [design review](DESIGN_REVIEW.md),
+[implementation roster](IMPLEMENTATION_STATUS.md), [current state](../../../results/v30/CURRENT_STATUS.json)
+and [interim theory return](THEORY_RETURN.md). Inputs are filed with their
+[source provenance](SOURCE_PROVENANCE.json); private theory context stays local.
 
-Gear 2 permits at most four below-normal single-thread CPU scientists with
-host-load backoff to two. No GPU, paid scientific calls or environment changes.
-The source capsule, settings, seed lane and admission receipt are immutable.
-A completed cell is accepted only after known answers, an excluded pilot,
-full seed replay and independent reconstruction. CPU ceilings stop admission
-at complete verified cells; partial grids stay explicitly partial.
+P's complete count/correction maps cover maker concentrations
+[three](reports/P-km3.md), [six](reports/P-km6.md), [twelve](reports/P-km12.md),
+[twenty-four](reports/P-km24.md) and [misstated tables](reports/P-misstated.md).
+Its [Bayesian reference remains held](reports/P-bayes-held.md).
 
-[Packet](PACKET.md), [preflight summary](PREFLIGHT_SUMMARY.md), and
-[source provenance](SOURCE_PROVENANCE.json) are filed here. The first verified
-batches are [P's strongly differing makers](reports/P-km3.md) and
-[R's watched-record map](reports/R-watched.md). P labels, L, R, K, N, E and F
-have admitted maps; V's four visibility arms are admitted. All five finite texture maps are prepared behind their validation gates; conditional follow-ons and monitoring are being finalized.
-The new [maker-concentration six map](reports/P-km6.md) is verified. P's posterior-particle extension failed its final authorized convergence check and is [held](reports/P-bayes-held.md). Known failures and repairs remain retained.
-Older scientific versions remain closed. No V30 human-mechanism or registered
-claim is authorized. Private theory handoffs stay outside the public repository.
+R's [watched](reports/R-watched.md), [asked](reports/R-asked.md) and
+[heat](reports/R-heat.md) maps are complete. The exact-order map is undergoing
+its first bounded numerical repair. V's [visible-information map](reports/V-visible.md)
+is complete; hidden-state work continues. L has [95 corrected complete cells](reports/L-partial-rank-r2.md)
+and an approved continuation after its ranking audit. Other admitted studies and
+declared textures remain queued; a roster is not a completed result.
 
-[Complete implementation/admission roster](IMPLEMENTATION_STATUS.md) distinguishes runnable maps from held scope and conditional follow-ons.
+Every accepted sampled cell needs known answers, an excluded pilot, full replay
+and independent reconstruction. Exact-order cells use exhaustive enumeration.
+Resource stops preserve verified complete cells and mark the rest partial.
+All findings are descriptive constructed-world results; no human marker,
+registered claim or engine admission follows.
