@@ -44,3 +44,5 @@ November 15, 10:05 review: the [48-setting BLIND live-sum subset](reports/V-blin
 [November 15 shutdown recovery](RESTART_REPORT_2026-11-15.md): all completed bindings passed audit; Gear 2 resumed. V's 227 remaining hidden cells are resource-held. No new numerical repair was admitted.
 
 November 15, 11:45 review: K workload, K attention, N and E evidence is landed locally. K’s frozen point-estimate follow-on trigger is true in 10 of 12 groups; its separate validation is pending. P Bayesian remains held.
+
+November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,296-cell finer map is admitted. This is not a completed map. F and the L shared-event texture remain in progress; P Bayesian and L middle remain held.

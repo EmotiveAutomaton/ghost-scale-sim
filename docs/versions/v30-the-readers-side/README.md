@@ -36,3 +36,5 @@ The [blind-reader live-sum subset](reports/V-blind-live4-8.md) is verified for w
 [Shutdown recovery and queue status](RESTART_REPORT_2026-11-15.md): completed records audited and Gear 2 resumed on identical-source K successors.
 
 The [K workload](reports/K-workload.md), [K attention](reports/K-attention.md), [N attention](reports/N-attention.md) and [E extinction](reports/E-extinction.md) maps are verified locally, including explicit pilot exclusions. K’s conditional finer map awaits validation.
+
+November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,296-cell finer map is admitted. This is not a completed map. F and the L shared-event texture remain in progress; P Bayesian and L middle remain held.
