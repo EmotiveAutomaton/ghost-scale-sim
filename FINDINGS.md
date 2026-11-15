@@ -1,5 +1,15 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V30 first complete maps
+
+Correction: exact permutation-symmetry ties replace decimal-bin ranking for P's PERFECT/HALF corrected labels. One failed cell changed one auxiliary label; prior verified cells were unchanged. K and L's separately retained compilation/precision repairs passed. P's posterior extension has an owner-approved compiler repair under excluded validation.
+
+**G-V30-P-KM3-1; descriptive, no registered claim.** Can correcting a reader's label errors recover a maker's largest channel? In the completed map with strongly differing makers, at 128 sixty-sentence pages with 80% neutral sentences and highly variable page mixtures, the HUMAN-table corrected reader names the largest channel in 91.0% of makers (95% whole-block interval 85.0–97.0%), versus 21.0% (16.6–25.4%) for raw counts. The MODEL-table figures are 94.3% (91.2–97.4%) versus 24.7% (15.3–34.0%). This is a descriptive constructed-method result, not evidence that these page counts apply to people. [Report](docs/versions/v30-the-readers-side/reports/P-km3.md).
+
+**G-V30-R-WATCHED-1; descriptive, no registered claim.** How much can watching reveal when need and audience are hidden? With mixed prices, an occasion probability of one fifth per step and equal reason priors, the stipulated rule reaches sustained separation at a median 21 clock steps (95% whole-block interval 18–23). Need-driven and audience-driven reasons take 1,670 (1,432.5–1,967) and 1,718 (1,593–2,074) steps; 17.5% and 17.0% remain unresolved at 3,000. This is a descriptive constructed-method result; the price-invariant rule is a definition, not a discovered human marker. [Report](docs/versions/v30-the-readers-side/reports/R-watched.md).
+
+These maps support conditional reader design inside the constructed worlds. They do not validate human stress markers or an engine reader, and V30 remains in progress.
+
 ## November 14 second-healing maps
 
 The separately published X2 retained-date correction precedes these maps; original likelihood and separation results remain intact. Four other X2 variants are resource-held.

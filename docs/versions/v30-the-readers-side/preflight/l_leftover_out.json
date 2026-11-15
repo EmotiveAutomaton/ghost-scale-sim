@@ -1,0 +1,103 @@
+{
+ "types": {
+  "EXPOSED": {
+   "p": 0.1711,
+   "g": 1.0,
+   "rho": 0.3
+  },
+  "REACTIVE": {
+   "p": 0.1,
+   "g": 2.5684,
+   "rho": 0.3
+  },
+  "STICKY": {
+   "p": 0.1,
+   "g": 1.0,
+   "rho": 0.5741
+  }
+ },
+ "results": {
+  "shows only": {
+   "EXPOSED": {
+    "separated": 0.633,
+    "median_steps": 818,
+    "median_final_log_odds": 4.69
+   },
+   "REACTIVE": {
+    "separated": 1.0,
+    "median_steps": 413,
+    "median_final_log_odds": 16.31
+   },
+   "STICKY": {
+    "separated": 0.333,
+    "median_steps": 1263,
+    "median_final_log_odds": 1.33
+   }
+  },
+  "shows and events, exact": {
+   "EXPOSED": {
+    "separated": 1.0,
+    "median_steps": 56
+   },
+   "REACTIVE": {
+    "separated": 1.0,
+    "median_steps": 104
+   },
+   "STICKY": {
+    "separated": 1.0,
+    "median_steps": 84
+   }
+  },
+  "shows and events through a detector (hit .7, false alarm .05), sizes unseen": {
+   "EXPOSED": {
+    "separated": 1.0,
+    "median_steps": 193,
+    "median_final_log_odds": 37.5
+   },
+   "REACTIVE": {
+    "separated": 1.0,
+    "median_steps": 185,
+    "median_final_log_odds": 35.53
+   },
+   "STICKY": {
+    "separated": 0.933,
+    "median_steps": 518,
+    "median_final_log_odds": 17.87
+   }
+  },
+  "as above, and shows through a reader (hit .6, false alarm .05)": {
+   "EXPOSED": {
+    "separated": 0.983,
+    "median_steps": 378,
+    "median_final_log_odds": 17.27
+   },
+   "REACTIVE": {
+    "separated": 0.8,
+    "median_steps": 747,
+    "median_final_log_odds": 6.45
+   },
+   "STICKY": {
+    "separated": 0.583,
+    "median_steps": 950,
+    "median_final_log_odds": 4.56
+   }
+  },
+  "shows only, through a reader (hit .6, false alarm .05)": {
+   "EXPOSED": {
+    "separated": 0.067,
+    "median_steps": 1461,
+    "median_final_log_odds": 0.86
+   },
+   "REACTIVE": {
+    "separated": 0.2,
+    "median_steps": 1320,
+    "median_final_log_odds": 1.48
+   },
+   "STICKY": {
+    "separated": 0.033,
+    "median_steps": 908,
+    "median_final_log_odds": -0.52
+   }
+  }
+ }
+}

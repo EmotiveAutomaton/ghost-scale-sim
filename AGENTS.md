@@ -18,48 +18,43 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Active V29, November 13
+## Active V30, November 15
 
-The owner commissioned the two-day packet in docs/versions/v29-above-the-loops/.
-Read its PACKET, README, DESIGN_REVIEW, results/v29/CURRENT_STATUS.json and outer
-.local/v29/HANDOFF.md. This separately funds eleven finite descriptive families,
-36 CPU-hours plus 24 protected for the packet's healing, textures and conditional
-follow-ons. Gear 2 is four single-thread below-normal CPU workers with inherited
-host-load backoff to two; no GPU or environment synchronization.
+The owner commissioned docs/versions/v30-the-readers-side/. Read its README,
+packet, DESIGN_REVIEW, protocols, results/v30/CURRENT_STATUS.json and outer
+.local/v30/HANDOFF.md. This is a new finite 60-CPU-hour allocation: P/L/R/V/K/N
+have 44 hours, E/F six and healing/texture ten. The packet's two-to-three-day
+target is a planning estimate; the coming week is the seven-day outer limit
+frozen in ACCEPTANCE.json. Gear 2 is four single-thread below-normal CPU
+workers, reducing to two under inherited host-load backoff. No GPU or sync.
 
-All eleven primary maps and 35 continuation cards are verified and published at
-102c8cd51beaf6f959269f586d1f482178448995. Their original controllers are closed.
-Read the November 14 queue report and current private handoff before actions.
+The owner approved checked numerical approximation for L's hidden-event
+readers, fresh-page learned-versus-population prediction plus a separate
+true-mix oracle for P, and full-record R separation while preserving the
+supplied early-stop baseline. Exact controls and resolution gates still apply.
+Read results/v30/OWNER_DECISIONS_20261115.json. P's supplied numerical tables
+reproduce; its independent retained-mixture reconstruction is within 7.92e-14.
+Fresh-sample discrepancies and baseline auxiliary ties remain on record.
 
-The owner explicitly approved second numerical healings for X2 and Q2. X2's
-active recovery is outer .local/v29-x2-h2-20261114-r1/; its first startup failed
-on a missing import before the retained audit and remains preserved. The same
-repair's corrected entry point passed an excluded audit fixture. Five fixed
-cards, including the full retained-primary date audit, use unchanged likelihoods,
-seeds and scientific gates. Q2-H1 failed its excluded pilot and is closed.
-Q2-H2 is prepared at .local/v29-q2-h2-20261114/ and waits for actual X2 owner exit.
-Its 2400-second reservation and all prior costs stay inside the original pool.
-No third numerical repair is admitted in either family. Do not restart any
-failed capsule or treat a held or unexecuted card as a scientific null.
+The initial P COUNT/CORRECTED queue is separate from its unadmitted particle
+extension. Build the remaining commissioned families; a roster is not an
+executed or admitted study. Each complete cell requires excluded pilot, full
+seed replay and independent reconstruction. Keep immutable sources and all
+failures; one separately frozen healing per family. Resource stops retain
+verified complete cells and mark the remaining grid partial. Keep one finite
+expected-boundary monitor, disarmed during operator work, with at most four
+hours to the next build check if implementable work remains at turn end.
+Do not infer actual wake delivery from configuration.
 
-Q2-H2's difference-based auxiliary tie checks pass over 1180 retained cells,
-both failed full cells and normalization-shift fixtures. Earlier verified Q2
-labels remain unchanged. X2's earlier dates require its pending retained audit;
-completed primary likelihood and separation results remain intact.
+## V29 closed, November 14
 
-The owner-approved X1 equation correction remains in force. X3 and B3 have
-used their single healing. Known answers, applicable preflight, excluded pilots,
-complete replay and independent reconstruction remain mandatory for every map.
-
-The single active monitor is continuation/notifications-r2; prior monitors are
-stopped and retained. Keep it disarmed during operator work. A compatible native
-CLI response passed, but a full scientific review by the replacement has not
-yet executed. One expected-boundary wake plus failures/drains replaces repeated
-polling; reviews are local reports, not interactive chat messages. Monitor costs
-go to Q2-H2 and are covered by its reservation until activation. At finite end,
-land all eligible results and final theory return before retiring the monitor.
-Private theory context remains local in Ghost and both companions; earlier
-scientific campaigns stay closed.
+Eleven primaries, 35 original continuation maps and six separately repaired
+maps are verified and published at 2962c709820da6dddf4b30849ee707f08ffa6fa9.
+Read its THEORY_RETURN and FINAL_COVERAGE_20261114.json. Four additional X2
+repair variants are resource-held. Original failures and the auxiliary-date
+correction remain retained. Both repair controllers and the finite monitor
+have exited. No V29 science or recurring review remains commissioned.
+Historical status snapshots are not current process authority.
 
 ## V28 finite maps, November 11
 

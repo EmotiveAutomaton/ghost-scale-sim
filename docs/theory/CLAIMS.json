@@ -315836,9 +315836,57 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can correcting a reader's label errors recover a maker's largest channel? In the completed map with strongly differing makers, at 128 sixty-sentence pages with 80% neutral sentences and highly variable page mixtures, the HUMAN-table corrected reader names the largest channel in 91.0% of makers (95% whole-block interval 85.0–97.0%), versus 21.0% (16.6–25.4%) for raw counts. The MODEL-table figures are 94.3% (91.2–97.4%) versus 24.7% (15.3–34.0%). This is a descriptive constructed-method result, not evidence that these page counts apply to people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 packet laws with the recorded owner decisions and numerical repair.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, complete seed replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 135,
+        "worlds_per_cell": 300
+      },
+      "estimate_detail": {
+        "sha256": "a57238a18ab99421354d2f0a4f55dcd106d61ad333cad42ce694253b4a1d18f4",
+        "source_file": "results/v30/P-km3/VERIFIED.json"
+      },
+      "id": "G-V30-P-KM3-1",
+      "reader": "P count/corrected or R finite reason roster; exact observation privileges in the protocol.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-km3.md",
+      "source_line": 3,
+      "source_sha256": "b11e04731cce5ddcfdc1c0ba6d438abd087a10326e773c4303cc424781670758",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "How much can watching reveal when need and audience are hidden? With mixed prices, an occasion probability of one fifth per step and equal reason priors, the stipulated rule reaches sustained separation at a median 21 clock steps (95% whole-block interval 18–23). Need-driven and audience-driven reasons take 1,670 (1,432.5–1,967) and 1,718 (1,593–2,074) steps; 17.5% and 17.0% remain unresolved at 3,000. This is a descriptive constructed-method result; the price-invariant rule is a definition, not a discovered human marker.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 packet laws with the recorded owner decisions and numerical repair.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, complete seed replay and independent reconstruction pass.",
+      "estimate": {
+        "settings": 96,
+        "worlds_per_cell": 200
+      },
+      "estimate_detail": {
+        "sha256": "be8f4349f9e47d8eddcd212087525b772d6daeede910b84e0a506089616a0968",
+        "source_file": "results/v30/R-watched/VERIFIED.json"
+      },
+      "id": "G-V30-R-WATCHED-1",
+      "reader": "P count/corrected or R finite reason roster; exact observation privileges in the protocol.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/R-watched.md",
+      "source_line": 3,
+      "source_sha256": "0546f44ae81ad515d53da6772d3f90894f52efe15a834903f59d1067d075d90a",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-14T13:01:11.290769+00:00"
+  "updated": "2026-11-15T10:40:07.766890+00:00"
 }

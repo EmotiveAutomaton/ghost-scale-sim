@@ -1,5 +1,7 @@
 # Version index
 
+V30: [the reader's side](v30-the-readers-side/README.md), active finite maps and explicitly checked numerical readers. V29 is closed.
+
 [V29 above the loops](v29-above-the-loops/README.md) is active: Ten primaries verified; X3 running, secondary reporting complete and finite continuation prepared.
 
 [V28 finite maps](v28-maps/README.md) is complete; all three maps are verified and the finite scientific queue is idle.

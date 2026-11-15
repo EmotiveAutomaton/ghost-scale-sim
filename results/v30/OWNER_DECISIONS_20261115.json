@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-15",
+  "source": "Owner replies in active V30 setup conversation",
+  "decisions": [
+    {
+      "family": "L",
+      "decision": "Use checked numerical approximation for hidden-event readers; exact short-path and observed-event controls plus resolution checks required."
+    },
+    {
+      "family": "P",
+      "decision": "Use fresh-page predictive comparison of learned mix versus population mean, plus separately labelled true-mix oracle diagnostic."
+    },
+    {
+      "family": "R",
+      "decision": "Use full 3000-step sustained separation for production; preserve early-stop analyst baseline and verify arithmetic on retained paths."
+    },
+    {
+      "scope": "theory-context",
+      "decision": "Read newly supplied R16-R18 handoffs and copy to Sounding Line and ToMpathy if missing; keep private and uncommitted."
+    }
+  ]
+}
