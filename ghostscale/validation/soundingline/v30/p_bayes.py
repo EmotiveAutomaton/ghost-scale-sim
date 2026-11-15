@@ -1,4 +1,4 @@
-"""P posterior particles by latent-label Gibbs/Metropolis, with independent target density."""
+"""P collapsed posterior-particle repair, with independent gamma-ratio density."""
 import math
 from pathlib import Path
 import numpy as np
@@ -36,13 +36,30 @@ def target(theta,logphi_sum,N,km,kp,reference=False):
     return np.sum(km*np.log(theta)+kp*theta*logphi_sum)-N*normalizer
 
 @njit
+def collapsed_target(theta,tail_counts,km,kp,reference=False):
+    value=np.sum(km*np.log(theta))
+    for k in range(12):
+        a=kp*theta[k]
+        if reference:
+            # Independent Dirichlet-multinomial gamma ratios grouped by count.
+            for n in range(1,tail_counts.shape[1]+1):
+                number=tail_counts[k,n-1]-(tail_counts[k,n] if n<tail_counts.shape[1] else 0.)
+                if number>0:value+=number*(math.lgamma(a+n)-math.lgamma(a))
+        else:
+            # Integer-count rising-factorial identity avoids cancellation.
+            for j in range(tail_counts.shape[1]):
+                if tail_counts[k,j]>0:value+=tail_counts[k,j]*math.log(a+j)
+    return value
+
+@njit
 def chain(counts,C,h,km,kp,burn,draws,thin,seed,reference=False):
     np.random.seed(seed);N=len(counts)
     theta=np.exp(log_dirichlet(km));phi=np.empty((N,12))
     for j in range(N):phi[j]=log_dirichlet(kp*theta)
     samples=np.empty((draws,12));accepted=0;attempts=0;scale=.25
+    maximum=int(np.max(counts.sum(axis=1))) if N else 1
     for iteration in range(burn+draws*thin):
-        allocations=np.zeros((N,12))
+        allocations=np.zeros((N,12),np.int64)
         for j in range(N):
             for observed in range(13):
                 weights=np.empty(13)
@@ -59,23 +76,28 @@ def chain(counts,C,h,km,kp,burn,draws,thin,seed,reference=False):
                         number=np.random.binomial(remaining,probability)
                         allocations[j,k]+=number;remaining-=number
                     total=max(0.,total-weights[k])
-            phi[j]=log_dirichlet(kp*theta+allocations[j])
-        sums=phi.sum(axis=0)
-        # Joint symmetric random walk in 11 additive log-ratios.
-        z=np.log(theta[:11])-math.log(theta[11])
-        prop_z=z+np.random.normal(0,scale,11)
-        allz=np.empty(12);allz[:11]=prop_z;allz[11]=0.
-        mx=np.max(allz);proposed=np.exp(allz-mx);proposed/=proposed.sum()
-        diff=target(proposed,sums,N,km,kp,reference)-target(theta,sums,N,km,kp,reference)
-        hit=math.log(max(np.random.random(),1e-300))<diff
-        if hit:theta=proposed
-        if iteration<burn:
-            accepted+=1 if hit else 0;attempts+=1
-            if (iteration+1)%32==0:
-                # Adaptation ends before retained draws.
-                scale*=math.exp((accepted/attempts-.234)*.5)
-                scale=min(2.,max(.005,scale));accepted=0;attempts=0
-        elif (iteration-burn)%thin==0:samples[(iteration-burn)//thin]=theta
+        tails=np.zeros((12,maximum))
+        for j in range(N):
+            for k in range(12):
+                for count in range(allocations[j,k]):tails[k,count]+=1.
+        # Collapsing phi here preserves the same posterior and removes its
+        # nearly deterministic coupling to tiny maker components.
+        value=collapsed_target(theta,tails,km,kp,reference)
+        for move in range(10):
+            z=np.log(theta[:11])-math.log(theta[11])
+            prop_z=z+np.random.normal(0,scale,11)
+            allz=np.empty(12);allz[:11]=prop_z;allz[11]=0.
+            mx=np.max(allz);proposed=np.exp(allz-mx);proposed/=proposed.sum()
+            candidate=collapsed_target(proposed,tails,km,kp,reference)
+            hit=math.log(max(np.random.random(),1e-300))<candidate-value
+            if hit:theta=proposed;value=candidate
+            if iteration<burn:accepted+=1 if hit else 0;attempts+=1
+        # Required partially collapsed order: regenerate phi after theta.
+        for j in range(N):phi[j]=log_dirichlet(kp*theta+allocations[j])
+        if iteration<burn and (iteration+1)%32==0:
+            scale*=math.exp((accepted/attempts-.234)*.5)
+            scale=min(2.,max(.005,scale));accepted=0;attempts=0
+        elif iteration>=burn and (iteration-burn)%thin==0:samples[(iteration-burn)//thin]=theta
     return samples
 
 def diagnostics(samples):
@@ -145,10 +167,12 @@ def summarize(s,m):
             min_effective_sample=float(m["_ess"][:,j].min()),qualification="approximate posterior, not a proven ceiling"))
     return rows
 
-def pilot_exclusion(s,m):
+def validate_measures(s,m):
     if not np.isfinite(m["_rhat"]).all() or m["_rhat"].max()>1.1 or m["_ess"].min()<50:
         raise ArithmeticError("posterior particle convergence gate failed")
     return None
+
+pilot_exclusion=validate_measures
 
 def controls(dest=None,pulse=lambda **kw:None):
     rr=rng("P-bayes-known");theta=rr.dirichlet(np.ones(12));logs=rr.normal(-4,1,12);alpha=np.full(12,.5)

@@ -72,7 +72,7 @@ def summarize(s,m):
     rows=[dict(measure="separation",**censored_blocks(m["separation"],s["steps"],s["blocks"]))]
     for name in ("attention_share","infinite_final_odds","false_confidence"):rows.append(dict(measure=name,**mean_blocks(m[name],s["blocks"])))
     rows.append(dict(measure="reader_scope",description="exact arrival/no-gap contrast" if s["pair"]=="plan_weak_vs_empty"
-                     else "order-2 Markov projection trained on excluded worlds; not an exact hidden-queue reader"))
+                     else f"order-{s['order']} Markov projection trained on {s['train_worlds']} excluded worlds; not an exact hidden-queue reader"))
     return rows
 def pilot_exclusion(s,m):
     if np.all(m["separation"]<=10):return "all forty separated within ten steps"

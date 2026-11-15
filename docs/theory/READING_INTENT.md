@@ -1,5 +1,11 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 additional label maps
+
+**G-V30-P-KM6-1; descriptive, no registered claim.** Can correction recover a maker's largest channel as makers become more alike? At maker concentration 6, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 80.3% of makers (95% whole-block interval 75.8–84.8%), versus 16.0% (13.0–19.0%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts. [Report](../versions/v30-the-readers-side/reports/P-km6.md).
+
+The complete count/correction maps support conditional reader design in the miniature; they do not establish Bayesian convergence, human markers or engine admission.
+
 ## November 15 V30 first complete maps
 
 Correction: exact permutation-symmetry ties replace decimal-bin ranking for P's PERFECT/HALF corrected labels. One failed cell changed one auxiliary label; prior verified cells were unchanged. K and L's separately retained compilation/precision repairs passed. P's posterior extension has an owner-approved compiler repair under excluded validation.

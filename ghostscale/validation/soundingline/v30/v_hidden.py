@@ -35,7 +35,7 @@ def kernel(params,prior,prices,price_prob,public_prices,public_prob,qin,qn,loss,
            truth_kind,truth_weight,draws,observations,seed,generate_mode,reference=False):
     np.random.seed(seed);T=len(draws);J=len(params)
     money=np.full((J,K),5,np.int16);need=np.zeros((J,K),np.int16);stock=np.full((J,K),8,np.int16)
-    shutdown=np.zeros((J,K),np.int16);weights=np.full((J,K),1./K);ll=np.zeros(J)
+    shutdown=np.zeros((J,K),np.int64);weights=np.full((J,K),1./K);ll=np.zeros(J)
     records=np.zeros((T,10),np.int16);public_after=np.zeros(T,np.int16);private_price=np.zeros(T,np.int16)
     invited=np.zeros(T,np.int8);defects=np.zeros(T,np.int8);prediction=np.zeros(T);delta=np.zeros(T)
     ll_path=np.zeros((T,J));m=5;d=0;x=8

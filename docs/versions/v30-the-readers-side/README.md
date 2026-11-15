@@ -21,8 +21,8 @@ at complete verified cells; partial grids stay explicitly partial.
 [source provenance](SOURCE_PROVENANCE.json) are filed here. The first verified
 batches are [P's strongly differing makers](reports/P-km3.md) and
 [R's watched-record map](reports/R-watched.md). P labels, L, R, K, N, E and F
-have admitted maps; additional reader and finite texture work remains in progress.
-P's posterior-particle extension has separate numerical validation and stays
+have admitted maps; V's four visibility arms are admitted. All five finite texture maps are prepared behind their validation gates; conditional follow-ons and monitoring are being finalized.
+The new [maker-concentration six map](reports/P-km6.md) is verified. P's posterior-particle extension has separate numerical validation and stays
 inside the same overall allocation. Known failures and repairs remain retained.
 Older scientific versions remain closed. No V30 human-mechanism or registered
 claim is authorized. Private theory handoffs stay outside the public repository.

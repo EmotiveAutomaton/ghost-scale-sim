@@ -42,8 +42,10 @@ def settings():
 def generate(s,lane="study",pulse=lambda **kw:None):
     # Context pairing across reading tables; uniforms do not depend on truth in estimation.
     seedparts={k:s[k] for k in ("km","kp","h","m","pages")}
+    if "maker_prior" in s:seedparts["maker_prior"]=s["maker_prior"]
     r=rng("P",lane,seedparts)
-    theta=r.dirichlet(np.full(12,s["km"]/12),s["worlds"])
+    alpha=np.array(s.get("maker_prior",np.full(12,s["km"]/12)),float)
+    theta=r.dirichlet(alpha,s["worlds"])
     obs=np.empty((s["worlds"],s["pages"],13),np.int16)
     c=table(s["table"],s.get("neutral_shift",0.))
     for w,truth in enumerate(theta):

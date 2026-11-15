@@ -82,6 +82,9 @@ def worker(c,job):
             reference=root/(lane+"-reconstruct")
             run_cell(module,s,reference,mode="reconstruct",original=original,lane=lane,pulse=pulse)
             equivalent(original,reference)
+            if hasattr(module,"validate_measures"):
+                with np.load(original/"cell_measures.npz",allow_pickle=False) as z:
+                    module.validate_measures(s,{k:z[k] for k in z.files})
             if lane=="pilot":
                 with np.load(original/"cell_measures.npz",allow_pickle=False) as z:
                     measures={k:z[k] for k in z.files}

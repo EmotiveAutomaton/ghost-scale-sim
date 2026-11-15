@@ -315884,9 +315884,86 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can correction recover a maker's largest channel as makers become more alike? At maker concentration 6, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 80.3% of makers (95% whole-block interval 75.8–84.8%), versus 16.0% (13.0–19.0%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 hierarchical label generation and supplied normalized tables.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "corrected": {
+          "block_means": [
+            0.8,
+            0.86,
+            0.78,
+            0.74,
+            0.8,
+            0.84
+          ],
+          "blocks": 6,
+          "estimate": 0.8033333333333333,
+          "interval95": [
+            0.7584809566244166,
+            0.8481857100422501
+          ],
+          "measure": "largest_label_accuracy",
+          "pages": 128,
+          "reader": "CORRECTED",
+          "standard_error": 0.017448336437736533,
+          "worlds": 300
+        },
+        "count": {
+          "block_means": [
+            0.14,
+            0.16,
+            0.2,
+            0.12,
+            0.16,
+            0.18
+          ],
+          "blocks": 6,
+          "estimate": 0.16,
+          "interval95": [
+            0.13031747770442823,
+            0.18968252229557178
+          ],
+          "measure": "largest_label_accuracy",
+          "pages": 128,
+          "reader": "COUNT",
+          "standard_error": 0.011547005383792518,
+          "worlds": 300
+        },
+        "setting": {
+          "blocks": 6,
+          "corrector": "HUMAN",
+          "h": 0.8,
+          "km": 6,
+          "kp": 3,
+          "m": 60,
+          "neutral_shift": 0.0,
+          "pages": 128,
+          "part": "labels",
+          "table": "HUMAN",
+          "worlds": 300
+        }
+      },
+      "estimate_detail": {
+        "sha256": "06cb3dbd20d0056c50bc2b2d454186eb6f0f2ac5d6d72451e41fb17d36931823",
+        "source_file": "results/v30/P-km6/VERIFIED.json"
+      },
+      "id": "G-V30-P-KM6-1",
+      "reader": "COUNT and known-table nonnegative least-squares correction; no evaluator mixture enters estimation.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-km6.md",
+      "source_line": 3,
+      "source_sha256": "86f569965af1788dce283c8642743845a3253cf37084cae6d4de6b11437ff3db",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T10:40:07.766890+00:00"
+  "updated": "2026-11-15T11:12:28.065313+00:00"
 }
