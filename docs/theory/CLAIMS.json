@@ -316526,9 +316526,81 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can two channels sharing events help a reader distinguish exposure, reaction strength and persistence? The theory thread proposed shows without visible triggers as a reading of leftover activation; that proposal is unsettled. This two-channel texture is a descriptive constructed-method map. 93 of 108 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Both channels share the same latent event and persistence. The checked one-dimensional activation approximation and numerical event-ranking ties remain explicit; finite resolution fixtures do not prove accuracy on every path.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, complete replay and independent reconstruction passed for retained complete cells.",
+      "estimate": {
+        "planned_settings": 108,
+        "verified_settings": 93
+      },
+      "estimate_detail": {
+        "sha256": "e0e0eb964fed0da2d3cd5382456eb95ec607d3bdcea35652c15f9df2efaead11",
+        "source_file": "results/v30/L-pair-partial/VERIFIED.json"
+      },
+      "id": "G-V30-L-PAIR-PARTIAL-1",
+      "reader": "Both channels share the same latent event and persistence. The checked one-dimensional activation approximation and numerical event-ranking ties remain explicit; finite resolution fixtures do not prove accuracy on every path.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/L-pair-partial.md",
+      "source_line": 3,
+      "source_sha256": "e5465d0cf61ed48ae4f659052cc95b636bc5ced1a717ce5dd5220dd5abfe4385",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "How does an uneven distribution of labels affect recovery of a maker's largest channel? The analyst's declared texture replaces uniform label frequencies with marginals reconstructed from the supplied reader tables. This is a descriptive constructed-method map. 137 of 360 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Only COUNT and CORRECTED are admitted. The Bayesian reader remains invalid. Table marginals are stipulated generator inputs; they do not establish a population distribution of feelings or essay-reader accuracy.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, complete replay and independent reconstruction passed for retained complete cells.",
+      "estimate": {
+        "planned_settings": 360,
+        "verified_settings": 137
+      },
+      "estimate_detail": {
+        "sha256": "e9daae120ddd3a901e83c9673fa7260912abdf3d8ae45f8d0338a541da1fe56c",
+        "source_file": "results/v30/P-uneven-partial/VERIFIED.json"
+      },
+      "id": "G-V30-P-UNEVEN-PARTIAL-1",
+      "reader": "Only COUNT and CORRECTED are admitted. The Bayesian reader remains invalid. Table marginals are stipulated generator inputs; they do not establish a population distribution of feelings or essay-reader accuracy.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-uneven-partial.md",
+      "source_line": 3,
+      "source_sha256": "918acdbbfb5e8748d64acb632849c14d2b126472362b6ad904a0a32c41e3ef95",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "What can a partner learn from refusals when the maker's internal state is hidden? The analyst's reputation proposal is tested in a constructed ledger world. This is a descriptive constructed-mechanism map. 61 of 288 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "All 61 retained cells are BLIND; no RECORD comparison or four-arm ranking follows. BLIND public refusals change forecasts by zero by construction. The particle reader shares state propagation and resampling conventions between implementations; the independent reconstruction checks choice-probability arithmetic.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, complete replay and independent reconstruction passed for retained complete cells.",
+      "estimate": {
+        "planned_settings": 288,
+        "verified_settings": 61
+      },
+      "estimate_detail": {
+        "sha256": "f8a0512d10e0aebdb8fa68bf318cfa1dc41d6a488ae394261d11ac92bb8c919e",
+        "source_file": "results/v30/V-hidden-partial/VERIFIED.json"
+      },
+      "id": "G-V30-V-HIDDEN-PARTIAL-1",
+      "reader": "All 61 retained cells are BLIND; no RECORD comparison or four-arm ranking follows. BLIND public refusals change forecasts by zero by construction. The particle reader shares state propagation and resampling conventions between implementations; the independent reconstruction checks choice-probability arithmetic.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-hidden-partial.md",
+      "source_line": 3,
+      "source_sha256": "b066a9818e32d6b57526fdd9e28075fc3cb726a9ae9bdc78d9108157a8c40273",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T21:04:05.781380+00:00"
+  "updated": "2026-11-15T21:37:01.669142+00:00"
 }

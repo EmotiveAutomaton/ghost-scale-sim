@@ -38,3 +38,35 @@ def test_empty_unbuilt_boundary_and_v30_pool(tmp_path,monkeypatch):
     record=read(next((c/"accounting").glob("*.json")))
     assert record["pool"]=="reserve" and record["reservation"]==0
     assert "family" not in record
+
+def test_rearm_drops_already_acknowledged_snapshot(tmp_path,monkeypatch):
+    c,s,now=fixture(tmp_path)
+    (s/'ARMED').touch()
+    delivered=[]
+    monkeypatch.setattr(watch,'pending',lambda *_:[])
+    monkeypatch.setattr(watch,'deferred_events',lambda *args:{})
+    monkeypatch.setattr(watch,'deliver',lambda *args:delivered.append(args[-1]))
+    assert not watch.deliver_current(c,s,{})
+    assert not delivered
+
+def test_rearm_respects_new_deferral_and_operator_disarm(tmp_path,monkeypatch):
+    c,s,now=fixture(tmp_path);(s/'ARMED').touch()
+    events=[dict(id='failed',kind='batch_failed')]
+    monkeypatch.setattr(watch,'pending',lambda *_:events)
+    monkeypatch.setattr(watch,'deferred_events',lambda *args:{'failed':True})
+    monkeypatch.setattr(watch,'deliver',lambda *args:(_ for _ in ()).throw(AssertionError('unexpected delivery')))
+    assert not watch.deliver_current(c,s,{})
+    def disarm(*args):
+        (s/'ARMED').unlink()
+        return {}
+    monkeypatch.setattr(watch,'deferred_events',disarm)
+    assert not watch.deliver_current(c,s,{})
+
+def test_fresh_failure_is_delivered(tmp_path,monkeypatch):
+    c,s,now=fixture(tmp_path);(s/'ARMED').touch()
+    events=[dict(id='new',kind='batch_failed')];delivered=[]
+    monkeypatch.setattr(watch,'pending',lambda *_:events)
+    monkeypatch.setattr(watch,'deferred_events',lambda *args:{})
+    monkeypatch.setattr(watch,'deliver',lambda *args:delivered.append(args[-1]))
+    assert watch.deliver_current(c,s,{})
+    assert delivered==[events]

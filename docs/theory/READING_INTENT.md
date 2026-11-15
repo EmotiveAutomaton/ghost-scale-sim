@@ -1,5 +1,17 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 V-hidden-partial
+
+**G-V30-V-HIDDEN-PARTIAL-1; descriptive partial map.** What can a partner learn from refusals when the maker's internal state is hidden? The analyst's reputation proposal is tested in a constructed ledger world. This is a descriptive constructed-mechanism map. 61 of 288 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed. [Report](../versions/v30-the-readers-side/reports/V-hidden-partial.md).
+
+## November 15 V30 P-uneven-partial
+
+**G-V30-P-UNEVEN-PARTIAL-1; descriptive partial map.** How does an uneven distribution of labels affect recovery of a maker's largest channel? The analyst's declared texture replaces uniform label frequencies with marginals reconstructed from the supplied reader tables. This is a descriptive constructed-method map. 137 of 360 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed. [Report](../versions/v30-the-readers-side/reports/P-uneven-partial.md).
+
+## November 15 V30 L-pair-partial
+
+**G-V30-L-PAIR-PARTIAL-1; descriptive partial map.** Can two channels sharing events help a reader distinguish exposure, reaction strength and persistence? The theory thread proposed shows without visible triggers as a reading of leftover activation; that proposal is unsettled. This two-channel texture is a descriptive constructed-method map. 93 of 108 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed. [Report](../versions/v30-the-readers-side/reports/L-pair-partial.md).
+
 ## November 15 V30 outside enforcement
 
 **G-V30-F-ENFORCEMENT-1; descriptive, no registered claim.** Can a reader distinguish a rule held for its own sake from compliance shaped by outside enforcement after the enforcer leaves? In one stipulated 64-step enforcement setting with punishment probability 0.75, fine 16 and drift 0.05, the median time from departure to separation was 52 steps (95% whole-block interval 51–55) for the own-rule maker and 47 (46–49) for the drifting priced maker; neither group remained unresolved at 512 steps. This is a descriptive constructed-mechanism result, not evidence about people. [Report](../versions/v30-the-readers-side/reports/F-enforcement.md).

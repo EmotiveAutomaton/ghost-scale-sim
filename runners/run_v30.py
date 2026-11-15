@@ -1,5 +1,5 @@
 """Finite source-bound V30 cell queue. A cell lands only after complete replay/reconstruction."""
-import argparse,ctypes,importlib,os,subprocess,time,traceback
+import argparse,ctypes,importlib,math,os,subprocess,time,traceback
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
 import numpy as np
@@ -12,6 +12,24 @@ from runners.run_v29 import compare
 from runners.watch_v23_events import owner,event
 
 def now():return datetime.now(timezone.utc)
+def resource_contract(c):
+    """Apply only an explicit, conserved pool supplement; original pins stay intact."""
+    original=read(c/"ACCEPTANCE.json")
+    path=c/"RESOURCE_REALLOCATION.json"
+    if not path.exists():return original
+    supplement=read(path)
+    if supplement.get("approved") is not True or not supplement.get("owner_authorization"):
+        raise ValueError("resource supplement lacks owner authorization")
+    if supplement.get("acceptance_sha256")!=digest(c/"ACCEPTANCE.json"):
+        raise ValueError("resource supplement acceptance mismatch")
+    limits=supplement["cpu_limits"]
+    if set(limits)!=set(original["cpu_limits"]):raise ValueError("pool roster changed")
+    if any(isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) or v<0 for v in limits.values()):
+        raise ValueError("invalid pool limit")
+    if sum(limits.values())!=sum(original["cpu_limits"].values()):raise ValueError("pool total changed")
+    if supplement.get("total_cpu_seconds")!=original["total_cpu_seconds"]:raise ValueError("total ceiling changed")
+    # Nothing else in the supplement can override clocks, gear or scientific gates.
+    return dict(original,cpu_limits=limits)
 def accounting(c):
     a=read(c/"ACCEPTANCE.json");totals={k:0. for k in a["cpu_limits"]}
     for path in (c/"accounting").glob("*.json"):
@@ -138,7 +156,7 @@ def finish(c,item,error=None):
     return state
 
 def run(c):
-    runtime.below_normal();a=read(c/"ACCEPTANCE.json");active={};blocked={};previous=None;samples=[];limit=4
+    runtime.below_normal();a=resource_contract(c);active={};blocked={};previous=None;samples=[];limit=4
     with owner(c/"controller"):
         if (c/"QUEUE_COMPLETE.json").exists():raise ValueError("finite queue already closed")
         for job in (c/"jobs").iterdir():
@@ -186,7 +204,8 @@ def run(c):
                     write(c/"QUEUE_COMPLETE.json",dict(at=current.isoformat(),counts=counts,blocked=blocked,
                          unrun=waiting,reason="finite/resource/time endpoint"))
                     event(c,"v30-finite-end","queue_depleted",dict(counts=counts,blocked=blocked,unrun=waiting));break
-                time.sleep(5)
+                # A blocked queue needs a heartbeat, not a full directory scan every five seconds.
+                time.sleep(5 if active else 60)
         finally:
             for item in active.values():finish(c,item,"controller exit")
             charge(c,"controller-"+str(os.getpid()),"reserve",time.process_time(),"STOPPED")

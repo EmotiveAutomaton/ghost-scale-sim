@@ -1,5 +1,7 @@
 # V30: the reader's side
 
+Current [queue/recording audit](QUEUE_HEALTH_2026-11-15.md): Gear 2 is configured but scientific starts are resource-held. Three partial maps are fully filed; an allocation decision is pending.
+
 The November 14 packet was commissioned November 15. This finite allocation
 has 60 CPU-hours: 44 for P/L/R/V/K/N, six for E/F and ten for healing/texture.
 The two-to-three-day target is an estimate; the seven-day outer window and

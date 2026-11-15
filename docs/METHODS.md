@@ -1977,3 +1977,7 @@ L's event-ranking area gives half credit to positive-negative score differences 
 ## V30 outside-enforcement reader
 
 The F reader compares two stipulated action laws using the observed enforcement schedule, money, need, offers and actions. Drift continues after departure and finite stock limits opportunities; known answers, excluded pilots, full seed replay and independent reconstruction are recorded per cell. This is a constructed mechanism test, not a validated reader of human records.
+
+## V30 resource-boundary audit
+
+The November 15 health audit checks all completed source/plan/admission bindings and rechecks retained pilot, replay, reconstruction and raw hashes for 243 unlanded cells. Three partial maps publish only completed cells, preserving the unrun grid. Validation-only receipts are distinguished from sampled outputs. Accounting includes conservative allowances once, separately labelled from measured CPU. [Audit report](versions/v30-the-readers-side/QUEUE_HEALTH_2026-11-15.md).

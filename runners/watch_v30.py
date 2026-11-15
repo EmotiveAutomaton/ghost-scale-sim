@@ -28,6 +28,17 @@ def observe(c,state,current):
 def review_ready(events):
     return any(e["kind"]!="batch_complete" for e in events)
 
+def deliver_current(c,state,cfg):
+    """Re-read acknowledgements after arming; never deliver an earlier snapshot."""
+    if not (state/"ARMED").exists():return False
+    current=datetime.now(timezone.utc)
+    events=pending(c,state)
+    deferred=deferred_events(c,state,events,current)
+    ready=[e for e in events if e["id"] not in deferred]
+    if not review_ready(ready) or not (state/"ARMED").exists():return False
+    deliver(c,state,cfg,ready)
+    return True
+
 def charge(c,state):
     write(c/"accounting"/("monitor-"+str(os.getpid())+".json"),
         dict(pool="reserve",state=state,cpu_seconds=time.process_time(),reservation=0.),immutable=False)
@@ -45,7 +56,7 @@ def run(c,state,config):
                     interactive_chat_delivery=False),immutable=False)
                 charge(c,"RUNNING")
                 if review_ready(ready) and (state/"ARMED").exists():
-                    try:deliver(c,state,cfg,ready)
+                    try:deliver_current(c,state,cfg)
                     except ReviewOwnerBusyError:pass
                 time.sleep(30)
         finally:

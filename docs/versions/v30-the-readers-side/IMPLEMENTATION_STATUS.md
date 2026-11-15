@@ -16,12 +16,12 @@ All commissioned family implementations, named texture maps and conditional foll
 | K attention reader | 24 | 24 verified; explicit Markov approximation |
 | N attention policies | 6 | 3 verified; 3 pilot aliases excluded |
 | E extinction | 60 | 48 verified; 12 pilot aliases excluded |
-| F outside enforcement | 216 | admitted after priority families |
-| P uneven-label texture | 360 | admitted |
-| L shared-event texture | 108 | R2 successors admitted after new validation |
-| R half/double slopes | 960 | admitted |
-| K unequal work | 156 | admitted |
-| K attention approximation checks | 48 | admitted |
+| F outside enforcement | 216 | verified and published |
+| P uneven-label texture | 360 | 137 verified and filed; 223 resource-held |
+| L shared-event texture | 108 | 93 verified and filed; 15 resource-held |
+| R half/double slopes | 960 | admitted; resource-held |
+| K unequal work | 156 | admitted; resource-held |
+| K attention approximation checks | 48 | admitted; resource-held |
 
 The table counts settings, not independent worlds or completed results. Conditional follow-ons await their complete verified trigger maps. They are implemented and validated before admission, never generated merely to occupy workers.
 
@@ -48,3 +48,5 @@ November 15, 11:45 review: K workload, K attention, N and E evidence is landed l
 November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,296-cell finer map is admitted. This is not a completed map. F and the L shared-event texture remain in progress; P Bayesian and L middle remain held.
 
 November 15, 13:00 review: the [216-setting F map](reports/F-enforcement.md) is verified; L shared-event and P uneven textures remain in progress at the snapshot. K finer-map validation is bound separately; admission is not completion.
+
+Current resource boundary: K finer map has 1,296 admitted cells; none has started. All executable scope is built. Budget reallocation is proposed, not active. See QUEUE_HEALTH_2026-11-15.md.
