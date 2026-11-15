@@ -316598,9 +316598,50 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "What does a partner gain from seeing a refusal when the maker's state and record are hidden? In the BLIND condition a public refusal changes the forecast by construction, by zero; this 24-setting subset covers live-sum weight 16, not the complete hidden-reader map. For illustration, with weight 16, plentiful resources, low offers, loss 2 and no rare large offers, the entrusted share is 98.0% (95% whole-block interval 95.5–100.5%). This is a descriptive constructed-mechanism result, not a claim about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 live-sum and blind-reader model.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "block_means": [
+          1.0,
+          0.920078125,
+          1.0,
+          1.0,
+          0.9600390625,
+          0.9600390625,
+          1.0,
+          1.0
+        ],
+        "blocks": 8,
+        "estimate": 0.98001953125,
+        "interval95": [
+          0.9547653211069502,
+          1.0052737413930497
+        ],
+        "measure": "entrusted_share",
+        "standard_error": 0.010680009784234772,
+        "worlds": 200
+      },
+      "estimate_detail": {
+        "sha256": "d21edcc02f559f736e4fd9457d06a5c36f992a5f9392d0cd80581e333d686f6b",
+        "source_file": "results/v30/V-blind-live16/VERIFIED.json"
+      },
+      "id": "G-V30-V-BLIND-LIVE16-1",
+      "reader": "Blind to ledger and public refusals.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-blind-live16.md",
+      "source_line": 3,
+      "source_sha256": "40e33859bec12a3e50b26fe25593515199aee1372773813d1a0585b995c87b21",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T21:37:01.669142+00:00"
+  "updated": "2026-11-15T22:15:17.514236+00:00"
 }

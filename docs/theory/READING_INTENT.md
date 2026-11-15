@@ -1,5 +1,10 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 blind-reader weight 16 subset
+
+**G-V30-V-BLIND-LIVE16-1; descriptive, no registered claim.** What does a partner gain from seeing a refusal when the maker's state and record are hidden? In the BLIND condition a public refusal changes the forecast by construction, by zero; this 24-setting subset covers live-sum weight 16, not the complete hidden-reader map. For illustration, with weight 16, plentiful resources, low offers, loss 2 and no rare large offers, the entrusted share is 98.0% (95% whole-block interval 95.5–100.5%). This is a descriptive constructed-mechanism result, not a claim about people. [Report](../versions/v30-the-readers-side/reports/V-blind-live16.md).
+
+
 ## November 15 V30 V-hidden-partial
 
 **G-V30-V-HIDDEN-PARTIAL-1; descriptive partial map.** What can a partner learn from refusals when the maker's internal state is hidden? The analyst's reputation proposal is tested in a constructed ledger world. This is a descriptive constructed-mechanism map. 61 of 288 planned settings have complete verified evidence. The remaining settings are resource-held; no full-map comparison is claimed. [Report](../versions/v30-the-readers-side/reports/V-hidden-partial.md).
