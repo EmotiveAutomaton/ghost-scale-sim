@@ -17,7 +17,7 @@ Pending scope is not a null. Reported intervals are pointwise block intervals.
 | Habit, means, audience, rule | Acts, prices, occasion frequency, context visibility | All 96 watched and 384 asked settings complete; price-invariant refusal is stipulated. |
 | Heat versus refusal | Repeated staged offers | All 24 settings complete. Heat median two/four offers versus refusal one at the strongest heat contrast; performer follow-on not triggered. |
 | Best probe order | Six stipulated probe laws and a prior | All 96 successor settings verified locally; earlier 84 exact settings retained. |
-| Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings and blind-reader subsets for weights 4, 8 and 16 verified; the weight-16 subset is locally landed pending publication, and the hidden map remains partial. |
+| Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings and blind-reader subsets for weights 4, 8 and 16 verified; the weight-16 subset is published, and the hidden map remains partial. |
 | Plan quieting and cues | Gap arrivals, windows, attention | 156 workload and 24 attention settings verified locally; attention reader approximate. |
 | Loudest versus reachable need | Needs and opening opportunities | Three sampled settings verified; three all-open pilot aliases excluded. |
 | Extinction across contexts | Alarm after extinction and place change | 48 sampled settings verified and 12 pilot aliases excluded; return partly fixed by model. |
@@ -66,7 +66,7 @@ income, defection, payoffs and event-conditioned forecast changes.
 STATE sees the ledger and learns type; INSIDE knows type. An already known
 type is not updated by refusal, a fixed control. The route to ToMpathy is
 conditional trust evidence. The [blind-reader live-sum subset](reports/V-blind-live4-8.md)
-covers weights 4 and 8; the [24-setting weight-16 subset](reports/V-blind-live16.md) is locally verified and pending publication. Public refusal does not update the blind forecast by construction.
+covers weights 4 and 8; the [24-setting weight-16 subset](reports/V-blind-live16.md) is verified and published. Public refusal does not update the blind forecast by construction.
 The unfinished hidden arms prohibit a full visibility ranking. [K workload](reports/K-workload.md) triggered its finer map in 10 of 12 groups by the frozen point-estimate rule; excluded validation passed and the finer map is admitted, not complete. [K attention](reports/K-attention.md) uses an approximate reader. [N](reports/N-attention.md) and [E](reports/E-extinction.md) are complete with pilot aliases excluded. Their pointwise intervals and routes are in the reports. [F outside enforcement](reports/F-enforcement.md) is complete under stipulated drift and finite stock.
 
 ## Validity and limits
