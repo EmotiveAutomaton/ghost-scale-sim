@@ -47,5 +47,6 @@ and load backoff. A reliable full-campaign finish time is not yet available.
 
 The complete L primary, 96-setting R-order audit and 48-setting V blind subset
 were committed locally before the restart but were not verified published.
-The previous publication block remains explicit; no unpublished event is
-acknowledged. [Recovery evidence](../../../results/v30/RESTART_RECOVERY_20261115.json).
+The owner subsequently approved publication, and the audited checkpoint was
+verified on public main at fe4afb8ba. The earlier block is retained as history;
+only fully landed, published evidence is eligible for event acknowledgement. [Recovery evidence](../../../results/v30/RESTART_RECOVERY_20261115.json).
