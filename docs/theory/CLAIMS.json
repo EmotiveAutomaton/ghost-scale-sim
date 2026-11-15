@@ -316320,7 +316320,7 @@
       "registered_claim": false,
       "source_file": "docs/versions/v30-the-readers-side/reports/L-complete-rank-r2.md",
       "source_line": 3,
-      "source_sha256": "6f5b197902e7bd2110eb6bda778fbd081c4b53768add5200831b99dcea2cfbba",
+      "source_sha256": "d3e8cae5f5eccebf152678ed2ec7a2bdf1dbcf24e3bc78ac067e6d03ff82e0c1",
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
@@ -316352,9 +316352,50 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "What does a partner gain from seeing a refusal when the maker's state and record are hidden? In the BLIND condition a public refusal changes the forecast by construction, by zero; this 48-setting subset covers live-sum weights 4 and 8, not the complete hidden-reader map. For illustration, with weight 4, plentiful resources, low offers, loss 2 and no rare large offers, the entrusted share is 57.8% (95% whole-block interval 49.1–66.5%). This is a descriptive constructed-mechanism result, not a claim about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 live-sum and blind-reader model.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass.",
+      "estimate": {
+        "block_means": [
+          0.5233203125,
+          0.6446875,
+          0.601171875,
+          0.4027734375,
+          0.6018359375,
+          0.5226953125,
+          0.5633203125,
+          0.76078125
+        ],
+        "blocks": 8,
+        "estimate": 0.5775732421875,
+        "interval95": [
+          0.4905030396535159,
+          0.664643444721484
+        ],
+        "measure": "entrusted_share",
+        "standard_error": 0.036822003527763256,
+        "worlds": 200
+      },
+      "estimate_detail": {
+        "sha256": "00d3d71e7d7129215098c211fdc829579b51c67951380d18a7238a9397a17521",
+        "source_file": "results/v30/V-blind-live4-8/VERIFIED.json"
+      },
+      "id": "G-V30-V-BLIND-LIVE4-8-1",
+      "reader": "Blind to ledger and public refusals.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-blind-live4-8.md",
+      "source_line": 3,
+      "source_sha256": "fb6540a9d12e3448a124313eb6fa1d1204fee6489918404c194ea8c9518f065a",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T17:27:26.799031+00:00"
+  "updated": "2026-11-15T18:15:20.730319+00:00"
 }

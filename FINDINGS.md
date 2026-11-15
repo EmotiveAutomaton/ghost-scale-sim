@@ -1,5 +1,10 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V30 blind-reader subset
+
+**G-V30-V-BLIND-LIVE4-8-1; descriptive, no registered claim.** What does a partner gain from seeing a refusal when the maker's state and record are hidden? In the BLIND condition a public refusal changes the forecast by construction, by zero; this 48-setting subset covers live-sum weights 4 and 8, not the complete hidden-reader map. For illustration, with weight 4, plentiful resources, low offers, loss 2 and no rare large offers, the entrusted share is 57.8% (95% whole-block interval 49.1–66.5%). This is a descriptive constructed-mechanism result, not a claim about people. [Report](docs/versions/v30-the-readers-side/reports/V-blind-live4-8.md).
+
+
 ## November 15 V30 exact probe-order audit
 
 **G-V30-R-ORDER-R2-1; descriptive, no registered claim.** How does the order of stipulated questions affect the number needed to distinguish a rule? The 96-setting exact probe-order audit is complete. In the 84 settings retained from before the repair, all measured arrays, selected fixed orders and reported fixed and adaptive expected costs are unchanged. This is a constructed-method result under the specified answer law, not evidence about people. [Report](docs/versions/v30-the-readers-side/reports/R-order-r2.md).

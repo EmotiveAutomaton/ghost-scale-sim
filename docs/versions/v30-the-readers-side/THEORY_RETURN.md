@@ -3,7 +3,7 @@
 These are descriptive constructed-world results. No finding establishes a human
 marker or admits an engine reader. Corrections: P's Bayesian reference remains
 invalid; L's event-ranking ties were repaired and all completed cells audited;
-R's exact-order tie repair passes validation and its full audit is queued.
+R's exact-order successor audit is verified locally; the earlier failed assertion remains retained.
 
 ## Tells table
 
@@ -13,11 +13,11 @@ Pending scope is not a null. Reported intervals are pointwise block intervals.
 | Distinction | Evidence required | Current result |
 |---|---|---|
 | Largest maker channel | Repeated labels and a known reader-error table | All 558 COUNT/CORRECTED settings complete; Bayesian comparison unavailable. |
-| Frequent triggers, strong reactions, persistence | Shows and detected events | All 133 primary settings complete after ranking correction; a middle-detector correlation follow-on awaits validation. |
+| Frequent triggers, strong reactions, persistence | Shows and detected events | All 133 primary settings complete after ranking correction; the middle-detector follow-on is held after failed validation. |
 | Habit, means, audience, rule | Acts, prices, occasion frequency, context visibility | All 96 watched and 384 asked settings complete; price-invariant refusal is stipulated. |
 | Heat versus refusal | Repeated staged offers | All 24 settings complete. Heat median two/four offers versus refusal one at the strongest heat contrast; performer follow-on not triggered. |
-| Best probe order | Six stipulated probe laws and a prior | Numerical tie repair validated; full 96-setting audit admitted, with earlier 84 exact settings retained. |
-| Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings complete; hidden-state arms continue. |
+| Best probe order | Six stipulated probe laws and a prior | All 96 successor settings verified locally; earlier 84 exact settings retained. |
+| Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings and a 48-setting blind-reader subset verified; the hidden map remains partial. |
 | Plan quieting and cues | Gap arrivals, windows, attention | K workload/attention maps queued; attention reader approximate. |
 | Loudest versus reachable need | Needs and opening opportunities | N queued. |
 | Extinction across contexts | Alarm after extinction and place change | E queued; return partly fixed by model. |
@@ -48,8 +48,8 @@ neither a human marker nor transfer to recalled feelings is established. In the
 2,000-maker exact-event correlation cell, correlation with persistence controlling
 reaction strength is 0.9783 (95% block interval 0.9765–0.9800), while partial
 correlation with reaction strength controlling persistence and event frequency
-is 0.8594 (0.8469–0.8703). The middle-detector follow-on is triggered, with
-validation pending; both dependencies are specific to the stipulated model.
+is 0.8594 (0.8469–0.8703). The middle-detector follow-on was triggered, but
+its excluded validation failed and it is held; both dependencies are specific to the stipulated model.
 
 R carries Round 18 G2. The [watched map](reports/R-watched.md) retains
 full-record separation and censoring. The [asked map](reports/R-asked.md)
@@ -58,15 +58,16 @@ are truthful, falling to 83.0% (77.1–88.9%) at reliability 0.9 and zero at
 0.75 in the named equal-prior/keep-bias-0.5 cell. The [heat map](reports/R-heat.md)
 tests the analyst's unsettled heat proposal: heat is slower than refusal in
 both trigger settings, so no performer follow-on is admitted.
-The ToMpathy route is conditional probe planning; order recommendations await
-the repaired exact map.
+The ToMpathy route is conditional probe planning; the [96-setting exact-order
+successor audit](reports/R-order-r2.md) is verified locally.
 
 V's [visible-information report](reports/V-visible.md) retains entrustment,
 income, defection, payoffs and event-conditioned forecast changes.
 STATE sees the ledger and learns type; INSIDE knows type. An already known
 type is not updated by refusal, a fixed control. The route to ToMpathy is
-conditional trust evidence; the unfinished hidden arms prohibit a full
-visibility ranking. K/N/E/F remain pending with their original routes.
+conditional trust evidence. The [blind-reader live-sum subset](reports/V-blind-live4-8.md)
+covers weights 4 and 8; public refusal does not update its forecast by construction.
+The unfinished hidden arms prohibit a full visibility ranking. K/N/E/F remain pending with their original routes.
 
 ## Validity and limits
 

@@ -11,7 +11,7 @@ All commissioned family implementations, named texture maps and conditional foll
 | R watched and asked | 480 | verified complete |
 | R repeated heat/refusal | 24 | verified complete; performer not triggered |
 | R exact probe order | 96 | 84 original exact cells retained; approved assertion-only repair passes; all 96 exact settings admitted |
-| V four visibility arms | 576 | 288 visible cells verified; hidden arms running |
+| V four visibility arms | 576 | 288 visible cells verified; 61 hidden cells verified at the 10:07 snapshot, remaining hidden grid incomplete |
 | K workload | 156 | admitted |
 | K attention reader | 24 | admitted; explicit Markov approximation |
 | N attention policies | 6 | admitted |
@@ -34,7 +34,9 @@ Morning update: L's approved second repair passed 194 checks over 191 retained r
 The assertion-only R successor now passes all 15 checks, and its 96-cell exact audit is admitted. L's 108 texture successors also pass the new check and are admitted. No further automatic L or R repair.
 
 The complete L primary includes a 2,000-maker exact-event correlation cell.
-Its frozen middle-detector follow-on trigger is true; validation is prepared and
-must pass before that follow-on is admitted. [Complete L report](reports/L-complete-rank-r2.md).
+Its frozen middle-detector follow-on trigger is true; excluded validation failed,
+and the follow-on is held. [Complete L report](reports/L-complete-rank-r2.md).
 
 November 15 review: the [96-setting exact R order audit](reports/R-order-r2.md) is verified locally; 84 overlapping retained settings have unchanged measure arrays, selected fixed orders and reported fixed/adaptive costs. L middle-detector follow-on validation failed while serializing a non-finite summary; the follow-on is held, not a scientific null. No further automatic L repair is authorized.
+
+November 15, 10:05 review: the [48-setting BLIND live-sum subset](reports/V-blind-live4-8.md) is verified locally. The hidden grid remains partial; no final resource disposition or four-arm comparison is claimed.

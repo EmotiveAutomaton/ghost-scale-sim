@@ -18,7 +18,7 @@ Its [Bayesian reference remains held](reports/P-bayes-held.md).
 
 R's [watched](reports/R-watched.md), [asked](reports/R-asked.md) and
 [heat](reports/R-heat.md) maps are complete. The exact-order successor audit is
-running after its approved assertion-only repair. V's [visible-information map](reports/V-visible.md)
+verified locally after its approved assertion-only repair. V's [visible-information map](reports/V-visible.md)
 is complete; hidden-state work continues. L's [complete corrected primary map](reports/L-complete-rank-r2.md)
 combines 95 corrected earlier cells with 38 verified successors. Other admitted studies and
 declared textures remain queued; a roster is not a completed result.
@@ -30,3 +30,5 @@ All findings are descriptive constructed-world results; no human marker,
 registered claim or engine admission follows.
 
 November 15 review: the [96-setting exact R order audit](reports/R-order-r2.md) is verified locally; 84 overlapping retained settings have unchanged measure arrays, selected fixed orders and reported fixed/adaptive costs. L middle-detector follow-on validation failed while serializing a non-finite summary; the follow-on is held, not a scientific null. No further automatic L repair is authorized.
+
+The [blind-reader live-sum subset](reports/V-blind-live4-8.md) is verified for weights 4 and 8; the rest of the hidden map remains partial.
