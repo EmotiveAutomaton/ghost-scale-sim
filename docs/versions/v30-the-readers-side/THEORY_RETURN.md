@@ -13,7 +13,7 @@ Pending scope is not a null. Reported intervals are pointwise block intervals.
 | Distinction | Evidence required | Current result |
 |---|---|---|
 | Largest maker channel | Repeated labels and a known reader-error table | All 558 COUNT/CORRECTED settings complete; Bayesian comparison unavailable. |
-| Frequent triggers, strong reactions, persistence | Shows and detected events | 95/133 settings complete after ranking correction. Target rate 0.16 complete; remaining map continues. |
+| Frequent triggers, strong reactions, persistence | Shows and detected events | All 133 primary settings complete after ranking correction; a middle-detector correlation follow-on awaits validation. |
 | Habit, means, audience, rule | Acts, prices, occasion frequency, context visibility | All 96 watched and 384 asked settings complete; price-invariant refusal is stipulated. |
 | Heat versus refusal | Repeated staged offers | All 24 settings complete. Heat median two/four offers versus refusal one at the strongest heat contrast; performer follow-on not triggered. |
 | Best probe order | Six stipulated probe laws and a prior | Numerical tie repair validated; full 96-setting audit admitted, with earlier 84 exact settings retained. |
@@ -38,13 +38,18 @@ independent rating noise: 55.4384 informative sentences, eight whole pages
 at 7.5 such sentences per page.
 
 L tests the thread's unsettled leftover-activation proposal.
-The [corrected partial detector map](reports/L-partial-rank-r2.md) includes
+The [complete corrected map](reports/L-complete-rank-r2.md) includes
 five competing makers at target show rate 0.16. With a show reader hitting 0.6
 and falsely reporting 0.05, shows alone leave all three pure-maker medians
 unresolved by 1,500 steps. Exact events give medians 461 (420–491), 1343.5
 (1200–1417) and 1182 (1035–1303) for frequent triggers, strong reactions and
 persistence. The route is ToMpathy's detector requirement and Sounding Line IN14;
-neither a human marker nor the unfinished correlation result is established.
+neither a human marker nor transfer to recalled feelings is established. In the
+2,000-maker exact-event correlation cell, correlation with persistence controlling
+reaction strength is 0.9783 (95% block interval 0.9765–0.9800), while partial
+correlation with reaction strength controlling persistence and event frequency
+is 0.8594 (0.8469–0.8703). The middle-detector follow-on is triggered, with
+validation pending; both dependencies are specific to the stipulated model.
 
 R carries Round 18 G2. The [watched map](reports/R-watched.md) retains
 full-record separation and censoring. The [asked map](reports/R-asked.md)
@@ -84,9 +89,9 @@ and [retained failures](../../../results/v30/RETAINED_FAILURES.json).
 
 ## Not yet run or accepted
 
-Bayesian P remains held. L's remaining primary/correlation cells, repaired
-order map, hidden V, K/N/E/F and textures have their dispositions in the
+Bayesian P remains held. The repaired order map, hidden V, K/N/E/F, L's
+conditional follow-on and textures have their dispositions in the
 [roster](IMPLEMENTATION_STATUS.md) and [current state](../../../results/v30/CURRENT_STATUS.json).
 Conditional work requires complete verified inputs. The R performer trigger
-is false; P scale comparison unavailable; L and K triggers remain pending.
+is false; P scale comparison unavailable; L triggered and K remains pending.
 Final coverage and resource-held remainders will replace this interim return.

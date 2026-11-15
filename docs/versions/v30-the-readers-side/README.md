@@ -17,10 +17,10 @@ P's complete count/correction maps cover maker concentrations
 Its [Bayesian reference remains held](reports/P-bayes-held.md).
 
 R's [watched](reports/R-watched.md), [asked](reports/R-asked.md) and
-[heat](reports/R-heat.md) maps are complete. The exact-order map is undergoing
-its first bounded numerical repair. V's [visible-information map](reports/V-visible.md)
-is complete; hidden-state work continues. L has [95 corrected complete cells](reports/L-partial-rank-r2.md)
-and an approved continuation after its ranking audit. Other admitted studies and
+[heat](reports/R-heat.md) maps are complete. The exact-order successor audit is
+running after its approved assertion-only repair. V's [visible-information map](reports/V-visible.md)
+is complete; hidden-state work continues. L's [complete corrected primary map](reports/L-complete-rank-r2.md)
+combines 95 corrected earlier cells with 38 verified successors. Other admitted studies and
 declared textures remain queued; a roster is not a completed result.
 
 Every accepted sampled cell needs known answers, an excluded pilot, full replay

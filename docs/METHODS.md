@@ -2,6 +2,12 @@
 
 V30 adds per-cell immutable execution with excluded pilots, full seed replay and independent retained-data reconstruction. Exact finite probe-order maps use enumeration instead of fabricated sampled pilots. Checked activation grids and posterior particles have prospective numerical admission gates; resource stops retain complete cells. See [V30 protocols](versions/v30-the-readers-side/README.md).
 
+V30's completed L primary preserves 95 corrected earlier cells alongside 38
+successor cells. Its retained ranking audit uses half credit within 1e-10 and
+checks adjacent resolutions without changing likelihoods or separation gates.
+The exact-event correlation trigger is evaluated prospectively from the verified
+cell; the middle-detector follow-on requires separate validation. [L report](versions/v30-the-readers-side/reports/L-complete-rank-r2.md).
+
 V29's owner-approved second numerical repairs separate auxiliary rounding from scientific evidence. Q2 uses a difference-based 1e-10-nat tie band for auxiliary rank labels; X2 represents frozen probabilities at twelve decimals for the inclusive half-probability dating threshold. Both preserve likelihoods and three-nat separation gates, retain failed originals, and require full replay and independent reconstruction. Retained-path audits report any changed earlier labels or dates separately. These conventions do not validate miniature realism. [Repair protocols and current status](versions/v29-above-the-loops/QUEUE_REPORT_2026-11-14.md).
 
 V29's completed additions include exact hidden freeze-state mixtures with explicit late-entry priors, conditional next-action rates from retained paths, and whole-block refitting for shared predictive-rank uncertainty. Conditional rates retain denominators and are descriptive, not causal effects or extra independent likelihood factors. The finite continuation freezes variant rosters and parent bindings, pairs extinction/reminder paths, and requires complete pilot and main replay/reconstruction before landing. [Secondary analysis](versions/v29-above-the-loops/reports/SECONDARY.md), [continuation protocol](versions/v29-above-the-loops/protocols/CONTINUATION.md).

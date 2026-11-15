@@ -7,7 +7,7 @@ All commissioned family implementations, named texture maps and conditional foll
 | P labels | 558 | verified complete |
 | P Bayesian reference | 180 | held: frozen convergence failed |
 | P strength | 1 | analytic known answer verified |
-| L one channel and correlation | 133 | 95 verified with corrected ranks; 38 repaired successors admitted |
+| L one channel and correlation | 133 | 95 corrected original cells and 38 verified repaired successors; complete |
 | R watched and asked | 480 | verified complete |
 | R repeated heat/refusal | 24 | verified complete; performer not triggered |
 | R exact probe order | 96 | 84 original exact cells retained; approved assertion-only repair passes; all 96 exact settings admitted |
@@ -32,3 +32,7 @@ L's dispatch audit caught missing fast-separation/exact-alias pilot exclusions b
 Morning update: L's approved second repair passed 194 checks over 191 retained records. R's first repair passed all three exact replay/reconstruction fixtures but its new control assertion was wrong; the owner approved an assertion-only successor with scientific code unchanged. Read their frozen repair protocols.
 
 The assertion-only R successor now passes all 15 checks, and its 96-cell exact audit is admitted. L's 108 texture successors also pass the new check and are admitted. No further automatic L or R repair.
+
+The complete L primary includes a 2,000-maker exact-event correlation cell.
+Its frozen middle-detector follow-on trigger is true; validation is prepared and
+must pass before that follow-on is admitted. [Complete L report](reports/L-complete-rank-r2.md).

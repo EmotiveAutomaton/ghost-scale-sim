@@ -1,5 +1,9 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 complete L map
+
+**G-V30-L-COMPLETE-R2-1; descriptive, no registered claim.** Does the share of shows without a visible event track persistence? The theory thread proposed this as a reading of leftover activation. In 2,000 constructed makers with exact event detection, its correlation with persistence after controlling reaction strength was 0.9783 (95% block interval 0.9765–0.9800); its partial correlation with reaction strength after controlling persistence and event frequency was 0.8594 (0.8469–0.8703). Both dependencies occur in the stipulated activation law, and this is not a human stress marker. [Report](../versions/v30-the-readers-side/reports/L-complete-rank-r2.md).
+
 ## November 15 V30 corrected event ranking
 
 **G-V30-L-PARTIAL-R2-1; descriptive partial map.** Can a reader tell frequent triggers, strong reactions and persistence apart? This tests the theory thread's unsettled proposal that shows without visible triggers reveal leftover activation. Ninety-five of 133 one-channel/correlation settings have verified complete evidence; the target-show-rate 0.16 map is complete, the 0.08 map is partial and 0.32 plus the correlation study await the repaired continuation. This is a constructed-method result, not a human stress marker.

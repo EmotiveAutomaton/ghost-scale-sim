@@ -316232,9 +316232,101 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Does the share of shows without a visible event track persistence? The theory thread proposed this as a reading of leftover activation. In 2,000 constructed makers with exact event detection, its correlation with persistence after controlling reaction strength was 0.9783 (95% block interval 0.9765–0.9800); its partial correlation with reaction strength after controlling persistence and event frequency was 0.8594 (0.8469–0.8703). Both dependencies occur in the stipulated activation law, and this is not a human stress marker.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Stipulated activation, observation and event laws.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, full replay, independent reconstruction and retained ranking audit pass.",
+      "estimate": {
+        "correlation_g": {
+          "blocks": 8,
+          "estimate": 0.1975701294250835,
+          "interval95": [
+            0.16099825066684828,
+            0.2325054057667519
+          ],
+          "measure": "correlation_g",
+          "worlds": 2000
+        },
+        "correlation_g_given_p_rho": {
+          "blocks": 8,
+          "estimate": 0.8593784842454227,
+          "interval95": [
+            0.8468529216829619,
+            0.87031797786488
+          ],
+          "measure": "correlation_g_given_p_rho",
+          "worlds": 2000
+        },
+        "correlation_p": {
+          "blocks": 8,
+          "estimate": -0.1869947244700423,
+          "interval95": [
+            -0.22656233468793707,
+            -0.15022499692426322
+          ],
+          "measure": "correlation_p",
+          "worlds": 2000
+        },
+        "correlation_p_given_g_rho": {
+          "blocks": 8,
+          "estimate": -0.7291659086160033,
+          "interval95": [
+            -0.7558964198319359,
+            -0.7045317408361944
+          ],
+          "measure": "correlation_p_given_g_rho",
+          "worlds": 2000
+        },
+        "correlation_rho": {
+          "blocks": 8,
+          "estimate": 0.9517734914126232,
+          "interval95": [
+            0.9497227939178187,
+            0.9537756815693831
+          ],
+          "measure": "correlation_rho",
+          "worlds": 2000
+        },
+        "correlation_rho_given_g": {
+          "blocks": 8,
+          "estimate": 0.9783375126904205,
+          "interval95": [
+            0.9765311456037598,
+            0.9799939353084156
+          ],
+          "measure": "correlation_rho_given_g",
+          "worlds": 2000
+        },
+        "correlation_rho_given_g_p": {
+          "blocks": 8,
+          "estimate": 0.9895102891345412,
+          "interval95": [
+            0.9888878070304233,
+            0.9900844203137376
+          ],
+          "measure": "correlation_rho_given_g_p",
+          "worlds": 2000
+        }
+      },
+      "estimate_detail": {
+        "sha256": "8bf824dbfccaf4a2a67f3f9a75799228a76a73906c287f2918f12b40b39b50ba",
+        "source_file": "results/v30/L-complete-rank-r2/CORRELATION.json"
+      },
+      "id": "G-V30-L-COMPLETE-R2-1",
+      "reader": "Exact event detection for correlation; checked grid for detector map.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/L-complete-rank-r2.md",
+      "source_line": 3,
+      "source_sha256": "6f5b197902e7bd2110eb6bda778fbd081c4b53768add5200831b99dcea2cfbba",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T16:14:16.929032+00:00"
+  "updated": "2026-11-15T17:08:22.169007+00:00"
 }
