@@ -36,3 +36,5 @@ The assertion-only R successor now passes all 15 checks, and its 96-cell exact a
 The complete L primary includes a 2,000-maker exact-event correlation cell.
 Its frozen middle-detector follow-on trigger is true; validation is prepared and
 must pass before that follow-on is admitted. [Complete L report](reports/L-complete-rank-r2.md).
+
+November 15 review: the [96-setting exact R order audit](reports/R-order-r2.md) is verified locally; 84 overlapping retained settings have unchanged measure arrays, selected fixed orders and reported fixed/adaptive costs. L middle-detector follow-on validation failed while serializing a non-finite summary; the follow-on is held, not a scientific null. No further automatic L repair is authorized.

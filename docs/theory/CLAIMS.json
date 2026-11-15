@@ -316324,9 +316324,37 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "How does the order of stipulated questions affect the number needed to distinguish a rule? The 96-setting exact probe-order audit is complete. In the 84 settings retained from before the repair, all measured arrays, selected fixed orders and reported fixed and adaptive expected costs are unchanged. This is a constructed-method result under the specified answer law, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 stipulated answer and emission laws.",
+      "claim_kind": "method",
+      "control_status": "15 validation checks, known-answer controls, complete exact replay and independent reconstruction pass.",
+      "estimate": {
+        "fixed_cost_changes": 0,
+        "greedy_cost_changes": 0,
+        "maximum_absolute_measure_array_change": 0,
+        "order_changes": 0,
+        "overlap_settings": 84,
+        "settings": 96
+      },
+      "estimate_detail": {
+        "sha256": "40c21c28dc447c8c3c80eba599ecf53234fe209c88b5caf952c597aaf76f61ff",
+        "source_file": "results/v30/R-order-r2/VERIFIED.json"
+      },
+      "id": "G-V30-R-ORDER-R2-1",
+      "reader": "Fixed and greedy adaptive exact probe-order enumeration.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/R-order-r2.md",
+      "source_line": 3,
+      "source_sha256": "6baedb5b81ea9a6e8247d60d423f4ed6b5eb2d1523745db310ec5d1000bc6704",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T17:08:22.169007+00:00"
+  "updated": "2026-11-15T17:27:26.799031+00:00"
 }

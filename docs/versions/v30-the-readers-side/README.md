@@ -28,3 +28,5 @@ and independent reconstruction. Exact-order cells use exhaustive enumeration.
 Resource stops preserve verified complete cells and mark the rest partial.
 All findings are descriptive constructed-world results; no human marker,
 registered claim or engine admission follows.
+
+November 15 review: the [96-setting exact R order audit](reports/R-order-r2.md) is verified locally; 84 overlapping retained settings have unchanged measure arrays, selected fixed orders and reported fixed/adaptive costs. L middle-detector follow-on validation failed while serializing a non-finite summary; the follow-on is held, not a scientific null. No further automatic L repair is authorized.

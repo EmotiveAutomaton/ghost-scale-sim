@@ -1,5 +1,10 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 exact probe-order audit
+
+**G-V30-R-ORDER-R2-1; descriptive, no registered claim.** How does the order of stipulated questions affect the number needed to distinguish a rule? The 96-setting exact probe-order audit is complete. In the 84 settings retained from before the repair, all measured arrays, selected fixed orders and reported fixed and adaptive expected costs are unchanged. This is a constructed-method result under the specified answer law, not evidence about people. [Report](../versions/v30-the-readers-side/reports/R-order-r2.md).
+
+
 ## November 15 V30 complete L map
 
 **G-V30-L-COMPLETE-R2-1; descriptive, no registered claim.** Does the share of shows without a visible event track persistence? The theory thread proposed this as a reading of leftover activation. In 2,000 constructed makers with exact event detection, its correlation with persistence after controlling reaction strength was 0.9783 (95% block interval 0.9765–0.9800); its partial correlation with reaction strength after controlling persistence and event frequency was 0.8594 (0.8469–0.8703). Both dependencies occur in the stipulated activation law, and this is not a human stress marker. [Report](../versions/v30-the-readers-side/reports/L-complete-rank-r2.md).
