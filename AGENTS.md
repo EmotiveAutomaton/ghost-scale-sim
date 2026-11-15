@@ -36,9 +36,14 @@ Read results/v30/OWNER_DECISIONS_20261115.json. P's supplied numerical tables
 reproduce; its independent retained-mixture reconstruction is within 7.92e-14.
 Fresh-sample discrepancies and baseline auxiliary ties remain on record.
 
-The initial P COUNT/CORRECTED queue is separate from its unadmitted particle
-extension. Build the remaining commissioned families; a roster is not an
-executed or admitted study. Each complete cell requires excluded pilot, full
+All commissioned primary implementations, named textures and conditional
+follow-on builders are present. Read IMPLEMENTATION_STATUS.md and CARDS.json.
+P's final owner-approved collapsed Bayesian repair failed its frozen convergence
+gate; its 180 scientific settings remain held, with no additional automatic
+repair authorized. COUNT/CORRECTED and the other admitted maps continue.
+L's missing pilot dispatch exclusions were added before any affected cell
+started; use the preserved L-CORE-GATED and L_PAIR_GATED successors.
+A roster is not an executed or admitted study. Each complete cell requires excluded pilot, full
 seed replay and independent reconstruction. Keep immutable sources and all
 failures; one separately frozen healing per family. Resource stops retain
 verified complete cells and mark the remaining grid partial. Keep one finite

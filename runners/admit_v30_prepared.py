@@ -18,6 +18,9 @@ def admit(c):
         if not gate.exists():write(gate,dict(passed=True,validation_sha256=digest(validation),
             validation_completion_sha256=digest(job/"COMPLETE.json"),prepared_sha256=digest(path)))
         total=len(prepared["settings"])
+        prior=[c/f"jobs/{family}-{i:04d}/COMPLETE.json" for i in range(total)]
+        if all(p.exists() and read(p)["state"]=="WITHDRAWN_UNSTARTED" for p in prior):
+            dispositions[family]="superseded before execution; preserved successor plans govern";continue
         for i,s in enumerate(prepared["settings"]):
             if family=="L_PAIR":s=dict(s,resolution=answer["chosen_resolution"])
             plan={k:prepared[k] for k in ("source_root","source_manifest_sha256","acceptance_sha256",

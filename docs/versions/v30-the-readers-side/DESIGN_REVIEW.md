@@ -75,3 +75,5 @@ seed replay and independent reconstruction. Resource limits retain complete
 verified cells and label the remaining grid partial. One separately frozen
 healing is permitted per family; contrary scientific results are not repairs.
 Only the packet's named textures and conditional follow-ons are commissioned.
+
+Final numerical admission update: the owner-approved collapsed P sampler failed the unchanged chain convergence gates; its 180 scientific settings are held. All other primary/texture admission checks passed. L's pilot dispatch exclusions were added to unstarted successors with numerical code unchanged. See IMPLEMENTATION_STATUS.md and the validation ledger.

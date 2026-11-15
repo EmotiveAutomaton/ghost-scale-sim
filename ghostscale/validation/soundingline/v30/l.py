@@ -254,3 +254,14 @@ def controls(dest=None,pulse=lambda **kw:None):
     result=audit_controls(checks)
     if dest is not None:write(Path(dest)/"CONTROLS.json",result)
     return result
+
+def pilot_exclusion(s,m):
+    if s["part"]=="correlation":return None
+    if np.all(m["separation"]<=10):return "all forty separated within ten steps"
+    # Equal observed prefix likelihoods imply equal per-step probabilities on
+    # the retained path. Do not round near-equal scientific evidence into an alias.
+    likelihood=m["_ll"];truth=s["truth"]
+    for rival in range(likelihood.shape[-1]):
+        if rival!=truth and np.array_equal(likelihood[...,truth],likelihood[...,rival]):
+            return "observed exact likelihood alias"
+    return None

@@ -17,7 +17,7 @@ def accepted(c,names):
 
 def triggers(c):
     out={}
-    item=accepted(c,["L-CORE-R1-0132"])
+    item=accepted(c,["L-CORE-GATED-0132"])
     if item:
         rows,bind=item
         x=next(r for r in rows[0]["rows"] if r["measure"]=="correlation_rho_given_g")["estimate"]

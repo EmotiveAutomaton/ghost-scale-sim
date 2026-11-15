@@ -1,5 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
+November 15 numerical limitation: P's owner-approved collapsed Bayesian repair failed its frozen convergence gate (worst split-chain ratio 1.736; minimum effective sample size 6.505). Its 180 scientific settings remain unrun; valid count/correction maps are unchanged. [Failure report](docs/versions/v30-the-readers-side/reports/P-bayes-held.md).
+
+## November 15 V30 additional label maps
+
+**G-V30-P-KM12-1; descriptive, no registered claim.** Can correction recover a maker's largest channel as makers become more alike? At maker concentration 12, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 75.0% of makers (95% whole-block interval 68.8–81.2%), versus 13.7% (10.9–16.5%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts. [Report](docs/versions/v30-the-readers-side/reports/P-km12.md).
+
+The complete count/correction maps support conditional reader design in the miniature; they do not establish Bayesian convergence, human markers or engine admission.
+
 ## November 15 V30 additional label maps
 
 **G-V30-P-KM6-1; descriptive, no registered claim.** Can correction recover a maker's largest channel as makers become more alike? At maker concentration 6, 128 sixty-sentence pages, 80% neutral sentences and page concentration three, the HUMAN-table corrected reader names the largest channel in 80.3% of makers (95% whole-block interval 75.8–84.8%), versus 16.0% (13.0–19.0%) for raw counts. This is a descriptive constructed-method result, not evidence about people's page counts. [Report](docs/versions/v30-the-readers-side/reports/P-km6.md).

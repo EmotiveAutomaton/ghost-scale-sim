@@ -1,6 +1,6 @@
 # Ghost Scale Simulation
 
-V30 is running in Gear 2. Its first complete maps cover label recovery for strongly differing makers and all 96 watched-rule settings. [Program and design decisions](docs/versions/v30-the-readers-side/README.md); [P result](docs/versions/v30-the-readers-side/reports/P-km3.md); [R result](docs/versions/v30-the-readers-side/reports/R-watched.md); [recorded state](results/v30/CURRENT_STATUS.json). Remaining readers, textures and checks are still being assembled.
+V30 is running in Gear 2. Its first complete maps cover label recovery for strongly differing makers and all 96 watched-rule settings. [Program and design decisions](docs/versions/v30-the-readers-side/README.md); [P result](docs/versions/v30-the-readers-side/reports/P-km3.md); [R result](docs/versions/v30-the-readers-side/reports/R-watched.md); [recorded state](results/v30/CURRENT_STATUS.json). All implementations and named textures are built; the Bayesian reference is held after failed convergence. [Setup and limits](docs/versions/v30-the-readers-side/SETUP_REPORT_2026-11-15.md).
 
 V29 has eleven primary maps, 35 original continuation maps and six separately repaired maps verified. Four additional X2 repair variants are resource-held. [Theory return and tells](docs/versions/v29-above-the-loops/THEORY_RETURN.md); [coverage](results/v29/FINAL_COVERAGE_20261114.json).
 
