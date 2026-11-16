@@ -1,6 +1,6 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-16T08:16:53.515466+00:00. Gear 2 is active with 4 permitted scientific workers. Counts below are a snapshot; the queue continues.
+Checkpoint 2026-11-16T11:17:22.816727+00:00. Gear 2 is active with 4 permitted scientific workers. Counts below are a snapshot; the queue continues.
 
 | Family | Prepared jobs | Purpose |
 |---|---:|---|
@@ -29,3 +29,5 @@ S.b is held after an excluded numerical reconstruction failure and its failed fi
 All scientific jobs require known answers, forty excluded pilots, full seed replay and independent reconstruction. Family ceilings can leave partial maps; a complete roster is not a promise of full execution. No registered claim or human marker is admitted.
 
 [First 216 diary cells](D_DIARY_SHAPES.md) are fully audited; the opening eighteen overlap that map and are not additional replication. [Current machine-readable state](../../../results/v31/CURRENT_STATUS.json).
+
+Five complete 216-cell D diary blocks (1,080 cells) and the 144-cell reaction/carry map have been audited and documented. The opening eighteen are included once. Later D cells remain partial until a complete prospective block is verified. [Theory return](THEORY_RETURN.md).

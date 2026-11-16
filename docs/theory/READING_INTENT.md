@@ -1,5 +1,15 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+**G-V31-D-OPTIONAL-RECIPE-SUPPLEMENT-1; method sensitivity analysis.** Does the optional moment estimator retain its precision advantage in additional verified diary settings? Ten further cells meet the frozen spread criterion; their biases and observation-model limits remain material, so this is a secondary sensitivity analysis. [Supplement](../versions/v31-four-settings/D_OPTIONAL_RECIPE_SUPPLEMENT.md).
+
+**G-V31-D-LEVEL-TIED-BINARY-1; descriptive method map.** How do diary estimates behave when usual levels are tied to sensitivity and events are binary? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](../versions/v31-four-settings/D_LEVEL_TIED_BINARY.md).
+
+**G-V31-D-RATE-TIED-GRADED-1; descriptive method map.** How do diary estimates behave when event rates are tied to sensitivity and events are graded? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](../versions/v31-four-settings/D_RATE_TIED_GRADED.md).
+
+**G-V31-D-RATE-TIED-BINARY-1; descriptive method map.** How do diary estimates behave when event rates are tied to sensitivity and events are binary? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](../versions/v31-four-settings/D_RATE_TIED_BINARY.md).
+
+**G-V31-D-REACTION-CARRY-1; descriptive method map.** Can estimated diary reactivity and carry appear correlated when the planted parameters are independent? The complete 144-cell constructed diary map quantifies that correlation and the recovery of each parameter; it is a method calibration, not evidence about people. [Report](../versions/v31-four-settings/D_REACTION_CARRY.md).
+
 ## V31 diary-shape calibration
 
 **G-V31-D-GRADED-DIARY-SHAPES-1; descriptive method map.** How well do diary estimates distinguish one sensitivity from competing sensitivities across study sizes? All 216 graded-event mild-floor settings with independent usual levels and event rates are verified: three sample sizes, four diary schedules, three event rates and six populations. These are method calibrations in constructed worlds, not evidence for a human trait. [Report](../versions/v31-four-settings/D_GRADED_DIARY_SHAPES.md).

@@ -2,7 +2,7 @@
 
 | Distinction | Observation that can tell | Current evidence | Reader visibility |
 |---|---|---|---|
-| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | First 432 diary settings verified; rival30 reads about 0.84–0.85 at 2,272 people and event rate 0.20 | Known events and paired feeling ratings |
+| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 1,080 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
 | Cost, optimism, confidence, slow evidence | Wait/outcome across odds and cost interventions | Exact preflight reproduced; scientific queue prepared | Trial outcomes and assigned conditions |
 | Colored, white, prompted remainder | Residual association by clock and message gap | Controls and preflight passed; 552 distinct cells queued | Oracle-removed rhythm/topic and noisy remainder |
 | Six pairs of four settings | Cue-aligned switches, work, timing and plans | Matching jobs prepared; exact readers validated; hidden readers gated | Four separate observation views |
@@ -11,7 +11,7 @@
 
 These are descriptive finite miniatures, architecture untested. No result establishes a human marker or deployed reader. The four-setting interpretation remains provisional.
 
-D calibrates Sounding Line ES2/MI2. [Complete first shape map](D_DIARY_SHAPES.md) retains all estimates, intervals, availability and classifications; its 43,200 worlds include the earlier 3,600-world opening. [Optional secondary recipe](D_OPTIONAL_RECIPE.md) met the declared precision trigger in five already published cells; its linear-model bias remains. D.b is queued for ES3.
+D calibrates Sounding Line ES2/MI2. [Complete first shape map](D_DIARY_SHAPES.md) retains all estimates, intervals, availability and classifications; its 43,200 worlds include the earlier 3,600-world opening. [Optional secondary recipe](D_OPTIONAL_RECIPE.md) met the declared precision trigger in five already published cells; its linear-model bias remains. The [144-cell reaction/carry map](D_REACTION_CARRY.md) is complete for ES3; estimated correlations can be positive even when the planted parameters are independent. It does not cover gaps over 240 minutes.
 
 S asks which waiting explanations are observable (G10); its finite, nonzero cost/optimism evidence is a near-alias, not an exact identity. S.b remains held after excluded numerical failures pending the additional repair decision. S.c is queued. M supplies EN1 calibration and oracle per-maker evidence requirements; it does not yet validate estimated real-text residuals.
 
@@ -22,3 +22,5 @@ Not yet run or admitted: most scientific cells; W matched descendants until cali
 [Implementation](IMPLEMENTATION_STATUS.md), [current queue](../../../results/v31/CURRENT_STATUS.json), [monitoring record](../../../results/v31/MONITORING.json).
 
 The separate [graded-event diary map](D_GRADED_DIARY_SHAPES.md) adds 216 verified cells and 43,200 fresh worlds. Across both complete blocks the total is 432 cells, 86,400 scientific worlds and 17,280 excluded pilot worlds. These retain separate generated event-size laws.
+
+The three additional complete 216-cell blocks are [binary events with tied rates](D_RATE_TIED_BINARY.md), [graded events with tied rates](D_RATE_TIED_GRADED.md) and [binary events with tied usual levels](D_LEVEL_TIED_BINARY.md). Together with the first two blocks, these are 1,080 distinct diary cells and 216,000 scientific worlds, including the overlapping opening eighteen only once. The carry map adds 144 cells and 28,800 scientific worlds. [Ten further optional-recipe trigger cells](D_OPTIONAL_RECIPE_SUPPLEMENT.md) use existing verified data and retain bias qualifications.

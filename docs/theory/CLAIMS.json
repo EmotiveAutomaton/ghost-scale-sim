@@ -317436,6 +317436,110 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-REACTION-CARRY-1",
+      "allowed_wording": "Can estimated diary reactivity and carry appear correlated when the planted parameters are independent? The complete 144-cell constructed diary map quantifies that correlation and the recovery of each parameter; it is a method calibration, not evidence about people.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_REACTION_CARRY.md",
+      "source_line": 3,
+      "source_sha256": "aaca1d4e11a6392f72774e0adfb172750d1ec6f15d960b06e436678b65abdf3e",
+      "estimate": {
+        "settings": 144,
+        "scientific_worlds": 28800,
+        "excluded_pilot_worlds": 5760,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-RATE-TIED-BINARY-1",
+      "allowed_wording": "How do diary estimates behave when event rates are tied to sensitivity and events are binary? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_RATE_TIED_BINARY.md",
+      "source_line": 3,
+      "source_sha256": "f52320a5cdb8ae6b79140ac8be3530e12dd83480aa88e255720982cbabfdc70e",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-RATE-TIED-GRADED-1",
+      "allowed_wording": "How do diary estimates behave when event rates are tied to sensitivity and events are graded? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_RATE_TIED_GRADED.md",
+      "source_line": 3,
+      "source_sha256": "ec3abd47fd6d76d9aa86169bd93d27fa9a199d171b0f04638495996b2d9fc14d",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-LEVEL-TIED-BINARY-1",
+      "allowed_wording": "How do diary estimates behave when usual levels are tied to sensitivity and events are binary? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_LEVEL_TIED_BINARY.md",
+      "source_line": 3,
+      "source_sha256": "190fd0091920b9032ee6eee171bc27baf820309a94328a6aaa8542703ce87e42",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-OPTIONAL-RECIPE-SUPPLEMENT-1",
+      "allowed_wording": "Does the optional moment estimator retain its precision advantage in additional verified diary settings? Ten further cells meet the frozen spread criterion; their biases and observation-model limits remain material, so this is a secondary sensitivity analysis.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary ratings with mild floor",
+      "reader": "Full-record random-slope moment correction",
+      "control_status": "passes; observation-model bias remains",
+      "source_file": "docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_SUPPLEMENT.md",
+      "source_line": 3,
+      "source_sha256": "43cb745bb07964a35943bc65dfd3046b333d195e58b58527e070051ab40396b2",
+      "estimate": {
+        "settings": 10,
+        "new_worlds": 0,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,
