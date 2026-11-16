@@ -1,16 +1,1 @@
-{
-  "at": "2026-11-16T13:30:33.524669+00:00",
-  "later_results": "Local eighth and ninth blocks pending publication; no exact event acknowledgements for these blocks.",
-  "next_review": "2026-11-16T13:46:33.524669+00:00",
-  "remote_verified_through": "399cd4fa29bfdd467422c2ee1bcda1258a3f7724",
-  "repository": "EmotiveAutomaton/ghost-scale-sim",
-  "repository_id": 1311281989,
-  "visibility": "public",
-  "authenticated_owner_and_push_access_verified": true,
-  "remote_identity_verified": true,
-  "publication_verified": false,
-  "state": "LOCAL_CHECKPOINT_AWAITING_EXPLICIT_PUBLICATION_APPROVAL",
-  "reason": "Automatic approval review rejected an ordinary push as sensitive egress and requires explicit approval of the concrete payload.",
-  "acknowledgements": "No unpublished result event is acknowledged.",
-  "unpublished_prior_commit": "c70db2f6b6ca02413fa75b90f0e092531a5f3c86"
-}
+{"acknowledgements":"Pending events are acknowledged only after exact remote verification.","at":"2026-11-16T14:21:14.577036+00:00","pending_complete_diary_blocks":3,"pending_partial_diary_cells":122,"recorded_distinct_diary_cells":2282,"remote_verified_through":"399cd4fa29bfdd467422c2ee1bcda1258a3f7724","separate_carry_cells":144,"state":"AUDITED_CURRENT_SNAPSHOT_READY_FOR_REQUESTED_PUBLICATION"}

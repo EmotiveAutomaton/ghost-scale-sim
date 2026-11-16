@@ -317664,6 +317664,68 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-NO-FLOOR-GRADED-1",
+      "allowed_wording": "How do diary estimates behave without a rating floor, with usual levels and event rates independent of sensitivity and graded events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_NO_FLOOR_GRADED.md",
+      "source_line": 3,
+      "source_sha256": "99e6a08291cb3e5d65cce710ac9fa31c4e1cc506424eb4e89de618ee8508635e",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-OPTIONAL-RECIPE-NO-FLOOR-GRADED-1",
+      "allowed_wording": "One further no-floor graded-event setting meets the optional diary estimator spread criterion in constructed worlds. Bias and availability remain relevant; the method is a secondary sensitivity analysis.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Linear event ratings without floor",
+      "reader": "Full-record random-slope moment correction",
+      "control_status": "passes; bias and availability remain",
+      "source_file": "docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_NO_FLOOR_GRADED.md",
+      "source_line": 3,
+      "source_sha256": "241b1df9d6c08a6c79d771366f06bc80903dd08d1f3f5d7db270cc5ca657c393",
+      "estimate": {
+        "settings": 1,
+        "new_worlds": 0,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-NO-FLOOR-RATE-TIED-BINARY-CHECKPOINT-1",
+      "allowed_wording": "What has been retained from the next diary map at the requested publication checkpoint? All 122 completed settings have verified replay and reconstruction; this is a partial descriptive method map, with no pooled contrast or complete-grid conclusion.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_NO_FLOOR_RATE_TIED_BINARY_CHECKPOINT.md",
+      "source_line": 3,
+      "source_sha256": "820d640ad5470ab55425578abd4abf8facde901391223359014c4f6b6bea3d19",
+      "estimate": {
+        "settings": 122,
+        "scientific_worlds": 24400,
+        "excluded_pilot_worlds": 4880,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,

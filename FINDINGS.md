@@ -1,5 +1,11 @@
 # Every question this project asked, and where its answer stands today
 
+**G-V31-D-NO-FLOOR-RATE-TIED-BINARY-CHECKPOINT-1; descriptive method map.** What has been retained from the next diary map at the requested publication checkpoint? All 122 completed settings have verified replay and reconstruction; this is a partial descriptive method map, with no pooled contrast or complete-grid conclusion. [Report](docs/versions/v31-four-settings/D_NO_FLOOR_RATE_TIED_BINARY_CHECKPOINT.md).
+
+**G-V31-D-OPTIONAL-RECIPE-NO-FLOOR-GRADED-1; method sensitivity analysis.** One further no-floor graded-event setting meets the optional diary estimator spread criterion in constructed worlds. Bias and availability remain relevant; the method is a secondary sensitivity analysis. [Report](docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_NO_FLOOR_GRADED.md).
+
+**G-V31-D-NO-FLOOR-GRADED-1; descriptive method map.** How do diary estimates behave without a rating floor, with usual levels and event rates independent of sensitivity and graded events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](docs/versions/v31-four-settings/D_NO_FLOOR_GRADED.md).
+
 **G-V31-D-OPTIONAL-RECIPE-NO-FLOOR-1; method sensitivity analysis.** Three further no-floor settings meet the optional diary estimator spread criterion in constructed worlds. Bias and availability remain relevant; the method is a secondary sensitivity analysis. [Report](docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_NO_FLOOR.md).
 
 **G-V31-D-NO-FLOOR-BINARY-1; descriptive method map.** How do diary estimates behave without a rating floor, with usual levels and event rates independent of sensitivity and binary events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](docs/versions/v31-four-settings/D_NO_FLOOR_BINARY.md).

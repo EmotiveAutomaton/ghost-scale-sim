@@ -1,6 +1,6 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-16T12:34:57.127231+00:00. Gear 2 permits 4 workers. This snapshot has 4 active jobs and {'VERIFIED': 1766} completed receipts; counts continue to change.
+Checkpoint 2026-11-16T14:18:49.215745+00:00. Gear 2 permits 4 workers. There are 4 active jobs and 2419 completed receipts; counts continue to change.
 
 The table distinguishes prepared scientific cells from excluded validation jobs. Preparation does not imply completed execution.
 
@@ -34,8 +34,8 @@ W matching-dependent science and W/Q hidden-reader descendants require their com
 
 All sampled scientific cells require forty excluded pilots, complete seed replay and independent reconstruction. Family ceilings can leave partial maps. No registered claim, human marker or deployed reader follows.
 
-Seven complete 216-cell diary blocks (1,512 distinct cells) and the separate 144-cell carry map are audited and documented. The opening eighteen are included once. Later diary cells remain in an incomplete prospective block. [Latest complete diary block](D_LEVEL_AND_RATE_TIED_BINARY.md).
+Ten complete 216-cell diary blocks (2,160 distinct settings) and the separate 144-cell carry map are audited and documented. The opening eighteen are included once. An additional 122 completed cells from the next prospective block are retained in a separately verified partial snapshot. [Latest complete map](D_NO_FLOOR_GRADED.md).
 
-Eight complete 216-cell diary blocks (1,728 distinct settings) and the separate 144-cell carry map are audited. Later diary cells remain a partial prospective block. [Latest diary report](D_LEVEL_AND_RATE_TIED_GRADED.md).
+Scientific execution continues. Automatic agent review is unavailable after its last interrupted invocation; the non-model event monitor remains live but review launches are disarmed. An operator must review new admission boundaries until the review service is available again.
 
-Nine complete 216-cell diary blocks (1,944 distinct settings) and the separate 144-cell carry map are audited. The opening eighteen overlap the first block; later settings remain a partial prospective block. [No-floor binary report](D_NO_FLOOR_BINARY.md).
+[Partial checkpoint and its limits](D_NO_FLOOR_RATE_TIED_BINARY_CHECKPOINT.md). No complete-block contrast is inferred from missing settings.

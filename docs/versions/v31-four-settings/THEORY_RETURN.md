@@ -2,7 +2,7 @@
 
 | Distinction | Observation that can tell | Current evidence | Reader visibility |
 |---|---|---|---|
-| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 1,944 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
+| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 2,160 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
 | Cost, optimism, confidence, slow evidence | Wait/outcome across odds and cost interventions | Exact preflight reproduced; scientific queue prepared | Trial outcomes and assigned conditions |
 | Colored, white, prompted remainder | Residual association by clock and message gap | Controls and preflight passed; 552 distinct cells queued | Oracle-removed rhythm/topic and noisy remainder |
 | Six pairs of four settings | Cue-aligned switches, work, timing and plans | Matching jobs prepared; exact readers validated; hidden readers gated | Four separate observation views |
@@ -32,3 +32,7 @@ The [binary-event map with both usual levels and event rates tied to sensitivity
 The [graded-event block with both ties](D_LEVEL_AND_RATE_TIED_GRADED.md) adds 216 audited settings. Eight blocks comprise 1,728 distinct diary settings and 345,600 scientific worlds, including the opening eighteen once. The separate carry map has 144 settings. [Six additional recipe triggers](D_OPTIONAL_RECIPE_BOTH_TIED.md) retain bias qualifications.
 
 The [no-floor binary block](D_NO_FLOOR_BINARY.md) adds 216 audited settings. Nine blocks contain 1,944 distinct diary settings and 388,800 scientific worlds; the opening eighteen are included once. The 144 carry settings are separate. [Three further recipe triggers](D_OPTIONAL_RECIPE_NO_FLOOR.md) retain bias and availability qualifications.
+
+The [no-floor graded-event block](D_NO_FLOOR_GRADED.md) adds 216 audited settings. Ten complete blocks contain 2,160 distinct diary settings and 432,000 scientific worlds; the opening eighteen are included once. The 144 carry settings are separate. [One additional recipe trigger](D_OPTIONAL_RECIPE_NO_FLOOR_GRADED.md) retains bias and availability qualifications.
+
+The owner-requested [partial next-block checkpoint](D_NO_FLOOR_RATE_TIED_BINARY_CHECKPOINT.md) records 122 further verified diary cells available at 2026-11-16 14:19 UTC, without a full-grid conclusion. Together with ten complete blocks, 2,282 distinct diary cells and 144 separate carry cells are documented. Automatic agent reviews are currently unavailable; scientific execution continues under the finite controller.
