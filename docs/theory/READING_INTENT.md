@@ -1,5 +1,9 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 K finer-map slice
+
+**G-V30-K-BEST-Q-LOW-1; descriptive, no registered claim.** When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.05-opening slice, no quieting closes 13.98 gaps per 1,000 steps (95% whole-block interval 13.79 to 14.17); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening-no-deadline.md).
+
 ## November 15 V30 V-blind-mimic8-partial
 
 **G-V30-V-BLIND-MIMIC8-PARTIAL-1; descriptive, no registered claim.** What can a partner learn from public refusals when it sees only its own ventures? In BLIND, a public refusal changes its forecast by zero by construction. Twenty-two of 24 settings for the mimic maker with stock parameter eight have complete verified evidence at the resource-boundary snapshot. [Report](../versions/v30-the-readers-side/reports/V-blind-mimic8-partial.md).

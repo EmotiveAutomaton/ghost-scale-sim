@@ -104,3 +104,5 @@ Final coverage and resource-held remainders will replace this interim return.
 [L-pair-complete](reports/L-pair-complete.md): 108 of 108 settings verified; G-V30-L-PAIR-COMPLETE-1.
 
 [V-blind-mimic8-partial](reports/V-blind-mimic8-partial.md): 22 of 24 settings verified; G-V30-V-BLIND-MIMIC8-PARTIAL-1.
+
+[K-best-q-low-arrival-opening-no-deadline](reports/K-best-q-low-arrival-opening-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-1.
