@@ -1,5 +1,25 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 uneven-label continuation
+
+**G-V30-P-UNEVEN-CONTINUATION-1; descriptive partial map.** How does an uneven label distribution affect recovery of a maker's largest channel? This continuation retains 45 additional verified settings from the stipulated uneven-label texture. Together with the earlier 137-cell snapshot, 182 of 360 settings are recorded; the map is incomplete. This is a descriptive constructed-method result, with no pooled comparison asserted. [Report](../versions/v30-the-readers-side/reports/P-uneven-continuation-0137-0181.md).
+
+## November 15 V30 K finer-map slice
+
+**G-V30-K-BEST-Q-LOW-OPEN10-DEADLINE-1; descriptive, no registered claim.** When plans have deadlines but no cues, how does quieting unresolved stress relate to completed work? In this constructed low-arrival, 0.10-opening slice, no quieting closes 19.01 gaps per 1,000 steps (95% whole-block interval 18.65 to 19.37); full quieting closes 18.60 (interval 18.22 to 18.97). The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening10-deadline.md).
+
+## November 15 V30 K finer-map slice
+
+**G-V30-K-BEST-Q-LOW-OPEN05-DEADLINE-1; descriptive, no registered claim.** When plans have deadlines but no cues, how does quieting unresolved stress relate to completed work? In this constructed low-arrival, 0.05-opening slice, no quieting closes 13.98 gaps per 1,000 steps (95% whole-block interval 13.79 to 14.17); full quieting closes 13.70 (interval 13.55 to 13.86). The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening05-deadline.md).
+
+## November 15 V30 K finer-map slice
+
+**G-V30-K-BEST-Q-LOW-OPEN75-1; descriptive, no registered claim.** When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.75-opening slice, no quieting closes 19.76 gaps per 1,000 steps (95% whole-block interval 19.29 to 20.22); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening75-no-deadline.md).
+
+## November 15 V30 K finer-map slice
+
+**G-V30-K-BEST-Q-LOW-OPEN50-1; descriptive, no registered claim.** When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.50-opening slice, no quieting closes 19.98 gaps per 1,000 steps (95% whole-block interval 19.50 to 20.46); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening50-no-deadline.md).
+
 ## November 15 V30 K finer-map slice
 
 **G-V30-K-BEST-Q-LOW-OPEN30-1; descriptive, no registered claim.** When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.30-opening slice, no quieting closes 19.77 gaps per 1,000 steps (95% whole-block interval 19.62 to 19.92); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening30-no-deadline.md).

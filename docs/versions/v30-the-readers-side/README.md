@@ -62,3 +62,13 @@ The [blind-reader live-sum subset](reports/V-blind-live16.md) is verified for we
 [K-best-q-low-arrival-opening20-no-deadline](reports/K-best-q-low-arrival-opening20-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN20-1.
 
 [K-best-q-low-arrival-opening30-no-deadline](reports/K-best-q-low-arrival-opening30-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN30-1.
+
+[K-best-q-low-arrival-opening50-no-deadline](reports/K-best-q-low-arrival-opening50-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN50-1.
+
+[K-best-q-low-arrival-opening75-no-deadline](reports/K-best-q-low-arrival-opening75-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN75-1.
+
+[K-best-q-low-arrival-opening05-deadline](reports/K-best-q-low-arrival-opening05-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN05-DEADLINE-1.
+
+[K-best-q-low-arrival-opening10-deadline](reports/K-best-q-low-arrival-opening10-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN10-DEADLINE-1.
+
+[P-uneven-continuation-0137-0181](reports/P-uneven-continuation-0137-0181.md): 45 additional settings verified; the 360-setting texture remains incomplete. G-V30-P-UNEVEN-CONTINUATION-1.

@@ -317025,9 +317025,290 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.50-opening slice, no quieting closes 19.98 gaps per 1,000 steps (95% whole-block interval 19.50 to 20.46); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Each setting has 200 worlds in eight blocks, excluded 40-world pilots, controls, complete seed replay and independent reconstruction. Intervals are pointwise, not simultaneous; shared generators and summary conventions limit independence. Unfinished gaps are censored at their observed age. The full set of opening, arrival and deadline combinations remains incomplete. Miniature: architecture untested; no registered claim.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "full_quieting": {
+          "block_means": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blocks": 8,
+          "estimate": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.0,
+          "worlds": 200
+        },
+        "no_quieting": {
+          "block_means": [
+            19.88,
+            20.080000000000002,
+            19.733333333333334,
+            19.36,
+            19.56,
+            20.906666666666666,
+            20.77333333333333,
+            19.56
+          ],
+          "blocks": 8,
+          "estimate": 19.98166666666667,
+          "interval95": [
+            19.501813638257776,
+            20.461519695075562
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.2029299276980985,
+          "worlds": 200
+        }
+      },
+      "estimate_detail": {
+        "sha256": "0bbde99827877ee3139beafe029d7a9b3b71e5efb487e3d78366940cac3e1eeb",
+        "source_file": "results/v30/K-best-q-low-arrival-opening50-no-deadline/VERIFIED.json"
+      },
+      "id": "G-V30-K-BEST-Q-LOW-OPEN50-1",
+      "reader": "Constructed queue with stipulated cues and attention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening50-no-deadline.md",
+      "source_line": 3,
+      "source_sha256": "2351bdd809adfe48a61df0a144d4a56050caddd935148dbf298e3b2ee28664d9",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.75-opening slice, no quieting closes 19.76 gaps per 1,000 steps (95% whole-block interval 19.29 to 20.22); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Each setting has 200 worlds in eight blocks, excluded 40-world pilots, controls, complete seed replay and independent reconstruction. Intervals are pointwise, not simultaneous; shared generators and summary conventions limit independence. Unfinished gaps are censored at their observed age. The full set of opening, arrival and deadline combinations remains incomplete. Miniature: architecture untested; no registered claim.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "full_quieting": {
+          "block_means": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blocks": 8,
+          "estimate": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.0,
+          "worlds": 200
+        },
+        "no_quieting": {
+          "block_means": [
+            19.88,
+            19.85333333333333,
+            19.373333333333335,
+            19.333333333333332,
+            20.106666666666666,
+            20.8,
+            18.973333333333333,
+            19.733333333333334
+          ],
+          "blocks": 8,
+          "estimate": 19.756666666666668,
+          "interval95": [
+            19.290556365751637,
+            20.222776967581698
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.19711812589296696,
+          "worlds": 200
+        }
+      },
+      "estimate_detail": {
+        "sha256": "952f7aa20b660dd12ffe7f26ad50f705ee9cdfbecba04bfa2d2cf697fa679c22",
+        "source_file": "results/v30/K-best-q-low-arrival-opening75-no-deadline/VERIFIED.json"
+      },
+      "id": "G-V30-K-BEST-Q-LOW-OPEN75-1",
+      "reader": "Constructed queue with stipulated cues and attention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening75-no-deadline.md",
+      "source_line": 3,
+      "source_sha256": "c5b2dda4a1999d6c60902f151f2b8527d42d6024c1a27eed73e7c761c6d1eb9f",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "When plans have deadlines but no cues, how does quieting unresolved stress relate to completed work? In this constructed low-arrival, 0.05-opening slice, no quieting closes 13.98 gaps per 1,000 steps (95% whole-block interval 13.79 to 14.17); full quieting closes 13.70 (interval 13.55 to 13.86). The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Each setting has 200 worlds in eight blocks, excluded 40-world pilots, controls, complete seed replay and independent reconstruction. Intervals are pointwise, not simultaneous; shared generators and summary conventions limit independence. Unfinished gaps are censored at their observed age. The full set of opening, arrival and deadline combinations remains incomplete. Miniature: architecture untested; no registered claim.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "full_quieting": {
+          "block_means": [
+            13.746666666666668,
+            14.04,
+            13.439999999999998,
+            13.746666666666668,
+            13.733333333333334,
+            13.466666666666665,
+            13.72,
+            13.72
+          ],
+          "blocks": 8,
+          "estimate": 13.701666666666668,
+          "interval95": [
+            13.545616537145827,
+            13.857716796187509
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.06599362643588214,
+          "worlds": 200
+        },
+        "no_quieting": {
+          "block_means": [
+            14.053333333333333,
+            14.226666666666665,
+            13.653333333333332,
+            14.226666666666667,
+            13.96,
+            13.653333333333332,
+            14.013333333333332,
+            14.066666666666668
+          ],
+          "blocks": 8,
+          "estimate": 13.981666666666666,
+          "interval95": [
+            13.794863251241935,
+            14.168470082091396
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.0789991962989056,
+          "worlds": 200
+        }
+      },
+      "estimate_detail": {
+        "sha256": "4f2eff10609495d86a88ea0ba9e13f03a8c7c55abda755f1088afdece6d4b884",
+        "source_file": "results/v30/K-best-q-low-arrival-opening05-deadline/VERIFIED.json"
+      },
+      "id": "G-V30-K-BEST-Q-LOW-OPEN05-DEADLINE-1",
+      "reader": "Constructed queue with stipulated cues and attention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening05-deadline.md",
+      "source_line": 3,
+      "source_sha256": "92c7ace0d06304d81b3f2485eed5c07b7045226ca30dd94c2f162dea9f64c675",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "When plans have deadlines but no cues, how does quieting unresolved stress relate to completed work? In this constructed low-arrival, 0.10-opening slice, no quieting closes 19.01 gaps per 1,000 steps (95% whole-block interval 18.65 to 19.37); full quieting closes 18.60 (interval 18.22 to 18.97). The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Each setting has 200 worlds in eight blocks, excluded 40-world pilots, controls, complete seed replay and independent reconstruction. Intervals are pointwise, not simultaneous; shared generators and summary conventions limit independence. Unfinished gaps are censored at their observed age. The full set of opening, arrival and deadline combinations remains incomplete. Miniature: architecture untested; no registered claim.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "full_quieting": {
+          "block_means": [
+            18.506666666666668,
+            18.14666666666667,
+            18.69333333333333,
+            18.333333333333332,
+            18.89333333333333,
+            18.733333333333334,
+            18.026666666666664,
+            19.44
+          ],
+          "blocks": 8,
+          "estimate": 18.596666666666668,
+          "interval95": [
+            18.218526236862594,
+            18.97480709647074
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.15991565237029148,
+          "worlds": 200
+        },
+        "no_quieting": {
+          "block_means": [
+            18.84,
+            18.613333333333333,
+            19.026666666666664,
+            18.76,
+            19.413333333333334,
+            18.973333333333336,
+            18.6,
+            19.85333333333333
+          ],
+          "blocks": 8,
+          "estimate": 19.009999999999998,
+          "interval95": [
+            18.65078113779131,
+            19.369218862208687
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.15191371820141095,
+          "worlds": 200
+        }
+      },
+      "estimate_detail": {
+        "sha256": "420df68a0e288f56661182f6eac482181e8e626ae2e97ef47df7b20878b64aa6",
+        "source_file": "results/v30/K-best-q-low-arrival-opening10-deadline/VERIFIED.json"
+      },
+      "id": "G-V30-K-BEST-Q-LOW-OPEN10-DEADLINE-1",
+      "reader": "Constructed queue with stipulated cues and attention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening10-deadline.md",
+      "source_line": 3,
+      "source_sha256": "c52c2268ced09c2d01292a5cb44a4a6f3dc75d34f1eb1f6c74413d2fa956f8bd",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "How does an uneven label distribution affect recovery of a maker's largest channel? This continuation retains 45 additional verified settings from the stipulated uneven-label texture. Together with the earlier 137-cell snapshot, 182 of 360 settings are recorded; the map is incomplete. This is a descriptive constructed-method result, with no pooled comparison asserted.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Each setting has known-answer controls, an excluded 40-world pilot, complete seed replay and independent reconstruction. Intervals are pointwise; shared generators and summary conventions limit independence. COUNT and CORRECTED are admitted; the Bayesian reader remains invalid. The reader-table marginals are stipulated inputs, not a population distribution. Miniature: architecture untested; no registered claim or evidence about people follows.",
+      "claim_kind": "method",
+      "control_status": "Controls, excluded pilots, full replay and independent reconstruction passed.",
+      "estimate": {
+        "additional_verified_settings": 45,
+        "planned_settings": 360,
+        "previously_verified_settings": 137
+      },
+      "estimate_detail": {
+        "sha256": "cd7952b498af9fe60859c8c0145d8118fe9e4c13b531e36279aeda7f3ca6f412",
+        "source_file": "results/v30/P-uneven-continuation-0137-0181/VERIFIED.json"
+      },
+      "id": "G-V30-P-UNEVEN-CONTINUATION-1",
+      "reader": "COUNT and CORRECTED; stipulated reader-table marginals.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-uneven-continuation-0137-0181.md",
+      "source_line": 3,
+      "source_sha256": "8f29cc8a9c151007b7edc3a16807c33111f798c534dad85007bafe79779189da",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-16T02:22:24.844156+00:00"
+  "updated": "2026-11-16T05:04:44.917474+00:00"
 }
