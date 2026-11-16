@@ -1,5 +1,9 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+**G-V31-D-OPTIONAL-RECIPE-BOTH-TIED-1; method sensitivity analysis.** Six further verified settings with both usual levels and event rates tied meet the optional estimator spread criterion. Bias remains material; this is a secondary sensitivity analysis in constructed worlds. [Report](../versions/v31-four-settings/D_OPTIONAL_RECIPE_BOTH_TIED.md).
+
+**G-V31-D-LEVEL-AND-RATE-TIED-GRADED-1; descriptive method map.** How do diary estimates behave when both usual levels and event rates are tied to sensitivity, with graded events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](../versions/v31-four-settings/D_LEVEL_AND_RATE_TIED_GRADED.md).
+
 **G-V31-D-LEVEL-AND-RATE-TIED-BINARY-1; descriptive method map.** How do diary estimates behave when both usual levels and event rates are tied to sensitivity, with binary events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](../versions/v31-four-settings/D_LEVEL_AND_RATE_TIED_BINARY.md).
 
 **G-V31-D-LEVEL-TIED-GRADED-1; descriptive method map.** How do diary estimates behave when usual levels are tied to sensitivity and events are graded? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](../versions/v31-four-settings/D_LEVEL_TIED_GRADED.md).

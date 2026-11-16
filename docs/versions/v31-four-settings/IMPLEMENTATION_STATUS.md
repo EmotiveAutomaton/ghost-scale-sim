@@ -35,3 +35,5 @@ W matching-dependent science and W/Q hidden-reader descendants require their com
 All sampled scientific cells require forty excluded pilots, complete seed replay and independent reconstruction. Family ceilings can leave partial maps. No registered claim, human marker or deployed reader follows.
 
 Seven complete 216-cell diary blocks (1,512 distinct cells) and the separate 144-cell carry map are audited and documented. The opening eighteen are included once. Later diary cells remain in an incomplete prospective block. [Latest complete diary block](D_LEVEL_AND_RATE_TIED_BINARY.md).
+
+Eight complete 216-cell diary blocks (1,728 distinct settings) and the separate 144-cell carry map are audited. Later diary cells remain a partial prospective block. [Latest diary report](D_LEVEL_AND_RATE_TIED_GRADED.md).

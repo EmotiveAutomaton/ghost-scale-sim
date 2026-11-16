@@ -2,7 +2,7 @@
 
 | Distinction | Observation that can tell | Current evidence | Reader visibility |
 |---|---|---|---|
-| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 1,512 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
+| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 1,728 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
 | Cost, optimism, confidence, slow evidence | Wait/outcome across odds and cost interventions | Exact preflight reproduced; scientific queue prepared | Trial outcomes and assigned conditions |
 | Colored, white, prompted remainder | Residual association by clock and message gap | Controls and preflight passed; 552 distinct cells queued | Oracle-removed rhythm/topic and noisy remainder |
 | Six pairs of four settings | Cue-aligned switches, work, timing and plans | Matching jobs prepared; exact readers validated; hidden readers gated | Four separate observation views |
@@ -28,3 +28,5 @@ The three additional complete 216-cell blocks are [binary events with tied rates
 The [graded-event block with tied usual levels](D_LEVEL_TIED_GRADED.md) adds 216 independently verified settings. Six complete blocks contain 1,296 distinct diary settings and 259,200 scientific worlds; the original eighteen are included once. The separate carry map contains 144 settings.
 
 The [binary-event map with both usual levels and event rates tied to sensitivity](D_LEVEL_AND_RATE_TIED_BINARY.md) adds 216 verified cells. Seven complete blocks now contain 1,512 distinct diary settings and 302,400 scientific worlds; the separate carry map adds 144 settings and 28,800 worlds.
+
+The [graded-event block with both ties](D_LEVEL_AND_RATE_TIED_GRADED.md) adds 216 audited settings. Eight blocks comprise 1,728 distinct diary settings and 345,600 scientific worlds, including the opening eighteen once. The separate carry map has 144 settings. [Six additional recipe triggers](D_OPTIONAL_RECIPE_BOTH_TIED.md) retain bias qualifications.
