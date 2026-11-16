@@ -317540,6 +317540,27 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-LEVEL-TIED-GRADED-1",
+      "allowed_wording": "How do diary estimates behave when usual levels are tied to sensitivity and events are graded? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_LEVEL_TIED_GRADED.md",
+      "source_line": 3,
+      "source_sha256": "9402e6d1a765f8f78957055c4b45beecb6224d94c62401041aafd80a038dd1e9",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,

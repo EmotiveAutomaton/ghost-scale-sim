@@ -2,7 +2,7 @@
 
 | Distinction | Observation that can tell | Current evidence | Reader visibility |
 |---|---|---|---|
-| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 1,080 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
+| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 1,296 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
 | Cost, optimism, confidence, slow evidence | Wait/outcome across odds and cost interventions | Exact preflight reproduced; scientific queue prepared | Trial outcomes and assigned conditions |
 | Colored, white, prompted remainder | Residual association by clock and message gap | Controls and preflight passed; 552 distinct cells queued | Oracle-removed rhythm/topic and noisy remainder |
 | Six pairs of four settings | Cue-aligned switches, work, timing and plans | Matching jobs prepared; exact readers validated; hidden readers gated | Four separate observation views |
@@ -24,3 +24,5 @@ Not yet run or admitted: most scientific cells; W matched descendants until cali
 The separate [graded-event diary map](D_GRADED_DIARY_SHAPES.md) adds 216 verified cells and 43,200 fresh worlds. Across both complete blocks the total is 432 cells, 86,400 scientific worlds and 17,280 excluded pilot worlds. These retain separate generated event-size laws.
 
 The three additional complete 216-cell blocks are [binary events with tied rates](D_RATE_TIED_BINARY.md), [graded events with tied rates](D_RATE_TIED_GRADED.md) and [binary events with tied usual levels](D_LEVEL_TIED_BINARY.md). Together with the first two blocks, these are 1,080 distinct diary cells and 216,000 scientific worlds, including the overlapping opening eighteen only once. The carry map adds 144 cells and 28,800 scientific worlds. [Ten further optional-recipe trigger cells](D_OPTIONAL_RECIPE_SUPPLEMENT.md) use existing verified data and retain bias qualifications.
+
+The [graded-event block with tied usual levels](D_LEVEL_TIED_GRADED.md) adds 216 independently verified settings. Six complete blocks contain 1,296 distinct diary settings and 259,200 scientific worlds; the original eighteen are included once. The separate carry map contains 144 settings.

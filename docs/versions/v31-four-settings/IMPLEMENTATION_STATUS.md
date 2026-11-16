@@ -31,3 +31,5 @@ All scientific jobs require known answers, forty excluded pilots, full seed repl
 [First 216 diary cells](D_DIARY_SHAPES.md) are fully audited; the opening eighteen overlap that map and are not additional replication. [Current machine-readable state](../../../results/v31/CURRENT_STATUS.json).
 
 Five complete 216-cell D diary blocks (1,080 cells) and the 144-cell reaction/carry map have been audited and documented. The opening eighteen are included once. Later D cells remain partial until a complete prospective block is verified. [Theory return](THEORY_RETURN.md).
+
+Six complete 216-cell diary blocks (1,296 distinct cells) and the separate 144-cell carry map are documented. Later diary cells remain a partial prospective block. [Latest block](D_LEVEL_TIED_GRADED.md).
