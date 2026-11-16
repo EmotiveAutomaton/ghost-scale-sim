@@ -1,5 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V30 V-blind-mimic8-partial
+
+**G-V30-V-BLIND-MIMIC8-PARTIAL-1; descriptive, no registered claim.** What can a partner learn from public refusals when it sees only its own ventures? In BLIND, a public refusal changes its forecast by zero by construction. Twenty-two of 24 settings for the mimic maker with stock parameter eight have complete verified evidence at the resource-boundary snapshot. [Report](docs/versions/v30-the-readers-side/reports/V-blind-mimic8-partial.md).
+
+## November 15 V30 L-pair-complete
+
+**G-V30-L-PAIR-COMPLETE-1; descriptive, no registered claim.** Can two channels sharing events help a reader distinguish exposure, reaction strength and persistence? The complete 108-setting shared-event texture is verified in this constructed world. [Report](docs/versions/v30-the-readers-side/reports/L-pair-complete.md).
+
 ## November 15 V30 the rule maker with stock parameter two
 
 **G-V30-V-BLIND-RULE2-1; descriptive, no registered claim.** What can a partner learn from public refusals when it sees only its own ventures? In the BLIND condition a public refusal changes its forecast by zero by construction. This complete 24-setting subset covers the rule maker with stock parameter two. In the plentiful, low-offer, loss-two, no-tail setting, the entrusted share is 97.0% (95% whole-block interval 94.6–99.4%). This is a descriptive constructed-mechanism result, not a claim about people or a completed four-arm comparison. [Report](docs/versions/v30-the-readers-side/reports/V-blind-rule2.md).

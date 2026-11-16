@@ -316721,9 +316721,57 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "Can two channels sharing events help a reader distinguish exposure, reaction strength and persistence? The complete 108-setting shared-event texture is verified in this constructed world.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "The channels share the same latent event and persistence. The checked one-dimensional activation approximation and numerical event-ranking ties remain explicit; finite resolution fixtures do not establish accuracy on every path.",
+      "claim_kind": "method",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "planned_settings": 108,
+        "verified_settings": 108
+      },
+      "estimate_detail": {
+        "sha256": "34b3c46270916fda5ec4e9675abdb3d77fa71b963d02ca07445eef485904942a",
+        "source_file": "results/v30/L-pair-complete/VERIFIED.json"
+      },
+      "id": "G-V30-L-PAIR-COMPLETE-1",
+      "reader": "The channels share the same latent event and persistence. The checked one-dimensional activation approximation and numerical event-ranking ties remain explicit; finite resolution fixtures do not establish accuracy on every path.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/L-pair-complete.md",
+      "source_line": 3,
+      "source_sha256": "598a4b12c92c90543380ad14d80e3c78e9600ae78a30cdb9800477a7324be5ae",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "What can a partner learn from public refusals when it sees only its own ventures? In BLIND, a public refusal changes its forecast by zero by construction. Twenty-two of 24 settings for the mimic maker with stock parameter eight have complete verified evidence at the resource-boundary snapshot.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "The other two settings remain unstarted at the snapshot; the hidden map and four-arm comparison are incomplete. The particle reader shares state propagation and resampling conventions between implementations; independent reconstruction checks choice-probability arithmetic.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "planned_settings": 24,
+        "verified_settings": 22
+      },
+      "estimate_detail": {
+        "sha256": "ba7962a78750069c5ceb014dd20a65bc997e7b71c53c8acd803fdded65838272",
+        "source_file": "results/v30/V-blind-mimic8-partial/VERIFIED.json"
+      },
+      "id": "G-V30-V-BLIND-MIMIC8-PARTIAL-1",
+      "reader": "The other two settings remain unstarted at the snapshot; the hidden map and four-arm comparison are incomplete. The particle reader shares state propagation and resampling conventions between implementations; independent reconstruction checks choice-probability arithmetic.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-blind-mimic8-partial.md",
+      "source_line": 3,
+      "source_sha256": "7beeb275d1440d15f08d5d8f14a71bbe422c0dbe325dd66e7f791b529d305370",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-16T00:07:51.274632+00:00"
+  "updated": "2026-11-16T00:55:06.585725+00:00"
 }

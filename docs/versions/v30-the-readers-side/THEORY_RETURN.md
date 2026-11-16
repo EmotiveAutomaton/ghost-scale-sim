@@ -100,3 +100,7 @@ Final coverage and resource-held remainders will replace this interim return.
 [V-blind-live20](reports/V-blind-live20.md) is verified for all 24 declared settings; the full hidden-state map remains incomplete. G-V30-V-BLIND-LIVE20-1.
 
 [V-blind-rule2](reports/V-blind-rule2.md) is verified for all 24 declared settings; the full hidden-state map remains incomplete. G-V30-V-BLIND-RULE2-1.
+
+[L-pair-complete](reports/L-pair-complete.md): 108 of 108 settings verified; G-V30-L-PAIR-COMPLETE-1.
+
+[V-blind-mimic8-partial](reports/V-blind-mimic8-partial.md): 22 of 24 settings verified; G-V30-V-BLIND-MIMIC8-PARTIAL-1.
