@@ -17,17 +17,19 @@ def softmax(x):
 def transition(belief,cue,v,r,a):
     prior=belief*(1-v)+(1-belief)*v/3
     logp=2*(1-a)*np.log(prior)
-    for j in range(4):logp[j]+=2*a*np.log(r if j==cue else (1-r)/3)
+    if cue>=0:
+        for j in range(4):logp[j]+=2*a*np.log(r if j==cue else (1-r)/3)
     return softmax(logp)
 
 @njit(cache=True)
-def simulate(draws,v,r,f,theta):
+def simulate(draws,v,r,f,theta,blackout=0):
     a,ts,d,s,d2=theta;belief=np.ones(4)/4;schema=0;context=0;cbar=.5;u=0.;plan=0
     rows=np.zeros((len(draws),11))
     for t in range(len(draws)):
         z=draws[t]
         if z[0]<v:context=(context+1+int(z[1]*3))%4
         cue=context if z[2]<r else (context+1+int(z[3]*3))%4
+        if t%500<blackout:cue=-1
         drop=z[4]<.1;actionable=drop and z[5]<f
         u+=drop
         if plan==0 and actionable:plan=4
@@ -78,7 +80,8 @@ def full_reference(path,v,r,models):
             row=path[t]
             u+=row[2]
             transition_matrix=np.full((4,4),v/3);np.fill_diagonal(transition_matrix,1-v)
-            prior=b@transition_matrix;lik=np.full(4,(1-r)/3);lik[int(row[1])]=r
+            prior=b@transition_matrix;lik=np.ones(4)
+            if row[1]>=0:lik[:]=(1-r)/3;lik[int(row[1])]=r
             b=prior**(2*(1-a))*lik**(2*a);b/=b.sum()
             prob=b**(1/ts);prob[old]*=np.exp(1/ts);prob/=prob.sum();old=int(row[4])
             nextbar=.8*cbar+.2*b[old];rise=max(0,nextbar-cbar);cbar=nextbar
@@ -94,7 +97,7 @@ def generate(s,lane,pulse=lambda **kw:None):
     paths=[]
     for w in range(s['worlds']):
         g=rng('W',s,lane,w);z=g.random((s['steps'],11));z[:,10]=g.normal(size=s['steps'])
-        paths.append(simulate(z,s['volatility'],s['reliability'],s['actionable'],np.array(s['models'][s['truth']])))
+        paths.append(simulate(z,s['volatility'],s['reliability'],s['actionable'],np.array(s['models'][s['truth']]),s.get('blackout',0)))
         pulse(world=w+1,phase='generate')
     return dict(records=np.array(paths))
 
@@ -106,7 +109,8 @@ def cue_paths(path,v,r,models,reference=False):
         for t in range(len(path)):
             row=path[t]
             if reference:
-                prior=b*(1-v)+(1-b)*v/3;like=np.full(4,(1-r)/3);like[int(row[1])]=r
+                prior=b*(1-v)+(1-b)*v/3;like=np.ones(4)
+                if row[1]>=0:like[:]=(1-r)/3;like[int(row[1])]=r
                 b=prior**(2*(1-theta[0]))*like**(2*theta[0]);b/=b.sum()
                 q=b**(1/theta[1]);q[old]*=np.exp(1/theta[1]);q/=q.sum()
             else:
@@ -118,10 +122,11 @@ def hidden_path(path,s,theta,seed,reference=False):
     n=s['particles'];g=np.random.default_rng(seed);v=s['volatility'];r=s['reliability'];f=s['actionable']
     a,ts,d,stress,d2=theta;b=np.ones((n,4))/4;context=np.zeros(n,dtype=int);cbar=np.full(n,.5);u=np.zeros(n);plan=np.zeros(n,dtype=int);old=0;ll=0.;values=[]
     from scipy.special import expit,logsumexp
-    for row in path:
+    for t,row in enumerate(path):
         change=g.random(n)<v;context=np.where(change,(context+g.integers(1,4,n))%4,context)
         cue=np.where(g.random(n)<r,context,(context+g.integers(1,4,n))%4)
         prior=b*(1-v)+(1-b)*v/3;like=np.full((n,4),(1-r)/3);like[np.arange(n),cue]=r
+        if t%500<s.get('blackout',0):like[:]=1.
         if reference:
             b=prior**(2*(1-a))*like**(2*a);b/=b.sum(1,keepdims=True)
             probs=b**(1/ts);probs[:,old]*=np.exp(1/ts);probs/=probs.sum(1,keepdims=True)

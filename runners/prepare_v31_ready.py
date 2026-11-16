@@ -8,7 +8,12 @@ def prepare(c):
     for job in sorted((c/'jobs').glob('W-MATCH-*')):
         if not (job/'COMPLETE.json').exists():continue
         if read(job/'COMPLETE.json')['state']!='VERIFIED':continue
+        done=read(job/'COMPLETE.json');worker=read(job/'WORKER_COMPLETE.json')
+        assert done['plan_sha256']==worker['plan_sha256']==digest(job/'PLAN.json')
+        assert done['worker_receipt_sha256']==digest(job/'WORKER_COMPLETE.json')
+        assert worker['validation_sha256']==digest(job/'output/VALIDATION.json')
         match=read(job/'output/MATCH.json');setting=read(job/'PLAN.json')['setting']
+        assert read(job/'output/VALIDATION.json')['matching']==match
         if not match['passed']:status.append(dict(job=job.name,state='MATCH_INFEASIBLE'));continue
         idx=int(job.name.rsplit('-',1)[1]);world=tuple(setting[k] for k in ('volatility','reliability','actionable'))
         for view in ('V4','V2'):

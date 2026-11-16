@@ -13,3 +13,5 @@ seed replay and independent reconstruction precede scientific landing.
 The packet and supplied preflight files are filed here. Round 24 theory context
 is read and retained locally. Nothing in this version establishes a human marker
 or qualifies an engine reader. No registered claim is commissioned.
+
+Current [theory return](THEORY_RETURN.md), [implementation state](IMPLEMENTATION_STATUS.md), [diary map](D_DIARY_SHAPES.md) and [optional estimator recipe](D_OPTIONAL_RECIPE.md).

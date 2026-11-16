@@ -14,7 +14,7 @@ def panel(s,theta,lane,n=4,steps=4096):
     for j in range(n):
         g=rng('W-matching',s['volatility'],s['reliability'],s['actionable'],lane,j)
         draws=g.random((steps,11));draws[:,10]=g.normal(size=steps)
-        scores.append(statistics(simulate(draws,s['volatility'],s['reliability'],s['actionable'],theta)))
+        scores.append(statistics(simulate(draws,s['volatility'],s['reliability'],s['actionable'],theta,s.get('blackout',0))))
     return np.array(scores)
 
 def match(s,left,right,fraction):

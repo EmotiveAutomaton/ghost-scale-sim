@@ -317395,6 +317395,26 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-OPTIONAL-RECIPE-1",
+      "allowed_wording": "Can the diary estimator be made more precise without claiming that its observation model is exact? At the ES2-shaped, low-event-rate setting, the random-slope moment estimator has 35.6%–49.3% less between-world spread than the split-day estimator in five planted populations. This meets the packet’s optional-recipe trigger; bias remains and the method is offered only as a secondary sensitivity analysis.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Linear event ratings with mild floor",
+      "reader": "Full-record random-slope moment correction",
+      "control_status": "passes; linear-model bias remains",
+      "source_file": "docs/versions/v31-four-settings/D_OPTIONAL_RECIPE.md",
+      "source_line": 3,
+      "source_sha256": "1c7baae82c660d5e599e1db878cdbfafd2a7a4313361e75e1ad77d8eac8d39b8",
+      "estimate": {
+        "settings": 5,
+        "new_worlds": 0,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,
