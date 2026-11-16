@@ -1,9 +1,11 @@
-# V30 theory return — in progress
+# V30 theory return — closed for theory review
 
 These are descriptive constructed-world results. No finding establishes a human
 marker or admits an engine reader. Corrections: P's Bayesian reference remains
 invalid; L's event-ranking ties were repaired and all completed cells audited;
-R's exact-order successor audit is verified locally; the earlier failed assertion remains retained.
+R's exact-order successor audit is verified and published; the earlier failed assertion remains retained.
+
+V30 is closed by owner decision; no further work or recurring wake remains. The [final report](FINAL_REPORT.md) records complete, partial and held scope. All accepted science is published through `efc21f376`.
 
 ## Tells table
 
@@ -16,9 +18,9 @@ Pending scope is not a null. Reported intervals are pointwise block intervals.
 | Frequent triggers, strong reactions, persistence | Shows and detected events | All 133 primary settings complete after ranking correction; the middle-detector follow-on is held after failed validation. |
 | Habit, means, audience, rule | Acts, prices, occasion frequency, context visibility | All 96 watched and 384 asked settings complete; price-invariant refusal is stipulated. |
 | Heat versus refusal | Repeated staged offers | All 24 settings complete. Heat median two/four offers versus refusal one at the strongest heat contrast; performer follow-on not triggered. |
-| Best probe order | Six stipulated probe laws and a prior | All 96 successor settings verified locally; earlier 84 exact settings retained. |
-| Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings and blind-reader subsets for weights 4, 8 and 16 verified; the weight-16 subset is published, and the hidden map remains partial. |
-| Plan quieting and cues | Gap arrivals, windows, attention | 156 workload and 24 attention settings verified locally; attention reader approximate. |
+| Best probe order | Six stipulated probe laws and a prior | All 96 successor settings verified and published; earlier 84 exact settings retained. |
+| Public refusal and trust | Public offers plus private venture outcomes | 288 visible-state settings complete; 142/288 hidden-state settings verified, including 22/24 mimic-eight settings. The hidden map is partial. |
+| Plan quieting and cues | Gap arrivals, windows, attention | 156 workload and 24 attention settings verified and published; attention reader approximate. |
 | Loudest versus reachable need | Needs and opening opportunities | Three sampled settings verified; three all-open pilot aliases excluded. |
 | Extinction across contexts | Alarm after extinction and place change | 48 sampled settings verified and 12 pilot aliases excluded; return partly fixed by model. |
 | Outside enforcement | Selling during/after enforcement | All 216 settings verified; drift stipulated. |
@@ -59,14 +61,14 @@ are truthful, falling to 83.0% (77.1–88.9%) at reliability 0.9 and zero at
 tests the analyst's unsettled heat proposal: heat is slower than refusal in
 both trigger settings, so no performer follow-on is admitted.
 The ToMpathy route is conditional probe planning; the [96-setting exact-order
-successor audit](reports/R-order-r2.md) is verified locally.
+successor audit](reports/R-order-r2.md) is verified and published.
 
 V's [visible-information report](reports/V-visible.md) retains entrustment,
 income, defection, payoffs and event-conditioned forecast changes.
 STATE sees the ledger and learns type; INSIDE knows type. An already known
 type is not updated by refusal, a fixed control. The route to ToMpathy is
 conditional trust evidence. The [blind-reader live-sum subset](reports/V-blind-live4-8.md)
-covers weights 4 and 8; the [24-setting weight-16 subset](reports/V-blind-live16.md) is verified and published. Public refusal does not update the blind forecast by construction.
+covers weights 4 and 8; weights 16 and 20 and rule-two each have complete 24-setting subsets; mimic-eight has 22/24. Total hidden coverage is 142/288. Public refusal does not update the blind forecast by construction.
 The unfinished hidden arms prohibit a full visibility ranking. [K workload](reports/K-workload.md) triggered its finer map in 10 of 12 groups by the frozen point-estimate rule; excluded validation passed and the finer map is admitted, not complete. [K attention](reports/K-attention.md) uses an approximate reader. [N](reports/N-attention.md) and [E](reports/E-extinction.md) are complete with pilot aliases excluded. Their pointwise intervals and routes are in the reports. [F outside enforcement](reports/F-enforcement.md) is complete under stipulated drift and finite stock.
 
 ## Validity and limits

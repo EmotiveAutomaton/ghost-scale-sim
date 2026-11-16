@@ -1,8 +1,8 @@
 # Version index
 
-V30: [the reader's side](v30-the-readers-side/README.md), active finite maps and explicitly checked numerical readers. V29 is closed.
+V31: [four settings and calibration](v31-four-settings/README.md), implementation in progress. V30 is [closed for theory review](v30-the-readers-side/FINAL_REPORT.md); V29 is closed.
 
-[V29 above the loops](v29-above-the-loops/README.md) is active: Ten primaries verified; X3 running, secondary reporting complete and finite continuation prepared.
+[V29 above the loops](v29-above-the-loops/README.md) is closed with eleven primary maps and separately recorded continuations.
 
 [V28 finite maps](v28-maps/README.md) is complete; all three maps are verified and the finite scientific queue is idle.
 V27's eligible science and separately approved K3 diagnostic are complete;

@@ -317354,6 +317354,26 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "id": "G-V31-D-ES2-OPENING-1",
+      "allowed_wording": "How does a diary estimator recover one dial or competing sensitivities? In the first 18 constructed settings, the split-day estimator, its same-prompt diagnostic and a random-slope moment estimator are fully replayed and independently reconstructed. This opening map covers 2,272 people, ten days with six prompts, three event rates and six populations; it does not cover the full diary grid or establish a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Linear event response, shared prompt noise and rating floor; no human-choice claim",
+      "reader": "Split-day reliability correction; same-prompt diagnostic; random-slope moment correction",
+      "control_status": "passes",
+      "source_file": "docs/versions/v31-four-settings/D_ES2_OPENING.md",
+      "source_line": 3,
+      "source_sha256": "7d4dd6849681b77acb102adfbed7f50445f22412a4387e75be58ecd1337ec742",
+      "estimate": {
+        "settings": 18,
+        "scientific_worlds": 3600,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,

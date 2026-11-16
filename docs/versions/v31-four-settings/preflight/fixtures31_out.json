@@ -1,0 +1,142 @@
+{
+ "KP1": {
+  "planted_odds_ratio_per_sd": 1.35,
+  "recovered_odds_ratio": 1.348,
+  "area_from_remainder_alone": 0.583,
+  "base_rate": 0.0897,
+  "null_world_recovered_odds_ratio": 0.986,
+  "null_world_trap_raw_pause_no_boundary_term": 1.044
+ },
+ "KP2": {
+  "own carries it (0.05, 0)": {
+   "base_mse": 0.49242,
+   "own_gain_pct": 0.44,
+   "donor_gain_pct": 0.123,
+   "own_minus_donor_pct": 0.316
+  },
+  "shared part only (0.03, 0.03)": {
+   "base_mse": 0.49367,
+   "own_gain_pct": 0.408,
+   "donor_gain_pct": 0.46,
+   "own_minus_donor_pct": -0.052
+  },
+  "donor carries it (0, 0.05)": {
+   "base_mse": 0.49468,
+   "own_gain_pct": 0.208,
+   "donor_gain_pct": 0.486,
+   "own_minus_donor_pct": -0.278
+  }
+ },
+ "CH13": {
+  "planted": "shift = -0.03 * exp(-minutes / 15), score points",
+  "expected_by_bin": {
+   "0-2 min": -0.0279,
+   "2-5 min": -0.0241,
+   "5-10 min": -0.0188,
+   "10-20 min": -0.012,
+   "20-60 min": -0.0044,
+   "60-up min": -0.0002
+  },
+  "recovered_system_set_waits": {
+   "0-2 min": -0.0265,
+   "2-5 min": -0.0217,
+   "5-10 min": -0.013,
+   "10-20 min": -0.0078,
+   "20-60 min": 0.0024,
+   "60-up min": 0.0143
+  },
+  "recovered_when_touchier_players_return_sooner": {
+   "0-2 min": -0.038,
+   "2-5 min": -0.0263,
+   "5-10 min": -0.0173,
+   "10-20 min": -0.0094,
+   "20-60 min": 0.0039,
+   "60-up min": -0.0102
+  },
+  "games": 360000
+ },
+ "CH14": {
+  "planted count 1.0, recency -0.30 (no standing preference term in the fit)": [
+   1.092,
+   -0.354
+  ],
+  "planted count 1.0, recency 0": [
+   1.184,
+   -0.051
+  ]
+ },
+ "ES1": {
+  "planted": {
+   "a_ashamed_criticised_minus_ignored": 0.15,
+   "b_lonely_ignored_minus_criticised": 0.2,
+   "c_angry_criticised_minus_mean_ignored_sidelined": 0.2
+  },
+  "recovered": {
+   "a": 0.147,
+   "b": 0.2,
+   "c": 0.198
+  },
+  "trap_one_event_at_a_time": {
+   "a": 0.1
+  }
+ },
+ "ES3": {
+  "planted": "0.4 * exp(-minutes / 90) plus a shared day effect",
+  "planted_mean_by_bin": {
+   "0-90": 0.219,
+   "90-240": 0.084,
+   "240-up": 0.011
+  },
+  "recovered_slope_by_bin": {
+   "0-90": 0.328,
+   "90-240": 0.194,
+   "240-up": 0.12
+  },
+  "primary_short_minus_long": 0.208,
+  "day_effect_alone_slope": 0.109
+ },
+ "EN1": {
+  "planted": "colored share 0.2, time constant 60 minutes",
+  "recovered_correlation_by_gap": {
+   "0-15": 0.182,
+   "15-60": 0.119,
+   "60-240": 0.041,
+   "240-up": -0.008
+  },
+  "rhythm_only_world_before_removing_time_of_day": {
+   "0-15": 0.114,
+   "15-60": 0.106,
+   "60-240": 0.101,
+   "240-up": -0.001
+  },
+  "pairs": {
+   "0-15": 87846,
+   "15-60": 84656,
+   "60-240": 51281,
+   "240-up": 15617
+  }
+ },
+ "MI1": {
+  "planted": {
+   "c1_others_ashamed_minus_angry": 0.2,
+   "c2_routine_angry_minus_afraid": 0.25,
+   "c3_plans_afraid_minus_angry": 0.25
+  },
+  "recovered": {
+   "c1": 0.174,
+   "c2": 0.245,
+   "c3": 0.294
+  }
+ },
+ "IP1": {
+  "planted": "Anger loads 0.5 on Neuroticism and -0.4 on Agreeableness; Anxiety 0.7 and 0",
+  "anger_betas_on_N_rest_and_A": [
+   0.5,
+   -0.423
+  ],
+  "anxiety_betas_on_N_rest_and_A": [
+   0.692,
+   -0.032
+  ]
+ }
+}

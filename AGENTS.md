@@ -18,7 +18,26 @@ authorship and contribution records retain their original attribution.
 - Use `.venv/Scripts/python.exe` explicitly. Never synchronize that environment while
   a scientific run is using it. Verification goes in an isolated checkout.
 
-## Active V30, November 15
+## V31 opening and V30 closure, November 15
+
+The owner commissioned `docs/versions/v31-four-settings/PACKET.md`. Read its
+README, DESIGN_REVIEW, protocols and outer `.local/v31/HANDOFF.md` when present.
+This is a separate 160-CPU-hour finite allocation, Gear 2 at most four
+single-thread below-normal scientists with inherited host-load backoff.
+Each family requires text-first implementation, supplied preflight comparison
+where available, excluded pilots, full replay and independent reconstruction.
+The owner approved matching all W stress pairs on completed plans, preserving maker equations and other pairs' original matching measures.
+Never treat a roster as admission or completed execution. Keep one finite
+expected-boundary monitor, disarmed during operator work, and preserve its live owner.
+
+The owner closed V30 for theory review instead of approving its proposed final
+five-hour transfer. Read its FINAL_REPORT and results/v30/final-closeout/.
+All completed science is published through efc21f376. Scientific workers,
+controller and monitor have exited; recurring V30 wakes are retired. Partial
+maps and failed gates remain unchanged. Do not restart or transfer unused V30
+hours into V31. The earlier active notes below are historical.
+
+## Historical V30 operating contract, November 15
 
 The owner commissioned docs/versions/v30-the-readers-side/. Read its README,
 packet, DESIGN_REVIEW, protocols, results/v30/CURRENT_STATUS.json and outer

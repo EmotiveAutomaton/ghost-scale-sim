@@ -1,0 +1,222 @@
+{
+ "no floor, people 2000, prompts 60": {
+  "true 1.0": {
+   "latent_mean": 1.0,
+   "latent_sd_over_worlds": 0.004,
+   "same_half_version_mean": 1.139,
+   "half_reliability": 0.792,
+   "people_used": 1380
+  },
+  "true 0.8": {
+   "latent_mean": 0.778,
+   "latent_sd_over_worlds": 0.018,
+   "same_half_version_mean": 0.917,
+   "half_reliability": 0.792,
+   "people_used": 1367
+  },
+  "true 0.5": {
+   "latent_mean": 0.466,
+   "latent_sd_over_worlds": 0.027,
+   "same_half_version_mean": 0.61,
+   "half_reliability": 0.79,
+   "people_used": 1369
+  },
+  "true 0.0": {
+   "latent_mean": -0.011,
+   "latent_sd_over_worlds": 0.024,
+   "same_half_version_mean": 0.133,
+   "half_reliability": 0.79,
+   "people_used": 1374
+  }
+ },
+ "floor, people 2000, prompts 60": {
+  "true 1.0": {
+   "latent_mean": 0.999,
+   "latent_sd_over_worlds": 0.003,
+   "same_half_version_mean": 1.129,
+   "half_reliability": 0.795,
+   "people_used": 1374
+  },
+  "true 0.8": {
+   "latent_mean": 0.788,
+   "latent_sd_over_worlds": 0.012,
+   "same_half_version_mean": 0.911,
+   "half_reliability": 0.801,
+   "people_used": 1370
+  },
+  "true 0.5": {
+   "latent_mean": 0.49,
+   "latent_sd_over_worlds": 0.029,
+   "same_half_version_mean": 0.614,
+   "half_reliability": 0.796,
+   "people_used": 1373
+  },
+  "true 0.0": {
+   "latent_mean": 0.04,
+   "latent_sd_over_worlds": 0.03,
+   "same_half_version_mean": 0.163,
+   "half_reliability": 0.798,
+   "people_used": 1374
+  }
+ },
+ "floor, people 2000, prompts 84": {
+  "true 1.0": {
+   "latent_mean": 1.0,
+   "latent_sd_over_worlds": 0.003,
+   "same_half_version_mean": 1.1,
+   "half_reliability": 0.832,
+   "people_used": 1591
+  },
+  "true 0.8": {
+   "latent_mean": 0.786,
+   "latent_sd_over_worlds": 0.014,
+   "same_half_version_mean": 0.89,
+   "half_reliability": 0.83,
+   "people_used": 1602
+  },
+  "true 0.5": {
+   "latent_mean": 0.482,
+   "latent_sd_over_worlds": 0.02,
+   "same_half_version_mean": 0.585,
+   "half_reliability": 0.827,
+   "people_used": 1600
+  },
+  "true 0.0": {
+   "latent_mean": 0.039,
+   "latent_sd_over_worlds": 0.026,
+   "same_half_version_mean": 0.139,
+   "half_reliability": 0.831,
+   "people_used": 1602
+  }
+ },
+ "floor, people 300, prompts 60": {
+  "true 1.0": {
+   "latent_mean": 1.004,
+   "latent_sd_over_worlds": 0.006,
+   "same_half_version_mean": 1.135,
+   "half_reliability": 0.794,
+   "people_used": 205
+  },
+  "true 0.8": {
+   "latent_mean": 0.768,
+   "latent_sd_over_worlds": 0.038,
+   "same_half_version_mean": 0.9,
+   "half_reliability": 0.792,
+   "people_used": 206
+  },
+  "true 0.5": {
+   "latent_mean": 0.507,
+   "latent_sd_over_worlds": 0.077,
+   "same_half_version_mean": 0.633,
+   "half_reliability": 0.796,
+   "people_used": 205
+  },
+  "true 0.0": {
+   "latent_mean": 0.04,
+   "latent_sd_over_worlds": 0.068,
+   "same_half_version_mean": 0.17,
+   "half_reliability": 0.784,
+   "people_used": 202
+  }
+ },
+ "floor, usual level tied to the dial": {
+  "true 1.0": {
+   "latent_mean": 1.0,
+   "latent_sd_over_worlds": 0.003,
+   "same_half_version_mean": 1.103,
+   "half_reliability": 0.827,
+   "people_used": 1370
+  },
+  "true 0.8": {
+   "latent_mean": 0.824,
+   "latent_sd_over_worlds": 0.013,
+   "same_half_version_mean": 0.927,
+   "half_reliability": 0.827,
+   "people_used": 1368
+  },
+  "true 0.5": {
+   "latent_mean": 0.575,
+   "latent_sd_over_worlds": 0.021,
+   "same_half_version_mean": 0.68,
+   "half_reliability": 0.823,
+   "people_used": 1370
+  },
+  "true 0.0": {
+   "latent_mean": 0.142,
+   "latent_sd_over_worlds": 0.017,
+   "same_half_version_mean": 0.254,
+   "half_reliability": 0.811,
+   "people_used": 1377
+  }
+ },
+ "floor, rare events (rate 0.08)": {
+  "true 1.0": {
+   "latent_mean": 1.001,
+   "latent_sd_over_worlds": 0.005,
+   "same_half_version_mean": 1.151,
+   "half_reliability": 0.768,
+   "people_used": 809
+  },
+  "true 0.8": {
+   "latent_mean": 0.794,
+   "latent_sd_over_worlds": 0.019,
+   "same_half_version_mean": 0.944,
+   "half_reliability": 0.767,
+   "people_used": 815
+  },
+  "true 0.5": {
+   "latent_mean": 0.495,
+   "latent_sd_over_worlds": 0.036,
+   "same_half_version_mean": 0.641,
+   "half_reliability": 0.77,
+   "people_used": 805
+  },
+  "true 0.0": {
+   "latent_mean": 0.04,
+   "latent_sd_over_worlds": 0.038,
+   "same_half_version_mean": 0.187,
+   "half_reliability": 0.772,
+   "people_used": 823
+  }
+ },
+ "truth on the estimator scale": {
+  "logs correlate 1.0": 1.0,
+  "logs correlate 0.8": 0.78,
+  "logs correlate 0.5": 0.469,
+  "logs correlate 0.0": 0.0
+ },
+ "rival": {
+  "second input spread 0.3, floor, people 2000, prompts 60": {
+   "truth_between_logs": 0.857,
+   "truth_between_reactivities": 0.837,
+   "latent_mean": 0.845,
+   "latent_sd_over_worlds": 0.012,
+   "same_half_version_mean": 0.951,
+   "share_of_worlds_with_estimate_above_0_85": 0.3
+  },
+  "second input spread 0.3, floor, people 2000, prompts 84": {
+   "truth_between_logs": 0.857,
+   "truth_between_reactivities": 0.837,
+   "latent_mean": 0.846,
+   "latent_sd_over_worlds": 0.008,
+   "same_half_version_mean": 0.929,
+   "share_of_worlds_with_estimate_above_0_85": 0.35
+  },
+  "second input spread 0.6, floor, people 2000, prompts 60": {
+   "truth_between_logs": 0.64,
+   "truth_between_reactivities": 0.581,
+   "latent_mean": 0.605,
+   "latent_sd_over_worlds": 0.018,
+   "same_half_version_mean": 0.678,
+   "share_of_worlds_with_estimate_above_0_85": 0.0
+  },
+  "second input spread 0.6, floor, people 2000, prompts 84": {
+   "truth_between_logs": 0.64,
+   "truth_between_reactivities": 0.581,
+   "latent_mean": 0.606,
+   "latent_sd_over_worlds": 0.014,
+   "same_half_version_mean": 0.668,
+   "share_of_worlds_with_estimate_above_0_85": 0.0
+  }
+ }
+}

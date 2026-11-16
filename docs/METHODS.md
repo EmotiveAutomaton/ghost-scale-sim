@@ -1,5 +1,7 @@
 # The methodology layer
 
+V31 adds person-level regression sufficient-statistic retention, split-day reliability correction, an independently reconstructed random-slope moment estimator, and per-world availability and jackknife intervals. Full seed replay regenerates every item; intervals across worlds use independent blocks. [Diary protocol](versions/v31-four-settings/protocols/D.md).
+
 V30 adds per-cell immutable execution with excluded pilots, full seed replay and independent retained-data reconstruction. Exact finite probe-order maps use enumeration instead of fabricated sampled pilots. Checked activation grids and posterior particles have prospective numerical admission gates; resource stops retain complete cells. See [V30 protocols](versions/v30-the-readers-side/README.md).
 
 V30 shutdown recovery retains interrupted attempts and their charges. Successors

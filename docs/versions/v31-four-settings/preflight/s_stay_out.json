@@ -1,0 +1,282 @@
+{
+ "temperature": 0.5,
+ "reference_odds": 0.75,
+ "target_lift_steps": 4.0,
+ "laws": {
+  "constant hazard": {
+   "task": {
+    "kind": "constant",
+    "H": 40,
+    "R": 20.0,
+    "g": 0.15
+   },
+   "baseline_wait_on_omission": {
+    "0.25": 0.9,
+    "0.5": 4.64,
+    "0.75": 11.31,
+    "0.9": 18.07
+   },
+   "matched_parameters": {
+    "cost": 0.6363,
+    "shift": 0.6501,
+    "sharpen": 1.5917,
+    "slow": 0.7252
+   },
+   "lift_by_odds": {
+    "cost": {
+     "0.25": 1.76,
+     "0.5": 3.92,
+     "0.75": 4.0,
+     "0.9": 4.0
+    },
+    "shift": {
+     "0.25": 1.55,
+     "0.5": 3.92,
+     "0.75": 4.0,
+     "0.9": 4.0
+    },
+    "sharpen": {
+     "0.25": -0.47,
+     "0.5": 0.0,
+     "0.75": 4.0,
+     "0.9": 8.0
+    },
+    "slow": {
+     "0.25": 0.07,
+     "0.5": 1.42,
+     "0.75": 4.0,
+     "0.9": 6.56
+    }
+   },
+   "lift_when_cost_doubles_at_reference": {
+    "cost": 5.98,
+    "shift": 3.35,
+    "sharpen": 3.35,
+    "slow": 0.68
+   },
+   "trials_to_3_log_odds": {
+    "odds 0.75 only": {
+     "cost told from shift": 474,
+     "cost told from sharpen": 474,
+     "cost told from slow": 2286,
+     "shift told from cost": 559,
+     "shift told from sharpen": null,
+     "shift told from slow": 357,
+     "sharpen told from cost": 559,
+     "sharpen told from shift": null,
+     "sharpen told from slow": 357,
+     "slow told from cost": 1917,
+     "slow told from shift": 294,
+     "slow told from sharpen": 294
+    },
+    "odds 0.9 and 0.75": {
+     "cost told from shift": 676,
+     "cost told from sharpen": 70,
+     "cost told from slow": 183,
+     "shift told from cost": 799,
+     "shift told from sharpen": 76,
+     "shift told from slow": 148,
+     "sharpen told from cost": 57,
+     "sharpen told from shift": 45,
+     "sharpen told from slow": 284,
+     "slow told from cost": 138,
+     "slow told from shift": 85,
+     "slow told from sharpen": 266
+    },
+    "odds 0.75 and 0.5": {
+     "cost told from shift": 316,
+     "cost told from sharpen": 6,
+     "cost told from slow": 26,
+     "shift told from cost": 373,
+     "shift told from sharpen": 6,
+     "shift told from slow": 22,
+     "sharpen told from cost": 18,
+     "sharpen told from shift": 17,
+     "sharpen told from slow": 55,
+     "slow told from cost": 44,
+     "slow told from shift": 36,
+     "slow told from sharpen": 36
+    },
+    "odds 0.75 and 0.25": {
+     "cost told from shift": 310,
+     "cost told from sharpen": 5,
+     "cost told from slow": 11,
+     "shift told from cost": 416,
+     "shift told from sharpen": 6,
+     "shift told from slow": 13,
+     "sharpen told from cost": 12,
+     "sharpen told from shift": 13,
+     "sharpen told from slow": 44,
+     "slow told from cost": 30,
+     "slow told from shift": 32,
+     "slow told from sharpen": 39
+    },
+    "all four odds": {
+     "cost told from shift": 329,
+     "cost told from sharpen": 6,
+     "cost told from slow": 13,
+     "shift told from cost": 416,
+     "shift told from sharpen": 6,
+     "shift told from slow": 14,
+     "sharpen told from cost": 12,
+     "sharpen told from shift": 11,
+     "sharpen told from slow": 42,
+     "slow told from cost": 28,
+     "slow told from shift": 26,
+     "slow told from sharpen": 38
+    },
+    "odds 0.75, cost 1 and 2": {
+     "cost told from shift": 39,
+     "cost told from sharpen": 39,
+     "cost told from slow": 6,
+     "shift told from cost": 65,
+     "shift told from sharpen": null,
+     "shift told from slow": 16,
+     "sharpen told from cost": 65,
+     "sharpen told from shift": null,
+     "sharpen told from slow": 16,
+     "slow told from cost": 18,
+     "slow told from shift": 30,
+     "slow told from sharpen": 30
+    }
+   }
+  },
+  "rising hazard": {
+   "task": {
+    "kind": "rising",
+    "H": 20,
+    "R": 14.0
+   },
+   "baseline_wait_on_omission": {
+    "0.25": 0.24,
+    "0.5": 0.38,
+    "0.75": 0.73,
+    "0.9": 17.16
+   },
+   "matched_parameters": {
+    "cost": 0.8401,
+    "shift": 0.5295,
+    "sharpen": 1.482,
+    "slow": 0.6055
+   },
+   "lift_by_odds": {
+    "cost": {
+     "0.25": 0.12,
+     "0.5": 0.23,
+     "0.75": 4.0,
+     "0.9": 2.74
+    },
+    "shift": {
+     "0.25": 0.05,
+     "0.5": 0.12,
+     "0.75": 4.0,
+     "0.9": 2.33
+    },
+    "sharpen": {
+     "0.25": -0.03,
+     "0.5": 0.0,
+     "0.75": 4.0,
+     "0.9": 2.68
+    },
+    "slow": {
+     "0.25": 0.0,
+     "0.5": 0.0,
+     "0.75": 4.0,
+     "0.9": 2.44
+    }
+   },
+   "lift_when_cost_doubles_at_reference": {
+    "cost": 0.06,
+    "shift": 0.01,
+    "sharpen": 0.01,
+    "slow": 0.0
+   },
+   "trials_to_3_log_odds": {
+    "odds 0.75 only": {
+     "cost told from shift": 66,
+     "cost told from sharpen": 66,
+     "cost told from slow": 25,
+     "shift told from cost": 89,
+     "shift told from sharpen": null,
+     "shift told from slow": 252,
+     "sharpen told from cost": 89,
+     "sharpen told from shift": null,
+     "sharpen told from slow": 252,
+     "slow told from cost": 44,
+     "slow told from shift": 366,
+     "slow told from sharpen": 366
+    },
+    "odds 0.9 and 0.75": {
+     "cost told from shift": 101,
+     "cost told from sharpen": 126,
+     "cost told from slow": 45,
+     "shift told from cost": 110,
+     "shift told from sharpen": 508,
+     "shift told from slow": 477,
+     "sharpen told from cost": 171,
+     "sharpen told from shift": 736,
+     "sharpen told from slow": 358,
+     "slow told from cost": 74,
+     "slow told from shift": 677,
+     "slow told from sharpen": 415
+    },
+    "odds 0.75 and 0.5": {
+     "cost told from shift": 112,
+     "cost told from sharpen": 70,
+     "cost told from slow": 37,
+     "shift told from cost": 150,
+     "shift told from sharpen": 504,
+     "shift told from slow": 262,
+     "sharpen told from cost": 94,
+     "sharpen told from shift": 587,
+     "sharpen told from slow": 502,
+     "slow told from cost": 62,
+     "slow told from shift": 335,
+     "slow told from sharpen": 728
+    },
+    "odds 0.75 and 0.25": {
+     "cost told from shift": 116,
+     "cost told from sharpen": 73,
+     "cost told from slow": 42,
+     "shift told from cost": 155,
+     "shift told from sharpen": 480,
+     "shift told from slow": 375,
+     "sharpen told from cost": 96,
+     "sharpen told from shift": 556,
+     "sharpen told from slow": 432,
+     "slow told from cost": 71,
+     "slow told from shift": 499,
+     "slow told from sharpen": 581
+    },
+    "all four odds": {
+     "cost told from shift": 165,
+     "cost told from sharpen": 96,
+     "cost told from slow": 62,
+     "shift told from cost": 187,
+     "shift told from sharpen": 333,
+     "shift told from slow": 434,
+     "sharpen told from cost": 130,
+     "sharpen told from shift": 407,
+     "sharpen told from slow": 640,
+     "slow told from cost": 98,
+     "slow told from shift": 535,
+     "slow told from sharpen": 724
+    },
+    "odds 0.75, cost 1 and 2": {
+     "cost told from shift": 101,
+     "cost told from sharpen": 101,
+     "cost told from slow": 42,
+     "shift told from cost": 136,
+     "shift told from sharpen": null,
+     "shift told from slow": 484,
+     "sharpen told from cost": 136,
+     "sharpen told from shift": null,
+     "sharpen told from slow": 484,
+     "slow told from cost": 73,
+     "slow told from shift": 693,
+     "slow told from sharpen": 693
+    }
+   }
+  }
+ }
+}

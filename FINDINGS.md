@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V31 diary calibration
+
+**G-V31-D-ES2-OPENING-1; descriptive method map.** How does a diary estimator recover one dial or competing sensitivities? In the first 18 constructed settings, the split-day estimator, its same-prompt diagnostic and a random-slope moment estimator are fully replayed and independently reconstructed. This opening map covers 2,272 people, ten days with six prompts, three event rates and six populations; it does not cover the full diary grid or establish a human trait. [Report](docs/versions/v31-four-settings/D_ES2_OPENING.md).
+
 ## November 15 V30 retained resource-boundary cells
 
 **G-V30-P-UNEVEN-TAIL-1; descriptive partial map.** How does an uneven label distribution affect recovery of a maker's largest channel? This continuation records ten additional complete settings. Together with the earlier 137 and 45 settings, 192 of the 360 planned texture settings are recorded. The incomplete map does not establish a pooled comparison, and the Bayesian reader remains held after failed validation. [Report](docs/versions/v30-the-readers-side/reports/P-uneven-continuation-0182-0191.md).
