@@ -1,0 +1,15 @@
+{
+  "additional_automatic_repair": false,
+  "approved": true,
+  "budget": "Existing V31 healing pool; production within existing S ceiling.",
+  "family": "S_LEARNING_R2",
+  "owner_authorization": "Allow the bounded log-calculation repair (Recommended)",
+  "previous_failures_retained": [
+    "S_LEARNING",
+    "S_LEARNING_R1"
+  ],
+  "recorded_at": "2026-11-16T12:29:11.220164+00:00",
+  "scope": "One additional independently rescaled log posterior calculation; same Bayesian model and unchanged validation gates.",
+  "validation_cpu_cap_seconds": 600,
+  "validation_wall_cap_seconds": 1800
+}

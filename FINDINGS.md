@@ -1,5 +1,7 @@
 # Every question this project asked, and where its answer stands today
 
+**G-V31-D-LEVEL-AND-RATE-TIED-BINARY-1; descriptive method map.** How do diary estimates behave when both usual levels and event rates are tied to sensitivity, with binary events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](docs/versions/v31-four-settings/D_LEVEL_AND_RATE_TIED_BINARY.md).
+
 **G-V31-D-LEVEL-TIED-GRADED-1; descriptive method map.** How do diary estimates behave when usual levels are tied to sensitivity and events are graded? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait. [Report](docs/versions/v31-four-settings/D_LEVEL_TIED_GRADED.md).
 
 **G-V31-D-OPTIONAL-RECIPE-SUPPLEMENT-1; method sensitivity analysis.** Does the optional moment estimator retain its precision advantage in additional verified diary settings? Ten further cells meet the frozen spread criterion; their biases and observation-model limits remain material, so this is a secondary sensitivity analysis. [Supplement](docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_SUPPLEMENT.md).

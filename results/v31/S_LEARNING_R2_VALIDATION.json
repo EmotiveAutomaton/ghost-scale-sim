@@ -1,0 +1,62 @@
+{
+  "admission_sha256": "9da1c7efdef620dc7b052d2a69cfe78304b5eab006b503217a361a895152f366",
+  "admitted_settings": 64,
+  "at": "2026-11-16T12:32:02.704844+00:00",
+  "authorization_sha256": "88ad3789579a9687be0bc35161024aac145391df6eba1307444e862c2d03f7ee",
+  "controls": {
+    "checks": {
+      "censored_wait_decreases_odds": true,
+      "finite_extreme_support_0": true,
+      "finite_extreme_support_3": true,
+      "finite_extreme_support_40": true,
+      "finite_extreme_support_80": true,
+      "independent_dynamic_programme": true,
+      "independent_extreme_update_0": true,
+      "independent_extreme_update_3": true,
+      "independent_extreme_update_40": true,
+      "independent_extreme_update_80": true,
+      "independent_terminal": true,
+      "independent_update": true,
+      "log_shift_invariance_0": true,
+      "log_shift_invariance_3": true,
+      "log_shift_invariance_40": true,
+      "log_shift_invariance_80": true,
+      "normalized_extreme_update_0": true,
+      "normalized_extreme_update_3": true,
+      "normalized_extreme_update_40": true,
+      "normalized_extreme_update_80": true,
+      "received_reward_increases_odds": true,
+      "zero_wait_is_uninformative": true
+    },
+    "passed": true
+  },
+  "cpu_cap_seconds": 518.0625,
+  "freeze_sha256": "3dc8c1af6a8c1f6ab3212ca16f6e726833034cb302368b9cd52072d7ab9384ac",
+  "full_seed_replay": true,
+  "independent_reconstruction": true,
+  "passed": true,
+  "production_unchanged": true,
+  "profile_cpu_seconds": 9.59375,
+  "profile_worlds": 8,
+  "protocol_sha256": "3581f6a4354ae86a3ff979e85d93941a9a5b1d30a1299bdf980d38a0d3224793",
+  "retained_fixtures": [
+    {
+      "family": "S_LEARNING",
+      "passed": true,
+      "raw_sha256": "197142ec9aa04c62515ce85113fc732091f837a5d53e313a01dcd1ac13a110d3",
+      "reconstruction": "retained-S_LEARNING",
+      "summary_sha256": "7760035c9d19e417e00ee27897f830eac36959da6cc5d34bc403c1fa4e03c73e"
+    },
+    {
+      "family": "S_LEARNING_R1",
+      "passed": true,
+      "raw_sha256": "197142ec9aa04c62515ce85113fc732091f837a5d53e313a01dcd1ac13a110d3",
+      "reconstruction": "retained-S_LEARNING",
+      "summary_sha256": "7760035c9d19e417e00ee27897f830eac36959da6cc5d34bc403c1fa4e03c73e"
+    }
+  ],
+  "scientific_results_pending": true,
+  "source_manifest_sha256": "174bc15d29873d5e2fc3293007f0675cb0b983e3c6efa201105e1a8d3e92eb60",
+  "validation_completion_sha256": "ac3896c711ff6c61e79662539a9700983941cd0b1c21b7653a31b141196918ae",
+  "validation_cpu_seconds": 18.4375
+}

@@ -1,5 +1,11 @@
 # The methodology layer
 
+V31 S.b preserves finite posterior support in its independent reconstruction by
+normalizing scalar log likelihoods with a maximum shift and compensated summation.
+The retained failed fixture and production-byte comparison pass without changing
+the Bayesian model or validation thresholds. This checks numerical agreement,
+not the realism of the learning model. [Repair evidence](versions/v31-four-settings/S_LEARNING_R2_REPORT.md).
+
 V31 adds person-level regression sufficient-statistic retention, split-day reliability correction, an independently reconstructed random-slope moment estimator, and per-world availability and jackknife intervals. Full seed replay regenerates every item; intervals across worlds use independent blocks. [Diary protocol](versions/v31-four-settings/protocols/D.md).
 
 V30 adds per-cell immutable execution with excluded pilots, full seed replay and independent retained-data reconstruction. Exact finite probe-order maps use enumeration instead of fabricated sampled pilots. Checked activation grids and posterior particles have prospective numerical admission gates; resource stops retain complete cells. See [V30 protocols](versions/v30-the-readers-side/README.md).

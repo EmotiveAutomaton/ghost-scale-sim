@@ -1,11 +1,13 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-16T11:17:22.816727+00:00. Gear 2 is active with 4 permitted scientific workers. Counts below are a snapshot; the queue continues.
+Checkpoint 2026-11-16T12:34:57.127231+00:00. Gear 2 permits 4 workers. This snapshot has 4 active jobs and {'VERIFIED': 1766} completed receipts; counts continue to change.
+
+The table distinguishes prepared scientific cells from excluded validation jobs. Preparation does not imply completed execution.
 
 | Family | Prepared jobs | Purpose |
 |---|---:|---|
-| D_CORE | 3456 | science |
 | D_CARRY | 144 | science |
+| D_CORE | 3456 | science |
 | D_HEAVY | 1728 | science |
 | G4_IDENTITY | 114 | science |
 | G7_CAPITAL | 24 | science |
@@ -14,22 +16,22 @@ Checkpoint 2026-11-16T11:17:22.816727+00:00. Gear 2 is active with 4 permitted s
 | Q_HIDDEN_V1 | 6 | validation |
 | Q_HIDDEN_V2 | 6 | validation |
 | S_CORE | 2160 | science |
+| S_LEARNING_R2 | 64 | science |
+| S_LEARNING_R2_VALIDATION | 1 | validation |
 | S_UNIFORM | 48 | science |
 | T_CORE | 216 | science |
-| W_MATCH_VALIDATION | 108 | validation |
 | W_BURST | 27 | science |
 | W_COUPLING | 18 | science |
 | W_HIDDEN_V1 | 3 | validation |
 | W_HIDDEN_V3 | 3 | validation |
+| W_MATCH_VALIDATION | 108 | validation |
 
-D covers the full declared diary grid plus reaction/carry. S has exact paired readers, a uniform-arrival texture and a built but validity-held learning extension. M has 552 distinct laws covering 1,296 logical labels through exact aliases. W has excluded matching, exact-reader admission, the approved coupling experiment and burst timing; its hidden readers are separately gated. T is built. Q has 45 exact cells and twelve moving-reader validation jobs. G4 and G7 reserves are built.
+S.b's owner-approved second numerical repair passed all unchanged gates. Its 64 settings are admitted under S_LEARNING_R2, with scientific results pending. The two earlier failures remain retained. [Repair report](S_LEARNING_R2_REPORT.md).
 
-S.b is held after an excluded numerical reconstruction failure and its failed first repair; the requested second repair is a separate owner decision. G6 lacks its intervention definition. Matching-dependent W jobs are created only from passed calibration receipts. Conditional follow-ons still need trigger evaluation and their own admission; no eligible result is rerun for occupancy.
+D covers diary and reaction/carry maps. S includes exact paired readers, learning and uniform arrivals. M has 552 distinct laws covering 1,296 labels through exact aliases. W includes matching, exact readers, coupling and burst timing; hidden readers remain gated. T, exact Q and G4/G7 reserves are built. G6 still needs its operational definition.
 
-All scientific jobs require known answers, forty excluded pilots, full seed replay and independent reconstruction. Family ceilings can leave partial maps; a complete roster is not a promise of full execution. No registered claim or human marker is admitted.
+W matching-dependent science and W/Q hidden-reader descendants require their completed gates. Conditional follow-ons require frozen triggers and separate validation. No further automatic S repair or repetition of valid science is admitted.
 
-[First 216 diary cells](D_DIARY_SHAPES.md) are fully audited; the opening eighteen overlap that map and are not additional replication. [Current machine-readable state](../../../results/v31/CURRENT_STATUS.json).
+All sampled scientific cells require forty excluded pilots, complete seed replay and independent reconstruction. Family ceilings can leave partial maps. No registered claim, human marker or deployed reader follows.
 
-Five complete 216-cell D diary blocks (1,080 cells) and the 144-cell reaction/carry map have been audited and documented. The opening eighteen are included once. Later D cells remain partial until a complete prospective block is verified. [Theory return](THEORY_RETURN.md).
-
-Six complete 216-cell diary blocks (1,296 distinct cells) and the separate 144-cell carry map are documented. Later diary cells remain a partial prospective block. [Latest block](D_LEVEL_TIED_GRADED.md).
+Seven complete 216-cell diary blocks (1,512 distinct cells) and the separate 144-cell carry map are audited and documented. The opening eighteen are included once. Later diary cells remain in an incomplete prospective block. [Latest complete diary block](D_LEVEL_AND_RATE_TIED_BINARY.md).

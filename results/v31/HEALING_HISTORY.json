@@ -1,1 +1,15 @@
-{"D_heavy_preparation":{"corrected":true,"error":"setting key mismatch before profile records or admission","model_unchanged":true},"S":{"R1":"Failed: longdouble has no wider exponent range on this platform","additional_repair":"owner decision pending","initial":"Excluded reconstruction underflow, original/replay retained","production_admitted":false}}
+{
+  "D_heavy_preparation": {
+    "corrected": true,
+    "error": "setting key mismatch before profile records or admission",
+    "model_unchanged": true
+  },
+  "S": {
+    "R1": "Failed: longdouble has no wider exponent range on this platform",
+    "R2": "22 known-answer/numerical controls, retained failed-fixture reconstruction, full seed replay and independent reconstruction passed; production bytes unchanged.",
+    "additional_repair": "Owner approved one bounded log-calculation repair on 2026-11-16; R2 passed and 64 settings admitted.",
+    "further_automatic_repair": false,
+    "initial": "Excluded reconstruction underflow, original/replay retained",
+    "production_admitted": true
+  }
+}

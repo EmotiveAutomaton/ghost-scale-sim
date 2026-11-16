@@ -317561,6 +317561,27 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-LEVEL-AND-RATE-TIED-BINARY-1",
+      "allowed_wording": "How do diary estimates behave when both usual levels and event rates are tied to sensitivity, with binary events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_LEVEL_AND_RATE_TIED_BINARY.md",
+      "source_line": 3,
+      "source_sha256": "dbd4f4e9a79f5aed295090009e7de3fd11afaaf35c4821f856340ae6081f7e96",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,
