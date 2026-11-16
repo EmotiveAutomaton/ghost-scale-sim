@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V31 diary-shape calibration
+
+**G-V31-D-GRADED-DIARY-SHAPES-1; descriptive method map.** How well do diary estimates distinguish one sensitivity from competing sensitivities across study sizes? All 216 graded-event mild-floor settings with independent usual levels and event rates are verified: three sample sizes, four diary schedules, three event rates and six populations. These are method calibrations in constructed worlds, not evidence for a human trait. [Report](docs/versions/v31-four-settings/D_GRADED_DIARY_SHAPES.md).
+
 **G-V31-D-OPTIONAL-RECIPE-1; method sensitivity analysis.** Can the diary estimator be made more precise without claiming that its observation model is exact? At the ES2-shaped, low-event-rate setting, the random-slope moment estimator has 35.6%–49.3% less between-world spread than the split-day estimator in five planted populations. This meets the packet’s optional-recipe trigger; bias remains and the method is offered only as a secondary sensitivity analysis. [Recipe](docs/versions/v31-four-settings/D_OPTIONAL_RECIPE.md).
 
 ## V31 diary-shape calibration

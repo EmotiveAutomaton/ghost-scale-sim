@@ -1,6 +1,6 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-16T08:08:59.512347+00:00. Gear 2 is active with 4 permitted scientific workers. Counts below are a snapshot; the queue continues.
+Checkpoint 2026-11-16T08:16:53.515466+00:00. Gear 2 is active with 4 permitted scientific workers. Counts below are a snapshot; the queue continues.
 
 | Family | Prepared jobs | Purpose |
 |---|---:|---|
