@@ -317306,9 +317306,57 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "How does quieting an unresolved gap interact with cues, deadlines and access to work? This partial low-arrival, 0.20-opening, deadline slice retains six complete settings out of 36. Together with eight complete slices, 294 of the 1,296 planned finer-map settings are recorded. The incomplete slice does not establish its best quieting level or a complete contrast.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen gap-arrival, work-opening, stress-driven attention, cue and deadline rules; low arrival0.02 and opening0.20. Partial declared quieting/cue grid.",
+      "claim_kind": "mechanism",
+      "control_status": "Controls, excluded pilots, full seed replay and independent reconstruction passed for included settings.",
+      "estimate": {
+        "additional_verified_settings": 6,
+        "planned_settings": 1296
+      },
+      "estimate_detail": {
+        "sha256": "0a25b648072da96d4510e0eeadd1405d9c3316131fa1461df372816265020d11",
+        "source_file": "results/v30/K-best-q-low-arrival-opening20-deadline-partial/VERIFIED.json"
+      },
+      "id": "G-V30-K-BEST-Q-LOW-OPEN20-DEADLINE-PARTIAL-1",
+      "reader": "Constructed queue outcomes under declared policies; no fitted human or text reader.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening20-deadline-partial.md",
+      "source_line": 3,
+      "source_sha256": "2f32134a66455659961d129eb890834ccc73628ff10465f8402235745365d858",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "How does an uneven label distribution affect recovery of a maker's largest channel? This continuation records ten additional complete settings. Together with the earlier 137 and 45 settings, 192 of the 360 planned texture settings are recorded. The incomplete map does not establish a pooled comparison, and the Bayesian reader remains held after failed validation.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Stipulated uneven maker-label mixture and frozen empirical reader-table marginals; existing COUNT/CORRECTED definitions.",
+      "claim_kind": "method",
+      "control_status": "Controls, excluded pilots, full seed replay and independent reconstruction passed for included settings.",
+      "estimate": {
+        "additional_verified_settings": 10,
+        "planned_settings": 360
+      },
+      "estimate_detail": {
+        "sha256": "9f58280202c2c58cb0a868a28c7d5c1d2ff790a51677b0fb255cb187dd20ec33",
+        "source_file": "results/v30/P-uneven-continuation-0182-0191/VERIFIED.json"
+      },
+      "id": "G-V30-P-UNEVEN-TAIL-1",
+      "reader": "COUNT and CORRECTED on constructed label records; Bayesian reference held after convergence failure.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/P-uneven-continuation-0182-0191.md",
+      "source_line": 3,
+      "source_sha256": "7ff8ab656d00eef26d84f44a5fabfe8c7e4db0b1a0877e3449f28cc780453e9d",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-16T05:04:44.917474+00:00"
+  "updated": "2026-11-16T05:18:17.024840+00:00"
 }

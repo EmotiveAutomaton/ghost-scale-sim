@@ -122,3 +122,7 @@ Final coverage and resource-held remainders will replace this interim return.
 [K-best-q-low-arrival-opening10-deadline](reports/K-best-q-low-arrival-opening10-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN10-DEADLINE-1.
 
 [P-uneven-continuation-0137-0181](reports/P-uneven-continuation-0137-0181.md): 45 additional settings verified; the 360-setting texture remains incomplete. G-V30-P-UNEVEN-CONTINUATION-1.
+
+[K-best-q-low-arrival-opening20-deadline-partial](reports/K-best-q-low-arrival-opening20-deadline-partial.md): 6 additional verified settings; wider map incomplete. G-V30-K-BEST-Q-LOW-OPEN20-DEADLINE-PARTIAL-1.
+
+[P-uneven-continuation-0182-0191](reports/P-uneven-continuation-0182-0191.md): 10 additional verified settings; wider map incomplete. G-V30-P-UNEVEN-TAIL-1.

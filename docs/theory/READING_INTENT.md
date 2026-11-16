@@ -1,5 +1,13 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+## November 15 V30 retained resource-boundary cells
+
+**G-V30-P-UNEVEN-TAIL-1; descriptive partial map.** How does an uneven label distribution affect recovery of a maker's largest channel? This continuation records ten additional complete settings. Together with the earlier 137 and 45 settings, 192 of the 360 planned texture settings are recorded. The incomplete map does not establish a pooled comparison, and the Bayesian reader remains held after failed validation. [Report](../versions/v30-the-readers-side/reports/P-uneven-continuation-0182-0191.md).
+
+## November 15 V30 retained resource-boundary cells
+
+**G-V30-K-BEST-Q-LOW-OPEN20-DEADLINE-PARTIAL-1; descriptive partial map.** How does quieting an unresolved gap interact with cues, deadlines and access to work? This partial low-arrival, 0.20-opening, deadline slice retains six complete settings out of 36. Together with eight complete slices, 294 of the 1,296 planned finer-map settings are recorded. The incomplete slice does not establish its best quieting level or a complete contrast. [Report](../versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening20-deadline-partial.md).
+
 ## November 15 V30 uneven-label continuation
 
 **G-V30-P-UNEVEN-CONTINUATION-1; descriptive partial map.** How does an uneven label distribution affect recovery of a maker's largest channel? This continuation retains 45 additional verified settings from the stipulated uneven-label texture. Together with the earlier 137-cell snapshot, 182 of 360 settings are recorded; the map is incomplete. This is a descriptive constructed-method result, with no pooled comparison asserted. [Report](../versions/v30-the-readers-side/reports/P-uneven-continuation-0137-0181.md).
