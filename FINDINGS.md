@@ -2,6 +2,10 @@
 
 ## November 15 V30 K finer-map slice
 
+**G-V30-K-BEST-Q-LOW-OPEN10-1; descriptive, no registered claim.** When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.10-opening slice, no quieting closes 19.01 gaps per 1,000 steps (95% whole-block interval 18.65 to 19.37); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening10-no-deadline.md).
+
+## November 15 V30 K finer-map slice
+
 **G-V30-K-BEST-Q-LOW-1; descriptive, no registered claim.** When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.05-opening slice, no quieting closes 13.98 gaps per 1,000 steps (95% whole-block interval 13.79 to 14.17); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people. [Report](docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening-no-deadline.md).
 
 ## November 15 V30 V-blind-mimic8-partial

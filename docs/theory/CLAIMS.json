@@ -316833,9 +316833,73 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "When plans have no cue and no deadline, can leaving a gap's stress active help complete work? In this constructed low-arrival, 0.10-opening slice, no quieting closes 19.01 gaps per 1,000 steps (95% whole-block interval 18.65 to 19.37); full quieting closes 0.00, fixed by construction when neither cues nor deadlines can return attention. The 36 settings cross nine quieting levels and four cue reliabilities. This is a descriptive mechanism result under stipulated queue laws, not evidence about people.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Each setting has 200 worlds in eight blocks, excluded 40-world pilots, controls, complete seed replay and independent reconstruction. Intervals are pointwise, not simultaneous; shared generators and summary conventions limit independence. Unfinished gaps are censored at their observed age. The other opening, arrival and deadline combinations remain incomplete. Miniature: architecture untested; no registered claim.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full replay and independent reconstruction pass for included settings.",
+      "estimate": {
+        "full_quieting": {
+          "block_means": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blocks": 8,
+          "estimate": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.0,
+          "worlds": 200
+        },
+        "no_quieting": {
+          "block_means": [
+            18.84,
+            18.613333333333333,
+            19.026666666666664,
+            18.76,
+            19.413333333333334,
+            18.973333333333336,
+            18.6,
+            19.85333333333333
+          ],
+          "blocks": 8,
+          "estimate": 19.009999999999998,
+          "interval95": [
+            18.65078113779131,
+            19.369218862208687
+          ],
+          "measure": "closed_per_1000",
+          "standard_error": 0.15191371820141095,
+          "worlds": 200
+        }
+      },
+      "estimate_detail": {
+        "sha256": "76d9bb15c22853cfbfc6fa72d573af7ba12ee47a2097bf9ec32abaf14586da89",
+        "source_file": "results/v30/K-best-q-low-arrival-opening10-no-deadline/VERIFIED.json"
+      },
+      "id": "G-V30-K-BEST-Q-LOW-OPEN10-1",
+      "reader": "Constructed queue with stipulated cues and attention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/K-best-q-low-arrival-opening10-no-deadline.md",
+      "source_line": 3,
+      "source_sha256": "e3bb7e28793ddc20ff06502ce80c80e35984b6c1289dc6045da697d2b4f44f9e",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-16T01:11:18.801566+00:00"
+  "updated": "2026-11-16T01:25:20.552086+00:00"
 }
