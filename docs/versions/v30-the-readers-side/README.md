@@ -60,3 +60,5 @@ The [blind-reader live-sum subset](reports/V-blind-live16.md) is verified for we
 [K-best-q-low-arrival-opening10-no-deadline](reports/K-best-q-low-arrival-opening10-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN10-1.
 
 [K-best-q-low-arrival-opening20-no-deadline](reports/K-best-q-low-arrival-opening20-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN20-1.
+
+[K-best-q-low-arrival-opening30-no-deadline](reports/K-best-q-low-arrival-opening30-no-deadline.md): one 36-setting slice verified; the 1,296-setting follow-on remains incomplete. G-V30-K-BEST-Q-LOW-OPEN30-1.
