@@ -316639,9 +316639,91 @@
       "status": "descriptive",
       "superseded_by": null,
       "supersedes": null
+    },
+    {
+      "allowed_wording": "What can a partner learn from public refusals when it sees only its own ventures? In the BLIND condition a public refusal changes its forecast by zero by construction. This complete 24-setting subset covers live-sum weight 20. In the plentiful, low-offer, loss-two, no-tail setting, the entrusted share is 96.5% (95% whole-block interval 94.4–98.6%). This is a descriptive constructed-mechanism result, not a claim about people or a completed four-arm comparison.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 ledger, maker and blind-reader laws.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full seed replay and independent reconstruction pass.",
+      "estimate": {
+        "block_means": [
+          0.9600390625,
+          0.9600390625,
+          1.0,
+          1.0,
+          0.9600390625,
+          0.9600390625,
+          0.920078125,
+          0.9600390625
+        ],
+        "blocks": 8,
+        "estimate": 0.9650341796874999,
+        "interval95": [
+          0.9436238813558309,
+          0.986444478019169
+        ],
+        "measure": "entrusted_share",
+        "standard_error": 0.009054418822460839,
+        "worlds": 200
+      },
+      "estimate_detail": {
+        "sha256": "09d04932d7d1ff7b1f5bac008ca3c4adb351b7ea3d05690dc024a8a44f1cb5f7",
+        "source_file": "results/v30/V-blind-live20/VERIFIED.json"
+      },
+      "id": "G-V30-V-BLIND-LIVE20-1",
+      "reader": "Blind to public offers and private state; shared propagation/resampling convention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-blind-live20.md",
+      "source_line": 3,
+      "source_sha256": "b16ca68b59d32286a68f7aa7eff4933b0de6f11e3443f197e008204139b0bff7",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
+    },
+    {
+      "allowed_wording": "What can a partner learn from public refusals when it sees only its own ventures? In the BLIND condition a public refusal changes its forecast by zero by construction. This complete 24-setting subset covers the rule maker with stock parameter two. In the plentiful, low-offer, loss-two, no-tail setting, the entrusted share is 97.0% (95% whole-block interval 94.6–99.4%). This is a descriptive constructed-mechanism result, not a claim about people or a completed four-arm comparison.",
+      "architecture": "constructed miniature; architecture untested",
+      "assumed_choice_model": "Frozen V30 ledger, maker and blind-reader laws.",
+      "claim_kind": "mechanism",
+      "control_status": "Known answers, excluded pilots, full seed replay and independent reconstruction pass.",
+      "estimate": {
+        "block_means": [
+          0.9600390625,
+          0.9600390625,
+          1.0,
+          0.9600390625,
+          0.920078125,
+          0.9600390625,
+          1.0,
+          1.0
+        ],
+        "blocks": 8,
+        "estimate": 0.970029296875,
+        "interval95": [
+          0.9464061463927791,
+          0.9936524473572208
+        ],
+        "measure": "entrusted_share",
+        "standard_error": 0.009990234374999999,
+        "worlds": 200
+      },
+      "estimate_detail": {
+        "sha256": "88b125becdd0dde3f9fc53c4330f82ce7125fc3874fdde0dfc1466b8e7e45d24",
+        "source_file": "results/v30/V-blind-rule2/VERIFIED.json"
+      },
+      "id": "G-V30-V-BLIND-RULE2-1",
+      "reader": "Blind to public offers and private state; shared propagation/resampling convention.",
+      "registered_claim": false,
+      "source_file": "docs/versions/v30-the-readers-side/reports/V-blind-rule2.md",
+      "source_line": 3,
+      "source_sha256": "f535773cf4f2a6ce9363dc8d9fcc738c395f00507ed788216ff95353ded58f95",
+      "status": "descriptive",
+      "superseded_by": null,
+      "supersedes": null
     }
   ],
   "schema_version": 1,
   "scope": "V25-required backfill; historical claims retain original scientific status",
-  "updated": "2026-11-15T22:15:17.514236+00:00"
+  "updated": "2026-11-16T00:07:51.274632+00:00"
 }

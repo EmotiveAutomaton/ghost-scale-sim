@@ -75,3 +75,63 @@ def test_progress_without_completed_turn_cannot_rearm_delivery(tmp_path):
     defer_review_events(c,s,events,datetime.now(timezone.utc)+timedelta(hours=1),'Inspected','Check')
     (s/'ARMED').touch();finish_review_delivery(c,s,entry)
     assert not (s/'ARMED').exists()
+
+
+def completed_before_due(tmp_path,monkeypatch,complete=True,changed=False):
+    from runners import watch_v23_events as watcher
+    c,s,events=fixture(tmp_path)
+    actual_now=datetime.now(timezone.utc)
+    due=actual_now+timedelta(minutes=2)
+    defer_review_events(c,s,events,due,'Inspected incomplete map','Land at due boundary')
+    finished=due-timedelta(seconds=14)
+    entry=dict(at=actual_now.isoformat(),exit_code=0,events=['done'],report_record=dict(
+        state='REPORT_RECORDED' if complete else 'REPORT_INCOMPLETE',
+        turn_completed=complete,finished=finished.isoformat()))
+    if changed:
+        write(c/'events/done.json',dict(id='done',kind='batch_complete',evidence='changed'),immutable=False)
+    class Clock(datetime):
+        @classmethod
+        def now(cls,tz=None):return due+timedelta(seconds=53)
+    monkeypatch.setattr(watcher,'datetime',Clock)
+    return c,s,entry,due
+
+
+def test_successful_handoff_expiring_during_finalization_rearms_due_work(tmp_path,monkeypatch):
+    c,s,entry,due=completed_before_due(tmp_path,monkeypatch)
+    assert not finish_review_delivery(c,s,entry)
+    assert (s/'ARMED').exists()
+    assert entry['acknowledged']==[]  # No unpublished event is falsely landed.
+    assert entry['due_after_report']==['done']
+    assert deferred_events(c,s,pending(c,s),due+timedelta(seconds=53))==set()
+
+
+@pytest.mark.parametrize('complete,changed',[(False,False),(True,True)])
+def test_late_finalization_keeps_failed_or_changed_handoff_disarmed(tmp_path,monkeypatch,complete,changed):
+    c,s,entry,due=completed_before_due(tmp_path,monkeypatch,complete,changed)
+    assert finish_review_delivery(c,s,entry)=={'done'}
+    assert not (s/'ARMED').exists()
+
+
+def test_nonzero_exit_cannot_use_expired_success_handoff(tmp_path,monkeypatch):
+    c,s,entry,due=completed_before_due(tmp_path,monkeypatch)
+    entry['exit_code']=1
+    assert finish_review_delivery(c,s,entry)=={'done'}
+    assert not (s/'ARMED').exists()
+
+
+@pytest.mark.parametrize('offset',[30,120])
+def test_handoff_expired_before_completion_or_future_completion_stays_blocked(tmp_path,monkeypatch,offset):
+    c,s,entry,due=completed_before_due(tmp_path,monkeypatch)
+    entry['report_record']['finished']=(due+timedelta(seconds=offset)).isoformat()
+    assert finish_review_delivery(c,s,entry)=={'done'}
+    assert not (s/'ARMED').exists()
+
+
+def test_review_does_not_inherit_monitor_import_root(tmp_path,monkeypatch):
+    from runners.watch_v23_events import review_environment
+    profile=tmp_path/'profile';(profile/'.codex').mkdir(parents=True)
+    (profile/'.codex/config.toml').write_text('')
+    monkeypatch.setenv('PYTHONPATH','stale-monitor-capsule')
+    result=review_environment(dict(review_user_profile=str(profile)))
+    assert 'PYTHONPATH' not in result
+    assert result['USERPROFILE']==str(profile)

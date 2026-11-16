@@ -1981,3 +1981,7 @@ The F reader compares two stipulated action laws using the observed enforcement 
 ## V30 resource-boundary audit
 
 The November 15 health audit checks all completed source/plan/admission bindings and rechecks retained pilot, replay, reconstruction and raw hashes for 243 unlanded cells. Three partial maps publish only completed cells, preserving the unrun grid. Validation-only receipts are distinguished from sampled outputs. Accounting includes conservative allowances once, separately labelled from measured CPU. [Audit report](versions/v30-the-readers-side/QUEUE_HEALTH_2026-11-15.md).
+
+## Completed-review handoff timing
+
+A successful native review may finish before its bounded handoff expires while receipt finalization crosses that deadline. The monitor verifies the saved handoff at successful report completion and leaves expired exact events due for the next review. It does not acknowledge them as published. Failed reports, changed hashes, nonzero exits and invalid timestamps retain the stop. Monitor capsules include their late-imported shutdown dependency, and review subprocesses do not inherit the monitor import path. [V30 retained-event regression and targeted checks](versions/v30-the-readers-side/WAKE_HEALTH_2026-11-15.md).

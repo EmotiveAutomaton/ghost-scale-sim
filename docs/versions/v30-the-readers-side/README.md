@@ -1,5 +1,7 @@
 # V30: the reader's side
 
+Current [queue and wake repair](WAKE_HEALTH_2026-11-15.md): four workers remain active; two more subsets are recorded and the missed-review cause is repaired.
+
 Current [approved allocation](RESOURCE_REALLOCATION_2026-11-15.md): Gear 2 has resumed with four workers. The 60-hour total and validity gates are unchanged. The [preceding audit](QUEUE_HEALTH_2026-11-15.md) preserves the earlier resource-boundary snapshot.
 
 The November 14 packet was commissioned November 15. This finite allocation
@@ -44,3 +46,7 @@ November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,
 November 15, 13:00 review: the [216-setting F map](reports/F-enforcement.md) is verified; L shared-event and P uneven textures remain in progress at the snapshot. K finer-map validation is bound separately; admission is not completion.
 
 The [blind-reader live-sum subset](reports/V-blind-live16.md) is verified for weight 16; the rest of the hidden map remains partial.
+
+[V-blind-live20](reports/V-blind-live20.md) is verified for all 24 declared settings; the full hidden-state map remains incomplete. G-V30-V-BLIND-LIVE20-1.
+
+[V-blind-rule2](reports/V-blind-rule2.md) is verified for all 24 declared settings; the full hidden-state map remains incomplete. G-V30-V-BLIND-RULE2-1.

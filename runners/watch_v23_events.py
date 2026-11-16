@@ -213,7 +213,25 @@ def finish_review_delivery(campaign,state,entry):
     """A review cannot override a failed handoff by manually rearming itself."""
     remaining=pending(campaign,state);unresolved={e['id'] for e in remaining}
     entry['acknowledged']=[identity for identity in entry['events'] if identity not in unresolved]
-    deferred=deferred_events(campaign,state,remaining)
+    current=datetime.now(timezone.utc)
+    deferred=deferred_events(campaign,state,remaining,current)
+    # Reading thousands of receipt files can cross the next review's due time.
+    # A handoff that was valid when a successful report finished is still a
+    # handoff; expiry makes its events ready now, rather than disabling delivery.
+    report=entry.get('report_record',{})
+    if report.get('state')=='REPORT_RECORDED' and report.get('turn_completed') and entry.get('exit_code')==0:
+        try:
+            finished=datetime.fromisoformat(report['finished'])
+            began=datetime.fromisoformat(entry['at'])
+            saved=read(state/'DEFERRED_EVENTS.json')
+            saved_at=datetime.fromisoformat(saved['at'])
+            if began<=saved_at<=finished<=current:
+                at_completion=deferred_events(campaign,state,remaining,finished)
+                entry['due_after_report']=sorted(at_completion-deferred)
+                deferred |= at_completion
+                entry['handoff_evaluated_at']=finished.isoformat()
+        except (OSError,ValueError,KeyError,TypeError):
+            pass  # Missing/invalid completion proof never extends a handoff.
     blocked=unresolved.intersection(entry['events'])-deferred
     report_state=entry.get('report_record',{}).get('state')
     report_problem=report_state is not None and report_state!='REPORT_RECORDED'
@@ -266,6 +284,8 @@ def review_environment(config):
         raise ValueError('missing explicit owner configuration')
     environment.update(USERPROFILE=str(profile),HOMEDRIVE=profile.drive,
         HOMEPATH=str(profile)[len(profile.drive):],HOME=str(profile),CODEX_HOME=str(profile/'.codex'))
+    # The monitor's immutable import root is not the review's working checkout.
+    environment.pop('PYTHONPATH',None)
     return environment
 
 

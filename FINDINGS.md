@@ -1,5 +1,13 @@
 # Every question this project asked, and where its answer stands today
 
+## November 15 V30 the rule maker with stock parameter two
+
+**G-V30-V-BLIND-RULE2-1; descriptive, no registered claim.** What can a partner learn from public refusals when it sees only its own ventures? In the BLIND condition a public refusal changes its forecast by zero by construction. This complete 24-setting subset covers the rule maker with stock parameter two. In the plentiful, low-offer, loss-two, no-tail setting, the entrusted share is 97.0% (95% whole-block interval 94.6–99.4%). This is a descriptive constructed-mechanism result, not a claim about people or a completed four-arm comparison. [Report](docs/versions/v30-the-readers-side/reports/V-blind-rule2.md).
+
+## November 15 V30 live-sum weight 20
+
+**G-V30-V-BLIND-LIVE20-1; descriptive, no registered claim.** What can a partner learn from public refusals when it sees only its own ventures? In the BLIND condition a public refusal changes its forecast by zero by construction. This complete 24-setting subset covers live-sum weight 20. In the plentiful, low-offer, loss-two, no-tail setting, the entrusted share is 96.5% (95% whole-block interval 94.4–98.6%). This is a descriptive constructed-mechanism result, not a claim about people or a completed four-arm comparison. [Report](docs/versions/v30-the-readers-side/reports/V-blind-live20.md).
+
 ## November 15 V30 blind-reader weight 16 subset
 
 **G-V30-V-BLIND-LIVE16-1; descriptive, no registered claim.** What does a partner gain from seeing a refusal when the maker's state and record are hidden? In the BLIND condition a public refusal changes the forecast by construction, by zero; this 24-setting subset covers live-sum weight 16, not the complete hidden-reader map. For illustration, with weight 16, plentiful resources, low offers, loss 2 and no rare large offers, the entrusted share is 98.0% (95% whole-block interval 95.5–100.5%). This is a descriptive constructed-mechanism result, not a claim about people. [Report](docs/versions/v30-the-readers-side/reports/V-blind-live16.md).

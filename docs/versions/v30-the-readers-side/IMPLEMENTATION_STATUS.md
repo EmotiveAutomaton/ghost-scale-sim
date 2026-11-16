@@ -50,3 +50,5 @@ November 15, 12:10 review: K’s excluded follow-on validation passed and its 1,
 November 15, 13:00 review: the [216-setting F map](reports/F-enforcement.md) is verified; L shared-event and P uneven textures remain in progress at the snapshot. K finer-map validation is bound separately; admission is not completion.
 
 Current resource boundary: K finer map has 1,296 admitted cells; none has started. All executable scope is built. The owner-approved reallocation is now active, and four V workers have resumed. See RESOURCE_REALLOCATION_2026-11-15.md; earlier partial-map counts remain snapshot values.
+
+Current wake-repair check: every commissioned implementation and eligible builder is present; four V hidden workers are active. The two new BLIND subsets bring fully landed hidden settings to 120. The broader queue proceeds under the approved reallocation; P Bayesian and L middle remain held. See [current health](WAKE_HEALTH_2026-11-15.md).

@@ -96,3 +96,7 @@ conditional follow-on and textures have their dispositions in the
 Conditional work requires complete verified inputs. The R performer trigger
 is false; P scale comparison unavailable; L triggered but validation failed; K triggered and its validation passed; the admitted finer map is not complete.
 Final coverage and resource-held remainders will replace this interim return.
+
+[V-blind-live20](reports/V-blind-live20.md) is verified for all 24 declared settings; the full hidden-state map remains incomplete. G-V30-V-BLIND-LIVE20-1.
+
+[V-blind-rule2](reports/V-blind-rule2.md) is verified for all 24 declared settings; the full hidden-state map remains incomplete. G-V30-V-BLIND-RULE2-1.
