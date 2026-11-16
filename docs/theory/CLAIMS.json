@@ -317623,6 +317623,47 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-NO-FLOOR-BINARY-1",
+      "allowed_wording": "How do diary estimates behave without a rating floor, with usual levels and event rates independent of sensitivity and binary events? This complete prospective block contains 216 constructed-world settings across three sample sizes, four schedules, three event rates and six populations. It is a descriptive method calibration, not evidence of a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated diary event and observation model",
+      "reader": "Diary regression estimators",
+      "control_status": "passes; estimator and observation limitations retained",
+      "source_file": "docs/versions/v31-four-settings/D_NO_FLOOR_BINARY.md",
+      "source_line": 3,
+      "source_sha256": "1f792dadde26e67aab663115c4e9d52b8a8a84fb10f77d47f0906b7043519ea7",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-OPTIONAL-RECIPE-NO-FLOOR-1",
+      "allowed_wording": "Three further no-floor settings meet the optional diary estimator spread criterion in constructed worlds. Bias and availability remain relevant; the method is a secondary sensitivity analysis.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Linear event ratings without floor",
+      "reader": "Full-record random-slope moment correction",
+      "control_status": "passes; bias and availability remain",
+      "source_file": "docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_NO_FLOOR.md",
+      "source_line": 3,
+      "source_sha256": "a7b64d6f9ddc1bed1a7eb1da46fa57b9d30a35f0641bf397670f1eeed6420f67",
+      "estimate": {
+        "settings": 3,
+        "new_worlds": 0,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,

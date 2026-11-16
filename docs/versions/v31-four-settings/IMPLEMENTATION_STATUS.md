@@ -37,3 +37,5 @@ All sampled scientific cells require forty excluded pilots, complete seed replay
 Seven complete 216-cell diary blocks (1,512 distinct cells) and the separate 144-cell carry map are audited and documented. The opening eighteen are included once. Later diary cells remain in an incomplete prospective block. [Latest complete diary block](D_LEVEL_AND_RATE_TIED_BINARY.md).
 
 Eight complete 216-cell diary blocks (1,728 distinct settings) and the separate 144-cell carry map are audited. Later diary cells remain a partial prospective block. [Latest diary report](D_LEVEL_AND_RATE_TIED_GRADED.md).
+
+Nine complete 216-cell diary blocks (1,944 distinct settings) and the separate 144-cell carry map are audited. The opening eighteen overlap the first block; later settings remain a partial prospective block. [No-floor binary report](D_NO_FLOOR_BINARY.md).
