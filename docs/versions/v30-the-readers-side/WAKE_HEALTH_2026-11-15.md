@@ -17,3 +17,5 @@ Only the monitor was replaced. Its new native heartbeat is verified; automatic d
 The single next review is 16:30 Pacific, ahead of the estimated 16:30-16:45 V resource boundary. Around 16:09, V had 53,252 of its 57,600 CPU seconds charged or reserved; recent cells used roughly 400 CPU seconds with four workers. This is an estimate, not completion evidence. The admitted texture and finer-map queue follows within its separate reserve. Host backoff, reservations and cell costs can delay or limit coverage.
 
 The approved total remains 60 CPU-hours. This snapshot charges or reserves 41.83 hours, including the prior conservative tail allowance once. New starts still end November 21 at 23:48 Pacific and drain November 22 at 01:48. These are outer limits, not reasons to wait after eligible work finishes. No finite closure is claimed.
+
+Post-publication provenance correction: all 24 V30 report bindings were audited and corrected from CRLF working-copy hashes to the already-published LF bytes. Every difference is exactly line endings; numerical results and report wording are unchanged. [Correction ledger](../../../results/v30/REPORT_HASH_CORRECTION_20261115.json).
