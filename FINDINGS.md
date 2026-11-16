@@ -1,5 +1,9 @@
 # Every question this project asked, and where its answer stands today
 
+## V31 diary-shape calibration
+
+**G-V31-D-DIARY-SHAPES-1; descriptive method map.** How well do diary estimates distinguish one sensitivity from competing sensitivities across study sizes? All 216 mild-floor settings with independent usual levels and event rates are verified: three sample sizes, four diary schedules, three event rates and six populations. These are method calibrations in constructed worlds, not evidence for a human trait. [Report](docs/versions/v31-four-settings/D_DIARY_SHAPES.md).
+
 ## November 15 V31 diary calibration
 
 **G-V31-D-ES2-OPENING-1; descriptive method map.** How does a diary estimator recover one dial or competing sensitivities? In the first 18 constructed settings, the split-day estimator, its same-prompt diagnostic and a random-slope moment estimator are fully replayed and independently reconstructed. This opening map covers 2,272 people, ten days with six prompts, three event rates and six populations; it does not cover the full diary grid or establish a human trait. [Report](docs/versions/v31-four-settings/D_ES2_OPENING.md).

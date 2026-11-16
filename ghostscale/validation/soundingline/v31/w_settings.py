@@ -52,7 +52,7 @@ def simulate(draws,v,r,f,theta):
 def full_paths(path,v,r,models):
     result=np.zeros((len(models),len(path)))
     for h in range(len(models)):
-        a,ts,d,s,d2=models[h];belief=np.ones(4)/4;schema=0;cbar=.5;u=0.;ll=0.
+        a,ts,d,s,d2=models[h];belief=np.ones(4)/4;schema=int(path[0,11]) if path.shape[1]>11 else 0;cbar=.5;u=0.;ll=0.
         for t in range(len(path)):
             row=path[t];u+=row[2]
             belief=transition(belief,int(row[1]),v,r,a)
@@ -68,11 +68,14 @@ def full_paths(path,v,r,models):
             u*=.95;result[h,t]=ll
     return result
 
+@njit(cache=True)
 def full_reference(path,v,r,models):
-    result=[]
-    for a,ts,d,s,d2 in models:
-        b=np.full(4,.25);old=0;cbar=.5;u=0.;increments=[]
-        for row in path:
+    result=np.zeros((len(models),len(path)))
+    for model in range(len(models)):
+        a,ts,d,s,d2=models[model]
+        b=np.full(4,.25);old=int(path[0,11]) if path.shape[1]>11 else 0;cbar=.5;u=0.;total=0.
+        for t in range(len(path)):
+            row=path[t]
             u+=row[2]
             transition_matrix=np.full((4,4),v/3);np.fill_diagonal(transition_matrix,1-v)
             prior=b@transition_matrix;lik=np.full(4,(1-r)/3);lik[int(row[1])]=r
@@ -84,9 +87,8 @@ def full_reference(path,v,r,models):
             if row[5]:term-=.5*((row[6]+.5*d*(cbar-.5)+d2*rise)/.3)**2
             if row[7] and row[5]:term-=np.logaddexp(0,-(s*u-3) if row[8] else s*u-3)
             if row[9]:u=max(0,u-1)
-            u*=.95;increments.append(term)
-        result.append(np.cumsum(increments))
-    return np.array(result)
+            u*=.95;total+=term;result[model,t]=total
+    return result
 
 def generate(s,lane,pulse=lambda **kw:None):
     paths=[]
@@ -96,11 +98,63 @@ def generate(s,lane,pulse=lambda **kw:None):
         pulse(world=w+1,phase='generate')
     return dict(records=np.array(paths))
 
+@njit(cache=True)
+def cue_paths(path,v,r,models,reference=False):
+    rows=np.zeros((len(models),len(path)))
+    for m in range(len(models)):
+        theta=models[m];b=np.ones(4)/4;old=0;ll=0.
+        for t in range(len(path)):
+            row=path[t]
+            if reference:
+                prior=b*(1-v)+(1-b)*v/3;like=np.full(4,(1-r)/3);like[int(row[1])]=r
+                b=prior**(2*(1-theta[0]))*like**(2*theta[0]);b/=b.sum()
+                q=b**(1/theta[1]);q[old]*=np.exp(1/theta[1]);q/=q.sum()
+            else:
+                b=transition(b,int(row[1]),v,r,theta[0]);z=np.log(b);z[old]+=1;q=softmax(z/theta[1])
+            old=int(row[4]);ll+=np.log(q[old]);rows[m,t]=ll
+    return rows
+
+def hidden_path(path,s,theta,seed,reference=False):
+    n=s['particles'];g=np.random.default_rng(seed);v=s['volatility'];r=s['reliability'];f=s['actionable']
+    a,ts,d,stress,d2=theta;b=np.ones((n,4))/4;context=np.zeros(n,dtype=int);cbar=np.full(n,.5);u=np.zeros(n);plan=np.zeros(n,dtype=int);old=0;ll=0.;values=[]
+    from scipy.special import expit,logsumexp
+    for row in path:
+        change=g.random(n)<v;context=np.where(change,(context+g.integers(1,4,n))%4,context)
+        cue=np.where(g.random(n)<r,context,(context+g.integers(1,4,n))%4)
+        prior=b*(1-v)+(1-b)*v/3;like=np.full((n,4),(1-r)/3);like[np.arange(n),cue]=r
+        if reference:
+            b=prior**(2*(1-a))*like**(2*a);b/=b.sum(1,keepdims=True)
+            probs=b**(1/ts);probs[:,old]*=np.exp(1/ts);probs/=probs.sum(1,keepdims=True)
+        else:
+            b=np.exp(2*(1-a)*np.log(prior)+2*a*np.log(like));b/=b.sum(1,keepdims=True)
+            z=np.log(b);z[:,old]+=1;z/=ts;probs=np.exp(z-logsumexp(z,axis=1,keepdims=True))
+        old=int(row[4]);logw=np.log(probs[:,old])
+        if s['view']=='V3':
+            drop=g.random(n)<.1;u+=drop;newplan=(plan==0)&drop&(g.random(n)<f);plan=np.where(newplan,4,plan)
+            available=plan>0;logw=np.where(available==bool(row[7]),logw,-np.inf)
+            newbar=.8*cbar+.2*b[:,old];rise=np.maximum(0,newbar-cbar);cbar=newbar
+            worklogit=d*(cbar-.5)+1;logw-=np.logaddexp(0,-worklogit if row[5] else worklogit)
+            if row[5]:
+                mu=-.5*d*(cbar-.5)-d2*rise;logw-=.5*((row[6]-mu)/.3)**2
+                if row[7]:
+                    z=stress*u-3;logw-=np.logaddexp(0,-z if row[8] else z)
+                plan=np.where(row[8]>0,0,np.maximum(0,plan-1))
+                completed=available&(plan==0)&(not bool(row[8]));logw=np.where(completed==bool(row[9]),logw,-np.inf)
+                u=np.where(completed,np.maximum(0,u-1),u)
+            u*=.95
+        normal=logsumexp(logw)-np.log(n)
+        if not np.isfinite(normal):raise ArithmeticError('hidden W filter lost observed-path support')
+        ll+=normal;values.append(ll);weights=np.exp(logw-logsumexp(logw));cdf=np.cumsum(weights);cdf[-1]=1
+        take=np.searchsorted(cdf,(g.random()+np.arange(n))/n)
+        b=b[take];context=context[take];cbar=cbar[take];u=u[take];plan=plan[take]
+    return np.array(values)
+
 def infer(raw,s,reference=False,pulse=lambda **kw:None):
-    if s['view']!='V4':raise ValueError('Partial-view accuracy admission required; no privileged full-view fallback')
     results={k:[] for k in ('separation','wrongly_settled','switches_per100','plans_per1000','right_work','alias')}
     for w,path in enumerate(raw['records']):
-        ll=(full_reference if reference else full_paths)(path,s['volatility'],s['reliability'],np.array(s['models']))
+        if s['view']=='V4':ll=(full_reference if reference else full_paths)(path,s['volatility'],s['reliability'],np.array(s['models']))
+        elif s['view']=='V2':ll=cue_paths(path,s['volatility'],s['reliability'],np.array(s['models']),reference)
+        else:ll=np.array([hidden_path(path,s,np.array(theta),31004+100*w+j,reference) for j,theta in enumerate(s['models'])])
         truth=s['truth'];gap=ll[truth]-np.max(np.delete(ll,truth,0),axis=0);hit=np.flatnonzero(np.minimum.accumulate(gap[::-1])[::-1]>=3)
         last=ll[:,-1];order=np.sort(last)
         results['separation'].append(int(hit[0]+1) if len(hit) else s['steps']+1)
@@ -125,5 +179,6 @@ def controls(dest,pulse=lambda **kw:None):
     first=full_paths(path,v,r,models);second=full_reference(path,v,r,models)
     checks={'exact_half_weight_update':bool(np.allclose(transition(b,cue,v,r,.5),expected,atol=1e-14,rtol=0)),
         'independent_full_view':float(np.max(abs(first-second)))<1e-8,
+        'independent_cue_view':float(np.max(abs(cue_paths(path,v,r,models)-cue_paths(path,v,r,models,True))))<1e-8,
         'identical_law_alias':bool(np.array_equal(full_paths(path,v,r,np.array([BASE,BASE]))[0],full_paths(path,v,r,np.array([BASE,BASE]))[1]))}
     write(dest/'CONTROLS.json',checks);return dict(passed=all(checks.values()),checks=checks)

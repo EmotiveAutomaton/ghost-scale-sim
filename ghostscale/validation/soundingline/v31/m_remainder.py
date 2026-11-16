@@ -4,10 +4,36 @@ from numba import njit
 from .common import rng,write,rows_for
 
 @njit(cache=True)
+def kalman_odds(times,y,share,tau):
+    out=np.zeros_like(y)
+    for person in range(len(y)):
+        mean=0.;variance=share;ll=0.
+        for t in range(y.shape[1]):
+            if t:
+                phi=np.exp(-(times[person,t]-times[person,t-1])/tau)
+                mean*=phi;variance=phi*phi*variance+share*(1-phi*phi)
+            total=variance+1-share;error=y[person,t]-mean
+            ll+=-.5*(np.log(total)+error*error/total-y[person,t]**2)
+            mean+=variance/total*error;variance*=((1-share)/total);out[person,t]=ll
+    return out
+
+def precision_odds(times,y,share,tau):
+    mean=np.zeros(len(y));variance=np.full(len(y),share);ll=np.zeros(len(y));out=np.zeros_like(y)
+    for t in range(y.shape[1]):
+        if t:
+            phi=np.exp(-np.diff(times[:,t-1:t+1],axis=1)[:,0]/tau)
+            mean=phi*mean;variance=phi**2*variance+share*(1-phi**2)
+        total=variance+1-share;error=y[:,t]-mean
+        ll-=.5*(np.log(total)+error**2/total-y[:,t]**2);out[:,t]=ll
+        updated=1/(1/variance+1/(1-share))
+        mean=updated*(mean/variance+y[:,t]/(1-share));variance=updated
+    return out
+
+@njit(cache=True)
 def pair_sums(times,thread,y,different):
     # Clock bins and message-distance bins; each retains n,sum x,sum y,
     # sum x²,sum y²,sum xy. Worlds, never pairs, are replication units.
-    sums=np.zeros((8,6))
+    sums=np.zeros((len(y),8,6))
     for person in range(len(y)):
         for i in range(y.shape[1]-1):
             for j in range(i+1,y.shape[1]):
@@ -17,12 +43,12 @@ def pair_sums(times,thread,y,different):
                 distance=j-i;bb=4 if distance==1 else 5 if distance<=3 else 6 if distance<=10 else 7
                 x=y[person,i];z=y[person,j]
                 for k in (b,bb):
-                    sums[k,0]+=1;sums[k,1]+=x;sums[k,2]+=z
-                    sums[k,3]+=x*x;sums[k,4]+=z*z;sums[k,5]+=x*z
+                    sums[person,k,0]+=1;sums[person,k,1]+=x;sums[person,k,2]+=z
+                    sums[person,k,3]+=x*x;sums[person,k,4]+=z*z;sums[person,k,5]+=x*z
     return sums
 
 def pair_reference(times,thread,y,different):
-    sums=np.zeros((8,6));i,j=np.triu_indices(y.shape[1],1);distance=j-i
+    sums=np.zeros((len(y),8,6));i,j=np.triu_indices(y.shape[1],1);distance=j-i
     for person in range(len(y)):
         mask=thread[person,i]!=thread[person,j] if different else np.ones(len(i),dtype=bool)
         gap=times[person,j]-times[person,i];x=y[person,i];z=y[person,j]
@@ -30,14 +56,14 @@ def pair_reference(times,thread,y,different):
         msg=4+np.searchsorted([1,3,10],distance,side='left')
         for b in range(8):
             keep=mask&((bins if b<4 else msg)==b);xx=x[keep];zz=z[keep]
-            sums[b]+=np.array([len(xx),xx.sum(),zz.sum(),xx@xx,zz@zz,xx@zz])
+            sums[person,b]+=np.array([len(xx),xx.sum(),zz.sum(),xx@xx,zz@zz,xx@zz])
     return sums
 
 def generate(s,lane,pulse=lambda **kw:None):
     times=[];threads=[];observed=[];rhythms=[];topics=[]
     n=s['makers'];t=s['messages']
     for w in range(s['worlds']):
-        g=rng('M',s,lane,w);clock=np.cumsum(g.lognormal(np.log(25),1.2,(n,t)),axis=1)
+        g=rng('M',s,lane,w);clock=np.cumsum(g.lognormal(np.log(25),1.5,(n,t)),axis=1)
         ids=np.cumsum(g.random((n,t))<.2,axis=1);latent=np.empty((n,t));latent[:,0]=g.normal(size=n)
         topic=np.empty((n,t));topic[:,0]=g.normal(0,.5,n)
         for k in range(1,t):
@@ -58,7 +84,28 @@ def infer(raw,s,reference=False,pulse=lambda **kw:None):
     values={}
     for w in range(s['worlds']):
         y=raw['observed'][w]-raw['rhythm'][w]-raw['topic'][w]
-        z=(pair_reference if reference else pair_sums)(raw['times'][w],raw['threads'][w],y,s['different_threads'])
+        odds=(precision_odds if reference else kalman_odds)(raw['times'][w],y,s['q']*s['reliability']**2,s['tau'])
+        values.setdefault('colored_evidence_maker_share',[]).append(float(np.mean(odds[:,-1]>=3)))
+        values.setdefault('white_evidence_maker_share',[]).append(float(np.mean(odds[:,-1]<=-3)))
+        values.setdefault('unresolved_maker_share',[]).append(float(np.mean(abs(odds[:,-1])<3)))
+        # Exact two-law likelihood for each maker; the colored model has known
+        # q/tau/m, so these are oracle-information requirements, not learned fits.
+        color=np.minimum.accumulate(odds[:,::-1],axis=1)[:,::-1]>=3
+        times=np.where(color.any(1),color.argmax(1)+1,s['messages']+1)
+        values.setdefault('maker_messages_censored_mean',[]).append(float(times.mean()))
+        individual=(pair_reference if reference else pair_sums)(raw['times'][w],raw['threads'][w],y,s['different_threads'])
+        z=individual.sum(0)
+        def correlations(z):
+            n,sx,sy,sxx,syy,sxy=np.moveaxis(z,-1,0);den=np.sqrt(np.maximum(0.,(n*sxx-sx*sx)*(n*syy-sy*sy)))
+            return np.divide(n*sxy-sx*sy,den,out=np.full_like(n,np.nan),where=den>0)
+        jk=np.array([correlations(z-individual[np.arange(s['makers'])%10==k].sum(0)) for k in range(10)])
+        errs=np.sqrt(.9*np.sum((jk-jk.mean(0))**2,axis=0));corrs=correlations(z)
+        contrast=corrs[0]-corrs[3];jkdiff=jk[:,0]-jk[:,3];contrast_se=np.sqrt(.9*np.sum((jkdiff-jkdiff.mean())**2))
+        values.setdefault('positive_short_gap',[]).append(float(corrs[0]-1.96*errs[0]>0))
+        values.setdefault('fading_detected',[]).append(float(contrast-1.96*contrast_se>0))
+        values.setdefault('short_minus_long',[]).append(float(contrast))
+        values.setdefault('short_gap_standard_error',[]).append(float(errs[0]))
+        values.setdefault('maker_short_correlation_mean',[]).append(float(np.nanmean(correlations(individual)[:,0])))
         for b,row in enumerate(z):
             n,sx,sy,sxx,syy,sxy=row;den=np.sqrt(max(0.,(n*sxx-sx*sx)*(n*syy-sy*sy)))
             corr=(n*sxy-sx*sy)/den if den>0 else np.nan
@@ -75,12 +122,22 @@ def summarize(s,m):
 def controls(dest,pulse=lambda **kw:None):
     g=np.random.default_rng(3103);t=np.cumsum(g.lognormal(3,1,(20,30)),axis=1);ids=np.tile(np.arange(30)//3,(20,1));y=g.normal(size=t.shape)
     a=pair_sums(t,ids,y,True);b=pair_reference(t,ids,y,True)
+    null_y=g.normal(size=(2000,30));null_t=np.tile(np.arange(30)*10.,(2000,1));null_ids=np.tile(np.arange(30),(2000,1))
+    null=pair_sums(null_t,null_ids,null_y,True).sum(0);n,sx,sy,sxx,syy,sxy=null[1]
+    corr=(n*sxy-sx*sy)/np.sqrt((n*sxx-sx*sx)*(n*syy-sy*sy))
     checks={'independent_pairs':bool(np.allclose(a,b,atol=1e-9,rtol=1e-12)),
         'cross_thread_exclusion':pair_sums(t,np.zeros_like(ids),y,True).sum()==0,
-        'white_population_covariance':True,'same_thread_not_sufficient':True}
+        'white_null_abs_correlation_below_03':abs(corr)<.03}
     # Analytic null: independent zero-mean noises have E[XY]=0. Colored target
     # is m² q exp(-gap/tau); reader attenuation is squared, not m.
     checks['attenuation']=abs((.6**2*.2*np.exp(-60/60))-.026487319764343846)<1e-14
+    checks['independent_exact_gaussian_reader']=bool(np.allclose(kalman_odds(t,y,.2,60),precision_odds(t,y,.2,60),rtol=1e-10,atol=1e-9))
+    errors=[]
+    for person in range(len(y)):
+        cov=.2*np.exp(-np.abs(t[person,:,None]-t[person,None,:])/60)+.8*np.eye(y.shape[1])
+        dense=-.5*(np.linalg.slogdet(cov)[1]+y[person]@np.linalg.solve(cov,y[person])-y[person]@y[person])
+        errors.append(abs(dense-kalman_odds(t[person:person+1],y[person:person+1],.2,60)[0,-1]))
+    checks['dense_gaussian_known_answer']=max(errors)<1e-10
     write(dest/'CONTROLS.json',checks);return dict(passed=all(checks.values()),checks=checks)
 
 def pilot_exclusion(s,m):return None

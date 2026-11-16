@@ -317374,6 +317374,27 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-DIARY-SHAPES-1",
+      "allowed_wording": "How well do diary estimates distinguish one sensitivity from competing sensitivities across study sizes? All 216 mild-floor settings with independent usual levels and event rates are verified: three sample sizes, four diary schedules, three event rates and six populations. These are method calibrations in constructed worlds, not evidence for a human trait.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Linear event response with prompt-shared noise and mild rating floor",
+      "reader": "Split-day, same-prompt diagnostic and random-slope moment estimators",
+      "control_status": "passes",
+      "source_file": "docs/versions/v31-four-settings/D_DIARY_SHAPES.md",
+      "source_line": 3,
+      "source_sha256": "35a4f751daf9c8059b027e3a79e2b54ca0faa4df3d9d99dd78f23f43b88982e2",
+      "estimate": {
+        "settings": 216,
+        "scientific_worlds": 43200,
+        "excluded_pilot_worlds": 8640,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,
