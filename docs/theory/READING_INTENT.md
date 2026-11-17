@@ -1,5 +1,10 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+**G-V31-D-RESTART-1; descriptive method.** How do diary estimators behave when event rates depend on sensitivity without a rating floor? The first 82 settings completed after the approved restart pass full replay and independent reconstruction. They complete the 216-setting binary-event block and begin its graded-event counterpart; the diary map remains partial. [Report](../versions/v31-four-settings/D_RESTART_20261117.md).
+
+**G-V31-D-RECIPE-RATE-TIED-1; descriptive method.** Does the optional diary estimator retain its precision advantage when event rates depend on sensitivity without a rating floor? Two previously verified settings meet the declared recipe trigger: between-world spread is 37.3% and 41.3% lower than the split-day estimator. Their mean biases are -0.00469 and -0.00246. These are constructed-method sensitivity results, not a replacement for a registered primary. [Report](../versions/v31-four-settings/D_OPTIONAL_RECIPE_RATE_TIED_20261117.md).
+
+
 **G-V31-M-R1-OVERNIGHT-1; descriptive method.** Can the corrected remainder reader recover planted temporal dependence? The 251 additional completed settings have full replay and independent reconstruction under the repaired correlation calculation. This is a partial continuation, not a complete-grid conclusion. Earlier opening cells are counted separately and the two old instrument-affected cells remain superseded. In the 52 completed settings with a 5% planted remainder, 99.61% to 100% of individual makers remain unresolved; group-level short-gap detection ranges from 3.5% to 100% across those different designs. This colored-case prefix does not yet establish specificity. [Report](../versions/v31-four-settings/MORNING_20261117_M_R1.md).
 
 

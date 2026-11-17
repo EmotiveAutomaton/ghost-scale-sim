@@ -1,0 +1,96 @@
+# D: first batch after the approved restart
+
+How do diary estimators behave when event rates depend on sensitivity without a rating floor? The first 82 settings completed after the approved restart pass full replay and independent reconstruction. They complete the 216-setting binary-event block and begin its graded-event counterpart; the diary map remains partial.
+
+These 82 settings add 16,400 scientific worlds and 3,280 excluded pilots, bringing the published diary prefix to 2,396 of 5,184 settings. Carry-study settings are counted separately. No prior valid world was repeated for occupancy.
+
+The table gives each setting's planted population, number of people, record length, event rate and event coding. Bias is the estimated correlation minus its planted target, averaged over 200 worlds. These are separate cell estimates, not a pooled effect; full eight-block intervals and availability are retained in each aggregate.
+
+| Setting | Population | People | Days × prompts | Event rate | Graded event | Split-day bias | Moment-estimator bias |
+|---|---|---:|---|---:|---|---:|---:|
+| D-CORE-2314 | RIVAL30 | 300 | 10 × 6 | 0.4 | False | -0.010299 | -0.003523 |
+| D-CORE-2315 | RIVAL60 | 300 | 10 × 6 | 0.4 | False | -0.002121 | 0.006836 |
+| D-CORE-2316 | ONE | 300 | 10 × 6 | 0.08 | False | 0.000310 | 0.001454 |
+| D-CORE-2317 | TWO80 | 300 | 10 × 6 | 0.08 | False | -0.031008 | -0.004546 |
+| D-CORE-2318 | TWO50 | 300 | 10 × 6 | 0.08 | False | -0.040155 | 0.000157 |
+| D-CORE-2319 | TWO0 | 300 | 10 × 6 | 0.08 | False | -0.009642 | 0.000002 |
+| D-CORE-2320 | RIVAL30 | 300 | 10 × 6 | 0.08 | False | -0.031584 | -0.004610 |
+| D-CORE-2321 | RIVAL60 | 300 | 10 × 6 | 0.08 | False | -0.050187 | -0.005559 |
+| D-CORE-2322 | ONE | 300 | 14 × 6 | 0.2 | False | -0.000217 | 0.000005 |
+| D-CORE-2323 | TWO80 | 300 | 14 × 6 | 0.2 | False | -0.012496 | -0.001301 |
+| D-CORE-2324 | TWO50 | 300 | 14 × 6 | 0.2 | False | -0.007216 | 0.000710 |
+| D-CORE-2325 | TWO0 | 300 | 14 × 6 | 0.2 | False | -0.009271 | -0.007602 |
+| D-CORE-2326 | RIVAL30 | 300 | 14 × 6 | 0.2 | False | -0.012967 | -0.005064 |
+| D-CORE-2327 | RIVAL60 | 300 | 14 × 6 | 0.2 | False | -0.011343 | -0.000489 |
+| D-CORE-2328 | ONE | 300 | 14 × 6 | 0.4 | False | 0.000133 | 0.000210 |
+| D-CORE-2329 | TWO80 | 300 | 14 × 6 | 0.4 | False | -0.004429 | 0.002444 |
+| D-CORE-2330 | TWO50 | 300 | 14 × 6 | 0.4 | False | -0.006261 | 0.001094 |
+| D-CORE-2331 | TWO0 | 300 | 14 × 6 | 0.4 | False | -0.001705 | 0.000075 |
+| D-CORE-2332 | RIVAL30 | 300 | 14 × 6 | 0.4 | False | -0.005032 | 0.000922 |
+| D-CORE-2333 | RIVAL60 | 300 | 14 × 6 | 0.4 | False | -0.001475 | 0.006342 |
+| D-CORE-2334 | ONE | 300 | 14 × 6 | 0.08 | False | -0.000026 | 0.001015 |
+| D-CORE-2335 | TWO80 | 300 | 14 × 6 | 0.08 | False | -0.031112 | -0.003926 |
+| D-CORE-2336 | TWO50 | 300 | 14 × 6 | 0.08 | False | -0.030407 | -0.002193 |
+| D-CORE-2337 | TWO0 | 300 | 14 × 6 | 0.08 | False | -0.006299 | -0.007551 |
+| D-CORE-2338 | RIVAL30 | 300 | 14 × 6 | 0.08 | False | -0.021028 | 0.000785 |
+| D-CORE-2339 | RIVAL60 | 300 | 14 × 6 | 0.08 | False | -0.035892 | -0.002355 |
+| D-CORE-2340 | ONE | 300 | 8 × 1 | 0.2 | False | 0.005281 | 0.011868 |
+| D-CORE-2341 | TWO80 | 300 | 8 × 1 | 0.2 | False | -0.031621 | -0.000536 |
+| D-CORE-2342 | TWO50 | 300 | 8 × 1 | 0.2 | False | -0.030288 | -0.018415 |
+| D-CORE-2343 | TWO0 | 300 | 8 × 1 | 0.2 | False | -0.045926 | -0.021325 |
+| D-CORE-2344 | RIVAL30 | 300 | 8 × 1 | 0.2 | False | -0.014038 | -0.012536 |
+| D-CORE-2345 | RIVAL60 | 300 | 8 × 1 | 0.2 | False | -0.017717 | -0.003579 |
+| D-CORE-2346 | ONE | 300 | 8 × 1 | 0.4 | False | 0.009721 | 0.002996 |
+| D-CORE-2347 | TWO80 | 300 | 8 × 1 | 0.4 | False | -0.014307 | -0.001019 |
+| D-CORE-2348 | TWO50 | 300 | 8 × 1 | 0.4 | False | -0.024698 | -0.011878 |
+| D-CORE-2349 | TWO0 | 300 | 8 × 1 | 0.4 | False | 0.010410 | 0.009513 |
+| D-CORE-2350 | RIVAL30 | 300 | 8 × 1 | 0.4 | False | -0.013741 | -0.002342 |
+| D-CORE-2351 | RIVAL60 | 300 | 8 × 1 | 0.4 | False | -0.021344 | -0.010249 |
+| D-CORE-2352 | ONE | 300 | 8 × 1 | 0.08 | False | 0.045935 | 0.002554 |
+| D-CORE-2353 | TWO80 | 300 | 8 × 1 | 0.08 | False | 0.020569 | -0.010766 |
+| D-CORE-2354 | TWO50 | 300 | 8 × 1 | 0.08 | False | -0.024085 | -0.007132 |
+| D-CORE-2355 | TWO0 | 300 | 8 × 1 | 0.08 | False | -0.100861 | -0.026772 |
+| D-CORE-2356 | RIVAL30 | 300 | 8 × 1 | 0.08 | False | 0.000602 | -0.002239 |
+| D-CORE-2357 | RIVAL60 | 300 | 8 × 1 | 0.08 | False | -0.012444 | -0.002269 |
+| D-CORE-2358 | ONE | 300 | 16 × 1 | 0.2 | False | 0.002945 | 0.001817 |
+| D-CORE-2359 | TWO80 | 300 | 16 × 1 | 0.2 | False | -0.016050 | -0.004821 |
+| D-CORE-2360 | TWO50 | 300 | 16 × 1 | 0.2 | False | -0.022716 | -0.017408 |
+| D-CORE-2361 | TWO0 | 300 | 16 × 1 | 0.2 | False | -0.014472 | -0.014999 |
+| D-CORE-2362 | RIVAL30 | 300 | 16 × 1 | 0.2 | False | -0.010600 | -0.001332 |
+| D-CORE-2363 | RIVAL60 | 300 | 16 × 1 | 0.2 | False | -0.013907 | -0.000752 |
+| D-CORE-2364 | ONE | 300 | 16 × 1 | 0.4 | False | 0.001412 | 0.002188 |
+| D-CORE-2365 | TWO80 | 300 | 16 × 1 | 0.4 | False | -0.019344 | -0.010706 |
+| D-CORE-2366 | TWO50 | 300 | 16 × 1 | 0.4 | False | -0.001794 | 0.006845 |
+| D-CORE-2367 | TWO0 | 300 | 16 × 1 | 0.4 | False | 0.001193 | -0.000018 |
+| D-CORE-2368 | RIVAL30 | 300 | 16 × 1 | 0.4 | False | -0.012767 | -0.002723 |
+| D-CORE-2369 | RIVAL60 | 300 | 16 × 1 | 0.4 | False | -0.003800 | 0.010268 |
+| D-CORE-2370 | ONE | 300 | 16 × 1 | 0.08 | False | 0.000116 | 0.004567 |
+| D-CORE-2371 | TWO80 | 300 | 16 × 1 | 0.08 | False | -0.018503 | -0.009613 |
+| D-CORE-2372 | TWO50 | 300 | 16 × 1 | 0.08 | False | -0.029056 | -0.012441 |
+| D-CORE-2373 | TWO0 | 300 | 16 × 1 | 0.08 | False | -0.011781 | -0.002000 |
+| D-CORE-2374 | RIVAL30 | 300 | 16 × 1 | 0.08 | False | -0.016636 | -0.007911 |
+| D-CORE-2375 | RIVAL60 | 300 | 16 × 1 | 0.08 | False | -0.008454 | -0.001831 |
+| D-CORE-2376 | ONE | 2272 | 10 × 6 | 0.2 | True | 0.000319 | 0.000991 |
+| D-CORE-2377 | TWO80 | 2272 | 10 × 6 | 0.2 | True | -0.015899 | -0.001120 |
+| D-CORE-2378 | TWO50 | 2272 | 10 × 6 | 0.2 | True | -0.017303 | -0.000930 |
+| D-CORE-2379 | TWO0 | 2272 | 10 × 6 | 0.2 | True | -0.001715 | 0.000584 |
+| D-CORE-2380 | RIVAL30 | 2272 | 10 × 6 | 0.2 | True | -0.012126 | -0.000987 |
+| D-CORE-2381 | RIVAL60 | 2272 | 10 × 6 | 0.2 | True | -0.015710 | 0.000544 |
+| D-CORE-2382 | ONE | 2272 | 10 × 6 | 0.4 | True | 0.000003 | 0.000409 |
+| D-CORE-2383 | TWO80 | 2272 | 10 × 6 | 0.4 | True | -0.007068 | -0.000068 |
+| D-CORE-2384 | TWO50 | 2272 | 10 × 6 | 0.4 | True | -0.011112 | -0.000910 |
+| D-CORE-2385 | TWO0 | 2272 | 10 × 6 | 0.4 | True | -0.000608 | 0.001142 |
+| D-CORE-2386 | RIVAL30 | 2272 | 10 × 6 | 0.4 | True | -0.005928 | 0.000696 |
+| D-CORE-2387 | RIVAL60 | 2272 | 10 × 6 | 0.4 | True | -0.008915 | 0.000134 |
+| D-CORE-2388 | ONE | 2272 | 10 × 6 | 0.08 | True | 0.000080 | -0.000278 |
+| D-CORE-2389 | TWO80 | 2272 | 10 × 6 | 0.08 | True | -0.033129 | -0.006347 |
+| D-CORE-2390 | TWO50 | 2272 | 10 × 6 | 0.08 | True | -0.040177 | -0.007518 |
+| D-CORE-2391 | TWO0 | 2272 | 10 × 6 | 0.08 | True | 0.001375 | 0.000130 |
+| D-CORE-2392 | RIVAL30 | 2272 | 10 × 6 | 0.08 | True | -0.023342 | -0.001103 |
+| D-CORE-2393 | RIVAL60 | 2272 | 10 × 6 | 0.08 | True | -0.036426 | -0.003428 |
+| D-CORE-2394 | ONE | 2272 | 14 × 6 | 0.2 | True | -0.000133 | -0.000270 |
+| D-CORE-2395 | TWO80 | 2272 | 14 × 6 | 0.2 | True | -0.012196 | -0.002229 |
+
+This is a descriptive method calibration in a miniature whose architecture is untested. Known events and paired ratings are privileged observations; real missingness and event reporting are not calibrated. Sounding Line ES2/MI2 receives condition-specific estimator calibration; ToMpathy receives a measurement boundary, not a deployed reader.
+
+[Protocol](../versions/v31-four-settings/protocols/D.md); [aggregate evidence](../../results/v31/restart-20261117/D_CORE/VERIFIED.json); [complete batch audit](../../results/v31/restart-20261117/AUDIT.json).
