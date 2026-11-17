@@ -1,6 +1,6 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-17T01:32:49.203258+00:00. Gear 2 allows four below-normal, single-thread scientific workers, reducing to two under the inherited host-load rule. The existing controller is running the corrected M roster.
+Checkpoint 2026-11-17T01:40:35.123371+00:00. Gear 2 allows four below-normal, single-thread scientific workers, reducing to two under the inherited host-load rule. The existing controller is running the corrected M roster.
 
 The table distinguishes scientific cells from excluded validation jobs. Counts are a dated snapshot; an execution receipt is not evidence that matching or a scientific hypothesis succeeded.
 
@@ -12,7 +12,7 @@ The table distinguishes scientific cells from excluded validation jobs. Counts a
 | G4_IDENTITY | science | 114 | EXCLUDED: 60, VERIFIED: 54 |
 | G7_CAPITAL | science | 24 | VERIFIED: 24 |
 | M_CORE | science | 552 | FAILED: 3, SUPERSEDED_BY_M_R1: 547, VERIFIED: 2 |
-| M_R1 | science | 552 | QUEUED: 535, RUNNING: 3, VERIFIED: 14 |
+| M_R1 | science | 552 | QUEUED: 532, RUNNING: 3, VERIFIED: 17 |
 | M_R1_VALIDATION | validation | 1 | VERIFIED: 1 |
 | Q_CONDITIONAL_ADMISSION_R1 | validation | 1 | QUEUED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0006 | science | 1 | VERIFIED: 1 |
@@ -38,7 +38,7 @@ The table distinguishes scientific cells from excluded validation jobs. Counts a
 | W_READER_V2 | science | 24 | VERIFIED: 24 |
 | W_READER_V4 | science | 60 | VERIFIED: 60 |
 
-All currently admissible scope is built. M_R1 has 552 original settings admitted after its retained-path repair. D is resource-limited. W hidden readers failed their first repair; the owner-approved Q directory-only successor is admitted in the existing controller. Its separately prepared conditional builder can admit production only after all validation and measured-profile gates pass. G6 remains design-held. These holds are not scientific nulls.
+All currently admissible scope is built. M_R1 has 552 original settings admitted after its retained-path repair. D is resource-limited. W hidden readers failed their first repair; the owner-approved Q directory-only successor is running in an existing slot. Its separately prepared conditional builder admits production only after all validation and measured-profile gates pass. G6 remains design-held. These holds are not scientific nulls.
 
 The 2,834-cell main snapshot contains 2,681 scientific cells and 153 excluded pilots, independently audited before publication. A separate same-evening supplement records completed M cells and the third Q follow-on. Thirty of 108 W matching validations passed; 78 were infeasible. [Repair and matching evidence](HEALING_REVIEW_20261116.md).
 

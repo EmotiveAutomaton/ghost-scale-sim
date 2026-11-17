@@ -1,5 +1,8 @@
 # Every question this project asked, and where its answer stands today
 
+**G-V31-M-R1-CONTINUATION-1; descriptive method.** Can the corrected remainder reader recover planted temporal dependence? The additional completed settings have full replay and independent reconstruction under the repaired correlation calculation. This is a partial continuation, not a complete-grid conclusion. Earlier opening cells are counted separately and the two old instrument-affected cells remain superseded. [Report](docs/versions/v31-four-settings/EVENING_FINAL_M_R1.md).
+
+
 **G-V31-M-R1-1; descriptive method.** Can the corrected remainder reader recover planted temporal dependence? Seven completed settings have full replay and independent reconstruction under the repaired correlation calculation. This is an opening fragment, not a complete-grid conclusion; the two original completed settings are superseded rather than counted as independent replications. [Report](docs/versions/v31-four-settings/EVENING_M_R1.md).
 
 **G-V31-Q-EVENTS-FOLLOWON-Q-EXACT-0008-1; descriptive method.** Does exact rank information remove apparent absence of an own-event trigger? At group-event rate 0.10 with no membership moves, 79.88% of shows lack a negative own event and 59.08% lack a negative rank-reading change. In 23.68% of shows, a negative rank-reading change is present despite no negative own event. These are distinct conditional statistics, not a causal decomposition. [Report](docs/versions/v31-four-settings/EVENING_Q_EVENTS_FOLLOWON_Q_EXACT-0008.md).
