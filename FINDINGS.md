@@ -1,5 +1,8 @@
 # Every question this project asked, and where its answer stands today
 
+**G-V31-M-R1-OVERNIGHT-1; descriptive method.** Can the corrected remainder reader recover planted temporal dependence? The 251 additional completed settings have full replay and independent reconstruction under the repaired correlation calculation. This is a partial continuation, not a complete-grid conclusion. Earlier opening cells are counted separately and the two old instrument-affected cells remain superseded. In the 52 completed settings with a 5% planted remainder, 99.61% to 100% of individual makers remain unresolved; group-level short-gap detection ranges from 3.5% to 100% across those different designs. This colored-case prefix does not yet establish specificity. [Report](docs/versions/v31-four-settings/MORNING_20261117_M_R1.md).
+
+
 **G-V31-M-R1-CONTINUATION-1; descriptive method.** Can the corrected remainder reader recover planted temporal dependence? The additional completed settings have full replay and independent reconstruction under the repaired correlation calculation. This is a partial continuation, not a complete-grid conclusion. Earlier opening cells are counted separately and the two old instrument-affected cells remain superseded. [Report](docs/versions/v31-four-settings/EVENING_FINAL_M_R1.md).
 
 

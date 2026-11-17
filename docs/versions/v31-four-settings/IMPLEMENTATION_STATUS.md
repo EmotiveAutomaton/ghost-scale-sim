@@ -1,26 +1,26 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-17T01:40:35.123371+00:00. Gear 2 allows four below-normal, single-thread scientific workers, reducing to two under the inherited host-load rule. The existing controller is running the corrected M roster.
+Checkpoint 2026-11-17T12:57:07.754091+00:00. Gear 2 is active with 4 below-normal, single-thread diary workers. The corrected M roster follows in the packet's D-first order. Host-load backoff still reduces the ceiling from four to two.
 
-The table distinguishes scientific cells from excluded validation jobs. Counts are a dated snapshot; an execution receipt is not evidence that matching or a scientific hypothesis succeeded.
+The table distinguishes scientific settings from validation jobs. A verified validation workflow does not imply scientific admission. Original M cells remain superseded by their corrected successors.
 
 | Family | Kind | Prepared | Recorded states |
 |---|---|---:|---|
 | D_CARRY | science | 144 | VERIFIED: 144 |
-| D_CORE | science | 3456 | RESOURCE_HELD: 1142, VERIFIED: 2314 |
-| D_HEAVY | science | 1728 | RESOURCE_HELD: 1728 |
+| D_CORE | science | 3456 | QUEUED: 1074, RUNNING: 4, VERIFIED: 2378 |
+| D_HEAVY | science | 1728 | QUEUED: 1728 |
 | G4_IDENTITY | science | 114 | EXCLUDED: 60, VERIFIED: 54 |
 | G7_CAPITAL | science | 24 | VERIFIED: 24 |
 | M_CORE | science | 552 | FAILED: 3, SUPERSEDED_BY_M_R1: 547, VERIFIED: 2 |
-| M_R1 | science | 552 | QUEUED: 532, RUNNING: 3, VERIFIED: 17 |
+| M_R1 | science | 552 | QUEUED: 284, VERIFIED: 268 |
 | M_R1_VALIDATION | validation | 1 | VERIFIED: 1 |
-| Q_CONDITIONAL_ADMISSION_R1 | validation | 1 | QUEUED: 1 |
+| Q_CONDITIONAL_ADMISSION_R1 | validation | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0006 | science | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0007 | science | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0008 | science | 1 | VERIFIED: 1 |
 | Q_EXACT | science | 45 | VERIFIED: 45 |
 | Q_HIDDEN_R1 | validation | 1 | FAILED: 1 |
-| Q_HIDDEN_R1_IO | validation | 1 | RUNNING: 1 |
+| Q_HIDDEN_R1_IO | validation | 1 | FAILED: 1 |
 | Q_HIDDEN_V1 | validation | 6 | FAILED: 2, HELD_AFTER_FAILURE: 4 |
 | Q_HIDDEN_V2 | validation | 6 | FAILED: 4, HELD_AFTER_FAILURE: 2 |
 | S_CORE | science | 2160 | EXCLUDED: 93, VERIFIED: 2067 |
@@ -38,10 +38,12 @@ The table distinguishes scientific cells from excluded validation jobs. Counts a
 | W_READER_V2 | science | 24 | VERIFIED: 24 |
 | W_READER_V4 | science | 60 | VERIFIED: 60 |
 
-All currently admissible scope is built. M_R1 has 552 original settings admitted after its retained-path repair. D is resource-limited. W hidden readers failed their first repair; the owner-approved Q directory-only successor is running in an existing slot. Its separately prepared conditional builder admits production only after all validation and measured-profile gates pass. G6 remains design-held. These holds are not scientific nulls.
+All currently admissible scope is built. The D/M budget boundary was reached overnight; no scientific job was interrupted. The owner approved a 55-hour transfer within the existing 160-hour total. Effective limits are D 50, S 15, M 35, W 10, T 5, Q 15, healing 10 and verification/reserve 20 CPU-hours. The original acceptance, job sources, gates, start cutoff and drain are unchanged.
 
-The 2,834-cell main snapshot contains 2,681 scientific cells and 153 excluded pilots, independently audited before publication. A separate same-evening supplement records completed M cells and the third Q follow-on. Thirty of 108 W matching validations passed; 78 were infeasible. [Repair and matching evidence](HEALING_REVIEW_20261116.md).
+Q's directory-only successor ran and failed its unchanged resolution gate; the conditional builder correctly declined production. W hidden readers remain held after their failed repair. G6 remains design-held. These are not scientific nulls, and the budget transfer grants no further repair.
 
-The single inexpensive event monitor remains live, but automatic agent reviews are unavailable. No automatic wake delivery is promised. Scientific execution and receipt recording continue independently. An operator must handle new admission or failure boundaries until review service is restored.
+The 251-cell overnight M batch adds 50,200 scientific worlds and 10,040 excluded pilots. Full byte replay, numerical reconstruction, raw hashes, source and receipt bindings passed. The cumulative corrected M record is 268 of 552 settings. Later diary completions are recorded by the active workers and will receive their next separate aggregate landing.
 
-Original family ceilings, 160 CPU-hour total, start cutoff and drain deadline remain unchanged. Prepared work can still end resource-held; unused capacity in another family is not an authorized transfer. [Theory return](THEORY_RETURN.md).
+The live event monitor records completions, but native agent reviews remain unavailable. The queue was idle after its last M completion at 21:46 Pacific on November 16 until resumed at 04:49 on November 17. A written wake plan did not deliver an operator review; no continuous overnight occupancy or automatic future wake is claimed.
+
+[Morning audit and queue report](QUEUE_REPORT_20261117.md), [M results](MORNING_20261117_M_R1.md), [Q validation hold](Q_REPAIR_DISPOSITION_20261117.md), [theory return](THEORY_RETURN.md).

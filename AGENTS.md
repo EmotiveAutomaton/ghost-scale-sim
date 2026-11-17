@@ -26,6 +26,13 @@ This is a separate 160-CPU-hour finite allocation, Gear 2 at most four
 single-thread below-normal scientists with inherited host-load backoff.
 Each family requires text-first implementation, supplied preflight comparison
 where available, excluded pilots, full replay and independent reconstruction.
+November 17: the owner approved a conserved 55-CPU-hour transfer. Effective
+limits are D 50, S 15, M 35, W 10, T 5, Q 15, healing 10 and reserve 20 hours;
+the total remains 160. Read results/v31/RESOURCE_REALLOCATION_20261117.json
+and the separate immutable local supplement. Preserve acceptance bytes, prior
+charges, scientific source capsules, deadlines and validity gates. The corrected
+Q directory successor failed its resolution gate; its conditional builder held
+production. This transfer does not authorize another Q or W repair.
 The owner approved matching all W stress pairs on completed plans, preserving maker equations and other pairs' original matching measures.
 Never treat a roster as admission or completed execution. Keep one finite
 expected-boundary monitor, disarmed during operator work, and preserve its live owner.

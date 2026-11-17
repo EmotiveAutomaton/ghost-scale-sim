@@ -15,3 +15,5 @@ is read and retained locally. Nothing in this version establishes a human marker
 or qualifies an engine reader. No registered claim is commissioned.
 
 Current [theory return](THEORY_RETURN.md), [implementation state](IMPLEMENTATION_STATUS.md), [diary map](D_DIARY_SHAPES.md) and [optional estimator recipe](D_OPTIONAL_RECIPE.md).
+
+[November 17 queue and integrity review](QUEUE_REPORT_20261117.md): 251 overnight M cells audited, Q hidden validation held, and the approved conserved resource transfer activates remaining diary/M work.

@@ -1,4 +1,4 @@
-# V31 theory return: November 16 checkpoint
+# V31 theory return: November 17 checkpoint
 
 Which observation can distinguish each proposed mechanism in a constructed world? Completed cells now provide the following finite answers. These are descriptive model or method results, not human markers, registered claims or deployed readers.
 
@@ -6,9 +6,9 @@ Rows name the question, the completed evidence and the observation restriction. 
 
 | Question | Completed evidence | Observation restriction |
 |---|---|---|
-| Diary one-dial/two-dial distinctions | 2,314 diary settings and 144 carry settings; remaining D grid resource-held | Known events and paired feeling ratings; oracle model choices |
+| Diary one-dial/two-dial distinctions | 2,378 diary settings completed locally and 144 carry settings; continuation active after approved reallocation | Known events and paired feeling ratings; oracle model choices |
 | Waiting explanations | 2,067 scientific core cells plus 93 excluded pilots; 64 learning and 48 uniform-arrival cells | Outcomes and assigned conditions; known candidate laws |
-| Colored remainder | Corrected M reader passed retained-path validation; 552 settings admitted and running | Oracle-removed rhythm/topic; no estimated real-text residual claim |
+| Colored remainder | 268 corrected settings complete; 284 queued after the diary grid | Oracle-removed rhythm/topic; no estimated real-text residual claim |
 | Matched four-setting comparisons | 60 full-view and 24 exact cue-view cells; 30 feasible matching panels out of 108 | Hidden-view numerical readers not admitted |
 | Within-schema coupling and burst timing | 18 controlled coupling cells and 27 full-view timing cells | Single-setting coupling remains aliased; timing must be visible |
 | Habit, heuristic, value, identity | 216 exact-reader settings completed | Attention known; probes and effects stipulated |
@@ -42,4 +42,6 @@ Main snapshot reports:
 
 All accepted sampled cells retain forty excluded pilots, 200 scientific worlds, full byte replay and independent reconstruction. Pointwise intervals and censoring remain in each aggregate. Different grid cells are not pooled into one effect. M corrections reuse original paths and are not new replications.
 
-Remaining holds: D resource ceiling; W hidden accuracy; Q production pending its approved directory-only validation successor and cost profile; G6 definition. No automatic S or W additional repair is authorized. The review service is unavailable, so the finite scientific queue can run but automatic agent wake delivery is not assured.
+Remaining holds: W hidden accuracy; Q hidden resolution after the approved directory successor failed; G6 definition. No automatic S, W or Q additional repair is authorized. The review service is unavailable, so the finite scientific queue can run but automatic agent wake delivery is not assured.
+
+[Overnight M batch](MORNING_20261117_M_R1.md) adds 251 audited settings. In its 52 completed 5%-remainder settings, 99.61% to 100% of individual makers remain unresolved, even though group-level detection can be high. This colored-case prefix cannot yet establish specificity. [Q hold](Q_REPAIR_DISPOSITION_20261117.md) preserves all failed checks. The 55-hour transfer funds existing D/M rosters and verification within the unchanged 160-hour total.

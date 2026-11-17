@@ -35,6 +35,40 @@ def accounting(c):
     for path in (c/"accounting").glob("*.json"):
         row=read(path);totals[row["pool"]]+=max(row["cpu_seconds"],row.get("reservation",0.))
     return totals
+
+class QueueInventory:
+    """Cache immutable plans/receipts; discover newly admitted jobs once a minute.
+
+    Dispatch still reopens and verifies the complete source/admission binding.
+    Newly finished jobs are inspected every cycle, before any dispatch decision.
+    """
+    def __init__(self):
+        self.plans={};self.completed={};self.next_discovery=0.
+    def snapshot(self,c,monotonic):
+        if monotonic>=self.next_discovery:
+            for path in (c/"jobs").glob("*/PLAN.json"):
+                if path.parent.name not in self.plans:self.plans[path.parent.name]=(path,read(path))
+            self.next_discovery=monotonic+60.
+        for name,(path,plan) in self.plans.items():
+            receipt=path.parent/"COMPLETE.json"
+            if name not in self.completed and receipt.exists():self.completed[name]=read(receipt)["state"]
+        return sorted(self.plans.values(),key=lambda item:item[1]["order"]),dict(self.completed)
+
+class AccountingInventory:
+    """Reuse unchanged charges, but observe mutable service/reservation updates."""
+    def __init__(self):self.rows={}
+    def totals(self,c):
+        result={k:0. for k in read(c/"ACCEPTANCE.json")["cpu_limits"]};seen=set()
+        with os.scandir(c/"accounting") as entries:
+            for entry in entries:
+                if not entry.name.endswith(".json"):continue
+                seen.add(entry.name);stat=entry.stat();stamp=(stat.st_mtime_ns,stat.st_size)
+                old=self.rows.get(entry.name)
+                if old is None or old[0]!=stamp:self.rows[entry.name]=(stamp,read(Path(entry.path)))
+                row=self.rows[entry.name][1]
+                result[row["pool"]]+=max(row["cpu_seconds"],row.get("reservation",0.))
+        self.rows={name:row for name,row in self.rows.items() if name in seen}
+        return result
 def charge(c,key,pool,cpu,state,reservation=0.):
     write(c/"accounting"/(key+".json"),dict(pool=pool,cpu_seconds=cpu,state=state,reservation=reservation),immutable=False)
 def admissible(a,totals,plan,current):
@@ -157,6 +191,7 @@ def finish(c,item,error=None):
 
 def run(c):
     runtime.below_normal();a=resource_contract(c);active={};blocked={};previous=None;samples=[];limit=4
+    inventory=QueueInventory();charges=AccountingInventory()
     with owner(c/"controller"):
         if (c/"QUEUE_COMPLETE.json").exists():raise ValueError("finite queue already closed")
         for job in (c/"jobs").iterdir():
@@ -178,14 +213,14 @@ def run(c):
                 for name,item in list(active.items()):
                     if item["plan"]["family"] in blocked:
                         finish(c,item,"family stopped after retained failure");del active[name]
-                jobs=sorted((c/"jobs").glob("*/PLAN.json"),key=lambda x:read(x)["order"])
-                totals=accounting(c);waiting=[];counts={}
-                for path in jobs:
-                    job=path.parent;plan=read(path);family=plan["family"]
-                    if (job/"COMPLETE.json").exists():
-                        state=read(job/"COMPLETE.json")["state"];counts[state]=counts.get(state,0)+1
-                        if state=="FAILED":blocked[family]="retained cell failure"
-                        continue
+                jobs,completed=inventory.snapshot(c,time.monotonic())
+                totals=charges.totals(c);waiting=[];counts={}
+                for name,state in completed.items():
+                    counts[state]=counts.get(state,0)+1
+                    if state=="FAILED":blocked[inventory.plans[name][1]["family"]]="retained cell failure"
+                for path,plan in jobs:
+                    job=path.parent;family=plan["family"]
+                    if job.name in completed:continue
                     if (job/"STARTED.json").exists():continue
                     if family in blocked:continue
                     if not admissible(a,totals,plan,current):
@@ -194,12 +229,12 @@ def run(c):
                     active[job.name]=start(c,job);totals[plan["pool"]]+=plan["cpu_cap_seconds"]
                 write(c/"STATUS.json",dict(at=current.isoformat(),pid=os.getpid(),gear=2,worker_limit=limit,
                     active=list(active),waiting=waiting,counts=counts,blocked=blocked,
-                    accounting=accounting(c),build_complete=(c/"BUILD_COMPLETE.json").exists()),immutable=False)
+                    accounting=totals,build_complete=(c/"BUILD_COMPLETE.json").exists()),immutable=False)
                 terminal=(c/"BUILD_COMPLETE.json").exists() and not active and not waiting
                 exhausted=current>=datetime.fromisoformat(a["new_starts_close"]) or (c/"STOP").exists()
                 # Resource-held pending cells become terminal once no active reservation can release capacity.
                 resource_end=(c/"BUILD_COMPLETE.json").exists() and not active and waiting and all(
-                    not admissible(a,accounting(c),read(c/"jobs"/name/"PLAN.json"),current) for name in waiting)
+                    not admissible(a,totals,inventory.plans[name][1],current) for name in waiting)
                 if not active and (terminal or exhausted or resource_end):
                     write(c/"QUEUE_COMPLETE.json",dict(at=current.isoformat(),counts=counts,blocked=blocked,
                          unrun=waiting,reason="finite/resource/time endpoint"))
