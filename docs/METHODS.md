@@ -1,5 +1,7 @@
 # The methodology layer
 
+V31 M now detects exact constant-value pairs before computing correlations, using centered streaming covariance and independent two-pass arithmetic. Its retained-path audit preserves raw bytes and corrects only the affected per-maker mean. Higher particle counts remain subject to unchanged resolution gates; W failed and stays held. [Numerical review](versions/v31-four-settings/HEALING_REVIEW_20261116.md).
+
 V31 S.b preserves finite posterior support in its independent reconstruction by
 normalizing scalar log likelihoods with a maximum shift and compensated summation.
 The retained failed fixture and production-byte comparison pass without changing

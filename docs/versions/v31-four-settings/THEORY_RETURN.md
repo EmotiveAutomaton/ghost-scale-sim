@@ -1,38 +1,44 @@
-# V31 theory return: running checkpoint
+# V31 theory return: November 16 checkpoint
 
-| Distinction | Observation that can tell | Current evidence | Reader visibility |
-|---|---|---|---|
-| One dial, two dials, contest-readiness rival | Independent event-response estimates across days | 2,160 diary settings verified; level tied to sensitivity raises the displayed rival30 estimate to about 0.87 | Known events and paired feeling ratings |
-| Cost, optimism, confidence, slow evidence | Wait/outcome across odds and cost interventions | Exact preflight reproduced; scientific queue prepared | Trial outcomes and assigned conditions |
-| Colored, white, prompted remainder | Residual association by clock and message gap | Controls and preflight passed; 552 distinct cells queued | Oracle-removed rhythm/topic and noisy remainder |
-| Six pairs of four settings | Cue-aligned switches, work, timing and plans | Matching jobs prepared; exact readers validated; hidden readers gated | Four separate observation views |
-| Habit, heuristic, value, identity | Costs, offers and optional effects | 216 exact-reader cells queued | Assigned probes and observed actions |
-| Rank and level | Neighbour changes and membership histories | 45 exact cells and twelve moving-reader gates queued | Three explicit views |
+Which observation can distinguish each proposed mechanism in a constructed world? Completed cells now provide the following finite answers. These are descriptive model or method results, not human markers, registered claims or deployed readers.
 
-These are descriptive finite miniatures, architecture untested. No result establishes a human marker or deployed reader. The four-setting interpretation remains provisional.
+Rows name the question, the completed evidence and the observation restriction. Unrun and failed-reader scope is kept separate.
 
-D calibrates Sounding Line ES2/MI2. [Complete first shape map](D_DIARY_SHAPES.md) retains all estimates, intervals, availability and classifications; its 43,200 worlds include the earlier 3,600-world opening. [Optional secondary recipe](D_OPTIONAL_RECIPE.md) met the declared precision trigger in five already published cells; its linear-model bias remains. The [144-cell reaction/carry map](D_REACTION_CARRY.md) is complete for ES3; estimated correlations can be positive even when the planted parameters are independent. It does not cover gaps over 240 minutes.
+| Question | Completed evidence | Observation restriction |
+|---|---|---|
+| Diary one-dial/two-dial distinctions | 2,314 diary settings and 144 carry settings; remaining D grid resource-held | Known events and paired feeling ratings; oracle model choices |
+| Waiting explanations | 2,067 scientific core cells plus 93 excluded pilots; 64 learning and 48 uniform-arrival cells | Outcomes and assigned conditions; known candidate laws |
+| Colored remainder | Corrected M reader passed retained-path validation; 552 settings admitted and running | Oracle-removed rhythm/topic; no estimated real-text residual claim |
+| Matched four-setting comparisons | 60 full-view and 24 exact cue-view cells; 30 feasible matching panels out of 108 | Hidden-view numerical readers not admitted |
+| Within-schema coupling and burst timing | 18 controlled coupling cells and 27 full-view timing cells | Single-setting coupling remains aliased; timing must be visible |
+| Habit, heuristic, value, identity | 216 exact-reader settings completed | Attention known; probes and effects stipulated |
+| Rank and level | 45 exact-reader cells and three event-absence follow-ons | Moving partial views remain validity-held |
+| Feeling source and future options | 54 context-visible source cells, 60 aliases excluded; 24 one-step Capital cells | Source cues must vary; Capital only one step ahead |
 
-S asks which waiting explanations are observable (G10); its finite, nonzero cost/optimism evidence is a near-alias, not an exact identity. S.b's owner-approved stable-log repair passed; its 64 settings are admitted, with scientific results pending. [Repair evidence](S_LEARNING_R2_REPORT.md). S.c is queued. M supplies EN1 calibration and oracle per-maker evidence requirements; it does not yet validate estimated real-text residuals.
+The controlled coupling contrast separates all sampled worlds by the record end, but the uniform-arrival waiting map leaves a majority unresolved in every setting. Both outcomes are findings. Failed numerical readers are validity holds, not contrary scientific findings.
 
-W tests the provisional four settings (G9), including owner-approved stress matching and the controlled two-block coupling comparison. It feeds the engine’s attention-marker questions. T (G5) feeds probe design. Q (G8) feeds ES1 and the interpretation of shows lacking page events. G4/G7 reserves are prepared.
+Sounding Line routes: D to ES2/MI2 and ES3 calibration; S to waiting-task design; M to EN1 residual calibration; Q to ES1 event-absence interpretation. ToMpathy routes: W and T to probe/visibility design, Q to causal-reading limits, G4/G7 to contextual source and reachable-option distinctions. Each family report retains its route and restrictions.
 
-Not yet run or admitted: most scientific cells; W matched descendants until calibration; W/Q hidden descendants until accuracy gates; S.b scientific execution; conditional descendants until their specific triggers; G6 until its intervention is defined. Resource ceilings may leave explicit partial maps.
+Main snapshot reports:
+- [D CORE](EVENING_D_CORE.md)
+- [G4 IDENTITY](EVENING_G4_IDENTITY.md)
+- [G7 CAPITAL](EVENING_G7_CAPITAL.md)
+- [M R1](EVENING_M_R1.md)
+- [Q EVENTS FOLLOWON Q EXACT-0006](EVENING_Q_EVENTS_FOLLOWON_Q_EXACT-0006.md)
+- [Q EVENTS FOLLOWON Q EXACT-0007](EVENING_Q_EVENTS_FOLLOWON_Q_EXACT-0007.md)
+- [Q EVENTS FOLLOWON Q EXACT-0008](EVENING_Q_EVENTS_FOLLOWON_Q_EXACT-0008.md)
+- [Q EXACT](EVENING_Q_EXACT.md)
+- [S CORE](EVENING_S_CORE.md)
+- [S LEARNING R2](EVENING_S_LEARNING_R2.md)
+- [S UNIFORM](EVENING_S_UNIFORM.md)
+- [T CORE](EVENING_T_CORE.md)
+- [W BURST](EVENING_W_BURST.md)
+- [W COUPLING](EVENING_W_COUPLING.md)
+- [W READER V2](EVENING_W_READER_V2.md)
+- [W READER V4](EVENING_W_READER_V4.md)
 
-[Implementation](IMPLEMENTATION_STATUS.md), [current queue](../../../results/v31/CURRENT_STATUS.json), [monitoring record](../../../results/v31/MONITORING.json).
+[Repair dispositions](HEALING_REVIEW_20261116.md), [implementation and queue](IMPLEMENTATION_STATUS.md), [main aggregate audit](../../../results/v31/evening-20261116/AUDIT.json).
 
-The separate [graded-event diary map](D_GRADED_DIARY_SHAPES.md) adds 216 verified cells and 43,200 fresh worlds. Across both complete blocks the total is 432 cells, 86,400 scientific worlds and 17,280 excluded pilot worlds. These retain separate generated event-size laws.
+All accepted sampled cells retain forty excluded pilots, 200 scientific worlds, full byte replay and independent reconstruction. Pointwise intervals and censoring remain in each aggregate. Different grid cells are not pooled into one effect. M corrections reuse original paths and are not new replications.
 
-The three additional complete 216-cell blocks are [binary events with tied rates](D_RATE_TIED_BINARY.md), [graded events with tied rates](D_RATE_TIED_GRADED.md) and [binary events with tied usual levels](D_LEVEL_TIED_BINARY.md). Together with the first two blocks, these are 1,080 distinct diary cells and 216,000 scientific worlds, including the overlapping opening eighteen only once. The carry map adds 144 cells and 28,800 scientific worlds. [Ten further optional-recipe trigger cells](D_OPTIONAL_RECIPE_SUPPLEMENT.md) use existing verified data and retain bias qualifications.
-
-The [graded-event block with tied usual levels](D_LEVEL_TIED_GRADED.md) adds 216 independently verified settings. Six complete blocks contain 1,296 distinct diary settings and 259,200 scientific worlds; the original eighteen are included once. The separate carry map contains 144 settings.
-
-The [binary-event map with both usual levels and event rates tied to sensitivity](D_LEVEL_AND_RATE_TIED_BINARY.md) adds 216 verified cells. Seven complete blocks now contain 1,512 distinct diary settings and 302,400 scientific worlds; the separate carry map adds 144 settings and 28,800 worlds.
-
-The [graded-event block with both ties](D_LEVEL_AND_RATE_TIED_GRADED.md) adds 216 audited settings. Eight blocks comprise 1,728 distinct diary settings and 345,600 scientific worlds, including the opening eighteen once. The separate carry map has 144 settings. [Six additional recipe triggers](D_OPTIONAL_RECIPE_BOTH_TIED.md) retain bias qualifications.
-
-The [no-floor binary block](D_NO_FLOOR_BINARY.md) adds 216 audited settings. Nine blocks contain 1,944 distinct diary settings and 388,800 scientific worlds; the opening eighteen are included once. The 144 carry settings are separate. [Three further recipe triggers](D_OPTIONAL_RECIPE_NO_FLOOR.md) retain bias and availability qualifications.
-
-The [no-floor graded-event block](D_NO_FLOOR_GRADED.md) adds 216 audited settings. Ten complete blocks contain 2,160 distinct diary settings and 432,000 scientific worlds; the opening eighteen are included once. The 144 carry settings are separate. [One additional recipe trigger](D_OPTIONAL_RECIPE_NO_FLOOR_GRADED.md) retains bias and availability qualifications.
-
-The owner-requested [partial next-block checkpoint](D_NO_FLOOR_RATE_TIED_BINARY_CHECKPOINT.md) records 122 further verified diary cells available at 2026-11-16 14:19 UTC, without a full-grid conclusion. Together with ten complete blocks, 2,282 distinct diary cells and 144 separate carry cells are documented. Automatic agent reviews are currently unavailable; scientific execution continues under the finite controller.
+Remaining holds: D resource ceiling; W hidden accuracy; Q production pending its approved directory-only validation successor and cost profile; G6 definition. No automatic S or W additional repair is authorized. The review service is unavailable, so the finite scientific queue can run but automatic agent wake delivery is not assured.

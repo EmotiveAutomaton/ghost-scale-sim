@@ -40,5 +40,6 @@ That conditional contrast and its single-setting alias are both explicit.
 S.b's excluded reconstruction caught posterior underflow. Its first repair also
 failed because the installed extended floating type has the same exponent range.
 Both are retained. The owner-approved stable-log R2 repair passed all unchanged
-validation gates; 64 S.b settings are admitted. Scientific results remain pending.
+validation gates; all 64 S.b settings have now completed and passed full replay
+and independent reconstruction. [Scientific map](EVENING_S_LEARNING_R2.md).
 [Repair evidence](S_LEARNING_R2_REPORT.md). S's exact known-odds and uniform-arrival studies are independent.

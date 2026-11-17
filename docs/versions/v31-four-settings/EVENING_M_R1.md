@@ -1,0 +1,21 @@
+# M corrected opening checkpoint
+
+Can the corrected remainder reader recover planted temporal dependence? Seven completed settings have full replay and independent reconstruction under the repaired correlation calculation. This is an opening fragment, not a complete-grid conclusion; the two original completed settings are superseded rather than counted as independent replications.
+
+The table gives each completed setting, its sample design, the mean share of makers still unresolved, and the corrected mean short-gap correlation. These are cell estimates over 200 worlds, not a pooled effect. Full eight-block intervals remain in the aggregate files.
+
+| Setting | Makers | Messages per maker | Planted kind | Remainder fraction | Reliability | Unresolved maker share | Mean short-gap correlation |
+|---|---:|---:|---|---:|---:|---:|---:|
+| M_R1-0000 | 600 | 100 | COLORED | 0.2 | 1.0 | 0.851133 | 0.140737 |
+| M_R1-0001 | 600 | 100 | COLORED | 0.2 | 1.0 | 0.848317 | 0.155089 |
+| M_R1-0004 | 150 | 100 | COLORED | 0.2 | 1.0 | 0.850167 | 0.137918 |
+| M_R1-0005 | 150 | 100 | COLORED | 0.2 | 1.0 | 0.847767 | 0.154983 |
+| M_R1-0006 | 150 | 400 | COLORED | 0.2 | 1.0 | 0.288000 | 0.165101 |
+| M_R1-0007 | 150 | 400 | COLORED | 0.2 | 1.0 | 0.290267 | 0.170031 |
+| M_R1-0008 | 50 | 100 | COLORED | 0.2 | 1.0 | 0.856700 | 0.133918 |
+
+Rhythm and topic are removed by oracle construction. This does not validate estimated residuals from real text. Sounding Line EN1 receives a finite method calibration; ToMpathy receives a reader-boundary diagnostic. The remaining M roster is running within its original allocation.
+
+This descriptive method snapshot has 1,400 scientific worlds and 280 excluded pilot worlds. Full byte replay, independent reconstruction, source, raw and completion bindings passed. The miniature architecture is untested; no human marker, registered claim or deployed reader follows.
+
+[Aggregate evidence](../../../results/v31/evening-supplement-20261116/M_R1/VERIFIED.json); [repair and admission record](HEALING_REVIEW_20261116.md).
