@@ -1,0 +1,47 @@
+{
+  "bundle_id": "fb1fd7ca6fa47ba601657552bfbc75c8b7912d61e83061483da065f917e16d13",
+  "files": [
+    {
+      "file": "raw/data/v31/jobs/M-CORE-0002/output/pilot-original/cell_measures.npz",
+      "key": "SHA256-s10664--97cae2e18484fdd22f0d7685f3e6eae345faeaca14df1ac5fa552dc0e8968ea7",
+      "sha256": "97cae2e18484fdd22f0d7685f3e6eae345faeaca14df1ac5fa552dc0e8968ea7",
+      "size": 10664
+    },
+    {
+      "file": "raw/data/v31/jobs/M-CORE-0002/output/pilot-original/cell_points.npz",
+      "key": "SHA256-s238049534--f1756c690befeadd378a3adae8a475e4edc62e407eb99054584a18d15c65e3e2",
+      "sha256": "f1756c690befeadd378a3adae8a475e4edc62e407eb99054584a18d15c65e3e2",
+      "size": 238049534
+    },
+    {
+      "file": "raw/data/v31/jobs/M-CORE-0002/output/pilot-reconstruct/cell_measures.npz",
+      "key": "SHA256-s10662--7136dece0c3bdde849ab241d32adf11c19136e22c46d3940d42d35ff1d83e158",
+      "sha256": "7136dece0c3bdde849ab241d32adf11c19136e22c46d3940d42d35ff1d83e158",
+      "size": 10662
+    },
+    {
+      "file": "raw/data/v31/jobs/M-CORE-0002/output/pilot-replay/cell_measures.npz",
+      "key": "SHA256-s10664--97cae2e18484fdd22f0d7685f3e6eae345faeaca14df1ac5fa552dc0e8968ea7",
+      "sha256": "97cae2e18484fdd22f0d7685f3e6eae345faeaca14df1ac5fa552dc0e8968ea7",
+      "size": 10664
+    },
+    {
+      "file": "raw/data/v31/jobs/M-CORE-0002/output/pilot-replay/cell_points.npz",
+      "key": "SHA256-s238049534--f1756c690befeadd378a3adae8a475e4edc62e407eb99054584a18d15c65e3e2",
+      "sha256": "f1756c690befeadd378a3adae8a475e4edc62e407eb99054584a18d15c65e3e2",
+      "size": 238049534
+    },
+    {
+      "file": "raw/data/v31/jobs/M-CORE-0002/output/study-original/cell_points.npz",
+      "key": "SHA256-s15733572--444593847eb4290bfc6b4a3ff9811641d16d6d44f749114ca7fea18076c36c83",
+      "sha256": "444593847eb4290bfc6b4a3ff9811641d16d6d44f749114ca7fea18076c36c83",
+      "size": 15733572
+    }
+  ],
+  "migration_receipt_sha256": "44cc4a3a50f8259c03b39a8a426500c502fb4168f4ba5963eb484978ad783dd0",
+  "remote": "ghost-archive",
+  "schema": 1,
+  "scientific_scope": "Storage integrity only; scientific validity and reporting remain in version result records.",
+  "source_bundle": "v31/jobs/M-CORE-0002/output",
+  "storage_state": "VERIFIED_ARCHIVE"
+}

@@ -56,6 +56,12 @@ frozen worker requires creating its own output folder. Keep those four attempts.
 M_EXTERNAL_R1 fixes only the directory layout using external whole-job directories
 and unchanged scientific capsules; require its first original setting to verify
 before admitting the other 101. No additional Q/W or numerical repair follows.
+The owner additionally approved git-annex integration for external raw archives.
+Read docs/RESULTS_AND_RAW_DATA.md and raw/INDEX.json. Keep all readable reported
+results in ordinary Git; raw/data holds content-addressed pointers to verified
+external evidence. Archive admission does not establish scientific validity.
+Preserve main, existing Git guards, original scientific paths and the read-only
+archive remote. Hard links are shared storage, not independent backup copies.
 The owner approved matching all W stress pairs on completed plans, preserving maker equations and other pairs' original matching measures.
 Never treat a roster as admission or completed execution. Keep one finite
 expected-boundary monitor, disarmed during operator work, and preserve its live owner.

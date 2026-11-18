@@ -1,5 +1,7 @@
 # Ghost Scale Simulation
 
+[Results and raw evidence](docs/RESULTS_AND_RAW_DATA.md): readable reports and numerical results remain in this repository. The [raw archive catalog](raw/README.md) uses git-annex to retrieve large evidence from external storage within the same project.
+
 V30 is closed for theory review; all completed scientific results are published. Its partial maps and failed validation remain explicit. [Final report](docs/versions/v30-the-readers-side/FINAL_REPORT.md). V31 has completed its full diary map and is running bounded corrected-M storage recovery in Gear 2; completed waiting, matched-setting, probe and rank maps are recorded in its [theory return](docs/versions/v31-four-settings/THEORY_RETURN.md).
 
 V29 has eleven primary maps, 35 original continuation maps and six separately repaired maps verified. Four additional X2 repair variants are resource-held. [Theory return and tells](docs/versions/v29-above-the-loops/THEORY_RETURN.md); [coverage](results/v29/FINAL_COVERAGE_20261114.json).

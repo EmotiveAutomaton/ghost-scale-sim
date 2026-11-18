@@ -1,5 +1,7 @@
 # Documentation map
 
+[Results and raw evidence](RESULTS_AND_RAW_DATA.md): ordinary Git retains readable findings and aggregates; the same repository catalogs externally stored raw files through git-annex.
+
 [V27 current program](versions/v27-motives-and-set-points/README.md): motives,
 set points, stress, closing, recursive reading and structural markers. Consult
 its implementation status for prepared work and unresolved design choices.

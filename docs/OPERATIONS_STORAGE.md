@@ -5,6 +5,15 @@ and reports. Machine-local campaign directories retain small queue records,
 source capsules, accounting and launch state. Large persistent outputs belong on
 the owner-designated external evidence volume, configured outside Git.
 
+The owner also commissioned same-repository git-annex integration. Keep readable
+results in ordinary Git; `raw/data/` holds annex pointers and `raw/catalog/` their
+provenance. The standard external directory remote uses hard links to completed,
+verified raw payloads and preserves the original paths. Never annex private
+operating material or substitute a raw pointer for a reportable aggregate.
+Read [the results and raw-data guide](RESULTS_AND_RAW_DATA.md) and coverage index
+before claiming that an archive is registered or published. No second physical
+copy is created by the object-store links.
+
 Current V31 continuation uses external job directories through directory links
 at the original local paths; per-job records accompany the data, while central
 queue control and accounting remain local. The frozen worker creates its own
