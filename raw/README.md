@@ -4,7 +4,7 @@ This directory is part of the original Ghost Scale Git repository. Files under
 `data/` are git-annex pointers identified by SHA-256 and byte size. Their large
 contents live in the external `ghost-archive` store. They do not enter ordinary
 Git history. [Per-bundle catalogs](catalog/) bind each file to its completed,
-verified archive transaction. [Coverage](INDEX.json) distinguishes registered
+verified archive transaction or completed external job. [Coverage](INDEX.json) distinguishes registered
 content from the migration still in progress.
 
 The readable results remain in [`results/`](../results/), with reports in
@@ -17,10 +17,15 @@ With git-annex installed and the archive mounted, enable the existing remote:
 ```text
 git annex enableremote ghost-archive directory="<archive-root>/annex-objects"
 git config remote.ghost-archive.annex-readonly true
+git annex verifyremote ghost-archive
 git annex whereis raw/data/<file>
 git annex get --from=ghost-archive -- raw/data/<file>
 git annex fsck -- raw/data/<file>
 ```
+
+For remote verification, confirm that the displayed configuration is the expected
+`type=directory encryption=none` and that the local directory is your archive.
+Newer git-annex versions require this verification after enabling a restored remote.
 
 Retrieve only the files needed for an analysis. `git annex drop -- raw/data/<file>`
 can release a retrieved local cache after annex checks its external availability.
@@ -39,3 +44,4 @@ share the same underlying bytes and count as one physical copy. This avoids a
 second full archive allocation but does not create an independent backup.
 
 [Results and storage guide](../docs/RESULTS_AND_RAW_DATA.md).
+[Storage checks and retrieval evidence](VALIDATION.json).

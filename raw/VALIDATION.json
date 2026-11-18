@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "scope": "Storage and retrieval infrastructure; no new scientific validity claim",
+  "targeted_tests": {
+    "command": "python -m pytest tests/test_annex_storage.py -q -p no:cacheprovider",
+    "passed": 11,
+    "covers": [
+      "unsafe path rejection",
+      "raw versus operating-file selection",
+      "completed migration and destination binding",
+      "hard-link identity and original preservation",
+      "corrupt object and changed source rejection",
+      "immutable external completion, worker and plan binding"
+    ]
+  },
+  "real_archive_retrieval": {
+    "get_checksum_drop_passed": true,
+    "source_archive_preserved": true,
+    "git_index_contains_only_small_raw_pointers": true,
+    "main_preserved": true,
+    "preexisting_git_hooks_preserved": true
+  },
+  "isolated_clone": {
+    "source_main": "2187c1696cd9b857bcc188feec938e4c0988e263",
+    "shared_git_objects": true,
+    "separate_worktree_and_annex_cache": true,
+    "sparse_checkout": true,
+    "raw_file": "data/v31/jobs/M_R1-0000/output/pilot-original/cell_measures.npz",
+    "get_checksum_drop_passed": true,
+    "main_preserved": true,
+    "working_tree_clean_after_drop": true,
+    "setup_correction": "The restored directory remote requires explicit verification before retrieval; the retrieval guide includes that step.",
+    "limitation": "This was an isolated local clone using shared Git objects, not an independent full network clone or a check of every archived raw file. An unrelated historical long-path attribute warning remained visible."
+  },
+  "integrity_chain": "Completed migration SHA-256 receipts, or full hashing of terminal external output, bind archive admission. Annex keys preserve SHA-256 and byte size; retrieval verifies selected content.",
+  "coverage": "See INDEX.json for registered coverage; migration and backfill remain separate from publication.",
+  "backup_limit": "Archive object hard links share existing bytes and provide no independent backup."
+}

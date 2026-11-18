@@ -1,6 +1,6 @@
 """Register verified archive payloads with git-annex without copying raw bytes.
 
-Consumes completed archive_storage receipts only. Existing scientific paths and
+Consumes completed archive_storage or hashed external-job receipts. Scientific paths and
 archive bytes remain unchanged. This command stages annex pointers; publication
 and any site-specific command authorization are the caller's responsibility.
 """
@@ -51,11 +51,26 @@ def is_raw(name):
 
 
 def entries(receipt,destination):
-    if receipt.get('stage')!='RECLAIMED' or receipt.get('original_path_preserved') is not True:
-        raise ValueError('archive transaction is not complete')
     relative=safe_relative(receipt['relative'])
     if relative.parts[0]!='.local' or len(relative.parts)<2:raise ValueError('unreviewed source root')
-    expected=(Path(destination)/'retained'/str(relative)).resolve()
+    if receipt.get('kind')=='external-job':
+        if receipt.get('stage')!='EXTERNAL_COMPLETE_HASHED':raise ValueError('external job is not complete')
+        if len(relative.parts)!=5 or relative.parts[2]!='jobs' or relative.parts[4]!='output':
+            raise ValueError('unexpected external job layout')
+        expected=(Path(destination)/'runs'/relative.parts[1]/relative.parts[3]/'output').resolve()
+        for name in ('COMPLETE.json','WORKER_COMPLETE.json','PLAN.json'):
+            if sha(expected.parent/name)!=receipt['terminal_sha256'][name]:raise ValueError('external terminal record changed')
+        complete=read(expected.parent/'COMPLETE.json');worker=read(expected.parent/'WORKER_COMPLETE.json')
+        if complete['state'] not in ('VERIFIED','EXCLUDED') or worker['state']!=complete['state']:
+            raise ValueError('external job is not complete')
+        if complete['worker_receipt_sha256']!=receipt['terminal_sha256']['WORKER_COMPLETE.json']:
+            raise ValueError('external worker binding mismatch')
+        if complete['plan_sha256']!=receipt['terminal_sha256']['PLAN.json'] or worker['plan_sha256']!=complete['plan_sha256']:
+            raise ValueError('external plan binding mismatch')
+    else:
+        if receipt.get('stage')!='RECLAIMED' or receipt.get('original_path_preserved') is not True:
+            raise ValueError('archive transaction is not complete')
+        expected=(Path(destination)/'retained'/str(relative)).resolve()
     if Path(receipt['target']).resolve()!=expected:raise ValueError('archive target binding mismatch')
     output=[]
     for name,record in sorted(receipt['files'].items()):
@@ -140,7 +155,8 @@ def register_many(repo,destination,state,receipt_paths,remote='ghost-archive'):
     results=[]
     for receipt,items,bundle,done,source_sha in pending:
         public=dict(schema=1,bundle_id=bundle,source_bundle=receipt['relative'].removeprefix('.local/'),
-                migration_receipt_sha256=source_sha,storage_state='VERIFIED_ARCHIVE',
+                storage_receipt_sha256=source_sha,storage_state='VERIFIED_ARCHIVE',
+                storage_origin=receipt.get('kind','completed-migration'),
                 scientific_scope='Storage integrity only; scientific validity and reporting remain in version result records.',
                 remote=remote,files=[{k:row[k] for k in ('file','key','sha256','size')} for row in items])
         save(repo/'raw/catalog'/(bundle+'.json'),public)

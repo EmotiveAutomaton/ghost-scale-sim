@@ -32,7 +32,8 @@ Retrieval verifies content hashes. The remote is configured read-only for normal
 annex operations; registration creates new links but never replaces or deletes
 an existing archive file. [Directory remote](https://git-annex.branchable.com/special_remotes/directory/).
 
-`runners/annex_storage.py` admits only completed migration receipts, binds their
+`runners/annex_storage.py` admits completed migration receipts or fully hashed
+external-job snapshots bound to immutable completion, worker and plan records. It binds their
 destination, rejects unsafe paths and changed files, and checks that every staged
 raw entry is the expected small pointer. It selects numerical arrays, tabular
 payloads, compressed data archives and explicitly named raw JSON records;
