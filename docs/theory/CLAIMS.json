@@ -318221,6 +318221,26 @@
       "correction_class": null,
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-M-STORAGE-FIRST-1",
+      "allowed_wording": "Does the storage recovery reproduce the interrupted M evidence? The first 16 successor settings pass complete byte replay and independent reconstruction, including all eight complete raw archives retained from the four interrupted attempts. The corrected published grid now contains 308 of 552 unique settings. These successors reuse the original seeds and are not independent replications.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated colored remainder with oracle nuisance removal",
+      "reader": "Corrected correlation reader",
+      "control_status": "Controls, full byte replay, independent reconstruction and retained-parent byte equality passed",
+      "source_file": "docs/versions/v31-four-settings/M_STORAGE_FIRST_REPORT_20261117.md",
+      "source_line": 3,
+      "source_sha256": "fffca4b26741403cf6578eea5843d44020e36a2dbecce5be7f0de7815332a5f1",
+      "estimate": {
+        "settings": 16,
+        "scientific_worlds": 3200,
+        "excluded_pilot_worlds": 640,
+        "published_corrected_unique_settings": 308
+      },
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,

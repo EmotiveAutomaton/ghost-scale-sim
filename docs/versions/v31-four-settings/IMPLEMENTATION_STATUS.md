@@ -48,3 +48,5 @@ Effective CPU ceilings remain D 50, S 15, M 35, W 10, T 5, Q 15, healing 10 and 
 Native agent reviews remain unavailable after the usage-limit failure. Event recording continues; a cheap cached inventory replaces repeated event rehashing, with fresh hash checks retained at actual delivery. No automatic agent wake is promised.
 
 [Evening queue report](QUEUE_REPORT_EVENING_20261117.md), [complete diary](D_COMPLETE_REPORT_20261117.md), [complete optional recipe map](D_OPTIONAL_RECIPE_COMPLETE_20261117.md), [M prefix](M_PRE_STORAGE_REPORT_20261117.md).
+
+Recovery follow-up at 2026-11-18T02:06:10.876970+00:00: [the first 16 successors](M_STORAGE_FIRST_REPORT_20261117.md) are fully audited, bringing published corrected M coverage to 308/552. The live snapshot has 310 unique completed M settings, 4 active workers and 238 waiting jobs, with no new recovery failure. All eight complete retained parent archives reproduce exactly. Later runtime completions remain separately recorded for their next aggregate landing.
