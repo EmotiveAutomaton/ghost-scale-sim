@@ -17,3 +17,5 @@ or qualifies an engine reader. No registered claim is commissioned.
 Current [theory return](THEORY_RETURN.md), [implementation state](IMPLEMENTATION_STATUS.md), [diary map](D_DIARY_SHAPES.md) and [optional estimator recipe](D_OPTIONAL_RECIPE.md).
 
 [November 17 queue and integrity review](QUEUE_REPORT_20261117.md): 251 overnight M cells audited, Q hidden validation held, and the approved conserved resource transfer activates remaining diary/M work.
+
+[November 17 evening review](QUEUE_REPORT_EVENING_20261117.md): the full diary map is complete; bounded M storage recovery is running under unchanged scientific gates. [Complete diary](D_COMPLETE_REPORT_20261117.md), [68 optional recipes](D_OPTIONAL_RECIPE_COMPLETE_20261117.md).

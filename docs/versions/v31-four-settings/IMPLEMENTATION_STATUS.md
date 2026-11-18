@@ -1,19 +1,20 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-17T12:57:07.754091+00:00. Gear 2 is active with 4 below-normal, single-thread diary workers. The corrected M roster follows in the packet's D-first order. Host-load backoff still reduces the ceiling from four to two.
+Checkpoint 2026-11-18T02:00:16.124124+00:00. Gear 2 has 4 active M storage-recovery workers and 244 waiting settings. The complete diary grid is verified. Host-load backoff retains the four-to-two-worker limit.
 
-The table distinguishes scientific settings from validation jobs. A verified validation workflow does not imply scientific admission. Original M cells remain superseded by their corrected successors.
+The table counts settings and validation jobs separately. Original M results and interrupted attempts remain retained; count only corrected M successes and their successful storage successors toward the 552-setting grid.
 
 | Family | Kind | Prepared | Recorded states |
 |---|---|---:|---|
 | D_CARRY | science | 144 | VERIFIED: 144 |
-| D_CORE | science | 3456 | QUEUED: 1074, RUNNING: 4, VERIFIED: 2378 |
-| D_HEAVY | science | 1728 | QUEUED: 1728 |
+| D_CORE | science | 3456 | VERIFIED: 3456 |
+| D_HEAVY | science | 1728 | VERIFIED: 1728 |
 | G4_IDENTITY | science | 114 | EXCLUDED: 60, VERIFIED: 54 |
 | G7_CAPITAL | science | 24 | VERIFIED: 24 |
 | M_CORE | science | 552 | FAILED: 3, SUPERSEDED_BY_M_R1: 547, VERIFIED: 2 |
-| M_R1 | science | 552 | QUEUED: 284, VERIFIED: 268 |
+| M_R1 | science | 552 | FAILED: 4, SUPERSEDED_BY_M_STORAGE_R1: 256, VERIFIED: 292 |
 | M_R1_VALIDATION | validation | 1 | VERIFIED: 1 |
+| M_STORAGE_R1 | science | 260 | QUEUED: 244, RUNNING: 4, VERIFIED: 12 |
 | Q_CONDITIONAL_ADMISSION_R1 | validation | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0006 | science | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0007 | science | 1 | VERIFIED: 1 |
@@ -38,12 +39,12 @@ The table distinguishes scientific settings from validation jobs. A verified val
 | W_READER_V2 | science | 24 | VERIFIED: 24 |
 | W_READER_V4 | science | 60 | VERIFIED: 60 |
 
-All currently admissible scope is built. The D/M budget boundary was reached overnight; no scientific job was interrupted. The owner approved a 55-hour transfer within the existing 160-hour total. Effective limits are D 50, S 15, M 35, W 10, T 5, Q 15, healing 10 and verification/reserve 20 CPU-hours. The original acceptance, job sources, gates, start cutoff and drain are unchanged.
+Corrected M has 304 unique settings complete at this runtime snapshot. The newly audited public batch contains 2,788 D settings and 24 M settings; it brings published D coverage to all 5,184 settings and the pre-recovery M prefix to 292. New recovery completions retain automatic full replay/reconstruction and separate later audit/landing.
 
-Q's directory-only successor ran and failed its unchanged resolution gate; the conditional builder correctly declined production. W hidden readers remain held after their failed repair. G6 remains design-held. These are not scientific nulls, and the budget transfer grants no further repair.
+All 260 unfinished M settings have immutable successor plans, unchanged scientific sources, seeds and gates. Four failed original attempts are preserved. Capacity admission protects 30 GiB and reserves full active-job output bounds. A storage hold can stop further starts before the complete grid fits. No results were moved to another drive.
 
-The 251-cell overnight M batch adds 50,200 scientific worlds and 10,040 excluded pilots. Full byte replay, numerical reconstruction, raw hashes, source and receipt bindings passed. The cumulative corrected M record is 268 of 552 settings. Later diary completions are recorded by the active workers and will receive their next separate aggregate landing.
+Effective CPU ceilings remain D 50, S 15, M 35, W 10, T 5, Q 15, healing 10 and reserve 20 hours, totaling 160. The original acceptance and November 22 endpoints are unchanged. Q/W hidden readers remain validity-held and G6 is design-held; no further repair is implied.
 
-The live event monitor records completions, but native agent reviews remain unavailable. The queue was idle after its last M completion at 21:46 Pacific on November 16 until resumed at 04:49 on November 17. A written wake plan did not deliver an operator review; no continuous overnight occupancy or automatic future wake is claimed.
+Native agent reviews remain unavailable after the usage-limit failure. Event recording continues; a cheap cached inventory replaces repeated event rehashing, with fresh hash checks retained at actual delivery. No automatic agent wake is promised.
 
-[Morning audit and queue report](QUEUE_REPORT_20261117.md), [M results](MORNING_20261117_M_R1.md), [Q validation hold](Q_REPAIR_DISPOSITION_20261117.md), [theory return](THEORY_RETURN.md).
+[Evening queue report](QUEUE_REPORT_EVENING_20261117.md), [complete diary](D_COMPLETE_REPORT_20261117.md), [complete optional recipe map](D_OPTIONAL_RECIPE_COMPLETE_20261117.md), [M prefix](M_PRE_STORAGE_REPORT_20261117.md).

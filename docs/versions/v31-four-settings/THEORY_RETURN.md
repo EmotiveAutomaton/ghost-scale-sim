@@ -6,9 +6,9 @@ Rows name the question, the completed evidence and the observation restriction. 
 
 | Question | Completed evidence | Observation restriction |
 |---|---|---|
-| Diary one-dial/two-dial distinctions | 2,378 diary settings completed locally and 144 carry settings; continuation active after approved reallocation | Known events and paired feeling ratings; oracle model choices |
+| Diary one-dial/two-dial distinctions | All 5,184 diary settings and 144 separate carry settings complete | Known events and paired feeling ratings; oracle model choices |
 | Waiting explanations | 2,067 scientific core cells plus 93 excluded pilots; 64 learning and 48 uniform-arrival cells | Outcomes and assigned conditions; known candidate laws |
-| Colored remainder | 268 corrected settings complete; 284 queued after the diary grid | Oracle-removed rhythm/topic; no estimated real-text residual claim |
+| Colored remainder | 292 pre-recovery settings publicly audited; 304 unique corrected settings locally complete; bounded storage recovery active | Oracle-removed rhythm/topic; no estimated real-text residual claim |
 | Matched four-setting comparisons | 60 full-view and 24 exact cue-view cells; 30 feasible matching panels out of 108 | Hidden-view numerical readers not admitted |
 | Within-schema coupling and burst timing | 18 controlled coupling cells and 27 full-view timing cells | Single-setting coupling remains aliased; timing must be visible |
 | Habit, heuristic, value, identity | 216 exact-reader settings completed | Attention known; probes and effects stipulated |
@@ -46,4 +46,6 @@ Remaining holds: W hidden accuracy; Q hidden resolution after the approved direc
 
 [Overnight M batch](MORNING_20261117_M_R1.md) adds 251 audited settings. In its 52 completed 5%-remainder settings, 99.61% to 100% of individual makers remain unresolved, even though group-level detection can be high. This colored-case prefix cannot yet establish specificity. [Q hold](Q_REPAIR_DISPOSITION_20261117.md) preserves all failed checks. The 55-hour transfer funds existing D/M rosters and verification within the unchanged 160-hour total.
 
-The [first restart batch](D_RESTART_20261117.md) adds 82 fully audited diary settings, bringing the published diary prefix to 2,396. The [optional-recipe note](D_OPTIONAL_RECIPE_RATE_TIED_20261117.md) closes two reporting omissions without new draws; all 27 earlier qualifying triggers now have notes. Later completions remain local until their next audited batch.
+The [first restart batch](D_RESTART_20261117.md) adds 82 fully audited diary settings, bringing the published diary prefix to 2,396. The [optional-recipe note](D_OPTIONAL_RECIPE_RATE_TIED_20261117.md) closes two reporting omissions without new draws; all 27 earlier qualifying triggers now have notes. That historical prefix is superseded by the complete diary landing below.
+
+The [complete diary report](D_COMPLETE_REPORT_20261117.md) covers all 5,184 settings. Heavy floors can produce false multiple-dial classifications even when the optional estimator has lower spread. The complete [recipe map](D_OPTIONAL_RECIPE_COMPLETE_20261117.md) has 68 eligible settings out of 432 after correcting omission of the heavy branch. The [M prefix](M_PRE_STORAGE_REPORT_20261117.md) adds 24 settings; four storage failures are retained and the 260 unfinished settings have separately bound recovery plans. No scientific gate was relaxed.

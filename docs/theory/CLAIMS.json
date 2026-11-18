@@ -318159,6 +318159,68 @@
       "correction_class": "reporting omission corrected",
       "supersedes": null,
       "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-COMPLETE-1",
+      "allowed_wording": "How reliably can diary estimators distinguish one reactivity dial from multiple dials under different observation conditions? All 5,184 diary settings are complete and verified. Under heavy rating floors, the optional moment estimator falsely classifies up to 23.5% of one-dial worlds as multiple dials in an individual setting; the split-day estimator ranges from 1% to 100% correct one-dial classifications across those heavy-floor designs. Lower spread alone does not establish a better decision rule.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated V31 family laws",
+      "reader": "Declared observation privilege; see protocol",
+      "control_status": "Controls, full byte replay and independent reconstruction passed",
+      "source_file": "docs/versions/v31-four-settings/D_COMPLETE_REPORT_20261117.md",
+      "source_line": 3,
+      "source_sha256": "2bc2be927e7c14d2bab48cba75fdfcd9bfdc2626a3e41438ca23a139583e9760",
+      "estimate": {
+        "settings": 5184,
+        "scientific_worlds": 1036800,
+        "excluded_pilot_worlds": 207360,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-D-RECIPE-COMPLETE-1",
+      "allowed_wording": "Where does the optional diary estimator meet its declared precision threshold? Across the complete 432-setting ES2-shaped subset, 68 settings have between-world spread at most two thirds of the split-day estimator. This adds 41 to the previously reported 27. The heavy-floor branch is now included in the trigger scan; lower spread remains a secondary-method result and does not waive bias or classification failures.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated V31 family laws",
+      "reader": "Declared observation privilege; see protocol",
+      "control_status": "Controls, full byte replay and independent reconstruction passed",
+      "source_file": "docs/versions/v31-four-settings/D_OPTIONAL_RECIPE_COMPLETE_20261117.md",
+      "source_line": 3,
+      "source_sha256": "4b6e015805558852112d6c593f904d1729568c4d0aaad0a195ec8c6b15a46545",
+      "estimate": {
+        "settings": 68,
+        "new_worlds": 0,
+        "registered_claim": false
+      },
+      "correction_class": "Follow-up branch coverage correction",
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-M-PRE-STORAGE-1",
+      "allowed_wording": "Can the corrected remainder reader identify the planted temporal dependence before storage exhaustion? Twenty-four further M settings completed full byte replay and independent reconstruction, bringing the corrected pre-recovery prefix to 292 of 552. Four later jobs suffered storage failures and contribute no accepted scientific result; the unfinished settings have separate recovery identities.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated V31 family laws",
+      "reader": "Declared observation privilege; see protocol",
+      "control_status": "Controls, full byte replay and independent reconstruction passed",
+      "source_file": "docs/versions/v31-four-settings/M_PRE_STORAGE_REPORT_20261117.md",
+      "source_line": 3,
+      "source_sha256": "db7a66e21c657db707f9907590b4107c7d2f615e0fc6b50c598471be3a605cf3",
+      "estimate": {
+        "settings": 24,
+        "scientific_worlds": 4800,
+        "excluded_pilot_worlds": 960,
+        "registered_claim": false
+      },
+      "correction_class": null,
+      "supersedes": null,
+      "superseded_by": null
     }
   ],
   "schema_version": 1,

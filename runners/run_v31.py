@@ -1,5 +1,5 @@
 """Finite source-bound V31 cell queue. A cell lands only after complete replay/reconstruction."""
-import argparse,ctypes,importlib,math,os,subprocess,time,traceback
+import argparse,ctypes,importlib,math,os,shutil,subprocess,time,traceback
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
 import numpy as np
@@ -76,6 +76,22 @@ def admissible(a,totals,plan,current):
         and sum(totals.values())+plan["cpu_cap_seconds"]<=a["total_cpu_seconds"]
         and current+timedelta(seconds=plan["wall_cap_seconds"])<datetime.fromisoformat(a["drain"])
         and current<datetime.fromisoformat(a["new_starts_close"]))
+
+def storage_admissible(c,job,plan,active):
+    """Reserve worst-case new output before starting; never delete evidence.
+
+    The recovery's raw bound includes original and replay, pilot and study.
+    Already-running jobs retain their entire bound until completion, so this
+    deliberately double-counts any bytes they have already written.
+    """
+    required=plan.get("storage_required_bytes",0)
+    floor=plan.get("storage_floor_bytes",5*1024**3)
+    if required<0 or floor<0:raise ValueError("invalid storage reservation")
+    root=job.resolve();volume=root.anchor.lower()
+    held=sum(item["plan"].get("storage_required_bytes",0) for item in active.values()
+             if item["job"].resolve().anchor.lower()==volume)
+    return (shutil.disk_usage(c).free>=5*1024**3
+            and shutil.disk_usage(root).free>=required+held+floor)
 def verify(c,plan):
     if digest(c/"ACCEPTANCE.json")!=plan["acceptance_sha256"]:raise ValueError("acceptance changed")
     if environment()!=read(c/"ENVIRONMENT.json"):raise ValueError("environment changed")
@@ -85,6 +101,24 @@ def verify(c,plan):
         if digest(source/path)!=sha:raise ValueError("source changed: "+path)
     gate=c/"families"/plan["family"]/"ADMISSION.json"
     if digest(gate)!=plan["admission_sha256"] or not read(gate)["passed"]:raise ValueError("family not admitted")
+    if plan.get("recovery_parent"):
+        verify_recovery_parent(c,plan)
+
+def verify_recovery_parent(c,plan,completed_job=None):
+    parent=c/"jobs"/plan["recovery_parent"]
+    if digest(parent/"PLAN.json")!=plan["recovery_parent_plan_sha256"]:raise ValueError("recovery parent changed")
+    original=read(parent/"PLAN.json")
+    for key in ("setting","module","source_root","source_manifest_sha256","acceptance_sha256","cpu_cap_seconds","wall_cap_seconds","interpreter"):
+        if plan[key]!=original[key]:raise ValueError("recovery changes scientific contract: "+key)
+    expected=plan.get("recovery_parent_completion_sha256")
+    if (parent/"COMPLETE.json").exists():
+        if digest(parent/"COMPLETE.json")!=expected or read(parent/"COMPLETE.json")["state"]!="FAILED":
+            raise ValueError("recovery parent is not the retained failed attempt")
+    elif expected is not None:raise ValueError("recovery failure receipt missing")
+    for relative,sha in plan.get("retained_parent_files",{}).items():
+        if digest(parent/relative)!=sha:raise ValueError("retained recovery evidence changed")
+        if completed_job is not None and digest(completed_job/relative)!=sha:
+            raise ArithmeticError("recovery did not reproduce retained parent evidence")
 def equivalent(original,other,replay=False):
     if replay:
         if {p.name:digest(p) for p in original.iterdir()}!={p.name:digest(p) for p in other.iterdir()}:
@@ -179,7 +213,8 @@ def finish(c,item,error=None):
         try:
             receipt=read(job/"WORKER_COMPLETE.json")
             if child.returncode or receipt["plan_sha256"]!=digest(job/"PLAN.json"):raise ValueError("exit/binding mismatch")
-        except (OSError,ValueError,KeyError) as exc:error=str(exc)
+            if plan.get("recovery_parent"):verify_recovery_parent(c,plan,job)
+        except (OSError,ValueError,KeyError,ArithmeticError) as exc:error=str(exc)
     ctypes.windll.kernel32.CloseHandle(ctypes.c_void_p(item["handle"]));item["log"].close()
     state="FAILED" if error else receipt["state"]
     charge(c,job.name,plan["pool"],used,state)
@@ -214,7 +249,7 @@ def run(c):
                     if item["plan"]["family"] in blocked:
                         finish(c,item,"family stopped after retained failure");del active[name]
                 jobs,completed=inventory.snapshot(c,time.monotonic())
-                totals=charges.totals(c);waiting=[];counts={}
+                totals=charges.totals(c);waiting=[];counts={};storage_held=[]
                 for name,state in completed.items():
                     counts[state]=counts.get(state,0)+1
                     if state=="FAILED":blocked[inventory.plans[name][1]["family"]]="retained cell failure"
@@ -226,10 +261,15 @@ def run(c):
                     if not admissible(a,totals,plan,current):
                         waiting.append(job.name);continue
                     if len(active)>=limit:waiting.append(job.name);continue
+                    if not storage_admissible(c,job,plan,active):
+                        waiting.append(job.name);storage_held.append(job.name);continue
                     active[job.name]=start(c,job);totals[plan["pool"]]+=plan["cpu_cap_seconds"]
                 write(c/"STATUS.json",dict(at=current.isoformat(),pid=os.getpid(),gear=2,worker_limit=limit,
                     active=list(active),waiting=waiting,counts=counts,blocked=blocked,
-                    accounting=totals,build_complete=(c/"BUILD_COMPLETE.json").exists()),immutable=False)
+                    accounting=totals,storage_held=storage_held,build_complete=(c/"BUILD_COMPLETE.json").exists()),immutable=False)
+                if storage_held and not active:
+                    event(c,f"v31-storage-held-{sum(counts.values())}","storage_needed",
+                          dict(unstarted=len(storage_held),scientific_evidence_preserved=True))
                 terminal=(c/"BUILD_COMPLETE.json").exists() and not active and not waiting
                 exhausted=current>=datetime.fromisoformat(a["new_starts_close"]) or (c/"STOP").exists()
                 # Resource-held pending cells become terminal once no active reservation can release capacity.

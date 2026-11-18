@@ -11,12 +11,12 @@ def prepare(repo,c):
     for path in sorted((c/'jobs').glob('*/COMPLETE.json')):
         if read(path)['state']!='VERIFIED':continue
         job=path.parent;plan=read(job/'PLAN.json');family=plan['family'];s=plan['setting']
-        if family not in ('D_CORE','S_LEARNING_R2','Q_EXACT','Q_HIDDEN_V1_SCIENCE') and not family.startswith('W_HIDDEN_V1_SCIENCE_'):continue
+        if family not in ('D_CORE','D_HEAVY','S_LEARNING_R2','Q_EXACT','Q_HIDDEN_V1_SCIENCE') and not family.startswith('W_HIDDEN_V1_SCIENCE_'):continue
         src=job/'output/study-original/SUMMARY.json'
         if not src.exists():continue
         receipt=read(job/'WORKER_COMPLETE.json');assert receipt['summary_sha256']==digest(src)
         result=read(src);metrics={x['measure']:x for x in result['rows']}
-        if family=='D_CORE' and s['people']==2272 and s['days']==10 and s['prompts']==6:
+        if family in ('D_CORE','D_HEAVY') and s['people']==2272 and s['days']==10 and s['prompts']==6:
             ratio=metrics['random_slope']['spread']/metrics['split']['spread']
             triggers.append(dict(parent=job.name,kind='D_optional_recipe',eligible=ratio<=2/3,spread_ratio=ratio,summary_sha256=digest(src)))
         if family=='S_LEARNING_R2' and s['truth']=='SHIFT':

@@ -33,6 +33,14 @@ and the separate immutable local supplement. Preserve acceptance bytes, prior
 charges, scientific source capsules, deadlines and validity gates. The corrected
 Q directory successor failed its resolution gate; its conditional builder held
 production. This transfer does not authorize another Q or W repair.
+November 17 evening: D completed all 5,184 diary settings. The owner directed
+M storage recovery on the original drive after space was freed. Read
+protocols/M_STORAGE_RECOVERY_20261117.md and its authorization/roster. The separate
+M_STORAGE_R1 family covers four storage-interrupted and 256 unstarted settings,
+preserving original plans, scientific sources, seeds, gates, failures and charges.
+Keep the 30-GiB storage admission floor and active-output reservations. This is
+not another numerical repair. Automatic native reviews remain unavailable;
+keep event capture separate from claims of actual wake delivery.
 The owner approved matching all W stress pairs on completed plans, preserving maker equations and other pairs' original matching measures.
 Never treat a roster as admission or completed execution. Keep one finite
 expected-boundary monitor, disarmed during operator work, and preserve its live owner.

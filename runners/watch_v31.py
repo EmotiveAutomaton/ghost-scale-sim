@@ -2,7 +2,7 @@
 import argparse,os,time
 from datetime import datetime,timezone
 from pathlib import Path
-from ghostscale.validation.soundingline.v31.common import read,write
+from ghostscale.validation.soundingline.v31.common import read,write,digest
 from runners.watch_v23_events import (owner,event,pending,deliver,closed,
     require_native_review_host,ReviewOwnerBusyError,deferred_events,alive)
 
@@ -28,6 +28,38 @@ def observe(c,state,current):
 def review_ready(events):
     return any(e["kind"]!="batch_complete" for e in events)
 
+class PendingInventory:
+    """Reuse unchanged event/ack bytes; revalidate new or modified records.
+
+    Delivery still uses the uncached full pending() check in deliver_current.
+    """
+    def __init__(self):self.events={};self.acks={}
+    def _scan(self,root,cache,fingerprint=False):
+        present={}
+        if not root.exists():return present
+        with os.scandir(root) as entries:
+            for entry in entries:
+                if not entry.name.endswith('.json'):continue
+                stat=entry.stat();stamp=(stat.st_mtime_ns,stat.st_size)
+                old=cache.get(entry.name)
+                if old is None or old[0]!=stamp:
+                    p=Path(entry.path);value=read(p)
+                    if fingerprint:value=dict(value,event_sha256=digest(p))
+                    old=(stamp,value)
+                present[entry.name]=old
+        return present
+    def pending(self,c,state):
+        self.events=self._scan(c/'events',self.events,True)
+        self.acks=self._scan(state/'acks',self.acks)
+        result=[]
+        for name,(_,event_row) in sorted(self.events.items()):
+            ack=self.acks.get(event_row['id']+'.json')
+            if ack:
+                if ack[1]['event_sha256']!=event_row['event_sha256']:
+                    raise ValueError('event acknowledgement changed')
+            else:result.append(event_row)
+        return result
+
 def deliver_current(c,state,cfg):
     """Re-read acknowledgements after arming; never deliver an earlier snapshot."""
     if not (state/"ARMED").exists():return False
@@ -45,11 +77,12 @@ def charge(c,state):
 
 def run(c,state,config):
     require_native_review_host();cfg=read(config)
+    inventory=PendingInventory()
     with owner(state):
         try:
             while not closed(c) and not (state/"STOP").exists():
                 current=datetime.now(timezone.utc);observe(c,state,current)
-                events=pending(c,state);deferred=deferred_events(c,state,events,current)
+                events=inventory.pending(c,state);deferred=deferred_events(c,state,events,current)
                 ready=[x for x in events if x["id"] not in deferred]
                 write(state/"STATUS.json",dict(state="monitoring",pid=os.getpid(),heartbeat=current.isoformat(),
                     armed=(state/"ARMED").exists(),pending_events=len(ready),
