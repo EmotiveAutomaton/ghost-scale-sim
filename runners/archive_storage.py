@@ -15,6 +15,17 @@ import time
 class ArchivePaused(Exception):pass
 
 
+def lower_priority():
+    if os.name=='nt':
+        import ctypes
+        from ctypes import wintypes
+        kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+        kernel.SetPriorityClass.argtypes=[wintypes.HANDLE,wintypes.DWORD]
+        kernel.SetPriorityClass.restype=wintypes.BOOL
+        if not kernel.SetPriorityClass(wintypes.HANDLE(-1),0x4000):
+            raise ctypes.WinError(ctypes.get_last_error())
+
+
 def digest(path):
     h=hashlib.sha256()
     with Path(path).open('rb') as f:
@@ -161,9 +172,7 @@ def relocate(workspace,destination,relative,state,pulse=lambda **kw:None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--plan',type=Path,required=True);a=p.parse_args()
     plan=json.loads(a.plan.read_text());state=Path(plan['state']);began=time.process_time();start=time.monotonic();completed=[]
-    if os.name=='nt':
-        import ctypes
-        ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(),0x4000)
+    lower_priority()
     def pulse(**kw):
         save(state/'STATUS.json',dict(at=time.time(),pid=os.getpid(),completed=len(completed),
             reclaimed_bytes=sum(x['bytes'] for x in completed),cpu_seconds=time.process_time()-began,
