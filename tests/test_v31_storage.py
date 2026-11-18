@@ -56,3 +56,19 @@ def test_verified_parent_cannot_be_recovered(tmp_path):
     plan=dict(original,recovery_parent='old',recovery_parent_plan_sha256=digest(parent/'PLAN.json'),
               recovery_parent_completion_sha256=digest(parent/'COMPLETE.json'))
     with pytest.raises(ValueError,match='not the retained failed'):verify_recovery_parent(tmp_path,plan)
+
+
+def test_storage_checks_actual_output_destination(tmp_path,monkeypatch):
+    gib=1024**3;c=tmp_path/'campaign';job=tmp_path/'job';remote=tmp_path/'external'
+    remote.mkdir();job.mkdir();(job/'output').symlink_to(remote,target_is_directory=True)
+    seen=[]
+    def disk(path):
+        seen.append(path);return SimpleNamespace(free=100*gib)
+    monkeypatch.setattr('runners.run_v31.shutil.disk_usage',disk)
+    assert storage_admissible(c,job,dict(storage_required_bytes=gib,storage_floor_bytes=30*gib),{})
+    assert remote.resolve() in seen
+
+
+def test_unavailable_output_volume_holds_new_start(tmp_path,monkeypatch):
+    monkeypatch.setattr('runners.run_v31.shutil.disk_usage',lambda p:(_ for _ in ()).throw(OSError('offline')))
+    assert not storage_admissible(tmp_path,tmp_path,dict(storage_required_bytes=1),{})

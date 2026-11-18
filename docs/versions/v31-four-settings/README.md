@@ -21,3 +21,7 @@ Current [theory return](THEORY_RETURN.md), [implementation state](IMPLEMENTATION
 [November 17 evening review](QUEUE_REPORT_EVENING_20261117.md): the full diary map is complete; bounded M storage recovery is running under unchanged scientific gates. [Complete diary](D_COMPLETE_REPORT_20261117.md), [68 optional recipes](D_OPTIONAL_RECIPE_COMPLETE_20261117.md).
 
 Recovery follow-up at 2026-11-18T02:06:10.876970+00:00: [the first 16 successors](M_STORAGE_FIRST_REPORT_20261117.md) are fully audited, bringing published corrected M coverage to 308/552. The live snapshot has 310 unique completed M settings, 4 active workers and 238 waiting jobs, with no new recovery failure. All eight complete retained parent archives reproduce exactly. Later runtime completions remain separately recorded for their next aggregate landing.
+
+[November 18 overnight controls](M_OVERNIGHT_REPORT_20261118.md): 142 additional settings pass full audit, bringing corrected M to 450/552. The colored and independent-white grids are complete; adversarial grids remain partial. Their strong colored-evidence shares expose a specificity limit of the two-law reader. [Storage and queue restructuring](STORAGE_AND_QUEUE_20261118.md).
+
+[First external-storage result](M_EXTERNAL_FIRST_REPORT_20261118.md) brings the audited M grid to 451/552. The corrected continuation is running; [current storage and queue state](STORAGE_AND_QUEUE_20261118.md) supersedes prior runtime snapshots.

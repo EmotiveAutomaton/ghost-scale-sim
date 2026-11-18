@@ -1,8 +1,8 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-18T02:00:16.124124+00:00. Gear 2 has 4 active M storage-recovery workers and 244 waiting settings. The complete diary grid is verified. Host-load backoff retains the four-to-two-worker limit.
+Checkpoint 2026-11-18T11:09:28.455734+00:00. Gear 2: 4 active scientists, 96 waiting settings. All currently admissible work is built and admitted.
 
-The table counts settings and validation jobs separately. Original M results and interrupted attempts remain retained; count only corrected M successes and their successful storage successors toward the 552-setting grid.
+The table counts scientific settings and validation jobs separately. Failed and superseded M attempts do not add independent successful observations.
 
 | Family | Kind | Prepared | Recorded states |
 |---|---|---:|---|
@@ -12,9 +12,10 @@ The table counts settings and validation jobs separately. Original M results and
 | G4_IDENTITY | science | 114 | EXCLUDED: 60, VERIFIED: 54 |
 | G7_CAPITAL | science | 24 | VERIFIED: 24 |
 | M_CORE | science | 552 | FAILED: 3, SUPERSEDED_BY_M_R1: 547, VERIFIED: 2 |
+| M_EXTERNAL_R1 | science | 102 | QUEUED: 96, RUNNING: 4, VERIFIED: 2 |
 | M_R1 | science | 552 | FAILED: 4, SUPERSEDED_BY_M_STORAGE_R1: 256, VERIFIED: 292 |
 | M_R1_VALIDATION | validation | 1 | VERIFIED: 1 |
-| M_STORAGE_R1 | science | 260 | QUEUED: 244, RUNNING: 4, VERIFIED: 12 |
+| M_STORAGE_R1 | science | 260 | FAILED: 4, SUPERSEDED_BY_M_EXTERNAL_R1: 98, VERIFIED: 158 |
 | Q_CONDITIONAL_ADMISSION_R1 | validation | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0006 | science | 1 | VERIFIED: 1 |
 | Q_EVENTS_FOLLOWON_Q_EXACT-0007 | science | 1 | VERIFIED: 1 |
@@ -39,14 +40,10 @@ The table counts settings and validation jobs separately. Original M results and
 | W_READER_V2 | science | 24 | VERIFIED: 24 |
 | W_READER_V4 | science | 60 | VERIFIED: 60 |
 
-Corrected M has 304 unique settings complete at this runtime snapshot. The newly audited public batch contains 2,788 D settings and 24 M settings; it brings published D coverage to all 5,184 settings and the pre-recovery M prefix to 292. New recovery completions retain automatic full replay/reconstruction and separate later audit/landing.
+Corrected M has 452 unique settings complete at this runtime cut; 451 have the additional public audit and write-through. All 5,184 diary settings are complete. The 102-setting external successor preserves original sources, seeds and gates. Four initial directory-layout failures were retained before sampling; the corrected canary passed before broad admission.
 
-All 260 unfinished M settings have immutable successor plans, unchanged scientific sources, seeds and gates. Four failed original attempts are preserved. Capacity admission protects 30 GiB and reserves full active-job output bounds. A storage hold can stop further starts before the complete grid fits. No results were moved to another drive.
+Large output is external; admission protects 30 GiB there and 5 GiB locally for metadata. Bulk historical migration remains active. Effective CPU ceilings: D 48, S 15, M 35, W 10, T 5, Q 15, healing 10 and reserve 22 hours, totaling 160. Q/W hidden readers remain validity-held and G6 design-held. No further numerical repair is authorized.
 
-Effective CPU ceilings remain D 50, S 15, M 35, W 10, T 5, Q 15, healing 10 and reserve 20 hours, totaling 160. The original acceptance and November 22 endpoints are unchanged. Q/W hidden readers remain validity-held and G6 is design-held; no further repair is implied.
+Native automatic agent reviews remain unavailable. Event capture continues; this does not establish future agent wake delivery.
 
-Native agent reviews remain unavailable after the usage-limit failure. Event recording continues; a cheap cached inventory replaces repeated event rehashing, with fresh hash checks retained at actual delivery. No automatic agent wake is promised.
-
-[Evening queue report](QUEUE_REPORT_EVENING_20261117.md), [complete diary](D_COMPLETE_REPORT_20261117.md), [complete optional recipe map](D_OPTIONAL_RECIPE_COMPLETE_20261117.md), [M prefix](M_PRE_STORAGE_REPORT_20261117.md).
-
-Recovery follow-up at 2026-11-18T02:06:10.876970+00:00: [the first 16 successors](M_STORAGE_FIRST_REPORT_20261117.md) are fully audited, bringing published corrected M coverage to 308/552. The live snapshot has 310 unique completed M settings, 4 active workers and 238 waiting jobs, with no new recovery failure. All eight complete retained parent archives reproduce exactly. Later runtime completions remain separately recorded for their next aggregate landing.
+[Current storage and queue report](STORAGE_AND_QUEUE_20261118.md), [overnight controls](M_OVERNIGHT_REPORT_20261118.md), [first external result](M_EXTERNAL_FIRST_REPORT_20261118.md).

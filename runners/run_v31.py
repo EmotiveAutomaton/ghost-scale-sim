@@ -28,6 +28,18 @@ def resource_contract(c):
         raise ValueError("invalid pool limit")
     if sum(limits.values())!=sum(original["cpu_limits"].values()):raise ValueError("pool total changed")
     if supplement.get("total_cpu_seconds")!=original["total_cpu_seconds"]:raise ValueError("total ceiling changed")
+    later=c/"RESOURCE_REALLOCATION_20261118.json"
+    if later.exists():
+        next_supplement=read(later)
+        if next_supplement.get("approved") is not True or not next_supplement.get("owner_authorization"):
+            raise ValueError("second resource supplement lacks owner authorization")
+        if next_supplement.get("parent_supplement_sha256")!=digest(path) or next_supplement.get("acceptance_sha256")!=digest(c/"ACCEPTANCE.json"):
+            raise ValueError("second resource supplement binding mismatch")
+        proposed=next_supplement["cpu_limits"]
+        expected=dict(limits,D=limits["D"]-7200,reserve=limits["reserve"]+7200)
+        if proposed!=expected or next_supplement.get("total_cpu_seconds")!=original["total_cpu_seconds"]:
+            raise ValueError("second resource supplement exceeds approved transfer")
+        limits=proposed
     # Nothing else in the supplement can override clocks, gear or scientific gates.
     return dict(original,cpu_limits=limits)
 def accounting(c):
@@ -77,6 +89,11 @@ def admissible(a,totals,plan,current):
         and current+timedelta(seconds=plan["wall_cap_seconds"])<datetime.fromisoformat(a["drain"])
         and current<datetime.fromisoformat(a["new_starts_close"]))
 
+def output_volume_root(job):
+    output=job/"output"
+    if output.is_symlink():return output.resolve(strict=True)
+    return output.resolve() if output.is_dir() else job.resolve()
+
 def storage_admissible(c,job,plan,active):
     """Reserve worst-case new output before starting; never delete evidence.
 
@@ -87,11 +104,15 @@ def storage_admissible(c,job,plan,active):
     required=plan.get("storage_required_bytes",0)
     floor=plan.get("storage_floor_bytes",5*1024**3)
     if required<0 or floor<0:raise ValueError("invalid storage reservation")
-    root=job.resolve();volume=root.anchor.lower()
-    held=sum(item["plan"].get("storage_required_bytes",0) for item in active.values()
-             if item["job"].resolve().anchor.lower()==volume)
-    return (shutil.disk_usage(c).free>=5*1024**3
-            and shutil.disk_usage(root).free>=required+held+floor)
+    try:
+        root=output_volume_root(job);volume=root.anchor.lower()
+        held=sum(item["plan"].get("storage_required_bytes",0) for item in active.values()
+                 if output_volume_root(item["job"]).anchor.lower()==volume)
+        return (shutil.disk_usage(c).free>=5*1024**3
+                and shutil.disk_usage(root).free>=required+held+floor)
+    except OSError:
+        # An unavailable archive volume holds new starts; it does not kill peers.
+        return False
 def verify(c,plan):
     if digest(c/"ACCEPTANCE.json")!=plan["acceptance_sha256"]:raise ValueError("acceptance changed")
     if environment()!=read(c/"ENVIRONMENT.json"):raise ValueError("environment changed")

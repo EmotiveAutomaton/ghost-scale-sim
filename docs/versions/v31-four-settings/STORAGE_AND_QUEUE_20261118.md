@@ -1,0 +1,17 @@
+# V31 storage and queue checkpoint
+
+At 2026-11-18T11:09:28.455734+00:00, Gear 2 has 4 active scientists and 96 waiting settings, with no storage hold. The live corrected M grid has 452/552 settings verified. All currently admissible work is built; hidden Q/W studies remain validity-held and G6 remains design-held.
+
+The completed publication batch contains 142 overnight settings and the first external-storage setting: 28,600 scientific worlds and 5,720 excluded pilots. All 143 pass source/receipt checks, known answers, complete byte replay and independent reconstruction. This brings fully audited corrected M coverage to 451/552. Later automatic completions remain separately recorded for the next landing. All 5,184 diary settings were already complete.
+
+The initial external layout incorrectly precreated output folders, and four attempts stopped before controls or scientific sampling. Their errors and charges remain retained. The corrected layout links whole job directories and lets the unchanged frozen worker create its output. Its first original setting passed the full validation ladder before the other 101 were admitted. No model, seed, threshold or sample size changed.
+
+The readable workspace inventory measured 1,127.855 GiB across 8,216,462 files; 18 inaccessible temporary/cache directories were excluded. A reviewed transfer covers approximately 932 GiB across 8,727 bundles, including completed V31 outputs and 15 closed historical roots. At this checkpoint 48.12 GiB has been copied, hash-verified and reclaimed, and the working volume has 77.47 GiB free. The bulk transfer is still in progress. It preserves old paths and two transaction manifests; it is relocation, not an independent backup. Active outputs are excluded.
+
+A transient manifest replacement denial stopped the first bulk invocation safely. A tested successor retries atomic replacement for a bounded interval and reconciles the final manifest on resume. Ten archive tests plus eleven resource/storage-admission tests pass. Future large output goes directly to the external evidence volume; central queue control and accounting remain local. New starts stop if that volume is unavailable or space reservations do not fit. Network speed remains subject to the original job wall limits.
+
+The owner-approved two-hour transfer changes D to 48 CPU-hours and verification/service reserve to 22; the full allocation remains 160. All prior charges, immutable sources, scientific gates and November 22 endpoints remain. Bulk cross-version storage maintenance is recorded separately from scientific sampling.
+
+Completion time remains provisional while network throughput is measured. The 102-setting continuation is finite and expected to take several hours; the roughly 930-GiB archive is a separate multi-hour transfer, with small-file overhead uncertain. Neither is complete. Local event monitoring is alive, but automatic agent reviews remain unavailable after the recorded usage-limit failure; no successful future wake delivery is claimed.
+
+[Overnight results](M_OVERNIGHT_REPORT_20261118.md), [first external result](M_EXTERNAL_FIRST_REPORT_20261118.md), [live snapshot](../../../results/v31/CURRENT_STATUS.json), [migration receipt](../../../results/v31/STORAGE_MIGRATION_CHECKPOINT_20261118.json), [storage protocol](protocols/EXTERNAL_STORAGE_20261118.md), [resource transfer](../../../results/v31/RESOURCE_REALLOCATION_20261118.json).

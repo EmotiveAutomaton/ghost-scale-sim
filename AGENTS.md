@@ -41,6 +41,21 @@ preserving original plans, scientific sources, seeds, gates, failures and charge
 Keep the 30-GiB storage admission floor and active-output reservations. This is
 not another numerical repair. Automatic native reviews remain unavailable;
 keep event capture separate from claims of actual wake delivery.
+November 18: the owner superseded the original-drive-only note with external
+bulk storage. Read docs/OPERATIONS_STORAGE.md, the V31 EXTERNAL_STORAGE_20261118
+protocol, outer .local/STORAGE_POLICY.json and the current handoff. Large
+persistent output belongs on the configured external evidence volume; current
+unstarted M outputs are routed there before execution. Preserve old paths,
+verify copies before local reclamation, and keep active output outside migration
+plans. Do not audit a raw folder during its cutover. The approved second resource
+supplement transfers two D hours to reserve: D 48 and reserve 22, total 160.
+Earlier supplements, sources, failures, scientific gates and endpoints remain.
+Do not mistake a running bulk transfer for a completed archive.
+The initial external-output layout failed before controls/sampling because the
+frozen worker requires creating its own output folder. Keep those four attempts.
+M_EXTERNAL_R1 fixes only the directory layout using external whole-job directories
+and unchanged scientific capsules; require its first original setting to verify
+before admitting the other 101. No additional Q/W or numerical repair follows.
 The owner approved matching all W stress pairs on completed plans, preserving maker equations and other pairs' original matching measures.
 Never treat a roster as admission or completed execution. Keep one finite
 expected-boundary monitor, disarmed during operator work, and preserve its live owner.
