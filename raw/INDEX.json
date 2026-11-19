@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-19T05:17:42.968246+00:00",
-  "bundles_registered": 5177,
+  "at": "2026-11-19T05:18:57.473312+00:00",
+  "bundles_registered": 5207,
   "external_jobs_registered": 102,
   "migration": {
     "all_complete": false,
@@ -19,9 +19,9 @@
     "state": "failed"
   },
   "ordinary_git_result_files_at_setup": 388532,
-  "raw_file_paths": 50660,
+  "raw_file_paths": 50960,
   "raw_paths_by_campaign": {
-    "v31": 50660
+    "v31": 50960
   },
   "remote": "ghost-archive",
   "schema": 1,
@@ -29,6 +29,6 @@
   "scope": "Completed archive payloads and hashed completed external jobs only. Later archive transactions remain pending. Operating files and active scientific output are excluded; normal reported results stay in results/.",
   "source": "./catalog/",
   "storage": "Annex directory objects are hard links to existing verified archive bytes; one physical copy, no bulk local cache.",
-  "unique_content_bytes": 288735851350,
-  "unique_content_keys": 30068
+  "unique_content_bytes": 289557970181,
+  "unique_content_keys": 30246
 }
