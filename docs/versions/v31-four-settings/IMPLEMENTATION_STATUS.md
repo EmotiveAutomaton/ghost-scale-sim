@@ -1,8 +1,8 @@
 # V31 implementation and queue state
 
-Checkpoint 2026-11-18T11:09:28.455734+00:00. Gear 2: 4 active scientists, 96 waiting settings. All currently admissible work is built and admitted.
+Checkpoint 2026-11-18T19:48:55.319692+00:00. All currently admissible scientific work is complete. No scientist is active or queued. Q/W hidden-reader validity holds and the undefined G6 reserve remain.
 
-The table counts scientific settings and validation jobs separately. Failed and superseded M attempts do not add independent successful observations.
+Rows distinguish prepared scientific settings, validation jobs and retained superseded attempts. A verified successor is counted once in corrected scientific coverage.
 
 | Family | Kind | Prepared | Recorded states |
 |---|---|---:|---|
@@ -12,7 +12,7 @@ The table counts scientific settings and validation jobs separately. Failed and 
 | G4_IDENTITY | science | 114 | EXCLUDED: 60, VERIFIED: 54 |
 | G7_CAPITAL | science | 24 | VERIFIED: 24 |
 | M_CORE | science | 552 | FAILED: 3, SUPERSEDED_BY_M_R1: 547, VERIFIED: 2 |
-| M_EXTERNAL_R1 | science | 102 | QUEUED: 96, RUNNING: 4, VERIFIED: 2 |
+| M_EXTERNAL_R1 | science | 102 | VERIFIED: 102 |
 | M_R1 | science | 552 | FAILED: 4, SUPERSEDED_BY_M_STORAGE_R1: 256, VERIFIED: 292 |
 | M_R1_VALIDATION | validation | 1 | VERIFIED: 1 |
 | M_STORAGE_R1 | science | 260 | FAILED: 4, SUPERSEDED_BY_M_EXTERNAL_R1: 98, VERIFIED: 158 |
@@ -40,10 +40,6 @@ The table counts scientific settings and validation jobs separately. Failed and 
 | W_READER_V2 | science | 24 | VERIFIED: 24 |
 | W_READER_V4 | science | 60 | VERIFIED: 60 |
 
-Corrected M has 452 unique settings complete at this runtime cut; 451 have the additional public audit and write-through. All 5,184 diary settings are complete. The 102-setting external successor preserves original sources, seeds and gates. Four initial directory-layout failures were retained before sampling; the corrected canary passed before broad admission.
+All 552 corrected M settings and 5,184 diary settings are fully audited. Scientific execution is at its eligible endpoint; the entire packet is not an unqualified success because its held scope remains unexecuted. New final records await publication.
 
-Large output is external; admission protects 30 GiB there and 5 GiB locally for metadata. Bulk historical migration remains active. Effective CPU ceilings: D 48, S 15, M 35, W 10, T 5, Q 15, healing 10 and reserve 22 hours, totaling 160. Q/W hidden readers remain validity-held and G6 design-held. No further numerical repair is authorized.
-
-Native automatic agent reviews remain unavailable. Event capture continues; this does not establish future agent wake delivery.
-
-[Current storage and queue report](STORAGE_AND_QUEUE_20261118.md), [overnight controls](M_OVERNIGHT_REPORT_20261118.md), [first external result](M_EXTERNAL_FIRST_REPORT_20261118.md).
+[Queue and recording review](QUEUE_REPORT_20261118.md), [complete M map](M_COMPLETE_REPORT_20261118.md), [theory return](THEORY_RETURN.md).

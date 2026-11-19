@@ -1,0 +1,1 @@
+The final 101 M settings passed the full audit. AUDIT.json and M_EXTERNAL_R1/VERIFIED.json bind the exported aggregates. The canonical complete grid is in ../m-complete-20261118/. Publication is tracked separately.

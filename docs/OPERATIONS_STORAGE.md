@@ -30,6 +30,19 @@ Transaction manifests remain on both volumes. A partial transfer is resumable;
 unverified source data is retained. A relocated directory is not a new scientific
 replication or an extra independent backup.
 
+An empty output directory from a failed or excluded job stays at its original
+path. The transfer records `EMPTY_RETAINED` on both volumes, without creating a
+payload directory or discarding the failed attempt. Resume checks that it is
+still empty. This disposition permits later bundles to proceed; it is not a
+scientific success or a claim that raw evidence existed there.
+
+Historical parent folders may mix raw data with source snapshots, service state
+and protected caches. Narrow those plans to independently preflighted output
+subdirectories and retain the other content locally. An inaccessible cache is
+not authority to alter permissions or skip evidence during a parent cutover.
+Standalone database/archive files need a separate file-aware transfer, including
+database sidecars where present; record them as retained local scope meanwhile.
+
 Keep active outputs out of historical transfer plans. Do not perform raw-data
 audits during a folder's cutover: wait for its completed transaction, or pause
 the transfer service and verify it has stopped. Public aggregate files are

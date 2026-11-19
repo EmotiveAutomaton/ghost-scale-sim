@@ -2,9 +2,9 @@
 
 [Results and raw evidence](RESULTS_AND_RAW_DATA.md): ordinary Git retains readable findings and aggregates; the same repository catalogs externally stored raw files through git-annex.
 
-[V27 current program](versions/v27-motives-and-set-points/README.md): motives,
-set points, stress, closing, recursive reading and structural markers. Consult
-its implementation status for prepared work and unresolved design choices.
+[V31 current review](versions/v31-four-settings/QUEUE_REPORT_20261118.md): all
+eligible science is complete and audited. Q/W hidden-reader validity holds and
+the undefined G6 scope remain. External raw-archive migration continues separately.
 
 [V26 follow-up results](versions/v26-top-and-ends/followups-20261103/FINAL_REPORT.md): E1 longer histories and U1 source learning are complete and verified; no jobs or recurring wakes remain. Original V26 results stay closed and published.
 [N16 completed robustness extension](versions/v25-pieces-and-ends/N16_ROBUSTNESS_FINAL_REPORT.md):
@@ -24,12 +24,15 @@ original shared budget and deadline. Other completed V25 work remains held for r
 
 Start with the status of the work, then follow its evidence. This index describes
 where documents belong; it does not replace scientific verdicts or live native
-state. Updated 30 October 2026.
+state. Current navigation updated 18 November 2026; older entries retain their
+historical scope.
 
 ## Current work
 
 | Status | Entry point | Use |
 |---|---|---|
+| V31 eligible science complete; explicit validity/design holds | [V31 index](versions/v31-four-settings/README.md) | Complete diary and M maps, current audit and storage state |
+| V30 closed for theory review | [V30 final report](versions/v30-the-readers-side/FINAL_REPORT.md) | Completed maps, resource stops and retained validity holds |
 | V25 finite science complete; theory-review hold | [V25 index](versions/v25-pieces-and-ends/README.md) | Final report, claim ledger, validity and publication receipts |
 | V24 pilots and follow-ups complete | [V24 index](versions/v24-powered-readers/README.md) | Verified N16/D5 pilots, eight follow-ups and retained T1/T3 runtime failures |
 | Closed V23, finite allocation complete | [V23 index](versions/v23-research-division/README.md) | Current dispositions, confirmation arithmetic, conditional implementation and results |

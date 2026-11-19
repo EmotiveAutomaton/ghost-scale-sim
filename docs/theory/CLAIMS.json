@@ -318272,12 +318272,32 @@
       "control_status": "Known answers, complete byte replay and independent reconstruction passed",
       "source_file": "docs/versions/v31-four-settings/M_EXTERNAL_FIRST_REPORT_20261118.md",
       "source_line": 3,
-      "source_sha256": "570dee365a923747ff6001a8b3872a4a802821cb0c03262d164f4f479156d33e",
+      "source_sha256": "6f9a5d19e24d3b939ab36f66590ac53e3d90c9c70d3807b5da9d89a35d33605b",
       "estimate": {
         "new_settings": 1,
         "scientific_worlds": 200,
         "excluded_pilot_worlds": 40,
         "corrected_unique_settings": 451
+      },
+      "supersedes": null,
+      "superseded_by": null
+    },
+    {
+      "id": "G-V31-M-COMPLETE-1",
+      "allowed_wording": "Does the two-law reader identify colored persistence uniquely across the complete map? No: both adversarial refresh mechanisms can lead it to favor the colored law. All 552 distinct settings are complete and audited. This is a constructed-method limitation, not evidence about human makers.",
+      "claim_kind": "method",
+      "architecture": "miniature, architecture untested",
+      "assumed_choice_model": "Stipulated persistence and adversarial refresh laws",
+      "reader": "Oracle colored-versus-white reader; adversaries outside candidate set",
+      "control_status": "Known answers, full byte replay and independent reconstruction passed",
+      "source_file": "docs/versions/v31-four-settings/M_COMPLETE_REPORT_20261118.md",
+      "source_line": 3,
+      "source_sha256": "7659af65cc50cc77110c422161aa437d3526f9d853a20696efa989a64b749cb8",
+      "estimate": {
+        "unique_settings": 552,
+        "newly_audited_settings": 101,
+        "scientific_world_evaluations": 110400,
+        "excluded_pilot_world_evaluations": 22080
       },
       "supersedes": null,
       "superseded_by": null

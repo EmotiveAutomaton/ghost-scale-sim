@@ -88,6 +88,15 @@ def relocate(workspace,destination,relative,state,pulse=lambda **kw:None):
     key=hashlib.sha256(relative.as_posix().encode()).hexdigest();receipt=state/'transactions'/(key+'.json')
     retired=source.with_name(source.name+'.archive-retired-'+key[:12])
     record=json.loads(receipt.read_text()) if receipt.exists() else None
+    if record and (record['relative']!=relative.as_posix() or Path(record['target'])!=target):
+        raise ValueError('receipt identity changed')
+    if record and record['stage']=='EMPTY_RETAINED':
+        below(source,workspace)
+        if source.is_symlink() or not source.is_dir() or listing(source):
+            raise ValueError('recorded empty source changed')
+        mirror=destination/'manifests'/(key+'.json')
+        if not mirror.exists() or json.loads(mirror.read_text())!=record:save(mirror,record)
+        return record
     if record and record['stage']=='RECLAIMED':
         if not source.is_symlink() or source.resolve()!=target:raise ValueError('completed archive link changed')
         mirror=destination/'manifests'/(key+'.json')
@@ -101,7 +110,16 @@ def relocate(workspace,destination,relative,state,pulse=lambda **kw:None):
         if source.is_symlink() or not source.is_dir() or retired.exists():raise ValueError('source is not an untouched directory')
         if target.exists():raise ValueError('unowned destination already exists')
         files=listing(source)
-        if not files:raise ValueError('empty bundle')
+        if not files:
+            # Excluded/failed jobs may have created an output directory without
+            # writing evidence. Keep that directory untouched and record the
+            # zero-byte disposition instead of stopping all later transfers.
+            record=dict(stage='EMPTY_RETAINED',relative=relative.as_posix(),
+                        target=str(target),files={},bytes=0,finished=time.time(),
+                        original_path_preserved=True,empty_source_retained=True,
+                        target_created=False)
+            save(receipt,record);save(destination/'manifests'/(key+'.json'),record)
+            return record
         record=dict(stage='INVENTORIED',relative=relative.as_posix(),target=str(target),files=files,
                     bytes=sum(x['size'] for x in files.values()),started=time.time())
         save(receipt,record);target.mkdir(parents=True,exist_ok=False)
@@ -185,10 +203,11 @@ def main():
         for relative in plan['sources']:
             pulse(stage='starting',relative=relative)
             done=relocate(plan['workspace'],plan['destination'],relative,state,pulse)
-            completed.append(dict(relative=relative,bytes=done['bytes']))
+            completed.append(dict(relative=relative,bytes=done['bytes'],disposition=done['stage']))
         pulse(stage='complete')
         save(state/'COMPLETE.json',dict(at=time.time(),bundles=completed,bytes=sum(x['bytes'] for x in completed),
-            cpu_seconds=time.process_time()-began,all_hashes_verified=True,paths_preserved=True))
+            cpu_seconds=time.process_time()-began,all_hashes_verified=True,paths_preserved=True,
+            empty_sources_retained=sum(x['disposition']=='EMPTY_RETAINED' for x in completed)))
     except ArchivePaused as exc:
         pulse(stage='paused',reason=str(exc))
     except BaseException as exc:

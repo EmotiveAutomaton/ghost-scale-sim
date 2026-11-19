@@ -1,5 +1,7 @@
 # M: overnight recovery and adversarial controls
 
+**November 18 reporting correction.** The first external M report mislabeled the 0.2 planted remainder share as the refresh probability. The actual per-message refresh probability is 1/8 in both the frozen generator and protocol. All numerical results, seeds and scientific gates are unchanged.
+
 Can the two-law reader identify colored persistence uniquely? It cannot in the completed adversarial controls: the mean share of makers favoring the colored law reaches 76.18% when the state refreshes at thread boundaries and 84.08% when it refreshes probabilistically per message. Under independent white noise, that share ranges from 0.30% to 0.59%. This is a constructed-method limitation: evidence against white noise does not uniquely identify the colored mechanism.
 
 The 142 newly audited settings add 28,400 scientific worlds and 5,680 excluded pilots. Every setting passed source and receipt binding, known-answer controls, complete original/replay byte equality and independent numerical reconstruction. They bring audited corrected M coverage to 450 of 552 unique settings. Failed originals remain retained and do not add independent successful observations.

@@ -1,4 +1,4 @@
-# V31 theory return: November 17 checkpoint
+# V31 theory return: November 18 eligible-work endpoint
 
 Which observation can distinguish each proposed mechanism in a constructed world? Completed cells now provide the following finite answers. These are descriptive model or method results, not human markers, registered claims or deployed readers.
 
@@ -8,7 +8,7 @@ Rows name the question, the completed evidence and the observation restriction. 
 |---|---|---|
 | Diary one-dial/two-dial distinctions | All 5,184 diary settings and 144 separate carry settings complete | Known events and paired feeling ratings; oracle model choices |
 | Waiting explanations | 2,067 scientific core cells plus 93 excluded pilots; 64 learning and 48 uniform-arrival cells | Outcomes and assigned conditions; known candidate laws |
-| Colored remainder | 292 pre-recovery settings publicly audited; 304 unique corrected settings locally complete; bounded storage recovery active | Oracle-removed rhythm/topic; no estimated real-text residual claim |
+| Colored remainder | All 552 distinct settings complete and audited; two-law evidence does not establish a unique colored cause | Oracle-removed rhythm/topic; no estimated real-text residual claim |
 | Matched four-setting comparisons | 60 full-view and 24 exact cue-view cells; 30 feasible matching panels out of 108 | Hidden-view numerical readers not admitted |
 | Within-schema coupling and burst timing | 18 controlled coupling cells and 27 full-view timing cells | Single-setting coupling remains aliased; timing must be visible |
 | Habit, heuristic, value, identity | 216 exact-reader settings completed | Attention known; probes and effects stipulated |
@@ -42,7 +42,10 @@ Main snapshot reports:
 
 All accepted sampled cells retain forty excluded pilots, 200 scientific worlds, full byte replay and independent reconstruction. Pointwise intervals and censoring remain in each aggregate. Different grid cells are not pooled into one effect. M corrections reuse original paths and are not new replications.
 
-Remaining holds: W hidden accuracy; Q hidden resolution after the approved directory successor failed; G6 definition. No automatic S, W or Q additional repair is authorized. The review service is unavailable, so the finite scientific queue can run but automatic agent wake delivery is not assured.
+Remaining holds: W hidden accuracy; Q hidden resolution after the approved directory successor failed; G6 definition. No automatic S, W or Q additional repair is authorized. All eligible science has now finished, its controller has exited and recurring scientific reviews are retired. Automatic agent-review delivery was unavailable; no successful wake is claimed.
+
+The dated checkpoint paragraphs below are historical; the complete M map and
+November 18 queue review at the end supersede their partial counts and running states.
 
 [Overnight M batch](MORNING_20261117_M_R1.md) adds 251 audited settings. In its 52 completed 5%-remainder settings, 99.61% to 100% of individual makers remain unresolved, even though group-level detection can be high. This colored-case prefix cannot yet establish specificity. [Q hold](Q_REPAIR_DISPOSITION_20261117.md) preserves all failed checks. The 55-hour transfer funds existing D/M rosters and verification within the unchanged 160-hour total.
 
@@ -55,3 +58,9 @@ Recovery follow-up at 2026-11-18T02:06:10.876970+00:00: [the first 16 successors
 [November 18 overnight controls](M_OVERNIGHT_REPORT_20261118.md): 142 additional settings pass full audit, bringing corrected M to 450/552. The colored and independent-white grids are complete; adversarial grids remain partial. Their strong colored-evidence shares expose a specificity limit of the two-law reader. [Storage and queue restructuring](STORAGE_AND_QUEUE_20261118.md).
 
 [First external-storage result](M_EXTERNAL_FIRST_REPORT_20261118.md) brings the audited M grid to 451/552. The corrected continuation is running; [current storage and queue state](STORAGE_AND_QUEUE_20261118.md) supersedes prior runtime snapshots.
+
+[Complete M map](M_COMPLETE_REPORT_20261118.md): all 552 distinct settings are audited, with 110,400 scientific world evaluations and all prior failures retained. New records are locally complete; publication is tracked separately.
+
+[November 18 queue review](QUEUE_REPORT_20261118.md): eligible science is complete and audited; the archive transfer continues after a tested empty-folder repair. Q/W validity holds and the G6 definition hold remain.
+
+[November 18 evening checkpoint](EVENING_REVIEW_20261118.md): all eligible scientific results are audited; the archive continues from its retained infrastructure checkpoint. Publication is verified separately.

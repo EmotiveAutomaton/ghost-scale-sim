@@ -98,3 +98,19 @@ def test_resume_reconciles_final_manifest_after_remote_denial(tmp_path):
     mirror.write_text(json.dumps(dict(row,stage='VERIFIED')))
     assert a.relocate(workspace,dest,relative,state)==row
     assert json.loads(mirror.read_text())==row
+
+
+def test_empty_output_is_recorded_and_left_untouched(tmp_path):
+    workspace=tmp_path/'workspace';dest=tmp_path/'archive';state=workspace/'.local/migration'
+    src=workspace/'.local/v31/jobs/excluded/output';(src/'empty-child').mkdir(parents=True)
+    dest.mkdir();relative=src.relative_to(workspace)
+    row=a.relocate(workspace,dest,relative,state)
+    assert row['stage']=='EMPTY_RETAINED' and row['bytes']==0
+    assert src.is_dir() and not src.is_symlink() and (src/'empty-child').is_dir()
+    assert not (dest/'retained'/relative).exists()
+    mirror=next((dest/'manifests').glob('*.json'));mirror.write_text('{}')
+    assert a.relocate(workspace,dest,relative,state)==row
+    assert json.loads(mirror.read_text())==row
+    (src/'later-evidence.bin').write_bytes(b'preserve this')
+    with pytest.raises(ValueError,match='empty source changed'):a.relocate(workspace,dest,relative,state)
+    assert (src/'later-evidence.bin').read_bytes()==b'preserve this'

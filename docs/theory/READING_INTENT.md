@@ -1,5 +1,9 @@
 # Reading intent: every claim this simulation has tested, under its umbrella hypotheses
 
+**G-V31-M-COMPLETE-1; descriptive method.** Does the two-law reader identify colored persistence uniquely across the complete map? No: both adversarial refresh mechanisms can lead it to favor the colored law. All 552 distinct settings are complete and audited. This is a constructed-method limitation, not evidence about human makers. [Report](../versions/v31-four-settings/M_COMPLETE_REPORT_20261118.md).
+
+**November 18 reporting correction.** The first external M report mislabeled the 0.2 planted remainder share as the refresh probability. The actual per-message refresh probability is 1/8 in both the frozen generator and protocol. All numerical results, seeds and scientific gates are unchanged.
+
 **G-V31-M-EXTERNAL-FIRST-1; descriptive method.** Does the weak probabilistic-refresh condition identify individual makers? No maker crosses either frozen evidence threshold in this 200-world setting; all remain unresolved. Whole-world short-gap and fading detections each occur in 9.5% of worlds. This is a descriptive method result in a constructed setting, not a human marker. [Report](../versions/v31-four-settings/M_EXTERNAL_FIRST_REPORT_20261118.md).
 
 **G-V31-M-OVERNIGHT-1; descriptive method.** Can the two-law reader identify colored persistence uniquely? It cannot in the completed adversarial controls: the mean share of makers favoring the colored law reaches 76.18% when the state refreshes at thread boundaries and 84.08% when it refreshes probabilistically per message. Under independent white noise, that share ranges from 0.30% to 0.59%. This is a constructed-method limitation: evidence against white noise does not uniquely identify the colored mechanism. [Report](../versions/v31-four-settings/M_OVERNIGHT_REPORT_20261118.md).
