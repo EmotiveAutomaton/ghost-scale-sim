@@ -1,0 +1,42 @@
+{
+  "bundle_id": "180799a832085da281aa65f38cc5f507e1bcba4bf991262e27796127cb375a73",
+  "files": [
+    {
+      "file": "raw/data/v31/jobs/G4_IDENTITY-0113/output/pilot-original/cell_measures.npz",
+      "key": "SHA256-s1267--959362e979fdc07962ed19ce4db2f2b8f29978c0823b9bf1dbca5e0bc4b924a8",
+      "sha256": "959362e979fdc07962ed19ce4db2f2b8f29978c0823b9bf1dbca5e0bc4b924a8",
+      "size": 1267
+    },
+    {
+      "file": "raw/data/v31/jobs/G4_IDENTITY-0113/output/pilot-original/cell_points.npz",
+      "key": "SHA256-s736580--c4874d16f0a03579de8075882dfddaf2e2773cc4bb82e2217b9c9ba405c5fe87",
+      "sha256": "c4874d16f0a03579de8075882dfddaf2e2773cc4bb82e2217b9c9ba405c5fe87",
+      "size": 736580
+    },
+    {
+      "file": "raw/data/v31/jobs/G4_IDENTITY-0113/output/pilot-reconstruct/cell_measures.npz",
+      "key": "SHA256-s1267--959362e979fdc07962ed19ce4db2f2b8f29978c0823b9bf1dbca5e0bc4b924a8",
+      "sha256": "959362e979fdc07962ed19ce4db2f2b8f29978c0823b9bf1dbca5e0bc4b924a8",
+      "size": 1267
+    },
+    {
+      "file": "raw/data/v31/jobs/G4_IDENTITY-0113/output/pilot-replay/cell_measures.npz",
+      "key": "SHA256-s1267--959362e979fdc07962ed19ce4db2f2b8f29978c0823b9bf1dbca5e0bc4b924a8",
+      "sha256": "959362e979fdc07962ed19ce4db2f2b8f29978c0823b9bf1dbca5e0bc4b924a8",
+      "size": 1267
+    },
+    {
+      "file": "raw/data/v31/jobs/G4_IDENTITY-0113/output/pilot-replay/cell_points.npz",
+      "key": "SHA256-s736580--c4874d16f0a03579de8075882dfddaf2e2773cc4bb82e2217b9c9ba405c5fe87",
+      "sha256": "c4874d16f0a03579de8075882dfddaf2e2773cc4bb82e2217b9c9ba405c5fe87",
+      "size": 736580
+    }
+  ],
+  "remote": "ghost-archive",
+  "schema": 1,
+  "scientific_scope": "Storage integrity only; scientific validity and reporting remain in version result records.",
+  "source_bundle": "v31/jobs/G4_IDENTITY-0113/output",
+  "storage_origin": "completed-migration",
+  "storage_receipt_sha256": "dd955b4d47f54f9d1bc1f507fd9f976188ad63ce5c784a48f9697ff9cdf56eeb",
+  "storage_state": "VERIFIED_ARCHIVE"
+}
