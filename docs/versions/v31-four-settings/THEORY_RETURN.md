@@ -64,3 +64,5 @@ Recovery follow-up at 2026-11-18T02:06:10.876970+00:00: [the first 16 successors
 [November 18 queue review](QUEUE_REPORT_20261118.md): eligible science is complete and audited; the archive transfer continues after a tested empty-folder repair. Q/W validity holds and the G6 definition hold remain.
 
 [November 18 evening checkpoint](EVENING_REVIEW_20261118.md): all eligible scientific results are audited; the archive continues from its retained infrastructure checkpoint. Publication is verified separately.
+
+Publication verified: all completed scientific results, including the final 101 M settings and complete map, are on main at `cce06fe3d1`. [Receipt](../../../results/v31/evening-publication-20261118/PUBLISHED.json). Raw migration and annex catalog backfill remain unfinished.

@@ -26,3 +26,5 @@ the adjacent machine receipt after the remote accepts the audited commit.
 [Complete M report](M_COMPLETE_REPORT_20261118.md), [full queue audit](QUEUE_REPORT_20261118.md),
 [storage selection and holds](STORAGE_CHECK_AFTERNOON_20261118.md),
 [current checkpoint](../../../results/v31/evening-publication-20261118/CHECKPOINT.json).
+
+Publication verified: all completed scientific results, including the final 101 M settings and complete map, are on main at `cce06fe3d1`. [Receipt](../../../results/v31/evening-publication-20261118/PUBLISHED.json). Raw migration and annex catalog backfill remain unfinished.

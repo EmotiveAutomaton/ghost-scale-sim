@@ -38,3 +38,5 @@ Recovery follow-up at 2026-11-18T02:06:10.876970+00:00: [the first 16 successors
 [Afternoon storage review](STORAGE_CHECK_AFTERNOON_20261118.md) supersedes the earlier running archive snapshot: the cache-access failure is retained, and a narrower historical-output successor is active.
 
 [November 18 evening checkpoint](EVENING_REVIEW_20261118.md): all eligible scientific results are audited; the archive continues from its retained infrastructure checkpoint. Publication is verified separately.
+
+Publication verified: all completed scientific results, including the final 101 M settings and complete map, are on main at `cce06fe3d1`. [Receipt](../../../results/v31/evening-publication-20261118/PUBLISHED.json). Raw migration and annex catalog backfill remain unfinished.
