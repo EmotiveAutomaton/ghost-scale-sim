@@ -1,0 +1,72 @@
+{
+  "bundle_id": "1b40660db1e090f1a5fa6f03e5dfde372f57aa536ddc0168a5c164c599754fa5",
+  "files": [
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/pilot-original/cell_measures.npz",
+      "key": "SHA256-s3329--213cd27f1ad5152c33b931a48267030a43ab11a295674534a100a59761fd3268",
+      "sha256": "213cd27f1ad5152c33b931a48267030a43ab11a295674534a100a59761fd3268",
+      "size": 3329
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/pilot-original/cell_points.npz",
+      "key": "SHA256-s19679--5a8b4005708510061ace0ab4086f42614b0c2a69251b7024044ada7d53023afa",
+      "sha256": "5a8b4005708510061ace0ab4086f42614b0c2a69251b7024044ada7d53023afa",
+      "size": 19679
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/pilot-reconstruct/cell_measures.npz",
+      "key": "SHA256-s3331--ec60324e5b22872aa39ff2df48fc0440798cdd40eeb4c3063761b7d8e1d1a3eb",
+      "sha256": "ec60324e5b22872aa39ff2df48fc0440798cdd40eeb4c3063761b7d8e1d1a3eb",
+      "size": 3331
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/pilot-replay/cell_measures.npz",
+      "key": "SHA256-s3329--213cd27f1ad5152c33b931a48267030a43ab11a295674534a100a59761fd3268",
+      "sha256": "213cd27f1ad5152c33b931a48267030a43ab11a295674534a100a59761fd3268",
+      "size": 3329
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/pilot-replay/cell_points.npz",
+      "key": "SHA256-s19679--5a8b4005708510061ace0ab4086f42614b0c2a69251b7024044ada7d53023afa",
+      "sha256": "5a8b4005708510061ace0ab4086f42614b0c2a69251b7024044ada7d53023afa",
+      "size": 19679
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/study-original/cell_measures.npz",
+      "key": "SHA256-s5023--035034c14d61ea701bba65a295f961e2721f74daba50e69225064ebfc3d156a0",
+      "sha256": "035034c14d61ea701bba65a295f961e2721f74daba50e69225064ebfc3d156a0",
+      "size": 5023
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/study-original/cell_points.npz",
+      "key": "SHA256-s92814--a0f4f79076baa68d6365ee59dac1d211e616dcb00405ee0f7ff7bbf67356a0db",
+      "sha256": "a0f4f79076baa68d6365ee59dac1d211e616dcb00405ee0f7ff7bbf67356a0db",
+      "size": 92814
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/study-reconstruct/cell_measures.npz",
+      "key": "SHA256-s5022--1605fdc5e3b6e066ee92eedfc3a5f91428bf0a9492cbac95b50e713129c2ee02",
+      "sha256": "1605fdc5e3b6e066ee92eedfc3a5f91428bf0a9492cbac95b50e713129c2ee02",
+      "size": 5022
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/study-replay/cell_measures.npz",
+      "key": "SHA256-s5023--035034c14d61ea701bba65a295f961e2721f74daba50e69225064ebfc3d156a0",
+      "sha256": "035034c14d61ea701bba65a295f961e2721f74daba50e69225064ebfc3d156a0",
+      "size": 5023
+    },
+    {
+      "file": "raw/data/v31/jobs/S-CORE-0302/output/study-replay/cell_points.npz",
+      "key": "SHA256-s92814--a0f4f79076baa68d6365ee59dac1d211e616dcb00405ee0f7ff7bbf67356a0db",
+      "sha256": "a0f4f79076baa68d6365ee59dac1d211e616dcb00405ee0f7ff7bbf67356a0db",
+      "size": 92814
+    }
+  ],
+  "remote": "ghost-archive",
+  "schema": 1,
+  "scientific_scope": "Storage integrity only; scientific validity and reporting remain in version result records.",
+  "source_bundle": "v31/jobs/S-CORE-0302/output",
+  "storage_origin": "completed-migration",
+  "storage_receipt_sha256": "67f2e27c4d6a7f8cc5f4d1f61fbdcb570ad72690be68cf04785c43d870498260",
+  "storage_state": "VERIFIED_ARCHIVE"
+}
